@@ -5,7 +5,154 @@
   <title>Pantropy Server Manager Version Feed</title>
   <subtitle>This is the Pantropy Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2018-05-21T23:30:00Z</updated>
+  <updated>2018-06-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:2DB9133C-6A3B-47CF-B0AE-1B868F325DB6</id>
+    <title>1.0.12 (1.0.12.4)</title>
+    <summary>1.0.12.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-06-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
+            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
+            <li>Window Styles - fixed up some visual styles.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:9C3DDAC2-4491-4FE4-A098-2CA6F34D0AED</id>
+    <title>1.0.11 (1.0.11.5)</title>
+    <summary>1.0.11.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-06-04T05:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Mod Details - when the steam fetch fails, basic mod details are read from the local workshop cache file, if one exists.</li>
+            <li>Mod Details - grid background changed to blue, if mod record is invalid.</li>
+            <li>Mod Details - grid background changed to blue, if mod details could not be downloaded from steam. Private mods and mod that have been removed from steam workshop.</li>
+            <li>Mod Details - added mod fetch status message if failed.</li>
+            <li>Out of Date Mods - changed to exclude mods that are invalid (no steam information).</li>
+            <li>Rcon Window - changed the order the server status and player list is started.</li>
+            <li>Rcon Window - added null reference checking for send command results.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:95AF8378-06E7-44F6-9278-31F004123264</id>
+    <title>1.0.10 (1.0.10.1)</title>
+    <summary>1.0.10.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-27T23:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Translations - Fixed the map name and branch names when changing languages.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:2EFC7337-C652-4C09-92F8-68EDFADA4C0C</id>
+    <title>1.0.9 (1.0.9.2)</title>
+    <summary>1.0.9.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-27T03:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Processor Affinity - fixed bug with machines that have more than 32 processors.</li>
+            <li>Processor Affinity - removed code that checks the LauncherArgs for Affinity. Affinity can be set using the Affinity window, or the LauncherArgs.</li>
+            <li>Fix the bug when generating the support zip file.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:2EFC7337-C652-4C09-92F8-68EDFADA4C0C</id>
+    <title>1.0.8 (1.0.8.4)</title>
+    <summary>1.0.8.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Profile Tabs - added server status indicator buttons to the profile tabs for quick reference and ability to Start/Stop the server.</li>
+            <li>
+              Server Status Options - added two new options to the global settings.<br/>
+              1. Enable Server Status Actions - will enabled/disable to ability to perform an action when clicking on the server status icon.<br/>
+              2. Show Server Status Action Confirmation - will enabled/disable the display of a confirmation dialogue when an action is performed.
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>MotD Duration Label - fixed motd duration label format.</li>
+            <li>Global Settings - fixed shutdown command option tooltip.</li>
+            <li>Log folder creation - added exists check when creating the Logs folder.</li>
+            <li>DotNet Framework updated</li>
+          </ul>
+          <br/>
+          <font color="#1979e6">
+            NOTE: There is a new version of the Discord plugin - 1.0.12.1.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:6CE18339-6DF6-430F-9858-F32711BB6FEB</id>
