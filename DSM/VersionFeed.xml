@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:D80E19F9-33D2-4466-9177-A11506998E48</id>
+  <title>DnL Server Manager Version Feed</title>
+  <subtitle>This is the Dark and Light Server Manager release version feed.</subtitle>
+  <link href="http://servermanagers.freeforums.net/" />
+  <updated>2018-05-22T04:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:42180D14-C444-4FF5-B084-EF11836AA4CE</id>
+    <title>1.0.41 (1.0.41.1)</title>
+    <summary>1.0.41.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2018-05-22T04:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Duplicated comma bug - attempt #2 fixing the duplicate comma bug.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D91F21C2-D22C-495F-A14E-2121F07F23A9</id>
+    <title>1.0.40 (1.0.40.1)</title>
+    <summary>1.0.40.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2018-05-21T23:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Duplicated comma bug - fixed the duplicate comma bug.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Process Priority and Processor Affinity - added new priority and affinity entry fields.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:1B41F11B-5993-42CB-AC0B-4287B81E09E6</id>
+    <title>1.0.39 (1.0.39.6)</title>
+    <summary>1.0.39.6</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2018-05-21T03:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Player List - fixed bug that would prevent loading the player list if the steam fetch caused a problem.</li>
+            <li>Server Status spamming - attempt #1 to fix the server status spam being sent to the discord plugin.</li>
+            <li>MOD Path - manual and auto updates now use the same path method.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Stop process - changed the way the server stop process is done. It is now all threaded properly and should now close down the server within 30 seconds.</li>
+            <li>Server Status - when performing the manual update, the 'Updating' server status should now remain until the update process is complete. This will also keep the update and start buttons disabled.</li>
+            <li>RCON Window - changed player leaving message color to MidniteBlue.</li>
+            <li>Shutdown/Save Commands - moved them to the config file.</li>
+            <li>Import Profile - now imports to the current profile rather than creating a new profile and overwriting the current profile.</li>
+            <li>User Settings - added reading user config settings from json file when loading.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:BCFE0052-8E95-403C-A906-398F23F26F04</id>
+    <title>1.0.38 (1.0.38.3)</title>
+    <summary>1.0.38.3</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2018-05-12T02:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>SteamCMD - added a bug fix to reduce the steamcmd error when changing/removing branches.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Icons - all icons have be cleaned up and updated.</li>
+            <li>Message of the Day - Added a new Lines count. Will let you know how many lines the MotD is, and will turn red when you have exceeded the visible space in game.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:B7EBC54D-4A9B-44E9-AC60-6C0B75EF0036</id>
+    <title>1.0.37 (1.0.37.4)</title>
+    <summary>1.0.37.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2018-05-07T10:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Engrams - fixed bug that would clear the selected engrams.</li>
+            <li>Creature - fixed bug that would clear the creature spawn multipliers.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              Beta branch support now added to the server manager and works with the Manual and Auto update processes.<br/><br/>
+              <font color="#1979e6">
+                NOTE: This change affects the server cache and will force your server to perform an update when the next auto-update is run.
+              </font>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:EE080BB3-68BB-4504-8820-5376D5BEF650</id>
+    <title>1.0.36 (1.0.36.5)</title>
+    <summary>1.0.36.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2018-05-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>RCON Player List - Fixed player list showing online players as Invalid.</li>
+            <li>RCON Player List - Fixed player list showing duplicate player profiles.</li>
+            <li>RCON Player List - removed players from list when the player profile no longer exists (eg. cluster transfer).</li>
+            <li>Player List - removed players from list when the player profile no longer exists (eg. cluster transfer).</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:36C4F0E6-55DE-49BD-80B6-1227B664824A</id>
+    <title>1.0.35 (1.0.35.21)</title>
+    <summary>1.0.35.21</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T11:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Lots of bugfixes.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Lots of new features.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Lots of changes.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:347B33E6-FC01-44D3-A459-58EEE77FA3FE</id>
+    <title>1.0.34 (1.0.34.5)</title>
+    <summary>1.0.34.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Added a null check behind the save button.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added a global option to enable/disable downloading the player avatar images in the RCON window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6AFB9FE9-34EB-408A-9145-98E11887FA19</id>
+    <title>1.0.33 (1.0.33.2)</title>
+    <summary>1.0.33.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added an Enable/Disable button to the task status section.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:948963FC-6575-4A1A-8189-5956FDC996C8</id>
+    <title>1.0.32 (1.0.32.5)</title>
+    <summary>1.0.32.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed issue with WEB API calls, servers should now resolve properly.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the download location of the manager.</li>
+            <li>Changed the download location of the discord plugin.</li>
+            <li>Removed the validation check for the auto-backup and auto-update interval.</li>
+            <li>Removed avatar images from the backup/restore.</li>
+            <li>adds a length count to the MOTD field. It will turn red if the length > 1000.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:2EC47FB7-B565-46A9-8C18-5616118C5F40</id>
+    <title>1.0.31 (1.0.31.4)</title>
+    <summary>1.0.31.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>When starting the manager, the public IP is ALWAYS updated.</li>
+            <li>Creature name fixes.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added a Reset button to the top of the global settings form, to reset ALL user settings.</li>
+            <li>Added Wheat Seed, Twine, Apple and Berry resources.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:588ADBFF-E3B0-466E-A276-52E203C4DC26</id>
+    <title>1.0.30 (1.0.30.5)</title>
+    <summary>1.0.30.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug with DnLData reading of player and tribe files, when duplicate files are found.</li>
+            <li>Added extra exception checks when loading DnLData information.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              <font color="#1979e6">DnLServerManager.exe is now code signed.</font>
+            </li>
+            <li>Added new Server Status alert messages through the Discord plugin. A new alert type has been added ServerStatusUpdate.</li>
+            <li>Added new Wild Dino Wipe on server startup warning message through the Discord plugin.</li>
+            <li>More alert messages added to global settings, so you can customise.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D66B37C2-46BD-4699-87FC-D5016612F3AB</id>
+    <title>1.0.29 (1.0.29.2)</title>
+    <summary>1.0.29.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug when closing the RCON window, when opened using the Open Remote Console button (not RCON button).</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added new global option to enable/disable using 'DoExit' command to shutdown the server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:EF63CEE8-6841-43D4-9AF0-DE5BA576FCEF</id>
+    <title>1.0.28 (1.0.28.1)</title>
+    <summary>1.0.28.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              Added a new global setting that sets the delay period to wait after the saveworld command is sent.<br/><br/>
+              <font color="#1979e6">
+                NOTE: This is for server with larger world saves that take longer to complete the save.
+              </font>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:9AFA478C-FB0F-447C-BAE1-A0E5B0CDC270</id>
+    <title>1.0.27 (1.0.27.2)</title>
+    <summary>1.0.27.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>
+              Fixed alert messages sent to discord plugin. When adding \r\n or \n, they work properly.<br/>
+              <font color="#1979e6">
+                NOTE: Discord plugin <u style="font-size: .9em;">was not</u> changed.
+              </font>
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed location of the player avatar images. They are now stored in the SavedArks folder, not the TEMP folder.</li>
+            <li>Added player avatar images to the backup and restore.</li>
+            <li>Added support for TLS1.0, TLS1.1 and TLS1.2 when downloading files.</li>
+            <li>Removed support for SSL3 when downloading files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A63D05B9-50A7-429A-BF75-2AC43C807567</id>
+    <title>1.0.26 (1.0.26.1)</title>
+    <summary>1.0.26.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>
+              Second attempt to fix RCON spamming issue.<br/><br/>
+              <font color="#1979e6">
+                NOTE: This is not a guaranteed fix, as I am unable to reproduce the error so I am only guessing what might be the cause.
+                If you are suffering the RCON issue, can you please update and provide feedback if this fixed your problem or not.
+              </font>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:42CD00D4-BD1B-40F1-AB8D-D31993769327</id>
+    <title>1.0.25 (1.0.25.1)</title>
+    <summary>1.0.25.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>
+              First attempt to fix RCON spamming issue.<br/><br/>
+              <font color="#1979e6">
+                NOTE: This is not a guaranteed fix, as I am unable to reproduce the error so I am only guessing what might be the cause.
+                If you are suffering the RCON issue, can you please update and provide feedback if this fixed your problem or not.
+              </font>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:160B88B2-05F6-4A30-8E3F-BA684A71AD61</id>
+    <title>1.0.24 (1.0.24.2)</title>
+    <summary>1.0.24.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>
+              Completely re-wrote the server manager update. Everything is now done inside a new updater application.<br/><br/>
+              <font color="#1979e6">NOTE: Updating to this version will still use the old updater.</font>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:060D1F32-0ADB-4E11-AE3C-70C376A7DC98</id>
+    <title>1.0.23 (1.0.23.1)</title>
+    <summary>1.0.23.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added progress messages to the Server Manager Update process.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added Korean language translation.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5849E4A3-860E-40DD-BAEF-56EB143622B4</id>
+    <title>1.0.22 (1.0.22.1)</title>
+    <summary>1.0.22.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Changed the display of the sliders to show the proper numbers instead of Exponential notation.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0FED7201-C721-4ECF-9CDD-5CD7B9225DE4</id>
+    <title>1.0.21 (1.0.21.1)</title>
+    <summary>1.0.21.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Replaced difficulty override setting, with the old difficulty setting. Defaults to 400 (or 1.0, max creature level of 120).</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5DA54F06-39E5-47A1-AB93-C52725DF30DA</id>
+    <title>1.0.20 (1.0.20.1)</title>
+    <summary>1.0.20.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/2/downloads" />
+    <updated>2017-09-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fix crash when opening the RCON window via the Open button at the top right corner.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
