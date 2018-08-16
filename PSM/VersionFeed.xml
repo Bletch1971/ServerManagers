@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:BE852556-BFC7-4AF2-82F3-F8A1CAF5C241</id>
+  <title>Pantropy Server Manager Version Feed</title>
+  <subtitle>This is the Pantropy Server Manager release version feed.</subtitle>
+  <link href="http://servermanagers.freeforums.net/" />
+  <updated>2018-05-21T23:30:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:6CE18339-6DF6-430F-9858-F32711BB6FEB</id>
+    <title>1.0.7 (1.0.7.1)</title>
+    <summary>1.0.7.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-21T23:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Process Priority and Processor Affinity - added new priority and affinity entry fields.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:62E48ED1-DCDF-4D39-A4EB-51B8D7707966</id>
+    <title>1.0.6 (1.0.6.5)</title>
+    <summary>1.0.6.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-21T03:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Player List - fixed bug that would prevent loading the player list if the steam fetch caused a problem.</li>
+            <li>Server Status spamming - attempt #1 to fix the server status spam being sent to the discord plugin.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Stop process - changed the way the server stop process is done. It is now all threaded properly and should now close down the server within 30 seconds.</li>
+            <li>Server Status - when performing the manual update, the 'Updating' server status should now remain until the update process is complete. This will also keep the update and start buttons disabled.</li>
+            <li>Current Version - the version is now updated regardless of if the server is running or not.</li>
+            <li>Shutdown/Save Commands - moved them to the config file.</li>
+            <li>User Settings - added reading user config settings from json file when loading.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:AF23AC70-FA38-4F69-B561-5CD17DDE4A1C</id>
+    <title>1.0.5 (1.0.5.3)</title>
+    <summary>1.0.5.3</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-12T02:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>SteamCMD - added a bug fix to reduce the steamcmd error when changing/removing branches.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Icons - all icons have be cleaned up and updated.</li>
+            <li>Message of the Day - Added a new Lines count. Will let you know how many lines the MotD is, and will turn red when you have exceeded the visible space in game.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:DA9FC87F-0323-4302-ADB4-9CF9E47D2287</id>
+    <title>1.0.4 (1.0.4.3)</title>
+    <summary>1.0.4.3</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-07T10:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              Beta branch support now added to the server manager and works with the Manual and Auto update processes.<br/><br/>
+              <font color="#1979e6">
+                NOTE: This change affects the server cache and will force your server to perform an update when the next auto-update is run.
+              </font>
+            </li>
+            <br/>
+            <li>
+              Message of the Day - added the ability to set the MotD and the broadcast interval.<br/><br/>
+              <font color="#1979e6">
+                NOTE: As the broadcast method only supports single line messages, if the MotD spans multiple lines, only the first line with be broadcast.
+              </font>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D8F2431E-CBE8-4CF6-9BEE-4C867ADDBA71</id>
+    <title>1.0.3 (1.0.3.5)</title>
+    <summary>1.0.3.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-05-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Player List - Fixed player list showing players as Invalid.</li>
+            <li>Player List - Fixed player list showing duplicate player profiles.</li>
+            <li>Player List - removed players from list when the player profile no longer exists.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:EACB60DA-73EC-4D34-A618-182B115B82D8</id>
+    <title>1.0.2 (1.0.2.4)</title>
+    <summary>1.0.2.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2017-09-01T11:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Version Details Window - a new window to show the version updates.</li>
+            <li>Player Profile Window - a new window to show the player's details, right-click a player in the player list to access it.</li>
+          </ul>
+          <u style="font-size: .9em;">UPDATES</u>
+          <br/>
+          <ul>
+            <li>Server version is now updated each time the server status check is performed (approx every 5 seconds).</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:4edf1837-7d07-4b58-bab1-0c4459849cf7</id>
+    <title>1.0.1 (1.0.1.26)</title>
+    <summary>1.0.1.26</summary>
+    <link href="http://servermanagers.freeforums.net/thread/9/downloads" />
+    <updated>2018-04-30T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Very rough version for testing purposes only.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
