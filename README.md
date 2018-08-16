@@ -1,2 +1,2 @@
-# ServerManagers
-A manager for different steam game servers
+# Server Managers
+Managers for different steam dedicated game servers.
