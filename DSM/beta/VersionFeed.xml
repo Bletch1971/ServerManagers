@@ -5,118 +5,21 @@
   <title>DnL Server Manager Version Feed</title>
   <subtitle>This is the Dark and Light Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2018-06-13T00:00:00Z</updated>
-
-  <entry>
-    <id>urn:uuid:3D755945-D9C3-4B8D-A972-E442F2FAE2D2</id>
-    <title>1.0.46 (1.0.46.5)</title>
-    <summary>1.0.46.5</summary>
-    <link href="" />
-    <updated>2018-06-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Config Files - changed the output of float numbers to 6 decimals.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:065A621F-903F-4164-8A88-37AF2932311F</id>
-    <title>1.0.46 (1.0.46.4)</title>
-    <summary>1.0.46.4</summary>
-    <link href="" />
-    <updated>2018-06-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Out-Of-Date Mods - Fixed bug that would keep updating mod status when changing profiles.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:DFF42E2C-EE99-4509-BD7B-903609A4E62B</id>
-    <title>1.0.46 (1.0.46.3)</title>
-    <summary>1.0.46.3</summary>
-    <link href="" />
-    <updated>2018-06-12T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Profile Import - fixed the profile import, so that any INI file can be imported.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:430E34CD-3D23-4714-B976-504008F0E709</id>
-    <title>1.0.46 (1.0.46.2)</title>
-    <summary>1.0.46.2</summary>
-    <link href="" />
-    <updated>2018-06-12T02:20:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
+  <updated>2018-08-16T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:2FE211A0-0081-4A40-8DE2-EAEC79F81953</id>
-    <title>1.0.46 (1.0.46.1)</title>
-    <summary>1.0.46.1</summary>
+    <title>1.0.47 (1.0.47.1)</title>
+    <summary>1.0.47.1</summary>
     <link href="" />
-    <updated>2018-06-06T01:20:00Z</updated>
+    <updated>2018-08-16T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
+          <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
+            <li>Download Location Changed - Have moved the server manager files to a new location for hosting.</li>
           </ul>
         </p>
       </div>
