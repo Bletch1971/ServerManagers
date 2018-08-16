@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:9EF03FB7-4958-4B39-808A-12B8E4008510</id>
+  <title>Conan Server Manager Version Feed</title>
+  <subtitle>This is the Conan Server Manager release version feed.</subtitle>
+  <link href="http://servermanagers.freeforums.net/" />
+  <updated>2018-05-21T23:30:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:179FDCE4-029F-4253-B531-0BF7619FF65F</id>
+    <title>1.0.5 (1.0.5.1)</title>
+    <summary>1.0.5.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-21T23:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Admin Password - fixed the bug that would prevent the admin password being written to the ServerSettings.ini file.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Process Priority and Processor Affinity - added new priority and affinity entry fields.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E0D7D9C4-ECDD-4681-8D80-AF4238377B2E</id>
+    <title>1.0.4 (1.0.4.4)</title>
+    <summary>1.0.4.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-21T03:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Import Profile - new imports button to import existing servers to the current profile.</li>
+            <li>MotD - Message of the Day added with an interval timer that will broadcast it in game.</li>
+            <li>Kick AFK Settings - added Kick AFK percentage/time server settings.</li>
+            <li>User Settings - added reading user config settings from json file when loading.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:91B72A9C-84C9-47AE-A9C6-1E3565CA102A</id>
+    <title>1.0.3 (1.0.3.1)</title>
+    <summary>1.0.3.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-19T10:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>RCON Window - fixed the SQLite error, missing interop files are now deployed.</li>
+            <li>RCON Window - player list is now properly populated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CEC7E44F-F552-4CB0-8EBC-4122347D4B1A</id>
+    <title>1.0.2 (1.0.2.2)</title>
+    <summary>1.0.2.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-19T02:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MOD Path - manual and auto updates now use the same path method.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Shutdown/Save Commands - moved them to the config file.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5E30B739-D598-4E69-AB14-361B2676447A</id>
+    <title>1.0.1 (1.0.1.7)</title>
+    <summary>1.0.1.7</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-17T08:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Very rough version for testing purposes only.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
