@@ -5,21 +5,21 @@
   <title>Discord Plugin Version Feed</title>
   <subtitle>This is the Discord Plugin beta version feed.</subtitle>
   <link href="" />
-  <updated>2018-06-13T04:40:00Z</updated>
+  <updated>2018-08-16T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:2EA29651-EADE-41D4-AAA2-F40E7CAF3D62</id>
-    <title>1.0.13 (1.0.13.1)</title>
-    <summary>1.0.13.1</summary>
+    <title>1.0.14 (1.0.14.1)</title>
+    <summary>1.0.14.1</summary>
     <link href="" />
-    <updated>2018-06-13T04:40:00Z</updated>
+    <updated>2018-08-16T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Message Options - Added new message options to display the messages in Bold, Italic, Underlined and Embedded Code Block.</li>
+            <li>Download Location Changed - Have moved the server manager files to a new location for hosting.</li>
           </ul>
         </p>
       </div>
