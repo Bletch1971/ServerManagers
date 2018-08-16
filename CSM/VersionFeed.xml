@@ -5,7 +5,192 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2018-05-21T23:30:00Z</updated>
+  <updated>2018-06-24T23:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:61CA2DCD-A90C-45EA-8FDA-8C497FEFFE3B</id>
+    <title>1.0.11 (1.0.11.1)</title>
+    <summary>1.0.11.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-06-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Whitelisted Players - Added check option to turn whitelist on/off.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:773B7F65-4B5C-4775-B985-C115284B7312</id>
+    <title>1.0.10 (1.0.10.5)</title>
+    <summary>1.0.10.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-06-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
+            <li>Profile Import - fixed the profile import, so that any INI file can be imported.</li>
+            <li>Out-Of-Date Mods - Fixed bug that would keep updating mod status when changing profiles.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
+            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
+            <li>Config Files - changed the output of float numbers to 6 decimals.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:3872D5BF-BD64-4F2B-B9BE-79246113F88F</id>
+    <title>1.0.9 (1.0.9.5)</title>
+    <summary>1.0.9.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+  <updated>2018-06-04T05:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Mod Details - when the steam fetch fails, basic mod details are read from the local workshop cache file, if one exists.</li>
+            <li>Mod Details - grid background changed to blue, if mod record is invalid.</li>
+            <li>Mod Details - grid background changed to blue, if mod details could not be downloaded from steam. Private mods and mod that have been removed from steam workshop.</li>
+            <li>Mod Details - added mod fetch status message if failed.</li>
+            <li>Out of Date Mods - changed to exclude mods that are invalid (no steam information).</li>
+            <li>Rcon Window - changed the order the server status and player list is started.</li>
+            <li>Rcon Window - added null reference checking for send command results.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:9776B7FA-7E33-47DC-8454-1E5812D76473</id>
+    <title>1.0.8 (1.0.8.1)</title>
+    <summary>1.0.8.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-30T00:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Translations - Fixed the map name and branch names when changing languages.</li>
+            <li>Server Validation - Fixed the validation when the mod details could not be downloaded from steam.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Shutdown Countdown - have removed the 4 minute, 3 minute and 2 minute broadcasts. So after the 5 minute broadcast then next one is the 1 minute broadcast.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:4B4FDA09-8A0F-4C44-9384-75F5EF2BC8FD</id>
+    <title>1.0.7 (1.0.7.2)</title>
+    <summary>1.0.7.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-27T03:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Processor Affinity - fixed bug with machines that have more than 32 processors.</li>
+            <li>Processor Affinity - removed code that checks the LauncherArgs for Affinity. Affinity can be set using the Affinity window, or the LauncherArgs.</li>
+            <li>Fix the bug when generating the support zip file.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Whitelist Server Files - Added new whitelist section to the server files. Creates the whitelist.txt file.</li>
+            <li>Whitelist Filters - Added new whitelist filters to the RCON window and Player List Window.</li>
+            <li>Whitelist Indicator - PLayers that are whitelisted now have a blue border around the player profile when offline.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:201FEB6E-0EF4-4BBD-8368-D9C8C5AF1FDA</id>
+    <title>1.0.6 (1.0.6.4)</title>
+    <summary>1.0.6.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Profile Tabs - added server status indicator buttons to the profile tabs for quick reference and ability to Start/Stop the server.</li>
+            <li>
+              Server Status Options - added two new options to the global settings.<br/>
+              1. Enable Server Status Actions - will enabled/disable to ability to perform an action when clicking on the server status icon.<br/>
+              2. Show Server Status Action Confirmation - will enabled/disable the display of a confirmation dialogue when an action is performed.
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>MotD Duration Label - fixed motd duration label format.</li>
+            <li>Global Settings - fixed shutdown command option tooltip.</li>
+            <li>Log folder creation - added exists check when creating the Logs folder.</li>
+            <li>DotNet Framework updated</li>
+          </ul>
+          <br/>
+          <font color="#1979e6">
+            NOTE: There is a new version of the Discord plugin - 1.0.12.1.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:179FDCE4-029F-4253-B531-0BF7619FF65F</id>

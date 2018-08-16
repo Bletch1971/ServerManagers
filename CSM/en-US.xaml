@@ -142,6 +142,7 @@
     <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmLabel">You are about to update the mod version in the ASM last updated file. Do you want to continue?</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_FailedTitle">Write Timestamp Error</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_FailedLabel">The mod folder could not be found or does not exist. Try downloading the mod and trying again.</sys:String>
+    <sys:String x:Key="ModDetails_ModDetailFetchFailed_Label">Mod Details could not be fetched from steam.</sys:String>
 
     <sys:String x:Key="ModDetails_TotalCountLabel">Total Count:</sys:String>
     <sys:String x:Key="ModDetails_FilterLabel">Filter:</sys:String>
@@ -367,6 +368,16 @@
     <sys:String x:Key="RCON_ClearLogs_Label">Logs in {0} deleted.</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Can't open logs</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Unable to open the logs directory at {0}. Please make sure this directory exists and that you have permission to access it.\nException: {1}</sys:String>
+
+    <sys:String x:Key="InputMode_Command">Command</sys:String>
+    <sys:String x:Key="InputMode_Global">Global</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
+
+    <sys:String x:Key="ConsoleStatus_Disconnected">Disconnected</sys:String>
+    <sys:String x:Key="ConsoleStatus_Connected">Connected</sys:String>
+
+    <sys:String x:Key="Player_Join">Player '{0}' joined the game.</sys:String>
+    <sys:String x:Key="Player_Leave">Player '{0}' left the game.</sys:String>
     <!--#endregion-->
 
     <!--#region PlayerListWindow Window -->
@@ -392,6 +403,7 @@
     <sys:String x:Key="PlayerList_Menu_FilterOffline">Show All</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterAdmin">Show Admin</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterBanned">Show Banned</sys:String>
+    <sys:String x:Key="PlayerList_Menu_FilterWhitelisted">Show Whitelisted</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterInvalid">Show Invalid</sys:String>
     <sys:String x:Key="PlayerList_Menu_ShowAvatars">Show Player Avatars</sys:String>
     <!--#endregion-->
@@ -490,6 +502,11 @@
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
 
+    <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Start Server Confirmation</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">You are about to start the server, do you want to continue?</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Shutdown Server Confirmation</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionLabel">You are about to shutdown the server, do you want to continue?</sys:String>
+
     <sys:String x:Key="Updater_ProgressMessage_DownloadLabel">Downloading latest version file...</sys:String>
     <sys:String x:Key="Updater_ProgressMessage_PrepareLabel">Preparing downloadeded file...</sys:String>
     <sys:String x:Key="Updater_ProgressMessage_ExtractLabel">Extracting latest version to staging area...</sys:String>
@@ -521,6 +538,11 @@
     <sys:String x:Key="GlobalSettings_SteamAPIKeyButtonLabel">Get WebApi Key...</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Help...</sys:String>
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">If enabled, clicking the server status icons may perform one or mroe actions.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Show Server Status Action Confirmation</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">If enabled, a dialogue will be shown to confirmation the server status action.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Server Startup Options</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Validate profile on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">If enabled, when you manually start the server, a basic validation is performed on the server and mod files.</sys:String>
@@ -930,6 +952,15 @@
     <sys:String x:Key="ServerSettings_RemoveBlacklistedPlayerTooltip">Delete Blacklisted Player</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesBlacklistedIdColumnLabel">Steam ID</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesBlacklistedNameColumnLabel">Steam Name</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedLabel">Enable Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedTooltip">If enabled, only whitelised players will be able to join the server.</sys:String>
+    <sys:String x:Key="ServerSettings_AddWhitelistedPlayerTooltip">Add Whitelisted Player</sys:String>
+    <sys:String x:Key="ServerSettings_ClearWhitelistedPlayerTooltip">Clear Whitelisted Players</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadWhitelistedPlayerTooltip">Reload from File</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveWhitelistedPlayerTooltip">Delete Whitelisted Player</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedIdColumnLabel">Steam ID</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedNameColumnLabel">Steam Name</sys:String>
     <!--#endregion-->
     <!--#endregion-->
 
@@ -940,7 +971,7 @@
     <!--#endregion-->
 
     <!--#region Branch Names -->
-    <sys:String x:Key="Branch_live">Live</sys:String>
+    <sys:String x:Key="live">Live</sys:String>
     <!--#endregion-->
 
     <!--#region Game Map Names -->
