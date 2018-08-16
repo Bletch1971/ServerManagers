@@ -5,7 +5,217 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-05-22T04:00:00Z</updated>
+  <updated>2018-06-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:5F7EA274-8F56-4274-AD2B-6F03E83D1CC9</id>
+    <title>1.0.337 (1.0.337.7)</title>
+    <summary>1.0.337.7</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-06-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
+            <li>Profile Import - fixed the profile import, so that any INI file can be imported.</li>
+            <li>Profile Import - fixed the dialog window opening twice.</li>
+            <li>Out-Of-Date Mods - Fixed bug that would keep updating mod status when changing profiles.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+            <li>Dino Inventory - Added Medium and Hard variants of Spider and Gorilla Bosses.</li>
+            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
+            <li>RCON Window - removed right-click KILL command.</li>
+            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
+            <li>Config Files - changed the output of float numbers to 6 decimals.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CB85104C-B4DF-4137-B387-4E5FCE92D3ED</id>
+    <title>1.0.336 (1.0.336.5)</title>
+    <summary>1.0.336.5</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-06-04T05:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Mod Details - when the steam fetch fails, basic mod details are read from the local workshop cache file, if one exists.</li>
+            <li>Mod Details - grid background changed to blue, if mod record is invalid.</li>
+            <li>Mod Details - grid background changed to blue, if mod details could not be downloaded from steam. Private mods and mod that have been removed from steam workshop.</li>
+            <li>Mod Details - added mod fetch status message if failed.</li>
+            <li>Out of Date Mods - changed to exclude mods that are invalid (no steam information).</li>
+            <li>Rcon Window - changed the order the server status and player list is started.</li>
+            <li>Rcon Window - added null reference checking for send command results.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0ED2E18A-78AA-4A69-BE65-87C6BCB2E2A9</id>
+    <title>1.0.335 (1.0.335.2)</title>
+    <summary>1.0.335.2</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-30T22:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>
+              Scheduled Tasks folder name - fixed the folder name back to ArkServerManager.<br/>
+              <font color="#e62919">
+                NOTE: This change will require you to delete all your existing tasks under the 'ServerManager' folder in Windows Task Scheduler. Then you can use ASM to recreate them.<br/>
+                To recreate, open the Global Settings and close it. Then click save on all your profiles. Once done, all the scheduled tasks will be recreated.
+              </font>
+            </li>
+            <li>Translations - Fixed the map name, total conversion name and branch names when changing languages.</li>
+            <li>Server Validation - Fixed the validation when the mod details could not be downloaded from steam.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+            <li>zh-CN Translation file updated. (thanks @shouke)</li>
+            <li>en-US translation file - changed PerPlatformStructuresMultiplier tooltip to include 'Raft'.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0ED2E18A-78AA-4A69-BE65-87C6BCB2E2A9</id>
+    <title>1.0.334 (1.0.334.2)</title>
+    <summary>1.0.334.2</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-27T03:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Processor Affinity - fixed bug with machines that have more than 32 processors.</li>
+            <li>Processor Affinity - removed code that checks the LauncherArgs for Affinity. Affinity can be set using the Affinity window, or the LauncherArgs.</li>
+            <li>Engram Sync - fixed bug witht he engram sync.</li>
+            <li>Fix the bug when generating the support zip file.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E6EABDF7-A4FA-4CF1-8666-97752FC23F83</id>
+    <title>1.0.333 (1.0.333.1)</title>
+    <summary>1.0.333.1</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug that prevented ASM from starting.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A08707A4-4AAC-4FED-88DE-A14E5A87FCFC</id>
+    <title>1.0.332 (1.0.332.5)</title>
+    <summary>1.0.332.5</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Message of the Day - fixed the saving of the message of the day.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Profile Tabs - added server status indicator buttons to the profile tabs for quick reference and ability to Start/Stop the server.</li>
+            <li>
+              Server Status Options - added two new options to the global settings.<br/>
+              1. Enable Server Status Actions - will enabled/disable to ability to perform an action when clicking on the server status icon.<br/>
+              2. Show Server Status Action Confirmation - will enabled/disable the display of a confirmation dialogue when an action is performed.
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+            <li>zh-CN Translation file updated. (thanks @shouke)</li>
+            <li>MotD Duration Label - fixed motd duration label format.</li>
+            <li>Global Settings - fixed shutdown command option tooltip.</li>
+            <li>Log folder creation - added exists check when creating the Logs folder.</li>
+            <li>
+              <font color="#e62919">
+                DotNet Framework updated to 4.6.2. This means Windows OS versions from Vista and earlier will no longer work.
+              </font>
+            </li>
+          </ul>
+          <br/>
+          <font color="#1979e6">
+            NOTE: There is a new version of the Discord plugin - 1.0.12.1.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:BCD44AEB-605E-44CD-8E7F-958566F4933C</id>
