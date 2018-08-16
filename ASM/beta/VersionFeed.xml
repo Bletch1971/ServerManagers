@@ -5,139 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-06-13T00:00:00Z</updated>
+  <updated>2018-08-16T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:6ECA2EBB-B5F0-4CE4-97F4-226100B0EC5A</id>
-    <title>1.0.337 (1.0.337.7)</title>
-    <summary>1.0.337.7</summary>
+    <id>urn:uuid:AE20370D-536F-415B-BD9B-E3A373D4A6D4</id>
+    <title>1.0.338 (1.0.338.1)</title>
+    <summary>1.0.338.1</summary>
     <link href="" />
-    <updated>2018-06-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Config Files - changed the output of float numbers to 6 decimals.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:45D5415B-6816-4C87-9F01-F695887B78E5</id>
-    <title>1.0.337 (1.0.337.6)</title>
-    <summary>1.0.337.6</summary>
-    <link href="" />
-    <updated>2018-06-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Out-Of-Date Mods - Fixed bug that would keep updating mod status when changing profiles.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:19BA83F6-85F1-42EF-9815-0F4F773A5F16</id>
-    <title>1.0.337 (1.0.337.5)</title>
-    <summary>1.0.337.5</summary>
-    <link href="" />
-    <updated>2018-06-12T05:40:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Profile Import - fixed the dialog window opening twice.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>RCON Window - removed right-click KILL command.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:95856986-9BD4-4AEA-ABA8-031F8357D7B2</id>
-    <title>1.0.337 (1.0.337.4)</title>
-    <summary>1.0.337.4</summary>
-    <link href="" />
-    <updated>2018-06-12T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Profile Import - fixed the profile import, so that any INI file can be imported.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:269608F8-5930-4072-80F5-0D384C16B526</id>
-    <title>1.0.337 (1.0.337.3)</title>
-    <summary>1.0.337.3</summary>
-    <link href="" />
-    <updated>2018-06-12T02:20:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:F1729AAA-5362-4C4E-9D7E-69A49AD231EE</id>
-    <title>1.0.337 (1.0.337.2)</title>
-    <summary>1.0.337.2</summary>
-    <link href="" />
-    <updated>2018-06-11T22:20:00Z</updated>
+    <updated>2018-08-16T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -145,35 +20,6 @@
           <br/>
           <ul>
             <li>fr-FR Translation file updated. (thanks @angemymy)</li>
-            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:AE20370D-536F-415B-BD9B-E3A373D4A6D4</id>
-    <title>1.0.337 (1.0.337.1)</title>
-    <summary>1.0.337.1</summary>
-    <link href="" />
-    <updated>2018-06-06T01:20:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Dino Inventory - Added Medium and Hard variants of Spider and Gorilla Bosses.</li>
           </ul>
         </p>
       </div>
