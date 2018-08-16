@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:ED89B8FA-0E0B-46CC-A90B-595E69AE9A7E</id>
+  <title>Ark Server Manager Version Feed</title>
+  <subtitle>This is the Ark Server Manager release version feed.</subtitle>
+  <link href="http://arkservermanager.freeforums.net/" />
+  <updated>2018-05-22T04:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:BCD44AEB-605E-44CD-8E7F-958566F4933C</id>
+    <title>1.0.331 (1.0.331.1)</title>
+    <summary>1.0.331.1</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-22T04:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Duplicated comma bug - attempt #2 fixing the duplicate comma bug.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:89B87E7D-B862-4DC6-A3D3-386A6B0B5B31</id>
+    <title>1.0.330 (1.0.330.2)</title>
+    <summary>1.0.330.2</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-22T01:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Duplicated comma bug - fixed the duplicate comma bug.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Process Priority and Processor Affinity - added new priority and affinity entry fields.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:73ADD85E-49AF-4CB6-81D0-63B06EC95643</id>
+    <title>1.0.329 (1.0.329.4)</title>
+    <summary>1.0.329.4</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-21T03:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Status spamming - attempt to fix the server status spam being sent to the discord plugin.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Stop process - changed the way the server stop process is done. It is now all threaded properly and should now close down the server within 30 seconds.</li>
+            <li>Server Status - when performing the manual update, the 'Updating' server status should now remain until the update process is complete. This will also keep the update and start buttons disabled.</li>
+            <li>RCON Window - changed player leaving message color to MidniteBlue.</li>
+            <li>Import Profile - now imports to the current profile rather than creating a new profile and overwriting the current profile.</li>
+            <li>User Settings - added reading user config settings from json file when loading.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C5F289AB-85F9-4690-BDAC-743149524942</id>
+    <title>1.0.328 (1.0.328.7)</title>
+    <summary>1.0.328.7</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-16T06:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dino Spawns - fixed the bug that did not set the dino spawn values correctly when reading from INI files.</li>
+            <li>Player List - fixed bug that would prevent loading the player list if the steam fetch caused a problem.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>User Settings - added a user settings backup to the backup folder.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>FR Translation file updated. (thanks @angemymy)</li>
+            <li>ArkData - some code tweaks</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E8073547-E0AF-46A1-BBC9-0A00D2D7E14C</id>
+    <title>1.0.327 (1.0.327.4)</title>
+    <summary>1.0.327.4</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-12T06:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>SteamCMD - added a bug fix to reduce the steamcmd error when changing/removing branches.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Icons - all icons have be cleaned up and updated.</li>
+            <li>Mod Details window - when moving the mods up and down, it no longer updates the mod details. Only adding new mods will update the details.</li>
+            <li>Message of the Day - Added a new Lines count. Will let you know how many lines the MotD is, and will turn red when you have exceeded the visible space in game.</li>
+            <li>RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C74E7548-6527-410D-8163-A3ACE1BB6326</id>
+    <title>1.0.326 (1.0.326.5)</title>
+    <summary>1.0.326.5</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-07T10:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Engrams - fixed bug that would clear the selected engrams.</li>
+            <li>Dinos - fixed bug that would clear the dino spawn multipliers.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              Beta branch support now added to the server manager and works with the Manual and Auto update processes.<br/><br/>
+              <font color="#1979e6">
+                NOTE: This change affects the server cache and will force your server to perform an update when the next auto-update is run.
+              </font>
+            </li>
+            <br/>
+            <li>Profiles - added global options to enable/disable ASM controlling PGM and SotF settings (default disabled).</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:43CF5187-4C93-4FE7-A1CD-58F0D08A09E7</id>
+    <title>1.0.325 (1.0.325.5)</title>
+    <summary>1.0.325.5</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-05T21:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>FR Translation file updated. (thanks @angemymy)</li>
+            <li>RU Translation file updated. (thanks @varlonec)</li>
+            <li>RCON Window - text is now colored dependant on what type of message is being displayed.</li>
+            <li>RCON Player List - list is now loaded in two parts. The first part will load the online players only and displays only basic information (Steam Name and Steam Id). The second part will read the player and tribe profile files and requests player data from steam. Then they are merged together.</li>
+            <li>RCON Player List - removed players from list when the player profile no longer exists (eg. cluster transfer).</li>
+            <li>Player List - synchronized the method of reading the player and tribe profile files with the RCON player list. This list will take longer to display results as it is not able to show online players.</li>
+            <li>Player List - removed players from list when the player profile no longer exists (eg. cluster transfer).</li>
+          </ul>
+          <font color="#1979e6">
+            NOTE: Player Avatars Images will only load if you have less than 300 player profiles. If you have more than 300 player profiles then you will only see the ? image. The reason is because the player avatar images are what is causing the lag and freezing. 300 profiles is about the limit when the performance starts to degrade.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:3A04F64A-8303-4EEA-99EE-0F8F54ED49C1</id>
+    <title>1.0.324 (1.0.324.0)</title>
+    <summary>1.0.324.0</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-05T21:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <font color="Red">SKIPPED</font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0B85C4D7-991C-4954-9B39-E30146B8CA33</id>
+    <title>1.0.323 (1.0.323.19)</title>
+    <summary>1.0.323.19</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-05-02T05:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a few duplicate shutdown messages introduced with the Always Show Shutdown Reason in last release (322).</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Version Details Window - a new window to show the version updates.</li>
+            <li>
+              Player List window - a new window only available when RCON is disabled, replaces the RCON button with a Players button.<br/>
+              The player list only reads the ARK player and tribe files and displays them in a list. Without RCON I am unable to determine which player is online, so Online status is never shown here.<br/>
+              Right-click on a player to get a few options.<br/>
+              This list is only designed to give server owners WITHOUT RCON, the ability to see who is connecting to their server.
+            </li>
+            <li>Added global setting to shutdown or keep open the Server Shutdown window after it is finished - used for testing.</li>
+            <li>Gamedata storage changes</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>
+              Completely re-wrote the RCON player profile load.<br/>
+              It will only call the update one at a time - should remove the ListPlayers spam.<br/>
+              It <u>should</u> not freeze ASM when the profiles are now loading.
+            </li>
+            <li>RU Translation file updated. (thanks @varlonec)</li>
+            <li>FR Translation file updated. (thanks @angemymy)</li>
+            <li>The auto-update now has a file copy failure retry. If the file fails to copy, it will try 3 times with a 5 second delay in between.</li>
+            <li>The Server Files section is now read-only when the server is running.</li>
+            <li>The Server Files section is now an option in the Profile Sync.</li>
+            <li>The Shutdown window will now always open regardless of if RCON is enabled/disabled.</li>
+            <li>Added Server, Query and RCON port validation to the profile validation. Valid range is 0 - 65535.</li>
+            <li>Added the .arktributetribe files to the backup and restore functions.</li>
+            <li>Added a onfirmation dialog when using the Write Timestamp button in the Mod Details window.</li>
+            <li>The ArkApplication filter comboboxes have been changed, so that the display values can be globalized.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C5C0521B-3CE8-4DA7-BE03-B57378A78966</id>
+    <title>1.0.322 (1.0.322.7)</title>
+    <summary>1.0.322.7</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-04-30T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+          <u style="font-size: .9em;">NEW</u>
+          <ul>
+            <li>Mod Details Window - A new 'Timestamp' column has been added to shows the timestamp of the last time the mod was updated. This value is returned from the steam servers.</li>
+            <li>Mod Details Window - A new button has been added to each row. This button will allow you to manually set the value in the LastUpdatedASM.txt files. This should only be used if you MUST update a mod by manually copying the files.</li>
+            <li>Shutdown Reason Broadcast - A new option has been added to the global settings, that will broadcast the shutdown reason with every shutdown message. If disabled, the shutdown reason is only broadcast at the start of the shutdown.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:81419AF8-3047-456D-B94E-74BEC336D660</id>
+    <title>1.0.321 (1.0.321.2)</title>
+    <summary>1.0.321.2</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-04-30T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+          <u style="font-size: .9em;">NEW</u>
+          <ul>
+            <li>Added Aberrant Direbear and Bigfoot versions. (thanks @spikeydragoon)</li>
+            <li>Updated Ban Url.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGED</u>
+          <ul>
+            <li>RU Translation file updated. (thanks @varlonec)</li>
+            <li>FR Translation file updated. (thanks @angemymy)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CCE2F68C-3F1C-45F7-A234-34F09C892402</id>
+    <title>1.0.320 (1.0.320.8)</title>
+    <summary>1.0.320.8</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-04-30T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+          <u style="font-size: .9em;">NEW</u>
+          <ul>
+            <li>FR Translation file added. (thanks @angemymy)</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGED</u>
+          <ul>
+            <li>RU Translation file updated. (thanks @varlonec)</li>
+            <li>CN Translation file updated. (thanks @acme)</li>
+            <li>
+              <font color="#1979e6">ARK 278.0 options added.</font><br/>
+              ServerAllowAnsel -> Administration section<br/>
+              AllowHideDamageSourceFromLogs -> Administration section<br/>
+              TribeNameChangeCooldown -> Rules section<br/>
+              RandomSupplyCratePoints -> Rules section<br/>
+              DisableWeatherFog -> Environment section<br/>
+              bHardLimitTurretsInRange -> Structures section<br/>
+              TamedDinoCharacterFoodDrainMultiplier -> Dino section<br/>
+              TamedDinoTorporDrainMultiplier -> Dino section<br/>
+              WildDinoCharacterFoodDrainMultiplier -> Dino section<br/>
+              WildDinoTorporDrainMultiplier -> Dino section<br/>
+              PassiveTameIntervalMultiplier -> Dino section<br/>
+              PreventOfflinePvPConnectionInvincibleInterval -> Rules section<br/>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
