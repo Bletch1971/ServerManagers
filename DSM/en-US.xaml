@@ -163,6 +163,7 @@
     <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmLabel">You are about to update the mod version in the ASM last updated file. Do you want to continue?</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_FailedTitle">Write Timestamp Error</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_FailedLabel">The mod folder could not be found or does not exist. Try downloading the mod and trying again.</sys:String>
+    <sys:String x:Key="ModDetails_ModDetailFetchFailed_Label">Mod Details could not be fetched from steam.</sys:String>
 
     <sys:String x:Key="ModDetails_TotalCountLabel">Total Count:</sys:String>
     <sys:String x:Key="ModDetails_FilterLabel">Filter:</sys:String>
@@ -354,6 +355,11 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Enable Supply Crate Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">If enabled, the supply crate overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">WARNING: While any of these options are disabled, the server manager will not read or write the associated overrides settings. Re-enabling any of these options will cause ALL existing associated overrides to be removed from the config file.</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">If enabled, clicking the server status icons may perform one or mroe actions.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Show Server Status Action Confirmation</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">If enabled, a dialogue will be shown to confirmation the server status action.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Server Startup Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Player Level Increase:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
@@ -602,6 +608,11 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">If you proceed the entire SteamCMD folder will be removed including all mod cache downloads.\r\nAre you sure you want to reinstall SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
+
+    <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Start Server Confirmation</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">You are about to start the server, do you want to continue?</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Shutdown Server Confirmation</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionLabel">You are about to shutdown the server, do you want to continue?</sys:String>
 
     <sys:String x:Key="Updater_ProgressMessage_DownloadLabel">Downloading latest version file...</sys:String>
     <sys:String x:Key="Updater_ProgressMessage_PrepareLabel">Preparing downloadeded file...</sys:String>
@@ -1857,6 +1868,16 @@
     <sys:String x:Key="RCON_ClearLogs_Label">Logs in {0} deleted.</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Can't open logs</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Unable to open the logs directory at {0}. Please make sure this directory exists and that you have permission to access it.\nException: {1}</sys:String>
+
+    <sys:String x:Key="InputMode_Command">Command</sys:String>
+    <sys:String x:Key="InputMode_Global">Global</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
+
+    <sys:String x:Key="ConsoleStatus_Disconnected">Disconnected</sys:String>
+    <sys:String x:Key="ConsoleStatus_Connected">Connected</sys:String>
+
+    <sys:String x:Key="Player_Join">Player '{0}' joined the game.</sys:String>
+    <sys:String x:Key="Player_Leave">Player '{0}' left the game.</sys:String>
     <!--#endregion-->
 
     <!--#region Open RCON window -->
@@ -1876,8 +1897,8 @@
     <sys:String x:Key="Settings_Title">Settings</sys:String>
     <!--#endregion-->
 
-    <!--#region Game Map Names -->
-    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#region Branch Names -->
+    <sys:String x:Key="live">Live</sys:String>
     <!--#endregion-->
 
     <!--#region Game Map Names -->
