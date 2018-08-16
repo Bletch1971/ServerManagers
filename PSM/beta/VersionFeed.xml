@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:BE852556-BFC7-4AF2-82F3-F8A1CAF5C241</id>
+  <title>Pantropy Server Manager Version Feed</title>
+  <subtitle>This is the Pantropy Server Manager beta version feed.</subtitle>
+  <link href="http://servermanagers.freeforums.net/" />
+  <updated>2018-06-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:3B2D3FBF-A77B-4F57-BCAF-C1265EA30354</id>
+    <title>1.0.12 (1.0.12.4)</title>
+    <summary>1.0.12.4</summary>
+    <link href="" />
+    <updated>2018-06-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Window Styles - fixed up some visual styles.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:BED6976B-E025-48BF-8CE5-6A8AEE47C76D</id>
+    <title>1.0.12 (1.0.12.3)</title>
+    <summary>1.0.12.3</summary>
+    <link href="" />
+    <updated>2018-06-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:45BAB860-0394-4DA8-82E8-3235266EEC49</id>
+    <title>1.0.12 (1.0.12.2)</title>
+    <summary>1.0.12.2</summary>
+    <link href="" />
+    <updated>2018-06-12T02:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A4AA4EFA-9708-48AD-B169-9A427ABD65C5</id>
+    <title>1.0.12 (1.0.12.1)</title>
+    <summary>1.0.12.1</summary>
+    <link href="" />
+    <updated>2018-06-06T01:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
