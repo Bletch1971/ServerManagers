@@ -16,8 +16,9 @@
     <sys:String x:Key="GameApplication_SurvivalEvolved">Survival Evolved</sys:String>
     <sys:String x:Key="GameApplication_PrimitivePlus">Primitive Plus</sys:String>
     <sys:String x:Key="GameApplication_ScorchedEarth">Scorched Earth</sys:String>
-    <sys:String x:Key="GameApplication_Ragnarok">Ragnarok</sys:String>
+    <sys:String x:Key="GameApplication_Ragnarok">ScorchedEarth_P</sys:String>
     <sys:String x:Key="GameApplication_Aberration">Aberration</sys:String>
+    <sys:String x:Key="GameApplication_Extinction">Extinction</sys:String>
     <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
     <!--#endregion-->
 
@@ -2144,6 +2145,7 @@
     <sys:String x:Key="ScorchedEarth_P">Scorched Earth</sys:String>
     <sys:String x:Key="Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="Aberration_P">Aberration</sys:String>
+    <sys:String x:Key="Extinction">Extinction</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->

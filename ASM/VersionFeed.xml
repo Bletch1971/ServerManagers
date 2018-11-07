@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-08-16T00:00:00Z</updated>
+  <updated>2018-11-07T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:1BA11B06-53E6-44F0-9697-42AD0F7FCB7C</id>
+    <title>1.0.339 (1.0.339.1)</title>
+    <summary>1.0.339.1</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-11-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added Extinction gamedata file - only contains the map name for now.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:5F7EA274-8F56-4274-AD2B-6F03E83D1CC9</id>
