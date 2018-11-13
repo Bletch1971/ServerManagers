@@ -16,7 +16,7 @@
     <sys:String x:Key="GameApplication_SurvivalEvolved">Survival Evolved</sys:String>
     <sys:String x:Key="GameApplication_PrimitivePlus">Primitive Plus</sys:String>
     <sys:String x:Key="GameApplication_ScorchedEarth">Scorched Earth</sys:String>
-    <sys:String x:Key="GameApplication_Ragnarok">ScorchedEarth_P</sys:String>
+    <sys:String x:Key="GameApplication_Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="GameApplication_Aberration">Aberration</sys:String>
     <sys:String x:Key="GameApplication_Extinction">Extinction</sys:String>
     <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
@@ -2176,11 +2176,17 @@
     <sys:String x:Key="Beaver_Character_BP_C">Castoroides</sys:String>
     <sys:String x:Key="Bee_Character_BP_C">Giant Bee</sys:String>
     <sys:String x:Key="BigFoot_Character_BP_C">Gigantopithecus</sys:String>
+    <sys:String x:Key="BionicPara_Character_BP_C">Tek Parasaur</sys:String>
+    <sys:String x:Key="BionicQuetz_Character_BP_C">Tek Quetzal</sys:String>
+    <sys:String x:Key="BionicRaptor_Character_BP_C">Tek Raptor</sys:String>
+    <sys:String x:Key="BionicRex_Character_BP_C">Tek Rex</sys:String>
+    <sys:String x:Key="BionicStego_Character_BP_C">Tek Stegosaurus</sys:String>
     <sys:String x:Key="BoaFrill_Character_BP_C">Titanoboa</sys:String>
     <sys:String x:Key="Carno_Character_BP_C">Carnotaurus</sys:String>
     <sys:String x:Key="Chalico_Character_BP_C">Chalicotherium</sys:String>
     <sys:String x:Key="Cnidaria_Character_BP_C">Cnidaria</sys:String>
-    <sys:String x:Key="Coel_Character_BP_C">Coel</sys:String>
+    <sys:String x:Key="Coel_Character_BP_C">Coelacanth</sys:String>
+    <sys:String x:Key="Coel_Character_BP_Ocean_C">Coelacanth (Ocean)</sys:String>
     <sys:String x:Key="Compy_Character_BP_C">Compy</sys:String>
     <sys:String x:Key="Daeodon_Character_BP_C">Daeodon</sys:String>
     <sys:String x:Key="Dilo_Character_BP_C">Dilophosaurus</sys:String>
@@ -2189,6 +2195,7 @@
     <sys:String x:Key="Diplocaulus_Character_BP_C">Diplocalus</sys:String>
     <sys:String x:Key="Diplodocus_Character_BP_C">Diplodocus</sys:String>
     <sys:String x:Key="Direbear_Character_BP_C">Direbear</sys:String>
+    <sys:String x:Key="Direbear_Character_Polar_C">Polar Bear</sys:String>
     <sys:String x:Key="Direwolf_Character_BP_C">Direwolf</sys:String>
     <sys:String x:Key="Dodo_Character_BP_C">Dodo</sys:String>
     <sys:String x:Key="Doed_Character_BP_C">Doedicurus</sys:String>
@@ -2201,6 +2208,7 @@
     <sys:String x:Key="Euryp_Character_C">Eurypterid</sys:String>
     <sys:String x:Key="Galli_Character_BP_C">Gallimimus</sys:String>
     <sys:String x:Key="Gigant_Character_BP_C">Giganotosaurus</sys:String>
+    <sys:String x:Key="Gigant_Character_BP_TekCave_C">Giganotosaurus (Tek Cave)</sys:String>
     <sys:String x:Key="Hesperornis_Character_BP_C">Hesperornis</sys:String>
     <sys:String x:Key="Hyaenodon_Character_BP_C">Hyaenodon</sys:String>
     <sys:String x:Key="Ichthyornis_Character_BP_C">Ichthyornis</sys:String>
@@ -2218,12 +2226,15 @@
     <sys:String x:Key="Megalania_Character_BP_C">Megalania</sys:String>
     <sys:String x:Key="Megalodon_Character_BP_C">Megalodon</sys:String>
     <sys:String x:Key="Megalosaurus_Character_BP_C">Megalosaurus</sys:String>
+    <sys:String x:Key="Megalosaurus_Character_BP_TekCave_C">Megalosaurus (Tek Cave)</sys:String>
     <sys:String x:Key="MegaRaptor_Character_BP_C">Alpha Raptor</sys:String>
     <sys:String x:Key="MegaRex_Character_BP_C">Alpha T-Rex</sys:String>
     <sys:String x:Key="Megatherium_Character_BP_C">Megatherium</sys:String>
     <sys:String x:Key="Microraptor_Character_BP_C">Microraptor</sys:String>
     <sys:String x:Key="Monkey_Character_BP_C">Mesopithecus</sys:String>
     <sys:String x:Key="Mosa_Character_BP_C">Mosasaurus</sys:String>
+    <sys:String x:Key="Mosa_Character_BP_Cave_C">Mosasaurus (Cave)</sys:String>
+    <sys:String x:Key="Mosa_Character_BP_Mega_Cave_C">Alpha Mosasaurus (Cave)</sys:String>
     <sys:String x:Key="Moschops_Character_BP_C">Moschops</sys:String>
     <sys:String x:Key="Otter_Character_BP_C">Otter</sys:String>
     <sys:String x:Key="Oviraptor_Character_BP_C">Oviraptor</sys:String>
@@ -2239,6 +2250,7 @@
     <sys:String x:Key="Procoptodon_Character_BP_C">Procoptodon</sys:String>
     <sys:String x:Key="Ptero_Character_BP_C">Pteranodon</sys:String>
     <sys:String x:Key="Purlovia_Character_BP_C">Purlovia</sys:String>
+    <sys:String x:Key="Purlovia_Character_BP_Polar_C">Purlovia (Snow Cave)</sys:String>
     <sys:String x:Key="Quetz_Character_BP_C">Quetzal</sys:String>
     <sys:String x:Key="Raptor_Character_BP_C">Raptor</sys:String>
     <sys:String x:Key="Rex_Character_BP_C">Rex</sys:String>
@@ -2459,6 +2471,49 @@
     <sys:String x:Key="RockwellTentacle_Character_BP_Alpha_C">Rockwell Tentacle (Hard Variant)</sys:String>
     <sys:String x:Key="RockwellTentacle_Character_BP_Beta_C">Rockwell Tentacle (Medium Variant)</sys:String>
     <sys:String x:Key="RockwellTentacle_Character_BP_Gamma_C">Rockwell Tentacle (Easy Variant)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Extinction -->
+    <sys:String x:Key="Arthro_Character_BP_Corrupt">Corrupted Arthropluera</sys:String>
+    <sys:String x:Key="Carno_Character_BP_Corrupt_C">Corrupted Carnotaurus</sys:String>
+    <sys:String x:Key="Chalico_Character_BP_Corrupt_C">Corrupted Chalicotherium</sys:String>
+    <sys:String x:Key="Deathworm_Character_BP_Corrupt_C">Corrupted Deathworm</sys:String>
+    <sys:String x:Key="Dilo_Character_BP_Corrupt_C">Corrupted Dilophosaur</sys:String>
+    <sys:String x:Key="Dimorph_Character_BP_Corrupt_C">Corrupted Dimorphodon</sys:String>
+    <sys:String x:Key="Gigant_Character_BP_Corrupt_C">Corrupted Giganotosaurus</sys:String>
+    <sys:String x:Key="MegaRex_Character_BP_Corrupt_C">Enraged Corrupted Rex</sys:String>
+    <sys:String x:Key="MegaTrike_Character_BP_Corrupt_C">Enraged Triceratops</sys:String>
+    <sys:String x:Key="Paracer_Character_BP_Corrupt_C">Corrupted Paraceratherium</sys:String>
+    <sys:String x:Key="Ptero_Character_BP_Corrupt_C">Corrupted Pteranodon</sys:String>
+    <sys:String x:Key="Raptor_Character_BP_Corrupt_C">Corrupted Raptor</sys:String>
+    <sys:String x:Key="Rex_Character_BP_Corrupt_C">Corrupted Rex</sys:String>
+    <sys:String x:Key="RockDrake_Character_BP_Corrupt_C">Corrupted Rock Drake</sys:String>
+    <sys:String x:Key="Spino_Character_BP_Corrupt_C">Corrupted Spino</sys:String>
+    <sys:String x:Key="Stego_Character_BP_Corrupt_C">Corrupted Stegosaurus</sys:String>
+    <sys:String x:Key="Trike_Character_BP_Corrupt_C">Corrupted Triceratops</sys:String>
+    <sys:String x:Key="Xenomorph_Character_BP_Male_Tamed_Corrupt_C">Corrupted Reaper King</sys:String>
+    <sys:String x:Key="Wyvern_Character_BP_Fire_Corrupt_C">Corrupted Wyvern</sys:String>
+
+    <sys:String x:Key="DesertKaiju_Character_BP_C">Desert Titan</sys:String>
+    <sys:String x:Key="Enforcer_Character_BP_C">Enforcer</sys:String>
+    <sys:String x:Key="ForestKaiju_Character_BP_C">Forest Titan</sys:String>
+    <sys:String x:Key="Gacha_Character_BP_C">Gacha</sys:String>
+    <sys:String x:Key="GasBags_Character_BP_C">GasBags</sys:String>
+    <sys:String x:Key="IceJumper_Character_BP_C">Managarmr</sys:String>
+    <sys:String x:Key="IceKaiju_Character_BP_C">Ice Titan</sys:String>
+    <sys:String x:Key="MegaMek_Character_BP_C">Mega Mek</sys:String>
+    <sys:String x:Key="Mek_Character_BP_C">Mek</sys:String>
+    <sys:String x:Key="Owl_Character_BP_C">Snow Owl</sys:String>
+    <sys:String x:Key="Scout_Character_BP_C">Scout</sys:String>
+    <sys:String x:Key="Spindles_Character_BP_C">Velonasaur</sys:String>
+    <sys:String x:Key="Defender_Character_BP_C">Defense Unit</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Extinction - Bosses -->
+    <sys:String x:Key="CorruptTumor_Character_BP_C">Corrupt Tumor</sys:String>
+    <sys:String x:Key="KingKaiju_Character_BP_C">King Titan (Gamma)</sys:String>
+    <sys:String x:Key="KingKaiju_Character_BP_Alpha_C">King Titan (Alpha)</sys:String>
+    <sys:String x:Key="KingKaiju_Character_BP_Beta_C">King Titan (Beta)</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -3150,6 +3205,35 @@
     <sys:String x:Key="EngramEntry_TekSniper_C">Tek Railgun</sys:String>
     <!--#endregion-->
 
+    <!--#region Engram Class Names - Extinction -->
+    <sys:String x:Key="EngramEntry_CryoFridge_C">Cryofridge</sys:String>
+    <sys:String x:Key="EngramEntry_DinoLeash_C">Dino Leash</sys:String>
+    <sys:String x:Key="EngramEntry_EmptyCryopod_C">Empty Cryopod</sys:String>
+    <sys:String x:Key="EngramEntry_GachaSaddle_C">Gacha Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_GasBagsSaddle_C">Gasbags Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_IceJumperSaddle_C">Managarmr Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_MekBackpack_Cannon_C">M.S.C.M. (Mek Siege Cannon Module)</sys:String>
+    <sys:String x:Key="EngramEntry_MekBackpack_Missiles_C">M.R.L.M. (Mek Rocket Launcher Module)</sys:String>
+    <sys:String x:Key="EngramEntry_MekBackpack_Shield_C">M.D.S.M. (Mek Deployable Shield Module)</sys:String>
+    <sys:String x:Key="EngramEntry_MekCannonShell_C">Cannon Shell</sys:String>
+    <sys:String x:Key="EngramEntry_MekRocketPod_C">Rocket Pod</sys:String>
+    <sys:String x:Key="EngramEntry_MekSpawner_C">Unassembled Mek</sys:String>
+    <sys:String x:Key="EngramEntry_OwlSaddle_C">Snow Owl Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_RefinedElement_C">Unstable Element</sys:String>
+    <sys:String x:Key="EngramEntry_RefinedShards_C">Unstable Element Shard</sys:String>
+    <sys:String x:Key="EngramEntry_SpindlesSaddle_C">Velonasaur Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_StorageBox_Balloon_C">Delivery Crate</sys:String>
+    <sys:String x:Key="EngramEntry_TaxidermyBase_Large_C">Large Taxidermy Base</sys:String>
+    <sys:String x:Key="EngramEntry_TaxidermyBase_Medium_C">Medium Taxidermy Base</sys:String>
+    <sys:String x:Key="EngramEntry_TaxidermyBase_Small_C">Small Taxidermy Base</sys:String>
+    <sys:String x:Key="EngramEntry_TaxidermyTool_C">Taxidermy Tool</sys:String>
+    <!--#endregion-->
+
+    <!--#region Tekgram Class Names - Extinction -->
+    <sys:String x:Key="EngramEntry_TekBridge_C">Tek Bridge</sys:String>
+    <sys:String x:Key="EngramEntry_TekGravityGrenade_C">Tek Gravity Grenade</sys:String>
+    <!--#endregion-->
+
     <!--#endregion-->
 
     <!--#region Items -->
@@ -3171,6 +3255,50 @@
     <sys:String x:Key="PrimalItem_RecipeNote_HealSoup_C">Rockwell Recipes: Medical Brew</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_Jerky_C">Rockwell Recipes: Meat Jerky</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_Kibble_C">Rockwell Recipes: Egg-based Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Allo_C">Rockwell Recipes: Allosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ankylo_C">Rockwell Recipes: Ankylosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_archaeopteryx_C">Rockwell Recipes: Archaeopteryx Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Argentavis_C">Rockwell Recipes: Argentavis Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Baryonyx_C">Rockwell Recipes: Baryonyx Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Bronto_C">Rockwell Recipes: Brontosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Carbonemys_C">Rockwell Recipes: Carbonemys Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Carno_C">Rockwell Recipes: Carnotaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Compy_C">Rockwell Recipes: Compy Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dilo_C">Rockwell Recipes: Dilophosaur Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dimetrodon_C">Rockwell Recipes: Dimetrodon Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dimorphodon_C">Rockwell Recipes: Dimorphodon Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Diplodocus_C">Rockwell Recipes: Diplodocus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dodo_C">Rockwell Recipes: Dodo Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Gallimimus_C">Rockwell Recipes: Gallimimus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ichthyornis_C">Rockwell Recipes: Ichthyornis Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Iguanodon_C">Rockwell Recipes: Iguanodon Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Kairuku_C">Rockwell Recipes: Kairuku Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Kentrosaurus_C">Rockwell Recipes: Kentrosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Lystro_C">Rockwell Recipes: Lystrosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Megalania_C">Rockwell Recipes: Megalania Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Megalosaurus_C">Rockwell Recipes: Megalosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Microraptor_C">Rockwell Recipes: Microraptor Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Moschops_C">Rockwell Recipes: Moschops Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Oviraptor_C">Rockwell Recipes: Oviraptor Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pachy_C">Rockwell Recipes: Pachycephalosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_PachyRhino_C">Rockwell Recipes: Pachyrhinosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Parasaur_C">Rockwell Recipes: Parasaur Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pegomastax_C">Rockwell Recipes: Pegomastax Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pela_C">Rockwell Recipes: Pelagornis Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ptero_C">Rockwell Recipes: Pteranodon Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pulmono_C">Rockwell Recipes: Pulmonoscorpius Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Quetz_C">Rockwell Recipes: Quetzalcoatlus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Raptor_C">Rockwell Recipes: Raptor Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Rex_C">Rockwell Recipes: Tyrannosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Sarco_C">Rockwell Recipes: Sarcosuchus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Spino_C">Rockwell Recipes: Spinosaur Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Stegosaurus_C">Rockwell Recipes: Stegosaurus Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Tapejara_C">Rockwell Recipes: Tapejara Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_TerrorBird_C">Rockwell Recipes: Terror Bird Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Therizino_C">Rockwell Recipes: Therizinosaur Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Titanoboa_C">Rockwell Recipes: Titanoboa Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Triceratops_C">Rockwell Recipes: Triceratops Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Troodon_C">Rockwell Recipes: Troodon Kibble</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_LazarusChowder_C">Rockwell Recipes: Lazarus Chowder</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_Measurements_C">Notes on Rockwell Recipes</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_RespecSoup_C">Rockwell Recipes: Mindwipe Tonic</sys:String>
@@ -3441,17 +3569,22 @@
     <sys:String x:Key="PrimalItemConsumable_Egg_Pachy_C">Pachycephalosaurus Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Pachyrhino_C">Pachyrhinosaurus Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Para_C">Parasaur Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Para_Bionic_C">Tek Parasaur Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Pegomastax_C">Pegomastax Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Pela_C">Pelagornis Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Ptero_C">Pteranodon Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Quetz_C">Quetzal Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Quetz_Bionic_C">Tek Quetzal Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Raptor_C">Raptor Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Raptor_Bionic_C">Tek Raptor Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Rex_C">Rex Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Rex_Bionic_C">Tek Rex Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Sarco_C">Sarco Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Scorpion_C">Pulmonoscorpius Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Spider_C">Araneo Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Spino_C">Spino Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Stego_C">Stego Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Stego_Bionic_C">Tek Stego Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Tapejara_C">Tapejara Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Terrorbird_C">Terror Bird Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Therizino_C">Therizino Egg</sys:String>
@@ -3572,6 +3705,9 @@
     <sys:String x:Key="PrimalItemConsumableMiracleGro_C">Re-Fertilizer</sys:String>
     <sys:String x:Key="PrimalItemConsumableRespecSoup_C">Mindwipe Tonic</sys:String>
     <sys:String x:Key="PrimalItemConsumableSoap_C">Soap</sys:String>
+    <sys:String x:Key="PrimalItemCostume_BionicGigant_C">Giga Bionic Costume</sys:String>
+    <sys:String x:Key="PrimalItemCostume_BionicRex_C">Rex Bionic Costume</sys:String>
+    <sys:String x:Key="PrimalItemCostume_Brachiosaurus_C">Brachiosaurus Costume</sys:String>
     <sys:String x:Key="PrimalItemCostume_BoneCarno_C">Carno Bone Costume</sys:String>
     <sys:String x:Key="PrimalItemCostume_BoneGigant_C">Giganotosaurus Bone Costume</sys:String>
     <sys:String x:Key="PrimalItemCostume_BoneJerboa_C">Jerboa Bone Costume</sys:String>
@@ -3584,6 +3720,8 @@
     <sys:String x:Key="PrimalItemCostume_BoneWyvern_C">Wyvern Bone Costume</sys:String>
     <sys:String x:Key="PrimalItemCostume_ProcopBunny_C">Procoptodon Bunny Costume</sys:String>
     <sys:String x:Key="PrimalItemCostume_ReindeerStag_C">Megaloceros Reindeer Costume</sys:String>
+    <sys:String x:Key="PrimalItemCostume_Stygimoloch_C">Stygimoloch Costume</sys:String>
+    <sys:String x:Key="PrimalItemCostume_Styracosaurus_C">Styracosaurus Costume</sys:String>
     <sys:String x:Key="PrimalItemDye_ActuallyMagenta_C">Magenta Coloring</sys:String>
     <sys:String x:Key="PrimalItemDye_Black_C">Black Coloring</sys:String>
     <sys:String x:Key="PrimalItemDye_Blue_C">Blue Coloring</sys:String>
@@ -3637,6 +3775,7 @@
     <sys:String x:Key="PrimalItemResource_ApexDrop_Thylaco_C">Thylacoleo Hook-Claw</sys:String>
     <sys:String x:Key="PrimalItemResource_ApexDrop_Tuso_C">Tusoteuthis Tentacle</sys:String>
     <sys:String x:Key="PrimalItemResource_ApexDrop_Yuty_C">Yutyrannus Lungs</sys:String>
+    <sys:String x:Key="PrimalItemResource_ARKBone_C">Dinosaur Bone</sys:String>
     <sys:String x:Key="PrimalItemResource_Beer_C">Beer Liquid</sys:String>
     <sys:String x:Key="PrimalItemResource_BlackPearl_C">Black Pearl</sys:String>
     <sys:String x:Key="PrimalItemResource_Charcoal_C">Charcoal</sys:String>
@@ -3670,6 +3809,7 @@
     <sys:String x:Key="PrimalItemResource_RareMushroom_C">Rare Mushroom</sys:String>
     <sys:String x:Key="PrimalItemResource_Sap_C">Sap</sys:String>
     <sys:String x:Key="PrimalItemResource_Silicon_C">Silica Pearls</sys:String>
+    <sys:String x:Key="PrimalItemResource_SnailPaste_C">Achatina Paste</sys:String>
     <sys:String x:Key="PrimalItemResource_Sparkpowder_C">Sparkpowder</sys:String>
     <sys:String x:Key="PrimalItemResource_SquidOil_C">Oil (Tusoteuthis)</sys:String>
     <sys:String x:Key="PrimalItemResource_Stone_C">Stone</sys:String>
@@ -3688,14 +3828,24 @@
     <sys:String x:Key="PrimalItemSkin_CaptainsHat_C">Captains Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_Chili_C">Chili Helmet Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_ClownMask_C">Clown Mask Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_CorruptedBoots_C">Corrupted Boots</sys:String>
+    <sys:String x:Key="PrimalItemSkin_CorruptedGloves_C">Corrupted Gloves</sys:String>
+    <sys:String x:Key="PrimalItemSkin_CorruptedHelmet_C">Corrupted Helmet</sys:String>
+    <sys:String x:Key="PrimalItemSkin_CorruptedPants_C">Corrupted Pants</sys:String>
+    <sys:String x:Key="PrimalItemSkin_CorruptedShirt_C">Corrupted Chestpiece</sys:String>
+    <sys:String x:Key="PrimalItemSkin_DiloMask_C">Dilo Mask</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoBunnyHat_C">Dino Bunny Ears Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_DinoChickHat_C">Dino Easter Chick Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoCute_C">Cute Dino Helmet Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_DinoEasterEggHat_C">Dino Easter Egg Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoPartyHat_C">Dino Party Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoSantaHat_C">Dino Santa Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoSpecs_C">Dino Glasses</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoWitchHat_C">Dino Witch Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DodorexMask_C">DodoRex Mask Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DodowyvernHat_C">DodoWyvern Mask Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_EasterChick_C">Easter Chick Hat</sys:String>
+    <sys:String x:Key="PrimalItemSkin_EasterEggHat_C">Easter Egg Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_ExplorerHat_C">Safari Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_FlaregunFireworks_C">Fireworks Flaregun Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_Glasses_C">Nerdry Glasses</sys:String>
@@ -3952,6 +4102,7 @@
     <sys:String x:Key="PrimalItemStructure_XmasLights_C">Holiday Lights</sys:String>
     <sys:String x:Key="PrimalItemTransGPSAmmo_C">Transponder Node</sys:String>
     <sys:String x:Key="PrimalItemTrophy_AlphaRex_C">Alpha Rex Trophy</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_ARKLogo_C">Survivor's Trophy</sys:String>
     <sys:String x:Key="PrimalItemTrophy_Broodmother_C">Broodmother Trophy</sys:String>
     <sys:String x:Key="PrimalItemTrophy_Broodmother_Alpha_C">Broodmother Trophy (Alpha)</sys:String>
     <sys:String x:Key="PrimalItemTrophy_Broodmother_Beta_C">Broodmother Trophy (Beta)</sys:String>
@@ -4391,6 +4542,75 @@
     <sys:String x:Key="PrimalItemTrophy_Rockwell_Beta_Alpha_C">Rockwell Trophy (Alpha)</sys:String>
     <!--#endregion-->
 
+    <!--#region Item Class Names - Extinction -->
+    <sys:String x:Key="PrimalItem_WeaponEmptyCryopod_C">Empty Cryopod</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponTaxidermyTool_C">Taxidermy Tool</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponTekGravityGrenade_C">Tek Gravity Grenade</sys:String>
+    <sys:String x:Key="PrimalItemAmmo_CannonShell_C">Cannon Shell</sys:String>
+    <sys:String x:Key="PrimalItemAmmo_RocketPod_C">Rocket Pod</sys:String>
+    <sys:String x:Key="PrimalItemArmor_DesertKaiju_C">Desert Titan Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_ForestKaiju_C">Forest Titan Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_GachaSaddle_C">PrimalItemArmor_GachaSaddle_C</sys:String>
+    <sys:String x:Key="PrimalItemArmor_GasBagsSaddle_C">Gasbags Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_IceJumperSaddle_C">Managarmr Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_IceKaiju_C">Ice Titan Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MekBackpack_MissilePod_C">M.R.L.M. (Mek Rocket Launcher Module)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MekBackpack_Shield_C">M.D.S.M. (Mek Deployable Shield Module)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MekBackpack_SiegeCannon">M.D.S.M. (Mek Deployable Shield Module)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MekTransformer_C">M.O.M.I. (MegaMek Operational Materialization Interface)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_OwlSaddle_C">Snow Owl Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_SpindlesSaddle_C">Velonasaur Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArtifact_Extinction_DesertKaiju_C">Artifact of Chaos</sys:String>
+    <sys:String x:Key="PrimalItemArtifact_Extinction_ForestKaiju_C">Artifact of Growth</sys:String>
+    <sys:String x:Key="PrimalItemArtifact_Extinction_IceKaiju_C">Artifact of the Void</sys:String>
+    <sys:String x:Key="PrimalItemResource_ApexDrop_GasBag_C">Gasbags bladder</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Owl_C">Snow Owl Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_GachaPod_C">Gacha Crystal</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Large_EX_C">Superior Augmented Kibble</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Medium_EX_C">Regular Augmented Kibble</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Small_EX_C">Small Advanced Kibble</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Special_EX_C">Extraordinary Augmented Kibble</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Base_XLarge_EX_C">Exceptional Augmented Kibble</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Base_XSmall_EX_C">Extra Small Advanced Kibble</sys:String>
+    <sys:String x:Key="PrimalItemResource_BlueSap_C">Blue Crystalized Sap</sys:String>
+    <sys:String x:Key="PrimalItemResource_CondensedGas_C">Condensed Gas</sys:String>
+    <sys:String x:Key="PrimalItemResource_CorruptedPolymer_C">Corrupted Nodule</sys:String>
+    <sys:String x:Key="PrimalItemResource_CorruptedWood_C">Corrupted Wood</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementDust_C">Element Dust</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementDustFromElement_C">Crafted Element Dust (Element)</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementDustFromShards_C">Crafted Element Dust (Element Shard)</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementRefined_C">Unstable Element</sys:String>
+    <sys:String x:Key="PrimalItemResource_FracturedGem_C">Fragmented Green Gem</sys:String>
+    <sys:String x:Key="PrimalItemResource_RareDrop_CorruptHeart_C">Corrupt Heart</sys:String>
+    <sys:String x:Key="PrimalItemResource_RedSap_C">Red Crystalized Sap</sys:String>
+    <sys:String x:Key="PrimalItemResource_ScrapMetal_C">Scrap Metal</sys:String>
+    <sys:String x:Key="PrimalItemResource_ScrapMetalIngot_C">Scrap Metal Ingot</sys:String>
+    <sys:String x:Key="PrimalItemResource_ShardRefined_C">Unstable Element Shard</sys:String>
+    <sys:String x:Key="PrimalItemResource_Silicate_C">Silicate</sys:String>
+    <sys:String x:Key="PrimalItemSkin_HomoDeusBoots_C">HomoDeus Boots</sys:String>
+    <sys:String x:Key="PrimalItemSkin_HomoDeusGloves_C">HomoDeus Gloves</sys:String>
+    <sys:String x:Key="PrimalItemSkin_HomoDeusHelmet_C">HomoDeus Helmet</sys:String>
+    <sys:String x:Key="PrimalItemSkin_HomoDeusPants_C">HomoDeus Pants</sys:String>
+    <sys:String x:Key="PrimalItemSkin_HomoDeusShirt_C">HomoDeus Shirt</sys:String>
+    <sys:String x:Key="PrimalItem_Spawner_Enforcer_C">Unassembled Enforcer</sys:String>
+    <sys:String x:Key="PrimalItem_Spawner_Mek_C">Unassembled Mek</sys:String>
+    <sys:String x:Key="PrimalItemStructure_CryoFridge_C">Cryofridge</sys:String>
+    <sys:String x:Key="PrimalItemStructure_DinoLeash_C">Dino Leash</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_KingKaiju_C">King Titan Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_KingKaijuMecha_C">Mecha King Titan Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_StorageBox_Balloon_C">Delivery Crate</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TaxidermyBase_Large_C">Large Taxidermy Base</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TaxidermyBase_Medium_C">Medium Taxidermy Base</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TaxidermyBase_Small_C">Small Taxidermy Base</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekBridge_C">Tek Bridge</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_Kaiju_Desert_C">Desert Titan Trophy</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_Kaiju_Forest_C">Forest Titan Trophy</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_Kaiju_Ice_C">Ice Titan Trophy</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Alpha_C">King Titan Trophy (Alpha)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Beta_C">King Titan Trophy (Beta)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Gamma_C">King Titan Trophy (Gamma)</sys:String>
+    <!--#endregion-->
+
     <!--#endregion-->
 
     <!--#region Map Spawners -->
@@ -4451,6 +4671,7 @@
     <sys:String x:Key="DinoSpawnEntriesDodoRex_C">DodoRex</sys:String>
     <sys:String x:Key="DinoSpawnEntriesDodoWyvern_C">DodoWyvern</sys:String>
     <sys:String x:Key="DinoSpawnEntriesGigant_C">Gigant</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesGigantTekCave_C">Gigant (Tek Cave)</sys:String>
     <sys:String x:Key="DinoSpawnEntriesGrassland_C">Grassland</sys:String>
     <sys:String x:Key="DinoSpawnEntriesIceCave_C">IceCave</sys:String>
     <sys:String x:Key="DinoSpawnEntriesJungle_C">Jungle</sys:String>
@@ -4559,6 +4780,43 @@
     <sys:String x:Key="AB_DinoSpawnEntries_XenoQueens_C">XenoQueens</sys:String>
     <sys:String x:Key="AB_DinoSpawnEntries_Xenos_C">Xenos</sys:String>
     <sys:String x:Key="SE_DinoSpawnEntries_ChupaCabraSurface_C">ChupaCabraSurface</sys:String>
+
+    <sys:String x:Key="DinoSpawnEntries_City_Park2_C">City_Park2</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_City_Trench_C">City_Trench</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_CityCenter_C">CityCenter</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_CityCenter_DangerClose_C">CityCenter_DangerClose</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_CityObelisk_C">CityObelisk</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_CityTier2_Building_C">CityTier2_Building</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_CityTier2_Building_DangerClose_C">CityTier2_Building_DangerClose</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_CityTier2_Fliers_C">CityTier2_Fliers</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_ParkWater_C">ParkWater</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_ParkWater2_C">ParkWater2</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_City_Buffer_1_C">Wasteland_City_Buffer_1</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_City_Buffer_2_C">Wasteland_City_Buffer_2</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_DesertBuffer_C">Wasteland_DesertBuffer</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_Easy_C">Wasteland_Easy</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_ForbiddenZone_C">Wasteland_ForbiddenZone</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_Hard_C">Wasteland_Hard</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_Medium_C">Wasteland_Medium</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_North_C">Wasteland_North</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_NorthCraterForest_C">Wasteland_NorthCraterForest</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_OilFields_C">Wasteland_OilFields</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_OilFields_Fliers_C">Wasteland_OilFields_Fliers</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_SnowBuffer_C">Wasteland_SnowBuffer</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_South_C">Wasteland_South</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_Sulfur_C">asteland_Sulfur</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesQuetz_EX_C">Quetz</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_DesertCave_C">DesertCave</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_DesertMountain_C">DesertMountain</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_DesertOasis_C">DesertOasis</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_Forest_C">Forest</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_ShallowWater_Cave_C">ShallowWater_Cave</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_ShallowWater_Desert_C">ShallowWater_Desert</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntries_ShallowWater_Ice_C">ShallowWater_Ice</sys:String>
+    <sys:String x:Key="Ext_DinoSpawnEntriesSnow_C">Snow</sys:String>
+    <sys:String x:Key="T_Ext_DinoSpawnEntriesSnow_1_C">Snow_1</sys:String>
+    <sys:String x:Key="T_Ext_DinoSpawnEntriesSnow_Purlovia_C">Snow_Purlovia</sys:String>
+    <sys:String x:Key="T_Ext_DinoSpawnEntriesSnow_TEMP">Snow_TEMP</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -4652,6 +4910,15 @@
     <sys:String x:Key="ArtifactCrate_3_AB_C">Artifact Container Stalker</sys:String>
     <sys:String x:Key="ArtifactCrate_4_AB_C">Artifact Container Lost</sys:String>
 
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_EX_C">Cave Loot Crate (Blue)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_EX_C">Cave Loot Crate (Yellow)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_EX_C">Cave Loot Crate (Red)</sys:String>
+    <sys:String x:Key="ArtifactCrate_Desert_Kaiju_EX_C">Artifact Container Chaos</sys:String>
+    <sys:String x:Key="ArtifactCrate_ForestKaiju_EX_C">Artifact Container Growth</sys:String>
+    <sys:String x:Key="ArtifactCrate_IceKaiju_EX_C">Artifact Container Void</sys:String>
+    <sys:String x:Key="ArtifactCrate_KingKaiju_Alpha_EX_C">Artifact Container King Titan (Alpha)</sys:String>
+    <sys:String x:Key="ArtifactCrate_KingKaiju_Beta_EX_C">Artifact Container King Titan (Beta)</sys:String>
+    <sys:String x:Key="ArtifactCrate_KingKaiju_EX_C">Artifact Container King Titan (Gamma)</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -4678,6 +4945,11 @@
     <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_C">Boss Inventory - Megapithecus (Easy)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_Medium_C">Boss Inventory - Megapithecus (Medium)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_Hard_C">Boss Inventory - Megapithecus (Hard)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_C">Boss Inventory - Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Desert_C">Boss Inventory - Desert Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Forest_C">Boss Inventory - Forest Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss Inventory - Ice Titan</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>
