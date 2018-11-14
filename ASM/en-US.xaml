@@ -22,6 +22,17 @@
     <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
     <!--#endregion-->
 
+    <!--#region Mods -->
+    <sys:String x:Key="Mod_TheIsland">The Island</sys:String>
+    <sys:String x:Key="Mod_TheCenter">The Center</sys:String>
+    <sys:String x:Key="Mod_PrimitivePlus">Primitive Plus</sys:String>
+    <sys:String x:Key="Mod_ScorchedEarth">Scorched Earth</sys:String>
+    <sys:String x:Key="Mod_Ragnarok">Ragnarok</sys:String>
+    <sys:String x:Key="Mod_Aberration">Aberration</sys:String>
+    <sys:String x:Key="Mod_Extinction">Extinction</sys:String>
+    <sys:String x:Key="Mod_PGM">PGM</sys:String>
+    <!--#endregion-->
+
     <!--#region Process Priority -->
     <sys:String x:Key="Priority_low">Low</sys:String>
     <sys:String x:Key="Priority_belownormal">Below Normal</sys:String>
@@ -4804,7 +4815,7 @@
     <sys:String x:Key="DinoSpawnEntries_Wasteland_OilFields_Fliers_C">Wasteland_OilFields_Fliers</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Wasteland_SnowBuffer_C">Wasteland_SnowBuffer</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Wasteland_South_C">Wasteland_South</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Wasteland_Sulfur_C">asteland_Sulfur</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Wasteland_Sulfur_C">Wasteland_Sulfur</sys:String>
     <sys:String x:Key="DinoSpawnEntriesQuetz_EX_C">Quetz</sys:String>
     <sys:String x:Key="Ext_DinoSpawnEntries_DesertCave_C">DesertCave</sys:String>
     <sys:String x:Key="Ext_DinoSpawnEntries_DesertMountain_C">DesertMountain</sys:String>

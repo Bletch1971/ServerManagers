@@ -5,7 +5,32 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-11-13T00:00:00Z</updated>
+  <updated>2018-11-14T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:91F11983-DF55-4FE8-A1F0-0A275ECE436A</id>
+    <title>1.0.341 (1.0.341.1)</title>
+    <summary>1.0.341.1</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-11-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Dinos - Crafting skill has been re-enabled.</li>
+            <li>Language files - Have added Mod Name to the language files.</li>
+            <li>Drop Lists - Mod Name is now listed first (if specified) in the item description.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:91F11983-DF55-4FE8-A1F0-0A275ECE436A</id>
