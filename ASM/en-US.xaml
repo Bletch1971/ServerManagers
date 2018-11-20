@@ -11,19 +11,10 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
-    <!--#region GameApplication enum -->
-    <sys:String x:Key="GameApplication_All">All</sys:String>
-    <sys:String x:Key="GameApplication_SurvivalEvolved">Survival Evolved</sys:String>
-    <sys:String x:Key="GameApplication_PrimitivePlus">Primitive Plus</sys:String>
-    <sys:String x:Key="GameApplication_ScorchedEarth">Scorched Earth</sys:String>
-    <sys:String x:Key="GameApplication_Ragnarok">Ragnarok</sys:String>
-    <sys:String x:Key="GameApplication_Aberration">Aberration</sys:String>
-    <sys:String x:Key="GameApplication_Extinction">Extinction</sys:String>
-    <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
-    <!--#endregion-->
-
     <!--#region Mods -->
-    <sys:String x:Key="Mod_TheIsland">The Island</sys:String>
+    <sys:String x:Key="Mod_All">All</sys:String>
+    <sys:String x:Key="Mod_Unknown">Unknown</sys:String>
+    <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
     <sys:String x:Key="Mod_TheCenter">The Center</sys:String>
     <sys:String x:Key="Mod_PrimitivePlus">Primitive Plus</sys:String>
     <sys:String x:Key="Mod_ScorchedEarth">Scorched Earth</sys:String>
@@ -417,6 +408,8 @@
     <sys:String x:Key="GlobalSettings_OverrideServerStartupTooltip">If enabled, when the auto-update is performed the server WILL NOT be restarted, regardless of if it was online before the auto-update.</sys:String>
     <sys:String x:Key="GlobalSettings_ParallelUpdateLabel">Update servers in parallel</sys:String>
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">If enabled, when the auto-update is performed all servers will be updated at the same time, otherwise each server will be updated one after the other (this will take more time to complete).</sys:String>
+    <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
+    <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Grace Period:</sys:String>
@@ -4576,6 +4569,7 @@
     <sys:String x:Key="PrimalItemArtifact_Extinction_IceKaiju_C">Artifact of the Void</sys:String>
     <sys:String x:Key="PrimalItemResource_ApexDrop_GasBag_C">Gasbags bladder</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Owl_C">Snow Owl Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Spindles_C">Velonasaur Egg</sys:String>
     <sys:String x:Key="PrimalItemConsumable_GachaPod_C">Gacha Crystal</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Large_EX_C">Superior Augmented Kibble</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Medium_EX_C">Regular Augmented Kibble</sys:String>
@@ -4583,6 +4577,7 @@
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Special_EX_C">Extraordinary Augmented Kibble</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_XLarge_EX_C">Exceptional Augmented Kibble</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_XSmall_EX_C">Extra Small Advanced Kibble</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_OwlPellet_C">Snow Owl Pellet</sys:String>
     <sys:String x:Key="PrimalItemResource_BlueSap_C">Blue Crystalized Sap</sys:String>
     <sys:String x:Key="PrimalItemResource_CondensedGas_C">Condensed Gas</sys:String>
     <sys:String x:Key="PrimalItemResource_CorruptedPolymer_C">Corrupted Nodule</sys:String>
@@ -4608,7 +4603,7 @@
     <sys:String x:Key="PrimalItemStructure_CryoFridge_C">Cryofridge</sys:String>
     <sys:String x:Key="PrimalItemStructure_DinoLeash_C">Dino Leash</sys:String>
     <sys:String x:Key="PrimalItemStructure_Flag_KingKaiju_C">King Titan Flag</sys:String>
-    <sys:String x:Key="PrimalItemStructure_Flag_KingKaijuMecha_C">Mecha King Titan Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_KingKaijuMecha_C">King Titan Flag (Mecha)</sys:String>
     <sys:String x:Key="PrimalItemStructure_StorageBox_Balloon_C">Delivery Crate</sys:String>
     <sys:String x:Key="PrimalItemStructure_TaxidermyBase_Large_C">Large Taxidermy Base</sys:String>
     <sys:String x:Key="PrimalItemStructure_TaxidermyBase_Medium_C">Medium Taxidermy Base</sys:String>
