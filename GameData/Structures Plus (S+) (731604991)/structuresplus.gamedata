@@ -1,0 +1,5707 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-11-20T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 61,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AirConditionerPlus_C",
+      "Description": "S+ Air Conditioner",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AnimalTender_C",
+      "Description": "S+ Animal Tender",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoCrafter_C",
+      "Description": "S+ Auto Crafter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_C",
+      "Description": "S+ Auto Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Ballista_C",
+      "Description": "S+ Ballista Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Cannon_C",
+      "Description": "S+ Cannon Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Flame_C",
+      "Description": "S+ Flame Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Heavy_C",
+      "Description": "S+ Heavy Auto Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Minigun_C",
+      "Description": "S+ Minigun Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Rocket_C",
+      "Description": "S+ Rocket Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Tranq_C",
+      "Description": "S+ Tranq Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurretPlant_C",
+      "Description": "S+ Plant Species X Seed",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_AutoTurretTek_C",
+      "Description": "S+ Tek Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 7,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BedPlus_C",
+      "Description": "S+ Simple Bed",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BeeHivePlus_C",
+      "Description": "S+ Domesticated Bee Hive",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BeerBarrelPlus_C",
+      "Description": "S+ Beer Barrel",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BlueprintMaker_C",
+      "Description": "S+ Blueprint Maker",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 19,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BookshelfPlus_C",
+      "Description": "S+ Bookshelf",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BunkBedPlus_C",
+      "Description": "S+ Bunk Bed",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 2,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CampfirePlus_C",
+      "Description": "S+ Campfire ",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Catwalk_Glass_C",
+      "Description": "S+ Glass Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Catwalk_Metal_C",
+      "Description": "S+ Metal Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Catwalk_Tek_C",
+      "Description": "S+ Tek Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Catwalk_Wood_C",
+      "Description": "S+ Wood Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Adobe_C",
+      "Description": "S+ Adobe Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Glass_C",
+      "Description": "S+ Glass Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 42,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Greenhouse_C",
+      "Description": "S+ Greenhouse Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Metal_C",
+      "Description": "S+ Metal Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Repulser_C",
+      "Description": "S+ Repulser Plate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Stone_C",
+      "Description": "S+ Stone Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ceiling_Tek_C",
+      "Description": "S+ Tek Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_TekElevator_C",
+      "Description": "S+ Tek Elevator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Thatch_C",
+      "Description": "S+ Thatch Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Wood_C",
+      "Description": "S+ Wood Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ChargeInjector_C",
+      "Description": "S+ Charge Injector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChargeStation_C",
+      "Description": "S+ Charge Station",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChemBenchPlus_C",
+      "Description": "S+ Chemistry Bench",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_CloningChamberPlus_C",
+      "Description": "S+ Cloning Chamber",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CommandTool_C",
+      "Description": "S+ Command Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CompostBinPlus_C",
+      "Description": "S+ Compost Bin",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Converter_C",
+      "Description": "S+ Converter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 8,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CookingPotPlus_C",
+      "Description": "S+ Cooking Pot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_Large_C",
+      "Description": "S+ Large Crop Plot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_Medium_C",
+      "Description": "S+ Medium Crop Plot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 10,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_Small_C",
+      "Description": "S+ Small Crop Plot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DedicatedStorage_C",
+      "Description": "S+ Dedicated Storage",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DedicatedStorage_Intake_C",
+      "Description": "S+ Dedicated Storage Intake",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DemoGun_C",
+      "Description": "S+ Demo Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Adobe_C",
+      "Description": "S+ Adobe Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Glass_C",
+      "Description": "S+ Glass Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Greenhouse_C",
+      "Description": "S+ Greenhouse Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Metal_C",
+      "Description": "S+ Metal Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Stone_C",
+      "Description": "S+ Reinforced Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Door_Tek_C",
+      "Description": "S+ Tek Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Thatch_C",
+      "Description": "S+ Thatch Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Door_Underwater_C",
+      "Description": "S+ Vacuum Compartment Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Wood_C",
+      "Description": "S+ Wood Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Adobe_C",
+      "Description": "S+ Adobe Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Glass_C",
+      "Description": "S+ Glass Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Greenhouse_C",
+      "Description": "S+ Greenhouse Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Metal_C",
+      "Description": "S+ Metal Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Stone_C",
+      "Description": "S+ Stone Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Doorframe_Tek_C",
+      "Description": "S+ Tek Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Thatch_C",
+      "Description": "S+ Thatch Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Wood_C",
+      "Description": "S+ Wood Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Adobe_C",
+      "Description": "S+ Adobe Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Glass_C",
+      "Description": "S+ Glass Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Greenhouse_C",
+      "Description": "S+ Greenhouse Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Metal_C",
+      "Description": "S+ Metal Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Stone_C",
+      "Description": "S+ Reinforced Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DoubleDoor_Tek_C",
+      "Description": "S+ Tek Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Wood_C",
+      "Description": "S+ Wood Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Adobe_C",
+      "Description": "S+ Adobe Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Glass_C",
+      "Description": "S+ Glass Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Greenhouse_C",
+      "Description": "S+ Greenhouse Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Metal_C",
+      "Description": "S+ Metal Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Stone_C",
+      "Description": "S+ Stone Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DoubleDoorframe_Tek_C",
+      "Description": "S+ Tek Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Wood_C",
+      "Description": "S+ Wood Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Adobe_C",
+      "Description": "S+ Dynamic Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Metal_C",
+      "Description": "S+ Dynamic Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Stone_C",
+      "Description": "S+ Dynamic Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DynamicPillar_Tek_C",
+      "Description": "S+ Dynamic Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Wood_C",
+      "Description": "S+ Dynamic Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElectricalOutlet_C",
+      "Description": "S+ Electrical Outlet",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ElementCatalyzer_C",
+      "Description": "S+ Element Catalyzer",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorCallButton_C",
+      "Description": "S+ Elevator Call Button",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 73,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorPlatform_Large_C",
+      "Description": "S+ Large Elevator Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 72,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorPlatform_Medium_C",
+      "Description": "S+ Medium Elevator Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorPlatform_Small_C",
+      "Description": "S+ Small Elevator Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorTrack_Metal_C",
+      "Description": "S+ Small Elevator Track",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EuthanasiaGun_C",
+      "Description": "S+ Euthanasia Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FabricatorPlus_C",
+      "Description": "S+ Fabricator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Farmer_C",
+      "Description": "S+ Farmer",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FeedingTroughPlus_C",
+      "Description": "S+ Feeding Trough",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Adobe_C",
+      "Description": "S+ Adobe Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Metal_C",
+      "Description": "S+ Metal Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Stone_C",
+      "Description": "S+ Stone Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_FenceFoundation_Tek_C",
+      "Description": "S+ Tek Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Wood_C",
+      "Description": "S+ Wood Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_Adobe_C",
+      "Description": "S+ Adobe Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_Metal_C",
+      "Description": "S+ Metal Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_Stone_C",
+      "Description": "S+ Stone Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_FenceSupport_Tek_C",
+      "Description": "S+ Tek Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_Wood_C",
+      "Description": "S+ Wood Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 28,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FireplacePlus_C",
+      "Description": "S+ Stone Fireplace",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ForgePlus_C",
+      "Description": "S+ Refining Forge",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Adobe_C",
+      "Description": "S+ Adobe Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Glass_C",
+      "Description": "S+ Glass Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Metal_C",
+      "Description": "S+ Metal Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Stone_C",
+      "Description": "S+ Stone Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Foundation_Tek_C",
+      "Description": "S+ Tek Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Thatch_C",
+      "Description": "S+ Thatch Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Wood_C",
+      "Description": "S+ Wood Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FridgePlus_C",
+      "Description": "S+ Refrigerator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gardener_C",
+      "Description": "S+ Gardener",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GasCollectorTek_C",
+      "Description": "S+ Tek Gas Collector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Adobe_C",
+      "Description": "S+ Adobe Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Dynamic_C",
+      "Description": "S+ Dynamic Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Glass_C",
+      "Description": "S+ Glass Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Metal_C",
+      "Description": "S+ Metal Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Stone_C",
+      "Description": "S+ Reinforced Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Gate_Tek_C",
+      "Description": "S+ Tek Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Wood_C",
+      "Description": "S+ Wood Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Adobe_C",
+      "Description": "S+ Adobe Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Dynamic_C",
+      "Description": "S+ Dynamic Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Metal_C",
+      "Description": "S+ Metal Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Stone_C",
+      "Description": "S+ Stone Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Gateway_Tek_C",
+      "Description": "S+ Tek Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Wood_C",
+      "Description": "S+ Wood Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Generator_C",
+      "Description": "S+ Electrical Generator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_GeneratorTek_C",
+      "Description": "S+ Tek Generator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_GenomicsChamber_C",
+      "Description": "S+ Mutator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 64,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GrinderPlus_C",
+      "Description": "S+ Industrial Grinder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchery_C",
+      "Description": "S+ Hatchery",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Adobe_C",
+      "Description": "S+ Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Glass_C",
+      "Description": "S+ Glass Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Metal_C",
+      "Description": "S+ Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Stone_C",
+      "Description": "S+ Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Hatchframe_Tek_C",
+      "Description": "S+ Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Wood_C",
+      "Description": "S+ Wood Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HitchingPost_C",
+      "Description": "S+ Hitching Post",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 89,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndustrialCooker_C",
+      "Description": "S+ Industrial Cooker",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 80,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndustrialForgePlus_C",
+      "Description": "S+ Industrial Forge",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndustrialGrillPlus_C",
+      "Description": "S+ Industrial Grill",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Pillar_C",
+      "Description": "S+ Internal Piping - Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Square_C",
+      "Description": "S+ Internal Piping - Square",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Triangle_C",
+      "Description": "S+ Internal Piping - Triangle",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Wall_C",
+      "Description": "S+ Internal Piping - Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Pillar_C",
+      "Description": "S+ Internal Wiring - Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Square_C",
+      "Description": "S+ Internal Wiring - Square",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Triangle_C",
+      "Description": "S+ Internal Wiring - Triangle",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Wall_C",
+      "Description": "S+ Internal Wiring - Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InventoryAssistant_C",
+      "Description": "S+ Inventory Assistant",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemCollector_C",
+      "Description": "S+ Item Collector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Adobe_C",
+      "Description": "S+ Adobe Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Metal_C",
+      "Description": "S+ Metal Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Rope_C",
+      "Description": "S+ Rope Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ladder_Tek_C",
+      "Description": "S+ Tek Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Wood_C",
+      "Description": "S+ Wood Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 38,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Adobe_C",
+      "Description": "S+ Behemoth Adobe Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Glass_C",
+      "Description": "S+ Glass Behemoth Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Metal_C",
+      "Description": "S+ Metal Behemoth Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Stone_C",
+      "Description": "S+ Reinforced Behemoth Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeGate_Tek_C",
+      "Description": "S+ Behemoth Tek Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 38,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGateway_Adobe_C",
+      "Description": "S+ Adobe Behemoth Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGateway_Metal_C",
+      "Description": "S+ Metal Behemoth Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGateway_Stone_C",
+      "Description": "S+ Stone Behemoth Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeGateway_Tek_C",
+      "Description": "S+ Behemoth Tek Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframe_Adobe_C",
+      "Description": "S+ Large Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframe_Metal_C",
+      "Description": "S+ Large Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframe_Stone_C",
+      "Description": "S+ Large Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeHatchframe_Tek_C",
+      "Description": "S+ Large Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Adobe_C",
+      "Description": "S+ Large Sloped Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Metal_C",
+      "Description": "S+ Large Sloped Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Stone_C",
+      "Description": "S+ Large Sloped Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Tek_C",
+      "Description": "S+ Large Sloped Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Adobe_C",
+      "Description": "S+ Large Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Metal_C",
+      "Description": "S+ Large Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Stone_C",
+      "Description": "S+ Large Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargePillar_Tek_C",
+      "Description": "S+ Large Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Wood_C",
+      "Description": "S+ Large Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Adobe_C",
+      "Description": "S+ Large Adobe Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Glass_C",
+      "Description": "S+ Large Glass Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Metal_C",
+      "Description": "S+ Large Metal Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Stone_C",
+      "Description": "S+ Large Reinforced Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeTrapdoor_Tek_C",
+      "Description": "S+ Large Tek Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_Adobe_C",
+      "Description": "S+ Large Adobe Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeWall_Forcefield_C",
+      "Description": "S+ Large Forcefield Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_Glass_C",
+      "Description": "S+ Large Glass Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_Metal_C",
+      "Description": "S+ Large Metal Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_Stone_C",
+      "Description": "S+ Large Stone Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeWall_Tek_C",
+      "Description": "S+ Large Tek Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_Wood_C",
+      "Description": "S+ Large Wood Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LightSetter_C",
+      "Description": "S+ Light Setter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Mannequin_C",
+      "Description": "S+ Mannequin",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Adobe_C",
+      "Description": "S+ Medium Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Metal_C",
+      "Description": "S+ Medium Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Stone_C",
+      "Description": "S+ Medium Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_MediumPillar_Tek_C",
+      "Description": "S+ Medium Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Wood_C",
+      "Description": "S+ Medium Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ModelSelector_C",
+      "Description": "S+ Model Selector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 6,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MortarPestlePlus_C",
+      "Description": "S+ Mortar and Pestle",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MultiLamp_C",
+      "Description": "S+ Multi Lamp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Nanny_C",
+      "Description": "S+ Nanny",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_PersonalTeleporter_C",
+      "Description": "S+ Personal Teleporter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Pillarator_C",
+      "Description": "S+ Pillarator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeFlex_Metal_C",
+      "Description": "S+ Metal Pipe - Flexible",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeFlex_Stone_C",
+      "Description": "S+ Stone Pipe - Flexible",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeHorizontal_Metal_C",
+      "Description": "S+ Metal Pipe - Straight",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeHorizontal_Stone_C",
+      "Description": "S+ Stone Pipe - Straight",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIncline_Metal_C",
+      "Description": "S+ Metal Pipe - Inclined",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIncline_Stone_C",
+      "Description": "S+ Stone Pipe - Inclined",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntake_Metal_C",
+      "Description": "S+ Metal Pipe - Intake",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntake_Stone_C",
+      "Description": "S+ Stone Pipe - Intake",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntersection_Metal_C",
+      "Description": "S+ Metal Pipe - Intersection",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntersection_Stone_C",
+      "Description": "S+ Stone Pipe - Intersection",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeVertical_Metal_C",
+      "Description": "S+ Metal Pipe - Vertical",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeVertical_Stone_C",
+      "Description": "S+ Stone Pipe - Vertical",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PlusRemote_C",
+      "Description": "S+ Remote",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PreservingBinPlus_C",
+      "Description": "S+ Preserving Bin",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Adobe_C",
+      "Description": "S+ Adobe Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Glass_C",
+      "Description": "S+ Glass Half Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Metal_C",
+      "Description": "S+ Metal Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 28,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Stone_C",
+      "Description": "S+ Stone Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Railing_Tek_C",
+      "Description": "S+ Tek Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Wood_C",
+      "Description": "S+ Wood Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_Adobe_C",
+      "Description": "S+ Adobe Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_Glass_C",
+      "Description": "S+ Glass Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_Metal_C",
+      "Description": "S+ Metal Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_Stone_C",
+      "Description": "S+ Stone Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ramp_Tek_C",
+      "Description": "S+ Tek Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_Wood_C",
+      "Description": "S+ Wood Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RepairGun_C",
+      "Description": "S+ Repair Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ReplicatorPlus_C",
+      "Description": "S+ Tek Replicator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Adobe_C",
+      "Description": "S+ Sloped Adobe Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Glass_C",
+      "Description": "S+ Sloped Glass Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Greenhouse_C",
+      "Description": "S+ Sloped Greenhouse Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Metal_C",
+      "Description": "S+ Sloped Metal Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Stone_C",
+      "Description": "S+ Sloped Stone Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Roof_Tek_C",
+      "Description": "S+ Sloped Tek Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Thatch_C",
+      "Description": "S+ Sloped Thatch Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Wood_C",
+      "Description": "S+ Sloped Wood Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SheepHerder_C",
+      "Description": "S+ Sheep Herder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Adobe_Left_C",
+      "Description": "S+ Sloped Adobe Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Adobe_Right_C",
+      "Description": "S+ Sloped Adobe Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Glass_Left_C",
+      "Description": "S+ Sloped Glass Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Glass_Right_C",
+      "Description": "S+ Sloped Glass Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Greenhouse_Left_C",
+      "Description": "S+ Sloped Greenhouse Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Greenhouse_Right_C",
+      "Description": "S+ Sloped Greenhouse Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Metal_Left_C",
+      "Description": "S+ Sloped Metal Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Metal_Right_C",
+      "Description": "S+ Sloped Metal Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Stone_Left_C",
+      "Description": "S+ Sloped Stone Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Stone_Right_C",
+      "Description": "S+ Sloped Stone Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SlopedWall_Tek_Left_C",
+      "Description": "S+ Sloped Tek Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SlopedWall_Tek_Right_C",
+      "Description": "S+ Sloped Tek Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Thatch_Left_C",
+      "Description": "S+ Sloped Thatch Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Thatch_Right_C",
+      "Description": "S+ Sloped Thatch Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Wood_Left_C",
+      "Description": "S+ Sloped Wood Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Wood_Right_C",
+      "Description": "S+ Sloped Wood Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Adobe_C",
+      "Description": "S+ Small Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Metal_C",
+      "Description": "S+ Small Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Stone_C",
+      "Description": "S+ Small Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SmallPillar_Tek_C",
+      "Description": "S+ Small Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Wood_C",
+      "Description": "S+ Small Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmithyPlus_C",
+      "Description": "S+ Smithy",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 29,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SpikeWall_Metal_C",
+      "Description": "S+ Metal Spike Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SpikeWall_Wood_C",
+      "Description": "S+ Wooden Spike Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SPlusCraftingStation_C",
+      "Description": "S+ Crafting Station",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SPlusTekLight_C",
+      "Description": "S+ Tek Light",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 53,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SprayPainterPlus_C",
+      "Description": "S+ Spray Painter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Adobe_C",
+      "Description": "S+ Adobe Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Glass_C",
+      "Description": "S+ Glass Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Metal_C",
+      "Description": "S+ Metal Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 28,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Stone_C",
+      "Description": "S+ Stone Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Staircase_Tek_C",
+      "Description": "S+ Tek Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Wood_C",
+      "Description": "S+ Wooden Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 7,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StandingTorchPlus_C",
+      "Description": "S+ Standing Torch",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageLarge_C",
+      "Description": "S+ Large Storage Box",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageMetal_C",
+      "Description": "S+ Metal Storage Box",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageSmall_C",
+      "Description": "S+ Storage Box",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekBedPlus_C",
+      "Description": "S+ Tek Sleeping Pod",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekBuggy_C",
+      "Description": "S+ Tek ATV",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekForcefield_C",
+      "Description": "S+ Tek Shield Generator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekTroughPlus_C",
+      "Description": "S+ Tek Trough",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TeleporterPlus_C",
+      "Description": "S+ Teleporter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransferGun_C",
+      "Description": "S+ Transfer Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransferTool_C",
+      "Description": "S+ Transfer Tool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TransmitterPlus_C",
+      "Description": "S+ Tek Transmitter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransparencyCycler_C",
+      "Description": "S+ Transparency Cycler",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Adobe_C",
+      "Description": "S+ Adobe Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Glass_C",
+      "Description": "S+ Glass Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Metal_C",
+      "Description": "S+ Metal Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Trapdoor_Moonpool_C",
+      "Description": "S+ Moonpool Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Stone_C",
+      "Description": "S+ Reinforced Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Trapdoor_Tek_C",
+      "Description": "S+ Tek Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Wood_C",
+      "Description": "S+ Wood Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TreeSapTapPlus_C",
+      "Description": "S+ Tree Sap Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Adobe_C",
+      "Description": "S+ Adobe Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Glass_C",
+      "Description": "S+ Glass Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 42,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Greenhouse_C",
+      "Description": "S+ Greenhouse Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Metal_C",
+      "Description": "S+ Metal Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Stone_C",
+      "Description": "S+ Stone Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriCeiling_Tek_C",
+      "Description": "S+ Tek Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Wood_C",
+      "Description": "S+ Wood Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_Adobe_C",
+      "Description": "S+ Adobe Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_Glass_C",
+      "Description": "S+ Glass Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_Metal_C",
+      "Description": "S+ Metal Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_Stone_C",
+      "Description": "S+ Stone Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriFoundation_Tek_C",
+      "Description": "S+ Tek Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_Wood_C",
+      "Description": "S+ Wood Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Adobe_C",
+      "Description": "S+ Adobe Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Glass_C",
+      "Description": "S+ Glass Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Greenhouse_C",
+      "Description": "S+ Greenhouse Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Metal_C",
+      "Description": "S+ Metal Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Stone_C",
+      "Description": "S+ Stone Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriRoof_Tek_C",
+      "Description": "S+ Tek Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Wood_C",
+      "Description": "S+ Wood Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TurretConfigurator_C",
+      "Description": "S+ Turret Configurator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Underwater_Cube_C",
+      "Description": "S+ Vacuum Compartment",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Underwater_Cube_Sloped_C",
+      "Description": "S+ Sloped Vacuum Compartment",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Underwater_Moonpool_C",
+      "Description": "S+ Vacuum Moonpool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_UnderwaterTool_C",
+      "Description": "S+ Underwater Tool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VaultPlus_C",
+      "Description": "S+ Vault",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VesselPlus_C",
+      "Description": "S+ Vessel",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VisibilityTool_C",
+      "Description": "S+ Visibility Tool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Vivarium_C",
+      "Description": "S+ Vivarium",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Adobe_C",
+      "Description": "S+ Adobe Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Wall_Forcefield_C",
+      "Description": "S+ Forcefield Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Glass_C",
+      "Description": "S+ Glass Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 42,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Greenhouse_C",
+      "Description": "S+ Greenhouse Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Metal_C",
+      "Description": "S+ Metal Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Stone_C",
+      "Description": "S+ Stone Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Wall_Tek_C",
+      "Description": "S+ Tek Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Thatch_C",
+      "Description": "S+ Thatch Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Wood_C",
+      "Description": "S+ Wood Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 21,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WallTorchPlus_C",
+      "Description": "S+ Wall Torch",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 41,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTank_Metal_C",
+      "Description": "S+ Metal Water Tank",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTank_Stone_C",
+      "Description": "S+ Water Tank",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTap_Metal_C",
+      "Description": "S+ Metal Pipe - Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTap_Stone_C",
+      "Description": "S+ Stone Pipe - Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Adobe_C",
+      "Description": "S+ Adobe Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Glass_C",
+      "Description": "S+ Glass Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Greenhouse_C",
+      "Description": "S+ Greenhouse Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Metal_C",
+      "Description": "S+ Metal Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Stone_C",
+      "Description": "S+ Reinforced Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Window_Tek_C",
+      "Description": "S+ Tek Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Wood_C",
+      "Description": "S+ Wood Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Adobe_C",
+      "Description": "S+ Adobe Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Metal_C",
+      "Description": "S+ Metal Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Stone_C",
+      "Description": "S+ Stone Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_WindowWall_Tek_C",
+      "Description": "S+ Tek Windowframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Wood_C",
+      "Description": "S+ Wood Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindTurbinePlus_C",
+      "Description": "S+ Wind Turbine",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Flex_C",
+      "Description": "S+ Flexible Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Horizontal_C",
+      "Description": "S+ Straight Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Incline_C",
+      "Description": "S+ Diagonal Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Intersection_C",
+      "Description": "S+ Electrical Cable Intersection",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Vertical_C",
+      "Description": "S+ Vertical Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframe_Adobe_C",
+      "Description": "S+ Behemoth Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframe_Metal_C",
+      "Description": "S+ Behemoth Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframe_Stone_C",
+      "Description": "S+ Behemoth Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLHatchframe_Tek_C",
+      "Description": "S+ Behemoth Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Adobe_C",
+      "Description": "S+ Behemoth Sloped Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Metal_C",
+      "Description": "S+ Behemoth Sloped Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Stone_C",
+      "Description": "S+ Behemoth Sloped Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Tek_C",
+      "Description": "S+ Behemoth Sloped Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Adobe_C",
+      "Description": "S+ Behemoth Adobe Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Glass_C",
+      "Description": "S+ Behemoth Glass Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Metal_C",
+      "Description": "S+ Behemoth Metal Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Stone_C",
+      "Description": "S+ Behemoth Reinforced Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLTrapdoor_Tek_C",
+      "Description": "S+ Behemoth Tek Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Adobe_C",
+      "Description": "S+ XL Adobe Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLWall_Forcefield_C",
+      "Description": "S+ XL Forcefield Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Glass_C",
+      "Description": "S+ XL Glass Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Metal_C",
+      "Description": "S+ XL Metal Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Stone_C",
+      "Description": "S+ XL Stone Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLWall_Tek_C",
+      "Description": "S+ XL Tek Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Wood_C",
+      "Description": "S+ XL Wood Wall",
+      "Mod": "Structures Plus (S+)"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SPlusCraftingStation_C",
+      "Description": "S+ Crafting Station",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmithyPlus_C",
+      "Description": "S+ Smithy",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MortarPestlePlus_C",
+      "Description": "S+ Mortar and Pestle",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ForgePlus_C",
+      "Description": "S+ Refining Forge",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FabricatorPlus_C",
+      "Description": "S+ Fabricator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChemBenchPlus_C",
+      "Description": "S+ Chemistry Bench",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialCooker_C",
+      "Description": "S+ Industrial Cooker",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialForgePlus_C",
+      "Description": "S+ Industrial Forge",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialGrill_C",
+      "Description": "S+ Industrial Forge",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GrinderPlus_C",
+      "Description": "S+ Industrial Grinder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ReplicatorPlus_C",
+      "Description": "S+ Tek Replicator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BeerBarrelPlus_C",
+      "Description": "S+ Beer Barrel",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CampfirePlus_C",
+      "Description": "S+ Campfire ",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CompostBinPlus_C",
+      "Description": "S+ Compost Bin",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CookingPotPlus_C",
+      "Description": "S+ Cooking Pot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FireplacePlus_C",
+      "Description": "S+ Stone Fireplace",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PreservingBinPlus_C",
+      "Description": "S+ Preserving Bin",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TreeSapTapPlus_C",
+      "Description": "S+ Tree Sap Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FeedingTroughPlus_C",
+      "Description": "S+ Feeding Trough",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StandingTorchPlus_C",
+      "Description": "S+ Standing Torch",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WallTorchPlus_C",
+      "Description": "S+ Wall Torch",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FridgePlus_C",
+      "Description": "S+ Refrigerator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AirConditionerPlus_C",
+      "Description": "S+ Air Conditioner",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekForcefield_C",
+      "Description": "S+ Tek Shield Generator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TeleporterPlus_C",
+      "Description": "S+ Teleporter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TransmitterPlus_C",
+      "Description": "S+ Tek Transmitter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CloningChamberPlus_C",
+      "Description": "S+ Cloning Chamber",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BeeHivePlus_C",
+      "Description": "S+ Domesticated Bee Hive",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BedPlus_C",
+      "Description": "S+ Simple Bed",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BunkBedPlus_C",
+      "Description": "S+ Bunk Bed",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekTroughPlus_C",
+      "Description": "S+ Tek Trough",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TekBuggy_C",
+      "Description": "S+ Tek ATV",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SPlusTekLight_C",
+      "Description": "S+ Tek Light",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GasCollectorTek_C",
+      "Description": "S+ Tek Gas Collector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChargeStation_C",
+      "Description": "S+ Charge Station",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekBedPlus_C",
+      "Description": "S+ Tek Sleeping Pod",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gardener_C",
+      "Description": "S+ Gardener",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ItemCollector_C",
+      "Description": "S+ Item Collector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MultiLamp_C",
+      "Description": "S+ Multi Lamp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SheepHerder_C",
+      "Description": "S+ Sheep Herder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Farmer_C",
+      "Description": "S+ Farmer",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchery_C",
+      "Description": "S+ Hatchery",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BlueprintMaker_C",
+      "Description": "S+ Blueprint Maker",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Converter_C",
+      "Description": "S+ Converter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AnimalTender_C",
+      "Description": "S+ Animal Tender",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HitchingPost_C",
+      "Description": "S+ Hitching Post",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Nanny_C",
+      "Description": "S+ Nanny",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorCallButton_C",
+      "Description": "S+ Elevator Call Button",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChargeInjector_C",
+      "Description": "S+ Charge Injector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElementCatalyzer_C",
+      "Description": "S+ Element Catalyzer",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Vivarium_C",
+      "Description": "S+ Vivarium",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoCrafter_C",
+      "Description": "S+ Auto Crafter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Mannequin_C",
+      "Description": "S+ Mannequin",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GenomicsChamber_C",
+      "Description": "S+ Mutator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_C",
+      "Description": "S+ Auto Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurretTek_C",
+      "Description": "S+ Tek Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_AutoTurretPlant_Seed_C",
+      "Description": "S+ Plant Species X Seed",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_AutoTurretPlant_Seed_CHEAT_C",
+      "Description": "S+ Plant Species X Seed (CHEAT)",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Ballista_C",
+      "Description": "S+ Ballista Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Cannon_C",
+      "Description": "S+ Cannon Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Flame_C",
+      "Description": "S+ Flame Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Minigun_C",
+      "Description": "S+ Minigun Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Rocket_C",
+      "Description": "S+ Rocket Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Tranq_C",
+      "Description": "S+ Tranq Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Heavy_C",
+      "Description": "S+ Heavy Auto Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TransparencyCycler_C",
+      "Description": "S+ Transparency Cycler",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ModelSelector_C",
+      "Description": "S+ Model Selector",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_DemoGun_C",
+      "Description": "S+ Demo Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_RepairGun_C",
+      "Description": "S+ Repair Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TurretConfigurator_C",
+      "Description": "S+ Turret Configurator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TransferGun_C",
+      "Description": "S+ Transfer Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_LightSetter_C",
+      "Description": "S+ Light Setter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_PersonalTeleporter_C",
+      "Description": "S+ Personal Teleporter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_VisibilityTool_C",
+      "Description": "S+ Visibility Tool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_EuthanasiaGun_C",
+      "Description": "S+ Euthanasia Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_UnderwaterTool_C",
+      "Description": "S+ Underwater Tool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_PlusRemote_C",
+      "Description": "S+ Remote",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TransferTool_C",
+      "Description": "S+ Transfer Tool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_CommandTool_C",
+      "Description": "S+ Command Gun",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_SprayPainterPlus_C",
+      "Description": "S+ Spray Painter",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_InventoryAssistant_C",
+      "Description": "S+ Inventory Assistant",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Pillarator_C",
+      "Description": "S+ Pillarator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageSmall_C",
+      "Description": "S+ Storage Box",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageLarge_C",
+      "Description": "S+ Large Storage Box",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageMetal_C",
+      "Description": "S+ Metal Storage Box",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_VaultPlus_C",
+      "Description": "S+ Vault",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_VesselPlus_C",
+      "Description": "S+ Vessel",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BookshelfPlus_C",
+      "Description": "S+ Bookshelf",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DedicatedStorage_C",
+      "Description": "S+ Dedicated Storage",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DedicatedStorage_Intake_C",
+      "Description": "S+ Dedicated Storage Intake",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Thatch_C",
+      "Description": "S+ Thatch Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Wood_C",
+      "Description": "S+ Wood Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Stone_C",
+      "Description": "S+ Stone Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Metal_C",
+      "Description": "S+ Metal Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Glass_C",
+      "Description": "S+ Glass Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Adobe_C",
+      "Description": "S+ Adobe Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Tek_C",
+      "Description": "S+ Tek Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Wood_C",
+      "Description": "S+ Wood Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Stone_C",
+      "Description": "S+ Stone Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Metal_C",
+      "Description": "S+ Metal Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Glass_C",
+      "Description": "S+ Glass Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Adobe_C",
+      "Description": "S+ Adobe Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Tek_C",
+      "Description": "S+ Tek Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Thatch_C",
+      "Description": "S+ Thatch Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Wood_C",
+      "Description": "S+ Wood Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Stone_C",
+      "Description": "S+ Stone Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Metal_C",
+      "Description": "S+ Metal Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Greenhouse_C",
+      "Description": "S+ Greenhouse Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Glass_C",
+      "Description": "S+ Glass Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Adobe_C",
+      "Description": "S+ Adobe Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Tek_C",
+      "Description": "S+ Tek Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Repulser_C",
+      "Description": "S+ Repulser Plate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Wood_C",
+      "Description": "S+ Wood Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Stone_C",
+      "Description": "S+ Stone Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Metal_C",
+      "Description": "S+ Metal Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Greenhouse_C",
+      "Description": "S+ Greenhouse Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Glass_C",
+      "Description": "S+ Glass Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Adobe_C",
+      "Description": "S+ Adobe Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Tek_C",
+      "Description": "S+ Tek Triangle Ceiling",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Thatch_C",
+      "Description": "S+ Thatch Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Wood_C",
+      "Description": "S+ Wood Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Stone_C",
+      "Description": "S+ Stone Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Metal_C",
+      "Description": "S+ Metal Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Greenhouse_C",
+      "Description": "S+ Greenhouse Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Glass_C",
+      "Description": "S+ Glass Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Adobe_C",
+      "Description": "S+ Adobe Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Tek_C",
+      "Description": "S+ Tek Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Forcefield_C",
+      "Description": "S+ Forcefield Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Wood_C",
+      "Description": "S+ Large Wood Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Stone_C",
+      "Description": "S+ Large Stone Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Metal_C",
+      "Description": "S+ Large Metal Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Glass_C",
+      "Description": "S+ Large Glass Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Adobe_C",
+      "Description": "S+ Large Adobe Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Tek_C",
+      "Description": "S+ Large Tek Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Forcefield_C",
+      "Description": "S+ Large Forcefield Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Wood_C",
+      "Description": "S+ XL Wood Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Stone_C",
+      "Description": "S+ XL Stone Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Metal_C",
+      "Description": "S+ XL Metal Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Glass_C",
+      "Description": "S+ XL Glass Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Adobe_C",
+      "Description": "S+ XL Adobe Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Tek_C",
+      "Description": "S+ XL Tek Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Forcefield_C",
+      "Description": "S+ XL Forcefield Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Wood_C",
+      "Description": "S+ Wood Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Stone_C",
+      "Description": "S+ Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Metal_C",
+      "Description": "S+ Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Glass_C",
+      "Description": "S+ Glass Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Adobe_C",
+      "Description": "S+ Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Tek_C",
+      "Description": "S+ Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Wood_C",
+      "Description": "S+ Wood Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Stone_C",
+      "Description": "S+ Reinforced Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Metal_C",
+      "Description": "S+ Metal Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Glass_C",
+      "Description": "S+ Glass Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Adobe_C",
+      "Description": "S+ Adobe Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Tek_C",
+      "Description": "S+ Tek Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Stone_C",
+      "Description": "S+ Large Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Metal_C",
+      "Description": "S+ Large Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Adobe_C",
+      "Description": "S+ Large Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Tek_C",
+      "Description": "S+ Large Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Stone_C",
+      "Description": "S+ Large Sloped Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Metal_C",
+      "Description": "S+ Large Sloped Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Adobe_C",
+      "Description": "S+ Large Sloped Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Tek_C",
+      "Description": "S+ Large Sloped Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Stone_C",
+      "Description": "S+ Large Reinforced Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Metal_C",
+      "Description": "S+ Large Metal Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Glass_C",
+      "Description": "S+ Large Glass Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Adobe_C",
+      "Description": "S+ Large Adobe Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Tek_C",
+      "Description": "S+ Large Tek Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Stone_C",
+      "Description": "S+ Behemoth Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Metal_C",
+      "Description": "S+ Behemoth Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Adobe_C",
+      "Description": "S+ Behemoth Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Tek_C",
+      "Description": "S+ Behemoth Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Stone_C",
+      "Description": "S+ Behemoth Sloped Stone Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Metal_C",
+      "Description": "S+ Behemoth Sloped Metal Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Adobe_C",
+      "Description": "S+ Behemoth Sloped Adobe Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Tek_C",
+      "Description": "S+ Behemoth Sloped Tek Hatchframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Stone_C",
+      "Description": "S+ Behemoth Reinforced Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Metal_C",
+      "Description": "S+ Behemoth Metal Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Glass_C",
+      "Description": "S+ Behemoth Glass Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Adobe_C",
+      "Description": "S+ Behemoth Adobe Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Tek_C",
+      "Description": "S+ Behemoth Tek Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Wood_C",
+      "Description": "S+ Wood Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Stone_C",
+      "Description": "S+ Stone Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Metal_C",
+      "Description": "S+ Metal Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Adobe_C",
+      "Description": "S+ Adobe Window Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Tek_C",
+      "Description": "S+ Tek Windowframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Wood_C",
+      "Description": "S+ Wood Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Stone_C",
+      "Description": "S+ Reinforced Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Metal_C",
+      "Description": "S+ Metal Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Greenhouse_C",
+      "Description": "S+ Greenhouse Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Glass_C",
+      "Description": "S+ Glass Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Adobe_C",
+      "Description": "S+ Adobe Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Tek_C",
+      "Description": "S+ Tek Window",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Wood_C",
+      "Description": "S+ Wood Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Stone_C",
+      "Description": "S+ Stone Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Metal_C",
+      "Description": "S+ Metal Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Glass_C",
+      "Description": "S+ Glass Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Adobe_C",
+      "Description": "S+ Adobe Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Tek_C",
+      "Description": "S+ Tek Ramp",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Wood_C",
+      "Description": "S+ Wood Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Stone_C",
+      "Description": "S+ Stone Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Metal_C",
+      "Description": "S+ Metal Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Glass_C",
+      "Description": "S+ Glass Half Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Adobe_C",
+      "Description": "S+ Adobe Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Tek_C",
+      "Description": "S+ Tek Railing",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Wood_C",
+      "Description": "S+ Wood Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Stone_C",
+      "Description": "S+ Stone Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Metal_C",
+      "Description": "S+ Metal Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Adobe_C",
+      "Description": "S+ Adobe Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Tek_C",
+      "Description": "S+ Tek Fence Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_Wood_C",
+      "Description": "S+ Wood Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_Stone_C",
+      "Description": "S+ Stone Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_Metal_C",
+      "Description": "S+ Metal Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_Adobe_C",
+      "Description": "S+ Adobe Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_Tek_C",
+      "Description": "S+ Tek Fence Support",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SpikeWall_Wood_C",
+      "Description": "S+ Wooden Spike Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SpikeWall_Metal_C",
+      "Description": "S+ Metal Spike Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Thatch_Left_C",
+      "Description": "S+ Sloped Thatch Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Wood_Left_C",
+      "Description": "S+ Sloped Wood Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Stone_Left_C",
+      "Description": "S+ Sloped Stone Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Metal_Left_C",
+      "Description": "S+ Sloped Metal Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Glass_Left_C",
+      "Description": "S+ Sloped Glass Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Greenhouse_Left_C",
+      "Description": "S+ Sloped Greenhouse Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Adobe_Left_C",
+      "Description": "S+ Sloped Adobe Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Tek_Left_C",
+      "Description": "S+ Sloped Tek Wall Left",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Thatch_Right_C",
+      "Description": "S+ Sloped Thatch Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Wood_Right_C",
+      "Description": "S+ Sloped Wood Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Stone_Right_C",
+      "Description": "S+ Sloped Stone Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Metal_Right_C",
+      "Description": "S+ Sloped Metal Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Glass_Right_C",
+      "Description": "S+ Sloped Glass Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Greenhouse_Right_C",
+      "Description": "S+ Sloped Greenhouse Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Adobe_Right_C",
+      "Description": "S+ Sloped Adobe Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Tek_Right_C",
+      "Description": "S+ Sloped Tek Wall Right",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Thatch_C",
+      "Description": "S+ Sloped Thatch Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Wood_C",
+      "Description": "S+ Sloped Wood Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Stone_C",
+      "Description": "S+ Sloped Stone Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Metal_C",
+      "Description": "S+ Sloped Metal Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Glass_C",
+      "Description": "S+ Sloped Glass Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Greenhouse_C",
+      "Description": "S+ Sloped Greenhouse Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Adobe_C",
+      "Description": "S+ Sloped Adobe Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Tek_C",
+      "Description": "S+ Sloped Tek Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Wood_C",
+      "Description": "S+ Wood Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Stone_C",
+      "Description": "S+ Stone Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Metal_C",
+      "Description": "S+ Metal Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Greenhouse_C",
+      "Description": "S+ Greenhouse Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Glass_C",
+      "Description": "S+ Glass Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Adobe_C",
+      "Description": "S+ Adobe Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Tek_C",
+      "Description": "S+ Tek Triangle Roof",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Wood_C",
+      "Description": "S+ Wood Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Metal_C",
+      "Description": "S+ Metal Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Glass_C",
+      "Description": "S+ Glass Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Tek_C",
+      "Description": "S+ Tek Catwalk",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Thatch_C",
+      "Description": "S+ Thatch Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Wood_C",
+      "Description": "S+ Wood Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Stone_C",
+      "Description": "S+ Stone Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Metal_C",
+      "Description": "S+ Metal Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Greenhouse_C",
+      "Description": "S+ Greenhouse Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Glass_C",
+      "Description": "S+ Glass Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Adobe_C",
+      "Description": "S+ Adobe Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Tek_C",
+      "Description": "S+ Tek Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Thatch_C",
+      "Description": "S+ Thatch Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Wood_C",
+      "Description": "S+ Wood Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Stone_C",
+      "Description": "S+ Reinforced Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Metal_C",
+      "Description": "S+ Metal Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Greenhouse_C",
+      "Description": "S+ Greenhouse Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Glass_C",
+      "Description": "S+ Glass Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Adobe_C",
+      "Description": "S+ Adobe Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Tek_C",
+      "Description": "S+ Tek Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Wood_C",
+      "Description": "S+ Wood Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Stone_C",
+      "Description": "S+ Stone Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Metal_C",
+      "Description": "S+ Metal Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Greenhouse_C",
+      "Description": "S+ Greenhouse Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Glass_C",
+      "Description": "S+ Glass Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Adobe_C",
+      "Description": "S+ Adobe Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Tek_C",
+      "Description": "S+ Tek Double Doorframe",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Wood_C",
+      "Description": "S+ Wood Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Stone_C",
+      "Description": "S+ Reinforced Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Metal_C",
+      "Description": "S+ Metal Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Greenhouse_C",
+      "Description": "S+ Greenhouse Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Glass_C",
+      "Description": "S+ Glass Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Adobe_C",
+      "Description": "S+ Adobe Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Tek_C",
+      "Description": "S+ Tek Double Door",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Wood_C",
+      "Description": "S+ Wood Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Stone_C",
+      "Description": "S+ Stone Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Metal_C",
+      "Description": "S+ Metal Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Adobe_C",
+      "Description": "S+ Adobe Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Tek_C",
+      "Description": "S+ Tek Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Dynamic_C",
+      "Description": "S+ Dynamic Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Wood_C",
+      "Description": "S+ Wood Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Stone_C",
+      "Description": "S+ Reinforced Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Metal_C",
+      "Description": "S+ Metal Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Glass_C",
+      "Description": "S+ Glass Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Adobe_C",
+      "Description": "S+ Adobe Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Tek_C",
+      "Description": "S+ Tek Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Dynamic_C",
+      "Description": "S+ Dynamic Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Stone_C",
+      "Description": "S+ Stone Behemoth Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Metal_C",
+      "Description": "S+ Metal Behemoth Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Adobe_C",
+      "Description": "S+ Adobe Behemoth Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Tek_C",
+      "Description": "S+ Behemoth Tek Gateway",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Stone_C",
+      "Description": "S+ Reinforced Behemoth Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Metal_C",
+      "Description": "S+ Metal Behemoth Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Glass_C",
+      "Description": "S+ Glass Behemoth Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Adobe_C",
+      "Description": "S+ Behemoth Adobe Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Tek_C",
+      "Description": "S+ Behemoth Tek Gate",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Wood_C",
+      "Description": "S+ Wood Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Rope_C",
+      "Description": "S+ Rope Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Metal_C",
+      "Description": "S+ Metal Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Adobe_C",
+      "Description": "S+ Adobe Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Tek_C",
+      "Description": "S+ Tek Ladder",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Wood_C",
+      "Description": "S+ Wooden Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Stone_C",
+      "Description": "S+ Stone Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Metal_C",
+      "Description": "S+ Metal Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Adobe_C",
+      "Description": "S+ Adobe Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Glass_C",
+      "Description": "S+ Glass Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Tek_C",
+      "Description": "S+ Tek Staircase",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Wood_C",
+      "Description": "S+ Small Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Stone_C",
+      "Description": "S+ Small Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Metal_C",
+      "Description": "S+ Small Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Adobe_C",
+      "Description": "S+ Small Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Tek_C",
+      "Description": "S+ Small Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Wood_C",
+      "Description": "S+ Medium Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Stone_C",
+      "Description": "S+ Medium Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Metal_C",
+      "Description": "S+ Medium Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Adobe_C",
+      "Description": "S+ Medium Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Tek_C",
+      "Description": "S+ Medium Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Wood_C",
+      "Description": "S+ Large Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Stone_C",
+      "Description": "S+ Large Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Metal_C",
+      "Description": "S+ Large Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Adobe_C",
+      "Description": "S+ Large Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Tek_C",
+      "Description": "S+ Large Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Wood_C",
+      "Description": "S+ Dynamic Wood Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Stone_C",
+      "Description": "S+ Dynamic Stone Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Metal_C",
+      "Description": "S+ Dynamic Metal Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Adobe_C",
+      "Description": "S+ Dynamic Adobe Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Tek_C",
+      "Description": "S+ Dynamic Tek Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_Small_C",
+      "Description": "S+ Small Crop Plot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_Medium_C",
+      "Description": "S+ Medium Crop Plot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_Large_C",
+      "Description": "S+ Large Crop Plot",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeHorizontal_Stone_C",
+      "Description": "S+ Stone Pipe - Straight",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIncline_Stone_C",
+      "Description": "S+ Stone Pipe - Inclined",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntake_Stone_C",
+      "Description": "S+ Stone Pipe - Intake",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntersection_Stone_C",
+      "Description": "S+ Stone Pipe - Intersection",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTap_Stone_C",
+      "Description": "S+ Stone Pipe - Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeVertical_Stone_C",
+      "Description": "S+ Stone Pipe - Vertical",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeFlex_Stone_C",
+      "Description": "S+ Stone Pipe - Flexible",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeHorizontal_Metal_C",
+      "Description": "S+ Metal Pipe - Straight",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIncline_Metal_C",
+      "Description": "S+ Metal Pipe - Inclined",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntake_Metal_C",
+      "Description": "S+ Metal Pipe - Intake",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntersection_Metal_C",
+      "Description": "S+ Metal Pipe - Intersection",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTap_Metal_C",
+      "Description": "S+ Metal Pipe - Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeVertical_Metal_C",
+      "Description": "S+ Metal Pipe - Vertical",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeFlex_Metal_C",
+      "Description": "S+ Metal Pipe - Flexible",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Square_C",
+      "Description": "S+ Internal Piping - Square",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Wall_C",
+      "Description": "S+ Internal Piping - Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Triangle_C",
+      "Description": "S+ Internal Piping - Triangle",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Pillar_C",
+      "Description": "S+ Internal Piping - Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTank_Stone_C",
+      "Description": "S+ Water Tank",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTank_Metal_C",
+      "Description": "S+ Metal Water Tank",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Horizontal_C",
+      "Description": "S+ Straight Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Incline_C",
+      "Description": "S+ Diagonal Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Intersection_C",
+      "Description": "S+ Electrical Cable Intersection",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Vertical_C",
+      "Description": "S+ Vertical Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Flex_C",
+      "Description": "S+ Flexible Electrical Cable",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Square_C",
+      "Description": "S+ Internal Wiring - Square",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Wall_C",
+      "Description": "S+ Internal Wiring - Wall",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Triangle_C",
+      "Description": "S+ Internal Wiring - Triangle",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Pillar_C",
+      "Description": "S+ Internal Wiring - Pillar",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Generator_C",
+      "Description": "S+ Electrical Generator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindTurbinePlus_C",
+      "Description": "S+ Wind Turbine",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GeneratorTek_C",
+      "Description": "S+ Tek Generator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElectricalOutlet_C",
+      "Description": "S+ Electrical Outlet",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorTrack_Metal_C",
+      "Description": "S+ Small Elevator Track",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorPlatform_Small_C",
+      "Description": "S+ Small Elevator Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorPlatform_Medium_C",
+      "Description": "S+ Medium Elevator Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorPlatform_Large_C",
+      "Description": "S+ Large Elevator Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_TekElevator_C",
+      "Description": "S+ Tek Elevator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Underwater_Cube_C",
+      "Description": "S+ Vacuum Compartment",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Underwater_Moonpool_C",
+      "Description": "S+ Vacuum Moonpool",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Moonpool_C",
+      "Description": "S+ Moonpool Trapdoor",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Underwater_Cube_Sloped_C",
+      "Description": "S+ Sloped Vacuum Compartment",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Underwater_C",
+      "Description": "S+ Vacuum Compartment Door",
+      "Mod": "Structures Plus (S+)"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}
