@@ -5,7 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-11-22T00:00:00Z</updated>
+  <updated>2018-11-22T10:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:0048A383-0DC5-42B2-B8CD-7E26817FDE9A</id>
+    <title>1.0.344 (1.0.344.1)</title>
+    <summary>1.0.344.1</summary>
+    <link href="http://arkservermanager.freeforums.net/thread/3/downloads" />
+    <updated>2018-11-22T10:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Game Map droplist - moved TheIsland map to the gamedata file.</li>
+          </ul>
+          <font color="#ff0000">
+            WARNING: Before you restart your servers, check that the Map Name is set correctly.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:872A304B-4C00-4C90-A60D-00B7D714A44D</id>

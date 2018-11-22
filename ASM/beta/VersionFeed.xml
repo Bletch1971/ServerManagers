@@ -5,23 +5,25 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-11-22T00:00:00Z</updated>
+  <updated>2018-11-22T10:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:AE20370D-536F-415B-BD9B-E3A373D4A6D4</id>
     <title>1.0.343 (1.0.343.1)</title>
     <summary>1.0.343.1</summary>
     <link href="" />
-    <updated>2018-11-22T00:00:00Z</updated>
+    <updated>2018-11-22T10:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
-            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+            <li>Game Map droplist - moved TheIsland map to the gamedata file.</li>
           </ul>
+          <font color="#ff0000">
+            WARNING: Before you restart your servers, check that the Map Name is set correctly.
+          </font>
         </p>
       </div>
     </content>
