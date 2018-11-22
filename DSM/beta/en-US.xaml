@@ -11,10 +11,10 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
-    <!--#region GameApplication enum -->
-    <sys:String x:Key="GameApplication_All">All</sys:String>
-    <sys:String x:Key="GameApplication_DarkAndLight">Dark and Light</sys:String>
-    <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
+    <!--#region Mod -->
+    <sys:String x:Key="Mod_All">All</sys:String>
+    <sys:String x:Key="Mod_DarkAndLight">Dark and Light</sys:String>
+    <sys:String x:Key="Mod_Unknown">Unknown</sys:String>
     <!--#endregion-->
 
     <!--#region Process Priority -->
@@ -1905,6 +1905,7 @@
 
     <!--#region Game Map Names -->
     <sys:String x:Key="/Game/DNL/Maps/CapeOfSacredPath/DNL_ALL">The Sacred Path</sys:String>
+    <sys:String x:Key="/Game/TheShard/Maps/TheShard">The Shard</sys:String>
     <!--#endregion-->
 
     <!--#region Creatures -->
