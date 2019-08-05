@@ -5,26 +5,26 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2018-11-30T10:00:00Z</updated>
+  <updated>2019-08-05T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:AE20370D-536F-415B-BD9B-E3A373D4A6D4</id>
-    <title>1.0.345 (1.0.345.1)</title>
-    <summary>1.0.345.1</summary>
+    <id>urn:uuid:58D8978B-2842-4BDB-BDBF-5BA35299F309</id>
+    <title>1.0.347 (1.0.347.1)</title>
+    <summary>1.0.347.1</summary>
     <link href="" />
-    <updated>2018-11-30T10:00:00Z</updated>
+    <updated>2019-08-05T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Dino Grid - fix a bug that would stop saving certain dinos to the GAME.ini file.</li>
-          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Updated Extinction gamedata file - updated DINONAMETAG values, so spawns changes should now be possible (thanks Baradine Allawa).</li>
+            <li>Official Mods - moved the official mods to the gamedata files, for easy future updates.</li>
+          </ul>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Mod Form - fixed mod purge button to use the new official mods from the gamedata, will no longer remove Valguero map DLC.</li>
           </ul>
         </p>
       </div>
