@@ -172,7 +172,7 @@
     <sys:String x:Key="ModDetails_FolderSizeColumnLabel">Folder Size</sys:String>
 
     <sys:String x:Key="ModDetails_AddModsTooltip">Add mods to the list.</sys:String>
-    <sys:String x:Key="ModDetails_LoadModsTooltip">Load mod list from server mods folder.</sys:String>
+    <sys:String x:Key="ModDetails_LoadModsTooltip">Import mod list from server mods folder.</sys:String>
     <sys:String x:Key="ModDetails_MoveModUpTooltip">Move mod up in the list.</sys:String>
     <sys:String x:Key="ModDetails_MoveModDownTooltip">Move mod down in the list.</sys:String>
     <sys:String x:Key="ModDetails_PurgeModsFolderTooltip">Purge unused mods from Mods folder.</sys:String>
@@ -183,6 +183,7 @@
     <sys:String x:Key="ModDetails_RemoveAllModsTooltip">Remove all mods from the list.</sys:String>
     <sys:String x:Key="ModDetails_SaveModsTooltip">Save mods back to the profile.</sys:String>
     <sys:String x:Key="ModDetails_SaveModDetailsTooltip">Save formatted mod details.</sys:String>
+    <sys:String x:Key="ModDetails_OpenModFolderTooltip">Open server mods folder.</sys:String>
     <sys:String x:Key="ModDetails_Clipboard_SaveTitle">Mod Details</sys:String>
     <!--#endregion-->
 
