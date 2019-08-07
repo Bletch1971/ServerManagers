@@ -1,0 +1,685 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+        {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Slaughter_House_C",
+      "Description": "Slaughter House",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AP_OilPump_C",
+      "Description": "OilPump",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Preserving_Box_C",
+      "Description": "Preserving Box",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Jetpack_C",
+      "Description": "Jetpack",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Jetpack_Quiver_C",
+      "Description": "Jetpack Quiver",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GDF_HurricaneDropShip_C",
+      "Description": "HurricaneDropShip",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ID_CeilingLamp_C",
+      "Description": "CeilingLamp",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ID_HangerHanging_Light_C",
+      "Description": "HangerHanging Light",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MechBay_C",
+      "Description": "MechBay",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ID_Armoury_MediumLocker_C",
+      "Description": "Armoury MediumLocker",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ID_Armoury_MediumLocker_Type2_C",
+      "Description": "Armoury MediumLocker Type2",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ID_Armoury_MediumLocker_Type3_C",
+      "Description": "Armoury MediumLocker Type3",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Marine_C",
+      "Description": "Marine",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Medium_UpperArmor_RS_C",
+      "Description": "Medium UpperArmor RS",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Medium_UpperArmor_LS_C",
+      "Description": "Medium UpperArmor LS",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Medium_UpperArmor_C",
+      "Description": "Medium UpperArmor",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Light_UpperArmor_RS_C",
+      "Description": "Light UpperArmor RS",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Light_UpperArmor_LS_C",
+      "Description": "Medium UpperArmor LS",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_PlateShield_Mk1_C",
+      "Description": "PlateShield Mk1",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AXS_Medium_LowerArmor_C",
+      "Description": "Medium LowerArmor",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CF50_C",
+      "Description": "CF50",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CF50_40Gauge_Drum_C",
+      "Description": "CF50 40Gauge Drum",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CF50_20mm_Mag_C",
+      "Description": "CF50 20mm Mag",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CombatMechette_C",
+      "Description": "CombatMechette",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HM_AX40_C",
+      "Description": "HM AX40",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HMAX40_60mmSmoke_C",
+      "Description": "HMAX40 60mmSmoke",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HMAX40_60mmFrag_C",
+      "Description": "HMAX40 60mmFrag",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HMAX40_60mmCLM_C",
+      "Description": "HMAX40 60mmCLM",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HMAX40_40mmST_Drum_C",
+      "Description": "HMAX40 40mmST Drum",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HMAX40_40mmHE_Drum_C",
+      "Description": "HMAX40 40mmHE Drum",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HMAX40_40mmAP_Drum_C",
+      "Description": "HMAX40 40mmAP Drum",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PowerBlade_C",
+      "Description": "PowerBlade",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SLAUDrone_C",
+      "Description": "SLAUDrone",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SLAUDrone_MK2_C",
+      "Description": "SLAUDrone MK2",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_BunkerFoundation_Hex_C",
+      "Description": "BunkerFoundation Hex",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Foundation_FlatPanels_C",
+      "Description": "Foundation FlatPanels",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Foundation_FlatPanels_2_C",
+      "Description": "Foundation FlatPanels 2",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_FoundationGrated_C",
+      "Description": "FoundationGrated",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Catwalk_C",
+      "Description": "Catwalk",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Stairs_S_C",
+      "Description": "Stairs S",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Catwalk_Rail_C",
+      "Description": "Catwalk Rail",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_Bottom_C",
+      "Description": "OuterWall Bottom",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_BottomPost_C",
+      "Description": "OuterWall BottomPost",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_MiddleDual_C",
+      "Description": "OuterWall MiddleDual",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_MiddleDual_FlatPost_C",
+      "Description": "OuterWall MiddleDual FlatPost",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_Passage_MiddleDual_C",
+      "Description": "OuterWall Passage MiddleDual",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_VentingSystem_C",
+      "Description": "OuterWall VentingSystem",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OuterWall_Window_MiddleDual_C",
+      "Description": "OuterWall Window MiddleDual",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_SingleSlidingDoor_C",
+      "Description": "SingleSlidingDoor",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_ReinforcedPressureDoor_C",
+      "Description": "ReinforcedPressureDoor",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Ceiling_C",
+      "Description": "Ceiling",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_BunkerCeiling_C",
+      "Description": "BunkerCeiling",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Ceiling_Hanger_C",
+      "Description": "Ceiling Hanger",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Ceiling_StairsEntry_C",
+      "Description": "Ceiling StairsEntry",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Ceiling_StairsEntry_Straight_C",
+      "Description": "Ceiling StairsEntry Straight",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_CeilingBeam_C",
+      "Description": "CeilingBeam",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_CeilingLights_C",
+      "Description": "CeilingLights",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_RoofFlat_C",
+      "Description": "RoofFlat",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_OutterWall_GateFrame_C",
+      "Description": "OutterWall GateFrame",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_HangerBottom_C",
+      "Description": "InnerWall HangerBottom",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_HangerMiddle_C",
+      "Description": "InnerWall HangerMiddle",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_HangerPassage_C",
+      "Description": "InnerWall HangerPassage",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_HangerPassageD_C",
+      "Description": "InnerWall HangerPassageD",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_HangerTop_C",
+      "Description": "InnerWall HangerTop",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_PanelL_Panel2R_C",
+      "Description": "InnerWall PanelL Panel2R",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_PanelPipes_C",
+      "Description": "InnerWall PanelPipes",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_PanelPipes_To_Panels_L_C",
+      "Description": "InnerWall PanelPipes To Panels L",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_PanelPipes_To_Panels_R_C",
+      "Description": "InnerWall PanelPipes To Panels R",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_PanelR_Panel2L_C",
+      "Description": "InnerWall PanelR Panel2L",
+      "Mod": "Ark Futurism Final Existence"
+    },
+	{
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Panels_C",
+      "Description": "InnerWall Panels",
+      "Mod": "Ark Futurism Final Existence"
+    },       
+	{
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Panels_Type3_C",
+      "Description": "InnerWall Panels Type3",
+      "Mod": "Ark Futurism Final Existence"
+    },
+	{
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Panels_Type3F_C",
+      "Description": "InnerWall Panels Type3F",
+      "Mod": "Ark Futurism Final Existence"
+    },
+  {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Panels2_C",
+      "Description": "InnerWall Panels2",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Passage_Panels_C",
+      "Description": "InnerWall Passage_Panels",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Passage_PanelsType3_C",
+      "Description": "InnerWall Passage PanelsType3",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Panels2_C",
+      "Description": "InnerWall Panels2",
+      "Mod": "Ark Futurism Final Existence"
+    },
+	{
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_PassageD_Panels_C",
+      "Description": "InnerWall PassageD Panels",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Windows_Panels_C",
+      "Description": "InnerWall Windows Panels",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_InnerWall_Windows_PanelsType3_C",
+      "Description": "InnerWall Windows PanelsType3",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_Hanger_GateFrame_C",
+      "Description": "Hanger GateFrame",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_ConcretePost_Bottom_C",
+      "Description": "ConcretePost Bottom",
+      "Mod": "Ark Futurism Final Existence"
+    },
+  {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_ConcretePost_Middle_C",
+      "Description": "ConcretePost Middle",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_GlassWindow_C",
+      "Description": "GlassWindow",
+      "Mod": "Ark Futurism Final Existence"
+    },
+    {
+	  "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RFC_WindowShutters_C",
+      "Description": "WindowShutters",
+      "Mod": "Ark Futurism Final Existence"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

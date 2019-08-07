@@ -1,0 +1,29 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:01:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Cap_Flag",
+      "Description": "CAP FLAG",
+      "Mod": "ORPE"
+    },
+	    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PassiveCrystal",
+      "Description": "PassiveCrystal",
+      "Mod": "ORPE"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

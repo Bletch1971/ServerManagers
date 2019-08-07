@@ -1,0 +1,21 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 120,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekDecor_CraftingTable_eco_C",
+      "Description": "Tek Decor",
+      "Mod": "eco's Tek Decor"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

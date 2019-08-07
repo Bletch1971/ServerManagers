@@ -1,0 +1,77 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-21T11:00:00.0000000Z",
+  "MapSpawners": [
+    {
+      "ClassName": "DinoSpawnEntries_Deepwater_PGM_C",
+      "Description": "Deepwater",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_InlandWater_PGM_C",
+      "Description": "InlandWater",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_Ocean_PGM_C",
+      "Description": "Ocean",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_TheDeepwater_PGM_C",
+      "Description": "TheDeepwater",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_TheOcean_PGM_C",
+      "Description": "TheOcean",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesBeach_PGM_C",
+      "Description": "Beach",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesGrassland_PGM_C",
+      "Description": "Grassland",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesJungle_PGM_C",
+      "Description": "Jungle",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesMountain_PGM_C",
+      "Description": "Mountain",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesRedwoodsPGM_C",
+      "Description": "Redwoods",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesSnow_PGM_C",
+      "Description": "Snow",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesSnowMountain_PGM_C",
+      "Description": "SnowMountain",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesSnowShoreline_PGM_C",
+      "Description": "SnowShoreline",
+      "Mod": "PGM"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesSwamp_PGM_C",
+      "Description": "Swamp",
+      "Mod": "PGM"
+    }
+  ]
+}
