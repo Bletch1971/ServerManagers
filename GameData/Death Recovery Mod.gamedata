@@ -1,0 +1,24 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-19T22:00:55.6876809Z",
+  "Engrams": [
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Personal_Grave_C",
+      "Description": "A Personal Grave",
+      "Mod": "Death Recovery Mod"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Personal_Grave_C",
+      "Description": "A Personal Grave",
+      "Mod": "Death Recovery Mod"
+    }
+  ]
+}

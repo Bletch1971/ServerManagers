@@ -1,0 +1,69 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-19T22:00:55.6876809Z",
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulTerminal_DS_C",
+      "Description": "Soul Terminal",
+      "Mod": "Dino Storage v2"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulFinder_DS_C",
+      "Description": "Soul Finder",
+      "Mod": "Dino Storage v2"
+    },
+	{
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulTraps_DS_C",
+      "Description": "Soul Trap",
+      "Mod": "Dino Storage v2"
+    },
+	{
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulGun_DS_C",
+      "Description": "Soul Gun",
+      "Mod": "Dino Storage v2"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "SoulTerminal_DS_C",
+      "Description": "Soul Terminal",
+      "Mod": "Dino Storage v2"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "SoulFinder_DS_C",
+      "Description": "Soul Finder",
+      "Mod": "Dino Storage v2"
+    },
+	{
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "SoulTraps_DS_C",
+      "Description": "Soul Trap",
+      "Mod": "Dino Storage v2"
+    },
+	{
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "SoulGun_DS_C",
+      "Description": "Soul Gun",
+      "Mod": "Dino Storage v2"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-19T22:00:55.6876809Z",
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LifeCompressor_C",
+      "Description": "Life Compressor",
+      "Mod": "Fixed Permanent Titans"
+    },
+	{
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LifeExtender_C",
+      "Description": "Life Extender",
+      "Mod": "Fixed Permanent Titans"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_LifeCompressor_C",
+      "Description": "Life Compressor",
+      "Mod": "Fixed Permanent Titans"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_LifeExtender_C",
+      "Description": "Life Extender",
+      "Mod": "Fixed Permanent Titans"
+    }
+  ]
+}

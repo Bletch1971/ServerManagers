@@ -1,0 +1,640 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-19T22:00:55.6876809Z",
+  "Creatures": [
+    {
+      "NameTag": "Liopleurodon",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liop_Character_BP_C",
+      "Description": "Liopleurodon",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "NameTag": "Stygilomoch",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "BDStygi_Character_BP_C",
+      "Description": "Stygilomoch",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "NameTag": "Styrac",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "BDStyrac_Character_BP_C",
+      "Description": "Styracosaurus",
+      "Mod": "Kraken's Better Dinos"
+    }
+  ],
+  "Engrams": [
+    {
+      "Level": 19,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BDWorkbench_C",
+      "Description": "Better Dinos Workbench",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 56,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_ApeArmour_C",
+      "Description": "Ape Armour",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 30,
+      "Points": 22,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Diplodocus3Seater_C",
+      "Description": "Diplodocus 3 Seater Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 55,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Direwolf_C",
+      "Description": "Direwolf Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 65,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Enforcer_C",
+      "Description": "Enforcer Defence Shield (Saddle)",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 70,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_CrabPlatform_C",
+      "Description": "Karkinos Platform Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 53,
+      "Points": 36,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Liop_C",
+      "Description": "Liopleurodon Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Level": 46,
+      "Points": 28,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_MammothPlatform_C",
+      "Description": "Mammoth Platform Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 21,
+      "Points": 14,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Pachyrhino1Seater_C",
+      "Description": "Pachyrhino 1 Seater Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 43,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Purlovia_C",
+      "Description": "Purlovia Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 33,
+      "Points": 18,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RollratStarterSaddle_C",
+      "Description": "Roll Rat Starter 3 Seater Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 30,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Styrac_C",
+      "Description": "Styracosaurs Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 12,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Stygi_C",
+      "Description": "Stygilomoch Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 70,
+      "Points": 26,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ShadowDrakeSaddle_BD_C",
+      "Description": "Rock Drake Saddle (KBD)",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 40,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_TrikePlatform_C",
+      "Description": "Trike Platform Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 50,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ValyrianReins_C",
+      "Description": "Valyrian Reins",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 50,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CorruptedCostumeBD_C",
+      "Description": "Corrupted Costume",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 13,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FishBasketBD_C",
+      "Description": "Fish Basket",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 16,
+      "Points": 12,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BugRepel_BD_C",
+      "Description": "Bug Repellant",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 50,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SharkRepel_C",
+      "Description": "Shark Repellant",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Extension_Raft_Motor_C",
+      "Description": "Motorboat Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Extension_Raft_Wood_C",
+      "Description": "Raft Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Bronto_C",
+      "Description": "Bronto Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Crab_C",
+      "Description": "Karkinos Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Mammoth_C",
+      "Description": "Mammoth Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 93,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Mosa_C",
+      "Description": "Mosasaur Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Paracer_C",
+      "Description": "Paracer Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 84,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Plesio_C",
+      "Description": "Plesiosaur Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 97,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Quetz_C",
+      "Description": "Quetzal Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Titano_C",
+      "Description": "Titanosaur Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SaddleExtension_Trike_C",
+      "Description": "Trike Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BDWorkBench_C",
+      "Description": "BD Workbench",
+      "Mod": "Kraken's Better Dinos"
+    },
+    {
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_ApeSaddle_C",
+      "Description": "Ape Armour",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DiplodocusSaddle3Seater_C",
+      "Description": "Diplodocus 3 Seater Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DireWolfSaddle_C",
+      "Description": "Direwolf Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_EnforcerSaddle_C",
+      "Description": "Enforcer Defence Shield (Saddle)",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_CrabSaddle_Platform_C",
+      "Description": "Karkinos Platform Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_LiopSaddle_C",
+      "Description": "Liopleurodon Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_MammothPlatformSaddle_C",
+      "Description": "Mammoth Platform Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_PachyrhinoSaddle1Seater_C",
+      "Description": "Pachyrhino 1 Seater Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_PurloviaSaddle_C",
+      "Description": "Purlovia Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_RollRatStarterSaddle_C",
+      "Description": "Roll Rat Starter 3 Seater Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_RockDrakeSaddle_BD_C",
+      "Description": "Rock Drake Saddle (KBD)",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_StyracSaddle_C",
+      "Description": "Styracosaurus Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_StygiSaddle_C",
+      "Description": "Stygilomoch Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_TrikeSaddle_Platform_C",
+      "Description": "Trike Platform Saddle",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemCostume_ValyrianReins_C",
+      "Description": "Valyrian Reins",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemCostume_ZombieWyvernBD_C",
+      "Description": "Zombie Wyvern Costume",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Armor",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemCostume_CorruptedBD_C",
+      "Description": "Corrupted Costume",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FishBasketBD_C",
+      "Description": "Fish Basket",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Costume",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemCostume_StayPut_C",
+      "Description": "Orb of Staying Power",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BugRepellant_BD_C",
+      "Description": "Bug Repellant",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_SharkRepellant_C",
+      "Description": "Shark Repellant",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Extension_Raft_Motor_C",
+      "Description": "Motorboat Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Extension_Raft_Wood_C",
+      "Description": "Raft Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Bronto_C",
+      "Description": "Bronto Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Crab_C",
+      "Description": "Karkinos Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Mammoth_C",
+      "Description": "Mammoth Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Mosa_C",
+      "Description": "Mosasaur Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Paracer_C",
+      "Description": "Paracer Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Plesio_C",
+      "Description": "Plesiosaur Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Quetz_C",
+      "Description": "Quetzal Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Titano_C",
+      "Description": "Titanosaur Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaddleExtension_Trike_C",
+      "Description": "Trike Platform Saddle Extension",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Barrel_C",
+      "Description": "Oil Barrel",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Barrel_Monkey_C",
+      "Description": "Barrel o' Monkeys",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_WhaleOil_C",
+      "Description": "Bio Oil",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_EdibleCrabClaw_BD_C",
+      "Description": "Edible Crab Claw",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ToughHide_C",
+      "Description": "Tough Hide",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Veggie_SugarCandy_C",
+      "Description": "Sugar Candy",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_RottenGloop_C",
+      "Description": "Rotten Gloop",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BloodGlob_C",
+      "Description": "Blood Glob",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_ScorpionVenom_C",
+      "Description": "Scorpion Venom",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_SwineFlesh_C",
+      "Description": "Swine Flesh",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_PorkChop_C",
+      "Description": "Pork Chop",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_CuredBacon_C",
+      "Description": "Cured Bacon",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_SpoiledMilk_C",
+      "Description": "Spoiled Milk",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_MammalMilk_C",
+      "Description": "Mammalian Milk",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DiseasedBile_C",
+      "Description": "Diseased Bile",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_CthulhuBlood_C",
+      "Description": "Cthulhu Blood",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_AlduinsBreath_C",
+      "Description": "Alduin's Breath",
+      "Mod": "Kraken's Better Dinos"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Soup_LuckPotion_C",
+      "Description": "Felix Felcitas Luck Potion",
+      "Mod": "Kraken's Better Dinos"
+    }
+  ]
+}
