@@ -1,7 +1,7 @@
 {
   "Application": "ark",
-  "Version": "1.0.1",
-  "Created": "2019-07-28T00:00:00.0000000Z",
+  "Version": "1.1.0",
+  "Created": "2019-08-07T00:00:00.0000000Z",
   "Creatures": [],
   "Engrams": [
     {
@@ -2628,10 +2628,10 @@
       "Description": "S+ Tek Triangle Ceiling",
       "Mod": "Structures Plus (S+)"
     },
-	{
-      "Level": 0,
+    {
+      "Level": 65,
       "Points": 0,
-      "IsTekGram": true,
+      "IsTekGram": false,
       "ClassName": "EngramEntry_TriCeiling_TekElevator_C",
       "Description": "S+ Triangle Tek Elevator",
       "Mod": "Structures Plus (S+)"
@@ -3306,7 +3306,7 @@
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_IndustrialGrill_C",
-      "Description": "S+ Industrial Forge",
+      "Description": "S+ Industrial Grill",
       "Mod": "Structures Plus (S+)"
     },
     {
