@@ -1,7 +1,7 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2018-04-19T22:00:55.6876809Z",
+  "Version": "1.1.0",
+  "Created": "2019-08-14T00:00:00.0000000Z",
   "Engrams": [
     {
       "Level": 30,
@@ -49,6 +49,14 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_CP_Chair_C",
       "Description": "Chair",
+      "Mod": "MRRadTools.INC Content Pack"
+    },
+	{
+      "Level": 10,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SOFA_Table_C",
+      "Description": "Coffee Table",
       "Mod": "MRRadTools.INC Content Pack"
     },
 	{
@@ -327,7 +335,7 @@
       "Level": 30,
       "Points": 15,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_Ceiling_Concrete_C",
+      "ClassName": "EngramEntry_ConcreteCeiling_C",
       "Description": "Concrete Ceiling",
       "Mod": "MRRadTools.INC Content Pack"
     },
