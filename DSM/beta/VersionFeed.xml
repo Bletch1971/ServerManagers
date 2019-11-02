@@ -5,21 +5,21 @@
   <title>DnL Server Manager Version Feed</title>
   <subtitle>This is the Dark and Light Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2018-12-02T10:00:00Z</updated>
+  <updated>2019-11-01T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:2FE211A0-0081-4A40-8DE2-EAEC79F81953</id>
-    <title>1.0.50 (1.0.50.1)</title>
-    <summary>1.0.50.1</summary>
+    <title>1.0.51 (1.0.51.1)</title>
+    <summary>1.0.51.1</summary>
     <link href="" />
-    <updated>2018-12-02T10:00:00Z</updated>
+    <updated>2019-11-01T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Backup and Update Fix - fixed bug in previous version that pervented the Auto-Backup and Auto-Update from backing up the world save.</li>
+            <li>Server File Details - Fixed a crashing bug caused by having a steamid that is not available or does not exist.</li>
           </ul>
         </p>
       </div>
