@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:F3DDF193-EF36-42A6-91A9-B95A403E907A</id>
-    <title>1.0.351 (1.0.351.2)</title>
-    <summary>1.0.351.2</summary>
+    <title>1.0.352 (1.0.352.1)</title>
+    <summary>1.0.352.1</summary>
     <link href="" />
     <updated>2019-02-29T00:00:00Z</updated>
     <content type="xhtml">
@@ -19,12 +19,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fix issue with player/tribe linking in RCON window.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added new player ascension levels to gamedata file.</li>
+            <li>Fix issue with player/tribe linking in RCON window for maps other than Genesis, introduced in v351.</li>
           </ul>
         </p>
       </div>
