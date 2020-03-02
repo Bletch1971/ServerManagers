@@ -5,26 +5,26 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-02T07:00:00Z</updated>
+  <updated>2020-03-03T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:F3DDF193-EF36-42A6-91A9-B95A403E907A</id>
-    <title>1.0.354 (1.0.354.1)</title>
-    <summary>1.0.354.1</summary>
+    <title>1.0.355 (1.0.355.1)</title>
+    <summary>1.0.355.1</summary>
     <link href="" />
-    <updated>2020-03-02T07:00:00Z</updated>
+    <updated>2020-03-03T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Settings (Dinos section) - fixed the bForceCanRideFliers (Enable Flyer Riding (Genesis)) setting, so it clears the value in the gameusersettings.ini file if unchecked.</li>
-          </ul>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Settings (Stack Sizes) - new section that allows you to manange your individual item stack sizes. Has an option in the global setting to turn on/off.</li>
+            <li>Server Settings (Rules) - added new Genesis group with bDisableGenesisMissions and AllowTekSuitPowersInGenesis settings.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Settings (Structures) - put GenesisUseStructuresPreventionVolumes setting into Genesis group for clarity.</li>
           </ul>
         </p>
       </div>

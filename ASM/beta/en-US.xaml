@@ -21,6 +21,7 @@
     <sys:String x:Key="Mod_Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="Mod_Aberration">Aberration</sys:String>
     <sys:String x:Key="Mod_Extinction">Extinction</sys:String>
+    <sys:String x:Key="Mod_Genesis">Genesis</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -1113,6 +1114,11 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsCount).</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
+
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TekSuit Powers</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">if enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
+    <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">if enabled, will disable all missions on the Genesis map.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
@@ -1278,8 +1284,8 @@
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">If enabled, all tamed dinos will be unable to be ridden.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Disable Dino Taming</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">If enabled, all wild dinos will be unable to be tamed.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Enable Flyer Riding (Genesis)</sys:String>
-    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, all flyers can be ridden on Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Enable Flyer Riding</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, all flyers can be ridden; otherwise it will default to map settings.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoCustomizationLabel">Dino Customization</sys:String>
     <sys:String x:Key="ServerSettings_SpawnMultipliersOptionLabel">Spawn Multipliers</sys:String>
@@ -1500,8 +1506,8 @@
     <sys:String x:Key="ServerSettings_StructurePickupHoldDurationTooltip">Specifies the amount of time of the quick-pickup hold duration, use 0 to disable and have instant pickup.</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresLabel">Allow Integrated Structures Plus</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresTooltip">If enabled, will add all of the new S+ structures; otherwise disables all of the new S+ structures (intended mainly for letting unofficials that want to keep using the S+ mod version to keep using that without a ton of extra duplicate structures).</sys:String>
-    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Disable Building in Mission Areas (Genesis)</sys:String>
-    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">If enabled, will disable building in mission areas.</sys:String>
+    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Disable Building in Mission Areas</sys:String>
+    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">If enabled, will disable building in mission areas on the Genesis map.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Engrams -->
