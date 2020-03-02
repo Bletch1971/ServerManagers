@@ -339,6 +339,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Custom Override Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Enable Crafting Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">If enabled, the crafting overrides will be managed by ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeLabel">Enable Stack Size Overrides</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeTooltip">If enabled, the stack size overrides will be managed by ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerLabel">Enable Map Spawner Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">If enabled, the map spawner overrides will be managed by ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Enable Supply Crate Overrides</sys:String>
@@ -1981,6 +1983,27 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">Save all supply crates</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">Save supply crate</sys:String>
     <!--#endregion-->
+
+    <!--#region Server Settings - Stack Size Overrides -->
+    <sys:String x:Key="ServerSettings_StackSizeOverridesLabel">Stack Size Overrides</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemsLabel">Stacked Items</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_SaveTitle">Stack Size Override Settings</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent ASM managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemClassColumnLabel">Item</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemClassColumnTooltip">Item Class String</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_UseMultiplierColumnLabel">Use Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_UseMultiplierColumnTooltip">If enabled, will appliy the multipler to the base stack size of the item; otherwise it uses Stack Size.</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_MaxItemQuantityStackSizeColumnLabel">Stack Size</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_MaxItemQuantityStackSizeColumnTooltip">Stack size of the specified item</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_MaxItemQuantityMultiplierColumnLabel">Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_MaxItemQuantityMultiplierColumnTooltip">Multipler applied to the base stack size of specified item</sys:String>
+
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_AddItemTooltip">Add stack size item</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_ClearItemsTooltip">Delete all stack size items</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_PasteItemsTooltip">Paste stack size items data</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_RemoveItemTooltip">Delete stack size item</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_SaveItemsTooltip">Save stack size items data</sys:String>
 
     <!--#region Server Settings - Overlay -->
     <sys:String x:Key="ServerSettings_OverlayMessage_SavingLabel">Saving...</sys:String>
