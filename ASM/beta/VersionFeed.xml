@@ -16,6 +16,11 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Settings (Dinos section) - fixed the bForceCanRideFliers (Enable Flyer Riding (Genesis)) setting, so it clears the value in the gameusersettings.ini file if unchecked.</li>
+          </ul>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
