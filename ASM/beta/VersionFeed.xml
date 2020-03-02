@@ -19,24 +19,24 @@
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            Server Settings (Administration section -> Server Options)
-            <li>-structurememopts (Structure Memory Optimizations)</li>
-            <li>-noundermeshchecking (No Under Mesh Checking)</li>
-            <li>-noundermeshkilling (No Under Mesh Killing)</li>
-            Server Settings (Rules section)
-            <li>FuelConsumptionIntervalMultiplier</li>
-            <li>LimitNonPlayerDroppedItemsRange</li>
-            <li>LimitNonPlayerDroppedItemsCount</li>
-            Server Settings (Players section)
-            <li>MaxFallSpeedMultiplier</li>
-            Server Settings (Dinos section)
-            <li>bForceCanRideFliers (Enable Flyer Riding (Genesis))</li>
-            Server Settings (Structures section)
-            <li>AlwaysAllowStructurePickup</li>
-            <li>StructurePickupTimeAfterPlacement</li>
-            <li>StructurePickupHoldDuration</li>
-            <li>AllowIntegratedSPlusStructures</li>
-            <li>bGenesisUseStructuresPreventionVolumes (Disable Building in Mission Areas (Genesis))</li>
+            <li>Server Settings (Administration section -> Server Options)</li>
+            <li>* -structurememopts (Structure Memory Optimizations)</li>
+            <li>* -noundermeshchecking (No Under Mesh Checking)</li>
+            <li>* -noundermeshkilling (No Under Mesh Killing)</li>
+            <li>Server Settings (Rules section)</li>
+            <li>* FuelConsumptionIntervalMultiplier</li>
+            <li>* LimitNonPlayerDroppedItemsRange</li>
+            <li>* LimitNonPlayerDroppedItemsCount</li>
+            <li>Server Settings (Players section)</li>
+            <li>* MaxFallSpeedMultiplier</li>
+            <li>Server Settings (Dinos section)</li>
+            <li>* bForceCanRideFliers (Enable Flyer Riding (Genesis))</li>
+            <li>Server Settings (Structures section)</li>
+            <li>* AlwaysAllowStructurePickup</li>
+            <li>* StructurePickupTimeAfterPlacement</li>
+            <li>* StructurePickupHoldDuration</li>
+            <li>* AllowIntegratedSPlusStructures</li>
+            <li>* bGenesisUseStructuresPreventionVolumes (Disable Building in Mission Areas (Genesis))</li>
           </ul>
         </p>
       </div>
