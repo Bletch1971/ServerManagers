@@ -878,6 +878,12 @@
     <sys:String x:Key="ServerSettings_UseNoHangDetectionTooltip">If enabled, prevents some types of crashes causes by hanging (may appear as though the server is lagging while the server is hanging).</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselLabel">Server Allow Ansel</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">If enabled, will enable NVIDIA Ansel on Servers.</sys:String>
+    <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Structure Memory Optimizations</sys:String>
+    <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">If enabled, will enable the structure memory optimizations. NOTE: avoid using it when running structure-related mods (until they get updated) as it can break the snappoints of these mod structures.</sys:String>
+    <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">No Under Mesh Checking</sys:String>
+    <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">If enabled, will turn it off the anti meshing system entirely.</sys:String>
+    <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">No Under Mesh Killing</sys:String>
+    <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">If enabled, will turn off the anti meshing player kills (but still allow teleporting).</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmKeyLabel">Web Key</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmKeyTooltip">A key which is optional to use in the listening script, but required to have it in the text file.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
@@ -958,8 +964,8 @@
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">If enabled, allows building in caves when PvE mode is enabled.</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireLabel">Disable PvE Friendly Fire</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireTooltip">If enabled, players are unable to deal damage to or kill other tribe members, dinos and structures when PvE mode is enabled.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableLootCratesLabel">Disable Loot Crates</sys:String>
-    <sys:String x:Key="ServerSettings_DisableLootCratesTooltip">If enabled, will prevent spawning of Loot crates (artifact crates will still spawn).</sys:String>
+    <sys:String x:Key="ServerSettings_DisableLootCratesLabel">Disable Supply Crates</sys:String>
+    <sys:String x:Key="ServerSettings_DisableLootCratesTooltip">If enabled, will prevent spawning of Supply crates (artifact crates will still spawn).</sys:String>
     <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresLabel">Allow Crate Spawns on top of Structures</sys:String>
     <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresTooltip">If enabled, will allow from-the-air Supply Crates to appear on top of Structures, rather than being prevented by Structures.</sys:String>
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsLabel">Random Supply Crate Points</sys:String>
@@ -1099,6 +1105,12 @@
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Specifies the multiplier for corpse and dropped box lifespan.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Global Powered Battery Durability</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondTooltip">Specifies the multiplier for the rate at which charge batteries are used in electrical objects (decrease per second).</sys:String>
+    <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierLabel">Fuel Consumption Interval Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierTooltip">Specifies the multiplier for the interval of fuel consumption.</sys:String>
+    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeLabel">Limit Non Player Dropped Items Range</sys:String>
+    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsCount).</sys:String>
+    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
+    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
@@ -1205,6 +1217,8 @@
 
     <sys:String x:Key="ServerSettings_CraftingSkillBonusMultiplierLabel">Crafting Skill Bonus Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_CraftingSkillBonusMultiplierTooltip">Specifies the multiplier for the crafting skill bonus.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxFallSpeedMultiplierLabel">Max Fall Speed Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_MaxFallSpeedMultiplierTooltip">Specifies the falling speed multiplier at which players starts taking fall damage. For example, having it set to 0.1 means players will no longer survive a regular jump while having it set very high such as 100.0 means players will survive a fall from the sky limit.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Dino Settings -->
@@ -1262,6 +1276,8 @@
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">If enabled, all tamed dinos will be unable to be ridden.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Disable Dino Taming</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">If enabled, all wild dinos will be unable to be tamed.</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Enable Flyer Riding (Genesis)</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, all flyers can be ridden on Genesis map.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoCustomizationLabel">Dino Customization</sys:String>
     <sys:String x:Key="ServerSettings_SpawnMultipliersOptionLabel">Spawn Multipliers</sys:String>
@@ -1473,6 +1489,17 @@
     <sys:String x:Key="ServerSettings_LimitTurretsNumTooltip">Sets the maximum number of turrets that can be placed within the limit range.</sys:String>
     <sys:String x:Key="ServerSettings_HardLimitTurretsInRangeLabel">Hard Limit Turrets In Range</sys:String>
     <sys:String x:Key="ServerSettings_HardLimitTurretsInRangeTooltip">If enabled, will implement a retroactive turret hard limit. This will work on autoturrets, heavy turrets, tek turrets, plant turrets and is no longer map specific. The hard limit calculation is done on start-up, so if your turrets are ever over the limit, they will be randomly shut-off until you're under the limit. In order to restore shut off turrets, you must pick up any which exceed the number, as well as shut-off turrets and replace them in order for them to work.</sys:String>
+    <sys:String x:Key="ServerSettings_StructurePickupLabel">Structure Pickup</sys:String>
+    <sys:String x:Key="ServerSettings_AlwaysAllowStructurePickupLabel">Always Allow Structure Pickup</sys:String>
+    <sys:String x:Key="ServerSettings_AlwaysAllowStructurePickupTooltip">If enabled, will disable the timer on the quick-pickup system.</sys:String>
+    <sys:String x:Key="ServerSettings_StructurePickupTimeAfterPlacementLabel">Structure Pickup Time after Placement</sys:String>
+    <sys:String x:Key="ServerSettings_StructurePickupTimeAfterPlacementTooltip">Specifies the amount of time in seconds after placement that quick pickup is available.</sys:String>
+    <sys:String x:Key="ServerSettings_StructurePickupHoldDurationLabel">Structure Pickup Hold Duration</sys:String>
+    <sys:String x:Key="ServerSettings_StructurePickupHoldDurationTooltip">Specifies the amount of time of the quick-pickup hold duration, use 0 to disable and have instant pickup.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresLabel">Allow Integrated Structures Plus</sys:String>
+    <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresTooltip">If enabled, will add all of the new S+ structures; otherwise disables all of the new S+ structures (intended mainly for letting unofficials that want to keep using the S+ mod version to keep using that without a ton of extra duplicate structures).</sys:String>
+    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Disable Building in Mission Areas (Genesis)</sys:String>
+    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">If enabled, will disable building in mission areas.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Engrams -->
