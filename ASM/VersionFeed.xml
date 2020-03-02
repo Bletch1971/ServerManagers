@@ -5,7 +5,47 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-02-29T00:00:00Z</updated>
+  <updated>2020-03-02T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F1654EC3-CF23-42B6-8937-C4021940E899</id>
+    <title>1.0.353 (1.0.353.1)</title>
+    <summary>1.0.353.1</summary>
+    <link href="" />
+    <updated>2020-03-02T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings (Administration section -> Server Options)</li>
+            <li>* -structurememopts (Structure Memory Optimizations)</li>
+            <li>* -noundermeshchecking (No Under Mesh Checking)</li>
+            <li>* -noundermeshkilling (No Under Mesh Killing)</li>
+            <li>Server Settings (Rules section)</li>
+            <li>* FuelConsumptionIntervalMultiplier</li>
+            <li>* LimitNonPlayerDroppedItemsRange</li>
+            <li>* LimitNonPlayerDroppedItemsCount</li>
+            <li>Server Settings (Players section)</li>
+            <li>* MaxFallSpeedMultiplier</li>
+            <li>Server Settings (Dinos section)</li>
+            <li>* bForceCanRideFliers (Enable Flyer Riding (Genesis))</li>
+            <li>Server Settings (Structures section)</li>
+            <li>* AlwaysAllowStructurePickup</li>
+            <li>* StructurePickupTimeAfterPlacement</li>
+            <li>* StructurePickupHoldDuration</li>
+            <li>* AllowIntegratedSPlusStructures</li>
+            <li>* bGenesisUseStructuresPreventionVolumes (Disable Building in Mission Areas (Genesis))</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:EF59B94D-236C-4BA9-BEA5-BA48BE886464</id>
