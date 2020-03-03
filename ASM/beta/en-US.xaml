@@ -467,6 +467,8 @@
     <sys:String x:Key="GlobalSettings_WorldSaveDelayTooltip">The number of seconds to wait for the worldsave command to complete before the server is shutdown.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldFileLabel">Backup World File on Shutdown</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldFileTooltip">If enabled, a world file backup will be performed when the server is shutdown; otherwise no world save backup will be performed.</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateLabel">Verify Server Files After Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
