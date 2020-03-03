@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-04T00:00:00Z</updated>
+  <updated>2020-03-04T01:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:B4C23BAA-7F19-46C8-A1EE-590CED2155C0</id>
+    <title>1.0.356 (1.0.356.2)</title>
+    <summary>1.0.356.2</summary>
+    <link href="" />
+    <updated>2020-03-04T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings (Advanced) - added an option to enable/disable world save backups being performed when the server shuts down. For those of you who use other backup methods.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:F3DDF193-EF36-42A6-91A9-B95A403E907A</id>
@@ -16,10 +39,10 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">NEW</u>
+          <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings (Advanced) - added an option to enable/disable world save backups being performed when the server shuts down. For those of you who use other backup methods.</li>
+            <li>Added coloring to the grids for Valgeuro and Genesis DLC.</li>
           </ul>
         </p>
       </div>
