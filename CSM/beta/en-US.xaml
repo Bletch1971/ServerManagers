@@ -657,6 +657,8 @@
     <sys:String x:Key="GlobalSettings_CloseShutdownWindowWhenFinishedTooltip">If enabled, the server shutdown window will close after it is finished; otherwise it will stay open.</sys:String>
     <sys:String x:Key="GlobalSettings_WorldSaveDelayLabel">WorldSave Delay:</sys:String>
     <sys:String x:Key="GlobalSettings_WorldSaveDelayTooltip">The number of seconds to wait for the worldsave command to complete before the server is shutdown.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldFileLabel">Backup World File on Shutdown</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldFileTooltip">If enabled, a world file backup will be performed when the server is shutdown; otherwise no world save backup will be performed.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
