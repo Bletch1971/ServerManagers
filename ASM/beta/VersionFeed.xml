@@ -5,7 +5,32 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-04T01:00:00Z</updated>
+  <updated>2020-03-04T02:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:59BF86E2-FA90-49EB-A6E7-3E43E77B3498</id>
+    <title>1.0.356 (1.0.356.3)</title>
+    <summary>1.0.356.3</summary>
+    <link href="" />
+    <updated>2020-03-04T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Player and Dino levels have been updated.</li>
+            <li>Chibi Player levels are now highlighted, the note message has been updated with additional information about the levels.</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:B4C23BAA-7F19-46C8-A1EE-590CED2155C0</id>

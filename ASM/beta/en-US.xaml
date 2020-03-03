@@ -1552,7 +1552,7 @@
 
     <!--#region Server Settings - Custom Level Progressions -->
     <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Custom Level Progressions</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels for Ascension.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and Other leveling and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsLabel">Enable Custom Level Progressions</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsTooltip">If enabled, enables player and dino level customizations.</sys:String>
     <sys:String x:Key="ServerSettings_CustomPlayerLevelsLabel">Custom Player Levels</sys:String>
