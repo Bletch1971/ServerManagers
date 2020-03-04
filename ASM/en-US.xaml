@@ -265,6 +265,37 @@
     <sys:String x:Key="Progress_ReinstallSteamCmd_WindowTitle">SteamCMD Progress</sys:String>
     <!--#endregion-->
 
+    <!--#region GameData Window -->
+    <sys:String x:Key="GameDataWindow_Title">Game Data Files</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddGameDataTooltip">Add Game Data File</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearGameDataTooltip">Delete All User Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenGameDataFolderTooltip">Open Game Data Folder</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataForumTooltip">Open Game Data Forum</sys:String>
+    <sys:String x:Key="GameDataWindow_ReloadGameDataTooltip">Reload Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_RemoveGameDataTooltip">Delete Game Data File</sys:String>
+
+    <sys:String x:Key="GameDataWindow_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="GameDataWindow_VersionColumnLabel">Version</sys:String>
+    <sys:String x:Key="GameDataWindow_DateColumnLabel">Created Date</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddErrorTitle">Add Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_AddErrorLabel">An error occurred while reading the selected file.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearTitle">Confirm Clear Action</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearErrorTitle">Clear Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteTitle">Confirm Delete Action</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteErrorTitle">Delete Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenErrorTitle">Open Folder Error</sys:String>
+    <sys:String x:Key="GameDataWindow_LoadErrorTitle">Load Error</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddDialogTitle">Select game data file</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterLabel">Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
+    <!--#endregion-->
+
     <!--#region Plugins Window -->
     <sys:String x:Key="PluginsWindow_Title">Plugins</sys:String>
 
@@ -465,6 +496,10 @@
     <sys:String x:Key="GlobalSettings_CloseShutdownWindowWhenFinishedTooltip">If enabled, the server shutdown window will close after it is finished; otherwise it will stay open.</sys:String>
     <sys:String x:Key="GlobalSettings_WorldSaveDelayLabel">WorldSave Delay:</sys:String>
     <sys:String x:Key="GlobalSettings_WorldSaveDelayTooltip">The number of seconds to wait for the worldsave command to complete before the server is shutdown.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldFileLabel">Backup World File on Shutdown</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldFileTooltip">If enabled, a world file backup will be performed when the server is shutdown; otherwise no world save backup will be performed.</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateLabel">Verify Server Files After Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
@@ -537,6 +572,7 @@
     <sys:String x:Key="MainWindow_OpenRCONTooltip">Open remote console</sys:String>
     <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open ASM logs folder</sys:String>
     <sys:String x:Key="MainWindow_OpenSettingsTooltip">Open Global Settings</sys:String>
+    <sys:String x:Key="MainWindow_OpenGameDataTooltip">Open Game Data</sys:String>
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Open Plugins</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">Open Help</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">Upgrade to {0} now!</sys:String>
@@ -1284,8 +1320,10 @@
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">If enabled, all tamed dinos will be unable to be ridden.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Disable Dino Taming</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">If enabled, all wild dinos will be unable to be tamed.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Change Flyer Riding</sys:String>
+    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">If enabled, will allow you to change if flyers can be ridden on the map or not; otherwise will default to use the map settings.</sys:String>
     <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Enable Flyer Riding</sys:String>
-    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, all flyers can be ridden; otherwise it will default to map settings.</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, players can ride flyers; otherwise players cannot ride flyers.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoCustomizationLabel">Dino Customization</sys:String>
     <sys:String x:Key="ServerSettings_SpawnMultipliersOptionLabel">Spawn Multipliers</sys:String>
@@ -1550,7 +1588,7 @@
 
     <!--#region Server Settings - Custom Level Progressions -->
     <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Custom Level Progressions</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels for Ascension.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and Other leveling and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsLabel">Enable Custom Level Progressions</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsTooltip">If enabled, enables player and dino level customizations.</sys:String>
     <sys:String x:Key="ServerSettings_CustomPlayerLevelsLabel">Custom Player Levels</sys:String>

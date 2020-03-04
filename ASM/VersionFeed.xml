@@ -5,10 +5,45 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-03T01:00:00Z</updated>
+  <updated>2020-03-04T05:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:98F7D9A7-ADC3-4C26-A214-3332EAB94014</id>
+    <id>urn:uuid:47B49351-1B04-4A85-93B8-060DFB63AC64</id>
+    <title>1.0.356 (1.0.356.6)</title>
+    <summary>1.0.356.6</summary>
+    <link href="" />
+    <updated>2020-03-04T05:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Game Data Window button to open a new Game Data window. Button is top right corner next to plugins button.</li>
+            <li>Game Data Window - A new windows that allows you to manage your game data files.</li>
+            <li>Global Settings (Advanced) - added an option to enable/disable world save backups being performed when the server shuts down. For those of you who use other backup methods.</li>
+            <li>Global Settings (Advanced) - added an option to enable/disable server verification after the auto update is done. If enabled, will add extra time when the auto update is run and your server is updated.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Settings (Dinos section) - have split the bForceCanRideFliers setting into two settings - Change Flyer Riding and Enable Flyer Riding. This will allow you to use the maps default setting, or enable/disable flyer riding on your server. Using the map default will remove the bForceCanRideFliers setting from your config file, otherwise it will set to TRUE or FALSE.</li>
+            <li>Added coloring to the grids for Valgeuro and Genesis DLC.</li>
+            <li>Player and Dino levels have been updated.</li>
+            <li>Chibi Player levels are now highlighted (like ascension was), the note message has been updated with additional information about the levels.</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:193E99A2-71A0-4EBA-93B7-96F07B8631C3</id>
     <title>1.0.355 (1.0.355.2)</title>
     <summary>1.0.355.2</summary>
     <link href="" />
