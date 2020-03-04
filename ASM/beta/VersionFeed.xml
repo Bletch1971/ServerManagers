@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-04T03:00:00Z</updated>
+  <updated>2020-03-04T04:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:C8A75801-8D32-4A58-89FD-2E78B0922472</id>
+    <title>1.0.356 (1.0.356.5)</title>
+    <summary>1.0.356.5</summary>
+    <link href="" />
+    <updated>2020-03-04T04:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Settings (Dinos section) - have split the bForceCanRideFliers setting into two settings - Change Flyer Riding and Enable Flyer Riding. This will allow you to use the maps default setting, or enable/disable flyer riding on your server. Using the map default will remove the bForceCanRideFliers setting from your config file, otherwise it will set to TRUE or FALSE.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:7583DC55-3042-4BDC-AB01-8CD362A94D48</id>
@@ -19,7 +42,7 @@
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Global Settings (Advanced) - added an option to enable/disable server verification after the auto update is done.</li>
+            <li>Global Settings (Advanced) - added an option to enable/disable server verification after the auto update is done. If enabled, will add extra time when the auto update is run and your server is updated.</li>
           </ul>
         </p>
       </div>
@@ -43,7 +66,7 @@
           <br/>
           <ul>
             <li>Player and Dino levels have been updated.</li>
-            <li>Chibi Player levels are now highlighted, the note message has been updated with additional information about the levels.</li>
+            <li>Chibi Player levels are now highlighted (like ascension was), the note message has been updated with additional information about the levels.</li>
             <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
           </ul>
         </p>

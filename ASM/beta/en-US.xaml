@@ -1288,8 +1288,10 @@
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">If enabled, all tamed dinos will be unable to be ridden.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Disable Dino Taming</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">If enabled, all wild dinos will be unable to be tamed.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Change Flyer Riding</sys:String>
+    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">If enabled, will allow you to change if flyers can be ridden on the map or not; otherwise will default to use the map settings.</sys:String>
     <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Enable Flyer Riding</sys:String>
-    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, all flyers can be ridden; otherwise it will default to map settings.</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">If enabled, players can ride flyers; otherwise players cannot ride flyers.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoCustomizationLabel">Dino Customization</sys:String>
     <sys:String x:Key="ServerSettings_SpawnMultipliersOptionLabel">Spawn Multipliers</sys:String>
