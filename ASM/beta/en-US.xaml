@@ -1573,6 +1573,8 @@
     <sys:String x:Key="ServerSettings_EngramsHiddenColumnLabel">Hidden</sys:String>
     <sys:String x:Key="ServerSettings_EngramsKnownColumnLabel">Known</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnLabel">Remove Prereqs</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnLabel">Auto Unlock</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Unlock Level</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemoveRecordTooltip">Remove this Engram</sys:String>
 
     <sys:String x:Key="ServerSettings_EngramsOverride_EngramsRemoveRecordTitle">Remove Engram</sys:String>

@@ -5,139 +5,29 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-04T05:00:00Z</updated>
-
-  <entry>
-    <id>urn:uuid:77683C9D-BF7E-45F3-A9A9-ADE6108F2B0A</id>
-    <title>1.0.356 (1.0.356.6)</title>
-    <summary>1.0.356.6</summary>
-    <link href="" />
-    <updated>2020-03-04T05:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Main Window - Added Game Data Window button to open a new Game Data window. Button is top right corner next to plugins button.</li>
-            <li>Game Data Window - A new windows that allows you to manage your game data files.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:C8A75801-8D32-4A58-89FD-2E78B0922472</id>
-    <title>1.0.356 (1.0.356.5)</title>
-    <summary>1.0.356.5</summary>
-    <link href="" />
-    <updated>2020-03-04T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Settings (Dinos section) - have split the bForceCanRideFliers setting into two settings - Change Flyer Riding and Enable Flyer Riding. This will allow you to use the maps default setting, or enable/disable flyer riding on your server. Using the map default will remove the bForceCanRideFliers setting from your config file, otherwise it will set to TRUE or FALSE.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:7583DC55-3042-4BDC-AB01-8CD362A94D48</id>
-    <title>1.0.356 (1.0.356.4)</title>
-    <summary>1.0.356.4</summary>
-    <link href="" />
-    <updated>2020-03-04T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings (Advanced) - added an option to enable/disable server verification after the auto update is done. If enabled, will add extra time when the auto update is run and your server is updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:59BF86E2-FA90-49EB-A6E7-3E43E77B3498</id>
-    <title>1.0.356 (1.0.356.3)</title>
-    <summary>1.0.356.3</summary>
-    <link href="" />
-    <updated>2020-03-04T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Player and Dino levels have been updated.</li>
-            <li>Chibi Player levels are now highlighted (like ascension was), the note message has been updated with additional information about the levels.</li>
-            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:B4C23BAA-7F19-46C8-A1EE-590CED2155C0</id>
-    <title>1.0.356 (1.0.356.2)</title>
-    <summary>1.0.356.2</summary>
-    <link href="" />
-    <updated>2020-03-04T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings (Advanced) - added an option to enable/disable world save backups being performed when the server shuts down. For those of you who use other backup methods.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
+  <updated>2020-03-05T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:F3DDF193-EF36-42A6-91A9-B95A403E907A</id>
-    <title>1.0.356 (1.0.356.1)</title>
-    <summary>1.0.356.1</summary>
+    <title>1.0.357 (1.0.357.1)</title>
+    <summary>1.0.357.1</summary>
     <link href="" />
-    <updated>2020-03-04T00:00:00Z</updated>
+    <updated>2020-03-05T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dialog forms - have fixed an issue where the dialog forms would open behind the current window.</li>
+          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Added coloring to the grids for Valgeuro and Genesis DLC.</li>
+            <li>Server Settings (Engrams section) - added two additional columns to the engrams grid to allow each engram to be automatically unlocked.</li>
+            <li>Game Data Window - Fixed a bug when clicking the Open GameData Folder button and no gamedata folder exists. It will create the folder and open it.</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
           </ul>
         </p>
       </div>
