@@ -1,0 +1,63 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-03-04T00:00:00.0000000Z",
+  "Creatures": [
+    {
+      "NameTag": "Achatina",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Achatina_Character_BP_C",
+      "Description": "Achatina",
+      "Mod": "ArkPrime"
+    }
+  ],
+  "Engrams": [
+    {
+      "Level": 55,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AdvancedBullet_C",
+      "Description": "Advanced Bullet",
+      "Mod": "ArkPrime"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_BloodExtractor_C",
+      "Description": "Blood Extraction Syringe",
+      "Mod": "ArkPrime"
+    }
+  ],
+  "MapSpawners": [
+    {
+      "ClassName": "DinoSpawnEntries_Beavers_C",
+      "Description": "Beavers",
+      "Mod": "ArkPrime"
+    }
+  ],
+  "SupplyCrates": [
+    {
+      "ClassName": "SupplyCrate_Cave_QualityTier1_C",
+      "Description": "Cave Loot Crate (Green)",
+      "Mod": "ArkPrime"
+    }
+  ],
+  "Inventories": [
+    {
+      "ClassName": "DinoDropInventoryComponent_BossSpider_Easy_C",
+      "Description": "Boss Inventory - Broodmother (Easy)",
+      "Mod": "ArkPrime"
+    }
+  ],
+  "GameMaps": [
+    {
+      "IsSotF": false,
+      "ClassName": "TheIsland",
+      "Description": "The Island",
+      "Mod": "ArkPrime"
+    }
+  ]
+}
