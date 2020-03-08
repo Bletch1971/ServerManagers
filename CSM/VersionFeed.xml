@@ -5,7 +5,31 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-03T00:00:00Z</updated>
+  <updated>2020-03-07T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:FCE4B9D9-9A1B-4A99-B2DD-364B53DD911D</id>
+    <title>1.0.17 (1.0.17.1)</title>
+    <summary>1.0.17.1</summary>
+    <link href="" />
+    <updated>2020-03-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Game Data Window button to open a new Game Data window. Button is top right corner next to plugins button.</li>
+            <li>Game Data Window - A new window that allows you to manage your game data files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:702FFCE2-CEFB-45C9-A5E6-C1619B39D2DE</id>
