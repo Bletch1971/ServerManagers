@@ -234,6 +234,37 @@
     <sys:String x:Key="ProfileSyncWindow_SectionNameColumnLabel">Section</sys:String>
     <!--#endregion-->
 
+    <!--#region GameData Window -->
+    <sys:String x:Key="GameDataWindow_Title">Game Data Files</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddGameDataTooltip">Add Game Data File</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearGameDataTooltip">Delete All User Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenGameDataFolderTooltip">Open Game Data Folder</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataForumTooltip">Open Game Data Forum</sys:String>
+    <sys:String x:Key="GameDataWindow_ReloadGameDataTooltip">Reload Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_RemoveGameDataTooltip">Delete Game Data File</sys:String>
+
+    <sys:String x:Key="GameDataWindow_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="GameDataWindow_VersionColumnLabel">Version</sys:String>
+    <sys:String x:Key="GameDataWindow_DateColumnLabel">Created Date</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddErrorTitle">Add Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_AddErrorLabel">An error occurred while reading the selected file.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearTitle">Confirm Clear Action</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearErrorTitle">Clear Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteTitle">Confirm Delete Action</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteErrorTitle">Delete Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenErrorTitle">Open Folder Error</sys:String>
+    <sys:String x:Key="GameDataWindow_LoadErrorTitle">Load Error</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddDialogTitle">Select game data file</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterLabel">Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
+    <!--#endregion-->
+
     <!--#region Plugins Window -->
     <sys:String x:Key="PluginsWindow_Title">Plugins</sys:String>
 
@@ -458,6 +489,7 @@
     <sys:String x:Key="MainWindow_OpenRCONTooltip">Open remote console</sys:String>
     <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open Server Manager logs folder</sys:String>
     <sys:String x:Key="MainWindow_OpenSettingsTooltip">Open Global Settings</sys:String>
+    <sys:String x:Key="MainWindow_OpenGameDataTooltip">Open Game Data</sys:String>
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Open Plugins</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">Open Help</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">Upgrade to {0} now!</sys:String>
