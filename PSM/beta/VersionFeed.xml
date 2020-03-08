@@ -8,6 +8,30 @@
   <updated>2020-03-07T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:1795E2AE-1FD9-4F8D-B8FB-6E99B4EA1D38</id>
+    <title>1.0.18 (1.0.18.2)</title>
+    <summary>1.0.18.2</summary>
+    <link href="" />
+    <updated>2020-03-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Resource File - Removed duplicate entry that caused server manager to crash.</li>
+            <li>Main Window - Fixed broken button style.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:982C2AB5-B9FB-4E03-B0DD-92A77F24B4FB</id>
     <title>1.0.18 (1.0.18.1)</title>
     <summary>1.0.18.1</summary>
