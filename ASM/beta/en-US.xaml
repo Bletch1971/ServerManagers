@@ -752,15 +752,17 @@
     <sys:String x:Key="ServerSettings_Save_UpdatePermissions_ErrorLabel">Failed to update directory permissions. Ensure you have administrator rights on this machine and try again. If the problem persists, please report this as a bug.</sys:String>
     <sys:String x:Key="ServerSettings_Save_UpdateSchedule_ErrorTitle">Update schedule failed</sys:String>
     <sys:String x:Key="ServerSettings_Save_UpdateSchedule_ErrorLabel">Failed to update scheduled tasks. Ensure you have administrator rights on this machine and try again. If the problem persists, please report this as a bug.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetTitle">Confirm Reset Action</sys:String>
-    <sys:String x:Key="ServerSettings_ResetLabel">Click 'Yes' to confirm you want to perform the reset.</sys:String>
     <sys:String x:Key="ServerSettings_LoadCustomConfig_Title">Load Ini File.</sys:String>
     <sys:String x:Key="ServerSettings_LoadCustomConfig_Label">The ini file was successfully loaded.</sys:String>
     <sys:String x:Key="ServerSettings_LoadCustomConfig_ErrorTitle">Ini File Load Error</sys:String>
+    <sys:String x:Key="ServerSettings_AddChildErrorTitle">Add Record Error</sys:String>
+    <sys:String x:Key="ServerSettings_AddChildErrorLabel">You must select a parent record to add the new record to.</sys:String>
     <sys:String x:Key="ServerSettings_ClearTitle">Confirm Clear Action</sys:String>
     <sys:String x:Key="ServerSettings_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
     <sys:String x:Key="ServerSettings_DeleteTitle">Confirm Delete Action</sys:String>
     <sys:String x:Key="ServerSettings_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetTitle">Confirm Reset Action</sys:String>
+    <sys:String x:Key="ServerSettings_ResetLabel">Click 'Yes' to confirm you want to perform the reset.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Administration   -->
@@ -1566,15 +1568,23 @@
     <sys:String x:Key="ServerSettings_FilterOnlySelectedEngramsLabel">Filter Only Selected Engrams</sys:String>
     <sys:String x:Key="ServerSettings_FilterOnlySelectedEngramsTooltip">If enabled, only the selected engram will be visible.</sys:String>
     <sys:String x:Key="ServerSettings_SaveEngramOverrideColumnLabel">Selected</sys:String>
+    <sys:String x:Key="ServerSettings_SaveEngramOverrideColumnTooltip">Selected</sys:String>
     <sys:String x:Key="ServerSettings_EngramsNameColumnLabel">Name</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsNameColumnTooltip">Name of the Engram (engram class name).</sys:String>
     <sys:String x:Key="ServerSettings_EngramsModColumnLabel">Mod</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsModColumnTooltip">Mod</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelColumnLabel">Level</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsLevelColumnTooltip">Player level when the engram can be manually unlocked.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsCostColumnLabel">Cost</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsCostColumnTooltip">The amount fo engram points needed to manually unlock.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsHiddenColumnLabel">Hidden</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsKnownColumnLabel">Known</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsHiddenColumnTooltip">If enabled, the engram will be removed from the engram unlock screen and cannot be learned.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnLabel">Remove Prereqs</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnTooltip">If enabled, will remove the prerequisites needed to unlock the engram.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnLabel">Auto Unlock</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnTooltip">Is enabled, the engram will be automatically unlocked at the specified level.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Unlock Level</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnTooltip">Player level when the engram is automatically unlocked. Auto Unlock must be enabled.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemoveRecordTooltip">Remove this Engram</sys:String>
 
     <sys:String x:Key="ServerSettings_EngramsOverride_EngramsRemoveRecordTitle">Remove Engram</sys:String>
