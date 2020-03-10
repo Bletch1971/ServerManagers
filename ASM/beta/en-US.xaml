@@ -1573,6 +1573,8 @@
     <sys:String x:Key="ServerSettings_EngramsNameColumnTooltip">Name of the Engram (engram class name).</sys:String>
     <sys:String x:Key="ServerSettings_EngramsModColumnLabel">Mod</sys:String>
     <sys:String x:Key="ServerSettings_EngramsModColumnTooltip">Mod</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsIsTekgramColumnLabel">Is Tekgram</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsIsTekgramColumnTooltip">Is Tekgram</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelColumnLabel">Level</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelColumnTooltip">Player level when the engram can be manually unlocked.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsCostColumnLabel">Cost</sys:String>
