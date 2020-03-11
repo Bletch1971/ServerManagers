@@ -5,7 +5,42 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-05T00:00:00Z</updated>
+  <updated>2020-03-09T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:A3359CF9-37EE-4068-BEF6-2F661C2F9A00</id>
+    <title>1.0.358 (1.0.358.2)</title>
+    <summary>1.0.358.2</summary>
+    <link href="" />
+    <updated>2020-03-09T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dialog forms - have fixed an issue where the dialog forms would open behind the current window.</li>
+            <li>Server Settings - have added error dialogs when trying to add a child record without selecting a parent record first (crafting overrides, map spawner overrides and supply crate overrides).</li>
+            <li>Server Settings (Engrams section) - will not write OverrideNamedEngramEntries entries to the game.ini file unless one or more default values have changed.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Settings (Dino section) - changed the way the sort works for the dino grid.</li>
+            <li>Server Settings (Engrams section) - added column header tooltips to for more clarity.</li>
+            <li>Server Settings (Engrams section) - changed the way the sort works for the engrams grid.</li>
+            <li>Server Settings (Environment section) - changed the way the sort works for the resources grid.</li>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:72F068F8-1E22-4A60-87B7-3BA9B133DDF1</id>
