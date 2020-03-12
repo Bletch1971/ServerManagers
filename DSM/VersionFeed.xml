@@ -5,7 +5,60 @@
   <title>DnL Server Manager Version Feed</title>
   <subtitle>This is the Dark and Light Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-07T01:00:00Z</updated>
+  <updated>2020-03-12T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F97DFA57-C4EB-41C1-8ABD-BF8328558550</id>
+    <title>1.0.56 (1.0.56.1)</title>
+    <summary>1.0.56.1</summary>
+    <link href="" />
+    <updated>2020-03-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Game Data - have crash when loading with an invalid gamedata file.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Game Data Window - Added a validate button, to validate the user gamedata files.</li>
+            <li>Game Data Window - Displays the gamedata file in Red if the file is invalid.</li>
+            <li>Game Data Window - When adding a new gamedata file, will display an error if the file is invalid.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:EEAA3BDA-AB84-4B7E-AB83-E64D35150EDA</id>
+    <title>1.0.55 (1.0.55.1)</title>
+    <summary>1.0.55.1</summary>
+    <link href="" />
+    <updated>2020-03-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dialog forms - have fixed an issue where the dialog forms would open behind the current window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:F4CA1048-DC8F-4A7F-87B1-08D1FA4003E3</id>
