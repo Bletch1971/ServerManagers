@@ -5,59 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-09T00:00:00Z</updated>
+  <updated>2020-03-12T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:814D8572-49B5-4A7F-86FF-3C72E05F3755</id>
-    <title>1.0.358 (1.0.358.2)</title>
-    <summary>1.0.358.2</summary>
+    <id>urn:uuid:C5946415-0354-472D-A6C4-AA74F940FC47</id>
+    <title>1.0.359 (1.0.359.1)</title>
+    <summary>1.0.359.1</summary>
     <link href="" />
-    <updated>2020-03-09T00:00:00Z</updated>
+    <updated>2020-03-12T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Server Settings (Engrams section) - will not write OverrideNamedEngramEntries entries to the game.ini file unless one or more default values have changed.</li>
+            <li>Game Data - have crash when loading with an invalid gamedata file.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Server Settings (Dino section) - changed the way the sort works for the dino grid.</li>
-            <li>Server Settings (Engrams section) - changed the way the sort works for the engrams grid.</li>
-            <li>Server Settings (Environment section) - changed the way the sort works for the resources grid.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:A3359CF9-37EE-4068-BEF6-2F661C2F9A00</id>
-    <title>1.0.358 (1.0.358.1)</title>
-    <summary>1.0.358.1</summary>
-    <link href="" />
-    <updated>2020-03-07T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Dialog forms - have fixed an issue where the dialog forms would open behind the current window.</li>
-            <li>Server Settings - have added error dialogs when trying to add a child record without selecting a parent record first (crafting overrides, map spawner overrides and supply crate overrides).</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Settings (Engrams section) - added column header tooltips to for more clarity.</li>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>Game Data Window - Added a validate button, to validate the user gamedata files.</li>
+            <li>Game Data Window - Displays the gamedata file in Red if the file is invalid.</li>
+            <li>Game Data Window - When adding a new gamedata file, will display an error if the file is invalid.</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
           </ul>
         </p>
       </div>
