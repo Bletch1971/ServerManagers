@@ -268,6 +268,7 @@
     <sys:String x:Key="GameDataWindow_OpenGameDataFolderTooltip">Open Game Data Folder</sys:String>
     <sys:String x:Key="GameDataWindow_GameDataForumTooltip">Open Game Data Forum</sys:String>
     <sys:String x:Key="GameDataWindow_ReloadGameDataTooltip">Reload Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateGameDataTooltip">Validate Game Data Files</sys:String>
     <sys:String x:Key="GameDataWindow_RemoveGameDataTooltip">Delete Game Data File</sys:String>
 
     <sys:String x:Key="GameDataWindow_NameColumnLabel">Name</sys:String>
@@ -276,6 +277,7 @@
 
     <sys:String x:Key="GameDataWindow_AddErrorTitle">Add Action Error</sys:String>
     <sys:String x:Key="GameDataWindow_AddErrorLabel">An error occurred while reading the selected file.</sys:String>
+    <sys:String x:Key="GameDataWindow_ExistingFileErrorLabel">A file with the same name already exists, delete the existing file and try again.</sys:String>
     <sys:String x:Key="GameDataWindow_ClearTitle">Confirm Clear Action</sys:String>
     <sys:String x:Key="GameDataWindow_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
     <sys:String x:Key="GameDataWindow_ClearErrorTitle">Clear Action Error</sys:String>
@@ -284,6 +286,11 @@
     <sys:String x:Key="GameDataWindow_DeleteErrorTitle">Delete Action Error</sys:String>
     <sys:String x:Key="GameDataWindow_OpenErrorTitle">Open Folder Error</sys:String>
     <sys:String x:Key="GameDataWindow_LoadErrorTitle">Load Error</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateSuccessTitle">Validation</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateSuccessLabel">All game data files are valid.</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorTitle">Validation Error</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorLabel">The following file(s) have errors</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorMessage">The file is not valid. It may contain errors or have incorrect formatting.</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddDialogTitle">Select game data file</sys:String>
     <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String>
