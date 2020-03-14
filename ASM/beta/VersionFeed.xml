@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-13T00:00:00Z</updated>
+  <updated>2020-03-13T02:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:753D5140-8B78-44F1-A04A-640A6A57AB7A</id>
+    <title>1.0.359 (1.0.359.3)</title>
+    <summary>1.0.359.3</summary>
+    <link href="" />
+    <updated>2020-03-13T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor Window - Added the application version check and update feature.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:E7152248-4E51-4C82-94C8-CC23FACF84A8</id>
@@ -21,7 +44,7 @@
           <ul>
             <li>Dino Levels - Dino levels now start at level 1, not level 2.</li>
           </ul>
-          <u style="font-size: .9em;">New</u>
+          <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
             <li>Main Window - the main window now stores the height and width of the window.</li>
