@@ -5,7 +5,30 @@
   <title>DnL Server Manager Version Feed</title>
   <subtitle>This is the Dark and Light Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-13T00:00:00Z</updated>
+  <updated>2020-03-13T02:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:906F0459-3D59-4B68-867C-3E2C1202E229</id>
+    <title>1.0.57 (1.0.57.2)</title>
+    <summary>1.0.57.2</summary>
+    <link href="" />
+    <updated>2020-03-13T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor Window - Added the application version check and update feature.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:881875C7-1719-48C5-91F2-41959F4CF2BD</id>
