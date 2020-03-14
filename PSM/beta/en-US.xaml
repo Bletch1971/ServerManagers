@@ -335,7 +335,6 @@
     <sys:String x:Key="ServerMonitor_TotalCountLabel">Total Servers:</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
-    <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">Version</sys:String>
     <sys:String x:Key="ServerMonitor_PlayersColumnLabel">Players</sys:String>
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
