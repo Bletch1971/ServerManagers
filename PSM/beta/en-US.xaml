@@ -329,6 +329,31 @@
     <sys:String x:Key="PluginsWindow_AddFilterExtension">*.dll</sys:String>
     <!--#endregion-->
 
+    <!--#region Server Monitor Window -->
+    <sys:String x:Key="ServerMonitor_Title">Server Monitor</sys:String>
+
+    <sys:String x:Key="ServerMonitor_TotalCountLabel">Total Servers:</sys:String>
+    <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
+    <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
+    <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
+    <sys:String x:Key="ServerMonitor_VersionColumnLabel">Version</sys:String>
+    <sys:String x:Key="ServerMonitor_PlayersColumnLabel">Players</sys:String>
+    <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
+
+    <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
+    <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
+    <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServerTooltip">Stop the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_InstallServerTooltip">Install the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Update/Verify the server.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Server Update Error</sys:String>
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Another server is being upgraded, wait until the upgrade has finished and try again.</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Confirm Window Close</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">You are currently perform a server update, closing the window with disconnect you from steamcmd. Do you want to continue closing the window?</sys:String>
+    <!--#endregion-->
+
     <!--#region Shutdown Window -->
     <sys:String x:Key="ShutdownWindow_Title">Server Shutdown</sys:String>
     <sys:String x:Key="ShutdownWindow_ProfileTitle">Server Shutdown - {0}</sys:String>
@@ -576,6 +601,7 @@
     <sys:String x:Key="MainWindow_OpenGameDataTooltip">Open Game Data</sys:String>
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Open Plugins</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">Open Help</sys:String>
+    <sys:String x:Key="MainWindow_OpenServerMonitorTooltip">Open Server Monitor</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">Upgrade to {0} now!</sys:String>
     <sys:String x:Key="MainWindow_TaskStatusLabel">Task Status</sys:String>
     <sys:String x:Key="MainWindow_TaskAdminErrorTitle">Requires Administration Permissions</sys:String>
