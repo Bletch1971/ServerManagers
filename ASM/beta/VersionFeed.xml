@@ -5,7 +5,38 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-12T00:00:00Z</updated>
+  <updated>2020-03-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:E7152248-4E51-4C82-94C8-CC23FACF84A8</id>
+    <title>1.0.359 (1.0.359.2)</title>
+    <summary>1.0.359.2</summary>
+    <link href="" />
+    <updated>2020-03-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dino Levels - Dino levels now start at level 1, not level 2.</li>
+          </ul>
+          <u style="font-size: .9em;">New</u>
+          <br/>
+          <ul>
+            <li>Main Window - the main window now stores the height and width of the window.</li>
+            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
+            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
+            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:C5946415-0354-472D-A6C4-AA74F940FC47</id>
@@ -19,7 +50,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Game Data - have crash when loading with an invalid gamedata file.</li>
+            <li>Game Data - fixed a crash when loading with an invalid gamedata file.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
