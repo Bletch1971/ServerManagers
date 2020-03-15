@@ -439,6 +439,8 @@
     <sys:String x:Key="GlobalSettings_ForceCopyModsTooltip">If enabled, the mod files will be copied to the server folder even if the server has the latest version. Enabling can fix mod corruption issues.</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Force mod file downloads when no steam information available</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">If enabled, the Steamcmd window will not be closed when finished. You will need to manually close it or type quit. Note: does not affect auto-update.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use Anonymous Credentials</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controls whether the anonymous user is used to download from SteamCMD.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Username:</sys:String>
@@ -532,6 +534,8 @@
     <sys:String x:Key="GlobalSettings_BackupWorldFileTooltip">If enabled, a world file backup will be performed when the server is shutdown; otherwise no world save backup will be performed.</sys:String>
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateLabel">Verify Server Files After Auto Update</sys:String>
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Update Directory Permissions on Save</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
