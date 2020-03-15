@@ -647,6 +647,10 @@
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">How old the backup file must be to be deleted in days.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">WorldSave Message:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">This message will be displayed upon backup when the world is about to be saved.</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateLabel">Verify Server Files After Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Update Directory Permissions on Save</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Enable Auto Update</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryLabel">Cache Directory:</sys:String>
