@@ -5,7 +5,37 @@
   <title>DnL Server Manager Version Feed</title>
   <subtitle>This is the Dark and Light Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-14T00:00:00Z</updated>
+  <updated>2020-03-15T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:DE0AF187-7FCB-409F-9323-7934C969EC21</id>
+    <title>1.0.57 (1.0.57.5)</title>
+    <summary>1.0.57.5</summary>
+    <link href="" />
+    <updated>2020-03-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Monitor Window - Fixed the display of the map name, when a modded map.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Shutdown Options - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
+            <li>Shutdown Window - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
+            <li>Shutdown Process - have added logic to send the shutdown message to the game client via RCON, only if the setting is enabled.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:EB639961-381F-48EA-BC98-511FE4AED581</id>
