@@ -5,7 +5,30 @@
   <title>Pantropy Server Manager Version Feed</title>
   <subtitle>This is the Pantropy Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-15T00:00:00Z</updated>
+  <updated>2020-03-15T01:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:5B1F377C-5E9D-4977-8608-F3E107C4601C</id>
+    <title>1.0.22 (1.0.22.6)</title>
+    <summary>1.0.22.6</summary>
+    <link href="" />
+    <updated>2020-03-15T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Monitor Window - Fixed the display of the map name, when name has a special character.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:7FD51EE7-B4B4-4F34-ACEE-F8F8EA9F19A8</id>
