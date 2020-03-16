@@ -363,6 +363,8 @@
     <sys:String x:Key="ShutdownWindow_RestartServerTooltip">If enabled, the server will be immediately restarted after it is shutdown.</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerLabel">Update server after shutdown</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerTooltip">If enabled, the server will be updated after it is shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
+    <sys:String x:Key="ShutdownWindow_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client.</sys:String>
     <sys:String x:Key="ShutdownWindow_BackupWorldFileLabel">Backup world file after shutdown</sys:String>
     <sys:String x:Key="ShutdownWindow_BackupWorldFileTooltip">If enabled, the world file will be backed up after shutdown.</sys:String>
     <sys:String x:Key="ShutdownWindow_ShutdownReasonLabel">Reason (optional):</sys:String>
@@ -470,6 +472,8 @@
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
+    <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
+    <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Grace Period:</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalTooltip">The amount of time in minutes to broadcast messages about the upgrade before shutting down and upgrading the server.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessage1Label">Message 1:</sys:String>
