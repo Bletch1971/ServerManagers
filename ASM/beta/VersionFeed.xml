@@ -5,213 +5,26 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-16T00:00:00Z</updated>
+  <updated>2020-03-18T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:831016A9-CA9F-448A-BF76-DF955F70758F</id>
-    <title>1.0.359 (1.0.359.8)</title>
-    <summary>1.0.359.8</summary>
+    <id>urn:uuid:7E8A88B3-0BF4-4A3C-AE52-1DD4C96C5F41</id>
+    <title>1.0.360 (1.0.360.1)</title>
+    <summary>1.0.360.1</summary>
     <link href="" />
-    <updated>2020-03-16T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
-            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:A1E98967-776F-4FA1-8558-E16565A3C527</id>
-    <title>1.0.359 (1.0.359.7)</title>
-    <summary>1.0.359.7</summary>
-    <link href="" />
-    <updated>2020-03-15T01:00:00Z</updated>
+    <updated>2020-03-18T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when name has a special character.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:926691DB-9C49-41A9-94D9-2BE14F193189</id>
-    <title>1.0.359 (1.0.359.6)</title>
-    <summary>1.0.359.6</summary>
-    <link href="" />
-    <updated>2020-03-15T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when a modded map.</li>
-          </ul>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings - Shutdown Options - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
-            <li>Shutdown Window - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
-            <li>Shutdown Process - have added logic to send the shutdown message to the game client via RCON, only if the setting is enabled.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6383B87A-866B-435F-8D4E-93F5399D5954</id>
-    <title>1.0.359 (1.0.359.5)</title>
-    <summary>1.0.359.5</summary>
-    <link href="" />
-    <updated>2020-03-14T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Environment Section - Resource Grid - fixed tooltip on the save button.</li>
-            <li>Environment Section - Resource Grid - fixed duplicate resource issue when pasting in settings of existing resources, will now overwrite the values, instead of creating new.</li>
+            <li>ru-RU Translation file fixed.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings - added UpdateDirectoryPermissions option.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:96BC7198-842C-43E6-8933-1DC29A934CB9</id>
-    <title>1.0.359 (1.0.359.4)</title>
-    <summary>1.0.359.4</summary>
-    <link href="" />
-    <updated>2020-03-13T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the patch notes button.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:753D5140-8B78-44F1-A04A-640A6A57AB7A</id>
-    <title>1.0.359 (1.0.359.3)</title>
-    <summary>1.0.359.3</summary>
-    <link href="" />
-    <updated>2020-03-13T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the application version check and update feature.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:E7152248-4E51-4C82-94C8-CC23FACF84A8</id>
-    <title>1.0.359 (1.0.359.2)</title>
-    <summary>1.0.359.2</summary>
-    <link href="" />
-    <updated>2020-03-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Dino Levels - Dino levels now start at level 1, not level 2.</li>
-          </ul>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Main Window - the main window now stores the height and width of the window.</li>
-            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
-            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
-            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:C5946415-0354-472D-A6C4-AA74F940FC47</id>
-    <title>1.0.359 (1.0.359.1)</title>
-    <summary>1.0.359.1</summary>
-    <link href="" />
-    <updated>2020-03-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Game Data - fixed a crash when loading with an invalid gamedata file.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Game Data Window - Added a validate button, to validate the user gamedata files.</li>
-            <li>Game Data Window - Displays the gamedata file in Red if the file is invalid.</li>
-            <li>Game Data Window - When adding a new gamedata file, will display an error if the file is invalid.</li>
             <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
-            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
           </ul>
         </p>
       </div>
