@@ -5,7 +5,54 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-03-09T00:00:00Z</updated>
+  <updated>2020-03-16T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:C5946415-0354-472D-A6C4-AA74F940FC47</id>
+    <title>1.0.359 (1.0.359.8)</title>
+    <summary>1.0.359.8</summary>
+    <link href="" />
+    <updated>2020-03-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Game Data - fixed a crash when loading with an invalid gamedata file.</li>
+            <li>Dino Levels - Dino levels now start at level 1, not level 2.</li>
+            <li>Environment Section - Resource Grid - fixed tooltip on the save button.</li>
+            <li>Environment Section - Resource Grid - fixed duplicate resource issue when pasting in settings of existing resources, will now overwrite the values, instead of creating new.</li>
+          </ul>
+          <u style="font-size: .9em;">New</u>
+          <br/>
+          <ul>
+            <li>Main Window - the main window now stores the height and width of the window.</li>
+            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
+            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
+            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
+            <li>Global Settings - Shutdown Options - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
+            <li>Shutdown Window - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
+            <li>Shutdown Process - have added logic to send the shutdown message to the game client via RCON, only if the setting is enabled.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Game Data Window - Added a validate button, to validate the user gamedata files.</li>
+            <li>Game Data Window - Displays the gamedata file in Red if the file is invalid.</li>
+            <li>Game Data Window - When adding a new gamedata file, will display an error if the file is invalid.</li>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:A3359CF9-37EE-4068-BEF6-2F661C2F9A00</id>
