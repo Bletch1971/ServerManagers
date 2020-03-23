@@ -5,146 +5,21 @@
   <title>Pantropy Server Manager Version Feed</title>
   <subtitle>This is the Pantropy Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-15T01:00:00Z</updated>
+  <updated>2020-03-23T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:5B1F377C-5E9D-4977-8608-F3E107C4601C</id>
-    <title>1.0.22 (1.0.22.6)</title>
-    <summary>1.0.22.6</summary>
+    <id>urn:uuid:1872B400-8857-49A0-8F30-ED0D5226AB89</id>
+    <title>1.0.23 (1.0.23.1)</title>
+    <summary>1.0.23.1</summary>
     <link href="" />
-    <updated>2020-03-15T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when name has a special character.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:7FD51EE7-B4B4-4F34-ACEE-F8F8EA9F19A8</id>
-    <title>1.0.22 (1.0.22.5)</title>
-    <summary>1.0.22.5</summary>
-    <link href="" />
-    <updated>2020-03-15T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when a modded map.</li>
-          </ul>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings - Shutdown Options - have added an option to enable/disable sending the shutdown message to the game client.</li>
-            <li>Shutdown Window - have added an option to enable/disable sending the shutdown message to the game client.</li>
-            <li>Shutdown Process - have added logic to send the shutdown message to the game client, only if the setting is enabled.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:D12CB555-D2EF-43AA-BDDB-F18E56861EF3</id>
-    <title>1.0.22 (1.0.22.4)</title>
-    <summary>1.0.22.4</summary>
-    <link href="" />
-    <updated>2020-03-14T00:00:00Z</updated>
+    <updated>2020-03-23T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings - added UpdateDirectoryPermissions option.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:D9EB2212-C7FD-45F5-A3B2-D33B2DA78E1B</id>
-    <title>1.0.22 (1.0.22.3)</title>
-    <summary>1.0.22.3</summary>
-    <link href="" />
-    <updated>2020-03-13T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the patch notes button.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:CAA9EC54-6077-4E85-B9CC-A07612A027D2</id>
-    <title>1.0.22 (1.0.22.2)</title>
-    <summary>1.0.22.2</summary>
-    <link href="" />
-    <updated>2020-03-13T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the application version check and update feature.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:CE5219FC-C8C1-4684-AA5D-AE28C695D01E</id>
-    <title>1.0.22 (1.0.22.1)</title>
-    <summary>1.0.22.1</summary>
-    <link href="" />
-    <updated>2020-03-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">New</u>
-          <br/>
-          <ul>
-            <li>Main Window - the main window now stores the height and width of the window.</li>
-            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
-            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
-            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
+            <li>Server Monitor Window - added backup and open folder buttons.</li>
           </ul>
         </p>
       </div>
