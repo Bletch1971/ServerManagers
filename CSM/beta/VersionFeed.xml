@@ -5,162 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-16T00:00:00Z</updated>
+    <updated>2020-03-23T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:1AB89A6E-135C-49F0-867D-214F8D5FEC5D</id>
-    <title>1.0.21 (1.0.21.8)</title>
-    <summary>1.0.21.8</summary>
+    <id>urn:uuid:B33EF359-E372-4BA6-BC43-B8AC59939DEA</id>
+    <title>1.0.22 (1.0.22.1)</title>
+    <summary>1.0.22.1</summary>
     <link href="" />
-    <updated>2020-03-16T00:00:00Z</updated>
+    <updated>2020-03-23T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:4B41FAC6-7A56-44D7-961C-1A22B0F465C7</id>
-    <title>1.0.21 (1.0.21.7)</title>
-    <summary>1.0.21.7</summary>
-    <link href="" />
-    <updated>2020-03-15T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when name has a special character.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:269160F7-2A37-4EBC-BB3B-911F9B144FFD</id>
-    <title>1.0.21 (1.0.21.5)</title>
-    <summary>1.0.21.5</summary>
-    <link href="" />
-    <updated>2020-03-14T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Global Settings - added UpdateDirectoryPermissions option.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:5F308BDE-9E4A-43C0-8EE5-7694EC322B01</id>
-    <title>1.0.21 (1.0.21.4)</title>
-    <summary>1.0.21.4</summary>
-    <link href="" />
-    <updated>2020-03-13T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the patch notes button.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:126F1D51-EADD-4684-A60F-ABB93B9FEC56</id>
-    <title>1.0.21 (1.0.21.3)</title>
-    <summary>1.0.21.3</summary>
-    <link href="" />
-    <updated>2020-03-13T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the application version check and update feature.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:31ADFA50-7AE3-4618-AB7E-94FA18FC0B0B</id>
-    <title>1.0.21 (1.0.21.2)</title>
-    <summary>1.0.21.2</summary>
-    <link href="" />
-    <updated>2020-03-13T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - fixed icon and tooltip on the player list/rcon button.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:0DB80A69-BA80-4451-A3C2-58C1918F5FBA</id>
-    <title>1.0.21 (1.0.21.1)</title>
-    <summary>1.0.21.1</summary>
-    <link href="" />
-    <updated>2020-03-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">New</u>
-          <br/>
-          <ul>
-            <li>Main Window - the main window now stores the height and width of the window.</li>
-            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
-            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
-            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
+            <li>Server Monitor Window - added backup and open folder buttons.</li>
           </ul>
         </p>
       </div>
