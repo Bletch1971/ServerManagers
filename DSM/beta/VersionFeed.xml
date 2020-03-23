@@ -5,169 +5,21 @@
   <title>DnL Server Manager Version Feed</title>
   <subtitle>This is the Dark and Light Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-16T00:00:00Z</updated>
+  <updated>2020-03-23T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:9EFE9942-59D7-4B55-8499-1E653760CBC1</id>
-    <title>1.0.57 (1.0.57.7)</title>
-    <summary>1.0.57.7</summary>
+    <id>urn:uuid:7D0FA1D3-A9ED-4501-82A7-B1CE0676998C</id>
+    <title>1.0.58 (1.0.58.1)</title>
+    <summary>1.0.58.1</summary>
     <link href="" />
-    <updated>2020-03-16T00:00:00Z</updated>
+    <updated>2020-03-23T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:DE43E099-50CE-4F6D-80C6-832FC46F2D9D</id>
-    <title>1.0.57 (1.0.57.6)</title>
-    <summary>1.0.57.6</summary>
-    <link href="" />
-    <updated>2020-03-15T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when name has a special character.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:DE0AF187-7FCB-409F-9323-7934C969EC21</id>
-    <title>1.0.57 (1.0.57.5)</title>
-    <summary>1.0.57.5</summary>
-    <link href="" />
-    <updated>2020-03-15T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Fixed the display of the map name, when a modded map.</li>
-          </ul>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings - Shutdown Options - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
-            <li>Shutdown Window - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
-            <li>Shutdown Process - have added logic to send the shutdown message to the game client via RCON, only if the setting is enabled.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:EB639961-381F-48EA-BC98-511FE4AED581</id>
-    <title>1.0.57 (1.0.57.4)</title>
-    <summary>1.0.57.4</summary>
-    <link href="" />
-    <updated>2020-03-14T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Global Settings - added UpdateDirectoryPermissions option.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:FDBEAFDB-90EF-4182-BBB6-B605E0DBC9B4</id>
-    <title>1.0.57 (1.0.57.3)</title>
-    <summary>1.0.57.3</summary>
-    <link href="" />
-    <updated>2020-03-13T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the patch notes button.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:906F0459-3D59-4B68-867C-3E2C1202E229</id>
-    <title>1.0.57 (1.0.57.2)</title>
-    <summary>1.0.57.2</summary>
-    <link href="" />
-    <updated>2020-03-13T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor Window - Added the application version check and update feature.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:881875C7-1719-48C5-91F2-41959F4CF2BD</id>
-    <title>1.0.57 (1.0.57.1)</title>
-    <summary>1.0.57.1</summary>
-    <link href="" />
-    <updated>2020-03-13T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">New</u>
-          <br/>
-          <ul>
-            <li>Main Window - the main window now stores the height and width of the window.</li>
-            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
-            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
-            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
+            <li>Server Monitor Window - added backup and open folder buttons.</li>
           </ul>
         </p>
       </div>
