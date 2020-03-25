@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-16T00:00:00Z</updated>
+    <updated>2020-03-23T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:B33EF359-E372-4BA6-BC43-B8AC59939DEA</id>
+    <title>1.0.22 (1.0.22.1)</title>
+    <summary>1.0.22.1</summary>
+    <link href="" />
+    <updated>2020-03-23T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor Window - added backup and open folder buttons.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:0DB80A69-BA80-4451-A3C2-58C1918F5FBA</id>
