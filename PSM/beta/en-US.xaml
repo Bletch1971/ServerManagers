@@ -403,11 +403,13 @@
     <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Help...</sys:String>
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
     <sys:String x:Key="GlobalSettings_StyleSelectionLabel">Style</sys:String>
+    
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">If enabled, clicking the server status icons may perform one or mroe actions.</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Show Server Status Action Confirmation</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">If enabled, a dialogue will be shown to confirmation the server status action.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Server Startup Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Player Level Increase:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
@@ -471,6 +473,13 @@
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">If enabled, when the auto-update is performed all servers will be updated at the same time, otherwise each server will be updated one after the other (this will take more time to complete).</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoRestartLabel">Auto Restart Options</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalLabel">Enable Grace Period</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalTooltip">If enabled, it will check if the server was last started with the grace period and skip; otherwise if not last started within the grace period the server will be restarted.</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalLabel">Grace Period:</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalTooltip">The amount of time in minutes to prevent the server restarting, since the last server start.</sys:String>
+
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client.</sys:String>
@@ -488,6 +497,7 @@
     <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">This message will be displayed when the server shutdown has been cancelled.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Show shutdown reason with ALL shutdown messages</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">If enabled, the shutdown reason will be shown with all shutdown message; otherwise it will only be shown at the start of the server shutdown.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP Email Settings</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">The name or IP address of the host used for SMTP transmissions.</sys:String>
@@ -515,6 +525,7 @@
     <sys:String x:Key="GlobalSettings_EmailNotify_AutoRestartTooltip">If enabled, an email will be sent when the server is shutdown/restarted during the auto-shutdown process.</sys:String>
     <sys:String x:Key="GlobalSettings_EmailNotify_ShutdownRestartLabel">Shutdown/Restart</sys:String>
     <sys:String x:Key="GlobalSettings_EmailNotify_ShutdownRestartTooltip">If enabled, an email will be sent when the server is shutdown or restarted.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_AdvancedSettingsLabel">Advanced Settings</sys:String>
     <sys:String x:Key="GlobalSettings_AdvancedSettingsInformationLabel">Do not touch these settings unless you know what you are doing, or have been instructed to change them by support staff.</sys:String>
     <sys:String x:Key="GlobalSettings_UseShutdownCommandLabel">Use Server Shutdown Command</sys:String>
