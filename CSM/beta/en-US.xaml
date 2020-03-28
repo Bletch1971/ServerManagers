@@ -605,11 +605,13 @@
     <sys:String x:Key="GlobalSettings_SteamAPIKeyButtonLabel">Get WebApi Key...</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Help...</sys:String>
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
+    
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">If enabled, clicking the server status icons may perform one or mroe actions.</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Show Server Status Action Confirmation</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">If enabled, a dialogue will be shown to confirmation the server status action.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Server Startup Options</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Validate profile on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">If enabled, when you manually start the server, a basic validation is performed on the server and mod files.</sys:String>
@@ -675,6 +677,12 @@
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">If enabled, when the auto-update is performed all servers will be updated at the same time, otherwise each server will be updated one after the other (this will take more time to complete).</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoRestartLabel">Auto Restart Options</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalLabel">Enable Grace Period</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalTooltip">If enabled, it will check if the server was last started with the grace period and skip; otherwise if not last started within the grace period the server will be restarted.</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalLabel">Grace Period:</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalTooltip">The amount of time in minutes to prevent the server restarting, since the last server start.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
