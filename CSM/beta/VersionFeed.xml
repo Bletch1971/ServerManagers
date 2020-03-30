@@ -8,6 +8,29 @@
   <updated>2020-03-29T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:DDC988A1-4BB5-4D99-B1FD-3EB7F7D1A863</id>
+    <title>1.0.23 (1.0.23.3)</title>
+    <summary>1.0.23.3</summary>
+    <link href="" />
+    <updated>2020-03-29T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>RCON Window - added adjustable player list, width is retained.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:638CA8E4-CE02-49DB-BE93-EC5CBD60F756</id>
     <title>1.0.23 (1.0.23.2)</title>
     <summary>1.0.23.2</summary>
