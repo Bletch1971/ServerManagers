@@ -5,7 +5,30 @@
   <title>Pantropy Server Manager Version Feed</title>
   <subtitle>This is the Pantropy Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-03-29T04:00:00Z</updated>
+  <updated>2020-03-31T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:525A7132-C9DF-417D-AF28-90F985853B77</id>
+    <title>1.0.24 (1.0.24.5)</title>
+    <summary>1.0.24.5</summary>
+    <link href="" />
+    <updated>2020-03-31T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Tweaked a few application setting values.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:270A70F3-7659-4710-B0EB-8689911D4755</id>
