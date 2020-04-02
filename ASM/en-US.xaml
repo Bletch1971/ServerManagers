@@ -1430,6 +1430,8 @@
 
     <sys:String x:Key="ServerSettings_MatingIntervalLabel">Mating Interval:</sys:String>
     <sys:String x:Key="ServerSettings_MatingIntervalTooltip">Specifies the multiplier for time between tamed dino mating. Lower values decrease the time between mating.</sys:String>
+    <sys:String x:Key="ServerSettings_MatingSpeedLabel">Mating Speed:</sys:String>
+    <sys:String x:Key="ServerSettings_MatingSpeedTooltip">Specifies the multiplier for the speed at which dinosaurs mate with each other. Higher values increase the mating speed.</sys:String>
     <sys:String x:Key="ServerSettings_EggHatchSpeedLabel">Egg Hatch Speed:</sys:String>
     <sys:String x:Key="ServerSettings_EggHatchSpeedTooltip">Specifies the multiplier for time that fertilised eggs hatch. Higher values decrease the time an eggs hatches.</sys:String>
     <sys:String x:Key="ServerSettings_BabyMatureSpeedLabel">Baby Mature Speed:</sys:String>
