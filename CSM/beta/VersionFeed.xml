@@ -5,230 +5,27 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-01T02:00:00Z</updated>
-
-  <entry>
-    <id>urn:uuid:7298FE52-9AA6-40C8-B80A-8DB67C8A7821</id>
-    <title>1.0.23 (1.0.23.10)</title>
-    <summary>1.0.23.10</summary>
-    <link href="" />
-    <updated>2020-04-01T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Code cleanup.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:4C801E83-E13B-4433-BBFF-D028B39C2915</id>
-    <title>1.0.23 (1.0.23.9)</title>
-    <summary>1.0.23.9</summary>
-    <link href="" />
-    <updated>2020-04-01T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Tweaked logging settings.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:3D9934E9-B0D2-4705-9D83-A0236B54E572</id>
-    <title>1.0.23 (1.0.23.8)</title>
-    <summary>1.0.23.8</summary>
-    <link href="" />
-    <updated>2020-04-01T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Tweaked logging settings.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:AA27FFD4-F949-401C-BB70-86A327D29BA0</id>
-    <title>1.0.23 (1.0.23.7)</title>
-    <summary>1.0.23.7</summary>
-    <link href="" />
-    <updated>2020-03-31T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Tweaked logging settings.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:4B504A75-8E8A-49EF-8D90-82A26FD58AED</id>
-    <title>1.0.23 (1.0.23.6)</title>
-    <summary>1.0.23.6</summary>
-    <link href="" />
-    <updated>2020-03-31T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Tweaked logging settings.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:72D55EA7-A779-4F9C-A7C9-22D3E17CDF92</id>
-    <title>1.0.23 (1.0.23.5)</title>
-    <summary>1.0.23.5</summary>
-    <link href="" />
-    <updated>2020-03-31T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Tweaked a few application setting values.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:761858A2-1C5E-4CC8-8849-F7D695D85D3D</id>
-    <title>1.0.23 (1.0.23.4)</title>
-    <summary>1.0.23.4</summary>
-    <link href="" />
-    <updated>2020-03-29T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Updated all 3rd party libraries to latest versions.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:DDC988A1-4BB5-4D99-B1FD-3EB7F7D1A863</id>
-    <title>1.0.23 (1.0.23.3)</title>
-    <summary>1.0.23.3</summary>
-    <link href="" />
-    <updated>2020-03-29T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>RCON Window - added adjustable player list, width is retained.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:638CA8E4-CE02-49DB-BE93-EC5CBD60F756</id>
-    <title>1.0.23 (1.0.23.2)</title>
-    <summary>1.0.23.2</summary>
-    <link href="" />
-    <updated>2020-03-29T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added missing settings to the support zip file generation.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
+  <updated>2020-04-02T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:AFF6E785-595E-47B9-82AF-526CD0BBBBA4</id>
-    <title>1.0.23 (1.0.23.1)</title>
-    <summary>1.0.23.1</summary>
+    <title>1.0.24 (1.0.24.1)</title>
+    <summary>1.0.24.1</summary>
     <link href="" />
-    <updated>2020-03-27T00:00:00Z</updated>
+    <updated>2020-04-02T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">NEW</u>
+          <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Global Setting - Added new Auto Restart section with options to enable/disable auto restart grace period.</li>
-            <li>Starting a Server - when you server is started, it now records the last started time in your profiles.</li>
-            <li>Auto-Restart - with the grace period option enabled, when the auto-restart process runs it will check if your server was started within the grace period and skip; otherwise it will restart as normal.</li>
+            <li>Fixed the Auto-Restart Grace Period interval logic. It should work correctly now.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Auto-Restart section - added a note and fixed the tooltip.</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
           </ul>
         </p>
       </div>
