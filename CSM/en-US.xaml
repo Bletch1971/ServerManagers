@@ -679,10 +679,11 @@
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoRestartLabel">Auto Restart Options</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalInformationLabel">The grace period does not prevent auto-updates from restarting your server.</sys:String>
     <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalLabel">Enable Grace Period</sys:String>
     <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalTooltip">If enabled, it will check if the server was last started with the grace period and skip; otherwise if not last started within the grace period the server will be restarted.</sys:String>
     <sys:String x:Key="GlobalSettings_RestartGraceIntervalLabel">Grace Period:</sys:String>
-    <sys:String x:Key="GlobalSettings_RestartGraceIntervalTooltip">The amount of time in minutes to prevent the server restarting, since the last server start.</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalTooltip">The amount of time in hours and minutes (hh:mm) to prevent the server restarting, since the last server start.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
