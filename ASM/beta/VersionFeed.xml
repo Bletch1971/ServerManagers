@@ -5,10 +5,45 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-04T01:00:00Z</updated>
+  <updated>2020-04-04T03:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:0C452408-BE29-4CBB-8BD0-AE25259B33A3</id>
+    <id>urn:uuid:285E32F2-5C71-4BBC-B0AB-55833832F561</id>
+    <title>1.0.365 (1.0.365.3)</title>
+    <summary>1.0.365.3</summary>
+    <link href="" />
+    <updated>2020-04-04T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>General Server Setting Changes - Have added default values to most settings.</li>
+            <li>General Server Setting Changes - Have added WriteIfNotDefault flag to most (int, float) settings.</li>
+            <li>General Server Setting Changes - When current setting value = default value, and WriteIfNotDefault flag is set, the property will no longer be written to the ini files. This should speed up the reading of the ini files.</li>
+            <li>General Server Setting Changes - Have removed most server settings from the profile file. This should speed up the reading of the profile files.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>New slider control - includes checkbox. Have selected four properties for testing - Enable Idle Timeout, MOTD Interval, Player Max XP, Dino Max XP. Values are only written to the config files when the checkbox is enabled, this should allow for the server defaults to be used.</li>
+            <li>Administration Section - Enable Idle Timeout - Have changed the slider control to include a checkbox to enable/disable the setting. Previously checkbox was a separate control.</li>
+            <li>Administration Section - MOTD Interval - Have changed the slider control to include a checkbox to enable/disable the setting. Previously checkbox was a separate control.</li>
+            <li>Player Section - Max XP - Have changed the slider control to include a checkbox to enable/disable the setting.</li>
+            <li>Dino Section - Max XP - Have changed the slider control to include a checkbox to enable/disable the setting.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CCBB267F-C31C-414C-BBF3-35451B2C2BE8</id>
     <title>1.0.365 (1.0.365.2)</title>
     <summary>1.0.365.2</summary>
     <link href="" />
