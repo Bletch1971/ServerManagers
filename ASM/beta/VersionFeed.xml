@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-04T00:00:00Z</updated>
+  <updated>2020-04-04T01:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:0C452408-BE29-4CBB-8BD0-AE25259B33A3</id>
+    <title>1.0.365 (1.0.365.2)</title>
+    <summary>1.0.365.2</summary>
+    <link href="" />
+    <updated>2020-04-04T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Rules Section - added new server settings - bEnableCryopodNerf, CryopodNerfDuration, and CryopodNerfDamageMult. They are located at the bottom of the rules section.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:0C452408-BE29-4CBB-8BD0-AE25259B33A3</id>
@@ -25,7 +48,6 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings - Auto-Restart section - added a note and fixed the tooltip.</li>
             <li>fr-FR Translation file updated. (thanks @angemymy)</li>
             <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
             <li>ru-RU Translation file updated. (thanks @varlonec)</li>

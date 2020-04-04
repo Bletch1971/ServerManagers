@@ -1210,9 +1210,16 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
 
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TekSuit Powers</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">if enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">if enabled, will disable all missions on the Genesis map.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Cryopod Nerf Duration</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">The amount of time, in seconds, that the damage adjustment will take effect for creatures released from a cryopod.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Cryopod Nerf Damage Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the dameage done will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
