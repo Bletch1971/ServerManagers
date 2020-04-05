@@ -5,7 +5,46 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-02T00:00:00Z</updated>
+  <updated>2020-04-04T05:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:0C452408-BE29-4CBB-8BD0-AE25259B33A3</id>
+    <title>1.0.365 (1.0.365.5)</title>
+    <summary>1.0.365.5</summary>
+    <link href="" />
+    <updated>2020-04-04T05:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>RCON Window - Fixed the overlay, so that is can be used again.</li>
+            <li>Valguero Gamedata File - Fixed the classname of the Deinonychus Saddle. (thanks @jutka)</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Rules Section - Tribute Upload Options - have added to new settings - MaxTributeDinos and MaxTributeItems. Both default of 50 and max limit of 200, anything over 200 can cause cluster corruption.</li>
+            <li>Rules Section - added new server settings - bEnableCryopodNerf, CryopodNerfDuration, and CryopodNerfDamageMult. They are located at the bottom of the rules section.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Switched out the engram list for a grid, to keep consistent with the other sections.</li>
+            <li>Added last started date/time as tooltip for Status field.</li>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:D7F6EB7A-59C0-494D-9207-8B9E7BDE29DB</id>

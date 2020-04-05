@@ -693,6 +693,7 @@
     <sys:String x:Key="SliderUnits_Minutes">minutes</sys:String>
     <sys:String x:Key="SliderUnits_Hours">hours</sys:String>
     <sys:String x:Key="SliderUnits_Days">days</sys:String>
+    <sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
     <sys:String x:Key="SliderUnits_Items">items</sys:String>
     <sys:String x:Key="SliderUnits_XP">xp</sys:String>
     <sys:String x:Key="SliderUnits_Players">players</sys:String>
@@ -722,6 +723,7 @@
     <sys:String x:Key="ServerSettings_OpenServerFolderTooltip">Open the server's installation folder.</sys:String>
     <sys:String x:Key="ServerSettings_StatusLabel">Status:</sys:String>
     <sys:String x:Key="ServerSettings_StatusTooltip">The status of the Ark server on your local network.</sys:String>
+    <sys:String x:Key="ServerSettings_LastStartedLabel">Last Start Time:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">Availability:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">The status of the Ark server on Steam.</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Unknown">Unknown</sys:String>
@@ -1106,26 +1108,22 @@
     <sys:String x:Key="ServerSettings_NoItemUploadsTooltip">If enabled, the item uploads are disabled.</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">No Dino Uploads</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">If enabled, the dino uploads are disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Max Tribute Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">If enabled, will limit the number of dinos that a player can store in the obelisks. NOTE: Setting this to high can cause cluster corruption.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Max Tribute Items</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">If enabled, will limit the number of items that a player can store in the obelisks. NOTE: Setting this to high can cause cluster corruption.</sys:String>
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Cluster Tribute Options</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">No Transfer from Filtering</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">If enabled, the survivor, item and dino transfers are disabled if the server is not in the same cluster.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Override Survivor Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
-    <sys:String x:Key="ServerSettings_TributeCharacterExpirationSecondsLabel">Survivor Upload Expiration</sys:String>
-    <sys:String x:Key="ServerSettings_TributeCharacterExpirationSecondsTooltip">Set the expiration timer for uploaded survivors.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Override Item Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
-    <sys:String x:Key="ServerSettings_TributeItemExpirationSecondsLabel">Item Upload Expiration</sys:String>
-    <sys:String x:Key="ServerSettings_TributeItemExpirationSecondsTooltip">Set the expiration timer for uploaded items.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Override Dino Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
-    <sys:String x:Key="ServerSettings_TributeDinoExpirationSecondsLabel">Dino Upload Expiration</sys:String>
-    <sys:String x:Key="ServerSettings_TributeDinoExpirationSecondsTooltip">Set the expiration timer for uploaded dinos.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Override Minimum Dino Re-upload Interval</sys:String>
     <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">If enabled, will allow you to override the re-upload interval.</sys:String>
-    <sys:String x:Key="ServerSettings_MinimumDinoReuploadIntervalLabel">Minimum Dino Re-upload Interval</sys:String>
-    <sys:String x:Key="ServerSettings_MinimumDinoReuploadIntervalTooltip">Set the cooldown between allowed Dino re-uploads. Remaining cooldown time is displayed on the Dino Upload UI.</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsLabel">Allow Foreign Dino Downloads</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsTooltip">If enabled, will allow you to download foreign Dinos to the map.</sys:String>
 
@@ -1210,9 +1208,16 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
 
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TekSuit Powers</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">if enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">if enabled, will disable all missions on the Genesis map.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Cryopod Nerf Duration</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">The amount of time, in seconds, that the damage adjustment will take effect for creatures released from a cryopod.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Cryopod Nerf Damage Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the dameage done will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
