@@ -58,7 +58,7 @@
     <sys:String x:Key="Application_DataDirectoryLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile. You will now be asked to select the location where the server manager's data directory is located. You may later change this in the Settings window.</sys:String>
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
-    <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The Server Manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
+    <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
     <!--#endregion-->
@@ -503,25 +503,21 @@
     <!--#endregion-->
 
     <!--#region Main Window -->
-    <sys:String x:Key="MainWindow_Title">Conan Server Manager</sys:String>
-    <sys:String x:Key="MainWindow_TitleWithAdmin">Conan Server Manager (Administrator)</sys:String>
-    <sys:String x:Key="MainWindow_Label">Conan Server Manager</sys:String>
+    <sys:String x:Key="MainWindow_Title">Conan Exiles™ Server Manager</sys:String>
+    <sys:String x:Key="MainWindow_TitleWithAdmin">Conan Exiles™ Server Manager (Administrator)</sys:String>
+    <sys:String x:Key="MainWindow_Label">Conan Exiles™ Server Manager</sys:String>
     <sys:String x:Key="MainWindow_NewProfileTooltip">Create a new server profile.</sys:String>
     <sys:String x:Key="MainWindow_CloseProfileTooltip">Delete the server profile.</sys:String>
     <sys:String x:Key="MainWindow_VersionLabel">Version:</sys:String>
     <sys:String x:Key="MainWindow_BetaVersionLabel">Beta Version:</sys:String>
-    <sys:String x:Key="MainWindow_MyIpLabel">My Public IP:</sys:String>
+    <sys:String x:Key="MainWindow_MyIpLabel">My Public IP</sys:String>
     <sys:String x:Key="MainWindow_MyIpTooltip">The IP address players use to connect to your server.</sys:String>
     <sys:String x:Key="MainWindow_MyIpError">Invalid IP address or hostname</sys:String>
     <sys:String x:Key="MainWindow_RefreshMyIpTooltip">Attempt to determine your current public IP</sys:String>
-    <sys:String x:Key="MainWindow_DoesServerManagerUserExistLabel">Server Manager User Exists:</sys:String>
-    <sys:String x:Key="MainWindow_ServerManagerMissingTooltip">Why is the Server Manager User Missing?</sys:String>
-    <sys:String x:Key="MainWindow_ServerManagerMissing_ErrorTitle">Server Manager User Missing</sys:String>
-    <sys:String x:Key="MainWindow_ServerManagerMissing_ErrorLabel">The server manager requires it's own windows user to run SteamCMD. To create the Server Manager user, open the Global Settings.</sys:String>
     <sys:String x:Key="MainWindow_DonateTooltip">Like what you see and want to show your appreciation?  Donate here!</sys:String>
     <sys:String x:Key="MainWindow_SteamCMDTooltip">Reinstall SteamCMD from the internet.</sys:String>
     <sys:String x:Key="MainWindow_OpenRCONTooltip">Open remote console</sys:String>
-    <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open Server Manager logs folder</sys:String>
+    <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open server manager logs folder</sys:String>
     <sys:String x:Key="MainWindow_OpenSettingsTooltip">Open Global Settings</sys:String>
     <sys:String x:Key="MainWindow_OpenGameDataTooltip">Open Game Data</sys:String>
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Open Plugins</sys:String>
@@ -558,7 +554,7 @@
     <sys:String x:Key="MainWindow_ProfileDelete_Title">Delete Profile {0}?</sys:String>
     <sys:String x:Key="MainWindow_ProfileDelete_Label">Are you sure you want to delete this profile?\r\n\r\nNOTE: This will only delete the profile, not the installation directory, save games or settings files contained therein.</sys:String>
     <sys:String x:Key="MainWindow_Donate_Title">Make a donation?</sys:String>
-    <sys:String x:Key="MainWindow_Donate_Label">The Server Manager is an open-source project, provided completely free of charge. You can still donate if you would like; however you are under no obligation. If you wish to donate, your browser will open to PayPal's website where you may donate as little or as much as you like. Would you like to donate now?</sys:String>
+    <sys:String x:Key="MainWindow_Donate_Label">This server manager is provided completely free of charge. You can still donate if you would like; however you are under no obligation. If you wish to donate, your browser will open to PayPal's website where you may donate as little or as much as you like. Would you like to donate now?</sys:String>
     <sys:String x:Key="MainWindow_Upgrade_Title">Upgrade available</sys:String>
     <sys:String x:Key="MainWindow_Upgrade_Label">Version {0} is now available. To upgrade the application must close. Close and upgrade now?</sys:String>
     <sys:String x:Key="MainWindow_OverlayMessage_UpgradeLabel">Starting Upgrade...</sys:String>
@@ -585,11 +581,10 @@
     <!--#endregion-->
 
     <!--#region GlobalSettings Control -->
-    <sys:String x:Key="GlobalSettings_Title">Conan Server Manager</sys:String>
+    <sys:String x:Key="GlobalSettings_Title">Conan Exiles™ Server Manager</sys:String>
     <sys:String x:Key="GlobalSettings_VersionLabel">Version:</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
-    <sys:String x:Key="GlobalSettings_DoesServerManagerUserExistLabel">Server Manager User Exists:</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Data Directory:</sys:String>
@@ -864,7 +859,7 @@
     <sys:String x:Key="ServerSettings_ResetSectionTooltip">Resets the section back to defaults.</sys:String>
 
     <sys:String x:Key="ServerSettings_AdminRequired_ErrorTitle">Needs Administrator Access</sys:String>
-    <sys:String x:Key="ServerSettings_AdminRequired_ErrorLabel">Automatic Management features of the Server Manager use administrator features of Windows to schedule tasks that will run even if the server manager is not running, without installing any separate processes or services. To do this, the Server Manager must run with administrator privileges. Restart the Server Manager and 'Run As Administrator' and you will be able to utilize these features.</sys:String>
+    <sys:String x:Key="ServerSettings_AdminRequired_ErrorLabel">Automatic Management features of the server manager use administrator features of Windows to schedule tasks that will run even if the server manager is not running, without installing any separate processes or services. To do this, the server manager must run with administrator privileges. Restart the server manager and 'Run As Administrator' and you will be able to utilize these features.</sys:String>
     <sys:String x:Key="ServerSettings_ServerAutoSettings_ErrorTitle">Conan Auto Settings</sys:String>
     <sys:String x:Key="ServerSettings_ServerAutoSettings_ErrorLabel">The Conan automatic settings and the server manager automatic settings cannot be enabled at the same time. They are similar features that cause problems for the other and if the server manager automatic features are enabled, the Conan features are disabled.</sys:String>
     <sys:String x:Key="ServerSettings_UpgradeServer_RunningTitle">Server running</sys:String>
