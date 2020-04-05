@@ -693,6 +693,7 @@
     <sys:String x:Key="SliderUnits_Minutes">minutes</sys:String>
     <sys:String x:Key="SliderUnits_Hours">hours</sys:String>
     <sys:String x:Key="SliderUnits_Days">days</sys:String>
+    <sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
     <sys:String x:Key="SliderUnits_Items">items</sys:String>
     <sys:String x:Key="SliderUnits_XP">xp</sys:String>
     <sys:String x:Key="SliderUnits_Players">players</sys:String>
@@ -1107,26 +1108,22 @@
     <sys:String x:Key="ServerSettings_NoItemUploadsTooltip">If enabled, the item uploads are disabled.</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">No Dino Uploads</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">If enabled, the dino uploads are disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Max Tribute Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">If enabled, will limit the number of dinos that a player can store in the obelisks. NOTE: Setting this to high can cause cluster corruption.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Max Tribute Items</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">If enabled, will limit the number of items that a player can store in the obelisks. NOTE: Setting this to high can cause cluster corruption.</sys:String>
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Cluster Tribute Options</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">No Transfer from Filtering</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">If enabled, the survivor, item and dino transfers are disabled if the server is not in the same cluster.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Override Survivor Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
-    <sys:String x:Key="ServerSettings_TributeCharacterExpirationSecondsLabel">Survivor Upload Expiration</sys:String>
-    <sys:String x:Key="ServerSettings_TributeCharacterExpirationSecondsTooltip">Set the expiration timer for uploaded survivors.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Override Item Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
-    <sys:String x:Key="ServerSettings_TributeItemExpirationSecondsLabel">Item Upload Expiration</sys:String>
-    <sys:String x:Key="ServerSettings_TributeItemExpirationSecondsTooltip">Set the expiration timer for uploaded items.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Override Dino Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
-    <sys:String x:Key="ServerSettings_TributeDinoExpirationSecondsLabel">Dino Upload Expiration</sys:String>
-    <sys:String x:Key="ServerSettings_TributeDinoExpirationSecondsTooltip">Set the expiration timer for uploaded dinos.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Override Minimum Dino Re-upload Interval</sys:String>
     <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">If enabled, will allow you to override the re-upload interval.</sys:String>
-    <sys:String x:Key="ServerSettings_MinimumDinoReuploadIntervalLabel">Minimum Dino Re-upload Interval</sys:String>
-    <sys:String x:Key="ServerSettings_MinimumDinoReuploadIntervalTooltip">Set the cooldown between allowed Dino re-uploads. Remaining cooldown time is displayed on the Dino Upload UI.</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsLabel">Allow Foreign Dino Downloads</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsTooltip">If enabled, will allow you to download foreign Dinos to the map.</sys:String>
 
