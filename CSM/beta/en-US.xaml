@@ -814,6 +814,7 @@
     <sys:String x:Key="ServerSettings_OpenServerFolderTooltip">Open the server's installation folder.</sys:String>
     <sys:String x:Key="ServerSettings_StatusLabel">Status:</sys:String>
     <sys:String x:Key="ServerSettings_StatusTooltip">The status of the server on your local network.</sys:String>
+    <sys:String x:Key="ServerSettings_LastStartedLabel">Last Start Time:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">Availability:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">The status of the server on Steam.</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Unknown">Unknown</sys:String>
