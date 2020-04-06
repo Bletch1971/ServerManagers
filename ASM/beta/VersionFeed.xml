@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-05T02:00:00Z</updated>
+  <updated>2020-04-05T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:ED9CCBE7-84BA-4C85-94FF-B06283373A8F</id>
+    <title>1.0.366 (1.0.366.3)</title>
+    <summary>1.0.366.3</summary>
+    <link href="" />
+    <updated>2020-04-05T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Settings window - cleaded up a few slider controls.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:ED9CCBE7-84BA-4C85-94FF-B06283373A8F</id>
@@ -19,7 +42,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Server Settings - Difficulty Overide - fixed bug that would clear the difficulty setting.</li>
+            <li>Server Settings - Difficulty Override - fixed bug that would clear the difficulty setting.</li>
             <li>Server Settings - EnableCryopodNerf - fixed setting name so it now works.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
