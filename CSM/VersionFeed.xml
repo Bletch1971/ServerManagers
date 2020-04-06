@@ -5,7 +5,34 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-04T02:00:00Z</updated>
+  <updated>2020-04-05T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:A231F3EF-9CC8-4107-8580-1067D1C49054</id>
+    <title>1.0.26 (1.0.26.3)</title>
+    <summary>1.0.26.3</summary>
+    <link href="" />
+    <updated>2020-04-05T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - changed the min width to 1024 pixels.</li>
+            <li>Main Window - rearranged the header section and the buttons.</li>
+            <li>Profile Sync Window - windows is now resizable.</li>
+            <li>Slider control - changed the min width of the value field to be smaller.</li>
+            <li>pt-BR Translation file added. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:EF91C5B7-05CE-4FD9-9CD1-AC5D37DEEB59</id>
