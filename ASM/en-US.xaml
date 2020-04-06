@@ -49,16 +49,16 @@
     <sys:String x:Key="Application_SingleInstance_FailedLabel">Failed to switch to the other application instance. Starting new application instance.</sys:String>
 
     <sys:String x:Key="Application_DataDirectoryTitle">Select Data Directory</sys:String>
-    <sys:String x:Key="Application_DataDirectoryLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile. You will now be asked to select the location where the Ark Server Manager data directory is located. You may later change this in the Settings window.</sys:String>
+    <sys:String x:Key="Application_DataDirectoryLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile. You will now be asked to select the location where the server manager data directory is located. You may later change this in the Settings window.</sys:String>
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
-    <sys:String x:Key="Application_DataDirectory_ConfirmLabel">Ark Server Manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
+    <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
     <!--#endregion-->
 
     <!--#region Updater Window -->
-    <sys:String x:Key="AutoUpdater_Title">ARK Server Manager - Updating...</sys:String>
+    <sys:String x:Key="AutoUpdater_Title">Server Manager - Updating...</sys:String>
     <sys:String x:Key="AutoUpdater_Status">Status</sys:String>
     <sys:String x:Key="AutoUpdater_Status_CleaningSteamCmd">Cleaning up SteamCMD...</sys:String>
     <sys:String x:Key="AutoUpdater_Status_DownloadingSteamCmd">Downloading SteamCMD...</sys:String>
@@ -155,7 +155,7 @@
     <sys:String x:Key="ModDetails_Unsaved_Title">Unsaved Changed</sys:String>
     <sys:String x:Key="ModDetails_Unsaved_Label">You have made changes that have not been saved to the profile, if you continue your changes will be discarded. Do you want to continue?</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmTitle">Write Timestamp Confirmation</sys:String>
-    <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmLabel">You are about to update the mod version in the ASM last updated file. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmLabel">You are about to update the mod version in the server manager last updated file. Do you want to continue?</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_FailedTitle">Write Timestamp Error</sys:String>
     <sys:String x:Key="ModDetails_WriteTimestamp_FailedLabel">The mod folder could not be found or does not exist. Try downloading the mod and trying again.</sys:String>
     <sys:String x:Key="ModDetails_ModDetailFetchFailed_Label">Mod Details could not be fetched from steam.</sys:String>
@@ -252,7 +252,7 @@
     <!--#endregion-->
 
     <!--#region Version Feed Window -->
-    <sys:String x:Key="VersionFeedWindow_Title">ASM Version Details</sys:String>
+    <sys:String x:Key="VersionFeedWindow_Title">Server Manager Version Details</sys:String>
     <sys:String x:Key="VersionFeedWindow_Load_FailedTitle">Load Feed Error</sys:String>
 
     <sys:String x:Key="VersionFeedWindow_VersionFilterLabel">Version:</sys:String>
@@ -388,7 +388,7 @@
     <!--#endregion-->
 
     <!--#region GlobalSettings Window -->
-    <sys:String x:Key="GlobalSettings_Title">Ark Server Manager</sys:String>
+    <sys:String x:Key="GlobalSettings_Title">ARK: Survival Evolved™ Server Manager</sys:String>
     <sys:String x:Key="GlobalSettings_VersionLabel">Version:</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
@@ -404,18 +404,18 @@
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Custom Override Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Enable Crafting Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">If enabled, the crafting overrides will be managed by ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">If enabled, the crafting overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeLabel">Enable Stack Size Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeTooltip">If enabled, the stack size overrides will be managed by ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeTooltip">If enabled, the stack size overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerLabel">Enable Map Spawner Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">If enabled, the map spawner overrides will be managed by ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">If enabled, the map spawner overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Enable Supply Crate Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">If enabled, the supply crate overrides will be managed by ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">If enabled, the supply crate overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Enable PGM Ark Settings</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">If enabled, the PGM settings will be managed by ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">If enabled, the PGM settings will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Enable SotF Settings</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">If enabled, the SotF settings will be managed by ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">WARNING: While any of these options are disabled, ASM will not read or write the associated overrides settings. Re-enabling any of these options will cause ALL existing associated overrides to be removed from the config file.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">If enabled, the SotF settings will be managed by the server manager.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">WARNING: While any of these options are disabled, the server manager will not read or write the associated overrides settings. Re-enabling any of these options will cause ALL existing associated overrides to be removed from the config file.</sys:String>
     
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
@@ -608,21 +608,21 @@
     <!--#endregion-->
 
     <!--#region Main Window -->   
-    <sys:String x:Key="MainWindow_Title">ARK Server Manager</sys:String>
-    <sys:String x:Key="MainWindow_TitleWithAdmin">ARK Server Manager (Administrator)</sys:String>
-    <sys:String x:Key="MainWindow_ArkNameLabel">ARK Server Manager</sys:String>
+    <sys:String x:Key="MainWindow_Title">ARK: Survival Evolved™ Server Manager</sys:String>
+    <sys:String x:Key="MainWindow_TitleWithAdmin">ARK: Survival Evolved™ Server Manager (Administrator)</sys:String>
+    <sys:String x:Key="MainWindow_ArkNameLabel">ARK: Survival Evolved™ Server Manager</sys:String>
     <sys:String x:Key="MainWindow_NewProfileTooltip">Create a new server profile.</sys:String>
     <sys:String x:Key="MainWindow_CloseProfileTooltip">Delete the server profile.</sys:String>
     <sys:String x:Key="MainWindow_VersionLabel">Version:</sys:String>
     <sys:String x:Key="MainWindow_BetaVersionLabel">Beta Version:</sys:String>
-    <sys:String x:Key="MainWindow_MyIpLabel">My Public IP:</sys:String>
+    <sys:String x:Key="MainWindow_MyIpLabel">My Public IP</sys:String>
     <sys:String x:Key="MainWindow_MyIpTooltip">The IP address players use to connect to your server.</sys:String>
     <sys:String x:Key="MainWindow_MyIpError">Invalid IP address or hostname</sys:String>
     <sys:String x:Key="MainWindow_RefreshMyIpTooltip">Attempt to determine your current public IP</sys:String>
     <sys:String x:Key="MainWindow_DonateTooltip">Like what you see and want to show your appreciation?  Donate here!</sys:String>
     <sys:String x:Key="MainWindow_SteamCMDTooltip">Reinstall SteamCMD from the internet.</sys:String>
     <sys:String x:Key="MainWindow_OpenRCONTooltip">Open remote console</sys:String>
-    <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open ASM logs folder</sys:String>
+    <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open server manager logs folder</sys:String>
     <sys:String x:Key="MainWindow_OpenSettingsTooltip">Open Global Settings</sys:String>
     <sys:String x:Key="MainWindow_OpenGameDataTooltip">Open Game Data</sys:String>
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Open Plugins</sys:String>
@@ -659,7 +659,7 @@
     <sys:String x:Key="MainWindow_ProfileDelete_Title">Delete Profile {0}?</sys:String>
     <sys:String x:Key="MainWindow_ProfileDelete_Label">Are you sure you want to delete this profile?\r\n\r\nNOTE: This will only delete the profile, not the installation directory, save games or settings files contained therein.</sys:String>
     <sys:String x:Key="MainWindow_Donate_Title">Make a donation?</sys:String>
-    <sys:String x:Key="MainWindow_Donate_Label">Ark Server Manager is an open-source project, provided completely free of charge. You can still donate if you would like; however you are under no obligation. If you wish to donate, your browser will open to PayPal's website where you may donate as little or as much as you like. Would you like to donate now?</sys:String>
+    <sys:String x:Key="MainWindow_Donate_Label">This server manager is provided completely free of charge. You can still donate if you would like; however you are under no obligation. If you wish to donate, your browser will open to PayPal's website where you may donate as little or as much as you like. Would you like to donate now?</sys:String>
     <sys:String x:Key="MainWindow_Upgrade_Title">Upgrade available</sys:String>
     <sys:String x:Key="MainWindow_Upgrade_Label">Version {0} is now available. To upgrade the application must close. Close and upgrade now?</sys:String>
     <sys:String x:Key="MainWindow_OverlayMessage_UpgradeLabel">Starting Upgrade...</sys:String>
@@ -745,7 +745,7 @@
 
     <!--#region Server Settings - General Buttons -->
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Create Support Zip</sys:String>
-    <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Create a zip file that contains all the files necessary for use by the ASM support team to diagnose a problem.</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Create a zip file that contains all the files necessary for use by the server manager support team to diagnose a problem.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sync</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileTooltip">Copy settings from another profile to this profile.</sys:String>
     <sys:String x:Key="ServerSettings_ImportButtonLabel">Import</sys:String>
@@ -773,9 +773,9 @@
     <sys:String x:Key="ServerSettings_ResetSectionTooltip">Resets the section back to defaults.</sys:String>
 
     <sys:String x:Key="ServerSettings_AdminRequired_ErrorTitle">Needs Administrator Access</sys:String>
-    <sys:String x:Key="ServerSettings_AdminRequired_ErrorLabel">Automatic Management features of the Server Manager use administrator features of Windows to schedule tasks that will run even if the ASM is not running, without installing any separate processes or services. To do this, the Server Manager must run with administrator privileges. Restart the Server Manager and 'Run As Administrator' and you will be able to utilize these features.</sys:String>
+    <sys:String x:Key="ServerSettings_AdminRequired_ErrorLabel">Automatic Management features of the server manager use administrator features of Windows to schedule tasks that will run even if the server manager is not running, without installing any separate processes or services. To do this, the server manager must run with administrator privileges. Restart the server manager and 'Run As Administrator' and you will be able to utilize these features.</sys:String>
     <sys:String x:Key="ServerSettings_ArkAutoSettings_ErrorTitle">ARK Auto Settings</sys:String>
-    <sys:String x:Key="ServerSettings_ArkAutoSettings_ErrorLabel">The ARK automatic settings and ASM automatic settings cannot be enabled at the same time. They are similar features that cause problems for the other and if the ASM automatic features are enabled, the ARK features are disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_ArkAutoSettings_ErrorLabel">The ARK automatic settings and server manager automatic settings cannot be enabled at the same time. They are similar features that cause problems for the other and if the server manager automatic features are enabled, the ARK features are disabled.</sys:String>
     <sys:String x:Key="ServerSettings_UpgradeServer_RunningTitle">Server running</sys:String>
     <sys:String x:Key="ServerSettings_UpgradeServer_RunningLabel">The server must be stopped to upgrade. Do you wish to proceed?</sys:String>
     <sys:String x:Key="ServerSettings_UpgradeServer_FailedTitle">Server Update Error</sys:String>
@@ -890,9 +890,9 @@
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Cross-ARK Data Transfer ClusterId:</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group ARK servers together via Cross-ARK Data Transfer.</sys:String>
     <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonLabel">Create SymLink</sys:String>
-    <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonTooltip">Creates a cluster symbolic link for this server to the ASM clusters folder.</sys:String>
+    <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonTooltip">Creates a cluster symbolic link for this server to the server manager clusters folder.</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Cluster Directory Override</sys:String>
-    <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">If enabled, allows you to use a common cross-server storage location that functions between multiple servers running on the same machine. Uses the clusters directory in the ASM Data directory.</sys:String>
+    <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">If enabled, allows you to use a common cross-server storage location that functions between multiple servers running on the same machine. Uses the clusters directory in the server manager Data directory.</sys:String>
 
     <sys:String x:Key="ServerSettings_MapsAndModsLabel">Maps and Mods</sys:String>
     <sys:String x:Key="ServerSettings_MapsAndModsSOTFLabel">Survival of the Fittest enabled - Maps and Mods disabled</sys:String>
@@ -985,7 +985,7 @@
     <sys:String x:Key="ServerSettings_WebAlarmKeyTooltip">A key which is optional to use in the listening script, but required to have it in the text file.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Specifies the URL where your listening script is stored, waiting and ready to receive the post information by your game server.</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: ASM does not provide the Web Alarms functionaility. ASM just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionaility, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Server Log Options</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Reset all server log options to defaults.</sys:String>
@@ -1032,7 +1032,7 @@
     <!--#region Server Settings - Automatic Management -->
     <sys:String x:Key="ServerSettings_AutomaticManagementLabel">Automatic Management</sys:String>
     <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">Why can't I use this?</sys:String>
-    <sys:String x:Key="ServerSettings_ASMSettingLabel">Ark Server Manager Settings</sys:String>
+    <sys:String x:Key="ServerSettings_ASMSettingLabel">Server Manager Settings</sys:String>
     <sys:String x:Key="ServerSettings_AutoStartLabel">Auto-Start server on boot</sys:String>
     <sys:String x:Key="ServerSettings_AutoStartTooltip">Automatically start the server when the machine starts.</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Shutdown server at</sys:String>
@@ -1258,9 +1258,6 @@
     <sys:String x:Key="ServerSettings_EnableFlyerCarryTooltip">If enabled, permit flying dinosaurs to pick up other dinosaurs and players when mounted by a player in PvE.</sys:String>
     <sys:String x:Key="ServerSettings_XPMultiplierLabel">XP Multiplier:</sys:String>
     <sys:String x:Key="ServerSettings_XPMultiplierTooltip">Specifies the scaling factor for the experience received by players. Higher values increase XP amounts awarded for various actions; lower values decrease it.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxXPLabel">Max XP:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxXPTooltip">Set the maximum XP cap.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxXPUnits">xp</sys:String>
     <sys:String x:Key="ServerSettings_ResetMaxXPTooltip">Reset maximum XP Cap to official default</sys:String>
     <sys:String x:Key="ServerSettings_DamageLabel">Damage:</sys:String>
     <sys:String x:Key="ServerSettings_DamageTooltip">Specifies the scaling factor for the damage dealt with attacks. Higher values increase damage. Lower values decrease it.</sys:String>
@@ -1663,14 +1660,18 @@
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmLabel">Click 'Yes' to confirm you want to unselect all the engrams.</sys:String>
     <!--#endregion-->
 
-    <!--#region Server Settings - Custom Level Progressions -->
-    <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Custom Level Progressions</sys:String>
+    <!--#region Server Settings - Level Progressions -->
+    <sys:String x:Key="ServerSettings_LevelProgressionsLabel">Player and Dino Level Progressions</sys:String>
+    <sys:String x:Key="ServerSettings_MaxXPPlayerLabel">Player Max XP:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxXPPlayerTooltip">Set the maximum XP cap for the players.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxXPDinoLabel">Dino Max XP:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxXPDinoTooltip">Set the maximum XP cap for the dinos.</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and Other leveling and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsLabel">Enable Custom Level Progressions</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsTooltip">If enabled, enables player and dino level customizations.</sys:String>
     <sys:String x:Key="ServerSettings_CustomPlayerLevelsLabel">Custom Player Levels</sys:String>
     <sys:String x:Key="ServerSettings_DeleteAllLevelsTooltip">Delete all existing levels.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Reset all level customizations back to ASM defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Reset all level customizations back to server manager defaults.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToOfficialDefaultsTooltip">Reset all level customizations back to official defaults.</sys:String>
     <sys:String x:Key="ServerSettings_ImportLevelsTooltip">Import level customizations from CSV file.</sys:String>
     <sys:String x:Key="ServerSettings_ExportLevelsTooltip">Export level customizations to CSV file.</sys:String>
@@ -1972,7 +1973,7 @@
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerLabel">Containers</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryLabel">Entries</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_SaveTitle">Map Spawner Settings</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent ASM managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
 
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnLabel">Type</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnTooltip">Spawner Override Type</sys:String>
@@ -2004,7 +2005,7 @@
     <sys:String x:Key="ServerSettings_CraftingOverrides_ItemsLabel">Crafted Items</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_ResourcesLabel">Resource Items</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_SaveTitle">Crafting Override Settings</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent ASM managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_WarningLabel">NOTE: Changing the resources of a crafted item will require the Engram to be re-learnt. If the Engram is already known, a mindwipe tonic must be used so that it can be re-learnt.</sys:String>
 
     <sys:String x:Key="ServerSettings_CraftingOverrides_ItemClassColumnLabel">Crafted Item</sys:String>
@@ -2035,7 +2036,7 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntriesLabel">Item Set Entries</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemsLabel">Items</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveTitle">Supply Crate Override Settings</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent ASM managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_WarningLabel">WARNING: If you do not populate each grid properly, it could result in the Supply Crate not spawning into the world. Please ensure ALL sections are populated.</sys:String>
 
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_ClassColumnLabel">Supply Crate</sys:String>
@@ -2111,7 +2112,7 @@
     <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierTooltip">This is the global modifier to allow increasing or decreasing item stack sizes. NOTE: This only works for  items that are intended to stack.</sys:String>
     <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemsLabel">Stacked Items</sys:String>
     <sys:String x:Key="ServerSettings_StackSizeOverrides_SaveTitle">Stack Size Override Settings</sys:String>
-    <sys:String x:Key="ServerSettings_StackSizeOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent ASM managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
 
     <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemClassColumnLabel">Item</sys:String>
     <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemClassColumnTooltip">Item Class String</sys:String>

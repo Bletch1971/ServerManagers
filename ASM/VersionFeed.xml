@@ -5,7 +5,41 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-04T05:00:00Z</updated>
+  <updated>2020-04-05T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:E6A65DBC-9032-4CAF-99F4-82FCBD06507E</id>
+    <title>1.0.366 (1.0.366.3)</title>
+    <summary>1.0.366.3</summary>
+    <link href="" />
+    <updated>2020-04-05T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Difficulty Override - fixed bug that would clear the difficulty setting.</li>
+            <li>Server Settings - EnableCryopodNerf - fixed setting name so it now works.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - changed the min width to 1024 pixels.</li>
+            <li>Main Window - rearranged the header section and the buttons.</li>
+            <li>Profile Sync Window - windows is now resizable.</li>
+            <li>Slider control - changed the min width of the value field to be smaller.</li>
+            <li>Player/Dino Max XP Settings - moved these two settings to the Player and Dino Level Progression section.</li>
+            <li>pt-BR Translation file added. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:0C452408-BE29-4CBB-8BD0-AE25259B33A3</id>
