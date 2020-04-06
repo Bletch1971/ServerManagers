@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-05T02:00:00Z</updated>
+  <updated>2020-04-05T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:29CF912F-811B-4926-A237-2D32FC123571</id>
+    <title>1.0.26 (1.0.26.3)</title>
+    <summary>1.0.26.3</summary>
+    <link href="" />
+    <updated>2020-04-05T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Settings window - cleaded up a few slider controls.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:29CF912F-811B-4926-A237-2D32FC123571</id>
