@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:E797A3E2-5708-422A-808B-48DBA55B3FB0</id>
-    <title>1.0.27 (1.0.27.1)</title>
-    <summary>1.0.27.1</summary>
+    <title>1.1.27 (1.1.27.1)</title>
+    <summary>1.1.27.1</summary>
     <link href="" />
     <updated>2020-04-06T12:00:00Z</updated>
     <content type="xhtml">
@@ -21,7 +21,7 @@
           <ul>
             <li>Server Manager Profiles - Have changed the name of the profile files to be the profile id. This is to prevent profile name clashes.</li>
             <li>Server Manager Profiles - Have removed the config file backups in the profiles folder. These files were never used and a pain to maintain.</li>
-            <li>Server Manager Logging - All logged now uses the profile id as the folder/filenames.</li>
+            <li>Server Manager Logging - All logging now uses the profile id as the folder/filenames.</li>
           </ul>
         </p>
       </div>
