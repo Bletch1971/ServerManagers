@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-05T03:00:00Z</updated>
+  <updated>2020-04-06T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:EEE0C3FB-EC4D-4956-A743-D6DC14F679C8</id>
+    <title>1.0.366 (1.0.367.1)</title>
+    <summary>1.0.367.1</summary>
+    <link href="" />
+    <updated>2020-04-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dino Multipliers - Tamed/Add/Affinity - fixed a bug when setting some of these values to 1, will remove them from the config files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:E6A65DBC-9032-4CAF-99F4-82FCBD06507E</id>
