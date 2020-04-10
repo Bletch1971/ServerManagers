@@ -5,11 +5,49 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-06T00:00:00Z</updated>
+  <updated>2020-04-10T04:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:8C692EDA-2C5C-46BC-8AC4-DE351E8E9CF8</id>
+    <title>1.1.368 (1.1.368.4)</title>
+    <summary>1.1.368.4</summary>
+    <link href="" />
+    <updated>2020-04-010T04:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Settings - fixed the bug that keeps clearing the EnableAutoDestroyStructures setting.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Rules Section - added new CryopodNerfIncomingDamageMultPercent setting.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Manager Profiles - Have changed the name of the profile files to be the profile id. This is to prevent profile name clashes.</li>
+            <li>Server Manager Profiles - Have removed the config file backups in the profiles folder. These files were never used and a pain to maintain.</li>
+            <li>Server Manager Logging - All logging now uses the profile id as the folder/filenames.</li>
+            <li>Server Installation Folder - changed the underlying control so that it displays underscore characters.</li>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:EEE0C3FB-EC4D-4956-A743-D6DC14F679C8</id>
-    <title>1.0.366 (1.0.367.1)</title>
+    <title>1.0.367 (1.0.367.1)</title>
     <summary>1.0.367.1</summary>
     <link href="" />
     <updated>2020-04-06T00:00:00Z</updated>

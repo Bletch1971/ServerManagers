@@ -397,11 +397,13 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Data Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Backup Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyLabel">Steam WebApi Key:</sys:String>
-    <sys:String x:Key="GlobalSettings_SetLocationButtonLabel">Set Location...</sys:String>
+    <sys:String x:Key="GlobalSettings_SetLocationButtonLabel">...</sys:String>
     <sys:String x:Key="GlobalSettings_ClearButtonLabel">Clear</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyButtonLabel">Get WebApi Key...</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Help...</sys:String>
+    
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
+    
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Custom Override Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Enable Crafting Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">If enabled, the crafting overrides will be managed by the server manager.</sys:String>
@@ -428,12 +430,24 @@
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Dino Level Increase:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Output SteamCMD to the progress window</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">If enabled, the SteamCMD output will be shown in the progress window instead of the command window. NOTE: if enabled, this could cause your server and mods updates to fail.</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Validate profile on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">If enabled, when you manually start the server, a basic validation is performed on the server and mod files. NOTE: Will not be performed if Ark Mod Management enabled.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Perform server and mod update on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">If enabled, when you manually start the server, the server and mod files will be updated to the latest version. NOTE: Will not be performed if Ark Mod Management enabled.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">If enabled, the Steamcmd window will not be closed when finished. You will need to manually close it or type quit. Note: does not affect auto-update.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">The user name associated with the steam account.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">The password associated with the steam account.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authenticate...</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Output SteamCMD to the progress window</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">If enabled, the SteamCMD output will be shown in the progress window instead of the command window. NOTE: if enabled, this could cause your server and mods updates to fail.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use Anonymous Credentials with SteamCMD</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controls whether the anonymous user is used to download from SteamCMD.</sys:String>
+
     <sys:String x:Key="GlobalSettings_UpdateModSettingsLabel">Mod Update Settings</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateModWithServerLabel">Update mods when updating server</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateModWithServerTooltip">If enabled, the mods will be updated when the server is updated.</sys:String>
@@ -443,15 +457,6 @@
     <sys:String x:Key="GlobalSettings_ForceCopyModsTooltip">If enabled, the mod files will be copied to the server folder even if the server has the latest version. Enabling can fix mod corruption issues.</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Force mod file downloads when no steam information available</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">If enabled, the Steamcmd window will not be closed when finished. You will need to manually close it or type quit. Note: does not affect auto-update.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use Anonymous Credentials</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controls whether the anonymous user is used to download from SteamCMD.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Username:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">The user name associated with the steam account.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Password:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">The password associated with the steam account.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authenticate</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Workshop Cache Expiry</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh.</sys:String>
     <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
@@ -1214,10 +1219,12 @@
 
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Cryopod Nerf Duration</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duration</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">The amount of time, in seconds, that the damage adjustment will take effect for creatures released from a cryopod.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Cryopod Nerf Damage Multiplier</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the dameage done will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Outgoing Damage Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the damage done by the creature will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Incoming Damage Multiplier Percent</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Specifies the percentage increase to the incoming damage multiplier of a creature, after they have been released from a cryopod. Higher values means more incoming damage done to the creature (eg. 0.25 = 25% more damage).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
