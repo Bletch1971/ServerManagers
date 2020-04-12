@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-12T00:00:00Z</updated>
+  <updated>2020-04-12T01:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:63BC4246-3F95-4B06-99D3-C012D8B7BA0E</id>
+    <title>1.1.29 (1.1.29.1)</title>
+    <summary>1.1.29.1</summary>
+    <link href="" />
+    <updated>2020-04-12T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug that caused the server manager to crash when creating the server file watchers.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:5FEBCE52-E2B5-453F-BE87-A6D56E415E6C</id>
