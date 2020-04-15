@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-15T03:00:00Z</updated>
+  <updated>2020-04-15T04:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F42B9D18-0CBC-439F-8F28-5C8879E2202E</id>
+    <title>1.1.371 (1.1.371.4)</title>
+    <summary>1.1.371.4</summary>
+    <link href="" />
+    <updated>2020-04-15T04:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Windows Firewall Management - when you delete a profile it will now attempt to remove the firewall rules.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:A7565417-A4CC-49F8-BE2F-EED7A1267A10</id>
