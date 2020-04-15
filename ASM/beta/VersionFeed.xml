@@ -6,7 +6,7 @@
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
   <updated>2020-04-15T00:00:00Z</updated>
-  
+
   <entry>
     <id>urn:uuid:0E46C4E0-4E1D-41E2-9CA8-BCD52200B802</id>
     <title>1.1.371 (1.1.371.1)</title>
@@ -21,6 +21,11 @@
           <ul>
             <li>Deleting profiles - have added dispose call to prevent crash when updating server status.</li>
             <li>Deleting profiles - have added null check to dispose call to prevent crash when removing profile.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
           </ul>
         </p>
       </div>
