@@ -5,21 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-12T01:00:00Z</updated>
+  <updated>2020-04-15T00:00:00Z</updated>
   
   <entry>
-    <id>urn:uuid:76BFA606-96CE-4B87-85DA-CDA4F0083DF0</id>
-    <title>1.1.370 (1.1.370.1)</title>
-    <summary>1.1.370.1</summary>
+    <id>urn:uuid:0E46C4E0-4E1D-41E2-9CA8-BCD52200B802</id>
+    <title>1.1.371 (1.1.371.1)</title>
+    <summary>1.1.371.1</summary>
     <link href="" />
-    <updated>2020-04-12T01:00:00Z</updated>
+    <updated>2020-04-15T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fixed a bug that caused the server manager to crash when creating the server file watchers.</li>
+            <li>Deleting profiles - have added dispose call to prevent crash when updating server status.</li>
+            <li>Deleting profiles - have added null check to dispose call to prevent crash when removing profile.</li>
           </ul>
         </p>
       </div>
