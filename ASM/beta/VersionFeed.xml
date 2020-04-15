@@ -5,10 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-15T02:00:00Z</updated>
+  <updated>2020-04-15T03:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:0E46C4E0-4E1D-41E2-9CA8-BCD52200B802</id>
+    <id>urn:uuid:A7565417-A4CC-49F8-BE2F-EED7A1267A10</id>
+    <title>1.1.371 (1.1.371.3)</title>
+    <summary>1.1.371.3</summary>
+    <link href="" />
+    <updated>2020-04-15T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Windows Firewall Management - have replaced the command line code to create the firewall rules with a proper library to create them.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:250DDC89-26E5-4F04-A784-610719B656A6</id>
     <title>1.1.371 (1.1.371.2)</title>
     <summary>1.1.371.2</summary>
     <link href="" />
