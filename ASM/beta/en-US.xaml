@@ -1720,8 +1720,9 @@
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterExtension">*.csv</sys:String>
     <!--#endregion-->
 
-    <!--#region Server Settings - Custom GameUserSettings Details -->
-    <sys:String x:Key="ServerSettings_CustomSettingsLabel">Custom GameUserSettings Details</sys:String>
+    <!--#region Server Settings - Custom Config Settings -->
+    <sys:String x:Key="ServerSettings_CustomGameUserSettingsLabel">Custom GameUserSettings.ini Settings</sys:String>
+    <sys:String x:Key="ServerSettings_CustomGameSettingsLabel">Custom Game.ini Settings</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomSettingsSectionsLabel">Custom Sections</sys:String>
     <sys:String x:Key="ServerSettings_CustomSettingsSectionNameColumnLabel">Section Name</sys:String>
