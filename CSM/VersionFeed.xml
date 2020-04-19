@@ -5,7 +5,39 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-12T01:00:00Z</updated>
+  <updated>2020-04-19T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:518E4808-C54D-4FED-9E47-5777468E33BD</id>
+    <title>1.1.30 (1.1.30.5)</title>
+    <summary>1.1.30.5</summary>
+    <link href="" />
+    <updated>2020-04-19T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Deleting profiles - have added dispose call to prevent crash when updating server status.</li>
+            <li>Deleting profiles - have added null check to dispose call to prevent crash when removing profile.</li>
+            <li>Server Monitor Shortcut - fixed the shortcut creation, due to new server manager name.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added ToolTip to profile label and profile tab that shows the profile name and profile id.</li>
+            <li>Windows Firewall Management - have replaced the command line code to create the firewall rules with a proper library to create them.</li>
+            <li>Windows Firewall Management - when you delete a profile it will now attempt to remove the firewall rules.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:63BC4246-3F95-4B06-99D3-C012D8B7BA0E</id>
