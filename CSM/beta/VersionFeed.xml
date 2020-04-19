@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-15T04:00:00Z</updated>
+  <updated>2020-04-19T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:FAB830B4-D6EA-4BF4-967F-4FCD00DEBAE8</id>
+    <title>1.1.30 (1.1.30.5)</title>
+    <summary>1.1.30.5</summary>
+    <link href="" />
+    <updated>2020-04-19T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added ToolTip to profile label and profile tab that shows the profile name and profile id.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:4F0EE1E2-063D-4E83-B373-707998322B32</id>
