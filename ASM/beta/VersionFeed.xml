@@ -21,6 +21,11 @@
           <ul>
             <li>Setting Directory Permissions - Fixed bug that caused the directory permissions process to fail.</li>
           </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>pt-BR Translation file added. (thanks @bruno5011)</li>
+          </ul>
         </p>
       </div>
     </content>
