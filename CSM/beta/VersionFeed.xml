@@ -5,114 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-19T00:00:00Z</updated>
+  <updated>2020-04-20T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:FAB830B4-D6EA-4BF4-967F-4FCD00DEBAE8</id>
-    <title>1.1.30 (1.1.30.5)</title>
-    <summary>1.1.30.5</summary>
+    <id>urn:uuid:0AEF2443-7B40-41B9-9918-7C5C034912AC</id>
+    <title>1.1.31 (1.1.31.1)</title>
+    <summary>1.1.31.1</summary>
     <link href="" />
-    <updated>2020-04-19T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added ToolTip to profile label and profile tab that shows the profile name and profile id.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:4F0EE1E2-063D-4E83-B373-707998322B32</id>
-    <title>1.1.30 (1.1.30.4)</title>
-    <summary>1.1.30.4</summary>
-    <link href="" />
-    <updated>2020-04-15T04:00:00Z</updated>
+    <updated>2020-04-20T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Server Monitor Shortcut - fixed the shortcut creation, due to new server manager name.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:521C8A87-B401-47CC-91E5-6005619D1B91</id>
-    <title>1.1.30 (1.1.30.3)</title>
-    <summary>1.1.30.3</summary>
-    <link href="" />
-    <updated>2020-04-15T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Windows Firewall Management - when you delete a profile it will now attempt to remove the firewall rules.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:B21BC063-0496-4930-82C6-D80B956474B3</id>
-    <title>1.1.30 (1.1.30.2)</title>
-    <summary>1.1.30.2</summary>
-    <link href="" />
-    <updated>2020-04-15T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Windows Firewall Management - have replaced the command line code to create the firewall rules with a proper library to create them.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:518E4808-C54D-4FED-9E47-5777468E33BD</id>
-    <title>1.1.30 (1.1.30.1)</title>
-    <summary>1.1.30.1</summary>
-    <link href="" />
-    <updated>2020-04-15T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Deleting profiles - have added dispose call to prevent crash when updating server status.</li>
-            <li>Deleting profiles - have added null check to dispose call to prevent crash when removing profile.</li>
+            <li>Setting Directory Permissions - Fixed bug that caused the directory permissions process to fail.</li>
           </ul>
         </p>
       </div>
