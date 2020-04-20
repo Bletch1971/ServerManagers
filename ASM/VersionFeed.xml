@@ -5,7 +5,35 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-04-19T00:00:00Z</updated>
+  <updated>2020-04-20T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:30E4BD56-FC1D-4F7B-AA45-8EF907711150</id>
+    <title>1.1.372 (1.1.372.1)</title>
+    <summary>1.1.372.1</summary>
+    <link href="" />
+    <updated>2020-04-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Setting Directory Permissions - Fixed bug that caused the directory permissions process to fail.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>pt-BR Translation file added. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:0E46C4E0-4E1D-41E2-9CA8-BCD52200B802</id>
