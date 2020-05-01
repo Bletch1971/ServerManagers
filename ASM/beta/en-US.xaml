@@ -1056,8 +1056,6 @@
 
     <!--#region Server Settings - Rules -->
     <sys:String x:Key="ServerSettings_RulesLabel">Rules</sys:String>
-    <sys:String x:Key="ServerSettings_TribeNameChangeCooldownLabel">Tribe Name Change Cooldown</sys:String>
-    <sys:String x:Key="ServerSettings_TribeNameChangeCooldownTooltip">Cooldown added to tribe's changing their name.</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Enable Hardcore Mode</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Enables hardcore mode (players can not respawn, a new character must be created).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Enable PvP</sys:String>
@@ -1086,9 +1084,6 @@
     <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsTooltip">If enabled, will allow the player to have unlimited respecs using the mindwipe tonic.</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsLabel">Allow Platform Saddle Multi Floors</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">If enabled, will allow multiple platform floors on rafts and saddle platforms.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeLabel">Max Players in Tribe:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeTooltip">Set to 0 for unlimited player in tribe, set to a number > 0 to act as a limit.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeUnits">players</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Enable Difficulty Override</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">If enabled, this will allow the max level of creatures in the world to be changed.</sys:String>
@@ -1160,17 +1155,24 @@
     <sys:String x:Key="ServerSettings_StopTimeLabel">Stop Time:</sys:String>
     <sys:String x:Key="ServerSettings_StopTimeTooltip">The stop time in hours and minutes from midnight to disable PvE mode.</sys:String>
 
-    <sys:String x:Key="ServerSettings_TribeWarfareLabel">PvE "Tribe Warfare" options</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTribeWarfareLabel">Allow Tribe Warfare</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTribeWarfareTooltip">If enabled, capability for tribes to officially declare war on each other for mutually-agreed-upon period of time.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowCancelTribeWarfareLabel">Allow Cancelling Tribe Warfare</sys:String>
-    <sys:String x:Key="ServerSettings_AllowCancelTribeWarfareTooltip">If enabled, tribes are able to cancel an agreed-upon war before it has actually started.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeLabel">Max Players in Tribe:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeTooltip">Set to 0 for unlimited player in tribe, set to a number > 0 to act as a limit.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeUnits">players</sys:String>
+    <sys:String x:Key="ServerSettings_TribeNameChangeCooldownLabel">Tribe Name Change Cooldown</sys:String>
+    <sys:String x:Key="ServerSettings_TribeNameChangeCooldownTooltip">Cooldown added to tribe's changing their name.</sys:String>
+    <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownLabel">Tribe Name Reuse Cooldown</sys:String>
+    <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownTooltip">Locks a tribe slot so when a tribe member leaves, the slot cannot be reused until the cooldown expires. Set to 0 to disable the cooldown.</sys:String>
     <sys:String x:Key="ServerSettings_AllowTribeAlliancesLabel">Allow Tribe Alliances</sys:String>
     <sys:String x:Key="ServerSettings_AllowTribeAlliancesTooltip">If enabled, players are able to create alliances with other tribes.</sys:String>
     <sys:String x:Key="ServerSettings_MaxAlliancesPerTribeLabel">Max Alliances Per Tribe</sys:String>
     <sys:String x:Key="ServerSettings_MaxAlliancesPerTribeTooltip">The maximum number of alliances allowed for each tribe.</sys:String>
     <sys:String x:Key="ServerSettings_MaxTribesPerAllianceLabel">Max Tribes Per Alliance</sys:String>
     <sys:String x:Key="ServerSettings_MaxTribesPerAllianceTooltip">The maximum number of tribes allowed in each alliance.</sys:String>
+    <sys:String x:Key="ServerSettings_TribeWarfareLabel">PvE "Tribe Warfare" options</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTribeWarfareLabel">Allow Tribe Warfare</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTribeWarfareTooltip">If enabled, capability for tribes to officially declare war on each other for mutually-agreed-upon period of time.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCancelTribeWarfareLabel">Allow Cancelling Tribe Warfare</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCancelTribeWarfareTooltip">If enabled, tribes are able to cancel an agreed-upon war before it has actually started.</sys:String>
 
     <sys:String x:Key="ServerSettings_AllowCustomRecipesLabel">Allow Custom Recipes</sys:String>
     <sys:String x:Key="ServerSettings_AllowCustomRecipesTooltip">If enabled, players are able to use the Custom RP-oriented Recipe/Cooking System (including Skill-Based results).</sys:String>
