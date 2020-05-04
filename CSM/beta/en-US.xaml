@@ -216,21 +216,20 @@
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">Profile Sync - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">Load Profile Sync Error</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_Title">Process Profile Sync</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_Label">You are about the overwrite the selected section settings of your current profile with those from the selected profile. You will not be able to undo, do you want to continue?</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected section settings of the selected profiles with those of the current profile. You will not be able to undo, do you want to continue?</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">Process Profile Sync Error</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_NoProfileSelectedLabel">You have not selected a profile to copy from.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">You have not selected any profiles to copy settings to.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">You have not selected any sections to copy settings from.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the selected profile to your current profile.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">Select All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">Unselect All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">Process</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_CloseButtonLabel">Close</sys:String>
 
-    <sys:String x:Key="ProfileSyncWindow_InformationLabel">This form will copy the selected settings from the selected profile to the current profile.</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_ProfileFilterLabel">Profile to Copy From:</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_ProfileFilterTooltip">Select the profile to copy the settings from.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_SyncInformationLabel">This form will copy the selected settings to the selected profiles.</sys:String>
 
     <sys:String x:Key="ProfileSyncWindow_SelectedColumnLabel">Copy</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_ProfileNameColumnLabel">Profile</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SectionNameColumnLabel">Section</sys:String>
     <!--#endregion-->
 
