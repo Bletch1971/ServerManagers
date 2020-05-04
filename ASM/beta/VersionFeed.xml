@@ -5,7 +5,31 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-05-01T01:00:00Z</updated>
+  <updated>2020-05-03T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:D351B78C-56BD-4BC8-8B5D-8A3723CE657F</id>
+    <title>1.1.374 (1.1.374.3)</title>
+    <summary>1.1.374.3</summary>
+    <link href="" />
+    <updated>2020-05-03T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Profile Sync Window - have changed the way this window works. You now open on the profile you want to copy from, and you can now select one or more profiles to copy to.</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:36C3D673-BE76-4548-90EE-D52B3BB1758D</id>
@@ -19,7 +43,7 @@
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Global Settings - added new alert message for Outdated mods.</li>
+            <li>Global Settings - added new alert message for Outdated mods to the discord plugin.</li>
             <li>Out of Date Mods - added new alert message that is sent when the server manager detects a mod is outdated.</li>
           </ul>
         </p>
