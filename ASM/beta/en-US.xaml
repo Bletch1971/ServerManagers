@@ -753,7 +753,7 @@
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Create Support Zip</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Create a zip file that contains all the files necessary for use by the server manager support team to diagnose a problem.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sync</sys:String>
-    <sys:String x:Key="ServerSettings_SyncProfileTooltip">Copy settings from another profile to this profile.</sys:String>
+    <sys:String x:Key="ServerSettings_SyncProfileButtonTooltip">Copy settings from this profile to one or more profiles.</sys:String>
     <sys:String x:Key="ServerSettings_ImportButtonLabel">Import</sys:String>
     <sys:String x:Key="ServerSettings_ImportButtonTooltip">Load an existing profile, or import one directly from an existing server.</sys:String>
     <sys:String x:Key="ServerSettings_SaveButtonLabel">Save</sys:String>
