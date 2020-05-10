@@ -458,6 +458,7 @@
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Workshop Cache Expiry</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">How often to perform the server backup, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
@@ -466,7 +467,9 @@
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">How old the backup file must be to be deleted in days.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">WorldSave Message:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">This message will be displayed upon backup when the world is about to be saved.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Enable Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Game Server</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryLabel">Cache Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTooltip">This is where the automatic updater will cache copies of the server files.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateIntervalLabel">Update Interval:</sys:String>
@@ -714,7 +717,7 @@
     <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">The name for the server profile.  This is not the public name users will see in Ark.  For that, set the 'Server Name' field.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Installed Version:</sys:String>
-    <sys:String x:Key="ServerSettings_InstalledVersionTooltip">The version of the Ark server that is currently downloaded (NOTE: will not update until the server is started).</sys:String>
+    <sys:String x:Key="ServerSettings_InstalledVersionTooltip">The version of the server that is currently downloaded (NOTE: will not update until the server is started).</sys:String>
     <sys:String x:Key="ServerSettings_OutOfDateModsLabel">Outdated Mods:</sys:String>
     <sys:String x:Key="ServerSettings_OutOfDateModsTooltip">The number of mod that are currently out of date.</sys:String>
     <sys:String x:Key="ServerSettings_OutOfDateModsButtonTooltip">Perform a mod check.</sys:String>
@@ -722,23 +725,23 @@
     <sys:String x:Key="ServerSettings_OpenLogFolderTooltip">Open the server's logs folder.</sys:String>
     <sys:String x:Key="ServerSettings_ValidateProfileTooltip">Performs a basic profile validation on the server and mod files.</sys:String>
     <sys:String x:Key="ServerSettings_AvailableVersionLabel">Latest Available Version:</sys:String>
-    <sys:String x:Key="ServerSettings_AvailableVersionTooltip">The version of the Ark server that is currently available for download.</sys:String>
-    <sys:String x:Key="ServerSettings_AvailableVersionRefreshTooltip">Refresh the latest version of the Ark server that is currently available to download.</sys:String>
+    <sys:String x:Key="ServerSettings_AvailableVersionTooltip">The version of the server that is currently available for download.</sys:String>
+    <sys:String x:Key="ServerSettings_AvailableVersionRefreshTooltip">Refresh the latest version of the server that is currently available to download.</sys:String>
     <sys:String x:Key="ServerSettings_InstallLocationLabel">Installation Location:</sys:String>
-    <sys:String x:Key="ServerSettings_InstallLocationTooltip">The folder that contains the Ark server game and configuration files.</sys:String>
+    <sys:String x:Key="ServerSettings_InstallLocationTooltip">The folder that contains the server game and configuration files.</sys:String>
     <sys:String x:Key="ServerSettings_OpenServerFolderTooltip">Open the server's installation folder.</sys:String>
     <sys:String x:Key="ServerSettings_StatusLabel">Status:</sys:String>
-    <sys:String x:Key="ServerSettings_StatusTooltip">The status of the Ark server on your local network.</sys:String>
+    <sys:String x:Key="ServerSettings_StatusTooltip">The status of the server on your local network.</sys:String>
     <sys:String x:Key="ServerSettings_LastStartedLabel">Last Start Time:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">Availability:</sys:String>
-    <sys:String x:Key="ServerSettings_AvailabilityTooltip">The status of the Ark server on Steam.</sys:String>
+    <sys:String x:Key="ServerSettings_AvailabilityTooltip">The status of the server on Steam.</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Unknown">Unknown</sys:String>
     <sys:String x:Key="ServerSettings_Availability_SetPublicIP">Set Public IP</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Unavailable">Unavailable</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Waiting">Waiting for publication</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Available">Available</sys:String>
     <sys:String x:Key="ServerSettings_PlayersLabel">Players:</sys:String>
-    <sys:String x:Key="ServerSettings_PlayersTooltip">The current number of players connected to the Ark server.</sys:String>
+    <sys:String x:Key="ServerSettings_PlayersTooltip">The current number of players connected to the server.</sys:String>
 
     <sys:String x:Key="ServerSettings_RuntimeStatusInitializingLabel">Initializing</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusRunningLabel">Running</sys:String>
@@ -759,21 +762,21 @@
     <sys:String x:Key="ServerSettings_SaveButtonLabel">Save</sys:String>
     <sys:String x:Key="ServerSettings_SaveButtonTooltip">Save the current profile and write the .INI files for the server.</sys:String>
     <sys:String x:Key="ServerSettings_StopButtonLabel">Stop</sys:String>
-    <sys:String x:Key="ServerSettings_StopButtonTooltip">Stop the Ark server.</sys:String>
+    <sys:String x:Key="ServerSettings_StopButtonTooltip">Stop the server.</sys:String>
     <sys:String x:Key="ServerSettings_StartButtonLabel">Start</sys:String>
-    <sys:String x:Key="ServerSettings_StartButtonTooltip">Start the Ark server.</sys:String>
+    <sys:String x:Key="ServerSettings_StartButtonTooltip">Start the server.</sys:String>
     <sys:String x:Key="ServerSettings_RCONButtonLabel">RCON</sys:String>
     <sys:String x:Key="ServerSettings_RCONButtonTooltip">Open the RCON window.</sys:String>
     <sys:String x:Key="ServerSettings_PlayerListButtonLabel">Players</sys:String>
     <sys:String x:Key="ServerSettings_PlayerListButtonTooltip">Open the Player List window.</sys:String>
     <sys:String x:Key="ServerSettings_UpgradeButtonLabel">Upgrade / Verify</sys:String>
-    <sys:String x:Key="ServerSettings_UpgradeButtonTooltip">Upgrade to the latest version of the Ark server that is currently available to download. If there is no update then it will verify your server files</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeButtonTooltip">Upgrade to the latest version of the server that is currently available to download. If there is no update then it will verify your server files</sys:String>
     <sys:String x:Key="ServerSettings_InstallButtonLabel">Install</sys:String>
-    <sys:String x:Key="ServerSettings_InstallButtonTooltip">Install the latest version of the Ark server.</sys:String>
+    <sys:String x:Key="ServerSettings_InstallButtonTooltip">Install the latest version of the server.</sys:String>
     <sys:String x:Key="ServerSettings_CancelUpgradeButtonLabel">Cancel</sys:String>
-    <sys:String x:Key="ServerSettings_CancelUpgradeButtonTooltip">Cancel the Ark server upgrade.</sys:String>
+    <sys:String x:Key="ServerSettings_CancelUpgradeButtonTooltip">Cancel the server upgrade.</sys:String>
     <sys:String x:Key="ServerSettings_SetLocationButtonLabel">Set Location...</sys:String>
-    <sys:String x:Key="ServerSettings_SetLocationButtonTooltip">Update the folder that contains the Ark server game and configuration files.</sys:String>
+    <sys:String x:Key="ServerSettings_SetLocationButtonTooltip">Update the folder that contains the server game and configuration files.</sys:String>
     <sys:String x:Key="ServerSettings_ValidateButtonLabel">Validate</sys:String>
     <sys:String x:Key="ServerSettings_ValidateButtonTooltip">Verify the server content against the Steam version.</sys:String>
     <sys:String x:Key="ServerSettings_ResetSectionTooltip">Resets the section back to defaults.</sys:String>
@@ -831,7 +834,7 @@
     <sys:String x:Key="ServerSettings_AdministrationSectionLabel">Administration</sys:String>
     <sys:String x:Key="ServerSettings_NameAndPasswordsLabel">Name and Passwords</sys:String>
     <sys:String x:Key="ServerSettings_ServerNameLabel">Server Name:</sys:String>
-    <sys:String x:Key="ServerSettings_ServerNameTooltip">The public name of the Ark server, as seen in Steam and Ark.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerNameTooltip">The public name of the server, as seen in Steam and in the game.</sys:String>
     <sys:String x:Key="ServerSettings_ServerNameLengthLabel">Length:</sys:String>
     <sys:String x:Key="ServerSettings_ServerPasswordLabel">Server Password:</sys:String>
     <sys:String x:Key="ServerSettings_ServerPasswordTooltip">The password users must enter in order to access the server. If this is set, only people who know the password can access your server.</sys:String>
@@ -894,7 +897,7 @@
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Optional)</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Sets the directory name (underneath the servers Saved folder) to store the world, player and tribe files.</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Cross-ARK Data Transfer ClusterId:</sys:String>
-    <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group ARK servers together via Cross-ARK Data Transfer.</sys:String>
+    <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group the servers together via Cross-ARK Data Transfer.</sys:String>
     <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonLabel">Create SymLink</sys:String>
     <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonTooltip">Creates a cluster symbolic link for this server to the server manager clusters folder.</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Cluster Directory Override</sys:String>
@@ -1150,7 +1153,7 @@
     <sys:String x:Key="ServerSettings_PvEScheduleLabel">PvE Schedule</sys:String>
     <sys:String x:Key="ServerSettings_PvEScheduleTooltip">If enabled, allows switching between PvE and PvP at pre-specified in-game times or pre-specified real-world times.</sys:String>
     <sys:String x:Key="ServerSettings_UseServerTimeLabel">Use Server Time</sys:String>
-    <sys:String x:Key="ServerSettings_UseServerTimeTooltip">If enabled, the schedule will use the time on the Ark server machine; otherwise it uses the in-game time.</sys:String>
+    <sys:String x:Key="ServerSettings_UseServerTimeTooltip">If enabled, the schedule will use the time on the server machine; otherwise it uses the in-game time.</sys:String>
     <sys:String x:Key="ServerSettings_StartTimeLabel">Start Time:</sys:String>
     <sys:String x:Key="ServerSettings_StartTimeTooltip">The start time in hours and minutes from midnight to enable PvE mode.</sys:String>
     <sys:String x:Key="ServerSettings_StopTimeLabel">Stop Time:</sys:String>
