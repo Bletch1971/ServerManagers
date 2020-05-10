@@ -651,6 +651,7 @@
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Enable Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Game Server</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryLabel">Cache Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTooltip">This is where the automatic updater will cache copies of the server files.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateIntervalLabel">Update Interval:</sys:String>
