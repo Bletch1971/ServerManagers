@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-05-10T00:00:00Z</updated>
+  <updated>2020-05-14T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:81EA1E3C-4BDD-4923-81BE-0C2C856F90A2</id>
+    <title>1.1.374 (1.1.374.7)</title>
+    <summary>1.1.374.7</summary>
+    <link href="" />
+    <updated>2020-05-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Sync Window - after a profile has been updated, the profile is now saved.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:808992C2-61ED-49F4-8B62-24857B1CE39D</id>
