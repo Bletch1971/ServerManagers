@@ -216,21 +216,20 @@
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">Profile Sync - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">Load Profile Sync Error</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_Title">Process Profile Sync</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_Label">You are about the overwrite the selected section settings of your current profile with those from the selected profile. You will not be able to undo, do you want to continue?</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected section settings of the selected profiles with those of the current profile. You will not be able to undo, do you want to continue?</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">Process Profile Sync Error</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_NoProfileSelectedLabel">You have not selected a profile to copy from.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">You have not selected any profiles to copy settings to.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">You have not selected any sections to copy settings from.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the selected profile to your current profile.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">Select All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">Unselect All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">Process</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_CloseButtonLabel">Close</sys:String>
 
-    <sys:String x:Key="ProfileSyncWindow_InformationLabel">This form will copy the selected settings from the selected profile to the current profile.</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_ProfileFilterLabel">Profile to Copy From:</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_ProfileFilterTooltip">Select the profile to copy the settings from.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_SyncInformationLabel">This form will copy the selected settings to the selected profiles.</sys:String>
 
     <sys:String x:Key="ProfileSyncWindow_SelectedColumnLabel">Copy</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_ProfileNameColumnLabel">Profile</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SectionNameColumnLabel">Section</sys:String>
     <!--#endregion-->
 
@@ -652,6 +651,7 @@
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Enable Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Game Server</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryLabel">Cache Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTooltip">This is where the automatic updater will cache copies of the server files.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateIntervalLabel">Update Interval:</sys:String>
@@ -788,6 +788,8 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">This message will be displayed when the game server has been updated.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Server Status Change:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">This message will be displayed when the status of the server changes.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mod Update Detected:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Creatures Warning:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild creature wipe is scheduled.</sys:String>
     <!--#endregion-->
@@ -833,7 +835,7 @@
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Create Support Zip</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Create a zip file that contains all the files necessary for use by the server manager support team to diagnose a problem.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sync</sys:String>
-    <sys:String x:Key="ServerSettings_SyncProfileTooltip">Copy settings from another profile to this profile.</sys:String>
+    <sys:String x:Key="ServerSettings_SyncProfileButtonTooltip">Copy settings from this profile to one or more profiles.</sys:String>
     <sys:String x:Key="ServerSettings_ImportButtonLabel">Import</sys:String>
     <sys:String x:Key="ServerSettings_ImportButtonTooltip">Load an existing profile, or import one directly from an existing server.</sys:String>
     <sys:String x:Key="ServerSettings_SaveButtonLabel">Save</sys:String>

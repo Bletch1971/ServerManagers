@@ -5,7 +5,41 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-04-21T00:00:00Z</updated>
+  <updated>2020-05-14T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F31488FF-5B1F-4484-A9C0-DE9AA1DB8282</id>
+    <title>1.1.33 (1.1.33.7)</title>
+    <summary>1.1.33.7</summary>
+    <link href="" />
+    <updated>2020-05-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Removed ProfileToolTip from profile file.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - added new alert message for Outdated mods to the discord plugin.</li>
+            <li>Out of Date Mods - added new alert message that is sent when the server manager detects a mod is outdated.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Profile Sync Window - have changed the way this window works. You now open on the profile you want to copy from, and you can now select one or more profiles to copy to.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:5ADD1255-C89E-4DEF-934A-03F129CBE779</id>
