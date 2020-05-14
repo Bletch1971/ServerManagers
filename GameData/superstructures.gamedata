@@ -1,0 +1,6113 @@
+{
+  "Application": "ark",
+  "Version": "1.1.0",
+  "Created": "2019-08-07T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+      {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ShieldPost_C",
+      "Description": "SS Shield Post",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_CryoFridge_SS_C",
+      "Description": "SS Cryofridge",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 61,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AirConditionerPlus_C",
+      "Description": "SS Air Conditioner",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AnimalTender_C",
+      "Description": "SS Animal Tender",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoCrafter_C",
+      "Description": "SS Auto Crafter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_C",
+      "Description": "SS Auto Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Ballista_C",
+      "Description": "SS Ballista Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Cannon_C",
+      "Description": "SS Cannon Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Flame_C",
+      "Description": "SS Flame Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Heavy_C",
+      "Description": "SS Heavy Auto Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Minigun_C",
+      "Description": "SS Minigun Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Rocket_C",
+      "Description": "SS Rocket Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_Tranq_C",
+      "Description": "SS Tranq Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurretPlant_C",
+      "Description": "SS Plant Species X Seed",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_AutoTurretTek_C",
+      "Description": "SS Tek Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 7,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BedPlus_C",
+      "Description": "SS Simple Bed",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BeeHivePlus_C",
+      "Description": "SS Domesticated Bee Hive",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BeerBarrelPlus_C",
+      "Description": "SS Beer Barrel",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BlueprintMaker_C",
+      "Description": "SS Blueprint Maker",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 19,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BookshelfPlus_C",
+      "Description": "SS Bookshelf",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BunkBedPlus_C",
+      "Description": "SS Bunk Bed",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 2,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CampfirePlus_C",
+      "Description": "SS Campfire ",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Catwalk_Glass_C",
+      "Description": "SS Glass Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Catwalk_Metal_C",
+      "Description": "SS Metal Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Catwalk_Tek_C",
+      "Description": "SS Tek Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Catwalk_Wood_C",
+      "Description": "SS Wood Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Adobe_C",
+      "Description": "SS Adobe Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Glass_C",
+      "Description": "SS Glass Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 42,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Greenhouse_C",
+      "Description": "SS Greenhouse Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Metal_C",
+      "Description": "SS Metal Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Repulser_C",
+      "Description": "SS Repulser Plate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Stone_C",
+      "Description": "SS Stone Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ceiling_Tek_C",
+      "Description": "SS Tek Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ceiling_TekGlass_C",
+      "Description": "SS Tek Glass Ceiling",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_TekElevator_C",
+      "Description": "SS Tek Elevator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Thatch_C",
+      "Description": "SS Thatch Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ceiling_Wood_C",
+      "Description": "SS Wood Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ChargeInjector_C",
+      "Description": "SS Charge Injector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChargeStation_C",
+      "Description": "SS Charge Station",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChemBenchPlus_C",
+      "Description": "SS Chemistry Bench",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_CloningChamberPlus_C",
+      "Description": "SS Cloning Chamber",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CommandTool_C",
+      "Description": "SS Command Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CompostBinPlus_C",
+      "Description": "SS Compost Bin",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Converter_C",
+      "Description": "SS Converter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 8,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CookingPotPlus_C",
+      "Description": "SS Cooking Pot",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_Large_C",
+      "Description": "SS Large Crop Plot",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_Medium_C",
+      "Description": "SS Medium Crop Plot",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_SeamlessSquare_C",
+      "Description": "SS Seamless Crop Square",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_SeamlessTriangle_C",
+      "Description": "SS Seamless Crop Triangle",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 10,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CropPlotPlus_Small_C",
+      "Description": "SS Small Crop Plot",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 95,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CrystalCracker_C",
+      "Description": "SS Crystal Cracker",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DedicatedStorageSP_C",
+      "Description": "SS Dedicated Storage",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DedicatedStorage_Intake_C",
+      "Description": "SS Dedicated Storage Intake",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DemoGun_C",
+      "Description": "SS Demo Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Adobe_C",
+      "Description": "SS Adobe Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Glass_C",
+      "Description": "SS Glass Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Greenhouse_C",
+      "Description": "SS Greenhouse Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Metal_C",
+      "Description": "SS Metal Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Stone_C",
+      "Description": "SS Reinforced Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Door_Tek_C",
+      "Description": "SS Tek Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Thatch_C",
+      "Description": "SS Thatch Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Door_Underwater_C",
+      "Description": "SS Vacuum Compartment Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Door_Wood_C",
+      "Description": "SS Wood Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Adobe_C",
+      "Description": "SS Adobe Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Glass_C",
+      "Description": "SS Glass Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Greenhouse_C",
+      "Description": "SS Greenhouse Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Metal_C",
+      "Description": "SS Metal Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Stone_C",
+      "Description": "SS Stone Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Doorframe_Tek_C",
+      "Description": "SS Tek Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Thatch_C",
+      "Description": "SS Thatch Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Doorframe_Wood_C",
+      "Description": "SS Wood Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_AdobeSP_C",
+      "Description": "SS Adobe Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Glass_C",
+      "Description": "SS Glass Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_GreenhouseSP_C",
+      "Description": "SS Greenhouse Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_MetalSP_C",
+      "Description": "SS Metal Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_StoneSP_C",
+      "Description": "SS Reinforced Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DoubleDoor_TekSP_C",
+      "Description": "SS Tek Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_WoodSP_C",
+      "Description": "SS Wood Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_AdobeSP_C",
+      "Description": "SS Adobe Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Glass_C",
+      "Description": "SS Glass Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_GreenhouseSP_C",
+      "Description": "SS Greenhouse Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_MetalSP_C",
+      "Description": "SS Metal Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_StoneSP_C",
+      "Description": "SS Stone Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DoubleDoorframe_TekSP_C",
+      "Description": "SS Tek Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_WoodSP_C",
+      "Description": "SS Wood Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 95,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DroneTerminal_C",
+      "Description": "SS Drone Terminal",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DyeStation_C",
+      "Description": "SS Dyeria",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Adobe_C",
+      "Description": "SS Dynamic Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Metal_C",
+      "Description": "SS Dynamic Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Stone_C",
+      "Description": "SS Dynamic Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_DynamicPillar_Tek_C",
+      "Description": "SS Dynamic Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DynamicPillar_Wood_C",
+      "Description": "SS Dynamic Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElectricalOutlet_C",
+      "Description": "SS Electrical Outlet",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ElementCatalyzer_C",
+      "Description": "SS Element Catalyzer",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorCallButton_C",
+      "Description": "SS Elevator Call Button",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 73,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorPlatform_Large_C",
+      "Description": "SS Large Elevator Platform",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 72,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorPlatform_Medium_C",
+      "Description": "SS Medium Elevator Platform",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorPlatform_Small_C",
+      "Description": "SS Small Elevator Platform",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElevatorTrack_Metal_C",
+      "Description": "SS Small Elevator Track",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EuthanasiaGun_C",
+      "Description": "SS Euthanasia Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FabricatorPlus_C",
+      "Description": "SS Fabricator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Farmer_C",
+      "Description": "SS Farmer",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FeedingTroughPlus_C",
+      "Description": "SS Feeding Trough",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Adobe_C",
+      "Description": "SS Adobe Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Metal_C",
+      "Description": "SS Metal Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Stone_C",
+      "Description": "SS Stone Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_FenceFoundation_Tek_C",
+      "Description": "SS Tek Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceFoundation_Wood_C",
+      "Description": "SS Wood Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_AdobeSP_C",
+      "Description": "SS Adobe Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_MetalSP_C",
+      "Description": "SS Metal Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_StoneSP_C",
+      "Description": "SS Stone Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_FenceSupport_TekSP_C",
+      "Description": "SS Tek Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FenceSupport_WoodSP_C",
+      "Description": "SS Wood Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 28,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FireplacePlus_C",
+      "Description": "SS Stone Fireplace",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ForgePlus_C",
+      "Description": "SS Refining Forge",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Adobe_C",
+      "Description": "SS Adobe Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Glass_C",
+      "Description": "SS Glass Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Metal_C",
+      "Description": "SS Metal Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Stone_C",
+      "Description": "SS Stone Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Foundation_Tek_C",
+      "Description": "SS Tek Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Thatch_C",
+      "Description": "SS Thatch Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Foundation_Wood_C",
+      "Description": "SS Wood Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FridgePlus_C",
+      "Description": "SS Refrigerator",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FridgeTek_C",
+      "Description": "SS Tek Refrigerator",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 85,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GachaGavager_C",
+      "Description": "SS Gacha Gavager",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gardener_C",
+      "Description": "SS Gardener",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GasCollectorTek_C",
+      "Description": "SS Tek Gas Collector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Adobe_C",
+      "Description": "SS Adobe Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Dynamic_C",
+      "Description": "SS Dynamic Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Glass_C",
+      "Description": "SS Glass Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Metal_C",
+      "Description": "SS Metal Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Stone_C",
+      "Description": "SS Reinforced Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Gate_Tek_C",
+      "Description": "SS Tek Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gate_Wood_C",
+      "Description": "SS Wood Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Adobe_C",
+      "Description": "SS Adobe Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Dynamic_C",
+      "Description": "SS Dynamic Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Metal_C",
+      "Description": "SS Metal Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Stone_C",
+      "Description": "SS Stone Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Gateway_Tek_C",
+      "Description": "SS Tek Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gateway_Wood_C",
+      "Description": "SS Wood Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Generator_C",
+      "Description": "SS Electrical Generator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_GeneratorTek_C",
+      "Description": "SS Tek Generator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_GenomicsChamber_C",
+      "Description": "SS Mutator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 64,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GrinderPlus_C",
+      "Description": "SS Industrial Grinder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchery_C",
+      "Description": "SS Hatchery",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Adobe_C",
+      "Description": "SS Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Glass_C",
+      "Description": "SS Glass Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Metal_C",
+      "Description": "SS Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Stone_C",
+      "Description": "SS Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Hatchframe_Tek_C",
+      "Description": "SS Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hatchframe_Wood_C",
+      "Description": "SS Wood Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HitchingPost_C",
+      "Description": "SS Hitching Post",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HitchingPost_Tek_C",
+      "Description": "SS Tek Hitching Post",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Incinerator_C",
+      "Description": "SS Incinerator",
+      "Mod": "Super Structures (SS)"
+    },		
+    {
+      "Level": 89,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndustrialCooker_C",
+      "Description": "SS Industrial Cooker",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 80,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndustrialForgePlus_C",
+      "Description": "SS Industrial Forge",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndustrialGrillPlus_C",
+      "Description": "SS Industrial Grill",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Pillar_C",
+      "Description": "SS Internal Piping - Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Square_C",
+      "Description": "SS Internal Piping - Square",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Triangle_C",
+      "Description": "SS Internal Piping - Triangle",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalPipe_Wall_C",
+      "Description": "SS Internal Piping - Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Pillar_C",
+      "Description": "SS Internal Wiring - Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Square_C",
+      "Description": "SS Internal Wiring - Square",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Triangle_C",
+      "Description": "SS Internal Wiring - Triangle",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InternalWire_Wall_C",
+      "Description": "SS Internal Wiring - Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_InventoryAssistant_C",
+      "Description": "SS Inventory Assistant",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemCollector_C",
+      "Description": "SS Item Collector",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemTranslocator_C",
+      "Description": "SS Item Translocator",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Adobe_C",
+      "Description": "SS Adobe Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Metal_C",
+      "Description": "SS Metal Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Rope_C",
+      "Description": "SS Rope Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ladder_Tek_C",
+      "Description": "SS Tek Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ladder_Wood_C",
+      "Description": "SS Wood Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 38,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Adobe_C",
+      "Description": "SS Behemoth Adobe Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Glass_C",
+      "Description": "SS Glass Behemoth Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Metal_C",
+      "Description": "SS Metal Behemoth Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGate_Stone_C",
+      "Description": "SS Reinforced Behemoth Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeGate_Tek_C",
+      "Description": "SS Behemoth Tek Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 38,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGateway_Adobe_C",
+      "Description": "SS Adobe Behemoth Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGateway_Metal_C",
+      "Description": "SS Metal Behemoth Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeGateway_Stone_C",
+      "Description": "SS Stone Behemoth Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeGateway_Tek_C",
+      "Description": "SS Behemoth Tek Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframe_Adobe_C",
+      "Description": "SS Large Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframe_Metal_C",
+      "Description": "SS Large Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframe_Stone_C",
+      "Description": "SS Large Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeHatchframe_Tek_C",
+      "Description": "SS Large Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Adobe_C",
+      "Description": "SS Large Sloped Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Metal_C",
+      "Description": "SS Large Sloped Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Stone_C",
+      "Description": "SS Large Sloped Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeHatchframeSloped_Tek_C",
+      "Description": "SS Large Sloped Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Adobe_C",
+      "Description": "SS Large Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Metal_C",
+      "Description": "SS Large Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Stone_C",
+      "Description": "SS Large Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargePillar_Tek_C",
+      "Description": "SS Large Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargePillar_Wood_C",
+      "Description": "SS Large Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Adobe_C",
+      "Description": "SS Large Adobe Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Glass_C",
+      "Description": "SS Large Glass Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Metal_C",
+      "Description": "SS Large Metal Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeTrapdoor_Stone_C",
+      "Description": "SS Large Reinforced Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeTrapdoor_Tek_C",
+      "Description": "SS Large Tek Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_AdobeSP_C",
+      "Description": "SS Large Adobe Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeWall_Forcefield_C",
+      "Description": "SS Large Forcefield Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_Glass_C",
+      "Description": "SS Large Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_MetalSP_C",
+      "Description": "SS Large Metal Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_StoneSP_C",
+      "Description": "SS Large Stone Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_LargeWall_TekSP_C",
+      "Description": "SS Large Tek Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LargeWall_WoodSP_C",
+      "Description": "SS Large Wood Wall",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 22,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LeashTek_C",
+      "Description": "SS Tek Leash",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LightSetter_C",
+      "Description": "SS Light Setter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Mannequin_C",
+      "Description": "SS Mannequin",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Adobe_C",
+      "Description": "SS Medium Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Metal_C",
+      "Description": "SS Medium Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Stone_C",
+      "Description": "SS Medium Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_MediumPillar_Tek_C",
+      "Description": "SS Medium Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MediumPillar_Wood_C",
+      "Description": "SS Medium Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ModelSelector_C",
+      "Description": "SS Model Selector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 6,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MortarPestlePlus_C",
+      "Description": "SS Mortar and Pestle",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MultiLamp_C",
+      "Description": "SS Multi Lamp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Nanny_C",
+      "Description": "SS Nanny",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_PersonalTeleporter_C",
+      "Description": "SS Personal Teleporter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Pillarator_C",
+      "Description": "SS Pillarator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeFlex_MetalSP_C",
+      "Description": "SS Metal Pipe - Flexible",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeFlex_StoneSP_C",
+      "Description": "SS Stone Pipe - Flexible",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeHorizontal_Metal_C",
+      "Description": "SS Metal Pipe - Straight",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeHorizontal_Stone_C",
+      "Description": "SS Stone Pipe - Straight",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIncline_Metal_C",
+      "Description": "SS Metal Pipe - Inclined",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIncline_Stone_C",
+      "Description": "SS Stone Pipe - Inclined",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntake_Metal_C",
+      "Description": "SS Metal Pipe - Intake",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntake_Stone_C",
+      "Description": "SS Stone Pipe - Intake",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntersection_Metal_C",
+      "Description": "SS Metal Pipe - Intersection",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeIntersection_Stone_C",
+      "Description": "SS Stone Pipe - Intersection",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeVertical_Metal_C",
+      "Description": "SS Metal Pipe - Vertical",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PipeVertical_Stone_C",
+      "Description": "SS Stone Pipe - Vertical",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PlanetShield_C",
+      "Description": "SS Planetary Shield",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PlusRemote_C",
+      "Description": "SS Remote",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PreservingBinPlus_C",
+      "Description": "SS Preserving Bin",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Adobe_C",
+      "Description": "SS Adobe Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Glass_C",
+      "Description": "SS Glass Half Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Metal_C",
+      "Description": "SS Metal Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 28,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Stone_C",
+      "Description": "SS Stone Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Railing_Tek_C",
+      "Description": "SS Tek Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Railing_Wood_C",
+      "Description": "SS Wood Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_AdobeSP_C",
+      "Description": "SS Adobe Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_Glass_C",
+      "Description": "SS Glass Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_MetalSP_C",
+      "Description": "SS Metal Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_StoneSP_C",
+      "Description": "SS Stone Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Ramp_TekSP_C",
+      "Description": "SS Tek Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ramp_WoodSP_C",
+      "Description": "SS Wood Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RepairGun_C",
+      "Description": "SS Repair Gun",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RepairStation_C",
+      "Description": "SS Repair Station",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ReplicatorPlus_C",
+      "Description": "SS Tek Replicator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Adobe_C",
+      "Description": "SS Sloped Adobe Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Glass_C",
+      "Description": "SS Sloped Glass Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Greenhouse_C",
+      "Description": "SS Sloped Greenhouse Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Metal_C",
+      "Description": "SS Sloped Metal Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Stone_C",
+      "Description": "SS Sloped Stone Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Roof_Tek_C",
+      "Description": "SS Sloped Tek Roof",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Roof_TekGlass_C",
+      "Description": "SS Sloped Tek Glass Roof",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Thatch_C",
+      "Description": "SS Sloped Thatch Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Roof_Wood_C",
+      "Description": "SS Sloped Wood Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SheepHerder_C",
+      "Description": "SS Sheep Herder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Adobe_Left_C",
+      "Description": "SS Sloped Adobe Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Adobe_Right_C",
+      "Description": "SS Sloped Adobe Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Glass_Left_C",
+      "Description": "SS Sloped Glass Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Glass_Right_C",
+      "Description": "SS Sloped Glass Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Greenhouse_Left_C",
+      "Description": "SS Sloped Greenhouse Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Greenhouse_Right_C",
+      "Description": "SS Sloped Greenhouse Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Metal_Left_C",
+      "Description": "SS Sloped Metal Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Metal_Right_C",
+      "Description": "SS Sloped Metal Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Stone_Left_C",
+      "Description": "SS Sloped Stone Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Stone_Right_C",
+      "Description": "SS Sloped Stone Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SlopedWall_Tek_Left_C",
+      "Description": "SS Sloped Tek Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SlopedWall_Tek_Right_C",
+      "Description": "SS Sloped Tek Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Thatch_Left_C",
+      "Description": "SS Sloped Thatch Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Thatch_Right_C",
+      "Description": "SS Sloped Thatch Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Wood_Left_C",
+      "Description": "SS Sloped Wood Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SlopedWall_Wood_Right_C",
+      "Description": "SS Sloped Wood Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Adobe_C",
+      "Description": "SS Small Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Metal_C",
+      "Description": "SS Small Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Stone_C",
+      "Description": "SS Small Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SmallPillar_Tek_C",
+      "Description": "SS Small Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmallPillar_Wood_C",
+      "Description": "SS Small Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SmithyPlus_C",
+      "Description": "SS Smithy",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 29,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SpikeWall_Metal_C",
+      "Description": "SS Metal Spike Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SpikeWall_Wood_C",
+      "Description": "SS Wooden Spike Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SPlusCraftingStation_C",
+      "Description": "SS Crafting Station",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_SPlusTekLight_C",
+      "Description": "SS Tek Light",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 53,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SprayPainterPlus_C",
+      "Description": "SS Spray Painter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Adobe_C",
+      "Description": "SS Adobe Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Glass_C",
+      "Description": "SS Glass Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Metal_C",
+      "Description": "SS Metal Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 28,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Stone_C",
+      "Description": "SS Stone Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Staircase_Tek_C",
+      "Description": "SS Tek Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Staircase_Wood_C",
+      "Description": "SS Wooden Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 7,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StandingTorchPlus_C",
+      "Description": "SS Standing Torch",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageLarge_C",
+      "Description": "SS Large Storage Box",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageMetal_C",
+      "Description": "SS Metal Storage Box",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageSmall_C",
+      "Description": "SS Storage Box",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 32,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TaxidermyPlus_Large_C",
+      "Description": "SS Large Taxidermy Base",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 21,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TaxidermyPlus_Medium_C",
+      "Description": "SS Medium Taxidermy Base",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 10,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TaxidermyPlus_Small_C",
+      "Description": "SS Small Taxidermy Base",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekBedPlus_C",
+      "Description": "SS Tek Sleeping Pod",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 72,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekBridgePlus_C",
+      "Description": "SS Tek Bridge",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekBuggy_C",
+      "Description": "SS Tek ATV",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekChemBench_C",
+      "Description": "SS Laboratory",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekCookingPot_C",
+      "Description": "SS Tek Cooking Pot",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekForcefield_C",
+      "Description": "SS Tek Shield Generator",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekForge_C",
+      "Description": "SS Tek Forge",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekStorage_C",
+      "Description": "SS Tek Storage",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Level": 135,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekStove_C",
+      "Description": "SS Tek Stove",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekTroughPlus_C",
+      "Description": "SS Tek Trough",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TeleporterPlus_C",
+      "Description": "SS Teleporter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransferGun_C",
+      "Description": "SS Transfer Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransferTool_C",
+      "Description": "SS Transfer Tool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TransmitterPlus_C",
+      "Description": "SS Tek Transmitter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransparencyCycler_C",
+      "Description": "SS Transparency Cycler",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Adobe_C",
+      "Description": "SS Adobe Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Glass_C",
+      "Description": "SS Glass Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Metal_C",
+      "Description": "SS Metal Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Trapdoor_Moonpool_C",
+      "Description": "SS Moonpool Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Stone_C",
+      "Description": "SS Reinforced Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Trapdoor_Tek_C",
+      "Description": "SS Tek Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Trapdoor_Wood_C",
+      "Description": "SS Wood Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 36,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TreeSapTapPlus_C",
+      "Description": "SS Tree Sap Tap",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_AdobeSP_C",
+      "Description": "SS Adobe Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_Glass_C",
+      "Description": "SS Glass Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 42,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_GreenhouseSP_C",
+      "Description": "SS Greenhouse Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_MetalSP_C",
+      "Description": "SS Metal Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_StoneSP_C",
+      "Description": "SS Stone Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriCeiling_TekSP_C",
+      "Description": "SS Tek Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_TekElevator_C",
+      "Description": "SS Triangle Tek Elevator",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriCeiling_WoodSP_C",
+      "Description": "SS Wood Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_AdobeSP_C",
+      "Description": "SS Adobe Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_Glass_C",
+      "Description": "SS Glass Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_MetalSP_C",
+      "Description": "SS Metal Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_StoneSP_C",
+      "Description": "SS Stone Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriFoundation_TekSP_C",
+      "Description": "SS Tek Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriFoundation_WoodSP_C",
+      "Description": "SS Wood Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_AdobeSP_C",
+      "Description": "SS Adobe Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_Glass_C",
+      "Description": "SS Glass Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_GreenhouseSP_C",
+      "Description": "SS Greenhouse Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_MetalSP_C",
+      "Description": "SS Metal Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_StoneSP_C",
+      "Description": "SS Stone Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriRoof_TekSP_C",
+      "Description": "SS Tek Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TriRoof_WoodSP_C",
+      "Description": "SS Wood Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TurretConfigurator_C",
+      "Description": "SS Turret Configurator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Underwater_Cube_C",
+      "Description": "SS Vacuum Compartment",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Underwater_Cube_Sloped_C",
+      "Description": "SS Sloped Vacuum Compartment",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Underwater_Moonpool_C",
+      "Description": "SS Vacuum Moonpool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_UnderwaterTool_C",
+      "Description": "SS Underwater Tool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VaultPlus_C",
+      "Description": "SS Vault",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VesselPlus_C",
+      "Description": "SS Vessel",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VisibilityTool_C",
+      "Description": "SS Visibility Tool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Vivarium_C",
+      "Description": "SS Vivarium",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Adobe_C",
+      "Description": "SS Adobe Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Wall_Forcefield_C",
+      "Description": "SS Forcefield Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Glass_C",
+      "Description": "SS Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 42,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Greenhouse_C",
+      "Description": "SS Greenhouse Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Metal_C",
+      "Description": "SS Metal Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Stone_C",
+      "Description": "SS Stone Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Wall_Tek_C",
+      "Description": "SS Tek Wall",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Wall_TekGlass_C",
+      "Description": "SS Tek Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Thatch_C",
+      "Description": "SS Thatch Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wall_Wood_C",
+      "Description": "SS Wood Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 21,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WallTorchPlus_C",
+      "Description": "SS Wall Torch",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 41,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTank_Metal_C",
+      "Description": "SS Metal Water Tank",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTank_Stone_C",
+      "Description": "SS Water Tank",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTap_Metal_C",
+      "Description": "SS Metal Pipe - Tap",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 17,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterTap_Stone_C",
+      "Description": "SS Stone Pipe - Tap",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Adobe_C",
+      "Description": "SS Adobe Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Glass_C",
+      "Description": "SS Glass Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Greenhouse_C",
+      "Description": "SS Greenhouse Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Metal_C",
+      "Description": "SS Metal Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Stone_C",
+      "Description": "SS Reinforced Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Window_Tek_C",
+      "Description": "SS Tek Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Window_Wood_C",
+      "Description": "SS Wood Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Adobe_C",
+      "Description": "SS Adobe Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 46,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Metal_C",
+      "Description": "SS Metal Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Stone_C",
+      "Description": "SS Stone Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_WindowWall_Tek_C",
+      "Description": "SS Tek Windowframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 14,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindowWall_Wood_C",
+      "Description": "SS Wood Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WindTurbinePlus_C",
+      "Description": "SS Wind Turbine",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_FlexSP_C",
+      "Description": "SS Flexible Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Horizontal_C",
+      "Description": "SS Straight Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Incline_C",
+      "Description": "SS Diagonal Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Intersection_C",
+      "Description": "SS Electrical Cable Intersection",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Wire_Vertical_C",
+      "Description": "SS Vertical Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframe_Adobe_C",
+      "Description": "SS Behemoth Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframe_Metal_C",
+      "Description": "SS Behemoth Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframe_Stone_C",
+      "Description": "SS Behemoth Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLHatchframe_Tek_C",
+      "Description": "SS Behemoth Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Adobe_C",
+      "Description": "SS Behemoth Sloped Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Metal_C",
+      "Description": "SS Behemoth Sloped Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Stone_C",
+      "Description": "SS Behemoth Sloped Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLHatchframeSloped_Tek_C",
+      "Description": "SS Behemoth Sloped Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Adobe_C",
+      "Description": "SS Behemoth Adobe Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Glass_C",
+      "Description": "SS Behemoth Glass Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Metal_C",
+      "Description": "SS Behemoth Metal Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLTrapdoor_Stone_C",
+      "Description": "SS Behemoth Reinforced Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLTrapdoor_Tek_C",
+      "Description": "SS Behemoth Tek Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Adobe_C",
+      "Description": "SS XL Adobe Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLWall_Forcefield_C",
+      "Description": "SS XL Forcefield Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Glass_C",
+      "Description": "SS XL Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Metal_C",
+      "Description": "SS XL Metal Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Stone_C",
+      "Description": "SS XL Stone Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XLWall_Tek_C",
+      "Description": "SS XL Tek Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XLWall_Wood_C",
+      "Description": "SS XL Wood Wall",
+      "Mod": "Super Structures (SS)"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SPlusCraftingStation_C",
+      "Description": "SS Crafting Station",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmithyPlus_C",
+      "Description": "SS Smithy",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MortarPestlePlus_C",
+      "Description": "SS Mortar and Pestle",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ForgePlus_C",
+      "Description": "SS Refining Forge",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FabricatorPlus_C",
+      "Description": "SS Fabricator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChemBenchPlus_C",
+      "Description": "SS Chemistry Bench",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialCooker_C",
+      "Description": "SS Industrial Cooker",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialForgePlus_C",
+      "Description": "SS Industrial Forge",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialGrill_C",
+      "Description": "SS Industrial Grill",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GrinderPlus_C",
+      "Description": "SS Industrial Grinder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ReplicatorPlus_C",
+      "Description": "SS Tek Replicator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BeerBarrelPlus_C",
+      "Description": "SS Beer Barrel",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CampfirePlus_C",
+      "Description": "SS Campfire ",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CompostBinPlus_C",
+      "Description": "SS Compost Bin",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CookingPotPlus_C",
+      "Description": "SS Cooking Pot",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FireplacePlus_C",
+      "Description": "SS Stone Fireplace",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PreservingBinPlus_C",
+      "Description": "SS Preserving Bin",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DyeStation_C",
+      "Description": "SS Dyeria",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekStove_C",
+      "Description": "SS Tek Stove",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekForge_C",
+      "Description": "SS Tek Forge",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekChemBench_C",
+      "Description": "SS Laboratory",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekCookingPot_C",
+      "Description": "SS Tek Cooking Pot",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TreeSapTapPlus_C",
+      "Description": "SS Tree Sap Tap",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FeedingTroughPlus_C",
+      "Description": "SS Feeding Trough",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StandingTorchPlus_C",
+      "Description": "SS Standing Torch",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WallTorchPlus_C",
+      "Description": "SS Wall Torch",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FridgePlus_C",
+      "Description": "SS Refrigerator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AirConditionerPlus_C",
+      "Description": "SS Air Conditioner",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekForcefield_C",
+      "Description": "SS Tek Shield Generator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TeleporterPlus_C",
+      "Description": "SS Teleporter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TransmitterPlus_C",
+      "Description": "SS Tek Transmitter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CloningChamberPlus_C",
+      "Description": "SS Cloning Chamber",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BeeHivePlus_C",
+      "Description": "SS Domesticated Bee Hive",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BedPlus_C",
+      "Description": "SS Simple Bed",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BunkBedPlus_C",
+      "Description": "SS Bunk Bed",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekTroughPlus_C",
+      "Description": "SS Tek Trough",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TekBuggy_C",
+      "Description": "SS Tek ATV",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SPlusTekLight_C",
+      "Description": "SS Tek Light",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GasCollectorTek_C",
+      "Description": "SS Tek Gas Collector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChargeStation_C",
+      "Description": "SS Charge Station",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekBedPlus_C",
+      "Description": "SS Tek Sleeping Pod",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LeashTek_C",
+      "Description": "SS LeashTek",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TaxidermyPlus_Small_C",
+      "Description": "SS Small Taxidermy Base",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TaxidermyPlus_Medium_C",
+      "Description": "SS Medium Taxidermy Base",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TaxidermyPlus_Large_C",
+      "Description": "SS Large Taxidermy Base",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekBridgePlus_C",
+      "Description": "SS Tek Bridge",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FridgeTek_C",
+      "Description": "SS Tek Refrigerator",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gardener_C",
+      "Description": "SS Gardener",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ItemCollector_C",
+      "Description": "SS Item Collector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MultiLamp_C",
+      "Description": "SS Multi Lamp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SheepHerder_C",
+      "Description": "SS Sheep Herder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Farmer_C",
+      "Description": "SS Farmer",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchery_C",
+      "Description": "SS Hatchery",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BlueprintMaker_C",
+      "Description": "SS Blueprint Maker",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Converter_C",
+      "Description": "SS Converter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AnimalTender_C",
+      "Description": "SS Animal Tender",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HitchingPost_C",
+      "Description": "SS Hitching Post",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Nanny_C",
+      "Description": "SS Nanny",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorCallButton_C",
+      "Description": "SS Elevator Call Button",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChargeInjector_C",
+      "Description": "SS Charge Injector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElementCatalyzer_C",
+      "Description": "SS Element Catalyzer",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Vivarium_C",
+      "Description": "SS Vivarium",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoCrafter_C",
+      "Description": "SS Auto Crafter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Mannequin_C",
+      "Description": "SS Mannequin",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PlanetShield_C",
+      "Description": "SS Planetary Shield",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Incinerator_C",
+      "Description": "SS Incinerator",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RepairStation_C",
+      "Description": "SS Repair Station",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ItemTranslocator_C",
+      "Description": "SS Item Translocator",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DroneTerminal_C",
+      "Description": "SS Drone Terminal",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HitchingPost_Tek_C",
+      "Description": "SS Tek Hitching Post",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GachaGavager_C",
+      "Description": "SS Gacha Gavager",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CrystalCracker_C",
+      "Description": "SS Crystal Cracker",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GenomicsChamber_C",
+      "Description": "SS Mutator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_C",
+      "Description": "SS Auto Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurretTek_C",
+      "Description": "SS Tek Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_AutoTurretPlant_Seed_C",
+      "Description": "SS Plant Species X Seed",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_AutoTurretPlant_Seed_CHEAT_C",
+      "Description": "SS Plant Species X Seed (CHEAT)",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Ballista_C",
+      "Description": "SS Ballista Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Cannon_C",
+      "Description": "SS Cannon Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Flame_C",
+      "Description": "SS Flame Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Minigun_C",
+      "Description": "SS Minigun Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Rocket_C",
+      "Description": "SS Rocket Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Tranq_C",
+      "Description": "SS Tranq Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AutoTurret_Heavy_C",
+      "Description": "SS Heavy Auto Turret",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TransparencyCycler_C",
+      "Description": "SS Transparency Cycler",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ModelSelector_C",
+      "Description": "SS Model Selector",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_DemoGun_C",
+      "Description": "SS Demo Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_RepairGun_C",
+      "Description": "SS Repair Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TurretConfigurator_C",
+      "Description": "SS Turret Configurator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TransferGun_C",
+      "Description": "SS Transfer Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_LightSetter_C",
+      "Description": "SS Light Setter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_PersonalTeleporter_C",
+      "Description": "SS Personal Teleporter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_VisibilityTool_C",
+      "Description": "SS Visibility Tool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_EuthanasiaGun_C",
+      "Description": "SS Euthanasia Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_UnderwaterTool_C",
+      "Description": "SS Underwater Tool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_PlusRemote_C",
+      "Description": "SS Remote",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_TransferTool_C",
+      "Description": "SS Transfer Tool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_CommandTool_C",
+      "Description": "SS Command Gun",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_SprayPainterPlus_C",
+      "Description": "SS Spray Painter",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_InventoryAssistant_C",
+      "Description": "SS Inventory Assistant",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Tool",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Pillarator_C",
+      "Description": "SS Pillarator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageSmall_C",
+      "Description": "SS Storage Box",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageLarge_C",
+      "Description": "SS Large Storage Box",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageMetal_C",
+      "Description": "SS Metal Storage Box",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_VaultPlus_C",
+      "Description": "SS Vault",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_VesselPlus_C",
+      "Description": "SS Vessel",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BookshelfPlus_C",
+      "Description": "SS Bookshelf",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DedicatedStorageSP_C",
+      "Description": "SS Dedicated Storage",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DedicatedStorage_Intake_C",
+      "Description": "SS Dedicated Storage Intake",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekStorage_C",
+      "Description": "SS Tek Storage",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Thatch_C",
+      "Description": "SS Thatch Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Wood_C",
+      "Description": "SS Wood Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Stone_C",
+      "Description": "SS Stone Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Metal_C",
+      "Description": "SS Metal Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Glass_C",
+      "Description": "SS Glass Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Adobe_C",
+      "Description": "SS Adobe Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_Tek_C",
+      "Description": "SS Tek Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_WoodSP_C",
+      "Description": "SS Wood Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_StoneSP_C",
+      "Description": "SS Stone Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_MetalSP_C",
+      "Description": "SS Metal Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_Glass_C",
+      "Description": "SS Glass Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_AdobeSP_C",
+      "Description": "SS Adobe Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_TekSP_C",
+      "Description": "SS Tek Triangle Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Thatch_C",
+      "Description": "SS Thatch Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Wood_C",
+      "Description": "SS Wood Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Stone_C",
+      "Description": "SS Stone Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Metal_C",
+      "Description": "SS Metal Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Greenhouse_C",
+      "Description": "SS Greenhouse Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Glass_C",
+      "Description": "SS Glass Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Adobe_C",
+      "Description": "SS Adobe Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Tek_C",
+      "Description": "SS Tek Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_TekGlass_C",
+      "Description": "SS Tek Glass Ceiling",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_Repulser_C",
+      "Description": "SS Repulser Plate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_WoodSP_C",
+      "Description": "SS Wood Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_StoneSP_C",
+      "Description": "SS Stone Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_MetalSP_C",
+      "Description": "SS Metal Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_GreenhouseSP_C",
+      "Description": "SS Greenhouse Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_Glass_C",
+      "Description": "SS Glass Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_AdobeSP_C",
+      "Description": "SS Adobe Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_TekSP_C",
+      "Description": "SS Tek Triangle Ceiling",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Thatch_C",
+      "Description": "SS Thatch Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Wood_C",
+      "Description": "SS Wood Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Stone_C",
+      "Description": "SS Stone Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Metal_C",
+      "Description": "SS Metal Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Greenhouse_C",
+      "Description": "SS Greenhouse Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Glass_C",
+      "Description": "SS Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Adobe_C",
+      "Description": "SS Adobe Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Tek_C",
+      "Description": "SS Tek Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_Forcefield_C",
+      "Description": "SS Forcefield Wall",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wall_TekGlass_C",
+      "Description": "SS Tek Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_WoodSP_C",
+      "Description": "SS Large Wood Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_StoneSP_C",
+      "Description": "SS Large Stone Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_MetalSP_C",
+      "Description": "SS Large Metal Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Glass_C",
+      "Description": "SS Large Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_AdobeSP_C",
+      "Description": "SS Large Adobe Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_TekSP_C",
+      "Description": "SS Large Tek Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeWall_Forcefield_C",
+      "Description": "SS Large Forcefield Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Wood_C",
+      "Description": "SS XL Wood Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Stone_C",
+      "Description": "SS XL Stone Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Metal_C",
+      "Description": "SS XL Metal Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Glass_C",
+      "Description": "SS XL Glass Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Adobe_C",
+      "Description": "SS XL Adobe Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Tek_C",
+      "Description": "SS XL Tek Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLWall_Forcefield_C",
+      "Description": "SS XL Forcefield Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Wood_C",
+      "Description": "SS Wood Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Stone_C",
+      "Description": "SS Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Metal_C",
+      "Description": "SS Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Glass_C",
+      "Description": "SS Glass Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Adobe_C",
+      "Description": "SS Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Hatchframe_Tek_C",
+      "Description": "SS Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Wood_C",
+      "Description": "SS Wood Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Stone_C",
+      "Description": "SS Reinforced Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Metal_C",
+      "Description": "SS Metal Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Glass_C",
+      "Description": "SS Glass Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Adobe_C",
+      "Description": "SS Adobe Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Tek_C",
+      "Description": "SS Tek Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Stone_C",
+      "Description": "SS Large Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Metal_C",
+      "Description": "SS Large Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Adobe_C",
+      "Description": "SS Large Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframe_Tek_C",
+      "Description": "SS Large Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Stone_C",
+      "Description": "SS Large Sloped Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Metal_C",
+      "Description": "SS Large Sloped Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Adobe_C",
+      "Description": "SS Large Sloped Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeHatchframeSloped_Tek_C",
+      "Description": "SS Large Sloped Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Stone_C",
+      "Description": "SS Large Reinforced Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Metal_C",
+      "Description": "SS Large Metal Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Glass_C",
+      "Description": "SS Large Glass Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Adobe_C",
+      "Description": "SS Large Adobe Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeTrapdoor_Tek_C",
+      "Description": "SS Large Tek Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Stone_C",
+      "Description": "SS Behemoth Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Metal_C",
+      "Description": "SS Behemoth Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Adobe_C",
+      "Description": "SS Behemoth Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframe_Tek_C",
+      "Description": "SS Behemoth Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Stone_C",
+      "Description": "SS Behemoth Sloped Stone Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Metal_C",
+      "Description": "SS Behemoth Sloped Metal Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Adobe_C",
+      "Description": "SS Behemoth Sloped Adobe Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLHatchframeSloped_Tek_C",
+      "Description": "SS Behemoth Sloped Tek Hatchframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Stone_C",
+      "Description": "SS Behemoth Reinforced Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Metal_C",
+      "Description": "SS Behemoth Metal Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Glass_C",
+      "Description": "SS Behemoth Glass Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Adobe_C",
+      "Description": "SS Behemoth Adobe Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_XLTrapdoor_Tek_C",
+      "Description": "SS Behemoth Tek Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Wood_C",
+      "Description": "SS Wood Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Stone_C",
+      "Description": "SS Stone Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Metal_C",
+      "Description": "SS Metal Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Adobe_C",
+      "Description": "SS Adobe Window Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindowWall_Tek_C",
+      "Description": "SS Tek Windowframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Wood_C",
+      "Description": "SS Wood Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Stone_C",
+      "Description": "SS Reinforced Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Metal_C",
+      "Description": "SS Metal Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Greenhouse_C",
+      "Description": "SS Greenhouse Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Glass_C",
+      "Description": "SS Glass Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Adobe_C",
+      "Description": "SS Adobe Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Window_Tek_C",
+      "Description": "SS Tek Window",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_WoodSP_C",
+      "Description": "SS Wood Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_StoneSP_C",
+      "Description": "SS Stone Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_MetalSP_C",
+      "Description": "SS Metal Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_Glass_C",
+      "Description": "SS Glass Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_AdobeSP_C",
+      "Description": "SS Adobe Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ramp_TekSP_C",
+      "Description": "SS Tek Ramp",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Wood_C",
+      "Description": "SS Wood Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Stone_C",
+      "Description": "SS Stone Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Metal_C",
+      "Description": "SS Metal Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Glass_C",
+      "Description": "SS Glass Half Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Adobe_C",
+      "Description": "SS Adobe Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Railing_Tek_C",
+      "Description": "SS Tek Railing",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Wood_C",
+      "Description": "SS Wood Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Stone_C",
+      "Description": "SS Stone Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Metal_C",
+      "Description": "SS Metal Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Adobe_C",
+      "Description": "SS Adobe Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceFoundation_Tek_C",
+      "Description": "SS Tek Fence Foundation",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_WoodSP_C",
+      "Description": "SS Wood Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_StoneSP_C",
+      "Description": "SS Stone Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_MetalSP_C",
+      "Description": "SS Metal Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_AdobeSP_C",
+      "Description": "SS Adobe Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FenceSupport_TekSP_C",
+      "Description": "SS Tek Fence Support",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SpikeWall_Wood_C",
+      "Description": "SS Wooden Spike Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SpikeWall_Metal_C",
+      "Description": "SS Metal Spike Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Thatch_Left_C",
+      "Description": "SS Sloped Thatch Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Wood_Left_C",
+      "Description": "SS Sloped Wood Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Stone_Left_C",
+      "Description": "SS Sloped Stone Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Metal_Left_C",
+      "Description": "SS Sloped Metal Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Glass_Left_C",
+      "Description": "SS Sloped Glass Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Greenhouse_Left_C",
+      "Description": "SS Sloped Greenhouse Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Adobe_Left_C",
+      "Description": "SS Sloped Adobe Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Tek_Left_C",
+      "Description": "SS Sloped Tek Wall Left",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Thatch_Right_C",
+      "Description": "SS Sloped Thatch Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Wood_Right_C",
+      "Description": "SS Sloped Wood Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Stone_Right_C",
+      "Description": "SS Sloped Stone Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Metal_Right_C",
+      "Description": "SS Sloped Metal Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Glass_Right_C",
+      "Description": "SS Sloped Glass Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Greenhouse_Right_C",
+      "Description": "SS Sloped Greenhouse Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Adobe_Right_C",
+      "Description": "SS Sloped Adobe Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SlopedWall_Tek_Right_C",
+      "Description": "SS Sloped Tek Wall Right",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Thatch_C",
+      "Description": "SS Sloped Thatch Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Wood_C",
+      "Description": "SS Sloped Wood Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Stone_C",
+      "Description": "SS Sloped Stone Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Metal_C",
+      "Description": "SS Sloped Metal Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Glass_C",
+      "Description": "SS Sloped Glass Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Greenhouse_C",
+      "Description": "SS Sloped Greenhouse Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Adobe_C",
+      "Description": "SS Sloped Adobe Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_Tek_C",
+      "Description": "SS Sloped Tek Roof",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Roof_TekGlass_C",
+      "Description": "SS Sloped Tek Glass Roof",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_WoodSP_C",
+      "Description": "SS Wood Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_StoneSP_C",
+      "Description": "SS Stone Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_MetalSP_C",
+      "Description": "SS Metal Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_GreenhouseSP_C",
+      "Description": "SS Greenhouse Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_Glass_C",
+      "Description": "SS Glass Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_AdobeSP_C",
+      "Description": "SS Adobe Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriRoof_TekSP_C",
+      "Description": "SS Tek Triangle Roof",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Wood_C",
+      "Description": "SS Wood Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Metal_C",
+      "Description": "SS Metal Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Glass_C",
+      "Description": "SS Glass Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Catwalk_Tek_C",
+      "Description": "SS Tek Catwalk",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Thatch_C",
+      "Description": "SS Thatch Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Wood_C",
+      "Description": "SS Wood Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Stone_C",
+      "Description": "SS Stone Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Metal_C",
+      "Description": "SS Metal Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Greenhouse_C",
+      "Description": "SS Greenhouse Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Glass_C",
+      "Description": "SS Glass Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Adobe_C",
+      "Description": "SS Adobe Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Doorframe_Tek_C",
+      "Description": "SS Tek Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Thatch_C",
+      "Description": "SS Thatch Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Wood_C",
+      "Description": "SS Wood Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Stone_C",
+      "Description": "SS Reinforced Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Metal_C",
+      "Description": "SS Metal Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Greenhouse_C",
+      "Description": "SS Greenhouse Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Glass_C",
+      "Description": "SS Glass Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Adobe_C",
+      "Description": "SS Adobe Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Tek_C",
+      "Description": "SS Tek Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_WoodSP_C",
+      "Description": "SS Wood Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_StoneSP_C",
+      "Description": "SS Stone Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_MetalSP_C",
+      "Description": "SS Metal Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_GreenhouseSP_C",
+      "Description": "SS Greenhouse Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Glass_C",
+      "Description": "SS Glass Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_AdobeSP_C",
+      "Description": "SS Adobe Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_TekSP_C",
+      "Description": "SS Tek Double Doorframe",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_WoodSP_C",
+      "Description": "SS Wood Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_StoneSP_C",
+      "Description": "SS Reinforced Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_MetalSP_C",
+      "Description": "SS Metal Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_GreenhouseSP_C",
+      "Description": "SS Greenhouse Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Glass_C",
+      "Description": "SS Glass Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_AdobeSP_C",
+      "Description": "SS Adobe Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_TekSP_C",
+      "Description": "SS Tek Double Door",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Wood_C",
+      "Description": "SS Wood Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Stone_C",
+      "Description": "SS Stone Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Metal_C",
+      "Description": "SS Metal Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Adobe_C",
+      "Description": "SS Adobe Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Tek_C",
+      "Description": "SS Tek Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gateway_Dynamic_C",
+      "Description": "SS Dynamic Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Wood_C",
+      "Description": "SS Wood Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Stone_C",
+      "Description": "SS Reinforced Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Metal_C",
+      "Description": "SS Metal Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Glass_C",
+      "Description": "SS Glass Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Adobe_C",
+      "Description": "SS Adobe Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Tek_C",
+      "Description": "SS Tek Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gate_Dynamic_C",
+      "Description": "SS Dynamic Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Stone_C",
+      "Description": "SS Stone Behemoth Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Metal_C",
+      "Description": "SS Metal Behemoth Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Adobe_C",
+      "Description": "SS Adobe Behemoth Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGateway_Tek_C",
+      "Description": "SS Behemoth Tek Gateway",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Stone_C",
+      "Description": "SS Reinforced Behemoth Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Metal_C",
+      "Description": "SS Metal Behemoth Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Glass_C",
+      "Description": "SS Glass Behemoth Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Adobe_C",
+      "Description": "SS Behemoth Adobe Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargeGate_Tek_C",
+      "Description": "SS Behemoth Tek Gate",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Wood_C",
+      "Description": "SS Wood Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Rope_C",
+      "Description": "SS Rope Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Metal_C",
+      "Description": "SS Metal Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Adobe_C",
+      "Description": "SS Adobe Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ladder_Tek_C",
+      "Description": "SS Tek Ladder",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Wood_C",
+      "Description": "SS Wooden Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Stone_C",
+      "Description": "SS Stone Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Metal_C",
+      "Description": "SS Metal Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Adobe_C",
+      "Description": "SS Adobe Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Glass_C",
+      "Description": "SS Glass Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Staircase_Tek_C",
+      "Description": "SS Tek Staircase",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Wood_C",
+      "Description": "SS Small Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Stone_C",
+      "Description": "SS Small Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Metal_C",
+      "Description": "SS Small Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Adobe_C",
+      "Description": "SS Small Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallPillar_Tek_C",
+      "Description": "SS Small Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Wood_C",
+      "Description": "SS Medium Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Stone_C",
+      "Description": "SS Medium Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Metal_C",
+      "Description": "SS Medium Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Adobe_C",
+      "Description": "SS Medium Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MediumPillar_Tek_C",
+      "Description": "SS Medium Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Wood_C",
+      "Description": "SS Large Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Stone_C",
+      "Description": "SS Large Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Metal_C",
+      "Description": "SS Large Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Adobe_C",
+      "Description": "SS Large Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LargePillar_Tek_C",
+      "Description": "SS Large Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Wood_C",
+      "Description": "SS Dynamic Wood Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Stone_C",
+      "Description": "SS Dynamic Stone Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Metal_C",
+      "Description": "SS Dynamic Metal Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Adobe_C",
+      "Description": "SS Dynamic Adobe Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DynamicPillar_Tek_C",
+      "Description": "SS Dynamic Tek Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_Small_C",
+      "Description": "SS Small Crop Plot",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_Medium_C",
+      "Description": "SS Medium Crop Plot",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_Large_C",
+      "Description": "SS Large Crop Plot",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_SeamlessSquare_C",
+      "Description": "SS Seamless Crop Square",
+      "Mod": "Super Structures (SS)"
+    },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CropPlotPlus_SeamlessTriangle_C",
+      "Description": "SS Seamless Crop Triangle",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeHorizontal_Stone_C",
+      "Description": "SS Stone Pipe - Straight",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIncline_Stone_C",
+      "Description": "SS Stone Pipe - Inclined",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntake_Stone_C",
+      "Description": "SS Stone Pipe - Intake",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntersection_Stone_C",
+      "Description": "SS Stone Pipe - Intersection",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTap_Stone_C",
+      "Description": "SS Stone Pipe - Tap",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeVertical_Stone_C",
+      "Description": "SS Stone Pipe - Vertical",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeFlex_StoneSP_C",
+      "Description": "SS Stone Pipe - Flexible",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeHorizontal_Metal_C",
+      "Description": "SS Metal Pipe - Straight",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIncline_Metal_C",
+      "Description": "SS Metal Pipe - Inclined",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntake_Metal_C",
+      "Description": "SS Metal Pipe - Intake",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeIntersection_Metal_C",
+      "Description": "SS Metal Pipe - Intersection",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTap_Metal_C",
+      "Description": "SS Metal Pipe - Tap",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeVertical_Metal_C",
+      "Description": "SS Metal Pipe - Vertical",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PipeFlex_MetalSP_C",
+      "Description": "SS Metal Pipe - Flexible",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Square_C",
+      "Description": "SS Internal Piping - Square",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Wall_C",
+      "Description": "SS Internal Piping - Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Triangle_C",
+      "Description": "SS Internal Piping - Triangle",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalPipe_Pillar_C",
+      "Description": "SS Internal Piping - Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTank_Stone_C",
+      "Description": "SS Water Tank",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTank_Metal_C",
+      "Description": "SS Metal Water Tank",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Horizontal_C",
+      "Description": "SS Straight Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Incline_C",
+      "Description": "SS Diagonal Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Intersection_C",
+      "Description": "SS Electrical Cable Intersection",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_Vertical_C",
+      "Description": "SS Vertical Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wire_FlexSP_C",
+      "Description": "SS Flexible Electrical Cable",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Square_C",
+      "Description": "SS Internal Wiring - Square",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Wall_C",
+      "Description": "SS Internal Wiring - Wall",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Triangle_C",
+      "Description": "SS Internal Wiring - Triangle",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_InternalWire_Pillar_C",
+      "Description": "SS Internal Wiring - Pillar",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Generator_C",
+      "Description": "SS Electrical Generator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WindTurbinePlus_C",
+      "Description": "SS Wind Turbine",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GeneratorTek_C",
+      "Description": "SS Tek Generator",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElectricalOutlet_C",
+      "Description": "SS Electrical Outlet",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorTrack_Metal_C",
+      "Description": "SS Small Elevator Track",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorPlatform_Small_C",
+      "Description": "SS Small Elevator Platform",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorPlatform_Medium_C",
+      "Description": "SS Medium Elevator Platform",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElevatorPlatform_Large_C",
+      "Description": "SS Large Elevator Platform",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Ceiling_TekElevator_C",
+      "Description": "SS Tek Elevator",
+      "Mod": "Super Structures (SS)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriCeiling_TekElevator_C",
+      "Description": "SS Triangle Tek Elevator",
+      "Mod": "Super Structures (SS)"
+    },	
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Underwater_Cube_C",
+      "Description": "SS Vacuum Compartment",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Underwater_Moonpool_C",
+      "Description": "SS Vacuum Moonpool",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Trapdoor_Moonpool_C",
+      "Description": "SS Moonpool Trapdoor",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Underwater_Cube_Sloped_C",
+      "Description": "SS Sloped Vacuum Compartment",
+      "Mod": "Super Structures (SS)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Door_Underwater_C",
+      "Description": "SS Vacuum Compartment Door",
+      "Mod": "Super Structures (SS)"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}
