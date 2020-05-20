@@ -5,160 +5,22 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-05-14T00:00:00Z</updated>
+  <updated>2020-05-15T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:F03B8264-F1E6-4A48-B590-42CA62AE2F53</id>
-    <title>1.1.33 (1.1.33.7)</title>
-    <summary>1.1.33.7</summary>
+    <id>urn:uuid:F6979B74-6993-41F7-B824-E936E804B2D3</id>
+    <title>1.1.34 (1.1.34.1)</title>
+    <summary>1.1.34.1</summary>
     <link href="" />
-    <updated>2020-05-14T00:00:00Z</updated>
+    <updated>2020-05-15T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Sync Window - after a profile has been updated, the profile is now saved.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:8DE06E64-4E21-4864-8A57-5C56430AB5FB</id>
-    <title>1.1.33 (1.1.33.6)</title>
-    <summary>1.1.33.6</summary>
-    <link href="" />
-    <updated>2020-05-10T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Moved the Update reason for game server to the globalisation file.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:93E619A6-2441-4D5C-A397-C74861F7C394</id>
-    <title>1.1.33 (1.1.33.5)</title>
-    <summary>1.1.33.5</summary>
-    <link href="" />
-    <updated>2020-05-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Sync Window - switched the lists, so it matches the wording of the information message.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:7B94A861-22B7-40F0-B145-D2E1A3CD3120</id>
-    <title>1.1.33 (1.1.33.4)</title>
-    <summary>1.1.33.4</summary>
-    <link href="" />
-    <updated>2020-05-04T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Sync Button - updated the tooltip.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:543B4E10-9C82-4767-AA61-FAF5C4C6545F</id>
-    <title>1.1.33 (1.1.33.3)</title>
-    <summary>1.1.33.3</summary>
-    <link href="" />
-    <updated>2020-05-03T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Profile Sync Window - have changed the way this window works. You now open on the profile you want to copy from, and you can now select one or more profiles to copy to.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:D04E7E26-D35B-4D28-92BE-5363FC2B6035</id>
-    <title>1.1.33 (1.1.33.2)</title>
-    <summary>1.1.33.2</summary>
-    <link href="" />
-    <updated>2020-05-01T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings - added new alert message for Outdated mods to the discord plugin.</li>
-            <li>Out of Date Mods - added new alert message that is sent when the server manager detects a mod is outdated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:F31488FF-5B1F-4484-A9C0-DE9AA1DB8282</id>
-    <title>1.1.33 (1.1.33.1)</title>
-    <summary>1.1.33.1</summary>
-    <link href="" />
-    <updated>2020-05-01T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Removed ProfileToolTip from profile file.</li>
+            <li>Profile Sync - removed the ports and password from the administration section sync.</li>
+            <li>Globalisation - added some missing strings to the globalisation files.</li>
           </ul>
         </p>
       </div>
