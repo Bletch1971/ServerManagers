@@ -147,6 +147,8 @@
     <sys:String x:Key="ModDetails_Load_FailedLabel">An error occurred while retrieving the mod details.\r\n{0}</sys:String>
     <sys:String x:Key="ModDetails_Purge_FailedTitle">Purge Unused Mods Error</sys:String>
     <sys:String x:Key="ModDetails_Purge_Title">Purge Unused Mods</sys:String>
+    <sys:String x:Key="ModDetails_Purge_Label">You are about to purge ALL unused mods from your server's Mod folder. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_Purge_SuccessLabel">Mod purge complete, a total of {folderCount} mod folder(s) and {fileCount} mod file(s) were purged.</sys:String>
     <sys:String x:Key="ModDetails_Refresh_FailedTitle">Refresh Mod Details Error</sys:String>
     <sys:String x:Key="ModDetails_Reload_FailedTitle">Reload Mod Details Error</sys:String>
     <sys:String x:Key="ModDetails_Save_FailedTitle">Save Mods Error</sys:String>
@@ -750,6 +752,14 @@
     <sys:String x:Key="ServerSettings_RuntimeStatusUninstalledLabel">Uninstalled</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusUnknownLabel">Unknown</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusUpdatingLabel">Updating</sys:String>
+
+    <sys:String x:Key="ServerSettings_ProfileValidateTitle">Profile Validation</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateSuccessLabel">The profile passed the basic validation.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateErrorTitle">Profile Validation Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_SupportZipTitle">Support ZipFile Creation</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipSuccessLabel">The support zip file has been created and saved to your desktop.\r\nThe filename is {filename}.</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipErrorTitle">Support ZipFile Creation Error</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
@@ -878,13 +888,14 @@
     <sys:String x:Key="ServerSettings_MaxPlayersLabel">Max Players:</sys:String>
     <sys:String x:Key="ServerSettings_MaxPlayersTooltip">Sets the maximum number of players which can join this server.</sys:String>
 
-    <sys:String x:Key="ServerSettings_AdminConsoleLabel">Admin Console (RCON)</sys:String>
-    <sys:String x:Key="ServerSettings_EnableRCONPortLabel">Enable RCON Port</sys:String>
-    <sys:String x:Key="ServerSettings_EnableRCONPortTooltip">If enabled, the RCON port will be enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_RCONEnabledLabel">Enable RCON</sys:String>
+    <sys:String x:Key="ServerSettings_RCONEnabledTooltip">If enabled, the RCON feature will be enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_RCONPortLabel">RCON Port:</sys:String>
     <sys:String x:Key="ServerSettings_RCONPortTooltip">The port that RCON will use on your server.</sys:String>
-    <sys:String x:Key="ServerSettings_RCONResetTooltip">Resets the RCON Window settings back to defaults.</sys:String>
     <sys:String x:Key="ServerSettings_RCONLogBufferLabel">RCON Server Log Buffer:</sys:String>
     <sys:String x:Key="ServerSettings_RCONLogBufferTooltip">Sets the max length of RCON game log buffer (default 600).</sys:String>
+    <sys:String x:Key="ServerSettings_RCONResetTooltip">Resets the RCON Window settings back to defaults.</sys:String>
+
     <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Force Respawn Dinos on Startup (Causes lag after 'Ready' while repopulating)</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">If enabled, when the server is started ALL wild creatures will be wiped and respawned (this will only destroy wild creatures that are NOT currently being tamed).</sys:String>
     <sys:String x:Key="ServerSettings_NoDinosLabel">No Dinos</sys:String>

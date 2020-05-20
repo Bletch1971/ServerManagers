@@ -5,173 +5,25 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-05-14T00:00:00Z</updated>
+  <updated>2020-05-15T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:81EA1E3C-4BDD-4923-81BE-0C2C856F90A2</id>
-    <title>1.1.374 (1.1.374.7)</title>
-    <summary>1.1.374.7</summary>
+    <id>urn:uuid:0ABECBAA-14B5-461B-8B7D-E2F1B655AE09</id>
+    <title>1.1.375 (1.1.375.1)</title>
+    <summary>1.1.375.1</summary>
     <link href="" />
-    <updated>2020-05-14T00:00:00Z</updated>
+    <updated>2020-05-15T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Sync Window - after a profile has been updated, the profile is now saved.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:808992C2-61ED-49F4-8B62-24857B1CE39D</id>
-    <title>1.1.374 (1.1.374.6)</title>
-    <summary>1.1.374.6</summary>
-    <link href="" />
-    <updated>2020-05-10T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Moved the Update reason for game server to the globalisation file.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:5F6D4206-E78B-413E-A228-726A4F90ACD9</id>
-    <title>1.1.374 (1.1.374.5)</title>
-    <summary>1.1.374.5</summary>
-    <link href="" />
-    <updated>2020-05-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Sync Window - switched the lists, so it matches the wording of the information message.</li>
-            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:14BB5F92-6A60-461C-8BEB-7F5D30C35BB9</id>
-    <title>1.1.374 (1.1.374.4)</title>
-    <summary>1.1.374.4</summary>
-    <link href="" />
-    <updated>2020-05-04T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Sync Button - updated the tooltip.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:D351B78C-56BD-4BC8-8B5D-8A3723CE657F</id>
-    <title>1.1.374 (1.1.374.3)</title>
-    <summary>1.1.374.3</summary>
-    <link href="" />
-    <updated>2020-05-03T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Profile Sync Window - have changed the way this window works. You now open on the profile you want to copy from, and you can now select one or more profiles to copy to.</li>
-            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:36C3D673-BE76-4548-90EE-D52B3BB1758D</id>
-    <title>1.1.374 (1.1.374.2)</title>
-    <summary>1.1.374.2</summary>
-    <link href="" />
-    <updated>2020-05-01T01:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Global Settings - added new alert message for Outdated mods to the discord plugin.</li>
-            <li>Out of Date Mods - added new alert message that is sent when the server manager detects a mod is outdated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:EA2525A7-371F-4D72-A789-39F244C3C72C</id>
-    <title>1.1.374 (1.1.374.1)</title>
-    <summary>1.1.374.1</summary>
-    <link href="" />
-    <updated>2020-05-01T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Aberration - added Tek Sleeping Pod engram and item.</li>
-            <li>Removed ProfileToolTip from profile file.</li>
-          </ul>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Server Settings - Rules Section - added missing TribeSlotReuseCooldown setting.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>Profile Sync - removed the ports and password from the administration section sync.</li>
+            <li>Globalisation - added some missing strings to the globalisation files.</li>
+            <li>SurvivalEvolved gamedata file updated. (thanks @depth)</li>
+            <li>Ragnarok gamedata file updated. (thanks @depth)</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
           </ul>
         </p>
       </div>
