@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-05-21T00:00:00Z</updated>
+  <updated>2020-05-21T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:ABE7529C-8AAA-498C-B898-1979824EB4D2</id>
+    <title>1.1.34 (1.1.34.3)</title>
+    <summary>1.1.34.3</summary>
+    <link href="" />
+    <updated>2020-05-21T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - changed the workshop cache field to accept 0. When set the zero it will disable to auto refresh, and must be done manually.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:10B50D98-DA07-4AC4-BB73-D9C43A0A9973</id>
