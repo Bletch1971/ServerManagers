@@ -935,7 +935,7 @@
     <sys:String x:Key="ServerSettings_NetworkingLabel">Networking</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">Local IP:</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPTooltip">Sets the local (private) IP the server will listen on. This should be your primary network card which routes to the public internet.</sys:String>
-    <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the game choose</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the server choose</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPRecommendedLabel">(Recommended)</sys:String>
     <sys:String x:Key="ServerSettings_RefreshLocalIPTooltip">Refresh the available local IPs.</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortLabel">Server Port:</sys:String>
