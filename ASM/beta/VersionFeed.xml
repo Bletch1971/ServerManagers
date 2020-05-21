@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-05-21T04:00:00Z</updated>
+  <updated>2020-05-21T05:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:46A8F348-AE16-4122-876B-F6F63B8B51A7</id>
+    <title>1.1.375 (1.1.375.5)</title>
+    <summary>1.1.375.5</summary>
+    <link href="" />
+    <updated>2020-05-21T05:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - changed the workshop cache field to accept 0. When set the zero it will disable to auto refresh, and must be done manually.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:9B1C6B84-CF50-489B-99F1-3B3EC1D2E7A0</id>
