@@ -1005,7 +1005,7 @@
     <sys:String x:Key="ServerSettings_WebAlarmKeyTooltip">A key which is optional to use in the listening script, but required to have it in the text file.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Specifies the URL where your listening script is stored, waiting and ready to receive the post information by your game server.</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionaility, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionality, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Server Log Options</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Reset all server log options to defaults.</sys:String>
@@ -1031,6 +1031,11 @@
     <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Event Details</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">NOTE: Enabling an event on your server should only be done when the official event is running. If you enable the event before or after the official dates, the event may cause your server to become unstable, or may not work at all.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Active Event:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
 
     <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
