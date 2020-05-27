@@ -131,6 +131,8 @@
     <sys:String x:Key="ModDetails_Load_FailedLabel">An error occurred while retrieving the mod details.\r\n{0}</sys:String>
     <sys:String x:Key="ModDetails_Purge_FailedTitle">Purge Unused Mods Error</sys:String>
     <sys:String x:Key="ModDetails_Purge_Title">Purge Unused Mods</sys:String>
+    <sys:String x:Key="ModDetails_Purge_Label">You are about to purge ALL unused mods from your server's Mod folder. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_Purge_SuccessLabel">Mod purge complete, a total of {folderCount} mod folder(s) and {fileCount} mod file(s) were purged.</sys:String>
     <sys:String x:Key="ModDetails_Refresh_FailedTitle">Refresh Mod Details Error</sys:String>
     <sys:String x:Key="ModDetails_Reload_FailedTitle">Reload Mod Details Error</sys:String>
     <sys:String x:Key="ModDetails_Save_FailedTitle">Save Mods Error</sys:String>
@@ -635,7 +637,7 @@
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Force mod file downloads when no steam information available</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Workshop Cache Expiry</sys:String>
-    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh.</sys:String>
+    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh. Set to 0 to never expire the cache, you must manually refresh the cache.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
@@ -829,6 +831,14 @@
     <sys:String x:Key="ServerSettings_RuntimeStatusUninstalledLabel">Uninstalled</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusUnknownLabel">Unknown</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusUpdatingLabel">Updating</sys:String>
+
+    <sys:String x:Key="ServerSettings_ProfileValidateTitle">Profile Validation</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateSuccessLabel">The profile passed the basic validation.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateErrorTitle">Profile Validation Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_SupportZipTitle">Support ZipFile Creation</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipSuccessLabel">The support zip file has been created and saved to your desktop.\r\nThe filename is {filename}.</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipErrorTitle">Support ZipFile Creation Error</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
@@ -925,7 +935,7 @@
     <sys:String x:Key="ServerSettings_NetworkingLabel">Networking</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">Local IP:</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPTooltip">Sets the local (private) IP the server will listen on. This should be your primary network card which routes to the public internet.</sys:String>
-    <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the game choose</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the server choose</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPRecommendedLabel">(Recommended)</sys:String>
     <sys:String x:Key="ServerSettings_RefreshLocalIPTooltip">Refresh the available local IPs.</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortLabel">Server Port:</sys:String>
