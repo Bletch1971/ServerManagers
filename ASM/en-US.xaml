@@ -147,6 +147,8 @@
     <sys:String x:Key="ModDetails_Load_FailedLabel">An error occurred while retrieving the mod details.\r\n{0}</sys:String>
     <sys:String x:Key="ModDetails_Purge_FailedTitle">Purge Unused Mods Error</sys:String>
     <sys:String x:Key="ModDetails_Purge_Title">Purge Unused Mods</sys:String>
+    <sys:String x:Key="ModDetails_Purge_Label">You are about to purge ALL unused mods from your server's Mod folder. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_Purge_SuccessLabel">Mod purge complete, a total of {folderCount} mod folder(s) and {fileCount} mod file(s) were purged.</sys:String>
     <sys:String x:Key="ModDetails_Refresh_FailedTitle">Refresh Mod Details Error</sys:String>
     <sys:String x:Key="ModDetails_Reload_FailedTitle">Reload Mod Details Error</sys:String>
     <sys:String x:Key="ModDetails_Save_FailedTitle">Save Mods Error</sys:String>
@@ -457,7 +459,7 @@
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Force mod file downloads when no steam information available</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Workshop Cache Expiry</sys:String>
-    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh.</sys:String>
+    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh. Set to 0 to never expire the cache, you must manually refresh the cache.</sys:String>
     
     <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
@@ -750,6 +752,14 @@
     <sys:String x:Key="ServerSettings_RuntimeStatusUninstalledLabel">Uninstalled</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusUnknownLabel">Unknown</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusUpdatingLabel">Updating</sys:String>
+
+    <sys:String x:Key="ServerSettings_ProfileValidateTitle">Profile Validation</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateSuccessLabel">The profile passed the basic validation.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateErrorTitle">Profile Validation Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_SupportZipTitle">Support ZipFile Creation</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipSuccessLabel">The support zip file has been created and saved to your desktop.\r\nThe filename is {filename}.</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipErrorTitle">Support ZipFile Creation Error</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
@@ -852,7 +862,7 @@
     <sys:String x:Key="ServerSettings_QueryPortTooltip">The port Steam uses to communicate with your server. Default is 27015. Change this and Server Port if you wish to host multiple servers on one machine.</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">Local IP:</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPTooltip">Sets the local (private) IP the server will listen on. This should be your primary network card which routes to the public internet.</sys:String>
-    <sys:String x:Key="ServerSettings_LocalIPArkChooseLabel">Let ARK choose</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the server choose</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPRecommendedLabel">(Recommended)</sys:String>
     <sys:String x:Key="ServerSettings_RefreshLocalIPTooltip">Refresh the available local IPs.</sys:String>
     <sys:String x:Key="ServerSettings_UseRawSocketsLabel">Use Raw Sockets</sys:String>
@@ -866,42 +876,13 @@
     <sys:String x:Key="ServerSettings_LocalIP_ErrorTitle">Local IP invalid</sys:String>
     <sys:String x:Key="ServerSettings_LocalIP_ErrorLabel">Your Local IP address {0} is no longer available. Please review the available IP addresses and select a valid one. If you have a server running on the original IP, you will need to stop it first.</sys:String>
 
-    <sys:String x:Key="ServerSettings_LoginOptionsLabel">Login Options</sys:String>
-    <sys:String x:Key="ServerSettings_UseBanListLabel">Use Ban List URL</sys:String>
-    <sys:String x:Key="ServerSettings_UseBanListTooltip">If enabled, the ban list URL specified will be used.</sys:String>
-    <sys:String x:Key="ServerSettings_BanListTooltip">The URL of the ban list to use.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetBanlistTooltip">Reset the ban list properties to defaults.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableIdleTimeoutLabel">Enable Idle Timeout</sys:String>
-    <sys:String x:Key="ServerSettings_EnableIdleTimeoutTooltip">If enabled, the idle timeout period will be used.</sys:String>
-    <sys:String x:Key="ServerSettings_IdleTimeoutTooltip">The time until idle players are kicked from the server.</sys:String>
-    <sys:String x:Key="ServerSettings_IdleTimeoutUnits">seconds</sys:String>
-    <sys:String x:Key="ServerSettings_MaxPlayersLabel">Max Players:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxPlayersTooltip">Sets the maximum number of players which can join this server.</sys:String>
-
-    <sys:String x:Key="ServerSettings_AdminConsoleLabel">Admin Console (RCON)</sys:String>
-    <sys:String x:Key="ServerSettings_EnableRCONPortLabel">Enable RCON Port</sys:String>
-    <sys:String x:Key="ServerSettings_EnableRCONPortTooltip">If enabled, the RCON port will be enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_RCONEnabledLabel">Enable RCON</sys:String>
+    <sys:String x:Key="ServerSettings_RCONEnabledTooltip">If enabled, the RCON feature will be enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_RCONPortLabel">RCON Port:</sys:String>
     <sys:String x:Key="ServerSettings_RCONPortTooltip">The port that RCON will use on your server.</sys:String>
-    <sys:String x:Key="ServerSettings_RCONResetTooltip">Resets the RCON Window settings back to defaults.</sys:String>
     <sys:String x:Key="ServerSettings_RCONLogBufferLabel">RCON Server Log Buffer:</sys:String>
     <sys:String x:Key="ServerSettings_RCONLogBufferTooltip">Sets the max length of RCON game log buffer (default 600).</sys:String>
-    <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Force Respawn Dinos on Startup (Causes lag after 'Ready' while repopulating)</sys:String>
-    <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">If enabled, when the server is started ALL wild creatures will be wiped and respawned (this will only destroy wild creatures that are NOT currently being tamed).</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinosLabel">No Dinos</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinosTooltip">If enabled, no dinos will spawn on the map.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Enable Auto Force Respawn Dinos</sys:String>
-    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip">If enabled, will force respawn of wild dinos after the specified interval.</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Auto Force Respawn Dinos Interval</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">The interval between the forced auto dino respawn.</sys:String>
-    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Alternate Save Directory Name:</sys:String>
-    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Optional)</sys:String>
-    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Sets the directory name (underneath the servers Saved folder) to store the world, player and tribe files.</sys:String>
-    <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Cross-ARK Data Transfer ClusterId:</sys:String>
-    <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group the servers together via Cross-ARK Data Transfer.</sys:String>
-    <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonLabel">Create SymLink</sys:String>
-    <sys:String x:Key="ServerSettings_CreateSymbolicLinkButtonTooltip">Creates a cluster symbolic link for this server to the server manager clusters folder.</sys:String>
-    <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Cluster Directory Override</sys:String>
-    <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">If enabled, allows you to use a common cross-server storage location that functions between multiple servers running on the same machine. Uses the clusters directory in the server manager Data directory.</sys:String>
+    <sys:String x:Key="ServerSettings_RCONResetTooltip">Resets the RCON Window settings back to defaults.</sys:String>
 
     <sys:String x:Key="ServerSettings_MapsAndModsLabel">Maps and Mods</sys:String>
     <sys:String x:Key="ServerSettings_MapsAndModsSOTFLabel">Survival of the Fittest enabled - Maps and Mods disabled</sys:String>
@@ -919,12 +900,6 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">A comma-separated list of mod ids, in the order in which they should be applied.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">View the mod details.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Upgrade to the latest version of the mods that is currently available to download.</sys:String>
-
-    <sys:String x:Key="ServerSettings_EnableExtinctionEventLabel">Enable Extinction Event</sys:String>
-    <sys:String x:Key="ServerSettings_EnableExtinctionEventTooltip">If enabled, the extinction countdown will be turned on. To reset the countdown, disable, save the profile and then enable.</sys:String>
-    <sys:String x:Key="ServerSettings_ExtinctionEventTimeIntervalLabel">Time Interval</sys:String>
-    <sys:String x:Key="ServerSettings_ExtinctionEventTimeIntervalTooltip">Sets the number of days to countdown before the extinction event will occur.</sys:String>
-    <sys:String x:Key="ServerSettings_ExtinctionEventUTCTooltip">The date and time of the extinction event.</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">Saves</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Auto Save Period:</sys:String>
@@ -947,8 +922,24 @@
     <sys:String x:Key="ServerSettings_MOTDIntervalTooltip">The interval when the Message of the Day will be shown.</sys:String>
     <sys:String x:Key="ServerSettings_MOTDIntervalUnits">minutes</sys:String>
 
+    <sys:String x:Key="ServerSettings_EnableExtinctionEventLabel">Enable Extinction Event</sys:String>
+    <sys:String x:Key="ServerSettings_EnableExtinctionEventTooltip">If enabled, the extinction countdown will be turned on. To reset the countdown, disable, save the profile and then enable.</sys:String>
+    <sys:String x:Key="ServerSettings_ExtinctionEventTimeIntervalLabel">Time Interval</sys:String>
+    <sys:String x:Key="ServerSettings_ExtinctionEventTimeIntervalTooltip">Sets the number of days to countdown before the extinction event will occur.</sys:String>
+    <sys:String x:Key="ServerSettings_ExtinctionEventUTCTooltip">The date and time of the extinction event.</sys:String>
+
     <sys:String x:Key="ServerSettings_ServerOptionsLabel">Server Options</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerOptionsTooltip">Reset all server options to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPlayersLabel">Max Players:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPlayersTooltip">Sets the maximum number of players which can join this server.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableIdleTimeoutLabel">Enable Idle Timeout</sys:String>
+    <sys:String x:Key="ServerSettings_EnableIdleTimeoutTooltip">If enabled, the idle timeout period will be used.</sys:String>
+    <sys:String x:Key="ServerSettings_IdleTimeoutTooltip">The time until idle players are kicked from the server.</sys:String>
+    <sys:String x:Key="ServerSettings_IdleTimeoutUnits">seconds</sys:String>
+    <sys:String x:Key="ServerSettings_UseBanListLabel">Use Ban List URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseBanListTooltip">If enabled, the ban list URL specified will be used.</sys:String>
+    <sys:String x:Key="ServerSettings_BanListTooltip">The URL of the ban list to use.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetBanlistTooltip">Reset the ban list properties to defaults.</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACLabel">Disable Valve Anti-Cheat System (VAC)</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACTooltip">If enabled, the Valve anti-cheat system will be disabled. Please use this with caution!</sys:String>
     <sys:String x:Key="ServerSettings_DisablePMVOptimizationLabel">Disable Player-Move-Physics Optimization</sys:String>
@@ -974,14 +965,14 @@
     <sys:String x:Key="ServerSettings_ForceLowMemoryTooltip">If enabled, reduces graphics and audio effects to save about 800 MB RAM, likely enabling 4GB RAM players to get past infinite-loading screens.</sys:String>
     <sys:String x:Key="ServerSettings_ForceNoManSkyLabel">Force No Man Sky</sys:String>
     <sys:String x:Key="ServerSettings_ForceNoManSkyTooltip">If enabled, lots of the detailed sky features are disabled, such as clouds and starry night sky. You still see the stars, the sun, and the moon.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Enable Web Alarms</sys:String>
-    <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">If enabled, servers can now get web notifications posted somewhere when important things happen to a tribe.</sys:String>
     <sys:String x:Key="ServerSettings_UseNoMemoryBiasLabel">Use No Memory Bias</sys:String>
     <sys:String x:Key="ServerSettings_UseNoMemoryBiasTooltip">If enabled, will use the old method, more RAM usage but no potential performance loss.</sys:String>
     <sys:String x:Key="ServerSettings_StasisKeepControllersLabel">Stasis Keep Controllers</sys:String>
     <sys:String x:Key="ServerSettings_StasisKeepControllersTooltip">If enabled, the server can gain performance by keeping the AI's in memory of statised creatures. NOTE: your server must have a lot of RAM otherwise your server will suffer with a large memory overhead.</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionLabel">No Hang Detection</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionTooltip">If enabled, prevents some types of crashes causes by hanging (may appear as though the server is lagging while the server is hanging).</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinosLabel">No Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinosTooltip">If enabled, no dinos will spawn on the map.</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselLabel">Server Allow Ansel</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">If enabled, will enable NVIDIA Ansel on Servers.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Structure Memory Optimizations</sys:String>
@@ -990,11 +981,19 @@
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">If enabled, will turn it off the anti meshing system entirely.</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">No Under Mesh Killing</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">If enabled, will turn off the anti meshing player kills (but still allow teleporting).</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmKeyLabel">Web Key</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmKeyTooltip">A key which is optional to use in the listening script, but required to have it in the text file.</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Specifies the URL where your listening script is stored, waiting and ready to receive the post information by your game server.</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionaility, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
+    <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Force Respawn Dinos on Startup (Causes lag after 'Ready' while repopulating)</sys:String>
+    <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">If enabled, when the server is started ALL wild creatures will be wiped and respawned (this will only destroy wild creatures that are NOT currently being tamed).</sys:String>
+    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Enable Auto Force Respawn Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip">If enabled, will force respawn of wild dinos after the specified interval.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Auto Force Respawn Dinos Interval</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">The interval between the forced auto dino respawn.</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Alternate Save Directory Name:</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Optional)</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Sets the directory name (underneath the servers Saved folder) to store the world, player and tribe files.</sys:String>
+    <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Cross-ARK Data Transfer ClusterId:</sys:String>
+    <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group the servers together via Cross-ARK Data Transfer.</sys:String>
+    <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Cluster Directory Override</sys:String>
+    <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">If enabled, allows you to use a common cross-server storage location that functions between multiple servers running on the same machine. Uses the clusters directory in the server manager Data directory.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Server Log Options</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Reset all server log options to defaults.</sys:String>
@@ -1014,12 +1013,25 @@
     <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">If enabled, admin commands will be echoed to chat for admins only to see.</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Tribe Log Destroyed Enemy Structures</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">If enabled, the enemy-structure destruction log (for the victim tribe) wil display the attacker tribe in the Tribe Logs, instead of a generic structure destruction message.</sys:String>
+    
+    <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Enable Web Alarms</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">If enabled, servers can now get web notifications posted somewhere when important things happen to a tribe.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmKeyLabel">Web Key</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmKeyTooltip">A key which is optional to use in the listening script, but required to have it in the text file.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Specifies the URL where your listening script is stored, waiting and ready to receive the post information by your game server.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionality, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
 
     <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Event Details</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">NOTE: Enabling an event on your server should only be done when the official event is running. If you enable the event before or after the official dates, the event may cause your server to become unstable, or may not work at all.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Active Event:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
 
     <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
