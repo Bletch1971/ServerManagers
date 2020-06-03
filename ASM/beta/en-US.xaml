@@ -1021,12 +1021,14 @@
     <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Specifies the URL where your listening script is stored, waiting and ready to receive the post information by your game server.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionality, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Web Alarm Error</sys:String>
 
     <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
 
     <sys:String x:Key="ServerSettings_EventLabel">Event Details</sys:String>
     <sys:String x:Key="ServerSettings_EventNote">NOTE: Enabling an event on your server should only be done when the official event is running. If you enable the event before or after the official dates, the event may cause your server to become unstable, or may not work at all.</sys:String>
@@ -1762,6 +1764,8 @@
     <!--#region Server Settings - Server File Details -->
     <sys:String x:Key="ServerSettings_ServerFilesLabel">Server File Details</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesWarningLabel">NOTE: Any changes will require a server restart to take effect.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesLoadErrorTitle">Load Error</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesSaveErrorTitle">Save Error</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesAdminLabel">Administrators</sys:String>
     <sys:String x:Key="ServerSettings_AddAdminPlayerTooltip">Add Administrator</sys:String>
@@ -2359,8 +2363,14 @@
 
     <!--#region Branch Names -->
     <sys:String x:Key="live">Live</sys:String>
-    <sys:String x:Key="halloween">Halloween Event</sys:String>
-    <sys:String x:Key="holidayevent">Christmas Event</sys:String>
+    <!--#endregion-->
+
+    <!--#region Event Names -->
+    <sys:String x:Key="vday">Valentines Day</sys:String>
+    <sys:String x:Key="Easter">Easter</sys:String>
+    <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
+    <sys:String x:Key="TurkeyTrial">Turkey Trial</sys:String>
+    <sys:String x:Key="WinterWonderland">Winter Wonderland</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature -->
@@ -5159,6 +5169,66 @@
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss Inventory - Ice Titan</sys:String>
     <!--#endregion-->
     
+    <!--#endregion-->
+
+    <!--#region Profile Validation -->
+    <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+
+    <sys:String x:Key="ProfileValidation_MapNameBlank">The map name has not been entered.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Server files have not been downloaded, server folder does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Server files have not been downloaded properly, server executable file ({ServerExe}) does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">The server files are for a different application.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_MapModNotDownloaded">Map mod has not been downloaded, mod folder does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModFileNotDownloaded">Map mod has not been downloaded properly, mod file does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModInvalid">The map mod is not a valid map mod.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModFileInvalid">Map mod has not been downloaded properly, mod file is invalid.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModNameInvalid">Map mod file does not exist or is invalid.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModNameMismatch">The map name does not match the map mod's map name.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModDifferentApplication">The map mod is for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModOutdated">The map mod is outdated.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModSteamError">The map mod details could not be retrieved from steam.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_TCModNotDownloaded">Total conversion mod has not been downloaded, mod folder does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModFileNotDownloaded">Total conversion mod has not been downloaded properly, mod file does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModInvalid">The total conversion mod is not a valid total conversion mod.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModFileInvalid">Total conversion mod has not been downloaded properly, mod file is invalid.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModNameInvalid">Total conversion mod file does not exist or is invalid.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModNameMismatch">The map name does not match the total conversion mod's map name.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModDifferentApplication">The total conversion mod is for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModOutdated">The total conversion mod is outdated.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModSteamError">The total conversion mod details could not be retrieved from steam.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ModNotDownloaded">Mod {modId} has not been downloaded, mod folder does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Mod {modId} has not been downloaded properly, mod file does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Mod {modId} is for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModOutdated">Mod {modId} is outdated.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModSteamError">Mod {modId} details could not be retrieved from steam.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Profile Save -->
+    <sys:String x:Key="ProfileSave_Saving">Saving...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingPlayerDinoMaxXP">Checking Player and Dino Max XP...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingDinoInformation">Constructing Dino Information...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingEngramInformation">Constructing Engram Information...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Constructing Map Spawner Information...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Constructing Supply Crate Information...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Constructing Stack Size Information...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingProfileFile">Saving Profile File...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingConfigFiles">Saving Config Files...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingLauncherFile">Saving Launcher File...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingWebAlarmFile">Checking Web Alarm File...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingDirectoryPermissions">Checking Directory Permissions...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingScheduledTasks">Checking Scheduled Tasks...</sys:String>
+    <!--#endregion-->
+
+    <!--#region Restore Save Files -->
+    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Backup file could not be found or does not exist.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">The server save folder could not be found or does not exist.\r\n{saveFolder}</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">The backup does not contain the world save file.</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>
