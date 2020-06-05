@@ -8,6 +8,8 @@
     >
 
     <!--#region Generic -->
+    <sys:String x:Key="Generic_TranslatedByLabel">Last Updated By:</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">unknown</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
@@ -808,6 +810,7 @@
     <sys:String x:Key="ServerSettings_UpdateServer_FailedTitle">Updating Server Error</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_Title">Backup Server</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Backup Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">The backup was successful.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Shutdown Server Error</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Shutdown Server Cancelled</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">The shutdown window is already open for this server.</sys:String>
@@ -5172,6 +5175,9 @@
     <!--#endregion-->
 
     <!--#region Profile Validation -->
+    <sys:String x:Key="ProfileValidation_Title">Profile Validation</sys:String>
+    <sys:String x:Key="ProfileValidation_WarningLabel">The following validation problems were encountered.\r\n\r\n{validateMessage}\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+
     <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
@@ -5229,6 +5235,11 @@
     <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Backup file could not be found or does not exist.</sys:String>
     <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">The server save folder could not be found or does not exist.\r\n{saveFolder}</sys:String>
     <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">The backup does not contain the world save file.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Update -->
+    <sys:String x:Key="ServerUpdate_Title">Server Update</sys:String>
+    <sys:String x:Key="ServerUpdate_WarningLabel">There was a problem while performing the server update. This may leave your server in a incomplete state.\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>
