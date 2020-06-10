@@ -915,12 +915,11 @@
     <sys:String x:Key="ServerSettings_MapPathTooltip">The standard map name (e.g. TheIsland, TheCenter), or the local mod path (e.g. /Game/Mods/123456789/ModMapName) if your mod has a map in it.</sys:String>
     <sys:String x:Key="ServerSettings_TotalConversionLabel">Total Conversion ID:</sys:String>
     <sys:String x:Key="ServerSettings_TotalConversionTooltip">The id of the total conversion mod.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetMapNameIslandTooltip">Reset map name to the Island map</sys:String>
-    <sys:String x:Key="ServerSettings_ResetMapNameCenterTooltip">Reset map name to the Center map</sys:String>
-    <sys:String x:Key="ServerSettings_ResetMapNameScorchedEarthTooltip">Reset map name to the Scorched Earth map</sys:String>
-    <sys:String x:Key="ServerSettings_ResetMapNameRagnarokTooltip">Reset map name to the Ragnarok map</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameTooltip">Read total conversion mod to find the map name</sys:String>
-    <sys:String x:Key="ServerSettings_ResetTotalConversionPrimitivePlusTooltip">Reset total conversion to Primitive +</sys:String>
+    <sys:String x:Key="ServerSettings_FindTotalConversionMapNameSuccessTitle">Find Total Conversion Map Name</sys:String>
+    <sys:String x:Key="ServerSettings_FindTotalConversionMapNameSuccessLabel">The map name has been updated.</sys:String>
+    <sys:String x:Key="ServerSettings_FindTotalConversionMapNameErrorTitle">Find Total Conversion Map Name Error</sys:String>
+    <sys:String x:Key="ServerSettings_FindTotalConversionMapNameErrorLabel">The map name could not be found, please check the total conversion mod id is correct and the mod has been downloaded.</sys:String>
     <sys:String x:Key="ServerSettings_ModIdsLabel">Mod IDs:</sys:String>
     <sys:String x:Key="ServerSettings_ModIdsTooltip">A comma-separated list of mod ids, in the order in which they should be applied.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">View the mod details.</sys:String>
