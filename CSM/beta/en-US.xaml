@@ -13,6 +13,13 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
+    <!--#region Mod Types -->
+    <sys:String x:Key="ModType_Unknown">Unknown</sys:String>
+    <sys:String x:Key="ModType_NotDownloaded">Not Downloaded</sys:String>
+    <sys:String x:Key="ModType_Map">Map</sys:String>
+    <sys:String x:Key="ModType_Mod">Mod</sys:String>
+    <!--#endregion-->
+
     <!--#region GameApplication enum -->
     <sys:String x:Key="GameApplication_All">All</sys:String>
     <sys:String x:Key="GameApplication_Conan">Conan</sys:String>
@@ -221,6 +228,18 @@
     <sys:String x:Key="WorldSaveRestore_DeleteTooltip">Delete backup file</sys:String>
     <sys:String x:Key="WorldSaveRestore_ReloadTooltip">Reload backup files</sys:String>
     <sys:String x:Key="WorldSaveRestore_RestoreTooltip">Restore backup</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_DeleteConfirmationTitle">Delete Backup Confirmation</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteConfirmationLabel">You are about to delete backup file\r\n{fileName}.\r\n\r\nDo you want to continue?</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteErrorTitle">Delete Backup Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteSuccessTitle">Delete Backup Success</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteSuccessLabel">The backup file has been deleted.</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_RestoreConfirmationTitle">Restore Backup Confirmation</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreConfirmationLabel">You are about to restore backup file\r\n{fileName}.\r\n\r\nDo you want to continue?</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreErrorTitle">Restore Backup Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreSuccessTitle">Restore Backup Success</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreSuccessLabel">The backup file has been restored, {fileCount} file(s) restored.</sys:String>
     <!--#endregion-->
 
     <!--#region Profile Sync Window -->
