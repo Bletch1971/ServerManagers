@@ -5,10 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-06-11T16:00:00Z</updated>
+  <updated>2020-06-11T17:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:FA4452BD-15FD-46C2-BADB-5B00BE3BE579</id>
+    <id>urn:uuid:2812382C-8C2B-4554-88A9-F060E9B98C87</id>
+    <title>1.1.379 (1.1.379.3)</title>
+    <summary>1.1.379.3</summary>
+    <link href="" />
+    <updated>2020-06-11T17:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Engram Grid - select/unselect all now works with the textbox filter as well.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E5C67D0A-48B1-41D7-9A35-E871AEB0DFFA</id>
     <title>1.1.379 (1.1.379.2)</title>
     <summary>1.1.379.2</summary>
     <link href="" />
