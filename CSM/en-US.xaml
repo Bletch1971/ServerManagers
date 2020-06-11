@@ -8,13 +8,30 @@
     >
 
     <!--#region Generic -->
+    <sys:String x:Key="Generic_TranslatedByLabel">Last Updated By:</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">unknown</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Types -->
+    <sys:String x:Key="ModType_Unknown">Unknown</sys:String>
+    <sys:String x:Key="ModType_NotDownloaded">Not Downloaded</sys:String>
+    <sys:String x:Key="ModType_Map">Map</sys:String>
+    <sys:String x:Key="ModType_Mod">Mod</sys:String>
     <!--#endregion-->
 
     <!--#region GameApplication enum -->
     <sys:String x:Key="GameApplication_All">All</sys:String>
     <sys:String x:Key="GameApplication_Conan">Conan</sys:String>
     <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="live">Live</sys:String>
+    <!--#endregion-->
+
+    <!--#region Game Map Names -->
+    <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
     <!--#endregion-->
 
     <!--#region Process Priority -->
@@ -211,6 +228,18 @@
     <sys:String x:Key="WorldSaveRestore_DeleteTooltip">Delete backup file</sys:String>
     <sys:String x:Key="WorldSaveRestore_ReloadTooltip">Reload backup files</sys:String>
     <sys:String x:Key="WorldSaveRestore_RestoreTooltip">Restore backup</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_DeleteConfirmationTitle">Delete Backup Confirmation</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteConfirmationLabel">You are about to delete backup file\r\n{fileName}.\r\n\r\nDo you want to continue?</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteErrorTitle">Delete Backup Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteSuccessTitle">Delete Backup Success</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteSuccessLabel">The backup file has been deleted.</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_RestoreConfirmationTitle">Restore Backup Confirmation</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreConfirmationLabel">You are about to restore backup file\r\n{fileName}.\r\n\r\nDo you want to continue?</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreErrorTitle">Restore Backup Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreSuccessTitle">Restore Backup Success</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreSuccessLabel">The backup file has been restored, {fileCount} file(s) restored.</sys:String>
     <!--#endregion-->
 
     <!--#region Profile Sync Window -->
@@ -888,6 +917,7 @@
     <sys:String x:Key="ServerSettings_UpdateServer_NoSteamCredentialsLabel">The server update failed as the steam username or password has not been setup in the Global Settings.</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_Title">Backup Server</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Backup Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">The backup was successful.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Shutdown Server Error</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Shutdown Server Cancelled</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">The shutdown window is already open for this server.</sys:String>
@@ -998,6 +1028,7 @@
     <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
 
     <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
@@ -1039,6 +1070,8 @@
     <!--#region Server Settings - Server File Details -->
     <sys:String x:Key="ServerSettings_ServerFilesLabel">Server File Details</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesWarningLabel">NOTE: Any changes will require a server restart to take effect.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesLoadErrorTitle">Load Error</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesSaveErrorTitle">Save Error</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesBlacklistedLabel">Blacklisted</sys:String>
     <sys:String x:Key="ServerSettings_AddBlacklistedPlayerTooltip">Add Blacklisted Player</sys:String>
@@ -1065,12 +1098,45 @@
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Checking Scheduled Tasks...</sys:String>
     <!--#endregion-->
 
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
+    <!--#region Profile Validation -->
+    <sys:String x:Key="ProfileValidation_Title">Profile Validation</sys:String>
+    <sys:String x:Key="ProfileValidation_WarningLabel">The following validation problems were encountered.\r\n\r\n{validateMessage}\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPeerPort">The server peer port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+
+    <sys:String x:Key="ProfileValidation_MapNameBlank">The map name has not been entered.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Server files have not been downloaded, server folder does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Server files have not been downloaded properly, server executable file ({ServerExe}) does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">The server files are for a different application.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Mod {modId} has not been downloaded, mod file does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Mod {modId} is for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModOutdated">Mod {modId} is outdated.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModSteamError">Mod {modId} details could not be retrieved from steam.</sys:String>
     <!--#endregion-->
 
-    <!--#region Game Map Names -->
-    <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
+    <!--#region Profile Save -->
+    <sys:String x:Key="ProfileSave_Saving">Saving...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingProfileFile">Saving Profile File...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingConfigFiles">Saving Config Files...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingLauncherFile">Saving Launcher File...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingDirectoryPermissions">Checking Directory Permissions...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingScheduledTasks">Checking Scheduled Tasks...</sys:String>
+    <!--#endregion-->
+
+    <!--#region Restore Save Files -->
+    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Backup file could not be found or does not exist.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">The server save folder could not be found or does not exist.\r\n{saveFolder}</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">The backup does not contain the world save file.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Update -->
+    <sys:String x:Key="ServerUpdate_Title">Server Update</sys:String>
+    <sys:String x:Key="ServerUpdate_WarningLabel">There was a problem while performing the server update. This may leave your server in a incomplete state.\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>
