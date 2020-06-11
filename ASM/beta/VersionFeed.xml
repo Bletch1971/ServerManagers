@@ -5,7 +5,36 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-06-10T00:00:00Z</updated>
+  <updated>2020-06-11T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:59901667-73CC-4A36-8A2E-A880284D3950</id>
+    <title>1.1.377 (1.1.377.6)</title>
+    <summary>1.1.377.6</summary>
+    <link href="" />
+    <updated>2020-06-11T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Crystal Isles gamedata file added - only includes map name.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:59901667-73CC-4A36-8A2E-A880284D3950</id>
