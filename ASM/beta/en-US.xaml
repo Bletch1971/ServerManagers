@@ -1127,6 +1127,8 @@
     <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsTooltip">If enabled, will allow the player to have unlimited respecs using the mindwipe tonic.</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsLabel">Allow Platform Saddle Multi Floors</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">If enabled, will allow multiple platform floors on rafts and saddle platforms.</sys:String>
+    <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierLabel">Platform Saddle Build Area Bounds Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Increasing the multiplier allows structures being placed further away from the platform.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Enable Difficulty Override</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">If enabled, this will allow the max level of creatures in the world to be changed.</sys:String>
