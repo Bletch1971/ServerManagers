@@ -5,7 +5,32 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-06-15T03:00:00Z</updated>
+  <updated>2020-06-15T04:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:B113D82B-0E58-40A7-A21B-A469B91A6698</id>
+    <title>1.1.38 (1.1.38.4)</title>
+    <summary>1.1.38.4</summary>
+    <link href="" />
+    <updated>2020-06-15T04:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Removed all steam related features from PlayerList/Rcon windows.</li>
+            <li>Fixed loaded EPIC player profiles in PlayerList/Rcon windows.</li>
+            <li>Removed steam details from Player window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:B113D82B-0E58-40A7-A21B-A469B91A6698</id>

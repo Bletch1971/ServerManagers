@@ -485,10 +485,8 @@
     <sys:String x:Key="PlayerList_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="PlayerList_ProfileInvalidCountLabel">Invalid:</sys:String>
 
-    <sys:String x:Key="PlayerList_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewTribe">View Clan...</sys:String>
-    <sys:String x:Key="PlayerList_Menu_CopySteamId">Copy Steam ID...</sys:String>
     <sys:String x:Key="PlayerList_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="PlayerList_Menu_Players">_Players</sys:String>
@@ -499,14 +497,11 @@
     <sys:String x:Key="PlayerList_Menu_Filter">_Filter</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterOffline">Show All</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterAdmin">Show Admin</sys:String>
-    <sys:String x:Key="PlayerList_Menu_FilterBanned">Show Banned</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterWhitelisted">Show Whitelisted</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterInvalid">Show Invalid</sys:String>
-    <sys:String x:Key="PlayerList_Menu_ShowAvatars">Show Player Avatars</sys:String>
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
-    <sys:String x:Key="Profile_SteamSectionLabel">Steam Details</sys:String>
     <sys:String x:Key="Profile_PlayerSectionLabel">Player Details</sys:String>
     <sys:String x:Key="Profile_TribeSectionLabel">Clan Details</sys:String>
     <sys:String x:Key="Profile_TribeMembersSectionLabel">Clan Members</sys:String>
@@ -515,20 +510,13 @@
     <sys:String x:Key="Profile_NameLabel">Name:</sys:String>
     <sys:String x:Key="Profile_OnlineLabel">Online:</sys:String>
     <sys:String x:Key="Profile_LastOnlineLabel">Last Online:</sys:String>
-    <sys:String x:Key="Profile_BannedCommunityLabel">Community Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedVACLabel">VAC Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedVACCountLabel">Number of VAC Bans:</sys:String>
-    <sys:String x:Key="Profile_BannedVACDaysLabel">Days Since Last Ban:</sys:String>
     <sys:String x:Key="Profile_LevelLabel">Level:</sys:String>
-    <sys:String x:Key="Profile_BannedLabel">Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedGameCountLabel">Number of Game Bans:</sys:String>
     <sys:String x:Key="Profile_TribeOwnerLabel">Owner:</sys:String>
-    <sys:String x:Key="Profile_SteamNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="Profile_PlatformNameColumnLabel">Player Name</sys:String>
     <sys:String x:Key="Profile_CharacterNameColumnLabel">Character Name</sys:String>
     <sys:String x:Key="Profile_LevelColumnLabel">Level</sys:String>
     <sys:String x:Key="Profile_OnlineColumnLabel">Online</sys:String>
     <sys:String x:Key="Profile_LastOnlineColumnLabel">Last Online</sys:String>
-    <sys:String x:Key="Profile_NavigateSteamProfile">Click to open the steam profile in a browser</sys:String>
 
     <sys:String x:Key="Profile_WindowTitle_Player">Player Profile - {0}</sys:String>
     <sys:String x:Key="Profile_WindowTitle_Tribe">Clan Profile - {0}</sys:String>
