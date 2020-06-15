@@ -5,10 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-06-15T08:00:00Z</updated>
+  <updated>2020-06-15T09:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:969AFCCC-C266-47F8-B61C-3E70CD311724</id>
+    <id>urn:uuid:3FB0EDF5-4379-4C28-98BB-7625DCEBAA1E</id>
+    <title>1.1.379 (1.1.379.9)</title>
+    <summary>1.1.379.9</summary>
+    <link href="" />
+    <updated>2020-06-15T09:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the Server Files section to be generic.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:06B62477-39A1-4437-8DCF-6A28AAA985D1</id>
     <title>1.1.379 (1.1.379.8)</title>
     <summary>1.1.379.8</summary>
     <link href="" />

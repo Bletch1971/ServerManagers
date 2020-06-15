@@ -100,11 +100,11 @@
     <sys:String x:Key="CustomConfigData_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
-    <!--#region AddSteamUserWindow Window -->
-    <sys:String x:Key="AddSteamUser_Title">Add Steam Users</sys:String>
-    <sys:String x:Key="AddSteamUser_InstructionLabel">Enter one or more SteamIds. Each id must be on a new line.</sys:String>
-    <sys:String x:Key="AddSteamUser_ProcessButtonLabel">OK</sys:String>
-    <sys:String x:Key="AddSteamUser_CancelButtonLabel">Cancel</sys:String>
+    <!--#region AddUserWindow Window -->
+    <sys:String x:Key="AddUser_Title">Add Users</sys:String>
+    <sys:String x:Key="AddUser_InstructionLabel">Enter one or more user ids. Each id must be on a new line.</sys:String>
+    <sys:String x:Key="AddUser_ProcessButtonLabel">OK</sys:String>
+    <sys:String x:Key="AddUser_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
     <!--#region ProcessorAffinity Window -->
@@ -1798,24 +1798,24 @@
     <sys:String x:Key="ServerSettings_ClearAdminPlayerTooltip">Clear Administrators</sys:String>
     <sys:String x:Key="ServerSettings_ReloadAdminPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveAdminPlayerTooltip">Delete Administrator</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">Player Name</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistLabel">Whitelisted</sys:String>
     <sys:String x:Key="ServerSettings_AddWhitelistPlayerTooltip">Add Whitelisted Player</sys:String>
     <sys:String x:Key="ServerSettings_ClearWhitelistPlayerTooltip">Clear Whitelisted Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadWhitelistPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveWhitelistPlayerTooltip">Delete Whitelisted Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">Player Name</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesExclusiveLabel">Exclusive Join</sys:String>
     <sys:String x:Key="ServerSettings_AddExclusivePlayerTooltip">Add Exclusive Player</sys:String>
     <sys:String x:Key="ServerSettings_ClearExclusivePlayerTooltip">Clear Exclusive Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadExclusivePlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveExclusivePlayerTooltip">Delete Exclusive Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">Player Name</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinLabel">Enable Exclusive Join</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinTooltip">If enabled, only players in the Exclusive Join list will be able to log into the server.</sys:String>
     <!--#endregion-->
