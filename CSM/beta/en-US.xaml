@@ -120,10 +120,10 @@
     <!--#endregion-->
 
     <!--#region AddSteamUserWindow Window -->
-    <sys:String x:Key="AddSteamUser_Title">Add Steam Users</sys:String>
-    <sys:String x:Key="AddSteamUser_InstructionLabel">Enter one or more SteamIds. Each id must be on a new line.</sys:String>
-    <sys:String x:Key="AddSteamUser_ProcessButtonLabel">OK</sys:String>
-    <sys:String x:Key="AddSteamUser_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="AddUser_Title">Add Users</sys:String>
+    <sys:String x:Key="AddUser_InstructionLabel">Enter one or more ids. Each id must be on a new line.</sys:String>
+    <sys:String x:Key="AddUser_ProcessButtonLabel">OK</sys:String>
+    <sys:String x:Key="AddUser_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
     <!--#region ProcessorAffinity Window -->
@@ -1070,8 +1070,8 @@
     <sys:String x:Key="ServerSettings_ClearBlacklistedPlayerTooltip">Clear Blacklisted Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadBlacklistedPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveBlacklistedPlayerTooltip">Delete Blacklisted Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedNameColumnLabel">Player Name</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistedLabel">Enable Whitelist</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistedTooltip">If enabled, only whitelised players will be able to join the server.</sys:String>
@@ -1079,8 +1079,8 @@
     <sys:String x:Key="ServerSettings_ClearWhitelistedPlayerTooltip">Clear Whitelisted Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadWhitelistedPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveWhitelistedPlayerTooltip">Delete Whitelisted Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedNameColumnLabel">Player Name</sys:String>
     <!--#endregion-->
     <!--#endregion-->
 
