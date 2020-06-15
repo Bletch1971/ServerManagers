@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-06-15T09:00:00Z</updated>
+  <updated>2020-06-15T10:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:13187C1E-BC88-44C3-B1C7-5B501C645832</id>
+    <title>1.1.379 (1.1.379.10)</title>
+    <summary>1.1.379.10</summary>
+    <link href="" />
+    <updated>2020-06-15T10:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed the shutdown window bug.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:3FB0EDF5-4379-4C28-98BB-7625DCEBAA1E</id>
