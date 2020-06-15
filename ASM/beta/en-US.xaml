@@ -395,6 +395,8 @@
     <sys:String x:Key="ShutdownWindow_RestartServerTooltip">If enabled, the server will be immediately restarted after it is shutdown.</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerLabel">Update server after shutdown</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerTooltip">If enabled, the server will be updated after it is shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
     <sys:String x:Key="ShutdownWindow_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="ShutdownWindow_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
     <sys:String x:Key="ShutdownWindow_BackupWorldFileLabel">Backup world file after shutdown</sys:String>
@@ -527,6 +529,8 @@
 
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Grace Period:</sys:String>
