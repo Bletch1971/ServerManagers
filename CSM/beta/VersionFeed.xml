@@ -5,7 +5,31 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-06-15T00:00:00Z</updated>
+  <updated>2020-06-15T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:B113D82B-0E58-40A7-A21B-A469B91A6698</id>
+    <title>1.1.38 (1.1.38.3)</title>
+    <summary>1.1.38.3</summary>
+    <link href="" />
+    <updated>2020-06-15T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Shutdown Options - Have added a new setting to disable the online player check when shutting down the server.</li>
+            <li>Shutdown Window - Have added a new setting to disable the online player check when shutting down the server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:23DBBA6F-66DA-49D4-BBCE-DB2C48D97D40</id>
