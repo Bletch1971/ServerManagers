@@ -132,6 +132,7 @@
 
     <sys:String x:Key="PlayerList_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewTribe">View Tribe...</sys:String>
+    <sys:String x:Key="PlayerList_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="PlayerList_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="PlayerList_Menu_Players">_Players</sys:String>
@@ -2251,7 +2252,7 @@
     <sys:String x:Key="RCON_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewTribe">View Tribe...</sys:String>
-    <sys:String x:Key="RCON_Menu_CopySteamId">Copy Steam ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="RCON_AdminNameLabel">Admin Name:</sys:String>
@@ -2282,8 +2283,8 @@
     <sys:String x:Key="RCON_ChatPlayerLabel">Send a chat message to :</sys:String>
     <sys:String x:Key="RCON_RenamePlayerLabel">Rename player from :</sys:String>
     <sys:String x:Key="RCON_RenameTribeLabel">Rename tribe from :</sys:String>
-    <sys:String x:Key="RCON_CopySteamIdLabel">Steam ID copied to the clipboard for :</sys:String>
-    <sys:String x:Key="RCON_CopySteamIdTitle">Steam ID copied</sys:String>
+    <sys:String x:Key="RCON_CopyIdLabel">ID copied to the clipboard for :</sys:String>
+    <sys:String x:Key="RCON_CopyIdTitle">ID copied</sys:String>
     <sys:String x:Key="RCON_CopyPlayerIdLabel">Player ID copied to the clipboard for :</sys:String>
     <sys:String x:Key="RCON_CopyPlayerIdTitle">Player ID copied</sys:String>
     <sys:String x:Key="RCON_ClipboardErrorLabel">Clipboard could not be opened. Another application may be using it. Please try closing other applications and trying again.</sys:String>
