@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Last Updated By:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">unknown</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">Bletch</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
