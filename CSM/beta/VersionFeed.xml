@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-06-17T00:00:00Z</updated>
+  <updated>2020-06-18T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:9A0BF0A6-79EC-413B-9EBA-BBB3D9F14CBC</id>
+    <title>1.1.38 (1.1.38.9)</title>
+    <summary>1.1.38.9</summary>
+    <link href="" />
+    <updated>2020-06-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Added Whitelist checkbox to the sync.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:0868D002-41B1-4397-89BD-A3CCDE30F240</id>
