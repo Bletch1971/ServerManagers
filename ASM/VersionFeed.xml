@@ -5,7 +5,58 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-06-11T12:00:00Z</updated>
+  <updated>2020-06-18T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:FA4452BD-15FD-46C2-BADB-5B00BE3BE579</id>
+    <title>1.1.379 (1.1.379.13)</title>
+    <summary>1.1.379.13</summary>
+    <link href="" />
+    <updated>2020-06-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Engrams Grid - fixed the engrams being writing to the config file, when Selected Only is checked.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Shutdown Options - Have added a new setting to disable the online player check when shutting down the server.</li>
+            <li>Shutdown Window - Have added a new setting to disable the online player check when shutting down the server.</li>
+            <li>Rules Section - added new PlatformSaddleBuildAreaBoundsMultiplier slider option.</li>
+            <li>Dino Grid - added new filter textbox, so you can filter the grid with text matching.</li>
+            <li>Engram Grid - added new filter textbox, so you can filter the grid with text matching.</li>
+            <li>Resources Grid - added new filter textbox, so you can filter the grid with text matching.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Raw Sockets settings have been removed - will need to manually start/save/stop your servers for the effects to take.</li>
+            <li>Added new server settings - UseVivox, Crossplay and EpicOnly.</li>
+            <li>Added Crystal Isles to the official mod list in the gamedata file.</li>
+            <li>Added extra server port to firewall rule.</li>
+            <li>Remove the avatar images from the player/rcon list.</li>
+            <li>Removed the map and total conversion from the profile sync.</li>
+            <li>Removed all steam related features from PlayerList/Rcon windows.</li>
+            <li>Fixed loaded EPIC player profiles in PlayerList/Rcon windows.</li>
+            <li>Removed steam details from Player window.</li>
+            <li>Changed the Server Files section to be generic.</li>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+            <li>zh-CN Translation file updated. (thanks @shouke)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:EE365F77-7112-49BC-825D-D74737A45371</id>

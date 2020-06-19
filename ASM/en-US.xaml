@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Last Updated By:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">unknown</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">Bletch</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
@@ -100,11 +100,11 @@
     <sys:String x:Key="CustomConfigData_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
-    <!--#region AddSteamUserWindow Window -->
-    <sys:String x:Key="AddSteamUser_Title">Add Steam Users</sys:String>
-    <sys:String x:Key="AddSteamUser_InstructionLabel">Enter one or more SteamIds. Each id must be on a new line.</sys:String>
-    <sys:String x:Key="AddSteamUser_ProcessButtonLabel">OK</sys:String>
-    <sys:String x:Key="AddSteamUser_CancelButtonLabel">Cancel</sys:String>
+    <!--#region AddUserWindow Window -->
+    <sys:String x:Key="AddUser_Title">Add Users</sys:String>
+    <sys:String x:Key="AddUser_InstructionLabel">Enter one or more user ids. Each id must be on a new line.</sys:String>
+    <sys:String x:Key="AddUser_ProcessButtonLabel">OK</sys:String>
+    <sys:String x:Key="AddUser_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
     <!--#region ProcessorAffinity Window -->
@@ -130,10 +130,9 @@
     <sys:String x:Key="PlayerList_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="PlayerList_ProfileInvalidCountLabel">Invalid:</sys:String>
 
-    <sys:String x:Key="PlayerList_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewTribe">View Tribe...</sys:String>
-    <sys:String x:Key="PlayerList_Menu_CopySteamId">Copy Steam ID...</sys:String>
+    <sys:String x:Key="PlayerList_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="PlayerList_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="PlayerList_Menu_Players">_Players</sys:String>
@@ -146,10 +145,8 @@
     <sys:String x:Key="PlayerList_Menu_FilterOnline">Show Online</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterOffline">Show All</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterAdmin">Show Admin</sys:String>
-    <sys:String x:Key="PlayerList_Menu_FilterBanned">Show Banned</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterWhitelisted">Show Whitelisted</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterInvalid">Show Invalid</sys:String>
-    <sys:String x:Key="PlayerList_Menu_ShowAvatars">Show Player Avatars</sys:String>
     <!--#endregion-->
 
     <!--#region Mod Details Window -->
@@ -395,6 +392,8 @@
     <sys:String x:Key="ShutdownWindow_RestartServerTooltip">If enabled, the server will be immediately restarted after it is shutdown.</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerLabel">Update server after shutdown</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerTooltip">If enabled, the server will be updated after it is shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
     <sys:String x:Key="ShutdownWindow_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="ShutdownWindow_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
     <sys:String x:Key="ShutdownWindow_BackupWorldFileLabel">Backup world file after shutdown</sys:String>
@@ -527,6 +526,8 @@
 
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Grace Period:</sys:String>
@@ -891,13 +892,6 @@
     <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the server choose</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPRecommendedLabel">(Recommended)</sys:String>
     <sys:String x:Key="ServerSettings_RefreshLocalIPTooltip">Refresh the available local IPs.</sys:String>
-    <sys:String x:Key="ServerSettings_UseRawSocketsLabel">Use Raw Sockets</sys:String>
-    <sys:String x:Key="ServerSettings_UseRawSocketsTooltip">Allow direct P2P connections instead of through steam. Open up both the Server Port and Server Port + 1 are open in the firewall and port forwarding.</sys:String>
-    <sys:String x:Key="ServerSettings_NoNetThreadingLabel">No Net Threading</sys:String>
-    <sys:String x:Key="ServerSettings_NoNetThreadingTooltip">If enabled, servers will only utilize a single thread for networking (useful to improve performance for machines with more servers than cpu cores).</sys:String>
-    <sys:String x:Key="ServerSettings_ForceNetThreadingLabel">Force Net Threading</sys:String>
-    <sys:String x:Key="ServerSettings_ForceNetThreadingTooltip">If enabled, servers will utilize multiple threads for networking.</sys:String>
-    <sys:String x:Key="ServerSettings_UseRawSocketsWarningLabel">NOTE: Enable the Raw Sockets option with caution. Using Raw Sockets could cause login issues and may not work on ALL maps.</sys:String>
 
     <sys:String x:Key="ServerSettings_LocalIP_ErrorTitle">Local IP invalid</sys:String>
     <sys:String x:Key="ServerSettings_LocalIP_ErrorLabel">Your Local IP address {0} is no longer available. Please review the available IP addresses and select a valid one. If you have a server running on the original IP, you will need to stop it first.</sys:String>
@@ -1006,6 +1000,12 @@
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">If enabled, will turn it off the anti meshing system entirely.</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">No Under Mesh Killing</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">If enabled, will turn off the anti meshing player kills (but still allow teleporting).</sys:String>
+    <sys:String x:Key="ServerSettings_UseVivoxLabel">Enable Vivox</sys:String>
+    <sys:String x:Key="ServerSettings_UseVivoxTooltip">If enabled, will turn on Vivox. NOTE: Steam Servers only.</sys:String>
+    <sys:String x:Key="ServerSettings_CrossplayLabel">Enable Crossplay</sys:String>
+    <sys:String x:Key="ServerSettings_CrossplayTooltip">If enabled, will turn on crossplay, so players using clients from different stores can connect to the dedicated server.</sys:String>
+    <sys:String x:Key="ServerSettings_EpicOnlyLabel">Epic Store Players Only</sys:String>
+    <sys:String x:Key="ServerSettings_EpicOnlyTooltip">If enabled, will only allow players using the Epic store client to connect.</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Force Respawn Dinos on Startup (Causes lag after 'Ready' while repopulating)</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">If enabled, when the server is started ALL wild creatures will be wiped and respawned (this will only destroy wild creatures that are NOT currently being tamed).</sys:String>
     <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Enable Auto Force Respawn Dinos</sys:String>
@@ -1127,6 +1127,8 @@
     <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsTooltip">If enabled, will allow the player to have unlimited respecs using the mindwipe tonic.</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsLabel">Allow Platform Saddle Multi Floors</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">If enabled, will allow multiple platform floors on rafts and saddle platforms.</sys:String>
+    <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierLabel">Platform Saddle Build Area Bounds Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Increasing the multiplier allows structures being placed further away from the platform.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Enable Difficulty Override</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">If enabled, this will allow the max level of creatures in the world to be changed.</sys:String>
@@ -1797,24 +1799,24 @@
     <sys:String x:Key="ServerSettings_ClearAdminPlayerTooltip">Clear Administrators</sys:String>
     <sys:String x:Key="ServerSettings_ReloadAdminPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveAdminPlayerTooltip">Delete Administrator</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">Player Name</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistLabel">Whitelisted</sys:String>
     <sys:String x:Key="ServerSettings_AddWhitelistPlayerTooltip">Add Whitelisted Player</sys:String>
     <sys:String x:Key="ServerSettings_ClearWhitelistPlayerTooltip">Clear Whitelisted Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadWhitelistPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveWhitelistPlayerTooltip">Delete Whitelisted Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">Player Name</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesExclusiveLabel">Exclusive Join</sys:String>
     <sys:String x:Key="ServerSettings_AddExclusivePlayerTooltip">Add Exclusive Player</sys:String>
     <sys:String x:Key="ServerSettings_ClearExclusivePlayerTooltip">Clear Exclusive Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadExclusivePlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveExclusivePlayerTooltip">Delete Exclusive Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">Player Name</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinLabel">Enable Exclusive Join</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinTooltip">If enabled, only players in the Exclusive Join list will be able to log into the server.</sys:String>
     <!--#endregion-->
@@ -2191,7 +2193,6 @@
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
-    <sys:String x:Key="Profile_SteamSectionLabel">Steam Details</sys:String>
     <sys:String x:Key="Profile_PlayerSectionLabel">Player Details</sys:String>
     <sys:String x:Key="Profile_TribeSectionLabel">Tribe Details</sys:String>
     <sys:String x:Key="Profile_TribeMembersSectionLabel">Tribe Members</sys:String>
@@ -2201,22 +2202,15 @@
     <sys:String x:Key="Profile_OnlineLabel">Online:</sys:String>
     <sys:String x:Key="Profile_CreatedLabel">Created:</sys:String>
     <sys:String x:Key="Profile_UpdatedLabel">Last Updated:</sys:String>
-    <sys:String x:Key="Profile_BannedCommunityLabel">Community Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedVACLabel">VAC Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedVACCountLabel">Number of VAC Bans:</sys:String>
-    <sys:String x:Key="Profile_BannedVACDaysLabel">Days Since Last Ban:</sys:String>
     <sys:String x:Key="Profile_LevelLabel">Level:</sys:String>
     <sys:String x:Key="Profile_WhitelistedLabel">Whitelisted:</sys:String>
-    <sys:String x:Key="Profile_BannedLabel">Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedGameCountLabel">Number of Game Bans:</sys:String>
     <sys:String x:Key="Profile_TribeOwnerLabel">Owner:</sys:String>
-    <sys:String x:Key="Profile_SteamNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="Profile_PlatformNameColumnLabel">Player Name</sys:String>
     <sys:String x:Key="Profile_CharacterNameColumnLabel">Character Name</sys:String>
     <sys:String x:Key="Profile_LevelColumnLabel">Level</sys:String>
     <sys:String x:Key="Profile_OnlineColumnLabel">Online</sys:String>
     <sys:String x:Key="Profile_CreatedColumnLabel">Created</sys:String>
     <sys:String x:Key="Profile_UpdatedColumnLabel">Last Updated</sys:String>
-    <sys:String x:Key="Profile_NavigateSteamProfile">Click to open the steam profile in a browser</sys:String>
     <sys:String x:Key="Profile_NavigateProfile">Click to view the profile file in explorer</sys:String>
 
     <sys:String x:Key="Profile_WindowTitle_Player">Player Profile - {0}</sys:String>
@@ -2258,7 +2252,7 @@
     <sys:String x:Key="RCON_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewTribe">View Tribe...</sys:String>
-    <sys:String x:Key="RCON_Menu_CopySteamId">Copy Steam ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="RCON_AdminNameLabel">Admin Name:</sys:String>
@@ -2289,8 +2283,8 @@
     <sys:String x:Key="RCON_ChatPlayerLabel">Send a chat message to :</sys:String>
     <sys:String x:Key="RCON_RenamePlayerLabel">Rename player from :</sys:String>
     <sys:String x:Key="RCON_RenameTribeLabel">Rename tribe from :</sys:String>
-    <sys:String x:Key="RCON_CopySteamIdLabel">Steam ID copied to the clipboard for :</sys:String>
-    <sys:String x:Key="RCON_CopySteamIdTitle">Steam ID copied</sys:String>
+    <sys:String x:Key="RCON_CopyIdLabel">ID copied to the clipboard for :</sys:String>
+    <sys:String x:Key="RCON_CopyIdTitle">ID copied</sys:String>
     <sys:String x:Key="RCON_CopyPlayerIdLabel">Player ID copied to the clipboard for :</sys:String>
     <sys:String x:Key="RCON_CopyPlayerIdTitle">Player ID copied</sys:String>
     <sys:String x:Key="RCON_ClipboardErrorLabel">Clipboard could not be opened. Another application may be using it. Please try closing other applications and trying again.</sys:String>
