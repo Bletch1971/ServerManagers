@@ -5,21 +5,21 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-06T00:00:00Z</updated>
+  <updated>2020-07-07T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:7497F06A-F1EB-4D64-ABD3-CC369BAA93EF</id>
-    <title>1.1.381 (1.1.381.1)</title>
-    <summary>1.1.381.1</summary>
+    <id>urn:uuid:B64AAEA1-4DCF-4740-9029-169E85302636</id>
+    <title>1.1.382 (1.1.382.1)</title>
+    <summary>1.1.382.1</summary>
     <link href="" />
-    <updated>2020-07-06T00:00:00Z</updated>
+    <updated>2020-07-07T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">NEW</u>
+          <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Added checkbox for new setting -PublicIPForEpic=, when checked it will add the server args, and uses your public IP address.</li>
+            <li>Updated QueryMaster to handle missing message parts, when querying the server.</li>
           </ul>
         </p>
       </div>
