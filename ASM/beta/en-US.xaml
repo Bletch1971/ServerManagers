@@ -1006,6 +1006,8 @@
     <sys:String x:Key="ServerSettings_CrossplayTooltip">If enabled, will turn on crossplay, so players using clients from different stores can connect to the dedicated server.</sys:String>
     <sys:String x:Key="ServerSettings_EpicOnlyLabel">Epic Store Players Only</sys:String>
     <sys:String x:Key="ServerSettings_EpicOnlyTooltip">If enabled, will only allow players using the Epic store client to connect.</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePublicIPForEpicLabel">Enable Public IP for Epic</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePublicIPForEpicTooltip">If enabled, will add a server argument for the public IP that EPIC clients will attempt to connect to.</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Force Respawn Dinos on Startup (Causes lag after 'Ready' while repopulating)</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">If enabled, when the server is started ALL wild creatures will be wiped and respawned (this will only destroy wild creatures that are NOT currently being tamed).</sys:String>
     <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Enable Auto Force Respawn Dinos</sys:String>

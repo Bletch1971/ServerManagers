@@ -5,27 +5,21 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-05T00:00:00Z</updated>
+  <updated>2020-07-06T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:C19388B4-785F-41DE-BDF2-0C29ED9E9A60</id>
-    <title>1.1.380 (1.1.380.1)</title>
-    <summary>1.1.380.1</summary>
+    <id>urn:uuid:7497F06A-F1EB-4D64-ABD3-CC369BAA93EF</id>
+    <title>1.1.381 (1.1.381.1)</title>
+    <summary>1.1.381.1</summary>
     <link href="" />
-    <updated>2020-07-05T00:00:00Z</updated>
+    <updated>2020-07-06T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
+          <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Custom Resource Grid - Fixed Custom Harvest Amount Multipliers checkbox so that it is only checked when one or more resource items are in the config file.</li>
-            <li>Mod id validation fixed, for mod ids of 10 digits or more.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>ClampResourceHarvestDamage setting changed to always write to the ini file.</li>
+            <li>Added checkbox for new setting -PublicIPForEpic=, when checked it will add the server args, and uses your public IP address.</li>
           </ul>
         </p>
       </div>
