@@ -5,7 +5,31 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-06-18T00:00:00Z</updated>
+  <updated>2020-07-07T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:45313067-F58E-4356-8F4C-5149D2920527</id>
+    <title>1.1.38 (1.1.38.10)</title>
+    <summary>1.1.38.10</summary>
+    <link href="" />
+    <updated>2020-07-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the database schema, so the player and tribe loading works again.</li>
+            <li>Updated QueryMaster to handle missing message parts, when querying the server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:9A0BF0A6-79EC-413B-9EBA-BBB3D9F14CBC</id>
