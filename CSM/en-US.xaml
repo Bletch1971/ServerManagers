@@ -120,10 +120,10 @@
     <!--#endregion-->
 
     <!--#region AddSteamUserWindow Window -->
-    <sys:String x:Key="AddSteamUser_Title">Add Steam Users</sys:String>
-    <sys:String x:Key="AddSteamUser_InstructionLabel">Enter one or more SteamIds. Each id must be on a new line.</sys:String>
-    <sys:String x:Key="AddSteamUser_ProcessButtonLabel">OK</sys:String>
-    <sys:String x:Key="AddSteamUser_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="AddUser_Title">Add Users</sys:String>
+    <sys:String x:Key="AddUser_InstructionLabel">Enter one or more ids. Each id must be on a new line.</sys:String>
+    <sys:String x:Key="AddUser_ProcessButtonLabel">OK</sys:String>
+    <sys:String x:Key="AddUser_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
     <!--#region ProcessorAffinity Window -->
@@ -368,6 +368,8 @@
     <sys:String x:Key="ShutdownWindow_RestartServerTooltip">If enabled, the server will be immediately restarted after it is shutdown.</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerLabel">Update server after shutdown</sys:String>
     <sys:String x:Key="ShutdownWindow_UpdateServerTooltip">If enabled, the server will be updated after it is shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
     <sys:String x:Key="ShutdownWindow_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="ShutdownWindow_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
     <sys:String x:Key="ShutdownWindow_BackupWorldFileLabel">Backup world file after shutdown</sys:String>
@@ -417,7 +419,7 @@
     <sys:String x:Key="RCON_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewTribe">View Clan...</sys:String>
-    <sys:String x:Key="RCON_Menu_CopySteamId">Copy Steam ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="RCON_StatusLabel">Status:</sys:String>
@@ -443,8 +445,8 @@
     <sys:String x:Key="RCON_ChatPlayerLabel">Send a chat message to :</sys:String>
     <sys:String x:Key="RCON_RenamePlayerLabel">Rename player from :</sys:String>
     <sys:String x:Key="RCON_RenameTribeLabel">Rename clan from :</sys:String>
-    <sys:String x:Key="RCON_CopySteamIdLabel">Steam ID copied to the clipboard for :</sys:String>
-    <sys:String x:Key="RCON_CopySteamIdTitle">Steam ID copied</sys:String>
+    <sys:String x:Key="RCON_CopyIdLabel">ID copied to the clipboard for :</sys:String>
+    <sys:String x:Key="RCON_CopyIdTitle">ID copied</sys:String>
     <sys:String x:Key="RCON_CopyPlayerIdLabel">Player ID copied to the clipboard for :</sys:String>
     <sys:String x:Key="RCON_CopyPlayerIdTitle">Player ID copied</sys:String>
     <sys:String x:Key="RCON_ClipboardErrorLabel">Clipboard could not be opened. Another application may be using it. Please try closing other applications and trying again.</sys:String>
@@ -483,10 +485,9 @@
     <sys:String x:Key="PlayerList_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="PlayerList_ProfileInvalidCountLabel">Invalid:</sys:String>
 
-    <sys:String x:Key="PlayerList_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewProfile">View Profile...</sys:String>
     <sys:String x:Key="PlayerList_Menu_ViewTribe">View Clan...</sys:String>
-    <sys:String x:Key="PlayerList_Menu_CopySteamId">Copy Steam ID...</sys:String>
+    <sys:String x:Key="PlayerList_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="PlayerList_Menu_CopyPlayerId">Copy Player ID...</sys:String>
 
     <sys:String x:Key="PlayerList_Menu_Players">_Players</sys:String>
@@ -497,14 +498,11 @@
     <sys:String x:Key="PlayerList_Menu_Filter">_Filter</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterOffline">Show All</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterAdmin">Show Admin</sys:String>
-    <sys:String x:Key="PlayerList_Menu_FilterBanned">Show Banned</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterWhitelisted">Show Whitelisted</sys:String>
     <sys:String x:Key="PlayerList_Menu_FilterInvalid">Show Invalid</sys:String>
-    <sys:String x:Key="PlayerList_Menu_ShowAvatars">Show Player Avatars</sys:String>
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
-    <sys:String x:Key="Profile_SteamSectionLabel">Steam Details</sys:String>
     <sys:String x:Key="Profile_PlayerSectionLabel">Player Details</sys:String>
     <sys:String x:Key="Profile_TribeSectionLabel">Clan Details</sys:String>
     <sys:String x:Key="Profile_TribeMembersSectionLabel">Clan Members</sys:String>
@@ -513,20 +511,13 @@
     <sys:String x:Key="Profile_NameLabel">Name:</sys:String>
     <sys:String x:Key="Profile_OnlineLabel">Online:</sys:String>
     <sys:String x:Key="Profile_LastOnlineLabel">Last Online:</sys:String>
-    <sys:String x:Key="Profile_BannedCommunityLabel">Community Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedVACLabel">VAC Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedVACCountLabel">Number of VAC Bans:</sys:String>
-    <sys:String x:Key="Profile_BannedVACDaysLabel">Days Since Last Ban:</sys:String>
     <sys:String x:Key="Profile_LevelLabel">Level:</sys:String>
-    <sys:String x:Key="Profile_BannedLabel">Banned:</sys:String>
-    <sys:String x:Key="Profile_BannedGameCountLabel">Number of Game Bans:</sys:String>
     <sys:String x:Key="Profile_TribeOwnerLabel">Owner:</sys:String>
-    <sys:String x:Key="Profile_SteamNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="Profile_PlatformNameColumnLabel">Player Name</sys:String>
     <sys:String x:Key="Profile_CharacterNameColumnLabel">Character Name</sys:String>
     <sys:String x:Key="Profile_LevelColumnLabel">Level</sys:String>
     <sys:String x:Key="Profile_OnlineColumnLabel">Online</sys:String>
     <sys:String x:Key="Profile_LastOnlineColumnLabel">Last Online</sys:String>
-    <sys:String x:Key="Profile_NavigateSteamProfile">Click to open the steam profile in a browser</sys:String>
 
     <sys:String x:Key="Profile_WindowTitle_Player">Player Profile - {0}</sys:String>
     <sys:String x:Key="Profile_WindowTitle_Tribe">Clan Profile - {0}</sys:String>
@@ -713,6 +704,8 @@
 
     <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
     <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Grace Period:</sys:String>
@@ -1078,8 +1071,8 @@
     <sys:String x:Key="ServerSettings_ClearBlacklistedPlayerTooltip">Clear Blacklisted Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadBlacklistedPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveBlacklistedPlayerTooltip">Delete Blacklisted Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedNameColumnLabel">Player Name</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistedLabel">Enable Whitelist</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistedTooltip">If enabled, only whitelised players will be able to join the server.</sys:String>
@@ -1087,8 +1080,8 @@
     <sys:String x:Key="ServerSettings_ClearWhitelistedPlayerTooltip">Clear Whitelisted Players</sys:String>
     <sys:String x:Key="ServerSettings_ReloadWhitelistedPlayerTooltip">Reload from File</sys:String>
     <sys:String x:Key="ServerSettings_RemoveWhitelistedPlayerTooltip">Delete Whitelisted Player</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedIdColumnLabel">Steam ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedNameColumnLabel">Steam Name</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedNameColumnLabel">Player Name</sys:String>
     <!--#endregion-->
     <!--#endregion-->
 

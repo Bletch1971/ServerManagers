@@ -5,7 +5,49 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-06-11T12:00:00Z</updated>
+  <updated>2020-07-11T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:C8612D41-184B-4A9E-9780-457B0337CD33</id>
+    <title>1.1.38 (1.1.38.13)</title>
+    <summary>1.1.38.13</summary>
+    <link href="" />
+    <updated>2020-07-11T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Added Whitelist checkbox to the sync.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Shutdown Options - Have added a new setting to disable the online player check when shutting down the server.</li>
+            <li>Shutdown Window - Have added a new setting to disable the online player check when shutting down the server.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Globalisation - added some additional strings to the globalisation files.</li>
+            <li>Remove the avatar images from the player/rcon list.</li>
+            <li>Removed the map from the profile sync.</li>
+            <li>Removed all steam related features from PlayerList/Rcon windows.</li>
+            <li>Fixed loaded EPIC player profiles in PlayerList/Rcon windows.</li>
+            <li>Removed steam details from Player window.</li>
+            <li>Changed the Server Files section to be generic.</li>
+            <li>Changed the database schema, so the player and tribe loading works again.</li>
+            <li>Updated QueryMaster to handle missing message parts, when querying the server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:3BF2385D-97ED-48C9-890E-E76F740B4EBB</id>
