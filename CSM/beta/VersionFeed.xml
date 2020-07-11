@@ -5,44 +5,22 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-07-12T00:00:00Z</updated>
+  <updated>2020-07-13T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:8C061970-49FD-4894-A94C-791C961C56BE</id>
-    <title>1.1.40 (1.1.40.2)</title>
-    <summary>1.1.40.2</summary>
+    <id>urn:uuid:1C99C798-11ED-4D57-A661-423D30D8B9AA</id>
+    <title>1.1.41 (1.1.41.1)</title>
+    <summary>1.1.41.1</summary>
     <link href="" />
-    <updated>2020-07-12T02:00:00Z</updated>
+    <updated>2020-07-13T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">CHANGE</u>
+          <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Added a fetch profile method to the Common Plugin Helper.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:45292341-D95A-42CE-88AB-C7B5E34AFAF9</id>
-    <title>1.1.40 (1.1.40.1)</title>
-    <summary>1.1.40.1</summary>
-    <link href="" />
-    <updated>2020-07-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Changed the shutdown timer alert interval from always 5 minutes, to a varying scale base on remaining time. Eg. 60 minute shutdown timer will only alert at these times - 60, 30, 15, 10, 5, 4 ,3, 2, 1.</li>
+            <li>Added a new server manager updater check, when performing an upgrade of the server manager.</li>
+            <li>Added a new directory check when selecting the data directory, to make sure it is not underneath the installation folder.</li>
           </ul>
         </p>
       </div>
