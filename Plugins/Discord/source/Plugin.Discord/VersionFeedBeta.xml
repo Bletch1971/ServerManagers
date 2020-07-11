@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:6BB39661-8638-425E-B5F7-0C75AACC1D26</id>
+  <title>Discord Plugin Version Feed</title>
+  <subtitle>This is the Discord Plugin beta version feed.</subtitle>
+  <link href="" />
+  <updated>2020-06-12T00:00:01Z</updated>
+
+  <entry>
+    <id>urn:uuid:A7158CB1-C5B2-4505-B171-CDD54918B227</id>
+    <title>1.0.16 (1.0.16.1)</title>
+    <summary>1.0.16.1</summary>
+    <link href="" />
+    <updated>2020-06-12T00:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Added url encoding so that special characters are sent to the webhook correctly.</li>
+            <li>Changed the text encoding from ASCII to UTF8, so that unicode languages should work correctly.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
