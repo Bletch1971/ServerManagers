@@ -5,26 +5,21 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-11T12:00:00Z</updated>
+  <updated>2020-07-12T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:15643574-3A6E-4A07-B078-36D8A60CEC0F</id>
-    <title>1.1.383 (1.1.383.1)</title>
-    <summary>1.1.383.1</summary>
+    <id>urn:uuid:1459F9AC-43D1-49B7-A461-6ABED2A6FC26</id>
+    <title>1.1.384 (1.1.384.1)</title>
+    <summary>1.1.384.1</summary>
     <link href="" />
-    <updated>2020-07-11T12:00:00Z</updated>
+    <updated>2020-07-12T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed an issue where the Alert message for the server status would send through English only. Changed it so that it will send the translated status instead.</li>
-          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Added Flame Arrow item to Scorched Earth gamedata file.</li>
+            <li>Changed the shutdown timer alert interval from always 5 minutes, to a varying scale base on remaining time. Eg. 60 minute shutdown timer will only alert at these times - 60, 30, 15, 10, 5, 4 ,3, 2, 1.</li>
           </ul>
         </p>
       </div>
