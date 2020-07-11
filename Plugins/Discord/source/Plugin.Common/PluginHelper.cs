@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ServerManagerTool.Plugin.Common.Delegates;
+using ServerManagerTool.Plugin.Common.Lib;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
@@ -17,6 +20,8 @@ namespace ServerManagerTool.Plugin.Common
         private static readonly object _syncLock = new object();
 
         private readonly Object _syncLockProcessAlert = new Object();
+        private readonly Object _syncLockFetchProfiles = new Object();
+        private FetchProfilesDelegate _fetchProfilesCallback;
         private bool _disposed;
 
         private PluginHelper()
@@ -143,6 +148,14 @@ namespace ServerManagerTool.Plugin.Common
                 File.Delete(pluginFile);
         }
 
+        internal IList<Profile> FetchProfileList()
+        {
+            lock (_syncLockFetchProfiles)
+            {
+                return _fetchProfilesCallback?.Invoke() ?? new List<Profile>();
+            }
+        }
+
         internal void LoadPlugin(string pluginFile)
         {
             if (string.IsNullOrWhiteSpace(pluginFile))
@@ -251,6 +264,11 @@ namespace ServerManagerTool.Plugin.Common
             return true;
         }
 
+        internal void SetFetchProfileCallback(FetchProfilesDelegate callback)
+        {
+            _fetchProfilesCallback = callback;
+        }
+
         public void Dispose()
         {
             Dispose(true);
@@ -265,6 +283,7 @@ namespace ServerManagerTool.Plugin.Common
 
             if (disposing)
             {
+                _fetchProfilesCallback = null;
                 _instance = null;
             }
 

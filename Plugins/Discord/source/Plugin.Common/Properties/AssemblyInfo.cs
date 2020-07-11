@@ -37,3 +37,4 @@ using System.Runtime.InteropServices;
 [assembly: InternalsVisibleTo("ARK Server Manager")]
 [assembly: InternalsVisibleTo("ConanServerManager")]
 [assembly: InternalsVisibleTo("ServerManager")]
+[assembly: InternalsVisibleTo("ServerManager.Plugin.Common.UnitTests")]
