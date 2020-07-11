@@ -1501,6 +1501,8 @@
     <sys:String x:Key="ServerSettings_DinoImprintLabel">Dino Imprinting</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierLabel">Imprinting Stat Scale:</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">How much of an effect on stats the imprinting quality has. Set it to 0 to effectively disable the system.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Imprint Amount Scale:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">A multiplier applied to the percentage each imprints provides. This multiplier is global, meaning it will affect the imprinting progresssion of every species. Higher values increase the amount of each imprint.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Cuddle Interval:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">A multiplier on how often babies want to cuddle. Lower values means you'll need to cuddle with them more frequently to gain imprinting quality.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Cuddle Grace Period:</sys:String>
