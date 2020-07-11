@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-11T12:00:00Z</updated>
+  <updated>2020-07-12T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:1459F9AC-43D1-49B7-A461-6ABED2A6FC26</id>
+    <title>1.1.384 (1.1.384.2)</title>
+    <summary>1.1.384.2</summary>
+    <link href="" />
+    <updated>2020-07-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the shutdown timer alert interval from always 5 minutes, to a varying scale base on remaining time. Eg. 60 minute shutdown timer will only alert at these times - 60, 30, 15, 10, 5, 4 ,3, 2, 1.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:15643574-3A6E-4A07-B078-36D8A60CEC0F</id>
