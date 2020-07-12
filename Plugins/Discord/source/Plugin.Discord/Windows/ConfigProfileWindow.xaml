@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:pc="clr-namespace:ServerManagerTool.Plugin.Common;assembly=ServerManager.Plugin.Common"
-        Title="{DynamicResource ConfigProfileWindow_Title}"
+        Name="ConfigProfileUI" Title="{DynamicResource ConfigProfileWindow_Title}"
         Icon="/ServerManager.Plugin.Discord;component/Art/favicon.ico"
         Width="640" Height="520" MinWidth="640" MinHeight="480" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Closing="ConfigProfileWindow_Closing">
     <Window.Resources>
@@ -150,11 +150,17 @@
                         </DataGrid.VerticalGridLinesBrush>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn     Width="*" Binding="{Binding Value}">
-                                <DataGridTextColumn.Header>
-                                    <TextBlock Text="{DynamicResource ConfigProfileWindow_ProfileNameColumnLabel}"/>
-                                </DataGridTextColumn.Header>
-                            </DataGridTextColumn>
+                            <DataGridTemplateColumn Width="*" CanUserSort="True" SortMemberPath="DisplayName">
+                                <DataGridTemplateColumn.Header>
+                                    <TextBlock Text="{DynamicResource ConfigProfileWindow_ProfileNameColumnLabel}" />
+                                </DataGridTemplateColumn.Header>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox IsEditable="True" ItemsSource="{Binding ProfileList, ElementName=ConfigProfileUI}" SelectedValue="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" GotFocus="ComboBox_GotFocus" LostFocus="ComboBox_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
                             <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -210,6 +216,7 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
+                            
                             <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>

@@ -148,7 +148,7 @@ namespace ServerManagerTool.Plugin.Common
                 File.Delete(pluginFile);
         }
 
-        internal IList<Profile> FetchProfileList()
+        public IList<Profile> FetchProfileList()
         {
             lock (_syncLockFetchProfiles)
             {

@@ -2,9 +2,11 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace ServerManagerTool.Plugin.Discord.Windows
@@ -15,6 +17,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
     public partial class ConfigProfileWindow : Window
     {
         private static readonly DependencyProperty ProfileProperty = DependencyProperty.Register(nameof(Profile), typeof(ConfigProfile), typeof(ConfigProfileWindow));
+        private static readonly DependencyProperty ProfileListProperty = DependencyProperty.Register(nameof(ProfileList), typeof(ComboBoxItemList), typeof(ConfigProfileWindow));
 
         internal ConfigProfileWindow(DiscordPlugin plugin, ConfigProfile profile)
         {
@@ -22,6 +25,8 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             this.OriginalProfile = profile;
             this.Profile = profile.Clone();
             this.Profile.CommitChanges();
+
+            RefreshProfileList();
 
             InitializeComponent();
 
@@ -47,6 +52,12 @@ namespace ServerManagerTool.Plugin.Discord.Windows
         {
             get;
             set;
+        }
+
+        private ComboBoxItemList ProfileList
+        {
+            get { return GetValue(ProfileListProperty) as ComboBoxItemList; }
+            set { SetValue(ProfileListProperty, value); }
         }
 
         private void ConfigProfileWindow_Closing(object sender, CancelEventArgs e)
@@ -218,6 +229,92 @@ namespace ServerManagerTool.Plugin.Discord.Windows
                 Debug.WriteLine($"ERROR: {nameof(DeleteProfileName_Click)}\r\n{ex.Message}");
                 MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_DeleteProfileNameErrorLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_DeleteErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void ComboBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            if (comboBox == null)
+                return;
+
+            try
+            {
+                comboBox.BeginInit();
+            }
+            finally
+            {
+                comboBox.EndInit();
+            }
+        }
+
+        private void ComboBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            if (comboBox == null)
+                return;
+
+            if (comboBox.SelectedItem == null)
+            {
+                var text = comboBox.Text;
+
+                if (!string.IsNullOrWhiteSpace(text))
+                {
+                    var source = comboBox.ItemsSource as ComboBoxItemList;
+                    source?.Add(new ComboBoxItem
+                    {
+                        ValueMember = text,
+                        DisplayMember = text,
+                    });
+                }
+
+                comboBox.SelectedValue = text;
+            }
+
+            var expression = comboBox.GetBindingExpression(Selector.SelectedValueProperty);
+            expression?.UpdateSource();
+
+            expression = comboBox.GetBindingExpression(ComboBox.TextProperty);
+            expression?.UpdateSource();
+        }
+
+        private void RefreshProfileList()
+        {
+            var newList = new ComboBoxItemList();
+            newList.Add(new ComboBoxItem
+            {
+                ValueMember = string.Empty,
+                DisplayMember = string.Empty,
+            });
+
+            try
+            {
+                foreach (var profile in PluginHelper.Instance.FetchProfileList())
+                {
+                    newList.Add(new ComboBoxItem
+                    {
+                        ValueMember = profile.ProfileName,
+                        DisplayMember = $"* {profile.ProfileName}",
+                    });
+                }
+            }
+            catch
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
+
+            foreach (var profile in Profile.ProfileNames)
+            {
+                if (!newList.Any(p => p.ValueMember.Equals(profile.Value, StringComparison.OrdinalIgnoreCase)))
+                {
+                    newList.Add(new ComboBoxItem
+                    {
+                        ValueMember = profile.Value,
+                        DisplayMember = profile.Value,
+                    });
+                }
+            }
+
+            this.ProfileList = newList;
         }
     }
 }
