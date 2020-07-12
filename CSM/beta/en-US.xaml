@@ -80,6 +80,9 @@
     <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
+
+    <sys:String x:Key="Application_NotifyIcon_ShowMainWindow">Show Main Window</sys:String>
+    <sys:String x:Key="Application_NotifyIcon_ShowServerMonitorWindow">Show Server Monitor</sys:String>
     <!--#endregion-->
 
     <!--#region Updater Window -->
@@ -609,6 +612,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Data Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Backup Directory:</sys:String>
