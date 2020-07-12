@@ -1733,6 +1733,8 @@
     <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and Other leveling and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsLabel">Enable Custom Level Progressions</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsTooltip">If enabled, enables player and dino level customizations.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsLabel">Enable Dino Level Progressions</sys:String>
+    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsTooltip">If enabled, enables dino level customizations.</sys:String>
     <sys:String x:Key="ServerSettings_CustomPlayerLevelsLabel">Custom Player Levels</sys:String>
     <sys:String x:Key="ServerSettings_DeleteAllLevelsTooltip">Delete all existing levels.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Reset all level customizations back to server manager defaults.</sys:String>
