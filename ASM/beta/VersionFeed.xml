@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-12T04:00:00Z</updated>
+  <updated>2020-07-12T05:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F20F014C-91F4-43B6-B118-A40FB1E6FFED</id>
+    <title>1.1.385 (1.1.385.5)</title>
+    <summary>1.1.385.5</summary>
+    <link href="" />
+    <updated>2020-07-12T05:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Updated the Plugin Helper with new features in preparation of the new Discord Plugin changes.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:94E0BF7F-8139-494D-B2CC-12026301FD7F</id>
