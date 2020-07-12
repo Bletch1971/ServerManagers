@@ -5,14 +5,38 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-13T00:00:00Z</updated>
+  <updated>2020-07-12T02:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:339DF8C0-33B2-4F8C-ACA6-8C0E75DA9E25</id>
+    <title>1.1.385 (1.1.385.1)</title>
+    <summary>1.1.385.1</summary>
+    <link href="" />
+    <updated>2020-07-12T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>New tray icon when the server manager starts.</li>
+            <li>New global setting to Minimize to Tray.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:A8829437-3A88-4A04-ABE8-419307C32B40</id>
     <title>1.1.385 (1.1.385.1)</title>
     <summary>1.1.385.1</summary>
     <link href="" />
-    <updated>2020-07-13T00:00:00Z</updated>
+    <updated>2020-07-12T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
