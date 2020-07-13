@@ -743,6 +743,9 @@
     <sys:String x:Key="SliderUnits_Tribes">tribes</sys:String>
     <sys:String x:Key="SliderUnits_Levels">levels</sys:String>
     <sys:String x:Key="SliderUnits_Units">units</sys:String>
+
+    <sys:String x:Key="General_FilterLabel">Filter:</sys:String>
+    <sys:String x:Key="General_FilterButtonTooltip">Click to apply the filter.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings -->
@@ -1462,7 +1465,6 @@
     <sys:String x:Key="ServerSettings_PasteDinoCustomizationsTooltip">Paste custom dino data.</sys:String>
     <sys:String x:Key="ServerSettings_SaveDinoCustomizationsTooltip">Save custom dino data.</sys:String>
     <sys:String x:Key="ServerSettings_DinoCustomizations_SaveTitle">Custom Dino Settings</sys:String>
-    <sys:String x:Key="ServerSettings_DinoFilterLabel">Filter:</sys:String>
     <sys:String x:Key="ServerSettings_NameColumnLabel">Name</sys:String>
     <sys:String x:Key="ServerSettings_ModColumnLabel">Mod</sys:String>
     <sys:String x:Key="ServerSettings_SpawnableColumnLabel">Spawnable</sys:String>
@@ -1547,7 +1549,6 @@
     <sys:String x:Key="ServerSettings_PasteCustomResourcesTooltip">Paste custom resource data.</sys:String>
     <sys:String x:Key="ServerSettings_SaveCustomResourcesTooltip">Save custom resource data.</sys:String>
     <sys:String x:Key="ServerSettings_CustomResources_SaveTitle">Custom Resource Settings</sys:String>
-    <sys:String x:Key="ServerSettings_ResourcesFilterLabel">Filter:</sys:String>
     <sys:String x:Key="ServerSettings_HarvestAmountEntryLabel">Amount</sys:String>
     <sys:String x:Key="ServerSettings_HarvestRemoveRecordTooltip">Remove this Resource</sys:String>
 
@@ -1688,7 +1689,6 @@
     <sys:String x:Key="ServerSettings_OnlyAllowSpecifiedEngramsTooltip">If enabled, only the selected engrams will be available to learn in game.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsSelectAllTooltip">Select all the engrams.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsUnselectAllTooltip">Unselect all the engrams.</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsFilterLabel">Filter:</sys:String>
     <sys:String x:Key="ServerSettings_FilterOnlySelectedEngramsLabel">Filter Only Selected Engrams</sys:String>
     <sys:String x:Key="ServerSettings_FilterOnlySelectedEngramsTooltip">If enabled, only the selected engram will be visible.</sys:String>
     <sys:String x:Key="ServerSettings_SaveEngramOverrideColumnLabel">Selected</sys:String>
