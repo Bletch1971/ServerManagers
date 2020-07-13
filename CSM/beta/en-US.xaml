@@ -61,6 +61,11 @@
     <sys:String x:Key="SliderUnits_Levels">levels</sys:String>
     <!--#endregion-->
 
+    <!--#region General strings -->
+    <sys:String x:Key="General_FilterLabel">Filter:</sys:String>
+    <sys:String x:Key="General_FilterButtonTooltip">Click to apply the filter.</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Run as Administrator</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">This application requires administration priviledges to access ALL functionality. Would you like to Run as Administrator?</sys:String>
@@ -169,7 +174,6 @@
     <sys:String x:Key="ModDetails_ModDetailFetchFailed_Label">Mod Details could not be fetched from steam.</sys:String>
 
     <sys:String x:Key="ModDetails_TotalCountLabel">Total Count:</sys:String>
-    <sys:String x:Key="ModDetails_FilterLabel">Filter:</sys:String>
 
     <sys:String x:Key="ModDetails_IndexColumnLabel">#</sys:String>
     <sys:String x:Key="ModDetails_ModIdColumnLabel">Mod ID</sys:String>
@@ -203,7 +207,6 @@
     <sys:String x:Key="WorkshopFiles_Refresh_FailedLabel">Loading workshop information from Steam failed, populating with the local cache instead.</sys:String>
     <sys:String x:Key="WorkshopFiles_TotalCountLabel">Count:</sys:String>
     <sys:String x:Key="WorkshopFiles_LastRefreshedLabel">Last Refreshed:</sys:String>
-    <sys:String x:Key="WorkshopFiles_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="WorkshopFiles_FilterExistingLabel">Filter out existing mods</sys:String>
 
     <sys:String x:Key="WorkshopFiles_SelectedColumnLabel">Selected</sys:String>
@@ -431,7 +434,6 @@
     <sys:String x:Key="RCON_PlayersLabel">Players:</sys:String>
     <sys:String x:Key="RCON_PlayersSeparatorLabel">/</sys:String>
     <sys:String x:Key="RCON_ModeLabel">Mode:</sys:String>
-    <sys:String x:Key="RCON_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="RCON_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="RCON_ProfileInvalidCountLabel">Invalid:</sys:String>
 
@@ -486,7 +488,6 @@
     <sys:String x:Key="PlayerList_CloseButtonLabel">Close</sys:String>
 
     <sys:String x:Key="PlayerList_TitleLabel">Player List: {0}</sys:String>
-    <sys:String x:Key="PlayerList_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="PlayerList_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="PlayerList_ProfileInvalidCountLabel">Invalid:</sys:String>
 
