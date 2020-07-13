@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-12T08:00:00Z</updated>
+  <updated>2020-07-12T09:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:AE3D8F05-4B29-40AD-9B0A-95A4138A6AA0</id>
+    <title>1.1.385 (1.1.385.9)</title>
+    <summary>1.1.385.9</summary>
+    <link href="" />
+    <updated>2020-07-12T09:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added a filter button to the filter boxes. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:53AD268A-78EE-4C85-8F5B-446CF45D867A</id>
