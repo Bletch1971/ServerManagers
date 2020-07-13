@@ -433,6 +433,8 @@
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
     
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Custom Override Options</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Enable Custom Engine.ini Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">If enabled, the engine.ini settings will be managers by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Enable Crafting Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">If enabled, the crafting overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeLabel">Enable Stack Size Overrides</sys:String>
@@ -869,6 +871,9 @@
     <sys:String x:Key="ServerSettings_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
     <sys:String x:Key="ServerSettings_DeleteTitle">Confirm Delete Action</sys:String>
     <sys:String x:Key="ServerSettings_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadTitle">Confirm Reload</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadLabel">Click 'Yes' to confirm you want to perform the reload.</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadErrorTitle">Reload Error</sys:String>
     <sys:String x:Key="ServerSettings_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_ResetLabel">Click 'Yes' to confirm you want to perform the reset.</sys:String>
     <!--#endregion-->
@@ -1779,9 +1784,11 @@
     <!--#region Server Settings - Custom Config Settings -->
     <sys:String x:Key="ServerSettings_CustomGameUserSettingsLabel">Custom GameUserSettings.ini Settings</sys:String>
     <sys:String x:Key="ServerSettings_CustomGameSettingsLabel">Custom Game.ini Settings</sys:String>
+    <sys:String x:Key="ServerSettings_CustomEngineSettingsLabel">Custom Engine.ini Settings</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomSettingsSectionsLabel">Custom Sections</sys:String>
     <sys:String x:Key="ServerSettings_CustomSettingsSectionNameColumnLabel">Section Name</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadSectionsTooltip">Reload from Config File</sys:String>
     <sys:String x:Key="ServerSettings_AddCustomSectionTooltip">Add Section</sys:String>
     <sys:String x:Key="ServerSettings_PasteCustomSectionsTooltip">Paste Section Data</sys:String>
     <sys:String x:Key="ServerSettings_ImportCustomSectionsTooltip">Import Data from Ini File</sys:String>

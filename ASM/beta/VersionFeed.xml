@@ -5,7 +5,31 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-12T09:00:00Z</updated>
+  <updated>2020-07-12T10:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:36C6B291-6CA7-4E7D-845D-F4533C9ADDB2</id>
+    <title>1.1.385 (1.1.385.10)</title>
+    <summary>1.1.385.10</summary>
+    <link href="" />
+    <updated>2020-07-12T10:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added a reload button to the Custom INI sections.</li>
+            <li>Added a new Custom Engine.ini section. This section is hidden by default, and can be shown using a new option in the global settings.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:AE3D8F05-4B29-40AD-9B0A-95A4138A6AA0</id>
