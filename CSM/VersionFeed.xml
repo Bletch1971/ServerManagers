@@ -5,7 +5,38 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-07-12T00:00:00Z</updated>
+  <updated>2020-07-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:1C99C798-11ED-4D57-A661-423D30D8B9AA</id>
+    <title>1.1.41 (1.1.41.8)</title>
+    <summary>1.1.41.8</summary>
+    <link href="" />
+    <updated>2020-07-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added a new server manager updater check, when performing an upgrade of the server manager.</li>
+            <li>Added a new directory check when selecting the data directory, to make sure it is not underneath the installation folder.</li>
+            <li>New tray icon when the server manager starts.</li>
+            <li>New global setting to Minimize to Tray.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added a filter button to the filter boxes. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:45292341-D95A-42CE-88AB-C7B5E34AFAF9</id>
