@@ -61,7 +61,7 @@
     <sys:String x:Key="ConfigProfileWindow_BotNameTooltip">This will override the name you setup in your webhook. Leave blank to use default.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_UseTTSLabel">Use Text to Speech (TTS)</sys:String>
     <sys:String x:Key="ConfigProfileWindow_UseTTSTooltip">If enabled, will make the bot announce with Text to Speech, otherwise will turn off Text to Speech.</sys:String>
-    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameLabel">Prefix Message with Server Manager Profile Name</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameLabel">Prefix Message with Profile Name</sys:String>
     <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameTooltip">If enabled, the alert message will be sent prefixed with the server manager profile name.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_MessageOptionsLabel">Message Options</sys:String>
     <sys:String x:Key="ConfigProfileWindow_MessageOptionsBoldLabel">Bold</sys:String>

@@ -5,7 +5,31 @@
   <title>Discord Plugin Version Feed</title>
   <subtitle>This is the Discord Plugin release version feed.</subtitle>
   <link href="" />
-  <updated>2020-06-12T00:00:01Z</updated>
+  <updated>2020-07-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:D8974ABF-8444-4D40-A594-D4443921B3B8</id>
+    <title>1.0.17 (1.0.17.2)</title>
+    <summary>1.0.17.2</summary>
+    <link href="" />
+    <updated>2020-07-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Profile name has been converted to a droplist and is now populated with the Server Manager Profile Names for selection.</li>
+            <li>Added drag/drop feature to the config window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:A7158CB1-C5B2-4505-B171-CDD54918B227</id>
