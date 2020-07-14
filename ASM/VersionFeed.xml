@@ -5,7 +5,44 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-12T00:00:00Z</updated>
+  <updated>2020-07-13T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:A8829437-3A88-4A04-ABE8-419307C32B40</id>
+    <title>1.1.385 (1.1.385.10)</title>
+    <summary>1.1.385.10</summary>
+    <link href="" />
+    <updated>2020-07-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added a new Enable Dino Level Progressions checkbox. Allows the ability to only enable player levels, or enable player and dino levels.</li>
+            <li>Added a new server manager updater check, when performing an upgrade of the server manager.</li>
+            <li>Added a new directory check when selecting the data directory, to make sure it is not underneath the installation folder.</li>
+            <li>New tray icon when the server manager starts.</li>
+            <li>New global setting to Minimize to Tray.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added a filter button to the filter boxes. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
+            <li>Added a reload button to the Custom INI sections.</li>
+            <li>Added a new Custom Engine.ini section. This section is hidden by default, and can be shown using a new option in the global settings.</li>
+            <li>Updated all grid checkbox columns to align the checkbox properly.</li>
+            <li>Added None to the active events.</li>
+            <li>de-DE Translation file updated. (thanks @maxiel)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:1459F9AC-43D1-49B7-A461-6ABED2A6FC26</id>

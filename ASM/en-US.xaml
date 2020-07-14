@@ -65,8 +65,13 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
+    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
+
+    <sys:String x:Key="Application_NotifyIcon_ShowMainWindow">Show Main Window</sys:String>
+    <sys:String x:Key="Application_NotifyIcon_ShowServerMonitorWindow">Show Server Monitor</sys:String>
     <!--#endregion-->
 
     <!--#region Updater Window -->
@@ -126,7 +131,6 @@
     <sys:String x:Key="PlayerList_CloseButtonLabel">Close</sys:String>
 
     <sys:String x:Key="PlayerList_TitleLabel">Player List: {0}</sys:String>
-    <sys:String x:Key="PlayerList_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="PlayerList_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="PlayerList_ProfileInvalidCountLabel">Invalid:</sys:String>
 
@@ -172,7 +176,6 @@
     <sys:String x:Key="ModDetails_ModDetailFetchFailed_Label">Mod Details could not be fetched from steam.</sys:String>
 
     <sys:String x:Key="ModDetails_TotalCountLabel">Total Count:</sys:String>
-    <sys:String x:Key="ModDetails_FilterLabel">Filter:</sys:String>
 
     <sys:String x:Key="ModDetails_IndexColumnLabel">#</sys:String>
     <sys:String x:Key="ModDetails_ModIdColumnLabel">Mod ID</sys:String>
@@ -207,7 +210,6 @@
     <sys:String x:Key="WorkshopFiles_Refresh_FailedLabel">Loading workshop information from Steam failed, populating with the local cache instead.</sys:String>
     <sys:String x:Key="WorkshopFiles_TotalCountLabel">Count:</sys:String>
     <sys:String x:Key="WorkshopFiles_LastRefreshedLabel">Last Refreshed:</sys:String>
-    <sys:String x:Key="WorkshopFiles_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="WorkshopFiles_FilterExistingLabel">Filter out existing mods</sys:String>
 
     <sys:String x:Key="WorkshopFiles_SelectedColumnLabel">Selected</sys:String>
@@ -369,6 +371,23 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllButtonTooltip">Select all the servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllButtonTooltip">Unselect all the servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedStartTooltip">Start the selected servers one at a time.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedSaveBackupButtonTooltip">Perform a manual world save on the selected servers.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_SelectedShutdownLabel">Shutdown Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedShutdownTooltip">Shutdown the selected servers, using the shutdown options.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedStopLabel">Stop Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedStopTooltip">Force stop the selected servers. This will send a kill command to each server to stop the server immediately.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_UpdateServerLabel">Update/Verify Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServerTooltip">Perform an manual update/verify on the selected server files only.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServerModsLabel">Update/Verify Selected Server Mods</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServerModsTooltip">Perform an manual update/verify on the selected server mods only.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServerAndModsLabel">Update/Verify Selected Servers and Mods</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServerAndModsTooltip">Perform an manual update/verify on the selected servers and mods.</sys:String>
+
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
@@ -418,6 +437,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Data Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Backup Directory:</sys:String>
@@ -430,6 +450,8 @@
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
     
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Custom Override Options</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Enable Custom Engine.ini Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">If enabled, the engine.ini settings will be managers by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Enable Crafting Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">If enabled, the crafting overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeLabel">Enable Stack Size Overrides</sys:String>
@@ -718,7 +740,7 @@
     <sys:String x:Key="Updater_ProgressMessage_UpgradeLabel">Starting upgrade...</sys:String>
     <!--#endregion-->
 
-    <!--#region General Menu strings -->
+    <!--#region General strings -->
     <sys:String x:Key="Menu_File">_File</sys:String>
     <sys:String x:Key="Menu_File_Exit">_Exit</sys:String>
 
@@ -737,6 +759,9 @@
     <sys:String x:Key="SliderUnits_Tribes">tribes</sys:String>
     <sys:String x:Key="SliderUnits_Levels">levels</sys:String>
     <sys:String x:Key="SliderUnits_Units">units</sys:String>
+
+    <sys:String x:Key="General_FilterLabel">Filter:</sys:String>
+    <sys:String x:Key="General_FilterButtonTooltip">Click to apply the filter.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings -->
@@ -863,6 +888,9 @@
     <sys:String x:Key="ServerSettings_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
     <sys:String x:Key="ServerSettings_DeleteTitle">Confirm Delete Action</sys:String>
     <sys:String x:Key="ServerSettings_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadTitle">Confirm Reload</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadLabel">Click 'Yes' to confirm you want to perform the reload.</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadErrorTitle">Reload Error</sys:String>
     <sys:String x:Key="ServerSettings_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_ResetLabel">Click 'Yes' to confirm you want to perform the reset.</sys:String>
     <!--#endregion-->
@@ -1456,7 +1484,6 @@
     <sys:String x:Key="ServerSettings_PasteDinoCustomizationsTooltip">Paste custom dino data.</sys:String>
     <sys:String x:Key="ServerSettings_SaveDinoCustomizationsTooltip">Save custom dino data.</sys:String>
     <sys:String x:Key="ServerSettings_DinoCustomizations_SaveTitle">Custom Dino Settings</sys:String>
-    <sys:String x:Key="ServerSettings_DinoFilterLabel">Filter:</sys:String>
     <sys:String x:Key="ServerSettings_NameColumnLabel">Name</sys:String>
     <sys:String x:Key="ServerSettings_ModColumnLabel">Mod</sys:String>
     <sys:String x:Key="ServerSettings_SpawnableColumnLabel">Spawnable</sys:String>
@@ -1541,7 +1568,6 @@
     <sys:String x:Key="ServerSettings_PasteCustomResourcesTooltip">Paste custom resource data.</sys:String>
     <sys:String x:Key="ServerSettings_SaveCustomResourcesTooltip">Save custom resource data.</sys:String>
     <sys:String x:Key="ServerSettings_CustomResources_SaveTitle">Custom Resource Settings</sys:String>
-    <sys:String x:Key="ServerSettings_ResourcesFilterLabel">Filter:</sys:String>
     <sys:String x:Key="ServerSettings_HarvestAmountEntryLabel">Amount</sys:String>
     <sys:String x:Key="ServerSettings_HarvestRemoveRecordTooltip">Remove this Resource</sys:String>
 
@@ -1682,7 +1708,6 @@
     <sys:String x:Key="ServerSettings_OnlyAllowSpecifiedEngramsTooltip">If enabled, only the selected engrams will be available to learn in game.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsSelectAllTooltip">Select all the engrams.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsUnselectAllTooltip">Unselect all the engrams.</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsFilterLabel">Filter:</sys:String>
     <sys:String x:Key="ServerSettings_FilterOnlySelectedEngramsLabel">Filter Only Selected Engrams</sys:String>
     <sys:String x:Key="ServerSettings_FilterOnlySelectedEngramsTooltip">If enabled, only the selected engram will be visible.</sys:String>
     <sys:String x:Key="ServerSettings_SaveEngramOverrideColumnLabel">Selected</sys:String>
@@ -1727,6 +1752,8 @@
     <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">NOTE: The last {levels} player levels are used for Ascension and Other leveling and are shown with a coloured background. If you customize your own player levels, make sure you add an additional {levels} levels.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsLabel">Enable Custom Level Progressions</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsTooltip">If enabled, enables player and dino level customizations.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsLabel">Enable Dino Level Progressions</sys:String>
+    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsTooltip">If enabled, enables dino level customizations.</sys:String>
     <sys:String x:Key="ServerSettings_CustomPlayerLevelsLabel">Custom Player Levels</sys:String>
     <sys:String x:Key="ServerSettings_DeleteAllLevelsTooltip">Delete all existing levels.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Reset all level customizations back to server manager defaults.</sys:String>
@@ -1774,9 +1801,11 @@
     <!--#region Server Settings - Custom Config Settings -->
     <sys:String x:Key="ServerSettings_CustomGameUserSettingsLabel">Custom GameUserSettings.ini Settings</sys:String>
     <sys:String x:Key="ServerSettings_CustomGameSettingsLabel">Custom Game.ini Settings</sys:String>
+    <sys:String x:Key="ServerSettings_CustomEngineSettingsLabel">Custom Engine.ini Settings</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomSettingsSectionsLabel">Custom Sections</sys:String>
     <sys:String x:Key="ServerSettings_CustomSettingsSectionNameColumnLabel">Section Name</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadSectionsTooltip">Reload from Config File</sys:String>
     <sys:String x:Key="ServerSettings_AddCustomSectionTooltip">Add Section</sys:String>
     <sys:String x:Key="ServerSettings_PasteCustomSectionsTooltip">Paste Section Data</sys:String>
     <sys:String x:Key="ServerSettings_ImportCustomSectionsTooltip">Import Data from Ini File</sys:String>
@@ -2265,7 +2294,6 @@
     <sys:String x:Key="RCON_PlayersLabel">Players:</sys:String>
     <sys:String x:Key="RCON_PlayersSeparatorLabel">/</sys:String>
     <sys:String x:Key="RCON_ModeLabel">Mode:</sys:String>
-    <sys:String x:Key="RCON_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="RCON_ProfileCountLabel">Profiles:</sys:String>
     <sys:String x:Key="RCON_ProfileInvalidCountLabel">Invalid:</sys:String>
 
