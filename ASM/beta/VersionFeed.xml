@@ -5,238 +5,27 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-07-12T10:00:00Z</updated>
+  <updated>2020-07-15T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:36C6B291-6CA7-4E7D-845D-F4533C9ADDB2</id>
-    <title>1.1.385 (1.1.385.10)</title>
-    <summary>1.1.385.10</summary>
+    <id>urn:uuid:AABD3536-9E3D-4304-8E66-A542C76978E7</id>
+    <title>1.1.386 (1.1.386.1)</title>
+    <summary>1.1.386.1</summary>
     <link href="" />
-    <updated>2020-07-12T10:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added a reload button to the Custom INI sections.</li>
-            <li>Added a new Custom Engine.ini section. This section is hidden by default, and can be shown using a new option in the global settings.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:AE3D8F05-4B29-40AD-9B0A-95A4138A6AA0</id>
-    <title>1.1.385 (1.1.385.9)</title>
-    <summary>1.1.385.9</summary>
-    <link href="" />
-    <updated>2020-07-12T09:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added a filter button to the filter boxes. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:53AD268A-78EE-4C85-8F5B-446CF45D867A</id>
-    <title>1.1.385 (1.1.385.8)</title>
-    <summary>1.1.385.8</summary>
-    <link href="" />
-    <updated>2020-07-12T08:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Part 1 - Added a filter button to the filter boxes on the Dino, Engram and Resources grid. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:99A99F1A-5477-4412-99F7-887BF3F66E86</id>
-    <title>1.1.385 (1.1.385.7)</title>
-    <summary>1.1.385.7</summary>
-    <link href="" />
-    <updated>2020-07-12T07:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Fixed the display of missing steam mod details.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:26B93183-0677-47EB-9EC3-CE32C70AB5F4</id>
-    <title>1.1.385 (1.1.385.6)</title>
-    <summary>1.1.385.6</summary>
-    <link href="" />
-    <updated>2020-07-12T06:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Updated the loading of the steam mod details.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:EB106331-E120-48FB-B749-9DBC79E4720C</id>
-    <title>1.1.385 (1.1.385.5)</title>
-    <summary>1.1.385.5</summary>
-    <link href="" />
-    <updated>2020-07-12T05:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Updated the Plugin Helper with new features in preparation of the new Discord Plugin changes.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:94E0BF7F-8139-494D-B2CC-12026301FD7F</id>
-    <title>1.1.385 (1.1.385.4)</title>
-    <summary>1.1.385.4</summary>
-    <link href="" />
-    <updated>2020-07-12T04:00:00Z</updated>
+    <updated>2020-07-15T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Added a new Enable Dino Level Progressions checkbox. Allows the ability to only enable player levels, or enable player and dino levels.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:1BC30667-802E-4E91-ABC1-562A90220656</id>
-    <title>1.1.385 (1.1.385.3)</title>
-    <summary>1.1.385.3</summary>
-    <link href="" />
-    <updated>2020-07-12T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Changed the server manager updater check to use copy instead of move.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:339DF8C0-33B2-4F8C-ACA6-8C0E75DA9E25</id>
-    <title>1.1.385 (1.1.385.2)</title>
-    <summary>1.1.385.2</summary>
-    <link href="" />
-    <updated>2020-07-12T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>New tray icon when the server manager starts.</li>
-            <li>New global setting to Minimize to Tray.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:A8829437-3A88-4A04-ABE8-419307C32B40</id>
-    <title>1.1.385 (1.1.385.1)</title>
-    <summary>1.1.385.1</summary>
-    <link href="" />
-    <updated>2020-07-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Added a new server manager updater check, when performing an upgrade of the server manager.</li>
-            <li>Added a new directory check when selecting the data directory, to make sure it is not underneath the installation folder.</li>
+            <li>Added import/export buttons to the Engrams, so they can be exported to json, and read in from json.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Updated all grid checkbox columns to align the checkbox properly.</li>
-            <li>Added None to the active events.</li>
-            <li>de-DE Translation file updated. (thanks @maxiel)</li>
+            <li>Changed the Difficulty Offset slider, so it does not have a max value.</li>
+            <li>pt-BR Translation file updated. (thanks @bruno5011)</li>
           </ul>
         </p>
       </div>

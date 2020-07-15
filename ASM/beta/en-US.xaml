@@ -1686,6 +1686,8 @@
     <sys:String x:Key="ServerSettings_ResetEngramsLabel">Reset all engram customizations back to defaults.</sys:String>
     <sys:String x:Key="ServerSettings_PasteCustomEngramsTooltip">Paste custom engram data.</sys:String>
     <sys:String x:Key="ServerSettings_SaveCustomEngramsTooltip">Save custom engram data.</sys:String>
+    <sys:String x:Key="ServerSettings_ImportCustomEngramsTooltip">Import custom engram data.</sys:String>
+    <sys:String x:Key="ServerSettings_ExportCustomEngramsTooltip">Export custom engram data.</sys:String>
     <sys:String x:Key="ServerSettings_CustomEngrams_SaveTitle">Custom Engram Settings</sys:String>
     <sys:String x:Key="ServerSettings_OnlyAllowSpecifiedEngramsLabel">Only Allow Selected Engrams</sys:String>
     <sys:String x:Key="ServerSettings_OnlyAllowSpecifiedEngramsTooltip">If enabled, only the selected engrams will be available to learn in game.</sys:String>
@@ -1724,6 +1726,20 @@
     <sys:String x:Key="ServerSettings_EngramsOverride_SelectAllConfirmLabel">Click 'Yes' to confirm you want to select all the engrams.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmTitle">Confirm Unselect All Action</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmLabel">Click 'Yes' to confirm you want to unselect all the engrams.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportErrorTitle">Export Error</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportDialogTitle">Select engram override data file</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportDefaultExtension">json</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportFilterLabel">JSON Files</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportFilterExtension">*.json</sys:String>
+
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportConfirmationTitle">Import Confirmation</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportConfirmationLabel">You are about to import the engram data, this will overwrite the engrams in the list with data from the file. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportErrorTitle">Import Error</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportDialogTitle">Select engram override data file</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportDefaultExtension">json</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportFilterLabel">JSON Files</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportFilterExtension">*.json</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Level Progressions -->
@@ -1741,8 +1757,8 @@
     <sys:String x:Key="ServerSettings_DeleteAllLevelsTooltip">Delete all existing levels.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Reset all level customizations back to server manager defaults.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToOfficialDefaultsTooltip">Reset all level customizations back to official defaults.</sys:String>
-    <sys:String x:Key="ServerSettings_ImportLevelsTooltip">Import level customizations from CSV file.</sys:String>
-    <sys:String x:Key="ServerSettings_ExportLevelsTooltip">Export level customizations to CSV file.</sys:String>
+    <sys:String x:Key="ServerSettings_ImportLevelsTooltip">Import level customization data.</sys:String>
+    <sys:String x:Key="ServerSettings_ExportLevelsTooltip">Export level customization data.</sys:String>
     <sys:String x:Key="ServerSettings_UpdateLevelsTooltip">Update maximum XP Cap to last level value.</sys:String>
 
     <sys:String x:Key="ServerSettings_ProgressionPlusColumnLabel">+</sys:String>
@@ -1768,15 +1784,17 @@
     <sys:String x:Key="ServerSettings_DinoLevels_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_DinoLevels_ResetLabel">Click 'Yes' to confirm you want to reset all the current dino levels.</sys:String>
 
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Error</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportErrorTitle">Import Error</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_UpdateErrorTitle">Update Error</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">Save level customizations</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportDialogTitle">Select level customization CSV file</sys:String>
+    
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Error</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">elect level customization data file</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportDefaultExtension">csv</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportDefaultExtension">csv</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterLabel">CSV Files</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterExtension">*.csv</sys:String>
+    
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportErrorTitle">Import Error</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportDialogTitle">Select level customization data file</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportDefaultExtension">csv</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterLabel">CSV Files</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterExtension">*.csv</sys:String>
     <!--#endregion-->
@@ -2400,6 +2418,7 @@
     <!--#endregion-->
 
     <!--#region Event Names -->
+    <sys:String x:Key="none">None</sys:String>
     <sys:String x:Key="vday">Valentines Day</sys:String>
     <sys:String x:Key="Easter">Easter</sys:String>
     <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
