@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:pc="clr-namespace:ServerManagerTool.Plugin.Common;assembly=ServerManager.Plugin.Common"
-        Title="{DynamicResource ConfigWindow_Title}"
+        Name="ConfigUI" Title="{DynamicResource ConfigWindow_Title}"
         Icon="/ServerManager.Plugin.Discord;component/Art/favicon.ico"
         Width="640" Height="480" MinWidth="640" MinHeight="480" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Closing="ConfigWindow_Closing" Loaded="ConfigWindow_Loaded">
     <Window.Resources>
@@ -24,8 +24,8 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
-    
-    <Grid Background="{StaticResource BeigeGradient}">
+
+    <Grid Background="{StaticResource BeigeGradient}" MouseLeftButtonUp="OnMouseLeftButtonUp" MouseMove="OnMouseMove">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -64,7 +64,7 @@
                 </StackPanel>
             </GroupBox.Header>
 
-            <DataGrid ItemsSource="{Binding PluginConfig.ConfigProfiles}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
+            <DataGrid Name="ConfigsGrid" ItemsSource="{Binding PluginConfig.ConfigProfiles}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" PreviewMouseLeftButtonDown="OnMouseLeftButtonDown">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridRow}">
                         <Style.Resources>
@@ -93,7 +93,7 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn     Width="*" Binding="{Binding Name}" IsReadOnly="True">
+                    <DataGridTextColumn     Width="*" IsReadOnly="True" Binding="{Binding Name}">
                         <DataGridTextColumn.Header>
                             <TextBlock Text="{DynamicResource ConfigWindow_NameColumnLabel}"/>
                         </DataGridTextColumn.Header>
@@ -107,7 +107,7 @@
                             </Style>
                         </DataGridTextColumn.CellStyle>
                     </DataGridTextColumn>
-                    <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                    <DataGridTemplateColumn Width="30" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditConfigProfile_Click" ToolTip="{DynamicResource ConfigWindow_EditConfigProfileTooltip}">
@@ -116,7 +116,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                    <DataGridTemplateColumn Width="30" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="DeleteConfigProfile_Click" ToolTip="{DynamicResource ConfigWindow_DeleteConfigProfileTooltip}">
@@ -133,5 +133,15 @@
             <Button Content="{DynamicResource Global_SaveButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" Click="Save_Click"/>
             <Button Content="{DynamicResource Global_CloseButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" IsCancel="True"/>
         </StackPanel>
+
+        <!-- Drag and Drop Popup -->
+        <Popup x:Name="popup" IsHitTestVisible="False" Placement="RelativePoint" PlacementTarget="{Binding ElementName=ConfigUI}" AllowsTransparency="True">
+            <Border BorderBrush="LightSteelBlue" BorderThickness="2" Background="White" Opacity="0.75">
+                <StackPanel Orientation="Horizontal" Margin="4,3,8,3">
+                    <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Drag.ico,Size=32}" Width="16" Height="16"/>
+                    <TextBlock FontSize="14" VerticalAlignment="Center" Text="{Binding DraggedItem.Name, ElementName=ConfigUI}" Margin="8,0,0,0" />
+                </StackPanel>
+            </Border>
+        </Popup>
     </Grid>
 </Window>

@@ -26,6 +26,7 @@
     <None Remove="Art\ChangeNotes.ico" />
     <None Remove="Art\Delete.ico" />
     <None Remove="Art\Download.ico" />
+    <None Remove="Art\Drag.ico" />
     <None Remove="Art\Edit.ico" />
     <None Remove="Art\favicon.ico" />
     <None Remove="Globalization\en-US\en-US.xaml" />
@@ -53,6 +54,7 @@
     <Resource Include="Art\ChangeNotes.ico" />
     <Resource Include="Art\Delete.ico" />
     <Resource Include="Art\Download.ico" />
+    <Resource Include="Art\Drag.ico" />
     <Resource Include="Art\Edit.ico" />
     <Resource Include="Art\favicon.ico" />
     <Resource Include="Globalization\en-US\en-US.xaml" />

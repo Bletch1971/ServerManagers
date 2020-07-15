@@ -198,6 +198,18 @@ namespace ServerManagerTool.Plugin.Common
                             Plugins.Add(new PluginItem { Plugin = plugin, PluginFile = pluginFile, PluginType = nameof(IAlertPlugin) });
                         }
                     }
+                    else if (type.GetInterface(typeof(IPlugin).Name) != null)
+                    {
+                        var plugin = assembly.CreateInstance(type.FullName) as IPlugin;
+                        if (plugin != null && plugin.Enabled)
+                        {
+                            if (type.GetInterface(typeof(IBeta).Name) != null)
+                                ((IBeta)plugin).BetaEnabled = BetaEnabled;
+                            plugin.Initialize();
+
+                            Plugins.Add(new PluginItem { Plugin = plugin, PluginFile = pluginFile, PluginType = nameof(IPlugin) });
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {

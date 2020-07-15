@@ -96,6 +96,17 @@ namespace ServerManagerTool.Plugin.Discord
             OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item));
         }
 
+        public void Move(int oldIndex, int newIndex)
+        {
+            var item = _listObject.ElementAt(oldIndex);
+            if (item != null)
+            {
+                _listObject.Remove(item);
+                _listObject.Insert(newIndex, item);
+                OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Move, item, newIndex, oldIndex));
+            }
+        }
+
         public bool Remove(T item)
         {
             int index = _listObject.IndexOf(item);

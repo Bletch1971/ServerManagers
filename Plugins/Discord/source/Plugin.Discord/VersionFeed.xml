@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:D8974ABF-8444-4D40-A594-D4443921B3B8</id>
-    <title>1.0.17 (1.0.17.1)</title>
-    <summary>1.0.17.1</summary>
+    <title>1.0.17 (1.0.17.2)</title>
+    <summary>1.0.17.2</summary>
     <link href="" />
     <updated>2020-07-13T00:00:00Z</updated>
     <content type="xhtml">
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Profile name has been converted to a droplist and is now populated with the Server Manager Profile Names for selection.</li>
+            <li>Added drag/drop feature to the config window.</li>
           </ul>
         </p>
       </div>

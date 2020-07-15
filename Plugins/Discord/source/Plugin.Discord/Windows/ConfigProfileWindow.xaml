@@ -132,7 +132,7 @@
                         </StackPanel>
                     </GroupBox.Header>
 
-                    <DataGrid ItemsSource="{Binding Profile.ProfileNames}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
+                    <DataGrid ItemsSource="{Binding Profile.ProfileNames}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type DataGridRow}">
                                 <Style.Resources>
@@ -150,7 +150,7 @@
                         </DataGrid.VerticalGridLinesBrush>
 
                         <DataGrid.Columns>
-                            <DataGridTemplateColumn Width="*" CanUserSort="True" SortMemberPath="DisplayName">
+                            <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.Header>
                                     <TextBlock Text="{DynamicResource ConfigProfileWindow_ProfileNameColumnLabel}" />
                                 </DataGridTemplateColumn.Header>
@@ -161,7 +161,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                             
-                            <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                            <DataGridTemplateColumn Width="30" IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="DeleteProfileName_Click" ToolTip="{DynamicResource ConfigProfileWindow_DeleteProfileNameTooltip}">
@@ -188,7 +188,7 @@
 
                     </GroupBox.Header>
 
-                    <DataGrid ItemsSource="{Binding Profile.AlertTypes}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
+                    <DataGrid ItemsSource="{Binding Profile.AlertTypes}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type DataGridRow}">
                                 <Style.Resources>
@@ -206,7 +206,7 @@
                         </DataGrid.VerticalGridLinesBrush>
 
                         <DataGrid.Columns>
-                            <DataGridTemplateColumn     Width="*">
+                            <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.Header>
                                     <TextBlock Text="{DynamicResource ConfigProfileWindow_AlertTypeColumnLabel}"/>
                                 </DataGridTemplateColumn.Header>
@@ -217,7 +217,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                             
-                            <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                            <DataGridTemplateColumn Width="30" IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="DeleteAlertType_Click" ToolTip="{DynamicResource ConfigProfileWindow_DeleteAlertTypeTooltip}">
