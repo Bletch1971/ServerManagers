@@ -1218,7 +1218,7 @@
     <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeUnits">players</sys:String>
     <sys:String x:Key="ServerSettings_TribeNameChangeCooldownLabel">Tribe Name Change Cooldown</sys:String>
     <sys:String x:Key="ServerSettings_TribeNameChangeCooldownTooltip">Cooldown added to tribe's changing their name.</sys:String>
-    <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownLabel">Tribe Name Reuse Cooldown</sys:String>
+    <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownLabel">Tribe Slot Reuse Cooldown</sys:String>
     <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownTooltip">Locks a tribe slot so when a tribe member leaves, the slot cannot be reused until the cooldown expires. Set to 0 to disable the cooldown.</sys:String>
     <sys:String x:Key="ServerSettings_AllowTribeAlliancesLabel">Allow Tribe Alliances</sys:String>
     <sys:String x:Key="ServerSettings_AllowTribeAlliancesTooltip">If enabled, players are able to create alliances with other tribes.</sys:String>
@@ -1625,7 +1625,7 @@
     <sys:String x:Key="ServerSettings_OverrideStructurePlatformPreventionLabel">Override Structure Platform Prevention</sys:String>
     <sys:String x:Key="ServerSettings_OverrideStructurePlatformPreventionTooltip">If enabled, allows auto-turrets to be buildable/working on dino platform saddles.</sys:String>
     <sys:String x:Key="ServerSettings_AllowUnalignedDinosOnFlyerPlatformLabel">Allow Unaligned Dinos on Flyer Platform</sys:String>
-    <sys:String x:Key="ServerSettings_AllowUnalignedDinosOnFlyerPlatformTooltip">If enabled, non-allied dinos are able to stand on the Quetal platforms.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnalignedDinosOnFlyerPlatformTooltip">If enabled, non-allied dinos are able to stand on the Quetzal platforms.</sys:String>
     <sys:String x:Key="ServerSettings_PvEAllowStructuresAtSupplyDropsLabel">Allow Structures at Supply Drops PvE</sys:String>
     <sys:String x:Key="ServerSettings_PvEAllowStructuresAtSupplyDropsTooltip">If enabled, will allow placing structures at supply drop locations.</sys:String>
 
@@ -1787,7 +1787,7 @@
     <sys:String x:Key="ServerSettings_CustomLevel_UpdateErrorTitle">Update Error</sys:String>
     
     <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Error</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">elect level customization data file</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">Select level customization data file</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportDefaultExtension">csv</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterLabel">CSV Files</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterExtension">*.csv</sys:String>
