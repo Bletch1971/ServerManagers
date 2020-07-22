@@ -371,23 +371,6 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectAllButtonTooltip">Select all the servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_UnselectAllButtonTooltip">Unselect all the servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedStartTooltip">Start the selected servers one at a time.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedSaveBackupButtonTooltip">Perform a manual world save on the selected servers.</sys:String>
-
-    <sys:String x:Key="ServerMonitor_SelectedShutdownLabel">Shutdown Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedShutdownTooltip">Shutdown the selected servers, using the shutdown options.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedStopLabel">Stop Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedStopTooltip">Force stop the selected servers. This will send a kill command to each server to stop the server immediately.</sys:String>
-
-    <sys:String x:Key="ServerMonitor_UpdateServerLabel">Update/Verify Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerTooltip">Perform an manual update/verify on the selected server files only.</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerModsLabel">Update/Verify Selected Server Mods</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerModsTooltip">Perform an manual update/verify on the selected server mods only.</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerAndModsLabel">Update/Verify Selected Servers and Mods</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerAndModsTooltip">Perform an manual update/verify on the selected servers and mods.</sys:String>
-
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
@@ -1235,7 +1218,7 @@
     <sys:String x:Key="ServerSettings_MaxNumberOfPlayersInTribeUnits">players</sys:String>
     <sys:String x:Key="ServerSettings_TribeNameChangeCooldownLabel">Tribe Name Change Cooldown</sys:String>
     <sys:String x:Key="ServerSettings_TribeNameChangeCooldownTooltip">Cooldown added to tribe's changing their name.</sys:String>
-    <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownLabel">Tribe Name Reuse Cooldown</sys:String>
+    <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownLabel">Tribe Slot Reuse Cooldown</sys:String>
     <sys:String x:Key="ServerSettings_TribeSlotReuseCooldownTooltip">Locks a tribe slot so when a tribe member leaves, the slot cannot be reused until the cooldown expires. Set to 0 to disable the cooldown.</sys:String>
     <sys:String x:Key="ServerSettings_AllowTribeAlliancesLabel">Allow Tribe Alliances</sys:String>
     <sys:String x:Key="ServerSettings_AllowTribeAlliancesTooltip">If enabled, players are able to create alliances with other tribes.</sys:String>
@@ -1642,7 +1625,7 @@
     <sys:String x:Key="ServerSettings_OverrideStructurePlatformPreventionLabel">Override Structure Platform Prevention</sys:String>
     <sys:String x:Key="ServerSettings_OverrideStructurePlatformPreventionTooltip">If enabled, allows auto-turrets to be buildable/working on dino platform saddles.</sys:String>
     <sys:String x:Key="ServerSettings_AllowUnalignedDinosOnFlyerPlatformLabel">Allow Unaligned Dinos on Flyer Platform</sys:String>
-    <sys:String x:Key="ServerSettings_AllowUnalignedDinosOnFlyerPlatformTooltip">If enabled, non-allied dinos are able to stand on the Quetal platforms.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnalignedDinosOnFlyerPlatformTooltip">If enabled, non-allied dinos are able to stand on the Quetzal platforms.</sys:String>
     <sys:String x:Key="ServerSettings_PvEAllowStructuresAtSupplyDropsLabel">Allow Structures at Supply Drops PvE</sys:String>
     <sys:String x:Key="ServerSettings_PvEAllowStructuresAtSupplyDropsTooltip">If enabled, will allow placing structures at supply drop locations.</sys:String>
 
@@ -1703,6 +1686,8 @@
     <sys:String x:Key="ServerSettings_ResetEngramsLabel">Reset all engram customizations back to defaults.</sys:String>
     <sys:String x:Key="ServerSettings_PasteCustomEngramsTooltip">Paste custom engram data.</sys:String>
     <sys:String x:Key="ServerSettings_SaveCustomEngramsTooltip">Save custom engram data.</sys:String>
+    <sys:String x:Key="ServerSettings_ImportCustomEngramsTooltip">Import custom engram data.</sys:String>
+    <sys:String x:Key="ServerSettings_ExportCustomEngramsTooltip">Export custom engram data.</sys:String>
     <sys:String x:Key="ServerSettings_CustomEngrams_SaveTitle">Custom Engram Settings</sys:String>
     <sys:String x:Key="ServerSettings_OnlyAllowSpecifiedEngramsLabel">Only Allow Selected Engrams</sys:String>
     <sys:String x:Key="ServerSettings_OnlyAllowSpecifiedEngramsTooltip">If enabled, only the selected engrams will be available to learn in game.</sys:String>
@@ -1741,6 +1726,20 @@
     <sys:String x:Key="ServerSettings_EngramsOverride_SelectAllConfirmLabel">Click 'Yes' to confirm you want to select all the engrams.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmTitle">Confirm Unselect All Action</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmLabel">Click 'Yes' to confirm you want to unselect all the engrams.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportErrorTitle">Export Error</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportDialogTitle">Select engram override data file</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportDefaultExtension">json</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportFilterLabel">JSON Files</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportFilterExtension">*.json</sys:String>
+
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportConfirmationTitle">Import Confirmation</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportConfirmationLabel">You are about to import the engram data, this will overwrite the engrams in the list with data from the file. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportErrorTitle">Import Error</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportDialogTitle">Select engram override data file</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportDefaultExtension">json</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportFilterLabel">JSON Files</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportFilterExtension">*.json</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Level Progressions -->
@@ -1758,8 +1757,8 @@
     <sys:String x:Key="ServerSettings_DeleteAllLevelsTooltip">Delete all existing levels.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Reset all level customizations back to server manager defaults.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToOfficialDefaultsTooltip">Reset all level customizations back to official defaults.</sys:String>
-    <sys:String x:Key="ServerSettings_ImportLevelsTooltip">Import level customizations from CSV file.</sys:String>
-    <sys:String x:Key="ServerSettings_ExportLevelsTooltip">Export level customizations to CSV file.</sys:String>
+    <sys:String x:Key="ServerSettings_ImportLevelsTooltip">Import level customization data.</sys:String>
+    <sys:String x:Key="ServerSettings_ExportLevelsTooltip">Export level customization data.</sys:String>
     <sys:String x:Key="ServerSettings_UpdateLevelsTooltip">Update maximum XP Cap to last level value.</sys:String>
 
     <sys:String x:Key="ServerSettings_ProgressionPlusColumnLabel">+</sys:String>
@@ -1785,15 +1784,17 @@
     <sys:String x:Key="ServerSettings_DinoLevels_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_DinoLevels_ResetLabel">Click 'Yes' to confirm you want to reset all the current dino levels.</sys:String>
 
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Error</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportErrorTitle">Import Error</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_UpdateErrorTitle">Update Error</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">Save level customizations</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportDialogTitle">Select level customization CSV file</sys:String>
+    
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Error</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">Select level customization data file</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportDefaultExtension">csv</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportDefaultExtension">csv</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterLabel">CSV Files</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterExtension">*.csv</sys:String>
+    
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportErrorTitle">Import Error</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportDialogTitle">Select level customization data file</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportDefaultExtension">csv</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterLabel">CSV Files</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterExtension">*.csv</sys:String>
     <!--#endregion-->
@@ -2417,6 +2418,7 @@
     <!--#endregion-->
 
     <!--#region Event Names -->
+    <sys:String x:Key="none">None</sys:String>
     <sys:String x:Key="vday">Valentines Day</sys:String>
     <sys:String x:Key="Easter">Easter</sys:String>
     <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
