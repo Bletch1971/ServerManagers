@@ -5,184 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-07-12T08:00:00Z</updated>
+  <updated>2020-08-06T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:D95673CC-F3CC-4458-B6F7-EBBE0C19862A</id>
-    <title>1.1.41 (1.1.41.8)</title>
-    <summary>1.1.41.8</summary>
+    <id>urn:uuid:892ADC34-8A4A-460F-9B04-DC9C9987466C</id>
+    <title>1.1.42 (1.1.42.1)</title>
+    <summary>1.1.42.1</summary>
     <link href="" />
-    <updated>2020-07-12T08:00:00Z</updated>
+    <updated>2020-08-06T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Cleaned up the config INI loading.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6B3F21CA-3CC4-49A1-A640-CFC04DFD583C</id>
-    <title>1.1.41 (1.1.41.7)</title>
-    <summary>1.1.41.7</summary>
-    <link href="" />
-    <updated>2020-07-12T07:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added a filter button to the filter boxes. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:2B3C8D35-63B4-4A2E-A2AB-B21B7C25A79C</id>
-    <title>1.1.41 (1.1.41.6)</title>
-    <summary>1.1.41.6</summary>
-    <link href="" />
-    <updated>2020-07-12T06:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Fixed the display of missing steam mod details.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:72ACDCCC-29F2-4798-B978-BDEE571E0EA2</id>
-    <title>1.1.41 (1.1.41.5)</title>
-    <summary>1.1.41.5</summary>
-    <link href="" />
-    <updated>2020-07-12T05:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Updated the loading of the steam mod details.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:C5E5DA19-AE44-444C-94B3-E5046CD8A4BA</id>
-    <title>1.1.41 (1.1.41.4)</title>
-    <summary>1.1.41.4</summary>
-    <link href="" />
-    <updated>2020-07-12T04:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Updated the Plugin Helper with new features in preparation of the new Discord Plugin changes.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:17B08EE7-A6FA-42BA-9BA0-1F5187069203</id>
-    <title>1.1.41 (1.1.41.3)</title>
-    <summary>1.1.41.3</summary>
-    <link href="" />
-    <updated>2020-07-12T03:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Changed the server manager updater check to use copy instead of move.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6833583A-A368-44BE-80FF-6A57B3574CDC</id>
-    <title>1.1.41 (1.1.41.2)</title>
-    <summary>1.1.41.2</summary>
-    <link href="" />
-    <updated>2020-07-12T02:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>New tray icon when the server manager starts.</li>
-            <li>New global setting to Minimize to Tray.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:1C99C798-11ED-4D57-A661-423D30D8B9AA</id>
-    <title>1.1.41 (1.1.41.1)</title>
-    <summary>1.1.41.1</summary>
-    <link href="" />
-    <updated>2020-07-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Added a new server manager updater check, when performing an upgrade of the server manager.</li>
-            <li>Added a new directory check when selecting the data directory, to make sure it is not underneath the installation folder.</li>
+            <li>en-US updated.</li>
           </ul>
         </p>
       </div>
