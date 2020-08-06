@@ -1712,13 +1712,13 @@
     <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnLabel">Remove Prereqs</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnTooltip">If enabled, will remove the prerequisites needed to unlock the engram.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnLabel">Auto Unlock</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnTooltip">Is enabled, the engram will be automatically unlocked at the specified level.</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnTooltip">If enabled, the engram will be automatically unlocked at the specified level.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Unlock Level</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnTooltip">Player level when the engram is automatically unlocked. Auto Unlock must be enabled.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemoveRecordTooltip">Remove this Engram</sys:String>
 
     <sys:String x:Key="ServerSettings_EngramsOverride_EngramsRemoveRecordTitle">Remove Engram</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsOverride_EngramsRemoveRecordLabel">Click 'Yes' to confirm you want to delete the resource record.</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_EngramsRemoveRecordLabel">Click 'Yes' to confirm you want to delete the engram record.</sys:String>
 
     <sys:String x:Key="ServerSettings_EngramsOverride_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_ResetLabel">Click 'Yes' to confirm you want to reset all the current engram changes.</sys:String>
