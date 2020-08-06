@@ -353,23 +353,6 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectAllButtonTooltip">Select all the servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_UnselectAllButtonTooltip">Unselect all the servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedStartTooltip">Start the selected servers one at a time.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedSaveBackupButtonTooltip">Perform a manual world save on the selected servers.</sys:String>
-
-    <sys:String x:Key="ServerMonitor_SelectedShutdownLabel">Shutdown Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedShutdownTooltip">Shutdown the selected servers, using the shutdown options.</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedStopLabel">Stop Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_SelectedStopTooltip">Force stop the selected servers. This will send a kill command to each server to stop the server immediately.</sys:String>
-
-    <sys:String x:Key="ServerMonitor_UpdateServerLabel">Update/Verify Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerTooltip">Perform an manual update/verify on the selected server files only.</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerModsLabel">Update/Verify Selected Server Mods</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerModsTooltip">Perform an manual update/verify on the selected server mods only.</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerAndModsLabel">Update/Verify Selected Servers and Mods</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServerAndModsTooltip">Perform an manual update/verify on the selected servers and mods.</sys:String>
-
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
