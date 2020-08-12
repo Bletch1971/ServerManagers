@@ -1013,6 +1013,8 @@
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">If enabled, will turn off the anti meshing player kills (but still allow teleporting).</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxLabel">Enable Vivox</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxTooltip">If enabled, will turn on Vivox. NOTE: Steam Servers only.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowSharedConnectionsLabel">Allow Shared Connections</sys:String>
+    <sys:String x:Key="ServerSettings_AllowSharedConnectionsTooltip">If disabled, will disable family sharing.</sys:String>
     <sys:String x:Key="ServerSettings_CrossplayLabel">Enable Crossplay</sys:String>
     <sys:String x:Key="ServerSettings_CrossplayTooltip">If enabled, will turn on crossplay, so players using clients from different stores can connect to the dedicated server.</sys:String>
     <sys:String x:Key="ServerSettings_EpicOnlyLabel">Epic Store Players Only</sys:String>
@@ -1142,6 +1144,8 @@
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">If enabled, will allow multiple platform floors on rafts and saddle platforms.</sys:String>
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierLabel">Platform Saddle Build Area Bounds Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Increasing the multiplier allows structures being placed further away from the platform.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesLabel">Max Gateways on Saddles</sys:String>
+    <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesTooltip">Limits the number of gateways that can be placed on platform saddles. This option is not retroactive, so applying this change will require some manual administration work to clear up any pre-existing platforms that exceed the limit.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Enable Difficulty Override</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">If enabled, this will allow the max level of creatures in the world to be changed.</sys:String>
