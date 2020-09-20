@@ -8,11 +8,34 @@
   <updated>2020-09-21T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:63D078CE-5E97-462C-A0A6-4327692D0D69</id>
+    <title>1.1.45 (1.1.45.1)</title>
+    <summary>1.1.45.1</summary>
+    <link href="" />
+    <updated>2020-09-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug that cleared the server map when clicking save in the Mod Details window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:5C31A84E-72DB-41A8-8FE1-91ACC40B318B</id>
     <title>1.1.44 (1.1.44.1)</title>
     <summary>1.1.44.1</summary>
     <link href="" />
-    <updated>2020-09-21T00:00:00Z</updated>
+    <updated>2020-09-20T01:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
