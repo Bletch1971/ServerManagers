@@ -989,6 +989,8 @@
     <sys:String x:Key="ServerSettings_MapsAndModsLabel">Maps and Mods</sys:String>
     <sys:String x:Key="ServerSettings_MapPathLabel">Map Name:</sys:String>
     <sys:String x:Key="ServerSettings_MapPathTooltip">The standard map name.</sys:String>
+    <sys:String x:Key="ServerSettings_MapSaveNameLabel">Map Save File:</sys:String>
+    <sys:String x:Key="ServerSettings_MapSaveNameTooltip">The file name of the map save (e.g. game.db).</sys:String>
     <sys:String x:Key="ServerSettings_ModIdsLabel">Mod IDs:</sys:String>
     <sys:String x:Key="ServerSettings_ModIdsTooltip">A comma-separated list of mod ids, in the order in which they should be applied.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">View the mod details.</sys:String>
