@@ -32,6 +32,7 @@
 
     <!--#region Game Map Names -->
     <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
+    <sys:String x:Key="/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
     <!--#endregion-->
 
     <!--#region Process Priority -->
