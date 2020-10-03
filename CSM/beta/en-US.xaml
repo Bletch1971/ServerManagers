@@ -804,8 +804,10 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">This message will be displayed when the server is being stopped.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Server Shutdown Message:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">This message will be displayed when the server is being shutdown.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Server Started Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Server Start Message:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">This message will be displayed when the server is being started.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Include Public IP and Port in Start Message</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">The startup message will include the Public IP and Port.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Backup Process Error:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">This message will be displayed when the auto-backup process encountered an error.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Shutdown Process Error:</sys:String>
