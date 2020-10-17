@@ -256,11 +256,11 @@
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">Profile Sync - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">Load Profile Sync Error</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_Title">Process Profile Sync</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected section settings of the selected profiles with those of the current profile. You will not be able to undo, do you want to continue?</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected profiles with the settings from the selected sections of the current profile. You will not be able to undo, do you want to continue?</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">Process Profile Sync Error</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">You have not selected any profiles to copy settings to.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">You have not selected any sections to copy settings from.</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the selected profile to your current profile.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the current profile to the selected profiles.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">Select All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">Unselect All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">Process</sys:String>
