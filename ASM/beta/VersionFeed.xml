@@ -5,10 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-10-17T00:00:00Z</updated>
+  <updated>2020-10-19T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:425EED2C-A653-4C70-AF7F-0F947AB0DF52</id>
+    <id>urn:uuid:67562619-54C0-45D2-AD93-C6A31EE9E842</id>
+    <title>1.1.391 (1.1.391.3)</title>
+    <summary>1.1.391.3</summary>
+    <link href="" />
+    <updated>2020-10-19T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>fixed the issue with the server monitor not opening when using the shortcut.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:8DFFE2B6-70B8-407A-A305-5DE4FA0E482E</id>
     <title>1.1.391 (1.1.391.2)</title>
     <summary>1.1.391.2</summary>
     <link href="" />
