@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-10-24T00:00:00Z</updated>
+  <updated>2020-10-25T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:4C050EA1-4671-42DD-A735-2427ED08629A</id>
+    <title>1.1.48 (1.1.48.5)</title>
+    <summary>1.1.48.5</summary>
+    <link href="" />
+    <updated>2020-10-25T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Options - added server region selection.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:4C050EA1-4671-42DD-A735-2427ED08629A</id>
@@ -19,7 +42,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>fixed the issue with the Public IP not being set properly.</li>
+            <li>Fixed the issue with the Public IP not being set properly.</li>
           </ul>
         </p>
       </div>
@@ -42,7 +65,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>fixed the issue with the server monitor not opening when using the shortcut.</li>
+            <li>Fixed the issue with the server monitor not opening when using the shortcut.</li>
           </ul>
         </p>
       </div>
@@ -65,7 +88,7 @@
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>added public ip checks to all server starts.</li>
+            <li>Added public ip checks to all server starts.</li>
           </ul>
         </p>
       </div>
@@ -89,7 +112,7 @@
           <br/>
           <ul>
             <li>After profile sync, if automatic management section selected, it will run the schedule update.</li>
-            <li>translation files updated.</li>
+            <li>Translation files updated.</li>
           </ul>
         </p>
       </div>
