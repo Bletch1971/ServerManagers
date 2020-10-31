@@ -30,6 +30,15 @@
     <sys:String x:Key="live">Live</sys:String>
     <!--#endregion-->
 
+    <!--#region Server Regions -->
+    <sys:String x:Key="ServerRegion_0">Europe</sys:String>
+    <sys:String x:Key="ServerRegion_1">North America</sys:String>
+    <sys:String x:Key="ServerRegion_2">Asia</sys:String>
+    <sys:String x:Key="ServerRegion_3">Australia</sys:String>
+    <sys:String x:Key="ServerRegion_4">South America</sys:String>
+    <sys:String x:Key="ServerRegion_5">Japan</sys:String>
+    <!--#endregion-->
+
     <!--#region Game Map Names -->
     <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
     <sys:String x:Key="/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
@@ -256,11 +265,11 @@
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">Profile Sync - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">Load Profile Sync Error</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_Title">Process Profile Sync</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected section settings of the selected profiles with those of the current profile. You will not be able to undo, do you want to continue?</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected profiles with the settings from the selected sections of the current profile. You will not be able to undo, do you want to continue?</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">Process Profile Sync Error</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">You have not selected any profiles to copy settings to.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">You have not selected any sections to copy settings from.</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the selected profile to your current profile.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the current profile to the selected profiles.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">Select All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">Unselect All</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">Process</sys:String>
@@ -1027,6 +1036,8 @@
     <sys:String x:Key="ServerSettings_KickIdlePlayersPercentageTooltip">The percentage controls how many players need to be logged on before the system starts to kick people. If set to 0, the system should be off. If set to 80 then you need 80% of max players logged in before it will start to kick anybody.</sys:String>
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodLabel">Kick AFK Time:</sys:String>
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodTooltip">Set the amount of AFK time before a character is kicked.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerRegionLabel">Server Region:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerRegionTooltip">Selecting a server region will affect how your server is filtered in the list. Select your region to help players find a server that is close to them.</sys:String>
 
     <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
