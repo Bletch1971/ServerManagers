@@ -1028,8 +1028,12 @@
 
     <sys:String x:Key="ServerSettings_ServerOptionsLabel">Server Options</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerOptionsTooltip">Reset all server options to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_UseVACLabel">Use VAC (Valve Anti-Cheat)</sys:String>
+    <sys:String x:Key="ServerSettings_UseVACLabelTooltip">If enabled, will enable VAC protection for your game server.</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeLabel">Use BattlEye</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">If enabled, will enable BattlEye protection for your game server.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFamilySharedAccountLabel">Allow Family Shared Accounts</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFamilySharedAccountTooltip">If enabled, players will be able to use family shared accounts to access the server; otherwise only the account that owns the game wil be able to access the server.</sys:String>
     <sys:String x:Key="ServerSettings_MaxPlayersLabel">Max Players:</sys:String>
     <sys:String x:Key="ServerSettings_MaxPlayersTooltip">Sets the maximum number of players which can join this server.</sys:String>
     <sys:String x:Key="ServerSettings_KickIdlePlayersPercentageLabel">Kick AFK Percentage:</sys:String>
