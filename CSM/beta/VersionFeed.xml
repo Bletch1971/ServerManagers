@@ -5,7 +5,32 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-11-01T00:00:00Z</updated>
+  <updated>2020-11-06T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:62EBFE90-11B3-4D8D-B857-9F26C5594DC1</id>
+    <title>1.1.49 (1.1.49.2)</title>
+    <summary>1.1.49.2</summary>
+    <link href="" />
+    <updated>2020-11-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Disabled the Server Peer Port - can no longer be changed, defaults to Server Port + 1.</li>
+            <li>Removed Query Port and Server Peer Port from Engine.ini file.</li>
+            <li>Added Rcon Port to the command line.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:B16E389F-EB2F-43DE-8802-1FD5FE09E90A</id>
