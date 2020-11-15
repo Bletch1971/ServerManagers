@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-10-24T00:00:00Z</updated>
+  <updated>2020-11-10T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F7AC70E3-2CD2-4358-87CF-D7A49AEE783A</id>
+    <title>1.1.392 (1.1.392.2)</title>
+    <summary>1.1.392.2</summary>
+    <link href="" />
+    <updated>2020-11-10T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Defaulted Redirect SteamCmd output to False.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:425EED2C-A653-4C70-AF7F-0F947AB0DF52</id>
