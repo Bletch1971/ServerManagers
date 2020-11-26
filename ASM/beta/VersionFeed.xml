@@ -5,26 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-11-23T00:00:00Z</updated>
+  <updated>2020-11-25T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:35859975-1EC4-491C-9794-94A2D0965590</id>
-    <title>1.1.393 (1.1.393.1)</title>
-    <summary>1.1.393.1</summary>
+    <id>urn:uuid:22A04828-2422-4218-8122-E1CCB2202352</id>
+    <title>1.1.394 (1.1.394.1)</title>
+    <summary>1.1.394.1</summary>
     <link href="" />
-    <updated>2020-11-23T00:00:00Z</updated>
+    <updated>2020-11-25T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Settings - Added MaxHexagonsPerCharacter and HexagonRewardMultiplier setting to the bottom of the Rules section.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Translation files updated.</li>
+            <li>Server Settings - Added Peer port field to Administration section. It is set to readonly, as it cannot be changed, but shows the extra port required by the server.</li>
+            <li>Global Settings - Added option to automatically manage the Public IP, default to True. If disabled, then the Public IP must be updated manually.</li>
           </ul>
         </p>
       </div>
