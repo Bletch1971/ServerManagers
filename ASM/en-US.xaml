@@ -422,6 +422,7 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
+    <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Manage Public IP automatically</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Data Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Backup Directory:</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyLabel">Steam WebApi Key:</sys:String>
@@ -898,6 +899,8 @@
     <sys:String x:Key="ServerSettings_NetworkingLabel">Networking</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortLabel">Server Port:</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortTooltip">The port users will use to connect to your server. Default is 7777. Change this and Query Port if you wish to host multiple servers on one machine.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortLabel">Peer Port:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortTooltip">Pinger port used to determine server availability. Default is 7778.</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortLabel">Query Port:</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortTooltip">The port Steam uses to communicate with your server. Default is 27015. Change this and Server Port if you wish to host multiple servers on one machine.</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">Local IP:</sys:String>
@@ -5241,6 +5244,7 @@
     <sys:String x:Key="ProfileValidation_WarningLabel">The following validation problems were encountered.\r\n\r\n{validateMessage}\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
 
     <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPeerPort">The server peer port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
 
