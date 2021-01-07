@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CharactersDataSet" targetNamespace="http://tempuri.org/Characters.xsd" xmlns:mstns="http://tempuri.org/Characters.xsd" xmlns="http://tempuri.org/Characters.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="NotPublic" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CharactersDataSet" msdata:IsDataSet="true" msdata:Locale="en" msprop:Generator_DataSetName="CharactersDataSet" msprop:Generator_UserDSName="CharactersDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Characters" msprop:Generator_TableClassName="CharactersDataTable" msprop:Generator_RowEvArgName="CharactersRowChangeEvent" msprop:Generator_TableVarName="tableCharacters" msprop:Generator_TablePropName="Characters" msprop:Generator_RowDeletingName="CharactersRowDeleting" msprop:Generator_RowChangingName="CharactersRowChanging" msprop:Generator_RowEvHandlerName="CharactersRowChangeEventHandler" msprop:Generator_RowDeletedName="CharactersRowDeleted" msprop:Generator_UserTableName="Characters" msprop:Generator_RowChangedName="CharactersRowChanged" msprop:Generator_RowClassName="CharactersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountId" msprop:Generator_ColumnVarNameInTable="columnAccountId" msprop:Generator_ColumnPropNameInRow="AccountId" msprop:Generator_ColumnPropNameInTable="AccountIdColumn" msprop:Generator_UserColumnName="AccountId" type="xs:long" />
+              <xs:element name="CharacterId" msprop:Generator_ColumnVarNameInTable="columnCharacterId" msprop:Generator_ColumnPropNameInRow="CharacterId" msprop:Generator_ColumnPropNameInTable="CharacterIdColumn" msprop:Generator_UserColumnName="CharacterId" type="xs:long" />
+              <xs:element name="CharacterName" msprop:Generator_ColumnVarNameInTable="columnCharacterName" msprop:Generator_ColumnPropNameInRow="CharacterName" msprop:Generator_ColumnPropNameInTable="CharacterNameColumn" msprop:Generator_UserColumnName="CharacterName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Level" msprop:Generator_ColumnVarNameInTable="columnLevel" msprop:Generator_ColumnPropNameInRow="Level" msprop:Generator_ColumnPropNameInTable="LevelColumn" msprop:Generator_UserColumnName="Level" type="xs:short" minOccurs="0" />
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank" type="xs:short" minOccurs="0" />
+              <xs:element name="GuildId" msprop:Generator_ColumnVarNameInTable="columnGuildId" msprop:Generator_ColumnPropNameInRow="GuildId" msprop:Generator_ColumnPropNameInTable="GuildIdColumn" msprop:Generator_UserColumnName="GuildId" type="xs:long" minOccurs="0" />
+              <xs:element name="IsAlive" msprop:Generator_ColumnVarNameInTable="columnIsAlive" msprop:Generator_ColumnPropNameInRow="IsAlive" msprop:Generator_ColumnPropNameInTable="IsAliveColumn" msprop:Generator_UserColumnName="IsAlive" type="xs:boolean" />
+              <xs:element name="LastTimeOnline" msprop:Generator_ColumnVarNameInTable="columnLastTimeOnline" msprop:Generator_ColumnPropNameInRow="LastTimeOnline" msprop:Generator_ColumnPropNameInTable="LastTimeOnlineColumn" msprop:Generator_UserColumnName="LastTimeOnline" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

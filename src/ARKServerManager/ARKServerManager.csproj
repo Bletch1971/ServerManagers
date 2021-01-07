@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95D4E57F-06F9-4B41-BEBB-2A8E81759BD2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServerManagerTool</RootNamespace>
+    <AssemblyName>ARK Server Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ExpressionBlendVersion>12.0.50716.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <SupportUrl>http://arkservermanager.freeforums.net/thread/1194/faq-frequently-asked</SupportUrl>
+    <ErrorReportUrl>http://arkservermanager.freeforums.net/board/3/tech-support-bug-reports</ErrorReportUrl>
+    <ProductName>ARK Survival Evolved™ Server Manager</ProductName>
+    <PublisherName>Bletch1971</PublisherName>
+    <SuiteName>Server Managers</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.1.395.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Art\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ServerManagerTool.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestTimestampUrl>
+    </ManifestTimestampUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.13.8.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.8\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Wpf, Version=4.0.12.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.Wpf.4.0.12\lib\EO.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.8.19.0, Culture=neutral, PublicKeyToken=c416bc1b32d97233, processorArchitecture=MSIL">
+      <HintPath>..\packages\TaskScheduler.2.8.19\lib\net452\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.2\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expression.Blend.Sdk.1.0.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TinyCsvParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=d7df35b038077099, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyCsvParser.2.5.2\lib\net45\TinyCsvParser.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Enums\LevelProgression.cs" />
+    <Compile Include="Enums\LogEventType.cs" />
+    <Compile Include="Enums\NPCSpawnContainerType.cs" />
+    <Compile Include="Enums\PlayerFilterType.cs" />
+    <Compile Include="Enums\PlayerSortType.cs" />
+    <Compile Include="Enums\ServerProcessStatus.cs" />
+    <Compile Include="Enums\ServerProcessType.cs" />
+    <Compile Include="Enums\ServerProfileCategory.cs" />
+    <Compile Include="Enums\ServerStatus.cs" />
+    <Compile Include="Enums\StatsMultiplier.cs" />
+    <Compile Include="Enums\AvailabilityStatus.cs" />
+    <Compile Include="Enums\WatcherServerStatus.cs" />
+    <Compile Include="Interface\ISpawnIniValue.cs" />
+    <Compile Include="Interface\ISpawnIniValuesCollection.cs" />
+    <Compile Include="Lib\Events\ProfileEventArgs.cs" />
+    <Compile Include="Lib\Model\EngramAutoUnlock.cs" />
+    <Compile Include="Lib\Model\StackSizeOverride.cs" />
+    <Compile Include="Lib\Serialization\IniFileEntryAttribute.cs" />
+    <Compile Include="Lib\Serialization\IniFiles.cs" />
+    <Compile Include="Lib\Serialization\IniSections.cs" />
+    <Compile Include="Lib\Serialization\SystemIniFile.cs" />
+    <Compile Include="Lib\Model\PlayerListParameters.cs" />
+    <Compile Include="Lib\ServerBranchSnapshot.cs" />
+    <Compile Include="Lib\ServerPlayers.cs" />
+    <Compile Include="Lib\ServerProfileSnapshot.cs" />
+    <Compile Include="Lib\ViewConverters\EnumDescriptionTypeConverter.cs" />
+    <Compile Include="Lib\ViewConverters\MapNameValueConverter.cs" />
+    <Compile Include="Lib\ViewModel\Engram.cs" />
+    <Compile Include="Lib\ViewModel\EngramSettings.cs" />
+    <Compile Include="Utils\ModUtils.cs" />
+    <Compile Include="Windows\AddUserWindow.xaml.cs">
+      <DependentUpon>AddUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Model\StatsMultiplierArray.cs" />
+    <Compile Include="Windows\PlayerListWindow.xaml.cs">
+      <DependentUpon>PlayerListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GameDataWindow.xaml.cs">
+      <DependentUpon>GameDataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProcessorAffinityWindow.xaml.cs">
+      <DependentUpon>ProcessorAffinityWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProfileSyncWindow.xaml.cs">
+      <DependentUpon>ProfileSyncWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CustomConfigDataWindow.xaml.cs">
+      <DependentUpon>CustomConfigDataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Model\PGMTerrain.cs" />
+    <Compile Include="Lib\Model\NPCSpawner.cs" />
+    <Compile Include="Lib\ViewModel\SupplyCrate.cs" />
+    <Compile Include="Lib\ViewModel\NPCSpawnSettings.cs" />
+    <Compile Include="Lib\ViewModel\MapSpawner.cs" />
+    <Compile Include="Lib\ViewConverters\TributeExpirationConverter.cs" />
+    <Compile Include="Lib\ViewConverters\ExtinctionEventDateConverter.cs" />
+    <Compile Include="Lib\ViewConverters\OfficialDifficultyValueConverter.cs" />
+    <Compile Include="Lib\ViewConverters\ExtinctionEventTimeIntervalConverter.cs" />
+    <Compile Include="Lib\ViewModel\SupplyCrateSettings.cs" />
+    <Compile Include="Windows\PluginsWindow.xaml.cs">
+      <DependentUpon>PluginsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServerMonitorWindow.xaml.cs">
+      <DependentUpon>ServerMonitorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VersionFeedWindow.xaml.cs">
+      <DependentUpon>VersionFeedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WorldSaveRestoreWindow.xaml.cs">
+      <DependentUpon>WorldSaveRestoreWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WorkshopFilesWindow.xaml.cs">
+      <DependentUpon>WorkshopFilesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ShutdownWindow.xaml.cs">
+      <DependentUpon>ShutdownWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ModDetailsWindow.xaml.cs">
+      <DependentUpon>ModDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Model\PublishedFileDetail.cs" />
+    <Compile Include="Windows\ProgressWindow.xaml.cs">
+      <DependentUpon>ProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Model\CraftingOverride.cs" />
+    <Compile Include="Lib\Model\ResourceClassMultiplier.cs" />
+    <Compile Include="Lib\Model\SupplyCrateOverride.cs" />
+    <Compile Include="Lib\ViewModel\PrimalItem.cs" />
+    <Compile Include="Lib\ViewConverters\PrimalItemClassNameToDisplayNameConverter.cs" />
+    <Compile Include="Lib\ViewConverters\SupplyCrateClassNameToDisplayNameConverter.cs" />
+    <Compile Include="Windows\CommandLineWindow.xaml.cs">
+      <DependentUpon>CommandLineWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorHandling.cs" />
+    <Compile Include="Windows\GlobalSettingsControl.xaml.cs">
+      <DependentUpon>GlobalSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Model\NPCReplacement.cs" />
+    <Compile Include="Lib\Model\ClassMultiplier.cs" />
+    <Compile Include="Lib\Model\DinoSpawn.cs" />
+    <Compile Include="Lib\Model\EngramEntry.cs" />
+    <Compile Include="Lib\GameData.cs" />
+    <Compile Include="Lib\Model\RCONParameters.cs" />
+    <Compile Include="Lib\Model\StatsMultipliers.cs" />
+    <Compile Include="Lib\Model\Level.cs" />
+    <Compile Include="Lib\Server.cs" />
+    <Compile Include="Lib\ServerProfile.cs" />
+    <Compile Include="Lib\ServerRCON.cs" />
+    <Compile Include="Lib\ServerApp.cs" />
+    <Compile Include="Lib\ServerRuntime.cs" />
+    <Compile Include="Lib\ViewConverters\DifficultyOffsetValueConverter.cs" />
+    <Compile Include="Lib\ViewModel\DinoSettings.cs" />
+    <Compile Include="Lib\ViewModel\DinoSettingsList.cs" />
+    <Compile Include="Lib\ViewConverters\EngramClassNameToDisplayNameConverter.cs" />
+    <Compile Include="Lib\ViewConverters\DinoNameValueConverter.cs" />
+    <Compile Include="Lib\ViewConverters\LevelIndexToDisplayOffsetConverter.cs" />
+    <Compile Include="Lib\ViewModel\PlayerInfo.cs" />
+    <Compile Include="Lib\ViewConverters\ResourceNameValueConverter.cs" />
+    <Compile Include="Windows\OpenRCONWindow.xaml.cs">
+      <DependentUpon>OpenRCONWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PlayerProfileWindow.xaml.cs">
+      <DependentUpon>PlayerProfileWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RCONWindow.xaml.cs">
+      <DependentUpon>RCONWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServerSettingsControl.xaml.cs">
+      <DependentUpon>ServerSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\ServerStatusWatcher.cs" />
+    <Compile Include="Windows\TribeProfileWindow.xaml.cs">
+      <DependentUpon>TribeProfileWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <None Include="VersionFeed.xml" />
+    <None Include="VersionFeedBeta.xml" />
+    <Resource Include="Art\Add.ico" />
+    <Resource Include="Art\Cancel.ico" />
+    <Resource Include="Art\Validate.ico" />
+    <Resource Include="Art\Checked.ico" />
+    <Resource Include="Art\Unchecked.ico" />
+    <Resource Include="Art\Command.ico" />
+    <Resource Include="Art\Copy.ico" />
+    <Resource Include="Art\Delete.ico" />
+    <Resource Include="Art\FolderDelete.ico" />
+    <Resource Include="Art\Down.ico" />
+    <Resource Include="Art\Up.ico" />
+    <Resource Include="Art\Drag.ico" />
+    <Resource Include="Art\Edit.ico" />
+    <Resource Include="Art\Find.ico" />
+    <Resource Include="Art\Help.ico" />
+    <Resource Include="Art\FolderOpen.ico" />
+    <Resource Include="Art\FolderImport.ico" />
+    <Resource Include="Art\Logs.ico" />
+    <Resource Include="Art\Paste.ico" />
+    <Resource Include="Art\Players.ico" />
+    <Resource Include="Art\Plugin.ico" />
+    <Resource Include="Art\Refresh.ico" />
+    <Resource Include="Art\Reload.ico" />
+    <Resource Include="Art\Save.ico" />
+    <Resource Include="Art\FolderExport.ico" />
+    <Resource Include="Art\Settings.ico" />
+    <Resource Include="Art\Start.ico" />
+    <Resource Include="Art\Stop.ico" />
+    <Resource Include="Art\Steam.ico" />
+    <Resource Include="Art\Download.ico" />
+    <Resource Include="Art\Website.ico" />
+    <Resource Include="Art\ChangeNotes.ico" />
+    <Resource Include="Art\Zip.ico" />
+    <Resource Include="Art\StatusOff.ico" />
+    <Resource Include="Art\StatusOn.ico" />
+    <Resource Include="Art\StatusStarting.ico" />
+    <Resource Include="Art\StatusUnknown.ico" />
+    <Resource Include="Art\Document.ico" />
+    <Resource Include="Art\Servers.ico" />
+    <Resource Include="Art\Shortcut.ico" />
+    <Resource Include="Art\Filter.ico" />
+    <Resource Include="Art\DropArrow.ico" />
+    <Content Include="Globalization\ru-RU\ru-RU.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Globalization\es-ES\es-ES.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Globalization\zh-CN\zh-CN.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Globalization\fr-FR\fr-FR.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Globalization\pt-BR\pt-BR.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Globalization\en-AU\en-AU.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Page Include="Windows\AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PlayerListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GameDataWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ProcessorAffinityWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ProfileSyncWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\CustomConfigDataWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PluginsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ServerMonitorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VersionFeedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WorldSaveRestoreWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WorkshopFilesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ShutdownWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ModDetailsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ProgressWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="GameData\CrystalIsles.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Installer.iss" />
+    <Content Include="Styles\Default.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Page Include="Windows\AutoUpdateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Content Include="Globalization\de-DE\de-DE.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Page Include="Windows\OpenRCONWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PlayerProfileWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\TribeProfileWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Art\favicon.ico" />
+    <Resource Include="Art\Donate.png" />
+    <Resource Include="Art\NoAvatar.png" />
+    <Content Include="Globalization\en-US\en-US.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Page Include="Windows\CommandLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GlobalSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\AutoUpdateWindow.xaml.cs">
+      <DependentUpon>AutoUpdateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Config.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\ServerManager.cs" />
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\RCONWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ServerSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Config.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Config.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="GameData\Aberration.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\PGM.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\PrimitivePlus.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\Ragnarok.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\ScorchedEarth.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\SurvivalEvolved.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\TheCenter.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\Extinction.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\Genesis.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\Valguero.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <AdditionalFiles Include="GameData\Spreadsheets\Aberration.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\Extinction.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\Genesis.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\PGM.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\PrimitivePlus.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\Ragnarok.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\ScorchedEarth.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\SurvivalEvolved.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\TheCenter.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\Valguero.xlsx" />
+    <AdditionalFiles Include="GameData\Spreadsheets\_Template.xlsx" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DeployBetaToGithub.cmd" />
+    <None Include="DeployToGithub.cmd" />
+    <None Include="MakeLatestBetaVersionGithub.ps1" />
+    <None Include="MakeLatestVersionGithub.ps1" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArkData\ArkData.csproj">
+      <Project>{d2ee1483-021f-4900-bbe8-88338d1386f4}</Project>
+      <Name>ArkData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARKServerManager.Common\ARKServerManager.Common.csproj">
+      <Project>{dd0a2401-99b8-4de1-b8ed-9b075172f8af}</Project>
+      <Name>ARKServerManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeXtVdf\NeXt.Vdf.csproj">
+      <Project>{e4eda8b8-006c-4d41-822f-f64b6db0021f}</Project>
+      <Name>NeXt.Vdf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin.Common\Plugin.Common.csproj">
+      <Project>{679fe859-9a82-4ffb-a758-c1e8df915f58}</Project>
+      <Name>Plugin.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QueryMaster\QueryMaster.csproj">
+      <Project>{4ca9c894-518f-42d7-bbe2-cfdfe7a03f8a}</Project>
+      <Name>QueryMaster</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerManager.Common\ServerManager.Common.csproj">
+      <Project>{7c99d9f7-0c65-4116-927a-94eb018c88fd}</Project>
+      <Name>ServerManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerManager.Updater\ServerManager.Updater.csproj">
+      <Project>{3e0c9ee6-780f-4fef-ba03-e38062a5fdb6}</Project>
+      <Name>ServerManager.Updater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFSharp.Globalizer\WPFSharp.Globalizer.csproj">
+      <Project>{715461e8-4e54-4993-80a8-8e72892135e0}</Project>
+      <Name>WPFSharp.Globalizer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

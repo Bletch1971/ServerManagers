@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GuildsDataSet" targetNamespace="http://tempuri.org/Guilds.xsd" xmlns:mstns="http://tempuri.org/Guilds.xsd" xmlns="http://tempuri.org/Guilds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="NotPublic" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GuildsDataSet" msdata:IsDataSet="true" msdata:Locale="en" msprop:Generator_DataSetName="GuildsDataSet" msprop:Generator_UserDSName="GuildsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Guilds" msprop:Generator_TableClassName="GuildsDataTable" msprop:Generator_RowEvArgName="GuildsRowChangeEvent" msprop:Generator_TableVarName="tableGuilds" msprop:Generator_TablePropName="Guilds" msprop:Generator_RowDeletingName="GuildsRowDeleting" msprop:Generator_RowChangingName="GuildsRowChanging" msprop:Generator_RowEvHandlerName="GuildsRowChangeEventHandler" msprop:Generator_RowDeletedName="GuildsRowDeleted" msprop:Generator_RowChangedName="GuildsRowChanged" msprop:Generator_UserTableName="Guilds" msprop:Generator_RowClassName="GuildsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GuildId" msprop:Generator_ColumnVarNameInTable="columnGuildId" msprop:Generator_ColumnPropNameInRow="GuildId" msprop:Generator_ColumnPropNameInTable="GuildIdColumn" msprop:Generator_UserColumnName="GuildId" type="xs:long" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MessageOfTheDay" msprop:Generator_ColumnVarNameInTable="columnMessageOfTheDay" msprop:Generator_ColumnPropNameInRow="MessageOfTheDay" msprop:Generator_ColumnPropNameInTable="MessageOfTheDayColumn" msprop:Generator_UserColumnName="MessageOfTheDay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OwnerId" msprop:Generator_ColumnVarNameInTable="columnOwnerId" msprop:Generator_ColumnPropNameInRow="OwnerId" msprop:Generator_ColumnPropNameInTable="OwnerIdColumn" msprop:Generator_UserColumnName="OwnerId" type="xs:long" />
+              <xs:element name="NameLastChangedBy" msprop:Generator_ColumnVarNameInTable="columnNameLastChangedBy" msprop:Generator_ColumnPropNameInRow="NameLastChangedBy" msprop:Generator_ColumnPropNameInTable="NameLastChangedByColumn" msprop:Generator_UserColumnName="NameLastChangedBy" type="xs:long" />
+              <xs:element name="MotdLastChangedBy" msprop:Generator_ColumnVarNameInTable="columnMotdLastChangedBy" msprop:Generator_ColumnPropNameInRow="MotdLastChangedBy" msprop:Generator_ColumnPropNameInTable="MotdLastChangedByColumn" msprop:Generator_UserColumnName="MotdLastChangedBy" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PK_Guilds" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Guilds" />
+      <xs:field xpath="mstns:GuildId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

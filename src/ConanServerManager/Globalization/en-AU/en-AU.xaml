@@ -1,0 +1,12 @@
+﻿<Globalization:GlobalizationResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:Globalization="clr-namespace:WPFSharp.Globalizer;assembly=WPFSharp.Globalizer"
+    Name="en-AU"
+    LinkedStyle="en-AU-style"
+    >
+
+    <sys:String x:Key="Generic_TranslatedBy">Bletch</sys:String>
+
+</Globalization:GlobalizationResourceDictionary>

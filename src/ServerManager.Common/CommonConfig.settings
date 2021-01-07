@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServerManagerTool.Common" GeneratedClassName="CommonConfig">
+  <Profiles />
+  <Settings>
+    <Setting Name="PublicIPCheckUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
+    </Setting>
+    <Setting Name="SteamCmdRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SteamCMD</Value>
+    </Setting>
+    <Setting Name="SteamCmdExeFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SteamCMD.exe</Value>
+    </Setting>
+    <Setting Name="SteamCmdZipFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SteamCMD.zip</Value>
+    </Setting>
+    <Setting Name="SteamCmdUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallArgs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login anonymous +quit</Value>
+    </Setting>
+    <Setting Name="DefaultSteamAPIKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SteamAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SteamAPIKeyUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://steamcommunity.com/dev/apikey</Value>
+    </Setting>
+    <Setting Name="SteamCmdAuthenticateArgs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login {0} {1} +quit</Value>
+    </Setting>
+    <Setting Name="SteamProcessName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Steam</Value>
+    </Setting>
+    <Setting Name="SteamClientFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UpgradeConfig" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SteamCmdRemoveQuit" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

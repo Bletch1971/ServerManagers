@@ -1,0 +1,124 @@
+﻿<Window x:Class="ServerManagerTool.ProfileSyncWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        MinWidth="400" MinHeight="640" Width="640" Height="500" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResize"
+        Loaded="Window_Loaded"
+        Icon="../Art/favicon.ico" Title="{DynamicResource ProfileSyncWindow_Title}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
+                <ResourceDictionary Source="..\Styles\Default.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource GradientBackground}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" Text="{DynamicResource ProfileSyncWindow_SyncInformationLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+
+            <ListView Grid.Row="2" Grid.Column="0" Margin="5,5,5,0" ItemsSource="{Binding SyncSections}" HorizontalContentAlignment="Stretch">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="Auto">
+                            <GridViewColumnHeader>
+                                <TextBlock Text="{DynamicResource ProfileSyncWindow_SelectedColumnLabel}" />
+                            </GridViewColumnHeader>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Selected}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="330" DisplayMemberBinding="{Binding SectionName}">
+                            <GridViewColumnHeader HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5,0,0,0">
+                                <TextBlock Text="{DynamicResource ProfileSyncWindow_SectionNameColumnLabel}" />
+                            </GridViewColumnHeader>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}" >
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="Height" Value="20" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Grid.Row="2" Grid.Column="1" Margin="5,5,5,0" ItemsSource="{Binding SyncProfiles}" HorizontalContentAlignment="Stretch">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="Auto">
+                            <GridViewColumnHeader>
+                                <TextBlock Text="{DynamicResource ProfileSyncWindow_SelectedColumnLabel}" />
+                            </GridViewColumnHeader>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Selected}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="330" DisplayMemberBinding="{Binding ProfileName}">
+                            <GridViewColumnHeader HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5,0,0,0">
+                                <TextBlock Text="{DynamicResource ProfileSyncWindow_ProfileNameColumnLabel}" />
+                            </GridViewColumnHeader>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}" >
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="Height" Value="20" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <DockPanel Grid.Row="3" Grid.Column="0">
+                <Button DockPanel.Dock="Left" Content="{DynamicResource ProfileSyncWindow_SelectAllButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" Click="SectionSelectAll_Click"/>
+                <Button DockPanel.Dock="Left" Content="{DynamicResource ProfileSyncWindow_UnselectAllButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" Click="SectionUnselectAll_Click"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="3" Grid.Column="1">
+                <Button DockPanel.Dock="Left" Content="{DynamicResource ProfileSyncWindow_SelectAllButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" Click="ProfileSelectAll_Click"/>
+                <Button DockPanel.Dock="Left" Content="{DynamicResource ProfileSyncWindow_UnselectAllButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" Click="ProfileUnselectAll_Click"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+                <Button DockPanel.Dock="Right" Content="{DynamicResource ProfileSyncWindow_CloseButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" IsCancel="True"/>
+                <Button DockPanel.Dock="Right" Content="{DynamicResource ProfileSyncWindow_ProcessButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" Click="Process_Click"/>
+            </DockPanel>
+        </Grid>
+
+        <!-- It's important that this is in the end of the XAML as it needs to be on top of everything else! -->
+        <Grid x:Name="OverlayGrid" Visibility="Collapsed" DockPanel.Dock="Top" >
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border MinWidth="250" Background="Orange" BorderBrush="Black" BorderThickness="1" CornerRadius="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="OverlayProfile" Grid.Row="0" Margin="5,0,5,1" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" />
+                    <Label x:Name="OverlaySection" Grid.Row="1" Margin="5,1,5,0" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

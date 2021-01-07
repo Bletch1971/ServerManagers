@@ -1,0 +1,23 @@
+{
+  "Application": "ark",
+  "Version": "1.1.0",
+  "Created": "2020-02-25T00:00:00.0000000Z",
+  "Creatures": [
+  ],
+  "Engrams": [
+  ], 
+  "Items": [
+  ],
+  "MapSpawners": [
+  ],
+  "SupplyCrates": [
+  ],
+  "GameMaps": [
+	{
+      "IsSotF": false,
+      "ClassName": "Genesis",
+      "Description": "Genesis",
+      "Mod": "Genesis"
+	}
+  ]
+}

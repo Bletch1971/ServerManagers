@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CharacterStatsDataSet" targetNamespace="http://tempuri.org/CharacterStats.xsd" xmlns:mstns="http://tempuri.org/CharacterStats.xsd" xmlns="http://tempuri.org/CharacterStats.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="NotPublic" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CharacterStatsDataSet" msdata:IsDataSet="true" msdata:Locale="en" msprop:Generator_DataSetName="CharacterStatsDataSet" msprop:Generator_UserDSName="CharacterStatsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CharacterStats" msprop:Generator_TableClassName="CharacterStatsDataTable" msprop:Generator_RowEvArgName="CharacterStatsRowChangeEvent" msprop:Generator_TableVarName="tableCharacterStats" msprop:Generator_TablePropName="CharacterStats" msprop:Generator_RowDeletingName="CharacterStatsRowDeleting" msprop:Generator_RowChangingName="CharacterStatsRowChanging" msprop:Generator_RowEvHandlerName="CharacterStatsRowChangeEventHandler" msprop:Generator_RowDeletedName="CharacterStatsRowDeleted" msprop:Generator_RowChangedName="CharacterStatsRowChanged" msprop:Generator_UserTableName="CharacterStats" msprop:Generator_RowClassName="CharacterStatsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CharacterId" msprop:Generator_ColumnVarNameInTable="columnCharacterId" msprop:Generator_ColumnPropNameInRow="CharacterId" msprop:Generator_ColumnPropNameInTable="CharacterIdColumn" msprop:Generator_UserColumnName="CharacterId" type="xs:long" minOccurs="0" />
+              <xs:element name="StatType" msprop:Generator_ColumnVarNameInTable="columnStatType" msprop:Generator_ColumnPropNameInRow="StatType" msprop:Generator_ColumnPropNameInTable="StatTypeColumn" msprop:Generator_UserColumnName="StatType" type="xs:long" minOccurs="0" />
+              <xs:element name="StatId" msprop:Generator_ColumnVarNameInTable="columnStatId" msprop:Generator_ColumnPropNameInRow="StatId" msprop:Generator_ColumnPropNameInTable="StatIdColumn" msprop:Generator_UserColumnName="StatId" type="xs:long" minOccurs="0" />
+              <xs:element name="StatValue" msprop:Generator_ColumnVarNameInTable="columnStatValue" msprop:Generator_ColumnPropNameInRow="StatValue" msprop:Generator_ColumnPropNameInTable="StatValueColumn" msprop:Generator_UserColumnName="StatValue" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

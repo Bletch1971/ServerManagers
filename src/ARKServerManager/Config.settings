@@ -1,0 +1,711 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServerManagerTool" GeneratedClassName="Config">
+  <Profiles />
+  <Settings>
+    <Setting Name="SteamCmdUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip</Value>
+    </Setting>
+    <Setting Name="SteamCmdExe" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SteamCMD.exe</Value>
+    </Setting>
+    <Setting Name="SteamCmdDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SteamCMD</Value>
+    </Setting>
+    <Setting Name="SteamCmdZip" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SteamCMD.zip</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallArgs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login anonymous +quit</Value>
+    </Setting>
+    <Setting Name="ConfigDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SteamCmdInstallServerArgsFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login anonymous +force_install_dir "{0}"  "+app_update 376030 {1} {2}" +quit</Value>
+    </Setting>
+    <Setting Name="ServersInstallDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Servers</Value>
+    </Setting>
+    <Setting Name="DefaultServerProfileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Unnamed Profile</Value>
+    </Setting>
+    <Setting Name="DefaultServerName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Unnamed Server</Value>
+    </Setting>
+    <Setting Name="ServerBinaryRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGame\Binaries\Win64</Value>
+    </Setting>
+    <Setting Name="ServerConfigRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGame\Saved\Config\WindowsServer</Value>
+    </Setting>
+    <Setting Name="ServerExe" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGameServer.exe</Value>
+    </Setting>
+    <Setting Name="ServerCommandLineArgsMatchFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">?QueryPort={0}</Value>
+    </Setting>
+    <Setting Name="ServerCommandLineStandardArgs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-nosteamclient -game -server -log</Value>
+    </Setting>
+    <Setting Name="ProfilesDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Profiles</Value>
+    </Setting>
+    <Setting Name="ProfileExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.profile</Value>
+    </Setting>
+    <Setting Name="DataDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultDataDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ark Server Manager</Value>
+    </Setting>
+    <Setting Name="ServerProcessName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGameServer</Value>
+    </Setting>
+    <Setting Name="ServerGameUserSettingsConfigFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GameUserSettings.ini</Value>
+    </Setting>
+    <Setting Name="IniExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.ini</Value>
+    </Setting>
+    <Setting Name="LoadProfileExtensionList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">*.profile,*.ini</Value>
+    </Setting>
+    <Setting Name="MachinePublicIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PublicIPCheckUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
+    </Setting>
+    <Setting Name="ManageFirewallAutomatically" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LogsDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Logs</Value>
+    </Setting>
+    <Setting Name="ServerCommandLineArgsIPMatchFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">?MultiHome={0}</Value>
+    </Setting>
+    <Setting Name="LatestASMVersionUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/ASM/latest.txt</Value>
+    </Setting>
+    <Setting Name="UpdateCheckTime" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1440</Value>
+    </Setting>
+    <Setting Name="SavedArksRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGame\Saved\SavedArks</Value>
+    </Setting>
+    <Setting Name="UpgradeConfig" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RCON_PlayerListSort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="RCON_PlayerListFilter" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="RCON_AdminName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HelpUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://arkservermanager.freeforums.net/thread/1194/faq-frequently-asked</Value>
+    </Setting>
+    <Setting Name="OpenRCON_ServerIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OpenRCON_RCONPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">32330</Value>
+    </Setting>
+    <Setting Name="CultureName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en-US</Value>
+    </Setting>
+    <Setting Name="SectionAdministrationIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionAutomaticManagementIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionRulesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionChatAndNotificationsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionHUDAndVisualsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionPlayerSettingsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionDinoSettingsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionEnvironmentIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionStructuresIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionEngramsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionCustomLevelsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionSOTFIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CustomLevelXPIncrease_Player" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="CustomLevelXPIncrease_Dino" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallServerArgsFormat_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login anonymous +force_install_dir "{0}"  "+app_update 445400 {1} {2}" +quit</Value>
+    </Setting>
+    <Setting Name="ArkSE_PatchNotesUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://survivetheark.com/index.php?/forums/forum/5-changelog-patch-notes/</Value>
+    </Setting>
+    <Setting Name="ArkSotF_PatchNotesUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://survivetheark.com/index.php?/forums/forum/9-changelog-patch-notes/</Value>
+    </Setting>
+    <Setting Name="ArkSEUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://store.steampowered.com/app/346110/</Value>
+    </Setting>
+    <Setting Name="ArkSotfUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://store.steampowered.com/app/407530/</Value>
+    </Setting>
+    <Setting Name="RunAsAdministratorPrompt" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_EnableUpdate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_UpdatePeriod" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_GracePeriod" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_GraceMessage1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server shutdown required. Server will shutdown in {minutes} minutes. Please logout before shutdown to prevent character corruption.</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_GraceMessage2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server shutdown required. Server will shutdown in 1 minute. Please logout before shutdown to prevent character corruption.</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_GraceMessage3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server shutdown required. Server is shutting down now.</Value>
+    </Setting>
+    <Setting Name="LastUpdatedTimeFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LastUpdatedASM.txt</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_WorldSaveMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server shutdown required. Server is about to shutdown, performing a world save.</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_EnableWorldSave" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LauncherFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">RunServer.cmd</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallModArgsFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login {0} +workshop_download_item 346110 {1} +quit</Value>
+    </Setting>
+    <Setting Name="ArkSteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">steamapps\workshop\content\346110\</Value>
+    </Setting>
+    <Setting Name="ServerModsRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGame\Content\Mods</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_CacheDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ServerUpdate_UpdateModsWhenUpdatingServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ServerUpdate_ForceUpdateMods" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServerUpdate_ForceCopyMods" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WebAlarmFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AlarmPostCredentials.txt</Value>
+    </Setting>
+    <Setting Name="SavedRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShooterGame\Saved</Value>
+    </Setting>
+    <Setting Name="SteamCmdRedirectOutput" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_UseSmartCopy" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="StyleName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WorkshopCacheFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">workshopcache_346110.json</Value>
+    </Setting>
+    <Setting Name="Email_Host" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Email_Port" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="Email_UseSSL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Email_UseDetaultCredentials" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Email_Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Email_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Email_From" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Email_To" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailNotify_AutoUpdate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EmailNotify_AutoRestart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SteamCmd_Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SteamCmd_AnonymousUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">anonymous</Value>
+    </Setting>
+    <Setting Name="SteamCmd_UseAnonymousCredentials" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SteamCmdAuthenticateArgs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login {0} {1} +quit</Value>
+    </Setting>
+    <Setting Name="SteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">steamapps\workshop</Value>
+    </Setting>
+    <Setting Name="ArkSteamWorkshopFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">appworkshop_346110.acf</Value>
+    </Setting>
+    <Setting Name="SteamCmd_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ValidateProfileOnServerStart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SectionCustomGameUserSettingsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionCustomGameSettingsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServerUpdate_OnServerStart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallModArgsFormat_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+login {0} +workshop_download_item 407530 {1} +quit</Value>
+    </Setting>
+    <Setting Name="ArkSteamWorkshopFile_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">appworkshop_407530.acf</Value>
+    </Setting>
+    <Setting Name="ArkSteamWorkshopFolderRelativePath_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">steamapps\workshop\content\407530\</Value>
+    </Setting>
+    <Setting Name="WorkshopCacheFile_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">workshopcache_407530.json</Value>
+    </Setting>
+    <Setting Name="AppId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">346110</Value>
+    </Setting>
+    <Setting Name="AppId_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">407530</Value>
+    </Setting>
+    <Setting Name="AppIdServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">376030</Value>
+    </Setting>
+    <Setting Name="AppIdServer_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">445400</Value>
+    </Setting>
+    <Setting Name="ServerAppIdFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">steam_appid.txt</Value>
+    </Setting>
+    <Setting Name="ClustersDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Clusters</Value>
+    </Setting>
+    <Setting Name="LatestASMBetaVersionUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/ASM/beta/latest.txt</Value>
+    </Setting>
+    <Setting Name="LatestASMBetaDownloadUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/ASM/beta/latest.zip</Value>
+    </Setting>
+    <Setting Name="LatestASMDownloadUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/ASM/latest.zip</Value>
+    </Setting>
+    <Setting Name="LatestASMPatchNotesUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://arkservermanager.freeforums.net/thread/5193/downloads</Value>
+    </Setting>
+    <Setting Name="LatestASMBetaPatchNotesUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://arkservermanager.freeforums.net/board/11/beta-testers</Value>
+    </Setting>
+    <Setting Name="ArkWhitelistFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PlayersJoinNoCheckList.txt</Value>
+    </Setting>
+    <Setting Name="ArkAdminFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AllowedCheaterSteamIDs.txt</Value>
+    </Setting>
+    <Setting Name="SectionServerFilesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ArkExclusiveFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PlayersExclusiveJoinList.txt</Value>
+    </Setting>
+    <Setting Name="EmailNotify_ShutdownRestart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WorkshopCache_ExpiredHours" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">168</Value>
+    </Setting>
+    <Setting Name="DefaultServerFolderName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server</Value>
+    </Setting>
+    <Setting Name="ServerStatusUrlFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultServerMap_PGM" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PGARK</Value>
+    </Setting>
+    <Setting Name="SavedPGMRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PGArks</Value>
+    </Setting>
+    <Setting Name="DefaultPGMapName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AsmPGArk</Value>
+    </Setting>
+    <Setting Name="SectionPGMIsExpanded" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BackupDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">_backup_</Value>
+    </Setting>
+    <Setting Name="ServerGameConfigFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Game.ini</Value>
+    </Setting>
+    <Setting Name="SectionMapSpawnerOverridesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_CancelMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server shutdown has been cancelled.</Value>
+    </Setting>
+    <Setting Name="SectionCraftingOverridesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionSupplyCrateOverridesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SteamAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SteamAPIKeyUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://steamcommunity.com/dev/apikey</Value>
+    </Setting>
+    <Setting Name="ServerUpdate_ForceUpdateModsIfNoSteamInfo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoBackup_EnableBackup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoBackup_BackupPeriod" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="EmailNotify_AutoBackup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoBackup_DeleteOldFiles" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoBackup_DeleteInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="ServerBackup_WorldSaveMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A world save is about to be performed, you may experience some lag during this process. Please be patient.</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_RetryOnFail" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SteamWebAPIKeyHelpUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://arkservermanager.freeforums.net/thread/3024/get-own-steam-web-api</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_ShowUpdateReason" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BackupServerExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.asmbak</Value>
+    </Setting>
+    <Setting Name="ScheduledTasksCheckTime" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_ValidateServerFiles" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_OverrideServerStartup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ASMUniqueKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SectionSupplyCrateOverridesEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SectionCraftingOverridesEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SectionMapSpawnerOverridesEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_ParallelUpdate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_UpdateReasonPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server Update Reason:</Value>
+    </Setting>
+    <Setting Name="Alert_ServerStopMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server is stopping.</Value>
+    </Setting>
+    <Setting Name="Alert_ServerShutdownMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server is shutting down.</Value>
+    </Setting>
+    <Setting Name="Alert_ServerStartedMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server is starting.</Value>
+    </Setting>
+    <Setting Name="Alert_BackupProcessError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server backup process was performed but an error occurred.</Value>
+    </Setting>
+    <Setting Name="Alert_ShutdownProcessError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server shutdown process was performed but an error occurred.</Value>
+    </Setting>
+    <Setting Name="Alert_RestartProcessError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server restart process was performed but an error occurred.</Value>
+    </Setting>
+    <Setting Name="Alert_UpdateProcessError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The server update process was performed but an error occurred.</Value>
+    </Setting>
+    <Setting Name="Alert_ModUpdateDetected" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mod updates have been detected:</Value>
+    </Setting>
+    <Setting Name="ASMPluginUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://arkservermanager.freeforums.net/board/22/plugins</Value>
+    </Setting>
+    <Setting Name="PlayerFileExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.arkprofile</Value>
+    </Setting>
+    <Setting Name="TribeFileExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.arktribe</Value>
+    </Setting>
+    <Setting Name="BackupExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.zip</Value>
+    </Setting>
+    <Setting Name="MapExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.ark</Value>
+    </Setting>
+    <Setting Name="UpdaterPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ASM_</Value>
+    </Setting>
+    <Setting Name="UpdaterFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ServerManagerUpdater.exe</Value>
+    </Setting>
+    <Setting Name="PlayerImageFileExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.png</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_WorldSaveDelay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_UseShutdownCommand" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Alert_ServerStatusChange" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server Status:</Value>
+    </Setting>
+    <Setting Name="Alert_ServerUpdate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Game Server Update</Value>
+    </Setting>
+    <Setting Name="Alert_UpdateResults" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Update performed, includes:</Value>
+    </Setting>
+    <Setting Name="Alert_ForceRespawnDinos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A wild dino wipe is scheduled after the server starts and may delay login until it is complete. Please be patient.</Value>
+    </Setting>
+    <Setting Name="ServerManagerCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ED89B8FA-0E0B-46CC-A90B-595E69AE9A7E</Value>
+    </Setting>
+    <Setting Name="BackupPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ServerShutdown_AllMessagesShowReason" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GameDataDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GameData</Value>
+    </Setting>
+    <Setting Name="GameDataExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.gamedata</Value>
+    </Setting>
+    <Setting Name="FirewallRulePrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ARK Server:</Value>
+    </Setting>
+    <Setting Name="DonationUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=bletch1971%40hotmail%2ecom&amp;lc=US&amp;item_name=Server%20Manager&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted</Value>
+    </Setting>
+    <Setting Name="GameDataApplication" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ark</Value>
+    </Setting>
+    <Setting Name="TributeTribeFileExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.arktributetribe</Value>
+    </Setting>
+    <Setting Name="SendMessageDelay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="CloseShutdownWindowWhenFinished" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PlayerListFilter" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">63</Value>
+    </Setting>
+    <Setting Name="PlayerListSort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ServerManagerVersionFeedUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/ASM/VersionFeed.xml</Value>
+    </Setting>
+    <Setting Name="ServerManagerVersionBetaFeedUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/ASM/beta/VersionFeed.xml</Value>
+    </Setting>
+    <Setting Name="DefaultServerBranchName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">live</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallServerBetaNameArgsFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-beta {0}</Value>
+    </Setting>
+    <Setting Name="SteamCmdInstallServerBetaPasswordArgsFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-betapassword {0}</Value>
+    </Setting>
+    <Setting Name="ServerBranchFolderPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">__</Value>
+    </Setting>
+    <Setting Name="ArkSteamManifestFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">appmanifest_376030.acf</Value>
+    </Setting>
+    <Setting Name="ArkSteamManifestFile_SotF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">appmanifest_407530.acf</Value>
+    </Setting>
+    <Setting Name="SteamManifestFolderRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">steamapps</Value>
+    </Setting>
+    <Setting Name="SectionPGMEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionSOTFEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DefaultGlobalizationFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Globalization\en-US\en-US.xaml</Value>
+    </Setting>
+    <Setting Name="ServerShutdownCommand" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">doexit</Value>
+    </Setting>
+    <Setting Name="ServerSaveCommand" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">saveworld</Value>
+    </Setting>
+    <Setting Name="ServerStatus_EnableActions" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ServerStatus_ShowActionConfirmation" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DefaultStyleFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Styles\Default.xaml</Value>
+    </Setting>
+    <Setting Name="ScheduledTaskFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ArkServerManager</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_SequencialDelayPeriod" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SectionStackSizeOverridesEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SectionStackSizeOverridesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BackupWorldFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_VerifyServerAfterUpdate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GameDataUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://arkservermanager.freeforums.net/board/25/game-data</Value>
+    </Setting>
+    <Setting Name="MainWindow_Width" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1100</Value>
+    </Setting>
+    <Setting Name="MainWindow_Height" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">900</Value>
+    </Setting>
+    <Setting Name="ServerMonitorWindow_Width" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">900</Value>
+    </Setting>
+    <Setting Name="ServerMonitorWindow_Height" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="UpdateDirectoryPermissions" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_CheckForOnlinePlayers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ServerShutdown_SendShutdownMessages" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoRestart_EnabledGracePeriod" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoRestart_GracePeriod" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ServerStatusWatcher_LocalStatusQueryDelay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15000</Value>
+    </Setting>
+    <Setting Name="ServerStatusWatcher_RemoteStatusQueryDelay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">120000</Value>
+    </Setting>
+    <Setting Name="MainWindow_MinimizeToTray" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServerEngineConfigFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Engine.ini</Value>
+    </Setting>
+    <Setting Name="SectionCustomEngineSettingsIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionCustomEngineSettingsEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServerMonitorMessageOutput_Height" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="Alert_ServerStartedMessageIncludeIPandPort" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ManagePublicIPAutomatically" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

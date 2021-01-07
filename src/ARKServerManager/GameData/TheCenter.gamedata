@@ -1,0 +1,187 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-21T11:00:00.0000000Z",
+  "Creatures": [
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "SpiderL_Character_BP_TheCenter_C",
+      "Description": "Broodmother Lysrix (Easy Variant)",
+      "Mod": "TheCenter"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "SpiderL_Character_BP_TheCenterMedium_C",
+      "Description": "Broodmother Lysrix (Medium Variant)",
+      "Mod": "TheCenter"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "SpiderL_Character_BP_TheCenterHard_C",
+      "Description": "Broodmother Lysrix (Hard Variant)",
+      "Mod": "TheCenter"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "Gorilla_Character_BP_TheCenter_C",
+      "Description": "Megapithecus (Easy Variant)",
+      "Mod": "TheCenter"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "Gorilla_Character_BP_TheCenter_Medium_C",
+      "Description": "Megapithecus (Medium Variant)",
+      "Mod": "TheCenter"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "Gorilla_Character_BP_TheCenter_Hard_C",
+      "Description": "Megapithecus (Hard Variant)",
+      "Mod": "TheCenter"
+    }
+  ],
+  "MapSpawners": [
+    {
+      "ClassName": "CustomAnglerSpawner_C",
+      "Description": "Angler",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "CustomPenguinSpawner_C",
+      "Description": "Penguin",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DunkEurSpawn_C",
+      "Description": "DunkEur",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "GrasslandsUnderArea_WaterSpawn_C",
+      "Description": "GrasslandsUnderArea_Water",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "IceCave_Spawner_C",
+      "Description": "IceCave",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "IceCaveWater_Spawner_C",
+      "Description": "IceCaveWater",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "Lava_Spawn_C",
+      "Description": "Lava",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "Lava_Upper_Spawn_C",
+      "Description": "Lava_Upper",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "LavaBeach_Spawn_C",
+      "Description": "LavaBeach",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "LavaWater_Spawn_C",
+      "Description": "LavaWater",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "MiniCaveBearSpawner_C",
+      "Description": "MiniCaveBear",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "SnowGrasslands_Spawn_C",
+      "Description": "SnowGrasslands",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "SnowGrasslandsUnderArea_Spawn_C",
+      "Description": "SnowGrasslandsUnderArea",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "SnowyLake_Mosa_C",
+      "Description": "SnowyLake_Mosa",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "SnowyMountain_Spawn_C",
+      "Description": "SnowyMountain",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "SpiderCaveSpawner_C",
+      "Description": "SpiderCave",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "UnderwaterCaveSpawn_C",
+      "Description": "UnderwaterCave",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_OceanUnderworld_C",
+      "Description": "OceanUnderworld",
+      "Mod": "TheCenter"
+    }
+  ],
+  "Inventories": [
+    {
+      "ClassName": "DinoDropInventoryComponent_BossSpider_TheCenter_C",
+      "Description": "Boss Inventory - Broodmother (Easy)",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossSpider_TheCenter_Medium_C",
+      "Description": "Boss Inventory - Broodmother (Medium)",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossSpider_TheCenter_Hard_C",
+      "Description": "Boss Inventory - Broodmother (Hard)",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossGorilla_TheCenter_C",
+      "Description": "Boss Inventory - Megapithecus (Easy)",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossGorilla_TheCenter_Medium_C",
+      "Description": "Boss Inventory - Megapithecus (Medium)",
+      "Mod": "TheCenter"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossGorilla_TheCenter_Hard_C",
+      "Description": "Boss Inventory - Megapithecus (Hard)",
+      "Mod": "TheCenter"
+    }
+  ],
+  "GameMaps": [
+    {
+      "IsSotF": false,
+      "ClassName": "TheCenter",
+      "Description": "The Center",
+      "Mod": "TheCenter"
+    }
+  ]
+}

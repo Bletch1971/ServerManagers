@@ -1,0 +1,147 @@
+﻿<Window x:Class="ServerManagerTool.WorkshopFilesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
+        MinWidth="700" MinHeight="480" Width="800" Height="480" ResizeMode="CanResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
+        Loaded="Window_Loaded" 
+        Icon="../Art/favicon.ico" Title="{DynamicResource WorkshopFiles_Title}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
+                <ResourceDictionary Source="..\Styles\Default.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFECE1D4" Offset="1"/>
+                <GradientStop Color="#FFEAE8E6"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid Background="{StaticResource BeigeGradient}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Width="22" Height="22" Margin="5,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Reload_Click" ToolTip="{DynamicResource WorkshopFiles_ReloadTooltip}">
+            <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Reload.ico,Size=32}"/>
+        </Button>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <TextBlock Margin="10,5,5,0" Text="{DynamicResource WorkshopFiles_TotalCountLabel}" VerticalAlignment="Center" />
+            <TextBlock Margin="5,5,5,0" Text="{Binding WorkshopFiles.Count}" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+            <TextBlock Margin="30,5,5,0" Text="{DynamicResource WorkshopFiles_LastRefreshedLabel}" VerticalAlignment="Center" />
+            <TextBlock Margin="5,5,5,0" Text="{Binding WorkshopFiles.CachedTimeFormatted}" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,5,0,0" Orientation="Horizontal" Height="30" DataContext="{Binding}">
+            <TextBlock Margin="5,0,5,0" Text="{DynamicResource General_FilterLabel}" VerticalAlignment="Center" />
+            <TextBox   Margin="5,0,5,0" Text="{Binding WorkshopFilterString, Mode=TwoWay}" Width="200" Padding="2" VerticalAlignment="Center"/>
+            <Button Margin="5,0,5,0" Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Click="FilterWorkshopFiles_Click" ToolTip="{DynamicResource General_FilterButtonTooltip}">
+                <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Filter.ico,Size=32}"/>
+            </Button>
+            <CheckBox  Margin="5,0,5,0" IsChecked="{Binding WorkshopFilterExisting, Mode=TwoWay}" Content="{DynamicResource WorkshopFiles_FilterExistingLabel}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding WorkshopFilesView}" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserSortColumns="True" RowHeaderWidth="0" SelectionMode="Single">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                    </Style.Resources>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </DataGrid.VerticalGridLinesBrush>
+
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="30" CanUserReorder="False" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Width="22" Height="22" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Add_Click" ToolTip="{DynamicResource WorkshopFiles_AddTooltip}">
+                                <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Add.ico,Size=32}"/>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="Auto" MinWidth="100" CanUserSort="True" SortMemberPath="WorkshopId" Header="{DynamicResource WorkshopFiles_ModIdColumnLabel}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Hyperlink NavigateUri="{Binding WorkshopUrl}" RequestNavigate="RequestNavigate_Click">
+                                    <TextBlock Text="{Binding WorkshopId}"/>
+                                </Hyperlink>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn     Width="1*" Binding="{Binding Title, Mode=OneWay}" Header="{DynamicResource WorkshopFiles_TitleColumnLabel}"/>
+                <DataGridTextColumn     Width="130" Binding="{Binding CreatedDate, Mode=OneWay}" Header="{DynamicResource WorkshopFiles_CreatedDateColumnLabel}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+                            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn     Width="130" Binding="{Binding UpdatedDate, Mode=OneWay}" Header="{DynamicResource WorkshopFiles_UpdatedDateColumnLabel}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+                            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn     Width="80" Binding="{Binding Subscriptions, Mode=OneWay}" Header="{DynamicResource WorkshopFiles_SubscriptionsColumnLabel}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+                            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn     Width="80" Binding="{Binding FileSize, Mode=OneWay}" Header="{DynamicResource WorkshopFiles_FileSizeColumnLabel}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+                            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

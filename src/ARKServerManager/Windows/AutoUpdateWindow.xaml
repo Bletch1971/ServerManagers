@@ -1,0 +1,26 @@
+﻿<Window x:Class="ServerManagerTool.AutoUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
+        xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
+        xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
+        xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
+        Width="380" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="Height" 
+        Loaded="Window_Loaded" Closing="Window_Closing"
+        Icon="../Art/favicon.ico" Title="{DynamicResource AutoUpdater_Title}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
+                <ResourceDictionary Source="..\Styles\Default.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="{StaticResource GradientBackground}">
+        <StackPanel HorizontalAlignment="Stretch" Margin="10" VerticalAlignment="Stretch" Width="Auto">
+            <ProgressBar x:Name="CompletionProgress" Height="10"/>
+            <Label x:Name="StatusLabel" Content="{DynamicResource AutoUpdater_Status}" HorizontalContentAlignment="Center"/>
+            <Button Content="{DynamicResource AutoUpdater_CancelButtonLabel}" Width="75" HorizontalAlignment="Center" IsCancel="True" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

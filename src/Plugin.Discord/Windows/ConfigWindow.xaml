@@ -1,0 +1,147 @@
+﻿<Window x:Class="ServerManagerTool.Plugin.Discord.Windows.ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pc="clr-namespace:ServerManagerTool.Plugin.Common;assembly=ServerManager.Plugin.Common"
+        Name="ConfigUI" Title="{DynamicResource ConfigWindow_Title}"
+        Icon="/ServerManager.Plugin.Discord;component/Art/favicon.ico"
+        Width="640" Height="480" MinWidth="640" MinHeight="480" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Closing="ConfigWindow_Closing" Loaded="ConfigWindow_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ServerManager.Plugin.Discord;component/Globalization/en-US/en-US.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
+            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFECE1D4" Offset="1"/>
+                <GradientStop Color="#FFEAE8E6"/>
+            </LinearGradientBrush>
+
+            <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
+                <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="Background" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource BeigeGradient}" MouseLeftButtonUp="OnMouseLeftButtonUp" MouseMove="OnMouseMove">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel.Style>
+                <Style TargetType="{x:Type StackPanel}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding NewVersionAvailable}" Value="False">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
+
+            <TextBlock Text="{DynamicResource Global_NewVersionAvailableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+            <Button Width="22" Height="22" Click="DownloadPlugin_Click" Margin="10,0,0,0" ToolTip="{DynamicResource Global_DownloadNewVersionTooltip}">
+                <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Download.ico,Size=32}" />
+            </Button>
+        </StackPanel>
+
+        <GroupBox Grid.Row="1" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                    <Button Width="22" Height="22" Click="PatchNotes_Click" ToolTip="{DynamicResource ConfigWindow_PatchNotesTooltip}">
+                        <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/ChangeNotes.ico,Size=32}" />
+                    </Button>
+                    <Button Width="22" Height="22" Click="AddConfigProfile_Click" Margin="20,0,0,0" ToolTip="{DynamicResource ConfigWindow_AddConfigProfileTooltip}">
+                        <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Add.ico,Size=32}" />
+                    </Button>
+                    <Button Width="22" Height="22" Click="ClearConfigProfiles_Click" Margin="10,0,0,0" ToolTip="{DynamicResource ConfigWindow_ClearConfigProfilesTooltip}">
+                        <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Delete.ico,Size=32}" />
+                    </Button>
+                </StackPanel>
+            </GroupBox.Header>
+
+            <DataGrid Name="ConfigsGrid" ItemsSource="{Binding PluginConfig.ConfigProfiles}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" PreviewMouseLeftButtonDown="OnMouseLeftButtonDown">
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Style.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                        </Style.Resources>
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.HorizontalGridLinesBrush>
+                    <SolidColorBrush Color="#FFB4B4B4"/>
+                </DataGrid.HorizontalGridLinesBrush>
+                <DataGrid.VerticalGridLinesBrush>
+                    <SolidColorBrush Color="#FFB4B4B4"/>
+                </DataGrid.VerticalGridLinesBrush>
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsEnabled}" Value="False">
+                                <Setter Property="Background" Value="Beige" />
+                                <Setter Property="Foreground" Value="Red" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn     Width="*" IsReadOnly="True" Binding="{Binding Name}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource ConfigWindow_NameColumnLabel}"/>
+                        </DataGridTextColumn.Header>
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsEnabled}" Value="False">
+                                        <Setter Property="Foreground" Value="Red" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTemplateColumn Width="30" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditConfigProfile_Click" ToolTip="{DynamicResource ConfigWindow_EditConfigProfileTooltip}">
+                                    <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Edit.ico,Size=32}" />
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="30" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="DeleteConfigProfile_Click" ToolTip="{DynamicResource ConfigWindow_DeleteConfigProfileTooltip}">
+                                    <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Delete.ico,Size=32}" />
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+            <Button Content="{DynamicResource Global_SaveButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" Click="Save_Click"/>
+            <Button Content="{DynamicResource Global_CloseButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" IsCancel="True"/>
+        </StackPanel>
+
+        <!-- Drag and Drop Popup -->
+        <Popup x:Name="popup" IsHitTestVisible="False" Placement="RelativePoint" PlacementTarget="{Binding ElementName=ConfigUI}" AllowsTransparency="True">
+            <Border BorderBrush="LightSteelBlue" BorderThickness="2" Background="White" Opacity="0.75">
+                <StackPanel Orientation="Horizontal" Margin="4,3,8,3">
+                    <Image Source="{pc:Icon Path=/ServerManager.Plugin.Discord;component/Art/Drag.ico,Size=32}" Width="16" Height="16"/>
+                    <TextBlock FontSize="14" VerticalAlignment="Center" Text="{Binding DraggedItem.Name, ElementName=ConfigUI}" Margin="8,0,0,0" />
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>

@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Globals">
+    <SccProjectName>%24/Development/ServerManagers/Main/Plugin.Discord</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>https://dev.azure.com/bretthewitson</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>Art\favicon.ico</ApplicationIcon>
+    <AssemblyName>ServerManager.Plugin.Discord</AssemblyName>
+    <RootNamespace>ServerManagerTool.Plugin.Discord</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Publish\**" />
+    <EmbeddedResource Remove="Publish\**" />
+    <None Remove="Publish\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Art\Add.ico" />
+    <None Remove="Art\ChangeNotes.ico" />
+    <None Remove="Art\Delete.ico" />
+    <None Remove="Art\Download.ico" />
+    <None Remove="Art\Drag.ico" />
+    <None Remove="Art\Edit.ico" />
+    <None Remove="Art\favicon.ico" />
+    <None Remove="Globalization\en-US\en-US.xaml" />
+    <None Remove="Globalization\pt-BR\pt-BR.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Windows\ConfigProfileWindow.xaml" />
+    <Page Include="Windows\ConfigWindow.xaml" />
+    <Page Include="Windows\VersionFeedWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Common\Plugin.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Art\Add.ico" />
+    <Resource Include="Art\ChangeNotes.ico" />
+    <Resource Include="Art\Delete.ico" />
+    <Resource Include="Art\Download.ico" />
+    <Resource Include="Art\Drag.ico" />
+    <Resource Include="Art\Edit.ico" />
+    <Resource Include="Art\favicon.ico" />
+    <Resource Include="Globalization\en-US\en-US.xaml" />
+    <Resource Include="Globalization\pt-BR\pt-BR.xaml">
+      <Generator></Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Config.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Config.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Config.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Config.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>
