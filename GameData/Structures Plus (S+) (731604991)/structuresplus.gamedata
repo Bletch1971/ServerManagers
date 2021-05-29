@@ -1,23 +1,15 @@
 {
   "Application": "ark",
-  "Version": "1.1.0",
-  "Created": "2019-08-07T00:00:00.0000000Z",
+  "Version": "1.2.0",
+  "Created": "2021-05-28T00:00:00.0000000Z",
   "Creatures": [],
   "Engrams": [
     {
-      "Level": 61,
+      "Level": 22,
       "Points": 0,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_AirConditionerPlus_C",
-      "Description": "S+ Air Conditioner",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Level": 20,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_AnimalTender_C",
-      "Description": "S+ Animal Tender",
+      "ClassName": "EngramEntry_LeashTek_C",
+      "Description": "S+ Dino Leash",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -29,14 +21,30 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 68,
+      "Level": 61,
       "Points": 0,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_AutoTurret_C",
-      "Description": "S+ Auto Turret",
+      "ClassName": "EngramEntry_AirConditionerPlus_C",
+      "Description": "S+ Air Conditioner",
       "Mod": "Structures Plus (S+)"
     },
-    {
+	{
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PressurePlate_C",
+      "Description": "S+ Pressure Plate",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Alarm_Tek_C",
+      "Description": "S+ Tek Sensor	",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
       "Level": 68,
       "Points": 0,
       "IsTekGram": false,
@@ -44,7 +52,15 @@
       "Description": "S+ Ballista Turret",
       "Mod": "Structures Plus (S+)"
     },
-    {
+	{
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AutoTurret_C",
+      "Description": "S+ Auto Turret",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
       "Level": 68,
       "Points": 0,
       "IsTekGram": false,
@@ -285,7 +301,7 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 0,
+      "Level": 92,
       "Points": 0,
       "IsTekGram": true,
       "ClassName": "EngramEntry_ChargeInjector_C",
@@ -293,7 +309,7 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 100,
+      "Level": 99,
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_ChargeStation_C",
@@ -308,20 +324,60 @@
       "Description": "S+ Chemistry Bench",
       "Mod": "Structures Plus (S+)"
     },
+	{
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChibiDisplay_C",
+      "Description": "S+ Chibi Display",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Cliff_Circle_Glass_C",
+      "Description": "S+ Glass Cliff Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 51,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Cliff_Circle_Metal_C",
+      "Description": "S+ Metal Cliff Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 37,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Cliff_Circle_Stone_C",
+      "Description": "S+ Stone Cliff Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 96,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Cliff_Circle_Tek_C",
+      "Description": "S+ Tek Cliff Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 33,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Cliff_Circle_Wood_C",
+      "Description": "S+ Wood Cliff Platform",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Level": 0,
       "Points": 0,
       "IsTekGram": true,
       "ClassName": "EngramEntry_CloningChamberPlus_C",
       "Description": "S+ Cloning Chamber",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_CommandTool_C",
-      "Description": "S+ Command Gun",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -412,12 +468,12 @@
       "Description": "S+ Dedicated Storage Intake",
       "Mod": "Structures Plus (S+)"
     },
-    {
-      "Level": 1,
+	{
+      "Level": 20,
       "Points": 0,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_DemoGun_C",
-      "Description": "S+ Demo Gun",
+      "ClassName": "EngramEntry_DermisDisplay_C",
+      "Description": "S+ Dermis Display",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -781,14 +837,6 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_EuthanasiaGun_C",
-      "Description": "S+ Euthanasia Gun",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
       "Level": 48,
       "Points": 0,
       "IsTekGram": false,
@@ -948,6 +996,14 @@
       "Description": "S+ Tek Foundation",
       "Mod": "Structures Plus (S+)"
     },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Foundation_TekFloating_C",
+      "Description": "S+ Tek Floating Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Level": 4,
       "Points": 0,
@@ -962,6 +1018,14 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Foundation_Wood_C",
       "Description": "S+ Wood Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 88,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Fridge_Cryo_C",
+      "Description": "S+ Cryofridge",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -997,9 +1061,9 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 65,
+      "Level": 40,
       "Points": 0,
-      "IsTekGram": false,
+      "IsTekGram": true,
       "ClassName": "EngramEntry_GasCollectorTek_C",
       "Description": "S+ Tek Gas Collector",
       "Mod": "Structures Plus (S+)"
@@ -1308,12 +1372,12 @@
       "Description": "S+ Internal Wiring - Wall",
       "Mod": "Structures Plus (S+)"
     },
-    {
-      "Level": 1,
+	{
+      "Level": 72,
       "Points": 0,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_InventoryAssistant_C",
-      "Description": "S+ Inventory Assistant",
+      "ClassName": "EngramEntry_ItemAggregator_C",
+      "Description": "S+ Item Aggregator",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -1589,7 +1653,7 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 15,
+      "Level": 19,
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_LargeWall_AdobeSP_C",
@@ -1644,22 +1708,6 @@
       "Description": "S+ Large Wood Wall",
       "Mod": "Structures Plus (S+)"
     },
-	{
-      "Level": 22,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_LeashTek_C",
-      "Description": "S+ Tek Leash",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_LightSetter_C",
-      "Description": "S+ Light Setter",
-      "Mod": "Structures Plus (S+)"
-    },
     {
       "Level": 40,
       "Points": 0,
@@ -1709,14 +1757,6 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_ModelSelector_C",
-      "Description": "S+ Model Selector",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
       "Level": 6,
       "Points": 0,
       "IsTekGram": false,
@@ -1740,20 +1780,36 @@
       "Description": "S+ Nanny",
       "Mod": "Structures Plus (S+)"
     },
-    {
+	{
+      "Level": 53,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ocean_Square_Metal_C",
+      "Description": "S+ Metal Ocean Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Ocean_Square_Wood_C",
+      "Description": "S+ Wood Ocean Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
       "Level": 0,
       "Points": 0,
       "IsTekGram": true,
-      "ClassName": "EngramEntry_PersonalTeleporter_C",
-      "Description": "S+ Personal Teleporter",
+      "ClassName": "EngramEntry_OilPumpTek_C",
+      "Description": "S+ Tek Oil Pump",
       "Mod": "Structures Plus (S+)"
     },
-    {
+	{
       "Level": 1,
       "Points": 0,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_Pillarator_C",
-      "Description": "S+ Pillarator",
+      "ClassName": "EngramEntry_OmniTool_C",
+      "Description": "S+ Omni Tool",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -1861,14 +1917,6 @@
       "Mod": "Structures Plus (S+)"
     },	
     {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_PlusRemote_C",
-      "Description": "S+ Remote",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
       "Level": 18,
       "Points": 0,
       "IsTekGram": false,
@@ -1972,14 +2020,6 @@
       "Description": "S+ Wood Ramp",
       "Mod": "Structures Plus (S+)"
     },
-    {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_RepairGun_C",
-      "Description": "S+ Repair Gun",
-      "Mod": "Structures Plus (S+)"
-    },
 	{
       "Level": 135,
       "Points": 0,
@@ -2066,14 +2106,6 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Roof_Wood_C",
       "Description": "S+ Sloped Wood Roof",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Level": 20,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_SheepHerder_C",
-      "Description": "S+ Sheep Herder",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -2274,6 +2306,14 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_SPlusCraftingStation_C",
       "Description": "S+ Crafting Station",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SplusMultiTool_C",
+      "Description": "S+ Multi-Tool",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -2484,20 +2524,20 @@
       "Description": "S+ Teleporter",
       "Mod": "Structures Plus (S+)"
     },
-    {
-      "Level": 1,
+	{
+      "Level": 32,
       "Points": 0,
       "IsTekGram": false,
-      "ClassName": "EngramEntry_TransferGun_C",
-      "Description": "S+ Transfer Gun",
+      "ClassName": "EngramEntry_ToiletPlus_C",
+      "Description": "S+ Toilet",
       "Mod": "Structures Plus (S+)"
     },
-    {
-      "Level": 1,
+	{
+      "Level": 0,
       "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_TransferTool_C",
-      "Description": "S+ Transfer Tool",
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TransferControlUnit_C",
+      "Description": "S+ Transfer Control Unit",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -2506,14 +2546,6 @@
       "IsTekGram": true,
       "ClassName": "EngramEntry_TransmitterPlus_C",
       "Description": "S+ Tek Transmitter",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_TransparencyCycler_C",
-      "Description": "S+ Transparency Cycler",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -2572,12 +2604,60 @@
       "Description": "S+ Wood Trapdoor",
       "Mod": "Structures Plus (S+)"
     },
+	{
+      "Level": 62,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Tree_Circle_Glass_C",
+      "Description": "S+ Glass Tree Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 59,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Tree_Circle_Metal_C",
+      "Description": "S+ Metal Tree Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 37,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Tree_Circle_Stone_C",
+      "Description": "S+ Stone Tree Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 95,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_Tree_Circle_Tek_C",
+      "Description": "S+ Tek Tree Platform",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 33,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Tree_Circle_Wood_C",
+      "Description": "S+ Wood Tree Platform",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Level": 36,
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_TreeSapTapPlus_C",
       "Description": "S+ Tree Sap Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TreeSapTapTek_C",
+      "Description": "S+ Tek Tree Sap Tap",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -2684,6 +2764,14 @@
       "Description": "S+ Tek Triangle Foundation",
       "Mod": "Structures Plus (S+)"
     },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TriFoundation_TekFloating_C",
+      "Description": "S+ Tek Floating Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Level": 11,
       "Points": 0,
@@ -2749,14 +2837,6 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_TurretConfigurator_C",
-      "Description": "S+ Turret Configurator",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
       "Level": 0,
       "Points": 0,
       "IsTekGram": true,
@@ -2781,14 +2861,6 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_UnderwaterTool_C",
-      "Description": "S+ Underwater Tool",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
       "Level": 75,
       "Points": 0,
       "IsTekGram": false,
@@ -2802,14 +2874,6 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_VesselPlus_C",
       "Description": "S+ Vessel",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Level": 1,
-      "Points": 0,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_VisibilityTool_C",
-      "Description": "S+ Visibility Tool",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -3189,7 +3253,7 @@
       "Mod": "Structures Plus (S+)"
     },
     {
-      "Level": 15,
+      "Level": 23,
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_XLWall_Adobe_C",
@@ -3246,6 +3310,13 @@
     }
   ],
   "Items": [
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LeashTek_C",
+      "Description": "S+ Dino Leash",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Category": "Structure",
       "IsHarvestable": false,
@@ -3431,6 +3502,13 @@
     {
       "Category": "Structure",
       "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElectricalOutlet_C",
+      "Description": "S+ Electrical Outlet",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_FridgePlus_C",
       "Description": "S+ Refrigerator",
       "Mod": "Structures Plus (S+)"
@@ -3501,13 +3579,6 @@
     {
       "Category": "Structure",
       "IsHarvestable": false,
-      "ClassName": "PrimalItem_TekBuggy_C",
-      "Description": "S+ Tek ATV",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_SPlusTekLight_C",
       "Description": "S+ Tek Light",
       "Mod": "Structures Plus (S+)"
@@ -3531,13 +3602,6 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_TekBedPlus_C",
       "Description": "S+ Tek Sleeping Pod",
-      "Mod": "Structures Plus (S+)"
-    },
-	{
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_LeashTek_C",
-      "Description": "S+ LeashTek",
       "Mod": "Structures Plus (S+)"
     },	
 	{
@@ -3575,35 +3639,56 @@
       "Description": "S+ Tek Refrigerator",
       "Mod": "Structures Plus (S+)"
     },	
-    {
+	{
       "Category": "Structure",
       "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_Gardener_C",
-      "Description": "S+ Gardener",
+      "ClassName": "PrimalItemStructure_Fridge_Cryo_C",
+      "Description": "S+ Cryofridge",
       "Mod": "Structures Plus (S+)"
     },
-    {
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TreeSapTapTek_C",
+      "Description": "S+ Tek Tree Sap Tap",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_OilPumpTek_C",
+      "Description": "S+ Tek Oil Pump",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Alarm_Tek_C",
+      "Description": "S+ Tek Alarm",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Alarm_Plate_C",
+      "Description": "S+ Alarm Plate",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ToiletPlus_C",
+      "Description": "S+ Toilet",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_ItemCollector_C",
       "Description": "S+ Item Collector",
       "Mod": "Structures Plus (S+)"
     },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_MultiLamp_C",
-      "Description": "S+ Multi Lamp",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_SheepHerder_C",
-      "Description": "S+ Sheep Herder",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
+	{
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Farmer_C",
@@ -3613,8 +3698,29 @@
     {
       "Category": "Structure",
       "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Gardener_C",
+      "Description": "S+ Gardener",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Hatchery_C",
       "Description": "S+ Hatchery",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ItemAggregator_C",
+      "Description": "S+ Aggregator",
+      "Mod": "Structures Plus (S+)"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MultiLamp_C",
+      "Description": "S+ Multi Lamp",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -3629,13 +3735,6 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Converter_C",
       "Description": "S+ Converter",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_AnimalTender_C",
-      "Description": "S+ Animal Tender",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -3750,6 +3849,27 @@
       "Description": "S+ Crystal Cracker",
       "Mod": "Structures Plus (S+)"
     },	
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TransferControlUnit_C",
+      "Description": "S+ Transfer Control Unit",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ChibiDisplay_C",
+      "Description": "S+ Chibi Display",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DermisDisplay_C",
+      "Description": "S+ Dermis Display",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Category": "Structure",
       "IsHarvestable": false,
@@ -3834,102 +3954,18 @@
       "Description": "S+ Heavy Auto Turret",
       "Mod": "Structures Plus (S+)"
     },
-    {
+	{
       "Category": "Tool",
       "IsHarvestable": false,
-      "ClassName": "PrimalItem_TransparencyCycler_C",
-      "Description": "S+ Transparency Cycler",
+      "ClassName": "PrimalItem_SplusMultiTool_C",
+      "Description": "S+ Multi Tool",
       "Mod": "Structures Plus (S+)"
     },
     {
       "Category": "Tool",
       "IsHarvestable": false,
-      "ClassName": "PrimalItem_ModelSelector_C",
-      "Description": "S+ Model Selector",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_DemoGun_C",
-      "Description": "S+ Demo Gun",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_RepairGun_C",
-      "Description": "S+ Repair Gun",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_TurretConfigurator_C",
-      "Description": "S+ Turret Configurator",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_TransferGun_C",
-      "Description": "S+ Transfer Gun",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_LightSetter_C",
-      "Description": "S+ Light Setter",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_PersonalTeleporter_C",
-      "Description": "S+ Personal Teleporter",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_VisibilityTool_C",
-      "Description": "S+ Visibility Tool",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_EuthanasiaGun_C",
-      "Description": "S+ Euthanasia Gun",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_UnderwaterTool_C",
-      "Description": "S+ Underwater Tool",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_PlusRemote_C",
-      "Description": "S+ Remote",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_TransferTool_C",
-      "Description": "S+ Transfer Tool",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_CommandTool_C",
-      "Description": "S+ Command Gun",
+      "ClassName": "PrimalItem_OmniTool_C",
+      "Description": "S+ Omni Tool",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -3937,20 +3973,6 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItem_SprayPainterPlus_C",
       "Description": "S+ Spray Painter",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_InventoryAssistant_C",
-      "Description": "S+ Inventory Assistant",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Tool",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_Pillarator_C",
-      "Description": "S+ Pillarator",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -4065,6 +4087,13 @@
       "Description": "S+ Tek Foundation",
       "Mod": "Structures Plus (S+)"
     },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Foundation_TekFloating_C",
+      "Description": "S+ Tek Floating Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
     {
       "Category": "Structure",
       "IsHarvestable": false,
@@ -4105,6 +4134,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_TriFoundation_TekSP_C",
       "Description": "S+ Tek Triangle Foundation",
+      "Mod": "Structures Plus (S+)"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TriFoundation_TekFloating_C",
+      "Description": "S+ Tek Floating Triangle Foundation",
       "Mod": "Structures Plus (S+)"
     },
     {
@@ -6002,13 +6038,6 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_GeneratorTek_C",
       "Description": "S+ Tek Generator",
-      "Mod": "Structures Plus (S+)"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_ElectricalOutlet_C",
-      "Description": "S+ Electrical Outlet",
       "Mod": "Structures Plus (S+)"
     },
     {
