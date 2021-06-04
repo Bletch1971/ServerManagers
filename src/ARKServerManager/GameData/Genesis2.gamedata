@@ -1,0 +1,152 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-06-04T00:00:00.0000000Z",
+  "Creatures": [
+      
+  ],
+  "Engrams": [
+    {
+      "Level": 29,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AmmoBox_C",
+      "Description": "Ammo Box",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 35,
+      "Points": 18,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Boulder_Fire_C",
+      "Description": "Jar of Pitch",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 8,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Canoe_C",
+      "Description": "Canoe",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 89,
+      "Points": 55,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EggIncubator_C",
+      "Description": "Egg Incubator",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 23,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LoadoutMannequin_C",
+      "Description": "Loadout Mannequin",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 19,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Milkglider_Saddle_C",
+      "Description": "Milkglider Saddle",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 94,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Minigun_C",
+      "Description": "Minigun",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 43,
+      "Points": 12,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_NetGun_Ammo_C",
+      "Description": "Net Projectile",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 120,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SpaceDolphin_Saddle_C",
+      "Description": "Space Dolphin Saddle",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 116,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekBow_C",
+      "Description": "Tek Bow",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 101,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekCanteen_C",
+      "Description": "Tek Canteen",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 104,
+      "Points": 32,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekCropPlot_C",
+      "Description": "Tek Crop Plot",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekExosuit_C",
+      "Description": "Tek Exosuit",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 112,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekHoverSail_C",
+      "Description": "Tek Hover Sail",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 118,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekPistol_C",
+      "Description": "Tek Pistol",
+      "Mod": "Genesis2"
+    },
+	{
+      "Level": 108,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekSecuirtyConsole_C",
+      "Description": "Tek Secuirty Console",
+      "Mod": "Genesis2"
+    }
+  ], 
+  "Items": [
+  ],
+  "MapSpawners": [
+  ],
+  "SupplyCrates": [
+  ],
+  "GameMaps": [
+	{
+      "IsSotF": false,
+      "ClassName": "Genesis2",
+      "Description": "Genesis 2",
+      "Mod": "Genesis 2"
+	}
+  ]
+}
