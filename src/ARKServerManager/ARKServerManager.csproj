@@ -301,6 +301,9 @@
     <Compile Include="Windows\SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
+    <Content Include="GameData\Genesis2.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="VersionFeed.xml" />
     <None Include="VersionFeedBeta.xml" />
     <Resource Include="Art\Add.ico" />
@@ -540,17 +543,6 @@
     <Content Include="GameData\Valguero.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <AdditionalFiles Include="GameData\Spreadsheets\Aberration.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Extinction.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Genesis.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\PGM.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\PrimitivePlus.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Ragnarok.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\ScorchedEarth.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\SurvivalEvolved.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\TheCenter.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Valguero.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\_Template.xlsx" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
