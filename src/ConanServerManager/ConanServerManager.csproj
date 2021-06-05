@@ -268,7 +268,6 @@
     <Compile Include="Enums\AvailabilityStatus.cs" />
     <Compile Include="Enums\WatcherServerStatus.cs" />
     <Compile Include="ErrorHandling.cs" />
-    <None Include="Installer.iss" />
     <Content Include="Styles\Default.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -406,10 +405,6 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="DeployBetaToGithub.cmd" />
-    <None Include="DeployToGithub.cmd" />
-    <None Include="MakeLatestBetaVersionGithub.ps1" />
-    <None Include="MakeLatestVersionGithub.ps1" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
   </ItemGroup>
