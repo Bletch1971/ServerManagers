@@ -23,8 +23,9 @@
     <sys:String x:Key="Mod_Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="Mod_Aberration">Aberration</sys:String>
     <sys:String x:Key="Mod_Extinction">Extinction</sys:String>
-    <sys:String x:Key="Mod_Genesis">Genesis</sys:String>
+    <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -1281,16 +1282,25 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
 
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TekSuit Powers</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TEK Suit Powers</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TEK Suit Powers on the Genesis map.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">if enabled, will disable all missions on the Genesis map.</sys:String>
 
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Disable TEK Suit on Spawn</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">If enabled, will prevent the player spawning with the TEK Suit.</sys:String>
+
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Is enabled, the hexagon store will be disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Allow Only Engram Points Trade</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Is enabled, only engram points can be sold on the Hexagon store.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Max Hexagons per Character</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Specifies the maximum number of hexagons that each player can have.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Hexagon Reward Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Specifies the multiplier for the hexagons rewards.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
@@ -1440,6 +1450,8 @@
     <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">If enabled, allows Flyers into caves.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">Allow Flying Stamina Recovery</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">If enabled, recovers stamina while standing on a flyer.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Allow Flyer Speed Leveling</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">If enabled, allows the leveling of flyer movement speed.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Prevent Dino Mate Boost</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">If enabled, the dino mate boost will be disabled.</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Disable Force Ground Flyer with Explosives</sys:String>
@@ -2421,7 +2433,9 @@
     <sys:String x:Key="Aberration_P">Aberration</sys:String>
     <sys:String x:Key="Extinction">Extinction</sys:String>
     <sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis</sys:String>
+    <sys:String x:Key="Genesis">Genesis: Part 1</sys:String>
+    <sys:String x:Key="CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Gen2">Genesis: Part 2</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -2577,17 +2591,11 @@
     <sys:String x:Key="SpiderL_Character_BP_Easy_C">Broodmother Lysrix (Easy Variant)</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Medium_C">Broodmother Lysrix (Medium Variant)</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Hard_C">Broodmother Lysrix (Hard Variant)</sys:String>
-    <sys:String x:Key="SpiderL_Character_BP_TheCenter_C">Broodmother Lysrix (Easy Variant)</sys:String>
-    <sys:String x:Key="SpiderL_Character_BP_TheCenterMedium_C">Broodmother Lysrix (Medium Variant)</sys:String>
-    <sys:String x:Key="SpiderL_Character_BP_TheCenterHard_C">Broodmother Lysrix (Hard Variant)</sys:String>
 
     <sys:String x:Key="Gorilla_Character_BP_C">Megapithecus</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Easy_C">Megapithecus (Easy Variant)</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Medium_C">Megapithecus (Medium Variant)</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Hard_C">Megapithecus (Hard Variant)</sys:String>
-    <sys:String x:Key="Gorilla_Character_BP_TheCenter_C">Megapithecus (Easy Variant)</sys:String>
-    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Medium_C">Megapithecus (Medium Variant)</sys:String>
-    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Hard_C">Megapithecus (Hard Variant)</sys:String>
 
     <sys:String x:Key="Dragon_Character_BP_Boss_C">Dragon</sys:String>
     <sys:String x:Key="Dragon_Character_BP_Boss_Easy_C">Dragon (Easy Variant)</sys:String>
@@ -2655,6 +2663,7 @@
     <sys:String x:Key="Griffin_Character_BP_C">Griffin</sys:String>
     <sys:String x:Key="Polar_Bear_C">Polar Bear</sys:String>
     <sys:String x:Key="Ragnarok_Wyvern_Override_Ice_C">Ice Wyvern</sys:String>
+    <sys:String x:Key="Iceworm_Character_Minion_BP_smaller_C">Iceworm</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature Class Names - Ragnarok - Bosses -->
@@ -2668,6 +2677,23 @@
     <sys:String x:Key="Manticore_Character_BP_Easy_Ragnarok_C">Manticore (Easy Variant)</sys:String>
     <sys:String x:Key="Manticore_Character_BP_Medium_Ragnarok_C">Manticore (Medium Variant)</sys:String>
     <sys:String x:Key="Manticore_Character_BP_Hard_Ragnarok_C">Manticore (Hard Variant)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - The Center - Bosses -->
+    <sys:String x:Key="SpiderL_Character_BP_TheCenter_C">Broodmother Lysrix (Easy Variant)</sys:String>
+    <sys:String x:Key="SpiderL_Character_BP_TheCenterMedium_C">Broodmother Lysrix (Medium Variant)</sys:String>
+    <sys:String x:Key="SpiderL_Character_BP_TheCenterHard_C">Broodmother Lysrix (Hard Variant)</sys:String>
+
+    <sys:String x:Key="Gorilla_Character_BP_TheCenter_C">Megapithecus (Easy Variant)</sys:String>
+    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Medium_C">Megapithecus (Medium Variant)</sys:String>
+    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Hard_C">Megapithecus (Hard Variant)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Valguero -->
+    <sys:String x:Key="Deinonychus_Character_BP_C">Deinonychus</sys:String>
+    <sys:String x:Key="IceGolem_Character_BP_C">Ice Golem</sys:String>
+    <sys:String x:Key="ChalkGolem_Character_BP_C">Chalk Golem</sys:String>
+    <sys:String x:Key="SpiderL_VAL_Character_BP_C">Broodmother (Lysrix)</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature Class Names - Aberration -->
@@ -2797,6 +2823,55 @@
     <sys:String x:Key="KingKaiju_Character_BP_C">King Titan (Gamma)</sys:String>
     <sys:String x:Key="KingKaiju_Character_BP_Alpha_C">King Titan (Alpha)</sys:String>
     <sys:String x:Key="KingKaiju_Character_BP_Beta_C">King Titan (Beta)</sys:String>
+    <!--#endregion-->
+	
+    <!--#region Dino/Creature Class Names - Genesis -->
+    <sys:String x:Key="SpaceWhale_Character_BP_C">Astrocetus</sys:String>
+    <sys:String x:Key="BogSpider_Character_BP_C">Bloodstalker</sys:String>
+    <sys:String x:Key="Cherufe_Character_BP_C">Magmasaur</sys:String>
+    <sys:String x:Key="GiantTurtle_Character_BP_C">Megachelon</sys:String>
+    <sys:String x:Key="Shapeshifter_Small_Character_BP_C">Ferox Small</sys:String>
+    <sys:String x:Key="Shapeshifter_Large_Character_BP_C">Ferox Large</sys:String>
+    <sys:String x:Key="InsectSwarmChar_BP_C">Insect Swarm</sys:String>
+    <sys:String x:Key="MicrobeSwarmChar_BP_C">Parakeet Fish School</sys:String>
+    <sys:String x:Key="TekHoverSkiff_Character_BP_C">Tek Hover Skiff</sys:String>
+    <sys:String x:Key="BionicTrike_Character_BP_C">Tek Triceratops</sys:String>
+    <sys:String x:Key="BionicGigant_Character_BP_C">Tek Giganotosaurus</sys:String>
+    <sys:String x:Key="Volcano_Allo_Character_BP_C">X-Allosaur</sys:String>
+    <sys:String x:Key="Volcano_Ankylo_Character_BP_C">X-Ankylosaur</sys:String>
+    <sys:String x:Key="Snow_Argent_Character_BP_C">X-Argentavis</sys:String>
+    <sys:String x:Key="Ocean_Basilosaurus_Character_BP_C">X-Basilosaurus</sys:String>
+    <sys:String x:Key="Ocean_Dunkle_Character_BP_C">X-Dunkleosteus</sys:String>
+    <sys:String x:Key="Ocean_Dolphin_Character_BP_C">X-Ichthyosaurus</sys:String>
+    <sys:String x:Key="Ocean_Megalodon_Character_BP_C">X-Megalodon</sys:String>
+    <sys:String x:Key="Ocean_Mosa_Character_BP_C">X-Mosasaur</sys:String>
+    <sys:String x:Key="Snow_Otter_Character_BP_C">X-Otter</sys:String>
+    <sys:String x:Key="Bog_Para_Character_BP_C">X-Parasaur</sys:String>
+    <sys:String x:Key="Bog_Raptor_Character_BP_C">X-Raptor</sys:String>
+    <sys:String x:Key="Volcano_Rex_Character_BP_C">X-Rex</sys:String>
+    <sys:String x:Key="Volcano_Golem_Character_BP_C">X-Rock Elemental</sys:String>
+    <sys:String x:Key="Snow_Saber_Character_BP_C">X-Sabertooth</sys:String>
+    <sys:String x:Key="Lunar_Salmon_Character_BP_C">X-Sabertooth Salmon</sys:String>
+    <sys:String x:Key="Rare_Lunar_Salmon_Character_BP_C">X-Sabertooth Salmon (Rare)</sys:String>
+    <sys:String x:Key="Bog_Spino_Character_BP_C">X-Spinosaur</sys:String>
+    <sys:String x:Key="Bog_Tapejara_Character_BP_C">X-Tapejara</sys:String>
+    <sys:String x:Key="Volcano_Trike_Character_BP_C">X-Triceratops</sys:String>
+    <sys:String x:Key="Snow_Rhino_Character_BP_C">X-Woolly Rhino</sys:String>
+    <sys:String x:Key="Snow_Yutyrannus_Character_BP_C">X-Yutyrannus</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Genesis - Bosses -->
+    <sys:String x:Key="EelBoss_Character_BP_Easy_C">Moeder, Master of the Ocean (Easy Variant)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Medium_C">Moeder, Master of the Ocean (Medium Variant)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Hard_C">Moeder, Master of the Ocean (Hard Variant)</sys:String>
+	
+    <sys:String x:Key="EelMinion_Character_BP_Easy_C">Eel Minion (Gamma)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Medium_C">Eel Minion (Beta)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Hard_C">Eel Minion (Alpha)</sys:String>
+	
+    <sys:String x:Key="VRMainBoss_Character_Easy_C">Corrupted Master Controller (Easy Variant)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Medium_C">Corrupted Master Controller (Medium Variant)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Hard_C">Corrupted Master Controller (Hard Variant)</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -3515,6 +3590,27 @@
     <!--#region Tekgram Class Names - Extinction -->
     <sys:String x:Key="EngramEntry_TekBridge_C">Tek Bridge</sys:String>
     <sys:String x:Key="EngramEntry_TekGravityGrenade_C">Tek Gravity Grenade</sys:String>
+    <!--#endregion-->
+	
+    <!--#region Engram Class Names - Genesis -->
+    <sys:String x:Key="EngramEntry_CherufeSaddle_C">Magmasaur Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_GiantTurtleSaddle_C">Megachelon Platform Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_FishingNet_C">Fishing Net</sys:String>
+    <sys:String x:Key="EngramEntry_OceanPlatformWood_C">Wood Ocean Platform</sys:String>
+    <sys:String x:Key="EngramEntry_OceanPlatformMetal_C">Metal Ocean Platform</sys:String>
+    <sys:String x:Key="EngramEntry_PressurePlate_C">Pressure Plate</sys:String>
+    <sys:String x:Key="EngramEntry_MiningDrill_C">Mining Drill</sys:String>
+    <!--#endregion-->
+
+    <!--#region Tekgram Class Names - Genesis -->
+    <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">Astrocetus Tek Saddle</sys:String>
+    <sys:String x:Key="EngramEntry_TekClaws_C">Tek Shoulder Cannon</sys:String>
+    <sys:String x:Key="EngramEntry_CruiseMissile_C">Tek Cruise Missile</sys:String>
+    <sys:String x:Key="EngramEntry_TekGrenadeLauncher_C">Tek Grenade Launcher</sys:String>
+    <sys:String x:Key="EngramEntry_HoverSkiff_C">Tek Hover Skiff</sys:String>
+    <sys:String x:Key="EngramEntry_JumpPad_C">Tek Jump Pad</sys:String>
+    <sys:String x:Key="EngramEntry_TekAlarm_C">Tek Sensor</sys:String>
+    <sys:String x:Key="EngramEntry_ShoulderCannon_C">Tek Shoulder Cannon</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -4896,6 +4992,50 @@
     <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Gamma_C">King Titan Trophy (Gamma)</sys:String>
     <!--#endregion-->
 
+    <!--#region Item Class Names - Genesis -->
+    <sys:String x:Key="PrimalItem_WeaponTekClaws_C">Tek Claws</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponTekGrenadeLauncher_C">Tek Grenade Launcher</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponFishingNet_C">Fish Net</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponTekCruiseMissile_C">Cruise Missile</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponMiningDrill_C">Mining Drill</sys:String>
+    <sys:String x:Key="PrimalItemArmor_ShoulderCannon_C">Tek Shoulder Cannon</sys:String>
+    <sys:String x:Key="PrimalItemArmor_SpaceWhaleSaddle_Tek_C">Astrocetus Tek Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_CherufeSaddle_C">Magmasaur Saddle (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_GiantTurtleSaddle_C">Megachelon Platform Saddle (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl1_C">Tier 1 Lootcrate (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl2_C">Tier 2 Lootcrate (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl3_C">Tier 3 Lootcrate (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_BogSpider_C">Bloodstalker Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Cherufe_C">Magmasaur Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_GiantTurtle_C">Megachelon Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Trike_Bionic_C">Tek Trike Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemResource_Ambergris_C">Ambergris</sys:String>
+    <sys:String x:Key="PrimalItemResource_TurtleShell_C">Turtle Shell</sys:String>
+    <sys:String x:Key="PrimalItemResource_HighQualityPollen_C">High Quality Pollen</sys:String>
+    <sys:String x:Key="PrimalItemResource_GoldenNugget_C">Golden Nugget</sys:String>
+    <sys:String x:Key="PrimalItemResource_RetrieveReaperGland_C">Reaper King Pheromone Gland (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemSkin_TrikeSkullHelmet_Retrieve_C">Alpha X-Triceratops Skull</sys:String>
+    <sys:String x:Key="PrimalItemResource_RetrieveMegTooth_C">Golden Striped Megalodon Tooth</sys:String>
+    <sys:String x:Key="PrimalItemSkin_MasterControllerHelmet_C">Master Controller Helmet</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarHelmet_C">Corrupted Avatar Helmet Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarShirt_C">Corrupted Avatar Shirt Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarPants_C">Corrupted Avatar Pants Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarGloves_C">Corrupted Avatar Gloves Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatartBoots_C">Corrupted Avatar Boots Skin</sys:String>
+    <sys:String x:Key="PrimalItem_Spawner_HoverSkiff_C">Unassembled TEK Hover Skiff</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_EelBoss_C">Moeder Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_VRBoss_C">VR Boss Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Metal_OceanPlatform_C">Metal Ocean Platform</sys:String>
+    <sys:String x:Key="PrimalItemStructure_PressurePlate_C">Pressure Plate</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekAlarm_C">Tek Sensor</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekJumpPad_C">Tek Jump Pad</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Wood_OceanPlatform_C">Wood Ocean Platform</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_EelBoss_Gamma_C">Gamma Moeder Trophy (Гамма)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_EelBoss_Beta_C">Beta Moeder Trophy (Бета)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_EelBoss_Alpha_C">Alpha Moeder Trophy (Альфа)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_MasterController_C">Master Controller Trophy</sys:String>
+    <!--#endregion-->
+
     <!--#endregion-->
 
     <!--#region Map Spawners -->
@@ -5235,6 +5375,10 @@
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Desert_C">Boss Inventory - Desert Titan</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Forest_C">Boss Inventory - Forest Titan</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss Inventory - Ice Titan</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss Inventory - Crystal Wyvern Queen (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss Inventory - Crystal Wyvern Queen (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss Inventory - Crystal Wyvern Queen (Alpha)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
