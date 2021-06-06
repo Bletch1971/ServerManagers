@@ -5,7 +5,37 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2020-11-29T00:00:00Z</updated>
+  <updated>2021-06-06T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:B30DEF07-7124-4112-BCFD-569BC9BBB542</id>
+    <title>1.1.395 (1.1.395.1)</title>
+    <summary>1.1.395.1</summary>
+    <link href="" />
+    <updated>2021-06-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Dino Section - Added the AllowFlyerSpeedLeveling setting.</li>
+            <li>Server Settings - Rules Section - Added new Genesis: Part 2 section.</li>
+            <li>Server Settings - Rules Section - Expanded Hexegon section with new settings.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Player Levels - Added the new 25 player levels introduced in the Genesis: Part 2 DLC.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:22A04828-2422-4218-8122-E1CCB2202352</id>
