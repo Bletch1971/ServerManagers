@@ -23,8 +23,9 @@
     <sys:String x:Key="Mod_Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="Mod_Aberration">Aberration</sys:String>
     <sys:String x:Key="Mod_Extinction">Extinction</sys:String>
-    <sys:String x:Key="Mod_Genesis">Genesis</sys:String>
+    <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -1281,16 +1282,25 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
 
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TekSuit Powers</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TEK Suit Powers</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TEK Suit Powers on the Genesis map.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">if enabled, will disable all missions on the Genesis map.</sys:String>
 
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Disable TEK Suit on Spawn</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">If enabled, will prevent the player spawning with the TEK Suit.</sys:String>
+
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Is enabled, the hexagon store will be disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Allow Only Engram Points Trade</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Is enabled, only engram points can be sold on the Hexagon store.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Max Hexagons per Character</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Specifies the maximum number of hexagons that each player can have.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Hexagon Reward Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Specifies the multiplier for the hexagons rewards.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
@@ -1440,6 +1450,8 @@
     <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">If enabled, allows Flyers into caves.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">Allow Flying Stamina Recovery</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">If enabled, recovers stamina while standing on a flyer.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Allow Flyer Speed Leveling</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">If enabled, allows the leveling of flyer movement speed.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Prevent Dino Mate Boost</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">If enabled, the dino mate boost will be disabled.</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Disable Force Ground Flyer with Explosives</sys:String>
@@ -2421,8 +2433,9 @@
     <sys:String x:Key="Aberration_P">Aberration</sys:String>
     <sys:String x:Key="Extinction">Extinction</sys:String>
     <sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis</sys:String>
+    <sys:String x:Key="Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Gen2">Genesis: Part 2</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->

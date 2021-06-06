@@ -1,0 +1,13 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-06-04T00:00:00.0000000Z",
+  "GameMaps": [
+    {
+      "IsSotF": false,
+      "ClassName": "Gen2",
+      "Description": "Genesis: Part 2",
+      "Mod": "Genesis2"
+    }
+  ]
+}

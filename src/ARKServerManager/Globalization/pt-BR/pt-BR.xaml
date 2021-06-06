@@ -422,6 +422,7 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Ativar e executar como Prompt de Administrador na Inicialização</sys:String>
 	<sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimizar para a bandeja</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gerenciar configurações de firewall automaticamente</sys:String>
+	<sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Gerenciar IP público automaticamente</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Diretório de dados:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Diretório de Backup:</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyLabel">Steam WebApi Key:</sys:String>
@@ -735,7 +736,7 @@
     <sys:String x:Key="SliderUnits_Percentage">%</sys:String>
     <sys:String x:Key="SliderUnits_Seconds">segundos</sys:String>
     <sys:String x:Key="SliderUnits_Minutes">minutos</sys:String>
-    <sys:String x:Key="SliderUnits_Hours">houras</sys:String>
+    <sys:String x:Key="SliderUnits_Hours">horas</sys:String>
     <sys:String x:Key="SliderUnits_Days">dias</sys:String>
 	<sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
     <sys:String x:Key="SliderUnits_Items">items</sys:String>
@@ -898,7 +899,9 @@
     <sys:String x:Key="ServerSettings_NetworkingLabel">Networking</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortLabel">Porta Servidor:</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortTooltip">Os usuários da porta usarão para se conectar ao seu servidor. O padrão é 7777. Altere isto e Query Port se você deseja hospedar vários servidores em uma máquina.</sys:String>
-    <sys:String x:Key="ServerSettings_QueryPortLabel">Porta Query:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortLabel">Porta Par:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortTooltip">Porta Par usada para determinar a disponibilidade do servidor. O padrão é 7778.</sys:String>
+	<sys:String x:Key="ServerSettings_QueryPortLabel">Porta Query:</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortTooltip">A porta Steam usa para se comunicar com seu servidor. O padrão é 27015. Altere this e Server Port se você deseja hospedar vários servidores em uma máquina.</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">Local IP:</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPTooltip">Define o IP local (privado) que o servidor irá escutar. Essa deve ser sua placa de rede principal, que direciona para a Internet pública.</sys:String>
@@ -1133,7 +1136,7 @@
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsLabel">Pontos de Supply Crate Fornecido Aleatório</sys:String>
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">Se habilitado, fará os Supply Crates aleatórias.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Impedir construção em áreas ricas em recursos</sys:String>
-    <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Se habilitado, desabilita completamente a construção em áreas específicas e ricas em recursos, em particular a instalação no TheIsland ao redor das principais montanhas.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Se habilitado, desabilita completamente a construção em áreas específicas e ricas em recursos, em particular construções do próprio jogo...</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Desativar Fogo Amigável PvP</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Se habilitado, os jogadores são incapazes de causar dano ou matar outros membros da tribo, dinossauros e estruturas quando o modo PvP estiver habilitado.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Use o Localizador de Corpos</sys:String>
@@ -1282,6 +1285,12 @@
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">se ativado, permitirá que o jogador use TekSuit Powers no mapa Genesis.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Desativar missões</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">se ativado, desabilitará todas as missões no mapa do Genesis.</sys:String>
+	
+	<sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
+    <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Máximo de Hexagons por personagem</sys:String>
+    <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Especifica o número máximo de hexagons que cada jogador pode ter.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Multiplicador de recompensa Hexagons</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Especifica o multiplicador para as recompensas dos Hexagons.</sys:String>
 	
 	<sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Habilitar Cryopod Nerf</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Se ativado, ajustará a quantidade de dano que uma criatura causa, por um período de tempo, após ter sido liberada de um criópode.</sys:String>
@@ -5235,6 +5244,7 @@
     <sys:String x:Key="ProfileValidation_WarningLabel">Foram encontrados os seguintes problemas de validação.\R\n\r\n{validateMessage}\r\n\r\n Deseja continuar com a inicialização do servidor, isso pode causar problemas?</sys:String>
 	
     <sys:String x:Key="ProfileValidation_ServerPort">A porta do servidor está fora do intervalo válido ({PortMinimum}-{PortMaximum}).</sys:String>
+	<sys:String x:Key="ProfileValidation_ServerPeerPort">A porta do par de servidor está fora do intervalo válido ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_QueryPort">A porta de consulta está fora do intervalo válido ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_RconPort">A porta rcon está fora do intervalo válido ({PortMinimum}-{PortMaximum}).</sys:String>
 
