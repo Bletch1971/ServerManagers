@@ -40,7 +40,12 @@ namespace ServerManagerTool.Common.Converters
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var sliderValue = System.Convert.ToInt32(value);
+            if (value is null || value.ToString() == string.Empty)
+                return default;
+
+            if (!int.TryParse(value.ToString(), out int sliderValue))
+                return default;
+
             sliderValue = Math.Max(MinValue, sliderValue);
             sliderValue = Math.Min(MaxValue, sliderValue);
 
