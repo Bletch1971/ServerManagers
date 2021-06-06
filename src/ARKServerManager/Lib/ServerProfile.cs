@@ -1579,6 +1579,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(DisableGenesisMissionsProperty, value); }
         }
 
+        public static readonly DependencyProperty DisableDefaultMapItemSetsProperty = DependencyProperty.Register(nameof(DisableDefaultMapItemSets), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableDefaultMapItemSets")]
+        public bool DisableDefaultMapItemSets
+        {
+            get { return (bool)GetValue(DisableDefaultMapItemSetsProperty); }
+            set { SetValue(DisableDefaultMapItemSetsProperty, value); }
+        }
+
         public static readonly DependencyProperty EnableCryoSicknessPVEProperty = DependencyProperty.Register(nameof(EnableCryoSicknessPVE), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
         public bool EnableCryoSicknessPVE
@@ -1627,12 +1635,36 @@ namespace ServerManagerTool.Lib
             set { SetValue(MaxHexagonsPerCharacterProperty, value); }
         }
 
+        public static readonly DependencyProperty DisableHexagonStoreProperty = DependencyProperty.Register(nameof(DisableHexagonStore), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableHexagonStore", ConditionedOn = nameof(DisableHexagonStore))]
+        public bool DisableHexagonStore
+        {
+            get { return (bool)GetValue(DisableHexagonStoreProperty); }
+            set { SetValue(DisableHexagonStoreProperty, value); }
+        }
+
+        public static readonly DependencyProperty HexStoreAllowOnlyEngramTradeOptionProperty = DependencyProperty.Register(nameof(HexStoreAllowOnlyEngramTradeOption), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bHexStoreAllowOnlyEngramTradeOption", ConditionedOn = nameof(HexStoreAllowOnlyEngramTradeOption))]
+        public bool HexStoreAllowOnlyEngramTradeOption
+        {
+            get { return (bool)GetValue(HexStoreAllowOnlyEngramTradeOptionProperty); }
+            set { SetValue(HexStoreAllowOnlyEngramTradeOptionProperty, value); }
+        }
+
         public static readonly DependencyProperty HexagonRewardMultiplierProperty = DependencyProperty.Register(nameof(HexagonRewardMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
-        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules)]
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "BaseHexagonRewardMultiplier")]
         public float HexagonRewardMultiplier
         {
             get { return (float)GetValue(HexagonRewardMultiplierProperty); }
             set { SetValue(HexagonRewardMultiplierProperty, value); }
+        }
+
+        public static readonly DependencyProperty HexagonCostMultiplierProperty = DependencyProperty.Register(nameof(HexagonCostMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules)]
+        public float HexagonCostMultiplier
+        {
+            get { return (float)GetValue(HexagonCostMultiplierProperty); }
+            set { SetValue(HexagonCostMultiplierProperty, value); }
         }
         #endregion
 

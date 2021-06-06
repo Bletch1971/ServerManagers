@@ -2320,18 +2320,41 @@
                                         </Grid>
                                     </GroupBox>
 
+                                    <GroupBox Header="{DynamicResource Mod_Genesis2}" Style="{StaticResource GroupBoxStyle}">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding DisableDefaultMapItemSets}" Content="{DynamicResource ServerSettings_DisableDefaultMapItemSetsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableDefaultMapItemSetsTooltip}"/>
+                                        </Grid>
+                                    </GroupBox>
+
                                     <GroupBox Header="{DynamicResource ServerSettings_HexagonsLabel}" Style="{StaticResource GroupBoxStyle}">
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <cctl:AnnotatedSlider Grid.Row="0" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_MaxHexagonsPerCharacterLabel}" Value="{Binding MaxHexagonsPerCharacter}" Suffix="" Minimum="0" Maximum="100000000" SmallChange="100" LargeChange="1000" TickFrequency="5000" ToolTip="{DynamicResource ServerSettings_MaxHexagonsPerCharacterTooltip}"/>
-                                            <cctl:AnnotatedSlider Grid.Row="1" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonRewardMultiplierLabel}" Value="{Binding HexagonRewardMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonRewardMultiplierTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding DisableHexagonStore}" Content="{DynamicResource ServerSettings_DisableHexagonStoreLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableHexagonStoreTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" IsChecked="{Binding HexStoreAllowOnlyEngramTradeOption}" Content="{DynamicResource ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip}"/>
+
+                                            <cctl:AnnotatedSlider Grid.Row="1" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_MaxHexagonsPerCharacterLabel}" Value="{Binding MaxHexagonsPerCharacter}" Suffix="" Minimum="0" Maximum="100000000" SmallChange="100" LargeChange="1000" TickFrequency="5000" ToolTip="{DynamicResource ServerSettings_MaxHexagonsPerCharacterTooltip}"/>
+                                            <cctl:AnnotatedSlider Grid.Row="2" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonRewardMultiplierLabel}" Value="{Binding HexagonRewardMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonRewardMultiplierTooltip}"/>
+                                            <cctl:AnnotatedSlider Grid.Row="3" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonCostMultiplierLabel}" Value="{Binding HexagonCostMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonCostMultiplierTooltip}"/>
                                         </Grid>
                                     </GroupBox>
                                 </StackPanel>

@@ -1282,16 +1282,25 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
 
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TekSuit Powers</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TekSuit Powers on the Genesis map.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TEK Suit Powers</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TEK Suit Powers on the Genesis map.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">if enabled, will disable all missions on the Genesis map.</sys:String>
 
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Disable TEK Suit on Spawn</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">If enabled, will prevent the player spawning with the TEK Suit.</sys:String>
+
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Is enabled, the hexagon store will be disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Allow Only Engram Points Trade</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Is enabled, only engram points can be sold on the Hexagon store.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Max Hexagons per Character</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Specifies the maximum number of hexagons that each player can have.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Hexagon Reward Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Specifies the multiplier for the hexagons rewards.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
