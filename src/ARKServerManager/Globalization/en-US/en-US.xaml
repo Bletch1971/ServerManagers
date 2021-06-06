@@ -1310,6 +1310,17 @@
     <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the damage done by the creature will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Incoming Damage Multiplier Percent</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Specifies the percentage increase to the incoming damage multiplier of a creature, after they have been released from a cryopod. Higher values means more incoming damage done to the creature (eg. 0.25 = 25% more damage).</sys:String>
+
+    <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">WARNING: This will permanently change the stats of any existing items so make sure to backup your current save before modifying and playing with the clamping values.</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_GenericQualityLabel">Generic Quality</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">Armor</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">Max Durability</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">Weapon Damage Percent</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">Weapon Clip Ammo</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">Hypo Insulation</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">Weight</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">Hyper Insulation</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->

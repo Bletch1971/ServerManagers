@@ -2357,6 +2357,34 @@
                                             <cctl:AnnotatedSlider Grid.Row="3" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonCostMultiplierLabel}" Value="{Binding HexagonCostMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonCostMultiplierTooltip}"/>
                                         </Grid>
                                     </GroupBox>
+
+                                    <GroupBox Header="{DynamicResource ServerSettings_ItemStatClampsLabel}" Style="{StaticResource GroupBoxStyle}">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Margin="5,0,5,0" Text="{DynamicResource ServerSettings_ItemStatClampsNoteLabel}" FontWeight="Bold" TextWrapping="WrapWithOverflow" IsEnabled="False"/>
+
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="1" Grid.Column="0" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_GenericQualityLabel}" Value="{Binding ItemStatClamps_GenericQuality}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="2" Grid.Column="0" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_ArmorLabel}" Value="{Binding ItemStatClamps_Armor}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="3" Grid.Column="0" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_WeaponDamagePercentLabel}" Value="{Binding ItemStatClamps_WeaponDamagePercent}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="4" Grid.Column="0" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_HypothermalInsulationLabel}" Value="{Binding ItemStatClamps_HypothermalInsulation}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="1" Grid.Column="1" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_WeightLabel}" Value="{Binding ItemStatClamps_Weight}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="2" Grid.Column="1" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_MaxDurabilityLabel}" Value="{Binding ItemStatClamps_MaxDurability}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="3" Grid.Column="1" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_WeaponClipAmmoLabel}" Value="{Binding ItemStatClamps_WeaponClipAmmo}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="4" Grid.Column="1" Margin="1" Label="{DynamicResource ServerSettings_ItemStatClamps_HyperthermalInsulationLabel}" Value="{Binding ItemStatClamps_HyperthermalInsulation}" Minimum="0" Maximum="1000000" TickFrequency="100" SmallChange="10" LargeChange="100" SuffixRelativeWidth="0" />
+                                        </Grid>
+                                    </GroupBox>
                                 </StackPanel>
                             </Grid>
                         </Expander>

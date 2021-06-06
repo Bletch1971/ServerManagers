@@ -1666,6 +1666,85 @@ namespace ServerManagerTool.Lib
             get { return (float)GetValue(HexagonCostMultiplierProperty); }
             set { SetValue(HexagonCostMultiplierProperty, value); }
         }
+
+        public bool ClampItemStats
+        {
+            get
+            {
+                return ItemStatClamps_GenericQuality.HasValue
+                    || ItemStatClamps_Armor.HasValue
+                    || ItemStatClamps_MaxDurability.HasValue
+                    || ItemStatClamps_WeaponDamagePercent.HasValue
+                    || ItemStatClamps_WeaponClipAmmo.HasValue
+                    || ItemStatClamps_HypothermalInsulation.HasValue
+                    || ItemStatClamps_Weight.HasValue
+                    || ItemStatClamps_HyperthermalInsulation.HasValue;
+            }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_GenericQualityProperty = DependencyProperty.Register(nameof(ItemStatClamps_GenericQuality), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[0]")]
+        public NullableValue<int> ItemStatClamps_GenericQuality
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_GenericQualityProperty); }
+            set { SetValue(ItemStatClamps_GenericQualityProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_ArmorProperty = DependencyProperty.Register(nameof(ItemStatClamps_Armor), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[1]")]
+        public NullableValue<int> ItemStatClamps_Armor
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_ArmorProperty); }
+            set { SetValue(ItemStatClamps_ArmorProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_MaxDurabilityProperty = DependencyProperty.Register(nameof(ItemStatClamps_MaxDurability), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[2]")]
+        public NullableValue<int> ItemStatClamps_MaxDurability
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_MaxDurabilityProperty); }
+            set { SetValue(ItemStatClamps_MaxDurabilityProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_WeaponDamagePercentProperty = DependencyProperty.Register(nameof(ItemStatClamps_WeaponDamagePercent), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[3]")]
+        public NullableValue<int> ItemStatClamps_WeaponDamagePercent
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_WeaponDamagePercentProperty); }
+            set { SetValue(ItemStatClamps_WeaponDamagePercentProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_WeaponClipAmmoProperty = DependencyProperty.Register(nameof(ItemStatClamps_WeaponClipAmmo), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[4]")]
+        public NullableValue<int> ItemStatClamps_WeaponClipAmmo
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_WeaponClipAmmoProperty); }
+            set { SetValue(ItemStatClamps_WeaponClipAmmoProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_HypothermalInsulationProperty = DependencyProperty.Register(nameof(ItemStatClamps_HypothermalInsulation), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[5]")]
+        public NullableValue<int> ItemStatClamps_HypothermalInsulation
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_HypothermalInsulationProperty); }
+            set { SetValue(ItemStatClamps_HypothermalInsulationProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_WeightProperty = DependencyProperty.Register(nameof(ItemStatClamps_Weight), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[6]")]
+        public NullableValue<int> ItemStatClamps_Weight
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_WeightProperty); }
+            set { SetValue(ItemStatClamps_WeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemStatClamps_HyperthermalInsulationProperty = DependencyProperty.Register(nameof(ItemStatClamps_HyperthermalInsulation), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 0)));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "ItemStatClamps[7]")]
+        public NullableValue<int> ItemStatClamps_HyperthermalInsulation
+        {
+            get { return (NullableValue<int>)GetValue(ItemStatClamps_HyperthermalInsulationProperty); }
+            set { SetValue(ItemStatClamps_HyperthermalInsulationProperty, value); }
+        }
         #endregion
 
         #region Chat and Notifications
@@ -3499,6 +3578,11 @@ namespace ServerManagerTool.Lib
 
             serverArgs.Append($"?AllowCrateSpawnsOnTopOfStructures={this.AllowCrateSpawnsOnTopOfStructures}");
 
+            if (this.ClampItemStats)
+            {
+                serverArgs.Append("?ClampItemStats=true");
+            }
+
             if (Config.Default.SectionSOTFEnabled && this.SOTF_Enabled)
             {
                 serverArgs.Append("?EvoEventInterval=").Append(this.SOTF_EvoEventInterval);
@@ -5314,6 +5398,15 @@ namespace ServerManagerTool.Lib
             this.ClearValue(HexStoreAllowOnlyEngramTradeOptionProperty);
             this.ClearValue(HexagonRewardMultiplierProperty);
             this.ClearValue(HexagonCostMultiplierProperty);
+
+            this.ClearNullableValue(ItemStatClamps_GenericQualityProperty);
+            this.ClearNullableValue(ItemStatClamps_ArmorProperty);
+            this.ClearNullableValue(ItemStatClamps_MaxDurabilityProperty);
+            this.ClearNullableValue(ItemStatClamps_WeaponDamagePercentProperty);
+            this.ClearNullableValue(ItemStatClamps_WeaponClipAmmoProperty);
+            this.ClearNullableValue(ItemStatClamps_HypothermalInsulationProperty);
+            this.ClearNullableValue(ItemStatClamps_WeightProperty);
+            this.ClearNullableValue(ItemStatClamps_HyperthermalInsulationProperty);
         }
 
         public void ResetSOTFSection()
@@ -5970,6 +6063,15 @@ namespace ServerManagerTool.Lib
             this.SetValue(HexStoreAllowOnlyEngramTradeOptionProperty, sourceProfile.HexStoreAllowOnlyEngramTradeOption);
             this.SetValue(HexagonRewardMultiplierProperty, sourceProfile.HexagonRewardMultiplier);
             this.SetValue(HexagonCostMultiplierProperty, sourceProfile.HexagonCostMultiplier);
+
+            this.SetNullableValue(ItemStatClamps_GenericQualityProperty, sourceProfile.ItemStatClamps_GenericQuality);
+            this.SetNullableValue(ItemStatClamps_ArmorProperty, sourceProfile.ItemStatClamps_Armor);
+            this.SetNullableValue(ItemStatClamps_MaxDurabilityProperty, sourceProfile.ItemStatClamps_MaxDurability);
+            this.SetNullableValue(ItemStatClamps_WeaponDamagePercentProperty, sourceProfile.ItemStatClamps_WeaponDamagePercent);
+            this.SetNullableValue(ItemStatClamps_WeaponClipAmmoProperty, sourceProfile.ItemStatClamps_WeaponClipAmmo);
+            this.SetNullableValue(ItemStatClamps_HypothermalInsulationProperty, sourceProfile.ItemStatClamps_HypothermalInsulation);
+            this.SetNullableValue(ItemStatClamps_WeightProperty, sourceProfile.ItemStatClamps_Weight);
+            this.SetNullableValue(ItemStatClamps_HyperthermalInsulationProperty, sourceProfile.ItemStatClamps_HyperthermalInsulation);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)
