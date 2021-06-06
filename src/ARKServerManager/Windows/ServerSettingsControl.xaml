@@ -2625,6 +2625,7 @@
 
                                         <CheckBox Grid.Row="0" Grid.Column="0" Margin="5" Content="{DynamicResource ServerSettings_EnableAllowCaveFlyersLabel}" IsChecked="{Binding EnableAllowCaveFlyers}" ToolTip="{DynamicResource ServerSettings_EnableAllowCaveFlyersTooltip}" HorizontalAlignment="Left"/>
                                         <CheckBox Grid.Row="0" Grid.Column="1" Margin="5" Content="{DynamicResource ServerSettings_AllowFlyingStaminaRecoveryLabel}" IsChecked="{Binding AllowFlyingStaminaRecovery}" ToolTip="{DynamicResource ServerSettings_AllowFlyingStaminaRecoveryTooltip}" HorizontalAlignment="Left"/>
+                                        <CheckBox Grid.Row="0" Grid.Column="2" Margin="5" Content="{DynamicResource ServerSettings_AllowFlyerSpeedLevelingLabel}" IsChecked="{Binding AllowFlyerSpeedLeveling}" ToolTip="{DynamicResource ServerSettings_AllowFlyerSpeedLevelingTooltip}" HorizontalAlignment="Left"/>
 
                                         <CheckBox Grid.Row="1" Grid.Column="0" Margin="5" Content="{DynamicResource ServerSettings_PreventMateBoostLabel}" IsChecked="{Binding PreventMateBoost}" ToolTip="{DynamicResource ServerSettings_PreventMateBoostTooltip}" HorizontalAlignment="Left"/>
                                         <CheckBox Grid.Row="1" Grid.Column="1" Margin="5" Content="{DynamicResource ServerSettings_ForceFlyerExplosivesLabel}" IsChecked="{Binding ForceFlyerExplosives}" ToolTip="{DynamicResource ServerSettings_ForceFlyerExplosivesTooltip}" HorizontalAlignment="Left"/>

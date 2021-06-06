@@ -1949,6 +1949,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(AllowFlyingStaminaRecoveryProperty, value); }
         }
 
+        public static readonly DependencyProperty AllowFlyerSpeedLevelingProperty = DependencyProperty.Register(nameof(AllowFlyerSpeedLeveling), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, "bAllowFlyerSpeedLeveling", ConditionedOn = nameof(AllowFlyerSpeedLeveling))]
+        public bool AllowFlyerSpeedLeveling
+        {
+            get { return (bool)GetValue(AllowFlyerSpeedLevelingProperty); }
+            set { SetValue(AllowFlyerSpeedLevelingProperty, value); }
+        }
+
         public static readonly DependencyProperty PreventMateBoostProperty = DependencyProperty.Register(nameof(PreventMateBoost), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Dinos, ConditionedOn = nameof(PreventMateBoost))]
         public bool PreventMateBoost
