@@ -2991,6 +2991,9 @@
                                                             <DataTrigger Binding="{Binding Mod}" Value="Genesis">
                                                                 <Setter Property="Background" Value="#B3EBFF" />
                                                             </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="Genesis2">
+                                                                <Setter Property="Background" Value="#B3EBFF" />
+                                                            </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="PrimitivePlus">
                                                                 <Setter Property="Background" Value="#E7F4DB" />
                                                             </DataTrigger>
@@ -3300,6 +3303,9 @@
                                                                 <Setter Property="Background" Value="#FFD6D6" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="Genesis">
+                                                                <Setter Property="Background" Value="#B3EBFF" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="Genesis2">
                                                                 <Setter Property="Background" Value="#B3EBFF" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="PrimitivePlus">
@@ -3806,6 +3812,9 @@
                                                             <Setter Property="Background" Value="#FFD6D6" />
                                                         </DataTrigger>
                                                         <DataTrigger Binding="{Binding Mod}" Value="Genesis">
+                                                            <Setter Property="Background" Value="#B3EBFF" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Mod}" Value="Genesis2">
                                                             <Setter Property="Background" Value="#B3EBFF" />
                                                         </DataTrigger>
                                                         <DataTrigger Binding="{Binding Mod}" Value="PrimitivePlus">
