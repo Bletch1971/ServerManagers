@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">03.12.2020 от Varlonec и Эдван</sys:String>    
+    <sys:String x:Key="Generic_TranslatedBy">06.06.2021 от Varlonec</sys:String>    
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -23,8 +23,9 @@
     <sys:String x:Key="Mod_Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="Mod_Aberration">Aberration</sys:String>
     <sys:String x:Key="Mod_Extinction">Extinction</sys:String>
-    <sys:String x:Key="Mod_Genesis">Genesis</sys:String>
+    <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -731,7 +732,7 @@
     <sys:String x:Key="Menu_File_Exit">_Выход</sys:String>
 
     <sys:String x:Key="LanguageSelectionLabel">_Язык</sys:String>
- 
+
     <sys:String x:Key="SliderUnits_Multiplier">x</sys:String>
     <sys:String x:Key="SliderUnits_Percentage">%</sys:String>
     <sys:String x:Key="SliderUnits_Seconds">секунд</sys:String>
@@ -1286,11 +1287,20 @@
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Отключить миссии</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">Если включено, отключит все миссии на карте Genesis.</sys:String>
 
-    <sys:String x:Key="ServerSettings_HexagonsLabel">Шестигранник</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Отключить костюм TEK на Спавне</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">Если включено, это предотвратит появление игрока в костюме TEK.</sys:String>
+
+    <sys:String x:Key="ServerSettings_HexagonsLabel">Шестигранники</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Отключить магазин Шестигранников</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Если включено, магазин Шестигранников будет отключён.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Разрешить продажу только Энграммам</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Если включено, только энграммы могут быть проданы в магазине шестигранников, отключает все остальное.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Максимальное колличество шестигранников на игрока.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Задает максимальное количество шестигранников, которое может иметь каждый игрок.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Множитель награды шестигранниками</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Задает множитель для наград в виде шестигранников.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Множитель цены в магазине шестигранников</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Позволяет изменять стоимость предметов в магазине шестигранников</sys:String>
     
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Включить криопод Nerf</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Если этот параметр включен, он будет корректировать количество урона, которое наносит существо в течение некоторого времени после того, как оно было выпущено из криопода.</sys:String>
@@ -1440,6 +1450,8 @@
     <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">Если этот параметр включен, позволяет полет на динозаврах в пещерах.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">Разрешить восстановление выносливости в воздухе</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">Если включено, восстанавливает выносливость, в воздухе.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Включить прокачку полёта</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Если включено, позволяет прокачивать скорость полёта.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Отключить Dino Mate Boost</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Если включено, усиление Dino Mate Boost будет отключено.(Животные с более быстрыми кладками яиц)</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Отключить Посадку Летающих с бомбами</sys:String>
@@ -2155,10 +2167,10 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_NumItemSetsPowerColumnTooltip">This is a multiplier to modify the item set quality. A value of 1.0 will result in a good mix of all quality levels (Wildcard recommends to keep it at 1.0).</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_SetsRandomWithoutReplacementColumnLabel">Prevent Duplicates</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_SetsRandomWithoutReplacementColumnTooltip">If enabled, will ensure that only one item will be added to the same loot crate, if it was added to two different sets.</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnLabel">Добавление Предметов в группу Контейнеров</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnTooltip">Если включено, вы можете изменить лут целой группы контейнеров с припасами, использовав только часть названия (а не полное название контейнера, как раньше)</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendPreventIncreasingMinMaxItemSetsColumnLabel">Динамическое увеличение</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendPreventIncreasingMinMaxItemSetsColumnTooltip">Если включено, динамически увеличивать допустимое количество предметов, несмотря на то сколько дополнительных предметов вы добавили (применяется только при Включеной "Добавление Предметов в группу Контейнеров").</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnLabel">Append Item Sets</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnTooltip">If enabled, will add item sets to supply crates, rather than totally overriding all their items.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendPreventIncreasingMinMaxItemSetsColumnLabel">Prevent Increasing</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendPreventIncreasingMinMaxItemSetsColumnTooltip">If enabled, will dynamically increase the amount of items dropped by however many additional itemsets you add (only applies when AppendItemSets=true).</sys:String>
 
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_NameColumnLabel">Description</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_NameColumnTooltip">A description to identify the item set.</sys:String>
@@ -2213,11 +2225,11 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Stack Size Overrides -->
-    <sys:String x:Key="ServerSettings_StackSizeOverridesLabel">Настроить размеры стеков</sys:String>
-    <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierLabel">Множитель размера стека</sys:String>
-    <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierTooltip">Это глобальный модификатор, позволяющий увеличивать или уменьшать размеры стека предметов. ПРИМЕЧАНИЕ: это работает только для предметов, которые предназначены для штабелирования.</sys:String>
-    <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemsLabel">Стек предметов</sys:String>
-    <sys:String x:Key="ServerSettings_StackSizeOverrides_SaveTitle">Настройки переопределения размера стека</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverridesLabel">Настроить размеры стаков</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierLabel">Множитель размера стака</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierTooltip">Это глобальный модификатор, позволяющий увеличивать или уменьшать размеры стака предметов. ПРИМЕЧАНИЕ: это работает только для предметов, которые предназначены для штабелирования.</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemsLabel">Стак предметов</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverrides_SaveTitle">Настройки переопределения размера стака</sys:String>
     <sys:String x:Key="ServerSettings_StackSizeOverrides_DisableLabel">ПРИМЕЧАНИЕ. Если вы хотите управлять переопределениями вручную или с помощью другого приложения, вы можете отключить параметр, который не позволит ASM управлять переопределениями. См. «Пользовательские параметры переопределения» в общих настройках.</sys:String>
 
     <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemClassColumnLabel">Предмет</sys:String>
@@ -2421,8 +2433,9 @@
     <sys:String x:Key="Aberration_P">Aberration</sys:String>
     <sys:String x:Key="Extinction">Extinction</sys:String>
     <sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis</sys:String>
+    <sys:String x:Key="Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Gen2">Genesis: Part 2</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -2579,16 +2592,10 @@
     <sys:String x:Key="SpiderL_Character_BP_Medium_C">Праматерь (Средняя)</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Hard_C">Праматерь (Сложная)</sys:String>
 
-
-
-    
     <sys:String x:Key="Gorilla_Character_BP_C">Мегапитек</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Easy_C">Мегапитек (Легкий)</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Medium_C">Мегапитек (Средний)</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Hard_C">Мегапитек (Сложный)</sys:String>
-
-
-
 
     <sys:String x:Key="Dragon_Character_BP_Boss_C">Дракон</sys:String>
     <sys:String x:Key="Dragon_Character_BP_Boss_Easy_C">Дракон (Легкий)</sys:String>
