@@ -4660,22 +4660,34 @@
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="50" DisplayMemberBinding="{Binding LevelIndex, Converter={StaticResource PlayerLevelIndexToDisplayLevelConverter}}"/>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="100">
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="Auto">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
-                                                            <TextBox Text="{Binding XPRequired}" Width="75" VerticalContentAlignment="Center" LostFocus="PlayerLevels_Recalculate"/>
+                                                            <Label Content="{Binding LevelIndex, Converter={StaticResource PlayerLevelIndexToDisplayLevelConverter}}" MinWidth="50" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramPointsColumnLabel}" Width="100">
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="Auto">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
-                                                            <TextBox Text="{Binding EngramPoints}" Width="75" VerticalContentAlignment="Center" LostFocus="PlayerLevels_Recalculate"/>
+                                                            <TextBox Text="{Binding XPRequired}" MinWidth="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" LostFocus="PlayerLevels_Recalculate"/>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramTotalColumnLabel}" Width="100" DisplayMemberBinding="{Binding EngramTotal}"/>
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramPointsColumnLabel}" Width="Auto">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBox Text="{Binding EngramPoints}" MinWidth="120" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" LostFocus="PlayerLevels_Recalculate"/>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramTotalColumnLabel}" Width="Auto">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <Label Content="{Binding EngramTotal}" MinWidth="120" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
                                             </GridView>
                                         </ListView.View>
 
@@ -4737,11 +4749,17 @@
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="50" DisplayMemberBinding="{Binding LevelIndex, Converter={StaticResource DinoLevelIndexToDisplayLevelConverter}}"/>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="100">
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="Auto">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
-                                                            <TextBox Text="{Binding XPRequired}" Width="75" VerticalContentAlignment="Center" LostFocus="DinoLevels_Recalculate"/>
+                                                            <Label Content="{Binding LevelIndex, Converter={StaticResource DinoLevelIndexToDisplayLevelConverter}}" MinWidth="50" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="Auto">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBox Text="{Binding XPRequired}" MinWidth="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" LostFocus="DinoLevels_Recalculate"/>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
