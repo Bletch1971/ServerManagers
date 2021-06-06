@@ -1244,7 +1244,14 @@ namespace ServerManagerTool.Lib
                                 LogProfileMessage("Validated server files (*new*).");
                             }
 
-                            LogProfileMessage("Updated server from cache. See ARK patch notes.");
+                            // update the version number
+                            _profile.LastInstalledVersion = GetServerVersion(GetServerVersionFile()).ToString();
+                            _profile.ServerUpdated = true;
+
+                            LogProfileMessage("Updated server from cache.");
+                            LogProfileMessage($"Server version: {_profile.LastInstalledVersion}.");
+
+                            LogProfileMessage("See ARK patch notes.");
                             LogProfileMessage(Config.Default.ArkSE_PatchNotesUrl);
 
                             if (!string.IsNullOrWhiteSpace(Config.Default.Alert_ServerUpdate))
@@ -1253,8 +1260,6 @@ namespace ServerManagerTool.Lib
                             emailMessage.AppendLine();
                             emailMessage.AppendLine("Updated server from cache. See ARK patch notes.");
                             emailMessage.AppendLine(Config.Default.ArkSE_PatchNotesUrl);
-
-                            _profile.ServerUpdated = true;
                         }
                         else
                         {
@@ -1747,6 +1752,9 @@ namespace ServerManagerTool.Lib
                 }
                 else
                     LogBranchMessage(branchName, "No new version.");
+
+                var cacheVersion = GetServerVersion(GetServerCacheVersionFile(branchName)).ToString();
+                LogMessage($"Server cache version: {cacheVersion}");
             }
             else
                 LogBranchMessage(branchName, $"Server cache does not exist.");
@@ -2271,6 +2279,8 @@ namespace ServerManagerTool.Lib
 
         private static string GetServerCacheTimeFile(string branchName) => IOUtils.NormalizePath(Path.Combine(GetServerCacheFolder(branchName), Config.Default.LastUpdatedTimeFile));
 
+        private static string GetServerCacheVersionFile(string branchName) => IOUtils.NormalizePath(Path.Combine(GetServerCacheFolder(branchName), Config.Default.VersionFile));
+
         private string GetServerExecutableFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerExe));
 
         private DateTime GetServerLatestTime(string timeFile)
@@ -2312,6 +2322,28 @@ namespace ServerManagerTool.Lib
         private string GetServerTimeFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.LastUpdatedTimeFile));
 
         private string GetServerSaveFolder() => IOUtils.NormalizePath(ServerProfile.GetProfileSavePath(_profile.InstallDirectory, _profile.AltSaveDirectoryName, _profile.PGM_Enabled, _profile.PGM_Name));
+
+        private string GetServerVersionFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.VersionFile));
+
+        public static Version GetServerVersion(string versionFile)
+        {
+            if (!string.IsNullOrWhiteSpace(versionFile) && File.Exists(versionFile))
+            {
+                var fileValue = File.ReadAllText(versionFile);
+
+                if (!string.IsNullOrWhiteSpace(fileValue))
+                {
+                    string versionString = fileValue.ToString();
+                    if (versionString.IndexOf('.') == -1)
+                        versionString = versionString + ".0";
+
+                    if (Version.TryParse(versionString, out Version version))
+                        return version;
+                }
+            }
+
+            return new Version(0, 0);
+        }
 
         private string GetServerWorldFile()
         {

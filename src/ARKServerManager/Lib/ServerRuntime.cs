@@ -619,6 +619,12 @@ namespace ServerManagerTool.Lib
                                 gotNewVersion = ServerApp.HasNewServerVersion(this.ProfileSnapshot.InstallDirectory, startTime);
 
                             progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} New server version - {gotNewVersion.ToString().ToUpperInvariant()}.");
+
+                            // update the version number of the server.
+                            var versionFile = Path.Combine(this.ProfileSnapshot.InstallDirectory, Config.Default.VersionFile);
+                            this.Version = ServerApp.GetServerVersion(versionFile);
+
+                            progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Server version: {this.Version}\r\n");
                         }
 
                         progressCallback?.Invoke(0, "\r\n");

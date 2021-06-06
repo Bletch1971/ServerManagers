@@ -707,5 +707,8 @@
     <Setting Name="ManagePublicIPAutomatically" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="VersionFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">version.txt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

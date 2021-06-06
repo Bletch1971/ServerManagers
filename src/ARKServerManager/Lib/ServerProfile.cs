@@ -5052,6 +5052,7 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(EnableAllowCaveFlyersProperty);
             this.ClearValue(AllowFlyingStaminaRecoveryProperty);
+            this.ClearValue(AllowFlyerSpeedLevelingProperty);
             this.ClearValue(PreventMateBoostProperty);
 
             this.ClearValue(DisableDinoDecayPvEProperty);
@@ -5300,6 +5301,7 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(AllowTekSuitPowersInGenesisProperty);
             this.ClearValue(DisableGenesisMissionsProperty);
+            this.ClearValue(DisableDefaultMapItemSetsProperty);
 
             this.ClearValue(EnableCryoSicknessPVEProperty);
             this.ClearValue(EnableCryopodNerfProperty);
@@ -5308,7 +5310,10 @@ namespace ServerManagerTool.Lib
             this.ClearValue(CryopodNerfIncomingDamageMultiplierPercentProperty);
 
             this.ClearValue(MaxHexagonsPerCharacterProperty);
+            this.ClearValue(DisableHexagonStoreProperty);
+            this.ClearValue(HexStoreAllowOnlyEngramTradeOptionProperty);
             this.ClearValue(HexagonRewardMultiplierProperty);
+            this.ClearValue(HexagonCostMultiplierProperty);
         }
 
         public void ResetSOTFSection()
@@ -5650,6 +5655,8 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(EnableAllowCaveFlyersProperty, sourceProfile.EnableAllowCaveFlyers);
             this.SetValue(AllowFlyingStaminaRecoveryProperty, sourceProfile.AllowFlyingStaminaRecovery);
+            this.SetValue(AllowFlyerSpeedLevelingProperty, sourceProfile.AllowFlyerSpeedLeveling);
+
             this.SetValue(PreventMateBoostProperty, sourceProfile.PreventMateBoost);
             this.SetValue(DisableDinoDecayPvEProperty, sourceProfile.DisableDinoDecayPvE);
             this.SetValue(DisableDinoDecayPvPProperty, sourceProfile.DisableDinoDecayPvP);
@@ -5959,7 +5966,10 @@ namespace ServerManagerTool.Lib
             this.SetValue(CryopodNerfIncomingDamageMultiplierPercentProperty, sourceProfile.CryopodNerfIncomingDamageMultiplierPercent);
 
             this.SetValue(MaxHexagonsPerCharacterProperty, sourceProfile.MaxHexagonsPerCharacter);
+            this.SetValue(DisableHexagonStoreProperty, sourceProfile.DisableHexagonStore);
+            this.SetValue(HexStoreAllowOnlyEngramTradeOptionProperty, sourceProfile.HexStoreAllowOnlyEngramTradeOption);
             this.SetValue(HexagonRewardMultiplierProperty, sourceProfile.HexagonRewardMultiplier);
+            this.SetValue(HexagonCostMultiplierProperty, sourceProfile.HexagonCostMultiplier);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)

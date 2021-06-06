@@ -72,6 +72,7 @@ namespace ServerManagerTool
         DinoTamedPerLevelStatMultipliers,
         DinoTamedAddPerLevelStatMultipliers,
         DinoTamedAffinityPerLevelStatMultipliers,
+        ItemStatClamps,
         RCONWindowExtents,
         ServerOptions,
         ServerLogOptions,
@@ -3989,6 +3990,9 @@ namespace ServerManagerTool
 
                             case ServerSettingsResetAction.DinoTamedAffinityPerLevelStatMultipliers:
                                 this.Settings.PerLevelStatsMultiplier_DinoTamed_Affinity.Reset();
+                                break;
+
+                            case ServerSettingsResetAction.ItemStatClamps:
                                 break;
 
                             case ServerSettingsResetAction.RCONWindowExtents:
