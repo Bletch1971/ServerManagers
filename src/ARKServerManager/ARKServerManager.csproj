@@ -36,7 +36,7 @@
     <PublisherName>Bletch1971</PublisherName>
     <SuiteName>Server Managers</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.1.395.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -301,6 +301,9 @@
     <Compile Include="Windows\SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
+    <Content Include="GameData\Genesis2.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="VersionFeed.xml" />
     <None Include="VersionFeedBeta.xml" />
     <Resource Include="Art\Add.ico" />
@@ -428,7 +431,6 @@
     <Content Include="GameData\CrystalIsles.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Installer.iss" />
     <Content Include="Styles\Default.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -540,24 +542,9 @@
     <Content Include="GameData\Valguero.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <AdditionalFiles Include="GameData\Spreadsheets\Aberration.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Extinction.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Genesis.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\PGM.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\PrimitivePlus.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Ragnarok.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\ScorchedEarth.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\SurvivalEvolved.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\TheCenter.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\Valguero.xlsx" />
-    <AdditionalFiles Include="GameData\Spreadsheets\_Template.xlsx" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="DeployBetaToGithub.cmd" />
-    <None Include="DeployToGithub.cmd" />
-    <None Include="MakeLatestBetaVersionGithub.ps1" />
-    <None Include="MakeLatestVersionGithub.ps1" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <AppDesigner Include="Properties\" />

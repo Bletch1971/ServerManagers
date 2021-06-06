@@ -2320,18 +2320,41 @@
                                         </Grid>
                                     </GroupBox>
 
+                                    <GroupBox Header="{DynamicResource Mod_Genesis2}" Style="{StaticResource GroupBoxStyle}">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding DisableDefaultMapItemSets}" Content="{DynamicResource ServerSettings_DisableDefaultMapItemSetsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableDefaultMapItemSetsTooltip}"/>
+                                        </Grid>
+                                    </GroupBox>
+
                                     <GroupBox Header="{DynamicResource ServerSettings_HexagonsLabel}" Style="{StaticResource GroupBoxStyle}">
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <cctl:AnnotatedSlider Grid.Row="0" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_MaxHexagonsPerCharacterLabel}" Value="{Binding MaxHexagonsPerCharacter}" Suffix="" Minimum="0" Maximum="100000000" SmallChange="100" LargeChange="1000" TickFrequency="5000" ToolTip="{DynamicResource ServerSettings_MaxHexagonsPerCharacterTooltip}"/>
-                                            <cctl:AnnotatedSlider Grid.Row="1" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonRewardMultiplierLabel}" Value="{Binding HexagonRewardMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonRewardMultiplierTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding DisableHexagonStore}" Content="{DynamicResource ServerSettings_DisableHexagonStoreLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableHexagonStoreTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" IsChecked="{Binding HexStoreAllowOnlyEngramTradeOption}" Content="{DynamicResource ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip}"/>
+
+                                            <cctl:AnnotatedSlider Grid.Row="1" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_MaxHexagonsPerCharacterLabel}" Value="{Binding MaxHexagonsPerCharacter}" Suffix="" Minimum="0" Maximum="100000000" SmallChange="100" LargeChange="1000" TickFrequency="5000" ToolTip="{DynamicResource ServerSettings_MaxHexagonsPerCharacterTooltip}"/>
+                                            <cctl:AnnotatedSlider Grid.Row="2" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonRewardMultiplierLabel}" Value="{Binding HexagonRewardMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonRewardMultiplierTooltip}"/>
+                                            <cctl:AnnotatedSlider Grid.Row="3" Grid.ColumnSpan="3" Margin="5,5,5,0" Label="{DynamicResource ServerSettings_HexagonCostMultiplierLabel}" Value="{Binding HexagonCostMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_HexagonCostMultiplierTooltip}"/>
                                         </Grid>
                                     </GroupBox>
                                 </StackPanel>
@@ -2625,6 +2648,7 @@
 
                                         <CheckBox Grid.Row="0" Grid.Column="0" Margin="5" Content="{DynamicResource ServerSettings_EnableAllowCaveFlyersLabel}" IsChecked="{Binding EnableAllowCaveFlyers}" ToolTip="{DynamicResource ServerSettings_EnableAllowCaveFlyersTooltip}" HorizontalAlignment="Left"/>
                                         <CheckBox Grid.Row="0" Grid.Column="1" Margin="5" Content="{DynamicResource ServerSettings_AllowFlyingStaminaRecoveryLabel}" IsChecked="{Binding AllowFlyingStaminaRecovery}" ToolTip="{DynamicResource ServerSettings_AllowFlyingStaminaRecoveryTooltip}" HorizontalAlignment="Left"/>
+                                        <CheckBox Grid.Row="0" Grid.Column="2" Margin="5" Content="{DynamicResource ServerSettings_AllowFlyerSpeedLevelingLabel}" IsChecked="{Binding AllowFlyerSpeedLeveling}" ToolTip="{DynamicResource ServerSettings_AllowFlyerSpeedLevelingTooltip}" HorizontalAlignment="Left"/>
 
                                         <CheckBox Grid.Row="1" Grid.Column="0" Margin="5" Content="{DynamicResource ServerSettings_PreventMateBoostLabel}" IsChecked="{Binding PreventMateBoost}" ToolTip="{DynamicResource ServerSettings_PreventMateBoostTooltip}" HorizontalAlignment="Left"/>
                                         <CheckBox Grid.Row="1" Grid.Column="1" Margin="5" Content="{DynamicResource ServerSettings_ForceFlyerExplosivesLabel}" IsChecked="{Binding ForceFlyerExplosives}" ToolTip="{DynamicResource ServerSettings_ForceFlyerExplosivesTooltip}" HorizontalAlignment="Left"/>
@@ -4660,22 +4684,34 @@
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="50" DisplayMemberBinding="{Binding LevelIndex, Converter={StaticResource PlayerLevelIndexToDisplayLevelConverter}}"/>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="100">
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="Auto">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
-                                                            <TextBox Text="{Binding XPRequired}" Width="75" VerticalContentAlignment="Center" LostFocus="PlayerLevels_Recalculate"/>
+                                                            <Label Content="{Binding LevelIndex, Converter={StaticResource PlayerLevelIndexToDisplayLevelConverter}}" MinWidth="50" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramPointsColumnLabel}" Width="100">
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="Auto">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
-                                                            <TextBox Text="{Binding EngramPoints}" Width="75" VerticalContentAlignment="Center" LostFocus="PlayerLevels_Recalculate"/>
+                                                            <TextBox Text="{Binding XPRequired}" MinWidth="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" LostFocus="PlayerLevels_Recalculate"/>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramTotalColumnLabel}" Width="100" DisplayMemberBinding="{Binding EngramTotal}"/>
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramPointsColumnLabel}" Width="Auto">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBox Text="{Binding EngramPoints}" MinWidth="120" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" LostFocus="PlayerLevels_Recalculate"/>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionEngramTotalColumnLabel}" Width="Auto">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <Label Content="{Binding EngramTotal}" MinWidth="120" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
                                             </GridView>
                                         </ListView.View>
 
@@ -4737,11 +4773,17 @@
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="50" DisplayMemberBinding="{Binding LevelIndex, Converter={StaticResource DinoLevelIndexToDisplayLevelConverter}}"/>
-                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="100">
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionLevelColumnLabel}" Width="Auto">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
-                                                            <TextBox Text="{Binding XPRequired}" Width="75" VerticalContentAlignment="Center" LostFocus="DinoLevels_Recalculate"/>
+                                                            <Label Content="{Binding LevelIndex, Converter={StaticResource DinoLevelIndexToDisplayLevelConverter}}" MinWidth="50" Width="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="{DynamicResource ServerSettings_ProgressionXPRequiredColumnLabel}" Width="Auto">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBox Text="{Binding XPRequired}" MinWidth="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" LostFocus="DinoLevels_Recalculate"/>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>

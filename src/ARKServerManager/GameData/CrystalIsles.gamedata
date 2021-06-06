@@ -2,22 +2,12 @@
   "Application": "ark",
   "Version": "1.0.0",
   "Created": "2020-06-11T00:00:00.0000000Z",
-  "Creatures": [
-  ],
-  "Engrams": [
-  ], 
-  "Items": [
-  ],
-  "MapSpawners": [
-  ],
-  "SupplyCrates": [
-  ],
-  "GameMaps": [
-	{
-      "IsSotF": false,
-      "ClassName": "CrystalIsles",
-      "Description": "Crystal Isles",
-      "Mod": "CrystalIsles"
-	}
+    "GameMaps": [
+	  {
+        "IsSotF": false,
+        "ClassName": "CrystalIsles",
+        "Description": "Crystal Isles",
+        "Mod": "CrystalIsles"
+	  }
   ]
 }
