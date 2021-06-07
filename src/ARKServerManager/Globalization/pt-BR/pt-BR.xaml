@@ -1310,6 +1310,17 @@
     <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Especifica o multiplicador pelo dano causado pelas criaturas, depois que elas são liberadas de um criópode. Valores mais baixos significam que a vazão realizada será menor (por exemplo, 0,01 significa que 99% do dano é removido).</sys:String>
 	<sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Porcentagem do multiplicador de danos recebidos</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Especifica o aumento percentual no multiplicador de dano recebido de uma criatura, depois que ela é liberada de um criópode. Valores mais altos significam mais dano recebido à criatura (por exemplo, 0.25 = 25% a mais de dano).</sys:String>
+	
+	<sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">AVISO: Isso mudará permanentemente as estatísticas de qualquer item existente, portanto, certifique-se de fazer backup de seu salvamento atual antes de modificar e brincar com os valores de fixo.</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_GenericQualityLabel">Qualidade Genérica</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">Armadura</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">Durabilidade</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">Dano</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">Weapon Clip Ammo</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">Hyporthermal</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">Peso</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">Hyperthermal</sys:String>
 	<!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->

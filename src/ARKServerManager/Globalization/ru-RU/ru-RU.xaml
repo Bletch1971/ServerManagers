@@ -1310,6 +1310,17 @@
     <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Определяет множитель урона, нанесенного существам после того, как они были выпущены из криопода. Более низкие значения означают, что нанесенный урон будет ниже (например, 0,01 означает, что 99% ущерба будет удалено).</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Процент множителя входящего урона</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Определяет процентное увеличение множителя входящего урона существа после того, как оно было выпущено из криопода. Более высокие значения означают больше входящего урона, нанесенного существу (например, 0.25 = 25% больше урона).</sys:String>
+
+    <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">ПРЕДУПРЕЖДЕНИЕ: это навсегда изменит статистику любых существующих элементов, поэтому обязательно сделайте резервную копию вашего текущего сохранения, прежде чем изменять и играть с ограничивающими значениями.</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_GenericQualityLabel">Общее качество</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">Броня</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">Прочность</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">Процент урона от оружия</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">Боеприпасы для обоймы</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">Гипотермическая изоляция</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">Вес</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">Гипертермическая изоляция</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
@@ -1544,8 +1555,8 @@
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Множитель на то, как долго после задержки в обнимке с Baby Dino до приручения качество начинает снижаться. Более высокие значения увеличивают льготный период.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Потеря качества приручения:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Множитель того, как быстро качество приручения уменьшается после льготного периода, если вы еще не обнимались с Baby Dino. Более низкие значения замедляют потерю качества приручения</sys:String>
-    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Cuddle Lose Imprint Quality Speed:</sys:String>
-    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">A multiplier on how fast imprinting quality decreases after the grace period if you haven't yet cuddled with the baby. Lower values slow the imprint quality loss.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Скорость качества падения Приручения:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Множитель того, насколько быстро снижается качество Приручения после льготного периода, если вы еще не играли с ребёнком. Более низкие значения замедляют потерю качества Приручения.</sys:String>
     
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Подтвердить сброс</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Нажмите «Да», чтобы подтвердить, что вы хотите сбросить Max XP.</sys:String>
