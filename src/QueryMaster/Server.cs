@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net;
-using System.Diagnostics;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Net;
 using System.Net.Sockets;
 
 
@@ -59,29 +57,28 @@ namespace QueryMaster
         /// Retrieves information about the server 
         /// </summary>
         /// <returns>Instance of ServerInfo class</returns>
-        public virtual ServerInfo GetInfo(byte[] data=null)
+        public virtual ServerInfo GetInfo(byte[] data = null)
         {
-            // If we already have pre-formed request in data var
-            //  we will populate Query with it
-            // also let's declare Query earlier
-            byte[] Query;
+            // If we already have pre-formed request in data parameter, we will populate Query with it.
+            byte[] query;
 
             if (data != null && data.Length > 0)
             {
-                Query = data;
+                query = data;
             }
             else
             {
-                Query = QueryMsg.InfoQuery;
                 if (IsObsolete)
-                    Query = QueryMsg.ObsoleteInfoQuery;
+                    query = QueryMsg.ObsoleteInfoQuery;
+                else
+                    query = QueryMsg.InfoQuery;
             }
 
-            byte[] recvData = new byte[socket.BufferSize];
-            Stopwatch sw = Stopwatch.StartNew();
-            recvData = socket.GetResponse(Query, Type);
+            var sw = Stopwatch.StartNew();
+            var recvData = socket.GetResponse(query, Type);
             sw.Stop();
             Latency = sw.ElapsedMilliseconds;
+
             try
             {
                 // first, let's check if we have a challenge received instead of S2A_INFO_SRC
@@ -94,8 +91,9 @@ namespace QueryMaster
                     // we will get current Query and append recvData to its end. Skipping 0x41 and 
                     // honoring the trailing 0x00 at the Query end
                     
-                    byte[] signedQuery = new byte[Query.Length + (recvData.Length - 1)];
-                    Query.CopyTo(signedQuery, 0);
+                    var signedQuery = new byte[query.Length + (recvData.Length - 1)];
+                    query.CopyTo(signedQuery, 0);
+
                     for (int bId = (recvData.Length - 1); bId > 0; bId--)
                     {
                         signedQuery[signedQuery.Length - bId] = recvData[recvData.Length - bId];
@@ -108,16 +106,14 @@ namespace QueryMaster
 
                 switch (recvData[0])
                 {
-                    case 0x49: return Current(recvData);
-                    case 0x6D: return Obsolete(recvData);
-                    default: throw new InvalidHeaderException("packet header is not valid");
+                    case 0x49: 
+                        return Current(recvData);
+                    case 0x6D: 
+                        return Obsolete(recvData);
+                    default: 
+                        throw new InvalidHeaderException("packet header is not valid");
                 }
             }
-
-            // this patch must not have any impact in cases S2C_CHALLENGE never arrives
-            // hope, it will help those who are experiencing "stuck at initializing/waiting for publication"
-            // problem. ~FH
-
             catch (Exception e)
             {
                 e.Data.Add("ReceivedData", recvData);
