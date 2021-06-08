@@ -59,11 +59,23 @@ namespace QueryMaster
         /// Retrieves information about the server 
         /// </summary>
         /// <returns>Instance of ServerInfo class</returns>
-        public virtual ServerInfo GetInfo()
+        public virtual ServerInfo GetInfo(byte[] data=null)
         {
-            byte[] Query = QueryMsg.InfoQuery;
-            if (IsObsolete)
-                Query = QueryMsg.ObsoleteInfoQuery;
+            // If we already have pre-formed request in data var
+            //  we will populate Query with it
+            // also let's declare Query earlier
+            byte[] Query;
+
+            if (data != null && data.Length > 0)
+            {
+                Query = data;
+            }
+            else
+            {
+                Query = QueryMsg.InfoQuery;
+                if (IsObsolete)
+                    Query = QueryMsg.ObsoleteInfoQuery;
+            }
 
             byte[] recvData = new byte[socket.BufferSize];
             Stopwatch sw = Stopwatch.StartNew();
@@ -72,6 +84,28 @@ namespace QueryMaster
             Latency = sw.ElapsedMilliseconds;
             try
             {
+                // first, let's check if we have a challenge received instead of S2A_INFO_SRC
+                // according to https://steamcommunity.com/discussions/forum/14/2974028351344359625/
+                // server can reply with S2C_CHALLENGE in form of 0x41(4 byte) if it suspects client
+                // in IP spoofing
+
+                if (recvData[0] == 0x41)
+                {
+                    // we will get current Query and append recvData to its end. Skipping 0x41 and 
+                    // honoring the trailing 0x00 at the Query end
+                    
+                    byte[] signedQuery = new byte[Query.Length + (recvData.Length - 1)];
+                    Query.CopyTo(signedQuery, 0);
+                    for (int bId = (recvData.Length - 1); bId > 0; bId--)
+                    {
+                        signedQuery[signedQuery.Length - bId] = recvData[recvData.Length - bId];
+                    }
+
+                    // finally, we are calling GetInfo() recursively with our new signed query
+                    // to get pass the S2C_CHALLENGE
+                    return GetInfo(signedQuery);
+                }
+
                 switch (recvData[0])
                 {
                     case 0x49: return Current(recvData);
@@ -79,6 +113,11 @@ namespace QueryMaster
                     default: throw new InvalidHeaderException("packet header is not valid");
                 }
             }
+
+            // this patch must not have any impact in cases S2C_CHALLENGE never arrives
+            // hope, it will help those who are experiencing "stuck at initializing/waiting for publication"
+            // problem. ~FH
+
             catch (Exception e)
             {
                 e.Data.Add("ReceivedData", recvData);
