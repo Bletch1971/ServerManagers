@@ -55,6 +55,14 @@ namespace ServerManagerTool.Lib
             this.ClearNullableValue(MOTDIntervalProperty);
             this.ClearNullableValue(MaxTributeDinosProperty);
             this.ClearNullableValue(MaxTributeItemsProperty);
+            this.ClearNullableValue(ItemStatClamps_GenericQualityProperty);
+            this.ClearNullableValue(ItemStatClamps_ArmorProperty);
+            this.ClearNullableValue(ItemStatClamps_MaxDurabilityProperty);
+            this.ClearNullableValue(ItemStatClamps_WeaponDamagePercentProperty);
+            this.ClearNullableValue(ItemStatClamps_WeaponClipAmmoProperty);
+            this.ClearNullableValue(ItemStatClamps_HypothermalInsulationProperty);
+            this.ClearNullableValue(ItemStatClamps_WeightProperty);
+            this.ClearNullableValue(ItemStatClamps_HyperthermalInsulationProperty);
             this.ClearNullableValue(OverrideMaxExperiencePointsPlayerProperty);
             this.ClearNullableValue(OverrideMaxExperiencePointsDinoProperty);
 

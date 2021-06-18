@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">06.06.2021 от Varlonec</sys:String>    
+    <sys:String x:Key="Generic_TranslatedBy">13.06.2021 от Varlonec</sys:String>    
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -1548,12 +1548,12 @@
 
     <sys:String x:Key="ServerSettings_DinoImprintLabel">Привязка Дино</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierLabel">Качество привязки Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">Влияет на качество привязки. Установите значение 0, чтобы отключить систему.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Интервал между играми с Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Множитель того, как часто младенцы хотят обниматься. Более низкие значения означают, что вам нужно чаще обниматься с ними.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Период спада качества приручения Baby Dino:</sys:String>
-    <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Множитель на то, как долго после задержки в обнимке с Baby Dino до приручения качество начинает снижаться. Более высокие значения увеличивают льготный период.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Потеря качества приручения:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">Насколько сильно влияет на статистику качество привязки. Установите значение 0, чтобы отключить систему.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Качество игры с Дино</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Множитель применяется к проценту, предоставляемому каждым отпечатком. Например, если отпечаток обычно дает 10%, установка этого множителя на 0,5 означает, что теперь они будут давать по 5% каждый. В то время как установка его на 2,0 означает, что теперь они будут давать по 20% каждый и т.д.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Интервал между играми с дино</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Как часто дети хотят обниматься. Более низкие значения означают, что вам нужно будет чаще обниматься с ними.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Потеря качества приручения</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Множитель того, как быстро качество приручения уменьшается после льготного периода, если вы еще не обнимались с Baby Dino. Более низкие значения замедляют потерю качества приручения</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Скорость качества падения Приручения:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Множитель того, насколько быстро снижается качество Приручения после льготного периода, если вы еще не играли с ребёнком. Более низкие значения замедляют потерю качества Приручения.</sys:String>
