@@ -1571,38 +1571,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(LimitNonPlayerDroppedItemsCountProperty, value); }
         }
 
-        public static readonly DependencyProperty AllowTekSuitPowersInGenesisProperty = DependencyProperty.Register(nameof(AllowTekSuitPowersInGenesis), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
-        public bool AllowTekSuitPowersInGenesis
-        {
-            get { return (bool)GetValue(AllowTekSuitPowersInGenesisProperty); }
-            set { SetValue(AllowTekSuitPowersInGenesisProperty, value); }
-        }
-
-        public static readonly DependencyProperty DisableGenesisMissionsProperty = DependencyProperty.Register(nameof(DisableGenesisMissions), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableGenesisMissions")]
-        public bool DisableGenesisMissions
-        {
-            get { return (bool)GetValue(DisableGenesisMissionsProperty); }
-            set { SetValue(DisableGenesisMissionsProperty, value); }
-        }
-
-        public static readonly DependencyProperty DisableDefaultMapItemSetsProperty = DependencyProperty.Register(nameof(DisableDefaultMapItemSets), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableDefaultMapItemSets")]
-        public bool DisableDefaultMapItemSets
-        {
-            get { return (bool)GetValue(DisableDefaultMapItemSetsProperty); }
-            set { SetValue(DisableDefaultMapItemSetsProperty, value); }
-        }
-
-        public static readonly DependencyProperty EnableCryoSicknessPVEProperty = DependencyProperty.Register(nameof(EnableCryoSicknessPVE), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
-        public bool EnableCryoSicknessPVE
-        {
-            get { return (bool)GetValue(EnableCryoSicknessPVEProperty); }
-            set { SetValue(EnableCryoSicknessPVEProperty, value); }
-        }
-
         public static readonly DependencyProperty EnableCryopodNerfProperty = DependencyProperty.Register(nameof(EnableCryopodNerf), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, ConditionedOn = nameof(EnableCryopodNerf))]
         public bool EnableCryopodNerf
@@ -1633,6 +1601,62 @@ namespace ServerManagerTool.Lib
         {
             get { return (float)GetValue(CryopodNerfIncomingDamageMultiplierPercentProperty); }
             set { SetValue(CryopodNerfIncomingDamageMultiplierPercentProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisableGenesisMissionsProperty = DependencyProperty.Register(nameof(DisableGenesisMissions), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableGenesisMissions")]
+        public bool DisableGenesisMissions
+        {
+            get { return (bool)GetValue(DisableGenesisMissionsProperty); }
+            set { SetValue(DisableGenesisMissionsProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowTekSuitPowersInGenesisProperty = DependencyProperty.Register(nameof(AllowTekSuitPowersInGenesis), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
+        public bool AllowTekSuitPowersInGenesis
+        {
+            get { return (bool)GetValue(AllowTekSuitPowersInGenesisProperty); }
+            set { SetValue(AllowTekSuitPowersInGenesisProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisableDefaultMapItemSetsProperty = DependencyProperty.Register(nameof(DisableDefaultMapItemSets), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableDefaultMapItemSets")]
+        public bool DisableDefaultMapItemSets
+        {
+            get { return (bool)GetValue(DisableDefaultMapItemSetsProperty); }
+            set { SetValue(DisableDefaultMapItemSetsProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisableWorldBuffsProperty = DependencyProperty.Register(nameof(DisableWorldBuffs), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableWorldBuffs")]
+        public bool DisableWorldBuffs
+        {
+            get { return (bool)GetValue(DisableWorldBuffsProperty); }
+            set { SetValue(DisableWorldBuffsProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableWorldBuffScalingProperty = DependencyProperty.Register(nameof(EnableWorldBuffScaling), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bEnableWorldBuffScaling")]
+        public bool EnableWorldBuffScaling
+        {
+            get { return (bool)GetValue(EnableWorldBuffScalingProperty); }
+            set { SetValue(EnableWorldBuffScalingProperty, value); }
+        }
+
+        public static readonly DependencyProperty WorldBuffScalingEfficacyProperty = DependencyProperty.Register(nameof(WorldBuffScalingEfficacy), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, ConditionedOn = nameof(EnableWorldBuffScaling))]
+        public float WorldBuffScalingEfficacy
+        {
+            get { return (float)GetValue(WorldBuffScalingEfficacyProperty); }
+            set { SetValue(WorldBuffScalingEfficacyProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableCryoSicknessPVEProperty = DependencyProperty.Register(nameof(EnableCryoSicknessPVE), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
+        public bool EnableCryoSicknessPVE
+        {
+            get { return (bool)GetValue(EnableCryoSicknessPVEProperty); }
+            set { SetValue(EnableCryoSicknessPVEProperty, value); }
         }
 
         public static readonly DependencyProperty MaxHexagonsPerCharacterProperty = DependencyProperty.Register(nameof(MaxHexagonsPerCharacter), typeof(int), typeof(ServerProfile), new PropertyMetadata(2500000));
@@ -5391,15 +5415,18 @@ namespace ServerManagerTool.Lib
             this.ClearValue(LimitNonPlayerDroppedItemsRangeProperty);
             this.ClearValue(LimitNonPlayerDroppedItemsCountProperty);
 
-            this.ClearValue(AllowTekSuitPowersInGenesisProperty);
-            this.ClearValue(DisableGenesisMissionsProperty);
-            this.ClearValue(DisableDefaultMapItemSetsProperty);
-
             this.ClearValue(EnableCryoSicknessPVEProperty);
             this.ClearValue(EnableCryopodNerfProperty);
             this.ClearValue(CryopodNerfDurationProperty);
             this.ClearValue(CryopodNerfDamageMultiplierProperty);
             this.ClearValue(CryopodNerfIncomingDamageMultiplierPercentProperty);
+
+            this.ClearValue(AllowTekSuitPowersInGenesisProperty);
+            this.ClearValue(DisableGenesisMissionsProperty);
+            this.ClearValue(DisableDefaultMapItemSetsProperty);
+            this.ClearValue(DisableWorldBuffsProperty);
+            this.ClearValue(EnableWorldBuffScalingProperty);
+            this.ClearValue(WorldBuffScalingEfficacyProperty);
 
             this.ClearValue(MaxHexagonsPerCharacterProperty);
             this.ClearValue(DisableHexagonStoreProperty);
@@ -6057,14 +6084,18 @@ namespace ServerManagerTool.Lib
             this.SetValue(LimitNonPlayerDroppedItemsRangeProperty, sourceProfile.LimitNonPlayerDroppedItemsRange);
             this.SetValue(LimitNonPlayerDroppedItemsCountProperty, sourceProfile.LimitNonPlayerDroppedItemsCount);
 
-            this.SetValue(AllowTekSuitPowersInGenesisProperty, sourceProfile.AllowTekSuitPowersInGenesis);
-            this.SetValue(DisableGenesisMissionsProperty, sourceProfile.DisableGenesisMissions);
-
             this.SetValue(EnableCryoSicknessPVEProperty, sourceProfile.EnableCryoSicknessPVE);
             this.SetValue(EnableCryopodNerfProperty, sourceProfile.EnableCryopodNerf);
             this.SetValue(CryopodNerfDurationProperty, sourceProfile.CryopodNerfDuration);
             this.SetValue(CryopodNerfDamageMultiplierProperty, sourceProfile.CryopodNerfDamageMultiplier);
             this.SetValue(CryopodNerfIncomingDamageMultiplierPercentProperty, sourceProfile.CryopodNerfIncomingDamageMultiplierPercent);
+
+            this.SetValue(AllowTekSuitPowersInGenesisProperty, sourceProfile.AllowTekSuitPowersInGenesis);
+            this.SetValue(DisableGenesisMissionsProperty, sourceProfile.DisableGenesisMissions);
+            this.SetValue(DisableDefaultMapItemSetsProperty, sourceProfile.DisableDefaultMapItemSets);
+            this.SetValue(DisableWorldBuffsProperty, sourceProfile.DisableWorldBuffs);
+            this.SetValue(EnableWorldBuffScalingProperty, sourceProfile.EnableWorldBuffScaling);
+            this.SetValue(WorldBuffScalingEfficacyProperty, sourceProfile.WorldBuffScalingEfficacy);
 
             this.SetValue(MaxHexagonsPerCharacterProperty, sourceProfile.MaxHexagonsPerCharacter);
             this.SetValue(DisableHexagonStoreProperty, sourceProfile.DisableHexagonStore);

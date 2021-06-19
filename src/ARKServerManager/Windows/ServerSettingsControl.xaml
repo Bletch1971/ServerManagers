@@ -2324,6 +2324,8 @@
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -2332,6 +2334,10 @@
                                             </Grid.ColumnDefinitions>
 
                                             <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding DisableDefaultMapItemSets}" Content="{DynamicResource ServerSettings_DisableDefaultMapItemSetsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableDefaultMapItemSetsTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" IsChecked="{Binding DisableWorldBuffs}" Content="{DynamicResource ServerSettings_DisableWorldBuffsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableWorldBuffsTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="2" Margin="5,5,5,0" IsChecked="{Binding EnableWorldBuffScaling}" Content="{DynamicResource ServerSettings_EnableWorldBuffScalingLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnableWorldBuffScalingTooltip}"/>
+
+                                            <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding EnableWorldBuffScaling}" Label="{DynamicResource ServerSettings_WorldBuffScalingEfficacyLabel}" Value="{Binding WorldBuffScalingEfficacy}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="5000" SmallChange="1" LargeChange="10" TickFrequency="50" ToolTip="{DynamicResource ServerSettings_WorldBuffScalingEfficacyTooltip}"/>
                                         </Grid>
                                     </GroupBox>
 
