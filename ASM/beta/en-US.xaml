@@ -1282,6 +1282,15 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limit the number of droppeditems in an area (together with LimitNonPlayerDroppedItemsRange).</sys:String>
 
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duration</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">The amount of time, in seconds, that the damage adjustment will take effect for creatures released from a cryopod.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Outgoing Damage Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the damage done by the creature will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Incoming Damage Multiplier Percent</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Specifies the percentage increase to the incoming damage multiplier of a creature, after they have been released from a cryopod. Higher values means more incoming damage done to the creature (eg. 0.25 = 25% more damage).</sys:String>
+
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Allow TEK Suit Powers</sys:String>
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">If enabled, will allow the player to use TEK Suit Powers on the Genesis map.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Disable Missions</sys:String>
@@ -1289,6 +1298,13 @@
 
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Disable TEK Suit on Spawn</sys:String>
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">If enabled, will prevent the player spawning with the TEK Suit.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">Disable World Buffs</sys:String>
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsTooltip">If enabled, will disable world effects from Missions altogether.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingLabel">Enable World Buff Scaling</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">If enabled, will cause world buffs to scale their benefits multiplicatively, rather than add/subtract a flat amount to the value at runtime.</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">World Buff Scaling Efficacy</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Specifies the global scalar to reduce/increase the effectiveness of world buffs (e.g. 1 is default, 0.5 would be 50% less effective, 2.0 would be 2x more effective).</sys:String>
 
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
@@ -1301,15 +1317,6 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Specifies the multiplier for the hexagons rewards.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
-
-    <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Enable Cryopod Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">If enabled, will adjust the amount of damage a creature does, for a period of time, after it has been released from a cryopod.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duration</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">The amount of time, in seconds, that the damage adjustment will take effect for creatures released from a cryopod.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Outgoing Damage Multiplier</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Specifies the multiplier for damage done by creatures, after they have been released from a cryopod. Lower values means the damage done by the creature will be lower (eg. 0.01 means 99% of the damage is removed).</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Incoming Damage Multiplier Percent</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Specifies the percentage increase to the incoming damage multiplier of a creature, after they have been released from a cryopod. Higher values means more incoming damage done to the creature (eg. 0.25 = 25% more damage).</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">WARNING: This will permanently change the stats of any existing items so make sure to backup your current save before modifying and playing with the clamping values.</sys:String>
