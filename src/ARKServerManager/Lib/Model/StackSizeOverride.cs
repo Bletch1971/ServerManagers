@@ -131,6 +131,11 @@ namespace ServerManagerTool.Lib
         public string DisplayName => GameData.FriendlyItemNameForClass(ItemClassString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(ItemClassString);
+
+        public override bool ShouldSave()
+        {
+            return IsValid;
+        }
     }
 
     [DataContract]

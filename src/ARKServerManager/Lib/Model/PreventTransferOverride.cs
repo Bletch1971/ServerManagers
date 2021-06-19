@@ -18,7 +18,6 @@ namespace ServerManagerTool.Lib
         {
             List<string> errors = new List<string>();
 
-
             return errors.ToArray();
         }
 
@@ -72,5 +71,10 @@ namespace ServerManagerTool.Lib
         public string DisplayName => GameData.FriendlyItemNameForClass(DinoClassString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(DinoClassString);
+
+        public override bool ShouldSave()
+        {
+            return IsValid;
+        }
     }
 }
