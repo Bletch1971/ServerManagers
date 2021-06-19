@@ -5,7 +5,31 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-06-07T00:00:00Z</updated>
+  <updated>2021-06-19T03:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:0A751BBA-54B5-40A6-AB09-C6B2539DAFE7</id>
+    <title>1.1.399 (1.1.399.3)</title>
+    <summary>1.1.399.3</summary>
+    <link href="" />
+    <updated>2021-06-19T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Rules Section - Added new Genesis: Part 2 settings, bDisableWorldBuffs, bEnableWorldBuffScaling and WorldBuffScalingEfficacy.</li>
+            <li>Server Settings - Prevent Transfer Section - Added new section to handle the PreventTransferForClassNames settings. This section can be enabled/disables from the global settings, if you want to management these manually.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:F5253662-0C33-436C-8AC8-9EC459CFB620</id>
@@ -1058,7 +1082,7 @@
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Settings - Dino Section - added missing server setting Mating Speed Multiplier. This has been added to the Dino Breeding Multipliers group near the bottom of the section. (thanks @Norlinri)</li>
+            <li>Server Settings - Dino Section - added missing server setting Mating Speed Multiplier. This has been added to the Dino Breeding Multipliers group near the bottom of the section. (thanks @Norlini)</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
