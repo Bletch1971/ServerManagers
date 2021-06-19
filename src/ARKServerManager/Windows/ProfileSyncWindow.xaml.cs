@@ -237,6 +237,8 @@ namespace ServerManagerTool
                 SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.SupplyCrateOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_SupplyCrateOverridesLabel") });
             if (Config.Default.SectionStackSizeOverridesEnabled)
                 SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.StackSizeOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_StackSizeOverridesLabel") });
+            if (Config.Default.SectionPreventTransferOverridesEnabled)
+                SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.PreventTransferOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_PreventTransferOverridesLabel") });
             if (Config.Default.SectionPGMEnabled)
                 SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.PGM, SectionName = _globalizer.GetResourceString("ServerSettings_PGMLabel") });
             if (Config.Default.SectionSOTFEnabled)

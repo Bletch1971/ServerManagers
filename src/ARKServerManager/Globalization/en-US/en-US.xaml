@@ -445,6 +445,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">If enabled, the map spawner overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Enable Supply Crate Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">If enabled, the supply crate overrides will be managed by the server manager.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Enable Prevent Transfer Overrides</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">If enabled, the prevent transfer overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Enable PGM Ark Settings</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">If enabled, the PGM settings will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Enable SotF Settings</sys:String>
@@ -2269,6 +2271,23 @@
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Checking Scheduled Tasks...</sys:String>
     <!--#endregion-->
 
+    <!--#endregion-->
+    
+    <!--#region Server Settings - Prevent Transfer Overrides -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Prevent Transfer Overrides</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Prevent Transfers</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Prevent Transfer Override Settings</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">WARNING: Adding dinos to this list will prevent them from being transferred to and from the server.</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Dino</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Dino Class String</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Add prevent transfer item</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">Delete all prevent transfer items</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">Paste prevent transfer items data</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">Delete prevent transfer item</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">Save prevent transfer items data</sys:String>
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
@@ -5451,6 +5470,7 @@
     <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Constructing Map Spawner Information...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Constructing Supply Crate Information...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Constructing Stack Size Information...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingPreventTransferInformation">Constructing Prevent Transfer Information...</sys:String>
     <sys:String x:Key="ProfileSave_SavingProfileFile">Saving Profile File...</sys:String>
     <sys:String x:Key="ProfileSave_SavingConfigFiles">Saving Config Files...</sys:String>
     <sys:String x:Key="ProfileSave_SavingLauncherFile">Saving Launcher File...</sys:String>

@@ -22,6 +22,7 @@
         CraftingOverrides,
         SupplyCrateOverrides,
         StackSizeOverrides,
+        PreventTransferOverrides,
         PGM,
         SOTF,
     }

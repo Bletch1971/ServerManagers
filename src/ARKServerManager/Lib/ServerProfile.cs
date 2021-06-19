@@ -94,6 +94,7 @@ namespace ServerManagerTool.Lib
             this.ConfigOverrideItemCraftingCosts = new AggregateIniValueList<CraftingOverride>(nameof(ConfigOverrideItemCraftingCosts), null);
             this.ConfigOverrideItemMaxQuantity = new StackSizeOverrideList(nameof(ConfigOverrideItemMaxQuantity));
             this.ConfigOverrideSupplyCrateItems = new SupplyCrateOverrideList(nameof(ConfigOverrideSupplyCrateItems));
+            this.PreventTransferForClassNames = new PreventTransferOverrideList(nameof(PreventTransferForClassNames));
 
             this.ConfigAddNPCSpawnEntriesContainer = new NPCSpawnContainerList<NPCSpawnContainer>(nameof(ConfigAddNPCSpawnEntriesContainer), NPCSpawnContainerType.Add);
             this.ConfigSubtractNPCSpawnEntriesContainer = new NPCSpawnContainerList<NPCSpawnContainer>(nameof(ConfigSubtractNPCSpawnEntriesContainer), NPCSpawnContainerType.Subtract);
@@ -3202,6 +3203,16 @@ namespace ServerManagerTool.Lib
         }
         #endregion
 
+        #region Prevent Transfer Overrides 
+        public static readonly DependencyProperty PreventTransferForClassNamesProperty = DependencyProperty.Register(nameof(PreventTransferForClassNames), typeof(PreventTransferOverrideList), typeof(ServerProfile), new PropertyMetadata(null));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.PreventTransferOverrides)]
+        public PreventTransferOverrideList PreventTransferForClassNames
+        {
+            get { return (PreventTransferOverrideList)GetValue(PreventTransferForClassNamesProperty); }
+            set { SetValue(PreventTransferForClassNamesProperty, value); }
+        }
+        #endregion
+
         #region Survival of the Fittest
         public static readonly DependencyProperty SOTF_EnabledProperty = DependencyProperty.Register(nameof(SOTF_Enabled), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [DataMember]
@@ -3518,6 +3529,11 @@ namespace ServerManagerTool.Lib
             if (!Config.Default.SectionStackSizeOverridesEnabled)
             {
                 exclusions.Add(ServerProfileCategory.StackSizeOverrides);
+            }
+
+            if (!Config.Default.SectionPreventTransferOverridesEnabled)
+            {
+                exclusions.Add(ServerProfileCategory.PreventTransferOverrides);
             }
 
             if (!Config.Default.SectionPGMEnabled)
@@ -3909,6 +3925,8 @@ namespace ServerManagerTool.Lib
                 profile.ConfigOverrideSupplyCrateItems.RenderToView();
             if (Config.Default.SectionStackSizeOverridesEnabled)
                 profile.ConfigOverrideItemMaxQuantity.RenderToView();
+            if (Config.Default.SectionPreventTransferOverridesEnabled)
+                profile.PreventTransferForClassNames.RenderToView();
 
             return profile;
         }
@@ -4024,6 +4042,8 @@ namespace ServerManagerTool.Lib
                 profile.ConfigOverrideSupplyCrateItems.RenderToView();
             if (Config.Default.SectionStackSizeOverridesEnabled)
                 profile.ConfigOverrideItemMaxQuantity.RenderToView();
+            if (Config.Default.SectionPreventTransferOverridesEnabled)
+                profile.PreventTransferForClassNames.RenderToView();
 
             profile.LoadServerFileAdministrators();
             profile.LoadServerFileExclusive();
@@ -4128,6 +4148,12 @@ namespace ServerManagerTool.Lib
             {
                 progressCallback?.Invoke(0, _globalizer.GetResourceString("ProfileSave_ConstructingStackSizeInformation"));
                 this.ConfigOverrideItemMaxQuantity.RenderToModel();
+            }
+
+            if (Config.Default.SectionPreventTransferOverridesEnabled)
+            {
+                progressCallback?.Invoke(0, _globalizer.GetResourceString("ProfileSave_ConstructingPreventTransferInformation"));
+                this.PreventTransferForClassNames.RenderToModel();
             }
 
             if (!Config.Default.SectionPGMEnabled)
@@ -5327,6 +5353,12 @@ namespace ServerManagerTool.Lib
             this.PerLevelStatsMultiplier_Player = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_Player), GameData.GetPerLevelStatsMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerPerLevel(), true);
         }
 
+        public void ResetPreventTransferOverridesSection()
+        {
+            this.PreventTransferForClassNames = new PreventTransferOverrideList(nameof(PreventTransferForClassNames));
+            this.PreventTransferForClassNames.Reset();
+        }
+
         public void ResetRulesSection()
         {
             this.ClearValue(EnableHardcoreProperty);
@@ -5612,6 +5644,9 @@ namespace ServerManagerTool.Lib
                     break;
                 case ServerProfileCategory.StackSizeOverrides:
                     SyncStackSizeOverridesSection(sourceProfile);
+                    break;
+                case ServerProfileCategory.PreventTransferOverrides:
+                    SyncPreventTransferOverridesSection(sourceProfile);
                     break;
                 case ServerProfileCategory.PGM:
                     SyncPGMSection(sourceProfile);
@@ -5994,6 +6029,16 @@ namespace ServerManagerTool.Lib
             this.PerLevelStatsMultiplier_Player.Clear();
             this.PerLevelStatsMultiplier_Player.FromIniValues(sourceProfile.PerLevelStatsMultiplier_Player.ToIniValues());
             this.PerLevelStatsMultiplier_Player.IsEnabled = sourceProfile.PerLevelStatsMultiplier_Player.IsEnabled;
+        }
+
+        private void SyncPreventTransferOverridesSection(ServerProfile sourceProfile)
+        {
+            sourceProfile.PreventTransferForClassNames.RenderToModel();
+
+            this.PreventTransferForClassNames.Clear();
+            this.PreventTransferForClassNames.FromIniValues(sourceProfile.PreventTransferForClassNames.ToIniValues());
+            this.PreventTransferForClassNames.IsEnabled = this.PreventTransferForClassNames.Count > 0;
+            this.PreventTransferForClassNames.RenderToView();
         }
 
         private void SyncRulesSection(ServerProfile sourceProfile)

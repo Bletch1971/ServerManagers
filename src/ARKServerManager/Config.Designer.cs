@@ -2539,5 +2539,29 @@ namespace ServerManagerTool {
                 return ((string)(this["VersionFile"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SectionPreventTransferOverridesIsExpanded {
+            get {
+                return ((bool)(this["SectionPreventTransferOverridesIsExpanded"]));
+            }
+            set {
+                this["SectionPreventTransferOverridesIsExpanded"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SectionPreventTransferOverridesEnabled {
+            get {
+                return ((bool)(this["SectionPreventTransferOverridesEnabled"]));
+            }
+            set {
+                this["SectionPreventTransferOverridesEnabled"] = value;
+            }
+        }
     }
 }

@@ -2849,7 +2849,7 @@
                                                         </DataGridTemplateColumn.CellStyle>
                                                         <DataGridTemplateColumn.CellTemplate>
                                                             <DataTemplate>
-                                                                <ComboBox IsEditable="True" ItemsSource="{Binding BaseDinoSettingsDinoList, ElementName=SettingsControl}" SelectedValue="{Binding ReplacementClass, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                                <ComboBox IsEditable="True" ItemsSource="{Binding BaseDinoList, ElementName=SettingsControl}" SelectedValue="{Binding ReplacementClass, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                             </DataTemplate>
                                                         </DataGridTemplateColumn.CellTemplate>
                                                     </DataGridTemplateColumn>
@@ -5322,7 +5322,7 @@
                                                 </DataGridTemplateColumn.Header>
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BaseMapSpawnerDinoList, ElementName=SettingsControl}" SelectedValue="{Binding NPCClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BaseDinoList, ElementName=SettingsControl}" SelectedValue="{Binding NPCClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
@@ -5390,8 +5390,7 @@
                                     <RowDefinition Height="200"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <!--<ColumnDefinition Width="3*"/>-->
+                                    <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
 
                                 <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Text="{DynamicResource ServerSettings_SupplyCrate_DisableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkCyan"/>
@@ -5778,6 +5777,119 @@
                                                     <DataTemplate>
                                                         <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemoveSupplyCrateItem_Click" ToolTip="{DynamicResource ServerSettings_SupplyCrate_RemoveItemTooltip}">
                                                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </GroupBox>
+                            </Grid>
+                        </Expander>
+
+                        <Expander Name="SectionPreventTransferOverrides" IsExpanded="{Binding CurrentConfig.SectionPreventTransferOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionPreventTransferOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Expander.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{DynamicResource ServerSettings_PreventTransferOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
+                                    <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
+                                            IsEnabled="{Binding ElementName=SectionPreventTransferOverrides, Path=IsExpanded}"
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.PreventTransferOverridesSection}">
+                                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
+                                    </Button>
+                                </StackPanel>
+                            </Expander.Header>
+
+                            <Expander.Style>
+                                <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplateSotF}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=EnablePGMCheckbox, Path=IsChecked}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplatePGM}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Expander.Style>
+
+                            <Grid Margin="-8,0,2,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Text="{DynamicResource ServerSettings_PreventTransferOverrides_DisableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkCyan"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Text="{DynamicResource ServerSettings_PreventTransferOverrides_WarningLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+
+                                <GroupBox  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                    <GroupBox.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="{DynamicResource ServerSettings_PreventTransferOverrides_ItemsLabel}"/>
+                                            <Button Width="22" Height="22" Click="AddPreventTransferOverride_Click" Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_AddItemTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Add.ico,Size=32}"/>
+                                            </Button>
+                                            <Button Width="22" Height="22" Click="PastePreventTransferOverride_Click" Margin="5,0,0,0" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_PasteItemsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Paste.ico,Size=32}"/>
+                                            </Button>
+                                            <Button Width="22" Height="22" Click="ClearPreventTransferOverrides_Click" Margin="10,0,0,0" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_ClearItemsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                                            </Button>
+                                            <Button Width="22" Height="22" Click="SavePreventTransferOverride_Click" Margin="10,0,0,0" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_SaveItemsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Save.ico,Size=32}"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </GroupBox.Header>
+
+                                    <DataGrid Name="PreventTransferOverrideGrid" ItemsSource="{Binding PreventTransferForClassNames}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                        <DataGrid.Resources>
+                                            <Style TargetType="{x:Type DataGridRow}">
+                                                <Style.Resources>
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                                                </Style.Resources>
+                                            </Style>
+                                        </DataGrid.Resources>
+
+                                        <DataGrid.HorizontalGridLinesBrush>
+                                            <SolidColorBrush Color="#FFB4B4B4"/>
+                                        </DataGrid.HorizontalGridLinesBrush>
+                                        <DataGrid.VerticalGridLinesBrush>
+                                            <SolidColorBrush Color="#FFB4B4B4"/>
+                                        </DataGrid.VerticalGridLinesBrush>
+
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Width="2*" CanUserSort="True" SortMemberPath="DisplayName">
+                                                <DataGridTemplateColumn.Header>
+                                                    <TextBlock Text="{DynamicResource ServerSettings_PreventTransferOverrides_DinoClassColumnLabel}" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip}" />
+                                                </DataGridTemplateColumn.Header>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BaseDinoList, ElementName=SettingsControl}" SelectedValue="{Binding DinoClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+
+                                            <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemovePreventTransferOverrideItem_Click" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_RemoveItemTooltip}">
+                                                            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+
+                                            <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SavePreventTransferOverrideItem_Click" ToolTip="{DynamicResource ServerSettings_PreventTransferOverrides_SaveItemsTooltip}">
+                                                            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Save.ico,Size=32}"/>
                                                         </Button>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>

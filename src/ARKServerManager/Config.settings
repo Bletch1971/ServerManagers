@@ -710,5 +710,11 @@
     <Setting Name="VersionFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">version.txt</Value>
     </Setting>
+    <Setting Name="SectionPreventTransferOverridesIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SectionPreventTransferOverridesEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

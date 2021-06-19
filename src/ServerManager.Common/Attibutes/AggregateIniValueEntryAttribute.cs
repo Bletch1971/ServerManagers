@@ -35,13 +35,23 @@ namespace ServerManagerTool.Common.Attibutes
         public int BracketsAroundValueDelimiter = 1;
 
         /// <summary>
-        /// If true, then the property with not be written if empty. This does not work for collections, only value types.
+        /// If true, then the property will not be written if empty. This does not work for collections, only value types.
         /// </summary>
         public bool ExcludeIfEmpty;
 
         /// <summary>
-        /// If true, then the property with not be written if false. This does not work for collections, only BOOLEAN types.
+        /// If true, then the property will not be written if false. This does not work for collections, only BOOLEAN types.
         /// </summary>
         public bool ExcludeIfFalse = false;
+
+        /// <summary>
+        /// If true, the value will always be written with quotes; otherwise without quotes.
+        /// </summary>
+        public bool QuotedString = true;
+
+        /// <summary>
+        /// If true, then the property name will not be written. This does not work for collections, only value types.
+        /// </summary>
+        public bool ExcludePropertyName = false;
     }
 }

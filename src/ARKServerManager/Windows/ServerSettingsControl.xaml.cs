@@ -6,7 +6,6 @@ using ServerManagerTool.Common.Serialization;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
-using ServerManagerTool.Lib.Model;
 using ServerManagerTool.Lib.ViewModel;
 using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;
@@ -24,7 +23,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using WPFSharp.Globalizer;
 
@@ -59,6 +57,7 @@ namespace ServerManagerTool
         CraftingOverridesSection,
         SupplyCrateOverridesSection,
         StackSizeOverridesSection,
+        PreventTransferOverridesSection,
 
         // Properties
         MapNameTotalConversionProperty,
@@ -90,9 +89,8 @@ namespace ServerManagerTool
         public static readonly DependencyProperty BaseDinoModListProperty = DependencyProperty.Register(nameof(BaseDinoModList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseEngramModListProperty = DependencyProperty.Register(nameof(BaseEngramModList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseResourceModListProperty = DependencyProperty.Register(nameof(BaseResourceModList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
-        public static readonly DependencyProperty BaseDinoSettingsDinoListProperty = DependencyProperty.Register(nameof(BaseDinoSettingsDinoList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty BaseDinoListProperty = DependencyProperty.Register(nameof(BaseDinoList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseMapSpawnerListProperty = DependencyProperty.Register(nameof(BaseMapSpawnerList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
-        public static readonly DependencyProperty BaseMapSpawnerDinoListProperty = DependencyProperty.Register(nameof(BaseMapSpawnerDinoList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BasePrimalItemListProperty = DependencyProperty.Register(nameof(BasePrimalItemList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseSupplyCrateListProperty = DependencyProperty.Register(nameof(BaseSupplyCrateList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseGameMapsProperty = DependencyProperty.Register(nameof(BaseGameMaps), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
@@ -146,22 +144,16 @@ namespace ServerManagerTool
             set { SetValue(BaseResourceModListProperty, value); }
         }
 
-        public ComboBoxItemList BaseDinoSettingsDinoList
+        public ComboBoxItemList BaseDinoList
         {
-            get { return (ComboBoxItemList)GetValue(BaseDinoSettingsDinoListProperty); }
-            set { SetValue(BaseDinoSettingsDinoListProperty, value); }
+            get { return (ComboBoxItemList)GetValue(BaseDinoListProperty); }
+            set { SetValue(BaseDinoListProperty, value); }
         }
 
         public ComboBoxItemList BaseMapSpawnerList
         {
             get { return (ComboBoxItemList)GetValue(BaseMapSpawnerListProperty); }
             set { SetValue(BaseMapSpawnerListProperty, value); }
-        }
-
-        public ComboBoxItemList BaseMapSpawnerDinoList
-        {
-            get { return (ComboBoxItemList)GetValue(BaseMapSpawnerDinoListProperty); }
-            set { SetValue(BaseMapSpawnerDinoListProperty, value); }
         }
 
         public ComboBoxItemList BasePrimalItemList
@@ -380,9 +372,8 @@ namespace ServerManagerTool
             RefreshBaseResourceModList();
             RefreshCustomLevelProgressionsInformation();
 
-            this.BaseDinoSettingsDinoList = new ComboBoxItemList();
+            this.BaseDinoList = new ComboBoxItemList();
             this.BaseMapSpawnerList = new ComboBoxItemList();
-            this.BaseMapSpawnerDinoList = new ComboBoxItemList();
             this.BasePrimalItemList = new ComboBoxItemList();
             this.BaseSupplyCrateList = new ComboBoxItemList();
             this.BaseGameMaps = new ComboBoxItemList();
@@ -933,6 +924,7 @@ namespace ServerManagerTool
                 comment.AppendLine($"SectionMapSpawnerOverridesEnabled: {Config.Default.SectionMapSpawnerOverridesEnabled}");
                 comment.AppendLine($"SectionSupplyCrateOverridesEnabled: {Config.Default.SectionSupplyCrateOverridesEnabled}");
                 comment.AppendLine($"SectionStackSizeOverridesEnabled: {Config.Default.SectionStackSizeOverridesEnabled}");
+                comment.AppendLine($"SectionPreventTransferOverridesEnabled: {Config.Default.SectionPreventTransferOverridesEnabled}");
 
                 comment.AppendLine($"AutoBackup_EnableBackup: {Config.Default.AutoBackup_EnableBackup}");
                 comment.AppendLine($"AutoBackup_BackupPeriod: {Config.Default.AutoBackup_BackupPeriod}");
@@ -3301,6 +3293,106 @@ namespace ServerManagerTool
         }
         #endregion
 
+        #region Prevent Transfer Overrides
+        private void AddPreventTransferOverride_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.PreventTransferForClassNames.Add(new PreventTransferOverride());
+            Settings.PreventTransferForClassNames.IsEnabled = true;
+        }
+
+        private void ClearPreventTransferOverrides_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ClearLabel"), _globalizer.GetResourceString("ServerSettings_ClearTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            Settings.PreventTransferForClassNames.Clear();
+            Settings.PreventTransferForClassNames.IsEnabled = false;
+        }
+
+        private void PastePreventTransferOverride_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new CustomConfigDataWindow();
+            window.Owner = Window.GetWindow(this);
+            window.Closed += Window_Closed;
+            var result = window.ShowDialog();
+
+            if (!result.HasValue || !result.Value)
+                return;
+
+            // read the pasted data into an ini file.
+            var iniFile = IniFileUtils.ReadString(window.ConfigData.Replace(" ", ""));
+
+            Server.Profile.PreventTransferForClassNames.RenderToModel();
+
+            // cycle through the sections, adding them to the list. Will bypass any sections that are named as per the ARK default sections.
+            foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
+            {
+                var preventTransferForClassNames = new AggregateIniValueList<PreventTransferOverride>(nameof(Server.Profile.PreventTransferForClassNames), null);
+                preventTransferForClassNames.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{preventTransferForClassNames.IniCollectionKey}=")));
+                Server.Profile.PreventTransferForClassNames.AddRange(preventTransferForClassNames);
+                Server.Profile.PreventTransferForClassNames.IsEnabled |= preventTransferForClassNames.IsEnabled;
+            }
+
+            var errors = Server.Profile.PreventTransferForClassNames.RenderToView();
+
+            RefreshBaseDinoList();
+
+            if (errors.Length > 0)
+            {
+                var error = $"The following errors have been found:\r\n\r\n{string.Join("\r\n", errors)}";
+
+                var window2 = new CommandLineWindow(error);
+                window2.OutputTextWrapping = TextWrapping.NoWrap;
+                window2.Height = 500;
+                window2.Title = "Import Errors";
+                window2.Owner = Window.GetWindow(this);
+                window2.ShowDialog();
+            }
+        }
+
+        private void RemovePreventTransferOverrideItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_DeleteLabel"), _globalizer.GetResourceString("ServerSettings_DeleteTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            var item = ((PreventTransferOverride)((Button)e.Source).DataContext);
+            Settings.PreventTransferForClassNames.Remove(item);
+            Settings.PreventTransferForClassNames.IsEnabled = Settings.PreventTransferForClassNames.Count > 0;
+        }
+
+        private void SavePreventTransferOverride_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.PreventTransferForClassNames.RenderToModel();
+
+            var iniValues = Settings.PreventTransferForClassNames.ToIniValues().ToList();
+            var iniValue = string.Join("\r\n", iniValues);
+
+            var window = new CommandLineWindow(iniValue);
+            window.OutputTextWrapping = TextWrapping.NoWrap;
+            window.Height = 500;
+            window.Title = _globalizer.GetResourceString("ServerSettings_PreventTransferOverrides_SaveTitle");
+            window.Owner = Window.GetWindow(this);
+            window.ShowDialog();
+        }
+
+        private void SavePreventTransferOverrideItem_Click(object sender, RoutedEventArgs e)
+        {
+            var item = ((PreventTransferOverride)((Button)e.Source).DataContext);
+            if (item == null)
+                return;
+
+            var iniName = Settings.PreventTransferForClassNames.IniCollectionKey;
+            var iniValue = $"{iniName}={item.ToINIValue()}";
+
+            var window = new CommandLineWindow(iniValue);
+            window.OutputTextWrapping = TextWrapping.Wrap;
+            window.Height = 500;
+            window.Title = _globalizer.GetResourceString("ServerSettings_PreventTransferOverrides_SaveTitle");
+            window.Owner = Window.GetWindow(this);
+            window.ShowDialog();
+        }
+        #endregion
+
         #endregion
 
         #region Methods
@@ -3445,18 +3537,34 @@ namespace ServerManagerTool
                 }
             }
 
+            foreach (var preventTransfer in this.Settings.PreventTransferForClassNames)
+            {
+                if (string.IsNullOrWhiteSpace(preventTransfer.DinoClassString))
+                    continue;
+
+                if (!newList.Any(s => s.ValueMember.Equals(preventTransfer.DinoClassString, StringComparison.OrdinalIgnoreCase)))
+                {
+                    newList.Add(new Common.Model.ComboBoxItem
+                    {
+                        DisplayMember = preventTransfer.DinoClassString,
+                        ValueMember = preventTransfer.DinoClassString,
+                    });
+                }
+            }
+
             try
             {
                 this.DinoSettingsGrid.BeginInit();
                 this.NPCSpawnEntrySettingsGrid.BeginInit();
+                this.PreventTransferOverrideGrid.BeginInit();
 
-                this.BaseDinoSettingsDinoList = newList;
-                this.BaseMapSpawnerDinoList = newList;
+                this.BaseDinoList = newList;
             }
             finally
             {
                 this.DinoSettingsGrid.EndInit();
                 this.NPCSpawnEntrySettingsGrid.EndInit();
+                this.PreventTransferOverrideGrid.EndInit();
             }
         }
 
@@ -3932,6 +4040,11 @@ namespace ServerManagerTool
                             case ServerSettingsResetAction.StackSizeOverridesSection:
                                 this.Settings.ResetStackSizeOverridesSection();
                                 RefreshBasePrimalItemList();
+                                break;
+
+                            case ServerSettingsResetAction.PreventTransferOverridesSection:
+                                this.Settings.ResetPreventTransferOverridesSection();
+                                RefreshBaseDinoList();
                                 break;
 
                             // Properties

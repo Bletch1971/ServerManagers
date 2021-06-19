@@ -113,7 +113,7 @@ namespace ServerManagerTool.Common.Model
                 var propName = string.IsNullOrWhiteSpace(attr?.Key) ? prop.Name : attr.Key;
 
                 var val = prop.GetValue(this);
-                var propValue = StringUtils.GetPropertyValue(val, prop);
+                var propValue = StringUtils.GetPropertyValue(val, prop, attr?.QuotedString ?? true);
 
                 if ((attr?.ExcludeIfEmpty ?? false) && string.IsNullOrWhiteSpace(propValue))
                 {
@@ -121,7 +121,9 @@ namespace ServerManagerTool.Common.Model
                 }
                 else
                 {
-                    result.Append($"{propName}={propValue}");
+                    if (!(attr?.ExcludePropertyName ?? false))
+                        result.Append($"{propName}=");
+                    result.Append($"{propValue}");
 
                     delimiter = DELIMITER.ToString();
                 }
@@ -242,10 +244,11 @@ namespace ServerManagerTool.Common.Model
                     }
                     else
                     {
-                        var propValue = StringUtils.GetPropertyValue(val, prop);
+                        var propValue = StringUtils.GetPropertyValue(val, prop, attr?.QuotedString ?? true);
 
                         result.Append(delimiter);
-                        result.Append($"{propName}=");
+                        if (!(attr?.ExcludePropertyName ?? false))
+                            result.Append($"{propName}=");
                         if (attr?.ValueWithinBrackets ?? false)
                             result.Append("(");
 

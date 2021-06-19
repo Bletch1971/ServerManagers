@@ -10,14 +10,19 @@ namespace ServerManagerTool.Common.Utils
     {
         public const string DEFAULT_CULTURE_CODE = "en-US";
 
-        public static string GetPropertyValue(object value, PropertyInfo property)
+        public static string GetPropertyValue(object value, PropertyInfo property, bool quotedString = true)
         {
             string convertedVal;
 
             if (property.PropertyType == typeof(float))
                 convertedVal = ((float)value).ToString("0.000000####", CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE));
             else if (property.PropertyType == typeof(string))
-                convertedVal = $"\"{value}\"";
+            {
+                if (quotedString)
+                    convertedVal = $"\"{value}\"";
+                else
+                    convertedVal = $"{value}";
+            }
             else
                 convertedVal = Convert.ToString(value, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE));
 
