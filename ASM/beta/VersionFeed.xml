@@ -5,10 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-06-19T01:00:00Z</updated>
+  <updated>2021-06-19T03:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:0A751BBA-54B5-40A6-AB09-C6B2539DAFE7</id>
+    <id>urn:uuid:C69AFC93-0532-4703-9917-0D4296CBD559</id>
+    <title>1.1.399 (1.1.399.3)</title>
+    <summary>1.1.399.3</summary>
+    <link href="" />
+    <updated>2021-06-19T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Prevent Transfer Section - Added valid check to prevent writing record if dino not selected.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D9B9BAD5-5CAE-4A94-9229-516E8335ED34</id>
     <title>1.1.399 (1.1.399.2)</title>
     <summary>1.1.399.2</summary>
     <link href="" />
