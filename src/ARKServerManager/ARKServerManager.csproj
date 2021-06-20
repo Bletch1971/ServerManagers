@@ -97,6 +97,15 @@
     <ManifestTimestampUrl>
     </ManifestTimestampUrl>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Beta|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug - Beta\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetZip, Version=1.13.8.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetZip.1.13.8\lib\net40\DotNetZip.dll</HintPath>
@@ -229,6 +238,9 @@
     </Compile>
     <Compile Include="Windows\ServerMonitorWindow.xaml.cs">
       <DependentUpon>ServerMonitorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SupplyCrateOverridesWindow.xaml.cs">
+      <DependentUpon>SupplyCrateOverridesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\VersionFeedWindow.xaml.cs">
       <DependentUpon>VersionFeedWindow.xaml</DependentUpon>
@@ -402,6 +414,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\ServerMonitorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SupplyCrateOverridesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

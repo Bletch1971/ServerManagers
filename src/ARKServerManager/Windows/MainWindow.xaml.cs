@@ -129,7 +129,7 @@ namespace ServerManagerTool
 
         public MainWindow()
         {
-            BetaVersion = App.Instance.BetaVersion;
+            this.BetaVersion = App.Instance.BetaVersion;
             this.CurrentConfig = Config.Default;
 
             InitializeComponent();

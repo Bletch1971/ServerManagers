@@ -97,6 +97,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty BaseTotalConversionsProperty = DependencyProperty.Register(nameof(BaseTotalConversions), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseBranchesProperty = DependencyProperty.Register(nameof(BaseBranches), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseEventsProperty = DependencyProperty.Register(nameof(BaseEvents), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty BetaVersionProperty = DependencyProperty.Register(nameof(BetaVersion), typeof(bool), typeof(ServerSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty CurrentConfigProperty = DependencyProperty.Register(nameof(CurrentConfig), typeof(Config), typeof(ServerSettingsControl));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(ServerSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty NetworkInterfacesProperty = DependencyProperty.Register(nameof(NetworkInterfaces), typeof(List<NetworkAdapterEntry>), typeof(ServerSettingsControl), new PropertyMetadata(new List<NetworkAdapterEntry>()));
@@ -190,6 +191,12 @@ namespace ServerManagerTool
         {
             get { return (ComboBoxItemList)GetValue(BaseEventsProperty); }
             set { SetValue(BaseEventsProperty, value); }
+        }
+
+        public bool BetaVersion
+        {
+            get { return (bool)GetValue(BetaVersionProperty); }
+            set { SetValue(BetaVersionProperty, value); }
         }
 
         public Config CurrentConfig
@@ -357,6 +364,7 @@ namespace ServerManagerTool
 
         public ServerSettingsControl()
         {
+            this.BetaVersion = App.Instance.BetaVersion;
             this.CurrentConfig = Config.Default;
             this.CurrentCulture = Thread.CurrentThread.CurrentCulture;
 
@@ -4300,5 +4308,15 @@ namespace ServerManagerTool
             this.ProfileLastStarted = $"{_globalizer.GetResourceString("ServerSettings_LastStartedLabel")} {date}";
         }
         #endregion
+
+        private void OpenSupplyCrateOverridesWindow_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new SupplyCrateOverridesWindow(this.Server.Profile);
+            window.Owner = Window.GetWindow(this);
+            window.Closed += Window_Closed;
+            //window.SavePerformed += SupplyCrateOverridesWindow_SavePerformed;
+            window.Show();
+            window.Focus();
+        }
     }
 }
