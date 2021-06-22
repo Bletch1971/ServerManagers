@@ -445,6 +445,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Se ativado, as substituições do gerador de mapa serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Ativar substituições de Supply Crate</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Se habilitado, as substituições de supply crate serão gerenciadas pelo ASM.</sys:String>
+	<sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Ativar Prevenção de Substituição de Transferência</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Se habilitado, as substituições de transferência de prevenção serão gerenciadas pelo gerenciador do servidor.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Ativar configurações do Ark PGM</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">Se ativado, as configurações do PGM serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Ativar configurações SotF</sys:String>
@@ -1281,7 +1283,16 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeTooltip">Limite o número de itens descartados em uma área (junto com LimitNonPlayerDroppedItemsCount).</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limitar a contagem de itens descartados por não jogadores</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limite o número de itens descartados em uma área (junto com LimitNonPlayerDroppedItemsRange).</sys:String>
-	
+
+	<sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Habilitar Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Se ativado, ajustará a quantidade de dano que uma criatura causa, por um período de tempo, após ter sido liberada de um criópode.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duração de Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">A quantidade de tempo, em segundos, em que o ajuste de dano entrará em vigor para criaturas liberadas de um criópode.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Multiplicador de Dano Criópode Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Especifica o multiplicador pelo dano causado pelas criaturas, depois que elas são liberadas de um criópode. Valores mais baixos significam que a vazão realizada será menor (por exemplo, 0,01 significa que 99% do dano é removido).</sys:String>
+	<sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Porcentagem do multiplicador de danos recebidos</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Especifica o aumento percentual no multiplicador de dano recebido de uma criatura, depois que ela é liberada de um criópode. Valores mais altos significam mais dano recebido à criatura (por exemplo, 0.25 = 25% a mais de dano).</sys:String>
+
 	<sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Permitir poderes do TekSuit</sys:String>
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">se ativado, permitirá que o jogador use TekSuit Powers no mapa Genesis.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Desativar missões</sys:String>
@@ -1289,6 +1300,13 @@
 	
 	<sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Desativar TEK Suit no Spawn</sys:String>
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">Se habilitado, irá prevenir que o jogador de spawn com o TEK Suit.</sys:String>
+	
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">Desativar os Buffs do Mapa</sys:String>
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsTooltip">Se habilitado, desabilitará os efeitos das Missões completamente.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingLabel">Habilitar escala de Buff no Mapa</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">Se habilitado, fará com que os buffs do Mapa escalem seus benefícios multiplicativamente, ao invés de adicionar / subtrair uma quantia fixa ao valor em tempo de execução.</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">Buff de escalonamento global</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Especifica a escala global para reduzir / aumentar a eficácia dos buffs mundiais (por exemplo, 1 é o padrão, 0,5 seria 50% menos eficaz, 2,0 seria 2x mais eficaz).</sys:String>
 	
 	<sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
 	<sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Desativar Hexagon Store</sys:String>
@@ -1301,15 +1319,6 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Especifica o multiplicador para as recompensas dos Hexagons.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Multiplicador de custo Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Especifica o multiplicador para o custo Hexagons dos itens.</sys:String>
-	
-	<sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Habilitar Cryopod Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Se ativado, ajustará a quantidade de dano que uma criatura causa, por um período de tempo, após ter sido liberada de um criópode.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duração de Cryopod Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">A quantidade de tempo, em segundos, em que o ajuste de dano entrará em vigor para criaturas liberadas de um criópode.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Multiplicador de Dano Criópode Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Especifica o multiplicador pelo dano causado pelas criaturas, depois que elas são liberadas de um criópode. Valores mais baixos significam que a vazão realizada será menor (por exemplo, 0,01 significa que 99% do dano é removido).</sys:String>
-	<sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Porcentagem do multiplicador de danos recebidos</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Especifica o aumento percentual no multiplicador de dano recebido de uma criatura, depois que ela é liberada de um criópode. Valores mais altos significam mais dano recebido à criatura (por exemplo, 0.25 = 25% a mais de dano).</sys:String>
 	
 	<sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">AVISO: Isso mudará permanentemente as estatísticas de qualquer item existente, portanto, certifique-se de fazer backup de seu salvamento atual antes de modificar e brincar com os valores de fixo.</sys:String>
@@ -2262,6 +2271,23 @@
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Verificando Tarefas Agendadas ...</sys:String>
     <!--#endregion-->
 
+    <!--#endregion-->
+    
+    <!--#region Server Settings - Prevent Transfer Overrides -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Impedir sobreposições de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Impedir Transferências</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Impedir configurações de substituição de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">NOTA: Se quiser gerenciar suas substituições manualmente ou com outro aplicativo, você pode desabilitar a opção que impedirá o gerenciador do servidor de gerenciar as substituições. Veja as 'Opções de substituição personalizadas' nas configurações globais.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">AVISO: Adicionar dinossauros a esta lista impedirá que sejam transferidos para o servidor.</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Dino</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Dino Class String</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Adicionar item de prevenção de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">Excluir todos os itens de prevenção de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">Colar dados de itens de prevenção de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">Excluir item de impedimento de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">Salvar dados de itens de prevenção de transferência</sys:String>
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
@@ -5444,6 +5470,7 @@
     <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Construindo informações do Spawner no mapa ...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Construindo informações de Supply Crate...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Construindo informações sobre o stack ...</sys:String>
+	<sys:String x:Key="ProfileSave_ConstructingPreventTransferInformation">Construindo Informações de Prevenção de Transferência ...</sys:String>
     <sys:String x:Key="ProfileSave_SavingProfileFile">Salvando arquivo de perfil...</sys:String>
     <sys:String x:Key="ProfileSave_SavingConfigFiles">Salvando arquivos de configuração...</sys:String>
     <sys:String x:Key="ProfileSave_SavingLauncherFile">Salvando arquivo do iniciador...</sys:String>
