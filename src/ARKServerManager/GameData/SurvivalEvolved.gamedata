@@ -7607,6 +7607,48 @@
     {
       "Category": "Consumables",
       "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_XSmall_C",
+      "Description": "Kibble (Basic)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Small_C",
+      "Description": "Kibble (Simple)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Medium_C",
+      "Description": "Kibble (Regular)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Large_C",
+      "Description": "Kibble (Superior)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_XLarge_C",
+      "Description": "Kibble (Exceptional)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Special_C",
+      "Description": "Kibble (Extraordinary)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Kibble_Allo_C",
       "Description": "Kibble (Allosaurus Egg)",
       "Mod": "ArkPrime"

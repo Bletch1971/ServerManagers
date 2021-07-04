@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">13.06.2021 от Varlonec</sys:String>    
+    <sys:String x:Key="Generic_TranslatedBy">26.06.2021 от Varlonec и Mover</sys:String>    
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -434,7 +434,7 @@
 
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Языки</sys:String>
 
-    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Настройка перераспределения Настроек</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Пользовательские настройки</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Включить пользовательские настройки Engine.ini</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Если включено, то настройки engine.ini будут менеджерами сервера.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Включить Crafting Overrides</sys:String>
@@ -445,6 +445,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Если включено, Map Spawner Overrides будут использовать настройки ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Включить Supply Crate Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Если включено, Supply Crate Overrides будут использовать настройки ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Включить настройки запрета траснфера дино</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Если включено, настройками запретов трансфера дино будет управлять ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Включить PGM Ark</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">Если включено, процедурная генерация повятся в настройках ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Включить SotF</sys:String>
@@ -649,7 +651,7 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Это сообщение будет отображаться при изменении состояния сервера.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Обнаружено обновление мода:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Это сообщение будет отображаться, когда менеджер сервера обнаружит, что один или несколько модов устарели.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Предупреждение о респавно динозавров:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Предупреждение о респавне динозавров:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Это сообщение будет отображаться при запуске сервера и оповещение о запланированном респе динозавров</sys:String>
     <!--#endregion-->
 
@@ -1282,6 +1284,15 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit Non Player Dropped Items Count</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">(Колличество)Ограничить количество выбрасываемых предметов в области (вместе с LimitNonPlayerDroppedItemsRange).</sys:String>
 
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Включить криопод Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Если этот параметр включен, он будет корректировать количество урона, которое наносит существо в течение некоторого времени после того, как оно было выпущено из криопода.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Криопод Nerf Продолжительность</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">Время в секундах, в течение которого корректировка урона будет действовать для существ, выпущенных из криопода.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Криопод Nerf Множитель урона</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Определяет множитель урона, нанесенного существам после того, как они были выпущены из криопода. Более низкие значения означают, что нанесенный урон будет ниже (например, 0,01 означает, что 99% ущерба будет удалено).</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Процент множителя входящего урона</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Определяет процентное увеличение множителя входящего урона существа после того, как оно было выпущено из криопода. Более высокие значения означают больше входящего урона, нанесенного существу (например, 0.25 = 25% больше урона).</sys:String>
+
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Включить работу Тек костюма</sys:String>
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">Если включено, позволит игроку использовать Тек костюм на карте Genesis.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Отключить миссии</sys:String>
@@ -1289,6 +1300,13 @@
 
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Отключить костюм TEK на Спавне</sys:String>
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">Если включено, это предотвратит появление игрока в костюме TEK.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">Отключить Мировые Баффы</sys:String>
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsTooltip">Если включено, то полностью отключит мировые эффекты от миссий.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingLabel">Включить Масштабирование Мирового Баффа</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">Если включено, это приведет к тому, что мировые баффы будут мультипликативно масштабировать свои преимущества, а не добавлять/вычитать фиксированную сумму к значению во время выполнения.</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">Эффективность масштабирования мирового Баффа</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Задает глобальный скаляр для снижения/повышения эффективности мировых баффов (например, 1 по умолчанию, 0,5 будет на 50% менее эффективным, 2,0 будет в 2 раза эффективнее).</sys:String>
 
     <sys:String x:Key="ServerSettings_HexagonsLabel">Шестигранники</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Отключить магазин Шестигранников</sys:String>
@@ -1301,15 +1319,6 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Задает множитель для наград в виде шестигранников.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Множитель цены в магазине шестигранников</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Позволяет изменять стоимость предметов в магазине шестигранников</sys:String>
-    
-    <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Включить криопод Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Если этот параметр включен, он будет корректировать количество урона, которое наносит существо в течение некоторого времени после того, как оно было выпущено из криопода.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Криопод Nerf Продолжительность</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">Время в секундах, в течение которого корректировка урона будет действовать для существ, выпущенных из криопода.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Криопод Nerf Множитель урона</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Определяет множитель урона, нанесенного существам после того, как они были выпущены из криопода. Более низкие значения означают, что нанесенный урон будет ниже (например, 0,01 означает, что 99% ущерба будет удалено).</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Процент множителя входящего урона</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Определяет процентное увеличение множителя входящего урона существа после того, как оно было выпущено из криопода. Более высокие значения означают больше входящего урона, нанесенного существу (например, 0.25 = 25% больше урона).</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">ПРЕДУПРЕЖДЕНИЕ: это навсегда изменит статистику любых существующих элементов, поэтому обязательно сделайте резервную копию вашего текущего сохранения, прежде чем изменять и играть с ограничивающими значениями.</sys:String>
@@ -2262,6 +2271,23 @@
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Проверка запланированных задач...</sys:String>
     <!--#endregion-->
 
+    <!--#endregion-->
+ 
+    <!--#region Server Settings - Prevent Transfer Overrides -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Настройки запрета трансфера</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Запретить трансфер</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Настройки запрета трансфера</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">Примечание: Если вы хотите управлять данными настройками вручную или с помощью другого приложения, вы можете отключить опцию, которая не позволит ASM ими управлять. См. раздел "Пользовательские настройки" в глобальных настройках.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">ПРЕДУПРЕЖДЕНИЕ: Добавление дино в этот список запретит их передачу на сервер и с сервера.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Дино</sys:String>
+ 
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Dino Class String</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Добавить запрет переноса</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">Удалить все запреты переноса</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">Вставить данные запретов</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">Удалить запрет</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">Сохранить</sys:String>
+ 
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
@@ -5444,6 +5470,7 @@
     <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Построение Map Spawner Информация...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Построение Supply Crate Информация...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Построение Stack Size Информация...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingPreventTransferInformation">Создание информации о предотвращении передачи ...</sys:String>
     <sys:String x:Key="ProfileSave_SavingProfileFile">Сохранение файла профиля...</sys:String>
     <sys:String x:Key="ProfileSave_SavingConfigFiles">Сохранение файлов конфигурации...</sys:String>
     <sys:String x:Key="ProfileSave_SavingLauncherFile">Сохранение файла запуска...</sys:String>
