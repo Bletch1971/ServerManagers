@@ -18,8 +18,19 @@ namespace ServerManagerTool.Lib.ViewModel
             set { SetValue(ItemWeightProperty, value); }
         }
 
-        public string DisplayName => GameData.FriendlySupplyCrateNameForClass(ItemClassString);
+        public string DisplayName => GameData.FriendlyItemNameForClass(ItemClassString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(ItemClassString);
+
+        public string DisplayNameTreeView
+        {
+            get
+            {
+                var modName = GameData.FriendlyItemModNameForClass(ItemClassString); ;
+                return $"{(string.IsNullOrWhiteSpace(modName) ? string.Empty : $"({modName}) ")}{DisplayName}";
+            }
+        }
+
+        public string IsValidTreeView => GameData.HasItemForClass(ItemClassString) ? (IsValid ? "Y" : "N") : (IsValid ? "W" : "N");
     }
 }

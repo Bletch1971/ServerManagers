@@ -314,6 +314,11 @@
     <Compile Include="Windows\SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
+    <Resource Include="Art\StatusBad.ico" />
+    <Resource Include="Art\StatusGood.ico" />
+    <Resource Include="Art\StatusWarning.ico" />
+    <Resource Include="Art\Collapse.ico" />
+    <Resource Include="Art\Expand.ico" />
     <Content Include="GameData\Genesis2.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

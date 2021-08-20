@@ -3,6 +3,8 @@ using ServerManagerTool.Common.Model;
 using ServerManagerTool.Lib.ViewModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
 using System.Runtime.Serialization;
 using System.Windows;
 
@@ -37,9 +39,9 @@ namespace ServerManagerTool.Lib
                                 errors.Add($"Missing Supply Crate Item Weight: Crate '{supplyCrate.SupplyCrateClassString}'; Set '{itemSet.SetName}'; Entry '{itemEntry.ItemEntryName}'; Item '{itemEntry.ItemClassStrings[index]}'.");
 
                             itemEntry.Items.Add(new SupplyCrateItemEntrySettings {
-                                                                ItemClassString = itemEntry.ItemClassStrings[index],
-                                                                ItemWeight = itemsWeight,
-                                                            });
+                                ItemClassString = itemEntry.ItemClassStrings[index],
+                                ItemWeight = itemsWeight,
+                            });
                         }
                     }
                 }
@@ -187,6 +189,17 @@ namespace ServerManagerTool.Lib
         public string DisplayName => GameData.FriendlySupplyCrateNameForClass(SupplyCrateClassString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(SupplyCrateClassString) && ItemSets.Count > 0;
+
+        public string DisplayNameTreeView
+        {
+            get
+            {
+                var modName = GameData.FriendlySupplyCrateModNameForClass(SupplyCrateClassString); ;
+                return $"{(string.IsNullOrWhiteSpace(modName) ? string.Empty : $"({modName}) ")}{DisplayName}";
+            }
+        }
+
+        public string IsValidTreeView => ItemSets.Count == 0 ? "N" : (ItemSets.Any(i => i.IsValidTreeView == "N") ? "N" : (ItemSets.Any(i => i.IsValidTreeView == "W") ? "W" : "Y"));
     }
 
     [DataContract]
@@ -281,6 +294,10 @@ namespace ServerManagerTool.Lib
         }
 
         public bool IsValid => ItemEntries.Count > 0;
+
+        public string DisplayNameTreeView => SetName;
+
+        public string IsValidTreeView => ItemEntries.Count == 0 ? "N" : (ItemEntries.Any(i => i.IsValidTreeView == "N") ? "N" : (ItemEntries.Any(i => i.IsValidTreeView == "W") ? "W" : "Y"));
     }
 
     [DataContract]
@@ -414,5 +431,11 @@ namespace ServerManagerTool.Lib
         public bool IsModelValid => ItemClassStrings.Count > 0 && ItemClassStrings.Count == ItemsWeights.Count;
 
         public bool IsViewValid => Items.Count > 0;
+
+        public string DisplayNameTreeView => ItemEntryName;
+
+        public string IsValidTreeView => Items.Count == 0 ? "N" : (Items.Any(i => i.IsValidTreeView == "N") ? "N" : (Items.Any(i => i.IsValidTreeView == "W") ? "W" : "Y"));
+
+        public float ChanceToBeBlueprintTreeView => ForceBlueprint ? 1 : ChanceToBeBlueprintOverride;
     }
 }

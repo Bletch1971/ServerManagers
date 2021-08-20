@@ -285,6 +285,56 @@
     <sys:String x:Key="VersionFeedWindow_VersionFilterTooltip">Select the version to view details.</sys:String>
     <!--#endregion-->
 
+    <!--#region Supply Crate Overrides Window -->
+    <sys:String x:Key="SupplyCrateOverrides_Title">Supply Crate Overrides</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ProfileTitle">Supply Crate Overrides - {0}</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_Load_FailedTitle">Load Supply Crate Overrides Error</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_SaveTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_RemoveOverridesTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_RefreshOverridesTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_PasteOverridesTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_SaveOverridesTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ValidateOverridesTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ExpandTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_CollapseTooltip">.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_AddSupplyCrateTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ClearSupplyCrateTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_EditSupplyCrateTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_RemoveSupplyCrateTooltip">.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_Crate_SupplyCrateClassStringColumnLabel">Supply Crate</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_Crate_SupplyCrateClassStringColumnTooltip">Supply Crate class string of the crate to be overridden.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_AddItemSetTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ClearItemSetTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_EditItemSetTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_RemoveItemSetTooltip">.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_ItemSet_NameColumnLabel">Description</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ItemSet_NameColumnTooltip">A description to identify the item set.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_AddItemSetEntryTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ClearItemSetEntryTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_EditItemSetEntryTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_RemoveItemSetEntryTooltip">.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_ItemSetEntry_NameColumnLabel">Description</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ItemSetEntry_NameColumnTooltip">A description to identify the item set entry.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ItemSetEntry_ChanceToBeBlueprintOverrideColumnLabel">Blueprint Chance</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_ItemSetEntry_ChanceToBeBlueprintOverrideColumnTooltip">Specifies the chance you will generate a blueprint instead of the item.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_AddItemEntrySettingTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_EditItemEntrySettingTooltip">.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_RemoveItemEntrySettingTooltip">.</sys:String>
+
+    <sys:String x:Key="SupplyCrateOverrides_Item_ItemClassStringColumnLabel">Item</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_Item_ItemClassStringColumnTooltip">Item class string of the item.</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_Item_ItemWeightColumnLabel">Weight</sys:String>
+    <sys:String x:Key="SupplyCrateOverrides_Item_ItemWeightColumnTooltip">Specifies the chance that the item would make it into the loot crate.</sys:String>
+    <!--#endregion-->
+
     <!--#region Progress Window -->
     <sys:String x:Key="Progress_Title">Progress</sys:String>
     <sys:String x:Key="Progress_UpgradeServer_WindowTitle">Update Progress - {0}</sys:String>

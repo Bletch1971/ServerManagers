@@ -5,7 +5,7 @@
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         Loaded="Window_Loaded" Closing="Window_Closing"
         MinWidth="600" MinHeight="480" Width="900" Height="480" ResizeMode="CanResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
-        Name="SupplyCrateUI" Icon="../Art/favicon.ico" Title="SupplyCrateOverridesWindow" >
+        Name="SupplyCrateUI" Icon="../Art/favicon.ico" Title="{DynamicResource SupplyCrateOverrides_Title}" >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,17 +13,425 @@
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <cc:FloatToPercentageConverter x:Key="FloatToPercentageConverter"/>
+            <cc:FloatToStringConverter x:Key="FloatToStringConverter"/>
             <cc:InvertBooleanConverter x:Key="InvertBooleanConverter"/>
+            <cc:InvertIntToVisibilityConverter x:Key="InvertIntToVisibilityConverter"/>
             <cc:IsNullOrWhiteSpaceValueConverter x:Key="IsNullOrWhiteSpaceValueConverter"/>
+
+            <SolidColorBrush x:Key="GlyphBrush" Color="#444" />
 
             <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFECE1D4" Offset="1"/>
                 <GradientStop Color="#FFEAE8E6"/>
             </LinearGradientBrush>
+
+            <Style x:Key="ExpandCollapseToggleStyle" TargetType="ToggleButton">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Grid Width="15" Height="13" Background="Transparent">
+                                <Path x:Name="ExpandPath" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="1,1,1,1" Fill="{StaticResource GlyphBrush}" Data="M 4 0 L 8 4 L 4 8 Z"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter Property="Data" TargetName="ExpandPath" Value="M 0 4 L 8 4 L 4 8 Z"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <Style x:Key="TreeViewItemFocusVisual">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border>
+                                <Rectangle Margin="0,0,0,0" StrokeThickness="5" Stroke="Black" StrokeDashArray="1 2" Opacity="0"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="{x:Type TreeViewItem}" TargetType="{x:Type TreeViewItem}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="HorizontalContentAlignment" Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                <Setter Property="VerticalContentAlignment" Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                <Setter Property="Padding" Value="1,0,0,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="FocusVisualStyle" Value="{StaticResource TreeViewItemFocusVisual}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                            <ControlTemplate.Resources>
+                                <cc:LeftMarginMultiplierConverter Length="19" x:Key="lengthConverter" />
+                            </ControlTemplate.Resources>
+                            <StackPanel>
+                                <Border Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
+                                    <Grid Margin="{Binding Converter={StaticResource lengthConverter}, RelativeSource={RelativeSource TemplatedParent}}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="19" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <ToggleButton x:Name="Expander" Style="{StaticResource ExpandCollapseToggleStyle}" VerticalAlignment="Bottom" Margin="0,0,0,5" IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" ClickMode="Press"/>
+                                        <ContentPresenter x:Name="PART_Header" Grid.Column="1" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                                    </Grid>
+                                </Border>
+                                <ItemsPresenter x:Name="ItemsHost" />
+                            </StackPanel>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsExpanded" Value="false">
+                                    <Setter TargetName="ItemsHost" Property="Visibility" Value="Collapsed"/>
+                                </Trigger>
+                                <Trigger Property="HasItems" Value="false">
+                                    <Setter TargetName="Expander" Property="Visibility" Value="Hidden"/>
+                                </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="HasHeader" Value="false"/>
+                                        <Condition Property="Width" Value="Auto"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="PART_Header" Property="MinWidth" Value="75"/>
+                                </MultiTrigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="HasHeader" Value="false"/>
+                                        <Condition Property="Height" Value="Auto"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="PART_Header" Property="MinHeight" Value="19"/>
+                                </MultiTrigger>
+                                <Trigger Property="IsSelected" Value="true">
+                                    <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                                </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsSelected" Value="true"/>
+                                        <Condition Property="IsSelectionActive" Value="false"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                                </MultiTrigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <DataTemplate x:Key="SupplyCrateItemEntrySettingTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="*" MinWidth="50"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Background="#444" />
+                    <TextBlock Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" Padding="2,0,0,0" FontWeight="Bold" Foreground="White" TextAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" 
+                               Text="{DynamicResource SupplyCrateOverrides_Item_ItemClassStringColumnLabel}" 
+                               ToolTip="{DynamicResource SupplyCrateOverrides_Item_ItemClassStringColumnTooltip}"
+                               Visibility="{Binding Path=AlternationIndex, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}}, Converter={StaticResource InvertIntToVisibilityConverter}}"/>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Margin="0,0,0,0" Padding="0,0,2,0" FontWeight="Bold" Foreground="White" TextAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap"  
+                               Text="{DynamicResource SupplyCrateOverrides_Item_ItemWeightColumnLabel}" 
+                               ToolTip="{DynamicResource SupplyCrateOverrides_Item_ItemWeightColumnTooltip}"
+                               Visibility="{Binding Path=AlternationIndex, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}}, Converter={StaticResource InvertIntToVisibilityConverter}}"/>
+
+                    <Image Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="Y">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="N">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="W">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+
+                    <TextBlock Grid.Row="1" Grid.Column="1" Margin="5,0,0,0" TextAlignment="Left" Text="{Binding Path=DisplayNameTreeView}" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" TextAlignment="Right" Text="{Binding Path=ItemWeight, Converter={StaticResource FloatToStringConverter}}" />
+
+                    <Button Grid.Row="1" Grid.Column="3" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditItemEntrySetting_Click" ToolTip="{DynamicResource SupplyCrateOverrides_EditItemEntrySettingTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="5" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemoveItemEntrySetting_Click" ToolTip="{DynamicResource SupplyCrateOverrides_RemoveItemEntrySettingTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                    </Button>
+                </Grid>
+            </DataTemplate>
+
+            <HierarchicalDataTemplate x:Key="SupplyCrateItemSetEntryTemplate" ItemsSource="{Binding Items}" ItemTemplate="{StaticResource SupplyCrateItemEntrySettingTemplate}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="*" MinWidth="50"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="13" Background="#444" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Padding="2,0,0,0" FontWeight="Bold" Foreground="White" TextAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" 
+                               Text="{DynamicResource SupplyCrateOverrides_ItemSetEntry_NameColumnLabel}" 
+                               ToolTip="{DynamicResource SupplyCrateOverrides_ItemSetEntry_NameColumnTooltip}"
+                               Visibility="{Binding Path=AlternationIndex, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}}, Converter={StaticResource InvertIntToVisibilityConverter}}"/>
+                    <TextBlock Grid.Row="0" Grid.Column="9" Margin="0,0,0,0" Padding="0,0,2,0" FontWeight="Bold" Foreground="White" TextAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" 
+                               Text="{DynamicResource SupplyCrateOverrides_ItemSetEntry_ChanceToBeBlueprintOverrideColumnLabel}" 
+                               ToolTip="{DynamicResource SupplyCrateOverrides_ItemSetEntry_ChanceToBeBlueprintOverrideColumnTooltip}"
+                               Visibility="{Binding Path=AlternationIndex, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}}, Converter={StaticResource InvertIntToVisibilityConverter}}"/>
+
+                    <Image Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="Y">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="N">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="W">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+
+                    <Button Grid.Row="1" Grid.Column="1" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AddItemEntrySetting_Click" ToolTip="{DynamicResource SupplyCrateOverrides_AddItemEntrySettingTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Add.ico,Size=32}"/>
+                    </Button>
+
+                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" TextAlignment="Left" Text="{Binding Path=DisplayNameTreeView}" />
+                    <TextBlock Grid.Row="1" Grid.Column="9" Margin="5,0,0,0" TextAlignment="Right" Text="{Binding Path=ChanceToBeBlueprintTreeView, Converter={StaticResource FloatToPercentageConverter}}" />
+
+                    <Button Grid.Row="1" Grid.Column="10" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditItemSetEntry_Click" ToolTip="{DynamicResource SupplyCrateOverrides_EditItemSetEntryTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="11" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ClearItemSetEntry_Click" ToolTip="{DynamicResource SupplyCrateOverrides_ClearItemSetEntryTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Reload.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="12" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemoveItemSetEntry_Click" ToolTip="{DynamicResource SupplyCrateOverrides_RemoveItemSetEntryTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                    </Button>
+                </Grid>
+            </HierarchicalDataTemplate>
+
+            <HierarchicalDataTemplate x:Key="SupplyCrateItemSetTemplate" ItemsSource="{Binding ItemEntries}" ItemTemplate="{StaticResource SupplyCrateItemSetEntryTemplate}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="*" MinWidth="50"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="11" Background="#444" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Padding="2,0,0,0" FontWeight="Bold" Foreground="White" TextAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" 
+                               Text="{DynamicResource SupplyCrateOverrides_ItemSet_NameColumnLabel}" 
+                               ToolTip="{DynamicResource SupplyCrateOverrides_ItemSet_NameColumnTooltip}"
+                               Visibility="{Binding Path=AlternationIndex, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}}, Converter={StaticResource InvertIntToVisibilityConverter}}"/>
+
+                    <Image Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="Y">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="N">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="W">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+
+                    <Button Grid.Row="1" Grid.Column="1" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AddItemSetEntry_Click" ToolTip="{DynamicResource SupplyCrateOverrides_AddItemSetEntryTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Add.ico,Size=32}"/>
+                    </Button>
+
+                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" Text="{Binding Path=DisplayNameTreeView}" />
+
+                    <Button Grid.Row="1" Grid.Column="8" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditItemSet_Click" ToolTip="{DynamicResource SupplyCrateOverrides_EditItemSetTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="9" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ClearItemSet_Click" ToolTip="{DynamicResource SupplyCrateOverrides_ClearItemSetTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Reload.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="10" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemoveItemSet_Click" ToolTip="{DynamicResource SupplyCrateOverrides_RemoveItemSetTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                    </Button>
+                </Grid>
+            </HierarchicalDataTemplate>
+
+            <HierarchicalDataTemplate x:Key="SupplyCrateOverrideTemplate" ItemsSource="{Binding ItemSets}" ItemTemplate="{StaticResource SupplyCrateItemSetTemplate}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="*" MinWidth="50"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                        <ColumnDefinition Width="27"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="12" Background="#444" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Padding="2,0,0,0" FontWeight="Bold" Foreground="White" TextAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap"  
+                               Text="{DynamicResource SupplyCrateOverrides_Crate_SupplyCrateClassStringColumnLabel}" 
+                               ToolTip="{DynamicResource SupplyCrateOverrides_Crate_SupplyCrateClassStringColumnTooltip}"
+                               Visibility="{Binding Path=AlternationIndex, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}}, Converter={StaticResource InvertIntToVisibilityConverter}}"/>
+
+                    <Image Grid.Row="1" Grid.Column="0" Margin="0,2" VerticalAlignment="Center" Width="16" Height="16">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="Y">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="N">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsValidTreeView}" Value="W">
+                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+
+                    <Button Grid.Row="1" Grid.Column="1" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AddItemSet_Click" ToolTip="{DynamicResource SupplyCrateOverrides_AddItemSetTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Add.ico,Size=32}"/>
+                    </Button>
+
+                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" Text="{Binding Path=DisplayNameTreeView}" />
+
+                    <Button Grid.Row="1" Grid.Column="9" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditSupplyCrate_Click" ToolTip="{DynamicResource SupplyCrateOverrides_EditSupplyCrateTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="10" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ClearSupplyCrate_Click" ToolTip="{DynamicResource SupplyCrateOverrides_ClearSupplyCrateTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Reload.ico,Size=32}"/>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="11" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemoveSupplyCrate_Click" ToolTip="{DynamicResource SupplyCrateOverrides_RemoveSupplyCrateTooltip}">
+                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+                    </Button>
+                </Grid>
+            </HierarchicalDataTemplate>
         </ResourceDictionary>
     </Window.Resources>
 
     <Grid Background="{StaticResource BeigeGradient}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
 
+        <Button Grid.Row="0" Grid.Column="0" Width="22" Height="22" Margin="5,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Save_Click" ToolTip="{DynamicResource SupplyCrateOverrides_SaveTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Save.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="1" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="AddSupplyCrate_Click" ToolTip="{DynamicResource SupplyCrateOverrides_AddSupplyCrateTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Add.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="2" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RemoveOverrides_Click" ToolTip="{DynamicResource SupplyCrateOverrides_RemoveOverridesTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="3" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RefreshOverrides_Click" ToolTip="{DynamicResource SupplyCrateOverrides_RefreshOverridesTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="4" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PasteOverrides_Click" ToolTip="{DynamicResource SupplyCrateOverrides_PasteOverridesTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Paste.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="5" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SaveOverrides_Click" ToolTip="{DynamicResource SupplyCrateOverrides_SaveOverridesTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Copy.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="6" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ValidateOverrides_Click" ToolTip="{DynamicResource SupplyCrateOverrides_ValidateOverridesTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Validate.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="7" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Expand_Click" ToolTip="{DynamicResource SupplyCrateOverrides_ExpandTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Expand.ico,Size=32}"/>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="8" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Collapse_Click" ToolTip="{DynamicResource SupplyCrateOverrides_CollapseTooltip}">
+            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Collapse.ico,Size=32}"/>
+        </Button>
+
+        <TreeView Name="SupplyCratesTreeView" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10" Margin="5" HorizontalContentAlignment="Stretch" AlternationCount="1000000" 
+                  ItemsSource="{Binding ElementName=SupplyCrateUI, Path=ConfigOverrideSupplyCrateItems}" 
+                  ItemTemplate="{StaticResource SupplyCrateOverrideTemplate}" 
+                  SelectedItemChanged="SupplyCratesTreeView_SelectedItemChanged" />
     </Grid>
 </Window>
