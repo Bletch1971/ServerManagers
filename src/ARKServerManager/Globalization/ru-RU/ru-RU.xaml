@@ -1009,7 +1009,7 @@
     <sys:String x:Key="ServerSettings_StasisKeepControllersTooltip">Если это разрешено, сервер может получить производительность, сохранив AI в памяти о статусных существах. ПРИМЕЧАНИЕ. На вашем сервере должно быть много ОЗУ, иначе ваш сервер будет страдать с большими издержками памяти.</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionLabel">Нет Hang Detection</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionTooltip">Если включено, предотвращает появление некоторых типов сбоев путем зависания (может показаться, что сервер отстает, пока сервер висит).</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinosLabel">Нет Динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinosLabel">Нет динозавров</sys:String>
     <sys:String x:Key="ServerSettings_NoDinosTooltip">Если включено, на карте не появятся динозавры.</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselLabel">Разрешить Ansel</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">Если включено, разрешает NVIDIA Ansel на серверах.</sys:String>
@@ -1031,9 +1031,9 @@
     <sys:String x:Key="ServerSettings_EnablePublicIPForEpicTooltip">Если включено, добавит аргумент сервера для общедоступного IP-адреса, к которому будут пытаться подключиться клиенты EPIC.</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Перезаселить Мир во время Запуска сервера (Вызывает лаг после запуска Сервера)</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">Если включено, при запуске сервера все дикие существа будут уничтожены и обновлены (это уничтожит только диких существ, которые в настоящее время не приручены).</sys:String>
-    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Включить Авто Респаун Динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip">Если включено, принудительное возрождение диких Динозавтров через указанный интервал.</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Интервал Респауна Диких Дино</sys:String>
+    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Включить Авто Респаун динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip">Если включено, принудительное возрождение диких динозавтров через указанный интервал.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Интервал Респауна Диких дино</sys:String>
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">Интервал между принудительным автоматическим респауном динозавров.</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Альтернативная папка Сохранения:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Необязательно)</sys:String>
@@ -1125,13 +1125,13 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Включить Хардкор режим</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Включает Хардкор режим (игроки не могут возрождаться после смерти, должен быть создан новый персонаж).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Включить PvP</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvPTooltip">Включает PvP режим (игроки могут нанести повреждения или убить друг друга. В PvP игроки также могут повредить или разрушить здания другого племени или убить их Динозавров).</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePvPTooltip">Включает PvP режим (игроки могут нанести повреждения или убить друг друга. В PvP игроки также могут повредить или разрушить здания другого племени или убить их динозавров).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Включить PvE постройки в пещерах</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Если этот параметр включен, позволяет строить в пещерах PvE режиме.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Включить PvE Cryo Недомогание</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Если включено, при вытаскивании прирученного существо из криокапсулы, включится таймер крио-болезни. Для PvE серверов.</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireLabel">Отключить огонь по своим в PvE</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов племени, Динозавров и разрушить структуры.</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов племени, динозавров и разрушить структуры.</sys:String>
     <sys:String x:Key="ServerSettings_DisableLootCratesLabel">Отключить Разграбление ящиков</sys:String>
     <sys:String x:Key="ServerSettings_DisableLootCratesTooltip">Если этот параметр включен из разграбленных ящиков не будет появляться лут (контейнеры артефактов по-прежнему работают).</sys:String>
     <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresLabel">Лучи дропа, останавливаются на крыше строений </sys:String>
@@ -1141,7 +1141,7 @@
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Запрещает строительство в зонах респа ресурсов.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Если включено, полностью запрещает строительство в зонах с богатыми ресурсами, в частности настройка на карте TheIsland вокруг основных гор.</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Отключить огонь по своим в PvP</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов племени, Динозавров и разрушить структуры.</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов племени, динозавров и разрушить структуры.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Включить Луч для поиска Лута</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">Если включено, после смерти луч света стреляет в небо, чтобы помочь игроку найти место, где он погиб.</sys:String>
     <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Отключит анимацию респауна.</sys:String>
@@ -1157,43 +1157,43 @@
     
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Включить перераспределение сложности</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">Если включено, это позволит изменить максимальный уровень существ в мире.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyLabel">Максимальный уровень Динозавров:</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyLabel">Максимальный уровень динозавров:</sys:String>
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Максимальные уровни существ:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Включить загрузку данных</sys:String>
-    <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если этот параметр включен, это позволит загружать Выживших/Предметов/Динозавров на ваш сервер.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если этот параметр включен, это позволит загружать Выживших/Предметов/динозавров на ваш сервер.</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Не загружать Выживших</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsTooltip">Если включено, загрузка Выживших отключена.</sys:String>
     <sys:String x:Key="ServerSettings_NoItemDownloadsLabel">Не загружать Предметы</sys:String>
     <sys:String x:Key="ServerSettings_NoItemDownloadsTooltip">Если включено, загрузка предметов отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoDownloadsLabel">Не загружать Динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoDownloadsTooltip">Если включено, загрузка Динозавров отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoDownloadsLabel">Не загружать динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoDownloadsTooltip">Если включено, загрузка динозавров отключена.</sys:String>
 
     <sys:String x:Key="ServerSettings_TributeUploadLabel">Включить выгрузку данных</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorUploadsLabel">Не выгружать Выживших</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorUploadsTooltip">Если включено, выгрузка Выживших отключена.</sys:String>
     <sys:String x:Key="ServerSettings_NoItemUploadsLabel">Не выгружать Предметы</sys:String>
     <sys:String x:Key="ServerSettings_NoItemUploadsTooltip">Если включено, выгрузка Предметов отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">Не выгружать Динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">Если включено, выгрузка Динозавров отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Максимум хранимых Дино</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">Не выгружать динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">Если включено, выгрузка динозавров отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Максимум хранимых дино</sys:String>
     <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">Если включено, будет ограничено количество динозавров, которые игрок может хранить в обелисках. ПРИМЕЧАНИЕ. Установка этого значения может привести к повреждению кластера.</sys:String>
     <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Максимум хранимых Предметов</sys:String>
     <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">Если включено, будет ограничено количество предметов, которые игрок может хранить в обелисках. ПРИМЕЧАНИЕ. Установка этого значения может привести к повреждению кластера.</sys:String>
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Настройки работы Кластера</sys:String>
 	<sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Трансфер только по Фильтру (Кластер)</sys:String>
-    <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Если включено, передача Выживших, предметов и Динозавров отключена, если сервер не находится в одном кластере.</sys:String>
+    <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Если включено, передача Выживших, предметов и динозавров отключена, если сервер не находится в одном кластере.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Изменить время хранения выгруженного Выжившего.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">Если включено, вы можете выставить время хранения Выжившего в Кластере.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Изменить время хранения выгруженного Предмета.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsTooltip">Если включено, вы можете выставить время хранения Предмета в Кластере.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Изменить время хранения выгруженного Динозавра.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">Если включено, вы можете выставить время хранения Динозавра в Кластере.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Установить время повторной выгрузки Динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">Если включено, вы сможете указать интервал повторной выгрузки Динозавров.</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Изменить время хранения выгруженного динозавра.</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">Если включено, вы можете выставить время хранения динозавра в Кластере.</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Установить время повторной выгрузки динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">Если включено, вы сможете указать интервал повторной выгрузки динозавров.</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsLabel">Разрешить загрузку дино на Aberration</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsTooltip">Если включено,  позволит вам загружать на карту Aberration дино с других карт</sys:String>
 
@@ -1211,7 +1211,7 @@
     <sys:String x:Key="ServerSettings_PreventOfflinePvPLabel">Предотвратить Оффлайн PvP</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPTooltip">Если включено, активируется опция предотвращения Оффлайн-Рейдов.</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalLabel">Время до активации защиты</sys:String>
-    <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalTooltip">Период времени до того, как Выжившие / Динозавры / Структуры становятся неуязвимыми (ВСЕ игроки Племени должны быть оффлайн).</sys:String>
+    <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalTooltip">Период времени до того, как Выжившие / динозавры / Структуры становятся неуязвимыми (ВСЕ игроки Племени должны быть оффлайн).</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalUnits">секунд</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPConnectionInvincibleIntervalLabel">Баф бесмертия при входе в игру</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPConnectionInvincibleIntervalTooltip">На сколько секунд при входе в игру, дается бафф бесмертия. Для предотвращения убийство персонажа сразу после входа.</sys:String>
@@ -1378,15 +1378,15 @@
     <sys:String x:Key="ServerSettings_WaterDrainLabel">Потребление воды:</sys:String>
     <sys:String x:Key="ServerSettings_WaterDrainTooltip">Определяет коэффициент для потребления воды. Более высокие значения увеличение потребления воды (хочет пить чаще).</sys:String>
     <sys:String x:Key="ServerSettings_FoodDrainLabel">Потребление еды:</sys:String>
-    <sys:String x:Key="ServerSettings_FoodDrainTooltip">Определяет коэффициент для потребления продуктов питания. Более высокие значения увеличивают потребление пищи (хочет есть чаще).</sys:String>
+    <sys:String x:Key="ServerSettings_FoodDrainTooltip">Множитель скорости потребления пищи. Более высокие значения увеличивают потребление пищи (быстрее голодает).</sys:String>
     <sys:String x:Key="ServerSettings_StaminaDrainLabel">Расход выносливости:</sys:String>
     <sys:String x:Key="ServerSettings_StaminaDrainTooltip">Задает коэффициент для потребления выносливости. Более высокие значения увеличивают потребление выносливости (устает быстрее).</sys:String>
     <sys:String x:Key="ServerSettings_HealthRecoveryLabel">Восстановление здоровья:</sys:String>
     <sys:String x:Key="ServerSettings_HealthRecoveryTooltip">Определяет коэффициент для восстановления здоровья. Более высокие значения увеличивают скорость восстановления (раны заживают быстрее).</sys:String>
     <sys:String x:Key="ServerSettings_HarvestingDamageLabel">Урон при сборе:</sys:String>
     <sys:String x:Key="ServerSettings_HarvestingDamageTooltip">Определяет коэффициент для степени повреждения во время сбора ресурсов. Более высокие значения увеличивают степень повреждения. Более низкие значения уменьшают его.</sys:String>
-    <sys:String x:Key="ServerSettings_TurretDamageLabel">Урон турелями:</sys:String>
-    <sys:String x:Key="ServerSettings_TurretDamageTooltip">Определяет коэффициент урона турелью по Дино, на персонажей не распространяется (пули и снаряды турели). Более высокие значения увеличивают урон турелью. Более низкие значения уменьшают.</sys:String>
+    <sys:String x:Key="ServerSettings_TurretDamageLabel">Урон турелей:</sys:String>
+    <sys:String x:Key="ServerSettings_TurretDamageTooltip">Определяет коэффициент урона турелью по динозаврам, на персонажей не распространяется (пули и снаряды турели). Более высокие значения увеличивают урон турелей. Более низкие значения уменьшают.</sys:String>
 
     <sys:String x:Key="ServerSettings_PlayerBaseStatMultipliersLabel">Начальные параметры статов</sys:String>
     <sys:String x:Key="ServerSettings_PlayerPerLevelStatMultipliersLabel">Поуровневый множитель статов</sys:String>
@@ -1416,7 +1416,7 @@
     <sys:String x:Key="ServerSettings_StatWeightTooltip">Определяет множитель для переноса груза за каждый уровень. Более высокие значения увеличивают грузоподъемность быстрее; более низкие значения увеличивают грузоподъемность более медленно.</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatWeightTooltip">Определяет множитель для базового веса. Более высокие значения повышают базовый вес; Более низкие значения уменьшают базовый вес.</sys:String>
     <sys:String x:Key="ServerSettings_StatDamageLabel">Урон:</sys:String>
-    <sys:String x:Key="ServerSettings_StatDamageTooltip">Определяет множитель для усиления урона на уровень. Более высокие значения увеличивают урон быстрее; более низкие значения увеличивают урон медленнее.</sys:String>
+    <sys:String x:Key="ServerSettings_StatDamageTooltip">Определяет множитель для усиления урона за уровень. Более высокие значения увеличивают урон быстрее; более низкие значения увеличивают урон медленнее.</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatDamageTooltip">Определяет множитель для базового урона. Более высокие значения повышают базовый урон; Более низкие значения уменьшают базовый урон.</sys:String>
     <sys:String x:Key="ServerSettings_StatSpeedLabel">Скорость:</sys:String>
     <sys:String x:Key="ServerSettings_StatSpeedTooltip">Определяет множитель для усиления скорости на уровне. Более высокие значения увеличивают скорость быстрее; более низкие значения увеличивают скорость медленнее.</sys:String>
@@ -1438,79 +1438,79 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Dino Settings -->
-    <sys:String x:Key="ServerSettings_MaxTamedDinosLabel">Максимально ручных:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTamedDinosTooltip">Установить максимальное количество домашних динозавров на сервере.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosLabel">Максимально ручных: (Племя):</sys:String>
-    <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosTooltip">Установить максимальное количество домашних динозавров в Племени.</sys:String>
-    <sys:String x:Key="ServerSettings_DinoSettingsLabel">Параметры Дино</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDamageLabel">Урон домашними:</sys:String>
-    <sys:String x:Key="ServerSettings_TamedResistanceLabel">Сопротивление домашними:</sys:String>
-    <sys:String x:Key="ServerSettings_FoodDrainMultiplierLabel">Испражнения диких Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_FoodDrainMultiplierTooltip">Определяет интервал испражнений диких динозавров. Более высокие значения увеличивают колличество испражнений. Более низкие значения уменьшают его.</sys:String>
-    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierLabel">Испражнения прирученных Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierTooltip">Определяет интервал испражнений прирученных динозавров. Более высокие значения увеличивают колличество испражнений. Более низкие значения уменьшают его.</sys:String>
-    <sys:String x:Key="ServerSettings_TorporDrainMultiplierLabel">Испражнение оглушенных диких Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_TorporDrainMultiplierTooltip">Определяет интервал испражнений оглушенных диких Дино. Более высокие значения увеличивают колличество испражнений. Более низкие значения уменьшают его.</sys:String>
-    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierLabel">Испражнение оглушенных прирученных Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierTooltip">Определяет интервал испражнений оглушенных прирученных Дино. Более высокие значения увеличивают колличество испражнений. Более низкие значения уменьшают его.</sys:String>
-    <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierLabel">Пассивный интервал испражнений:</sys:String>
-    <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierTooltip">Определяет интервал испражнений между пассивными и по активации. Более высокие значения увеличивают колличество испражнений. Более низкие значения уменьшают его.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoSettingsLabel">Параметры динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTamedDinosLabel">Макс прирученных дино (сервер):</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTamedDinosTooltip">Устанавливает максимальное количество прирученных динозавров на сервере.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosLabel">Макс прирученных дино (трайб):</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosTooltip">Устанавливает максимальное количество прирученных динозавров в трайбе.</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDamageLabel">Урон прирученными:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedResistanceLabel">Сопротивление прирученными:</sys:String>
+    <sys:String x:Key="ServerSettings_FoodDrainMultiplierLabel">Потребление еды у диких:</sys:String>
+    <sys:String x:Key="ServerSettings_FoodDrainMultiplierTooltip">Множитель скорости потребления пищи у диких динозавров. Более высокие значения увеличивают потребление пищи (динозавры быстрее голодают). Это также влияет на время приручения.</sys:String>
+    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierLabel">Потребление еды у прирученных:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierTooltip">Множитель скорости потребления пищи у прирученных динозавров. Более высокие значения увеличивают потребление пищи (динозавры быстрее голодают). Это также влияет на время приручения.</sys:String>
+    <sys:String x:Key="ServerSettings_TorporDrainMultiplierLabel">Скорость спада оглушения у диких:</sys:String>
+    <sys:String x:Key="ServerSettings_TorporDrainMultiplierTooltip">Множитель того, насколько быстро дикие динозавры теряют оглушение. Более высокие значения увеличивают скорость падения оглушения. А более низкие значения уменьшают.</sys:String>
+    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierLabel">Скорость спада оглушения у прирученных:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierTooltip">Множитель того, насколько быстро прирученные динозавры теряют оглушение. Более высокие значения увеличивают скорость падения оглушения. А более низкие значения уменьшают.</sys:String>
+    <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierLabel">Интервал кормления при пассивном приручении:</sys:String>
+    <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierTooltip">Множитель того, как часто вы можете кормить динозавра при пассивном приручении. Более высокие значения уменьшают время между кормлением. А более низкие значения увеличивают.</sys:String>
 
-    <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostLabel">Колличество Седел платформ в Трайбе</sys:String>
-    <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostTooltip">Количество прирученных динозавров седлами платформами (со структурами) разрешено в Трайбе.</sys:String>
-    <sys:String x:Key="ServerSettings_UseTameLimitForStructuresOnlyLabel">Использовать ограничитель только для структур</sys:String>
-    <sys:String x:Key="ServerSettings_UseTameLimitForStructuresOnlyTooltip">если это разрешено, лимит на прирученных существ будет распространяться только на дино с постройками на седлах-платформах и плоты.</sys:String>
-    <sys:String x:Key="ServerSettings_DinoSpawnsLabel">Появление Дино:</sys:String>
-    <sys:String x:Key="ServerSettings_DinoSpawnsTooltip">Определяет коэффициент для появления динозавров. Более высокие значения увеличивают колличество появляемых динозавров по всему ARК.</sys:String>
+    <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostLabel">Количество Седел-платформ на трайб</sys:String>
+    <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostTooltip">Максимальное количество прирученных динозавров с седлами-платформами в трайбе, даже если на них нет структур.</sys:String>
+    <sys:String x:Key="ServerSettings_UseTameLimitForStructuresOnlyLabel">Вкл ограничение для платформ со структурами</sys:String>
+    <sys:String x:Key="ServerSettings_UseTameLimitForStructuresOnlyTooltip">Если это включено, то лимит на прирученных динозавров с седлами-платформами будет распространяться только если на них есть структуры. Это настройка касается и плотов.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoSpawnsLabel">Появление дино:</sys:String>
+    <sys:String x:Key="ServerSettings_DinoSpawnsTooltip">Определяет коэффициент для появления динозавров. Более высокие значения увеличивают колличество появляемых динозавров на сервере.</sys:String>
     <sys:String x:Key="ServerSettings_AllowRaidDinoFeedingLabel">Выкл голодание Титанов</sys:String>
     <sys:String x:Key="ServerSettings_AllowRaidDinoFeedingTooltip">Если это включено, то позволяет Титанам и Титанозавру быть постоянно прирученными (они перестают постепенно голодать)</sys:String>
-    <sys:String x:Key="ServerSettings_RaidDinoCharacterFoodDrainMultiplierLabel">Потребление корма Рейд-Животными</sys:String>
-    <sys:String x:Key="ServerSettings_RaidDinoCharacterFoodDrainMultiplierTooltip">Определяет множитель потребления пищи Рейд-Животными. Более высокие значения увеличивают потребление еды; Более низкие значения уменьшают потребление еды.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersLabel">Включить полет в пещерах</sys:String>
-    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">Если этот параметр включен, позволяет полет на динозаврах в пещерах.</sys:String>
+    <sys:String x:Key="ServerSettings_RaidDinoCharacterFoodDrainMultiplierLabel">Потребление еды у Титанов</sys:String>
+    <sys:String x:Key="ServerSettings_RaidDinoCharacterFoodDrainMultiplierTooltip">Определяет множитель потребления пищи у Титанов. Более высокие значения увеличивают потребление еды. Более низкие значения уменьшают потребление еды.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersLabel">Разрешить полет в пещерах</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">Если включено, то в пещерах на прирученных динозаврах можно летать.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">Разрешить восстановление выносливости в воздухе</sys:String>
-    <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">Если включено, восстанавливает выносливость, в воздухе.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Включить прокачку полёта</sys:String>
-    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Если включено, позволяет прокачивать скорость полёта.</sys:String>
-    <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Отключить Dino Mate Boost</sys:String>
-    <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Если включено, усиление Dino Mate Boost будет отключено.(Животные с более быстрыми кладками яиц)</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Отключить Посадку Летающих с бомбами</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Если включено, отключит приземление Летающих при наложении на них взрывчатых веществ.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">Если включено, то выносливость у летающих динозавров восстанавливается в воздухе.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Разрешить прокачку скорости полёта</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Если включено, то позволяет прокачивать скорость полёта.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Запретить Dino Mate Boost</sys:String>
+    <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Если включено, то усиление Dino Mate Boost будет отключено (животные с более быстрыми кладками яиц).</sys:String>
+    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Выкл приземление летающих дино с C4</sys:String>
+    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Если включено, то отключит приземление летающих динозавров, если на них есть C4.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Разрешить множественное присоединение C4</sys:String>
-    <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Если включено, разрешено прикреплять более одного C4 на каждого динозавра.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Выкл. Потерю прав на Дино в PvE</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoDecayTooltip">Если этот параметр включен, отключается постепенная потеря права собственности на дино в PvE; в противном случае каждый Дино может быть заявлен как собственный, любым игроком.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoDecayPvPLabel">Отключить PvP Dino Decay</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoDecayPvPTooltip">Если включено, отключает снятие клейма с динозавров в PvP; В противном случае любой динозавр может быть заклеймен любым игроком, по истечению времени.</sys:String>
-    <sys:String x:Key="ServerSettings_DinoDecayPeriodLabel">Время потери прав на Дино в PvE:</sys:String>
-    <sys:String x:Key="ServerSettings_DinoDecayPeriodTooltip">Множитель  потери прав на Дино. Работает только если "Выкл. Потерю прав на Дино PvE" не активно.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableImprintDinoBuffLabel">Отключить Baby Dino бонус</sys:String>
-    <sys:String x:Key="ServerSettings_DisableImprintDinoBuffTooltip">Если включено, выращенные динозавры не будут получать бонусы от выращенного им персонажа. Бонус дамаги\резистов и т.д.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Если включено, то разрешено прикреплять более одного C4 на каждого динозавра.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Выкл потерю прав на дино в PvE</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoDecayTooltip">Если включено, то отключается постепенная потеря права собственности на динозавра в PvE; в противном случае по истечении таймера каждый динозавр может быть заклеймлен любым игроком.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoDecayPvPLabel">Выкл потерю прав на дино в PvP</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoDecayPvPTooltip">Если включено, то отключается постепенная потеря права собственности на динозавра в PvP; в противном случае по истечении таймера каждый динозавр может быть заклеймлен любым игроком.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoDecayPeriodLabel">Таймер потери прав на дино в PvE:</sys:String>
+    <sys:String x:Key="ServerSettings_DinoDecayPeriodTooltip">Множитель потери прав на динозавра. Работает только если у параметра "Выкл потерю прав на дино в PvE" не стоит галочка.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableImprintDinoBuffLabel">Выкл Baby Dino бонус</sys:String>
+    <sys:String x:Key="ServerSettings_DisableImprintDinoBuffTooltip">Если включено, то выращенные динозавры не будут получать бонусы от выращенного им персонажа. Бонус дамаги\резистов и т.д.</sys:String>
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleLabel">Разрешить играть с Baby Dino всем</sys:String>
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleTooltip">Если включено, каждый в племени сможет позаботиться о Baby Dino (покормить и т. д.), А не только те, за кем он закреплен.</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosLabel">Авто-Уничтожение Разклейменных Существ</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosTooltip">Если включено, все заклейменные динозавры будут автоматически уничтожаться при загрузке, если клеймо спало.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Отключить езду на Динозаврах</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">Если включено, запрещено ездить на прирученных динозаврах.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Отключить приручение Диких</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">Если включено, все дикие динозавры не смогут быть приручены.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Изменить Flyer Riding</sys:String>
-    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">Если включено, позволит вам изменить, можно ли летать на карте или нет; в противном случае по умолчанию будут использоваться настройки карты.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Включить Flyer Riding</sys:String>
-    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">Если включено, игроки могут исаользовать летунов; в противном случае игроки не могут Летать.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Выкл езду на дино</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">Если включено, то запрещено ездить на прирученных динозаврах.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Выкл приручение дино</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">Если включено, то все дикие динозавры не смогут быть приручены.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Изменить езду на летающих дино</sys:String>
+    <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">Если включено, то позволит вам изменить, можно ли летать на карте. В противном случае по умолчанию будут использоваться настройки карты.</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Вкл езду на летающих дино</sys:String>
+    <sys:String x:Key="ServerSettings_ForceCanRideFliersTooltip">Если включено, игроки могут использовать летающих животных. В противном случае игроки не смогут летать.</sys:String>
 
-    <sys:String x:Key="ServerSettings_DinoCustomizationLabel">Кастомизация Дино</sys:String>
+    <sys:String x:Key="ServerSettings_DinoCustomizationLabel">Кастомизация дино</sys:String>
     <sys:String x:Key="ServerSettings_SpawnMultipliersOptionLabel">Множитель появления</sys:String>
     <sys:String x:Key="ServerSettings_SpawnMultipliersOptionTooltip">Показать/Скрыть столбец Множитель появления.</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDamageOptionLabel">Урон домашними</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDamageOptionTooltip">Показать/Скрыть столбец Урон домашними.</sys:String>
-    <sys:String x:Key="ServerSettings_TamedResistanceOptionLabel">Сопротивление домашними</sys:String>
-    <sys:String x:Key="ServerSettings_TamedResistanceOptionTooltip">Показать/Скрыть столбец Сопротивление домашними.</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDamageOptionLabel">Урон прирученными</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDamageOptionTooltip">Показать/Скрыть столбец Урон прирученными.</sys:String>
+    <sys:String x:Key="ServerSettings_TamedResistanceOptionLabel">Сопротивление прирученными</sys:String>
+    <sys:String x:Key="ServerSettings_TamedResistanceOptionTooltip">Показать/Скрыть столбец Сопротивление прирученными.</sys:String>
     <sys:String x:Key="ServerSettings_WildDamageOptionLabel">Урон Дикими</sys:String>
     <sys:String x:Key="ServerSettings_WildDamageOptionTooltip">Показать/Скрыть столбец Урон Дикими.</sys:String>
     <sys:String x:Key="ServerSettings_WildResistanceOptionLabel">Сопротивление Дикими</sys:String>
     <sys:String x:Key="ServerSettings_WildResistanceOptionTooltip">Показать/Скрыть столбец Сопротивление Дикими.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetDinoCustomizationsTooltip">Сброс всех Кастомизаций Дино обратно по умолчанию.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetDinoCustomizationsTooltip">Сброс всех Кастомизаций дино обратно по умолчанию.</sys:String>
     <sys:String x:Key="ServerSettings_PasteDinoCustomizationsTooltip">Вставьте пользовательские данные динозавров.</sys:String>
     <sys:String x:Key="ServerSettings_SaveDinoCustomizationsTooltip">Сохранить пользовательские данные динозавров.</sys:String>
     <sys:String x:Key="ServerSettings_DinoCustomizations_SaveTitle">Пользовательские настройки динозавров.</sys:String>
@@ -1522,20 +1522,20 @@
     <sys:String x:Key="ServerSettings_SpawnWeightColumnLabel">Вес появляемых</sys:String>
     <sys:String x:Key="ServerSettings_OverrideLimitColumnLabel">Перекрыть предел</sys:String>
     <sys:String x:Key="ServerSettings_SpawnLimitColumnLabel">Предел появления</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDamageColumnLabel">Урон домашними</sys:String>
-    <sys:String x:Key="ServerSettings_TamedResistanceColumnLabel">Сопротивление домашними</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDamageColumnLabel">Урон прирученными</sys:String>
+    <sys:String x:Key="ServerSettings_TamedResistanceColumnLabel">Сопротивление прирученными</sys:String>
     <sys:String x:Key="ServerSettings_WildDamageColumnLabel">Урон Дикими</sys:String>
     <sys:String x:Key="ServerSettings_WildResistanceColumnLabel">Сопротивление Дикими</sys:String>
-    <sys:String x:Key="ServerSettings_DinoRemoveRecordTooltip">Удалить этого Динозавра</sys:String>
+    <sys:String x:Key="ServerSettings_DinoRemoveRecordTooltip">Удалить этого динозавра</sys:String>
 
-    <sys:String x:Key="ServerSettings_DinoCustomization_DinoRemoveRecordTitle">Удалить Динозавра</sys:String>
-    <sys:String x:Key="ServerSettings_DinoCustomization_DinoRemoveRecordLabel">Нажмите «Да», для подтверждения, что вы хотите удалить запись Динозавра.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoCustomization_DinoRemoveRecordTitle">Удалить динозавра</sys:String>
+    <sys:String x:Key="ServerSettings_DinoCustomization_DinoRemoveRecordLabel">Нажмите «Да», для подтверждения, что вы хотите удалить запись динозавра.</sys:String>
 
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatMultipliersLabel">По уровневый множитель (для домашних)</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Добавит по уровневый множитель статов (для домашних)</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">По уровневый множитель влечения (для домашних)</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">По уровневый множитель (для диких)</sys:String>
-    <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Коэффициент размножения Динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Коэффициент размножения динозавров</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Если включено, позволяет изменять коэффициенты, которые будут применяться к базовому стату.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Если включено, позволяет изменять коэффициенты, которые будут применяться на каждый стат.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">Если этот параметр включен, позволяет изменять факторы, которые должны применяться к добавлению Приручения для каждого стата.</sys:String>
@@ -1555,10 +1555,10 @@
     <sys:String x:Key="ServerSettings_BabyFoodConsumptionSpeedLabel">Голод у "Baby Dino":</sys:String>
     <sys:String x:Key="ServerSettings_BabyFoodConsumptionSpeedTooltip">Задает коэффициент скорости, с которым детеныш динозавра будет потреблять пищу. Более высокие значения сделают его более голодным (будет чаще хотеть есть).</sys:String>
 
-    <sys:String x:Key="ServerSettings_DinoImprintLabel">Привязка Дино</sys:String>
-    <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierLabel">Качество привязки Дино:</sys:String>
+    <sys:String x:Key="ServerSettings_DinoImprintLabel">Привязка дино</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierLabel">Качество привязки дино:</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">Насколько сильно влияет на статистику качество привязки. Установите значение 0, чтобы отключить систему.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Качество игры с Дино</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Качество игры с дино</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Множитель применяется к проценту, предоставляемому каждым отпечатком. Например, если отпечаток обычно дает 10%, установка этого множителя на 0,5 означает, что теперь они будут давать по 5% каждый. В то время как установка его на 2,0 означает, что теперь они будут давать по 20% каждый и т.д.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Интервал между играми с дино</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Как часто дети хотят обниматься. Более низкие значения означают, что вам нужно будет чаще обниматься с ними.</sys:String>
@@ -1576,7 +1576,7 @@
     <!--#region Server Settings - Environment -->
     <sys:String x:Key="ServerSettings_EnvironmentLabel">Окружающая среда</sys:String>
     <sys:String x:Key="ServerSettings_TamingSpeedLabel">Скорость Приручения:</sys:String>
-    <sys:String x:Key="ServerSettings_TamingSpeedTooltip">Изменяет скорость приручения Динозавров. При более высоком значении, приручение произойдет быстрее.</sys:String>
+    <sys:String x:Key="ServerSettings_TamingSpeedTooltip">Изменяет скорость приручения динозавров. При более высоком значении, приручение произойдет быстрее.</sys:String>
     <sys:String x:Key="ServerSettings_HarvestAmountLabel">Количество сбора ресурсов:</sys:String>
     <sys:String x:Key="ServerSettings_HarvestAmountTooltip">Задает коэффициент урожайности для всех видов сбора ресурсов (вырубка деревьев, сбор ягод, разделка туши, добыча руды, и т.д.). Более высокие значения увеличивают количество материалов, полученых с каждым ударом.</sys:String>
     <sys:String x:Key="ServerSettings_ResourceRespawnLabel">Время до появления ресурсов:</sys:String>
@@ -1621,7 +1621,7 @@
     <sys:String x:Key="ServerSettings_GlobalItemDecompTimeLabel">Время исчезновения лута:</sys:String>
     <sys:String x:Key="ServerSettings_GlobalItemDecompTimeTooltip">Позволяет изменить глобальные настройки время исчезновения выброшенных предметов, награбленных мешков и т.д. по всему миру. Более высокие значения увеличивают время.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalCorpseDecompTimeLabel">Время разложения трупов:</sys:String>
-    <sys:String x:Key="ServerSettings_GlobalCorpseDecompTimeTooltip">Позволяет изменить глобальные настройки время разложения трупов (игроков и Дино). Более высокие значения увеличивают время.</sys:String>
+    <sys:String x:Key="ServerSettings_GlobalCorpseDecompTimeTooltip">Позволяет изменить глобальные настройки время разложения трупов (игроков и дино). Более высокие значения увеличивают время.</sys:String>
     <sys:String x:Key="ServerSettings_CropDecaySpeedLabel">Время разложения растений:</sys:String>
     <sys:String x:Key="ServerSettings_CropDecaySpeedTooltip">Позволяет изменить глобальные настройки время разложения растений. Более низкие значения продлевают разложение.</sys:String>
     <sys:String x:Key="ServerSettings_CropGrowthSpeedLabel">Время роста растений:</sys:String>
@@ -1790,16 +1790,16 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Level Progressions -->
-    <sys:String x:Key="ServerSettings_LevelProgressionsLabel">Прогресс уровня Игрока и Дино</sys:String>
+    <sys:String x:Key="ServerSettings_LevelProgressionsLabel">Прогресс уровня Игрока и дино</sys:String>
     <sys:String x:Key="ServerSettings_MaxXPPlayerLabel">Игрок Максимум XP:</sys:String>
     <sys:String x:Key="ServerSettings_MaxXPPlayerTooltip">Установите максимальный лимит XP для игроков.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxXPDinoLabel">Дино Максимум XP:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxXPDinoLabel">дино Максимум XP:</sys:String>
     <sys:String x:Key="ServerSettings_MaxXPDinoTooltip">Установите максимальное ограничение XP для динозавров.</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevelProgressions_InformationLabel">ПРИМЕЧАНИЕ. Последние уровни игроков {levels} используются для прохождения Вознесения и другого уровня и отображаются на цветном фоне. Если вы настраиваете свои собственные уровни игроков, убедитесь, что вы добавили дополнительные уровни {levels}.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsLabel">Вкл. Свои настройки уровня</sys:String>
     <sys:String x:Key="ServerSettings_EnableCustomLevelProgressionsTooltip">Если параметр включен, Вы сможете изменять прогресс для каждого уровня персонажа и динозавров самостоятельно.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsLabel">Включить прогрессию уровня Дино</sys:String>
-    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsTooltip">Если включено, включает настройки уровня Дино.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsLabel">Включить прогрессию уровня дино</sys:String>
+    <sys:String x:Key="ServerSettings_EnableDinoLevelProgressionsTooltip">Если включено, включает настройки уровня дино.</sys:String>
     <sys:String x:Key="ServerSettings_CustomPlayerLevelsLabel">Свои уровни персонажа</sys:String>
     <sys:String x:Key="ServerSettings_DeleteAllLevelsTooltip">Удалить все существующие уровни.</sys:String>
     <sys:String x:Key="ServerSettings_ResetToASMDefaultsTooltip">Сбросить все настройки уровня обратно к ASM по умолчанию.</sys:String>
@@ -1818,7 +1818,7 @@
     <sys:String x:Key="ServerSettings_ProgressionAddLevelTooltip">Добавить еще один уровень.</sys:String>
     <sys:String x:Key="ServerSettings_ProgressionRemoveLevelTooltip">Удалить этот уровень.</sys:String>
 
-    <sys:String x:Key="ServerSettings_CustomDinoLevelsLabel">Пользовательские уровни Дино</sys:String>
+    <sys:String x:Key="ServerSettings_CustomDinoLevelsLabel">Пользовательские уровни дино</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomLevels_LastRemove_ErrorTitle">Не могу удалить последний элемент</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevels_LastRemove_ErrorLabel">Вы не можете удалить последний уровень. Если вы хотите отключить эту функцию, снимите флажок Включить прогрессии пользовательского уровня.</sys:String>
@@ -1827,9 +1827,9 @@
     <sys:String x:Key="ServerSettings_PlayerLevels_ResetTitle">Подтвердите сброс действия</sys:String>
     <sys:String x:Key="ServerSettings_PlayerLevels_ResetLabel">Нажмите «Да», чтобы подтвердить, что вы хотите сбросить все текущие уровни игроков.</sys:String>
     <sys:String x:Key="ServerSettings_DinoLevels_ClearTitle">Подтвердите четкое действие</sys:String>
-    <sys:String x:Key="ServerSettings_DinoLevels_ClearLabel">Нажмите «Да», чтобы подтвердить, что вы хотите очистить все текущие уровни Дино.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoLevels_ClearLabel">Нажмите «Да», чтобы подтвердить, что вы хотите очистить все текущие уровни дино.</sys:String>
     <sys:String x:Key="ServerSettings_DinoLevels_ResetTitle">Подтвердите сброс действия</sys:String>
-    <sys:String x:Key="ServerSettings_DinoLevels_ResetLabel">Нажмите «Да», чтобы подтвердить, что вы хотите сбросить все текущие уровни Дино.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoLevels_ResetLabel">Нажмите «Да», чтобы подтвердить, что вы хотите сбросить все текущие уровни дино.</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomLevel_UpdateErrorTitle">Ошибка обновления</sys:String>
     
@@ -2279,7 +2279,7 @@
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Настройки запрета трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">Примечание: Если вы хотите управлять данными настройками вручную или с помощью другого приложения, вы можете отключить опцию, которая не позволит ASM ими управлять. См. раздел "Пользовательские настройки" в глобальных настройках.</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">ПРЕДУПРЕЖДЕНИЕ: Добавление дино в этот список запретит их передачу на сервер и с сервера.</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Дино</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">дино</sys:String>
  
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Dino Class String</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Добавить запрет переноса</sys:String>
@@ -2324,7 +2324,7 @@
     <sys:String x:Key="RCON_Menu_AutoScroll">Автопрокрутка</sys:String>
     <sys:String x:Key="RCON_Menu_Server">_Сервер</sys:String>
     <sys:String x:Key="RCON_Menu_SaveWorld">Сохранить мир</sys:String>
-    <sys:String x:Key="RCON_Menu_DestroyWildDinos">Уничтожить диких Дино</sys:String>
+    <sys:String x:Key="RCON_Menu_DestroyWildDinos">Уничтожить диких дино</sys:String>
     <sys:String x:Key="RCON_Menu_Players">_Игроки</sys:String>
     <sys:String x:Key="RCON_Menu_Sort">Сортировка</sys:String>
     <sys:String x:Key="RCON_Menu_SortOnline">По онлайн</sys:String>
@@ -3602,7 +3602,7 @@
 
     <!--#region Engram Class Names - Extinction -->
     <sys:String x:Key="EngramEntry_CryoFridge_C">Криохолодильник</sys:String>
-    <sys:String x:Key="EngramEntry_DinoLeash_C">Радио Загон для Дино</sys:String>
+    <sys:String x:Key="EngramEntry_DinoLeash_C">Радио Загон для дино</sys:String>
     <sys:String x:Key="EngramEntry_EmptyCryopod_C">Криокапсула</sys:String>
     <sys:String x:Key="EngramEntry_GachaSaddle_C">Седло для Гачи (Extinction)</sys:String>
     <sys:String x:Key="EngramEntry_GasBagsSaddle_C">Седло для Газбагса (Extinction)</sys:String>
@@ -4252,7 +4252,7 @@
     <sys:String x:Key="PrimalItemSkin_DiloMask_C">Маска Дило</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoBunnyHat_C">Костюм кролика для Прокоптодона (скин)</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoChickHat_C">Dino Easter Chick Hat</sys:String>
-    <sys:String x:Key="PrimalItemSkin_DinoCute_C">Милая Дино-шапка (скин)</sys:String>
+    <sys:String x:Key="PrimalItemSkin_DinoCute_C">Милая дино-шапка (скин)</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoEasterEggHat_C">Dino Easter Egg Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoPartyHat_C">Шапка Пирамидка для дино (скин)</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoSantaHat_C">Шапка Санты для дино (скин)</sys:String>
@@ -5013,7 +5013,7 @@
     <sys:String x:Key="PrimalItem_Spawner_Enforcer_C">Неразвернутый Инфорсер</sys:String>
     <sys:String x:Key="PrimalItem_Spawner_Mek_C">Разобранный Мех</sys:String>
     <sys:String x:Key="PrimalItemStructure_CryoFridge_C">Криохолодильник</sys:String>
-    <sys:String x:Key="PrimalItemStructure_DinoLeash_C">Радио Загон для Дино</sys:String>
+    <sys:String x:Key="PrimalItemStructure_DinoLeash_C">Радио Загон для дино</sys:String>
     <sys:String x:Key="PrimalItemStructure_Flag_KingKaiju_C">Флаг Короля Титанов</sys:String>
     <sys:String x:Key="PrimalItemStructure_Flag_KingKaijuMecha_C">Флаг Короля Титанов (Mecha)</sys:String>
     <sys:String x:Key="PrimalItemStructure_StorageBox_Balloon_C">Ящик Доставки</sys:String>
@@ -5464,8 +5464,8 @@
 
     <!--#region Profile Save -->
     <sys:String x:Key="ProfileSave_Saving">Сохранение...</sys:String>
-    <sys:String x:Key="ProfileSave_CheckingPlayerDinoMaxXP">Проверка игрока и Дино Макс ХР...</sys:String>
-    <sys:String x:Key="ProfileSave_ConstructingDinoInformation">Построение информации Дино...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingPlayerDinoMaxXP">Проверка игрока и дино Макс ХР...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingDinoInformation">Построение информации дино...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingEngramInformation">Построение информации инграммы...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Построение Map Spawner Информация...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Построение Supply Crate Информация...</sys:String>
