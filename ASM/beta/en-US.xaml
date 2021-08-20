@@ -3641,7 +3641,7 @@
 
     <!--#region Tekgram Class Names - Genesis -->
     <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">Astrocetus Tek Saddle</sys:String>
-    <sys:String x:Key="EngramEntry_TekClaws_C">Tek Shoulder Cannon</sys:String>
+    <sys:String x:Key="EngramEntry_TekClaws_C">Tek Claws</sys:String>
     <sys:String x:Key="EngramEntry_CruiseMissile_C">Tek Cruise Missile</sys:String>
     <sys:String x:Key="EngramEntry_TekGrenadeLauncher_C">Tek Grenade Launcher</sys:String>
     <sys:String x:Key="EngramEntry_HoverSkiff_C">Tek Hover Skiff</sys:String>
