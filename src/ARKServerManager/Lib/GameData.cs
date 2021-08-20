@@ -192,7 +192,7 @@ namespace ServerManagerTool.Lib
 
         public static Engram GetEngramForClass(string className) => engrams.FirstOrDefault(e => e.EngramClassName.Equals(className));
 
-        public static bool HasEngramForClass(string className) => engrams.Any(e => e.EngramClassName.Equals(className));
+        public static bool HasEngramForClass(string className) => !string.IsNullOrWhiteSpace(className) && engrams.Any(e => e.EngramClassName.Equals(className));
 
         public static bool IsTekgram(string className) => engrams.Any(e => e.EngramClassName.Equals(className) && e.IsTekgram);
 
@@ -206,9 +206,11 @@ namespace ServerManagerTool.Lib
 
         public static PrimalItem GetItemForClass(string className) => items.FirstOrDefault(e => e.ClassName.Equals(className));
 
-        public static bool HasItemForClass(string className) => items.Any(e => e.ClassName.Equals(className));
+        public static bool HasItemForClass(string className) => !string.IsNullOrWhiteSpace(className) && items.Any(e => e.ClassName.Equals(className));
 
         public static string FriendlyItemNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.Items?.FirstOrDefault(i => i.ClassName.Equals(className))?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+
+        public static string FriendlyItemModNameForClass(string className) => string.IsNullOrWhiteSpace(className) ? string.Empty : GameData.FriendlyNameForClass($"Mod_{gameData?.Items?.FirstOrDefault(i => i.ClassName.Equals(className))?.Mod}", true) ?? string.Empty;
         #endregion
 
         #region Resources
@@ -218,7 +220,7 @@ namespace ServerManagerTool.Lib
 
         public static ResourceClassMultiplier GetResourceMultiplierForClass(string className) => resourceMultipliers.FirstOrDefault(e => e.ClassName.Equals(className));
 
-        public static bool HasResourceMultiplierForClass(string className) => resourceMultipliers.Any(e => e.ClassName.Equals(className));
+        public static bool HasResourceMultiplierForClass(string className) => !string.IsNullOrWhiteSpace(className) && resourceMultipliers.Any(e => e.ClassName.Equals(className));
 
         public static string FriendlyResourceNameForClass(string className) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.Items?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsHarvestable)?.Description ?? className;
         #endregion
@@ -230,7 +232,7 @@ namespace ServerManagerTool.Lib
 
         public static MapSpawner GetMapSpawnerForClass(string className) => mapSpawners.FirstOrDefault(e => e.ClassName.Equals(className));
 
-        public static bool HasMapSpawnerForClass(string className) => mapSpawners.Any(e => e.ClassName.Equals(className));
+        public static bool HasMapSpawnerForClass(string className) => !string.IsNullOrWhiteSpace(className) && mapSpawners.Any(e => e.ClassName.Equals(className));
 
         public static string FriendlyMapSpawnerNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.MapSpawners?.FirstOrDefault(i => i.ClassName.Equals(className))?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
         #endregion
@@ -242,9 +244,11 @@ namespace ServerManagerTool.Lib
 
         public static SupplyCrate GetSupplyCrateForClass(string className) => supplyCrates.FirstOrDefault(e => e.ClassName.Equals(className));
 
-        public static bool HasSupplyCrateForClass(string className) => supplyCrates.Any(e => e.ClassName.Equals(className));
+        public static bool HasSupplyCrateForClass(string className) => !string.IsNullOrWhiteSpace(className) && supplyCrates.Any(e => e.ClassName.Equals(className));
 
         public static string FriendlySupplyCrateNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.SupplyCrates?.FirstOrDefault(i => i.ClassName.Equals(className))?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+
+        public static string FriendlySupplyCrateModNameForClass(string className) => string.IsNullOrWhiteSpace(className) ? string.Empty : GameData.FriendlyNameForClass($"Mod_{gameData?.SupplyCrates?.FirstOrDefault(i => i.ClassName.Equals(className))?.Mod}", true) ?? string.Empty;
         #endregion
 
         #region Game Maps
