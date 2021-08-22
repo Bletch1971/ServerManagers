@@ -380,6 +380,22 @@ namespace ServerManagerTool.Lib
             set { SetValue(KickIdlePlayersPeriodProperty, value); }
         }
 
+        public static readonly DependencyProperty ServerTransferEnabledProperty = DependencyProperty.Register(nameof(ServerTransferEnabled), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.ServerSettings, IniSections.ServerSettings_ServerSettings, ServerProfileCategory.Administration)]
+        public bool ServerTransferEnabled
+        {
+            get { return (bool)GetValue(ServerTransferEnabledProperty); }
+            set { SetValue(ServerTransferEnabledProperty, value); }
+        }
+
+        public static readonly DependencyProperty CanImportDirectlyFromSameServerProperty = DependencyProperty.Register(nameof(CanImportDirectlyFromSameServer), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.ServerSettings, IniSections.ServerSettings_ServerSettings, ServerProfileCategory.Administration)]
+        public bool CanImportDirectlyFromSameServer
+        {
+            get { return (bool)GetValue(CanImportDirectlyFromSameServerProperty); }
+            set { SetValue(CanImportDirectlyFromSameServerProperty, value); }
+        }
+
         public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [DataMember]
         public string BranchName
