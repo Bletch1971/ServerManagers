@@ -1043,6 +1043,10 @@
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodTooltip">Set the amount of AFK time before a character is kicked.</sys:String>
     <sys:String x:Key="ServerSettings_ServerRegionLabel">Server Region:</sys:String>
     <sys:String x:Key="ServerSettings_ServerRegionTooltip">Selecting a server region will affect how your server is filtered in the list. Select your region to help players find a server that is close to them.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerTransferEnabledLabel">Enable Server Transfers</sys:String>
+    <sys:String x:Key="ServerSettings_ServerTransferEnabledTooltip">If enabled, will enable character server transfers.</sys:String>
+    <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerLabel">Can Import Directly from Same Server</sys:String>
+    <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerTooltip">If enabled, will allow players to directly import characters that were exported from exactly the same server.</sys:String>
 
     <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
