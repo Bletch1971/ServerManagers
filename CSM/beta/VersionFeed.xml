@@ -5,21 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-11-25T00:00:00Z</updated>
+  <updated>2021-08-22T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:6914861A-2D4E-4F08-89A3-D3D7A77F74C1</id>
-    <title>1.1.50 (1.1.50.1)</title>
-    <summary>1.1.50.1</summary>
+    <id>urn:uuid:2B49A030-A742-476B-B811-6F0D7780B117</id>
+    <title>1.1.51 (1.1.51.1)</title>
+    <summary>1.1.51.1</summary>
     <link href="" />
-    <updated>2020-11-25T00:00:00Z</updated>
+    <updated>2021-08-22T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Global Settings - Added option to automatically manage the Public IP, default to True. If disabled, then the Public IP must be updated manually.</li>
+            <li>Server Settings - Added new server transfer options (server whitelist option in future version).</li>
           </ul>
         </p>
       </div>
