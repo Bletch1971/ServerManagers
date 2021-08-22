@@ -306,6 +306,53 @@
 			"Mod": "Valguero"
 		}
 	],
+	"Inventories": [
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossDragon_Easy_Valguero_C",
+		  "Description": "Boss Inventory - Dragon (Easy)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossDragon_Medium_Valguero_C",
+		  "Description": "Boss Inventory - Dragon (Medium)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossDragon_Hard_Valguero_C",
+		  "Description": "Boss Inventory - Dragon (Hard)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossManticore_Easy_Valguero_C",
+		  "Description": "Boss Inventory - Manticore (Easy)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossManticore_Medium_Valguero_C",
+		  "Description": "Boss Inventory - Manticore (Medium)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossManticore_Hard_Valguero_C",
+		  "Description": "Boss Inventory - Manticore (Hard)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C",
+		  "Description": "Boss Inventory - Megapithecus (Easy)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C",
+		  "Description": "Boss Inventory - Megapithecus (Medium)",
+		  "Mod": "Valguero"
+		},
+		{
+		  "ClassName": "DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C",
+		  "Description": "Boss Inventory - Megapithecus (Hard)",
+		  "Mod": "Valguero"
+		}
+	],
 	"GameMaps": [
 		{
 			"IsSotF": false,
