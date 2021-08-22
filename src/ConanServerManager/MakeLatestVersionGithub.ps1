@@ -28,7 +28,7 @@
     [string]$signTFlag = "http://timestamp.digicert.com",
 
     [Parameter()]
-    [string]$installerTool = "C:\Program Files (x86)\Inno Setup 5\ISCC.exe",
+    [string]$installerTool = "D:\Program Files\Inno Setup 6\ISCC.exe",
 
     [Parameter()]
     [string]$githubRoot = "D:\GitHub\ServerManagers\CSM"
