@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">26.06.2021 от Varlonec и Mover</sys:String>    
+    <sys:String x:Key="Generic_TranslatedBy">27.08.2021 от Varlonec, Mover, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -435,37 +435,37 @@
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Языки</sys:String>
 
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Пользовательские настройки</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Включить пользовательские настройки Engine.ini</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Вкл пользовательские настройки Engine.ini</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Если включено, то настройки engine.ini будут менеджерами сервера.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Включить Crafting Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">Если включено, Crafting Overrides будут использовать настройки ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeLabel">Включить переопределение размера стека</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeTooltip">Если включено, переопределение размера стека будет управляться ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerLabel">Включить Map Spawner Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Если включено, Map Spawner Overrides будут использовать настройки ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Включить Supply Crate Overrides</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Если включено, Supply Crate Overrides будут использовать настройки ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Включить настройки запрета траснфера дино</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Если включено, настройками запретов трансфера дино будет управлять ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Включить PGM Ark</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">Если включено, процедурная генерация повятся в настройках ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Включить SotF</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Если включено, SotF появится в настройках ASM.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">ПРЕДУПРЕЖДЕНИЕ. Если любой из этих параметров отключен, ASM не будет читать или записывать связанные с этип параметры переопределения. Повторное включение любого из этих параметров приведет к удалению всех существующих связанных переопределений в файле конфигурации.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Вкл настройки Требований для крафта</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">Если включено, то требованием для крафта будет управлять ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeLabel">Вкл настройки Размеров стаков</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeTooltip">Если включено, то переопределением размера стаков будет управляться ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerLabel">Вкл настройки Спавнов дино</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Если включено, то спавнами дино будет управлять ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Вкл настройки Лучей с дропами</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Если включено, то настройки лучей с дропом будет управлять ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Вкл настройки Запретов трансфера дино</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Если включено, то настройками запретов трансфера дино будет управлять ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Вкл PGM ARK</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">Если включено, то процедурная генерация карт появится в настройках ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Вкл SotF</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Если включено, Survival Of The Fittest появится в настройках ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">ПРЕДУПРЕЖДЕНИЕ: Если любой из этих параметров отключен, ASM не будет читать или записывать связанные с этип параметры переопределения. Повторное включение любого из этих параметров приведет к удалению всех существующих связанных переопределений в файле конфигурации.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Настройки активных иконок статуса сервера</sys:String>
-    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Включить активную иконку</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Вкл активную иконку</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">Если включено, при нажатии на иконку активности сервера, можно вызвать функцию включения или выключения.</sys:String>
-    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Показать подтверждение действия</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Показать подтверждения действий</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">Если включено, будет показан диалог подтверждения действия статуса сервера.</sys:String>
 
-    <sys:String x:Key="GlobalSettings_ServerStartupLabel">Настройки запуска Сервера</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartupLabel">Настройки запуска сервера</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Увеличение уровня игрока:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">Количество XP будет увеличено при добавлении нового настраиваемого уровня.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Увеличение уровня динозавров:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">Количество XP, которое должно быть увеличено при добавлении нового настраиваемого уровня.</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Проверить профиль при старте сервера</sys:String>
-    <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Если включено, при ручном запуске сервера выполняется базовая проверка Сервера и файлов Модов. ПРИМЕЧАНИЕ. Не будет выполнено, если включено авто управление Ark Mod Management(Автоматическое управление Модами).</sys:String>
+    <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Если включено, при ручном запуске сервера выполняется базовая проверка сервера и файлов модов. ПРИМЕЧАНИЕ: Не будет выполнено, если включено авто-управление Ark Mod Management (автоматическое управление модами).</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Выполнение обновления сервера и модов при запуске сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Если включено, при ручном запуске сервера файлы сервера и мод будут обновлены до последней версии. ПРИМЕЧАНИЕ. Не будет выполнено, если включено управление Ark Mod Management(Автоматическое управление Модами).</sys:String>
 
@@ -1033,42 +1033,42 @@
     <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">Если включено, при запуске сервера все дикие существа будут уничтожены и обновлены (это уничтожит только диких существ, которые в настоящее время не приручены).</sys:String>
     <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Включить Авто Респаун динозавров</sys:String>
     <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip">Если включено, принудительное возрождение диких динозавтров через указанный интервал.</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Интервал Респауна Диких дино</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">Интервал между принудительным автоматическим респауном динозавров.</sys:String>
-    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Альтернативная папка Сохранения:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Интервал респауна диких дино</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">Интервал между автоматическим респауном динозавров.</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Альтернативная папка сохранения:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Необязательно)</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Устанавливает имя каталога (под серверами «Сохраненная папка») для хранения файлов мира, игрока и племени.</sys:String>
-    <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Установить КластерID Cross-ARK:</sys:String>
-    <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Устанавливает идентификатор Кластера для этого сервера, который будет группировать серверы ARK вместе с помощью передачи данных Cross-ARK.</sys:String>
+    <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Установить айди кластера:</sys:String>
+    <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Устанавливает идентификатор, который будет объединять сервера в один общий кластер.</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Установить каталог Кластера</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">Если это разрешено, вы можете использовать общее хранилище Кластера, которое работает между несколькими серверами, работающими на одном компьютере.</sys:String>
 
-    <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Настройки Логов Сервера</sys:String>
-    <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Сброс всех настроек Логов сервера по умолчанию.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableAdminLogsLabel">Вкл. лог Админа сервера</sys:String>
-    <sys:String x:Key="ServerSettings_EnableAdminLogsTooltip">Если опция включена, логи администратора сервера (включая поддержку RCON) будут задействован.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTribeLogsLabel">Максимальный лог Племя:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTribeLogsTooltip">Устанавливает максимальное количество записей в лог Племя, которые хранятся в Племени (по умолчанию 100).</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAdminLogsIncludeTribeLogsLabel">Логи Администратора сервера включают Логи Племени</sys:String>
-    <sys:String x:Key="ServerSettings_ServerAdminLogsIncludeTribeLogsTooltip">Если включено, он будет записывать все Логи племени (для всех племен) в файлы Логов Shootergame.</sys:String>
-    <sys:String x:Key="ServerSettings_ServerRCONOutputTribeLogsLabel">Вывод в RCON логов Племени.</sys:String>
-    <sys:String x:Key="ServerSettings_ServerRCONOutputTribeLogsTooltip">Если включено, он будет записывать все Логи Племени (для всех Племен) в окно RCON.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowHideDamageSourceFromLogsLabel">Разрешить скрывать источник повреждений в логах</sys:String>
-    <sys:String x:Key="ServerSettings_AllowHideDamageSourceFromLogsTooltip">Если включено, заставит Silencer скрыть имя игрока, который убил вас из сообщения об убийстве в журнале племени.</sys:String>
-    <sys:String x:Key="ServerSettings_LogAdminChatLabel">Лог Админа в чат</sys:String>
-    <sys:String x:Key="ServerSettings_LogAdminChatTooltip">Если включен, команды администратора будут отображаться в чате</sys:String>
-    <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatLabel">Лог Админ команд в чате (только Админ)</sys:String>
-    <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">Если включено, команды администратора будут отображаться в чате для администраторов только для просмотра.</sys:String>
-    <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Лог Племени об уничтожении строений Врагом</sys:String>
-    <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">Если включено, журнал уничтожения строений противником (для Племени жертвы) отобразит Племя злоумышленника в журналах Племени, а не общее сообщение об уничтожении строений.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Настройки логов сервера</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Сброс всех настроек логов сервера по умолчанию.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAdminLogsLabel">Вкл логи администратора сервера</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAdminLogsTooltip">Если включено, то логи администратора сервера будут включены (включая поддержку RCON).</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTribeLogsLabel">Размер логов трайба:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTribeLogsTooltip">Устанавливает максимальное количество записей в логах трайба (по умолчанию 100).</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAdminLogsIncludeTribeLogsLabel">Логи администратора сервера содержат логи трайбов</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAdminLogsIncludeTribeLogsTooltip">Если включено, то все логи трайбов на сервере будут записываться в файле ShooterGame\Saved\Logs\ShooterGame.log.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerRCONOutputTribeLogsLabel">Показывать логи трайбов в RCON</sys:String>
+    <sys:String x:Key="ServerSettings_ServerRCONOutputTribeLogsTooltip">Если включено, то все логи трайбов на сервере будут отображаться в окне RCON (окно RCON обязательно должно быть открыто!).</sys:String>
+    <sys:String x:Key="ServerSettings_AllowHideDamageSourceFromLogsLabel">Разрешить скрыть источник повреждений в логах</sys:String>
+    <sys:String x:Key="ServerSettings_AllowHideDamageSourceFromLogsTooltip">Если включено, то в логах трайба не будет отображаться кто вас убил.</sys:String>
+    <sys:String x:Key="ServerSettings_LogAdminChatLabel">Вкл отображение логов администратора в чате (для всех)</sys:String>
+    <sys:String x:Key="ServerSettings_LogAdminChatTooltip">Если включено, то логи введённых команд администратора будут отображаться в игровом чате (видны всем).</sys:String>
+    <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatLabel">Вкл отображение логов администратора в чате (только для администраторов)</sys:String>
+    <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">Если включено, то логи введённых команд администратора будут отображаться в игровом чате (видны только администраторам).</sys:String>
+    <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Вкл отображение в логах кто уничтожил структуры</sys:String>
+    <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">Если включено, то в логах будет отображено кто или какой трайб уничтожил ваши структуры, а не общее сообщение об уничтожении структур (для пострадавшего трайба).</sys:String>
 
-    <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Включить Web Alarms</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Вкл Web Alarms</sys:String>
     <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">Если это разрешено, серверы теперь могут получать сетевые уведомления, размещенные где-то, когда важные вещи случаются с племенем.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmKeyLabel">Web Key</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmKeyTooltip">Ключ, который необязательно использовать в скрипте прослушивания, но должен быть в текстовом файле.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlLabel">Web URL</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Указывает URL-адрес, в котором хранится ваш скрипт прослушивания, ожидающий и готовый к отправке информации о вашем сервере.</sys:String>
-    <sys:String x:Key="ServerSettings_WebAlarmNote">ПРИМЕЧАНИЕ. ASM не предоставляет функциональность Web Alarms. ASM позволяет вам включать/отключать Web Alarms и создавать необходимые файлы AlarmPostCredentials.</sys:String>
+    <sys:String x:Key="ServerSettings_WebAlarmNote">ПРИМЕЧАНИЕ: ASM не предоставляет функциональность Web Alarms. ASM позволяет вам включать/отключать Web Alarms и создавать необходимые файлы AlarmPostCredentials.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Web оповещение об ошибке</sys:String>
     
     <sys:String x:Key="ServerSettings_BranchLabel">Детали веток</sys:String>
@@ -1109,12 +1109,12 @@
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Выключить сервер в</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownTooltip">Укажите время выключения сервера (формат в ЧЧ:ММ)</sys:String>
     <sys:String x:Key="ServerSettings_RestartAfterShutdownLabel">затем перезагрузить</sys:String>
-    <sys:String x:Key="ServerSettings_RestartAfterShutdownTooltip">Если включено, перезагрузить сервер сразу после завершения работы</sys:String>
+    <sys:String x:Key="ServerSettings_RestartAfterShutdownTooltip">Если включено, то сервер сразу перезапустится после завершения работы</sys:String>
     <sys:String x:Key="ServerSettings_UpdateAfterShutdownLabel">Выполнять обновление</sys:String>
-    <sys:String x:Key="ServerSettings_UpdateAfterShutdownTooltip">Если включено, обновит сервер после завершения работы</sys:String>
-    <sys:String x:Key="ServerSettings_PeriodicBackupsLabel">Включить периодический Авто-Бекап</sys:String>
+    <sys:String x:Key="ServerSettings_UpdateAfterShutdownTooltip">Если включено, запустится обновление сервере после завершения работы</sys:String>
+    <sys:String x:Key="ServerSettings_PeriodicBackupsLabel">Вкл периодический Авто-Бекап</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicBackupsTooltip">Если этот параметр включен, сервер будет периодически Авто-Бекапиться. Смотреть и редактировать в "Глобальные настройки".</sys:String>
-    <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Включить периодические Авто-Обновления</sys:String>
+    <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Вкл периодические Авто-Обновления</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Автоматически проверяет наличие обновлений сервера и модов. Если они присутствуют, запускает их установку. Смотреть и редактировать в "Глобальные настройки"</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Перезапустить сервер при завершении работы</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Если этот параметр включен, сервер будет перезагружен, даже если вы отключите Автозапуск и Авто-Обновление.</sys:String>
@@ -1122,37 +1122,37 @@
 
     <!--#region Server Settings - Rules -->
     <sys:String x:Key="ServerSettings_RulesLabel">Правила сервера</sys:String>
-    <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Включить Хардкор режим</sys:String>
-    <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Включает Хардкор режим (игроки не могут возрождаться после смерти, должен быть создан новый персонаж).</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvPLabel">Включить PvP</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvPTooltip">Включает PvP режим (игроки могут нанести повреждения или убить друг друга. В PvP игроки также могут повредить или разрушить здания другого племени или убить их динозавров).</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Включить PvE постройки в пещерах</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Если этот параметр включен, позволяет строить в пещерах PvE режиме.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Включить PvE Cryo Недомогание</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Если включено, при вытаскивании прирученного существо из криокапсулы, включится таймер крио-болезни. Для PvE серверов.</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireLabel">Отключить огонь по своим в PvE</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов племени, динозавров и разрушить структуры.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableLootCratesLabel">Отключить Разграбление ящиков</sys:String>
-    <sys:String x:Key="ServerSettings_DisableLootCratesTooltip">Если этот параметр включен из разграбленных ящиков не будет появляться лут (контейнеры артефактов по-прежнему работают).</sys:String>
-    <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresLabel">Лучи дропа, останавливаются на крыше строений </sys:String>
-    <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresTooltip">Если включено, лучи останавливаются на верхней части строения, а не проходят сквозь него до земли.</sys:String>
-    <sys:String x:Key="ServerSettings_RandomSupplyCratePointsLabel">Рандомный респ Снабжения</sys:String>
-    <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">Если это разрешено, ящики снабжения респаются случайными образом.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Запрещает строительство в зонах респа ресурсов.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Вкл режим Хардкор</sys:String>
+    <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Включает режим Хардкор (игроки не могут возрождаться после смерти, должен быть создан новый персонаж).</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePvPLabel">Вкл PvP</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePvPTooltip">Включает PvP режим (игроки могут нанести повреждения или убить друг друга. В PvP игроки также могут повредить или разрушить структуры другого тарйба или убить их динозавров).</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Вкл строительство в пещерах в PvE</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Если этот параметр включен, позволяет строить в пещерах в PvE режиме.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Вкл крио-недомогание в PvE</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Если включено, при вытаскивании прирученного существа из криокапсулы, включится таймер крио-болезни (для PvE серверов).</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireLabel">Откл урон по своим в PvE</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов трайба, динозавров и разрушить структуры.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableLootCratesLabel">Откл спавн лучей с дропом</sys:String>
+    <sys:String x:Key="ServerSettings_DisableLootCratesTooltip">Если включено, то лучи с дропом не будут появляться на сервере (артефакты по-прежнему будут появляться).</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresLabel">Вкл остановку лучей с дропом на крыше строений</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCrateSpawnsOnTopOfStructuresTooltip">Если включено, лучи с дропом останавливаются на верхней части строения, а не проходят сквозь него до земли.</sys:String>
+    <sys:String x:Key="ServerSettings_RandomSupplyCratePointsLabel">Рандомный респ снабжения</sys:String>
+    <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">Если это разрешено, то лучи спавнятся случайным образом.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Запретить строительство в зонах респауна ресурсов.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Если включено, полностью запрещает строительство в зонах с богатыми ресурсами, в частности настройка на карте TheIsland вокруг основных гор.</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Отключить огонь по своим в PvP</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов племени, динозавров и разрушить структуры.</sys:String>
-    <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Включить Луч для поиска Лута</sys:String>
-    <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">Если включено, после смерти луч света стреляет в небо, чтобы помочь игроку найти место, где он погиб.</sys:String>
-    <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Отключит анимацию респауна.</sys:String>
-    <sys:String x:Key="ServerSettings_PreventSpawnAnimationsTooltip">Если включено, отключит анимацию респауна(поднятие с кровати).</sys:String>
-    <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsLabel">Разрешить бесконечно использовать суп "Амнезия"</sys:String>
-    <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsTooltip">Если включено, разрешает неограниченно использовать суп "Амнезия" на сервере.(по умолчанию 1 раз за уровень)</sys:String>
-    <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsLabel">Разрешает постройку на платформе нескольких уровней</sys:String>
-    <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">Если включено, разрешает постройку в несколько уровней под платформами.</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Откл урон по своим в PvP</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов трайба, динозавров и разрушить структуры.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Вкл луч для поиска трупа</sys:String>
+    <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">Если включено, то после смерти над вашим трупом будет виден зелёный луч света, чтобы помочь игроку найти место, где он погиб.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Откл анимацию респауна</sys:String>
+    <sys:String x:Key="ServerSettings_PreventSpawnAnimationsTooltip">Если включено, то отключится анимация респауна (поднятие с кровати).</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsLabel">Разрешить бесконечно использовать тоник "Амнезия"</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsTooltip">Если включено, разрешает неограниченно использовать тоник "Амнезия" на сервере (по умолчанию только 1 раз за уровень).</sys:String>
+    <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsLabel">Разрешить постройку под платформами в несколько уровней</sys:String>
+    <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">Если включено, разрешает постройку в несколько уровней под платформами (на плотах).</sys:String>
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierLabel">Увеличение зоны строительства на платформах</sys:String>
-    <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Увеличение множителя позволяет размещать конструкции дальше от платформы.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesLabel">Максимальное кол. ворот на седлах-платформах</sys:String>
+    <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Увеличение множителя позволяет размещать структуры дальше от края платформы.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesLabel">Макс количество ворот на седлах-платформах</sys:String>
     <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesTooltip">Ограничивает количество ворот, которые можно разместить на седлах-платформах. Этот вариант не имеет обратной силы, поэтому применение этого изменения потребует некоторой ручной административной работы, чтобы очистить все существующие платформы, превышающие лимит.</sys:String>
     
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Включить перераспределение сложности</sys:String>
@@ -1162,45 +1162,45 @@
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Максимальные уровни существ:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
 
-    <sys:String x:Key="ServerSettings_EnableTributeLabel">Включить загрузку данных</sys:String>
-    <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если этот параметр включен, это позволит загружать Выживших/Предметов/динозавров на ваш сервер.</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Не загружать Выживших</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsTooltip">Если включено, загрузка Выживших отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemDownloadsLabel">Не загружать Предметы</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemDownloadsTooltip">Если включено, загрузка предметов отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoDownloadsLabel">Не загружать динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoDownloadsTooltip">Если включено, загрузка динозавров отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableTributeLabel">Вкл загрузку из данных кластера</sys:String>
+    <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если включено, это позволит загружать выживших/предметов/динозавров на сервер.</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Откл загрузку выживших на сервер</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsTooltip">Если включено, загрузка выживших на сервер отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemDownloadsLabel">Откл загрузку предметов на сервер</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemDownloadsTooltip">Если включено, загрузка предметов на сервер отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoDownloadsLabel">Откл загрузку динозавров на сервер</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoDownloadsTooltip">Если включено, загрузка динозавров на сервер отключена.</sys:String>
 
-    <sys:String x:Key="ServerSettings_TributeUploadLabel">Включить выгрузку данных</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorUploadsLabel">Не выгружать Выживших</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorUploadsTooltip">Если включено, выгрузка Выживших отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemUploadsLabel">Не выгружать Предметы</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemUploadsTooltip">Если включено, выгрузка Предметов отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">Не выгружать динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">Если включено, выгрузка динозавров отключена.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Максимум хранимых дино</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">Если включено, будет ограничено количество динозавров, которые игрок может хранить в обелисках. ПРИМЕЧАНИЕ. Установка этого значения может привести к повреждению кластера.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Максимум хранимых Предметов</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">Если включено, будет ограничено количество предметов, которые игрок может хранить в обелисках. ПРИМЕЧАНИЕ. Установка этого значения может привести к повреждению кластера.</sys:String>
+    <sys:String x:Key="ServerSettings_TributeUploadLabel">Настройки выгрузки в данные с сервера</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorUploadsLabel">Откл выгрузку выживших в данные</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorUploadsTooltip">Если включено, выгрузка выживших в данные (облако) отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemUploadsLabel">Откл выгрузку предметов в данные</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemUploadsTooltip">Если включено, выгрузка предметов в данные (облако) отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">Откл выгрузку динозавров в данные</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">Если включено, выгрузка динозавров в данные (облако) отключена.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Макс хранимых дино в данных</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">Если включено, то можно изменить количество динозавров, которые игрок может хранить в данных (облаке). ПРИМЕЧАНИЕ: установка этого значения может привести к повреждению данных кластера.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Макс хранимых предметов в данных</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">Если включено, то можно изменить количество предметов, которые игрок может хранить в данных (облаке). ПРИМЕЧАНИЕ: установка этого значения может привести к повреждению данных кластера.</sys:String>
 
-    <sys:String x:Key="ServerSettings_ClusterTributeLabel">Настройки работы Кластера</sys:String>
-	<sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Трансфер только по Фильтру (Кластер)</sys:String>
-    <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Если включено, передача Выживших, предметов и динозавров отключена, если сервер не находится в одном кластере.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Изменить время хранения выгруженного Выжившего.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">Если включено, вы можете выставить время хранения Выжившего в Кластере.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Изменить время хранения выгруженного Предмета.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsTooltip">Если включено, вы можете выставить время хранения Предмета в Кластере.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Изменить время хранения выгруженного динозавра.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">Если включено, вы можете выставить время хранения динозавра в Кластере.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Установить время повторной выгрузки динозавров</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">Если включено, вы сможете указать интервал повторной выгрузки динозавров.</sys:String>
-    <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsLabel">Разрешить загрузку дино на Aberration</sys:String>
-    <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsTooltip">Если включено,  позволит вам загружать на карту Aberration дино с других карт</sys:String>
+    <sys:String x:Key="ServerSettings_ClusterTributeLabel">Настройки работы кластера</sys:String>
+	<sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Трансфер только по Фильтру (кластер)</sys:String>
+    <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Если включено, то трансфер Выживших, предметов и динозавров отключен, если сервер не находится в одном кластере.</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Изменить время хранения выживших в данных</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">Если включено, вы можете изменить время хранения Выжившего в данных (облаке).</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Изменить время хранения предметов в данных</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsTooltip">Если включено, вы можете изменить время хранения предмета в данных (облаке).</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Изменить время хранения дино в данных</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">Если включено, вы можете изменить время хранения динозавров в данных (облаке).</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Установить время повторной выгрузки дино в данные</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">Если включено, вы сможете указать интервал повторной выгрузки динозавров в данные (облако).</sys:String>
+    <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsLabel">Разрешить загрузку дино из данных на Аберрацию</sys:String>
+    <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsTooltip">Если включено, то это позволит вам загружать динозавров из данных на карту Aberration.</sys:String>
 
     <sys:String x:Key="ServerSettings_PvPRespawnLabel">Увеличить интервал респауна в PvP</sys:String>
     <sys:String x:Key="ServerSettings_PvPRespawnTooltip">Если этот параметр включен, позволяет увеличить интервал респауна в PvP.</sys:String>
     <sys:String x:Key="ServerSettings_IntervalCheckPeriodLabel">Время проверки интервала</sys:String>
-    <sys:String x:Key="ServerSettings_IntervalCheckPeriodTooltip">Проверка времени респауна продолжается после того, как игрок убит группой.</sys:String>
+    <sys:String x:Key="ServerSettings_IntervalCheckPeriodTooltip">Проверка времени респауна продолжается после того, если игрок был убит группой игроков (макс время респауна, которое может настакаться при частых смертях).</sys:String>
     <sys:String x:Key="ServerSettings_IntervalCheckPeriodUnits">секунд</sys:String>
     <sys:String x:Key="ServerSettings_IntervalMultiplierLabel">Множитель интервала:</sys:String>
     <sys:String x:Key="ServerSettings_IntervalMultiplierTooltip">Множитель значения базовой суммы для определения времени респауна.</sys:String>
@@ -1208,13 +1208,13 @@
     <sys:String x:Key="ServerSettings_IntervalBaseLabel">Базовая сумма интервала:</sys:String>
     <sys:String x:Key="ServerSettings_IntervalBaseTooltip">Период базового времени, используемый для определения времени респауна.</sys:String>
     <sys:String x:Key="ServerSettings_IntervalBaseUnits">секунд</sys:String>
-    <sys:String x:Key="ServerSettings_PreventOfflinePvPLabel">Предотвратить Оффлайн PvP</sys:String>
+    <sys:String x:Key="ServerSettings_PreventOfflinePvPLabel">Запретить Оффлайн PvP</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPTooltip">Если включено, активируется опция предотвращения Оффлайн-Рейдов.</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalLabel">Время до активации защиты</sys:String>
-    <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalTooltip">Период времени до того, как Выжившие / динозавры / Структуры становятся неуязвимыми (ВСЕ игроки Племени должны быть оффлайн).</sys:String>
+    <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalTooltip">Время до того, как Выжившие, динозавры и структуры становятся неуязвимыми (ВСЕ игроки из трайба должны быть оффлайн).</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPIntervalUnits">секунд</sys:String>
-    <sys:String x:Key="ServerSettings_PreventOfflinePvPConnectionInvincibleIntervalLabel">Баф бесмертия при входе в игру</sys:String>
-    <sys:String x:Key="ServerSettings_PreventOfflinePvPConnectionInvincibleIntervalTooltip">На сколько секунд при входе в игру, дается бафф бесмертия. Для предотвращения убийство персонажа сразу после входа.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventOfflinePvPConnectionInvincibleIntervalLabel">Бафф бесмертия при входе в игру</sys:String>
+    <sys:String x:Key="ServerSettings_PreventOfflinePvPConnectionInvincibleIntervalTooltip">На какое время при входе в игру, дается бафф бесмертия (в секундах). Настройка для предотвращения убийства персонажа сразу после входа на сервер.</sys:String>
 
     <sys:String x:Key="ServerSettings_PvEScheduleLabel">Расписание PvE</sys:String>
     <sys:String x:Key="ServerSettings_PvEScheduleTooltip">Если этот параметр включен, позволяет переключаться между PvE и PvP в заранее определенное время в игре или предварительно заданные промежутки времени в реальном мире.</sys:String>
@@ -1903,7 +1903,7 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Survival of the Fittest -->
-    <sys:String x:Key="ServerSettings_SOTFLabel">Survival of the Fittest (Выживает сильнейший)</sys:String>
+    <sys:String x:Key="ServerSettings_SOTFLabel">Survival of the Fittest (выживает сильнейший)</sys:String>
     <sys:String x:Key="ServerSettings_EnableSOTFLabel">Включить Survival of the Fittest</sys:String>
     <sys:String x:Key="ServerSettings_EnableSOTFTooltip">Если этот параметр включен, выполняется настройка сервера в режиме "Survival of the Fittest".</sys:String>
     <sys:String x:Key="ServerSettings_DisableDeathSpectatorLabel">Отключить "Мертвого зрителя"</sys:String>
@@ -2107,20 +2107,20 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Map Spawner Overrides -->
-    <sys:String x:Key="ServerSettings_MapSpawnerOverridesLabel">Map Spawner Overrides</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerLabel">Containers</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryLabel">Entries</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_SaveTitle">Map Spawner Settings</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverridesLabel">Спавны дино</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerLabel">Контейнеры</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryLabel">Записи</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_SaveTitle">Настройки спавнов дино на сервере</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
 
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnLabel">Type</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnLabel">Тип</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnTooltip">Spawner Override Type</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnLabel">Spawner</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnLabel">Спавн</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnTooltip">Spawner Class String</sys:String>
 
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryNameColumnLabel">Name</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryNameColumnLabel">Имя</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryNameColumnTooltip">Spawn Name</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryClassColumnLabel">Dino</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryClassColumnLabel">Дино</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryClassColumnTooltip">Entity ID of the dino to be added</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryWeightClassColumnLabel">Weight</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryWeightClassColumnTooltip">Weight Factor for this spawn</sys:String>
@@ -2139,21 +2139,21 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Crafting Overrides -->
-    <sys:String x:Key="ServerSettings_CraftingOverridesLabel">Crafting Overrides</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ItemsLabel">Crafted Items</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourcesLabel">Resource Items</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_SaveTitle">Crafting Override Settings</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverridesLabel">Изменение требований для крафта</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ItemsLabel">Предметы крафта</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourcesLabel">Ресурсы для крафта</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_SaveTitle">Настройки Изменений требований для крафта</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_WarningLabel">NOTE: Changing the resources of a crafted item will require the Engram to be re-learnt. If the Engram is already known, a mindwipe tonic must be used so that it can be re-learnt.</sys:String>
 
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ItemClassColumnLabel">Crafted Item</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ItemClassColumnLabel">Предмет крафта</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_ItemClassColumnTooltip">Crafted Item Class String</sys:String>
 
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceClassColumnLabel">Resource Item</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceClassColumnLabel">Ресурс для крафта</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceClassColumnTooltip">Resource Item Class String.</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceQuantityColumnLabel">Quantity</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceQuantityColumnTooltip">How much of the resource is required.</sys:String>
-    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceExactColumnLabel">Require Exact Resource Type</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceQuantityColumnLabel">Количество</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceQuantityColumnTooltip">Какое количество ресурсов требуется для крафта.</sys:String>
+    <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceExactColumnLabel">Требовать точный тип ресурса</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_ResourceExactColumnTooltip">Determines if a logical check takes place on whether the production makes any sense at all.</sys:String>
 
     <sys:String x:Key="ServerSettings_CraftingOverrides_AddItemTooltip">Add crafting item</sys:String>
@@ -2168,7 +2168,7 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Supply Crate Overrides -->
-    <sys:String x:Key="ServerSettings_SupplyCrateOverridesLabel">Supply Crate Overrides</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrateOverridesLabel">Лучи с дропами</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_CratesLabel">Supply Crates</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetsLabel">Item Sets</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntriesLabel">Item Set Entries</sys:String>
@@ -2245,7 +2245,7 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Stack Size Overrides -->
-    <sys:String x:Key="ServerSettings_StackSizeOverridesLabel">Настроить размеры стаков</sys:String>
+    <sys:String x:Key="ServerSettings_StackSizeOverridesLabel">Размеры стаков</sys:String>
     <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierLabel">Множитель размера стака</sys:String>
     <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierTooltip">Это глобальный модификатор, позволяющий увеличивать или уменьшать размеры стака предметов. ПРИМЕЧАНИЕ: это работает только для предметов, которые предназначены для штабелирования.</sys:String>
     <sys:String x:Key="ServerSettings_StackSizeOverrides_ItemsLabel">Стак предметов</sys:String>
@@ -2274,7 +2274,7 @@
     <!--#endregion-->
  
     <!--#region Server Settings - Prevent Transfer Overrides -->
-    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Настройки запрета трансфера</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Запрет трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Запретить трансфер</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Настройки запрета трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">Примечание: Если вы хотите управлять данными настройками вручную или с помощью другого приложения, вы можете отключить опцию, которая не позволит ASM ими управлять. См. раздел "Пользовательские настройки" в глобальных настройках.</sys:String>
@@ -3671,50 +3671,50 @@
     <sys:String x:Key="PrimalItem_RecipeNote_HealSoup_C">Рецепты Роквелла: Целебный отвар</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_Jerky_C">Рецепты Роквелла: Вяленое мясо</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_Kibble_C">Рецепты Роквелла: Киблы из Яйца</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Allo_C">Rockwell Recipes: Allosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ankylo_C">Rockwell Recipes: Ankylosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_archaeopteryx_C">Rockwell Recipes: Archaeopteryx Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Argentavis_C">Rockwell Recipes: Argentavis Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Baryonyx_C">Rockwell Recipes: Baryonyx Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Bronto_C">Rockwell Recipes: Brontosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Carbonemys_C">Rockwell Recipes: Carbonemys Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Carno_C">Rockwell Recipes: Carnotaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Compy_C">Rockwell Recipes: Compy Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dilo_C">Rockwell Recipes: Dilophosaur Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dimetrodon_C">Rockwell Recipes: Dimetrodon Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dimorphodon_C">Rockwell Recipes: Dimorphodon Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Diplodocus_C">Rockwell Recipes: Diplodocus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dodo_C">Rockwell Recipes: Dodo Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Gallimimus_C">Rockwell Recipes: Gallimimus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ichthyornis_C">Rockwell Recipes: Ichthyornis Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Iguanodon_C">Rockwell Recipes: Iguanodon Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Kairuku_C">Rockwell Recipes: Kairuku Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Kentrosaurus_C">Rockwell Recipes: Kentrosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Lystro_C">Rockwell Recipes: Lystrosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Megalania_C">Rockwell Recipes: Megalania Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Megalosaurus_C">Rockwell Recipes: Megalosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Microraptor_C">Rockwell Recipes: Microraptor Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Moschops_C">Rockwell Recipes: Moschops Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Oviraptor_C">Rockwell Recipes: Oviraptor Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pachy_C">Rockwell Recipes: Pachycephalosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_PachyRhino_C">Rockwell Recipes: Pachyrhinosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Parasaur_C">Rockwell Recipes: Parasaur Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pegomastax_C">Rockwell Recipes: Pegomastax Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pela_C">Rockwell Recipes: Pelagornis Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ptero_C">Rockwell Recipes: Pteranodon Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pulmono_C">Rockwell Recipes: Pulmonoscorpius Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Quetz_C">Rockwell Recipes: Quetzalcoatlus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Raptor_C">Rockwell Recipes: Raptor Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Rex_C">Rockwell Recipes: Tyrannosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Sarco_C">Rockwell Recipes: Sarcosuchus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Spino_C">Rockwell Recipes: Spinosaur Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Stegosaurus_C">Rockwell Recipes: Stegosaurus Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Tapejara_C">Rockwell Recipes: Tapejara Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_TerrorBird_C">Rockwell Recipes: Terror Bird Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Therizino_C">Rockwell Recipes: Therizinosaur Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Titanoboa_C">Rockwell Recipes: Titanoboa Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Triceratops_C">Rockwell Recipes: Triceratops Kibble</sys:String>
-    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Troodon_C">Rockwell Recipes: Troodon Kibble</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Allo_C">Рецепты Роквелла: Аллозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ankylo_C">Рецепты Роквелла: Анкилозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_archaeopteryx_C">Рецепты Роквелла: Археоптерикс Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Argentavis_C">Рецепты Роквелла: Аргентавис Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Baryonyx_C">Рецепты Роквелла: Барионикс Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Bronto_C">Рецепты Роквелла: Бронтозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Carbonemys_C">Рецепты Роквелла: Карбонемис Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Carno_C">Рецепты Роквелла: Карнотавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Compy_C">Рецепты Роквелла: Компи Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dilo_C">Рецепты Роквелла: Дилофозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dimetrodon_C">Рецепты Роквелла: Диметродон Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dimorphodon_C">Рецепты Роквелла: Диморфодон Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Diplodocus_C">Рецепты Роквелла: Диплодокус Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Dodo_C">Рецепты Роквелла: Додо Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Gallimimus_C">Рецепты Роквелла: Галимимус Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ichthyornis_C">Рецепты Роквелла: Ихтиорнис Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Iguanodon_C">Рецепты Роквелла: Игуанадон Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Kairuku_C">Рецепты Роквелла: Кайруку Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Kentrosaurus_C">Rockwell Recipes: Кентрозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Lystro_C">Rockwell Recipes: Листрозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Megalania_C">Rockwell Recipes: Мегалания Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Megalosaurus_C">Rockwell Recipes: Мегалозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Microraptor_C">Rockwell Recipes: Микрораптор Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Moschops_C">Rockwell Recipes: Мосхопс Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Oviraptor_C">Rockwell Recipes: Овираптор Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pachy_C">Rockwell Recipes: Пахицефалозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_PachyRhino_C">Rockwell Recipes: Пахиринозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Parasaur_C">Rockwell Recipes: Парозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pegomastax_C">Rockwell Recipes: Пегомастакс Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pela_C">Rockwell Recipes: Пелагорнис Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Ptero_C">Rockwell Recipes: Птеранодон Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Pulmono_C">Rockwell Recipes: Скорпион Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Quetz_C">Rockwell Recipes: Кетцалькоатль Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Raptor_C">Rockwell Recipes: Раптор Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Rex_C">Rockwell Recipes: Тираннозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Sarco_C">Rockwell Recipes: Саркозух Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Spino_C">Rockwell Recipes: Спинозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Stegosaurus_C">Rockwell Recipes: Стегозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Tapejara_C">Rockwell Recipes: Тапежара Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_TerrorBird_C">Rockwell Recipes: Ужасная птица Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Therizino_C">Rockwell Recipes: Теризинозавр Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Titanoboa_C">Rockwell Recipes: Титанобоа Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Triceratops_C">Rockwell Recipes: Трицератопс Киблы</sys:String>
+    <sys:String x:Key="PrimalItem_RecipeNote_Kibble_Troodon_C">Rockwell Recipes: Троодон Киблы</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_LazarusChowder_C">Рецепты Роквелла: Кремовый деликатес</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_Measurements_C">Примечания к рецептам Rockwell</sys:String>
     <sys:String x:Key="PrimalItem_RecipeNote_RespecSoup_C">Рецепты Роквелла: Тоник "Амнезия"</sys:String>

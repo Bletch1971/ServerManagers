@@ -36,14 +36,6 @@
       "Mod": "ScorchedEarth"
     },
     {
-      "NameTag": "Manticore",
-      "IsSpawnable": false,
-      "IsTameable": "False",
-      "ClassName": "Manticore_Character_BP_C",
-      "Description": "Manticore",
-      "Mod": "ScorchedEarth"
-    },
-    {
       "NameTag": "Mantis",
       "IsSpawnable": true,
       "IsTameable": "True",

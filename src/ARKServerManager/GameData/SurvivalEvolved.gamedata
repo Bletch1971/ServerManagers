@@ -1,7 +1,7 @@
 {
   "Application": "ark",
-  "Version": "1.7.2",
-  "Created": "2020-12-03T00:00:00.0000000Z",
+  "Version": "1.7.3",
+  "Created": "2021-08-23T00:00:00.0000000Z",
   "Creatures": [
     {
       "NameTag": "Achatina",
@@ -4305,6 +4305,14 @@
       "Level": 0,
       "Points": 0,
       "IsTekGram": true,
+      "ClassName": "EngramEntry_TekATV_C",
+      "Description": "Tek ATV",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
       "ClassName": "EngramEntry_Tek_Gate_C",
       "Description": "Tek Dinosaur Gate",
       "Mod": "ArkPrime"
@@ -6846,6 +6854,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemArmor_YutySaddle_C",
       "Description": "Yutyrannus Saddle",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Artifacts",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArtifactGeneric_C",
+      "Description": "Artifact Universal",
       "Mod": "ArkPrime"
     },
     {

@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">晴天</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">Jokin</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -24,6 +24,7 @@
     <sys:String x:Key="Mod_Aberration">畸变地图(Aberration)</sys:String>
     <sys:String x:Key="Mod_Extinction">灭绝地图(Extinction)</sys:String>
     <sys:String x:Key="Mod_Genesis">创世纪(Genesis)</sys:String>
+	<sys:String x:Key="Mod_Genesis2">创世纪二(Genesis: Part 2)</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
     <sys:String x:Key="Mod_PGM">程序生成地图(PGM)</sys:String>
     <sys:String x:Key="Mod_Valguero">瓦尔盖罗(Valguero)</sys:String>
@@ -424,7 +425,8 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">启用作为启动管理员提示符下运行</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">最小化到托盘</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">自动管理防火墙设置</sys:String>
-    <sys:String x:Key="GlobalSettings_DataDirectoryLabel">数据目录:</sys:String>
+    <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">自动管理公共IP</sys:String>
+	<sys:String x:Key="GlobalSettings_DataDirectoryLabel">数据目录:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">备份目录：</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyLabel">Steam WebApi 密钥:</sys:String>
     <sys:String x:Key="GlobalSettings_SetLocationButtonLabel">设置位置...</sys:String>
@@ -434,7 +436,7 @@
     
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">语言</sys:String>
     
-<sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">自定义覆盖选项</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">自定义覆盖选项</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">启用自定义Engine.ini设置</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">如果启用，Engine.ini设置将由服务器管理器进行管理器。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">启用制作设置</sys:String>
@@ -443,7 +445,9 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideStackSizeTooltip">如果启用，则叠加大小设置将由方舟服务器管理器进行管理。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerLabel">启用地图刷新设置</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">如果启用，地图刷新设置将由方舟服务器管理器进行管理。</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">启用补给箱设置</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">启用光柱/补给箱/战利品设置</sys:String>
+	<sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">启用禁止恐龙传输覆盖</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">如果启用，禁止传输覆盖将由服务器管理器管理.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">如果启用，补给箱设置将由方舟服务器管理器进行管理。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">启用程序生成方舟设置</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">如果启用，程序生成方舟设置将由方舟服务器管理器进行管理。</sys:String>
@@ -623,7 +627,8 @@
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTitle">SteamCmd身份验证禁用</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledLabel">您已选择将SteamCMD输出重定向到进度窗口。 您无法使用Steam账户，您必须使用匿名账户。</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTooltip">使用Steam认证，必须关闭输出SteamCMD到进度窗口选项。</sys:String>
-
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">在启动消息中包含公共IP和端口</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">启动消息将包括公共IP和端口.</sys:String>
     <sys:String x:Key="GlobalSettings_AlertsLabel">警告选项</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">服务器停止消息：</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">当服务器停止时，将显示此消息。</sys:String>
@@ -631,6 +636,7 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">当服务器关闭时，将显示此消息。</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">服务器开始消息：</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">当服务器启动时，将显示此消息。</sys:String>
+	
     <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">备份过程错误：</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">当自动备份过程遇到错误时，将显示此消息。</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">关机过程错误：</sys:String>
@@ -1290,7 +1296,40 @@
     <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">指生物从低温舱中释放后所造成伤害的倍数。 较低的值意味着该生物所造成的伤害将较低(如： 0.01意味着99% 的损伤被移除)。</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">伤害倍数百分比</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">指定生物从低温舱释放后，伤害增加的百分比。 较高的值意味着对生物造成更多的伤害(例如： 0.2525% 更多的伤害)。</sys:String>
-    <!--#endregion-->
+
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">禁止重生TEK套装</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">如果启用，将禁止玩家重生TEK套装.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">禁用世界buff</sys:String>
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsTooltip">如果启用，将完全禁用任务的世界效果.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingLabel">启用世界Buff效果</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">如果启用，将使世界buff成倍地扩展其优势，而不是在运行时向该值添加/减去固定数量.</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">世界Buff比例效果</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">指定全局标量以降低/提高世界增益效果（例如，默认值为1，0.5将降低50%的效果，2.0将提高2倍的效果）.</sys:String>
+
+    <sys:String x:Key="ServerSettings_HexagonsLabel">六角币</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">禁用六角币存储</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">启用后，将无法存储六角币.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">只允许印痕点交易</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">如果启用，只有印痕点数可以在六角币商店出售.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">六角币最大存储量</sys:String>
+    <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">指定玩家拥有的最大六角币数量.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">六角币奖励倍数</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">设置六角币获得倍数.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">六角币消耗倍数</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">设置六角币消耗倍数.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ItemStatClampsLabel">物品品质设置</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">注意：这将永久改变现有物品的品质.</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_GenericQualityLabel">通用质量</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">护甲</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">最大耐久</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">武器伤害</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">武器弹药量</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">次绝缘</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">重量</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">超绝缘</sys:String>
+	<!--#endregion-->
 
     <!-- 服务器设置 - 聊天和通知 -->
     <sys:String x:Key="ServerSettings_ChatAndNotificationsLabel">聊天和通知</sys:String>
@@ -2111,56 +2150,56 @@
     <sys:String x:Key="ServerSettings_CraftingOverrides_SaveItemTooltip">保存制作项目</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-补给箱和宝箱覆盖 -->
-    <sys:String x:Key="ServerSettings_SupplyCrateOverridesLabel">补给箱覆盖</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_CratesLabel">补给箱</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetsLabel">物品设置</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntriesLabel">设置加入物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemsLabel">物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_SaveTitle">补给箱覆盖设置</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_DisableLabel">注意：如果要手动或者使用其他应用程序管理补给箱覆盖，可以禁用此服务器管理器补给箱覆盖。 详情在右上角全局设置“启用补给箱设置”选项。</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_WarningLabel">警告:如果你不正确地填写每个参数,它可能导致补给箱和宝箱不产生。请确保所有部分填写正确。</sys:String>
+    <!-- 服务器设置-光柱/补给箱/BOSS战利品和宝箱覆盖 -->
+    <sys:String x:Key="ServerSettings_SupplyCrateOverridesLabel">光柱/补给箱/战利品设置覆盖</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_CratesLabel">有关于光柱/补给箱/战利品/宝箱/河狸窝掉落的描述</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetsLabel">物品分类(温馨提示请看概率)</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntriesLabel">分类内容(温馨提示请看概率)</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemsLabel">物品代码(温馨提示请看概率)</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_SaveTitle">光柱/补给箱/战利品/宝箱覆盖设置</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_DisableLabel">注意：如果要手动或者使用其他应用程序管理光柱/补给箱/战利品掉落覆盖，可以禁用此服务器管理器补给箱覆盖。 详情在右上角全局设置“启用补给箱设置”选项。</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_WarningLabel">警告:如果你不正确地填写每个参数,它可能导致光柱/补给箱/战利品/宝箱掉落不产生。请确保所有部分填写正确。</sys:String>
 
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_ClassColumnLabel">补给箱</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_ClassColumnTooltip">提供需要覆盖的箱子的箱子类字符串</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MinItemSetsColumnLabel">最少物品设置</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MinItemSetsColumnTooltip">设置补给箱最少物品数量.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_ClassColumnLabel">光柱/补给箱/战利品/宝箱/河狸窝</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_ClassColumnTooltip">提供需要覆盖的光柱/补给箱/战利品/宝箱/河狸窝的箱子类字符串</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MinItemSetsColumnLabel">最少物品分类</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MinItemSetsColumnTooltip">设置光柱/补给箱/战利品最少物品数量.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MaxItemSetsColumnLabel">最大物品设置</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MaxItemSetsColumnTooltip">设置补给箱最大物品数量.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_MaxItemSetsColumnTooltip">设置光柱/补给箱/战利品最大物品数量.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_NumItemSetsPowerColumnLabel">品质倍率</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_NumItemSetsPowerColumnTooltip">这是用倍数来修改物品品质. 数值1.0将决定混合物品品质(通常设置保持为1.0).</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_SetsRandomWithoutReplacementColumnLabel">防止重复</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_SetsRandomWithoutReplacementColumnTooltip">如果打开, 将确保只有一样同类型的物品被添加到补给箱中.</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnLabel">附加项目集</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnLabel">设为追加</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendItemSetsColumnTooltip">如果启用，将添加项目集到供应箱，而不是完全覆盖所有项目。</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendPreventIncreasingMinMaxItemSetsColumnLabel">防止增加</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Crate_AppendPreventIncreasingMinMaxItemSetsColumnTooltip">如果启用，则会动态增加您添加的其他项目集所掉落的项目数量（仅在AppendItemSets = true时适用）。</sys:String>
 
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_NameColumnLabel">描述</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_NameColumnTooltip">用于标识项目的描述。</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MinNumItemsColumnLabel">最少物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MinNumItemsColumnTooltip">设置补给箱中最少物品.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MinNumItemsColumnLabel">最少分类</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MinNumItemsColumnTooltip">设置光柱/补给箱/战利品中最少物品.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MaxNumItemsColumnLabel">最多物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MaxNumItemsColumnTooltip">设置补给箱中最多物品.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_MaxNumItemsColumnTooltip">设置光柱/补给箱/战利品最多物品.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_NumItemsPowerColumnLabel">品质倍数</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_NumItemsPowerColumnTooltip">这是用倍率来修改物品品质.数值1.0将决定混合物品品质(通常设置保持为1.0) </sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_SetWeightColumnLabel">重量</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_SetWeightColumnLabel">概率</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_SetWeightColumnTooltip">指定项目集合使其进入补给箱的几率。</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_ItemsRandomWithoutReplacementColumnLabel">防止重复</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSet_ItemsRandomWithoutReplacementColumnTooltip">如果启用，将确保只有一个项目将添加到相同的补给箱，如果它被添加到两个不同的集合。</sys:String>
 
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_NameColumnLabel">描述</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_NameColumnTooltip">描述设置加入的物品.</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_EntryWeightColumnLabel">重量</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_EntryWeightColumnTooltip">指定几率物品进入补给箱.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_EntryWeightColumnLabel">概率</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_EntryWeightColumnTooltip">指定几率物品进入光柱/补给箱/战利品.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MinQuantityColumnLabel">最低品质</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MinQuantityColumnTooltip">最低品质物品将进入补给箱.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MinQuantityColumnTooltip">最低品质物品将进入光柱/补给箱/战利品.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MaxQuantityColumnLabel">最高品质</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MaxQuantityColumnTooltip">最高品质物品将进入补给箱.</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MaxQuantityColumnTooltip">最高品质物品将进入光柱/补给箱/战利品.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MinQualityColumnLabel">最低品质</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MinQualityColumnTooltip">最低品质的物品将进入补给箱 (通常建议保持在1.0).</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MinQualityColumnTooltip">最低品质的物品将进入光柱/补给箱/战利品 (通常建议保持在1.0).</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MaxQualityColumnLabel">最高品质</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MaxQualityColumnTooltip">最高品质的物品将进入补给箱 (通常建议保持在1.0).</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_MaxQualityColumnTooltip">最高品质的物品将进入光柱/补给箱/战利品 (通常建议保持在1.0).</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_ForceBlueprintColumnLabel">强制蓝图</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_ForceBlueprintColumnTooltip">如果开启, 你将会经常生成蓝图替换物品.</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetEntry_ChanceToBeBlueprintOverrideColumnLabel">蓝图几率</sys:String>
@@ -2168,24 +2207,24 @@
 
     <sys:String x:Key="ServerSettings_SupplyCrate_Item_ItemClassStringColumnLabel">物品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Item_ItemClassStringColumnTooltip">该物品的物品代码.</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_Item_ItemWeightColumnLabel">重量</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_Item_ItemWeightColumnLabel">概率</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_Item_ItemWeightColumnTooltip">指定物品进入战利品箱的几率。</sys:String>
 
-    <sys:String x:Key="ServerSettings_SupplyCrate_AddCrateTooltip">增加补给箱</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_AddCrateTooltip">增加光柱/补给箱/战利品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_AddItemSetTooltip">增加物品设置</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_AddItemSetEntryTooltip">设置加入物品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_AddItemTooltip">增加物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_ClearCratesTooltip">删除所有补给箱</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_ClearCratesTooltip">删除所有光柱/补给箱/战利品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ClearItemSetsTooltip">删除所有物品设置</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ClearItemSetEntriesTooltip">删除所有加入的物品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ClearItemsTooltip">删除所有物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_PasteCrateTooltip">粘贴补给箱数据</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_RemoveCrateTooltip">删除补给箱</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_PasteCrateTooltip">粘贴光柱/补给箱/战利品数据</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_RemoveCrateTooltip">删除光柱/补给箱/战利品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemSetTooltip">删除物品设置</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemSetEntryTooltip">删除设置加入的物品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemTooltip">删除物品</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">保存所有补给箱</sys:String>
-    <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">保存补给箱</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">保存所有光柱/补给箱/战利品</sys:String>
+    <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">保存光柱/补给箱/战利品</sys:String>
     <!--#endregion-->
 
     <!-- 服务器设置-叠加大小覆盖-->
@@ -2217,6 +2256,23 @@
 
     <!--#endregion-->
 
+    <!--#region 服务器设置-禁止传输覆盖 -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">禁止恐龙传输覆盖</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">禁止传输</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">禁止传输覆盖设置</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">注意:如果您想手动或使用另一个应用程序管理您的覆盖，您可以禁用该选项，该选项将阻止服务器管理器管理覆盖。查看全局设置中的“自定义覆盖选项”.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">警告:将恐龙添加到这个列表将阻止它们被传输到服务器或从服务器.</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">恐龙</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">恐龙类的目录</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">添加禁止传输</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">删除所有禁止传输</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">粘贴禁止传输数据</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">删除禁止传输</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">保存禁止传输数据</sys:String>
+    <!--#endregion-->
+	
     <!-- 玩家/部落档案窗口 -->
     <sys:String x:Key="Profile_PlayerSectionLabel">玩家设置</sys:String>
     <sys:String x:Key="Profile_TribeSectionLabel">部落设置</sys:String>
@@ -2399,6 +2455,7 @@
     <sys:String x:Key="Extinction">灭绝地图(Extinction)</sys:String>
     <sys:String x:Key="Valguero_P">瓦尔盖罗(Valguero)</sys:String>
     <sys:String x:Key="Genesis">创世纪(Genesis)</sys:String>
+	<sys:String x:Key="Gen2">创世纪 2（Genesis: Part 2）</sys:String>
     <sys:String x:Key="CrystalIsles">水晶岛(Crystal Isles)</sys:String>
     <!--#endregion-->
 
@@ -2411,6 +2468,7 @@
     <!--#endregion-->
 
     <!--#region Event Names -->
+	<sys:String x:Key="none">无节日</sys:String>
     <sys:String x:Key="vday">情人节</sys:String>
     <sys:String x:Key="Easter">复活节</sys:String>
     <sys:String x:Key="FearEvolved">恐惧进化（万圣节）</sys:String>
@@ -2635,7 +2693,7 @@
     <!--#endregion-->
 
     <!-- 恐龙/生物类名称 - 仙境传说 - Boss -->
-    <sys:String x:Key="Iceworm_Queen_Character_BP_C">冰虫</sys:String>
+    <sys:String x:Key="Iceworm_Queen_Character_BP_C">冰虫洞蠕虫女皇</sys:String>
     <sys:String x:Key="LavaGolem_Character_BP_C">熔岩石头人</sys:String>
 
     <sys:String x:Key="Dragon_Character_BP_Boss_Easy_Ragnarok_C">喷火龙 (仙境传说简单难度)</sys:String>
@@ -2780,8 +2838,118 @@
     <sys:String x:Key="Deinonychus_Character_BP_C">恐爪龙</sys:String>
     <sys:String x:Key="ChalkGolem_Character_BP_C">岩石巨人(苔藓)</sys:String>
     <sys:String x:Key="IceGolem_Character_BP_C">岩石巨人(冰)</sys:String>
-
     <!--#endregion-->
+	
+	<!--#恐龙/生物类名-创世记 （1）-->
+    <sys:String x:Key="SpaceWhale_Character_BP_C">鲲</sys:String>
+    <sys:String x:Key="BogSpider_Character_BP_C">血腥追猎者</sys:String>
+    <sys:String x:Key="Cherufe_Character_BP_C">岩浆怪</sys:String>
+    <sys:String x:Key="GiantTurtle_Character_BP_C">平台巨龟</sys:String>
+    <sys:String x:Key="Shapeshifter_Small_Character_BP_C">费洛克斯小</sys:String>
+    <sys:String x:Key="Shapeshifter_Large_Character_BP_C">费洛克斯大</sys:String>
+    <sys:String x:Key="InsectSwarmChar_BP_C">昆虫群</sys:String>
+    <sys:String x:Key="MicrobeSwarmChar_BP_C">鱼群</sys:String>
+    <sys:String x:Key="TekHoverSkiff_Character_BP_C">悬停小艇</sys:String>
+    <sys:String x:Key="BionicTrike_Character_BP_C">Tek 三角龙</sys:String>
+    <sys:String x:Key="BionicGigant_Character_BP_C">Tek 南方巨兽</sys:String>
+    <sys:String x:Key="Volcano_Allo_Character_BP_C">X-异特龙</sys:String>
+    <sys:String x:Key="Volcano_Ankylo_Character_BP_C">X-甲龙</sys:String>
+    <sys:String x:Key="Snow_Argent_Character_BP_C">X-阿根廷巨鹰</sys:String>
+    <sys:String x:Key="Ocean_Basilosaurus_Character_BP_C">X-龙王鲸</sys:String>
+    <sys:String x:Key="Ocean_Dunkle_Character_BP_C">X-邓氏鱼</sys:String>
+    <sys:String x:Key="Ocean_Dolphin_Character_BP_C">X-鱼龙</sys:String>
+    <sys:String x:Key="Ocean_Megalodon_Character_BP_C">X-巨齿鲨</sys:String>
+    <sys:String x:Key="Ocean_Mosa_Character_BP_C">X-沧龙</sys:String>
+    <sys:String x:Key="Snow_Otter_Character_BP_C">X-水獺</sys:String>
+    <sys:String x:Key="Bog_Para_Character_BP_C">X-副栉龙</sys:String>
+    <sys:String x:Key="Bog_Raptor_Character_BP_C">X-迅猛龙</sys:String>
+    <sys:String x:Key="Volcano_Rex_Character_BP_C">X-国王</sys:String>
+    <sys:String x:Key="Volcano_Golem_Character_BP_C">X-石头人</sys:String>
+    <sys:String x:Key="Snow_Saber_Character_BP_C">X-剑齿虎</sys:String>
+    <sys:String x:Key="Lunar_Salmon_Character_BP_C">X-剑齿鲑</sys:String>
+    <sys:String x:Key="Rare_Lunar_Salmon_Character_BP_C">X-剑齿鲑（稀有）</sys:String>
+    <sys:String x:Key="Bog_Spino_Character_BP_C">X-棘背龙</sys:String>
+    <sys:String x:Key="Bog_Tapejara_Character_BP_C">X-古神翼龙</sys:String>
+    <sys:String x:Key="Volcano_Trike_Character_BP_C">X-三角龙</sys:String>
+    <sys:String x:Key="Snow_Rhino_Character_BP_C">X-披毛犀</sys:String>
+    <sys:String x:Key="Snow_Yutyrannus_Character_BP_C">X-羽暴龙</sys:String>
+    <!--#endregion-->
+	
+	<!-- 恐龙/生物类名称 - 水晶岛 -->
+	<sys:String x:Key="CrystalWyvern_Character_BP_Mega_C">精英水晶血飞龙</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Blood_C">水晶血飞龙</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Ember_C">灰烬水晶飞龙</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_WS_C">热带水晶飞龙</sys:String>
+	<sys:String x:Key="Tropeognathus_Character_BP_C">喷气翼龙</sys:String>
+	<sys:String x:Key="HoneyBee_Character_BP_C">巨蜂</sys:String>
+	<!--#endregion-->
+	
+	<!--#region 恐龙/生物类名-水晶岛-BOSS -->
+	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_Easy_C">水晶飞龙女王（简单）</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_Medium_C">水晶飞龙女王（中等）</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_Hard_C">水晶飞龙女王（困难）</sys:String>
+	<!--#endregion-->
+	
+    <!--#region 恐龙/生物类名-创世记（1）-BOSS -->
+    <sys:String x:Key="EelBoss_Character_BP_Easy_C">鳗鱼BOSS (简单难度)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Medium_C">鳗鱼BOSS (中等难度)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Hard_C">鳗鱼BOSS (困难难度)</sys:String>
+	
+    <sys:String x:Key="EelMinion_Character_BP_Easy_C">鳗鱼爪牙 (伽马值)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Medium_C">鳗鱼爪牙(Beta)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Hard_C">鳗鱼爪牙 (Alpha)</sys:String>
+	
+    <sys:String x:Key="VRMainBoss_Character_Easy_C">VR BOSS (简单难度)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Medium_C">VR BOSS (中等难度)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Hard_C">VR BOSS (困难难度)</sys:String>
+	<!--#endregion-->
+	
+    <!-- 恐龙/生物类名称 - 创世记(2) -->
+    <sys:String x:Key="SpaceDolphin_Character_BP_C">虚空海豚</sys:String>
+	<sys:String x:Key="MilkGlider_Character_BP_C">鸭嘴飞鼠</sys:String>
+	<sys:String x:Key="BrainSlug_Character_BP_C">诺格林</sys:String>
+	<sys:String x:Key="LionfishLion_Character_BP_C">影鬃</sys:String>
+	<sys:String x:Key="TekStrider_Character_BP_C">跨步者</sys:String>
+	<sys:String x:Key="TekWyvern_Character_BP_C">虚空飞龙</sys:String>
+	<sys:String x:Key="Allo_Character_BP_Rockwell_C">R-异特龙</sys:String>
+	<sys:String x:Key="Carno_Character_BP_Rockwell_C">R-牛龙</sys:String>
+	<sys:String x:Key="Daeodon_Character_BP_Eden_C">R-凶齿豨</sys:String>
+	<sys:String x:Key="Direbear_Character_BP_Rockwell_C">R-恐熊</sys:String>
+	<sys:String x:Key="Dilo_Character_BP_Rockwell_C">R-双脊龙</sys:String>
+	<sys:String x:Key="Direwolf_Character_BP_Eden_C">R-冰原狼</sys:String>
+	<sys:String x:Key="GasBags_Character_BP_Eden_C">R-气囊虫</sys:String>
+	<sys:String x:Key="Gigant_Character_BP_Rockwell_C">R-南巨</sys:String>
+	<sys:String x:Key="Megatherium_Character_BP_Eden_C">R-大地懒</sys:String>
+	<sys:String x:Key="Owl_Character_BP_Eden_C">R-雪鸮</sys:String>
+	<sys:String x:Key="Para_Character_BP_Eden_C">R-副栉龙</sys:String>
+	<sys:String x:Key="Procoptodon_Character_BP_Eden_C">R-巨型袋鼠</sys:String>
+	<sys:String x:Key="Quetz_Character_BP_Rockwell_C">R-风神翼龙</sys:String>
+	<sys:String x:Key="Sauropod_Character_BP_Rockwell_C">R-雷龙</sys:String>
+	<sys:String x:Key="Spindles_Character_BP_Rockwell_C">R-刺面龙</sys:String>
+	<sys:String x:Key="Thylacoleo_Character_BP_Eden_C">R-袋狮</sys:String>
+	<sys:String x:Key="Turtle_Character_BP_Rockwell_C">R-碳水龟</sys:String>
+	<sys:String x:Key="Equus_Character_BP_Eden_C">R-庞马</sys:String>
+	<sys:String x:Key="Xenomorph_Character_BP_Female_Gen2_C">R-死神王后</sys:String>
+	<sys:String x:Key="Xenomorph_Character_BP_Male_Gen2_C">R-死神国王</sys:String>
+	<sys:String x:Key="Xenomorph_Character_BP_Male_Tamed_Gen2_C">R-死神国王（驯服）</sys:String>
+	<sys:String x:Key="Summoner_Character_BP_C">召唤师</sys:String>
+	<sys:String x:Key="cEndTank_Character_BP_ExpG_C">防御单元</sys:String>
+	<sys:String x:Key="Macrophage_Swarm_Character">巨噬细胞</sys:String>
+	<sys:String x:Key="Exosuit_Character_BP_C">Exo-Mek机甲（做物品收物品）</sys:String>
+    <!--#endregion-->
+	
+	<!-- 恐龙/生物类名称 - 创世记(2)-BOSS -->
+	<sys:String x:Key="RockwellNode_Character_BP_Boss_C">罗克韦尔 BOSS（全盛时期）</sys:String>
+	<sys:String x:Key="RockwellNode_Character_BP_Boss_Gamma_C">罗克韦尔 BOSS（简单）</sys:String>
+	<sys:String x:Key="RockwellNode_Character_BP_Boss_Beta_C">罗克韦尔 BOSS（中等）</sys:String>
+	<sys:String x:Key="RockwellNode_Character_BP_Boss_Alpha_C">罗克韦尔 BOSS（困难）</sys:String>
+	
+	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_C">罗克韦尔节点 BOSS</sys:String>
+	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_Gamma_C">罗克韦尔节点 BOSS（简单）</sys:String>
+	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_Beta_C">罗克韦尔节点 BOSS（中等）</sys:String>
+	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_Alpha_C">罗克韦尔节点 BOSS（困难）</sys:String>
+	<!--#endregion-->
+	
     <!--#endregion-->
 
     <!--#region Engrams -->
@@ -3499,7 +3667,29 @@
     <sys:String x:Key="EngramEntry_TekBridge_C">泰克桥梁</sys:String>
     <sys:String x:Key="EngramEntry_TekGravityGrenade_C">泰克重力手雷</sys:String>
     <!--#endregion-->
+	
+    <!--#印痕技能类 - 创世 (1)-->
+    <sys:String x:Key="EngramEntry_CherufeSaddle_C">鞍-岩喉龙</sys:String>
+    <sys:String x:Key="EngramEntry_GiantTurtleSaddle_C">鞍-巨龟平台</sys:String>
+    <sys:String x:Key="EngramEntry_FishingNet_C">渔网</sys:String>
+    <sys:String x:Key="EngramEntry_OceanPlatformWood_C">木制海洋平台</sys:String>
+    <sys:String x:Key="EngramEntry_OceanPlatformMetal_C">金属海洋平台</sys:String>
+    <sys:String x:Key="EngramEntry_PressurePlate_C">压力板</sys:String>
+    <sys:String x:Key="EngramEntry_MiningDrill_C">矿枪</sys:String>
+    <!--#endregion-->
+	
+    <!--#region 印痕技能泰克类 - 创世（1） -->
+    <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">鲲-泰克鞍</sys:String>
+    <sys:String x:Key="EngramEntry_TekClaws_C">泰克光刃</sys:String>
+    <sys:String x:Key="EngramEntry_CruiseMissile_C">巡航导弹</sys:String>
+    <sys:String x:Key="EngramEntry_TekGrenadeLauncher_C">TEK 榴弹发射器</sys:String>
+    <sys:String x:Key="EngramEntry_HoverSkiff_C">未组装的TEK悬停艇</sys:String>
+    <sys:String x:Key="EngramEntry_JumpPad_C">泰克弹射板</sys:String>
+    <sys:String x:Key="EngramEntry_TekAlarm_C">泰克传感器</sys:String>
+    <sys:String x:Key="EngramEntry_ShoulderCannon_C">泰克肩炮</sys:String>
 
+    <!--#endregion-->
+	
     <!--#印痕技能类 - 瓦尔盖罗 -->
     <sys:String x:Key="EngramEntry_Saddle_Deinonychus_C">鞍 - 恐爪龙</sys:String>
     <!--#endregion-->
@@ -3870,6 +4060,12 @@
     <sys:String x:Key="PrimalItemConsumable_IcedWaterJar_C">冰水瓶 (空)</sys:String>
     <sys:String x:Key="PrimalItemConsumable_IcedWaterJarRefill_C">冰水瓶 (满)</sys:String>
     <sys:String x:Key="PrimalItemConsumable_JellyVenom_C">生物毒素</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Kibble_Base_Medium_C">普通饲料</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Kibble_Base_XSmall_C">基础饲料</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Kibble_Base_Small_C">简单饲料</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Kibble_Base_Large_C">上等饲料</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Kibble_Base_XLarge_C">特殊饲料</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Kibble_Base_Special_C">非凡饲料</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Allo_C">饲料 (异特龙蛋)</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_AnkyloEgg_C">饲料 (甲龙蛋)</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_ArchaEgg_C">饲料 (始祖鸟蛋)</sys:String>
@@ -4484,7 +4680,7 @@
     <sys:String x:Key="PrimalItem_WeaponLongBow_C">长弓</sys:String>
     <sys:String x:Key="PrimalItem_WeaponMetalHammer_C">金属锤</sys:String>
     <sys:String x:Key="PrimalItem_WeaponMetalMachete_C">金属弯刀</sys:String>
- <sys:String x:Key="PrimalItem_WeaponObsidianSpear_C">黑曜石矛</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponObsidianSpear_C">黑曜石矛</sys:String>
     <sys:String x:Key="PrimalItem_WeaponObsiPick_C">黑曜石镐</sys:String>
     <sys:String x:Key="PrimalItem_WeaponPitchfork_C">干草叉</sys:String>
     <sys:String x:Key="PrimalItem_WeaponPrimitivePistol_C">燧发枪</sys:String>
@@ -4825,7 +5021,7 @@
     <sys:String x:Key="PrimalItemArmor_IceKaiju_C">冰霜泰坦鞍</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekBackpack_MissilePod_C">机甲火箭模块 (机甲可部署火箭模块)</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekBackpack_Shield_C">机甲护盾模块 (机甲可部署屏障模块)</sys:String>
-    <sys:String x:Key="PrimalItemArmor_MekBackpack_SiegeCannon">机甲重炮模块 (机甲可部署重炮模块)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MekBackpack_SiegeCannon_C">机甲重炮模块 (机甲可部署重炮模块)</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekTransformer_C">力神转换接口 (机甲可部署力神变形模块)</sys:String>
     <sys:String x:Key="PrimalItemArmor_OwlSaddle_C">雪鸮鞍</sys:String>
     <sys:String x:Key="PrimalItemArmor_SpindlesSaddle_C">刺面龙鞍</sys:String>
@@ -4886,8 +5082,82 @@
     <sys:String x:Key="PrimalItemArmor_DeinonychusSaddle_C">鞍-恐爪龙</sys:String>
     <!--#endregion-->
 	
-
-    <!--#endregion-->
+	<!--#项目类别名称 - 创世(1)-->
+    <sys:String x:Key="PrimalItem_WeaponTekClaws_C">泰克光刃</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponTekGrenadeLauncher_C">泰克榴弹发射器</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponFishingNet_C">鱼网</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponTekCruiseMissile_C">巡航导弹</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponMiningDrill_C">矿枪</sys:String>
+	<sys:String x:Key="PrimalItemArmor_ShoulderCannon_C">泰克肩炮</sys:String>
+	<sys:String x:Key="PrimalItemArmor_SpaceWhaleSaddle_Tek_C">泰克古神翼龙鞍</sys:String>
+	<sys:String x:Key="PrimalItemArmor_CherufeSaddle_C">岩喉龙鞍 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemArmor_GiantTurtleSaddle_C">巨龟平台鞍 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl1_C">资源包1 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl2_C">资源包2 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl3_C">资源包3 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_BogSpider_C">血蛛蛋 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_Cherufe_C">熔喉龙蛋 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_GiantTurtle_C">巨龟蛋 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_Trike_Bionic_C">泰克三角龙蛋 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemResource_Ambergris_C">龙涎香</sys:String>
+	<sys:String x:Key="PrimalItemResource_TurtleShell_C">甲壳碎片</sys:String>
+	<sys:String x:Key="PrimalItemResource_HighQualityPollen_C">优质花粉</sys:String>
+	<sys:String x:Key="PrimalItemResource_GoldenNugget_C">金块</sys:String>
+	<sys:String x:Key="PrimalItemResource_RetrieveReaperGland_C">死神毒素 (创世 1)</sys:String>
+	<sys:String x:Key="PrimalItemSkin_TrikeSkullHelmet_Retrieve_C">精英 X-三角龙</sys:String>
+	<sys:String x:Key="PrimalItem_Spawner_HoverSkiff_C">未组装的泰克悬浮艇</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Metal_OceanPlatform_C">金属海洋平台</sys:String>
+	<sys:String x:Key="PrimalItemSkin_MasterControllerHelmet_C">主控制器头盔皮肤</sys:String>
+	<sys:String x:Key="PrimalItemResource_RetrieveMegTooth_C">金纹巨齿</sys:String>
+	<sys:String x:Key="PrimalItemStructure_PressurePlate_C">压力板</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekAlarm_C">泰克传感器</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekJumpPad_C">泰克弹跳器</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Wood_OceanPlatform_C">木制海洋平台</sys:String>
+	<!--#endregion-->
+	
+	<!--#项目类别名称 - 创世(2)-->
+	<sys:String x:Key="PrimalItemConsumable_Mutagen_C">诱变剂</sys:String>
+	<sys:String x:Key="PrimalItemStructure_AmmoContainer_C">弹药箱</sys:String>
+	<sys:String x:Key="PrimalItemCanoe_C">独木舟</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponMinigun_C">加特林</sys:String>
+	<sys:String x:Key="PrimalItemStructure_EggIncubator_C">孵蛋器</sys:String>
+	<sys:String x:Key="PrimalItemStructure_CropPlot_Tek_C">泰克耕地</sys:String>
+	<sys:String x:Key="PrimalItem_Spawner_HoverSail_Main_C">泰克悬停帆</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponTekBow_C">泰克弓</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_TekCanteenCraftable_C">泰克水壶</sys:String>
+	<sys:String x:Key="PrimalItemStructure_SecurityCamera_C">泰克远程摄像头</sys:String>
+	<sys:String x:Key="PrimalItemStructure_TekSecurityConsole_C">泰克监控控制台</sys:String>
+	<sys:String x:Key="PrimalItemArmor_MilkGliderSaddle_C">鸭嘴飞鼠-鞍</sys:String>
+	<sys:String x:Key="PrimalItemArmor_SpaceDolphinSaddle_Tek_C">虚空海豚星翼-鞍</sys:String>
+	<sys:String x:Key="PrimalItemAmmo_ArrowNet_C">网枪</sys:String>
+	<sys:String x:Key="PrimalItemAmmo_Boulder_Fire_C">沥青罐</sys:String>
+	<sys:String x:Key="PrimalItem_Spawner_Exosuit_C">Exo-MEK机甲</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Mutagel_C">突变凝胶</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponTekPistol_C">泰克相枪</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_RawMeat_C">植物R-1 种子(生肉)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_RawFish_C">植物R-2 种子(鱼肉)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat_C">植物R-3 种子(腐肉)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat_C">植物R-4 种子(优质生肉)</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C">植物R-5 种子(优质生鱼肉)</sys:String>
+	<!--#endregion-->
+	
+	<!--#项目类别名称 - 新增（唯一集成模组） -->
+	<sys:String x:Key="PrimalItem_xidianka_Weiyi_C">恐龙洗点卡</sys:String>
+	<sys:String x:Key="PrimalItem_TEK_unlock_Weiyi_C">泰克一键解锁</sys:String>
+	<sys:String x:Key="PrimalItem_TurretZD_Weiyi_C">炮塔终端</sys:String>
+	<sys:String x:Key="PrimalItem_shengjika_Weiyi_C">恐龙自定义等级升级卡</sys:String>
+	<sys:String x:Key="PrimalItem_unlock_Weiyi_C">一键解锁</sys:String>
+	<sys:String x:Key="PrimalItem_Adminzhaozi_C">小姐姐保护罩</sys:String>
+	<sys:String x:Key="PrimalItem_chibang_weiyi_C">管理员翅膀</sys:String>
+	<sys:String x:Key="PrimalItem_Fly_weiyi_C">飞行背包</sys:String>
+	<sys:String x:Key="PrimalItem_jinshou_weiyi_C">金手指 2.0</sys:String>
+	<sys:String x:Key="PrimalItem_lihe_weiyi_C">抽奖礼盒1</sys:String>
+	<sys:String x:Key="PrimalItem_lihe2_weiyi_C">抽奖礼盒2</sys:String>
+	<sys:String x:Key="PrimalItem_mubei_weiyi_C">墓碑</sys:String>
+	<sys:String x:Key="PrimalItem_xinshoubao_weiyi_C">新手礼包</sys:String>
+	<!--#endregion-->
+	
+	<!--#endregion-->
 
     <!--#地图生物生成 -->
 
@@ -5137,6 +5407,7 @@
     <sys:String x:Key="ArtifactCrate_9_C">(老图孤岛) 上古神器强壮</sys:String>
     <sys:String x:Key="ArtifactCrate_10_C">(老图孤岛) 上古神器狡诈（新）</sys:String>
     <sys:String x:Key="ArtifactCrate_11_C">(老图孤岛) 上古神器残暴</sys:String>
+	<sys:String x:Key="SupplyCrate_Gift_C">迅猛龙节日礼物(仅限活动)</sys:String>
 
     <sys:String x:Key="SupplyCrate_Cave_QualityTier1_ScorchedEarth_C">(焦土) 洞穴战利品箱 1</sys:String>
     <sys:String x:Key="SupplyCrate_Cave_QualityTier2_ScorchedEarth_C">(焦土) 洞穴战利品箱 2</sys:String>
@@ -5186,15 +5457,40 @@
     <sys:String x:Key="ArtifactCrate_3_AB_C">(畸变) 神器容器潜行</sys:String>
     <sys:String x:Key="ArtifactCrate_4_AB_C">(畸变) 神器容器失落</sys:String>
 
+	<sys:String x:Key="PrimalInventoryBP_BaseMeatFishing_C">钓鱼的鱼肉</sys:String>
+	<sys:String x:Key="PrimalInventoryBP_BaseMeatFishingNet_C">渔网奖励</sys:String>
+	<sys:String x:Key="PrimalInventoryBP_BeaverDam_C">河狸窝战利品</sys:String>
+	<sys:String x:Key="PrimalInventoryBP_GenericFishing_C">钓鱼的战利品</sys:String>
+
     <sys:String x:Key="SupplyCrate_Cave_QualityTier1_EX_C">洞穴战利品箱 (蓝色)</sys:String>
     <sys:String x:Key="SupplyCrate_Cave_QualityTier2_EX_C">洞穴战利品箱 (黄色)</sys:String>
     <sys:String x:Key="SupplyCrate_Cave_QualityTier3_EX_C">洞穴战利品箱 (红色)</sys:String>
+	<sys:String x:Key="SupplyCrate_Base_Horde_Easy_C">蓝色空投</sys:String>
+	<sys:String x:Key="SupplyCrate_Base_Horde_Medium_C">黄色空投</sys:String>
+	<sys:String x:Key="SupplyCrate_Base_Horde_Hard_C">红色空投</sys:String>
+	<sys:String x:Key="SupplyCrate_Base_Horde_Legendary_C">紫色空投</sys:String>
     <sys:String x:Key="ArtifactCrate_Desert_Kaiju_EX_C">神器容器混乱</sys:String>
     <sys:String x:Key="ArtifactCrate_ForestKaiju_EX_C">神器容器增长</sys:String>
     <sys:String x:Key="ArtifactCrate_IceKaiju_EX_C">神器容器虚空</sys:String>
+	<sys:String x:Key="ElementNode_Easy_Horde_C">能量元素树(1级)</sys:String>
+	<sys:String x:Key="ElementNode_Hard_Horde_C">能量元素树(2级)</sys:String>
+	<sys:String x:Key="ElementNode_Medium_Horde_C">能量元素树(3级)</sys:String>
+	<sys:String x:Key="EKingKaiju_ElementNode_C">能量元素树(4级)</sys:String>
     <sys:String x:Key="ArtifactCrate_KingKaiju_Alpha_EX_C">神器容器国王泰坦 (困难)</sys:String>
     <sys:String x:Key="ArtifactCrate_KingKaiju_Beta_EX_C">神器容器国王泰坦 (中等)</sys:String>
     <sys:String x:Key="ArtifactCrate_KingKaiju_EX_C">神器容器国王泰坦 (简单)</sys:String>
+	
+	<sys:String x:Key="Val_SupplyCrate_Level35_C">紫色战利品箱</sys:String>
+	<sys:String x:Key="Val_SupplyCrate_Level35_Double_C">紫色战利品箱 (双重物品)</sys:String>
+	<sys:String x:Key="Val_SupplyCrate_Level60_C">红色战利品箱</sys:String>
+	<sys:String x:Key="Val_SupplyCrate_Level60_Double_C">红色战利品箱(双重物品)</sys:String>
+	<sys:String x:Key="Val_SupplyCrate_Level45_C">黄战利品箱</sys:String>
+	<sys:String x:Key="Val_SupplyCrate_Level45_Double_C">黄战利品箱(双重物品)</sys:String>
+	
+	<sys:String x:Key="SupplyCrateBaseBP_Instantaneous_DenLogs_Child2_C">河狸窝</sys:String>
+	<sys:String x:Key="SupplyCreate_OceanInstant_High_C">深海战利品箱</sys:String>
+	<sys:String x:Key="SupplyCrateBaseBP_Instantaneous_DamLogs_Child_C">大型河狸窝</sys:String>
+	<sys:String x:Key="SupplyCrate_Chest_Treasure_JacksonL_C_C">百宝箱</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -5211,6 +5507,16 @@
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_C">Boss 清单 - 喷火龙 (困难)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_EndBossMinion_C">Boss 清单 - 最终BOSS爪牙</sys:String>
 
+	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Valguero_C">Boss 清单 - 喷火龙 (容易)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Valguero_C">Boss 清单 - 喷火龙 (中等)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Valguero_C">Boss 清单 - 喷火龙 (困难)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Valguero_C">Boss 清单 - 狮身蝎尾 (容易)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Valguero_C">Boss 清单 - 狮身蝎尾 (中等)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Valguero_C">Boss 清单 - 狮身蝎尾 (困难)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Boss 清单 - 大金刚 (容易)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Boss 清单 - 大金刚 (中等)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Boss 清单 - 大金刚 (困难)</sys:String>
+
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_C">Boss 清单 - 狮蝎兽 (容易)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_C">Boss 清单 - 狮蝎兽 (中等)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_C">Boss 清单 - 狮蝎兽 (困难)</sys:String>
@@ -5226,6 +5532,17 @@
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Desert_C">Boss 清单 - 沙漠泰坦</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Forest_C">Boss 清单 - 森林泰坦</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss 清单 - 冰霜泰坦</sys:String>
+	
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss 清单 - （水晶岛）水晶女王 (简单)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss 清单 - （水晶岛）水晶女王 (中等)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss 清单 - （水晶岛）水晶女王 (困难)</sys:String>
+	
+	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss 清单 - 喷火龙 (简单)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss 清单 - 喷火龙 (中等)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C">Boss 清单 - 喷火龙 (困难)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C">Boss 清单 - 狮身蝎尾 (简单)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C">Boss 清单 - 狮身蝎尾 (中等)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C">Boss 清单 - 狮身蝎尾 (困难)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
@@ -6243,4 +6560,19 @@
     <sys:String x:Key="PrimalItemStructure_Wire_Flex_C">弹性电缆</sys:String>
     <!--#endregion-->
 
+    <!--#印痕技能类 - 新增（唯一集成模组） -->
+	<sys:String x:Key="EngramEntry_chibang_weiyi _C">管理员翅膀</sys:String>
+	<sys:String x:Key="EngramEntry_feixingbao_weiyi_C">飞行背包</sys:String>
+	<sys:String x:Key="EngramEntry_jinshou_weiyi_C">金手指 2.0</sys:String>
+	<sys:String x:Key="EngramEntry_lihe_weiyi_C">抽奖礼盒 1</sys:String>
+	<sys:String x:Key="EngramEntry_lihe2_weiyi_C">抽奖礼盒 2</sys:String>
+	<sys:String x:Key="EngramEntry_Mubei_weiyi_C">墓碑</sys:String>
+	<sys:String x:Key="EngramEntry_xinshoubao_weiyi_C">新手礼包</sys:String>
+	<sys:String x:Key="Engram_Adminzhaozi_C">小姐姐罩子</sys:String>
+	<sys:String x:Key="EngramEntry_shengjika_C">恐龙自定义等级升级卡</sys:String>
+	<sys:String x:Key="EngramEntry_unlock_Weiyi_C">一键解锁</sys:String>
+	<sys:String x:Key="EngramEntry_TEK_unlock_Weiyi_C">泰克一键解锁</sys:String>
+	<sys:String x:Key="EngramEntry_TurretZhongduan_Weiyi_C">炮塔终端</sys:String>
+	<sys:String x:Key="EngramEntry_xidianka_Weiyi_C">恐龙洗点卡</sys:String>
+	<!--#endregion-->
 </Globalization:GlobalizationResourceDictionary>
