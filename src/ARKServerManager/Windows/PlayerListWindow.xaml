@@ -15,66 +15,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <cc:EnumConverter x:Key="EnumConverter"/>
-            <cc:EnumFlagsConverter x:Key="EnumFlagsConverter"/>
-            <cc:IsNullOrWhiteSpaceValueConverter x:Key="IsNullOrWhiteSpaceValueConverter"/>
-            <cc:IsNullValueConverter x:Key="IsNullValueConverter"/>
-            <cc:NullValueConverter x:Key="NullValueConverter"/>
-
-            <SolidColorBrush x:Key="HeaderBrush" Color="#FFF0F0F0"/>
-
-            <Style x:Key="PlayerStatus" TargetType="Border">
-                <Setter Property="BorderBrush" Value="Gray"/>
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding IsOnline}"            Value="True">
-                        <Setter Property="BorderBrush" Value="LightGreen"/>
-                    </DataTrigger>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding IsOnline}"      Value="False" />
-                            <Condition Binding="{Binding IsValid}"       Value="False" />
-                        </MultiDataTrigger.Conditions>
-                        <Setter Property="BorderBrush" Value="Orange"/>
-                    </MultiDataTrigger>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding IsOnline}"      Value="False" />
-                            <Condition Binding="{Binding IsWhitelisted}" Value="True" />
-                        </MultiDataTrigger.Conditions>
-                        <Setter Property="BorderBrush" Value="#0066CC"/>
-                    </MultiDataTrigger>
-                </Style.Triggers>
-            </Style>
-            <Style x:Key="PlayerName" TargetType="Label">
-                <Setter Property="Content" Value="{Binding PlayerName}"/>
-                <Setter Property="ToolTip" Value="{Binding PlayerId}"/>
-                <Setter Property="Background" Value="AliceBlue"/>
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding IsAdmin}" Value="True">
-                        <Setter Property="FontWeight" Value="Bold"/>
-                        <Setter Property="Foreground" Value="#0066CC"/>
-                    </DataTrigger>
-                    <DataTrigger Binding="{Binding IsAdmin}" Value="False">
-                        <Setter Property="FontStyle" Value="Normal"/>
-                        <Setter Property="Foreground" Value="Black"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-            <Style x:Key="TribeName" TargetType="Label">
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding TribeName, Converter={StaticResource IsNullOrWhiteSpaceValueConverter}}" Value="True">
-                        <Setter Property="Content" Value="No tribe"/>
-                        <Setter Property="FontStyle" Value="Italic"/>
-                        <Setter Property="Foreground" Value="LightGray"/>
-                    </DataTrigger>
-                    <DataTrigger Binding="{Binding TribeName, Converter={StaticResource IsNullOrWhiteSpaceValueConverter}}" Value="False">
-                        <Setter Property="Content" Value="{Binding PlayerData.Tribe.Name}"/>
-                        <Setter Property="FontStyle" Value="Normal"/>
-                        <Setter Property="Foreground" Value="Black"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
         </ResourceDictionary>
     </Window.Resources>
 

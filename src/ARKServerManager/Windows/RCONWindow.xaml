@@ -20,81 +20,8 @@
             </ResourceDictionary.MergedDictionaries>
             
             <local:ScrollToBottomAction x:Key="ScrollToBottomAction" />
-            <cc:NullValueConverter x:Key="NullValueConverter"/>
-            <cc:IsNullValueConverter x:Key="IsNullValueConverter"/>
-            <cc:IsNullOrWhiteSpaceValueConverter x:Key="IsNullOrWhiteSpaceValueConverter"/>
-            <cc:EnumConverter x:Key="EnumConverter"/>
-            <cc:EnumFlagsConverter x:Key="EnumFlagsConverter"/>
-            
-            <SolidColorBrush x:Key="HeaderBrush" Color="#FFF0F0F0"/>
-            
-            <Style x:Key="ServerStatus" TargetType="{x:Type Label}">
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding ServerRCON.Status}" Value="Connected">
-                        <Setter Property="Foreground" Value="Green"/>
-                        <Setter Property="FontWeight" Value="Bold"/>
-                    </DataTrigger>
-                    <DataTrigger Binding="{Binding ServerRCON.Status}" Value="Disconnected">
-                        <Setter Property="Foreground" Value="Red"/>
-                        <Setter Property="FontWeight" Value="Bold"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-            <Style x:Key="PlayerStatus" TargetType="Border">
-                <Setter Property="BorderBrush" Value="Gray"/>
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding IsOnline}"            Value="True">
-                        <Setter Property="BorderBrush" Value="LightGreen"/>
-                    </DataTrigger>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding IsOnline}"      Value="False" />
-                            <Condition Binding="{Binding IsValid}"       Value="False" />
-                        </MultiDataTrigger.Conditions>
-                        <Setter Property="BorderBrush" Value="Orange"/>
-                    </MultiDataTrigger>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding IsOnline}"      Value="False" />
-                            <Condition Binding="{Binding IsWhitelisted}" Value="True" />
-                        </MultiDataTrigger.Conditions>
-                        <Setter Property="BorderBrush" Value="#0066CC"/>
-                    </MultiDataTrigger>
-                </Style.Triggers>
-            </Style>
-            <Style x:Key="PlayerName" TargetType="Label">
-                <Setter Property="Content" Value="{Binding PlayerName}"/>
-                <Setter Property="ToolTip" Value="{Binding PlayerId}"/>
-                <Setter Property="Background" Value="AliceBlue"/>
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding IsAdmin}" Value="True">
-                        <Setter Property="FontWeight" Value="Bold"/>
-                        <Setter Property="Foreground" Value="#0066CC"/>
-                    </DataTrigger>
-                    <DataTrigger Binding="{Binding IsAdmin}" Value="False">
-                        <Setter Property="FontStyle" Value="Normal"/>
-                        <Setter Property="Foreground" Value="Black"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-            <Style x:Key="Tribename" TargetType="Label">
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding TribeName, Converter={StaticResource IsNullOrWhiteSpaceValueConverter}}" Value="True">
-                        <Setter Property="Content" Value="No tribe"/>
-                        <Setter Property="FontStyle" Value="Italic"/>
-                        <Setter Property="Foreground" Value="LightGray"/>
-                    </DataTrigger>
-                    <DataTrigger Binding="{Binding TribeName, Converter={StaticResource IsNullOrWhiteSpaceValueConverter}}" Value="False">
-                        <Setter Property="Content" Value="{Binding PlayerData.Tribe.Name}"/>
-                        <Setter Property="FontStyle" Value="Normal"/>
-                        <Setter Property="Foreground" Value="Black"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-            
-            <ObjectDataProvider MethodName="GetValues"
-                ObjectType="{x:Type sys:Enum}"
-                x:Key="InputModes">
+           
+            <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}" x:Key="InputModes">
                 <ObjectDataProvider.MethodParameters>
                     <x:Type TypeName="local:InputMode" />
                 </ObjectDataProvider.MethodParameters>

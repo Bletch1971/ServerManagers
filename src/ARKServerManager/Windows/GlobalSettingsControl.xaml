@@ -15,17 +15,6 @@
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
-
-            <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
-                <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
-            </Style>
-            <Style x:Key="HiddenTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
-                <Setter Property="VerticalContentAlignment" Value="Center"/>
-                <Setter Property="Background" Value="Wheat"/>
-                <Setter Property="IsReadOnly" Value="True"/>
-            </Style>
-
             <ContentControl x:Key="DataDirectoryButtonContent">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
@@ -56,9 +45,6 @@
                     <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-3,0,-3"/>
                 </StackPanel>
             </ContentControl>
-
-            <cc:InvertBooleanConverter x:Key="InvertBooleanConverter"/>
-            <cc:MinutesToTimeValueConverter x:Key="MinutesToTimeValueConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
     

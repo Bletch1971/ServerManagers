@@ -14,19 +14,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            
-            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFECE1D4" Offset="1"/>
-                <GradientStop Color="#FFEAE8E6"/>
-            </LinearGradientBrush>
-            <SolidColorBrush x:Key="BeigeLabel" Color="#FFE6DFD8"/>
-            <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
-
-            <cc:InvertBooleanConverter x:Key="InvertBooleanConverter"/>
-
-            <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
-                <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
-            </Style>
 
             <ContentControl x:Key="ShutdownButtonContent">
                 <StackPanel Orientation="Horizontal">

@@ -10,8 +10,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <cc:InvertBooleanConverter x:Key="InvertBooleanConverter"/>
         </ResourceDictionary>
     </Window.Resources>
     
