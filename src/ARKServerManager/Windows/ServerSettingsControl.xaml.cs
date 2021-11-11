@@ -1288,6 +1288,11 @@ namespace ServerManagerTool
             }
         }
 
+        private void SupplyCratesGrids_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            Settings.ConfigOverrideSupplyCrateItems.Update();
+        }
+
         #region Dinos
         private void DinoCustomization_Reset(object sender, RoutedEventArgs e)
         {
@@ -3003,7 +3008,7 @@ namespace ServerManagerTool
         private void AddSupplyCrate_Click(object sender, RoutedEventArgs e)
         {
             Settings.ConfigOverrideSupplyCrateItems.Add(new SupplyCrateOverride());
-            Settings.ConfigOverrideSupplyCrateItems.IsEnabled = true;
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void AddSupplyCrateItemSet_Click(object sender, RoutedEventArgs e)
@@ -3015,6 +3020,7 @@ namespace ServerManagerTool
             }
 
             SelectedSupplyCrateOverride.ItemSets.Add(new SupplyCrateItemSet());
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void AddSupplyCrateItemSetEntry_Click(object sender, RoutedEventArgs e)
@@ -3026,6 +3032,7 @@ namespace ServerManagerTool
             }
 
             SelectedSupplyCrateItemSet.ItemEntries.Add(new SupplyCrateItemSetEntry());
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void AddSupplyCrateItem_Click(object sender, RoutedEventArgs e)
@@ -3037,6 +3044,7 @@ namespace ServerManagerTool
             }
 
             SelectedSupplyCrateItemSetEntry.Items.Add(new SupplyCrateItemEntrySettings());
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void ClearSupplyCrates_Click(object sender, RoutedEventArgs e)
@@ -3048,7 +3056,7 @@ namespace ServerManagerTool
             SelectedSupplyCrateItemSet = null;
             SelectedSupplyCrateOverride = null;
             Settings.ConfigOverrideSupplyCrateItems.Clear();
-            Settings.ConfigOverrideSupplyCrateItems.IsEnabled = false;
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void ClearSupplyCrateItemSets_Click(object sender, RoutedEventArgs e)
@@ -3059,6 +3067,7 @@ namespace ServerManagerTool
             SelectedSupplyCrateItemSetEntry = null;
             SelectedSupplyCrateItemSet = null;
             SelectedSupplyCrateOverride?.ItemSets.Clear();
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void ClearSupplyCrateItemSetEntries_Click(object sender, RoutedEventArgs e)
@@ -3068,6 +3077,7 @@ namespace ServerManagerTool
 
             SelectedSupplyCrateItemSetEntry = null;
             SelectedSupplyCrateItemSet?.ItemEntries.Clear();
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void ClearSupplyCrateItems_Click(object sender, RoutedEventArgs e)
@@ -3076,6 +3086,7 @@ namespace ServerManagerTool
                 return;
 
             SelectedSupplyCrateItemSetEntry?.Items.Clear();
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void PasteSupplyCrate_Click(object sender, RoutedEventArgs e)
@@ -3127,7 +3138,7 @@ namespace ServerManagerTool
 
             var item = ((SupplyCrateOverride)((Button)e.Source).DataContext);
             Settings.ConfigOverrideSupplyCrateItems.Remove(item);
-            Settings.ConfigOverrideSupplyCrateItems.IsEnabled = Settings.ConfigOverrideSupplyCrateItems.Count > 0;
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void RemoveSupplyCrateItemSet_Click(object sender, RoutedEventArgs e)
@@ -3140,6 +3151,7 @@ namespace ServerManagerTool
 
             var item = ((SupplyCrateItemSet)((Button)e.Source).DataContext);
             SelectedSupplyCrateOverride.ItemSets.Remove(item);
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void RemoveSupplyCrateItemSetEntry_Click(object sender, RoutedEventArgs e)
@@ -3152,6 +3164,7 @@ namespace ServerManagerTool
 
             var item = ((SupplyCrateItemSetEntry)((Button)e.Source).DataContext);
             SelectedSupplyCrateItemSet.ItemEntries.Remove(item);
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void RemoveSupplyCrateItem_Click(object sender, RoutedEventArgs e)
@@ -3164,6 +3177,7 @@ namespace ServerManagerTool
 
             var item = ((SupplyCrateItemEntrySettings)((Button)e.Source).DataContext);
             SelectedSupplyCrateItemSetEntry.Items.Remove(item);
+            Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
         private void SaveSupplyCrates_Click(object sender, RoutedEventArgs e)
@@ -4308,15 +4322,5 @@ namespace ServerManagerTool
             this.ProfileLastStarted = $"{_globalizer.GetResourceString("ServerSettings_LastStartedLabel")} {date}";
         }
         #endregion
-
-        private void OpenSupplyCrateOverridesWindow_Click(object sender, RoutedEventArgs e)
-        {
-            var window = new SupplyCrateOverridesWindow(this.Server.Profile);
-            window.Owner = Window.GetWindow(this);
-            window.Closed += Window_Closed;
-            //window.SavePerformed += SupplyCrateOverridesWindow_SavePerformed;
-            window.Show();
-            window.Focus();
-        }
     }
 }

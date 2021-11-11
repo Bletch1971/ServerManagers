@@ -239,9 +239,6 @@
     <Compile Include="Windows\ServerMonitorWindow.xaml.cs">
       <DependentUpon>ServerMonitorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\SupplyCrateOverridesWindow.xaml.cs">
-      <DependentUpon>SupplyCrateOverridesWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\VersionFeedWindow.xaml.cs">
       <DependentUpon>VersionFeedWindow.xaml</DependentUpon>
     </Compile>
@@ -419,10 +416,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\ServerMonitorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\SupplyCrateOverridesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

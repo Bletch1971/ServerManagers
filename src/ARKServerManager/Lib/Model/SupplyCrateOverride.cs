@@ -3,6 +3,8 @@ using ServerManagerTool.Common.Model;
 using ServerManagerTool.Lib.ViewModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -47,6 +49,8 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            Update();
+
             return errors.ToArray();
         }
 
@@ -73,6 +77,14 @@ namespace ServerManagerTool.Lib
 
         public void UpdateForLocalization()
         {
+        }
+
+        public void Update(bool recursive = true)
+        {
+            IsEnabled = this.Count > 0;
+
+            foreach (var supplyCrate in this)
+                supplyCrate.Update(recursive);
         }
     }
 
@@ -169,7 +181,10 @@ namespace ServerManagerTool.Lib
         public override void InitializeFromINIValue(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
+            {
+                Update();
                 return;
+            }
 
             var kvPair = value.Split(new[] { '=' }, 2);
             var kvValue = kvPair[1].Trim(' ');
@@ -188,9 +203,7 @@ namespace ServerManagerTool.Lib
 
         public string DisplayName => GameData.FriendlySupplyCrateNameForClass(SupplyCrateClassString);
 
-        public bool IsValid => !string.IsNullOrWhiteSpace(SupplyCrateClassString) && ItemSets.Count > 0;
-
-        public string DisplayNameTreeView
+        public string DisplayNameFull
         {
             get
             {
@@ -199,7 +212,25 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public string IsValidTreeView => ItemSets.Count == 0 ? "N" : (ItemSets.Any(i => i.IsValidTreeView == "N") ? "N" : (ItemSets.Any(i => i.IsValidTreeView == "W") ? "W" : "Y"));
+        public bool IsViewValid => !string.IsNullOrWhiteSpace(SupplyCrateClassString) && (ItemSets?.Count ?? 0) > 0;
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateOverride), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && ItemSets != null)
+            {
+                foreach (var itemSet in ItemSets)
+                    itemSet.Update(recursive);
+            }
+
+            ValidStatus = IsViewValid ? (ItemSets.Any(i => i.ValidStatus == "N") ? "N" : (ItemSets.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 
     [DataContract]
@@ -293,11 +324,27 @@ namespace ServerManagerTool.Lib
             return base.ToComplexINIValue(false);
         }
 
-        public bool IsValid => ItemEntries.Count > 0;
+        public string DisplayNameFull => SetName;
 
-        public string DisplayNameTreeView => SetName;
+        public bool IsViewValid => (ItemEntries?.Count ?? 0) > 0;
 
-        public string IsValidTreeView => ItemEntries.Count == 0 ? "N" : (ItemEntries.Any(i => i.IsValidTreeView == "N") ? "N" : (ItemEntries.Any(i => i.IsValidTreeView == "W") ? "W" : "Y"));
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateItemSet), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && ItemEntries != null)
+            {
+                foreach (var itemEntry in ItemEntries)
+                    itemEntry.Update(recursive);
+            }
+
+            ValidStatus = IsViewValid ? (ItemEntries.Any(i => i.ValidStatus == "N") ? "N" : (ItemEntries.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 
     [DataContract]
@@ -428,14 +475,30 @@ namespace ServerManagerTool.Lib
             return base.ToComplexINIValue(false);
         }
 
+        public string DisplayNameFull => ItemEntryName;
+
+        public float ChanceToBeBlueprint => ForceBlueprint ? 1 : ChanceToBeBlueprintOverride;
+
         public bool IsModelValid => ItemClassStrings.Count > 0 && ItemClassStrings.Count == ItemsWeights.Count;
 
-        public bool IsViewValid => Items.Count > 0;
+        public bool IsViewValid => (Items?.Count ?? 0) > 0;
 
-        public string DisplayNameTreeView => ItemEntryName;
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateItemSetEntry), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
 
-        public string IsValidTreeView => Items.Count == 0 ? "N" : (Items.Any(i => i.IsValidTreeView == "N") ? "N" : (Items.Any(i => i.IsValidTreeView == "W") ? "W" : "Y"));
+        public void Update(bool recursive = true)
+        {
+            if (recursive && Items != null)
+            {
+                foreach (var item in Items)
+                    item.Update();
+            }
 
-        public float ChanceToBeBlueprintTreeView => ForceBlueprint ? 1 : ChanceToBeBlueprintOverride;
+            ValidStatus = IsViewValid ? (Items.Any(i => i.ValidStatus == "N") ? "N" : (Items.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 }

@@ -20,9 +20,7 @@ namespace ServerManagerTool.Lib.ViewModel
 
         public string DisplayName => GameData.FriendlyItemNameForClass(ItemClassString);
 
-        public bool IsValid => !string.IsNullOrWhiteSpace(ItemClassString);
-
-        public string DisplayNameTreeView
+        public string DisplayNameFull
         {
             get
             {
@@ -31,6 +29,18 @@ namespace ServerManagerTool.Lib.ViewModel
             }
         }
 
-        public string IsValidTreeView => GameData.HasItemForClass(ItemClassString) ? (IsValid ? "Y" : "N") : (IsValid ? "W" : "N");
+        public bool IsViewValid => !string.IsNullOrWhiteSpace(ItemClassString);
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateItemEntrySettings), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update()
+        {
+            ValidStatus = IsViewValid ? (GameData.HasItemForClass(ItemClassString) ? "Y" : "W") : "N";
+        }
     }
 }
