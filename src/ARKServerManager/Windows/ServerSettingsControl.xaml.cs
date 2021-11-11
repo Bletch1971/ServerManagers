@@ -4308,15 +4308,5 @@ namespace ServerManagerTool
             this.ProfileLastStarted = $"{_globalizer.GetResourceString("ServerSettings_LastStartedLabel")} {date}";
         }
         #endregion
-
-        private void OpenSupplyCrateOverridesWindow_Click(object sender, RoutedEventArgs e)
-        {
-            var window = new SupplyCrateOverridesWindow(this.Server.Profile);
-            window.Owner = Window.GetWindow(this);
-            window.Closed += Window_Closed;
-            //window.SavePerformed += SupplyCrateOverridesWindow_SavePerformed;
-            window.Show();
-            window.Focus();
-        }
     }
 }

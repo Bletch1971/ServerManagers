@@ -5068,9 +5068,6 @@
                                             Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.SupplyCrateOverridesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
-                                    <Button Width="22" Height="22" Click="OpenSupplyCrateOverridesWindow_Click" Margin="5,0,0,0" Style="{StaticResource ButtonStyle1}" Visibility="{Binding ElementName=SettingsControl, Path=BetaVersion, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
-                                    </Button>
                                 </StackPanel>
                             </Expander.Header>
 
