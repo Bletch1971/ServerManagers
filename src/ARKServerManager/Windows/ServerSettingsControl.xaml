@@ -4571,18 +4571,21 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="{Binding CurrentConfig.CraftingOverrideItemGrid, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*" MinWidth="200"/>
+                                    <ColumnDefinition Width="Auto"/> <!--Splitter Column-->
+                                    <ColumnDefinition Width="3*" MinWidth="200"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Text="{DynamicResource ServerSettings_CraftingOverrides_DisableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkCyan"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Text="{DynamicResource ServerSettings_CraftingOverrides_DisableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkCyan"/>
 
-                                <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Text="{DynamicResource ServerSettings_CraftingOverrides_WarningLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Text="{DynamicResource ServerSettings_CraftingOverrides_WarningLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
 
-                                <GroupBox  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CraftingOverrides_ItemsLabel}"/>
@@ -4651,7 +4654,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="2" Grid.Column="1" Width="5" ShowsPreview="True" HorizontalAlignment="Center" VerticalAlignment="Stretch" Opacity="0"/>
+
+                                <GroupBox  Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CraftingOverrides_ResourcesLabel}"/>
@@ -4727,6 +4732,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
