@@ -948,11 +948,12 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}" Height="200">
+                                <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
-                                            <RowDefinition />
+                                            <RowDefinition Height="{Binding CurrentConfig.MOTDHeight, ElementName=SettingsControl, FallbackValue=100, Mode=TwoWay}" MinHeight="100"/>
+                                            <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
@@ -962,7 +963,7 @@
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
 
-                                        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
                                             <Label  Content="{DynamicResource ServerSettings_MOTDLineCountLabel}" VerticalAlignment="Center">
                                                 <Label.Style>
                                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
@@ -989,7 +990,7 @@
                                             </Label>
                                         </StackPanel>
 
-                                        <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
                                             <Label  Content="{DynamicResource ServerSettings_MOTDLengthLabel}" VerticalAlignment="Center">
                                                 <Label.Style>
                                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
@@ -1018,10 +1019,12 @@
 
                                         <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="1" Text="{Binding MOTD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ToolTip="{DynamicResource ServerSettings_MOTDTooltip}" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="4096" SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" SourceUpdated="MOTD_SourceUpdated"/>
 
-                                        <Label Grid.Row="2" Grid.Column="0" Margin="1" Content="{DynamicResource ServerSettings_MOTDDurationLabel}"/>
-                                        <cctl:AnnotatedSlider Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Value="{Binding MOTDDuration}" Suffix="{DynamicResource ServerSettings_MOTDDurationUnits}" Minimum="1" Maximum="30" TickFrequency="5" SmallChange="1" LargeChange="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDDurationTooltip}" />
+                                        <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
 
-                                        <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Margin="1" Label="{DynamicResource ServerSettings_MOTDIntervalEnabledLabel}" Value="{Binding MOTDInterval}" Suffix="{DynamicResource ServerSettings_MOTDIntervalUnits}" Minimum="10" Maximum="1440" TickFrequency="60" SmallChange="10" LargeChange="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDIntervalTooltip}" />
+                                        <Label Grid.Row="3" Grid.Column="0" Margin="1" Content="{DynamicResource ServerSettings_MOTDDurationLabel}"/>
+                                        <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Value="{Binding MOTDDuration}" Suffix="{DynamicResource ServerSettings_MOTDDurationUnits}" Minimum="1" Maximum="30" TickFrequency="5" SmallChange="1" LargeChange="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDDurationTooltip}" />
+
+                                        <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="1" Label="{DynamicResource ServerSettings_MOTDIntervalEnabledLabel}" Value="{Binding MOTDInterval}" Suffix="{DynamicResource ServerSettings_MOTDIntervalUnits}" Minimum="10" Maximum="1440" TickFrequency="60" SmallChange="10" LargeChange="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDIntervalTooltip}" />
                                     </Grid>
                                 </GroupBox>
 

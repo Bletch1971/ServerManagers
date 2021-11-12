@@ -2755,5 +2755,17 @@ namespace ServerManagerTool {
                 this["DinoSettingsGridHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public global::System.Windows.GridLength MOTDHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["MOTDHeight"]));
+            }
+            set {
+                this["MOTDHeight"] = value;
+            }
+        }
     }
 }
