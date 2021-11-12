@@ -2719,5 +2719,17 @@ namespace ServerManagerTool {
                 this["ServerFilesGridHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength EngramsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["EngramsGridHeight"]));
+            }
+            set {
+                this["EngramsGridHeight"] = value;
+            }
+        }
     }
 }

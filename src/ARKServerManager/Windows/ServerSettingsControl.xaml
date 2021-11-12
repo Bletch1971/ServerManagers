@@ -3253,7 +3253,9 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="{Binding CurrentConfig.EngramsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
 
                                 <CheckBox Grid.Row="0" Margin="5" Content="{DynamicResource ServerSettings_AutoUnlockAllEngramsLabel}" IsChecked="{Binding AutoUnlockAllEngrams}" ToolTip="{DynamicResource ServerSettings_AutoUnlockAllEngramsTooltip}" HorizontalAlignment="Left"/>
@@ -3281,8 +3283,14 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal"  Margin="0,2,0,0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,2,0,0">
                                             <CheckBox x:Name="OnlyAllowSpecifiedEngramsCheckBox"  Margin="5" Content="{DynamicResource ServerSettings_OnlyAllowSpecifiedEngramsLabel}" IsChecked="{Binding OnlyAllowSpecifiedEngrams, Mode=TwoWay}" IsEnabled="{Binding EngramSettings.IsEnabled}" ToolTip="{DynamicResource ServerSettings_OnlyAllowSpecifiedEngramsTooltip}" HorizontalAlignment="Left"/>
                                             <Button Width="22" Height="22" Margin="20,0,0,0" Click="Engrams_SelectAll" ToolTip="{DynamicResource ServerSettings_EngramsSelectAllTooltip}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Checked.ico,Size=32}"/>
@@ -3316,7 +3324,7 @@
                                             </Button>
                                         </StackPanel>
 
-                                        <StackPanel Orientation="Horizontal" DataContext="{Binding}">
+                                        <StackPanel Grid.Row="1" Orientation="Horizontal" DataContext="{Binding}">
                                             <Label Content="{DynamicResource General_FilterLabel}"/>
                                             <ComboBox Name="ModEngramComboBox" ItemsSource="{Binding BaseEngramModList, ElementName=SettingsControl}" SelectedValue="{Binding SelectedModEngram, ElementName=SettingsControl, Mode=TwoWay}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" Margin="0,0,2,0" IsEnabled="{Binding EngramSettings.IsEnabled}" HorizontalAlignment="Left" VerticalContentAlignment="Center" MinWidth="200" Width="Auto" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                             <TextBox Name="ModEngramTextbox" Text="{Binding EngramFilterString, ElementName=SettingsControl, Mode=TwoWay}" VerticalContentAlignment="Center" IsEnabled="{Binding EngramSettings.IsEnabled}" Padding="2" Margin="5,0,2,0" HorizontalAlignment="Left" MinWidth="300" Width="Auto" />
@@ -3339,7 +3347,7 @@
                                             </CheckBox>
                                         </StackPanel>
 
-                                        <DataGrid Margin="0,5,0,0" Name="EngramsOverrideGrid" ItemsSource="{Binding Source={StaticResource EngramsViewSource}}" Height="400" IsEnabled="{Binding EngramSettings.IsEnabled}" FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="0" GridLinesVisibility="Horizontal">
+                                        <DataGrid Grid.Row="2" Margin="0,5,0,0" Name="EngramsOverrideGrid" ItemsSource="{Binding Source={StaticResource EngramsViewSource}}" IsEnabled="{Binding EngramSettings.IsEnabled}" FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="0" GridLinesVisibility="Horizontal">
                                             <DataGrid.Resources>
                                                 <Style TargetType="{x:Type DataGridRow}">
                                                     <Style.Resources>
@@ -3577,9 +3585,10 @@
                                                 </Style>
                                             </DataGrid.RowStyle>
                                         </DataGrid>
-
-                                    </StackPanel>
+                                    </Grid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="2" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
