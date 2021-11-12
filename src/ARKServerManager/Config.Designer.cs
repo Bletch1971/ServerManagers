@@ -2575,5 +2575,53 @@ namespace ServerManagerTool {
                 this["PreventTransferOverrideGridHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCratesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCratesGridHeight"]));
+            }
+            set {
+                this["SupplyCratesGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCrateItemSetsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCrateItemSetsGridHeight"]));
+            }
+            set {
+                this["SupplyCrateItemSetsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCrateItemSetEntriesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCrateItemSetEntriesGridHeight"]));
+            }
+            set {
+                this["SupplyCrateItemSetEntriesGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCrateItemsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCrateItemsGridHeight"]));
+            }
+            set {
+                this["SupplyCrateItemsGridHeight"] = value;
+            }
+        }
     }
 }

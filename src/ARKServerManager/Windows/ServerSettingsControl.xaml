@@ -5088,13 +5088,13 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCratesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemSetsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemSetEntriesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition/>
                                     <RowDefinition Height="1" MinHeight="1"/>
                                 </Grid.RowDefinitions>

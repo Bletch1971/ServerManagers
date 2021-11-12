@@ -719,5 +719,17 @@
     <Setting Name="PreventTransferOverrideGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">400</Value>
     </Setting>
+    <Setting Name="SupplyCratesGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="SupplyCrateItemSetsGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="SupplyCrateItemSetEntriesGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="SupplyCrateItemsGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
