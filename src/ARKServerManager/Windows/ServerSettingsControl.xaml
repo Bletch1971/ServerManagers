@@ -4894,16 +4894,19 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="{Binding CurrentConfig.NPCSpawnSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*" MinWidth="200"/>
+                                    <ColumnDefinition Width="Auto"/> <!--Splitter Column-->
+                                    <ColumnDefinition Width="3*" MinWidth="200"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Text="{DynamicResource ServerSettings_MapSpawnerOverrides_DisableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkCyan"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Text="{DynamicResource ServerSettings_MapSpawnerOverrides_DisableLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkCyan"/>
 
-                                <GroupBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_MapSpawnerOverrides_ContainerLabel}"/>
@@ -4982,7 +4985,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="1" Grid.Column="1" Width="5" ShowsPreview="True" HorizontalAlignment="Center" VerticalAlignment="Stretch" Opacity="0"/>
+
+                                <GroupBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_MapSpawnerOverrides_EntryLabel}"/>
@@ -5055,6 +5060,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
@@ -5089,14 +5096,14 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                     <RowDefinition Height="{Binding CurrentConfig.SupplyCratesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemSetsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemSetEntriesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
-                                    <RowDefinition/>
-                                    <RowDefinition Height="1" MinHeight="1"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
@@ -5623,8 +5630,8 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                     <RowDefinition Height="{Binding CurrentConfig.PreventTransferOverrideGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
-                                    <RowDefinition/>
-                                    <RowDefinition Height="1" MinHeight="1"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />

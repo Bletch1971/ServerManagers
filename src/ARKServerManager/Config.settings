@@ -731,5 +731,8 @@
     <Setting Name="SupplyCrateItemsGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">200</Value>
     </Setting>
+    <Setting Name="NPCSpawnSettingsGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
