@@ -5088,10 +5088,15 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition MinHeight="200"/>
-                                    <RowDefinition MinHeight="200"/>
-                                    <RowDefinition MinHeight="200"/>
-                                    <RowDefinition MinHeight="200"/>
+                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="200" MinHeight="200"/>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="1" MinHeight="1"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
@@ -5260,7 +5265,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox  Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="3" Grid.Column="0" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+                                
+                                <GroupBox  Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_SupplyCrate_ItemSetsLabel}"/>
@@ -5372,7 +5379,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox  Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="5" Grid.Column="0" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+
+                                <GroupBox  Grid.Row="6" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntriesLabel}"/>
@@ -5496,7 +5505,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox  Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="7" Grid.Column="0" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+
+                                <GroupBox  Grid.Row="8" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_SupplyCrate_ItemsLabel}"/>
@@ -5576,6 +5587,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="9" Grid.Column="0" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
