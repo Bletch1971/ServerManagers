@@ -18,8 +18,29 @@ namespace ServerManagerTool.Lib.ViewModel
             set { SetValue(ItemWeightProperty, value); }
         }
 
-        public string DisplayName => GameData.FriendlySupplyCrateNameForClass(ItemClassString);
+        public string DisplayName => GameData.FriendlyItemNameForClass(ItemClassString);
 
-        public bool IsValid => !string.IsNullOrWhiteSpace(ItemClassString);
+        public string DisplayNameFull
+        {
+            get
+            {
+                var modName = GameData.FriendlyItemModNameForClass(ItemClassString); ;
+                return $"{(string.IsNullOrWhiteSpace(modName) ? string.Empty : $"({modName}) ")}{DisplayName}";
+            }
+        }
+
+        public bool IsViewValid => !string.IsNullOrWhiteSpace(ItemClassString);
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateItemEntrySettings), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update()
+        {
+            ValidStatus = IsViewValid ? (GameData.HasItemForClass(ItemClassString) ? "Y" : "W") : "N";
+        }
     }
 }

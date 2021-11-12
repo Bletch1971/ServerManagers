@@ -3,6 +3,10 @@ using ServerManagerTool.Common.Model;
 using ServerManagerTool.Lib.ViewModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Linq;
 using System.Runtime.Serialization;
 using System.Windows;
 
@@ -37,13 +41,15 @@ namespace ServerManagerTool.Lib
                                 errors.Add($"Missing Supply Crate Item Weight: Crate '{supplyCrate.SupplyCrateClassString}'; Set '{itemSet.SetName}'; Entry '{itemEntry.ItemEntryName}'; Item '{itemEntry.ItemClassStrings[index]}'.");
 
                             itemEntry.Items.Add(new SupplyCrateItemEntrySettings {
-                                                                ItemClassString = itemEntry.ItemClassStrings[index],
-                                                                ItemWeight = itemsWeight,
-                                                            });
+                                ItemClassString = itemEntry.ItemClassStrings[index],
+                                ItemWeight = itemsWeight,
+                            });
                         }
                     }
                 }
             }
+
+            Update();
 
             return errors.ToArray();
         }
@@ -71,6 +77,14 @@ namespace ServerManagerTool.Lib
 
         public void UpdateForLocalization()
         {
+        }
+
+        public void Update(bool recursive = true)
+        {
+            IsEnabled = this.Count > 0;
+
+            foreach (var supplyCrate in this)
+                supplyCrate.Update(recursive);
         }
     }
 
@@ -167,7 +181,10 @@ namespace ServerManagerTool.Lib
         public override void InitializeFromINIValue(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
+            {
+                Update();
                 return;
+            }
 
             var kvPair = value.Split(new[] { '=' }, 2);
             var kvValue = kvPair[1].Trim(' ');
@@ -186,7 +203,34 @@ namespace ServerManagerTool.Lib
 
         public string DisplayName => GameData.FriendlySupplyCrateNameForClass(SupplyCrateClassString);
 
-        public bool IsValid => !string.IsNullOrWhiteSpace(SupplyCrateClassString) && ItemSets.Count > 0;
+        public string DisplayNameFull
+        {
+            get
+            {
+                var modName = GameData.FriendlySupplyCrateModNameForClass(SupplyCrateClassString); ;
+                return $"{(string.IsNullOrWhiteSpace(modName) ? string.Empty : $"({modName}) ")}{DisplayName}";
+            }
+        }
+
+        public bool IsViewValid => !string.IsNullOrWhiteSpace(SupplyCrateClassString) && (ItemSets?.Count ?? 0) > 0;
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateOverride), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && ItemSets != null)
+            {
+                foreach (var itemSet in ItemSets)
+                    itemSet.Update(recursive);
+            }
+
+            ValidStatus = IsViewValid ? (ItemSets.Any(i => i.ValidStatus == "N") ? "N" : (ItemSets.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 
     [DataContract]
@@ -280,7 +324,27 @@ namespace ServerManagerTool.Lib
             return base.ToComplexINIValue(false);
         }
 
-        public bool IsValid => ItemEntries.Count > 0;
+        public string DisplayNameFull => SetName;
+
+        public bool IsViewValid => (ItemEntries?.Count ?? 0) > 0;
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateItemSet), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && ItemEntries != null)
+            {
+                foreach (var itemEntry in ItemEntries)
+                    itemEntry.Update(recursive);
+            }
+
+            ValidStatus = IsViewValid ? (ItemEntries.Any(i => i.ValidStatus == "N") ? "N" : (ItemEntries.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 
     [DataContract]
@@ -411,8 +475,30 @@ namespace ServerManagerTool.Lib
             return base.ToComplexINIValue(false);
         }
 
+        public string DisplayNameFull => ItemEntryName;
+
+        public float ChanceToBeBlueprint => ForceBlueprint ? 1 : ChanceToBeBlueprintOverride;
+
         public bool IsModelValid => ItemClassStrings.Count > 0 && ItemClassStrings.Count == ItemsWeights.Count;
 
-        public bool IsViewValid => Items.Count > 0;
+        public bool IsViewValid => (Items?.Count ?? 0) > 0;
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(SupplyCrateItemSetEntry), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && Items != null)
+            {
+                foreach (var item in Items)
+                    item.Update();
+            }
+
+            ValidStatus = IsViewValid ? (Items.Any(i => i.ValidStatus == "N") ? "N" : (Items.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 }

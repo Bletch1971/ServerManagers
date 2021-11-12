@@ -27,7 +27,6 @@
             <vm:DinoLevelIndexToDisplayLevelConverter x:Key="DinoLevelIndexToDisplayLevelConverter" />
             <vm:ExtinctionEventDateConverter x:Key="ExtinctionEventDateConverter"/>
             <vm:ExtinctionEventTimeIntervalConverter x:Key="ExtinctionEventTimeIntervalConverter"/>
-            <vm:MapNameValueConverter x:Key="MapNameValueConverter"/>
             <vm:OfficialDifficultyValueConverter x:Key="OfficialDifficultyValueConverter" />
             <vm:PlayerLevelIndexToDisplayLevelConverter x:Key="PlayerLevelIndexToDisplayLevelConverter" />
             <vm:ResourceNameValueConverter x:Key="ResourceNameValueConverter" />
@@ -5089,10 +5088,10 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="200"/>
-                                    <RowDefinition Height="200"/>
-                                    <RowDefinition Height="200"/>
-                                    <RowDefinition Height="200"/>
+                                    <RowDefinition MinHeight="200"/>
+                                    <RowDefinition MinHeight="200"/>
+                                    <RowDefinition MinHeight="200"/>
+                                    <RowDefinition MinHeight="200"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
@@ -5121,7 +5120,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid Name="SupplyCratesGrid" ItemsSource="{Binding ConfigOverrideSupplyCrateItems}" SelectedItem="{Binding Path=SelectedSupplyCrateOverride, ElementName=SettingsControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid Name="SupplyCratesGrid" ItemsSource="{Binding ConfigOverrideSupplyCrateItems}" SelectedItem="{Binding Path=SelectedSupplyCrateOverride, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25" SourceUpdated="SupplyCratesGrids_SourceUpdated">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -5138,6 +5137,28 @@
                                             <SolidColorBrush Color="#FFB4B4B4"/>
                                         </DataGrid.VerticalGridLinesBrush>
 
+                                        <DataGrid.RowHeaderTemplate>
+                                            <DataTemplate>
+                                                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                                                    <Image.Style>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="Y">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="N">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="W">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </DataTemplate>
+                                        </DataGrid.RowHeaderTemplate>
+
                                         <DataGrid.Columns>
                                             <DataGridTemplateColumn Width="*" MinWidth="100" CanUserSort="True" SortMemberPath="DisplayName">
                                                 <DataGridTemplateColumn.Header>
@@ -5145,24 +5166,24 @@
                                                 </DataGridTemplateColumn.Header>
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BaseSupplyCrateList, ElementName=SettingsControl}" SelectedValue="{Binding SupplyCrateClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BaseSupplyCrateList, ElementName=SettingsControl}" SelectedValue="{Binding SupplyCrateClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit, NotifyOnSourceUpdated=True}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinItemSets}">
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinItemSets, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}">
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_Crate_MinItemSetsColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_Crate_MinItemSetsColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxItemSets}">
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxItemSets, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}">
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_Crate_MaxItemSetsColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_Crate_MaxItemSetsColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding NumItemSetsPower}">
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding NumItemSetsPower, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}">
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_Crate_NumItemSetsPowerColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_Crate_NumItemSetsPowerColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
@@ -5252,7 +5273,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid Name="SupplyCrateItemSetsGrid" ItemsSource="{Binding Path=SelectedSupplyCrateOverride.ItemSets, ElementName=SettingsControl}" SelectedItem="{Binding Path=SelectedSupplyCrateItemSet, ElementName=SettingsControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid Name="SupplyCrateItemSetsGrid" ItemsSource="{Binding Path=SelectedSupplyCrateOverride.ItemSets, ElementName=SettingsControl}" SelectedItem="{Binding Path=SelectedSupplyCrateItemSet, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25" SourceUpdated="SupplyCratesGrids_SourceUpdated">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -5269,32 +5290,54 @@
                                             <SolidColorBrush Color="#FFB4B4B4"/>
                                         </DataGrid.VerticalGridLinesBrush>
 
+                                        <DataGrid.RowHeaderTemplate>
+                                            <DataTemplate>
+                                                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                                                    <Image.Style>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="Y">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="N">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="W">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </DataTemplate>
+                                        </DataGrid.RowHeaderTemplate>
+
                                         <DataGrid.Columns>
-                                            <DataGridTextColumn     Width="*" MinWidth="100" Binding="{Binding SetName}" >
+                                            <DataGridTextColumn     Width="*" MinWidth="100" Binding="{Binding SetName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSet_NameColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSet_NameColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinNumItems}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinNumItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSet_MinNumItemsColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSet_MinNumItemsColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxNumItems}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxNumItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSet_MaxNumItemsColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSet_MaxNumItemsColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding NumItemsPower}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding NumItemsPower, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSet_NumItemsPowerColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSet_NumItemsPowerColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding SetWeight}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding SetWeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSet_SetWeightColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSet_SetWeightColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
@@ -5342,7 +5385,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid Name="SupplyCrateItemSetEntriesGrid" ItemsSource="{Binding Path=SelectedSupplyCrateItemSet.ItemEntries, ElementName=SettingsControl}" SelectedItem="{Binding Path=SelectedSupplyCrateItemSetEntry, ElementName=SettingsControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid Name="SupplyCrateItemSetEntriesGrid" ItemsSource="{Binding Path=SelectedSupplyCrateItemSet.ItemEntries, ElementName=SettingsControl}" SelectedItem="{Binding Path=SelectedSupplyCrateItemSetEntry, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25" SourceUpdated="SupplyCratesGrids_SourceUpdated">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -5359,38 +5402,60 @@
                                             <SolidColorBrush Color="#FFB4B4B4"/>
                                         </DataGrid.VerticalGridLinesBrush>
 
+                                        <DataGrid.RowHeaderTemplate>
+                                            <DataTemplate>
+                                                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                                                    <Image.Style>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="Y">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="N">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="W">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </DataTemplate>
+                                        </DataGrid.RowHeaderTemplate>
+
                                         <DataGrid.Columns>
-                                            <DataGridTextColumn     Width="*" MinWidth="100" Binding="{Binding ItemEntryName}" >
+                                            <DataGridTextColumn     Width="*" MinWidth="100" Binding="{Binding ItemEntryName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_NameColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_NameColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinQuantity}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinQuantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MinQuantityColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MinQuantityColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxQuantity}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxQuantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MaxQuantityColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MaxQuantityColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinQuality}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MinQuality, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MinQualityColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MinQualityColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxQuality}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding MaxQuality, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MaxQualityColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_MaxQualityColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
                                             </DataGridTextColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding EntryWeight}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding EntryWeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_EntryWeightColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_EntryWeightColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
@@ -5411,8 +5476,8 @@
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
-                                            
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding ChanceToBeBlueprintOverride}" >
+
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding ChanceToBeBlueprintOverride, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_ChanceToBeBlueprintOverrideColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_ItemSetEntry_ChanceToBeBlueprintOverrideColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
@@ -5444,7 +5509,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid Name="SupplyCrateItemsGrid" ItemsSource="{Binding Path=SelectedSupplyCrateItemSetEntry.Items, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid Name="SupplyCrateItemsGrid" ItemsSource="{Binding Path=SelectedSupplyCrateItemSetEntry.Items, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25" SourceUpdated="SupplyCratesGrids_SourceUpdated">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -5461,6 +5526,28 @@
                                             <SolidColorBrush Color="#FFB4B4B4"/>
                                         </DataGrid.VerticalGridLinesBrush>
 
+                                        <DataGrid.RowHeaderTemplate>
+                                            <DataTemplate>
+                                                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                                                    <Image.Style>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="Y">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="N">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="W">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </DataTemplate>
+                                        </DataGrid.RowHeaderTemplate>
+
                                         <DataGrid.Columns>
                                             <DataGridTemplateColumn Width="*" MinWidth="100" CanUserSort="True" SortMemberPath="DisplayName">
                                                 <DataGridTemplateColumn.Header>
@@ -5468,11 +5555,11 @@
                                                 </DataGridTemplateColumn.Header>
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BasePrimalItemList, ElementName=SettingsControl}" SelectedValue="{Binding ItemClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BasePrimalItemList, ElementName=SettingsControl}" SelectedValue="{Binding ItemClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit, NotifyOnSourceUpdated=True}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
-                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding ItemWeight}" >
+                                            <DataGridTextColumn     Width="Auto" MinWidth="50" Binding="{Binding ItemWeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrate_Item_ItemWeightColumnLabel}" ToolTip="{DynamicResource ServerSettings_SupplyCrate_Item_ItemWeightColumnTooltip}" TextWrapping="Wrap"/>
                                                 </DataGridTextColumn.Header>
