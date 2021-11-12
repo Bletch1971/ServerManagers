@@ -2743,5 +2743,17 @@ namespace ServerManagerTool {
                 this["EnvironmentListBoxHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength DinoSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["DinoSettingsGridHeight"]));
+            }
+            set {
+                this["DinoSettingsGridHeight"] = value;
+            }
+        }
     }
 }

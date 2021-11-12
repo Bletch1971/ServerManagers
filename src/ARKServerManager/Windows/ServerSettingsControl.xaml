@@ -2445,8 +2445,15 @@
                                             </StackPanel>
                                         </GroupBox.Header>
 
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal" DataContext="{Binding}" Margin="0,2,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition Height="{Binding CurrentConfig.DinoSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                                <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                                <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
+                                            </Grid.RowDefinitions>
+
+                                            <StackPanel Grid.Row="0" Orientation="Horizontal" DataContext="{Binding}" Margin="0,2,0,0">
                                                 <Label Content="{DynamicResource General_FilterLabel}"/>
                                                 <ComboBox Name="ModDinoComboBox" ItemsSource="{Binding BaseDinoModList, ElementName=SettingsControl}" SelectedValue="{Binding SelectedModDino, ElementName=SettingsControl, Mode=TwoWay}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" Margin="0,0,2,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" MinWidth="200" Width="Auto" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                 <TextBox Name="ModDinoTextbox" Text="{Binding DinoFilterString, ElementName=SettingsControl, Mode=TwoWay}" VerticalContentAlignment="Center" Padding="2" Margin="5,0,2,0" HorizontalAlignment="Left" MinWidth="300" Width="Auto" />
@@ -2455,7 +2462,7 @@
                                                 </Button>
                                             </StackPanel>
 
-                                            <DataGrid Margin="0,5,0,0" Name="DinoSettingsGrid" ItemsSource="{Binding Source={StaticResource DinosViewSource}}" Height="400" FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="0" GridLinesVisibility="Horizontal">
+                                            <DataGrid Grid.Row="1" Margin="0,5,0,0" Name="DinoSettingsGrid" ItemsSource="{Binding Source={StaticResource DinosViewSource}}" FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="0" GridLinesVisibility="Horizontal">
                                                 <DataGrid.Resources>
                                                     <Style TargetType="{x:Type DataGridRow}">
                                                         <Style.Resources>
@@ -2754,7 +2761,9 @@
                                                     </Style>
                                                 </DataGrid.RowStyle>
                                             </DataGrid>
-                                        </StackPanel>
+
+                                            <GridSplitter Grid.Row="2" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+                                        </Grid>
                                     </GroupBox>
 
                                     <GroupBox Style="{StaticResource GroupBoxStyle}">
