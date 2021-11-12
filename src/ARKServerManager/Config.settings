@@ -737,7 +737,10 @@
     <Setting Name="StackSizeOverrideGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">400</Value>
     </Setting>
-    <Setting Name="CraftingOverrideItemGrid" Type="System.Windows.GridLength" Scope="User">
+    <Setting Name="CraftingOverrideItemGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="CustomLevelsGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">400</Value>
     </Setting>
   </Settings>

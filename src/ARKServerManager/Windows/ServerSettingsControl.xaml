@@ -4362,33 +4362,36 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition/>
+                                    <RowDefinition Height="{Binding CurrentConfig.CustomLevelsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="10*"/>
-                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="10*" MinWidth="200"/>
+                                    <ColumnDefinition Width="Auto"/> <!--Splitter Column-->
+                                    <ColumnDefinition Width="7*" MinWidth="200"/>
                                 </Grid.ColumnDefinitions>
 
-                                <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                                <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
                                     <Button DockPanel.Dock="Right" ToolTip="{DynamicResource ServerSettings_ResetMaxXPTooltip}" Click="MaxXPPlayer_Reset" Style="{StaticResource ButtonStyle1}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                     <cctl:AnnotatedCheckBoxAndIntegerSlider DockPanel.Dock="Right" Margin="0,1,0,1" Label="{DynamicResource ServerSettings_MaxXPPlayerLabel}" Value="{Binding OverrideMaxExperiencePointsPlayer}" Suffix="{DynamicResource SliderUnits_XP}" Minimum="0" Maximum="1000000000" SmallChange="5000" LargeChange="100000" TickFrequency="50000" ToolTip="{DynamicResource ServerSettings_MaxXPPlayerTooltip}"/>
                                 </DockPanel>
 
-                                <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                                <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
                                     <Button DockPanel.Dock="Right" Click="MaxXPDino_Reset" ToolTip="{DynamicResource ServerSettings_ResetMaxXPTooltip}" Style="{StaticResource ButtonStyle1}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                     <cctl:AnnotatedCheckBoxAndIntegerSlider DockPanel.Dock="Right" Margin="0,1,0,1" Label="{DynamicResource ServerSettings_MaxXPDinoLabel}" Value="{Binding OverrideMaxExperiencePointsDino}" Suffix="{DynamicResource SliderUnits_XP}" Minimum="0" Maximum="1000000000" SmallChange="5000" LargeChange="100000" TickFrequency="50000" ToolTip="{DynamicResource ServerSettings_MaxXPDinoTooltip}"/>
                                 </DockPanel>
 
-                                <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Text="{Binding CustomLevelProgressionsInformation, ElementName=SettingsControl, FallbackValue=NOTE: Custom Player and Dino levels..}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Text="{Binding CustomLevelProgressionsInformation, ElementName=SettingsControl, FallbackValue=NOTE: Custom Player and Dino levels..}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
 
                                 <CheckBox Grid.Row="3" Grid.Column="0" Margin="5" Name="EnableLevelsCheckbox" Content="{DynamicResource ServerSettings_EnableCustomLevelProgressionsLabel}" IsChecked="{Binding EnableLevelProgressions, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" SourceUpdated="EnableLevelProgressions_SourceUpdated" ToolTip="{DynamicResource ServerSettings_EnableCustomLevelProgressionsTooltip}" HorizontalAlignment="Left"/>
                                 <CheckBox Grid.Row="3" Grid.Column="2" Margin="5" Name="EnableDinoLevelsCheckbox" Content="{DynamicResource ServerSettings_EnableDinoLevelProgressionsLabel}" IsChecked="{Binding EnableDinoLevelProgressions, Mode=TwoWay}" IsEnabled="{Binding EnableLevelProgressions}" ToolTip="{DynamicResource ServerSettings_EnableDinoLevelProgressionsTooltip}" HorizontalAlignment="Left"/>
 
-                                <GroupBox Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomPlayerLevelsLabel}"/>
@@ -4477,7 +4480,9 @@
                                     </ListView>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="4" Grid.Column="1" Width="5" ShowsPreview="True" HorizontalAlignment="Center" VerticalAlignment="Stretch" Opacity="0"/>
+
+                                <GroupBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomDinoLevelsLabel}"/>
@@ -4538,6 +4543,8 @@
                                         </ListView.View>
                                     </ListView>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
@@ -4571,7 +4578,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.CraftingOverrideItemGrid, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding CurrentConfig.CraftingOverrideItemGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>

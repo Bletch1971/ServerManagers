@@ -2651,12 +2651,24 @@ namespace ServerManagerTool {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("400")]
-        public global::System.Windows.GridLength CraftingOverrideItemGrid {
+        public global::System.Windows.GridLength CraftingOverrideItemGridHeight {
             get {
-                return ((global::System.Windows.GridLength)(this["CraftingOverrideItemGrid"]));
+                return ((global::System.Windows.GridLength)(this["CraftingOverrideItemGridHeight"]));
             }
             set {
-                this["CraftingOverrideItemGrid"] = value;
+                this["CraftingOverrideItemGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomLevelsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomLevelsGridHeight"]));
+            }
+            set {
+                this["CustomLevelsGridHeight"] = value;
             }
         }
     }
