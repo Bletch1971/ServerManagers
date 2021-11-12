@@ -758,5 +758,8 @@
     <Setting Name="EngramsGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">400</Value>
     </Setting>
+    <Setting Name="EnvironmentListBoxHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

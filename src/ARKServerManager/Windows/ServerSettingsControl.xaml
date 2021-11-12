@@ -2982,8 +2982,15 @@
                                             </StackPanel>
                                         </GroupBox.Header>
 
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal" DataContext="{Binding}" Margin="0,2,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition Height="{Binding CurrentConfig.EnvironmentListBoxHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                                <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                                <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
+                                            </Grid.RowDefinitions>
+
+                                            <StackPanel Grid.Row="0" Orientation="Horizontal" DataContext="{Binding}" Margin="0,2,0,0">
                                                 <Label Content="{DynamicResource General_FilterLabel}"/>
                                                 <ComboBox Name="ModResourceComboBox" ItemsSource="{Binding BaseResourceModList, ElementName=SettingsControl}" SelectedValue="{Binding SelectedModResource, ElementName=SettingsControl, Mode=TwoWay}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" Margin="0,0,2,0" IsEnabled="{Binding ElementName=EnableHarvestResourceItemAmountClassMultipliersCheckbox, Path=IsChecked}" HorizontalAlignment="Left" VerticalContentAlignment="Center" MinWidth="200" Width="Auto" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                 <TextBox Name="ModResourceTextbox" Text="{Binding ResourceFilterString, ElementName=SettingsControl, Mode=TwoWay}" VerticalContentAlignment="Center" IsEnabled="{Binding ElementName=EnableHarvestResourceItemAmountClassMultipliersCheckbox, Path=IsChecked}" Padding="2" Margin="5,0,2,0" HorizontalAlignment="Left" MinWidth="300" Width="Auto" />
@@ -2992,7 +2999,7 @@
                                                 </Button>
                                             </StackPanel>
 
-                                            <ListBox Margin="0,5,0,0" Name="HarvestResourceItemAmountClassMultipliersListBox" ItemsSource="{Binding Source={StaticResource ResourcesViewSource}}" Height="400" IsEnabled="{Binding ElementName=EnableHarvestResourceItemAmountClassMultipliersCheckbox, Path=IsChecked}" HorizontalContentAlignment="Stretch">
+                                            <ListBox Grid.Row="1" Margin="0,5,0,0" Name="HarvestResourceItemAmountClassMultipliersListBox" ItemsSource="{Binding Source={StaticResource ResourcesViewSource}}" IsEnabled="{Binding ElementName=EnableHarvestResourceItemAmountClassMultipliersCheckbox, Path=IsChecked}" HorizontalContentAlignment="Stretch">
                                                 <ListBox.ItemTemplate>
                                                     <DataTemplate>
                                                         <Border BorderBrush="Black" BorderThickness="1">
@@ -3068,7 +3075,9 @@
                                                     </Style>
                                                 </ListBox.ItemContainerStyle>
                                             </ListBox>
-                                        </StackPanel>
+
+                                            <GridSplitter Grid.Row="2" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+                                        </Grid>
                                     </GroupBox>
 
                                     <cctl:AnnotatedSlider Margin="1" Label="{DynamicResource ServerSettings_BaseTemperatureMultiplierLabel}" Value="{Binding BaseTemperatureMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_BaseTemperatureMultiplierTooltip}"/>
