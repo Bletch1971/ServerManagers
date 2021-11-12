@@ -3607,7 +3607,9 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="{Binding CurrentConfig.ServerFilesGridHeight, ElementName=SettingsControl, FallbackValue=250, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1*"/>
@@ -3617,7 +3619,7 @@
 
                                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontWeight="Bold" Content="{DynamicResource ServerSettings_ServerFilesWarningLabel}"/>
 
-                                <GroupBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Height="250">
+                                <GroupBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerFilesAdminLabel}"/>
@@ -3705,7 +3707,7 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="250">
+                                <GroupBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerFilesWhitelistLabel}"/>
@@ -3793,7 +3795,7 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Height="250">
+                                <GroupBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <CheckBox Margin="0,6,0,5" IsChecked="{Binding EnableExclusiveJoin}" Content="{DynamicResource ServerSettings_EnableExclusiveJoinLabel}" ToolTip="{DynamicResource ServerSettings_EnableExclusiveJoinTooltip}" VerticalAlignment="Center"/>
@@ -3880,6 +3882,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
@@ -3905,12 +3909,18 @@
                             </Expander.Style>
 
                             <Grid Margin="-8,0,2,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding CurrentConfig.CustomGameUserSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
+                                </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*" MinWidth="200"/>
+                                    <ColumnDefinition Width="Auto"/> <!--Splitter Column-->
+                                    <ColumnDefinition Width="3*" MinWidth="200"/>
                                 </Grid.ColumnDefinitions>
 
-                                <GroupBox Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomSettingsSectionsLabel}"/>
@@ -3973,7 +3983,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Column="1" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="0" Grid.Column="1" Width="5" ShowsPreview="True" HorizontalAlignment="Center" VerticalAlignment="Stretch" Opacity="0"/>
+
+                                <GroupBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomSettingsItemsLabel}"/>
@@ -4029,6 +4041,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
@@ -4054,12 +4068,18 @@
                             </Expander.Style>
 
                             <Grid Margin="-8,0,2,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding CurrentConfig.CustomGameSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
+                                </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*" MinWidth="200"/>
+                                    <ColumnDefinition Width="Auto"/> <!--Splitter Column-->
+                                    <ColumnDefinition Width="3*" MinWidth="200"/>
                                 </Grid.ColumnDefinitions>
 
-                                <GroupBox Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomSettingsSectionsLabel}"/>
@@ -4122,7 +4142,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Column="1" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="0" Grid.Column="1" Width="5" ShowsPreview="True" HorizontalAlignment="Center" VerticalAlignment="Stretch" Opacity="0"/>
+
+                                <GroupBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomSettingsItemsLabel}"/>
@@ -4178,6 +4200,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
@@ -4203,12 +4227,18 @@
                             </Expander.Style>
 
                             <Grid Margin="-8,0,2,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding CurrentConfig.CustomEngineSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
+                                </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*" MinWidth="200"/>
+                                    <ColumnDefinition Width="Auto"/> <!--Splitter Column-->
+                                    <ColumnDefinition Width="3*" MinWidth="200"/>
                                 </Grid.ColumnDefinitions>
 
-                                <GroupBox Grid.Column="0" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomSettingsSectionsLabel}"/>
@@ -4271,7 +4301,9 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Column="1" HorizontalAlignment="Stretch" Height="400" Style="{StaticResource GroupBoxStyle}">
+                                <GridSplitter Grid.Row="0" Grid.Column="1" Width="5" ShowsPreview="True" HorizontalAlignment="Center" VerticalAlignment="Stretch" Opacity="0"/>
+
+                                <GroupBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_CustomSettingsItemsLabel}"/>
@@ -4327,6 +4359,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 

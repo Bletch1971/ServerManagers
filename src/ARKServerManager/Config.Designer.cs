@@ -2671,5 +2671,53 @@ namespace ServerManagerTool {
                 this["CustomLevelsGridHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomEngineSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomEngineSettingsGridHeight"]));
+            }
+            set {
+                this["CustomEngineSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomGameSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomGameSettingsGridHeight"]));
+            }
+            set {
+                this["CustomGameSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomGameUserSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomGameUserSettingsGridHeight"]));
+            }
+            set {
+                this["CustomGameUserSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250")]
+        public global::System.Windows.GridLength ServerFilesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["ServerFilesGridHeight"]));
+            }
+            set {
+                this["ServerFilesGridHeight"] = value;
+            }
+        }
     }
 }

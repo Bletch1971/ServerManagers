@@ -743,5 +743,17 @@
     <Setting Name="CustomLevelsGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">400</Value>
     </Setting>
+    <Setting Name="CustomEngineSettingsGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="CustomGameSettingsGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="CustomGameUserSettingsGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="ServerFilesGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
