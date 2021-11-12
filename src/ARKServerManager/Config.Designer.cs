@@ -2635,5 +2635,17 @@ namespace ServerManagerTool {
                 this["NPCSpawnSettingsGridHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength StackSizeOverrideGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["StackSizeOverrideGridHeight"]));
+            }
+            set {
+                this["StackSizeOverrideGridHeight"] = value;
+            }
+        }
     }
 }
