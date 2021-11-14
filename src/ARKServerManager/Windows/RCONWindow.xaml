@@ -222,7 +222,7 @@
                                             <Label Content="{Binding CharacterName}" Padding="0,-1,0,-1"/>
                                             <TextBlock Text="{Binding PlayerData.Level, StringFormat=({0})}" Margin="5,0,0,0" Padding="0,-1,0,-1" />
                                         </StackPanel>
-                                        <Label Padding="0,-1,0,-1" Style="{DynamicResource Tribename}"/>
+                                        <Label Padding="0,-1,0,-1" Style="{DynamicResource TribeName}"/>
                                     </StackPanel>
                                 </Grid>
                             </Border>

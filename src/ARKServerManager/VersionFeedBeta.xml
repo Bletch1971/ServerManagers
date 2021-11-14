@@ -5,27 +5,21 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-11-11T00:00:00Z</updated>
+  <updated>2021-11-14T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:191D15BB-817E-407B-882A-7CF063DD79A0</id>
-    <title>1.1.403 (1.1.403.1)</title>
-    <summary>1.1.403.1</summary>
+    <id>urn:uuid:FE1BAB29-859F-4939-AC97-304772112929</id>
+    <title>1.1.404 (1.1.404.1)</title>
+    <summary>1.1.404.1</summary>
     <link href="" />
-    <updated>2021-11-11T00:00:00Z</updated>
+    <updated>2021-11-14T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">NEW</u>
+          <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Server Settings - haved added resizing to all the grids, so the height can be increased/decreased. The height is also remembered, so when you reopen ASM, it will size the grid correctly.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGES</u>
-          <br/>
-          <ul>
-            <li>Server Settings - Supply Crate Section - Added indicator icons to each grid row, for better troubleshooting of possible issues.</li>
-            <li>ru-RU Translation file updated.</li>
+            <li>RCON Window - Fixed the tribe name missing from the player list.</li>
           </ul>
         </p>
       </div>
