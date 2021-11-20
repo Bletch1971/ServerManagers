@@ -35,7 +35,7 @@ namespace ServerManager.WebApplication.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
-        public ActionResult GetServerStatus_V1([FromRoute] string ipString, [FromRoute] int port)
+        public ActionResult<ServerStatusResponse> GetServerStatus_V1([FromRoute] string ipString, [FromRoute] int port)
         {
             // check for valid service
             if (_serverQueryService == null)
@@ -70,7 +70,7 @@ namespace ServerManager.WebApplication.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
-        public ActionResult GetServerStatus_V2([FromRoute] string managerCode, [FromRoute] string ipString, [FromRoute] int port)
+        public ActionResult<ServerStatusResponse> GetServerStatus_V2([FromRoute] string managerCode, [FromRoute] string ipString, [FromRoute] int port)
         {
             // check for valid service
             if (_serverQueryService == null)
@@ -105,7 +105,7 @@ namespace ServerManager.WebApplication.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
-        public ActionResult GetServerStatus_V3([FromRoute] string managerCode, [FromRoute] string managerVersion, [FromRoute] string ipString, [FromRoute] int port)
+        public ActionResult<ServerStatusResponse> GetServerStatus_V3([FromRoute] string managerCode, [FromRoute] string managerVersion, [FromRoute] string ipString, [FromRoute] int port)
         {
             // check for valid service
             if (_serverQueryService == null)
