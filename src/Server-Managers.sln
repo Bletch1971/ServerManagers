@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29424.173
+VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerManager.Common", "ServerManager.Common\ServerManager.Common.csproj", "{7C99D9F7-0C65-4116-927A-94EB018C88FD}"
 EndProject
@@ -39,6 +39,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ARKServerManager.Common", "ARKServerManager.Common\ARKServerManager.Common.csproj", "{DD0A2401-99B8-4DE1-B8ED-9B075172F8AF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConanServerManager.Common", "ConanServerManager.Common\ConanServerManager.Common.csproj", "{630422CA-4BCC-4D1D-9701-87D8EAF0B209}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerManager.WebApplication", "ServerManager.WebApplication\ServerManager.WebApplication.csproj", "{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +127,12 @@ Global
 		{630422CA-4BCC-4D1D-9701-87D8EAF0B209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{630422CA-4BCC-4D1D-9701-87D8EAF0B209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{630422CA-4BCC-4D1D-9701-87D8EAF0B209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}.Debug - Beta|Any CPU.ActiveCfg = Debug - Beta|Any CPU
+		{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}.Debug - Beta|Any CPU.Build.0 = Debug - Beta|Any CPU
+		{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C42E58-36BD-4C6B-9AD2-7F9EBCA7A68A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
