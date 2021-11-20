@@ -974,6 +974,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(EnablePVPProperty, value); }
         }
 
+        public static readonly DependencyProperty EnableCreativeModeProperty = DependencyProperty.Register(nameof(EnableCreativeMode), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bShowCreativeMode", WriteIfNotValue = false)]
+        public bool EnableCreativeMode
+        {
+            get { return (bool)GetValue(EnableCreativeModeProperty); }
+            set { SetValue(EnableCreativeModeProperty, value); }
+        }
+
         public static readonly DependencyProperty AllowCaveBuildingPvEProperty = DependencyProperty.Register(nameof(AllowCaveBuildingPvE), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
         public bool AllowCaveBuildingPvE
@@ -5372,6 +5380,7 @@ namespace ServerManagerTool.Lib
         {
             this.ClearValue(EnableHardcoreProperty);
             this.ClearValue(EnablePVPProperty);
+            this.ClearValue(EnableCreativeModeProperty);
             this.ClearValue(AllowCaveBuildingPvEProperty);
             this.ClearValue(DisableFriendlyFirePvPProperty);
             this.ClearValue(DisableFriendlyFirePvEProperty);
@@ -6055,6 +6064,7 @@ namespace ServerManagerTool.Lib
         {
             this.SetValue(EnableHardcoreProperty, sourceProfile.EnableHardcore);
             this.SetValue(EnablePVPProperty, sourceProfile.EnablePVP);
+            this.SetValue(EnableCreativeModeProperty, sourceProfile.EnableCreativeMode);
             this.SetValue(AllowCaveBuildingPvEProperty, sourceProfile.AllowCaveBuildingPvE);
             this.SetValue(DisableFriendlyFirePvPProperty, sourceProfile.DisableFriendlyFirePvP);
             this.SetValue(DisableFriendlyFirePvEProperty, sourceProfile.DisableFriendlyFirePvE);

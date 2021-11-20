@@ -1126,6 +1126,8 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Enables hardcore mode (players can not respawn, a new character must be created).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Enable PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Enables Player vs Player mode (players are able to deal damage to or kill each other. In PvP players can also damage or destroy another tribe's buildings or kill their dinos).</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Enable Creative Mode</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">If enabled, allows creative mode.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Enable PvE Cave Building</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">If enabled, allows building in caves when PvE mode is enabled.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Enable PvE Cryo Sickness</sys:String>

@@ -1714,6 +1714,7 @@
 
                                         <CheckBox Grid.Row="1" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding EnableHardcore}" Content="{DynamicResource ServerSettings_EnableHardcoreLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnableHardcoreTooltip}"/>
                                         <CheckBox Grid.Row="1" Grid.Column="1" Margin="5,5,5,0" IsChecked="{Binding EnablePVP}" Content="{DynamicResource ServerSettings_EnablePvPLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnablePvPTooltip}"/>
+                                        <CheckBox Grid.Row="1" Grid.Column="2" Margin="5,5,5,0" IsChecked="{Binding EnableCreativeMode}" Content="{DynamicResource ServerSettings_EnableCreativeModeLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnableCreativeModeTooltip}"/>
 
                                         <CheckBox Grid.Row="2" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding DisableFriendlyFirePvE}" Content="{DynamicResource ServerSettings_DisablePvEFriendlyFireLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisablePvEFriendlyFireTooltip}" />
                                         <CheckBox Grid.Row="2" Grid.Column="1" Margin="5,5,5,0" IsChecked="{Binding AllowCaveBuildingPvE}" Content="{DynamicResource ServerSettings_EnablePvECaveBuildingLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnablePvECaveBuildingTooltip}"/>
