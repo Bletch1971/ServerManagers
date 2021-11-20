@@ -5,21 +5,21 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-11-20T00:00:00Z</updated>
+  <updated>2021-11-20T01:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:79020463-01A7-466D-9B4A-1B14941C9C32</id>
-    <title>1.1.405 (1.1.405.1)</title>
-    <summary>1.1.405.1</summary>
+    <id>urn:uuid:CAE2A89D-B098-483C-B4D4-CFFE257C066C</id>
+    <title>1.1.406 (1.1.406.1)</title>
+    <summary>1.1.406.1</summary>
     <link href="" />
-    <updated>2021-11-20T00:00:00Z</updated>
+    <updated>2021-11-20T01:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Settings - Rules Section - added DestroyTamesOverLevelClamp setting.</li>
+            <li>Server Settings - Rules Section - added bShowCreativeMode setting.</li>
           </ul>
         </p>
       </div>
