@@ -1754,6 +1754,8 @@
                                         </StackPanel>
                                     </GroupBox>
 
+                                    <cctl:AnnotatedSlider Margin="1" Label="{DynamicResource ServerSettings_DestroyTamesOverLevelClamp﻿Label}" Value="{Binding DestroyTamesOverLevelClamp}" Suffix="{DynamicResource SliderUnits_Levels}" Minimum="0" Maximum="5000" SmallChange="1" LargeChange="5" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip}" />
+
                                     <GroupBox Style="{StaticResource GroupBoxStyle}">
                                         <GroupBox.Header>
                                             <CheckBox IsChecked="{Binding EnableTributeDownloads}" Content="{DynamicResource ServerSettings_EnableTributeLabel}" ToolTip="{DynamicResource ServerSettings_EnableTributeTooltip}"/>

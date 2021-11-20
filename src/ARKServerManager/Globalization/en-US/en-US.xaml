@@ -1161,7 +1161,9 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Determines the maximum levels of creatures in the world. The higher the value, the higher the Maximum Creature Level.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Difficulty Offset:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Determines the maximum levels of creatures in the world. The higher the value, the higher the Maximum Creature Level.</sys:String>
-
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destroy Tames Over Level:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Tames that exceed this level will be deleted on server start. To disable deletion set to 0.</sys:String>
+    
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Enable Tribute Downloads</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">If enabled, this will allow downloading external survivors/items/dinos into your server.</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">No Survivor Downloads</sys:String>

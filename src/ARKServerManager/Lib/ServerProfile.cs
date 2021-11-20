@@ -1045,6 +1045,15 @@ namespace ServerManagerTool.Lib
             set { SetValue(DifficultyOffsetProperty, value); }
         }
 
+        public static readonly DependencyProperty DestroyTamesOverLevelClamp﻿Property = DependencyProperty.Register(nameof(DestroyTamesOverLevelClamp), typeof(int), typeof(ServerProfile), new PropertyMetadata(0));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, WriteIfNotValue = 0)]
+        public int DestroyTamesOverLevelClamp
+        {
+            get { return (int)GetValue(DestroyTamesOverLevelClamp﻿Property); }
+            set { SetValue(DestroyTamesOverLevelClamp﻿Property, value); }
+        }
+
+
         public static readonly DependencyProperty EnableTributeDownloadsProperty = DependencyProperty.Register(nameof(EnableTributeDownloads), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, "NoTributeDownloads", InvertBoolean = true)]
         public bool EnableTributeDownloads
@@ -5373,6 +5382,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(EnableDifficultyOverrideProperty);
             this.ClearValue(OverrideOfficialDifficultyProperty);
             this.ClearValue(DifficultyOffsetProperty);
+            this.ClearValue(DestroyTamesOverLevelClamp﻿Property);
 
             this.ClearValue(EnableTributeDownloadsProperty);
             this.ClearValue(PreventDownloadSurvivorsProperty);
@@ -6055,6 +6065,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(EnableDifficultyOverrideProperty, sourceProfile.EnableDifficultyOverride);
             this.SetValue(OverrideOfficialDifficultyProperty, sourceProfile.OverrideOfficialDifficulty);
             this.SetValue(DifficultyOffsetProperty, sourceProfile.DifficultyOffset);
+            this.SetValue(DestroyTamesOverLevelClamp﻿Property, sourceProfile.DestroyTamesOverLevelClamp﻿);
 
             this.SetValue(EnableTributeDownloadsProperty, sourceProfile.EnableTributeDownloads);
             this.SetValue(PreventDownloadSurvivorsProperty, sourceProfile.PreventDownloadSurvivors);
