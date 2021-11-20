@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <EnvironmentName>Development</EnvironmentName>
     <Configurations>Debug;Release;Debug - Beta</Configurations>
     <ApplicationIcon>Art\favicon.ico</ApplicationIcon>
   </PropertyGroup>
