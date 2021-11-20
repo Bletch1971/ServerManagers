@@ -378,7 +378,7 @@
       <Value Profile="(Default)">Server</Value>
     </Setting>
     <Setting Name="ServerStatusUrlFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">https://servermanagers.azurewebsites.net/api/server/{0}/{1}/{2}/{3}</Value>
     </Setting>
     <Setting Name="DefaultServerMap_PGM" Type="System.String" Scope="Application">
       <Value Profile="(Default)">PGARK</Value>

@@ -243,7 +243,7 @@
       <Value Profile="(Default)">server</Value>
     </Setting>
     <Setting Name="ServerStatusUrlFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">https://servermanagers.azurewebsites.net/api/server/{0}/{1}/{2}/{3}</Value>
     </Setting>
     <Setting Name="BackupRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">_backup_</Value>
