@@ -5,21 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-11-20T01:00:00Z</updated>
+  <updated>2021-11-21T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:CAE2A89D-B098-483C-B4D4-CFFE257C066C</id>
-    <title>1.1.406 (1.1.406.1)</title>
-    <summary>1.1.406.1</summary>
+    <id>urn:uuid:2FF0893A-1412-4062-BF87-058F14E787FC</id>
+    <title>1.1.407 (1.1.407.1)</title>
+    <summary>1.1.407.1</summary>
     <link href="" />
-    <updated>2021-11-20T01:00:00Z</updated>
+    <updated>2021-11-21T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">NEW</u>
+          <u style="font-size: .9em;">CHANGES</u>
           <br/>
           <ul>
-            <li>Server Settings - Rules Section - added bShowCreativeMode setting.</li>
+            <li>Server Status checks - a few code tweaks to the server status checks.</li>
+            <li>pt-BR Translation file updated.</li>
           </ul>
         </p>
       </div>
