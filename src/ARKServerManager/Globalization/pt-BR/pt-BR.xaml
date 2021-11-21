@@ -1126,7 +1126,9 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Ativa o modo hardcore (os jogadores não podem renascer, um novo personagem deve ser criado).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Ativar PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Ativa o modo Jogador contra Jogador (jogadores são capazes de causar dano ou matar uns aos outros. Em jogadores PvP também podem danificar ou destruir os edifícios de outra tribo ou matar seus dinossauros).</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Ativar construçoes em Caverna PvE</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Ativar o modo criativo</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">Se ativado, permite o modo criativo.</sys:String>
+	<sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Ativar construçoes em Caverna PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Se habilitado, permite a construção em cavernas quando o modo PVE estiver habilitado.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Ativar doença criogênica do PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Se ativado, se você liberar uma criatura domesticada de um criodo, você terá um cronômetro de doença crio quando o modo PvE estiver ativado.</sys:String>
@@ -1161,6 +1163,8 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Determina os níveis máximos de criaturas do mundo. Quanto maior o valor, maior o Nível Máximo de Criatura.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Dificuldade Offset:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Determina os níveis máximos de criaturas do mundo. Quanto maior o valor, maior o Nível Máximo de Criatura.</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destruir domados acima do nível:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Dinos que excedem esse nível serão excluídos ao iniciar o servidor. Para desativar a exclusão definida para 0.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Ativar downloads de tributo</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Se habilitado, isso permitirá o download de sobreviventes / itens / dinossauros externos em seu servidor.</sys:String>

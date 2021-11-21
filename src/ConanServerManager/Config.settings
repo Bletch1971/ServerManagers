@@ -348,7 +348,7 @@
       <Value Profile="(Default)">https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=bletch1971%40hotmail%2ecom&amp;lc=US&amp;item_name=Server%20Manager&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted</Value>
     </Setting>
     <Setting Name="ServerManagerCode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">F2653C3D-BC83-440A-AD99-FD9D9466DE04</Value>
+      <Value Profile="(Default)">03F9106D-2B7B-411A-B533-FB641C44218D</Value>
     </Setting>
     <Setting Name="BackupExtension" Type="System.String" Scope="Application">
       <Value Profile="(Default)">.zip</Value>
