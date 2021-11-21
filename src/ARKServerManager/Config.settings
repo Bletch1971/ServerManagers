@@ -378,7 +378,7 @@
       <Value Profile="(Default)">Server</Value>
     </Setting>
     <Setting Name="ServerStatusUrlFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">https://servermanagers.azurewebsites.net/api/server/{0}/{1}/{2}/{3}</Value>
     </Setting>
     <Setting Name="DefaultServerMap_PGM" Type="System.String" Scope="Application">
       <Value Profile="(Default)">PGARK</Value>
@@ -543,7 +543,7 @@
       <Value Profile="(Default)">A wild dino wipe is scheduled after the server starts and may delay login until it is complete. Please be patient.</Value>
     </Setting>
     <Setting Name="ServerManagerCode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ED89B8FA-0E0B-46CC-A90B-595E69AE9A7E</Value>
+      <Value Profile="(Default)">6DCE02B1-8F41-4AF8-A6EA-E2E026CAB023</Value>
     </Setting>
     <Setting Name="BackupPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

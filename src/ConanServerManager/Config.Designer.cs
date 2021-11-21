@@ -877,7 +877,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.azurewebsites.net/api/server/{0}/{1}/{2}/{3}")]
         public string ServerStatusUrlFormat {
             get {
                 return ((string)(this["ServerStatusUrlFormat"]));
@@ -1264,7 +1264,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F2653C3D-BC83-440A-AD99-FD9D9466DE04")]
+        [global::System.Configuration.DefaultSettingValueAttribute("03F9106D-2B7B-411A-B533-FB641C44218D")]
         public string ServerManagerCode {
             get {
                 return ((string)(this["ServerManagerCode"]));
