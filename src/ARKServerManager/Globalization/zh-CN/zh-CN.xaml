@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">Jokin</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.11.21(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -264,9 +264,11 @@
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">配置文件同步 - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">加载配置文件同步错误</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_Title">配置文件同步进程</sys:String>
+	<sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">您将使用当前配置文件的选定部分中的设置覆盖选定的配置文件。您将无法撤消，是否继续?</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">配置文件同步进程错误</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">您尚未选择任何配置文件来复制设置。</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">您没有选择任何部分复制设置。</sys:String>
+	<sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">已成功将所选部分的设置从当前配置文件复制到所选配置文件.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">选择所有</sys:String>
     <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">取消所有选择</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">处理</sys:String>
@@ -904,6 +906,8 @@
     <sys:String x:Key="ServerSettings_NetworkingLabel">网络</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortLabel">服务器端口：</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortTooltip">用户将用于连接到服务器的端口。默认值为7777。如果希望在一台计算机上托管多个服务器，请更改此端口并查询端口。</sys:String>
+	<sys:String x:Key="ServerSettings_ServerPeerPortLabel">对等端口:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortTooltip">用于确定服务器可用性的Pinger端口。默认值为7778。</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortLabel">查询端口：</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortTooltip">Steam用于与服务器通信的端口。默认值为27015。如果希望在一台计算机上托管多个服务器，请更改此端口并查询端口。</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">本地 IP:</sys:String>
@@ -1126,6 +1130,8 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">开启极限模式（玩家死后无法重生，必须重新创建一个游戏角色才能进行游戏）.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">开启PVP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">开启玩家与玩家模式（玩家可以处理伤害或杀死对方。在PVP玩家也可以破坏或摧毁另一个部落的建筑或杀死恐龙.</sys:String>
+	<sys:String x:Key="ServerSettings_EnableCreativeModeLabel">启用创造性模式</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">如果启用，则允许创建模式.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">开启PVE洞穴建筑</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">如果启用，则在洞穴内的建筑将使用PVE模式.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">启用PVE低温症</sys:String>
@@ -1160,6 +1166,8 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">确定方舟生物的最大等级.该值越高,最大生物等级越高.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">难度偏移：</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">确定世界上生物的最大水平。 值越高，最大生物等级越高。</sys:String>
+	<sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">消灭等级以上的驯服:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">超过此级别的驯服将在服务器启动时删除. 要禁用删除，请将设置为0.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">启用角色数据下载</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">如果启用，这将允许将外部幸存者/物品/恐龙下载到您的服务器中。</sys:String>
@@ -1469,6 +1477,8 @@
     <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">如果启用，允许生物在洞穴内飞行.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">允许飞行耐力恢复</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">如果启用，将允许玩家站在飞行单位上恢复耐力。</sys:String>
+	<sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">允许加点飞行速度</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">如果启用，允许加点飞行速度.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">防止恐龙交配</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">如果启用，恐龙交配将被禁用。</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">禁用带爆炸物的飞行物强制地面</sys:String>
@@ -2690,6 +2700,7 @@
     <sys:String x:Key="Griffin_Character_BP_C">狮鹫</sys:String>
     <sys:String x:Key="Polar_Bear_C">北极熊</sys:String>
     <sys:String x:Key="Ragnarok_Wyvern_Override_Ice_C">冰飞龙</sys:String>
+	<sys:String x:Key="Iceworm_Character_Minion_BP_smaller_C">死亡蠕虫</sys:String>
     <!--#endregion-->
 
     <!-- 恐龙/生物类名称 - 仙境传说 - Boss -->
@@ -2838,6 +2849,7 @@
     <sys:String x:Key="Deinonychus_Character_BP_C">恐爪龙</sys:String>
     <sys:String x:Key="ChalkGolem_Character_BP_C">岩石巨人(苔藓)</sys:String>
     <sys:String x:Key="IceGolem_Character_BP_C">岩石巨人(冰)</sys:String>
+	<sys:String x:Key="SpiderL_VAL_Character_BP_C">育母蜘蛛 (Lysrix)</sys:String>
     <!--#endregion-->
 	
 	<!--#恐龙/生物类名-创世记 （1）-->
@@ -3678,7 +3690,7 @@
     <sys:String x:Key="EngramEntry_MiningDrill_C">矿枪</sys:String>
     <!--#endregion-->
 	
-    <!--#region 印痕技能泰克类 - 创世（1） -->
+    <!--# 印痕技能泰克类 - 创世（1） -->
     <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">鲲-泰克鞍</sys:String>
     <sys:String x:Key="EngramEntry_TekClaws_C">泰克光刃</sys:String>
     <sys:String x:Key="EngramEntry_CruiseMissile_C">巡航导弹</sys:String>
@@ -3687,7 +3699,10 @@
     <sys:String x:Key="EngramEntry_JumpPad_C">泰克弹射板</sys:String>
     <sys:String x:Key="EngramEntry_TekAlarm_C">泰克传感器</sys:String>
     <sys:String x:Key="EngramEntry_ShoulderCannon_C">泰克肩炮</sys:String>
-
+	<!--#endregion-->
+	
+	<!--# 印痕技能泰克类 - 创世（2） -->
+	<sys:String x:Key="EngramEntry_Spawner_HoverSail_Main_C">泰克悬停帆</sys:String>
     <!--#endregion-->
 	
     <!--#印痕技能类 - 瓦尔盖罗 -->
@@ -4855,6 +4870,7 @@
     <sys:String x:Key="PrimalItemStructure_Cauldron_C">打过</sys:String>
     <sys:String x:Key="PrimalItemStructure_CeilingLamp_C">吊灯</sys:String>
     <sys:String x:Key="PrimalItemStructure_CementMixer_C">水泥搅拌机</sys:String>
+	
     <sys:String x:Key="PrimalItemStructure_CementRoof_C">斜水泥屋顶</sys:String>
     <sys:String x:Key="PrimalItemStructure_ChainPipeStraight_C">链条</sys:String>
     <sys:String x:Key="PrimalItemStructure_ConcreteCeiling_C">混凝土天花板</sys:String>
@@ -4898,8 +4914,10 @@
     <sys:String x:Key="PrimalItemStructure_LumberWallWithWindow_II_C">木材窗框</sys:String>
     <sys:String x:Key="PrimalItemStructure_LumberWall_II_C">木材墙</sys:String>
     <sys:String x:Key="PrimalItemStructure_LumberWall_Sloped_Left_II_C">木材左山墙</sys:String>
-    <sys:String x:Key="PrimalItemStructure_LumberWall_Sloped_Right_II_C">木材右山墙</sys:String>
+	<sys:String x:Key="PrimalItemStructure_LumberWall_Sloped_Right_II_C">木材右山墙</sys:String>
+    <sys:String x:Key="PrimalItemArtifactGeneric_C">通用神器</sys:String>
     <sys:String x:Key="PrimalItemStructure_LumberWorkshop_C">木材站</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Ramp_Adobe_C">土坯斜坡</sys:String>
     <sys:String x:Key="PrimalItemStructure_Mailbox_C">APS邮箱</sys:String>
     <sys:String x:Key="PrimalItemStructure_MarketStall_C">市场摊位</sys:String>
     <sys:String x:Key="PrimalItemStructure_MetalSink_C">水池</sys:String>
@@ -5062,6 +5080,7 @@
     <sys:String x:Key="PrimalItem_Spawner_Enforcer_C">未组装的执行者</sys:String>
     <sys:String x:Key="PrimalItem_Spawner_Mek_C">未组装的机甲</sys:String>
     <sys:String x:Key="PrimalItemStructure_CryoFridge_C">低温冰箱</sys:String>
+	<sys:String x:Key="PrimalItem_Spawner_Enforcer_CityTerminal_C">未组装执行者蓝图</sys:String>
     <sys:String x:Key="PrimalItemStructure_DinoLeash_C">恐龙电子项圈</sys:String>
     <sys:String x:Key="PrimalItemStructure_Flag_KingKaiju_C">泰坦王旗帜</sys:String>
     <sys:String x:Key="PrimalItemStructure_Flag_KingKaijuMecha_C">机械泰坦王旗帜</sys:String>
@@ -5491,6 +5510,15 @@
 	<sys:String x:Key="SupplyCreate_OceanInstant_High_C">深海战利品箱</sys:String>
 	<sys:String x:Key="SupplyCrateBaseBP_Instantaneous_DamLogs_Child_C">大型河狸窝</sys:String>
 	<sys:String x:Key="SupplyCrate_Chest_Treasure_JacksonL_C_C">百宝箱</sys:String>
+	
+	<sys:String x:Key="SupplyCrate_Space_01_Ambergris_C">轨道空投_白色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_02_Crystal_C">轨道空投_绿色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_03_Sulfur_C">轨道空投_蓝色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_04_ElementShards_C">轨道空投_紫色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_05_Obsidian_C">轨道空投_黄色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_06_Oil_C">轨道空投_红色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_07_ElementDust_C">轨道空投_青色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_08_BlackPearls_C">轨道空投_橙色(创世2)</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -6458,6 +6486,21 @@
     <sys:String x:Key="PrimalItemStructure_Trapdoor_Moonpool_C">S +泰克水下天花板</sys:String>
     <sys:String x:Key="PrimalItemStructure_Underwater_Cube_Sloped_C">S +泰克倾斜密封舱</sys:String>
     <sys:String x:Key="PrimalItemStructure_Door_Underwater_C">S +泰克真空隔离门</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Ocean_Square_Wood_C">S+木质海洋平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Ocean_Square_Metal_C">S+金属海洋平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Cliff_Circle_Wood_C">S+木崖平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Cliff_Circle_Stone_C">S+石崖平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Cliff_Circle_Metal_C">S+金属悬崖平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Cliff_Circle_Glass_C">S+玻璃悬崖平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Circle_Wood_C">S+木树平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Circle_Stone_C">S+石树平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Circle_Glass_C">S+玻璃树平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Circle_Metal_C">S+金属树平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Circle_Tek_C">S+泰克树平台</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Wedge_Full_Metal_C">S+金属平台楔</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Wedge_Full_Wood_C">S+木平台楔</sys:String>
+	<sys:String x:Key="PrimalItemStructure_Tree_Wedge_Full_Glass_C">S+玻璃平台楔</sys:String>
+	<sys:String x:Key="APrimalItemStructure_Tree_Wedge_Full_Tek_C">S+泰克平台楔</sys:String>
     <!--#endregion-->
 	
     <!--#印痕技能类 - 新增 -->
@@ -6535,7 +6578,6 @@
     <sys:String x:Key="PrimalItemStructure_LargeWall_Wood_C">大型木制墙</sys:String>
     <sys:String x:Key="PrimalItemStructure_PipeFlex_Metal_C">金属水管 - 弹性</sys:String>
     <sys:String x:Key="PrimalItemStructure_PipeFlex_Stone_C">石制水管 - 弹性</sys:String>
-    <sys:String x:Key="PrimalItemStructure_Ramp_Adobe_C">黏土斜坡</sys:String>
     <sys:String x:Key="PrimalItemStructure_Ramp_Metal_C">金属斜坡</sys:String>
     <sys:String x:Key="PrimalItemStructure_Ramp_Stone_C">石制斜坡</sys:String>
     <sys:String x:Key="PrimalItemStructure_Ramp_Tek_C">泰克斜坡</sys:String>
