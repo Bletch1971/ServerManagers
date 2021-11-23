@@ -47,17 +47,24 @@ namespace ServerManagerTool.Common.Utils
                     // do nothing, just exit
                 }
 
-                var filesToDelete = new DirectoryInfo(backupPath).GetFiles($"{settingsFileName}_*{settingsFileExt}").Where(f => f.LastWriteTimeUtc.AddDays(7) < DateTime.UtcNow).ToArray();
-                foreach (var fileToDelete in filesToDelete)
+                try
                 {
-                    try
+                    var filesToDelete = new DirectoryInfo(backupPath).GetFiles($"{settingsFileName}_*{settingsFileExt}").Where(f => f.LastWriteTimeUtc.AddDays(7) < DateTime.UtcNow).ToArray();
+                    foreach (var fileToDelete in filesToDelete)
                     {
-                        fileToDelete.Delete();
+                        try
+                        {
+                            fileToDelete.Delete();
+                        }
+                        catch (Exception)
+                        {
+                            // do nothing, just exit
+                        }
                     }
-                    catch (Exception)
-                    {
-                        // do nothing, just exit
-                    }
+                }
+                catch (Exception)
+                {
+                    // do nothing, just exit
                 }
             }
         }

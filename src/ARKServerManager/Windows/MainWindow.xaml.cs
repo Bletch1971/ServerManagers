@@ -218,7 +218,7 @@ namespace ServerManagerTool
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (this.WindowState != WindowState.Minimized)
+            if (this.WindowState == WindowState.Normal)
             {
                 Config.Default.MainWindow_Height = e.NewSize.Height;
                 Config.Default.MainWindow_Width = e.NewSize.Width;
