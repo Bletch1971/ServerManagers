@@ -7,7 +7,8 @@
              xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
              xmlns:gctl="clr-namespace:WPFSharp.Globalizer.Controls;assembly=WPFSharp.Globalizer"
              mc:Ignorable="d" 
-             d:DesignWidth="800">
+             d:DesignWidth="800"
+             x:Name="GlobalSettings">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -19,6 +20,10 @@
             <cc:MinutesToTimeValueConverter x:Key="MinutesToTimeValueConverter"/>
 
             <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
+            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFECE1D4" Offset="1"/>
+                <GradientStop Color="#FFEAE8E6"/>
+            </LinearGradientBrush>
 
             <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
                 <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
@@ -81,11 +86,12 @@
             </ContentControl>
         </ResourceDictionary>
     </UserControl.Resources>
-    
-    <Grid Margin="3">
+
+    <Grid Margin="3" Background="{StaticResource BeigeGradient}">
         <ScrollViewer VerticalScrollBarVisibility="Visible">
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -128,14 +134,17 @@
                 </DockPanel>
 
                 <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_RunAsAdministratorLabel}" IsChecked="{Binding Config.RunAsAdministratorPrompt, Mode=TwoWay}" HorizontalAlignment="Left"/>
-                <CheckBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_MinimizeToTrayLabel}" IsChecked="{Binding Config.MainWindow_MinimizeToTray, Mode=TwoWay}" HorizontalAlignment="Left"/>
 
-                <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_ManageFirewallLabel}" IsChecked="{Binding Config.ManageFirewallAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
-                <CheckBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_ManagePublicIPLabel}" IsChecked="{Binding CurrentConfig.ManagePublicIPAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <Label    Grid.Row="2" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_StartModeLabel}" VerticalAlignment="Center"/>
+                <ComboBox Grid.Row="2" Grid.Column="1" Margin="5" ItemsSource="{Binding ElementName=GlobalSettings, Path=WindowStates}" SelectedValue="{Binding Config.MainWindow_WindowState}" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                <CheckBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_MinimizeToTrayLabel}" IsChecked="{Binding Config.MainWindow_MinimizeToTray, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                <Label    Grid.Row="3" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_DataDirectoryLabel}" VerticalAlignment="Center"/>
-                <TextBox  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.DataPath, Mode=TwoWay}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" />
-                <Button   Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,1,0,1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource DataDirectoryButtonContent}" Click="SetDataDir_Click"/>
+                <CheckBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_ManageFirewallLabel}" IsChecked="{Binding Config.ManageFirewallAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <CheckBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_ManagePublicIPLabel}" IsChecked="{Binding Config.ManagePublicIPAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
+
+                <Label    Grid.Row="4" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_DataDirectoryLabel}" VerticalAlignment="Center"/>
+                <TextBox  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.DataPath, Mode=TwoWay}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" />
+                <Button   Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,1,0,1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource DataDirectoryButtonContent}" Click="SetDataDir_Click"/>
 
                 <Label    Grid.Row="5" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_BackupDirectoryLabel}" VerticalAlignment="Center"/>
                 <TextBox  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.BackupPath, Mode=TwoWay}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" />

@@ -767,5 +767,14 @@
     <Setting Name="MOTDHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="MainWindow_WindowState" Type="System.Windows.WindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="MainWindow_Left" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="MainWindow_Top" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

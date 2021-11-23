@@ -10,8 +10,8 @@
         xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
         xmlns:tsk="clr-namespace:Microsoft.Win32.TaskScheduler;assembly=Microsoft.Win32.TaskScheduler"
         xmlns:tb="http://www.hardcodet.net/taskbar"
-        MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50"
-        Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" StateChanged="Window_StateChanged"
+        MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50" WindowState="Normal"
+        Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" StateChanged="Window_StateChanged" LocationChanged="Window_LocationChanged"
         Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}">
     <Window.Resources>
         <ResourceDictionary>

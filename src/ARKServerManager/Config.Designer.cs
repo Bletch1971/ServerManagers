@@ -2767,5 +2767,41 @@ namespace ServerManagerTool {
                 this["MOTDHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.WindowState MainWindow_WindowState {
+            get {
+                return ((global::System.Windows.WindowState)(this["MainWindow_WindowState"]));
+            }
+            set {
+                this["MainWindow_WindowState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double MainWindow_Left {
+            get {
+                return ((double)(this["MainWindow_Left"]));
+            }
+            set {
+                this["MainWindow_Left"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double MainWindow_Top {
+            get {
+                return ((double)(this["MainWindow_Top"]));
+            }
+            set {
+                this["MainWindow_Top"] = value;
+            }
+        }
     }
 }

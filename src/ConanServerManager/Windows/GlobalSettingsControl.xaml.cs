@@ -4,6 +4,7 @@ using ServerManagerTool.Common;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Xml;
 using WPFSharp.Globalizer;
 
@@ -26,6 +28,7 @@ namespace ServerManagerTool
 
         public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
+        public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(List<WindowState>), typeof(GlobalSettingsControl), new PropertyMetadata(new List<WindowState>()));
 
         public GlobalSettingsControl()
         {
@@ -34,6 +37,12 @@ namespace ServerManagerTool
             this.CommonConfig = CommonConfig.Default;
             this.IsAdministrator = SecurityUtils.IsAdministrator();
             this.Version = GetDeployedVersion();
+
+            this.WindowStates = new List<WindowState>();
+            foreach (var windowState in Enum.GetValues(typeof(WindowState)))
+            {
+                this.WindowStates.Add((WindowState)windowState);
+            }
 
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
@@ -63,6 +72,12 @@ namespace ServerManagerTool
         {
             get { return (bool)GetValue(IsAdministratorProperty); }
             set { SetValue(IsAdministratorProperty, value); }
+        }
+
+        public List<WindowState> WindowStates
+        {
+            get { return (List<WindowState>)GetValue(WindowStatesProperty); }
+            set { SetValue(WindowStatesProperty, value); }
         }
 
         public string Version
@@ -285,6 +300,18 @@ namespace ServerManagerTool
             {
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = cursor);
             }
+        }
+
+        private void ComboBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            if (comboBox == null)
+                return;
+
+            if (comboBox.IsDropDownOpen)
+                return;
+
+            e.Handled = true;
         }
 
         private void LanguageSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

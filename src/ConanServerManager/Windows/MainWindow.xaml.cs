@@ -152,8 +152,11 @@ namespace ServerManagerTool
                 }
             }
 
+            this.Left = Config.Default.MainWindow_Left;
+            this.Top = Config.Default.MainWindow_Top;
             this.Height = Config.Default.MainWindow_Height;
             this.Width = Config.Default.MainWindow_Width;
+            this.WindowState = Config.Default.MainWindow_WindowState;
 
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
@@ -195,6 +198,15 @@ namespace ServerManagerTool
                 window.Closed -= Window_Closed;
 
             this.Activate();
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                Config.Default.MainWindow_Left = Math.Max(0D, this.Left);
+                Config.Default.MainWindow_Top = Math.Max(0D, this.Top);
+            }
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
