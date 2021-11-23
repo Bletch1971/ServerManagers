@@ -2744,12 +2744,12 @@ namespace ServerManagerTool.Lib
             set { SetValue(PvPZoneStructureDamageMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty MaxStructuresVisibleProperty = DependencyProperty.Register(nameof(MaxStructuresVisible), typeof(float), typeof(ServerProfile), new PropertyMetadata(10500f));
+        public static readonly DependencyProperty MaxStructuresInRangeProperty = DependencyProperty.Register(nameof(MaxStructuresInRange), typeof(int), typeof(ServerProfile), new PropertyMetadata(10500));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Structures, "TheMaxStructuresInRange")]
-        public float MaxStructuresVisible
+        public int MaxStructuresInRange
         {
-            get { return (float)GetValue(MaxStructuresVisibleProperty); }
-            set { SetValue(MaxStructuresVisibleProperty, value); }
+            get { return (int)GetValue(MaxStructuresInRangeProperty); }
+            set { SetValue(MaxStructuresInRangeProperty, value); }
         }
 
         public static readonly DependencyProperty PerPlatformMaxStructuresMultiplierProperty = DependencyProperty.Register(nameof(PerPlatformMaxStructuresMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
@@ -3647,6 +3647,8 @@ namespace ServerManagerTool.Lib
             {
                 serverArgs.Append("?ClampItemStats=true");
             }
+
+            serverArgs.Append($"?TheMaxStructuresInRange={this.MaxStructuresInRange}");
 
             if (Config.Default.SectionSOTFEnabled && this.SOTF_Enabled)
             {
@@ -5531,7 +5533,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(StructureDamageRepairCooldownProperty);
             this.ClearValue(PvPStructureDecayProperty);
             this.ClearValue(PvPZoneStructureDamageMultiplierProperty);
-            this.ClearValue(MaxStructuresVisibleProperty);
+            this.ClearValue(MaxStructuresInRangeProperty);
             this.ClearValue(PerPlatformMaxStructuresMultiplierProperty);
             this.ClearValue(MaxPlatformSaddleStructureLimitProperty);
             this.ClearValue(OverrideStructurePlatformPreventionProperty);
@@ -6231,7 +6233,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(StructureDamageRepairCooldownProperty, sourceProfile.StructureDamageRepairCooldown);
             this.SetValue(PvPStructureDecayProperty, sourceProfile.PvPStructureDecay);
             this.SetValue(PvPZoneStructureDamageMultiplierProperty, sourceProfile.PvPZoneStructureDamageMultiplier);
-            this.SetValue(MaxStructuresVisibleProperty, sourceProfile.MaxStructuresVisible);
+            this.SetValue(MaxStructuresInRangeProperty, sourceProfile.MaxStructuresInRange);
             this.SetValue(PerPlatformMaxStructuresMultiplierProperty, sourceProfile.PerPlatformMaxStructuresMultiplier);
             this.SetValue(MaxPlatformSaddleStructureLimitProperty, sourceProfile.MaxPlatformSaddleStructureLimit);
             this.SetValue(OverrideStructurePlatformPreventionProperty, sourceProfile.OverrideStructurePlatformPrevention);
