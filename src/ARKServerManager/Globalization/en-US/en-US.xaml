@@ -1668,8 +1668,8 @@
     <sys:String x:Key="ServerSettings_EnablePvPStructureDecayTooltip">If enabled, structures in PvP will automatically decay if left unused after a period of time.</sys:String>
     <sys:String x:Key="ServerSettings_PvPZoneStructureDamageLabel">PvP Zone Structure Damage:</sys:String>
     <sys:String x:Key="ServerSettings_PvPZoneStructureDamageTooltip">Specifies the scaling factor for the damage structures take within caves/cave entrances, in PvP.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxStructuresVisibleLabel">Max Structures Visible:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxStructuresVisibleTooltip">The maximum number of structures which will be visible to the player.  Lower values may help with server speed.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxStructuresVisibleLabel">Max Structures in Range:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxStructuresVisibleTooltip">Specifies the maximum number of structures that can be constructed within a certain (currently hard-coded) range.</sys:String>
     <sys:String x:Key="ServerSettings_PerPlatformStructuresMultiplierLabel">Per-Platform Structures Multiplier:</sys:String>
     <sys:String x:Key="ServerSettings_PerPlatformStructuresMultiplierTooltip">Specifies the scaling factor for the maximum number of structures allowed on a single platform/saddle/raft.</sys:String>
     <sys:String x:Key="ServerSettings_MaxPlatformSaddleStructuresLabel">Max Platform Saddle Structures:</sys:String>
