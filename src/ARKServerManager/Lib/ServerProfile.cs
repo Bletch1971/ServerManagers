@@ -3648,8 +3648,6 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append("?ClampItemStats=true");
             }
 
-            serverArgs.Append($"?TheMaxStructuresInRange={this.MaxStructuresInRange}");
-
             if (Config.Default.SectionSOTFEnabled && this.SOTF_Enabled)
             {
                 serverArgs.Append("?EvoEventInterval=").Append(this.SOTF_EvoEventInterval);
