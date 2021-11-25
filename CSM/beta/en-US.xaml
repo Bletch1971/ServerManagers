@@ -623,6 +623,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Main Window Start Mode:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Manage Public IP automatically</sys:String>
