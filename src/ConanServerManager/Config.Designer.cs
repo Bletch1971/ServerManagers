@@ -1932,5 +1932,29 @@ namespace ServerManagerTool {
                 this["MainWindow_WindowState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public global::System.Windows.GridLength MOTDHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["MOTDHeight"]));
+            }
+            set {
+                this["MOTDHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250")]
+        public global::System.Windows.GridLength ServerFilesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["ServerFilesGridHeight"]));
+            }
+            set {
+                this["ServerFilesGridHeight"] = value;
+            }
+        }
     }
 }

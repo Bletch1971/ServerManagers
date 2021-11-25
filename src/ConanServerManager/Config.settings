@@ -536,5 +536,11 @@
     <Setting Name="MainWindow_WindowState" Type="System.Windows.WindowState" Scope="User">
       <Value Profile="(Default)">Normal</Value>
     </Setting>
+    <Setting Name="MOTDHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="ServerFilesGridHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

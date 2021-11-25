@@ -1043,20 +1043,21 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}" Height="200">
+                                <GroupBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
-                                            <RowDefinition />
+                                            <RowDefinition Height="{Binding Config.MOTDHeight, ElementName=SettingsControl, FallbackValue=100, Mode=TwoWay}" MinHeight="100"/>
+                                            <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" MinWidth="80"/>
-                                            <ColumnDefinition Width="Auto" MinWidth="80"/>
+                                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                            <ColumnDefinition Width="Auto" MinWidth="100"/>
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
 
-                                        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Orientation="Horizontal">
+                                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
                                             <Label  Content="{DynamicResource ServerSettings_MOTDLineCountLabel}" VerticalAlignment="Center">
                                                 <Label.Style>
                                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
@@ -1083,7 +1084,7 @@
                                             </Label>
                                         </StackPanel>
 
-                                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="3">
+                                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
                                             <Label  Content="{DynamicResource ServerSettings_MOTDLengthLabel}" VerticalAlignment="Center">
                                                 <Label.Style>
                                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
@@ -1110,10 +1111,12 @@
                                             </Label>
                                         </StackPanel>
 
-                                        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="1" Text="{Binding MOTD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ToolTip="{DynamicResource ServerSettings_MOTDTooltip}" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="4096" SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" SourceUpdated="MOTD_SourceUpdated"/>
+                                        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="1" Text="{Binding MOTD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ToolTip="{DynamicResource ServerSettings_MOTDTooltip}" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="4096" SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" SourceUpdated="MOTD_SourceUpdated"/>
 
-                                        <CheckBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_MOTDIntervalEnabledLabel}" IsChecked="{Binding MOTDIntervalEnabled}" ToolTip="{DynamicResource ServerSettings_MOTDIntervalEnabledTooltip}"/>
-                                        <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="2" Margin="1" Value="{Binding MOTDInterval, Converter={cc:IntRangeValueConverter 1}}" Suffix="{DynamicResource ServerSettings_MOTDIntervalUnits}" Minimum="10" Maximum="1440" TickFrequency="60" SmallChange="10" LargeChange="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" IsEnabled="{Binding MOTDIntervalEnabled}" ToolTip="{DynamicResource ServerSettings_MOTDIntervalTooltip}" />
+                                        <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+
+                                        <CheckBox Grid.Row="3" Grid.Column="0" Margin="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_MOTDIntervalEnabledLabel}" IsChecked="{Binding MOTDIntervalEnabled}" ToolTip="{DynamicResource ServerSettings_MOTDIntervalEnabledTooltip}"/>
+                                        <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Value="{Binding MOTDInterval, Converter={cc:IntRangeValueConverter 1}}" Suffix="{DynamicResource ServerSettings_MOTDIntervalUnits}" Minimum="10" Maximum="1440" TickFrequency="60" SmallChange="10" LargeChange="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" IsEnabled="{Binding MOTDIntervalEnabled}" ToolTip="{DynamicResource ServerSettings_MOTDIntervalTooltip}" />
                                     </Grid>
                                 </GroupBox>
 
@@ -1439,7 +1442,9 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="{Binding Config.ServerFilesGridHeight, ElementName=SettingsControl, FallbackValue=250, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="Auto"/> <!--Splitter Row-->
+                                    <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
@@ -1448,7 +1453,7 @@
 
                                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Content="{DynamicResource ServerSettings_ServerFilesWarningLabel}"/>
 
-                                <GroupBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Height="250">
+                                <GroupBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerFilesBlacklistedLabel}"/>
@@ -1536,7 +1541,7 @@
                                     </DataGrid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="250">
+                                <GroupBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <CheckBox Margin="0,6,0,5" IsChecked="{Binding EnableWhitelist}" Content="{DynamicResource ServerSettings_ServerFilesWhitelistedLabel}" ToolTip="{DynamicResource ServerSettings_ServerFilesWhitelistedTooltip}" VerticalAlignment="Center"/>
@@ -1623,6 +1628,8 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </GroupBox>
+
+                                <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
                             </Grid>
                         </Expander>
 
