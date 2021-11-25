@@ -5,45 +5,32 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-11-23T00:00:00Z</updated>
+  <updated>2021-11-24T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:CCE4B82B-122A-4BBF-A79F-934B79E41382</id>
-    <title>1.1.407 (1.1.407.2)</title>
-    <summary>1.1.407.2</summary>
+    <id>urn:uuid:50F06456-861E-483C-82BB-6072A428C652</id>
+    <title>1.1.408 (1.1.408.1)</title>
+    <summary>1.1.408.1</summary>
     <link href="" />
-    <updated>2021-11-23T00:00:00Z</updated>
+    <updated>2021-11-24T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">CHANGES</u>
+          <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>zh-CN Translation file updated.</li>
+            <li>Fixed a crashing bug when ASM closes and is unable to find the backup location to save the config settings.</li>
           </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:2FF0893A-1412-4062-BF87-058F14E787FC</id>
-    <title>1.1.407 (1.1.407.1)</title>
-    <summary>1.1.407.1</summary>
-    <link href="" />
-    <updated>2021-11-21T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGES</u>
+          <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Status checks - a few code tweaks to the server status checks.</li>
-            <li>pt-BR Translation file updated.</li>
+            <li>Global Settings - Added option to set the Main Window start mode - Normal, Maximized, Minimized.</li>
+            <li>Main Window - now sotres the Left and Top positions of the window, when in Normal mode. Will restore the window position when started. Defaults to 50,50.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Fixed the steamcmd warning about 'Please use force_install_dir before login!'.</li>
           </ul>
         </p>
       </div>
