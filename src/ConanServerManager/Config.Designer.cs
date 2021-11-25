@@ -37,7 +37,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login {0} +force_install_dir \"{1}\"  \"+app_update {2} {3} {4}\" +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{1}\"  +login {0} \"+app_update {2} {3} {4}\" +quit")]
         public string SteamCmdInstallServerArgsFormat {
             get {
                 return ((string)(this["SteamCmdInstallServerArgsFormat"]));

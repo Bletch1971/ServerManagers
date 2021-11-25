@@ -6,7 +6,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SteamCmdInstallServerArgsFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+login {0} +force_install_dir "{1}"  "+app_update {2} {3} {4}" +quit</Value>
+      <Value Profile="(Default)">+force_install_dir "{1}"  +login {0} "+app_update {2} {3} {4}" +quit</Value>
     </Setting>
     <Setting Name="ServersInstallPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Servers</Value>

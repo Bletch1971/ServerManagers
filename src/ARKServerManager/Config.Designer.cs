@@ -82,7 +82,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login anonymous +force_install_dir \"{0}\"  \"+app_update 376030 {1} {2}\" +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{0}\"  +login anonymous \"+app_update 376030 {1} {2}\" +quit")]
         public string SteamCmdInstallServerArgsFormat {
             get {
                 return ((string)(this["SteamCmdInstallServerArgsFormat"]));
@@ -578,7 +578,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login anonymous +force_install_dir \"{0}\"  \"+app_update 445400 {1} {2}\" +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{0}\"  +login anonymous \"+app_update 445400 {1} {2}\" +quit")]
         public string SteamCmdInstallServerArgsFormat_SotF {
             get {
                 return ((string)(this["SteamCmdInstallServerArgsFormat_SotF"]));

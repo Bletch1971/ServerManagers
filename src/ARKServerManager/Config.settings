@@ -21,7 +21,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SteamCmdInstallServerArgsFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+login anonymous +force_install_dir "{0}"  "+app_update 376030 {1} {2}" +quit</Value>
+      <Value Profile="(Default)">+force_install_dir "{0}"  +login anonymous "+app_update 376030 {1} {2}" +quit</Value>
     </Setting>
     <Setting Name="ServersInstallDir" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Servers</Value>
@@ -162,7 +162,7 @@
       <Value Profile="(Default)">1000</Value>
     </Setting>
     <Setting Name="SteamCmdInstallServerArgsFormat_SotF" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+login anonymous +force_install_dir "{0}"  "+app_update 445400 {1} {2}" +quit</Value>
+      <Value Profile="(Default)">+force_install_dir "{0}"  +login anonymous "+app_update 445400 {1} {2}" +quit</Value>
     </Setting>
     <Setting Name="ArkSE_PatchNotesUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://survivetheark.com/index.php?/forums/forum/5-changelog-patch-notes/</Value>

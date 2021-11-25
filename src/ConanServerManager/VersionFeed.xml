@@ -27,6 +27,11 @@
             <li>Global Settings - Added option to set the Main Window start mode - Normal, Maximized, Minimized.</li>
             <li>Main Window - now sotres the Left and Top positions of the window, when in Normal mode. Will restore the window position when started. Defaults to 50,50.</li>
           </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Fixed the steamcmd warning about 'Please use force_install_dir before login!'.</li>
+          </ul>
         </p>
       </div>
     </content>
