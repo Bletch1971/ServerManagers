@@ -57,6 +57,12 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
     <!--#region Unit strings -->
     <sys:String x:Key="SliderUnits_Multiplier">x</sys:String>
     <sys:String x:Key="SliderUnits_Percentage">%</sys:String>
