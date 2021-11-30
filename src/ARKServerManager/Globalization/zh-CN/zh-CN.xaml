@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.11.21(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.11.26(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -23,8 +23,8 @@
     <sys:String x:Key="Mod_Ragnarok">仙境地图(Ragnarok)</sys:String>
     <sys:String x:Key="Mod_Aberration">畸变地图(Aberration)</sys:String>
     <sys:String x:Key="Mod_Extinction">灭绝地图(Extinction)</sys:String>
-    <sys:String x:Key="Mod_Genesis">创世纪(Genesis)</sys:String>
-	<sys:String x:Key="Mod_Genesis2">创世纪二(Genesis: Part 2)</sys:String>
+    <sys:String x:Key="Mod_Genesis">创世纪 1(Genesis: Part 1)</sys:String>
+	<sys:String x:Key="Mod_Genesis2">创世纪 2(Genesis: Part 2)</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
     <sys:String x:Key="Mod_PGM">程序生成地图(PGM)</sys:String>
     <sys:String x:Key="Mod_Valguero">瓦尔盖罗(Valguero)</sys:String>
@@ -425,6 +425,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">重置</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">这将重置服务器管理器的所有用户全局设置。 成功后，服务器管理器将关闭。</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">启用作为启动管理员提示符下运行</sys:String>
+	<sys:String x:Key="GlobalSettings_StartModeLabel">窗口启动模式:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">最小化到托盘</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">自动管理防火墙设置</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">自动管理公共IP</sys:String>
@@ -1130,8 +1131,8 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">开启极限模式（玩家死后无法重生，必须重新创建一个游戏角色才能进行游戏）.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">开启PVP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">开启玩家与玩家模式（玩家可以处理伤害或杀死对方。在PVP玩家也可以破坏或摧毁另一个部落的建筑或杀死恐龙.</sys:String>
-	<sys:String x:Key="ServerSettings_EnableCreativeModeLabel">启用创造性模式</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">如果启用，则允许创建模式.</sys:String>
+	<sys:String x:Key="ServerSettings_EnableCreativeModeLabel">启用创造模式</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">如果启用，则允许创建模式.（地图里面玩家将拥有创造模式）</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">开启PVE洞穴建筑</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">如果启用，则在洞穴内的建筑将使用PVE模式.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">启用PVE低温症</sys:String>
@@ -1166,8 +1167,8 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">确定方舟生物的最大等级.该值越高,最大生物等级越高.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">难度偏移：</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">确定世界上生物的最大水平。 值越高，最大生物等级越高。</sys:String>
-	<sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">消灭等级以上的驯服:</sys:String>
-    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">超过此级别的驯服将在服务器启动时删除. 要禁用删除，请将设置为0.</sys:String>
+	<sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">消灭驯服等级以上的龙:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">超过此等级的驯服龙将在服务器启动时删除. 要禁用删除，请将设置为0.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">启用角色数据下载</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">如果启用，这将允许将外部幸存者/物品/恐龙下载到您的服务器中。</sys:String>
@@ -2861,9 +2862,10 @@
     <sys:String x:Key="Shapeshifter_Large_Character_BP_C">费洛克斯大</sys:String>
     <sys:String x:Key="InsectSwarmChar_BP_C">昆虫群</sys:String>
     <sys:String x:Key="MicrobeSwarmChar_BP_C">鱼群</sys:String>
-    <sys:String x:Key="TekHoverSkiff_Character_BP_C">悬停小艇</sys:String>
+    <sys:String x:Key="TekHoverSkiff_Character_BP_C">泰克悬浮艇</sys:String>
     <sys:String x:Key="BionicTrike_Character_BP_C">Tek 三角龙</sys:String>
     <sys:String x:Key="BionicGigant_Character_BP_C">Tek 南方巨兽</sys:String>
+	<sys:String x:Key="Ocean_Megalodon_Character_BP_Retrieve_C">X-金色条纹巨齿鲨</sys:String>
     <sys:String x:Key="Volcano_Allo_Character_BP_C">X-异特龙</sys:String>
     <sys:String x:Key="Volcano_Ankylo_Character_BP_C">X-甲龙</sys:String>
     <sys:String x:Key="Snow_Argent_Character_BP_C">X-阿根廷巨鹰</sys:String>
@@ -2897,6 +2899,7 @@
 	<!--#endregion-->
 	
 	<!--#region 恐龙/生物类名-水晶岛-BOSS -->
+	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_C">水晶女王{BOSS}</sys:String>
 	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_Easy_C">水晶飞龙女王（简单）</sys:String>
 	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_Medium_C">水晶飞龙女王（中等）</sys:String>
 	<sys:String x:Key="CrystalWyvern_Character_BP_Boss_Hard_C">水晶飞龙女王（困难）</sys:String>
@@ -3703,10 +3706,22 @@
 	
 	<!--# 印痕技能泰克类 - 创世（2） -->
 	<sys:String x:Key="EngramEntry_Spawner_HoverSail_Main_C">泰克悬停帆</sys:String>
+	<sys:String x:Key="EngramEntry_TekPistol_C">泰克相枪</sys:String>
+	<sys:String x:Key="EngramEntry_TekBow_C">泰克弓</sys:String>
+	<sys:String x:Key="EngramEntry_SpaceDolphin_Saddle_C">虚空海豚星翼-鞍</sys:String>
+	<sys:String x:Key="EngramEntry_NetGun_Ammo_C">网状射弹</sys:String>
+	<sys:String x:Key="EngramEntry_Minigun_C">加特林机枪</sys:String>
+	<sys:String x:Key="EngramEntry_Milkglider_Saddle_C">鸭嘴飞鼠-鞍</sys:String>
     <!--#endregion-->
 	
     <!--#印痕技能类 - 瓦尔盖罗 -->
     <sys:String x:Key="EngramEntry_Saddle_Deinonychus_C">鞍 - 恐爪龙</sys:String>
+	<!--#endregion-->
+	
+	<!--# 印痕技能 - 水晶岛 -->
+	<sys:String x:Key="EngramEntry_TropeSaddle_C">脊颌翼龙的鞍</sys:String>
+    <!--#endregion-->
+	
     <!--#endregion-->
     <!--#endregion-->
 
@@ -5148,7 +5163,10 @@
 	<sys:String x:Key="PrimalItemStructure_TekSecurityConsole_C">泰克监控控制台</sys:String>
 	<sys:String x:Key="PrimalItemArmor_MilkGliderSaddle_C">鸭嘴飞鼠-鞍</sys:String>
 	<sys:String x:Key="PrimalItemArmor_SpaceDolphinSaddle_Tek_C">虚空海豚星翼-鞍</sys:String>
-	<sys:String x:Key="PrimalItemAmmo_ArrowNet_C">网枪</sys:String>
+	<sys:String x:Key="PrimalItemAmmo_ArrowNet_Hunt_C">网状射弹</sys:String>
+	<sys:String x:Key="PrimalItemAmmo_ArrowNet_C">网状弹药</sys:String>
+	<sys:String x:Key="PrimalItemAmmo_NetGunGen_C">网枪</sys:String>
+	<sys:String x:Key="PrimalItem_WeaponHarpoon_Hunt_C">鱼叉枪</sys:String>
 	<sys:String x:Key="PrimalItemAmmo_Boulder_Fire_C">沥青罐</sys:String>
 	<sys:String x:Key="PrimalItem_Spawner_Exosuit_C">Exo-MEK机甲</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Mutagel_C">突变凝胶</sys:String>
@@ -5481,9 +5499,9 @@
 	<sys:String x:Key="PrimalInventoryBP_BeaverDam_C">河狸窝战利品</sys:String>
 	<sys:String x:Key="PrimalInventoryBP_GenericFishing_C">钓鱼的战利品</sys:String>
 
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_EX_C">洞穴战利品箱 (蓝色)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_EX_C">洞穴战利品箱 (黄色)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_EX_C">洞穴战利品箱 (红色)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_EX_C">洞穴补给箱 (蓝色)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_EX_C">洞穴补给箱 (黄色)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_EX_C">洞穴补给箱 (红色)</sys:String>
 	<sys:String x:Key="SupplyCrate_Base_Horde_Easy_C">蓝色空投</sys:String>
 	<sys:String x:Key="SupplyCrate_Base_Horde_Medium_C">黄色空投</sys:String>
 	<sys:String x:Key="SupplyCrate_Base_Horde_Hard_C">红色空投</sys:String>
@@ -5491,13 +5509,13 @@
     <sys:String x:Key="ArtifactCrate_Desert_Kaiju_EX_C">神器容器混乱</sys:String>
     <sys:String x:Key="ArtifactCrate_ForestKaiju_EX_C">神器容器增长</sys:String>
     <sys:String x:Key="ArtifactCrate_IceKaiju_EX_C">神器容器虚空</sys:String>
-	<sys:String x:Key="ElementNode_Easy_Horde_C">能量元素树(1级)</sys:String>
-	<sys:String x:Key="ElementNode_Hard_Horde_C">能量元素树(2级)</sys:String>
-	<sys:String x:Key="ElementNode_Medium_Horde_C">能量元素树(3级)</sys:String>
-	<sys:String x:Key="EKingKaiju_ElementNode_C">能量元素树(4级)</sys:String>
-    <sys:String x:Key="ArtifactCrate_KingKaiju_Alpha_EX_C">神器容器国王泰坦 (困难)</sys:String>
-    <sys:String x:Key="ArtifactCrate_KingKaiju_Beta_EX_C">神器容器国王泰坦 (中等)</sys:String>
-    <sys:String x:Key="ArtifactCrate_KingKaiju_EX_C">神器容器国王泰坦 (简单)</sys:String>
+	<sys:String x:Key="ElementNode_Easy_Horde_C">能量元素树(简单)</sys:String>
+	<sys:String x:Key="ElementNode_Hard_Horde_C">能量元素树(中级)</sys:String>
+	<sys:String x:Key="ElementNode_Medium_Horde_C">能量元素树(困难)</sys:String>
+	<sys:String x:Key="EKingKaiju_ElementNode_C">能量元素树(传说)</sys:String>
+    <sys:String x:Key="ArtifactCrate_KingKaiju_Alpha_EX_C">国王泰坦 (困难)</sys:String>
+    <sys:String x:Key="ArtifactCrate_KingKaiju_Beta_EX_C">国王泰坦 (中等)</sys:String>
+    <sys:String x:Key="ArtifactCrate_KingKaiju_EX_C">国王泰坦 (简单)</sys:String>
 	
 	<sys:String x:Key="Val_SupplyCrate_Level35_C">紫色战利品箱</sys:String>
 	<sys:String x:Key="Val_SupplyCrate_Level35_Double_C">紫色战利品箱 (双重物品)</sys:String>
@@ -5510,6 +5528,8 @@
 	<sys:String x:Key="SupplyCreate_OceanInstant_High_C">深海战利品箱</sys:String>
 	<sys:String x:Key="SupplyCrateBaseBP_Instantaneous_DamLogs_Child_C">大型河狸窝</sys:String>
 	<sys:String x:Key="SupplyCrate_Chest_Treasure_JacksonL_C_C">百宝箱</sys:String>
+	
+	<sys:String x:Key="BP_HeroPoisonPlant_C">毒气树(创世1)</sys:String>
 	
 	<sys:String x:Key="SupplyCrate_Space_01_Ambergris_C">轨道空投_白色(创世2)</sys:String>
 	<sys:String x:Key="SupplyCrate_Space_02_Crystal_C">轨道空投_绿色(创世2)</sys:String>
