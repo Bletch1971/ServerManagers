@@ -2,6 +2,7 @@
 using NLog;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Lib;
+using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty CurrentConfigProperty = DependencyProperty.Register(nameof(CurrentConfig), typeof(Config), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty CommonConfigProperty = DependencyProperty.Register(nameof(CommonConfig), typeof(CommonConfig), typeof(GlobalSettingsControl), new PropertyMetadata(null));
-        public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(List<WindowState>), typeof(GlobalSettingsControl), new PropertyMetadata(new List<WindowState>()));
+        public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
         {
@@ -39,10 +40,11 @@ namespace ServerManagerTool
             this.CommonConfig = CommonConfig.Default;
             this.DataContext = this;
 
-            this.WindowStates = new List<WindowState>();    
-            foreach (var windowState in Enum.GetValues(typeof(WindowState)))
+            this.WindowStates = new ComboBoxItemList();    
+            foreach (WindowState windowState in Enum.GetValues(typeof(WindowState)))
             {
-                this.WindowStates.Add((WindowState)windowState);
+                var displayMember = _globalizer.GetResourceString($"WindowState_{windowState}") ?? windowState.ToString();
+                this.WindowStates.Add(new Common.Model.ComboBoxItem(windowState.ToString(), displayMember));
             }
 
             InitializeComponent();
@@ -75,9 +77,9 @@ namespace ServerManagerTool
             set { SetValue(IsAdministratorProperty, value); }
         }
 
-        public List<WindowState> WindowStates
+        public ComboBoxItemList WindowStates
         {
-            get { return (List<WindowState>)GetValue(WindowStatesProperty); }
+            get { return (ComboBoxItemList)GetValue(WindowStatesProperty); }
             set { SetValue(WindowStatesProperty, value); }
         }
 
