@@ -5,7 +5,6 @@ using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -40,12 +39,7 @@ namespace ServerManagerTool
             this.CommonConfig = CommonConfig.Default;
             this.DataContext = this;
 
-            this.WindowStates = new ComboBoxItemList();    
-            foreach (WindowState windowState in Enum.GetValues(typeof(WindowState)))
-            {
-                var displayMember = _globalizer.GetResourceString($"WindowState_{windowState}") ?? windowState.ToString();
-                this.WindowStates.Add(new Common.Model.ComboBoxItem(windowState.ToString(), displayMember));
-            }
+            PopulateWindowsStatesComboBox();
 
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
@@ -310,6 +304,8 @@ namespace ServerManagerTool
         private void LanguageSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CurrentConfig.CultureName = AvailableLanguages.Instance.SelectedLanguage;
+
+            PopulateWindowsStatesComboBox();
         }
 
         private void StyleSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -389,6 +385,24 @@ namespace ServerManagerTool
             finally
             {
                 App.Current.Shutdown(exitCode);
+            }
+        }
+
+        private void PopulateWindowsStatesComboBox()
+        {
+            var selectedValue = this.WindowStateComboBox?.SelectedValue ?? CurrentConfig.MainWindow_WindowState;
+            var windowStates = new ComboBoxItemList();
+
+            foreach (WindowState windowState in Enum.GetValues(typeof(WindowState)))
+            {
+                var displayMember = _globalizer.GetResourceString($"WindowState_{windowState}") ?? windowState.ToString();
+                windowStates.Add(new Common.Model.ComboBoxItem(windowState.ToString(), displayMember));
+            }
+
+            this.WindowStates = windowStates;
+            if (this.WindowStateComboBox != null)
+            {
+                this.WindowStateComboBox.SelectedValue = selectedValue;
             }
         }
     }

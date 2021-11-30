@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.11.26(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.11.30(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -50,6 +50,12 @@
     <!--处理器亲和性-->
     <sys:String x:Key="ProcessorAffinity_Invalid">无效</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">所有</sys:String>
+    <!--#endregion-->
+	
+	<!--#窗口启动模式 -->
+    <sys:String x:Key="WindowState_Normal">正常</sys:String>
+    <sys:String x:Key="WindowState_Minimized">最小化</sys:String>
+    <sys:String x:Key="WindowState_Maximized">最大化</sys:String>
     <!--#endregion-->
 
     <!-- 应用 -->
@@ -2824,13 +2830,10 @@
     <sys:String x:Key="Xenomorph_Character_BP_Male_Tamed_Corrupt_C">腐化死神国王</sys:String>
     <sys:String x:Key="Wyvern_Character_BP_Fire_Corrupt_C">腐化双足飞龙</sys:String>
 
-    <sys:String x:Key="DesertKaiju_Character_BP_C">沙漠泰坦</sys:String>
     <sys:String x:Key="Enforcer_Character_BP_C">执行者</sys:String>
-    <sys:String x:Key="ForestKaiju_Character_BP_C">森林泰坦</sys:String>
     <sys:String x:Key="Gacha_Character_BP_C">嘎查</sys:String>
     <sys:String x:Key="GasBags_Character_BP_C">气囊虫</sys:String>
     <sys:String x:Key="IceJumper_Character_BP_C">玛纳加尔姆</sys:String>
-    <sys:String x:Key="IceKaiju_Character_BP_C">冰霜泰坦</sys:String>
     <sys:String x:Key="MegaMek_Character_BP_C">大型机甲</sys:String>
     <sys:String x:Key="Mek_Character_BP_C">机甲</sys:String>
     <sys:String x:Key="Owl_Character_BP_C">雪鸮</sys:String>
@@ -2840,10 +2843,12 @@
     <!--#endregion-->
 
     <!--#恐龙/生物类名称 - 灭绝 - BOSS -->
-    <sys:String x:Key="CorruptTumor_Character_BP_C">腐化的肿瘤</sys:String>
-    <sys:String x:Key="KingKaiju_Character_BP_C">国王泰坦 (简单难度)</sys:String>
-    <sys:String x:Key="KingKaiju_Character_BP_Alpha_C">国王泰坦 (困难难度)</sys:String>
-    <sys:String x:Key="KingKaiju_Character_BP_Beta_C">国王泰坦 (中等难度)</sys:String>
+	<sys:String x:Key="DesertKaiju_Character_BP_C">沙漠泰坦</sys:String>
+	<sys:String x:Key="IceKaiju_Character_BP_C">冰霜泰坦</sys:String>
+	<sys:String x:Key="ForestKaiju_Character_BP_C">森林泰坦</sys:String>
+    <sys:String x:Key="KingKaiju_Character_BP_C">国王泰坦 (简单)</sys:String>
+    <sys:String x:Key="KingKaiju_Character_BP_Alpha_C">国王泰坦 (困难)</sys:String>
+    <sys:String x:Key="KingKaiju_Character_BP_Beta_C">国王泰坦 (中等)</sys:String>
     <!--#endregion-->
 
     <!-- 恐龙/生物类名称 - 瓦尔盖罗 -->
@@ -2852,6 +2857,9 @@
     <sys:String x:Key="IceGolem_Character_BP_C">岩石巨人(冰)</sys:String>
 	<sys:String x:Key="SpiderL_VAL_Character_BP_C">育母蜘蛛 (Lysrix)</sys:String>
     <!--#endregion-->
+	
+	<!--#恐龙/生物类名称 - 瓦尔盖罗 - BOSS -->
+	<!--#endregion-->
 	
 	<!--#恐龙/生物类名-创世记 （1）-->
     <sys:String x:Key="SpaceWhale_Character_BP_C">鲲</sys:String>
@@ -2906,17 +2914,17 @@
 	<!--#endregion-->
 	
     <!--#region 恐龙/生物类名-创世记（1）-BOSS -->
-    <sys:String x:Key="EelBoss_Character_BP_Easy_C">鳗鱼BOSS (简单难度)</sys:String>
-    <sys:String x:Key="EelBoss_Character_BP_Medium_C">鳗鱼BOSS (中等难度)</sys:String>
-    <sys:String x:Key="EelBoss_Character_BP_Hard_C">鳗鱼BOSS (困难难度)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Easy_C">鳗鱼BOSS (简单)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Medium_C">鳗鱼BOSS (中等)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Hard_C">鳗鱼BOSS (困难)</sys:String>
 	
-    <sys:String x:Key="EelMinion_Character_BP_Easy_C">鳗鱼爪牙 (伽马值)</sys:String>
-    <sys:String x:Key="EelMinion_Character_BP_Medium_C">鳗鱼爪牙(Beta)</sys:String>
-    <sys:String x:Key="EelMinion_Character_BP_Hard_C">鳗鱼爪牙 (Alpha)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Easy_C">鳗鱼爪牙 (简单)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Medium_C">鳗鱼爪牙(中等)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Hard_C">鳗鱼爪牙 (困难)</sys:String>
 	
-    <sys:String x:Key="VRMainBoss_Character_Easy_C">VR BOSS (简单难度)</sys:String>
-    <sys:String x:Key="VRMainBoss_Character_Medium_C">VR BOSS (中等难度)</sys:String>
-    <sys:String x:Key="VRMainBoss_Character_Hard_C">VR BOSS (困难难度)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Easy_C">VR BOSS (简单)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Medium_C">VR BOSS (中等)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Hard_C">VR BOSS (困难)</sys:String>
 	<!--#endregion-->
 	
     <!-- 恐龙/生物类名称 - 创世记(2) -->
@@ -2926,6 +2934,8 @@
 	<sys:String x:Key="LionfishLion_Character_BP_C">影鬃</sys:String>
 	<sys:String x:Key="TekStrider_Character_BP_C">跨步者</sys:String>
 	<sys:String x:Key="TekWyvern_Character_BP_C">虚空飞龙</sys:String>
+	<sys:String x:Key="Gigant_Character_BP_ExpG_C">实验巨龙</sys:String>
+	<sys:String x:Key="Macrophage_Swarm_Character_BP_C">巨噬细胞</sys:String>
 	<sys:String x:Key="Allo_Character_BP_Rockwell_C">R-异特龙</sys:String>
 	<sys:String x:Key="Carno_Character_BP_Rockwell_C">R-牛龙</sys:String>
 	<sys:String x:Key="Daeodon_Character_BP_Eden_C">R-凶齿豨</sys:String>
@@ -2943,6 +2953,7 @@
 	<sys:String x:Key="Spindles_Character_BP_Rockwell_C">R-刺面龙</sys:String>
 	<sys:String x:Key="Thylacoleo_Character_BP_Eden_C">R-袋狮</sys:String>
 	<sys:String x:Key="Turtle_Character_BP_Rockwell_C">R-碳水龟</sys:String>
+	<sys:String x:Key="Shapeshifter_Large_Character_BP_Hunt_C">凶恶猿狐</sys:String>
 	<sys:String x:Key="Equus_Character_BP_Eden_C">R-庞马</sys:String>
 	<sys:String x:Key="Xenomorph_Character_BP_Female_Gen2_C">R-死神王后</sys:String>
 	<sys:String x:Key="Xenomorph_Character_BP_Male_Gen2_C">R-死神国王</sys:String>
@@ -3705,13 +3716,22 @@
 	<!--#endregion-->
 	
 	<!--# 印痕技能泰克类 - 创世（2） -->
-	<sys:String x:Key="EngramEntry_Spawner_HoverSail_Main_C">泰克悬停帆</sys:String>
+	<sys:String x:Key="EngramEntry_TekHoverSail_C">泰克悬停帆</sys:String>
 	<sys:String x:Key="EngramEntry_TekPistol_C">泰克相枪</sys:String>
+	<sys:String x:Key="EngramEntry_AmmoBox_C">弹药箱</sys:String>
 	<sys:String x:Key="EngramEntry_TekBow_C">泰克弓</sys:String>
 	<sys:String x:Key="EngramEntry_SpaceDolphin_Saddle_C">虚空海豚星翼-鞍</sys:String>
 	<sys:String x:Key="EngramEntry_NetGun_Ammo_C">网状射弹</sys:String>
 	<sys:String x:Key="EngramEntry_Minigun_C">加特林机枪</sys:String>
 	<sys:String x:Key="EngramEntry_Milkglider_Saddle_C">鸭嘴飞鼠-鞍</sys:String>
+	<sys:String x:Key="EngramEntry_Canoe_C">皮划艇</sys:String>
+	<sys:String x:Key="EngramEntry_Boulder_Fire_C">一罐沥青</sys:String>
+	<sys:String x:Key="EngramEntry_EggIncubator_C">孵化器</sys:String>
+	<sys:String x:Key="EngramEntry_LoadoutMannequin_C">人体模型</sys:String>
+	<sys:String x:Key="EngramEntry_TekCanteen_C">泰克水壶</sys:String>
+	<sys:String x:Key="EngramEntry_TekSecuirtyConsole_C">泰克监视控制台</sys:String>
+	<sys:String x:Key="EngramEntry_TekCropPlot_C">泰克耕地</sys:String>
+	<sys:String x:Key="EngramEntry_TekExosuit_C">未组装的Exo-Mek机甲(做物品收物品)</sys:String>
     <!--#endregion-->
 	
     <!--#印痕技能类 - 瓦尔盖罗 -->
@@ -4010,6 +4030,9 @@
     <sys:String x:Key="PrimalItemConsumable_Berry_Stimberry_C">白色浆果</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Berry_Tintoberry_C">红色浆果</sys:String>
     <sys:String x:Key="PrimalItemConsumable_BloodPack_C">血包</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute1_C">生成育母蜘蛛传送门</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute3_C">生成喷火龙传送门</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute2_C">生成大金刚传送门</sys:String>
     <sys:String x:Key="PrimalItemConsumable_BugRepellant_C">驱虫剂</sys:String>
     <sys:String x:Key="PrimalItemConsumable_CactusBuffSoup_C">仙人掌汁液</sys:String>
     <sys:String x:Key="PrimalItemConsumable_CanteenCraftable_C">水壶 (空)</sys:String>
@@ -5050,6 +5073,7 @@
     <sys:String x:Key="PrimalItemArmor_ForestKaiju_C">森林泰坦鞍</sys:String>
     <sys:String x:Key="PrimalItemArmor_GachaSaddle_C">嘎查鞍</sys:String>
     <sys:String x:Key="PrimalItemArmor_GasBagsSaddle_C">气囊虫鞍</sys:String>
+	<sys:String x:Key="CorruptTumor_Character_BP_C">腐化的肿瘤</sys:String>
     <sys:String x:Key="PrimalItemArmor_IceJumperSaddle_C">玛纳加尔姆鞍</sys:String>
     <sys:String x:Key="PrimalItemArmor_IceKaiju_C">冰霜泰坦鞍</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekBackpack_MissilePod_C">机甲火箭模块 (机甲可部署火箭模块)</sys:String>
@@ -5165,12 +5189,20 @@
 	<sys:String x:Key="PrimalItemArmor_SpaceDolphinSaddle_Tek_C">虚空海豚星翼-鞍</sys:String>
 	<sys:String x:Key="PrimalItemAmmo_ArrowNet_Hunt_C">网状射弹</sys:String>
 	<sys:String x:Key="PrimalItemAmmo_ArrowNet_C">网状弹药</sys:String>
+	<sys:String x:Key="PrimalItem_PurchasableEngram_C">可以购买的印痕点</sys:String>
 	<sys:String x:Key="PrimalItemAmmo_NetGunGen_C">网枪</sys:String>
 	<sys:String x:Key="PrimalItem_WeaponHarpoon_Hunt_C">鱼叉枪</sys:String>
 	<sys:String x:Key="PrimalItemAmmo_Boulder_Fire_C">沥青罐</sys:String>
-	<sys:String x:Key="PrimalItem_Spawner_Exosuit_C">Exo-MEK机甲</sys:String>
+	<sys:String x:Key="PrimalItem_Spawner_Exosuit_C">未组装Exo-mek机甲</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Mutagel_C">突变凝胶</sys:String>
 	<sys:String x:Key="PrimalItem_WeaponTekPistol_C">泰克相枪</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_MilkGlider_Medium_C"> 普通的造蛋</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_MilkGlider_Small_C">简单的造蛋</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_MilkGlider_Large_C">上等的造蛋</sys:String>
+	<sys:String x:Key="PrimalItemSkin_Costume_MutatedSurvivor_C">服装变异幸存者</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_MilkGlider_XLarge_C">特殊的造蛋</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_MilkGlider_Special_C">非凡的造蛋</sys:String>
+	<sys:String x:Key="PrimalItemConsumable_Egg_MilkGlider_XSmall_C">基础的造蛋</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_RawMeat_C">植物R-1 种子(生肉)</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_RawFish_C">植物R-2 种子(鱼肉)</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat_C">植物R-3 种子(腐肉)</sys:String>
@@ -5530,15 +5562,187 @@
 	<sys:String x:Key="SupplyCrate_Chest_Treasure_JacksonL_C_C">百宝箱</sys:String>
 	
 	<sys:String x:Key="BP_HeroPoisonPlant_C">毒气树(创世1)</sys:String>
+	<sys:String x:Key="Race_BogSpider_Easy_C">“摇摆之王”大奖赛(简单){任务}</sys:String>
+	<sys:String x:Key="Race_BogSpider_Medium_C">“摇摆之王”大奖赛(中等){任务}</sys:String>
+	<sys:String x:Key="Race_BogSpider_Hard_C">“摇摆之王”大奖赛(困难){任务}</sys:String>
+	<sys:String x:Key="Retrieve_BogBulbs_Easy_C">遇见花粉(简单){任务}</sys:String>
+	<sys:String x:Key="Retrieve_BogBulbs_Medium_C">遇见花粉{(中等){任务}</sys:String>
+	<sys:String x:Key="Retrieve_BogBulbs_Hard_C">遇见花粉(困难){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Bog_Easy_C">另一个沼泽狩猎(简单){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Bog_Medium_C">另一个沼泽狩猎(中等){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Bog_Hard_C">另一个沼泽狩猎(困难){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Bog_Easy_C">沼泽大擂台(简单){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Bog_Medium_C">沼泽大擂台(中等){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Bog_Hard_C">沼泽大擂台(困难){任务}</sys:String>
+	<sys:String x:Key="Fishing_OnlyNormalFish_CoelPiranhaOnly_Bog_Easy_C">沼泽钓鱼(简单){任务}</sys:String>
+	<sys:String x:Key="Fishing_OnlyNormalFish_CoelPiranhaOnly_Bog_Medium_C">沼泽钓鱼(中等){任务}</sys:String>
+	<sys:String x:Key="Fishing_OnlyNormalFish_CoelPiranhaOnly_Bog_Hard_C">沼泽钓鱼(困难){任务}</sys:String>
+	<sys:String x:Key="Race_BogKapro_Easy_C">沼泽拉力赛(简单){任务}</sys:String>
+	<sys:String x:Key="Race_BogKapro_Medium_C">沼泽拉力赛(中等){任务}</sys:String>
+	<sys:String x:Key="Race_BogKapro_Hard_C">沼泽拉力赛(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Raptor_Easy_C">加量不加价(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Raptor_Medium_C">加量不加价(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Raptor_Hard_C">加量不加价(困难){任务}</sys:String>
+	<sys:String x:Key="Sport_BasketBall_Easy_C">渡渡球投篮(简单){任务}</sys:String>
+	<sys:String x:Key="Sport_BasketBall_Medium_C">渡渡球投篮(中等){任务}</sys:String>
+	<sys:String x:Key="Sport_BasketBall_Hard_C">渡渡球投篮(困难){任务}</sys:String>
+	<sys:String x:Key="Escort_Bog_Toad_Easy_C">蹦蹦跳跳呱呱(简单){任务}</sys:String>
+	<sys:String x:Key="Escort_Bog_Toad_Medium_C">蹦蹦跳跳呱呱(中等){任务}</sys:String>
+	<sys:String x:Key="Escort_Bog_Toad_Hard_C">蹦蹦跳跳呱呱(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Spino_Easy_C">间谍对棘背龙(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Spino_Medium_C">间谍对棘背龙(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Spino_Hard_C">间谍对棘背龙(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Sarco_Easy_C">平静沼泽(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Sarco_Medium_C">平静沼泽(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Sarco_Hard_C">平静沼泽(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_BogSpider_Easy_C">网络搜索(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_BogSpider_Medium_C">网络搜索(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_BogSpider_Hard_C">网络搜索(困难){任务}</sys:String>
 	
-	<sys:String x:Key="SupplyCrate_Space_01_Ambergris_C">轨道空投_白色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_02_Crystal_C">轨道空投_绿色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_03_Sulfur_C">轨道空投_蓝色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_04_ElementShards_C">轨道空投_紫色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_05_Obsidian_C">轨道空投_黄色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_06_Oil_C">轨道空投_红色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_07_ElementDust_C">轨道空投_青色(创世2)</sys:String>
-	<sys:String x:Key="SupplyCrate_Space_08_BlackPearls_C">轨道空投_橙色(创世2)</sys:String>
+	<sys:String x:Key="GauntletWaves_Arctic_Easy_C">雪地大乱斗(简单){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Arctic_Medium_C">雪地大乱斗(中等){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Arctic_Hard_C">雪地大乱斗(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Megaloceros_Easy_C">迷路的鹿群(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Megaloceros_Medium_C">迷路的鹿群(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Megaloceros_Hard_C">迷路的鹿群(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Shapeshifter_Easy_C">捉迷藏(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Shapeshifter_Medium_C">捉迷藏(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Shapeshifter_Hard_C">捉迷藏(困难){任务}</sys:String>
+	<sys:String x:Key="Escort_Arctic_Procop_Easy_C">袋子在哪里,家就在哪里(简单){任务}</sys:String>
+	<sys:String x:Key="Escort_Arctic_Procop_Medium_C">袋子在哪里,家就在哪里(中等){任务}</sys:String>
+	<sys:String x:Key="Escort_Arctic_Procop_Hard_C">袋子在哪里,家就在哪里(困难){任务}</sys:String>
+	<sys:String x:Key="Fishing_OnlyNormalFish_EndImmediately_RodOnly_Ice_Easy_C">冰钓(简单){任务}</sys:String>
+	<sys:String x:Key="Fishing_OnlyNormalFish_EndImmediately_RodOnly_Ice_Medium_C">冰钓(中等){任务}</sys:String>
+	<sys:String x:Key="Fishing_OnlyNormalFish_EndImmediately_RodOnly_Ice_Hard_C">冰钓(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Mammoth_Easy_C">万象奔腾(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Mammoth_Medium_C">万象奔腾(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Mammoth_Hard_C">万象奔腾(困难){任务}</sys:String>
+	<sys:String x:Key="Retrieve_ArcticMounds_Easy_C">淘金狂热(简单){任务}</sys:String>
+	<sys:String x:Key="Retrieve_ArcticMounds_Medium_C">淘金狂热（中等){任务}</sys:String>
+	<sys:String x:Key="Retrieve_ArcticMounds_Hard_C">淘金狂热(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Yuty_Easy_C">怒羽冲冠(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Yuty_Medium_C">怒羽冲冠(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Yuty_Hard_C">怒羽冲冠(困难){任务}</sys:String>
+	<sys:String x:Key="Race_Saber_Easy_C">剑齿虎障碍滑雪(简单){任务}</sys:String>
+	<sys:String x:Key="Race_Saber_Medium_C">剑齿虎障碍滑雪(中等){任务}</sys:String>
+	<sys:String x:Key="Race_Saber_Hard_C">剑齿虎障碍滑雪(困难){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Arctic_Easy_C">搜索冰冻区(简单){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Arctic_Medium_C">搜索冰冻区(中等){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Arctic_Hard_C">搜索冰冻区(困难){任务}</sys:String>
+	<sys:String x:Key="Race_SnowRhino_Easy_C">犀牛-500(简单){任务}</sys:String>
+	<sys:String x:Key="Race_SnowRhino_Medium_C">犀牛-500(中等){任务}</sys:String>
+	<sys:String x:Key="Race_SnowRhino_Hard_C">犀牛-500(困难){任务}</sys:String>
+	
+	<sys:String x:Key="Race_Dolphin_Easy_C">水下闪电赛(简单){任务}</sys:String>
+	<sys:String x:Key="Race_Dolphin_Medium_C">水下闪电赛(中等){任务}</sys:String>
+	<sys:String x:Key="Race_Dolphin_Hard_C">水下闪电赛(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Leeds_Easy_C">追逐大白鲸(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Leeds_Medium_C">追逐大白鲸(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Leeds_Hard_C">追逐大白鲸(困难){任务}</sys:String>
+	<sys:String x:Key="Escort_Ocean_Dolphin_Easy_C">经典的回声(简单){任务}</sys:String>
+	<sys:String x:Key="Escort_Ocean_Dolphin_Medium_C">经典的回声(中等){任务}</sys:String>
+	<sys:String x:Key="Escort_Ocean_Dolphin_Hard_C">经典的回声(困难){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Ocean_Easy_C">捉迷藏(简单){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Ocean_Medium_C">捉迷藏(中等){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Ocean_Hard_C">捉迷藏(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Plesio_Easy_C">水怪寻踪(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Plesio_Medium_C">水怪寻踪(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Plesio_Hard_C">水怪寻踪(困难){任务}</sys:String>
+	<sys:String x:Key="EelBossFight_Easy_C">难缠的莫德尔(简单){任务}</sys:String>
+	<sys:String x:Key="EelBossFight_Medium_C">难缠的莫德尔(中等){任务}</sys:String>
+	<sys:String x:Key="EelBossFight_Hard_C">难缠的莫德尔(困难){任务}</sys:String>
+	<sys:String x:Key="Escort_Ocean_Turtle_Easy_C">海龟总动员(简单){任务}</sys:String>
+	<sys:String x:Key="Escort_Ocean_Turtle_Medium_C">海龟总动员(中等){任务}</sys:String>
+	<sys:String x:Key="Escort_Ocean_Turtle_Hard_C">海龟总动员(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Mosa_Easy_C">沧龙的建议(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Mosa_Medium_C">沧龙的建议(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Mosa_Hard_C">沧龙的建议(困难){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_MegTeeth_Easy_C">深海巨牙(简单){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_MegTeeth_Medium_C">深海巨牙(中等){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_MegTeeth_Hard_C">深海巨牙(困难){任务}</sys:String>
+	<sys:String x:Key="Race_Manta_Easy_C">水上摩托(简单){任务}</sys:String>
+	<sys:String x:Key="Race_Manta_Medium_C">水上摩托(中等){任务}</sys:String>
+	<sys:String x:Key="Race_Manta_Hard_C">水上摩托(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Tuso_Easy_C">谁藏了鱿鱼？(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Tuso_Medium_C">谁藏了鱿鱼？(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Tuso_Hard_C">谁藏了鱿鱼？(困难){任务}</sys:String>
+	
+	<sys:String x:Key="Hunt_Allo_Easy_C">你好,再见(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Allo_Medium_C">你好,再见(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Allo_Hard_C">你好,再见(困难){任务}</sys:String>
+	<sys:String x:Key="Race_Galli_Easy_C">热死人啦(简单){任务}</sys:String>
+	<sys:String x:Key="Race_Galli_Medium_C">热死人啦(中等){任务}</sys:String>
+	<sys:String x:Key="Race_Galli_Hard_C">热死人啦((困难){任务}</sys:String>
+	<sys:String x:Key="Race_Doed_Easy_C">得快点了(简单){任务}</sys:String>
+	<sys:String x:Key="Race_Doed_Medium_C">得快点了(中等){任务}</sys:String>
+	<sys:String x:Key="Race_Doed_Hard_C">得快点了(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_LavaLizard_Easy_C">热力猎杀(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_LavaLizard_Medium_C">热力猎杀(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_LavaLizard_Hard_C">热力猎杀(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_Rex_Easy_C">弑君者(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_Rex_Medium_C">弑君者(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_Rex_Hard_C">弑君者(困难){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Volcanic_Easy_C">岩浆大混战(简单){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Volcanic_Medium_C">岩浆大混战(中等){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Volcanic_Hard_C">岩浆大混战(困难){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_VolcanicTrike_Easy_C">惊心动魄的寻宝之旅(简单){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_VolcanicTrike_Medium_C">惊心动魄的寻宝之旅(中等){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_VolcanicTrike_Hard_C">惊心动魄的寻宝之旅(困难){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Volcanic_Easy_C">铁板烧烤(简单){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Volcanic_Medium_C">铁板烧烤(中等){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Volcanic_Hard_C">铁板烧烤(困难){任务}</sys:String>
+	<sys:String x:Key="RetrieveItem_Egg_Cherufe_Easy_C">取蛋大冒险(简单){任务}</sys:String>
+	<sys:String x:Key="RetrieveItem_Egg_Cherufe_Medium_C">取蛋大冒险(中等){任务}</sys:String>
+	<sys:String x:Key="RetrieveItem_Egg_Cherufe_Hard_C">取蛋大冒险(困难){任务}</sys:String>
+	<sys:String x:Key="Escort_Volcano_Para_Easy_C">山顶之旅(简单){任务}</sys:String>
+	<sys:String x:Key="Escort_Volcano_Para_Medium_C">山顶之旅(中等){任务}</sys:String>
+	<sys:String x:Key="Escort_Volcano_Para_Hard_C">山顶之旅(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_RockElemental_Easy_C">将你震撼(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_RockElemental_Medium_C">将你震撼(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_RockElemental_Hard_C">将你震撼(困难){任务}</sys:String>
+	
+	<sys:String x:Key="Hunt_SpaceWhale_Easy_C">船长的征服(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_SpaceWhale_Medium_C">船长的征服(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_SpaceWhale_Hard_C">船长的征服(困难){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_LunarReaper_Easy_C">无须畏惧死神国王(简单){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_LunarReaper_Medium_C">无须畏惧死神国王(中等){任务}</sys:String>
+	<sys:String x:Key="Retrieve_DinoDrop_LunarReaper_Hard_C">无须畏惧死神国王(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_BionicGiga_Easy_C">月光下的狩猎(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_BionicGiga_Medium_C">月光下的狩猎(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_BionicGiga_Hard_C">月光下的狩猎(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_NamelessXeno_Easy_C">这是一次猎虫行动(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_NamelessXeno_Medium_C">这是一次猎虫行动(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_NamelessXeno_Hard_C">这是一次猎虫行动(困难){任务}</sys:String>
+	<sys:String x:Key="Hunt_BionicRex_Easy_C">月球之王(简单){任务}</sys:String>
+	<sys:String x:Key="Hunt_BionicRex_Medium_C">月球之王(中等){任务}</sys:String>
+	<sys:String x:Key="Hunt_BionicRex_Hard_C">月球之王(困难){任务}</sys:String>
+	<sys:String x:Key="Sport_BasketBall_Lunar_Easy_C">空中大灌篮(简单){任务}</sys:String>
+	<sys:String x:Key="Sport_BasketBall_Lunar_Medium_C">空中大灌篮(中等){任务}</sys:String>
+	<sys:String x:Key="Sport_BasketBall_Lunar_Hard_C">空中大灌篮(困难){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Lunar_Easy_C">泰克恐怖(简单){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Lunar_Medium_C">泰克恐怖(中等){任务}</sys:String>
+	<sys:String x:Key="GauntletWaves_Lunar_Hard_C">泰克恐怖(困难){任务}</sys:String>
+	<sys:String x:Key="Escort_Lunar_LanternPets_Easy_C">这小小的光芒(简单){任务}</sys:String>
+	<sys:String x:Key="Escort_Lunar_LanternPets_Medium_C">这小小的光芒(中等){任务}</sys:String>
+	<sys:String x:Key="Escort_Lunar_LanternPets_Hard_C">这小小的光芒(困难){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Lunar_Easy_C">勇往直前(简单){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Lunar_Medium_C">勇往直前(中等){任务}</sys:String>
+	<sys:String x:Key="Gather_Nodes_Lunar_Hard_C">勇往直前(困难){任务}</sys:String>
+	<sys:String x:Key="Race_HoverSkiff_Easy_C">极品飞艇(简单){任务}</sys:String>
+	<sys:String x:Key="Race_HoverSkiff_Medium_C">极品飞艇(中等){任务}</sys:String>
+	<sys:String x:Key="Race_HoverSkiff_Hard_C">极品飞艇(困难){任务}</sys:String>
+	<sys:String x:Key="Lootcrate_lvl1_C">资源包1级</sys:String>
+	<sys:String x:Key="Lootcrate_lvl2_C">资源包2级</sys:String>
+	<sys:String x:Key="Lootcrate_lvl3_C">资源包3级</sys:String>
+	
+	<sys:String x:Key="SupplyCrate_Space_01_Ambergris_C">空投_白色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_02_Crystal_C">空投_绿色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_03_Sulfur_C">空投_蓝色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_04_ElementShards_C">空投_紫色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_05_Obsidian_C">空投_黄色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_06_Oil_C">空投_红色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_07_ElementDust_C">空投_青色(创世2)</sys:String>
+	<sys:String x:Key="SupplyCrate_Space_08_BlackPearls_C">空投_橙色(创世2)</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
