@@ -51,6 +51,12 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Run as Administrator</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">This application requires administration priviledges to access ALL functionality. Would you like to Run as Administrator?</sys:String>
