@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Changed some globalization key values (maps and branches).</li>
+            <li>Changed the way the data directory is selected and created on first startup of the server manager.</li>
           </ul>
         </p>
       </div>
