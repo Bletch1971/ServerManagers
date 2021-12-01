@@ -180,6 +180,9 @@
     <Compile Include="Windows\CommandLineWindow.xaml.cs">
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DataDirectoryWindow.xaml.cs">
+      <DependentUpon>DataDirectoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\GameDataWindow.xaml.cs">
       <DependentUpon>GameDataWindow.xaml</DependentUpon>
     </Compile>
@@ -302,6 +305,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\CommandLineWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DataDirectoryWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -208,6 +208,9 @@
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lib\Model\StatsMultiplierArray.cs" />
+    <Compile Include="Windows\DataDirectoryWindow.xaml.cs">
+      <DependentUpon>DataDirectoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PlayerListWindow.xaml.cs">
       <DependentUpon>PlayerListWindow.xaml</DependentUpon>
     </Compile>
@@ -388,6 +391,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Page Include="Windows\AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DataDirectoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

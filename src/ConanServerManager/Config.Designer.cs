@@ -1956,5 +1956,14 @@ namespace ServerManagerTool {
                 this["ServerFilesGridHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("csmdata")]
+        public string DefaultDataDirectoryName {
+            get {
+                return ((string)(this["DefaultDataDirectoryName"]));
+            }
+        }
     }
 }

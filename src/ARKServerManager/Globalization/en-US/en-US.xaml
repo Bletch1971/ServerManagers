@@ -165,6 +165,23 @@
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processor</sys:String>
     <!--#endregion-->
 
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Data Folder Selection</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Select the drive where the data folder should be located.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Data Folder Name:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">The name of the server manager data folder.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Local Disk</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} free of {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Refresh</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorLabel">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">The data folder name you have entered is not valid.</sys:String>
+    <!--#endregion-->
+
     <!--#region PlayerListWindow Window -->
     <sys:String x:Key="PlayerList_CloseButtonLabel">Close</sys:String>
 

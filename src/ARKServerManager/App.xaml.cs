@@ -410,69 +410,15 @@ namespace ServerManagerTool
 
             ApplicationStarted = true;
 
-            // Initial configuration setting
-            if (String.IsNullOrWhiteSpace(Config.Default.DataDir))
-            {
-                MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectoryLabel"), _globalizer.GetResourceString("Application_DataDirectoryTitle"), MessageBoxButton.OK, MessageBoxImage.Information);
+            if (string.IsNullOrWhiteSpace(Config.Default.DataDir))
+            {              
+                var dataDirectoryWindow = new DataDirectoryWindow();
+                dataDirectoryWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                var result = dataDirectoryWindow.ShowDialog();
 
-                var installationFolder = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                if (!installationFolder.EndsWith(@"\")) 
-                    installationFolder += @"\";
-
-                var desktopFolder1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                var desktopFolder2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-
-                while (String.IsNullOrWhiteSpace(Config.Default.DataDir))
+                if (!result.HasValue || !result.Value)
                 {
-                    var dialog = new CommonOpenFileDialog
-                    {
-                        EnsureFileExists = true,
-                        IsFolderPicker = true,
-                        Multiselect = false,
-                        Title = _globalizer.GetResourceString("Application_DataDirectory_DialogTitle"),
-                        InitialDirectory = Path.GetPathRoot(installationFolder)
-                    };
-
-                    if (dialog.ShowDialog() != CommonFileDialogResult.Ok)
-                    {
-                        Environment.Exit(0);
-                    }
-
-                    MessageBoxResult confirm = MessageBoxResult.Cancel;
-
-                    // check if the folder is under the installation folder
-                    var newDataFolder = dialog.FileName;
-                    if (!newDataFolder.EndsWith(@"\")) 
-                        newDataFolder += @"\";
-
-                    if (newDataFolder.StartsWith(installationFolder))
-                    {
-                        confirm = MessageBoxResult.No;
-                        MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel"), _globalizer.GetResourceString("Application_DataDirectory_DataDirectoryFolderErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    else if (newDataFolder.StartsWith(desktopFolder1) || newDataFolder.StartsWith(desktopFolder2))
-                    {
-                        confirm = MessageBoxResult.No;
-                        MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel"), _globalizer.GetResourceString("Application_DataDirectory_DataDirectoryFolderErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    else
-                    {
-                        confirm = MessageBox.Show(String.Format(_globalizer.GetResourceString("Application_DataDirectory_ConfirmLabel"), Path.Combine(newDataFolder, Config.Default.ProfilesDir), Path.Combine(newDataFolder, Config.Default.SteamCmdDir)), _globalizer.GetResourceString("Application_DataDirectory_ConfirmTitle"), MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
-                    }
-
-                    if (confirm == MessageBoxResult.Cancel)
-                    {
-                        Environment.Exit(0);
-                    }
-                    else if (confirm == MessageBoxResult.Yes)
-                    {
-                        if (newDataFolder.EndsWith(@"\")) 
-                            newDataFolder = newDataFolder.Substring(0, newDataFolder.Length -1);
-
-                        Config.Default.DataDir = newDataFolder;
-                        ReconfigureLogging();
-                        break;
-                    }
+                    Environment.Exit(0);
                 }
             }
 
