@@ -15,37 +15,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <ContentControl x:Key="DataDirectoryButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="BackupDirectoryButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="ClearButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource GlobalSettings_ClearButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="SteamAPIKeyButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource GlobalSettings_SteamAPIKeyButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="SteamAPIKeyHelpButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource GlobalSettings_SteamAPIKeyHelpButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="CacheDirectoryButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-3,0,-3"/>
-                </StackPanel>
-            </ContentControl>
         </ResourceDictionary>
     </UserControl.Resources>
 

@@ -12,8 +12,8 @@
              xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
              xmlns:enum="clr-namespace:ServerManagerTool.Enums"
              xmlns:acenum="clr-namespace:ServerManagerTool.Enums;assembly=ArkServerManager.Common"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              d:DesignWidth="900"
              x:Name="SettingsControl">
@@ -41,96 +41,6 @@
             <CollectionViewSource x:Key="DinosViewSource" Source="{Binding Settings.DinoSettings, ElementName=SettingsControl}" Filter="DinoMod_OnFilter" />
             <CollectionViewSource x:Key="EngramsViewSource" Source="{Binding Settings.EngramSettings, ElementName=SettingsControl}" Filter="EngramMod_OnFilter" />
             <CollectionViewSource x:Key="ResourcesViewSource" Source="{Binding Settings.HarvestResourceItemAmountClassMultipliers, ElementName=SettingsControl}" Filter="ResourceMod_OnFilter" />
-
-            <ContentControl x:Key="SupportZipButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Zip.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_SupportZipButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="SyncProfileButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Copy.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_SyncProfileButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="ImportButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/FolderImport.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_ImportButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="SaveButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Save.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_SaveButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="StopButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_StopButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="StartButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Start.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_StartButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="OpenRCONButtonContent">
-                <StackPanel Orientation="Horizontal"  Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Command.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_RCONButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="PlayerListButtonContent">
-                <StackPanel Orientation="Horizontal"  Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Players.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_PlayerListButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="ResetRCONButtonContent">
-                <StackPanel Orientation="Horizontal" Height="20">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_RCONButtonLabel}" VerticalAlignment="Center" Margin="0,-5,0,-5"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="UpgradeButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Download.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_UpgradeButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="InstallButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Download.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_InstallButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="CancelInstallButtonContent">
-                <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_CancelUpgradeButtonLabel}" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="LocationButtonContent"  Height="27">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource ServerSettings_SetLocationButtonLabel}" />
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="ShowCmdButtonContent">
-                <StackPanel Orientation="Horizontal" Height="20">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Command.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_ShowCommandButtonLabel}" VerticalAlignment="Center" Margin="0,-5,0,-5"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="CreateSymLinkButtonContent">
-                <StackPanel Orientation="Horizontal" Height="20">
-                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Command.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ServerSettings_CreateSymbolicLinkButtonLabel}" VerticalAlignment="Center" Margin="0,-5,0,-5"/>
-                </StackPanel>
-            </ContentControl>
 
             <ControlTemplate x:Key="ExpanderTemplateSE" TargetType="{x:Type Expander}">
                 <Border BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3" SnapsToDevicePixels="true" Padding="1" Margin="0,0,0,3" BorderBrush="Black">

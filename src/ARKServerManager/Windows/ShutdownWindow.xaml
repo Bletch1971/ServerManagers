@@ -2,8 +2,6 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
-        xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
-        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:en="clr-namespace:ServerManagerTool.Enums"
         Width="600" ResizeMode="CanMinimize" SizeToContent="Height" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="True" 
         Closing="Window_Closing" Closed="Window_Closed"
@@ -14,36 +12,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <ContentControl x:Key="ShutdownButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ShutdownWindow_ShutdownButtonLabel}" VerticalAlignment="Center" Padding="5,0"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="RestartButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Start.ico,Size=32}" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ShutdownWindow_RestartButtonLabel}" VerticalAlignment="Center" Padding="5,0"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="CancelShutdownButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Cancel.ico,Size=32}" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ShutdownWindow_CancelShutdownButtonLabel}" VerticalAlignment="Center" Padding="5,0"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="StopButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="16" Height="16" Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}" VerticalAlignment="Center"/>
-                    <Label Content="{DynamicResource ShutdownWindow_StopButtonLabel}" VerticalAlignment="Center" Padding="5,0"/>
-                </StackPanel>
-            </ContentControl>
-            <ContentControl x:Key="CancelButtonContent">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{DynamicResource ShutdownWindow_CloseButtonLabel}" VerticalAlignment="Center" Padding="5,0"/>
-                </StackPanel>
-            </ContentControl>
         </ResourceDictionary>
     </Window.Resources>
     <Grid Background="{StaticResource BeigeGradient}">
@@ -207,7 +175,7 @@
                 <Button.Style>
                     <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
                         <Setter Property="IsEnabled" Value="False" />
-                        <Setter Property="Content" Value="{StaticResource StopButtonContent}" />
+                        <Setter Property="Content" Value="{StaticResource StopButtonContent2}" />
                         <Setter Property="ToolTip" Value="{DynamicResource ShutdownWindow_StopButtonTooltip}" />
                         <Style.Triggers>
                             <MultiDataTrigger>
