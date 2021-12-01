@@ -63,13 +63,15 @@ namespace ServerManagerTool.Windows
                 var result = CreateDataDirectory();
                 if (result == MessageBoxResult.Yes)
                 {
+                    MessageBox.Show(_globalizer.GetResourceString("DataDirectory_RestartLabel"), _globalizer.GetResourceString("DataDirectory_RestartTitle"), MessageBoxButton.OK, MessageBoxImage.Information);
+                    
                     this.DialogResult = true;
                     this.Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, _globalizer.GetResourceString("DataDirectory_ErrorLabel"));
+                MessageBox.Show(ex.Message, _globalizer.GetResourceString("DataDirectory_ErrorTitle"));
             }
         }
 

@@ -181,8 +181,10 @@
     <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancel</sys:String>
     <sys:String x:Key="DataDirectory_RefreshButtonLabel">Refresh</sys:String>
 
-    <sys:String x:Key="DataDirectory_ErrorLabel">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="DataDirectory_ErrorTitle">Data Directory Selection Error</sys:String>
     <sys:String x:Key="DataDirectory_FolderErrorLabel">The data folder name you have entered is not valid.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Server Manager Restart Required</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">The data folder has been set, you must now restart the server manager to use the new settings.</sys:String>
     <!--#endregion-->
 
     <!--#region Mod Details Window -->

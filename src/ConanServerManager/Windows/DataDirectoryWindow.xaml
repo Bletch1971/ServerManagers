@@ -88,7 +88,7 @@
         <Label   Grid.Row="3" Grid.Column="0" Content="{DynamicResource DataDirectory_FolderLabel}" ToolTip="{DynamicResource DataDirectory_FolderTooltip}" />
         <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,5,0" Text="{Binding FolderName, ElementName=DataDirectory, Mode=TwoWay}" VerticalContentAlignment="Center" MaxLength="50" ToolTip="{DynamicResource DataDirectory_FolderTooltip}" />
 
-        <Button Grid.Row="4" Grid.Column="0" Content="{DynamicResource DataDirectory_RefreshButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" Click="Refresh_Click" Visibility="Visible"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="{DynamicResource DataDirectory_RefreshButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" Click="Refresh_Click" Visibility="Hidden"/>
         <Button Grid.Row="4" Grid.Column="1" Content="{DynamicResource DataDirectory_OkButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" Click="Ok_Click"/>
         <Button Grid.Row="4" Grid.Column="2" Content="{DynamicResource DataDirectory_CancelButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Left" IsCancel="True"/>
     </Grid>
