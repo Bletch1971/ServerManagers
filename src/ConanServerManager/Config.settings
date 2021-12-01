@@ -542,5 +542,8 @@
     <Setting Name="ServerFilesGridHeight" Type="System.Windows.GridLength" Scope="User">
       <Value Profile="(Default)">250</Value>
     </Setting>
+    <Setting Name="DefaultDataDirectoryName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">csmdata</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -2803,5 +2803,14 @@ namespace ServerManagerTool {
                 this["MainWindow_Top"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("asmdata")]
+        public string DefaultDataDirectoryName {
+            get {
+                return ((string)(this["DefaultDataDirectoryName"]));
+            }
+        }
     }
 }
