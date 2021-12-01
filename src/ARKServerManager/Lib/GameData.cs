@@ -259,7 +259,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetGameMaps() => gameMaps.Select(d => d.Duplicate());
 
-        public static string FriendlyMapNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyMapNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Map_" + className) ?? gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
 
         private static ComboBoxItem[] gameMapsSotF = new[]
         {
@@ -268,7 +268,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetGameMapsSotF() => gameMapsSotF.Select(d => d.Duplicate());
 
-        public static string FriendlyMapSotFNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyMapSotFNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Map_" + className) ?? gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
         #endregion
 
         #region Total Conversions
@@ -279,7 +279,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetTotalConversions() => totalConversions.Select(d => d.Duplicate());
 
-        public static string FriendlyTotalConversionNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.Mods?.FirstOrDefault(i => i.ClassName.Equals(className) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyTotalConversionNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("TotalConv_" + className) ?? gameData?.Mods?.FirstOrDefault(i => i.ClassName.Equals(className) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
 
         private static ComboBoxItem[] totalConversionsSotF = new[]
         {
@@ -288,7 +288,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetTotalConversionsSotF() => totalConversionsSotF.Select(d => d.Duplicate());
 
-        public static string FriendlyTotalConversionSotFNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.Mods?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyTotalConversionSotFNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("TotalConv_" + className) ?? gameData?.Mods?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
         #endregion
 
         #region Stats Multipliers
@@ -379,7 +379,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetBranches() => branches.Select(d => d.Duplicate());
 
-        public static string FriendlyBranchName(string branchName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(branchName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(branchName) ?? gameData?.Branches?.FirstOrDefault(i => i.BranchName.Equals(branchName) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : branchName);
+        public static string FriendlyBranchName(string branchName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(branchName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Branch_" + branchName) ?? gameData?.Branches?.FirstOrDefault(i => i.BranchName.Equals(branchName) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : branchName);
 
         private static ComboBoxItem[] branchesSotF = new[]
         {
@@ -388,7 +388,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetBranchesSotF() => branchesSotF.Select(d => d.Duplicate());
 
-        public static string FriendlyBranchSotFName(string branchName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(branchName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(branchName) ?? gameData?.Branches?.FirstOrDefault(i => i.BranchName.Equals(branchName) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : branchName);
+        public static string FriendlyBranchSotFName(string branchName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(branchName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Branch_" + branchName) ?? gameData?.Branches?.FirstOrDefault(i => i.BranchName.Equals(branchName) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : branchName);
         #endregion
 
         #region Events
@@ -399,7 +399,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetEvents() => events.Select(d => d.Duplicate());
 
-        public static string FriendlyEventName(string eventName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(eventName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(eventName) ?? gameData?.Events?.FirstOrDefault(i => i.EventName.Equals(eventName) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : eventName);
+        public static string FriendlyEventName(string eventName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(eventName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Event_" + eventName) ?? gameData?.Events?.FirstOrDefault(i => i.EventName.Equals(eventName) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : eventName);
 
         private static ComboBoxItem[] eventsSotF = new[]
         {
@@ -408,7 +408,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetEventsSotF() => eventsSotF.Select(d => d.Duplicate());
 
-        public static string FriendlyEventSotFName(string eventName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(eventName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(eventName) ?? gameData?.Events?.FirstOrDefault(i => i.EventName.Equals(eventName) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : eventName);
+        public static string FriendlyEventSotFName(string eventName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(eventName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Event_" + eventName) ?? gameData?.Events?.FirstOrDefault(i => i.EventName.Equals(eventName) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : eventName);
         #endregion
     }
 }

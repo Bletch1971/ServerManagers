@@ -12,6 +12,14 @@
     <sys:String x:Key="Generic_ErrorLabel">Erreur</sys:String>
     <!--#endregion-->
 
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_ConanSandbox">Les terres exilées</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Version Steam (Défaut)</sys:String>
+    <!--#endregion-->
+
     <!--#region GameApplication enum -->
     <sys:String x:Key="GameApplication_All">Tout</sys:String>
     <sys:String x:Key="GameApplication_Conan">Conan Exiles</sys:String>
@@ -987,14 +995,6 @@
     <sys:String x:Key="ServerSettings_OverlayMessage_SavingLabel">sauvegarde...</sys:String>
     <sys:String x:Key="ServerSettings_OverlayMessage_PermissionsLabel">Vérification des autorisations du répertoire...</sys:String>
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Vérification des tâches planifiées...</sys:String>
-    <!--#endregion-->
-
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Version Steam (Défaut)</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="ConanSandbox">Les terres exilées</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

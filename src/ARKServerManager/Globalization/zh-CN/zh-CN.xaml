@@ -13,7 +13,37 @@
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
-    <!--#region Mods -->
+    <!--#游戏地图名称 -->
+    <sys:String x:Key="Map_TheIsland">孤岛(The Island)</sys:String>
+    <sys:String x:Key="Map_TheCenter">中心岛地图(The Center)</sys:String>
+    <sys:String x:Key="Map_ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
+    <sys:String x:Key="Map_Ragnarok">仙境地图(Ragnarok)</sys:String>
+    <sys:String x:Key="Map_Aberration_P">畸变地图(Aberration)</sys:String>
+    <sys:String x:Key="Map_Extinction">灭绝地图(Extinction)</sys:String>
+    <sys:String x:Key="Map_Valguero_P">瓦尔盖罗(Valguero)</sys:String>
+    <sys:String x:Key="Map_Genesis">创世纪(Genesis)</sys:String>
+    <sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
+    <sys:String x:Key="Map_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
+    <!--#endregion-->
+
+    <!--#总转换名称 -->
+    <sys:String x:Key="TotalConv_111111111">原始服(Primitive Plus)</sys:String>
+    <!--#endregion-->
+
+    <!--#区域分支名称 -->
+    <sys:String x:Key="Branch_live">生存</sys:String>
+    <!--#endregion-->
+
+    <!--#region Event Names -->
+    <sys:String x:Key="Event_none">无节日</sys:String>
+    <sys:String x:Key="Event_vday">情人节</sys:String>
+    <sys:String x:Key="Event_Easter">复活节</sys:String>
+    <sys:String x:Key="Event_FearEvolved">恐惧进化（万圣节）</sys:String>
+    <sys:String x:Key="Event_TurkeyTrial">土耳其审判（感恩节）</sys:String>
+    <sys:String x:Key="Event_WinterWonderland">冬季仙境（圣诞节）</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Names -->
     <sys:String x:Key="Mod_All">所有</sys:String>
     <sys:String x:Key="Mod_Unknown">未知</sys:String>
     <sys:String x:Key="Mod_ArkPrime">方舟主体</sys:String>
@@ -2461,36 +2491,6 @@
 
     <!-- 设置窗口 -->
     <sys:String x:Key="Settings_Title">设置</sys:String>
-    <!--#endregion-->
-
-    <!--#游戏地图名称 -->
-    <sys:String x:Key="TheIsland">孤岛(The Island)</sys:String>
-    <sys:String x:Key="TheCenter">中心岛地图(The Center)</sys:String>
-    <sys:String x:Key="ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
-    <sys:String x:Key="Ragnarok">仙境地图(Ragnarok)</sys:String>
-    <sys:String x:Key="Aberration_P">畸变地图(Aberration)</sys:String>
-    <sys:String x:Key="Extinction">灭绝地图(Extinction)</sys:String>
-    <sys:String x:Key="Valguero_P">瓦尔盖罗(Valguero)</sys:String>
-    <sys:String x:Key="Genesis">创世纪(Genesis)</sys:String>
-	<sys:String x:Key="Gen2">创世纪 2（Genesis: Part 2）</sys:String>
-    <sys:String x:Key="CrystalIsles">水晶岛(Crystal Isles)</sys:String>
-    <!--#endregion-->
-
-    <!--#总转换名称 -->
-    <sys:String x:Key="111111111">原始服(Primitive Plus)</sys:String>
-    <!--#endregion-->
-
-    <!--#区域分支名称 -->
-    <sys:String x:Key="live">生存</sys:String>
-    <!--#endregion-->
-
-    <!--#region Event Names -->
-	<sys:String x:Key="none">无节日</sys:String>
-    <sys:String x:Key="vday">情人节</sys:String>
-    <sys:String x:Key="Easter">复活节</sys:String>
-    <sys:String x:Key="FearEvolved">恐惧进化（万圣节）</sys:String>
-    <sys:String x:Key="TurkeyTrial">土耳其审判（感恩节）</sys:String>
-    <sys:String x:Key="WinterWonderland">冬季仙境（圣诞节）</sys:String>
     <!--#endregion-->
 
     <!--恐龙/生物 -->

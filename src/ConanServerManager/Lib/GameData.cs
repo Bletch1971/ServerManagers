@@ -71,7 +71,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetGameMaps() => gameMaps.Select(m => m.Duplicate());
 
-        public static string FriendlyMapNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className))?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyMapNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Map_" + className) ?? gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className))?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
 
         public static string MapSaveNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : gameData?.GameMaps?.FirstOrDefault(i => i.ClassName.Equals(className))?.SaveFileName ?? (returnEmptyIfNotFound ? string.Empty : className);
         #endregion
@@ -84,7 +84,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetBranches() => branches.Select(d => d.Duplicate());
 
-        public static string FriendlyBranchName(string branchName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(branchName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(branchName) ?? gameData?.Branches?.FirstOrDefault(i => i.BranchName.Equals(branchName))?.Description ?? (returnEmptyIfNotFound ? string.Empty : branchName);
+        public static string FriendlyBranchName(string branchName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(branchName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Branch_" + branchName) ?? gameData?.Branches?.FirstOrDefault(i => i.BranchName.Equals(branchName))?.Description ?? (returnEmptyIfNotFound ? string.Empty : branchName);
         #endregion
 
         #region Server Regions

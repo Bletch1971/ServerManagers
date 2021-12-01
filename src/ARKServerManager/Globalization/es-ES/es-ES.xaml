@@ -13,7 +13,35 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
-    <!--#region Mods -->
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_TheIsland">The Island</sys:String>
+    <sys:String x:Key="Map_TheCenter">The Center</sys:String>
+    <sys:String x:Key="Map_ScorchedEarth_P">Scorched Earth</sys:String>
+    <sys:String x:Key="Map_Ragnarok">Ragnarok</sys:String>
+    <sys:String x:Key="Map_Aberration_P">Aberración</sys:String>
+    <sys:String x:Key="Map_Extinction">Extinción</sys:String>
+    <sys:String x:Key="Map_Valguero_P">Valguero</sys:String>
+    <sys:String x:Key="Map_Genesis">Genesis</sys:String>
+    <!--#endregion-->
+
+    <!--#region Total Conversion Names -->
+    <sys:String x:Key="TotalConv_111111111">Primitive Plus</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Pública</sys:String>
+    <!--#endregion-->
+
+    <!--#region Event Names -->
+    <sys:String x:Key="Event_none">Ninguno</sys:String>
+    <sys:String x:Key="Event_vday">Love Evolved (San Valentín)</sys:String>
+    <sys:String x:Key="Event_Easter">Eggcellent Adventure (Pascua)</sys:String>
+    <sys:String x:Key="Event_FearEvolved">Fear Evolved (Halloween)</sys:String>
+    <sys:String x:Key="Event_TurkeyTrial">Turkey Trial (Acción de Gracias)</sys:String>
+    <sys:String x:Key="Event_WinterWonderland">Winter Wonderland (Navidad)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Names -->
     <sys:String x:Key="Mod_All">Todos</sys:String>
     <sys:String x:Key="Mod_Unknown">Desconocido</sys:String>
     <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
@@ -2398,34 +2426,6 @@
 
     <!--#region Settings window -->
     <sys:String x:Key="Settings_Title">Ajustes</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="TheIsland">The Island</sys:String>
-    <sys:String x:Key="TheCenter">The Center</sys:String>
-    <sys:String x:Key="ScorchedEarth_P">Scorched Earth</sys:String>
-    <sys:String x:Key="Ragnarok">Ragnarok</sys:String>
-    <sys:String x:Key="Aberration_P">Aberración</sys:String>
-    <sys:String x:Key="Extinction">Extinción</sys:String>
-    <sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis</sys:String>
-    <!--#endregion-->
-
-    <!--#region Total Conversion Names -->
-    <sys:String x:Key="111111111">Primitive Plus</sys:String>
-    <!--#endregion-->
-
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Pública</sys:String>
-    <!--#endregion-->
-
-    <!--#region Event Names -->
-    <sys:String x:Key="none">Ninguno</sys:String>
-    <sys:String x:Key="vday">Love Evolved (San Valentín)</sys:String>
-    <sys:String x:Key="Easter">Eggcellent Adventure (Pascua)</sys:String>
-    <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
-    <sys:String x:Key="TurkeyTrial">Turkey Trial (Acción de Gracias)</sys:String>
-    <sys:String x:Key="WinterWonderland">Winter Wonderland (Navidad)</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature -->

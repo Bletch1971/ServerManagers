@@ -12,6 +12,14 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_ConanSandbox">The Exiled Lands</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
     <!--#region GameApplication enum -->
     <sys:String x:Key="GameApplication_All">Todos</sys:String>
     <sys:String x:Key="GameApplication_Conan">Conan</sys:String>
@@ -1031,14 +1039,6 @@
     <sys:String x:Key="ServerSettings_OverlayMessage_SavingLabel">Salvando ...</sys:String>
     <sys:String x:Key="ServerSettings_OverlayMessage_PermissionsLabel">Verificando permissões de diretório ...</sys:String>
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Verificando tarefas agendadas ...</sys:String>
-    <!--#endregion-->
-
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

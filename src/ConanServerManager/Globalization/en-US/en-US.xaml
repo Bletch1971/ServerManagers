@@ -13,6 +13,15 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_ConanSandbox">The Exiled Lands</sys:String>
+    <sys:String x:Key="Map_/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
     <!--#region Mod Types -->
     <sys:String x:Key="ModType_Unknown">Unknown</sys:String>
     <sys:String x:Key="ModType_NotDownloaded">Not Downloaded</sys:String>
@@ -26,10 +35,6 @@
     <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
     <!--#endregion-->
 
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
-    <!--#endregion-->
-
     <!--#region Server Regions -->
     <sys:String x:Key="ServerRegion_0">Europe</sys:String>
     <sys:String x:Key="ServerRegion_1">North America</sys:String>
@@ -37,11 +42,6 @@
     <sys:String x:Key="ServerRegion_3">Australia</sys:String>
     <sys:String x:Key="ServerRegion_4">South America</sys:String>
     <sys:String x:Key="ServerRegion_5">Japan</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
-    <sys:String x:Key="/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
     <!--#endregion-->
 
     <!--#region Process Priority -->
