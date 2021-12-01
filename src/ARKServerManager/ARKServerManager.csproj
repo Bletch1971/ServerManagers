@@ -319,6 +319,9 @@
     <Content Include="GameData\Genesis2.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="GameData\LostIsland.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="VersionFeed.xml" />
     <None Include="VersionFeedBeta.xml" />
     <Resource Include="Art\Add.ico" />
