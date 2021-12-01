@@ -81,6 +81,12 @@
     <sys:String x:Key="ProcessorAffinity_All">Todos</sys:String>
     <!--#endregion-->
 
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimizado</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximizado</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Executar como administrador</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">Este aplicativo requer privilégios de administração para acessar toda a funcionalidade. Você gostaria de executar como administrador?</sys:String>
@@ -451,6 +457,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Redefinir</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Isso redefinirá TODAS as configurações globais do usuário para o gerenciador do servidor. O gerenciador do servidor será fechado se for bem-sucedido.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Ativar e executar como Prompt de Administrador na Inicialização</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Modo de início da janela principal:</sys:String>
 	<sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimizar para a bandeja</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gerenciar configurações de firewall automaticamente</sys:String>
 	<sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Gerenciar IP público automaticamente</sys:String>
@@ -786,6 +793,8 @@
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Perfil ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">O ID exclusivo atribuído ao perfil.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">Perfil:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">O nome do perfil do servidor. Este nao e o nome publico que os usuários verao em Ark. Para isso, defina o campo 'Server Name'.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Versão Instalada:</sys:String>
