@@ -21,6 +21,7 @@
           <ul>
             <li>Changed some globalization key values (maps, branches, total conversions and events).</li>
             <li>Changed the primitive plus gamedata header from Mods to TotalConversions.</li>
+            <li>Changed the way the data directory is selected and created on first startup of the server manager.</li>
             <li>pt-BR Translation file updated.</li>
           </ul>
         </p>
