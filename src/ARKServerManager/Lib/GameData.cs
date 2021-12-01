@@ -86,14 +86,14 @@ namespace ServerManagerTool.Lib
             }
 
             // total conversion mods
-            gameData.Mods.AddRange(userGameData.Mods);
+            gameData.TotalConversions.AddRange(userGameData.TotalConversions);
 
-            if (gameData.Mods.Count > 0)
+            if (gameData.TotalConversions.Count > 0)
             {
                 var mods1 = totalConversions.ToList();
-                mods1.AddRange(gameData.Mods.Where(item => !item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
+                mods1.AddRange(gameData.TotalConversions.Where(item => !item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
                 var mods2 = totalConversionsSotF.ToList();
-                mods2.AddRange(gameData.Mods.Where(item => item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
+                mods2.AddRange(gameData.TotalConversions.Where(item => item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
 
                 totalConversions = mods1.ToArray();
                 totalConversionsSotF = mods2.ToArray();
@@ -279,7 +279,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetTotalConversions() => totalConversions.Select(d => d.Duplicate());
 
-        public static string FriendlyTotalConversionNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("TotalConv_" + className) ?? gameData?.Mods?.FirstOrDefault(i => i.ClassName.Equals(className) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyTotalConversionNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("TotalConv_" + className) ?? gameData?.TotalConversions?.FirstOrDefault(i => i.ClassName.Equals(className) && !i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
 
         private static ComboBoxItem[] totalConversionsSotF = new[]
         {
@@ -288,7 +288,7 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<ComboBoxItem> GetTotalConversionsSotF() => totalConversionsSotF.Select(d => d.Duplicate());
 
-        public static string FriendlyTotalConversionSotFNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("TotalConv_" + className) ?? gameData?.Mods?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
+        public static string FriendlyTotalConversionSotFNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("TotalConv_" + className) ?? gameData?.TotalConversions?.FirstOrDefault(i => i.ClassName.Equals(className) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
         #endregion
 
         #region Stats Multipliers
