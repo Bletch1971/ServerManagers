@@ -10,7 +10,7 @@
 AppId={{783D6AFF-E78C-44D5-B9E2-764D7C62C7FD}
 AppName=Conan Server Manager
 AppVersion={#AppVer}
-AppPublisher=Open Source Server Managers
+AppPublisher=Bletch1971
 AppPublisherURL=http://servermanagers.freeforums.net
 AppSupportURL=http://servermanagers.freeforums.net/board/39/tech-support-bug-reports
 AppUpdatesURL=http://servermanagers.freeforums.net/thread/36/downloads
@@ -45,9 +45,9 @@ Source: "*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubd
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{commonprograms}\ConanServerManager"; Filename: "{app}\ConanServerManager.exe"; Comment: "Start Conan Server Manager"
-Name: "{commondesktop}\ConanServerManager"; Filename: "{app}\ConanServerManager.exe"; Comment: "Start Conan Server Manager"; Tasks: desktopicon
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\ConanServerManager"; Filename: "{app}\ConanServerManager.exe"; Comment: "Start Conan Server Manager"; Tasks: quicklaunchicon
+Name: "{commonprograms}\Conan Server Manager"; Filename: "{app}\ConanServerManager.exe"; Comment: "Start Conan Server Manager"
+Name: "{commondesktop}\Conan Server Manager"; Filename: "{app}\ConanServerManager.exe"; Comment: "Start Conan Server Manager"; Tasks: desktopicon
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Conan Server Manager"; Filename: "{app}\ConanServerManager.exe"; Comment: "Start Conan Server Manager"; Tasks: quicklaunchicon
 
 [Run]
 Filename: "{app}\ConanServerManager.exe"; Description: "{cm:LaunchProgram,Conan Server Manager}"; Flags: nowait postinstall skipifsilent unchecked

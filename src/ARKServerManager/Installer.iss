@@ -10,7 +10,7 @@
 AppId={{8CF4109C-917A-4F81-A189-164E4DF22C7C}
 AppName=Ark Server Manager
 AppVersion={#AppVer}
-AppPublisher=Open Source Server Managers
+AppPublisher=Bletch1971
 AppPublisherURL=http://arkservermanager.freeforums.net/
 AppSupportURL=http://arkservermanager.freeforums.net/board/3/tech-support-bug-reports
 AppUpdatesURL=http://arkservermanager.freeforums.net/thread/5193/downloads
@@ -45,9 +45,9 @@ Source: "*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubd
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{commonprograms}\ArkServerManager"; Filename: "{app}\ARK Server Manager.exe"; Comment: "Start Ark Server Manager"
-Name: "{commondesktop}\ArkServerManager"; Filename: "{app}\ARK Server Manager.exe"; Comment: "Start Ark Server Manager"; Tasks: desktopicon
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\ArkServerManager"; Filename: "{app}\ARK Server Manager.exe"; Comment: "Start Ark Server Manager"; Tasks: quicklaunchicon
+Name: "{commonprograms}\Ark Server Manager"; Filename: "{app}\ARK Server Manager.exe"; Comment: "Start Ark Server Manager"
+Name: "{commondesktop}\Ark Server Manager"; Filename: "{app}\ARK Server Manager.exe"; Comment: "Start Ark Server Manager"; Tasks: desktopicon
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Ark Server Manager"; Filename: "{app}\ARK Server Manager.exe"; Comment: "Start Ark Server Manager"; Tasks: quicklaunchicon
 
 [Run]
 Filename: "{app}\ARK Server Manager.exe"; Description: "{cm:LaunchProgram,Ark Server Manager}"; Flags: nowait postinstall skipifsilent unchecked
