@@ -763,6 +763,8 @@
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Profile ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">The unique ID assigned to the profile.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">The name for the server profile.  This is not the public name users will see in Ark.  For that, set the 'Server Name' field.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Installed Version:</sys:String>
