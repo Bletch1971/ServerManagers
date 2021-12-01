@@ -73,8 +73,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">选择一个数据目录</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">确认位置</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">方舟服务器管理工具将存储配置文件和steamcmd以下目录:\r\n\r\n配置文件: {0}\r\nSteamCMD: {1}\r\n\r\n这样可以吗？</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">数据目录选择错误</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">您选择的目录在服务器管理器安装文件夹中。 不建议这样做，请选择另一个文件夹。</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">数据目录选择错误</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">您选择的目录在服务器管理器安装文件夹中。 不建议这样做，请选择另一个文件夹。</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">保存配置文件失败</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">保存配置文件失败 {0}.  {1}\n{2}</sys:String>
 

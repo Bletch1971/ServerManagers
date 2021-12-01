@@ -66,8 +66,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Sélectionnez un répertoire de données</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirmer l'emplacement</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">Ark Server Manager stockera les profils et SteamCMD dans les répertoires suivants:\r\n\r\n Profils:{0}\r\n SteamCMD:{1}\r\n\r\n Est-ce correct?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Erreur de sélection du répertoire de données</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">Le répertoire que vous avez choisi se trouve dans le dossier d'installation du gestionnaire du serveur. Ce n'est pas recommandé, veuillez choisir un autre dossier.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Erreur de sélection du répertoire de données</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">Le répertoire que vous avez choisi se trouve dans le dossier d'installation du gestionnaire du serveur. Ce n'est pas recommandé, veuillez choisir un autre dossier.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Échec de l'enregistrement du profil</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Échec de l'enregistrement du profil {0}.  {1}\n{2}</sys:String>
 

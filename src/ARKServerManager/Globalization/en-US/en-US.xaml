@@ -72,8 +72,9 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Data Directory Selection Error</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">The directory you have chosen is on the desktop. This is not recommended, please choose another folder.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
 

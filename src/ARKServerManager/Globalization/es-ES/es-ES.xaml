@@ -65,8 +65,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Seleccionar un directorio de datos</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirmar ubicación</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">El gestor de servidores almacenará los perfiles y SteamCMD en los siguientes directorios:\r\n\r\nPerfiles: {0}\r\nSteamCMD: {1}\r\n\r\n¿Es correcto?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Error de selección de directorio de datos</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">El directorio que has elegido está en la carpeta de instalación del gestor de servidores, lo que no se recomienda. Por favor elige otra carpeta.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Error de selección de directorio de datos</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">El directorio que has elegido está en la carpeta de instalación del gestor de servidores, lo que no se recomienda. Por favor elige otra carpeta.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Fallo al guardar el perfil</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Falló el guardado del perfil {0}.  {1}\n{2}</sys:String>
 

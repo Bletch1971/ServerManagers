@@ -419,6 +419,9 @@ namespace ServerManagerTool
                 if (!installationFolder.EndsWith(@"\")) 
                     installationFolder += @"\";
 
+                var desktopFolder1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                var desktopFolder2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+
                 while (String.IsNullOrWhiteSpace(Config.Default.DataDir))
                 {
                     var dialog = new CommonOpenFileDialog
@@ -427,7 +430,7 @@ namespace ServerManagerTool
                         IsFolderPicker = true,
                         Multiselect = false,
                         Title = _globalizer.GetResourceString("Application_DataDirectory_DialogTitle"),
-                        InitialDirectory = installationFolder
+                        InitialDirectory = Path.GetPathRoot(installationFolder)
                     };
 
                     if (dialog.ShowDialog() != CommonFileDialogResult.Ok)
@@ -445,7 +448,12 @@ namespace ServerManagerTool
                     if (newDataFolder.StartsWith(installationFolder))
                     {
                         confirm = MessageBoxResult.No;
-                        MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectory_WithinInstallFolderErrorLabel"), _globalizer.GetResourceString("Application_DataDirectory_WithinInstallFolderErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel"), _globalizer.GetResourceString("Application_DataDirectory_DataDirectoryFolderErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else if (newDataFolder.StartsWith(desktopFolder1) || newDataFolder.StartsWith(desktopFolder2))
+                    {
+                        confirm = MessageBoxResult.No;
+                        MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel"), _globalizer.GetResourceString("Application_DataDirectory_DataDirectoryFolderErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     else
                     {

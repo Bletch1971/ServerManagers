@@ -66,8 +66,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Selecione um diretório de dados</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirme a localização</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">O Ark Server Manager armazenará os perfis e o SteamCMD nos seguintes diretórios:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\n Está tudo bem?</sys:String>
-	<sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Erro na seleção do diretório de dados</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">O diretório que você escolheu está dentro da pasta de instalação do gerenciador de servidor. Isso não é recomendado, escolha outra pasta.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Erro na seleção do diretório de dados</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">O diretório que você escolheu está dentro da pasta de instalação do gerenciador de servidor. Isso não é recomendado, escolha outra pasta.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Não foi possível guardar o perfil</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Não foi possível guardar o perfil {0}.  {1}\n{2}</sys:String>
 	

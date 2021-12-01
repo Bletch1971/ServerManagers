@@ -65,8 +65,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Wähle ein Datenverzeichnis</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Bestätige Auswahl</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">Der Server Manager speichert Profile und SteamCMD in den folgenden Verzeichnissen:\r\n\r\nProfile: {0}\r\nSteamCMD: {1}\r\n\r\nIst das in Ordnung?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Fehler bei Auswahl des Datenverzeichnisses</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">Das von Dir ausgewählte Verzeichnis befindet sich im Installationsordner des Server-Managers. Dies wird nicht empfohlen, bitte wähle einen anderen Ordner.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Fehler bei Auswahl des Datenverzeichnisses</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">Das von Dir ausgewählte Verzeichnis befindet sich im Installationsordner des Server-Managers. Dies wird nicht empfohlen, bitte wähle einen anderen Ordner.</sys:String>
 	<sys:String x:Key="Application_Profile_SaveFailedTitle">Profil konnte nicht gespeichert werden</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Profil konnte nicht gespeichert werden {0}.  {1}\n{2}</sys:String>
 	

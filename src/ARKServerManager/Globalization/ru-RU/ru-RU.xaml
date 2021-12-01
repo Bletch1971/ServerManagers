@@ -66,8 +66,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Выберите каталог данных</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Подтвердить расположение</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">Ark Server Manager будет хранить профили и SteamCMD в следующих каталогах:\r\n\r\nПрофили: {0}\r\nSteamCMD: {1}\r\n\r\nВы подтверждаете?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Выбор каталога данных ошибок</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">Каталог, который вы выбрали, находится в папке установки менеджера сервера. Это не рекомендуется, пожалуйста, выберите другую папку.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Выбор каталога данных ошибок</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">Каталог, который вы выбрали, находится в папке установки менеджера сервера. Это не рекомендуется, пожалуйста, выберите другую папку.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Ошибка сохранения профиля</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Ошибка сохранения профиля {0}.  {1}\n{2}</sys:String>
 
