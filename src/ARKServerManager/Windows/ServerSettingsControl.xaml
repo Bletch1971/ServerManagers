@@ -44,13 +44,13 @@
 
             <ContentControl x:Key="SupportZipButtonContent">
                 <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,0,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Zip.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
+                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Zip.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
                     <Label Content="{DynamicResource ServerSettings_SupportZipButtonLabel}" VerticalAlignment="Center"/>
                 </StackPanel>
             </ContentControl>
             <ContentControl x:Key="SyncProfileButtonContent">
                 <StackPanel Orientation="Horizontal" Height="27">
-                    <Image Margin="5,0,0,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Copy.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
+                    <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Copy.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
                     <Label Content="{DynamicResource ServerSettings_SyncProfileButtonLabel}" VerticalAlignment="Center"/>
                 </StackPanel>
             </ContentControl>
@@ -290,6 +290,7 @@
             <Border DockPanel.Dock="Top" Margin="3" Padding="2" Style="{StaticResource BorderDarkStyle}">
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="36"/>
                         <RowDefinition Height="36"/>
                         <RowDefinition Height="36"/>
@@ -297,14 +298,20 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto" MinWidth="60"/>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <DockPanel Grid.Row="0" Grid.Column="0" Margin="2" DataContext="{Binding Profile}" VerticalAlignment="Center" >
+                    <StackPanel Grid.Row="0" Grid.Column="0" DataContext="{Binding Profile}" Orientation="Horizontal" >
+                        <Label Margin="2,0,0,0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ProfileIdLabel}" ToolTip="{DynamicResource ServerSettings_ProfileIdTooltip}"/>
+                        <Label VerticalAlignment="Center" Content="{Binding ProfileID}" ToolTip="{DynamicResource ServerSettings_ProfileIdTooltip}"/>
+                    </StackPanel>
+                    <Button Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="2" Click="CreateSupportZip_Click" Content="{StaticResource SupportZipButtonContent}" ToolTip="{DynamicResource ServerSettings_SupportZipButtonTooltip}"/>
+                    <Button Grid.Row="0" Grid.Column="3" Margin="2" Click="SyncProfile_Click" Content="{StaticResource SyncProfileButtonContent}" ToolTip="{DynamicResource ServerSettings_SyncProfileButtonTooltip}"/>
+
+                    <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="2" DataContext="{Binding Profile}" VerticalAlignment="Center" >
                         <Label DockPanel.Dock="Left" FontSize="15" Content="{DynamicResource ServerSettings_ProfileLabel}" ToolTip="{Binding ProfileToolTip}"/>
-                        <Button DockPanel.Dock="Right" Margin="2,0,0,0" Click="SyncProfile_Click" Content="{StaticResource SyncProfileButtonContent}" ToolTip="{DynamicResource ServerSettings_SyncProfileButtonTooltip}"/>
-                        <Button DockPanel.Dock="Right" Margin="2,0,0,0" Click="CreateSupportZip_Click" Content="{StaticResource SupportZipButtonContent}" ToolTip="{DynamicResource ServerSettings_SupportZipButtonTooltip}"/>
                         <TextBox VerticalContentAlignment="Center" SourceUpdated="ProfileName_SourceUpdated">
                             <Validation.ErrorTemplate>
                                 <ControlTemplate>
@@ -323,10 +330,10 @@
                             </TextBox.Text>
                         </TextBox>
                     </DockPanel>
-                    <Button Grid.Row="0" Grid.Column="1" Margin="2" Content="{StaticResource ImportButtonContent}" ToolTip="{DynamicResource ServerSettings_ImportButtonTooltip}" Click="Load_Click" />
-                    <Button Grid.Row="0" Grid.Column="2" Margin="2" Content="{StaticResource SaveButtonContent}" ToolTip="{DynamicResource ServerSettings_SaveButtonTooltip}" Command="{Binding SaveCommand, ElementName=SettingsControl}" CommandParameter="{Binding}" />
+                    <Button Grid.Row="1" Grid.Column="2" Margin="2" Content="{StaticResource ImportButtonContent}" ToolTip="{DynamicResource ServerSettings_ImportButtonTooltip}" Click="Load_Click" />
+                    <Button Grid.Row="1" Grid.Column="3" Margin="2" Content="{StaticResource SaveButtonContent}" ToolTip="{DynamicResource ServerSettings_SaveButtonTooltip}" Command="{Binding SaveCommand, ElementName=SettingsControl}" CommandParameter="{Binding}" />
 
-                    <Border Grid.Row="1" Grid.Column="0" Margin="2" DataContext="{Binding Profile}" Style="{StaticResource BorderFillLightStyle}">
+                    <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="2" DataContext="{Binding Profile}" Style="{StaticResource BorderFillLightStyle}">
                         <Grid VerticalAlignment="Center">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -387,7 +394,7 @@
                             </Button>
                         </Grid>
                     </Border>
-                    <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="2" DataContext="{Binding Runtime}" Click="Upgrade_Click">
+                    <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="2" DataContext="{Binding Runtime}" Click="Upgrade_Click">
                         <Button.Style>
                             <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
                                 <Style.Triggers>
@@ -430,7 +437,7 @@
                         </Button.Style>
                     </Button>
 
-                    <Border Grid.Row="2" Grid.Column="0" Margin="2" DataContext="{Binding Profile}" ToolTip="{DynamicResource ServerSettings_InstallLocationTooltip}" Style="{StaticResource BorderFillLightStyle}">
+                    <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="2" DataContext="{Binding Profile}" ToolTip="{DynamicResource ServerSettings_InstallLocationTooltip}" Style="{StaticResource BorderFillLightStyle}">
                         <Grid VerticalAlignment="Center" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -445,7 +452,7 @@
                             </Button>
                         </Grid>
                     </Border>
-                    <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="2" Content="{StaticResource LocationButtonContent}" DataContext="{Binding Runtime}" Click="SelectInstallDirectory_Click">
+                    <Button Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="2" Content="{StaticResource LocationButtonContent}" DataContext="{Binding Runtime}" Click="SelectInstallDirectory_Click">
                         <Button.Style>
                             <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
                                 <Style.Triggers>
@@ -480,7 +487,7 @@
                         </Button.Style>
                     </Button>
 
-                    <Grid Grid.Row="3" Grid.Column="0" DataContext="{Binding Runtime}" >
+                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" DataContext="{Binding Runtime}" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -530,7 +537,7 @@
                             </StackPanel>
                         </Border>
                     </Grid>
-                    <Button Grid.Row="3" Grid.Column="1" Margin="2" DataContext="{Binding Runtime}" Click="Start_Click">
+                    <Button Grid.Row="4" Grid.Column="2" Margin="2" DataContext="{Binding Runtime}" Click="Start_Click">
                         <Button.Style>
                             <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
                                 <Style.Triggers>
@@ -574,7 +581,7 @@
                             </Style>
                         </Button.Style>
                     </Button>
-                    <Button Grid.Row="3" Grid.Column="2" Margin="2" DataContext="{Binding Profile}" Content="{StaticResource OpenRCONButtonContent}" ToolTip="{DynamicResource ServerSettings_RCONButtonTooltip}" Click="OpenRCON_Click">
+                    <Button Grid.Row="4" Grid.Column="3" Margin="2" DataContext="{Binding Profile}" Content="{StaticResource OpenRCONButtonContent}" ToolTip="{DynamicResource ServerSettings_RCONButtonTooltip}" Click="OpenRCON_Click">
                         <Button.Style>
                             <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
                                 <Setter Property="Visibility" Value="Visible"/>
@@ -586,7 +593,7 @@
                             </Style>
                         </Button.Style>
                     </Button>
-                    <Button Grid.Row="3" Grid.Column="2" Margin="2" DataContext="{Binding Profile}" Content="{StaticResource PlayerListButtonContent}" ToolTip="{DynamicResource ServerSettings_PlayerListButtonTooltip}" Click="OpenPlayerList_Click">
+                    <Button Grid.Row="4" Grid.Column="3" Margin="2" DataContext="{Binding Profile}" Content="{StaticResource PlayerListButtonContent}" ToolTip="{DynamicResource ServerSettings_PlayerListButtonTooltip}" Click="OpenPlayerList_Click">
                         <Button.Style>
                             <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
                                 <Setter Property="Visibility" Value="Visible"/>

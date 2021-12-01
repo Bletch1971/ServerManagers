@@ -5,17 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-11-30T00:00:00Z</updated>
+  <updated>2021-12-01T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:0B63D89E-0C36-41DE-96E7-BFB140250C02</id>
-    <title>1.1.409 (1.1.409.2)</title>
-    <summary>1.1.409.2</summary>
+    <title>1.1.409 (1.1.409.3)</title>
+    <summary>1.1.409.3</summary>
     <link href="" />
-    <updated>2021-11-30T00:00:00Z</updated>
+    <updated>2021-12-01T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added the Profile ID to the top of the profile window.</li>
+          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>

@@ -85,6 +85,7 @@
         <Setter Property="BorderBrush" Value="{StaticResource DarkBorder}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="CornerRadius" Value="3"/>
+        <Setter Property="Background" Value="{StaticResource BeigeLabel}"/>
     </Style>
 
     <Style x:Key="BorderLightStyle" TargetType="Border">
