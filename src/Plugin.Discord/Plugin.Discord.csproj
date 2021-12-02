@@ -65,10 +65,8 @@
     <Resource Include="Art\Edit.ico" />
     <Resource Include="Art\favicon.ico" />
     <Resource Include="Globalization\en-US\en-US.xaml" />
-    <Resource Include="Globalization\pt-BR\pt-BR.xaml">
-      <Generator></Generator>
-    </Resource>
-    <Resource Include="Globalization\zh-CN\zh-CN.xaml" />
+    <EmbeddedResource Include="Globalization\pt-BR\pt-BR.xaml" />
+    <EmbeddedResource Include="Globalization\zh-CN\zh-CN.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Config.Designer.cs">

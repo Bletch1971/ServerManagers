@@ -1,4 +1,5 @@
 ﻿using ServerManagerTool.Plugin.Common.Delegates;
+using ServerManagerTool.Plugin.Common.Events;
 using ServerManagerTool.Plugin.Common.Lib;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace ServerManagerTool.Plugin.Common
     {
         private const string PLUGINFILE_FOLDER = "Plugins";
         private const string PLUGINFILE_EXTENSION = "dll";
+        public const string LANGUAGECODE_FALLBACK = "en-US";
 
         private static volatile PluginHelper _instance;
         private static readonly object _syncLock = new object();
@@ -24,9 +26,12 @@ namespace ServerManagerTool.Plugin.Common
         private FetchProfilesDelegate _fetchProfilesCallback;
         private bool _disposed;
 
+        public EventHandler<ResourceDictionaryChangedEventArgs> ResourceDictionaryChanged;
+
         private PluginHelper()
         {
             BetaEnabled = false;
+            LanguageCode = LANGUAGECODE_FALLBACK;
             Plugins = new ObservableCollection<PluginItem>();
         }
 
@@ -56,6 +61,12 @@ namespace ServerManagerTool.Plugin.Common
         }
 
         internal bool BetaEnabled
+        {
+            get;
+            set;
+        }
+
+        public string LanguageCode
         {
             get;
             set;
@@ -234,6 +245,12 @@ namespace ServerManagerTool.Plugin.Common
             {
                 LoadPlugin(pluginFile);
             }
+        }
+
+        public void OnResourceDictionaryChanged(string languageCode)
+        {
+            LanguageCode = languageCode;
+            ResourceDictionaryChanged?.Invoke(this, new ResourceDictionaryChangedEventArgs(languageCode));
         }
 
         internal void OpenConfigForm(string pluginCode, Window owner)

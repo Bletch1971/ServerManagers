@@ -1,11 +1,11 @@
 ﻿<Window x:Class="ServerManagerTool.Plugin.Discord.Windows.ConfigProfileWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:pc="clr-namespace:ServerManagerTool.Plugin.Common;assembly=ServerManager.Plugin.Common"
         Name="ConfigProfileUI" Title="{DynamicResource ConfigProfileWindow_Title}"
         Icon="/ServerManager.Plugin.Discord;component/Art/favicon.ico"
-        Width="640" Height="520" MinWidth="640" MinHeight="480" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Closing="ConfigProfileWindow_Closing">
+        Width="640" Height="520" MinWidth="640" MinHeight="480" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
+        Closing="ConfigProfileWindow_Closing">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -17,12 +17,6 @@
                 <GradientStop Color="#FFECE1D4" Offset="1"/>
                 <GradientStop Color="#FFEAE8E6"/>
             </LinearGradientBrush>
-
-            <ObjectDataProvider x:Key="AlertTypes" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
-                <ObjectDataProvider.MethodParameters>
-                    <x:Type TypeName="pc:AlertType" />
-                </ObjectDataProvider.MethodParameters>
-            </ObjectDataProvider>
 
             <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
                 <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
@@ -212,7 +206,7 @@
                                 </DataGridTemplateColumn.Header>
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <ComboBox IsEditable="False" ItemsSource="{Binding Source={StaticResource AlertTypes}}" SelectedValue="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                        <ComboBox IsEditable="False" ItemsSource="{Binding AlertTypeList, ElementName=ConfigProfileUI}" SelectedValue="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>

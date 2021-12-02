@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 
@@ -8,30 +6,6 @@ namespace ServerManagerTool.Plugin.Discord
 {
     public static class WindowUtils
     {
-        public static void RemoveDefaultResourceDictionary(Window window, string defaultDictionary)
-        {
-            if (window == null)
-                return;
-
-            var dictToRemove = window.Resources.MergedDictionaries.FirstOrDefault(d => d.Source.OriginalString.Contains(defaultDictionary));
-            if (dictToRemove != null)
-            {
-                window.Resources.MergedDictionaries.Remove(dictToRemove);
-            }
-        }
-
-        public static void RemoveDefaultResourceDictionary(UserControl control, string defaultDictionary)
-        {
-            if (control == null)
-                return;
-
-            var dictToRemove = control.Resources.MergedDictionaries.FirstOrDefault(d => d.Source.OriginalString.Contains(defaultDictionary));
-            if (dictToRemove != null)
-            {
-                control.Resources.MergedDictionaries.Remove(dictToRemove);
-            }
-        }
-
         /// <summary>
         /// Finds a parent of a given item on the visual tree.
         /// </summary>

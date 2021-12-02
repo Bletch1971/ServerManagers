@@ -305,6 +305,32 @@ namespace Plugin.Discord.UnitTests
             Assert.IsTrue(true);
         }
 
+        [TestMethod]
+        public void DiscordPlugin_OpenConfigForm_WithDifferentLanguage()
+        {
+            // Arrange
+            ServerManagerTool.Plugin.Common.PluginHelper.Instance.SetFetchProfileCallback(FetchProfiles);
+
+            var plugin = new DiscordPlugin();
+            plugin.BetaEnabled = true;
+            plugin.Initialize();
+
+            // Act
+            plugin.OpenConfigForm(null);
+
+            // Assert
+            Assert.IsTrue(true);
+
+            // Arrange
+            ServerManagerTool.Plugin.Common.PluginHelper.Instance.OnResourceDictionaryChanged("zh-CN");
+
+            // Act
+            plugin.OpenConfigForm(null);
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         private IList<Profile> FetchProfiles()
         {
             return new List<Profile>()

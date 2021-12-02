@@ -1,4 +1,5 @@
 ﻿using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Plugin.Common.Events;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -18,10 +19,19 @@ namespace ServerManagerTool.Plugin.Discord.Windows
 
         public VersionFeedWindow(DiscordPlugin plugin, string feedUri)
         {
+            InitializeComponent();
+            try
+            {
+                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
+                PluginHelper.Instance.ResourceDictionaryChanged += OnResourceDictionaryChanged;
+            }
+            catch
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
+
             this.Plugin = plugin ?? new DiscordPlugin();
             this.feedUri = feedUri;
-
-            InitializeComponent();
 
             this.DataContext = this;
         }
@@ -44,7 +54,20 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             set { SetValue(SelectedFeedEntryProperty, value); }
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void VersionFeedWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                if (!e.Cancel)
+                    PluginHelper.Instance.ResourceDictionaryChanged -= OnResourceDictionaryChanged;
+            }
+            catch
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
+        }
+
+        private void VersionFeedWindow_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -76,6 +99,18 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             }
 
             SelectedFeedEntry = FeedEntries.OrderByDescending(e => e.Updated).FirstOrDefault();
+        }
+
+        private void OnResourceDictionaryChanged(object sender, ResourceDictionaryChangedEventArgs e)
+        {
+            try
+            {
+                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
+            }
+            catch (Exception)
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
         }
     }
 }

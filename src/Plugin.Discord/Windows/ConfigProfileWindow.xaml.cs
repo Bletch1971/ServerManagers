@@ -1,4 +1,5 @@
 ﻿using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Plugin.Common.Events;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -16,24 +17,41 @@ namespace ServerManagerTool.Plugin.Discord.Windows
     /// </summary>
     public partial class ConfigProfileWindow : Window
     {
+        private static readonly DependencyProperty AlertsListProperty = DependencyProperty.Register(nameof(AlertTypeList), typeof(ComboBoxItemList), typeof(ConfigProfileWindow));
         private static readonly DependencyProperty ProfileProperty = DependencyProperty.Register(nameof(Profile), typeof(ConfigProfile), typeof(ConfigProfileWindow));
         private static readonly DependencyProperty ProfileListProperty = DependencyProperty.Register(nameof(ProfileList), typeof(ComboBoxItemList), typeof(ConfigProfileWindow));
 
         internal ConfigProfileWindow(DiscordPlugin plugin, ConfigProfile profile)
         {
+            InitializeComponent();
+            try
+            {
+                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
+                PluginHelper.Instance.ResourceDictionaryChanged += OnResourceDictionaryChanged;
+            }
+            catch
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
+
             this.Plugin = plugin ?? new DiscordPlugin();
             this.OriginalProfile = profile;
             this.Profile = profile.Clone();
             this.Profile.CommitChanges();
 
+            RefreshAlertTypeList();
             RefreshProfileList();
-
-            InitializeComponent();
 
             if (plugin.BetaEnabled)
                 Title = $"{Title} {ResourceUtils.GetResourceString(this.Resources, "Global_BetaModeLabel")}";
 
             this.DataContext = this;
+        }
+
+        private ComboBoxItemList AlertTypeList
+        {
+            get { return GetValue(AlertsListProperty) as ComboBoxItemList; }
+            set { SetValue(AlertsListProperty, value); }
         }
 
         private ConfigProfile OriginalProfile
@@ -69,6 +87,16 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             {
                 if (MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_CloseLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_CloseTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
                     e.Cancel = true;
+            }
+
+            try
+            {
+                if (!e.Cancel)
+                    PluginHelper.Instance.ResourceDictionaryChanged -= OnResourceDictionaryChanged;
+            }
+            catch
+            {
+                // do nothing
             }
         }
 
@@ -275,6 +303,37 @@ namespace ServerManagerTool.Plugin.Discord.Windows
 
             expression = comboBox.GetBindingExpression(ComboBox.TextProperty);
             expression?.UpdateSource();
+        }
+
+        private void OnResourceDictionaryChanged(object sender, ResourceDictionaryChangedEventArgs e)
+        {
+            try
+            {
+                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
+            }
+            catch (Exception)
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
+
+            RefreshAlertTypeList();
+        }
+
+        private void RefreshAlertTypeList()
+        {
+            var newList = new ComboBoxItemList();
+
+            foreach (AlertType alertType in Enum.GetValues(typeof(AlertType)))
+            {
+                newList.Add(new ComboBoxItem
+                {
+                    ValueMember = alertType.ToString(),
+                    DisplayMember = ResourceUtils.GetResourceString(this.Resources, $"AlertType_{alertType}") ?? alertType.ToString(),
+                });
+            }
+
+            newList.Sort(i => i.DisplayMember);
+            this.AlertTypeList = newList;
         }
 
         private void RefreshProfileList()
