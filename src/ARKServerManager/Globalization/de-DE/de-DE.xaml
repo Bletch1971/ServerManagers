@@ -2295,10 +2295,10 @@
     <sys:String x:Key="RCON_Menu_ViewSteamProfile">Zeige Steam Profil...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewProfile">Zeige Profil...</sys:String>
     <sys:String x:Key="RCON_Menu_ViewTribe">Zeige Stamm...</sys:String>
-    <sys:String x:Key="RCON_Menu_CopyId">Kokpiere ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_CopyId">Kopiere ID...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Kopiere Spieler ID...</sys:String>
 
-    <sys:String x:Key="RCON_AdminNameLabel">Adminname:</sys:String>
+    <sys:String x:Key="RCON_AdminNameLabel">Admin Name:</sys:String>
     <sys:String x:Key="RCON_AdminNameTooltip">Dies ist der Name, mit dem Serverchat-Nachrichten vorangestellt werden, die von der Konsole gesendet werden.</sys:String>
     <sys:String x:Key="RCON_StatusLabel">Status:</sys:String>
     <sys:String x:Key="RCON_PlayersLabel">Spieler:</sys:String>
@@ -2309,7 +2309,7 @@
 
     <sys:String x:Key="RCON_Button_OK">OK</sys:String>
     <sys:String x:Key="RCON_Button_Cancel">Abbrechen</sys:String>
-    <sys:String x:Key="RCON_Button_Change">Aendern</sys:String>
+    <sys:String x:Key="RCON_Button_Change">Ändern</sys:String>
     <sys:String x:Key="RCON_Button_Send">Senden</sys:String>
 
     <sys:String x:Key="RCON_TitleLabel">RCON: {0}</sys:String>
@@ -4035,7 +4035,7 @@
     <sys:String x:Key="PrimalItemResource_Electronics_C">Elektronik</sys:String>
     <sys:String x:Key="PrimalItemResource_Element_C">Element</sys:String>
     <sys:String x:Key="PrimalItemResource_ElementPowerNode_C">Element (Hergestellt)</sys:String>
-    <sys:String x:Key="PrimalItemResource_ElementShard_C">Element Fragment</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementShard_C">Elementarsplitter</sys:String>
     <sys:String x:Key="PrimalItemResource_Fibers_C">Faser</sys:String>
     <sys:String x:Key="PrimalItemResource_Flint_C">Feuerstein</sys:String>
     <sys:String x:Key="PrimalItemResource_Gasoline_C">Benzin</sys:String>
@@ -4086,7 +4086,7 @@
     <sys:String x:Key="PrimalItemSkin_DinoBunnyHat_C">Dino Bunny Ears Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoChickHat_C">Dino Easter Chick Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoCute_C">Cute Dino Helmet Skin</sys:String>
-    <sys:String x:Key="PrimalItemSkin_DinoEasterEggHat_C">Dino Easter Egg Hat</sys:String>
+    <sys:String x:Key="PrimalItemSkin_DinoEasterEggHat_C">Dino Easter Ei Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoPartyHat_C">Dino Party Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoSantaHat_C">Dino Santa Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DinoSpecs_C">Dino Glasses</sys:String>
@@ -4094,7 +4094,7 @@
     <sys:String x:Key="PrimalItemSkin_DodorexMask_C">DodoRex Mask Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_DodowyvernHat_C">DodoWyvern Mask Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_EasterChick_C">Easter Chick Hat</sys:String>
-    <sys:String x:Key="PrimalItemSkin_EasterEggHat_C">Easter Egg Hat</sys:String>
+    <sys:String x:Key="PrimalItemSkin_EasterEggHat_C">Easter Ei Hat</sys:String>
     <sys:String x:Key="PrimalItemSkin_ExplorerHat_C">Safari Hat Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_FlaregunFireworks_C">Fireworks Flaregun Skin</sys:String>
     <sys:String x:Key="PrimalItemSkin_Glasses_C">Nerdry Glasses</sys:String>
@@ -4142,7 +4142,7 @@
     <sys:String x:Key="PrimalItemStructure_CropPlot_Large_C">Large Crop Plot</sys:String>
     <sys:String x:Key="PrimalItemStructure_CropPlot_Medium_C">Medium Crop Plot</sys:String>
     <sys:String x:Key="PrimalItemStructure_CropPlot_Small_C">Small Crop Plot</sys:String>
-    <sys:String x:Key="PrimalItemStructure_EasterEgg_C">Bunny Egg</sys:String>
+    <sys:String x:Key="PrimalItemStructure_EasterEgg_C">Bunny Ei</sys:String>
     <sys:String x:Key="PrimalItemStructure_ElevatorPlatformLarge_C">Large Elevator Platform</sys:String>
     <sys:String x:Key="PrimalItemStructure_ElevatorPlatformSmall_C">Small Elevator Platform</sys:String>
     <sys:String x:Key="PrimalItemStructure_ElevatorPlatfromMedium_C">Medium Elevator Platform</sys:String>
@@ -4392,19 +4392,19 @@
     <sys:String x:Key="PrimalItemArmor_SpineyLizardPromoSaddle_C">ARK Thorny Dragon Saddle Skin</sys:String>
     <sys:String x:Key="PrimalItemArmor_SpineyLizardSaddle_C">Thorny Dragon Saddle</sys:String>
     <sys:String x:Key="PrimalItemConsumable_CactusSap_C">Cactus Sap</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Camelsaurus_C">Camelsaurus Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Mantis_C">Mantis Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Moth_C">Moth Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_SpineyLizard_C">Thorny Dragon Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Vulture_C">Vulture Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_Camelsaurus_C">Kibble (Camelsaurus Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_Mantis_C">Kibble (Mantis Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_Moth_C">Kibble (Moth Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_SpineyLizard_C">Kibble (Thorny Dragon Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_Vulture_C">Kibble (Vulture Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Wyvern_Fertilized_Fire_C">Wyvern Egg Fire</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Wyvern_Fertilized_Lightning_C">Wyvern Egg Lightning</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Wyvern_Fertilized_Poison_C">Wyvern Egg Poison</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Camelsaurus_C">Camelsaurus Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Mantis_C">Mantis Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Moth_C">Moth Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_SpineyLizard_C">Thorny Dragon Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Vulture_C">Vulture Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Camelsaurus_C">Kibble (Camelsaurus Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Mantis_C">Kibble (Mantis Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Moth_C">Kibble (Moth Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_SpineyLizard_C">Kibble (Thorny Dragon Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_Vulture_C">Kibble (Vulture Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Wyvern_Fertilized_Fire_C">Wyvern Ei Fire</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Wyvern_Fertilized_Lightning_C">Wyvern Ei Lightning</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Wyvern_Fertilized_Poison_C">Wyvern Ei Poison</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesY_C">Plant Species Y Seed</sys:String>
     <sys:String x:Key="PrimalItemResource_ApexDrop_FireWyvern_C">Fire Talon</sys:String>
     <sys:String x:Key="PrimalItemResource_ApexDrop_LightningWyvern_C">Lightning Talon</sys:String>
@@ -4748,13 +4748,13 @@
     <sys:String x:Key="PrimalItemArmor_RockDrakeSaddle_C">Rock Drake Saddle</sys:String>
     <sys:String x:Key="PrimalItemArmor_RockDrakeSaddle_Tek_C">Tek Rock Drake Saddle</sys:String>
     <sys:String x:Key="PrimalItemArmor_ZiplineMotor_C">Zip-Line Motor Attachment</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Basilisk_C">Basilisk Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_LanternBird_C">Featherlight Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_LanternLizard_C">Glowtail Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_RockDrake_C">Rock Drake Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_LanternBirdEgg_C">Kibble (Featherlight Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_LanternLizardEgg_C">Kibble (Glowtail Egg)</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Kibble_RockDrakeEgg_C">Kibble (Rock Drake Egg)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Basilisk_C">Basilisk Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_LanternBird_C">Featherlight Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_LanternLizard_C">Glowtail Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_RockDrake_C">Rock Drake Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_LanternBirdEgg_C">Kibble (Featherlight Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_LanternLizardEgg_C">Kibble (Glowtail Ei)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Kibble_RockDrakeEgg_C">Kibble (Rock Drake Ei)</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Mushroom_Aquatic_C">Aquatic Mushroom</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Mushroom_Ascerbic_C">Ascerbic Mushroom</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Mushroom_Auric_C">Auric Mushroom</sys:String>
@@ -4792,7 +4792,7 @@
     <!--#endregion-->
 
     <!--#region Item Class Names - Extinction -->
-    <sys:String x:Key="PrimalItem_WeaponEmptyCryopod_C">Empty Cryopod</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponEmptyCryopod_C">Leere Kryokapsel</sys:String>
     <sys:String x:Key="PrimalItem_WeaponTaxidermyTool_C">Taxidermy Tool</sys:String>
     <sys:String x:Key="PrimalItem_WeaponTekGravityGrenade_C">Tek Gravity Grenade</sys:String>
     <sys:String x:Key="PrimalItemAmmo_CannonShell_C">Cannon Shell</sys:String>
@@ -4813,8 +4813,8 @@
     <sys:String x:Key="PrimalItemArtifact_Extinction_ForestKaiju_C">Artifact of Growth</sys:String>
     <sys:String x:Key="PrimalItemArtifact_Extinction_IceKaiju_C">Artifact of the Void</sys:String>
     <sys:String x:Key="PrimalItemResource_ApexDrop_GasBag_C">Gasbags bladder</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Owl_C">Snow Owl Egg</sys:String>
-    <sys:String x:Key="PrimalItemConsumable_Egg_Spindles_C">Velonasaur Egg</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Owl_C">Snow Owl Ei</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Spindles_C">Velonasaur Ei</sys:String>
     <sys:String x:Key="PrimalItemConsumable_GachaPod_C">Gacha Crystal</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Large_EX_C">Superior Augmented Kibble</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Kibble_Base_Medium_EX_C">Regular Augmented Kibble</sys:String>
@@ -4827,16 +4827,16 @@
     <sys:String x:Key="PrimalItemResource_CondensedGas_C">Condensed Gas</sys:String>
     <sys:String x:Key="PrimalItemResource_CorruptedPolymer_C">Corrupted Nodule</sys:String>
     <sys:String x:Key="PrimalItemResource_CorruptedWood_C">Corrupted Wood</sys:String>
-    <sys:String x:Key="PrimalItemResource_ElementDust_C">Element Dust</sys:String>
-    <sys:String x:Key="PrimalItemResource_ElementDustFromElement_C">Crafted Element Dust (Element)</sys:String>
-    <sys:String x:Key="PrimalItemResource_ElementDustFromShards_C">Crafted Element Dust (Element Shard)</sys:String>
-    <sys:String x:Key="PrimalItemResource_ElementRefined_C">Unstable Element</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementDust_C">Element Staub</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementDustFromElement_C">Hergestellter Elementstaub (Element)</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementDustFromShards_C">Hergestellter Elementstaub (Elementarsplitter)</sys:String>
+    <sys:String x:Key="PrimalItemResource_ElementRefined_C">Instabiles Element</sys:String>
     <sys:String x:Key="PrimalItemResource_FracturedGem_C">Fragmented Green Gem</sys:String>
     <sys:String x:Key="PrimalItemResource_RareDrop_CorruptHeart_C">Corrupt Heart</sys:String>
     <sys:String x:Key="PrimalItemResource_RedSap_C">Red Crystalized Sap</sys:String>
     <sys:String x:Key="PrimalItemResource_ScrapMetal_C">Scrap Metal</sys:String>
     <sys:String x:Key="PrimalItemResource_ScrapMetalIngot_C">Scrap Metal Ingot</sys:String>
-    <sys:String x:Key="PrimalItemResource_ShardRefined_C">Unstable Element Shard</sys:String>
+    <sys:String x:Key="PrimalItemResource_ShardRefined_C">Instabiler Elementarsplitter</sys:String>
     <sys:String x:Key="PrimalItemResource_Silicate_C">Silicate</sys:String>
     <sys:String x:Key="PrimalItemSkin_HomoDeusBoots_C">HomoDeus Boots</sys:String>
     <sys:String x:Key="PrimalItemSkin_HomoDeusGloves_C">HomoDeus Gloves</sys:String>
@@ -4982,35 +4982,35 @@
     <sys:String x:Key="SE_DinoSpawnEntriesWyvern_C">Wyvern</sys:String>
     <sys:String x:Key="SE_DinoSpawnEntriesWyvernTrench_C">WyvernTrench</sys:String>
 
-    <sys:String x:Key="DinoSpawnEntries_Deepwater_PGM_C">Deepwater</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_InlandWater_PGM_C">InlandWater</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ocean_PGM_C">Ocean</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_TheDeepwater_PGM_C">TheDeepwater</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_TheOcean_PGM_C">TheOcean</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesBeach_PGM_C">Beach</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesGrassland_PGM_C">Grassland</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesJungle_PGM_C">Jungle</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesMountain_PGM_C">Mountain</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesSnow_PGM_C">Snow</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesSnowMountain_PGM_C">SnowMountain</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesSnowShoreline_PGM_C">SnowShoreline</sys:String>
-    <sys:String x:Key="DinoSpawnEntriesSwamp_PGM_C">Swamp</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Deepwater_PGM_C">Tiefsee</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_InlandWater_PGM_C">Inland-Wasser</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ocean_PGM_C">Ozean</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_TheDeepwater_PGM_C">DieTiefsee</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_TheOcean_PGM_C">DerOzean</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesBeach_PGM_C">Strand</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesGrassland_PGM_C">Grasland</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesJungle_PGM_C">Dschungel</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesMountain_PGM_C">Berg</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesSnow_PGM_C">Schnee</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesSnowMountain_PGM_C">SchneeBerg</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesSnowShoreline_PGM_C">SchneeKüstenlinie</sys:String>
+    <sys:String x:Key="DinoSpawnEntriesSwamp_PGM_C">Sumpf</sys:String>
     <sys:String x:Key="DinoSpawnEntriesRedwoodsPGM_C">Redwoods</sys:String>
 
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Bear_C">Bear</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Castle_C">Castle</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Center_C">Center</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_CenterWater_C">CenterWater</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Bear_C">Bär</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Castle_C">Burg</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Center_C">Mitte</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_CenterWater_C">ZentrumWasser</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Ragnarok_Golem_C">Golem</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Ragnarok_Griffin_C">Griffin</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Ragnarok_Iceworm_C">Iceworm</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Ragnarok_Jerboa_C">Jerboa</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Ragnarok_MonkeyIsland_C">MonkeyIsland</sys:String>
     <sys:String x:Key="DinoSpawnEntries_Ragnarok_Mudslide_C">Mudslide</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_PolarBear_C">PolarBear</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Scotland_C">Scotland</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_SnowForest_C">SnowForest</sys:String>
-    <sys:String x:Key="DinoSpawnEntries_Ragnarok_SnowPlains_C">SnowPlains</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_PolarBear_C">PolarBär</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_Scotland_C">Schottland</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_SnowForest_C">SchneeWald</sys:String>
+    <sys:String x:Key="DinoSpawnEntries_Ragnarok_SnowPlains_C">SchneeGebiete</sys:String>
 
     <sys:String x:Key="AB_DinoSpawnEntries_Basilisks_C">Basilisks</sys:String>
     <sys:String x:Key="AB_DinoSpawnEntries_BioLumCave_C">BioLumCave</sys:String>
@@ -5075,32 +5075,32 @@
     <!--#region Supply Crates -->
 
     <!--#region Supply Crate Class Names -->
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_C">Cave Loot Crate (Green)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_C">Cave Loot Crate (Blue)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_C">Cave Loot Crate (Yellow)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier4_C">Cave Loot Crate (Red)</sys:String>
-    <sys:String x:Key="SupplyCrate_IceCaveTier1_C">Ice Cave Loot Crate (Blue)</sys:String>
-    <sys:String x:Key="SupplyCrate_IceCaveTier2_C">Ice Cave Loot Crate (Yellow)</sys:String>
-    <sys:String x:Key="SupplyCrate_IceCaveTier3_C">Ice Cave Loot Crate (Red)</sys:String>
-    <sys:String x:Key="SupplyCrate_OceanInstant_C">Deep Sea Loot Crate</sys:String>
-    <sys:String x:Key="SupplyCrate_SwampCaveTier1_C">Swamp Cave Loot Crate (Blue)</sys:String>
-    <sys:String x:Key="SupplyCrate_SwampCaveTier2_C">Swamp Cave Loot Crate (Yellow)</sys:String>
-    <sys:String x:Key="SupplyCrate_SwampCaveTier3_C">Swamp Cave Loot Crate (Red)</sys:String>
-    <sys:String x:Key="SupplyCrate_UnderwaterCaveTier1_C">Underwater Cave Loot Crate (Blue)</sys:String>
-    <sys:String x:Key="SupplyCrate_UnderwaterCaveTier2_C">Underwater Cave Loot Crate (Yellow)</sys:String>
-    <sys:String x:Key="SupplyCrate_UnderwaterCaveTier3_C">Underwater Cave Loot Crate (Red)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level03_C">White Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level03_Double_C">White Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level15_C">Green Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level15_Double_C">Green Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level25_C">Blue Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level25_Double_C">Blue Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level35_C">Purple Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level35_Double_C">Purple Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level45_C">Yellow Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level45_Double_C">Yellow Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level60_C">Red Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level60_Double_C">Red Beacon (Double items)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_C">Höhlen Beutekiste (Grün)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_C">Höhlen Beutekiste (Blau)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_C">Höhlen Beutekiste (Gelb)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier4_C">Höhlen Beutekiste (Rot)</sys:String>
+    <sys:String x:Key="SupplyCrate_IceCaveTier1_C">Eis Höhlen Beutekiste (Blau)</sys:String>
+    <sys:String x:Key="SupplyCrate_IceCaveTier2_C">Eis Höhlen Beutekiste (Gelb)</sys:String>
+    <sys:String x:Key="SupplyCrate_IceCaveTier3_C">Eis Höhlen Beutekiste (Rot)</sys:String>
+    <sys:String x:Key="SupplyCrate_OceanInstant_C">Tiefsee Beutekiste</sys:String>
+    <sys:String x:Key="SupplyCrate_SwampCaveTier1_C">Sumpf Höhlen Beutekiste (Blau)</sys:String>
+    <sys:String x:Key="SupplyCrate_SwampCaveTier2_C">Sumpf Höhlen Beutekiste (Gelb)</sys:String>
+    <sys:String x:Key="SupplyCrate_SwampCaveTier3_C">Sumpf Höhlen Beutekiste (Rot)</sys:String>
+    <sys:String x:Key="SupplyCrate_UnderwaterCaveTier1_C">Unterwasser Höhlen Beutekiste (Blau)</sys:String>
+    <sys:String x:Key="SupplyCrate_UnderwaterCaveTier2_C">Unterwasser Höhlen Beutekiste (Gelb)</sys:String>
+    <sys:String x:Key="SupplyCrate_UnderwaterCaveTier3_C">Unterwasser Höhlen Beutekiste (Rot)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level03_C">Weißer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level03_Double_C">Weißer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level15_C">Grüner Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level15_Double_C">Grüner Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level25_C">Blauer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level25_Double_C">Blauer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level35_C">Lila Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level35_Double_C">Lila Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level45_C">Gelbe Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level45_Double_C">Gelbe Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level60_C">Rote Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level60_Double_C">Rote Beacon (Doppelte Gegenstände)</sys:String>
     <sys:String x:Key="ArtifactCrate_1_C">Artifact Container Hunter</sys:String>
     <sys:String x:Key="ArtifactCrate_2_C">Artifact Container Pack</sys:String>
     <sys:String x:Key="ArtifactCrate_3_C">Artifact Container Massive</sys:String>
@@ -5113,57 +5113,57 @@
     <sys:String x:Key="ArtifactCrate_10_C">Artifact Container Cunning</sys:String>
     <sys:String x:Key="ArtifactCrate_11_C">Artifact Container Brute</sys:String>
 
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_ScorchedEarth_C">Cave Loot Crate 1</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_ScorchedEarth_C">Cave Loot Crate 2</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_ScorchedEarth_C">Cave Loot Crate 3</sys:String>
-    <sys:String x:Key="SupplyCrate_Level03_ScorchedEarth_C">White Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level03_Double_ScorchedEarth_C">White Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level15_ScorchedEarth_C">Green Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level15_Double_ScorchedEarth_C">Green Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level30_ScorchedEarth_C">Blue Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level30_Double_ScorchedEarth_C">Blue Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level45_ScorchedEarth_C">Purple Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level45_Double_ScorchedEarth_C">Purple Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level55_ScorchedEarth_C">Yellow Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level55_Double_ScorchedEarth_C">Yellow Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level70_ScorchedEarth_C">Red Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level70_Double_ScorchedEarth_C">Red Beacon (Double items)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_ScorchedEarth_C">Höhlen Beutekiste 1</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_ScorchedEarth_C">Höhlen Beutekiste 2</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_ScorchedEarth_C">Höhlen Beutekiste 3</sys:String>
+    <sys:String x:Key="SupplyCrate_Level03_ScorchedEarth_C">Weißer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level03_Double_ScorchedEarth_C">Weißer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level15_ScorchedEarth_C">Grüner Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level15_Double_ScorchedEarth_C">Grüner Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level30_ScorchedEarth_C">Blauer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level30_Double_ScorchedEarth_C">Blauer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level45_ScorchedEarth_C">Lila Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level45_Double_ScorchedEarth_C">Lila Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level55_ScorchedEarth_C">Gelbe Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level55_Double_ScorchedEarth_C">Gelbe Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level70_ScorchedEarth_C">Rote Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level70_Double_ScorchedEarth_C">Rote Beacon (Doppelte Gegenstände)</sys:String>
     <sys:String x:Key="ArtifactCrate_SE_C">Artifact Container Destroyer</sys:String>
     <sys:String x:Key="ArtifactCrate_2_SE_C">Artifact Container Gatekeeper</sys:String>
     <sys:String x:Key="ArtifactCrate_3_SE_C">Artifact Container Crag</sys:String>
 
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level10_C">White Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level10_Double_C">White Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level25_C">Green Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level25_Double_C">Green Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level35_C">Blue Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level35_Double_C">Blue Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level50_C">Purple Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level50_Double_C">Purple Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level65_C">Yellow Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level65_Double_C">Yellow Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level80_C">Red Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level80_Double_C">Red Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level35_C">Dungeon Loot Crate (Blue)</sys:String>
-    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level50_C">Dungeon Loot Crate (Purple)</sys:String>
-    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level65_C">Dungeon Loot Crate (Yellow)</sys:String>
-    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level80_C">Dungeon Loot Crate (Red)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level35_Aberrant_Surface_C">Surface Blue Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level35_Aberrant_Surface_double_C">Surface Blue Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level50_Aberrant_Surface_C">Surface Purple Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level50_Aberrant_Surface_Double_C">Surface Purple Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level65_Aberrant_Surface_C">Surface Yellow Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level65_Aberrant_Surface_Double_C">Surface Yellow Beacon (Double items)</sys:String>
-    <sys:String x:Key="SupplyCrate_Level80_Aberrant_Surface_C">Surface Red Beacon</sys:String>
-    <sys:String x:Key="SupplyCrate_Level80_Aberrant_Surface_Double_C">Surface Red Beacon (Double items)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level10_C">Weißer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level10_Double_C">Weißer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level25_C">Grüner Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level25_Double_C">Grüner Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level35_C">Blauer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level35_Double_C">Blauer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level50_C">Lila Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level50_Double_C">Lila Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level65_C">Gelbe Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level65_Double_C">Gelbe Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level80_C">Rote Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_Aberration_Level80_Double_C">Rote Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level35_C">Dungeon Beutekiste (Blau)</sys:String>
+    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level50_C">Dungeon Beutekiste (Lila)</sys:String>
+    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level65_C">Dungeon Beutekiste (Gelb)</sys:String>
+    <sys:String x:Key="SupplyCrate_Dungeon_Aberration_Level80_C">Dungeon Beutekiste (Rot)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level35_Aberrant_Surface_C">Surface Blauer Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level35_Aberrant_Surface_double_C">Surface Blauer Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level50_Aberrant_Surface_C">Surface Lila Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level50_Aberrant_Surface_Double_C">Surface Lila Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level65_Aberrant_Surface_C">Surface Gelbe Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level65_Aberrant_Surface_Double_C">Surface Gelbe Beacon (Doppelte Gegenstände)</sys:String>
+    <sys:String x:Key="SupplyCrate_Level80_Aberrant_Surface_C">Surface Rote Beacon</sys:String>
+    <sys:String x:Key="SupplyCrate_Level80_Aberrant_Surface_Double_C">Surface Rote Beacon (Doppelte Gegenstände)</sys:String>
     <sys:String x:Key="ArtifactCrate_AB_C">Artifact Container Depths</sys:String>
     <sys:String x:Key="ArtifactCrate_2_AB_C">Artifact Container Shadows</sys:String>
     <sys:String x:Key="ArtifactCrate_3_AB_C">Artifact Container Stalker</sys:String>
     <sys:String x:Key="ArtifactCrate_4_AB_C">Artifact Container Lost</sys:String>
 
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_EX_C">Cave Loot Crate (Blue)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_EX_C">Cave Loot Crate (Yellow)</sys:String>
-    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_EX_C">Cave Loot Crate (Red)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier1_EX_C">Höhlen Beutekiste (Blau)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier2_EX_C">Höhlen Beutekiste (Gelb)</sys:String>
+    <sys:String x:Key="SupplyCrate_Cave_QualityTier3_EX_C">Höhlen Beutekiste (Rot)</sys:String>
     <sys:String x:Key="ArtifactCrate_Desert_Kaiju_EX_C">Artifact Container Chaos</sys:String>
     <sys:String x:Key="ArtifactCrate_ForestKaiju_EX_C">Artifact Container Growth</sys:String>
     <sys:String x:Key="ArtifactCrate_IceKaiju_EX_C">Artifact Container Void</sys:String>
@@ -5175,102 +5175,102 @@
     <!--#endregion-->
 
     <!--#region Boss Inventories -->
-    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Easy_C">Boss Inventory - Broodmother (Easy)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Medium_C">Boss Inventory - Broodmother (Medium)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Hard_C">Boss Inventory - Broodmother (Hard)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_C">Boss Inventory - Megapithecus (Easy)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_C">Boss Inventory - Megapithecus (Medium)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_C">Boss Inventory - Megapithecus (Hard)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_C">Boss Inventory - Dragon (Easy)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_C">Boss Inventory - Dragon (Medium)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_C">Boss Inventory - Dragon (Hard)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_EndBossMinion_C">Boss Inventory - End Boss Minion</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Easy_C">Boss Inventar - Brutmutter (Leicht)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Medium_C">Boss Inventar - Brutmutter (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Hard_C">Boss Inventar - Brutmutter (Hart)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_C">Boss Inventar - Megapithecus (Leicht)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_C">Boss Inventar - Megapithecus (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_C">Boss Inventar - Megapithecus (Hart)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_C">Boss Inventar - Dragon (Leicht)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_C">Boss Inventar - Dragon (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_C">Boss Inventar - Dragon (Hart)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_EndBossMinion_C">Boss Inventar - End Boss Minion</sys:String>
 
-    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_C">Boss Inventory - Manticore (Easy)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_C">Boss Inventory - Manticore (Medium)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_C">Boss Inventory - Manticore (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_C">Boss Inventar - Manticore (Leicht)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_C">Boss Inventar - Manticore (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_C">Boss Inventar - Manticore (Hart)</sys:String>
 
-    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_TheCenter_C">Boss Inventory - Broodmother (Easy)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_TheCenter_Medium_C">Boss Inventory - Broodmother (Medium)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_TheCenter_Hard_C">Boss Inventory - Broodmother (Hard)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_C">Boss Inventory - Megapithecus (Easy)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_Medium_C">Boss Inventory - Megapithecus (Medium)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_Hard_C">Boss Inventory - Megapithecus (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_TheCenter_C">Boss Inventar - Brutmutter (Leicht)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_TheCenter_Medium_C">Boss Inventar - Brutmutter (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossSpider_TheCenter_Hard_C">Boss Inventar - Brutmutter (Hart)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_C">Boss Inventar - Megapithecus (Leicht)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_Medium_C">Boss Inventar - Megapithecus (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_TheCenter_Hard_C">Boss Inventar - Megapithecus (Hart)</sys:String>
 
-    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_C">Boss Inventory - Titan</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Desert_C">Boss Inventory - Desert Titan</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Forest_C">Boss Inventory - Forest Titan</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss Inventory - Ice Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_C">Boss Inventar - Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Desert_C">Boss Inventar - Desert Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Forest_C">Boss Inventar - Forest Titan</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss Inventar - Ice Titan</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
 
     <!--#region Profile Validation -->
-    <sys:String x:Key="ProfileValidation_Title">Profile Validation</sys:String>
-    <sys:String x:Key="ProfileValidation_WarningLabel">The following validation problems were encountered.\r\n\r\n{validateMessage}\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+    <sys:String x:Key="ProfileValidation_Title">Profil Validierung</sys:String>
+    <sys:String x:Key="ProfileValidation_WarningLabel">Die folgenden Validierungsprobleme sind aufgetreten.\r\n\r\n{validateMessage}\r\n\r\nMöchten Sie mit dem Serverstart fortfahren, da dies zu Problemen führen könnte?</sys:String>
 
-    <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
-    <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
-    <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPort">Der Server-Port liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_QueryPort">Der Query Port liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_RconPort">Der RCON Port liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
 
-    <sys:String x:Key="ProfileValidation_MapNameBlank">The map name has not been entered.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapNameBlank">Der Name der Karte ist nicht angegeben worden.</sys:String>
 
-    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Server files have not been downloaded, server folder does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Server files have not been downloaded properly, server executable file ({ServerExe}) does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">The server files are for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Die Server Dateien wurden nicht heruntergeladen, der Server Ordner existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Die Server Dateien wurden nicht richtig heruntergeladen, die ausführbare Serverdatei ({ServerExe}) existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">Die Server Dateien sind für eine andere Anwendung.</sys:String>
 
-    <sys:String x:Key="ProfileValidation_MapModNotDownloaded">Map mod has not been downloaded, mod folder does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModFileNotDownloaded">Map mod has not been downloaded properly, mod file does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModInvalid">The map mod is not a valid map mod.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModFileInvalid">Map mod has not been downloaded properly, mod file is invalid.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModNameInvalid">Map mod file does not exist or is invalid.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModNameMismatch">The map name does not match the map mod's map name.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModDifferentApplication">The map mod is for a different application.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModOutdated">The map mod is outdated.</sys:String>
-    <sys:String x:Key="ProfileValidation_MapModSteamError">The map mod details could not be retrieved from steam.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModNotDownloaded">Die Map Mod wurde nicht heruntergeladen, der Mod Ordner existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModFileNotDownloaded">Die Map Mod wurde nicht richtig heruntergeladen, die Mod Datei existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModInvalid">Die Map Mod ist keine gültige Map Mod.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModFileInvalid">Die Map Mod wurde nicht richtig heruntergeladen, die Mod Datei ist ungültig.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModNameInvalid">Die Map Mod Datei existiert nicht oder ist ungültig.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModNameMismatch">Der Map Name stimmt nicht mit dem Map Namen der Map Mod überein.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModDifferentApplication">Die Map Mod ist für eine andere Anwendung gedacht.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModOutdated">Die Map Mod ist veraltet.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapModSteamError">Die Map Mod Details konnten nicht von Steam abgerufen werden.</sys:String>
 
-    <sys:String x:Key="ProfileValidation_TCModNotDownloaded">Total conversion mod has not been downloaded, mod folder does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModFileNotDownloaded">Total conversion mod has not been downloaded properly, mod file does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModInvalid">The total conversion mod is not a valid total conversion mod.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModFileInvalid">Total conversion mod has not been downloaded properly, mod file is invalid.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModNameInvalid">Total conversion mod file does not exist or is invalid.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModNameMismatch">The map name does not match the total conversion mod's map name.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModDifferentApplication">The total conversion mod is for a different application.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModOutdated">The total conversion mod is outdated.</sys:String>
-    <sys:String x:Key="ProfileValidation_TCModSteamError">The total conversion mod details could not be retrieved from steam.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModNotDownloaded">Total Conversion Mod wurde nicht heruntergeladen, Mod Ordner existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModFileNotDownloaded">Der Total Conversion Mod wurde nicht richtig heruntergeladen, die Mod Datei existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModInvalid">Die Total Conversion Mod ist keine gültige Total Conversion Mod.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModFileInvalid">Die Total Conversion Mod wurde nicht richtig heruntergeladen, die Mod Datei ist ungültig.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModNameInvalid">Die Datei Total Conversion Mod existiert nicht oder ist ungültig.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModNameMismatch">Der Name der Map stimmt nicht mit dem Namen der Map der Total Conversion Mod überein.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModDifferentApplication">Der Total Conversion Mod ist für eine andere Anwendung gedacht.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModOutdated">Die Total Conversion Mod ist veraltet.</sys:String>
+    <sys:String x:Key="ProfileValidation_TCModSteamError">Die Details der Total Conversion Mod konnten nicht über Steam abgerufen werden.</sys:String>
 
-    <sys:String x:Key="ProfileValidation_ModNotDownloaded">Mod {modId} has not been downloaded, mod folder does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Mod {modId} has not been downloaded properly, mod file does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Mod {modId} is for a different application.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModOutdated">Mod {modId} is outdated.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModSteamError">Mod {modId} details could not be retrieved from steam.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModNotDownloaded">Mod {modId} wurde nicht heruntergeladen, der Mod Ordner existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Mod {modId} wurde nicht richtig heruntergeladen, Mod Datei existiert nicht.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Mod {modId} ist für eine andere Anwendung bestimmt.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModOutdated">Mod {modId} ist veraltet.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModSteamError">Mod {modId} Details konnten nicht von Steam abgerufen werden.</sys:String>
     <!--#endregion-->
 
     <!--#region Profile Save -->
-    <sys:String x:Key="ProfileSave_Saving">Saving...</sys:String>
-    <sys:String x:Key="ProfileSave_CheckingPlayerDinoMaxXP">Checking Player and Dino Max XP...</sys:String>
-    <sys:String x:Key="ProfileSave_ConstructingDinoInformation">Constructing Dino Information...</sys:String>
-    <sys:String x:Key="ProfileSave_ConstructingEngramInformation">Constructing Engram Information...</sys:String>
-    <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Constructing Map Spawner Information...</sys:String>
-    <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Constructing Supply Crate Information...</sys:String>
-    <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Constructing Stack Size Information...</sys:String>
-    <sys:String x:Key="ProfileSave_SavingProfileFile">Saving Profile File...</sys:String>
-    <sys:String x:Key="ProfileSave_SavingConfigFiles">Saving Config Files...</sys:String>
-    <sys:String x:Key="ProfileSave_SavingLauncherFile">Saving Launcher File...</sys:String>
-    <sys:String x:Key="ProfileSave_CheckingWebAlarmFile">Checking Web Alarm File...</sys:String>
-    <sys:String x:Key="ProfileSave_CheckingDirectoryPermissions">Checking Directory Permissions...</sys:String>
-    <sys:String x:Key="ProfileSave_CheckingScheduledTasks">Checking Scheduled Tasks...</sys:String>
+    <sys:String x:Key="ProfileSave_Saving">Speichere...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingPlayerDinoMaxXP">Spieler und Dino Max XP prüfen...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingDinoInformation">Erstellen von Dino Informationen...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingEngramInformation">Erstellen von Engramm Informationen...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Erstellung von Map Spawner Informationen...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Informationen zum Bau von Versorgungskisten...</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Stack Size Informationen erstellen....</sys:String>
+    <sys:String x:Key="ProfileSave_SavingProfileFile">Speichere Profile Datei...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingConfigFiles">Speichere Config Dateien...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingLauncherFile">Speichere Launcher Datei...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingWebAlarmFile">Prüfe Web Alarm Datei...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingDirectoryPermissions">Prüfen von Verzeichnisberechtigungen...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingScheduledTasks">Geplante Aufgaben prüfen...</sys:String>
     <!--#endregion-->
 
     <!--#region Restore Save Files -->
-    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Backup file could not be found or does not exist.</sys:String>
-    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">The server save folder could not be found or does not exist.\r\n{saveFolder}</sys:String>
-    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">The backup does not contain the world save file.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Die Sicherungsdatei konnte nicht gefunden werden oder existiert nicht.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">Der Server-Speicherordner konnte nicht gefunden werden oder existiert nicht.\r\n{saveFolder}</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">Die Sicherung enthält nicht die Welt-Sicherungsdatei.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Update -->
     <sys:String x:Key="ServerUpdate_Title">Server Update</sys:String>
-    <sys:String x:Key="ServerUpdate_WarningLabel">There was a problem while performing the server update. This may leave your server in a incomplete state.\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+    <sys:String x:Key="ServerUpdate_WarningLabel">Bei der Durchführung des Server-Updates ist ein Problem aufgetreten. Dies kann dazu führen, dass sich Ihr Server in einem inkompletten Zustand befindet.\r\n\r\nMöchten Sie mit dem Serverstart fortfahren, da dies zu Problemen führen könnte?</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

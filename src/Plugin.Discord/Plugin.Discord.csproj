@@ -32,6 +32,7 @@
     <None Remove="Art\favicon.ico" />
     <None Remove="Globalization\en-US\en-US.xaml" />
     <None Remove="Globalization\pt-BR\pt-BR.xaml" />
+    <None Remove="Globalization\zh-CN\zh-CN.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Windows\ConfigProfileWindow.xaml" />
@@ -63,6 +64,7 @@
     <Resource Include="Globalization\pt-BR\pt-BR.xaml">
       <Generator></Generator>
     </Resource>
+    <Resource Include="Globalization\zh-CN\zh-CN.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Config.Designer.cs">

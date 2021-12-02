@@ -797,6 +797,8 @@
     <!--服务器设置 -->
 
     <!--服务器设置 - 常规 -->
+	<sys:String x:Key="ServerSettings_ProfileIdLabel">配置文件ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">分配给配置文件的唯一ID.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">配置名称:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">服务器配置文件的名称。这不是方舟游戏服务器的名称，玩家无法查看.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">安装的版本:</sys:String>
@@ -2960,6 +2962,7 @@
 	<sys:String x:Key="Xenomorph_Character_BP_Male_Tamed_Gen2_C">R-死神国王（驯服）</sys:String>
 	<sys:String x:Key="Summoner_Character_BP_C">召唤师</sys:String>
 	<sys:String x:Key="cEndTank_Character_BP_ExpG_C">防御单元</sys:String>
+	<sys:String x:Key="RemoteCamera_Character_BP_C">侦察机</sys:String>
 	<sys:String x:Key="Macrophage_Swarm_Character">巨噬细胞</sys:String>
 	<sys:String x:Key="Exosuit_Character_BP_C">Exo-Mek机甲（做物品收物品）</sys:String>
     <!--#endregion-->
