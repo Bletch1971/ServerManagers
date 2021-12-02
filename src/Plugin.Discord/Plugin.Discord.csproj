@@ -30,9 +30,13 @@
     <None Remove="Art\Drag.ico" />
     <None Remove="Art\Edit.ico" />
     <None Remove="Art\favicon.ico" />
+    <None Remove="DeployBetaToGithub.cmd" />
+    <None Remove="DeployToGithub.cmd" />
     <None Remove="Globalization\en-US\en-US.xaml" />
     <None Remove="Globalization\pt-BR\pt-BR.xaml" />
     <None Remove="Globalization\zh-CN\zh-CN.xaml" />
+    <None Remove="MakeLatestBetaVersionGithub.ps1" />
+    <None Remove="MakeLatestVersionGithub.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Windows\ConfigProfileWindow.xaml" />
