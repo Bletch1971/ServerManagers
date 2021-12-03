@@ -19,22 +19,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
         public VersionFeedWindow(DiscordPlugin plugin, string feedUri)
         {
             InitializeComponent();
-            try
-            {
-                ResourceUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
-            }
-            catch (MissingFieldException)
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
-            catch (MissingMethodException)
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
-            catch (Exception)
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
+            WindowUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
 
             this.Plugin = plugin ?? new DiscordPlugin();
             this.feedUri = feedUri;

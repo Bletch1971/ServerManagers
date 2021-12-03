@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using ServerManagerTool.Plugin.Common;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
@@ -6,6 +8,40 @@ namespace ServerManagerTool.Plugin.Discord
 {
     public static class WindowUtils
     {
+        public static void UpdateResourceDictionary(Window window, string languageCode)
+        {
+            var assembly = typeof(ResourceUtils).Assembly;
+            if (assembly != null)
+            {
+                var resourceUtilsType = assembly.GetType(typeof(ResourceUtils).FullName, false, true);
+                if (resourceUtilsType != null)
+                {
+                    var method = resourceUtilsType.GetMethod(nameof(UpdateResourceDictionary), new System.Type[] { typeof(Window), typeof(string) });
+                    if (method != null)
+                    {
+                        method.Invoke(null, new object[] { window, languageCode });
+                    }
+                }
+            }
+        }
+
+        public static void UpdateResourceDictionary(UserControl control, string languageCode)
+        {
+            var assembly = typeof(ResourceUtils).Assembly;
+            if (assembly != null)
+            {
+                var resourceUtilsType = assembly.GetType(typeof(ResourceUtils).FullName, false, true);
+                if (resourceUtilsType != null)
+                {
+                    var method = resourceUtilsType.GetMethod(nameof(UpdateResourceDictionary), new System.Type[] { typeof(UserControl), typeof(string) });
+                    if (method != null)
+                    {
+                        method.Invoke(null, new object[] { control, languageCode });
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Finds a parent of a given item on the visual tree.
         /// </summary>

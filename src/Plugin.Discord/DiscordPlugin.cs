@@ -63,16 +63,16 @@ namespace ServerManagerTool.Plugin.Discord
         {
             get
             {
-                var assembly = PluginHelper.Instance.GetType().Assembly;
+                var assembly = typeof(PluginHelper).Assembly;
                 if (assembly != null)
                 {
                     var pluginHelperType = assembly.GetType(typeof(PluginHelper).FullName, false, true);
                     if (pluginHelperType != null)
                     {
-                        var field = pluginHelperType.GetProperty("LanguageCode");
-                        if (field != null)
+                        var property = pluginHelperType.GetProperty(nameof(LanguageCode));
+                        if (property != null)
                         {
-                            return field.GetValue(PluginHelper.Instance).ToString();
+                            return property.GetValue(PluginHelper.Instance).ToString();
                         }
                     }
                 }
