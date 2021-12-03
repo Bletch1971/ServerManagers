@@ -20,10 +20,11 @@ namespace ServerManagerTool.Plugin.Discord.Windows
 
         internal ConfigWindow(DiscordPlugin plugin, DiscordPluginConfig pluginConfig)
         {
+            InitializeComponent();
+            WindowUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
+
             this.Plugin = plugin ?? new DiscordPlugin();
             this.PluginConfig = pluginConfig ?? new DiscordPluginConfig();
-
-            InitializeComponent();
 
             if (plugin.BetaEnabled)
                 Title = $"{Title} {ResourceUtils.GetResourceString(this.Resources, "Global_BetaModeLabel")}";

@@ -59,6 +59,28 @@ namespace ServerManagerTool.Plugin.Discord
 
         public bool HasConfigForm => true;
 
+        public string LanguageCode
+        {
+            get
+            {
+                var assembly = typeof(PluginHelper).Assembly;
+                if (assembly != null)
+                {
+                    var pluginHelperType = assembly.GetType(typeof(PluginHelper).FullName, false, true);
+                    if (pluginHelperType != null)
+                    {
+                        var property = pluginHelperType.GetProperty(nameof(LanguageCode));
+                        if (property != null)
+                        {
+                            return property.GetValue(PluginHelper.Instance).ToString();
+                        }
+                    }
+                }
+
+                return "en-US";
+            }
+        }
+
         private async Task CallHomeAsync()
         {
             try

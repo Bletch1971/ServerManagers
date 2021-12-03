@@ -306,6 +306,8 @@ namespace ServerManagerTool
             CurrentConfig.CultureName = AvailableLanguages.Instance.SelectedLanguage;
 
             PopulateWindowsStatesComboBox();
+
+            App.Instance.OnResourceDictionaryChanged(CurrentConfig.CultureName);
         }
 
         private void StyleSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

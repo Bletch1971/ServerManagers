@@ -15,6 +15,7 @@ namespace ServerManagerTool.Plugin.Common
     {
         private const string PLUGINFILE_FOLDER = "Plugins";
         private const string PLUGINFILE_EXTENSION = "dll";
+        public const string LANGUAGECODE_FALLBACK = "en-US";
 
         private static volatile PluginHelper _instance;
         private static readonly object _syncLock = new object();
@@ -27,6 +28,7 @@ namespace ServerManagerTool.Plugin.Common
         private PluginHelper()
         {
             BetaEnabled = false;
+            LanguageCode = LANGUAGECODE_FALLBACK;
             Plugins = new ObservableCollection<PluginItem>();
         }
 
@@ -56,6 +58,12 @@ namespace ServerManagerTool.Plugin.Common
         }
 
         internal bool BetaEnabled
+        {
+            get;
+            set;
+        }
+
+        public string LanguageCode
         {
             get;
             set;
@@ -234,6 +242,11 @@ namespace ServerManagerTool.Plugin.Common
             {
                 LoadPlugin(pluginFile);
             }
+        }
+
+        public void OnResourceDictionaryChanged(string languageCode)
+        {
+            LanguageCode = languageCode;
         }
 
         internal void OpenConfigForm(string pluginCode, Window owner)

@@ -16,24 +16,33 @@ namespace ServerManagerTool.Plugin.Discord.Windows
     /// </summary>
     public partial class ConfigProfileWindow : Window
     {
+        private static readonly DependencyProperty AlertsListProperty = DependencyProperty.Register(nameof(AlertTypeList), typeof(ComboBoxItemList), typeof(ConfigProfileWindow));
         private static readonly DependencyProperty ProfileProperty = DependencyProperty.Register(nameof(Profile), typeof(ConfigProfile), typeof(ConfigProfileWindow));
         private static readonly DependencyProperty ProfileListProperty = DependencyProperty.Register(nameof(ProfileList), typeof(ComboBoxItemList), typeof(ConfigProfileWindow));
 
         internal ConfigProfileWindow(DiscordPlugin plugin, ConfigProfile profile)
         {
+            InitializeComponent();
+            WindowUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
+
             this.Plugin = plugin ?? new DiscordPlugin();
             this.OriginalProfile = profile;
             this.Profile = profile.Clone();
             this.Profile.CommitChanges();
 
+            RefreshAlertTypeList();
             RefreshProfileList();
-
-            InitializeComponent();
 
             if (plugin.BetaEnabled)
                 Title = $"{Title} {ResourceUtils.GetResourceString(this.Resources, "Global_BetaModeLabel")}";
 
             this.DataContext = this;
+        }
+
+        private ComboBoxItemList AlertTypeList
+        {
+            get { return GetValue(AlertsListProperty) as ComboBoxItemList; }
+            set { SetValue(AlertsListProperty, value); }
         }
 
         private ConfigProfile OriginalProfile
@@ -277,6 +286,23 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             expression?.UpdateSource();
         }
 
+        private void RefreshAlertTypeList()
+        {
+            var newList = new ComboBoxItemList();
+
+            foreach (AlertType alertType in Enum.GetValues(typeof(AlertType)))
+            {
+                newList.Add(new ComboBoxItem
+                {
+                    ValueMember = alertType.ToString(),
+                    DisplayMember = ResourceUtils.GetResourceString(this.Resources, $"AlertType_{alertType}") ?? alertType.ToString(),
+                });
+            }
+
+            newList.Sort(i => i.DisplayMember);
+            this.AlertTypeList = newList;
+        }
+
         private void RefreshProfileList()
         {
             var newList = new ComboBoxItemList();
@@ -297,7 +323,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
                     });
                 }
             }
-            catch
+            catch (Exception)
             {
                 // do nothing, most likely they are using an older version of a server manager
             }
