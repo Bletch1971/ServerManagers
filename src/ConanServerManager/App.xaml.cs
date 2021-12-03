@@ -17,6 +17,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using WPFSharp.Globalizer;
@@ -304,6 +305,7 @@ namespace ServerManagerTool
             PluginHelper.Instance.BetaEnabled = this.BetaVersion;
             PluginHelper.Instance.LoadPlugins(installPath, true);
             PluginHelper.Instance.SetFetchProfileCallback(FetchProfiles);
+            OnResourceDictionaryChanged(Thread.CurrentThread.CurrentCulture.Name);
 
             // check if we are starting server manager for server shutdown
             if (e.Args.Any(a => a.StartsWith(Constants.ARG_AUTOSHUTDOWN1, StringComparison.OrdinalIgnoreCase)))
@@ -436,6 +438,11 @@ namespace ServerManagerTool
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void OnResourceDictionaryChanged(string languageCode)
+        {
+            PluginHelper.Instance.OnResourceDictionaryChanged(languageCode);
         }
 
         public static void ReconfigureLogging()

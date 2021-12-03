@@ -1,11 +1,7 @@
 ﻿using ServerManagerTool.Plugin.Common;
-using ServerManagerTool.Plugin.Common.Events;
 using System;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
-using System.Reflection;
-using System.Resources;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,9 +24,8 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             try
             {
                 ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
-                PluginHelper.Instance.ResourceDictionaryChanged += OnResourceDictionaryChanged;
             }
-            catch
+            catch (Exception)
             {
                 // do nothing, most likely they are using an older version of a server manager
             }
@@ -77,16 +72,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             {
                 if (MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_CloseLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_CloseTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
                     e.Cancel = true;
-            }
-
-            try
-            {
-                if (!e.Cancel)
-                    PluginHelper.Instance.ResourceDictionaryChanged -= OnResourceDictionaryChanged;
-            }
-            catch
-            {
-                // do nothing, most likely they are using an older version of a server manager
             }
         }
 
@@ -289,18 +274,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             var configFile = Path.Combine(PluginHelper.PluginFolder, Config.Default.ConfigFile);
             JsonUtils.SerializeToFile(PluginConfig, configFile);
             PluginConfig?.CommitChanges();
-        }
-
-        private void OnResourceDictionaryChanged(object sender, ResourceDictionaryChangedEventArgs e)
-        {
-            try
-            {
-                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
-            }
-            catch (Exception)
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
         }
 
         #region Drag and Drop

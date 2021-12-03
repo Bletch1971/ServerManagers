@@ -1,5 +1,4 @@
 ﻿using ServerManagerTool.Plugin.Common.Delegates;
-using ServerManagerTool.Plugin.Common.Events;
 using ServerManagerTool.Plugin.Common.Lib;
 using System;
 using System.Collections.Generic;
@@ -25,8 +24,6 @@ namespace ServerManagerTool.Plugin.Common
         private readonly Object _syncLockFetchProfiles = new Object();
         private FetchProfilesDelegate _fetchProfilesCallback;
         private bool _disposed;
-
-        public EventHandler<ResourceDictionaryChangedEventArgs> ResourceDictionaryChanged;
 
         private PluginHelper()
         {
@@ -250,7 +247,6 @@ namespace ServerManagerTool.Plugin.Common
         public void OnResourceDictionaryChanged(string languageCode)
         {
             LanguageCode = languageCode;
-            ResourceDictionaryChanged?.Invoke(this, new ResourceDictionaryChangedEventArgs(languageCode));
         }
 
         internal void OpenConfigForm(string pluginCode, Window owner)

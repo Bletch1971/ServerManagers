@@ -1,5 +1,4 @@
 ﻿using ServerManagerTool.Plugin.Common;
-using ServerManagerTool.Plugin.Common.Events;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -23,9 +22,8 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             try
             {
                 ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
-                PluginHelper.Instance.ResourceDictionaryChanged += OnResourceDictionaryChanged;
             }
-            catch
+            catch (Exception)
             {
                 // do nothing, most likely they are using an older version of a server manager
             }
@@ -52,19 +50,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
         {
             get { return (VersionFeedEntry)GetValue(SelectedFeedEntryProperty); }
             set { SetValue(SelectedFeedEntryProperty, value); }
-        }
-
-        private void VersionFeedWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            try
-            {
-                if (!e.Cancel)
-                    PluginHelper.Instance.ResourceDictionaryChanged -= OnResourceDictionaryChanged;
-            }
-            catch
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
         }
 
         private void VersionFeedWindow_Loaded(object sender, RoutedEventArgs e)
@@ -99,18 +84,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             }
 
             SelectedFeedEntry = FeedEntries.OrderByDescending(e => e.Updated).FirstOrDefault();
-        }
-
-        private void OnResourceDictionaryChanged(object sender, ResourceDictionaryChangedEventArgs e)
-        {
-            try
-            {
-                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
-            }
-            catch (Exception)
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ServerManagerTool.Plugin.Common;
-using ServerManagerTool.Plugin.Common.Events;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -27,9 +26,8 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             try
             {
                 ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
-                PluginHelper.Instance.ResourceDictionaryChanged += OnResourceDictionaryChanged;
             }
-            catch
+            catch (Exception)
             {
                 // do nothing, most likely they are using an older version of a server manager
             }
@@ -87,16 +85,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             {
                 if (MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_CloseLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_CloseTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
                     e.Cancel = true;
-            }
-
-            try
-            {
-                if (!e.Cancel)
-                    PluginHelper.Instance.ResourceDictionaryChanged -= OnResourceDictionaryChanged;
-            }
-            catch
-            {
-                // do nothing
             }
         }
 
@@ -305,20 +293,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             expression?.UpdateSource();
         }
 
-        private void OnResourceDictionaryChanged(object sender, ResourceDictionaryChangedEventArgs e)
-        {
-            try
-            {
-                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
-            }
-            catch (Exception)
-            {
-                // do nothing, most likely they are using an older version of a server manager
-            }
-
-            RefreshAlertTypeList();
-        }
-
         private void RefreshAlertTypeList()
         {
             var newList = new ComboBoxItemList();
@@ -356,7 +330,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
                     });
                 }
             }
-            catch
+            catch (Exception)
             {
                 // do nothing, most likely they are using an older version of a server manager
             }
