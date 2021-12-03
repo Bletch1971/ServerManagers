@@ -23,7 +23,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             InitializeComponent();
             try
             {
-                ResourceUtils.UpdateResourceDictionary(this, PluginHelper.Instance.LanguageCode);
+                ResourceUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
             }
             catch (Exception)
             {
