@@ -4,8 +4,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ServerManager Common Library")]
-[assembly: AssemblyDescription("The library is used to provide common functionality to the server managers.")]
+[assembly: AssemblyTitle("ServerManager Discord Library")]
+[assembly: AssemblyDescription("The library is used to provide discord functionality to the server managers.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bletch1971")]
 [assembly: AssemblyProduct("Server Managers")]

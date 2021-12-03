@@ -1,10 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup Label="Globals">
-    <SccProjectName>%24/Development/ServerManagers/Main/Plugin.Discord.UnitTests</SccProjectName>
-    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
-    <SccAuxPath>https://dev.azure.com/bretthewitson</SccAuxPath>
-    <SccLocalPath>.</SccLocalPath>
-  </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>

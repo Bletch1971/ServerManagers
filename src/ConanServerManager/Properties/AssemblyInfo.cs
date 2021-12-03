@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bletch1971")]
 [assembly: AssemblyProduct("Server Managers")]
-[assembly: AssemblyCopyright("Copyright © 2015-2020")]
+[assembly: AssemblyCopyright("Copyright © 2015-2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -18,16 +18,6 @@ using System.Windows;
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
-
-//In order to begin building localizable applications, set 
-//<UICulture>CultureYouAreCodingWith</UICulture> in your .csproj file
-//inside a <PropertyGroup>.  For example, if you are using US english
-//in your source files, set the <UICulture> to en-US.  Then uncomment
-//the NeutralResourceLanguage attribute below.  Update the "en-US" in
-//the line below to match the UICulture setting in the project file.
-
-//[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
-
 
 [assembly: ThemeInfo(
     //where theme specific resource dictionaries are located
@@ -52,4 +42,4 @@ using System.Windows;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0")]
 [assembly: AssemblyVersion("1.0")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

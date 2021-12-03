@@ -583,6 +583,10 @@
       <Project>{7c99d9f7-0c65-4116-927a-94eb018c88fd}</Project>
       <Name>ServerManager.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServerManager.Discord\ServerManager.Discord.csproj">
+      <Project>{c4c8000d-5e45-497c-a218-b95a1567010e}</Project>
+      <Name>ServerManager.Discord</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServerManager.Updater\ServerManager.Updater.csproj">
       <Project>{3e0c9ee6-780f-4fef-ba03-e38062a5fdb6}</Project>
       <Name>ServerManager.Updater</Name>

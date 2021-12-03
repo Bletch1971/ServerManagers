@@ -1,9 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="Globals">
-    <SccProjectName>%24/Development/ServerManagers/Main/ServerManager.Updater</SccProjectName>
-    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
-    <SccAuxPath>https://dev.azure.com/bretthewitson</SccAuxPath>
-    <SccLocalPath>.</SccLocalPath>
     <Configurations>Debug;Release;Debug - Beta</Configurations>
   </PropertyGroup>
   <PropertyGroup>
@@ -14,17 +10,11 @@
     <StartupObject>ServerManagerTool.Updater.Program</StartupObject>
     <AssemblyName>ServerManagerUpdater</AssemblyName>
     <RootNamespace>ServerManagerTool.Updater</RootNamespace>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Beta|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Management" />
