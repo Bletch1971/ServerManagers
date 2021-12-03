@@ -27,6 +27,14 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             {
                 ResourceUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
             }
+            catch (MissingFieldException)
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
+            catch (MissingMethodException)
+            {
+                // do nothing, most likely they are using an older version of a server manager
+            }
             catch (Exception)
             {
                 // do nothing, most likely they are using an older version of a server manager
