@@ -779,5 +779,14 @@
     <Setting Name="DefaultDataDirectoryName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">asmdata</Value>
     </Setting>
+    <Setting Name="DiscordBotEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DiscordBotPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">asm</Value>
+    </Setting>
+    <Setting Name="DiscordBotToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

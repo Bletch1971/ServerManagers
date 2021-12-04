@@ -1193,4 +1193,10 @@
     <sys:String x:Key="ServerUpdate_WarningLabel">There was a problem while performing the server update. This may leave your server in a incomplete state.\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
     <!--#endregion-->
 
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
+    <!--#endregion-->
+
 </Globalization:GlobalizationResourceDictionary>

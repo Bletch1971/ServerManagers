@@ -4,6 +4,9 @@ using NLog.Config;
 using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Discord;
+using ServerManagerTool.Discord.Enums;
+using ServerManagerTool.Discord.Interfaces;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
@@ -37,6 +40,7 @@ namespace ServerManagerTool
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private CancellationTokenSource _tokenSource;
         private GlobalizedApplication _globalizer;
         private bool _applicationStarted;
         private string _args;
@@ -142,6 +146,12 @@ namespace ServerManagerTool
             }
         }
 
+        public IServerManagerBot ServerManagerBot
+        {
+            get;
+            set;
+        }
+
         public static void DiscoverMachinePublicIP(bool forceOverride)
         {
             if (forceOverride || string.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
@@ -177,7 +187,11 @@ namespace ServerManagerTool
 
         private IList<Plugin.Common.Lib.Profile> FetchProfiles()
         {
-            return ServerManager.Instance.Servers.Select(s => new ServerManagerTool.Plugin.Common.Lib.Profile() { ProfileName = s?.Profile?.ProfileName ?? string.Empty, InstallationFolder = s?.Profile?.InstallDirectory ?? string.Empty }).ToList();
+            return ServerManager.Instance.Servers.Select(s => new ServerManagerTool.Plugin.Common.Lib.Profile()
+            {
+                ProfileName = s?.Profile?.ProfileName ?? string.Empty,
+                InstallationFolder = s?.Profile?.InstallDirectory ?? string.Empty
+            }).ToList();
         }
 
         public static string GetLogFolder() => IOUtils.NormalizePath(Path.Combine(Config.Default.DataPath, Config.Default.LogsRelativePath));
@@ -214,6 +228,11 @@ namespace ServerManagerTool
             }
 
             return LogManager.GetLogger(loggerName);
+        }
+
+        private static IList<string> HandleDiscordCommand(CommandType commandType, string channelId, string profileId)
+        {
+            return null;
         }
 
         private static void MigrateSettings()
@@ -395,6 +414,7 @@ namespace ServerManagerTool
 
             this.ApplicationStarted = true;
 
+            var restartRequired = false;
             if (string.IsNullOrWhiteSpace(Config.Default.DataPath))
             {
                 var dataDirectoryWindow = new DataDirectoryWindow();
@@ -405,12 +425,19 @@ namespace ServerManagerTool
                 {
                     Environment.Exit(0);
                 }
+
+                restartRequired = true;
             }
 
             Config.Default.ConfigPath = Path.Combine(Config.Default.DataPath, Config.Default.ProfilesRelativePath);
             System.IO.Directory.CreateDirectory(Config.Default.ConfigPath);
             Config.Default.Save();
             CommonConfig.Default.Save();
+
+            if (restartRequired)
+            {
+                Environment.Exit(0);
+            }
 
             if (e.Args.Any(a => a.StartsWith(Constants.ARG_SERVERMONITOR, StringComparison.OrdinalIgnoreCase)))
             {
@@ -425,6 +452,27 @@ namespace ServerManagerTool
                 GameData.Initialize();
 
                 StartupUri = new Uri("Windows/AutoUpdateWindow.xaml", UriKind.RelativeOrAbsolute);
+            }
+
+            if (Config.Default.DiscordBotEnabled)
+            {
+                _tokenSource = new CancellationTokenSource();
+
+                ServerManagerBot = ServerManagerBotFactory.GetServerManagerBot();
+
+                Task discordTask = Task.Run(async () =>
+                {
+                    await ServerManagerBot.StartAsync(Config.Default.DiscordBotPrefix, Config.Default.DiscordBotToken, Config.Default.DataPath, HandleDiscordCommand, _tokenSource.Token);
+                }, _tokenSource.Token)
+                    .ContinueWith(t => {
+                        var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
+                        if (message.StartsWith("#"))
+                        {
+                            message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
+                        }
+
+                        MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    }, TaskContinuationOptions.OnlyOnFaulted);
             }
         }
 
@@ -466,6 +514,12 @@ namespace ServerManagerTool
 
         private void ShutDownApplication()
         {
+            if (!(_tokenSource is null))
+            {
+                _tokenSource.Cancel();
+                _tokenSource.Dispose();
+            }
+
             if (this.ApplicationStarted)
             {
                 foreach (var server in ServerManager.Instance.Servers)

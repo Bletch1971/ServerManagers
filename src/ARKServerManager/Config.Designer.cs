@@ -2812,5 +2812,41 @@ namespace ServerManagerTool {
                 return ((string)(this["DefaultDataDirectoryName"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotEnabled {
+            get {
+                return ((bool)(this["DiscordBotEnabled"]));
+            }
+            set {
+                this["DiscordBotEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("asm")]
+        public string DiscordBotPrefix {
+            get {
+                return ((string)(this["DiscordBotPrefix"]));
+            }
+            set {
+                this["DiscordBotPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiscordBotToken {
+            get {
+                return ((string)(this["DiscordBotToken"]));
+            }
+            set {
+                this["DiscordBotToken"] = value;
+            }
+        }
     }
 }
