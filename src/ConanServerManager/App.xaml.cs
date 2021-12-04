@@ -146,12 +146,6 @@ namespace ServerManagerTool
             }
         }
 
-        public IServerManagerBot ServerManagerBot
-        {
-            get;
-            set;
-        }
-
         public static void DiscoverMachinePublicIP(bool forceOverride)
         {
             if (forceOverride || string.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
@@ -458,11 +452,9 @@ namespace ServerManagerTool
             {
                 _tokenSource = new CancellationTokenSource();
 
-                ServerManagerBot = ServerManagerBotFactory.GetServerManagerBot();
-
                 Task discordTask = Task.Run(async () =>
                 {
-                    await ServerManagerBot.StartAsync(Config.Default.DiscordBotToken,Config.Default.DiscordBotPrefix,  Config.Default.DataPath, HandleDiscordCommand, _tokenSource.Token);
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken,Config.Default.DiscordBotPrefix,  Config.Default.DataPath, HandleDiscordCommand, _tokenSource.Token);
                 }, _tokenSource.Token)
                     .ContinueWith(t => {
                         var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
