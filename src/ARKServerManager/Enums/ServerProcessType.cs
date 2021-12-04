@@ -10,5 +10,6 @@
         Backup,
         Shutdown,
         Restart,
+        Update,
     }
 }

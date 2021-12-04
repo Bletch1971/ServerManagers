@@ -1449,7 +1449,7 @@ namespace ServerManagerTool
 
                     await Task.Delay(1000);
 
-                    var branch = new BranchSnapshot() { BranchName = this.Server.Profile.BranchName, BranchPassword = this.Server.Profile.BranchPassword };
+                    var branch = BranchSnapshot.Create(this.Server.Profile);
                     return await this.Server.UpgradeAsync(_upgradeCancellationSource.Token, updateServer, branch, true, updateMods, (p, m, n) => { TaskUtils.RunOnUIThreadAsync(() => { window?.AddMessage(m, n); }).DoNotWait(); });
                 }
                 else

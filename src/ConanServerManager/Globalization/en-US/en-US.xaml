@@ -628,6 +628,9 @@
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
 
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot Running Commands</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">The discord bot has one or more running commands, do you want to continue shutting down the server manager?</sys:String>
+
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Start Server Confirmation</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">You are about to start the server, do you want to continue?</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Shutdown Server Confirmation</sys:String>
@@ -1217,12 +1220,17 @@
 
     <sys:String x:Key="DiscordBot_CommandNotImplemented">Command '{0}' has not been implemented.</sys:String>
     <sys:String x:Key="DiscordBot_CommandUnknown">Unknown command '{0}'.</sys:String>
-    <sys:String x:Key="DiscordBot_CommandRunning">Another command is currently running.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Another command is currently being processed.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
 
-    <sys:String x:Key="DiscordBot_CommandProfileMissing">The command requires a profile id.</sys:String>
-    <sys:String x:Key="DiscordBot_CommandProfileNotFound">Profile id {0} not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' was not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' must be '{1}' to perform the command.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
 
-    <sys:String x:Key="DiscordBot_CommandInfoFailed">Call to the server '{0}' failed.</sys:String>
+    <sys:String x:Key="DiscordBot_InfoFailed">Call to server '{0}' failed.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">A backup request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">An update request for server '{0}' has been sent.</sys:String>
 
     <sys:String x:Key="DiscordBot_CountLabel">Count:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>

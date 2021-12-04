@@ -623,7 +623,7 @@ namespace ServerManagerTool.Windows
 
                     await Task.Delay(1000);
 
-                    var branch = new ServerBranchSnapshot() { BranchName = serverProfile.BranchName, BranchPassword = serverProfile.BranchPassword };
+                    var branch = BranchSnapshot.Create(serverProfile);
                     return await server.UpgradeAsync(_upgradeCancellationSource.Token, updateServer, branch, true, updateMods, (p, m, n) => { TaskUtils.RunOnUIThreadAsync(() => { window?.AddMessage(m, n); }).DoNotWait(); });
                 }
                 else

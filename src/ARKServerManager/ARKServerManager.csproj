@@ -173,6 +173,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Delegates\ServerStatusChangeDelegate.cs" />
     <Compile Include="Enums\LevelProgression.cs" />
     <Compile Include="Enums\LogEventType.cs" />
     <Compile Include="Enums\NPCSpawnContainerType.cs" />
@@ -196,7 +197,7 @@
     <Compile Include="Lib\Serialization\IniSections.cs" />
     <Compile Include="Lib\Serialization\SystemIniFile.cs" />
     <Compile Include="Lib\Model\PlayerListParameters.cs" />
-    <Compile Include="Lib\ServerBranchSnapshot.cs" />
+    <Compile Include="Lib\BranchSnapshot.cs" />
     <Compile Include="Lib\ServerPlayers.cs" />
     <Compile Include="Lib\ServerProfileSnapshot.cs" />
     <Compile Include="Lib\ViewConverters\EnumDescriptionTypeConverter.cs" />

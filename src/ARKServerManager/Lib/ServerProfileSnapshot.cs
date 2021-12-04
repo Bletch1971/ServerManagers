@@ -7,6 +7,10 @@ namespace ServerManagerTool.Lib
 {
     public class ServerProfileSnapshot
     {
+        private ServerProfileSnapshot()
+        {
+        }
+
         public string ProfileId;
         public string ProfileName;
         public string InstallDirectory;

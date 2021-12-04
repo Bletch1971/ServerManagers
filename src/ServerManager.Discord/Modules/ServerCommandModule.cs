@@ -25,15 +25,6 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("backup", RunMode = RunMode.Async)]
         [Summary("Perform a backup of the server")]
-        [Remarks("backup")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task BackupServerAsync()
-        {
-            await BackupServerAsync(null);
-        }
-
-        [Command("backup", RunMode = RunMode.Async)]
-        [Summary("Perform a backup of the server")]
         [Remarks("backup profileId")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task BackupServerAsync(string profileId)
@@ -61,15 +52,6 @@ namespace ServerManagerTool.DiscordBot.Modules
             {
                 await ReplyAsync($"'{Context.Message}' command sent and failed with exception ({ex.Message})");
             }
-        }
-
-        [Command("shutdown", RunMode = RunMode.Async)]
-        [Summary("Shuts down the server properly")]
-        [Remarks("shutdown")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task ShutdownServerAsync()
-        {
-            await ShutdownServerAsync(null);
         }
 
         [Command("shutdown", RunMode = RunMode.Async)]
@@ -105,15 +87,6 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("start", RunMode = RunMode.Async)]
         [Summary("Starts the server")]
-        [Remarks("start")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task StartServerAsync()
-        {
-            await StartServerAsync(null);
-        }
-
-        [Command("start", RunMode = RunMode.Async)]
-        [Summary("Starts the server")]
         [Remarks("start profileId")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task StartServerAsync(string profileId)
@@ -145,15 +118,6 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("stop", RunMode = RunMode.Async)]
         [Summary("Forcibly stops the server")]
-        [Remarks("stop")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task StopServerAsync()
-        {
-            await StopServerAsync(null);
-        }
-
-        [Command("stop", RunMode = RunMode.Async)]
-        [Summary("Forcibly stops the server")]
         [Remarks("stop profileId")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task StopServerAsync(string profileId)
@@ -181,15 +145,6 @@ namespace ServerManagerTool.DiscordBot.Modules
             {
                 await ReplyAsync($"'{Context.Message}' command sent and failed with exception ({ex.Message})");
             }
-        }
-
-        [Command("update", RunMode = RunMode.Async)]
-        [Summary("Updates the server")]
-        [Remarks("update")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task UpdateServerAsync()
-        {
-            await UpdateServerAsync(null);
         }
 
         [Command("update", RunMode = RunMode.Async)]

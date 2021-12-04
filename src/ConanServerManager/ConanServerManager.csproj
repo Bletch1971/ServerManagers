@@ -160,6 +160,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Delegates\ServerStatusChangeDelegate.cs" />
     <Compile Include="Lib\Model\PlayerListParameters.cs" />
     <Compile Include="Lib\Model\RconParameters.cs" />
     <Compile Include="Lib\Serialization\IniFileEntryAttribute.cs" />

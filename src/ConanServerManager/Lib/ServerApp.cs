@@ -3,6 +3,7 @@ using ServerManagerTool.Common;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Delegates;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;
@@ -108,6 +109,7 @@ namespace ServerManagerTool.Lib
         public int ShutdownInterval = Config.Default.ServerShutdown_GracePeriod;
         public ProgressDelegate ProgressCallback = null;
         public ProcessWindowStyle SteamCMDProcessWindowStyle = ProcessWindowStyle.Minimized;
+        public ServerStatusChangeDelegate ServerStatusChangeCallback = null;
 
         public ServerApp(bool resetStartTime = false)
         {
@@ -261,7 +263,15 @@ namespace ServerManagerTool.Lib
 
             if (updateServer)
             {
-                UpgradeLocal(true, steamCmdRemoveQuit, cancellationToken, true);
+                try
+                {
+                    ServerStatusChangeCallback?.Invoke(ServerStatus.Updating);
+                    UpgradeLocal(true, steamCmdRemoveQuit, cancellationToken, true);
+                }
+                finally
+                {
+                    ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
+                }
             }
 
             if (ExitCode != EXITCODE_NORMALEXIT)
@@ -3060,7 +3070,7 @@ namespace ServerManagerTool.Lib
 
                     if (exitCode == EXITCODE_NORMALEXIT)
                     {
-                        var branches = _profiles.Keys.Where(p => p.EnableAutoUpdate).Select(p => new BranchSnapshot() { BranchName = p.BranchName, BranchPassword = p.BranchPassword }).Distinct(new BranchSnapshotComparer()).ToArray();
+                        var branches = _profiles.Keys.Where(p => p.EnableAutoUpdate).Select(p => BranchSnapshot.Create(p)).Distinct(new BranchSnapshotComparer()).ToArray();
                         var exitCodes = new ConcurrentDictionary<BranchSnapshot, int>();
 
                         // update the server cache for each branch

@@ -32,7 +32,7 @@ namespace ServerManagerTool.Lib
         public event EventHandler StatusUpdate;
 
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
+        private static readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private readonly List<PropertyChangeNotifier> profileNotifiers = new List<PropertyChangeNotifier>();
         private Process serverProcess;
         private IAsyncDisposable updateRegistration;
@@ -442,7 +442,7 @@ namespace ServerManagerTool.Lib
                 }
             }
 
-            UpdateServerStatus(ServerStatus.Initializing, this.Availability, false);
+            UpdateServerStatus(ServerStatus.Initializing, false);
 
             try
             {
@@ -516,7 +516,7 @@ namespace ServerManagerTool.Lib
 
                 bool isNewInstallation = this.Status == ServerStatus.Uninstalled;
 
-                UpdateServerStatus(ServerStatus.Updating, Availability, false);
+                UpdateServerStatus(ServerStatus.Updating, false);
 
                 // Run the SteamCMD to install the server
                 var steamCmdFile = SteamCmdUpdater.GetSteamCmdFile(Config.Default.DataPath);
@@ -938,7 +938,7 @@ namespace ServerManagerTool.Lib
             finally
             {
                 this.lastModStatusQuery = DateTime.MinValue;
-                UpdateServerStatus(ServerStatus.Stopped, Availability, false);
+                UpdateServerStatus(ServerStatus.Stopped, false);
             }
         }
 
@@ -961,6 +961,11 @@ namespace ServerManagerTool.Lib
             this.lastModStatusQuery = DateTime.MinValue;
         }
 
+        public void UpdateServerStatus(ServerStatus serverStatus, bool sendAlert)
+        {
+            UpdateServerStatus(serverStatus, Availability, sendAlert);
+        }
+
         public void UpdateServerStatus(ServerStatus serverStatus, AvailabilityStatus availabilityStatus, bool sendAlert)
         {
             this.Status = serverStatus;
@@ -974,32 +979,29 @@ namespace ServerManagerTool.Lib
 
         public void UpdateServerStatusString()
         {
-            switch (Status)
+            StatusString = GetServerStatusString(Status);
+        }
+
+        public static string GetServerStatusString(ServerStatus status)
+        {
+            switch (status)
             {
                 case ServerStatus.Initializing:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusInitializingLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusInitializingLabel");
                 case ServerStatus.Running:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusRunningLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusRunningLabel");
                 case ServerStatus.Stopped:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppedLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppedLabel");
                 case ServerStatus.Stopping:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppingLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppingLabel");
                 case ServerStatus.Uninstalled:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUninstalledLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUninstalledLabel");
                 case ServerStatus.Unknown:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
                 case ServerStatus.Updating:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUpdatingLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUpdatingLabel");
                 default:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
             }
         }
 
