@@ -1,6 +1,7 @@
 ﻿using Discord.Addons.Interactive;
 using Discord.Commands;
 using Microsoft.Extensions.Configuration;
+using ServerManagerTool.Discord.Delegates;
 using ServerManagerTool.Discord.Enums;
 using System;
 using System.Threading.Tasks;
@@ -11,11 +12,13 @@ namespace ServerManagerTool.Discord.Modules
     public sealed class ServerCommandModule : InteractiveBase
     {
         private readonly CommandService _service;
+        private readonly HandleCommandDelegate _handleCommandCallback;
         private readonly IConfigurationRoot _config;
 
-        public ServerCommandModule(CommandService service, IConfigurationRoot config)
+        public ServerCommandModule(CommandService service, HandleCommandDelegate handleCommandCallback, IConfigurationRoot config)
         {
             _service = service;
+            _handleCommandCallback = handleCommandCallback;
             _config = config;
         }
 
@@ -34,9 +37,10 @@ namespace ServerManagerTool.Discord.Modules
         {
             try
             {
+                var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = DiscordBot.HandleCommandCallback?.Invoke(CommandType.BackupServer, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.BackupServer, serverId, channelId, profileId);
                 if (response is null || response.Count == 0)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -71,9 +75,10 @@ namespace ServerManagerTool.Discord.Modules
         {
             try
             {
+                var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = DiscordBot.HandleCommandCallback?.Invoke(CommandType.ShutdownServer, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.ShutdownServer, serverId, channelId, profileId);
                 if (response is null || response.Count == 0)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -108,9 +113,10 @@ namespace ServerManagerTool.Discord.Modules
         {
             try
             {
+                var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = DiscordBot.HandleCommandCallback?.Invoke(CommandType.StartServer, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.StartServer, serverId, channelId, profileId);
                 if (response is null || response.Count == 0)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -145,9 +151,10 @@ namespace ServerManagerTool.Discord.Modules
         {
             try
             {
+                var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = DiscordBot.HandleCommandCallback?.Invoke(CommandType.StopServer, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.StopServer, serverId, channelId, profileId);
                 if (response is null || response.Count == 0)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -182,9 +189,10 @@ namespace ServerManagerTool.Discord.Modules
         {
             try
             {
+                var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = DiscordBot.HandleCommandCallback?.Invoke(CommandType.UpdateServer, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.UpdateServer, serverId, channelId, profileId);
                 if (response is null || response.Count == 0)
                 {
                     await ReplyAsync("No servers associated with this channel.");

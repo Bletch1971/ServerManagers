@@ -21,6 +21,7 @@ namespace ServerManagerTool.Discord
     {
         internal ServerManagerBot()
         {
+            Started = false;
         }
 
         private bool Started
@@ -29,7 +30,7 @@ namespace ServerManagerTool.Discord
             set;
         }
 
-        public async Task StartAsync(string commandPrefix, string discordToken, string dataDirectory, HandleCommandDelegate handleCommandCallback, CancellationToken token)
+        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, CancellationToken token)
         {
             if (Started)
             {
@@ -37,7 +38,7 @@ namespace ServerManagerTool.Discord
             }
             Started = true;
 
-            if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken))
+            if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleCommandCallback is null)
             {
                 return;
             }
@@ -104,7 +105,8 @@ namespace ServerManagerTool.Discord
                 .AddSingleton<StartupService>()
                 .AddSingleton<ShutdownService>()
                 .AddSingleton<Random>()
-                .AddSingleton(config);
+                .AddSingleton(config)
+                .AddSingleton(handleCommandCallback);
 
             // Create the service provider
             using (var provider = services.BuildServiceProvider())
@@ -113,8 +115,6 @@ namespace ServerManagerTool.Discord
                 provider?.GetRequiredService<LoggingService>();
                 await provider?.GetRequiredService<StartupService>().StartAsync();
                 provider?.GetRequiredService<CommandHandlerService>();
-
-                DiscordBot.HandleCommandCallback = handleCommandCallback;
 
                 try
                 {

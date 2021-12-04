@@ -6,6 +6,6 @@ namespace ServerManagerTool.Discord.Interfaces
 {
     public interface IServerManagerBot
     {
-        Task StartAsync(string commandPrefix, string discordToken, string dataDirectory, HandleCommandDelegate handleCommandCallback, CancellationToken token);
+        Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, CancellationToken token);
     }
 }
