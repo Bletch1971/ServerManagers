@@ -2848,5 +2848,47 @@ namespace ServerManagerTool {
                 this["DiscordBotToken"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiscordBotServerId {
+            get {
+                return ((string)(this["DiscordBotServerId"]));
+            }
+            set {
+                this["DiscordBotServerId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://discord.com/developers/applications")]
+        public string DiscordBotApplyUrl {
+            get {
+                return ((string)(this["DiscordBotApplyUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/thread/8764/get-own-discord-bot")]
+        public string DiscordBotHelpUrl {
+            get {
+                return ((string)(this["DiscordBotHelpUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SectionDiscordBotIsExpanded {
+            get {
+                return ((bool)(this["SectionDiscordBotIsExpanded"]));
+            }
+            set {
+                this["SectionDiscordBotIsExpanded"] = value;
+            }
+        }
     }
 }

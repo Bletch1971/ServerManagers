@@ -610,7 +610,18 @@
     <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">This message will be displayed when the server shutdown has been cancelled.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Show shutdown reason with ALL shutdown messages</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">If enabled, the shutdown reason will be shown with all shutdown message; otherwise it will only be shown at the start of the server shutdown.</sys:String>
-    
+
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Enable Discord Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">You will need to restart the server manager if you change any settings for the Discord Bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">The token associated with the discord bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">Server Id:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">The id of the discord server the bot will listen to.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP Email Settings</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">The name or IP address of the host used for SMTP transmissions.</sys:String>
@@ -1177,6 +1188,12 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">If enabled, the server will be periodically updated during the Auto-Update cycle. See the settings for Auto-Update options.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Restart server if shutdown</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Restarts and Auto-Updates.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel the bot will listen to.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->

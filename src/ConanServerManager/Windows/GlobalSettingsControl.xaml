@@ -528,6 +528,43 @@
 
                 <GroupBox Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
+                        <CheckBox IsChecked="{Binding Config.DiscordBotEnabled}" Content="{DynamicResource GlobalSettings_DiscordBotLabel}" VerticalAlignment="Center"/>
+                    </GroupBox.Header>
+
+                    <Grid IsEnabled="{Binding Config.DiscordBotEnabled}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="5" Text="{DynamicResource GlobalSettings_DiscordBotInformationLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource WarningMessage}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource GlobalSettings_DiscordBotTokenLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Name="HideDiscordBotTokenTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Style="{StaticResource HiddenTextBoxStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Name="DiscordBotTokenTextBox" Text="{Binding Config.DiscordBotToken}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotTokenTooltip}" LostFocus="HiddenField_LostFocus" Visibility="Collapsed"/>
+                        <Button Grid.Row="1" Grid.Column="5" Margin="1" Content="{DynamicResource DiscordBotApplyButtonContent}" Click="DiscordBotApply_Click"/>
+                        <Button Grid.Row="1" Grid.Column="6" Margin="1" Content="{DynamicResource DiscordBotHelpButtonContent}" Click="DiscordBotHelp_Click"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_DiscordBotServerLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Text="{Binding Config.DiscordBotServerId}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotServerTooltip}"/>
+                        <Label Grid.Row="2" Grid.Column="3" Content="{DynamicResource GlobalSettings_DiscordBotPrefixLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="4" Margin="1" Text="{Binding Config.DiscordBotPrefix}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotPrefixTooltip}"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                    <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_EmailSettingsLabel}"/>
                     </GroupBox.Header>
             
@@ -569,7 +606,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_EmailNotifySettingsLabel}"/>
                     </GroupBox.Header>
@@ -593,7 +630,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="22" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_AdvancedSettingsLabel}"/>
                     </GroupBox.Header>

@@ -231,9 +231,9 @@ namespace ServerManagerTool
             return LogManager.GetLogger(loggerName);
         }
 
-        private static IList<string> HandleDiscordCommand(CommandType commandType, string channelId, string profileId)
+        private static IList<string> HandleDiscordCommand(CommandType commandType, string serverId, string channelId, string profileId)
         {
-            return new List<string>() { $"{commandType}; {channelId}; {profileId ?? "no profile"}" };
+            return new List<string>() { $"{commandType}; {serverId}; {channelId}; {profileId ?? "no profile"}" };
         }
 
         private static void MigrateSettings()
@@ -481,7 +481,7 @@ namespace ServerManagerTool
 
                 Task discordTask = Task.Run(async () =>
                 {
-                    await ServerManagerBot.StartAsync(Config.Default.DiscordBotPrefix, Config.Default.DiscordBotToken, Config.Default.DataDir, HandleDiscordCommand, _tokenSource.Token);
+                    await ServerManagerBot.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, HandleDiscordCommand, _tokenSource.Token);
                 }, _tokenSource.Token)
                     .ContinueWith(t => {
                         var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;

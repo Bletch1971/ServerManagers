@@ -957,6 +957,16 @@ namespace ServerManagerTool.Lib
         }
         #endregion
 
+        #region Discord Bot
+        public static readonly DependencyProperty DiscordChannelIdProperty = DependencyProperty.Register(nameof(DiscordChannelId), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string DiscordChannelId
+        {
+            get { return (string)GetValue(DiscordChannelIdProperty); }
+            set { SetValue(DiscordChannelIdProperty, value); }
+        }
+        #endregion
+
         #region Rules
         public static readonly DependencyProperty EnableHardcoreProperty = DependencyProperty.Register(nameof(EnableHardcore), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, "ServerHardcore")]

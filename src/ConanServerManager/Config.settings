@@ -554,5 +554,17 @@
     <Setting Name="DiscordBotToken" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="DiscordBotServerId" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DiscordBotApplyUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://discord.com/developers/applications</Value>
+    </Setting>
+    <Setting Name="DiscordBotHelpUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://servermanagers.freeforums.net/thread/99/get-own-discord-bot</Value>
+    </Setting>
+    <Setting Name="SectionDiscordBotIsExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

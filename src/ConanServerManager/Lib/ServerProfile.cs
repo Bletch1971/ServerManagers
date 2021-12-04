@@ -567,6 +567,16 @@ namespace ServerManagerTool.Lib
         }
         #endregion
 
+        #region Discord Bot
+        public static readonly DependencyProperty DiscordChannelIdProperty = DependencyProperty.Register(nameof(DiscordChannelId), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string DiscordChannelId
+        {
+            get { return (string)GetValue(DiscordChannelIdProperty); }
+            set { SetValue(DiscordChannelIdProperty, value); }
+        }
+        #endregion
+
         #region Server Files 
         public static readonly DependencyProperty ServerFilesBlacklistedProperty = DependencyProperty.Register(nameof(ServerFilesBlacklisted), typeof(PlayerUserList), typeof(ServerProfile), new PropertyMetadata(null));
         [DataMember]

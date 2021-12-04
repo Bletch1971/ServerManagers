@@ -713,5 +713,15 @@
             <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-3,0,-3"/>
         </StackPanel>
     </ContentControl>
+    <ContentControl x:Key="DiscordBotApplyButtonContent">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{DynamicResource GlobalSettings_DiscordBotApplyButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
+        </StackPanel>
+    </ContentControl>
+    <ContentControl x:Key="DiscordBotHelpButtonContent">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{DynamicResource GlobalSettings_DiscordBotHelpButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
+        </StackPanel>
+    </ContentControl>
 
 </Globalization:StyleResourceDictionary>

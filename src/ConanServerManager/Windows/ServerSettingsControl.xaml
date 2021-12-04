@@ -1062,6 +1062,37 @@
                             </StackPanel>
                         </Expander>
 
+                        <Expander Name="SectionDiscordBot" IsExpanded="{Binding Config.SectionDiscordBotIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.DiscordBotEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Expander.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{DynamicResource ServerSettings_DiscordBotLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
+                                </StackPanel>
+                            </Expander.Header>
+
+                            <Expander.Style>
+                                <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                </Style>
+                            </Expander.Style>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_DiscordBotChannelLabel}" ToolTip="{DynamicResource ServerSettings_DiscordBotChannelTooltip}" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Text="{Binding DiscordChannelId, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_DiscordBotChannelTooltip}" VerticalContentAlignment="Center" />
+                            </Grid>
+                        </Expander>
+
                         <Expander Name="SectionServerFiles" IsExpanded="{Binding Config.SectionServerFilesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
