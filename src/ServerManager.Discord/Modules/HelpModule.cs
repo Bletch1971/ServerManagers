@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServerManagerTool.Discord.Modules
+namespace ServerManagerTool.DiscordBot.Modules
 {
     [Name("Help")]
     public sealed class HelpModule : ModuleBase<SocketCommandContext>
@@ -26,6 +26,7 @@ namespace ServerManagerTool.Discord.Modules
 
         [Command("help")]
         [Summary("Provides a list of available commands")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task HelpAsync()
         {
             var prefix = _config["DiscordSettings:Prefix"];
@@ -102,6 +103,7 @@ namespace ServerManagerTool.Discord.Modules
 
         [Command("help")]
         [Summary("Searches a list of available commands")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task HelpAsync(string command)
         {
             var searchResults = _service.Search(Context, command);

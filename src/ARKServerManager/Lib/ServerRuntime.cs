@@ -281,13 +281,13 @@ namespace ServerManagerTool.Lib
 
                     case WatcherServerStatus.RunningLocalCheck:
                         if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.WaitingForPublication : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.Waiting : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
                         if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
                         break;
 
                     case WatcherServerStatus.RunningExternalCheck:
                         if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.WaitingForPublication, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Waiting, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
                         if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
                         break;
 

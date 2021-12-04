@@ -4,7 +4,7 @@ using NLog.Config;
 using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Discord;
+using ServerManagerTool.DiscordBot;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
@@ -456,7 +456,7 @@ namespace ServerManagerTool
 
                 Task discordTask = Task.Run(async () =>
                 {
-                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, DiscordBotHelper.HandleDiscordCommand, _tokenSource.Token);
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
                 }, _tokenSource.Token)
                     .ContinueWith(t => {
                         var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;

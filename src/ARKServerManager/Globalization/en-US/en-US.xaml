@@ -5544,6 +5544,18 @@
     <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
     <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
     <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotImplemented">Command '{0}' has not been implemented.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Unknown command '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Another command is currently running.</sys:String>
+    
+    <sys:String x:Key="DiscordBot_CommandProfileMissing">The command requires a profile id.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandProfileNotFound">Profile id {0} not found or is not associated with the channel.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandInfoFailed">Call to the server '{0}' failed.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Count:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

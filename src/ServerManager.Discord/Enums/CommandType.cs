@@ -1,14 +1,15 @@
-﻿namespace ServerManagerTool.Discord.Enums
+﻿namespace ServerManagerTool.DiscordBot.Enums
 {
     public enum CommandType
     {
-        BackupServer,
-        ServerInfo,
-        ServerList,
-        ServerStatus,
-        ShutdownServer,
-        StartServer,
-        StopServer,
-        UpdateServer,
+        Info,
+        List,
+        Status,
+
+        Backup,
+        Shutdown,
+        Start,
+        Stop,
+        Update,
     }
 }

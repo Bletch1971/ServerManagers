@@ -5,7 +5,7 @@
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <RootNamespace>ServerManagerTool.Discord</RootNamespace>
+    <RootNamespace>ServerManagerTool.DiscordBot</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>

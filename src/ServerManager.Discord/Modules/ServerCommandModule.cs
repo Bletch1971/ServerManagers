@@ -1,12 +1,13 @@
-﻿using Discord.Addons.Interactive;
+﻿using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using Microsoft.Extensions.Configuration;
-using ServerManagerTool.Discord.Delegates;
-using ServerManagerTool.Discord.Enums;
+using ServerManagerTool.DiscordBot.Delegates;
+using ServerManagerTool.DiscordBot.Enums;
 using System;
 using System.Threading.Tasks;
 
-namespace ServerManagerTool.Discord.Modules
+namespace ServerManagerTool.DiscordBot.Modules
 {
     [Name("Server Commands")]
     public sealed class ServerCommandModule : InteractiveBase
@@ -25,6 +26,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("backup", RunMode = RunMode.Async)]
         [Summary("Perform a backup of the server")]
         [Remarks("backup")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task BackupServerAsync()
         {
             await BackupServerAsync(null);
@@ -33,6 +35,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("backup", RunMode = RunMode.Async)]
         [Summary("Perform a backup of the server")]
         [Remarks("backup profileId")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task BackupServerAsync(string profileId)
         {
             try
@@ -40,8 +43,8 @@ namespace ServerManagerTool.Discord.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.BackupServer, serverId, channelId, profileId);
-                if (response is null || response.Count == 0)
+                var response = _handleCommandCallback?.Invoke(CommandType.Backup, serverId, channelId, profileId);
+                if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
                 }
@@ -49,7 +52,7 @@ namespace ServerManagerTool.Discord.Modules
                 {
                     foreach (var output in response)
                     {
-                        await ReplyAsync(output);
+                        await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(1000);
                     }
                 }
@@ -63,6 +66,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("shutdown", RunMode = RunMode.Async)]
         [Summary("Shuts down the server properly")]
         [Remarks("shutdown")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task ShutdownServerAsync()
         {
             await ShutdownServerAsync(null);
@@ -71,6 +75,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("shutdown", RunMode = RunMode.Async)]
         [Summary("Shuts down the server properly")]
         [Remarks("shutdown profileId")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task ShutdownServerAsync(string profileId)
         {
             try
@@ -78,8 +83,8 @@ namespace ServerManagerTool.Discord.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.ShutdownServer, serverId, channelId, profileId);
-                if (response is null || response.Count == 0)
+                var response = _handleCommandCallback?.Invoke(CommandType.Shutdown, serverId, channelId, profileId);
+                if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
                 }
@@ -87,7 +92,7 @@ namespace ServerManagerTool.Discord.Modules
                 {
                     foreach (var output in response)
                     {
-                        await ReplyAsync(output);
+                        await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(1000);
                     }
                 }
@@ -101,6 +106,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("start", RunMode = RunMode.Async)]
         [Summary("Starts the server")]
         [Remarks("start")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task StartServerAsync()
         {
             await StartServerAsync(null);
@@ -109,6 +115,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("start", RunMode = RunMode.Async)]
         [Summary("Starts the server")]
         [Remarks("start profileId")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task StartServerAsync(string profileId)
         {
             try
@@ -116,8 +123,8 @@ namespace ServerManagerTool.Discord.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.StartServer, serverId, channelId, profileId);
-                if (response is null || response.Count == 0)
+                var response = _handleCommandCallback?.Invoke(CommandType.Start, serverId, channelId, profileId);
+                if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
                 }
@@ -125,7 +132,7 @@ namespace ServerManagerTool.Discord.Modules
                 {
                     foreach (var output in response)
                     {
-                        await ReplyAsync(output);
+                        await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(1000);
                     }
                 }
@@ -139,6 +146,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("stop", RunMode = RunMode.Async)]
         [Summary("Forcibly stops the server")]
         [Remarks("stop")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task StopServerAsync()
         {
             await StopServerAsync(null);
@@ -147,6 +155,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("stop", RunMode = RunMode.Async)]
         [Summary("Forcibly stops the server")]
         [Remarks("stop profileId")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task StopServerAsync(string profileId)
         {
             try
@@ -154,8 +163,8 @@ namespace ServerManagerTool.Discord.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.StopServer, serverId, channelId, profileId);
-                if (response is null || response.Count == 0)
+                var response = _handleCommandCallback?.Invoke(CommandType.Stop, serverId, channelId, profileId);
+                if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
                 }
@@ -163,7 +172,7 @@ namespace ServerManagerTool.Discord.Modules
                 {
                     foreach (var output in response)
                     {
-                        await ReplyAsync(output);
+                        await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(1000);
                     }
                 }
@@ -177,6 +186,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("update", RunMode = RunMode.Async)]
         [Summary("Updates the server")]
         [Remarks("update")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task UpdateServerAsync()
         {
             await UpdateServerAsync(null);
@@ -185,6 +195,7 @@ namespace ServerManagerTool.Discord.Modules
         [Command("update", RunMode = RunMode.Async)]
         [Summary("Updates the server")]
         [Remarks("update profileId")]
+        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task UpdateServerAsync(string profileId)
         {
             try
@@ -192,8 +203,8 @@ namespace ServerManagerTool.Discord.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.UpdateServer, serverId, channelId, profileId);
-                if (response is null || response.Count == 0)
+                var response = _handleCommandCallback?.Invoke(CommandType.Update, serverId, channelId, profileId);
+                if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
                 }
@@ -201,7 +212,7 @@ namespace ServerManagerTool.Discord.Modules
                 {
                     foreach (var output in response)
                     {
-                        await ReplyAsync(output);
+                        await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(1000);
                     }
                 }

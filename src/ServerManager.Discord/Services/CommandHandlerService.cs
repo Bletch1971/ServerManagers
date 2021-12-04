@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
 
-namespace ServerManagerTool.Discord.Services
+namespace ServerManagerTool.DiscordBot.Services
 {
     public class CommandHandlerService
     {

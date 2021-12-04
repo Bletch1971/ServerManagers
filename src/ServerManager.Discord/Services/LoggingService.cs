@@ -6,7 +6,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace ServerManagerTool.Discord.Services
+namespace ServerManagerTool.DiscordBot.Services
 {
     public class LoggingService
     {

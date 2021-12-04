@@ -1,7 +1,7 @@
 ﻿using Discord.WebSocket;
 using System.Threading.Tasks;
 
-namespace ServerManagerTool.Discord.Services
+namespace ServerManagerTool.DiscordBot.Services
 {
     public class ShutdownService
     {

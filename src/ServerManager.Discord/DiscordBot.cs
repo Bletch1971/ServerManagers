@@ -1,6 +1,6 @@
-﻿using ServerManagerTool.Discord.Delegates;
+﻿using ServerManagerTool.DiscordBot.Delegates;
 
-namespace ServerManagerTool.Discord
+namespace ServerManagerTool.DiscordBot
 {
     public static class DiscordBot
     {

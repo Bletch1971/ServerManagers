@@ -282,13 +282,13 @@
                                                 <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.Unknown}">
                                                     <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_Unknown}"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.NeedPublicIP}">
+                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.SetPublicIP}">
                                                     <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_SetPublicIP}"/>
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.Unavailable}">
                                                     <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_Unavailable}"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.WaitingForPublication}">
+                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.Waiting}">
                                                     <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_Waiting}"/>
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding Availability}" Value="{x:Static enum:AvailabilityStatus.Available}">

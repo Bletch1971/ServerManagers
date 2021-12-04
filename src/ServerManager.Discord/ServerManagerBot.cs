@@ -5,9 +5,9 @@ using Discord.Net.Providers.WS4Net;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ServerManagerTool.Discord.Delegates;
-using ServerManagerTool.Discord.Interfaces;
-using ServerManagerTool.Discord.Services;
+using ServerManagerTool.DiscordBot.Delegates;
+using ServerManagerTool.DiscordBot.Interfaces;
+using ServerManagerTool.DiscordBot.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,7 +15,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ServerManagerTool.Discord
+namespace ServerManagerTool.DiscordBot
 {
     public sealed class ServerManagerBot : IServerManagerBot
     {
@@ -30,7 +30,7 @@ namespace ServerManagerTool.Discord
             set;
         }
 
-        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, CancellationToken token)
+        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
             if (Started)
             {
@@ -38,7 +38,7 @@ namespace ServerManagerTool.Discord
             }
             Started = true;
 
-            if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleCommandCallback is null)
+            if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleTranslationCallback is null || handleCommandCallback is null)
             {
                 return;
             }
@@ -55,8 +55,8 @@ namespace ServerManagerTool.Discord
 
             var settings = new Dictionary<string, string>
             {
-                { "DiscordSettings:Prefix", commandPrefix },
                 { "DiscordSettings:Token", discordToken },
+                { "DiscordSettings:Prefix", commandPrefix },
                 { "ServerManager:DataDirectory", dataDirectory }
             };
 
@@ -106,7 +106,8 @@ namespace ServerManagerTool.Discord
                 .AddSingleton<ShutdownService>()
                 .AddSingleton<Random>()
                 .AddSingleton(config)
-                .AddSingleton(handleCommandCallback);
+                .AddSingleton(handleCommandCallback)
+                .AddSingleton(handleTranslationCallback);
 
             // Create the service provider
             using (var provider = services.BuildServiceProvider())

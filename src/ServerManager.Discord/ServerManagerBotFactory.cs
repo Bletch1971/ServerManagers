@@ -1,6 +1,6 @@
-﻿using ServerManagerTool.Discord.Interfaces;
+﻿using ServerManagerTool.DiscordBot.Interfaces;
 
-namespace ServerManagerTool.Discord
+namespace ServerManagerTool.DiscordBot
 {
     public static class ServerManagerBotFactory
     {
