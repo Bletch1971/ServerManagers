@@ -171,6 +171,8 @@
     <Compile Include="Lib\ViewConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="Lib\ViewConverters\MapNameValueConverter.cs" />
     <Compile Include="Lib\ViewModel\PlayerInfo.cs" />
+    <Compile Include="Utils\DiscordBotHelper.cs" />
+    <Compile Include="Utils\DiscordPluginHelper.cs" />
     <Compile Include="Windows\AddUserWindow.xaml.cs">
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>

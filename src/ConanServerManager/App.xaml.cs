@@ -1,15 +1,14 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
-using NLog;
+﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Discord;
 using ServerManagerTool.Discord.Enums;
-using ServerManagerTool.Discord.Interfaces;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
 using System.Collections.Generic;
@@ -179,15 +178,6 @@ namespace ServerManagerTool
             }
         }
 
-        private IList<Plugin.Common.Lib.Profile> FetchProfiles()
-        {
-            return ServerManager.Instance.Servers.Select(s => new ServerManagerTool.Plugin.Common.Lib.Profile()
-            {
-                ProfileName = s?.Profile?.ProfileName ?? string.Empty,
-                InstallationFolder = s?.Profile?.InstallDirectory ?? string.Empty
-            }).ToList();
-        }
-
         public static string GetLogFolder() => IOUtils.NormalizePath(Path.Combine(Config.Default.DataPath, Config.Default.LogsRelativePath));
 
         public static string GetProfileLogFolder(string profileId) => IOUtils.NormalizePath(Path.Combine(Config.Default.DataPath, Config.Default.LogsRelativePath, profileId.ToLower()));
@@ -317,7 +307,7 @@ namespace ServerManagerTool
             var installPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             PluginHelper.Instance.BetaEnabled = this.BetaVersion;
             PluginHelper.Instance.LoadPlugins(installPath, true);
-            PluginHelper.Instance.SetFetchProfileCallback(FetchProfiles);
+            PluginHelper.Instance.SetFetchProfileCallback(DiscordPluginHelper.FetchProfiles);
             OnResourceDictionaryChanged(Thread.CurrentThread.CurrentCulture.Name);
 
             // check if we are starting server manager for server shutdown
@@ -454,7 +444,7 @@ namespace ServerManagerTool
 
                 Task discordTask = Task.Run(async () =>
                 {
-                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken,Config.Default.DiscordBotPrefix,  Config.Default.DataPath, HandleDiscordCommand, _tokenSource.Token);
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken,Config.Default.DiscordBotPrefix,  Config.Default.DataPath, DiscordBotHelper.HandleDiscordCommand, _tokenSource.Token);
                 }, _tokenSource.Token)
                     .ContinueWith(t => {
                         var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
