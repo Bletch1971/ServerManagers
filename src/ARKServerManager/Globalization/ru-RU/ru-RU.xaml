@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">17.09.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">03.12.2021 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -79,6 +79,12 @@
     <!--#region Processor Afinity -->
     <sys:String x:Key="ProcessorAffinity_Invalid">Недействительный</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">Все</sys:String>
+    <!--#endregion-->
+
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Обычный</sys:String>
+    <sys:String x:Key="WindowState_Minimized">По минимуму</sys:String>
+    <sys:String x:Key="WindowState_Maximized">По максимуму</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -451,6 +457,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Сброс</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Это приведет к сбросу всех глобальных параметров пользователя в диспетчере сервера. Менеджер сервера будет закрыт, если сброс будет успешным.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Запускать программу в режиме Администратора</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Режим запуска Главного окна:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Свернуть в трей</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Управление параметрами брандмауэра автоматически</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Автоматическое управление общедоступным IP-адресом</sys:String>
@@ -786,6 +793,8 @@
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">ID профиля:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">Уникальный ID, присвоенный профилю.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">Профиль:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">Имя профиля сервера. Это не публичное имя которое будут видеть пользователи в ARK. Для этого заполните поле "Имя сервера".</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Установленная версия:</sys:String>
@@ -1156,6 +1165,8 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Включает режим Хардкор (игроки не могут возрождаться после смерти, должен быть создан новый персонаж).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Вкл PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Включает PvP режим (игроки могут нанести повреждения или убить друг друга. В PvP игроки также могут повредить или разрушить структуры другого тарйба или убить их динозавров).</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Включить Творческий Режим</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">Если включено, разрешает творческий режим.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Вкл строительство в пещерах в PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Если этот параметр включен, позволяет строить в пещерах в PvE режиме.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Вкл крио-недомогание в PvE</sys:String>
@@ -1191,6 +1202,8 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Максимальные уровни существ:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destroy Tames Over Level:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Tames that exceed this level will be deleted on server start. To disable deletion set to 0.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Вкл загрузку из данных кластера</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если включено, это позволит загружать выживших/предметов/динозавров на сервер.</sys:String>
