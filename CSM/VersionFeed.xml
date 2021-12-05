@@ -5,7 +5,31 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-01T00:00:00Z</updated>
+  <updated>2021-12-02T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:A3A790A9-D511-4CE8-AC15-A36B3DAB4385</id>
+    <title>1.1.55 (1.1.55.2)</title>
+    <summary>1.1.55.2</summary>
+    <link href="" />
+    <updated>2021-12-05T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed some globalization key values (maps and branches).</li>
+            <li>Changed the way the data directory is selected and created on first startup of the server manager.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:38961ED8-0964-4C1A-B09C-8AE2C5FCF76E</id>
