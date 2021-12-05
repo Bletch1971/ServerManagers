@@ -7,6 +7,7 @@
         Status,
 
         Backup,
+        Restart,
         Shutdown,
         Start,
         Stop,

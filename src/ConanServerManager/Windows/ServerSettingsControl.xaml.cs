@@ -834,7 +834,7 @@ namespace ServerManagerTool
 
                 var profile = ServerProfileSnapshot.Create(Server.Profile);
 
-                var exitCode = await Task.Run(() => app.PerformProfileBackup(profile));
+                var exitCode = await Task.Run(() => app.PerformProfileBackup(profile, CancellationToken.None));
                 if (exitCode != ServerApp.EXITCODE_NORMALEXIT && exitCode != ServerApp.EXITCODE_CANCELLED)
                     throw new ApplicationException($"An error occured during the backup process - ExitCode: {exitCode}");
 

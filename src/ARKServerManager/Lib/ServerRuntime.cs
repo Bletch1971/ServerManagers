@@ -169,6 +169,9 @@ namespace ServerManagerTool.Lib
                     ServerProfile.ServerIPProperty,
                     ServerProfile.MaxPlayersProperty,
 
+                    ServerProfile.ServerPasswordProperty,
+                    ServerProfile.AdminPasswordProperty,
+
                     ServerProfile.ServerMapProperty,
                     ServerProfile.ServerModIdsProperty,
                     ServerProfile.TotalConversionModIdProperty,
@@ -177,7 +180,7 @@ namespace ServerManagerTool.Lib
                 },
                 (s, p) =>
                 {
-                    if (Status == ServerStatus.Stopped || Status == ServerStatus.Uninstalled || Status == ServerStatus.Unknown)
+                    if (Status == ServerStatus.Stopped || Status == ServerStatus.Uninstalled || Status == ServerStatus.Unknown || Status == ServerStatus.Updating)
                     {
                         AttachToProfileCore(profile);
                     }
@@ -198,16 +201,7 @@ namespace ServerManagerTool.Lib
                 return;
             }
 
-            if (!String.IsNullOrWhiteSpace(this.ProfileSnapshot.ServerIP) && IPAddress.TryParse(this.ProfileSnapshot.ServerIP, out IPAddress localServerIpAddress))
-            {
-                // Use the explicit Server IP
-                localServerQueryEndPoint = new IPEndPoint(localServerIpAddress, Convert.ToUInt16(this.ProfileSnapshot.QueryPort));
-            }
-            else
-            {
-                // No Server IP specified, use Loopback
-                localServerQueryEndPoint = new IPEndPoint(IPAddress.Loopback, Convert.ToUInt16(this.ProfileSnapshot.QueryPort));
-            }
+            localServerQueryEndPoint = new IPEndPoint(this.ProfileSnapshot.ServerIPAddress, Convert.ToUInt16(this.ProfileSnapshot.QueryPort));
 
             //
             // Get the public endpoint for querying Steam
@@ -1093,7 +1087,7 @@ namespace ServerManagerTool.Lib
 
             try
             {
-                var endPoint = new IPEndPoint(IPAddress.Parse(this.ProfileSnapshot.ServerIP), this.ProfileSnapshot.RCONPort);
+                var endPoint = new IPEndPoint(this.ProfileSnapshot.ServerIPAddress, this.ProfileSnapshot.RCONPort);
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
 
                 if (server == null)

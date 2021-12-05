@@ -114,7 +114,7 @@ namespace ServerManagerTool.Lib
                 _startTime = DateTime.Now;
         }
 
-        private void BackupServer()
+        private void BackupServer(CancellationToken cancellationToken)
         {
             if (_profile == null || _profile.SotFEnabled)
             {
@@ -142,65 +142,65 @@ namespace ServerManagerTool.Lib
 
             if (_serverRunning)
             {
-                // check if RCON is enabled
-                if (_profile.RCONEnabled)
+                try
                 {
-                    try
+                    emailMessage.AppendLine();
+
+                    var sent = false;
+
+                    // perform a world save
+                    if (!string.IsNullOrWhiteSpace(Config.Default.ServerBackup_WorldSaveMessage))
                     {
-                        try
+                        ProcessAlert(AlertType.Backup, Config.Default.ServerBackup_WorldSaveMessage);
+                        sent = SendMessageAsync(Config.Default.ServerBackup_WorldSaveMessage, cancellationToken).Result;
+                        if (sent)
                         {
-                            emailMessage.AppendLine();
-
-                            var sent = false;
-
-                            // perform a world save
-                            if (!string.IsNullOrWhiteSpace(Config.Default.ServerBackup_WorldSaveMessage))
-                            {
-                                ProcessAlert(AlertType.Backup, Config.Default.ServerBackup_WorldSaveMessage);
-                                sent = SendMessageAsync(Config.Default.ServerBackup_WorldSaveMessage, CancellationToken.None).Result;
-                                if (sent)
-                                {
-                                    emailMessage.AppendLine("sent server save message.");
-                                }
-                            }
-
-                            sent = SendCommandAsync(Config.Default.ServerSaveCommand, false).Result;
-                            if (sent)
-                            {
-                                emailMessage.AppendLine("sent server save command.");
-                                Task.Delay(Config.Default.ServerShutdown_WorldSaveDelay * 1000).Wait();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Debug.WriteLine($"RCON> {Config.Default.ServerSaveCommand} command.\r\n{ex.Message}");
+                            emailMessage.AppendLine("sent server save message.");
                         }
                     }
-                    finally
+
+                    sent = SendCommandAsync(Config.Default.ServerSaveCommand, false).Result;
+                    if (sent)
                     {
-                        CloseRconConsole();
+                        emailMessage.AppendLine("sent server save command.");
+                        Task.Delay(Config.Default.ServerShutdown_WorldSaveDelay * 1000).Wait();
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    LogProfileMessage("RCON not enabled.");
+                    Debug.WriteLine($"RCON> {Config.Default.ServerSaveCommand} command.\r\n{ex.Message}");
                 }
             }
 
             if (ExitCode != EXITCODE_NORMALEXIT)
                 return;
+            if (cancellationToken.IsCancellationRequested)
+            {
+                ExitCode = EXITCODE_CANCELLED;
+                return;
+            }
 
             // make a backup of the current profile and config files.
             CreateProfileBackupArchiveFile(_profile);
 
             if (ExitCode != EXITCODE_NORMALEXIT)
                 return;
+            if (cancellationToken.IsCancellationRequested)
+            {
+                ExitCode = EXITCODE_CANCELLED;
+                return;
+            }
 
             // make a backup of the current world file.
             CreateServerBackupArchiveFile(emailMessage, _profile);
 
             if (ExitCode != EXITCODE_NORMALEXIT)
                 return;
+            if (cancellationToken.IsCancellationRequested)
+            {
+                ExitCode = EXITCODE_CANCELLED;
+                return;
+            }
 
             if (Config.Default.EmailNotify_AutoBackup)
             {
@@ -269,7 +269,7 @@ namespace ServerManagerTool.Lib
                 try
                 {
                     ServerStatusChangeCallback?.Invoke(ServerStatus.Updating);
-                    UpgradeLocal(true, cancellationToken, true);
+                    UpgradeLocal(true, true, cancellationToken);
                 }
                 finally
                 {
@@ -310,17 +310,20 @@ namespace ServerManagerTool.Lib
                 return;
             }
 
-            // check if the server was previously running before the update.
-            if (!_serverRunning && !_profile.AutoRestartIfShutdown)
+            // check if the server was previously running.
+            if (!_serverRunning)
             {
-                LogProfileMessage("Server was not running, server will not be started.");
+                if (_profile.AutoRestartIfShutdown)
+                {
+                    LogProfileMessage("Server was not running, server will be started as the setting to restart if shutdown is TRUE.");
+                }
+                else
+                {
+                    LogProfileMessage("Server was not running, server will not be started.");
 
-                ExitCode = EXITCODE_NORMALEXIT;
-                return;
-            }
-            if (!_serverRunning && _profile.AutoRestartIfShutdown)
-            {
-                LogProfileMessage("Server was not running, server will be started as the setting to restart if shutdown is TRUE.");
+                    ExitCode = EXITCODE_NORMALEXIT;
+                    return;
+                }
             }
 
             // Find the server process.
@@ -404,7 +407,7 @@ namespace ServerManagerTool.Lib
             try
             {
                 // create a connection to the server
-                var endPoint = new IPEndPoint(IPAddress.Parse(_profile.ServerIP), _profile.QueryPort);
+                var endPoint = new IPEndPoint(_profile.ServerIPAddress, _profile.QueryPort);
                 gameServer = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint);
 
                 // check if there is a shutdown reason
@@ -417,10 +420,6 @@ namespace ServerManagerTool.Lib
                 }
 
                 LogProfileMessage("Starting shutdown timer...");
-                if (!CheckForOnlinePlayers)
-                {
-                    LogProfileMessage("CheckForOnlinePlayers disabled, shutdown timer will not perform online player check.");
-                }
 
                 var minutesLeft = ShutdownInterval;
                 while (minutesLeft > 0)
@@ -432,7 +431,7 @@ namespace ServerManagerTool.Lib
                         if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                         {
                             ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                            SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, CancellationToken.None).Wait();
+                            SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
                         }
 
                         ExitCode = EXITCODE_CANCELLED;
@@ -462,7 +461,8 @@ namespace ServerManagerTool.Lib
                     }
                     else
                     {
-                        Debug.WriteLine($"CheckForOnlinePlayers disabled");
+                        Debug.WriteLine($"CheckForOnlinePlayers disabled, shutdown timer cancelled.");
+                        break;
                     }
 
                     var message = string.Empty;
@@ -536,7 +536,7 @@ namespace ServerManagerTool.Lib
                         {
                             LogProfileMessage(Config.Default.ServerShutdown_WorldSaveMessage);
                             ProcessAlert(AlertType.ShutdownMessage, Config.Default.ServerShutdown_WorldSaveMessage);
-                            SendMessageAsync(Config.Default.ServerShutdown_WorldSaveMessage, cancellationToken).Wait();
+                            SendMessageAsync(Config.Default.ServerShutdown_WorldSaveMessage, cancellationToken).Wait(cancellationToken);
                         }
 
                         if (SendCommandAsync(Config.Default.ServerSaveCommand, false).Result)
@@ -561,7 +561,7 @@ namespace ServerManagerTool.Lib
                     if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                     {
                         ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                        SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, CancellationToken.None).Wait();
+                        SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
                     }
 
                     ExitCode = EXITCODE_CANCELLED;
@@ -587,8 +587,6 @@ namespace ServerManagerTool.Lib
             }
             finally
             {
-                CloseRconConsole();
-
                 gameServer?.Dispose();
                 gameServer = null;
             }
@@ -600,10 +598,8 @@ namespace ServerManagerTool.Lib
                 if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                 {
                     ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                    SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, CancellationToken.None).Wait();
+                    SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
                 }
-
-                CloseRconConsole();
 
                 ExitCode = EXITCODE_CANCELLED;
                 return;
@@ -652,8 +648,6 @@ namespace ServerManagerTool.Lib
 
                     LogProfileMessage("Exiting server timed out, attempting to close the server.");
                 }
-
-                CloseRconConsole();
 
                 // Method 2 - Close the process
                 sent = process.CloseMainWindow();
@@ -721,7 +715,7 @@ namespace ServerManagerTool.Lib
             ExitCode = EXITCODE_SHUTDOWN_TIMEOUT;
         }
 
-        private void UpgradeLocal(bool validate, CancellationToken cancellationToken, bool updateMods)
+        private void UpgradeLocal(bool validate, bool updateMods, CancellationToken cancellationToken)
         {
             if (_profile == null)
             {
@@ -1250,7 +1244,7 @@ namespace ServerManagerTool.Lib
                             {
                                 // perform a steamcmd validate to confirm all the files
                                 LogProfileMessage("Validating server files (*new*).");
-                                UpgradeLocal(true, CancellationToken.None, false);
+                                UpgradeLocal(true, false, CancellationToken.None);
                                 LogProfileMessage("Validated server files (*new*).");
                             }
 
@@ -1774,17 +1768,6 @@ namespace ServerManagerTool.Lib
             LogBranchMessage(branchName, "-----------------------------");
             LogBranchMessage(branchName, "");
             ExitCode = EXITCODE_NORMALEXIT;
-        }
-
-        private void CloseRconConsole()
-        {
-            if (_rconConsole != null)
-            {
-                _rconConsole.Dispose();
-                _rconConsole = null;
-
-                Task.Delay(1000).Wait();
-            }
         }
 
         public void CheckServerWorldFileExists(ServerProfileSnapshot profile = null)
@@ -2578,38 +2561,41 @@ namespace ServerManagerTool.Lib
             int rconRetries = 0;
             int maxRetries = retryIfFailed ? RCON_MAXRETRIES : 1;
 
-            while (retries < maxRetries && rconRetries < RCON_MAXRETRIES)
+            try
             {
-                SetupRconConsole();
-
-                if (_rconConsole == null)
+                while (retries < maxRetries && rconRetries < RCON_MAXRETRIES)
                 {
-                    LogProfileMessage($"RCON> {command} - attempt {rconRetries + 1} (a).", false);
-#if DEBUG
-                    LogProfileMessage("RCON connection not created.", false);
-#endif
-                    rconRetries++;
-                }
-                else
-                {
-                    rconRetries = 0;
-                    try
-                    {
-                        _rconConsole.SendCommand(command);
-                        LogProfileMessage($"RCON> {command}");
+                    SetupRconConsole();
 
-                        return true;
-                    }
-                    catch (Exception ex)
+                    if (_rconConsole == null)
                     {
-                        LogProfileMessage($"RCON> {command} - attempt {retries + 1} (b).", false);
-#if DEBUG
-                        LogProfileMessage($"{ex.Message}", false);
-#endif
+                        LogProfileMessage($"RCON> {command} - attempt {rconRetries + 1} (a).", false);
+                        LogProfileMessage("RCON connection not created.", false);
+                        rconRetries++;
                     }
+                    else
+                    {
+                        rconRetries = 0;
+                        try
+                        {
+                            _rconConsole.SendCommand(command);
+                            LogProfileMessage($"RCON> {command}");
 
-                    retries++;
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            LogProfileMessage($"RCON> {command} - attempt {retries + 1} (b).", false);
+                            LogProfileMessage($"{ex.Message}", false);
+                        }
+
+                        retries++;
+                    }
                 }
+            }
+            finally
+            {
+                CloseRconConsole();
             }
 
             return false;
@@ -2672,6 +2658,17 @@ namespace ServerManagerTool.Lib
             }
         }
 
+        private void CloseRconConsole()
+        {
+            if (_rconConsole != null)
+            {
+                _rconConsole.Dispose();
+                _rconConsole = null;
+
+                Task.Delay(1000).Wait();
+            }
+        }
+
         private void SetupRconConsole()
         {
             CloseRconConsole();
@@ -2681,7 +2678,7 @@ namespace ServerManagerTool.Lib
 
             try
             {
-                var endPoint = new IPEndPoint(IPAddress.Parse(_profile.ServerIP), _profile.RCONPort);
+                var endPoint = new IPEndPoint(_profile.ServerIPAddress, _profile.RCONPort);
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
                 if (server == null)
                 {
@@ -2718,7 +2715,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public int PerformProfileBackup(ServerProfileSnapshot profile)
+        public int PerformProfileBackup(ServerProfileSnapshot profile, CancellationToken cancellationToken)
         {
             _profile = profile;
 
@@ -2743,7 +2740,7 @@ namespace ServerManagerTool.Lib
                 // check if the mutex was established
                 if (createdNew)
                 {
-                    BackupServer();
+                    BackupServer(cancellationToken);
 
                     if (ExitCode != EXITCODE_NORMALEXIT)
                     {
@@ -3099,7 +3096,7 @@ namespace ServerManagerTool.Lib
                         SendEmails = true,
                         ServerProcess = ServerProcessType.AutoBackup
                     };
-                    exitCodes.TryAdd(profile, app.PerformProfileBackup(profile));
+                    exitCodes.TryAdd(profile, app.PerformProfileBackup(profile, CancellationToken.None));
                 });
 
                 foreach (var profile in _profiles.Keys)

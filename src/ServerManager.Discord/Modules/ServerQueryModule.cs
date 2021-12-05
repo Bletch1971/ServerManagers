@@ -4,7 +4,9 @@ using Discord.Commands;
 using Microsoft.Extensions.Configuration;
 using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Enums;
+using ServerManagerTool.DiscordBot.Interfaces;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ServerManagerTool.DiscordBot.Modules
@@ -12,12 +14,14 @@ namespace ServerManagerTool.DiscordBot.Modules
     [Name("Server Query")]
     public sealed class ServerQueryModule : InteractiveBase
     {
+        private readonly IServerManagerBot _serverManagerBot;
         private readonly CommandService _service;
         private readonly HandleCommandDelegate _handleCommandCallback;
         private readonly IConfigurationRoot _config;
 
-        public ServerQueryModule(CommandService service, HandleCommandDelegate handleCommandCallback, IConfigurationRoot config)
+        public ServerQueryModule(IServerManagerBot serverManagerBot, CommandService service, HandleCommandDelegate handleCommandCallback, IConfigurationRoot config)
         {
+            _serverManagerBot = serverManagerBot;
             _service = service;
             _handleCommandCallback = handleCommandCallback;
             _config = config;
@@ -43,7 +47,7 @@ namespace ServerManagerTool.DiscordBot.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Info, serverId, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.Info, serverId, channelId, profileId, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -74,7 +78,7 @@ namespace ServerManagerTool.DiscordBot.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.List, serverId, channelId, null);
+                var response = _handleCommandCallback?.Invoke(CommandType.List, serverId, channelId, null, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -114,7 +118,7 @@ namespace ServerManagerTool.DiscordBot.Modules
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Status, serverId, channelId, profileId);
+                var response = _handleCommandCallback?.Invoke(CommandType.Status, serverId, channelId, profileId, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");

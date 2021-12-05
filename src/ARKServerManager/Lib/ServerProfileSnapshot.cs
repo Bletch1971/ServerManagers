@@ -20,7 +20,7 @@ namespace ServerManagerTool.Lib
         public string AdminPassword;
         public string ServerName;
         public string ServerArgs;
-        public string ServerIP;
+        public IPAddress ServerIPAddress;
         public int ServerPort;
         public int ServerPeerPort;
         public int QueryPort;
@@ -71,7 +71,7 @@ namespace ServerManagerTool.Lib
                 AdminPassword = profile.AdminPassword,
                 ServerName = profile.ServerName,
                 ServerArgs = profile.GetServerArgs(),
-                ServerIP = string.IsNullOrWhiteSpace(profile.ServerIP) ? IPAddress.Loopback.ToString() : profile.ServerIP.Trim(),
+                ServerIPAddress = string.IsNullOrWhiteSpace(profile.ServerIP) ? IPAddress.Loopback : IPAddress.TryParse(profile.ServerIP.Trim(), out IPAddress ipAddress) ? ipAddress : IPAddress.Loopback,
                 ServerPort = profile.ServerPort,
                 ServerPeerPort = profile.ServerPeerPort,
                 QueryPort = profile.QueryPort,

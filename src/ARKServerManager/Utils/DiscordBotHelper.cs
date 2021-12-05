@@ -23,7 +23,7 @@ namespace ServerManagerTool.Utils
 
         public static bool HasRunningCommands => _currentProfileCommands.Count > 0;
 
-        public static IList<string> HandleDiscordCommand(CommandType commandType, string serverId, string channelId, string profileId)
+        public static IList<string> HandleDiscordCommand(CommandType commandType, string serverId, string channelId, string profileId, CancellationToken token)
         {
             // check if incoming values are valid
             if (string.IsNullOrWhiteSpace(serverId) || string.IsNullOrWhiteSpace(channelId))
@@ -49,15 +49,17 @@ namespace ServerManagerTool.Utils
                         return GetServerStatus(channelId, profileId);
 
                     case CommandType.Backup:
-                        return BackupServer(channelId, profileId);
+                        return BackupServer(channelId, profileId, token);
+                    case CommandType.Restart:
+                        return RestartServer(channelId, profileId, token);
                     case CommandType.Shutdown:
-                        return ShutdownServer(channelId, profileId);
+                        return ShutdownServer(channelId, profileId, token);
                     case CommandType.Stop:
-                        return StopServer(channelId, profileId);
+                        return StopServer(channelId, profileId, token);
                     case CommandType.Start:
-                        return StartServer(channelId, profileId);
+                        return StartServer(channelId, profileId, token);
                     case CommandType.Update:
-                        return UpdateServer(channelId, profileId);
+                        return UpdateServer(channelId, profileId, token);
 
                     default:
                         return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandUnknown"), commandType) };
@@ -106,6 +108,17 @@ namespace ServerManagerTool.Utils
                     if (server is null)
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    switch (server.Runtime.Status)
+                    {
+                        case ServerStatus.Initializing:
+                        case ServerStatus.Stopping:
+                        case ServerStatus.Stopped:
+                        case ServerStatus.Uninstalled:
+                        case ServerStatus.Unknown:
+                        case ServerStatus.Updating:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
                     }
 
                     serverName = server.Profile.ServerName;
@@ -183,7 +196,7 @@ namespace ServerManagerTool.Utils
             return response;
         }
 
-        private static IList<string> BackupServer(string channelId, string profileId)
+        private static IList<string> BackupServer(string channelId, string profileId, CancellationToken token)
         {
             if (string.IsNullOrWhiteSpace(profileId))
             {
@@ -211,6 +224,16 @@ namespace ServerManagerTool.Utils
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
                     }
 
+                    switch (server.Runtime.Status)
+                    {
+                        case ServerStatus.Initializing:
+                        case ServerStatus.Stopping:
+                        case ServerStatus.Uninstalled:
+                        case ServerStatus.Unknown:
+                        case ServerStatus.Updating:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
+                    }
+
                     profile = ServerProfileSnapshot.Create(server.Profile);
                 }).Wait();
 
@@ -223,11 +246,19 @@ namespace ServerManagerTool.Utils
                     SendAlerts = true,
                     SendEmails = false,
                     ServerProcess = ServerProcessType.Backup,
+                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
+                    {
+                        TaskUtils.RunOnUIThreadAsync(() =>
+                        {
+                            var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                        }).Wait();
+                    }
                 };
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileBackup(profile);
+                    app.PerformProfileBackup(profile, token);
                     _currentProfileCommands.Remove(profileId);
                 });
 
@@ -244,22 +275,337 @@ namespace ServerManagerTool.Utils
             }
         }
 
-        private static IList<string> ShutdownServer(string channelId, string profileId)
+        private static IList<string> RestartServer(string channelId, string profileId, CancellationToken token)
         {
-            return new List<string>() { string.Format(_globalizer.GetResourceString("DiscordBot_CommandUnknown"), CommandType.Shutdown) };
+            if (string.IsNullOrWhiteSpace(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMissing"), CommandType.Restart) };
+            }
+
+            // check if another command is being run against the profile
+            if (_currentProfileCommands.ContainsKey(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[profileId], profileId) };
+            }
+            _currentProfileCommands.Add(profileId, CommandType.Restart);
+
+            ServerProfileSnapshot profile = null;
+            Task task = null;
+
+            try
+            {
+                TaskUtils.RunOnUIThreadAsync(() =>
+                {
+                    var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+
+                    if (server is null)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    switch (server.Runtime.Status)
+                    {
+                        case ServerStatus.Initializing:
+                        case ServerStatus.Stopping:
+                        case ServerStatus.Uninstalled:
+                        case ServerStatus.Unknown:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
+
+                        case ServerStatus.Updating:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), profileId));
+                    }
+
+                    profile = ServerProfileSnapshot.Create(server.Profile);
+                    profile.AutoRestartIfShutdown = true;
+                }).Wait();
+
+                List<string> response = new List<string>();
+
+                var app = new ServerApp(true)
+                {
+                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    OutputLogs = false,
+                    SendAlerts = true,
+                    SendEmails = false,
+                    ServerProcess = ServerProcessType.Restart,
+                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
+                    {
+                        TaskUtils.RunOnUIThreadAsync(() =>
+                        {
+                            var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                        }).Wait();
+                    }
+                };
+
+                task = Task.Run(() =>
+                {
+                    app.PerformProfileShutdown(profile, true, false, false, token);
+                    _currentProfileCommands.Remove(profileId);
+                });
+
+                response.Add(string.Format(_globalizer.GetResourceString("DiscordBot_RestartRequested"), profile.ServerName));
+
+                return response;
+            }
+            finally
+            {
+                if (task is null)
+                {
+                    _currentProfileCommands.Remove(profileId);
+                }
+            }
         }
 
-        private static IList<string> StopServer(string channelId, string profileId)
+        private static IList<string> ShutdownServer(string channelId, string profileId, CancellationToken token)
         {
-            return new List<string>() { string.Format(_globalizer.GetResourceString("DiscordBot_CommandUnknown"), CommandType.Stop) };
+            if (string.IsNullOrWhiteSpace(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMissing"), CommandType.Shutdown) };
+            }
+
+            // check if another command is being run against the profile
+            if (_currentProfileCommands.ContainsKey(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[profileId], profileId) };
+            }
+            _currentProfileCommands.Add(profileId, CommandType.Shutdown);
+
+            ServerProfileSnapshot profile = null;
+            Task task = null;
+
+            try
+            {
+                TaskUtils.RunOnUIThreadAsync(() =>
+                {
+                    var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+
+                    if (server is null)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    switch (server.Runtime.Status)
+                    {
+                        case ServerStatus.Initializing:
+                        case ServerStatus.Stopping:
+                        case ServerStatus.Stopped:
+                        case ServerStatus.Uninstalled:
+                        case ServerStatus.Unknown:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
+
+                        case ServerStatus.Updating:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), profileId));
+                    }
+
+                    profile = ServerProfileSnapshot.Create(server.Profile);
+                }).Wait();
+
+                List<string> response = new List<string>();
+
+                var app = new ServerApp(true)
+                {
+                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    OutputLogs = false,
+                    SendAlerts = true,
+                    SendEmails = false,
+                    ServerProcess = ServerProcessType.Shutdown,
+                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
+                    {
+                        TaskUtils.RunOnUIThreadAsync(() =>
+                        {
+                            var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                        }).Wait();
+                    }
+                };
+
+                task = Task.Run(() =>
+                {
+                    app.PerformProfileShutdown(profile, false, false, false, token);
+                    _currentProfileCommands.Remove(profileId);
+                });
+
+                response.Add(string.Format(_globalizer.GetResourceString("DiscordBot_ShutdownRequested"), profile.ServerName));
+
+                return response;
+            }
+            finally
+            {
+                if (task is null)
+                {
+                    _currentProfileCommands.Remove(profileId);
+                }
+            }
         }
 
-        private static IList<string> StartServer(string channelId, string profileId)
+        private static IList<string> StopServer(string channelId, string profileId, CancellationToken token)
         {
-            return new List<string>() { string.Format(_globalizer.GetResourceString("DiscordBot_CommandUnknown"), CommandType.Start) };
+            if (string.IsNullOrWhiteSpace(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMissing"), CommandType.Shutdown) };
+            }
+
+            // check if another command is being run against the profile
+            if (_currentProfileCommands.ContainsKey(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[profileId], profileId) };
+            }
+            _currentProfileCommands.Add(profileId, CommandType.Shutdown);
+
+            ServerProfileSnapshot profile = null;
+            Task task = null;
+
+            try
+            {
+                TaskUtils.RunOnUIThreadAsync(() =>
+                {
+                    var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+
+                    if (server is null)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    switch (server.Runtime.Status)
+                    {
+                        case ServerStatus.Initializing:
+                        case ServerStatus.Stopping:
+                        case ServerStatus.Stopped:
+                        case ServerStatus.Uninstalled:
+                        case ServerStatus.Unknown:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
+
+                        case ServerStatus.Updating:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), profileId));
+                    }
+
+                    profile = ServerProfileSnapshot.Create(server.Profile);
+                }).Wait();
+
+                List<string> response = new List<string>();
+
+                var app = new ServerApp(true)
+                {
+                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    OutputLogs = false,
+                    SendAlerts = true,
+                    SendEmails = false,
+                    ServerProcess = ServerProcessType.Shutdown,
+                    ShutdownInterval = 0,
+                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
+                    {
+                        TaskUtils.RunOnUIThreadAsync(() =>
+                        {
+                            var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                        }).Wait();
+                    }
+                };
+
+                task = Task.Run(() =>
+                {
+                    app.PerformProfileShutdown(profile, false, false, false, token);
+                    _currentProfileCommands.Remove(profileId);
+                });
+
+                response.Add(string.Format(_globalizer.GetResourceString("DiscordBot_StopRequested"), profile.ServerName));
+
+                return response;
+            }
+            finally
+            {
+                if (task is null)
+                {
+                    _currentProfileCommands.Remove(profileId);
+                }
+            }
         }
 
-        private static IList<string> UpdateServer(string channelId, string profileId)
+        private static IList<string> StartServer(string channelId, string profileId, CancellationToken token)
+        {
+            if (string.IsNullOrWhiteSpace(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMissing"), CommandType.Start) };
+            }
+
+            // check if another command is being run against the profile
+            if (_currentProfileCommands.ContainsKey(profileId))
+            {
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[profileId], profileId) };
+            }
+            _currentProfileCommands.Add(profileId, CommandType.Start);
+
+            ServerProfileSnapshot profile = null;
+            Task task = null;
+
+            try
+            {
+                TaskUtils.RunOnUIThreadAsync(() =>
+                {
+                    var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+
+                    if (server is null)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    switch (server.Runtime.Status)
+                    {
+                        case ServerStatus.Initializing:
+                        case ServerStatus.Stopping:
+                        case ServerStatus.Running:
+                        case ServerStatus.Uninstalled:
+                        case ServerStatus.Unknown:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
+
+                        case ServerStatus.Updating:
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), profileId));
+                    }
+
+                    profile = ServerProfileSnapshot.Create(server.Profile);
+                    profile.AutoRestartIfShutdown = true;
+                }).Wait();
+
+                List<string> response = new List<string>();
+
+                var app = new ServerApp(true)
+                {
+                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    OutputLogs = false,
+                    SendAlerts = true,
+                    SendEmails = false,
+                    ServerProcess = ServerProcessType.Restart,
+                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
+                    {
+                        TaskUtils.RunOnUIThreadAsync(() =>
+                        {
+                            var server = ServerManager.Instance.Servers.FirstOrDefault(s => Equals(channelId, s.Profile.DiscordChannelId) && Equals(profileId, s.Profile.ProfileID));
+                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                        }).Wait();
+                    }
+                };
+
+                task = Task.Run(() =>
+                {
+                    app.PerformProfileShutdown(profile, true, false, false, token);
+                    _currentProfileCommands.Remove(profileId);
+                });
+
+                response.Add(string.Format(_globalizer.GetResourceString("DiscordBot_StartRequested"), profile.ServerName));
+
+                return response;
+            }
+            finally
+            {
+                if (task is null)
+                {
+                    _currentProfileCommands.Remove(profileId);
+                }
+            }
+        }
+
+        private static IList<string> UpdateServer(string channelId, string profileId, CancellationToken token)
         {
             if (string.IsNullOrWhiteSpace(profileId))
             {
@@ -293,7 +639,7 @@ namespace ServerManagerTool.Utils
                         case ServerStatus.Initializing:
                         case ServerStatus.Stopping:
                         case ServerStatus.Unknown:
-                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, ServerRuntime.GetServerStatusString(ServerStatus.Stopped)));
+                            throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), profileId, server.Runtime.StatusString));
 
                         case ServerStatus.Running:
                             performRestart = true;
@@ -327,7 +673,7 @@ namespace ServerManagerTool.Utils
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, performRestart, true, false, CancellationToken.None);
+                    app.PerformProfileShutdown(profile, performRestart, true, false, token);
                     _currentProfileCommands.Remove(profileId);
                 });
 

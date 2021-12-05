@@ -24,11 +24,8 @@ namespace ServerManagerTool.DiscordBot
             Started = false;
         }
 
-        private bool Started
-        {
-            get;
-            set;
-        }
+        public CancellationToken Token { get; private set; }
+        public bool Started { get; private set; }  
 
         public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
@@ -42,6 +39,8 @@ namespace ServerManagerTool.DiscordBot
             {
                 return;
             }
+
+            Token = token;
 
             if (commandPrefix.Any(c => !char.IsLetterOrDigit(c)))
             {
@@ -57,7 +56,7 @@ namespace ServerManagerTool.DiscordBot
             {
                 { "DiscordSettings:Token", discordToken },
                 { "DiscordSettings:Prefix", commandPrefix },
-                { "ServerManager:DataDirectory", dataDirectory }
+                { "ServerManager:DataDirectory", dataDirectory },
             };
 
             // Begin building the configuration file
@@ -107,7 +106,8 @@ namespace ServerManagerTool.DiscordBot
                 .AddSingleton<Random>()
                 .AddSingleton(config)
                 .AddSingleton(handleCommandCallback)
-                .AddSingleton(handleTranslationCallback);
+                .AddSingleton(handleTranslationCallback)
+                .AddSingleton<IServerManagerBot>(this);
 
             // Create the service provider
             using (var provider = services.BuildServiceProvider())

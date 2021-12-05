@@ -17,7 +17,7 @@ namespace ServerManagerTool.Lib
         public string InstallDirectory;
         public string GameFile;
         public string AdminPassword;
-        public string ServerIP;
+        public IPAddress ServerIPAddress;
         public int ServerPort;
         public int ServerPeerPort;
         public int QueryPort;
@@ -60,7 +60,7 @@ namespace ServerManagerTool.Lib
                 InstallDirectory = profile.InstallDirectory,
                 GameFile = profile.GetServerWorldFile(),
                 AdminPassword = profile.AdminPassword,
-                ServerIP = string.IsNullOrWhiteSpace(profile.ServerIP) ? IPAddress.Loopback.ToString() : profile.ServerIP.Trim(),
+                ServerIPAddress = string.IsNullOrWhiteSpace(profile.ServerIP) || !IPAddress.TryParse(profile.ServerIP.Trim(), out IPAddress ipAddress) ? IPAddress.Loopback : ipAddress,
                 ServerPort = profile.ServerPort,
                 ServerPeerPort = profile.ServerPeerPort,
                 QueryPort = profile.QueryPort,
