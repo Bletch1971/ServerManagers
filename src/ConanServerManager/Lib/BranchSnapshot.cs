@@ -5,8 +5,30 @@ namespace ServerManagerTool.Lib
 {
     public class BranchSnapshot
     {
+        private BranchSnapshot()
+        {
+        }
+
         public string BranchName = string.Empty;
         public string BranchPassword = string.Empty;
+
+        public static BranchSnapshot Create(ServerProfile profile)
+        {
+            return new BranchSnapshot
+            {
+                BranchName = profile.BranchName,
+                BranchPassword = profile.BranchPassword
+            };
+        }
+
+        public static BranchSnapshot Create(ServerProfileSnapshot profile)
+        {
+            return new BranchSnapshot
+            {
+                BranchName = profile.BranchName,
+                BranchPassword = profile.BranchPassword
+            };
+        }
     }
 
     public class BranchSnapshotComparer : IEqualityComparer<BranchSnapshot>

@@ -2812,5 +2812,155 @@ namespace ServerManagerTool {
                 return ((string)(this["DefaultDataDirectoryName"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotEnabled {
+            get {
+                return ((bool)(this["DiscordBotEnabled"]));
+            }
+            set {
+                this["DiscordBotEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("asm")]
+        public string DiscordBotPrefix {
+            get {
+                return ((string)(this["DiscordBotPrefix"]));
+            }
+            set {
+                this["DiscordBotPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiscordBotToken {
+            get {
+                return ((string)(this["DiscordBotToken"]));
+            }
+            set {
+                this["DiscordBotToken"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiscordBotServerId {
+            get {
+                return ((string)(this["DiscordBotServerId"]));
+            }
+            set {
+                this["DiscordBotServerId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://discord.com/developers/applications")]
+        public string DiscordBotApplyUrl {
+            get {
+                return ((string)(this["DiscordBotApplyUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/thread/8764/get-own-discord-bot")]
+        public string DiscordBotHelpUrl {
+            get {
+                return ((string)(this["DiscordBotHelpUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SectionDiscordBotIsExpanded {
+            get {
+                return ((bool)(this["SectionDiscordBotIsExpanded"]));
+            }
+            set {
+                this["SectionDiscordBotIsExpanded"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordBackup {
+            get {
+                return ((bool)(this["AllowDiscordBackup"]));
+            }
+            set {
+                this["AllowDiscordBackup"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordUpdate {
+            get {
+                return ((bool)(this["AllowDiscordUpdate"]));
+            }
+            set {
+                this["AllowDiscordUpdate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordStart {
+            get {
+                return ((bool)(this["AllowDiscordStart"]));
+            }
+            set {
+                this["AllowDiscordStart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordRestart {
+            get {
+                return ((bool)(this["AllowDiscordRestart"]));
+            }
+            set {
+                this["AllowDiscordRestart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordShutdown {
+            get {
+                return ((bool)(this["AllowDiscordShutdown"]));
+            }
+            set {
+                this["AllowDiscordShutdown"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordStop {
+            get {
+                return ((bool)(this["AllowDiscordStop"]));
+            }
+            set {
+                this["AllowDiscordStop"] = value;
+            }
+        }
     }
 }

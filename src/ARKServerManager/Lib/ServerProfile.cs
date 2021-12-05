@@ -957,6 +957,64 @@ namespace ServerManagerTool.Lib
         }
         #endregion
 
+        #region Discord Bot
+        public static readonly DependencyProperty DiscordChannelIdProperty = DependencyProperty.Register(nameof(DiscordChannelId), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string DiscordChannelId
+        {
+            get { return (string)GetValue(DiscordChannelIdProperty); }
+            set { SetValue(DiscordChannelIdProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordBackupProperty = DependencyProperty.Register(nameof(AllowDiscordBackup), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordBackup
+        {
+            get { return (bool)GetValue(AllowDiscordBackupProperty); }
+            set { SetValue(AllowDiscordBackupProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordRestartProperty = DependencyProperty.Register(nameof(AllowDiscordRestart), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordRestart
+        {
+            get { return (bool)GetValue(AllowDiscordRestartProperty); }
+            set { SetValue(AllowDiscordRestartProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordShutdownProperty = DependencyProperty.Register(nameof(AllowDiscordShutdown), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordShutdown
+        {
+            get { return (bool)GetValue(AllowDiscordShutdownProperty); }
+            set { SetValue(AllowDiscordShutdownProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordStartProperty = DependencyProperty.Register(nameof(AllowDiscordStart), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordStart
+        {
+            get { return (bool)GetValue(AllowDiscordStartProperty); }
+            set { SetValue(AllowDiscordStartProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordStopProperty = DependencyProperty.Register(nameof(AllowDiscordStop), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordStop
+        {
+            get { return (bool)GetValue(AllowDiscordStopProperty); }
+            set { SetValue(AllowDiscordStopProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordUpdateProperty = DependencyProperty.Register(nameof(AllowDiscordUpdate), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordUpdate
+        {
+            get { return (bool)GetValue(AllowDiscordUpdateProperty); }
+            set { SetValue(AllowDiscordUpdateProperty, value); }
+        }
+        #endregion
+
         #region Rules
         public static readonly DependencyProperty EnableHardcoreProperty = DependencyProperty.Register(nameof(EnableHardcore), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, "ServerHardcore")]

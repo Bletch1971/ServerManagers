@@ -664,7 +664,7 @@ namespace ServerManagerTool
                     ProfileId = server.Runtime.ProfileSnapshot.ProfileId,
                     ProfileName = server.Runtime.ProfileSnapshot.ProfileName,
                     MaxPlayers = server.Runtime.MaxPlayers,
-                    RCONHost = server.Runtime.ProfileSnapshot.ServerIP,
+                    RCONHost = server.Runtime.ProfileSnapshot.ServerIPAddress.ToString(),
                     RCONPort = server.Runtime.ProfileSnapshot.RCONPort,
 
                     PGM_Enabled = server.Profile.PGM_Enabled,

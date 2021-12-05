@@ -1,16 +1,16 @@
 using ArkData;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Utils;
+using ServerManagerTool.DiscordBot;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -21,7 +21,6 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Xml;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -39,6 +38,7 @@ namespace ServerManagerTool
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private CancellationTokenSource _tokenSource;
         private GlobalizedApplication _globalizer;
         private bool _applicationStarted;
         private string _args;
@@ -177,11 +177,6 @@ namespace ServerManagerTool
             }
         }
 
-        private IList<Plugin.Common.Lib.Profile> FetchProfiles()
-        {
-            return ServerManager.Instance.Servers.Select(s => new ServerManagerTool.Plugin.Common.Lib.Profile() { ProfileName = s?.Profile?.ProfileName ?? string.Empty, InstallationFolder = s?.Profile?.InstallDirectory ?? string.Empty }).ToList();
-        }
-
         public static string GetLogFolder() => IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.LogsDir));
 
         public static string GetProfileLogFolder(string profileId) => IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.LogsDir, profileId.ToLower()));
@@ -312,7 +307,7 @@ namespace ServerManagerTool
             var installPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             PluginHelper.Instance.BetaEnabled = this.BetaVersion;
             PluginHelper.Instance.LoadPlugins(installPath, true);
-            PluginHelper.Instance.SetFetchProfileCallback(FetchProfiles);
+            PluginHelper.Instance.SetFetchProfileCallback(DiscordPluginHelper.FetchProfiles);
             OnResourceDictionaryChanged(Thread.CurrentThread.CurrentCulture.Name);
 
             // check if we are starting ASM for the old server restart - no longer supported
@@ -412,6 +407,7 @@ namespace ServerManagerTool
 
             ApplicationStarted = true;
 
+            var restartRequired = false;
             if (string.IsNullOrWhiteSpace(Config.Default.DataDir))
             {              
                 var dataDirectoryWindow = new DataDirectoryWindow();
@@ -422,12 +418,19 @@ namespace ServerManagerTool
                 {
                     Environment.Exit(0);
                 }
+
+                restartRequired = true; 
             }
 
             Config.Default.ConfigDirectory = Path.Combine(Config.Default.DataDir, Config.Default.ProfilesDir);            
             System.IO.Directory.CreateDirectory(Config.Default.ConfigDirectory);
             Config.Default.Save();
             CommonConfig.Default.Save();
+
+            if (restartRequired)
+            {
+                Environment.Exit(0);
+            }
 
             DataFileDetails.PlayerFileExtension = Config.Default.PlayerFileExtension;
             DataFileDetails.TribeFileExtension = Config.Default.TribeFileExtension;
@@ -445,6 +448,25 @@ namespace ServerManagerTool
                 GameData.Initialize();
 
                 StartupUri = new Uri("Windows/AutoUpdateWindow.xaml", UriKind.RelativeOrAbsolute);
+            }
+
+            if (Config.Default.DiscordBotEnabled)
+            {
+                _tokenSource = new CancellationTokenSource();
+
+                Task discordTask = Task.Run(async () =>
+                {
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
+                }, _tokenSource.Token)
+                    .ContinueWith(t => {
+                        var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
+                        if (message.StartsWith("#"))
+                        {
+                            message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
+                        }
+
+                        MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    }, TaskContinuationOptions.OnlyOnFaulted);
             }
         }
 
@@ -486,6 +508,12 @@ namespace ServerManagerTool
 
         private void ShutDownApplication()
         {
+            if (!(_tokenSource is null))
+            {
+                _tokenSource.Cancel();
+                _tokenSource.Dispose();
+            }
+
             if (ApplicationStarted)
             {
                 foreach (var server in ServerManager.Instance.Servers)

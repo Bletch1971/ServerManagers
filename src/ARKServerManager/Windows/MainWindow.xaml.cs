@@ -6,6 +6,7 @@ using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
 using System.Diagnostics;
@@ -169,7 +170,7 @@ namespace ServerManagerTool
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             //
             // Kick off the initialization.
@@ -199,15 +200,7 @@ namespace ServerManagerTool
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            if (sender is Window window)
-                window.Closed -= Window_Closed;
-
-            this.Activate();
-        }
-
-        private void Window_LocationChanged(object sender, EventArgs e)
+        private void MainWindow_LocationChanged(object sender, EventArgs e)
         {
             if (this.WindowState == WindowState.Normal)
             {
@@ -216,7 +209,7 @@ namespace ServerManagerTool
             }
         }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (this.WindowState == WindowState.Normal)
             {
@@ -225,7 +218,7 @@ namespace ServerManagerTool
             }
         }
 
-        private void Window_StateChanged(object sender, EventArgs e)
+        private void MainWindow_StateChanged(object sender, EventArgs e)
         {
             if (Config.Default.MainWindow_MinimizeToTray && this.WindowState == WindowState.Minimized)
             {
@@ -233,8 +226,26 @@ namespace ServerManagerTool
             }
         }
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            if (sender is Window window)
+                window.Closed -= Window_Closed;
+
+            this.Activate();
+        }
+
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
+            if (DiscordBotHelper.HasRunningCommands)
+            {
+                var result = MessageBox.Show(_globalizer.GetResourceString("MainWindow_DiscordBot_RunningCommandsLabel"), _globalizer.GetResourceString("MainWindow_DiscordBot_RunningCommandsTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+
             base.OnClosing(e);
             RCONWindow.CloseAllWindows();
             PlayerListWindow.CloseAllWindows();

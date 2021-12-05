@@ -3,15 +3,37 @@ using System.Collections.Generic;
 
 namespace ServerManagerTool.Lib
 {
-    public class ServerBranchSnapshot
+    public class BranchSnapshot
     {
+        private BranchSnapshot()
+        {
+        }
+
         public string BranchName = string.Empty;
         public string BranchPassword = string.Empty;
+
+        public static BranchSnapshot Create(ServerProfile profile)
+        {
+            return new BranchSnapshot
+            {
+                BranchName = profile.BranchName,
+                BranchPassword = profile.BranchPassword
+            };
+        }
+
+        public static BranchSnapshot Create(ServerProfileSnapshot profile)
+        {
+            return new BranchSnapshot
+            {
+                BranchName = profile.BranchName,
+                BranchPassword = profile.BranchPassword
+            };
+        }
     }
 
-    public class ServerBranchSnapshotComparer : IEqualityComparer<ServerBranchSnapshot>
+    public class BranchSnapshotComparer : IEqualityComparer<BranchSnapshot>
     {
-        public bool Equals(ServerBranchSnapshot x, ServerBranchSnapshot y)
+        public bool Equals(BranchSnapshot x, BranchSnapshot y)
         {
             //Check whether the compared objects reference the same data.
             if (Object.ReferenceEquals(x, y)) return true;
@@ -24,7 +46,7 @@ namespace ServerManagerTool.Lib
             return x.BranchName == y.BranchName;
         }
 
-        public int GetHashCode(ServerBranchSnapshot snapshot)
+        public int GetHashCode(BranchSnapshot snapshot)
         {
             //Check whether the object is null
             if (snapshot is null) return 0;

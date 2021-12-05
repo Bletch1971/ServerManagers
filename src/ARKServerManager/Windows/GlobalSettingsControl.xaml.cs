@@ -289,6 +289,16 @@ namespace ServerManagerTool
             }
         }
 
+        private void DiscordBotApply_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(Config.Default.DiscordBotApplyUrl);
+        }
+
+        private void DiscordBotHelp_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(Config.Default.DiscordBotHelpUrl);
+        }
+
         private void ComboBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             var comboBox = sender as ComboBox;
@@ -326,6 +336,8 @@ namespace ServerManagerTool
                     textBox = SteamAPIKeyTextBox;
                 if (Equals(hideTextBox, HideEmailPasswordTextBox))
                     textBox = EmailPasswordTextBox;
+                if (Equals(hideTextBox, HideDiscordBotTokenTextBox))
+                    textBox = DiscordBotTokenTextBox;
 
                 if (textBox != null)
                 {
@@ -349,6 +361,8 @@ namespace ServerManagerTool
                     hideTextBox = HideSteamAPIKeyTextBox;
                 if (textBox == EmailPasswordTextBox)
                     hideTextBox = HideEmailPasswordTextBox;
+                if (textBox == DiscordBotTokenTextBox)
+                    hideTextBox = HideDiscordBotTokenTextBox;
 
                 if (hideTextBox != null)
                 {

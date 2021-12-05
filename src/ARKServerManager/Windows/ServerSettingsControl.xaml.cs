@@ -1099,7 +1099,7 @@ namespace ServerManagerTool
 
                 var profile = ServerProfileSnapshot.Create(Server.Profile);
 
-                var exitCode = await Task.Run(() => app.PerformProfileBackup(profile));
+                var exitCode = await Task.Run(() => app.PerformProfileBackup(profile, CancellationToken.None));
                 if (exitCode != ServerApp.EXITCODE_NORMALEXIT && exitCode != ServerApp.EXITCODE_CANCELLED)
                     throw new ApplicationException($"An error occured during the backup process - ExitCode: {exitCode}");
 
@@ -4266,7 +4266,7 @@ namespace ServerManagerTool
 
                     await Task.Delay(1000);
 
-                    var branch = new ServerBranchSnapshot() { BranchName = this.Server.Profile.BranchName, BranchPassword = this.Server.Profile.BranchPassword };
+                    var branch = BranchSnapshot.Create(this.Server.Profile);
                     return await this.Server.UpgradeAsync(_upgradeCancellationSource.Token, updateServer, branch, true, updateMods, (p, m, n) => { TaskUtils.RunOnUIThreadAsync(() => { window?.AddMessage(m, n); }).DoNotWait(); });
                 }
                 else

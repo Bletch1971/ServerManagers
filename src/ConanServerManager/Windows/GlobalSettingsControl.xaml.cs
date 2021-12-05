@@ -257,6 +257,16 @@ namespace ServerManagerTool
             Process.Start(Config.Default.SteamWebAPIKeyHelpUrl);
         }
 
+        private void DiscordBotApply_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(Config.Default.DiscordBotApplyUrl);
+        }
+
+        private void DiscordBotHelp_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(Config.Default.DiscordBotHelpUrl);
+        }
+
         private async void SteamCMDAuthenticate_Click(object sender, RoutedEventArgs e)
         {
             var cursor = this.Cursor;
@@ -335,6 +345,8 @@ namespace ServerManagerTool
                     textBox = SteamAPIKeyTextBox;
                 if (Equals(hideTextBox, HideEmailPasswordTextBox))
                     textBox = EmailPasswordTextBox;
+                if (Equals(hideTextBox, HideDiscordBotTokenTextBox))
+                    textBox = DiscordBotTokenTextBox;
 
                 if (textBox != null)
                 {
@@ -358,6 +370,8 @@ namespace ServerManagerTool
                     hideTextBox = HideSteamAPIKeyTextBox;
                 if (textBox == EmailPasswordTextBox)
                     hideTextBox = HideEmailPasswordTextBox;
+                if (textBox == DiscordBotTokenTextBox)
+                    hideTextBox = HideDiscordBotTokenTextBox;
 
                 if (hideTextBox != null)
                 {

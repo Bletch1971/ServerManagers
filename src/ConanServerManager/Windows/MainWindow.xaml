@@ -10,7 +10,7 @@
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:enum="clr-namespace:ServerManagerTool.Enums"
         MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50" WindowState="Normal"
-        Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" StateChanged="Window_StateChanged" LocationChanged="Window_LocationChanged"
+        Loaded="MainWindow_Loaded" SizeChanged="MainWindow_SizeChanged" StateChanged="MainWindow_StateChanged" LocationChanged="MainWindow_LocationChanged"
         Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}">
     <Window.Resources>
         <ResourceDictionary>
