@@ -13,7 +13,37 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
-    <!--#region Mods -->
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_TheIsland">The Island</sys:String>
+    <sys:String x:Key="Map_TheCenter">The Center</sys:String>
+    <sys:String x:Key="Map_ScorchedEarth_P">Scorched Earth</sys:String>
+    <sys:String x:Key="Map_Ragnarok">Ragnarok</sys:String>
+    <sys:String x:Key="Map_Aberration_P">Aberration</sys:String>
+    <sys:String x:Key="Map_Extinction">Extinction</sys:String>
+    <sys:String x:Key="Map_Valguero_P">Valguero</sys:String>
+    <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
+    <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <!--#endregion-->
+
+    <!--#region Total Conversion Names -->
+    <sys:String x:Key="TotalConv_111111111">Primitive Plus</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
+    <!--#region Event Names -->
+    <sys:String x:Key="Event_none">None</sys:String>
+    <sys:String x:Key="Event_vday">Valentines Day</sys:String>
+    <sys:String x:Key="Event_Easter">Easter</sys:String>
+    <sys:String x:Key="Event_FearEvolved">Fear Evolved (Halloween)</sys:String>
+    <sys:String x:Key="Event_TurkeyTrial">Turkey Trial</sys:String>
+    <sys:String x:Key="Event_WinterWonderland">Winter Wonderland</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Names -->
     <sys:String x:Key="Mod_All">All</sys:String>
     <sys:String x:Key="Mod_Unknown">Unknown</sys:String>
     <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
@@ -72,8 +102,9 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Data Directory Selection Error</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">The directory you have chosen is on the desktop. This is not recommended, please choose another folder.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
 
@@ -132,6 +163,25 @@
 
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">Selected</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processor</sys:String>
+    <!--#endregion-->
+
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Data Folder Selection</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Select the drive where the data folder should be located.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Data Folder Name:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">The name of the server manager data folder.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Local Disk</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} free of {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Refresh</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">The data folder name you have entered is not valid.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Server Manager Restart Required</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">The data folder has been set, you must now restart the server manager to use the new settings.</sys:String>
     <!--#endregion-->
 
     <!--#region PlayerListWindow Window -->
@@ -2473,36 +2523,6 @@
 
     <!--#region Settings window -->
     <sys:String x:Key="Settings_Title">Settings</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="TheIsland">The Island</sys:String>
-    <sys:String x:Key="TheCenter">The Center</sys:String>
-    <sys:String x:Key="ScorchedEarth_P">Scorched Earth</sys:String>
-    <sys:String x:Key="Ragnarok">Ragnarok</sys:String>
-    <sys:String x:Key="Aberration_P">Aberration</sys:String>
-    <sys:String x:Key="Extinction">Extinction</sys:String>
-    <sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis: Part 1</sys:String>
-    <sys:String x:Key="CrystalIsles">Crystal Isles</sys:String>
-    <sys:String x:Key="Gen2">Genesis: Part 2</sys:String>
-    <!--#endregion-->
-
-    <!--#region Total Conversion Names -->
-    <sys:String x:Key="111111111">Primitive Plus</sys:String>
-    <!--#endregion-->
-
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
-    <!--#endregion-->
-
-    <!--#region Event Names -->
-    <sys:String x:Key="none">None</sys:String>
-    <sys:String x:Key="vday">Valentines Day</sys:String>
-    <sys:String x:Key="Easter">Easter</sys:String>
-    <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
-    <sys:String x:Key="TurkeyTrial">Turkey Trial</sys:String>
-    <sys:String x:Key="WinterWonderland">Winter Wonderland</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature -->
