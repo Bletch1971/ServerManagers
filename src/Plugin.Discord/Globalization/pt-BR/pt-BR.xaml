@@ -4,6 +4,18 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     >
 
+    <!--#region Alert Types -->
+    <sys:String x:Key="AlertType_Backup">Backup</sys:String>
+    <sys:String x:Key="AlertType_Error">Erro</sys:String>
+    <sys:String x:Key="AlertType_ModUpdateDetected">Mod Update Detected</sys:String>
+    <sys:String x:Key="AlertType_Shutdown">Desligar</sys:String>
+    <sys:String x:Key="AlertType_ShutdownMessage">Mensagem de desligamento</sys:String>
+    <sys:String x:Key="AlertType_ShutdownReason">Motivo de desligamento</sys:String>
+    <sys:String x:Key="AlertType_ServerStatusChange">Mudança de status do servidor</sys:String>
+    <sys:String x:Key="AlertType_Startup">Começar</sys:String>
+    <sys:String x:Key="AlertType_UpdateResults">Resultados da atualização</sys:String>
+    <!--#endregion-->
+
     <!--#region Global -->
     <sys:String x:Key="Global_CancelButtonLabel">Cancela</sys:String>
     <sys:String x:Key="Global_CloseButtonLabel">Fechar</sys:String>
