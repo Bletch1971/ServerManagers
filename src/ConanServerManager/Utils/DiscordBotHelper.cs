@@ -49,17 +49,29 @@ namespace ServerManagerTool.Utils
                         return GetServerStatus(channelId, profileId);
 
                     case CommandType.Backup:
-                        return BackupServer(channelId, profileId, token);
+                        if (Config.Default.AllowDiscordBackup)
+                            return BackupServer(channelId, profileId, token);
+                        return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandNotEnabled"), commandType) };
                     case CommandType.Restart:
-                        return RestartServer(channelId, profileId, token);
+                        if (Config.Default.AllowDiscordRestart)
+                            return RestartServer(channelId, profileId, token);
+                        return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandNotEnabled"), commandType) };
                     case CommandType.Shutdown:
-                        return ShutdownServer(channelId, profileId, token);
+                        if (Config.Default.AllowDiscordShutdown)
+                            return ShutdownServer(channelId, profileId, token);
+                        return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandNotEnabled"), commandType) };
                     case CommandType.Stop:
-                        return StopServer(channelId, profileId, token);
+                        if (Config.Default.AllowDiscordStop)
+                            return StopServer(channelId, profileId, token);
+                        return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandNotEnabled"), commandType) };
                     case CommandType.Start:
-                        return StartServer(channelId, profileId, token);
+                        if (Config.Default.AllowDiscordStart)
+                            return StartServer(channelId, profileId, token);
+                        return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandNotEnabled"), commandType) };
                     case CommandType.Update:
-                        return UpdateServer(channelId, profileId, token);
+                        if (Config.Default.AllowDiscordUpdate)
+                            return UpdateServer(channelId, profileId, token);
+                        return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandNotEnabled"), commandType) };
 
                     default:
                         return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandUnknown"), commandType) };
@@ -224,6 +236,11 @@ namespace ServerManagerTool.Utils
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
                     }
 
+                    if (!server.Profile.AllowDiscordBackup)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Backup, profileId));
+                    }
+
                     switch (server.Runtime.Status)
                     {
                         case ServerStatus.Initializing:
@@ -301,6 +318,11 @@ namespace ServerManagerTool.Utils
                     if (server is null)
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    if (!server.Profile.AllowDiscordRestart)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Restart, profileId));
                     }
 
                     switch (server.Runtime.Status)
@@ -385,6 +407,11 @@ namespace ServerManagerTool.Utils
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
                     }
 
+                    if (!server.Profile.AllowDiscordShutdown)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Shutdown, profileId));
+                    }
+
                     switch (server.Runtime.Status)
                     {
                         case ServerStatus.Initializing:
@@ -443,7 +470,7 @@ namespace ServerManagerTool.Utils
         {
             if (string.IsNullOrWhiteSpace(profileId))
             {
-                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMissing"), CommandType.Shutdown) };
+                return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMissing"), CommandType.Stop) };
             }
 
             // check if another command is being run against the profile
@@ -451,7 +478,7 @@ namespace ServerManagerTool.Utils
             {
                 return new List<string> { string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[profileId], profileId) };
             }
-            _currentProfileCommands.Add(profileId, CommandType.Shutdown);
+            _currentProfileCommands.Add(profileId, CommandType.Stop);
 
             ServerProfileSnapshot profile = null;
             Task task = null;
@@ -465,6 +492,11 @@ namespace ServerManagerTool.Utils
                     if (server is null)
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    if (!server.Profile.AllowDiscordStop)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Stop, profileId));
                     }
 
                     switch (server.Runtime.Status)
@@ -550,6 +582,11 @@ namespace ServerManagerTool.Utils
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
                     }
 
+                    if (!server.Profile.AllowDiscordStart)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Start, profileId));
+                    }
+
                     switch (server.Runtime.Status)
                     {
                         case ServerStatus.Initializing:
@@ -632,6 +669,11 @@ namespace ServerManagerTool.Utils
                     if (server is null)
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileId));
+                    }
+
+                    if (!server.Profile.AllowDiscordUpdate)
+                    {
+                        throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Update, profileId));
                     }
 
                     switch (server.Runtime.Status)

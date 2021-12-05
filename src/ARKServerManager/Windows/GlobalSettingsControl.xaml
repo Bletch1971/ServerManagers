@@ -589,29 +589,41 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" MinWidth="60"/>
                             <ColumnDefinition/>
                             <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" MinWidth="60"/>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="Auto" MinWidth="60"/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="5" Text="{DynamicResource GlobalSettings_DiscordBotInformationLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource WarningMessage}"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" Margin="5" Text="{DynamicResource GlobalSettings_DiscordBotInformationLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource WarningMessage}"/>
 
                         <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource GlobalSettings_DiscordBotTokenLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Name="HideDiscordBotTokenTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Style="{StaticResource HiddenTextBoxStyle}"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Name="DiscordBotTokenTextBox" Text="{Binding CurrentConfig.DiscordBotToken}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotTokenTooltip}" LostFocus="HiddenField_LostFocus" Visibility="Collapsed"/>
-                        <Button Grid.Row="1" Grid.Column="5" Margin="1" Content="{DynamicResource DiscordBotApplyButtonContent}" Click="DiscordBotApply_Click"/>
-                        <Button Grid.Row="1" Grid.Column="6" Margin="1" Content="{DynamicResource DiscordBotHelpButtonContent}" Click="DiscordBotHelp_Click"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Margin="1" Name="HideDiscordBotTokenTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Style="{StaticResource HiddenTextBoxStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Margin="1" Name="DiscordBotTokenTextBox" Text="{Binding CurrentConfig.DiscordBotToken}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotTokenTooltip}" LostFocus="HiddenField_LostFocus" Visibility="Collapsed"/>
+                        <StackPanel Grid.Row="1" Grid.Column="7" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Margin="1" Content="{DynamicResource DiscordBotApplyButtonContent}" Click="DiscordBotApply_Click"/>
+                            <Button Margin="1" Content="{DynamicResource DiscordBotHelpButtonContent}" Click="DiscordBotHelp_Click"/>
+                        </StackPanel>
 
                         <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_DiscordBotServerLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Text="{Binding CurrentConfig.DiscordBotServerId}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotServerTooltip}"/>
                         <Label Grid.Row="2" Grid.Column="3" Content="{DynamicResource GlobalSettings_DiscordBotPrefixLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="2" Grid.Column="4" Margin="1" Text="{Binding CurrentConfig.DiscordBotPrefix}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotPrefixTooltip}"/>
+
+                        <CheckBox Grid.Row="3" Grid.Column="1" Margin="0,5,0,0" IsChecked="{Binding CurrentConfig.AllowDiscordBackup}" Content="{DynamicResource ServerSettings_AllowDiscordBackupLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowBackupTooltip}"/>
+                        <CheckBox Grid.Row="3" Grid.Column="4" Margin="0,5,0,0" IsChecked="{Binding CurrentConfig.AllowDiscordUpdate}" Content="{DynamicResource ServerSettings_AllowDiscordUpdateLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowUpdateTooltip}"/>
+                        <CheckBox Grid.Row="3" Grid.Column="7" Margin="0,5,0,0" IsChecked="{Binding CurrentConfig.AllowDiscordStart}" Content="{DynamicResource ServerSettings_AllowDiscordStartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStartTooltip}"/>
+
+                        <CheckBox Grid.Row="4" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding CurrentConfig.AllowDiscordRestart}" Content="{DynamicResource ServerSettings_AllowDiscordRestartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowRestartTooltip}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="4" Margin="0,5,0,5" IsChecked="{Binding CurrentConfig.AllowDiscordShutdown}" Content="{DynamicResource ServerSettings_AllowDiscordShutdownLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowShutdownTooltip}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="7" Margin="0,5,0,5" IsChecked="{Binding CurrentConfig.AllowDiscordStop}" Content="{DynamicResource ServerSettings_AllowDiscordStopLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStopTooltip}"/>
                     </Grid>
                 </GroupBox>
 

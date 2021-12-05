@@ -2890,5 +2890,77 @@ namespace ServerManagerTool {
                 this["SectionDiscordBotIsExpanded"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordBackup {
+            get {
+                return ((bool)(this["AllowDiscordBackup"]));
+            }
+            set {
+                this["AllowDiscordBackup"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordUpdate {
+            get {
+                return ((bool)(this["AllowDiscordUpdate"]));
+            }
+            set {
+                this["AllowDiscordUpdate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordStart {
+            get {
+                return ((bool)(this["AllowDiscordStart"]));
+            }
+            set {
+                this["AllowDiscordStart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordRestart {
+            get {
+                return ((bool)(this["AllowDiscordRestart"]));
+            }
+            set {
+                this["AllowDiscordRestart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordShutdown {
+            get {
+                return ((bool)(this["AllowDiscordShutdown"]));
+            }
+            set {
+                this["AllowDiscordShutdown"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordStop {
+            get {
+                return ((bool)(this["AllowDiscordStop"]));
+            }
+            set {
+                this["AllowDiscordStop"] = value;
+            }
+        }
     }
 }
