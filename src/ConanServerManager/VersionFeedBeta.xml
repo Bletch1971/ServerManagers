@@ -5,45 +5,28 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-05T00:00:00Z</updated>
+  <updated>2021-12-06T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:6263DCCE-DC5A-4630-8BDB-F78DFD7118E3</id>
-    <title>1.1.55 (1.1.55.2)</title>
-    <summary>1.1.55.2</summary>
+    <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
+    <title>1.1.56 (1.1.56.1)</title>
+    <summary>1.1.56.1</summary>
     <link href="" />
-    <updated>2021-12-05T00:00:00Z</updated>
+    <updated>2021-12-06T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">CHANGE</u>
+          <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Project files clean-up.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:A3A790A9-D511-4CE8-AC15-A36B3DAB4385</id>
-    <title>1.1.55 (1.1.55.1)</title>
-    <summary>1.1.55.1</summary>
-    <link href="" />
-    <updated>2021-12-02T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Changed some globalization key values (maps and branches).</li>
-            <li>Changed the way the data directory is selected and created on first startup of the server manager.</li>
+            <li>
+              A new Discord Bot has been added to the server manager.<br/>
+              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.
+              <font color="#e62919">
+                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
+              </font>
+            </li>
           </ul>
         </p>
       </div>
