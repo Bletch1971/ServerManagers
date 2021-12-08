@@ -9,11 +9,11 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.11.30(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.12.07(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
-    <!--#游戏地图名称 -->
+<!--#游戏地图名称 -->
     <sys:String x:Key="Map_TheIsland">孤岛(The Island)</sys:String>
     <sys:String x:Key="Map_TheCenter">中心岛地图(The Center)</sys:String>
     <sys:String x:Key="Map_ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
@@ -21,8 +21,8 @@
     <sys:String x:Key="Map_Aberration_P">畸变地图(Aberration)</sys:String>
     <sys:String x:Key="Map_Extinction">灭绝地图(Extinction)</sys:String>
     <sys:String x:Key="Map_Valguero_P">瓦尔盖罗(Valguero)</sys:String>
-    <sys:String x:Key="Map_Genesis">创世纪(Genesis)</sys:String>
-    <sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
+    <sys:String x:Key="Map_Genesis">创世纪 1(Genesis: Part 1)</sys:String>
+	<sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
     <sys:String x:Key="Map_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
     <!--#endregion-->
 
@@ -34,8 +34,8 @@
     <sys:String x:Key="Branch_live">生存</sys:String>
     <!--#endregion-->
 
-    <!--#region Event Names -->
-    <sys:String x:Key="Event_none">无节日</sys:String>
+    <!--#region 活动名称 -->
+	<sys:String x:Key="Event_none">无节日</sys:String>
     <sys:String x:Key="Event_vday">情人节</sys:String>
     <sys:String x:Key="Event_Easter">复活节</sys:String>
     <sys:String x:Key="Event_FearEvolved">恐惧进化（万圣节）</sys:String>
@@ -43,7 +43,7 @@
     <sys:String x:Key="Event_WinterWonderland">冬季仙境（圣诞节）</sys:String>
     <!--#endregion-->
 
-    <!--#region Mod Names -->
+    <!--#region Mods -->
     <sys:String x:Key="Mod_All">所有</sys:String>
     <sys:String x:Key="Mod_Unknown">未知</sys:String>
     <sys:String x:Key="Mod_ArkPrime">方舟主体</sys:String>
@@ -163,6 +163,25 @@
 
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">选择</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">处理器</sys:String>
+    <!--#endregion-->
+	
+	<!--#数据目录窗口 -->
+    <sys:String x:Key="DataDirectory_Title">数据文件夹选择</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">您似乎没有数据目录集. 数据目录是存储配置文件和streamcmd的地方.它与服务器安装目录不同,您可以为每个配置文件选择.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">选择数据文件夹的硬盘号.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">数据文件夹名称:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">服务器管理器数据文件夹的名称.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">本地磁盘</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} free of {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">取消</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">刷新</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">数据目录选择错误</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">您输入的数据文件夹名称无效.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">需要重新启动服务器管理器</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">数据文件夹已设置，现在必须重新启动服务器管理器才能使用新设置.</sys:String>
     <!--#endregion-->
 
     <!-- 玩家列表窗口 -->

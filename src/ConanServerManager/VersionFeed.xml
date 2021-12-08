@@ -5,14 +5,14 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-02T00:00:00Z</updated>
+  <updated>2021-12-08T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
-    <title>1.1.56 (1.1.56.1)</title>
-    <summary>1.1.56.1</summary>
+    <title>1.1.56 (1.1.56.2)</title>
+    <summary>1.1.56.2</summary>
     <link href="" />
-    <updated>2021-12-06T00:00:00Z</updated>
+    <updated>2021-12-08T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -21,11 +21,18 @@
           <ul>
             <li>
               A new Discord Bot has been added to the server manager.<br/>
-              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.
-              To setup the new discord bot, open the global settings and scroll down to the Discord section.
+              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/>
               <font color="#e62919">
                 NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
               </font>
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>
+              <li>Global Settings - Added reset button to the Data Directory Location.</li>
             </li>
           </ul>
         </p>

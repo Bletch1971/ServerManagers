@@ -104,7 +104,8 @@
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">O Ark Server Manager armazenará os perfis e o SteamCMD nos seguintes diretórios:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\n Está tudo bem?</sys:String>
     <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Erro na seleção do diretório de dados</sys:String>
     <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">O diretório que você escolheu está dentro da pasta de instalação do gerenciador de servidor. Isso não é recomendado, escolha outra pasta.</sys:String>
-    <sys:String x:Key="Application_Profile_SaveFailedTitle">Não foi possível guardar o perfil</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">O diretório que você escolheu está na área de trabalho. Isso não é recomendado, escolha outra pasta.</sys:String>    
+	<sys:String x:Key="Application_Profile_SaveFailedTitle">Não foi possível guardar o perfil</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Não foi possível guardar o perfil {0}.  {1}\n{2}</sys:String>
 	
 	<sys:String x:Key="Application_NotifyIcon_ShowMainWindow">Mostrar janela principal</sys:String>
@@ -164,6 +165,25 @@
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processador</sys:String>
     <!--#endregion-->
 
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Seleção da pasta de dados</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">Parece que você não tem um conjunto de diretórios de dados. O diretório de dados é onde seus perfis e o SteamCMD serão armazenados. Não é o mesmo que o diretório de instalação do servidor, que você pode escolher para cada perfil.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Selecione a unidade onde a pasta de dados deve estar localizada.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Nome da pasta de dados:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">O nome da pasta de dados do server manager.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Disco local</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} livre de {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancelar</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Atualizar</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Erro de seleção no diretório de dados</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">O nome da pasta de dados que você digitou não é válido.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Reinicialização do Server Manager necessária</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">A pasta de dados foi configurada, você deve agora reiniciar o server manager para usar as novas configurações.</sys:String>
+    <!--#endregion-->
+	
     <!--#region PlayerListWindow Window -->
     <sys:String x:Key="PlayerList_CloseButtonLabel">Fechar</sys:String>
 
@@ -591,6 +611,23 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Mostrar o motivo de desligamento com TODAS as mensagens de desligamento</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Se habilitado, o motivo do desligamento será mostrado com todas as mensagens de desligamento; caso contrário, ele será mostrado apenas no início do encerramento do servidor.</sys:String>
     
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Habilitar Discord Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Você precisará reiniciar o server manager se alterar alguma configuração do Discord Bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">O token associado ao bot discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">Server Id:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">O id do servidor discord que o bot usará.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">O prefixo que deve ser usado ao enviar um comando via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Obter Token...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Ajuda...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Se ativado, o comando de backup pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Se ativado, o comando de reiniciar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Se habilitado, o comando de desligar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">Se habilitado, o comando de iniciar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">Se habilitado, o comando de parar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">Se ativado, o comando de atualizar pode ser enviado do discord.</sys:String>
+
 	<sys:String x:Key="GlobalSettings_EmailSettingsLabel">Configurações de email SMTP</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">O nome ou endereço IP do host usado para transmissões de SMTP.</sys:String>
@@ -754,6 +791,9 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">Se você prosseguir, toda a pasta do SteamCMD será removida, incluindo todos os downloads de cache mod.\R\n Tem certeza de que deseja reinstalar o SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstale o erro do SteamCMD</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">Ocorreu um erro ao tentar reinstalar o SteamCMD. Isso deixou o SteamCmd em um estado instável, tente reinstalar novamente ou informe isso.\R\nException: {0}</sys:String>
+
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot executando comandos</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">O bot discord tem um ou mais comandos em execução. Quer continuar fechando o server manager?</sys:String>
 
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Iniciar a confirmação do servidor</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">Você está prestes a iniciar o servidor, deseja continuar?</sys:String>
@@ -1157,6 +1197,24 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Se ativado, o servidor será atualizado periodicamente durante o ciclo de atualização automática. Veja as configurações das opções de atualização automática.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Reinicie o servidor se o desligamento</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Se ativado, o servidor será reiniciado mesmo se o desligamento for Reinicializações Automáticas e Atualizações Automáticas.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Detalhes do Discord Bot</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Id do canal:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">O id do canal do discord que este perfil irá usar.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Permitir backup</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Se ativado, o perfil usará os comandos de backup pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Permitir Reinício</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">Se ativado, o perfil usará comandos de reinicialização pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Permitir desligamento</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">Se ativado, o perfil usará comandos de desligamento pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Permitir iníciar</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">Se ativado, o perfil usará os comandos de iníciar pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Permitir parar</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Se ativado, o perfil usará os comandos de parar pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Permitir atualização</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Se ativado, o perfil usará os comandos de atualização pelo discord.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -5518,6 +5576,34 @@
     <!--#region Server Update -->
     <sys:String x:Key="ServerUpdate_Title">Atualização do servidor</sys:String>
     <sys:String x:Key="ServerUpdate_WarningLabel">Ocorreu um problema ao executar a atualização do servidor. Isso pode deixar o servidor em um estado incompleto.\r\n\r\nDeseja continuar com a inicialização do servidor, isso pode causar problemas?</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">O discord bot requer um token válido para que possa se conectar ao servidor discord\r\nIsso pode ser definido nas configurações globais.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">O prefixo discord bot contém caracteres inválidos. Somente letras e números são permitidos.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">O comando '{0}' não foi habilitado.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Comando desconhecido '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Outro comando está sendo processado.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Outro comando '{0}' está em execução no perfil '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">O comando '{0}' foi desativado para o perfil '{1}'.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">O comando '{0}' requer um id de perfil.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">O perfil '{0}' não foi encontrado ou não está associado ao canal.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">O perfil '{0}' está em um estado '{1}' que não pode executar este comando.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">O perfil '{0}' está sendo atualizado.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">A chamada para o servidor '{0}' falhou.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">Uma solicitação de backup para o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">Um pedido de reinicialização do servidor '{0}' foi enviado.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">Um pedido de desligamento do servidor '{0}' foi enviado.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">Uma solicitação de iníciar para o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">Uma solicitação de parar o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">Uma solicitação de atualização para o servidor '{0}' foi enviada.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Quantidade:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Mapa:</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

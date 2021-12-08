@@ -244,13 +244,6 @@ namespace ServerManagerTool
             PlayerListWindow.CloseAllWindows();
             ServerMonitorWindow.CloseAllWindows();
             this.versionChecker.DisposeAsync().DoNotWait();
-
-            var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var backupFolder = IOUtils.NormalizePath(string.IsNullOrWhiteSpace(Config.Default.BackupPath)
-                ? Path.Combine(Config.Default.DataPath, Config.Default.BackupRelativePath)
-                : Path.Combine(Config.Default.BackupPath));
-            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
-            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
         }
 
         private void ResourceDictionaryChangedEvent(object source, ResourceDictionaryChangedEventArgs e)

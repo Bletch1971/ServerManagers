@@ -641,6 +641,11 @@
             <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
         </StackPanel>
     </ContentControl>
+    <ContentControl x:Key="DataDirectoryResetButtonContent">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{DynamicResource GlobalSettings_ResetButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>
+        </StackPanel>
+    </ContentControl>
     <ContentControl x:Key="BackupDirectoryButtonContent">
         <StackPanel Orientation="Horizontal">
             <Label Content="{DynamicResource GlobalSettings_SetLocationButtonLabel}" VerticalAlignment="Center" Margin="0,-2,0,-2"/>

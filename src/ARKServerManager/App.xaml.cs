@@ -424,8 +424,7 @@ namespace ServerManagerTool
 
             Config.Default.ConfigDirectory = Path.Combine(Config.Default.DataDir, Config.Default.ProfilesDir);            
             System.IO.Directory.CreateDirectory(Config.Default.ConfigDirectory);
-            Config.Default.Save();
-            CommonConfig.Default.Save();
+            SaveConfigFiles();
 
             if (restartRequired)
             {
@@ -527,13 +526,31 @@ namespace ServerManagerTool
                         MessageBox.Show(String.Format(_globalizer.GetResourceString("Application_Profile_SaveFailedLabel"), server.Profile.ProfileName, ex.Message, ex.StackTrace), _globalizer.GetResourceString("Application_Profile_SaveFailedTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
-                Config.Default.Save();
-                CommonConfig.Default.Save();
+                SaveConfigFiles();
             }
 
             PluginHelper.Instance?.Dispose();
 
             ApplicationStarted = false;
+        }
+
+        public static void SaveConfigFiles(bool includeBackup = true)
+        {
+            Config.Default.Save();
+            CommonConfig.Default.Save();
+
+            Config.Default.Reload();
+            CommonConfig.Default.Reload();
+
+            var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var backupFolder = includeBackup 
+                ? IOUtils.NormalizePath(string.IsNullOrWhiteSpace(Config.Default.BackupPath)
+                        ? Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)
+                        : Path.Combine(Config.Default.BackupPath))
+                : null;
+
+            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
+            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
         }
     }
 }

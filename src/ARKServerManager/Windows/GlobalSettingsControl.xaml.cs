@@ -203,6 +203,21 @@ namespace ServerManagerTool
             }
         }
 
+        private void ResetDataDir_Click(object sender, RoutedEventArgs e)
+        {
+            // Confirm the reset with the user.
+            if (MessageBox.Show(_globalizer.GetResourceString("GlobalSettings_ResetDataDirectory_ConfirmLabel"), _globalizer.GetResourceString("GlobalSettings_ResetDataDirectory_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            // Update the config
+            Config.Default.DataDir = string.Empty;
+            Config.Default.ConfigDirectory = string.Empty;
+
+            App.SaveConfigFiles(false);
+
+            Environment.Exit(0);
+        }
+
         private void SetBackupDir_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new CommonOpenFileDialog();
@@ -384,13 +399,11 @@ namespace ServerManagerTool
             {
                 Config.Default.Reset();
                 Config.Default.UpgradeConfig = false;
-                Config.Default.Save();
-                Config.Default.Reload();
 
                 CommonConfig.Default.Reset();
                 CommonConfig.Default.UpgradeConfig = false;
-                CommonConfig.Default.Save();
-                CommonConfig.Default.Reload();
+
+                App.SaveConfigFiles(false);
             }
             catch (Exception ex)
             {
@@ -400,7 +413,7 @@ namespace ServerManagerTool
             }
             finally
             {
-                App.Current.Shutdown(exitCode);
+                Environment.Exit(0);
             }
         }
 
