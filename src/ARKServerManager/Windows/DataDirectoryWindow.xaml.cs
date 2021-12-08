@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServerManagerTool.Common.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace ServerManagerTool.Windows
         public DataDirectoryWindow()
         {
             InitializeComponent();
+            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
 
             PopulateDriveInformation();
         }
