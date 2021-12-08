@@ -5,14 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-12-08T00:00:00Z</updated>
+  <updated>2021-12-09T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:DBAFCE91-2235-4B6C-AE9B-5E4EF9FEC8F5</id>
-    <title>1.1.411 (1.1.411.3)</title>
-    <summary>1.1.411.3</summary>
+    <title>1.1.411 (1.1.411.4)</title>
+    <summary>1.1.411.4</summary>
     <link href="" />
-    <updated>2021-12-08T00:00:00Z</updated>
+    <updated>2021-12-09T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -22,7 +22,7 @@
             <li>
               A new Discord Bot has been added to the server manager.<br/>
               This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
-              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
               <font color="#e62919">
                 NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
               </font>
@@ -31,11 +31,10 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>
-              <li>Global Settings - Added reset button to the Data Directory Location.</li>
-              <li>pt-BR Translation file updated.</li>
-              <li>zh-CN Translation file updated.</li>
-            </li>
+            <li>Global Settings - Added reset button to the Data Directory Location.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
       </div>

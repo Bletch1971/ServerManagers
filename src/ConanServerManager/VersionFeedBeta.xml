@@ -19,9 +19,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>
-              <li>Fixed language translation of Data Directory window.</li>
-            </li>
+            <li>Fixed language translation of Data Directory window.</li>
           </ul>
         </p>
       </div>
@@ -44,9 +42,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>
-              <li>Global Settings - Added reset button to the Data Directory Location.</li>
-            </li>
+            <li>Global Settings - Added reset button to the Data Directory Location.</li>
           </ul>
         </p>
       </div>
@@ -72,7 +68,7 @@
             <li>
               A new Discord Bot has been added to the server manager.<br/>
               This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
-              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
               <font color="#e62919">
                 NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
               </font>
