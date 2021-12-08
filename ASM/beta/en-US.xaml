@@ -679,6 +679,8 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">Changing the data directory will move any existing profiles to the new location, but it will not move any server installations. Do you still want to change this directory?</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Failed to change data directory</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">There was an error changing the data directory: {0}\r\nPlease correct the error and try again, or contact technical support for assistance.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Confirm Data Directory Reset</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Click 'Yes' to confirm you want to reset the location of the data directory. Once reset, the server manager will shutdown and you will need to restart.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Select Backup Directory</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Select Cache Directory</sys:String>
