@@ -679,6 +679,8 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">Alterar o diretório de dados moverá os perfis existentes para o novo local, mas não moverá nenhuma instalação do servidor. Você ainda quer mudar este diretório?</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Falha ao alterar o diretório de dados</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">Ocorreu um erro ao alterar o diretório de dados: {0}\r\nPor favor, corrija o erro e tente novamente ou entre em contato com o suporte técnico para obter assistência.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Confirmar redefinição do diretório de dados</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Clique em 'Sim' para confirmar que deseja redefinir a localização do diretório de dados. Uma vez reiniciado, o gerenciador do servidor será encerrado e você precisará reiniciá-lo.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Selecione o diretório de backup</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Selecione o diretório de cache</sys:String>
