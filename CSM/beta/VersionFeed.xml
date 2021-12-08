@@ -8,7 +8,32 @@
   <updated>2021-12-08T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
+    <id>urn:uuid:8C834060-F20F-4ACE-8F49-0B459531BA3C</id>
+    <title>1.1.56 (1.1.56.3)</title>
+    <summary>1.1.56.3</summary>
+    <link href="" />
+    <updated>2021-12-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>
+              <li>Fixed language translation of Data Directory window.</li>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:339F72FC-920A-4425-AF86-AF9B34611A21</id>
     <title>1.1.56 (1.1.56.2)</title>
     <summary>1.1.56.2</summary>
     <link href="" />
