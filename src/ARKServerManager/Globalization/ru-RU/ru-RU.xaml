@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">08.12.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">09.12.2021 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -1638,12 +1638,16 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Добавит по уровневый множитель статов (прирученные)</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">По уровневый множитель влечения (прирученные)</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">По уровневый множитель (дикие)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Mutagen Level Boost (Wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Mutagen Level Boost (Bred)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Настройки размножения динозавров</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Если включено, позволяет изменять коэффициенты, которые будут применяться к базовому стату.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Если включено, позволяет изменять коэффициенты, которые будут применяться на каждый стат.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">Если этот параметр включен, позволяет изменять факторы, которые должны применяться к добавлению Приручения для каждого стата.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">Если этот параметр включен, позволяет изменять факторы, которые должны применяться к множителю Приручения для каждого стата.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">Если этот параметр включен, позволит изменять коэффициенты приручения для "Одомашнивания" при каждом стате.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">If enabled, allows scale factors to be applied to the Number of levels Mutagen adds to tames with wild ancestry.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">If enabled, allows scale factors to be applied to the Number of levels Mutagen adds to tames with bred ancestry.</sys:String>
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Сброс всех настроек обратно по умолчанию.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Сброс всех настроек обратно по умолчанию.</sys:String>
 
@@ -2375,22 +2379,22 @@
     <!--#endregion-->
 
     <!--#endregion-->
- 
+    
     <!--#region Server Settings - Prevent Transfer Overrides -->
     <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Запрет трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Запретить трансфер</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Настройки запрета трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">ПРИМЕЧАНИЕ: Если вы хотите управлять данными настройками вручную или с помощью другого приложения, вы можете отключить опцию, которая не позволит ASM ими управлять. См. раздел "Пользовательские настройки" в глобальных настройках.</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">ПРЕДУПРЕЖДЕНИЕ: Добавление дино в этот список запретит их трансфер на сервер и с сервера.</sys:String>
+
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Дино</sys:String>
- 
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Название класса дино (Пример: Allo_Character_BP_C)</sys:String>
+
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Добавить запрет трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">Удалить все запреты трансфера</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">Вставить данные запретов</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">Удалить запрет</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">Сохранить</sys:String>
- 
     <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
