@@ -10,7 +10,7 @@
         xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
         mc:Ignorable="d"
         MinWidth="600" MinHeight="500" Width="900" Height="500" Left="50" Top="50" ResizeMode="CanResize"
-        Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" StateChanged="Window_StateChanged"
+        Loaded="ServerMonitorWindow_Loaded" SizeChanged="ServerMonitorWindow_SizeChanged" StateChanged="ServerMonitorWindow_StateChanged" LocationChanged="ServerMonitorWindow_LocationChanged"
         Name="ServerMonitorUI" Icon="../Art/favicon.ico" Title="{DynamicResource ServerMonitor_Title}">
     <Window.Resources>
         <ResourceDictionary>

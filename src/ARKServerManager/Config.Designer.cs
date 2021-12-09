@@ -2962,5 +2962,29 @@ namespace ServerManagerTool {
                 this["AllowDiscordStop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double ServerMonitorWindow_Left {
+            get {
+                return ((double)(this["ServerMonitorWindow_Left"]));
+            }
+            set {
+                this["ServerMonitorWindow_Left"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double ServerMonitorWindow_Top {
+            get {
+                return ((double)(this["ServerMonitorWindow_Top"]));
+            }
+            set {
+                this["ServerMonitorWindow_Top"] = value;
+            }
+        }
     }
 }
