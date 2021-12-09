@@ -118,7 +118,8 @@ namespace ServerManagerTool.Plugin.Discord.Windows
                 {
                     foreach (var alertType in Profile.AlertTypes)
                     {
-                        Plugin.HandleAlert(Profile, alertType.Value, profileName.Value, $"Test '{alertType.Value}' message for profile name '{profileName.Value}'.");
+                        var testMessage = string.Format(ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_TestAlertMessage"), alertType.Value, profileName.Value);
+                        Plugin.HandleAlert(Profile, alertType.Value, profileName.Value, testMessage);
                         Task.Delay(1000).Wait();
                     }
                 }

@@ -5,14 +5,14 @@
     >
 
     <!--#region Alert Types -->
-    <sys:String x:Key="AlertType_Backup">Backup</sys:String>
-    <sys:String x:Key="AlertType_Error">Error</sys:String>
+    <sys:String x:Key="AlertType_Backup">Sicherung</sys:String>
+    <sys:String x:Key="AlertType_Error">Fehler</sys:String>
     <sys:String x:Key="AlertType_ModUpdateDetected">Mod Update Entdeckt</sys:String>
     <sys:String x:Key="AlertType_Shutdown">Herunterfahren</sys:String>
     <sys:String x:Key="AlertType_ShutdownMessage">Herunterfahren Nachricht</sys:String>
     <sys:String x:Key="AlertType_ShutdownReason">Herunterfahren Grund</sys:String>
     <sys:String x:Key="AlertType_ServerStatusChange">Server Status Änderung</sys:String>
-    <sys:String x:Key="AlertType_Startup">Starten</sys:String>
+    <sys:String x:Key="AlertType_Startup">Gestartet</sys:String>
     <sys:String x:Key="AlertType_UpdateResults">Update Ergebnisse</sys:String>
     <!--#endregion-->
 
@@ -66,7 +66,7 @@
     <sys:String x:Key="ConfigProfileWindow_NameLabel">Name:</sys:String>
     <sys:String x:Key="ConfigProfileWindow_NameTooltip">Der Name Ihres Konfigurationsprofils.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_IsEnabledLabel">Aktiviert</sys:String>
-    <sys:String x:Key="ConfigProfileWindow_IsEnabledTooltip">Ist das Konfigurationsprofil aktiviert.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_IsEnabledTooltip">Konfigurationsprofil aktiviern.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_WebhookLabel">Webhook Url:</sys:String>
     <sys:String x:Key="ConfigProfileWindow_WebhookTooltip">Dies ist Ihre Webhook Url, die von discord bereitgestellt wird.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_BotNameLabel">Bot Name:</sys:String>
