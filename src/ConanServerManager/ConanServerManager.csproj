@@ -189,7 +189,7 @@
     <Compile Include="Windows\GameDataWindow.xaml.cs">
       <DependentUpon>GameDataWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\GlobalSettingsControl.xaml.cs">
+    <Compile Include="UserControls\GlobalSettingsControl.xaml.cs">
       <DependentUpon>GlobalSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
@@ -222,7 +222,7 @@
     <Compile Include="Windows\ServerMonitorWindow.xaml.cs">
       <DependentUpon>ServerMonitorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServerSettingsControl.xaml.cs">
+    <Compile Include="UserControls\ServerSettingsControl.xaml.cs">
       <DependentUpon>ServerSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\SettingsWindow.xaml.cs">
@@ -319,7 +319,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\GlobalSettingsControl.xaml">
+    <Page Include="UserControls\GlobalSettingsControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -363,7 +363,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\ServerSettingsControl.xaml">
+    <Page Include="UserControls\ServerSettingsControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
