@@ -78,12 +78,14 @@ namespace ServerManagerTool.Lib
 
             this.DinoLevels = new LevelList();
             this.PlayerLevels = new LevelList();
-            this.PlayerBaseStatMultipliers = new StatsMultiplierArray(nameof(PlayerBaseStatMultipliers), GameData.GetBaseStatMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerBase(), true);
-            this.PerLevelStatsMultiplier_Player = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_Player), GameData.GetPerLevelStatsMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerPerLevel(), true);
-            this.PerLevelStatsMultiplier_DinoWild = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoWild), GameData.GetPerLevelStatsMultipliers_DinoWild, GameData.GetStatMultiplierInclusions_DinoWildPerLevel(), true);
-            this.PerLevelStatsMultiplier_DinoTamed = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed), GameData.GetPerLevelStatsMultipliers_DinoTamed, GameData.GetStatMultiplierInclusions_DinoTamedPerLevel(), true);
-            this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
-            this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
+            this.PlayerBaseStatMultipliers = new StatsMultiplierFloatArray(nameof(PlayerBaseStatMultipliers), GameData.GetBaseStatMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerBase(), true);
+            this.PerLevelStatsMultiplier_Player = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_Player), GameData.GetPerLevelStatsMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoWild = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoWild), GameData.GetPerLevelStatsMultipliers_DinoWild, GameData.GetStatMultiplierInclusions_DinoWildPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoTamed = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed), GameData.GetPerLevelStatsMultipliers_DinoTamed, GameData.GetStatMultiplierInclusions_DinoTamedPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
+            this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
+            this.MutagenLevelBoost = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost), GameData.GetPerLevelMutagenLevelBoost_DinoWild, GameData.GetMutagenLevelBoostInclusions_DinoWild(), true);
+            this.MutagenLevelBoostBred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoostBred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
 
             this.HarvestResourceItemAmountClassMultipliers = new ResourceClassMultiplierList(nameof(HarvestResourceItemAmountClassMultipliers), GameData.GetResourceMultipliers);
 
@@ -2046,19 +2048,19 @@ namespace ServerManagerTool.Lib
 
 
 
-        public static readonly DependencyProperty PlayerBaseStatMultipliersProperty = DependencyProperty.Register(nameof(PlayerBaseStatMultipliers), typeof(StatsMultiplierArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty PlayerBaseStatMultipliersProperty = DependencyProperty.Register(nameof(PlayerBaseStatMultipliers), typeof(StatsMultiplierFloatArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Players)]
-        public StatsMultiplierArray PlayerBaseStatMultipliers
+        public StatsMultiplierFloatArray PlayerBaseStatMultipliers
         {
-            get { return (StatsMultiplierArray)GetValue(PlayerBaseStatMultipliersProperty); }
+            get { return (StatsMultiplierFloatArray)GetValue(PlayerBaseStatMultipliersProperty); }
             set { SetValue(PlayerBaseStatMultipliersProperty, value); }
         }
 
-        public static readonly DependencyProperty PerLevelStatsMultiplier_PlayerProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_Player), typeof(StatsMultiplierArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty PerLevelStatsMultiplier_PlayerProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_Player), typeof(StatsMultiplierFloatArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Players)]
-        public StatsMultiplierArray PerLevelStatsMultiplier_Player
+        public StatsMultiplierFloatArray PerLevelStatsMultiplier_Player
         {
-            get { return (StatsMultiplierArray)GetValue(PerLevelStatsMultiplier_PlayerProperty); }
+            get { return (StatsMultiplierFloatArray)GetValue(PerLevelStatsMultiplier_PlayerProperty); }
             set { SetValue(PerLevelStatsMultiplier_PlayerProperty, value); }
         }
         #endregion
@@ -2431,36 +2433,52 @@ namespace ServerManagerTool.Lib
             set { SetValue(PassiveTameIntervalMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoWildProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoWild), typeof(StatsMultiplierArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoWildProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoWild), typeof(StatsMultiplierFloatArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
-        public StatsMultiplierArray PerLevelStatsMultiplier_DinoWild
+        public StatsMultiplierFloatArray PerLevelStatsMultiplier_DinoWild
         {
-            get { return (StatsMultiplierArray)GetValue(PerLevelStatsMultiplier_DinoWildProperty); }
+            get { return (StatsMultiplierFloatArray)GetValue(PerLevelStatsMultiplier_DinoWildProperty); }
             set { SetValue(PerLevelStatsMultiplier_DinoWildProperty, value); }
         }
 
-        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoTamedProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoTamed), typeof(StatsMultiplierArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoTamedProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoTamed), typeof(StatsMultiplierFloatArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
-        public StatsMultiplierArray PerLevelStatsMultiplier_DinoTamed
+        public StatsMultiplierFloatArray PerLevelStatsMultiplier_DinoTamed
         {
-            get { return (StatsMultiplierArray)GetValue(PerLevelStatsMultiplier_DinoTamedProperty); }
+            get { return (StatsMultiplierFloatArray)GetValue(PerLevelStatsMultiplier_DinoTamedProperty); }
             set { SetValue(PerLevelStatsMultiplier_DinoTamedProperty, value); }
         }
 
-        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoTamed_AddProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoTamed_Add), typeof(StatsMultiplierArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoTamed_AddProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoTamed_Add), typeof(StatsMultiplierFloatArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
-        public StatsMultiplierArray PerLevelStatsMultiplier_DinoTamed_Add
+        public StatsMultiplierFloatArray PerLevelStatsMultiplier_DinoTamed_Add
         {
-            get { return (StatsMultiplierArray)GetValue(PerLevelStatsMultiplier_DinoTamed_AddProperty); }
+            get { return (StatsMultiplierFloatArray)GetValue(PerLevelStatsMultiplier_DinoTamed_AddProperty); }
             set { SetValue(PerLevelStatsMultiplier_DinoTamed_AddProperty, value); }
         }
 
-        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoTamed_AffinityProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), typeof(StatsMultiplierArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty PerLevelStatsMultiplier_DinoTamed_AffinityProperty = DependencyProperty.Register(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), typeof(StatsMultiplierFloatArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
-        public StatsMultiplierArray PerLevelStatsMultiplier_DinoTamed_Affinity
+        public StatsMultiplierFloatArray PerLevelStatsMultiplier_DinoTamed_Affinity
         {
-            get { return (StatsMultiplierArray)GetValue(PerLevelStatsMultiplier_DinoTamed_AffinityProperty); }
+            get { return (StatsMultiplierFloatArray)GetValue(PerLevelStatsMultiplier_DinoTamed_AffinityProperty); }
             set { SetValue(PerLevelStatsMultiplier_DinoTamed_AffinityProperty, value); }
+        }
+
+        public static readonly DependencyProperty MutagenLevelBoostProperty = DependencyProperty.Register(nameof(MutagenLevelBoost), typeof(StatsMultiplierIntegerArray), typeof(ServerProfile), new PropertyMetadata(null));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
+        public StatsMultiplierIntegerArray MutagenLevelBoost
+        {
+            get { return (StatsMultiplierIntegerArray)GetValue(MutagenLevelBoostProperty); }
+            set { SetValue(MutagenLevelBoostProperty, value); }
+        }
+
+        public static readonly DependencyProperty MutagenLevelBoostBredProperty = DependencyProperty.Register(nameof(MutagenLevelBoostBred), typeof(StatsMultiplierIntegerArray), typeof(ServerProfile), new PropertyMetadata(null));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
+        public StatsMultiplierIntegerArray MutagenLevelBoostBred
+        {
+            get { return (StatsMultiplierIntegerArray)GetValue(MutagenLevelBoostBredProperty); }
+            set { SetValue(MutagenLevelBoostBredProperty, value); }
         }
 
         public static readonly DependencyProperty DinoSpawnsProperty = DependencyProperty.Register(nameof(DinoSpawnWeightMultipliers), typeof(AggregateIniValueList<DinoSpawn>), typeof(ServerProfile), new PropertyMetadata(null));
@@ -3539,6 +3557,8 @@ namespace ServerManagerTool.Lib
             settings.PerLevelStatsMultiplier_DinoTamed_Add.Reset();
             settings.PerLevelStatsMultiplier_DinoTamed_Affinity.Reset();
             settings.PerLevelStatsMultiplier_DinoWild.Reset();
+            settings.MutagenLevelBoost.Reset();
+            settings.MutagenLevelBoostBred.Reset();
             settings.PerLevelStatsMultiplier_Player.Reset();
             settings.PlayerBaseStatMultipliers.Reset();
             settings.LoadServerFileAdministrators();
@@ -5308,10 +5328,12 @@ namespace ServerManagerTool.Lib
             this.ClearValue(TamedDinoTorporDrainMultiplierProperty);
             this.ClearValue(PassiveTameIntervalMultiplierProperty);
 
-            this.PerLevelStatsMultiplier_DinoWild = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoWild), GameData.GetPerLevelStatsMultipliers_DinoWild, GameData.GetStatMultiplierInclusions_DinoWildPerLevel(), true);
-            this.PerLevelStatsMultiplier_DinoTamed = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed), GameData.GetPerLevelStatsMultipliers_DinoTamed, GameData.GetStatMultiplierInclusions_DinoTamedPerLevel(), true);
-            this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
-            this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
+            this.PerLevelStatsMultiplier_DinoWild = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoWild), GameData.GetPerLevelStatsMultipliers_DinoWild, GameData.GetStatMultiplierInclusions_DinoWildPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoTamed = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed), GameData.GetPerLevelStatsMultipliers_DinoTamed, GameData.GetStatMultiplierInclusions_DinoTamedPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
+            this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
+            this.MutagenLevelBoost = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost), GameData.GetPerLevelMutagenLevelBoost_DinoWild, GameData.GetMutagenLevelBoostInclusions_DinoWild(), true);
+            this.MutagenLevelBoostBred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoostBred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
 
             this.DinoSpawnWeightMultipliers = new AggregateIniValueList<DinoSpawn>(nameof(DinoSpawnWeightMultipliers), GameData.GetDinoSpawns);
             this.PreventDinoTameClassNames = new StringIniValueList(nameof(PreventDinoTameClassNames), () => new string[0]);
@@ -5424,8 +5446,8 @@ namespace ServerManagerTool.Lib
             this.ClearValue(CraftingSkillBonusMultiplierProperty);
             this.ClearValue(MaxFallSpeedMultiplierProperty);
 
-            this.PlayerBaseStatMultipliers = new StatsMultiplierArray(nameof(PlayerBaseStatMultipliers), GameData.GetBaseStatMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerBase(), true);
-            this.PerLevelStatsMultiplier_Player = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_Player), GameData.GetPerLevelStatsMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerPerLevel(), true);
+            this.PlayerBaseStatMultipliers = new StatsMultiplierFloatArray(nameof(PlayerBaseStatMultipliers), GameData.GetBaseStatMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerBase(), true);
+            this.PerLevelStatsMultiplier_Player = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_Player), GameData.GetPerLevelStatsMultipliers_Player, GameData.GetStatMultiplierInclusions_PlayerPerLevel(), true);
         }
 
         public void ResetPreventTransferOverridesSection()
@@ -5934,21 +5956,29 @@ namespace ServerManagerTool.Lib
             this.SetValue(TamedDinoTorporDrainMultiplierProperty, sourceProfile.TamedDinoTorporDrainMultiplier);
             this.SetValue(PassiveTameIntervalMultiplierProperty, sourceProfile.PassiveTameIntervalMultiplier);
 
-            this.PerLevelStatsMultiplier_DinoWild = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoWild), GameData.GetPerLevelStatsMultipliers_DinoWild, GameData.GetStatMultiplierInclusions_DinoWildPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoWild = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoWild), GameData.GetPerLevelStatsMultipliers_DinoWild, GameData.GetStatMultiplierInclusions_DinoWildPerLevel(), true);
             this.PerLevelStatsMultiplier_DinoWild.FromIniValues(sourceProfile.PerLevelStatsMultiplier_DinoWild.ToIniValues());
             this.PerLevelStatsMultiplier_DinoWild.IsEnabled = sourceProfile.PerLevelStatsMultiplier_DinoWild.IsEnabled;
 
-            this.PerLevelStatsMultiplier_DinoTamed = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed), GameData.GetPerLevelStatsMultipliers_DinoTamed, GameData.GetStatMultiplierInclusions_DinoTamedPerLevel(), true);
+            this.PerLevelStatsMultiplier_DinoTamed = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed), GameData.GetPerLevelStatsMultipliers_DinoTamed, GameData.GetStatMultiplierInclusions_DinoTamedPerLevel(), true);
             this.PerLevelStatsMultiplier_DinoTamed.FromIniValues(sourceProfile.PerLevelStatsMultiplier_DinoTamed.ToIniValues());
             this.PerLevelStatsMultiplier_DinoTamed.IsEnabled = sourceProfile.PerLevelStatsMultiplier_DinoTamed.IsEnabled;
 
-            this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
+            this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
             this.PerLevelStatsMultiplier_DinoTamed_Add.FromIniValues(sourceProfile.PerLevelStatsMultiplier_DinoTamed_Add.ToIniValues());
             this.PerLevelStatsMultiplier_DinoTamed_Add.IsEnabled = sourceProfile.PerLevelStatsMultiplier_DinoTamed_Add.IsEnabled;
 
-            this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
+            this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
             this.PerLevelStatsMultiplier_DinoTamed_Affinity.FromIniValues(sourceProfile.PerLevelStatsMultiplier_DinoTamed_Affinity.ToIniValues());
             this.PerLevelStatsMultiplier_DinoTamed_Affinity.IsEnabled = sourceProfile.PerLevelStatsMultiplier_DinoTamed_Affinity.IsEnabled;
+
+            this.MutagenLevelBoost = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost), GameData.GetPerLevelMutagenLevelBoost_DinoWild, GameData.GetMutagenLevelBoostInclusions_DinoWild(), true);
+            this.MutagenLevelBoost.FromIniValues(sourceProfile.MutagenLevelBoost.ToIniValues());
+            this.MutagenLevelBoost.IsEnabled = sourceProfile.MutagenLevelBoost.IsEnabled;
+
+            this.MutagenLevelBoostBred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoostBred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
+            this.MutagenLevelBoostBred.FromIniValues(sourceProfile.MutagenLevelBoostBred.ToIniValues());
+            this.MutagenLevelBoostBred.IsEnabled = sourceProfile.MutagenLevelBoostBred.IsEnabled;
 
             sourceProfile.DinoSettings.RenderToModel();
 

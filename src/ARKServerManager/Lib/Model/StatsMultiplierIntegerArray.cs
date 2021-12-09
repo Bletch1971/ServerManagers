@@ -5,35 +5,35 @@ using System.Linq;
 
 namespace ServerManagerTool.Lib.Model
 {
-    public class StatsMultiplierArray : FloatIniValueArray
+    public class StatsMultiplierIntegerArray : IntegerIniValueArray
     {
-        protected StatsMultiplierArray(string iniKeyName, Func<IEnumerable<float>> resetFunc, bool[] inclusions)
+        protected StatsMultiplierIntegerArray(string iniKeyName, Func<IEnumerable<int>> resetFunc, bool[] inclusions)
             : base(iniKeyName, resetFunc)
         {
             Inclusions = inclusions;
         }
 
-        public StatsMultiplierArray(string iniKeyName, Func<IEnumerable<float>> resetFunc, bool[] inclusions, bool onlyWriteNonDefaults)
+        public StatsMultiplierIntegerArray(string iniKeyName, Func<IEnumerable<int>> resetFunc, bool[] inclusions, bool onlyWriteNonDefaults)
             : base(iniKeyName, resetFunc)
         {
             Inclusions = inclusions;
 
             if (onlyWriteNonDefaults && resetFunc != null)
             {
-                DefaultValues = new StatsMultiplierArray(iniKeyName, null, inclusions);
+                DefaultValues = new StatsMultiplierIntegerArray(iniKeyName, null, inclusions);
                 DefaultValues.AddRange(resetFunc());
             }
         }
 
         public bool[] Inclusions { get; private set; } = null;
 
-        private StatsMultiplierArray DefaultValues { get; set; } = null;
+        private StatsMultiplierIntegerArray DefaultValues { get; set; } = null;
 
         public override void FromIniValues(IEnumerable<string> values)
         {
             this.Clear();
 
-            var list = new List<float>();
+            var list = new List<int>();
             if (this.ResetFunc != null)
                 list.AddRange(this.ResetFunc());
 

@@ -322,6 +322,16 @@ namespace ServerManagerTool.Lib
             return new float[] { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f };
         }
 
+        internal static IEnumerable<int> GetPerLevelMutagenLevelBoost_DinoWild()
+        {
+            return new int[] { 5, 5, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0 };
+        }
+
+        internal static IEnumerable<int> GetPerLevelMutagenLevelBoost_DinoTamed()
+        {
+            return new int[] { 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0 };
+        }
+
         internal static bool[] GetStatMultiplierInclusions_DinoWildPerLevel()
         {
             return new bool[] { true, true, false, true, true, false, true, true, true, true, false, true };
@@ -350,6 +360,16 @@ namespace ServerManagerTool.Lib
         internal static bool[] GetStatMultiplierInclusions_PlayerPerLevel()
         {
             return new bool[] { true, true, false, true, true, true, true, true, true, true, true, true };
+        }
+
+        internal static bool[] GetMutagenLevelBoostInclusions_DinoWild()
+        {
+            return new bool[] { true, true, true, true, true, true, true, true, true, true, true, true };
+        }
+
+        internal static bool[] GetMutagenLevelBoostInclusions_DinoTamed()
+        {
+            return new bool[] { true, true, true, true, true, true, true, true, true, true, true, true };
         }
         #endregion
 

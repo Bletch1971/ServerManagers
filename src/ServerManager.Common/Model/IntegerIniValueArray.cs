@@ -13,7 +13,7 @@ namespace ServerManagerTool.Common.Model
         {
         }
 
-        public override bool IsArray => false;
+        public override bool IsArray => true;
 
         private static string ToIniValueInternal(int val)
         {

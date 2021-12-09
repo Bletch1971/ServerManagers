@@ -192,6 +192,7 @@
     <Compile Include="Lib\Model\EngramAutoUnlock.cs" />
     <Compile Include="Lib\Model\PreventTransferOverride.cs" />
     <Compile Include="Lib\Model\StackSizeOverride.cs" />
+    <Compile Include="Lib\Model\StatsMultiplierIntegerArray.cs" />
     <Compile Include="Lib\Serialization\IniFileEntryAttribute.cs" />
     <Compile Include="Lib\Serialization\IniFiles.cs" />
     <Compile Include="Lib\Serialization\IniSections.cs" />
@@ -210,7 +211,7 @@
     <Compile Include="Windows\AddUserWindow.xaml.cs">
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Lib\Model\StatsMultiplierArray.cs" />
+    <Compile Include="Lib\Model\StatsMultiplierFloatArray.cs" />
     <Compile Include="Windows\DataDirectoryWindow.xaml.cs">
       <DependentUpon>DataDirectoryWindow.xaml</DependentUpon>
     </Compile>
@@ -274,7 +275,7 @@
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ErrorHandling.cs" />
-    <Compile Include="Windows\GlobalSettingsControl.xaml.cs">
+    <Compile Include="UserControls\GlobalSettingsControl.xaml.cs">
       <DependentUpon>GlobalSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lib\Model\NPCReplacement.cs" />
@@ -307,7 +308,7 @@
     <Compile Include="Windows\RCONWindow.xaml.cs">
       <DependentUpon>RCONWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServerSettingsControl.xaml.cs">
+    <Compile Include="UserControls\ServerSettingsControl.xaml.cs">
       <DependentUpon>ServerSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lib\ServerStatusWatcher.cs" />
@@ -491,7 +492,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\GlobalSettingsControl.xaml">
+    <Page Include="UserControls\GlobalSettingsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -520,7 +521,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ServerSettingsControl.xaml">
+    <Page Include="UserControls\ServerSettingsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
