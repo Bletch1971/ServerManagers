@@ -19,6 +19,16 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
+            <li>Fixed a minor issue when clicking the data directory reset button - fringe case that I found during testing.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Dino Section - Added MutagenLevelBoost and MutagenLevelBoostBred settings.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>
           </ul>
