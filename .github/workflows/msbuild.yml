@@ -1,6 +1,10 @@
 name: Build server manager applications - servermanagers
 
-on: [push]
+on: 
+  push:
+    paths:
+    - './src/**'
+  workflow_dispatch:
 
 env:
   # Path to the solution file relative to the root of the project.
