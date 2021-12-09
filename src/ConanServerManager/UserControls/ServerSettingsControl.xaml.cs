@@ -657,6 +657,8 @@ namespace ServerManagerTool
 
                 comment.AppendLine($"IsAdministrator: {SecurityUtils.IsAdministrator()}");
                 comment.AppendLine($"RunAsAdministratorPrompt: {Config.Default.RunAsAdministratorPrompt}");
+                comment.AppendLine($"MainWindow_WindowState: {Config.Default.MainWindow_WindowState}");
+                comment.AppendLine($"MainWindow_MinimizeToTray: {Config.Default.MainWindow_MinimizeToTray}");
                 comment.AppendLine($"ManageFirewallAutomatically: {Config.Default.ManageFirewallAutomatically}");
                 comment.AppendLine($"ValidateProfileOnServerStart: {Config.Default.ValidateProfileOnServerStart}");
                 comment.AppendLine($"SteamCMD File: {SteamCmdUpdater.GetSteamCmdFile(Config.Default.DataPath)}");
@@ -692,6 +694,17 @@ namespace ServerManagerTool
                 comment.AppendLine($"ServerUpdate_ForceUpdateMods: {Config.Default.ServerUpdate_ForceUpdateMods}");
                 comment.AppendLine($"ServerUpdate_ForceUpdateModsIfNoSteamInfo: {Config.Default.ServerUpdate_ForceUpdateModsIfNoSteamInfo}");
                 comment.AppendLine($"ServerUpdate_OnServerStart: {Config.Default.ServerUpdate_OnServerStart}");
+
+                comment.AppendLine($"DiscordBotEnabled: {Config.Default.DiscordBotEnabled}");
+                comment.AppendLine($"HasDiscordBotToken: {string.IsNullOrWhiteSpace(Config.Default.DiscordBotToken)}");
+                comment.AppendLine($"DiscordBotServerId: {Config.Default.DiscordBotServerId}");
+                comment.AppendLine($"DiscordBotPrefix: {Config.Default.DiscordBotPrefix}");
+                comment.AppendLine($"AllowDiscordBackup: {Config.Default.AllowDiscordBackup}");
+                comment.AppendLine($"AllowDiscordRestart: {Config.Default.AllowDiscordRestart}");
+                comment.AppendLine($"AllowDiscordShutdown: {Config.Default.AllowDiscordShutdown}");
+                comment.AppendLine($"AllowDiscordStart: {Config.Default.AllowDiscordStart}");
+                comment.AppendLine($"AllowDiscordStop: {Config.Default.AllowDiscordStop}");
+                comment.AppendLine($"AllowDiscordUpdate: {Config.Default.AllowDiscordUpdate}");
 
                 comment.AppendLine($"EmailNotify_AutoRestart: {Config.Default.EmailNotify_AutoRestart}");
                 comment.AppendLine($"EmailNotify_AutoBackup: {Config.Default.EmailNotify_AutoBackup}");
