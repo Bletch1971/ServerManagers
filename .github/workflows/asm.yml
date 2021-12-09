@@ -6,7 +6,7 @@ on:
 
 env:
   # Path to the solution file relative to the root of the project.
-  SOLUTION_FILE_PATH: .src/ARKServerManager
+  SOLUTION_FILE_PATH: ./src/ARKServerManager
 
   # Configuration type to build.
   BUILD_CONFIGURATION: Release
