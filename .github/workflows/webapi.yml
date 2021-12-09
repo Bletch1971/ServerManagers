@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - './src/ServerManager.WebApplication/**'
   workflow_dispatch:
 
 jobs:
