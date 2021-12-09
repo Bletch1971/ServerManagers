@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: .net-app
-        path: ${{env.SOLUTION_FILE_PATH}}/publish
+        path: ${{env.PROJECT_FILE_PATH}}/publish
 
   #deploy:
   #  runs-on: self-hosted
