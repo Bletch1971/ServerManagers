@@ -9,11 +9,11 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.12.07(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.12.09(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
-<!--#游戏地图名称 -->
+    <!--#游戏地图名称 -->
     <sys:String x:Key="Map_TheIsland">孤岛(The Island)</sys:String>
     <sys:String x:Key="Map_TheCenter">中心岛地图(The Center)</sys:String>
     <sys:String x:Key="Map_ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
@@ -60,7 +60,7 @@
     <sys:String x:Key="Mod_Valguero">瓦尔盖罗(Valguero)</sys:String>
     <!--#endregion-->
 
-    <!--#region Mod Types -->
+    <!--#region Mod 类型 -->
     <sys:String x:Key="ModType_Unknown">未知</sys:String>
     <sys:String x:Key="ModType_NotDownloaded">未下载</sys:String>
     <sys:String x:Key="ModType_Map">地图</sys:String>
@@ -1601,12 +1601,16 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">每级属性倍数 (驯服) - 增加</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">每级属性倍数 (驯服) - 姻亲</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">每级属性倍数 (野生)</sys:String>
+	<sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">诱变剂等级提升(野生型)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">诱变剂等级提升(驯服型)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">恐龙繁殖倍数设置</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">如果启用，允许将倍数应用于每个出生属性。（这个数值是根据官服倍数的一个调整）.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">如果启用，允许将倍数应用于每个属性。（这个数值是根据官服倍数的一个调整）.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">如果启用，则允许将倍数应用于每个属性的驯服加成。</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">如果启用，则允许将倍数应用于每个属性的驯服倍数。</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">如果启用，则允许将倍数应用于每个属性的驯服加点。</sys:String>
+	<sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">如果启用，允许使用诱变剂提升野生恐龙等级(属性).</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">如果启用，允许使用诱变剂提升驯服恐龙等级(属性).</sys:String>
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">重置所有倍数恢复到默认值.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">重置所有倍数恢复到默认值.</sys:String>
 
