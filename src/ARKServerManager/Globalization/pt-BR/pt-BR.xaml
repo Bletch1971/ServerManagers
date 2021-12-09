@@ -1638,12 +1638,16 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Multiplicadores de estatísticas por nível (domado) - Adicionar</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Multiplicadores de estatísticas por nível (domado) - afinidade</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Multiplicadores de status por nível (wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Aumento de nível de Mutagen (Wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Aumento de nível de Mutagen (Bred)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Dino Multiplicadores de Reprodução</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Se habilitado, permite que os fatores de escala sejam aplicados a cada estatística base.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Se ativado, permite que os fatores de escala sejam aplicados a cada estatística.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">Se ativado, permite que os fatores de escala sejam aplicados à adição de domado para cada estatística.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">Se ativado, permite que os fatores de escala sejam aplicados ao Multiplicador da Dominação para cada estatística.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">Se habilitado, permite que os fatores de escala sejam aplicados ao aumento de status domado para cada estatística.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">Se ativado, permite que os fatores de escala sejam aplicados ao número de níveis que o Mutagen adiciona a domar dino selvagem.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">Se ativado, permite que os fatores de escala sejam aplicados ao número de níveis que o Mutagen adiciona a domados de bred.</sys:String>
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Redefinir todos os multiplicadores de volta aos padrões.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Redefinir todos os multiplicadores de volta aos padrões.</sys:String>
 
@@ -1663,7 +1667,7 @@
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">Quanto de efeito nas estatísticas a qualidade de Imprinti tem. Defina como 0 para desativar efetivamente o sistema.</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Escala de quantidade da impressão:</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Multiplicador aplicado à porcentagem que cada impressão fornece. Este multiplicador é global, o que significa que afetará a progressão imprinting de todas as espécies. Valores mais altos aumentam a quantidade de cada impressão.</sys:String>
-	<sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Intervalo de acaracia:</sys:String>
+	<sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Intervalo de acaricia:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Um multiplicador de quantas vezes os bebês querem abraçar. Valores mais baixos significam que você precisará acariciá-los com mais frequência para obter uma qualidade de impressão.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Período de carência</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Um multiplicador de quanto tempo depois de atrasar o aconchego com o bebê antes da qualidade da imprint começa a diminuir. Valores mais altos aumentam o período de carência.</sys:String>
