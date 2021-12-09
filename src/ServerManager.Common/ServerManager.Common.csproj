@@ -17,7 +17,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NLog" Version="4.7.13" />
     <PackageReference Include="TaskScheduler" Version="2.9.2" />
-    <PackageReference Include="WindowsFirewallHelper" Version="1.6.3.40" />
+    <PackageReference Include="WindowsFirewallHelper" Version="1.6.3.46" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\AnnotatedCheckBoxAndFloatSlider.xaml" />
