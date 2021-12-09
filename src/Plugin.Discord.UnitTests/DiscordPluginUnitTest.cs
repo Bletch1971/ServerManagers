@@ -306,7 +306,7 @@ namespace Plugin.Discord.UnitTests
         }
 
         [TestMethod]
-        public void DiscordPlugin_OpenConfigForm_WithDifferentLanguage()
+        public void DiscordPlugin_OpenConfigForm_SwitchingLanguages()
         {
             // Arrange
             ServerManagerTool.Plugin.Common.PluginHelper.Instance.SetFetchProfileCallback(FetchProfiles);
@@ -323,6 +323,23 @@ namespace Plugin.Discord.UnitTests
 
             // Arrange
             ServerManagerTool.Plugin.Common.PluginHelper.Instance.OnResourceDictionaryChanged("zh-CN");
+
+            // Act
+            plugin.OpenConfigForm(null);
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
+        [TestMethod]
+        public void DiscordPlugin_OpenConfigForm_WithDifferentLanguage()
+        {
+            // Arrange
+            ServerManagerTool.Plugin.Common.PluginHelper.Instance.OnResourceDictionaryChanged("pt-BR");
+
+            var plugin = new DiscordPlugin();
+            plugin.BetaEnabled = true;
+            plugin.Initialize();
 
             // Act
             plugin.OpenConfigForm(null);
