@@ -413,7 +413,7 @@ namespace ServerManagerTool
             }
             finally
             {
-                Environment.Exit(0);
+                Environment.Exit(exitCode);
             }
         }
 

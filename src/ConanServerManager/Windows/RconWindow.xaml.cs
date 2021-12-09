@@ -316,7 +316,6 @@ namespace ServerManagerTool
                         inputBox.Visibility = Visibility.Collapsed;
                         dockPanel.IsEnabled = true;
 
-                        PlayerInfo player;
                         var inputText = inputTextBox.Text;
 
                         switch (this.CurrentInputWindowMode)
