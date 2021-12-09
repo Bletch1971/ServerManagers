@@ -27,6 +27,11 @@
             <li>de-DE Translation file updated.</li>
             <li>pt-BR Translation file updated.</li>
           </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the plugin initialization so it throws an exception if unable to load config file, rather than creating a new config file.</li>
+          </ul>
         </p>
       </div>
     </content>

@@ -25,7 +25,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             InitializeComponent();
             WindowUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
 
-            this.Plugin = plugin ?? new DiscordPlugin();
+            this.Plugin = plugin;
             this.OriginalProfile = profile;
             this.Profile = profile.Clone();
             this.Profile.CommitChanges();
@@ -77,7 +77,10 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             if (this.Profile.HasAnyChanges)
             {
                 if (MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_CloseLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigProfileWindow_CloseTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                {
                     e.Cancel = true;
+                    return;
+                }
             }
         }
 

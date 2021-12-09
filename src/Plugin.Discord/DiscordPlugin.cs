@@ -38,6 +38,8 @@ namespace ServerManagerTool.Plugin.Discord
 
         public bool Enabled => true;
 
+        public string ConfigFile => Path.Combine(PluginHelper.PluginFolder, Config.Default.ConfigFile);
+
         public string PluginCode => Config.Default.PluginCode;
 
         public string PluginName => Config.Default.PluginName;
@@ -227,56 +229,50 @@ namespace ServerManagerTool.Plugin.Discord
             }
         }
 
-        private void LoadConfig()
+        internal void BackupConfig()
         {
-            try
+            if (!File.Exists(ConfigFile))
+                return;
+
+            var backupFile = Path.ChangeExtension(ConfigFile, "bak");
+            File.Copy(ConfigFile, backupFile, true);
+        }
+
+        internal void LoadConfig()
+        {
+            PluginConfig = null;
+
+            if (File.Exists(ConfigFile))
             {
-                PluginConfig = null;
-
-                var configFile = Path.Combine(PluginHelper.PluginFolder, Config.Default.ConfigFile);
-                PluginConfig = JsonUtils.DeserializeFromFile<DiscordPluginConfig>(configFile);
-
-                if ((PluginConfig?.ConfigProfiles?.Count ?? 0) == 0)
-                {
-                    PluginConfig = new DiscordPluginConfig();
-
-                    SaveConfig();
-                }
-
-                PluginConfig?.CommitChanges();
+                PluginConfig = JsonUtils.DeserializeFromFile<DiscordPluginConfig>(ConfigFile);
             }
-            catch (Exception ex)
+            else
             {
                 PluginConfig = new DiscordPluginConfig();
-                Debug.WriteLine($"ERROR: {nameof(LoadConfig)}\r\n{ex.Message}");
+                SaveConfig();
             }
+
+            if (PluginConfig is null)
+            {
+                throw new Exception("Profile config file could not be loaded.");
+            }
+
+            PluginConfig.CommitChanges();
         }
 
         public void OpenConfigForm(Window owner)
         {
-            var window = new ConfigWindow(this, this.PluginConfig);
+            var window = new ConfigWindow(this, PluginConfig);
             window.Owner = owner;
+            window.ShowDialog();
 
-            var dialogResult = window.ShowDialog();
-            if (dialogResult.HasValue && dialogResult.Value)
-            {
-                SaveConfig();
-                LoadConfig();
-            }
+            LoadConfig();
         }
 
-        private void SaveConfig()
+        internal void SaveConfig()
         {
-            try
-            {
-                var configFile = Path.Combine(PluginHelper.PluginFolder, Config.Default.ConfigFile);
-                JsonUtils.SerializeToFile(PluginConfig, configFile);
-                PluginConfig?.CommitChanges();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"ERROR: {nameof(SaveConfig)}\r\n{ex.Message}");
-            }
+            JsonUtils.SerializeToFile(PluginConfig, ConfigFile);
+            PluginConfig.CommitChanges();
         }
     }
 }
