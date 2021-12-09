@@ -1638,14 +1638,18 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Per-Level Stat Multipliers (Tamed) - Add</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Per-Level Stat Multipliers (Tamed) - Affinity</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Per-Level Stat Multipliers (Wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Mutagen Level Boost (Wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Mutagen Level Boost (Bred)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Dino Breeding Multipliers</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">If enabled, allows scale factors to be applied to each base stat.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">If enabled, allows scale factors to be applied to each stat.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">If enabled, allows scale factors to be applied to the Taming Addition for each stat.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">If enabled, allows scale factors to be applied to the Taming Multiplier for each stat.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">If enabled, allows scale factors to be applied to the Tamed Stat Increase for each stat.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Reset all multipliers back to defaults.</sys:String>
-    <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Reset all multipliers back to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">If enabled, allows scale factors to be applied to the Number of levels Mutagen adds to tames with wild ancestry.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">If enabled, allows scale factors to be applied to the Number of levels Mutagen adds to tames with bred ancestry.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Reset all values back to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Reset all values back to defaults.</sys:String>
 
     <sys:String x:Key="ServerSettings_MatingIntervalLabel">Mating Interval:</sys:String>
     <sys:String x:Key="ServerSettings_MatingIntervalTooltip">Specifies the multiplier for time between tamed dino mating. Lower values decrease the time between mating.</sys:String>
