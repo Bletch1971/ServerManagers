@@ -7,4 +7,4 @@ Ark Server Manager - https://arkservermanager.freeforums.net/
 Server Managers - https://servermanagers.freeforums.net/
 
 # Invite link to discord
-discord.gg/HB8DXXt
+https://discord.gg/HB8DXXt
