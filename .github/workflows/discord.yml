@@ -1,0 +1,5 @@
+name: Build and Deploy Discord Plugin
+
+on: 
+  workflow_dispatch:
+

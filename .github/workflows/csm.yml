@@ -1,0 +1,5 @@
+name: Build and Deploy CSM
+
+on: 
+  workflow_dispatch:
+
