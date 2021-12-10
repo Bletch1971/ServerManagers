@@ -13,7 +13,4 @@
   <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.16.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
 </Project>

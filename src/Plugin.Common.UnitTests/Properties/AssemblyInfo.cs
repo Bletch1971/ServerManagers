@@ -1,19 +1,19 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ServerManager Updater")]
-[assembly: AssemblyDescription("An application used to update the server managers.")]
+[assembly: AssemblyTitle("Plugin.Common.UnitTests")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bletch1971")]
-[assembly: AssemblyProduct("Server Managers")]
+[assembly: AssemblyProduct("Plugin.Common.UnitTests")]
 [assembly: AssemblyCopyright("Copyright © 2015-2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("3e0c9ee6-780f-4fef-ba03-e38062a5fdb6")]
+[assembly: Guid("8d13fc88-9508-4c3a-8ed0-f7bd46e343cc")]
 
-// include semantic versioning - ServerManager.Updater
+// exclude from semantic versioning
 [assembly: AssemblyVersion("1.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
