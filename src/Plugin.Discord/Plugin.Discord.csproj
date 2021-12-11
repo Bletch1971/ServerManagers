@@ -34,7 +34,6 @@
     <None Remove="Globalization\zh-CN\zh-CN.xaml" />
     <None Remove="MakeLatestBetaVersionGithub.ps1" />
     <None Remove="MakeLatestVersionGithub.ps1" />
-    <None Remove="version.txt" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Windows\ConfigProfileWindow.xaml" />
