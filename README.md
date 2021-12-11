@@ -8,3 +8,4 @@ Conan Server Manager - https://servermanagers.freeforums.net
 
 # Invite link to discord
 https://discord.gg/HB8DXXt
+ 
