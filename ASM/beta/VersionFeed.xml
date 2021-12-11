@@ -5,7 +5,33 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-12-09T00:00:00Z</updated>
+  <updated>2021-12-10T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:0BCB8BBA-330F-4063-8B7E-5B144589999A</id>
+    <title>1.1.411 (1.1.411.5)</title>
+    <summary>1.1.411.5</summary>
+    <link href="" />
+    <updated>2021-12-10T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor window now stores it's location.</li>
+            <li>Reference library updates.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:7697EBD7-DEF6-422B-B9A6-D4B77F31D572</id>
