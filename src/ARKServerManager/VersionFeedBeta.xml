@@ -8,6 +8,30 @@
   <updated>2021-12-12T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:C02D44F9-E3AA-4CA0-BF2F-110F8C83CC21</id>
+    <title>1.1.411 (1.1.411.7)</title>
+    <summary>1.1.411.7</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added gamedata file for the Lost Island DLC - only contains the map name for the Map droplist - do not use until the DLC is officially released!</li>
+            <li>Added Lost Island to the language files for translation.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:F75C6AFF-2A27-49BE-917A-7EAAACCCBF17</id>
     <title>1.1.411 (1.1.411.6)</title>
     <summary>1.1.411.6</summary>
