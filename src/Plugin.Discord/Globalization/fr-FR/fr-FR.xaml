@@ -1,0 +1,131 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    >
+
+    <!--#region Alert Types -->
+    <sys:String x:Key="AlertType_Backup">Sauvegarde</sys:String>
+    <sys:String x:Key="AlertType_Error">Erreur</sys:String>
+    <sys:String x:Key="AlertType_ModUpdateDetected">Mise à jour Mod détectée</sys:String>
+    <sys:String x:Key="AlertType_Shutdown">Eteindre</sys:String>
+    <sys:String x:Key="AlertType_ShutdownMessage">Message d'arrêt </sys:String>
+    <sys:String x:Key="AlertType_ShutdownReason">Raison d'arrêt</sys:String>
+    <sys:String x:Key="AlertType_ServerStatusChange">Changement d'état du serveur</sys:String>
+    <sys:String x:Key="AlertType_Startup">Démarrage</sys:String>
+    <sys:String x:Key="AlertType_UpdateResults">Mettre à jour les résultats</sys:String>
+    <!--#endregion-->
+
+    <!--#region Global -->
+    <sys:String x:Key="Global_CancelButtonLabel">Sortie</sys:String>
+    <sys:String x:Key="Global_CloseButtonLabel">Fermer</sys:String>
+    <sys:String x:Key="Global_OkButtonLabel">OK</sys:String>
+    <sys:String x:Key="Global_SaveButtonLabel">Sauvegarder</sys:String>
+
+    <sys:String x:Key="Global_BetaModeLabel"> (Mode Beta)</sys:String>
+    <sys:String x:Key="Global_NewVersionAvailableLabel">Une nouvelle version du plugin est disponible.</sys:String>
+    <sys:String x:Key="Global_DownloadNewVersionTooltip">Téléchargez la dernière version.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Config Window -->
+    <sys:String x:Key="ConfigWindow_Title">Configuration du plug-in Discord</sys:String>
+
+    <sys:String x:Key="ConfigWindow_PatchNotesTooltip">Voir les notes Patch.</sys:String>
+    <sys:String x:Key="ConfigWindow_AddConfigProfileTooltip">Ajouter un profil</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearConfigProfilesTooltip">Supprimer tous les profils</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteConfigProfileTooltip">Supprimer le profil</sys:String>
+    <sys:String x:Key="ConfigWindow_EditConfigProfileTooltip">Editer le profil</sys:String>
+
+    <sys:String x:Key="ConfigWindow_NameColumnLabel">Nom</sys:String>
+
+    <sys:String x:Key="ConfigWindow_AddErrorTitle">Ajouter une erreur d'action</sys:String>
+    <sys:String x:Key="ConfigWindow_AddErrorLabel">Une erreur s'est produite lors de la tentative d'ajout d'un profil.</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearTitle">Confirmer Supprimer toute action</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez supprimer tout.</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearErrorTitle">Supprimer toute erreur d'action</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearErrorLabel">Une erreur s'est produite lors de la tentative de supprimer tous les profils.</sys:String>
+    <sys:String x:Key="ConfigWindow_CloseTitle">Confirmer Fermeture de l'Action</sys:String>
+    <sys:String x:Key="ConfigWindow_CloseLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez fermer le formulaire. Si vous avez des modifications non sauvegardées, elles seront perdues.</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteTitle">Confirmer Supprimer l'action</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez effectuer la suppression..</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteErrorTitle">Supprimer l'erreur d'action</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteErrorLabel">Une erreur s'est produite lors de la tentative de suppression du profil.</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadErrorTitle">Télécharger l'erreur d'action</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadErrorLabel">Une erreur s'est produite lors de la tentative d'exécution du téléchargement.</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadSuccessTitle">Téléchargement réussi</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadSuccessLabel">La dernière version a été enregistrée sur votre bureau.</sys:String>
+    <sys:String x:Key="ConfigWindow_EditErrorTitle">Edité l'erreur d'action</sys:String>
+    <sys:String x:Key="ConfigWindow_EditErrorLabel">Une erreur s'est produite lors de la tentative de modification d'un profil.</sys:String>
+    <sys:String x:Key="ConfigWindow_SaveErrorTitle">Enregistrer l'erreur d'action</sys:String>
+    <sys:String x:Key="ConfigWindow_SaveErrorLabel">Une erreur s'est produite lors de la tentative d'exécution de la sauvegarde.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Config Item Window -->
+    <sys:String x:Key="ConfigProfileWindow_Title">Configuration du profil</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_NameLabel">Nom:</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_NameTooltip">Le nom de votre profil de configuration.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_IsEnabledLabel">Activée</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_IsEnabledTooltip">La configuration du profil est-il activé?.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_WebhookLabel">URL webhook:</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_WebhookTooltip">Ceci est votre URL WebHook fournie par Discord.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_BotNameLabel">Nom de bot:</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_BotNameTooltip">Cela remplacera le nom que vous configurez dans votre webhook. Laisser blanc en utilisation par défaut.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_UseTTSLabel">Utilisez Text to Speech (TTS)</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_UseTTSTooltip">Si activé, fera annoncer le bot avec le texte à la parole, sinon coupera le texte au discours.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameLabel">Préfixe du Message avec nom de profil</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameTooltip">Si activé, le message d'alerte prédéterminé sera envoyé avec le nom du profil au gestionnaire de serveur..</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsLabel">Options de message</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsBoldLabel">Gras</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsBoldTooltip">Si activé, affichera le message en gras.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsUnderlineLabel">Souligner</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsUnderlineTooltip">Si activé, affichera le message avec un soulignement.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsItalicLabel">Italique</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsItalicTooltip">Si activé, affichera le message en italique.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsCodeBlockLabel">Bloc de code intégré</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsCodeBlockTooltip">Si activé, affichera le message dans un bloc de code intégré.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ProfileNamesLabel">Noms de profil</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AlertTypesLabel">Types d'alerte</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_AddProfileNameTooltip">Ajouter le nom du profil de gestionnaire de serveur</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearProfileNamesTooltip">Supprimer tous les noms de profil du gestionnaire de serveurs</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteProfileNameTooltip">Supprimer le nom du profil du gestionnaire de serveur</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_AddAlertTypeTooltip">Ajouter un type d'alerte</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearAlertTypesTooltip">Supprimer tous les types d'alertes</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteAlertTypeTooltip">Supprimer le type d'alerte</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_ProfileNameColumnLabel">Nom du profil Manager de serveur</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AlertTypeColumnLabel">Type d'alerte</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_TestButtonLabel">Test</sys:String>
+    
+    <sys:String x:Key="ConfigProfileWindow_AddErrorTitle">Ajouter une erreur d'action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AddAlertTypeErrorLabel">Une erreur s'est produite lors de la tentative d'ajout d'un type d'alerte.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AddProfileNameErrorLabel">Une erreur s'est produite lors de la tentative d'ajout d'un nom de profil.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearTitle">Confirmer Supprimer toute action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez supprimer tout.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearErrorTitle">Supprimer toute erreur d'action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearAlertTypesErrorLabel">Une erreur s'est produite lors de la tentative de suppression de tous les types d'alertes.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearProfileNamesErrorLabel">Une erreur s'est produite lors de la tentative de suppression de tous les noms de profil.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_CloseTitle">Confirmer fermeture de l'action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_CloseLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez fermer le formulaire. Si vous avez des modifications non sauvegardées, elles seront perdues.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteTitle">Confirmer Supprimer l'action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez effectuer la suppression..</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteErrorTitle">Supprimer l'erreur d'action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteAlertTypeErrorLabel">Une erreur s'est produite lors de la tentative de suppression du type d'alerte.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteProfileNameErrorLabel">Une erreur s'est produite lors de la tentative de suppression du nom du profil.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestErrorTitle">Erreur du test de l'action</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestErrorLabel">Une erreur s'est produite lors de la tentative de test du profil de configuration.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestEnabledErrorLabel">Le profil n'est pas activé et ne peut pas être testé.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Version Feed Window -->
+    <sys:String x:Key="VersionFeedWindow_Title">Détails de la version du Plugin Discord</sys:String>
+    <sys:String x:Key="VersionFeedWindow_Load_FailedTitle">Erreur du chargement du flux</sys:String>
+
+    <sys:String x:Key="VersionFeedWindow_VersionFilterLabel">Version:</sys:String>
+    <sys:String x:Key="VersionFeedWindow_VersionFilterTooltip">Sélectionnez la version pour afficher les détails.</sys:String>
+    <!--#endregion-->
+
+</ResourceDictionary>

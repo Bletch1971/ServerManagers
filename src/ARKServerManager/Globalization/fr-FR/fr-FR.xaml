@@ -81,6 +81,12 @@
     <sys:String x:Key="ProcessorAffinity_All">Tout</sys:String>
     <!--#endregion-->
 
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimisé</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximisé</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Exécuter en tant qu'administrateur</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">Cette application nécessite des privilèges d'administrateur pour accéder à toutes les fonctionnalités. Souhaitez-vous exécuter en tant qu'administrateur?</sys:String>
@@ -98,6 +104,7 @@
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">Ark Server Manager stockera les profils et SteamCMD dans les répertoires suivants:\r\n\r\n Profils:{0}\r\n SteamCMD:{1}\r\n\r\n Est-ce correct?</sys:String>
     <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Erreur de sélection du répertoire de données</sys:String>
     <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">Le répertoire que vous avez choisi se trouve dans le dossier d'installation du gestionnaire du serveur. Ce n'est pas recommandé, veuillez choisir un autre dossier.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">Le répertoire que vous avez choisi est sur le bureau. Ceci n'est pas recommandé, veuillez choisir un autre dossier .</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Échec de l'enregistrement du profil</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Échec de l'enregistrement du profil {0}.  {1}\n{2}</sys:String>
 
@@ -156,6 +163,25 @@
 
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">Choisir</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processeur</sys:String>
+    <!--#endregion-->
+
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Sélection de dossiers de données </sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">Il semble que vous n'ayez pas de répertoire de données défini. Le répertoire de données est où vos profils et vos profils SteamCMD seront stockés. Ce n'est pas la même chose que le répertoire d'installation du serveur, que vous pouvez choisir pour chaque profil.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Sélectionnez le lecteur où le dossier de données doit être localisé.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Nom du dossier de données :</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">Le nom du dossier Données du gestionnaire de serveur.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Disque local</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} libre de {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Annuler</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Rafraîchir</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Erreur de sélection du répertoire de données</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">Le nom du dossier de données que vous avez entré n'est pas valide.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Le redémarrage du gestionnaire de serveur requis</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">Le dossier de données a été défini, vous devez maintenant redémarrer le gestionnaire de serveur pour utiliser les nouveaux paramètres.</sys:String>
     <!--#endregion-->
 
     <!-- PlayerListWindow Window -->
@@ -451,6 +477,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Réinitialiser</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Cela réinitialisera TOUS les paramètres globaux de l'utilisateur pour le gestionnaire de serveur. Le gestionnaire de serveur sera fermé en cas de succès.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Exécuter en tant qu'administrateur au démarrage</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Mode de démarrage de la fenêtre principale:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Réduire dans la barre des tâches </sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gérer les paramètres du pare-feu automatiquement</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Gérer automatiquement l'IP Public</sys:String>
@@ -786,9 +813,11 @@
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
-    <sys:String x:Key="ServerSettings_ProfileLabel">Profil:</sys:String>
-    <sys:String x:Key="ServerSettings_ProfileTooltip">Le nom du profil du serveur. Ce n'est pas le nom public que les utilisateurs verront dans Ark. Pour cela, définissez le champ "Nom du serveur".</sys:String>
-    <sys:String x:Key="ServerSettings_InstalledVersionLabel">Version ARK installée:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">ID Profile:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">L'ID unique attribué au profil.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileTooltip">Le nom du profil du serveur. Ce n'est pas le nom public que les utilisateurs verront dans Ark. Pour cela, définissez le champ "Nom du serveur.</sys:String>
+    <sys:String x:Key="ServerSettings_InstalledVersionLabel">Version installée:</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionTooltip">La version du serveur Ark actuellement téléchargée (REMARQUE: ne sera pas mise à jour tant que le serveur ne sera pas démarré).</sys:String>
     <sys:String x:Key="ServerSettings_OutOfDateModsLabel">Mods obsolètes:</sys:String>
     <sys:String x:Key="ServerSettings_OutOfDateModsTooltip">Nombres de mods qui sont actuellement obsolètes.</sys:String>
@@ -1156,6 +1185,8 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Active le mode hardcore (les joueurs ne peuvent pas réapparaître, un nouveau personnage doit être créé).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Activer PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Active le mode Joueur contre Joueur (les joueurs peuvent infliger des dégâts ou s'entraider). En PvP, les joueurs peuvent aussi endommager ou détruire les bâtiments d'une autre tribu ou tuer leurs dinosaures..</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Activer le mode créatif</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">Si activé, permet le mode créatif.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Activer Construction dans les grottes en PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Si activé, permet de construire dans des grottes lorsque le mode PvE est activé.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Activer la maladie de cryo PvE</sys:String>
@@ -1191,6 +1222,8 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Détermine les niveaux maximum de créatures dans le jeu. Plus la valeur est élevée, plus le niveau de créature maximum est élevé.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Coefficient de Difficulté:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Détermine les niveaux maximum de créatures dans le jeu. Plus la valeur est élevée, plus le niveau de créature maximum est élevé.</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Détruire les Tames sur le niveau:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Tames dépassant ce niveau sera supprimé sur le lancement du serveur. Désactiver la suppression définie sur 0.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Activer les téléchargements tribu</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Si activé, cela permettra de télécharger des survivants/objets/dinos externes sur votre serveur.</sys:String>
