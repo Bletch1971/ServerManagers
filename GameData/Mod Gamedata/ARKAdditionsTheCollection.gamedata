@@ -1,0 +1,529 @@
+{
+    "Application": "ark",
+    "Version": "1.1.0",
+    "Created": "2021-12-10T20:27:00.0000000Z",
+    "Engrams": [
+	   {
+		  "Level": 76,
+		  "Points": 43,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_SaddleAcro_C",
+		  "Description": "SaddleAcro",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Level": 76,
+		  "Points": 44,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_Saddle_Archelon_C",
+		  "Description": "Saddle Archelon",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Level": 70,
+		  "Points": 40,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_Saddle_AdditionsBrachio_C",
+		  "Description": "Saddle AdditionsBrachio",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Level": 23,
+		  "Points": 12,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_ConcaSaddle_C",
+		  "Description": "ConcaSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Level": 80,
+		  "Points": 50,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_CryoSaddle_C",
+		  "Description": "CryoSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Level": 74,
+		  "Points": 40,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_Saddle_Deinosuchus_C",
+		  "Description": "Saddle Deinosuchus",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Level": 55,
+		  "Points": 15,
+		  "IsTekGram": "false",
+		  "ClassName": "EngramEntry_Saddle_Xiphactinus_C",
+		  "Description": "Saddle Xiphactinus",
+		  "Mod": "ARK Additions The Collection"
+	   }
+    ],
+    "Items": [
+	   {
+		  "Category": "Armor",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemArmor_AcroSaddle_C",
+		  "Description": "AcroSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Acro_C",
+		  "Description": "Egg Acro",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Acro_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Acro_Fertilized_Genesis_C",
+		  "Description": "C Genesis",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_ScorchedAcro_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Tool",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItem_Armor_Archelon_Saddle_C",
+		  "Description": "Armor Archelon Saddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Archelon_C",
+		  "Description": "Egg Archelon",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Archelon_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Armor",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemArmor_BrachioSaddle_C",
+		  "Description": "BrachioSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Brachiosaurus_C",
+		  "Description": "Egg Brachiosaurus",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Aberrant_C",
+		  "Description": "C Aberrant",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Genesis_C",
+		  "Description": "C Genesis",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Armor",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemArmor_ConcaSaddle_C",
+		  "Description": "ConcaSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_AberrantConcaEgg_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_ConcaEgg_C",
+		  "Description": "ConcaEgg",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_ConcaEgg_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_ConcaEgg_Fertilized_Genesis_C",
+		  "Description": "C Genesis",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Armor",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemArmor_CryoSaddle_C",
+		  "Description": "CryoSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_CryolophosaurusEgg_C",
+		  "Description": "CryolophosaurusEgg",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_CryolophosaurusEgg_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Deino_C",
+		  "Description": "Egg Deino",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Deino_Fertilized_C",
+		  "Description": "C Fertilized",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Deino_Fertilized_Aberrant_C",
+		  "Description": "C Aberrant",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Egg",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_Egg_Deino_Fertilized_Bog_C",
+		  "Description": "C Bog",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Armor",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemArmor_Deinosuchus_Saddle_C",
+		  "Description": "Deinosuchus Saddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Armor",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemArmor_XiphSaddle_C",
+		  "Description": "XiphSaddle",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_UnderwaterEgg_Xiphactinus_C",
+		  "Description": "UnderwaterEgg Xiphactinus",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_UnderwaterEgg_Xiphactinus_Abyssal_C",
+		  "Description": "UnderwaterEgg Xiphactinus Abyssal",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Consumable",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_UnderwaterEgg_Xiphactinus_Ocean_C",
+		  "Description": "UnderwaterEgg Xiphactinus Ocean",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Default Acro",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemSkin_ChibiDino_Acro",
+		  "Description": "Default Acro",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Scorched Acro",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemSkin_ChibiDino_Acro_Scorched",
+		  "Description": "Scorched Acro",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "X-Acro",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemSkin_ChibiDino_Acro_Gen1",
+		  "Description": "X-Acro",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "R-Acro",
+		  "IsHarvestable": "false",
+		  "ClassName": "R-Acro",
+		  "Description": "PrimalItemSkin_ChibiDino_Acro_Gen2",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Savage Acro",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemSkin_ChibiDino_Acro_Savage",
+		  "Description": "Savage Acro",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "UpFromTheDepths Chibi",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemBase_ChibiDino_Depths",
+		  "Description": "UpFromTheDepths Chibi",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Acro Adrenal Gland",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemResource_ApexDrop_Acro",
+		  "Description": "Acro Adrenal Gland",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Savage Acro Summoner",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemConsumable_BossSummon_SavageAcro",
+		  "Description": "Savage Acro Summoner",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Savage Acro Flag",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemStructure_Flag_SavageAcro",
+		  "Description": "Savage Acro Flag",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Savage Acro Head Trophy",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemTrophy_SavageAcro",
+		  "Description": "Savage Acro Head Trophy",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Savage Acro Costume",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemCostume_SavageAcro",
+		  "Description": "Savage Acro Costume",
+		  "Mod": "ARK Additions The Collection"
+	   },
+	   {
+		  "Category": "Ghost Acro Costume",
+		  "IsHarvestable": "false",
+		  "ClassName": "PrimalItemCostume_GhostAcro",
+		  "Description": "Ghost Acro Costume",
+		  "Mod": "ARK Additions The Collection"
+	   }
+    ],
+    "Creatures": [
+	   {
+		  "NameTag": "Acro",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Acrocanthosaurus_Character_BP_C",
+		  "Description": "Acrocanthosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Acro",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Bog_Acrocanthosaurus_Character_BP_C",
+		  "Description": "Bog Acrocanthosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Acro",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Scorched_Acrocanthosaurus_Character_BP_C",
+		  "Description": "Scorched Acrocanthosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Archelon",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Archelon_Character_BP_C",
+		  "Description": "Archelon",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "AdditionsBrachio",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Brachiosaurus_Character_BP_C",
+		  "Description": "Brachiosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "AdditionsBrachio",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Brachiosaurus_Character_BP_Aberrant_C",
+		  "Description": "Brachiosaurus  Aberrant",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "AdditionsBrachio",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Volcanic_Brachiosaurus_Character_BP_C",
+		  "Description": "Volcanic Brachiosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Concavenator",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Concavenator_Character_BP_C",
+		  "Description": "Concavenator",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Concavenator",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Volcanic_Concavenator_Character_BP_C",
+		  "Description": "Volcanic Concavenator",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Cryolophosaurus",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Cryolophosaurus_Character_BP_C",
+		  "Description": "Cryolophosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Cryolophosaurus",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Bog_Deinosuchus_Character_BP_C",
+		  "Description": "Bog Deinosuchus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Deino",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Deinosuchus_Character_BP_C",
+		  "Description": "Deinosuchus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Deino",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Deinosuchus_Character_BP_Aberrant_C",
+		  "Description": "Deinosuchus  Aberrant",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Xiph",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "AbyssalXiph_Character_BP_C",
+		  "Description": "AbyssalXiph",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Xiph",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "OceanXiph_Character_BP_C",
+		  "Description": "OceanXiph",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Xiph",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Xiph_Character_BP_C",
+		  "Description": "Xiph",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Woolly Brachiosaurus",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Brachiosaurus_Character_BP_Woolly_C",
+		  "Description": "Woolly Brachiosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "R-Brachiosaurus",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Brachiosaurus_Character_Eden_C",
+		  "Description": "R-Brachiosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "R-Acrocanthosaurus",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Acrocanthosaurus_Character_BP_Eden_C",
+		  "Description": "R-Acrocanthosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "R-Cryolophosaurus",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Cryolophosaurus_Character_BP_Rockwell_C",
+		  "Description": "R-Cryolophosaurus",
+		  "Mod": "ARK Additions: The Collection"
+	   },
+	   {
+		  "NameTag": "Archelon",
+		  "IsSpawnable": "true",
+		  "IsTameable": "true",
+		  "ClassName": "Archelon_Character_BP_C",
+		  "Description": "Archelon",
+		  "Mod": "ARK Additions: The Collection"
+	   }
+    ]
+  }

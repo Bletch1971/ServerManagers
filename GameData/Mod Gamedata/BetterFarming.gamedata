@@ -1,0 +1,577 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-03-01T02:22:40.5980963Z",
+  "Creatures": [],
+  "Engrams": [
+  {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BetterFarming_CropPlot_C",
+      "Description": "BetterFarming CropPlot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BetterFarming_FarmLand_C",
+      "Description": "BetterFarming FarmLand",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BetterFarming_Kitchen_BP_C",
+      "Description": "BetterFarming Kitchen BP",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CookingPot_C",
+      "Description": "CookingPot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BetterFarming_Sprinkler_C",
+      "Description": "BetterFarming Sprinkler",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BetterFarming_WaterIntake_C",
+      "Description": "BetterFarming WaterIntake",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BetterFarming_TreePlot_C",
+      "Description": "BetterFarming TreePlot",
+      "Mod": "BetterFarming"
+   }
+  ],
+  "Items": [
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_AloeVera_C",
+      "Description": "Seed AloeVera",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_AloeVera_C",
+      "Description": "Veggie AloeVera",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Celery_C",
+      "Description": "Seed Celery",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Celery_C",
+      "Description": "Veggie Celery",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_CoffeeBeans_C",
+      "Description": "Seed CoffeeBeans",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_CoffeeBeans_C",
+      "Description": "Veggie CoffeeBeans",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Mushroom_C",
+      "Description": "Seed Mushroom",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Mushroom_C",
+      "Description": "Veggie Mushroom",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Pepper_C",
+      "Description": "Seed Pepper",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Pepper_C",
+      "Description": "Veggie Pepper",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Beets_C",
+      "Description": "Seed Beets",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Beets_C",
+      "Description": "Veggie Beets",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Carrot_C",
+      "Description": "Seed Carrot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Carrot_C",
+      "Description": "Veggie Carrot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Lettuce_C",
+      "Description": "Seed Lettuce",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Lettuce_C",
+      "Description": "Veggie Lettuce",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Maize_C",
+      "Description": "Seed Maize",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Maize_C",
+      "Description": "Veggie Maize",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Potato_C",
+      "Description": "Seed Potato",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Potato_C",
+      "Description": "Veggie Potato",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Rice_C",
+      "Description": "Seed Rice",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Rice_C",
+      "Description": "Veggie Rice",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Wheat_C",
+      "Description": "Seed Wheat",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Wheat_C",
+      "Description": "Veggie Wheat",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Lemon_C",
+      "Description": "Seed Lemon",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Lemon_C",
+      "Description": "Veggie Lemon",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Cocoa_C",
+      "Description": "Seed Cocoa",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Cocoa_Beans_C",
+      "Description": "Veggie Cocoa Beans",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Olive_C",
+      "Description": "Seed Olive",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Veggie_Olive_C",
+      "Description": "Veggie Olive",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Soup_AloeTea_C",
+      "Description": "Soup AloeTea",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_AnimalFood_C",
+      "Description": "AnimalFood",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_NekaBuns_C",
+      "Description": "NekaBuns",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Soup_CelerySoup_C",
+      "Description": "Soup CelerySoup",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_CookedEgg_C",
+      "Description": "CookedEgg",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_FishAndChips_C",
+      "Description": "FishAndChips",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_GenericSeeds_C",
+      "Description": "GenericSeeds",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Soup_HotCocoa_C",
+      "Description": "Soup HotCocoa",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Soup_HotCoffee_C",
+      "Description": "Soup HotCoffee",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_CocoaPowder_C",
+      "Description": "CocoaPowder",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_CoffeePowder_C",
+      "Description": "CoffeePowder",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_FreshDough_C",
+      "Description": "FreshDough",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_ReadyDough_C",
+      "Description": "ReadyDough",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Egg_C",
+      "Description": "Egg",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Flour_C",
+      "Description": "Flour",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_FrenchFries_C",
+      "Description": "FrenchFries",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_OliveOil_C",
+      "Description": "OliveOil",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_FreshPotatoDough_C",
+      "Description": "FreshPotatoDough",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_ReadyPotatoDough_C",
+      "Description": "ReadyPotatoDough",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_RiceMilk_C",
+      "Description": "RiceMilk",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_RicePowder_C",
+      "Description": "RicePowder",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Yeast_C",
+      "Description": "Yeast",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_AloeVeraHeal_C",
+      "Description": "AloeVeraHeal",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_MixedSalad_C",
+      "Description": "MixedSalad",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Soup_MushroomSoup_C",
+      "Description": "Soup MushroomSoup",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_PotatoBread_C",
+      "Description": "PotatoBread",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_PreservedMeat_C",
+      "Description": "PreservedMeat",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_ProteinPie_C",
+      "Description": "ProteinPie",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_SpicyRoll_C",
+      "Description": "SpicyRoll",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_SurvivorMeal_C",
+      "Description": "SurvivorMeal",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_GenericSeeds_C",
+      "Description": "GenericSeeds",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CheatChest_C",
+      "Description": "CheatChest",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_ChickenCoop_C",
+      "Description": "ChickenCoop",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_BetterFarmingSeed_Veggie_CropPlot_C",
+      "Description": "BetterFarmingSeed Veggie CropPlot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CropPlot_C",
+      "Description": "CropPlot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_BetterFarmingSeed_Veggie_FarmLand_C",
+      "Description": "BetterFarmingSeed Veggie FarmLand",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_FarmLand_C",
+      "Description": "FarmLand",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Kitchen_C",
+      "Description": "Kitchen",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_CookingPot_C",
+      "Description": "CookingPot",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Sprinkler_C",
+      "Description": "Sprinkler",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_WaterIntake_C",
+      "Description": "WaterIntake",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Seed_Tree_C",
+      "Description": "Seed Tree",
+      "Mod": "BetterFarming"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_TreePlot_Medium_C",
+      "Description": "TreePlot Medium",
+      "Mod": "BetterFarming"
+   }
+  ]
+}

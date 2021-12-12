@@ -1,0 +1,23 @@
+{
+  "Application": "ark",
+  "Version": "1.0.1",
+  "Created": "2020-09-14T05:45:00.0000000Z",
+  "Creatures": [
+  ],
+  "Engrams": [
+  ], 
+  "Items": [
+  ],
+  "MapSpawners": [
+  ],
+  "SupplyCrates": [
+  ],
+  "GameMaps": [
+	{
+      "IsSotF": false,
+      "ClassName": "TiamatPrime",
+      "Description": "Tiamat",
+      "Mod": "Tiamat"
+	}
+  ]
+}

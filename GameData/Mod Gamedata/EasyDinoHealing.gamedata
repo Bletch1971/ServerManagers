@@ -1,0 +1,23 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-03-25T10:19:37.8563224Z",
+  "Engrams": [
+   {
+      "Level": 1,
+      "Points": 35,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BerryFeeder_C",
+      "Description": "BerryFeeder",
+      "Mod": "Easy Dino Healing"
+   },
+   {
+      "Level": 1,
+      "Points": 35,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MeatFeeder_C",
+      "Description": "MeatFeeder",
+      "Mod": "Easy Dino Healing"
+   }
+  ]
+}

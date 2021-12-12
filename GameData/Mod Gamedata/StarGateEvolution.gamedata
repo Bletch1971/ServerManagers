@@ -1,0 +1,644 @@
+{
+  "Application": "ark",
+  "Version": "1.2.0",
+  "Created": "2021-03-22T10:19:37.8543037Z",
+  "Engrams": [
+   {
+      "Level": 65,
+      "Points": 5,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Atlantis_Iris_C",
+      "Description": "Atlantis Iris",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 65,
+      "Points": 5,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_SGC_Iris_C",
+      "Description": "SGC Iris",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 60,
+      "Points": 4,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_PDA_C",
+      "Description": "PDA",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 6,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Advanced_Electronics_C",
+      "Description": "Advanced Electronics",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 5,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_ZPM_C",
+      "Description": "ZPM",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 25,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Lantean_Crafting_Table_C",
+      "Description": "Lantean Crafting Table",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Lantean_Fabricator_C",
+      "Description": "Lantean Fabricator",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Stargate_Crafting_Station_C",
+      "Description": "Stargate Crafting Station",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 60,
+      "Points": 7,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Pegasus_DHD_C",
+      "Description": "Pegasus DHD",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Lantean_ZPM_Hub_C",
+      "Description": "Lantean ZPM Hub",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 5,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Naquadah_Reactor_C",
+      "Description": "Naquadah Reactor",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Naquadah_Reactor_MK2_C",
+      "Description": "Naquadah Reactor MK2",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 8,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Braziers_C",
+      "Description": "Braziers",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 9,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Lantean_Lights_C",
+      "Description": "Lantean Lights",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 45,
+      "Points": 29,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Gate_Ramps_C",
+      "Description": "Gate Ramps",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 19,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Ring_Ramps_C",
+      "Description": "Ring Ramps",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 5,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_GoaUldRings_C",
+      "Description": "GoaUldRings",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 55,
+      "Points": 5,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_OriRings_C",
+      "Description": "OriRings",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Pegasus_Gate_C",
+      "Description": "Pegasus Gate",
+      "Mod": "StarGate Evolution"
+   }
+  ],
+  "Items": [
+   {
+      "Category": "Skin",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemSkin_Jaffa_Horus_Helmet_C",
+      "Description": "Jaffa Horus Helmet",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_AncientGene_C",
+      "Description": "AncientGene",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Medkit_C",
+      "Description": "Medkit",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_MRE_C",
+      "Description": "MRE",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_PainKillers_C",
+      "Description": "PainKillers",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Consumable",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemConsumable_Tretonin_C",
+      "Description": "Tretonin",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Atlantis_Iris_C",
+      "Description": "Atlantis Iris",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_SGC_Iris_C",
+      "Description": "SGC Iris",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Advanced_Electronics_C",
+      "Description": "Advanced Electronics",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_GoldIngot_C",
+      "Description": "GoldIngot",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_GoldOre_C",
+      "Description": "GoldOre",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Liquid_Naquadah_C",
+      "Description": "Liquid Naquadah",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_NaquadahIngot_C",
+      "Description": "NaquadahIngot",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_NaquadahOre_C",
+      "Description": "NaquadahOre",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_Zero_Point_Energy_C",
+      "Description": "Zero Point Energy",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_ZPM_C",
+      "Description": "ZPM",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_Crafting_Table_C",
+      "Description": "Lantean Crafting Table",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_Fabricator_C",
+      "Description": "Lantean Fabricator",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Stargate_Crafting_Station_C",
+      "Description": "Stargate Crafting Station",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Pegasus_DHD_C",
+      "Description": "Pegasus DHD",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_ZPM_Hub_C",
+      "Description": "Lantean ZPM Hub",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Naquadah_Reactor_C",
+      "Description": "Naquadah Reactor",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Naquadah_Reactor_MK2_C",
+      "Description": "Naquadah Reactor MK2",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Brazier_C",
+      "Description": "Brazier",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Goauld_Brazier_C",
+      "Description": "Goauld Brazier",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Jaffa_Brazier_C",
+      "Description": "Jaffa Brazier",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_OriBrazier_C",
+      "Description": "OriBrazier",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Drone_Missile_Stand_C",
+      "Description": "Drone Missile Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Gold_Ingot_Stand_C",
+      "Description": "Gold Ingot Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Gold_Ore_Stand_C",
+      "Description": "Gold Ore Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Liquid_Naquadah_Stand_C",
+      "Description": "Liquid Naquadah Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Medkit_Stand_C",
+      "Description": "Medkit Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MRE_Stand_C",
+      "Description": "MRE Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Naquadah_Ingot_Stand_C",
+      "Description": "Naquadah Ingot Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Naquadah_Ore_Stand_C",
+      "Description": "Naquadah Ore Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Zero_Point_Energy_Stand_C",
+      "Description": "Zero Point Energy Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_ZPM_Stand_C",
+      "Description": "ZPM Stand",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Exodus_Games_Logo_Light_C",
+      "Description": "Exodus Games Logo Light",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_Standing_Light_C",
+      "Description": "Lantean Standing Light",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_Triangle_Light_C",
+      "Description": "Lantean Triangle Light",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_Wall_Light_C",
+      "Description": "Lantean Wall Light",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Lantean_Fab_Model_C",
+      "Description": "Lantean Fab Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_SCS_Model_C",
+      "Description": "SCS Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MilkyWay_DHD_Model_C",
+      "Description": "MilkyWay DHD Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Pegasus_DHD_Model_C",
+      "Description": "Pegasus DHD Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_N_Reactor_MK1_Model_C",
+      "Description": "N Reactor MK1 Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_N_Reactor_MK2_Model_C",
+      "Description": "N Reactor MK2 Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_ZPM_Hub_Model_C",
+      "Description": "ZPM Hub Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_GoaUld_Rings_Model_C",
+      "Description": "GoaUld Rings Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MilkyWay_Gate_Model_C",
+      "Description": "MilkyWay Gate Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Pegasus_Gate_Model_C",
+      "Description": "Pegasus Gate Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Tollan_Gate_Model_C",
+      "Description": "Tollan Gate Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Universe_Gate_Model_C",
+      "Description": "Universe Gate Model",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Ancient_Ramp_C",
+      "Description": "Ancient Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Arcadia_Ramp_C",
+      "Description": "Arcadia Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_GoaUld_Ramp_C",
+      "Description": "GoaUld Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Icarus_Front_Ramp_C",
+      "Description": "Icarus Front Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Icarus_Ramp_C",
+      "Description": "Icarus Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Jaffa_Ramp_C",
+      "Description": "Jaffa Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Alpha_Ring_Ramp_C",
+      "Description": "Alpha Ring Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Beta_Ring_Ramp_C",
+      "Description": "Beta Ring Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Omega_Ring_Ramp_C",
+      "Description": "Omega Ring Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_SGC_Ramp_C",
+      "Description": "SGC Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_RampSGU_C",
+      "Description": "RampSGU",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Small_Stone_Ramp_C",
+      "Description": "Small Stone Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Stone_Ramp_C",
+      "Description": "Stone Ramp",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_GoaUld_Rings_C",
+      "Description": "GoaUld Rings",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Ori_Rings_C",
+      "Description": "Ori Rings",
+      "Mod": "StarGate Evolution"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Pegasus_Gate_C",
+      "Description": "Pegasus Gate",
+      "Mod": "StarGate Evolution"
+   }
+  ]
+}

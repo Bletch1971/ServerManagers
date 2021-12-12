@@ -1,0 +1,1138 @@
+{
+  "Application": "ark",
+  "Version": "1.2.0",
+  "Created": "2020-09-19T21:53:07.6460875Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 2,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Campfire_US_C",
+      "Description": "Campfire",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 2,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Spear_US_C",
+      "Description": "Spear",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 6,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Sparkpowder_US_C",
+      "Description": "Sparkpowder",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 5,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PreservingSalt_US_C",
+      "Description": "Preserving Salt",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 5,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Clay_US_C",
+      "Description": "Clay",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 6,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Narcotic_US_C",
+      "Description": "Narcotic",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 7,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StandingTorch_US_C",
+      "Description": "Standing Torch",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 9,
+      "Points": 2,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Boomerang_US_C",
+      "Description": "Boomerang",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 13,
+      "Points": 3,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChitinPaste_US_C",
+      "Description": "Cementing Paste",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 11,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Stimulant_US_C",
+      "Description": "Stimulant",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 15,
+      "Points": 2,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Gunpowder_US_C",
+      "Description": "Gunpowder",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 15,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FlareLauncher_US_C",
+      "Description": "Flare Gun",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 10,
+      "Points": 2,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ArrowStone_US_C",
+      "Description": "Stone Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 22,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Parachute_US_C",
+      "Description": "Parachute",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 16,
+      "Points": 12,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BugRepel_US_C",
+      "Description": "Bug Repellant",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 21,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ArrowTranq_US_C",
+      "Description": "Tranq Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 18,
+      "Points": 16,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CureLow_US_C",
+      "Description": "Lesser Antidote",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 22,
+      "Points": 12,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Propellant_US_C",
+      "Description": "Propellant",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 24,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_OilJar_US_C",
+      "Description": "Oil Jar",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 22,
+      "Points": 7,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AlarmTrap_US_C",
+      "Description": "Tripwire Alarm Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 26,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FlameArrow_US_C",
+      "Description": "Flame Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 29,
+      "Points": 9,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PoisonTrap_US_C",
+      "Description": "Tripwire Narcotic Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 28,
+      "Points": 9,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BearTrap_US_C",
+      "Description": "Bear Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 31,
+      "Points": 12,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BearTrap_Large_US_C",
+      "Description": "Large Bear Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 21,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WallTorch_US_C",
+      "Description": "Wall Torch",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 24,
+      "Points": 18,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GasGrenade_US_C",
+      "Description": "Smoke Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 29,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BallistaArrow_US_C",
+      "Description": "Spear Bolt",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 28,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Fireplace_US_C",
+      "Description": "Stone Fireplace",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 34,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SimpleBullet_US_C",
+      "Description": "Simple Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 35,
+      "Points": 13,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Scope_US_C",
+      "Description": "Scope Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 38,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Grenade_US_C",
+      "Description": "Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 35,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SimpleRifleBullet_US_C",
+      "Description": "Simple Rifle Ammo",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 39,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SimpleShotgunBullet_US_C",
+      "Description": "Simple Shotgun Ammo",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 38,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MiracleGro_US_C",
+      "Description": "Re-Fertilizer",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 34,
+      "Points": 5,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CannonBall_US_C",
+      "Description": "Cannon Ball",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 40,
+      "Points": 18,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PoisonGrenade_US_C",
+      "Description": "Poison Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 41,
+      "Points": 13,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Silencer_US_C",
+      "Description": "Silencer Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 48,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Polymer_US_C",
+      "Description": "Polymer",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 48,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Electronics_US_C",
+      "Description": "Electronics",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 44,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TripwireC4_US_C",
+      "Description": "Improvised Explosive Device",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 52,
+      "Points": 18,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Flashlight_US_C",
+      "Description": "Flashlight Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 51,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChainBola_US_C",
+      "Description": "Chain Bola",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 80,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ClusterGrenade_US_C",
+      "Description": "Cluster Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 47,
+      "Points": 40,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GrapplingHook_US_C",
+      "Description": "Grappling Hook",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 55,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AdvancedBullet_US_C",
+      "Description": "Advanced Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 65,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FlamethrowerAmmo_US_C",
+      "Description": "Flamethrower Ammo",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 65,
+      "Points": 12,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_C4Ammo_US_C",
+      "Description": "C4 Charge",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 58,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AdvancedRifleBullet_US_C",
+      "Description": "Advanced Rifle Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 59,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Laser_US_C",
+      "Description": "Laser Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 77,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HoloScope_US_C",
+      "Description": "Holo-Scope Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 87,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RocketAmmo_US_C",
+      "Description": "Rocket Propelled Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 66,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransGPSAmmo_US_C",
+      "Description": "Transponder Node",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 62,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TranqDart_US_C",
+      "Description": "Tranquilizer Dart",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 83,
+      "Points": 16,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AdvancedSniperBullet_US_C",
+      "Description": "Advanced Sniper Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 79,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CompoundArrow_US_C",
+      "Description": "Metal Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 90,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RocketHommingAmmo_US_C",
+      "Description": "Rocket Homing Missile",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 88,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SeaMine_US_C",
+      "Description": "Homing Underwater Mine",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 96,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RefinedTranqDart_US_C",
+      "Description": "Shocking Tranquilizer Dart",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 84,
+      "Points": 60,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SubstrateAbsorbent_US_C",
+      "Description": "Absorbent Substrate",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 90,
+      "Points": 60,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AggroTranqDart_US_C",
+      "Description": "Pheromone Dart",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 72,
+      "Points": 40,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TranqSpearBolt_US_C",
+      "Description": "Tranq Spear Bolt",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 31,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ZiplineAmmo_US_C",
+      "Description": "Zip-Line Anchor",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 71,
+      "Points": 22,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChargeBattery_US_C",
+      "Description": "Charge Battery",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 80,
+      "Points": 32,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChargeLantern_US_C",
+      "Description": "Charge Lantern",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 10,
+      "Points": 4,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Glowstick_US_C",
+      "Description": "Glow Stick",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 79,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TekGravityGrenade_US_C",
+      "Description": "Tek Gravity Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 97,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MekCannonShell_US_C",
+      "Description": "Cannon Shell",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 95,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MekRocketPod_US_C",
+      "Description": "Rocket Pod",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 58,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RefinedElement_US_C",
+      "Description": "Unstable Element",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 55,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RefinedShards_US_C",
+      "Description": "Unstable Element Shard",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 6,
+      "Points": 4,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FishingNet_US_C",
+      "Description": "Fish Net",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransferableElement_US_C",
+      "Description": "Transferable Element",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TransferableShards_US_C",
+      "Description": "Transferable Element Shard",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MeatSpoiler_US_C",
+      "Description": "Meat Spoiler",
+      "Mod": "UltraStacks"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Campfire_US_C",
+      "Description": "Campfire",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponSpear_US_C",
+      "Description": "Spear",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Sparkpowder_US_C",
+      "Description": "Sparkpowder",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_PreservingSalt_US_C",
+      "Description": "Preserving Salt",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Clay_US_C",
+      "Description": "Clay",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Narcotic_US_C",
+      "Description": "Narcotic",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StandingTorch_US_C",
+      "Description": "Standing Torch",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponBoomerang_US_C",
+      "Description": "Boomerang",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ChitinPaste_US_C",
+      "Description": "Cementing Paste",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Stimulant_US_C",
+      "Description": "Stimulant",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Gunpowder_US_C",
+      "Description": "Gunpowder",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponFlareGun_US_C",
+      "Description": "Flare Gun",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_ArrowStone_US_C",
+      "Description": "Stone Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumableBuff_Parachute_US_C",
+      "Description": "Parachute",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BugRepellant_US_C",
+      "Description": "Bug Repellant",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_ArrowTranq_US_C",
+      "Description": "Tranq Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_CureLow_US_C",
+      "Description": "Lesser Antidote",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Propellant_US_C",
+      "Description": "Propellant",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponOilJar_US_C",
+      "Description": "Oil Jar",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponAlarmTrap_US_C",
+      "Description": "Tripwire Alarm Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_ArrowFlame_US_C",
+      "Description": "Flame Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponPoisonTrap_US_C",
+      "Description": "Tripwire Narcotic Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BearTrap_US_C",
+      "Description": "Bear Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BearTrap_Large_US_C",
+      "Description": "Large Bear Trap",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WallTorch_US_C",
+      "Description": "Wall Torch",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_GasGrenade_US_C",
+      "Description": "Smoke Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_BallistaArrow_US_C",
+      "Description": "Spear Bolt",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Fireplace_US_C",
+      "Description": "Stone Fireplace",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SimpleBullet_US_C",
+      "Description": "Simple Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "WeaponAttachment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeaponAttachment_Scope_US_C",
+      "Description": "Scope Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponGrenade_US_C",
+      "Description": "Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SimpleRifleBullet_US_C",
+      "Description": "Simple Rifle Ammo",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SimpleShotgunBullet_US_C",
+      "Description": "Simple Shotgun Ammo",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumableMiracleGro_US_C",
+      "Description": "Re-Fertilizer",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_CannonBall_US_C",
+      "Description": "Cannon Ball",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_PoisonGrenade_US_C",
+      "Description": "Poison Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "WeaponAttachment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeaponAttachment_Silencer_US_C",
+      "Description": "Silencer Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Polymer_US_C",
+      "Description": "Polymer",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Electronics_US_C",
+      "Description": "Electronics",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponTripwireC4_US_C",
+      "Description": "Improvised Explosive Device",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "WeaponAttachment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeaponAttachment_Flashlight_US_C",
+      "Description": "Flashlight Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_ChainBola_US_C",
+      "Description": "Chain Bola",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponClusterGrenade_US_C",
+      "Description": "Cluster Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_GrapplingHook_US_C",
+      "Description": "Grappling Hook",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_AdvancedBullet_US_C",
+      "Description": "Advanced Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Flamethrower_US_C",
+      "Description": "Flamethrower Ammo",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemC4Ammo_US_C",
+      "Description": "C4 Charge",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_AdvancedRifleBullet_US_C",
+      "Description": "Advanced Rifle Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "WeaponAttachment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeaponAttachment_Laser_US_C",
+      "Description": "Laser Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "WeaponAttachment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeaponAttachment_HoloScope_US_C",
+      "Description": "Holo-Scope Attachment",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Rocket_US_C",
+      "Description": "Rocket Propelled Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemTransGPSAmmo_US_C",
+      "Description": "Transponder Node",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_TranqDart_US_C",
+      "Description": "Tranquilizer Dart",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_AdvancedSniperBullet_US_C",
+      "Description": "Advanced Sniper Bullet",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_CompoundBowArrow_US_C",
+      "Description": "Metal Arrow",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_RocketHomingMissile_US_C",
+      "Description": "Rocket Homing Missile",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SeaMine_US_C",
+      "Description": "Homing Underwater Mine",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_RefinedTranqDart_US_C",
+      "Description": "Shocking Tranquilizer Dart",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_SubstrateAbsorbent_US_C",
+      "Description": "Absorbent Substrate",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_AggroTranqDart_US_C",
+      "Description": "Pheromone Dart",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_TranqSpearBolt_US_C",
+      "Description": "Tranq Spear Bolt",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Zipline_US_C",
+      "Description": "Zip-Line Anchor",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_GlowStick_US_C",
+      "Description": "Glow Stick",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponTekGravityGrenade_US_C",
+      "Description": "Tek Gravity Grenade",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_CannonShell_US_C",
+      "Description": "Cannon Shell",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_RocketPod_US_C",
+      "Description": "Rocket Pod",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ElementRefined_US_C",
+      "Description": "Unstable Element",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ShardRefined_US_C",
+      "Description": "Unstable Element Shard",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponFishingNet_US_C",
+      "Description": "Fish Net",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_TransferableElement_US_C",
+      "Description": "Transferable Element",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Element_US_C",
+      "Description": "Element",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_TransferableShards_US_C",
+      "Description": "Transferable Element Shard",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ElementShard_US_C",
+      "Description": "Element Shard",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MeatSpoiler_US_C",
+      "Description": "Meat Spoiler",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RawMeatToSpoiledMeat_US_C",
+      "Description": "Convert Raw Meat to Spoiled Meat",
+      "Mod": "UltraStacks"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RawPrimeMeatToSpoiledMeat_US_C",
+      "Description": "Convert Raw Prime Meat to Spoiled Meat",
+      "Mod": "UltraStacks"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}
+

@@ -1,0 +1,23 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-07-10T00:00:00.0000000Z",
+  "Creatures": [
+  ],
+  "Engrams": [
+  ], 
+  "Items": [
+  ],
+  "MapSpawners": [
+  ],
+  "SupplyCrates": [
+  ],
+  "GameMaps": [
+	{
+      "IsSotF": false,
+      "ClassName": "Antartika",
+      "Description": "Antartika",
+      "Mod": "Antartika"
+	}
+  ]
+}

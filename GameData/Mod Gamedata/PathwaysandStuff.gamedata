@@ -1,0 +1,24 @@
+{
+  "Application": "ark",
+  "Version": "1.1.1",
+  "Created": "2021-04-10T12:30:37.8543037Z",
+  "Engrams": [
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_PathwayTable_C",
+      "Description": "Pathway Table",
+      "Mod": "Pathways and Stuff"
+    }
+  ],
+  "Items": [
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_PathwayTable_C",
+      "Description": "Pathway Table",
+      "Mod": "Pathways and Stuff"
+   }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-03-01T02:22:40.5980963Z",
+  "Creatures": [],
+  "Engrams": [
+   {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EE_Workbench_OzC_C",
+      "Description": "EE Workbench OzC",
+      "Mod": "OzC Craft"
+   }
+  ],
+  "Items": [
+ {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Fireplace_OzC_C",
+      "Description": "PIS Fireplace OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Bed_Wood_OzC_C",
+      "Description": "PIS Bed Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Bench_Basic_W_OzC_C",
+      "Description": "PIS Bench Basic W OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Carpet_01_OzC_C",
+      "Description": "PIS Carpet 01 OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Carpet_02_OzC_C",
+      "Description": "PIS Carpet 02 OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Carpet_Door_OzC_C",
+      "Description": "PIS Carpet Door OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Chair_Wood_OzC_C",
+      "Description": "PIS Chair Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Corner_Pillar_Arch_W_OzC_C",
+      "Description": "PIS Corner Pillar Arch W OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Corner_Pillar_Horizontal_W_OzC_C",
+      "Description": "PIS Corner Pillar Horizontal W OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Corner_Pillar_Wood_OzC_C",
+      "Description": "PIS Corner Pillar Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Table_Basic_W_OzC_C",
+      "Description": "PIS Table Basic W OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Wall_Hanger_OzC_C",
+      "Description": "PIS Wall Hanger OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Window_Curtain_OzC_C",
+      "Description": "PIS Window Curtain OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Window_Wood_OzC_C",
+      "Description": "PIS Window Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Door_Sliding_WG_OzC_C",
+      "Description": "PIS Door Sliding WG OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Door_Wide_OzC_C",
+      "Description": "PIS Door Wide OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Door_Wood_OzC_C",
+      "Description": "PIS Door Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Doorframe_Sliding_WG_OzC_C",
+      "Description": "PIS Doorframe Sliding WG OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Fence_Gate_Frame_Wood_OzC_C",
+      "Description": "PIS Fence Gate Frame Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Fence_Gate_Wood_OzC_C",
+      "Description": "PIS Fence Gate Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Floor_Stone_OzC_C",
+      "Description": "PIS Floor Stone OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Floor_Wood_OzC_C",
+      "Description": "PIS Floor Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Foundation_Wood_01_OzC_C",
+      "Description": "PIS Foundation Wood 01 OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Foundation_Wood_02_OzC_C",
+      "Description": "PIS Foundation Wood 02 OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Foundation_Wood_03_OzC_C",
+      "Description": "PIS Foundation Wood 03 OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Pillar_Wood_OzC_C",
+      "Description": "PIS Pillar Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Sloped_Scaffolding_Wood_OzC_C",
+      "Description": "PIS Sloped Scaffolding Wood OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Brazier_Floor_OzC_C",
+      "Description": "PIS Brazier Floor OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Candle_01_OzC_C",
+      "Description": "PIS Candle 01 OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Kerosene_Lamp_OzC_C",
+      "Description": "PIS Kerosene Lamp OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Lantern_Outdoor_Wall_OzC_C",
+      "Description": "PIS Lantern Outdoor Wall OzC",
+      "Mod": "OzC Craft"
+   },
+   {
+      "Category": "Structures",
+      "IsHarvestable": "false",
+      "ClassName": "PIS_Pot_Plant_01_OzC_C",
+      "Description": "PIS Pot Plant 01 OzC",
+      "Mod": "OzC Craft"
+   }
+  ]
+}

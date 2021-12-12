@@ -1,0 +1,638 @@
+{
+  "Application": "ark",
+  "Version": "1.1.1",
+  "Created": "2021-04-10T11:30:37.8543037Z",
+  "Engrams": [
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Barrel_C",
+      "Description": "Barrel",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_EmptyCart_C",
+      "Description": "Cart",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_PasteBowl_C",
+      "Description": "Cementing Paste Bowl",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CharcoalBag_C",
+      "Description": "Charcoal Bag",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CharcoalCart_C",
+      "Description": "Charcoal Cart",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MetalChest_C",
+      "Description": "Metal Chest",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_RockwellChest_C",
+      "Description": "Rockwell Chest",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_ChitinBox_C",
+      "Description": "Chitin Box",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_SmallCrate_C",
+      "Description": "Small Crate",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CrystalBag_C",
+      "Description": "Crystal Bag",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_ElementBin_C",
+      "Description": "Element Bin",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_FertilizerBag_C",
+      "Description": "Fertilizer Bag",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_FertilizerStack_C",
+      "Description": "Fertilizer Stack",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_FiberBox_C",
+      "Description": "Fiber Box",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_FlintBag_C",
+      "Description": "Flint Bag",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_GasBarrel_C",
+      "Description": "Gas Barrel",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_GenericShelf_C",
+      "Description": "Generic Shelf",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_GunpowderBarrel_C",
+      "Description": "Gunpowder Barrel",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_HideBox_C",
+      "Description": "Hide Box",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MetalIngot_C",
+      "Description": "Metal Ingot",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_IngotShelf_C",
+      "Description": "Ingot Shelf",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_IngotStack_C",
+      "Description": "Ingot Stack",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_OreBin_Metal_C",
+      "Description": "Metal Ore Bin",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_NarcoticsStorage_C",
+      "Description": "Narcotics Bowl",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_OreBin_Obsidian_C",
+      "Description": "Obsidian Ore Bin",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_OilBarrel_C",
+      "Description": "Oil Barrel",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Pallet_C",
+      "Description": "Pallet",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_PearlBag_C",
+      "Description": "Pearl Bag",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_SandBag_C",
+      "Description": "Sand Bag",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Shelf_C",
+      "Description": "Shelf",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_BarRefrigerator_C",
+      "Description": "Bar refrigerator",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_SparkpowderBarrel_C",
+      "Description": "Sparkpowder Barrel",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_StimulantStorage_C",
+      "Description": "Stimulant Bowl",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_OreBin_Stone_C",
+      "Description": "Stone Ore Bin",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_StoneShed_C",
+      "Description": "Stone Shed",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_HayBale_C",
+      "Description": "Hay Bale",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_ThatchCart_C",
+      "Description": "Thatch Cart",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_ToolRack_C",
+      "Description": "Tool Rack",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_GunCabinet_C",
+      "Description": "Gun Cabinet",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_WoodHolder_C",
+      "Description": "Log Holder",
+      "Mod": "RP Visual Storage"
+    },
+    {
+      "Level": 20,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Wood_Shed_C",
+      "Description": "Wood Shed",
+      "Mod": "RP Visual Storage"
+    }
+  ],
+  "Items": [
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Barrel_C",
+      "Description": "Storage Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_EmptyCart_C",
+      "Description": "Empty Cart",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_PasteBowl_C",
+      "Description": "Paste Bowl",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_CharcoalBag_C",
+      "Description": "Charcoal Bag",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_CharcoalCart_C",
+      "Description": "Charcoal Cart",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_MetalChest_C",
+      "Description": "Metal Chest",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_RockwellChest_C",
+      "Description": "Rockwell Chest",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_RockwellChest_C",
+      "Description": "Rockwell Chest",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_SmallCrate_C",
+      "Description": "Small Crate",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_CrystalBag_C",
+      "Description": "Crystal Bag",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_ElementBin_C",
+      "Description": "Element Bin",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_FertilizerBag_C",
+      "Description": "Fertilizer Bag",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_FertilizerStack_C",
+      "Description": "Fertilizer Stack",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Fiber_C",
+      "Description": "Fiber Box",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_FlintBag_C",
+      "Description": "Flint Bag",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Gas_C",
+      "Description": "Gas Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_FloorShelf_C",
+      "Description": "Floor Shelf",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_GunpowderBarrel_C",
+      "Description": "Gunpowder Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Hide_C",
+      "Description": "Hide Box",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_MetalIngot_C",
+      "Description": "Metal Ingot",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_IngotShelf_C",
+      "Description": "Ingot Shelf",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_IngotStack_C",
+      "Description": "Ingot Stack",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_OreBin_Metal_C",
+      "Description": "Metal Ore Bin",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Narcotics_C",
+      "Description": "Narcotics Bowl",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_OreBin_Obsidian_C",
+      "Description": "Obsidian Ore Bin",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Oil_C",
+      "Description": "Oil Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Pallet_C",
+      "Description": "Pallet",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_PearlBag_C",
+      "Description": "Pearl Bag",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_SaltBarrel_C",
+      "Description": "Salt Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_SandBag_C",
+      "Description": "Sand Bag",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Shelf_C",
+      "Description": "Shelf",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_BarRefrigerator_C",
+      "Description": "Bar Refrigerator",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_SparkPowderBarrel_C",
+      "Description": "Sparkpowder Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Stimulant_C",
+      "Description": "Stimulant Bowl",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_OreBin_Stone_C",
+      "Description": "Stone Ore Bin",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_StoneShed_C",
+      "Description": "Stone Shed",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_SulfurBarrel_C",
+      "Description": "Sulfur Barrel",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_HayBale_C",
+      "Description": "Hay Bale",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_ThatchCart_C",
+      "Description": "Thatch Cart",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_ToolRack_C",
+      "Description": "Tool Rack",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_GunCabinet_C",
+      "Description": "Gun Cabinet",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_WoodHolder_C",
+      "Description": "Log Holder",
+      "Mod": "RP Visual Storage"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_StorageBox_Wood_Shed_C",
+      "Description": "Wood Shed",
+      "Mod": "RP Visual Storage"
+   }
+  ]
+}

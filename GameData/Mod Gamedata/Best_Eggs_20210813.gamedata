@@ -1,0 +1,28 @@
+{
+  "Application": "ark",
+  "Version": "1.4.0",
+  "Created": "2020-08-07T11:29:22.5899608Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "BE_Engram_BestEggMaker_C",
+      "Description": "Best Egg Maker",
+      "Mod": "Best Eggs!"
+    },
+  ],
+  "Items": [
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BestEggMaker",
+      "Description": "Best Egg Maker",
+      "Mod": "Best Eggs!"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}
