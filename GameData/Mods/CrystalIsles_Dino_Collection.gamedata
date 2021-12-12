@@ -1,0 +1,536 @@
+{
+  "Application": "ark",
+  "Version": "2.2.0",
+  "Created": "2020-09-14T02:30:00.0000000Z",
+  "Creatures": [
+    {
+      "NameTag": "CrystalAnkylo",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalAnkylo_Character_BP_C",
+      "Description": "Crystal Ankylosaurus",
+      "Mod": "Crystal Isles Dino Addition"
+    },   
+	{
+      "NameTag": "Crystal_Basi",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_Basi_BP_C",
+      "Description": "Crystal Basilisk",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalDeinonychus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalDeinonychus_Character_BP_C",
+      "Description": "Crystal Deinonychus",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalDrake",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalDrake_Character_BP_C",
+      "Description": "Crystal Drake",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalGriffin",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalGriffin_Character_BP_C",
+      "Description": "Crystal Griffin",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalLizard",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalLizard_Character_BP_C",
+      "Description": "Crystal Magamasaur",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalMammoth",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalMammoth_Character_BP_C",
+      "Description": "Crystal Mammoth",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Crystal_Moth",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_Moth_BP_C",
+      "Description": "Crystal Moth",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+	{
+      "NameTag": "Crystal_Styg",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_Styg_Character_BP_C",
+      "Description": "Crystal Stygimoloch",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+	{
+      "NameTag": "Crystal_Theri",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_Theri_BP_C",
+      "Description": "Crystal Therizinosaurus",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Crystal_turtle",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_turtle_Character_Bp_C",
+      "Description": "Crystal Megachelon",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalOtter",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalOtter_Character_BP_C",
+      "Description": "Crystal Spine Otter",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalSnow_Otter",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalSnow_Otter_Character_BP_C",
+      "Description": "Crystal Crowned Otter",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "CrystalParacer",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalParacer_Character_BP_C",
+      "Description": "Crystal Paracer",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Crystal_Owl",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_Owl_Character_BP_C",
+      "Description": "Crystal Snow Owl",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Crystal_Whelp",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Crystal_Whelp_BP_C",
+      "Description": "Crystal Whelp",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+	{
+      "NameTag": "EmberPegasus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "EmberPegasus_Character_BP_C",
+      "Description": "Ember Pegasus",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "EmberYuty",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "EmberYuty_Character_BP_C",
+      "Description": "Ember Yutyrannus",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "GrandEmbertross_F",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "GrandEmbertross_F_Character_BP_C",
+      "Description": "Grand Embertross",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "LiqOrb",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "LiqOrb_Character_BP_C",
+      "Description": "Liquefied Element Orb",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Bronto",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Bronto_Character_BP_C",
+      "Description": "Liquefied Bronto",
+      "Mod": "Crystal Isles Dino Addition"
+    },   
+	{
+      "NameTag": "Liq_Gigant",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Gigant_Character_BP_C",
+      "Description": "Liquefied Giga",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+	{
+      "NameTag": "Liq_Gigant",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Gigant_Character_BP_C",
+      "Description": "Liquefied Griffin",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+	{
+      "NameTag": "Liq_Indom",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Indom_BP_C",
+      "Description": "Liquefied Indominus Rex",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Jerboa",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Jerboa_Character_BP_C",
+      "Description": "Liquefied Jerboa",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Quetz",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Quetz_Character_BP_C",
+      "Description": "Liquefied Quetzal",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Raptor",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Raptor_Character_BP_C",
+      "Description": "Liquefied Raptor",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_MegaRaptor",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "Liq_MegaRaptor_Character_BP_C",
+      "Description": "Liquefied Mega Raptor",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Rex",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Rex_Character_BP_C",
+      "Description": "Liquefied Rex",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_MegaRex",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "Liq_MegaRex_Character_BP_C",
+      "Description": "Liquefied Mega Rex",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Spino",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Spino_Character_BP_C",
+      "Description": "Liquefied Spino",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Stego",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Stego_Character_BP_C",
+      "Description": "Liquefied Stego",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Thyla",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Thyla_Character_BP_C",
+      "Description": "Liquefied Thylacoleo",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Trike",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Trike_Character_BP_C",
+      "Description": "Liquefied Trike",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_Wyvern",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Liq_Wyvern_Character_BP_C",
+      "Description": "Liquefied Wyvern",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "NameTag": "Liq_MegaWyvern",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "Liq_MegaWyvern_Character_BP_C",
+      "Description": "Liquefied Mega Wyvern",
+      "Mod": "Crystal Isles Dino Addition"
+    }
+  ],
+  "Engrams": [
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CrystalCrafter_C",
+      "Description": "Crystal Crafter",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Level": 32,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_CI_Deino_C",
+      "Description": "Deinonychus Saddle",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Embertross_C",
+      "Description": "Embertross Saddle",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle__Liq_Indom_C",
+      "Description": "Indominus Rex Saddle",
+      "Mod": "Crystal Isles Dino Addition"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_CrystalDeino_Saddle_C",
+      "Description": "Crystal Deinonychus Saddle",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_EmbertrossSaddle_C",
+      "Description": "Grand Embertross Saddle",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_Liq_IndomSaddle_C",
+      "Description": "Indominus Rex Saddle",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CrystalCrafter_C",
+      "Description": "Crystal Crafter",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_ThornCI_C",
+      "Description": "Briar Thorn",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_FacetedCrystalCI_C",
+      "Description": "Faceted Crystal",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_PrimalCrystalCI_C",
+      "Description": "Prime Crystal",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_PureCrystalCI_C",
+      "Description": "Pure Crystal",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RefinedCrystalCI_C",
+      "Description": "Refined Crystal",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RoughCrystalCI_C",
+      "Description": "Rough Crystal",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CI_Ankylo_C",
+      "Description": "Crystal Ankylo Egg",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CI_Ankylo_Fertilized_C",
+      "Description": "Crystal Ankylo Egg (Fertilized)",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalDein_C",
+      "Description": "Crystal Deinonychus Egg",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalDeinonychus_Fertilized_C",
+      "Description": "Crystal Deinonychus Egg (Fertilized)",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_LavaLizard_Fertilized_C",
+      "Description": "Crystal Lava Lizard Egg (Fertilized)",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalDrake_Fertilized_C",
+      "Description": "Crystal Drake Egg (Fertilized)",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalOwl_C",
+      "Description": "Crystal Snow Owl Egg",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalOwl_Fertilized_C",
+      "Description": "Crystal Snow Owl Egg (Fertilized)",
+      "Mod": "Crystal Isles Dino Addition"
+    }
+  ],
+  "MapSpawners": [
+    {
+      "ClassName": "DinoSpawnEntries_CI_Bog_C",
+      "Description": "DinoSpawnEntries_CI_Bog",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_CI_Deino_C",
+      "Description": "DinoSpawnEntries_CI_Deino",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Drakes_C",
+      "Description": "DinoSpawnEntries_CI_Drakes",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Griffin_C",
+      "Description": "DinoSpawnEntries_CI_Griffin",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Lava_C",
+      "Description": "DinoSpawnEntries_CI_Lava",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Lava2_C",
+      "Description": "DinoSpawnEntries_CI_Lava2",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_LiqDinos_C",
+      "Description": "DinoSpawnEntries_CI_LiqDinos",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Megachelon_C",
+      "Description": "DinoSpawnEntries_CI_Megachelon",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_N_Land_C",
+      "Description": "DinoSpawnEntries_CI_N_Land",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_D_OasisDinos_C",
+      "Description": "DinoSpawnEntries_CI_D_OasisDinos",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_PaleGrove_C",
+      "Description": "DinoSpawnEntries_CI_PaleGrove",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Redwoods_C",
+      "Description": "DinoSpawnEntries_CI_Redwoods",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CI_Shoals_C",
+      "Description": "DinoSpawnEntries_CI_Shoals",
+      "Mod": "Crystal Isles Dino Addition"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_Whelps_C",
+      "Description": "CI_DinoSpawnEntries_Whelps",
+      "Mod": "Crystal Isles Dino Addition"
+    }
+  ],
+  "Inventories": [
+    {
+      "ClassName": "DinoDropInventoryComponent_Embertross_C",
+      "Description": "Creature Inventory - Embertross",
+      "Mod": "Crystal Isles Dino Addition"
+    }
+  ]
+}

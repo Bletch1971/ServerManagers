@@ -1,0 +1,377 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-05-09T00:00:00.0000000Z",
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverAmarberry_C",
+      "Description": "Item Remover Amarberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverAmbergris_C",
+      "Description": "Item Remover Ambergris",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverAzulberry_C",
+      "Description": "Item Remover Azulberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverBerry_C",
+      "Description": "Item Remover Berry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverCrystal_C",
+      "Description": "Item Remover Crystal",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DinoFarmmode_C",
+      "Description": "Dino Farmmode Enabler",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverFiber_C",
+      "Description": "Item Remover Fiber",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverFlint_C",
+      "Description": "Item Remover Flint",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverHide_C",
+      "Description": "Item Remover Hide",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverMejoberry_C",
+      "Description": "Item Remover Mejoberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverMetal_C",
+      "Description": "Item Remover Metal",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverNarcoberry_C",
+      "Description": "Item Remover Narcoberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverObsidian_C",
+      "Description": "Item Remover Obsidian",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverPrimeMeat_C",
+      "Description": "Item Remover Prime Meat",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverRawFishMeat_C",
+      "Description": "Item Remover Raw Fish Meat",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverRawMeat_C",
+      "Description": "Item Remover Raw Meat",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoloFarmRemote_C",
+      "Description": "Solo Farm Remote",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverDinoLoot_C",
+      "Description": "Item Remover Primitiv Dino Loot",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverSand_C",
+      "Description": "Item Remover Sand",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverSeeds_C",
+      "Description": "Item Remover Seeds",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverStimberry_C",
+      "Description": "Item Remover Stimberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverStone_C",
+      "Description": "Item Remover Stone",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverThatch_C",
+      "Description": "Item Remover Thatch",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverTintoberry_C",
+      "Description": "Item Remover Tintoberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ItemRemoverWood_C",
+      "Description": "Item Remover Wood",
+      "Mod": "Solo Farm Mod"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverAmarberry_C",
+      "Description": "Item Remover Amarberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverAzulberry_C",
+      "Description": "Item Remover Azulberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverBerry_C",
+      "Description": "Item Remover Berry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverCrystal_C",
+      "Description": "Item Remover Crystal",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "Item_DinoFarmmode_C",
+      "Description": "Dino Farmmode Enabler",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverFiber_C",
+      "Description": "Item Remover Fiber",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverFlint_C",
+      "Description": "Item Remover Flint",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverHide_C",
+      "Description": "Item Remover Hide",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverMejoberry_C",
+      "Description": "Item Remover Mejoberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverMetal_C",
+      "Description": "Item Remover Metal",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverNarcoberry_C",
+      "Description": "Item Remover Narcoberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverObsidian_C",
+      "Description": "Item Remover Obsidian",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverPrimeMeat_C",
+      "Description": "Item Remover Prime Meat",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverRawFishMeat_C",
+      "Description": "Item Remover Raw Fish Meat",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverRawMeat_C",
+      "Description": "Item Remover Raw Meat",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_SoloFarmRemote_C",
+      "Description": "Solo Farm Remote",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "Item_ItemRemoverDinoLoot_C",
+      "Description": "Item Remover Primitiv Dino Loot",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverSand_C",
+      "Description": "Item Remover Sand",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverSeeds_C",
+      "Description": "Item Remover Seeds",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverStimberry_C",
+      "Description": "Item Remover Stimberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverStone_C",
+      "Description": "Item Remover Stone",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverThatch_C",
+      "Description": "Item Remover Thatch",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverTintoberry_C",
+      "Description": "Item Remover Tintoberry",
+      "Mod": "Solo Farm Mod"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "SFM_PrimalItem_ItemRemoverWood_C",
+      "Description": "Item Remover Wood",
+      "Mod": "Solo Farm Mod"
+    }
+  ]
+}

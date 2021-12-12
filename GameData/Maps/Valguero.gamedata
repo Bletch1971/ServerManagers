@@ -1,0 +1,237 @@
+{
+  "Application": "ark",
+  "Version": "1.1.0",
+  "Created": "2019-08-07T00:00:00.0000000Z",
+  "Creatures": [
+    {
+      "NameTag": "Deinonychus",
+      "IsSpawnable": true,
+      "IsTameable": "ByBreeding",
+      "ClassName": "Deinonychus_Character_BP_C",
+      "Description": "Deinonychus",
+      "Mod": "Valguero"
+    },
+	{
+      "NameTag": "RockElemental",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "ChalkGolem_Character_BP_C",
+      "Description": "Chalk Golem",
+      "Mod": "Valguero"
+    },
+	{
+      "NameTag": "RockElemental",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "IceGolem_Character_BP_C",
+      "Description": "Ice Golem",
+      "Mod": "Valguero"
+    }
+  ],
+  "Engrams": [
+    {
+      "Level": 32,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DeinonychusSaddle_C",
+      "Description": "Deinonychus Saddle",
+      "Mod": "Valguero"
+    }
+  ], 
+  "Items": [
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DeinonychusSaddle_C",
+      "Description": "Deinonychus Saddle",
+      "Mod": "Valguero"
+    }
+  ],
+  "MapSpawners": [
+    {
+      "ClassName": "VAL_DinoSpawnEntries_TwitchFertileLand_C",
+      "Description": "TwitchFertileLand",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "VAL_DinoSpawnEntries_TwitchFertileLand_Mix_C",
+      "Description": "TwitchFertileLandMix",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "VAL_DinoSpawnEntries_TwitchFertileLandEasy_C",
+      "Description": "TwitchFertileLandEasy",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "VAL_DinoSpawnEntries_TwitchBioWater_C",
+      "Description": "TwitchBioWater",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_DinoSpawnEntriesBee_C",
+      "Description": "Bee",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_DinoSpawnEntries_DrakeTrench_C",
+      "Description": "DrakeTrench",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntriesCave_JungleTemple_C",
+      "Description": "JungleTemple",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Eel_CaveWater_C",
+      "Description": "EelCaveWater",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_SmallLakeWithPiranha_C",
+      "Description": "SmallLakeWithPiranha",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Deinonychus_C",
+      "Description": "Deinonychus",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Valguero_Scotland_C",
+      "Description": "Scotland",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntriesSavana_C",
+      "Description": "Savana",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntriesTundra_C",
+      "Description": "Tundra",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_DinoSpawnEntriesWyvernTrench_C",
+      "Description": "WyvernTrench",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Valguero_IceWyvernEntries_C",
+      "Description": "IceWyvern",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntriesDeepWater_C",
+      "Description": "DeepWater",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_NormalLakeWater_C",
+      "Description": "NormalLakeWater",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_SmallLakeNoPiranha_C",
+      "Description": "SmallLakeNoPiranha",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_SpiderCave_Entrance_C",
+      "Description": "SpiderCaveEntrance",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Valguero_SnowForest_C",
+      "Description": "SnowForest",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Valguero_SnowPlains_C",
+      "Description": "SnowPlains",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_PolarBear_C",
+      "Description": "PolarBear",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Valguero_IceDesert_C",
+      "Description": "IceDesert",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_Iceworm_C",
+      "Description": "Iceworm",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_ChalkHills_C",
+      "Description": "ChalkHills",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_ChalkHills_Golem_C",
+      "Description": "ChalkHillsGolem",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntries_ChalkHills_Plains_C",
+      "Description": "ChalkHillsPlains",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "DinoSpawnEntriesBrood_C",
+      "Description": "Broodmother",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_FireWyvernEntries_C",
+      "Description": "FireWyvern",
+      "Mod": "Valguero"
+    }
+  ],
+  "SupplyCrates": [
+    {
+      "ClassName": "Val_SupplyCrate_Level35_C",
+      "Description": "Purple Beacon",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_SupplyCrate_Level35_Double_C",
+      "Description": "Purple Beacon (Double items)",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_SupplyCrate_Level45_C",
+      "Description": "Yellow Beacon",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_SupplyCrate_Level45_Double_C",
+      "Description": "Yellow Beacon (Double items)",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_SupplyCrate_Level60_C",
+      "Description": "Red Beacon",
+      "Mod": "Valguero"
+    },
+	{
+      "ClassName": "Val_SupplyCrate_Level60_Double_C",
+      "Description": "Red Beacon (Double items)",
+      "Mod": "Valguero"
+    }
+  ],
+  "GameMaps": [
+	{
+      "IsSotF": false,
+      "ClassName": "Valguero_P",
+      "Description": "Valguero",
+      "Mod": "Valguero"
+	}
+  ]
+}

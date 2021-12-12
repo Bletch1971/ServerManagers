@@ -1,0 +1,1310 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoStableStructuresandDecor_CraftingTable_C",
+      "Description": "eco\u0027s Stable Structures and Decor Crafting Table",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EDWaterVein_eco_C",
+      "Description": "Water Vein",
+      "Mod": "ecoStableStructuresandDecor"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ecoStableStructuresandDecor_CraftingTable_C",
+      "Description": "eco\u0027s Stable Structures and Decor Crafting Table",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED1stRibbon_eco_C",
+      "Description": "1st Place Ribbon",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED2ndRibbon_eco_C",
+      "Description": "2nd Place Ribbon",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED3rdRibbon_eco_C",
+      "Description": "3rd Place Ribbon",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDYouTriedRibbon_eco_C",
+      "Description": "You Tried Ribbon",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED1stTrophy_eco_C",
+      "Description": "1st Place Trophy",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED2ndTrophy_eco_C",
+      "Description": "2nd Place Trophy",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED3rdTrophy_eco_C",
+      "Description": "3rd Place Trophy",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ED_Shelf_eco_C",
+      "Description": "Wall Shelf",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWallNamePlate_eco_C",
+      "Description": "Wall Name Plate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDLargeSign_eco_C",
+      "Description": "Large Sign",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDPodium_eco_C",
+      "Description": "Rustic Podium",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWindmill_eco_C",
+      "Description": "Wooden Windmill",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDTackSmall_eco_C",
+      "Description": "Small Tack",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDTackLarge_eco_C",
+      "Description": "Large Tack",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDDoedSaddle_eco_C",
+      "Description": "Doed Saddle",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDMothSaddle_eco_C",
+      "Description": "Moth Saddle",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDSpineyLizardSaddle_eco_C",
+      "Description": "Spiney Lizard Saddle",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDToadSaddle_eco_C",
+      "Description": "Toad Saddle",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDWolfSaddle_eco_C",
+      "Description": "Wolf Saddle",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDPaintedBarrel_eco_C",
+      "Description": "Painted Storage Barrel",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRegBarrel_eco_C",
+      "Description": "Regular Storage Barrel",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSmallStorageCrate_eco_C",
+      "Description": "Small Storage Crate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDMediumStorageCrate_eco_C",
+      "Description": "Medium Storage Crate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDLargeStorageCrate_eco_C",
+      "Description": "Large Storage Crate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDLargeStorageRack_eco_C",
+      "Description": "Large Storage Rack",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDLargeToolRack_eco_C",
+      "Description": "Large Tool Rack",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDRusticChair_eco_C",
+      "Description": "Rustic Chair",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDRusticTable_eco_C",
+      "Description": "Rustic Table",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDLargeRusticTable_eco_C",
+      "Description": "Large Rustic Table",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDRusticBed_eco_C",
+      "Description": "Rustic Bed",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EDRusticKingBed_eco_C",
+      "Description": "Rustic King Bed",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWallLamp_eco_C",
+      "Description": "Wall Lamp",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED_HangingLamp_eco_C",
+      "Description": "Hanging Lamp",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN1_eco_C",
+      "Description": "Jump Number 1",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN2_eco_C",
+      "Description": "Jump Number 2",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN3_eco_C",
+      "Description": "Jump Number 3",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN4_eco_C",
+      "Description": "Jump Number 4",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN5_eco_C",
+      "Description": "Jump Number 5",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN6_eco_C",
+      "Description": "Jump Number 6",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN7_eco_C",
+      "Description": "Jump Number 7",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN8_eco_C",
+      "Description": "Jump Number 8",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN9_eco_C",
+      "Description": "Jump Number 9",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDN10_eco_C",
+      "Description": "Jump Number 10",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStoneJump_eco_C",
+      "Description": "Stone Jump",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodenJump_eco_C",
+      "Description": "Wooden Jump",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodMetalJump_eco_C",
+      "Description": "Wood Metal Jump",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodStoneJump_eco_C",
+      "Description": "Wooden and Stone Jump",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDFeedingTrough_eco_C",
+      "Description": "Feeding Trough",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDPathwayStairsR_eco_C",
+      "Description": "Pathway Stairs",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDPathwayStairsRotated_eco_C",
+      "Description": "Rotated Pathway Stairs",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStablePathway_eco_C",
+      "Description": "Stable Pathway",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStablePathwayRotated_eco_C",
+      "Description": "Rotated Stable Pathway",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStablePathwayLeftCorner_eco_C",
+      "Description": "Stable Pathway Left Corner",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStablePathwayLeftCornerRev_eco_C",
+      "Description": "Stable Pathway Left Corner Reversed",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStablePathwayRightCorner_eco_C",
+      "Description": "Stable Pathway Right Corner",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStablePathwayRightCornerRev_eco_C",
+      "Description": "Stable Pathway Right Corner Reversed",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSplitRopeRailing_eco_C",
+      "Description": "Split Rope Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRopeRailing_eco_C",
+      "Description": "Rope Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRopeRailingLongLeft_eco_C",
+      "Description": "Long Left Rope Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRopeRailingLongRight_eco_C",
+      "Description": "Long Right Rope Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStairRailingShort_eco_C",
+      "Description": "Short Stair Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStairRailingLong_eco_C",
+      "Description": "Long Stair Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodRailing_eco_C",
+      "Description": "Wooden Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodenGate_eco_C",
+      "Description": "Wooden Gate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodenGateFrame_eco_C",
+      "Description": "Wooden Gate Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodFence_eco_C",
+      "Description": "Wooden Fence",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDHayBale_eco_C",
+      "Description": "Hay Bale",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDHayFloor_eco_C",
+      "Description": "Hay Floor",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodRampShort_eco_C",
+      "Description": "Short Wooden Ramp",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodRampLong_eco_C",
+      "Description": "Long Wooden Ramp",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodStairsShort_eco_C",
+      "Description": "Short Wooden Stairs",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodStairsLong_eco_C",
+      "Description": "Long Wooden Stairs",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodPillar_eco_C",
+      "Description": "Wooden Pillar",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodPillarTop_eco_C",
+      "Description": "Wooden Pillar Top",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableInvertedSupport_eco_C",
+      "Description": "Inverted Support",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableInvertedSlopedWallLeft_eco_C",
+      "Description": "Inverted Sloped Wall Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableInvertedSlopedWallRight_eco_C",
+      "Description": "Inverted Sloped Wall Right",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWindow_eco_C",
+      "Description": "Stable Window",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableGlassDoor_eco_C",
+      "Description": "Glass Stable Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableGlassWindowDoor_eco_C",
+      "Description": "Glass Window Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorWindow_eco_C",
+      "Description": "Solid Stable Door with Window",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorSolid_eco_C",
+      "Description": "Solid Stable Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSaloonDoors_eco_C",
+      "Description": "Saloon Doors",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSaloonDoorFrame_eco_C",
+      "Description": "Saloon Door Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDGlassDD_eco_C",
+      "Description": "Glass Double Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDGlassWindowDD_eco_C",
+      "Description": "Glass Window Double Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWindowDD_eco_C",
+      "Description": "Window Double Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSolidDD_eco_C",
+      "Description": "Solid Double Door",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDDDAngledDoorFrame_eco_C",
+      "Description": "Angled Double Door Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableFloor_eco_C",
+      "Description": "Stable Floor",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDTopArchSingleWide_eco_C",
+      "Description": "Single Wide Top Arch",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDTopArchDoubleWide_eco_C",
+      "Description": "Double Wide Top Arch",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableArchFrameSingleWideAngled_eco_C",
+      "Description": "Angled Arch Frame Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableArchFrameDoubleWideAngled_eco_C",
+      "Description": "Angled Arch Frame Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableArchFrameDoubleWideAngledTall_eco_C",
+      "Description": "Tall Angled Arch Frame Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorSingleWide_eco_C",
+      "Description": "Stable Door Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorSolidSingleWide_eco_C",
+      "Description": "Solid Stable Door Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorDBWide_eco_C",
+      "Description": "Stable Door Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorSolidDBWide_eco_C",
+      "Description": "Solid Stable Door Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorSingleWideAngled_eco_C",
+      "Description": "Angled Door Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSolidStableDoorSingleWideAngled_eco_C",
+      "Description": "Angled Solid Door Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableArchFrameSingleWide_eco_C",
+      "Description": "Stable Arch Frame Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableArchFrameDoubleWide_eco_C",
+      "Description": "Stable Arch Frame Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableArchFrameTallDoubleWide_eco_C",
+      "Description": "Stable Arch Frame Tall Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWallWindow_eco_C",
+      "Description": "Stable Window",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWindowFrame_eco_C",
+      "Description": "Stable Window Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableRopeWallHalf_eco_C",
+      "Description": "Rope Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableMetalWallHalfBottom_eco_C",
+      "Description": "Metal Bottom Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableMetalWallMiddle_eco_C",
+      "Description": "Metal Middle Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableMetalWallHalfTop_eco_C",
+      "Description": "Metal Top Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWoodWallHalfBottom_eco_C",
+      "Description": "Wood Bottom Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWoodWallMiddle_eco_C",
+      "Description": "Wood Middle Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWoodWallHalfTop_eco_C",
+      "Description": "Wood Top Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWallArchGlass_eco_C",
+      "Description": "Glass Arch Stable Wall ",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWallFullGlass_eco_C",
+      "Description": "Full Glass Stable Wall ",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWallFull_eco_C",
+      "Description": "Full Stable Wall ",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorFrame_eco_C",
+      "Description": "Stable Door Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDDoorFrameDD_eco_C",
+      "Description": "Double Door Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledCeilingLeft_eco_C",
+      "Description": "Angled Ceiling Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledCeilingRight_eco_C",
+      "Description": "Angled Ceiling Right",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableTrapdoor_eco_C",
+      "Description": "Stable Trapdoor",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableHatchframe_eco_C",
+      "Description": "Stable Hatchframe",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodCeiling_eco_C",
+      "Description": "Wooden Ceiling",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedLeftGlass_eco_C",
+      "Description": "Glass Left Sloped",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedRightGlass_eco_C",
+      "Description": "Glass Right Sloped",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedLeft_eco_C",
+      "Description": "Left Sloped",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedRight_eco_C",
+      "Description": "Right Sloped",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledMetalCeilingLeft_eco_C",
+      "Description": "Angled Metal Ceiling Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledMetalCeilingRight_eco_C",
+      "Description": "Angled Metal Ceiling Right",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDMetalCeiling_eco_C",
+      "Description": "Metal Ceiling",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ED90RoofCorner_eco_C",
+      "Description": "90 Degree Metal Roof Corner",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofCorner_eco_C",
+      "Description": "Rustic Metal Roof Corner",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoof9045LT_eco_C",
+      "Description": "Left Roof Corner 90 to 45",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoof9045RT_eco_C",
+      "Description": "Right Roof Corner 90 to 45",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofLeft_eco_C",
+      "Description": "Rustic Metal Roof Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofRight_eco_C",
+      "Description": "Rustic Metal Roof Right",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoof_eco_C",
+      "Description": "Rustic Metal Roof",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledShortStableGateFrame_eco_C",
+      "Description": "Angled Short Stable Gate Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDShortWindowStableGate_eco_C",
+      "Description": "Short Stable Gate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDShortSolidStableGate_eco_C",
+      "Description": "Short Solid Stable Gate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDShortStableGateFrame_eco_C",
+      "Description": "Short Stable Gate Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableGate_eco_C",
+      "Description": "Stable Gate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableGateFrame_eco_C",
+      "Description": "Stable Gate Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDBehemothGate_eco_C",
+      "Description": "Stable Behemoth Gate",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDBehemothGateFrame_eco_C",
+      "Description": "Stable Behemoth Gate Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableFloorLeftAngled_eco_C",
+      "Description": "Angled Stable Floor Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableFloorRightAngled_eco_C",
+      "Description": "Angled Stable Floor Right",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRopeRailingAngled_eco_C",
+      "Description": "Angled Rope Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWoodRailingAngled_eco_C",
+      "Description": "Angled Wooden Railing",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledTopArchSingleWide_eco_C",
+      "Description": "Angled Top Arch Single Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledTopArchDoubleWide_eco_C",
+      "Description": "Angled Top Arch Double Wide",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedLeftAngledGlass_eco_C",
+      "Description": "Glass Angled Sloped Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedRightAngledGlass_eco_C",
+      "Description": "Glass Angled Right Sloped",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedLeftAngled_eco_C",
+      "Description": "Angled Sloped Left",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDSlopedRightAngled_eco_C",
+      "Description": "Angled Right Sloped",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableDoorFrameAngled_eco_C",
+      "Description": "Angled Stable Door Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWindowFrameAngled_eco_C",
+      "Description": "Angled Stable Window Frame",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableRopeWallHalfAngled_eco_C",
+      "Description": "Angled Rope Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableMetalWallHalfAngledBottom_eco_C",
+      "Description": "Angled Metal Bottom Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableMetalWallAngledMiddle_eco_C",
+      "Description": "Angled Metal Middle Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableMetalWallHalfAngledTop_eco_C",
+      "Description": "Angled Metal Top Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWoodWallHalfBottomAngled_eco_C",
+      "Description": "Angled Bottom Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWoodWallMiddleAngled_eco_C",
+      "Description": "Angled Middle Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableWoodWallHalfTopAngled_eco_C",
+      "Description": "Angled Top Half Stable Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableAngledWallFullGlass_eco_C",
+      "Description": "Angled Full Glass Stable Wall ",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableAngledWallFullGlassArch_eco_C",
+      "Description": "Angled Full Glass Arch Stable Wall ",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDStableAngledWallFull_eco_C",
+      "Description": "Angled Full Stable Wall ",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofAngledLeft_eco_C",
+      "Description": "Left Angled Rustic Metal Roof",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofAngledRight_eco_C",
+      "Description": "Right Angled Rustic Metal Roof",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofAngledFull_eco_C",
+      "Description": "Full Angled Rustic Metal Roof",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDRoofAngled_eco_C",
+      "Description": "Angled Rustic Metal Roof",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWeathervaneEquus_eco_C",
+      "Description": "Equus Weathervane",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWeathervaneRaptor_eco_C",
+      "Description": "Raptor Weathervane",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledCrossWallCircleWindow_eco_C",
+      "Description": "Angled Cross Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledDoubleCrossWallCircleWindow_eco_C",
+      "Description": "Angled Double Cross Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledFancyWallCircleWindow_eco_C",
+      "Description": "Angled Fancy Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDAngledPlainWallCircleWindow_eco_C",
+      "Description": "Angled Plain Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDCrossWallCircleWindow_eco_C",
+      "Description": "Cross Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDDoubleCrossWallCircleWindow_eco_C",
+      "Description": "Double Cross Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDFancyWallCircleWindow_eco_C",
+      "Description": "Fancy Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDPlainWallCircleWindow_eco_C",
+      "Description": "Plain Circle Window Wall",
+      "Mod": "ecoStableStructuresandDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EDWaterVein_eco_C",
+      "Description": "Water Vein",
+      "Mod": "ecoStableStructuresandDecor"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

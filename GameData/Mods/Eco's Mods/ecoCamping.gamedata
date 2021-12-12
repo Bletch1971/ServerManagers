@@ -1,0 +1,112 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8572962Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CPBackpack_eco_C",
+      "Description": "eco\u0027s Camping Crafting Bag",
+      "Mod": "ecoCamping"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPBackpack_eco_C",
+      "Description": "eco\u0027s Camping Crafting Bag",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_CPSmores_eco_C",
+      "Description": "S\u0027mores",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_CPTrailMix_eco_C",
+      "Description": "Trail Mix",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponCPMarshmallowStick_eco_C",
+      "Description": "Marshmallow on a Stick",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPLantern_eco_C",
+      "Description": "Lantern",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponCPHandLantern_eco_C",
+      "Description": "Hand Lantern",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPCampfire_eco_C",
+      "Description": "Campfire",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPLog_eco_C",
+      "Description": "Log Seat",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPTrophies_eco_C",
+      "Description": "Trophies",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPSleepingBag_eco_C",
+      "Description": "Sleeping Bag",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPTentSmall_eco_C",
+      "Description": "Small Tent",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CPTentBig_eco_C",
+      "Description": "Big Tent",
+      "Mod": "ecoCamping"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_CPCanoe_eco_C",
+      "Description": "Wooden Canoe",
+      "Mod": "ecoCamping"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

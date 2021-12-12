@@ -1,0 +1,946 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoTrees_CraftingTable_C",
+      "Description": "ecoTrees Landscape Crafting Table",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoTrees_Redwood_Crafting_Table_C",
+      "Description": "ecoTrees Redwood Crafting Table",
+      "Mod": "ecoTrees"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ecoTrees_CraftingTable_C",
+      "Description": "ecoTrees Landscape Crafting Table",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Acacia_Place_C",
+      "Description": "Acacia Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_AfricanBaobab_Place_C",
+      "Description": "African Baobab Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_AfricanOlive_Place_C",
+      "Description": "African Olive Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_AppleTree_eco_C",
+      "Description": "Apple Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OrangeTree_eco_C",
+      "Description": "Orange Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PearTree_eco_C",
+      "Description": "Pear Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BigFrond_Place_C",
+      "Description": "Big Frond Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BigFrond_Place_2_C",
+      "Description": "Small Frond Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SmallPalm_Place_C",
+      "Description": "Small Palm Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BananaSmall_Place_C",
+      "Description": "Banana Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BigPalm_Place_C",
+      "Description": "Big Palm Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Umbrella_Place_C",
+      "Description": "Umbrella Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CanopyMed_Place_C",
+      "Description": "Medium Canopy Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CanopyTall_Place_C",
+      "Description": "Tall Canopy Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Ceiba_Place_C",
+      "Description": "Ceiba Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ChineseBan_Place_C",
+      "Description": "Chinese Banyan Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DiviDivi_Place_C",
+      "Description": "DiviDivi Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EuropeanBeech_Place_C",
+      "Description": "European Beech Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Fir_Place_C",
+      "Description": "Fir Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Fir_Place_2_C",
+      "Description": "Small Fir Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Hammock_Place_C",
+      "Description": "Hammock Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Higeron_Place_C",
+      "Description": "Higeron Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Higeron_Place_2_C",
+      "Description": "Small Higeron Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_JapaneseMaple_Place_C",
+      "Description": "Small Japanese Maple Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_JapaneseMaple_Place_2_C",
+      "Description": "Tall Japanese Maple Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SakuraTree_eco_C",
+      "Description": "Sakura Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Kapok_Place_C",
+      "Description": "Kapok Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Kapok_Place_2_C",
+      "Description": "Full Kapok Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LitTree1_Place_C",
+      "Description": "Lit Cypress Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LiveOak_Place_C",
+      "Description": "Live Oak Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Mangrove_Place_C",
+      "Description": "Mangrove Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PondCypress_Place_C",
+      "Description": "Pond Cypress Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RainbowGum_Place_C",
+      "Description": "Rainbow Gum Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Sassafras_Place_C",
+      "Description": "Sassafras Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Sassafras_Place_2_C",
+      "Description": "Medium Sassafras Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Sassafras_Place_3_C",
+      "Description": "Small Sassafras Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Strangler1_Place_C",
+      "Description": "Strangler Tree Wide Top",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Strangler2_Place_C",
+      "Description": "Strangler Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Strangler3_Place_C",
+      "Description": "Large Strangler Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BirchTree_eco_C",
+      "Description": "Birch Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ATDiviDivi_eco_C",
+      "Description": "Autumn DiviDivi Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ATFrond_eco_C",
+      "Description": "Autumn Frond Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ATKapok_eco_C",
+      "Description": "Autumn Kapok Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ATHammock_eco_C",
+      "Description": "Autumn Hammock Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ATTallMaple_eco_C",
+      "Description": "Autumn Tall Maple Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Ash_Place_C",
+      "Description": "Ash Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ATChineseBanyan_eco_C",
+      "Description": "Autumn Chinese Banyan Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DeadPineSmall_Place_C",
+      "Description": "Small Dead Pine Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DeadPineTall_Place_C",
+      "Description": "Tall Dead Pine Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CanopySnow_Place_C",
+      "Description": "Snowy Canopy Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CanopySnowTall_Place_C",
+      "Description": "Tall Snowy Canopy Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnowyFir_Place_C",
+      "Description": "Snowy Fir Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnowyPalm_Place_C",
+      "Description": "Snowy Palm Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PineBush_Place_C",
+      "Description": "Lightly Snowy Pine Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PineBush_Place_2_C",
+      "Description": "Snowy Fern",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PineBush_Place_3_C",
+      "Description": "Snowy Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PineBushCluster_Place_C",
+      "Description": "Snowy Pine Bush Cluster",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PineSnowBush_Place_C",
+      "Description": "Snowy Pine Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bamboo_Place_C",
+      "Description": "Bamboo",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Rhododendron_Place_C",
+      "Description": "Rhododendron",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Sycamore_Place_C",
+      "Description": "Young Sycamore Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Azalea_Place_C",
+      "Description": "Azalea Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BananaPlant_Place_C",
+      "Description": "Banana Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BriarBushCluster_Place_C",
+      "Description": "Briar Bush Cluster",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BroadHeart_Place_C",
+      "Description": "Broad Heart Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ETSoilPlanting_eco_C",
+      "Description": "Soil Planting",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Cantaloupe_Place_C",
+      "Description": "Cantaloupe Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CornPlant_Place_C",
+      "Description": "Corn",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Fern_Place_C",
+      "Description": "Fern",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RedwoodFern_eco_C",
+      "Description": "Redwood Fern",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RedwoodShrub_eco_C",
+      "Description": "Redwood Shrub",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FountainPalm_Place_C",
+      "Description": "Fountain Palm",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GiantPumpkin1_Place_C",
+      "Description": "Giant Pumpkin Cluster",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GiantPumpkin2_Place_C",
+      "Description": "Giant Pumpkin",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PumpkinLarge_Place_C",
+      "Description": "Large Pumpkin",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PumpkinSmall_Place_C",
+      "Description": "Small Pumpkin",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargeBush_Place_C",
+      "Description": "Large Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargeBush_Place_2_C",
+      "Description": "Medium Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargeBush_Place_3_C",
+      "Description": "Small Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LilyPad_Place_C",
+      "Description": "Lily Pads",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LilyPad_Place_2_C",
+      "Description": "Large Lily Pads",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Myrio_Place_C",
+      "Description": "Myrio Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PalmCluster_Place_C",
+      "Description": "Palm Cluster Bush",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Pitcher_Place_C",
+      "Description": "Pitcher Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Potato_Place_C",
+      "Description": "Potato Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ThimbleBerry_Place_C",
+      "Description": "Thimbleberry Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WispGrass_Place_C",
+      "Description": "Wisp Grass Plant",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Flower1_Place_C",
+      "Description": "Yellow Flower",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Flower2_Place_C",
+      "Description": "Purple Flower",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Flower3_Place_C",
+      "Description": "White Flower",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Flower4_Place_C",
+      "Description": "Red Flower",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlowerCluster_Place_C",
+      "Description": "Flower Cluster",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Wildflowers_eco_C",
+      "Description": "Wildflowers",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MarigoldCluster_Place_C",
+      "Description": "Marigold Cluster",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RareFlower_Place_C",
+      "Description": "Rare Flower",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CaveRockB06_Place_C",
+      "Description": "Large Flat Mossy Cave Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MediumRock01_Place_C",
+      "Description": "Medium Mossy Cave Rock 1",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MediumRock02_Place_C",
+      "Description": "Medium Mossy Cave Rock 2",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MediumRockPlace_C",
+      "Description": "Medium Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RiverRock1_Place_C",
+      "Description": "River Rock 1",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RiverRock2_Place_C",
+      "Description": "River Rock 2",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SmallPaver_C",
+      "Description": "Small Paver Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargePaver_C",
+      "Description": "Large Paver Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Rock01_Place_C",
+      "Description": "Small Mossy Cave Rock 1",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RockA04_Place_C",
+      "Description": "Small Mossy Cave Rock 2",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RockB01_Place_C",
+      "Description": "Large Pillar Mossy Cave Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RockB03_Place_C",
+      "Description": "Medium Mossy Cave Rock 3",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RockGravel_Place_C",
+      "Description": "Mossy Gravel Rock Cluster",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_UltimateRock6_Place_C",
+      "Description": "Large Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnowRock1_Place_C",
+      "Description": "Medium Snowy Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnowRock1_Place_2_C",
+      "Description": "Medium Snowy Rock 2",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ETRedwoodsRockMedium_eco_C",
+      "Description": "Medium Redwoods Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ETRedwoodsRockLarge_eco_C",
+      "Description": "Large Redwoods Rock",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_coral1_place_C",
+      "Description": "Large Coral Reef 1",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_coral2_place_C",
+      "Description": "Large Coral Reef 2",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_coral3_place_C",
+      "Description": "Large Coral Reef 3",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_coral3_place_2_C",
+      "Description": "Giant Coral Reef 1",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_coral4_place_C",
+      "Description": "Large Coral Reef 4",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_coral4_place_2_C",
+      "Description": "Giant Coral Reef 2",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TallCoral_Place_C",
+      "Description": "Tall Coral",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ecoTrees_Redwood_Crafting_Table_C",
+      "Description": "ecoTrees Redwood Crafting Table",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ETRedwoodsLog_eco_C",
+      "Description": "Redwoods Log",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ETRedwoodsStump_eco_C",
+      "Description": "Redwoods Stump",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Redwood_Place_3_C",
+      "Description": "Small Redwood Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Redwood_Place_2_C",
+      "Description": "Medium Redwood Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Redwood_Place_C",
+      "Description": "Redwood Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnapableRedwood_eco_C",
+      "Description": "Snapable Redwood Tree",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WoodenPlatform_eco_C",
+      "Description": "Wooden Platform ecoTrees",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MetalPlatform_eco_C",
+      "Description": "Metal Platform - ecoTrees",
+      "Mod": "ecoTrees"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TreeTap_eco_C",
+      "Description": "Tree Sap Tap ecoTrees",
+      "Mod": "ecoTrees"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

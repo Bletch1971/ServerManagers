@@ -1,0 +1,305 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-19T22:42:32.8725243Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 25,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MuttonMaker_C",
+      "Description": "Mutton Maker",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 22,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SDKTranqArrow500_C",
+      "Description": "Sopur Tranq Arrow",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 18,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Narcotic_Sopur_C",
+      "Description": "Sopur Narcotic",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 50,
+      "Points": 50,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AdvancedAlchemyBench_C",
+      "Description": "Advanced Alchemy Table",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 18,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AlchemyTablle_C",
+      "Description": "Alchemy Table",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 50,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntryFireSalts_C",
+      "Description": "Fire Salts",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 30,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Narcotic_ImprovedSopu_C",
+      "Description": "Improved Sopur Narcotic",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 30,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SDKTranqArrowImproved_C",
+      "Description": "Improved Sopur Tranq Arrow",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 50,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SDKTranqArrowCrystallised_C",
+      "Description": "Crystallised Sopur Tranq Arrow",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 18,
+      "Points": 5,
+      "IsTekGram": false,
+      "ClassName": "EngramEntryCrytalSalt_C",
+      "Description": "Crystal Salts",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 22,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HungerPotion_C",
+      "Description": "Hunger Potion",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 10,
+      "Points": 5,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DeepCoreWaterWell_C",
+      "Description": "Deep Core Water Well",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 50,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CrystallisedSopur_C",
+      "Description": "Crystallised Sopur Narcotic",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 18,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SopurberrySeed_C",
+      "Description": "Sopurberry Seed",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 10,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Spoil_C",
+      "Description": "Meat Spoiler",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 65,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CrystallisedDart_C",
+      "Description": "Crystallies Sopur Tranq Dart",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 83,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CrystallisedSniperBullet_C",
+      "Description": "Crystallised Sopur Sniper Round",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 83,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CrystallisedSniperConversionKit_C",
+      "Description": "Sniper Rfile Conversion Kit",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 25,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PikePoison_C",
+      "Description": "Pike Poision",
+      "Mod": "SDKTamingPack"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MuttonMaker_C",
+      "Description": "Mutton Maker",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SDKTranqArrowSopur_C",
+      "Description": "Sopur Tranq Arrow",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Narcotic_Sopur_C",
+      "Description": "Sopur Narcotic",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Berry_Base_SDK_C",
+      "Description": "Sopur Berry",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AdvancedAlchemyBench_C",
+      "Description": "Advanced Alchemy Table",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Narcotic_ImprovedSopur_C",
+      "Description": "Improved Sopur Narcotic",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_FireSalts_C",
+      "Description": "Fire Salts",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_CrystalSalts_C",
+      "Description": "Crystal Salts",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HungerPotion_C",
+      "Description": "Hunger Potion",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_CrystallisedSopur_C",
+      "Description": "Crystallised Sopur Narcotic",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Sopurberry_C",
+      "Description": "Sopurberry Seed",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AlchemyTable_SDK_C",
+      "Description": "Alchemy Table",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_PikePoison_C",
+      "Description": "Pike Poision",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SDKTranqArrowImrproved_C",
+      "Description": "Improved Sopur Tranq Arrow",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SDKTranqArrowCrystallised_C",
+      "Description": "Crystallised Sopur Tranq Arrow",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DeepCoreWaterWell_C",
+      "Description": "Deep Core Water Well",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Spoil_C",
+      "Description": "Meat Spoiler",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_CrystallisedDart_C",
+      "Description": "Crystallies Sopur Tranq Dart",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_CrystallisedSniperBullet_C",
+      "Description": "Crystallised Sopur Sniper Round",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_SniperConversionKit_C",
+      "Description": "Sniper Rfile Conversion Kit",
+      "Mod": "SDKTamingPack"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}
