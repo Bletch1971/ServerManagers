@@ -1,0 +1,108 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-03-02T10:19:37.8543037Z",
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CD_CraftingTable_eco_C",
+      "Description": "Eco Chibi Table",
+      "Mod": "eco's Chibi Displays"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_CraftingTable_eco_C",
+      "Description": "Crafting Table",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_WallBase_eco_C",
+      "Description": "Wall Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_StorageBox_eco_C",
+      "Description": "Storage Box",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_SnowyBase_eco_C",
+      "Description": "Snow Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_SandyBase_eco_C",
+      "Description": "Sandy Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_RedCrystalBase_eco_C",
+      "Description": "Red Crystal Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_PurpleCrystalBase_eco_C",
+      "Description": "Purple Crystal Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_LavaBase_eco_C",
+      "Description": "Lava Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_GreenOceanBase_eco_C",
+      "Description": "Green Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_GreenCrystalBase_eco_C",
+      "Description": "Green Crystal Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_CalmingBase_eco_C",
+      "Description": "Calming Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_BlueCrystalBase_eco_C",
+      "Description": "Blue Crystal Base",
+      "Mod": "eco's Chibi Displays"
+    },
+	{
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CD_BiolumBase_eco_C",
+      "Description": "Biolume Base",
+      "Mod": "eco's Chibi Displays"
+    }
+  ]
+}

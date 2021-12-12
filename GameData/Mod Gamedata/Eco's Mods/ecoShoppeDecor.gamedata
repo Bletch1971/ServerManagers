@@ -1,0 +1,1046 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoShoppeDecor_MarketCraftingCart_eco_C",
+      "Description": "eco\u0027s Market Decor Crafting Cart",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoShoppeDecor_ShoppeCraftingTable_eco_C",
+      "Description": "eco\u0027s Shoppe Decor Crafting Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoShoppeDecor_UpholsteryCraftingTable_eco_C",
+      "Description": "eco\u0027s Upholstery Crafting Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoShoppeDecor_AwningSignCraftingCrate_eco_C",
+      "Description": "eco\u0027s Awning and Sign Crafting Crate",
+      "Mod": "ecoShoppeDecor"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SD_MarketCraftingCart_eco_C",
+      "Description": "eco\u0027s Market Decor Crafting Cart",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ProduceDisplay_eco_C",
+      "Description": "Produce Display",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_AmmoDisplay_eco_C",
+      "Description": "Ammo Display",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ShoeDisplay_eco_C",
+      "Description": "Shoe Display",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandCloth_eco_C",
+      "Description": "Cloth Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandHide_eco_C",
+      "Description": "Hide Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandChitin_eco_C",
+      "Description": "Chitin Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandFlak_eco_C",
+      "Description": "Flak Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandGhillie_eco_C",
+      "Description": "Ghillie Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandFur_eco_C",
+      "Description": "Fur Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandScuba_eco_C",
+      "Description": "Scuba Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandRiot_eco_C",
+      "Description": "Riot Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandDesert_eco_C",
+      "Description": "Desert Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandManticore_eco_C",
+      "Description": "Manticore Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandTek_eco_C",
+      "Description": "Tek Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandHazard_eco_C",
+      "Description": "Hazard Suit Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ArmorStandHomodeus_eco_C",
+      "Description": "Homodeus Armor Stand",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SD_FishBarrel_eco_C",
+      "Description": "Storage Barrel",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DodoCrate_eco_C",
+      "Description": "Dodo Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TurkeyCrate_eco_C",
+      "Description": "Turkey Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WolfCrate_eco_C",
+      "Description": "Wolf Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TrikeCrate_eco_C",
+      "Description": "Trike Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RexCrate_eco_C",
+      "Description": "Rex Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_YutyCrate_eco_C",
+      "Description": "Yuty Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ClothingTable_eco_C",
+      "Description": "Clothing Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DyeTable_eco_C",
+      "Description": "Dye Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_EggKibbleTable_eco_C",
+      "Description": "Egg and Kibble Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDFishTable_eco_C",
+      "Description": "Fish Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FoodTable_eco_C",
+      "Description": "Food Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MaterialsTable_eco_C",
+      "Description": "Materials Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDMedicalTable_eco_C",
+      "Description": "Medical Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDSaddleTable_eco_C",
+      "Description": "Saddle Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WeaponTable_eco_C",
+      "Description": "Weapon Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDBlueprintsStall_eco_C",
+      "Description": "Blueprints Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WallBlueprints_eco_C",
+      "Description": "Wall Blueprint Board",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDClothingStall_eco_C",
+      "Description": "Clothing Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDDyeStall_eco_C",
+      "Description": "Dye Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDEggKibbleStall_eco_C",
+      "Description": "Egg and Kibble Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDFishStall_eco_C",
+      "Description": "Fish Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDFoodStall_eco_C",
+      "Description": "Food Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDMaterialsStall_eco_C",
+      "Description": "Materials Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDMedicalStall_eco_C",
+      "Description": "Medical Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDSaddleStall_eco_C",
+      "Description": "Saddle Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDWeaponStall_eco_C",
+      "Description": "Weapon Stall",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SD_ShoppeCraftingTable_eco_C",
+      "Description": "eco\u0027s Shoppe Decor Crafting Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SmallShelf_eco_C",
+      "Description": "Small Wall Shelf",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargeShelf_eco_C",
+      "Description": "Large Wall Shelf",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SmallStockedShelf_eco_C",
+      "Description": "Small Stocked Shelf",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargeStockedShelf_eco_C",
+      "Description": "Large Stocked Wall Shelf",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DisplayShelf_eco_C",
+      "Description": "Display Shelf",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDSmallBookcase_eco_C",
+      "Description": "Small Bookcase",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDBookcase_eco_C",
+      "Description": "Bookcase",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FancyMetalChair_eco_C",
+      "Description": "Fancy Metal Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RoundFancyTable_eco_C",
+      "Description": "Round Fancy Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TeaTable_eco_C",
+      "Description": "Tea Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SquareFancyTable_eco_C",
+      "Description": "Square Fancy Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bench_eco_C",
+      "Description": "Bench",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WoodFoldingChair_eco_C",
+      "Description": "Wooden Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SquareWoodTable_eco_C",
+      "Description": "Square Wooden Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PurpleTablecloth_eco_C",
+      "Description": "Purple Tablecloth",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RedTablecloth_eco_C",
+      "Description": "Red Tablecloth",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BarberChair_eco_C",
+      "Description": "Barber Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDVase_eco_C",
+      "Description": "Vase",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SDFilingCabinet_eco_C",
+      "Description": "Filing Cabinet",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FancyDesk_eco_C",
+      "Description": "Fancy Desk",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Mailbox_eco_C",
+      "Description": "Mailbox",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SD_HangingLamp_eco_C",
+      "Description": "Hanging Lamp",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ChitinShoes_eco_C",
+      "Description": "Chitin Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ClothShoes_eco_C",
+      "Description": "Cloth Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlakShoes_eco_C",
+      "Description": "Flak Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlipperShoes_eco_C",
+      "Description": "Flipper Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FurShoes_eco_C",
+      "Description": "Fur Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GhilieShoes_eco_C",
+      "Description": "Ghilie Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RiotShoes_eco_C",
+      "Description": "Riot Shoes",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieBronto_eco_C",
+      "Description": "Bronto Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieFrog_eco_C",
+      "Description": "Frog Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieJugBug_eco_C",
+      "Description": "Jug Bug Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieMantis_eco_C",
+      "Description": "Mantis Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieMorellatops_eco_C",
+      "Description": "Morellatops Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieRex_eco_C",
+      "Description": "Rex Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieRockGolem_eco_C",
+      "Description": "Rock Golem Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieShark_eco_C",
+      "Description": "Shark Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieStego_eco_C",
+      "Description": "Stego Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieThornyDragon_eco_C",
+      "Description": "Thorny Dragon Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieThyla_eco_C",
+      "Description": "Thyla Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieTrike_eco_C",
+      "Description": "Trike Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieWolf_eco_C",
+      "Description": "Wolf Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SD_UpholsteryCraftingTable_eco_C",
+      "Description": "eco\u0027s Upholstery Crafting Table",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BlackPaddedChair_eco_C",
+      "Description": "Black Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BluePaddedChair_eco_C",
+      "Description": "Blue Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BrownPaddedChair_eco_C",
+      "Description": "Brown Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CyanPaddedChair_eco_C",
+      "Description": "Cyan Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GrayPaddedChair_eco_C",
+      "Description": "Gray Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GreenPaddedChair_eco_C",
+      "Description": "Green Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OrangePaddedChair_eco_C",
+      "Description": "Orange Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PinkPaddedChair_eco_C",
+      "Description": "Pink Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PurplePaddedChair_eco_C",
+      "Description": "Purple Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RedPaddedChair_eco_C",
+      "Description": "Red Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_YellowPaddedChair_eco_C",
+      "Description": "Yellow Padded Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BlackLeatherChair_eco_C",
+      "Description": "Black Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BlueLeatherChair_eco_C",
+      "Description": "Blue Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BrownLeatherChair_eco_C",
+      "Description": "Brown Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CyanLeatherChair_eco_C",
+      "Description": "Cyan Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GrayLeatherChair_eco_C",
+      "Description": "Gray Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GreenLeatherChair_eco_C",
+      "Description": "Green Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OrangeLeatherChair_eco_C",
+      "Description": "Orange Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PinkLeatherChair_eco_C",
+      "Description": "Pink Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PurpleLeatherChair_eco_C",
+      "Description": "Purple Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RedLeatherChair_eco_C",
+      "Description": "Red Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_YellowLeatherChair_eco_C",
+      "Description": "Yellow Leather Chair",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SD_AwningSignCraftingCrate_eco_C",
+      "Description": "eco\u0027s Awning and Sign Crafting Crate",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OpenSign_eco_C",
+      "Description": "Open Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ClosedSign_eco_C",
+      "Description": "Closed Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BlackAwning_eco_C",
+      "Description": "Black Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BlueAwning_eco_C",
+      "Description": "Blue Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BrownAwning_eco_C",
+      "Description": "Brown Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CyanAwning_eco_C",
+      "Description": "Cyan Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GrayAwning_eco_C",
+      "Description": "Gray Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GreenAwning_eco_C",
+      "Description": "Green Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OrangeAwning_eco_C",
+      "Description": "Orange Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PinkAwning_eco_C",
+      "Description": "Pink Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PurpleAwning_eco_C",
+      "Description": "Purple Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RedAwning_eco_C",
+      "Description": "Red Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_YellowAwning_eco_C",
+      "Description": "Yellow Awning",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Armory_Sign_eco_C",
+      "Description": "Armory Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Art_Sign_eco_C",
+      "Description": "Art Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bakery_Sign_eco_C",
+      "Description": "Bakery Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bank_Sign_eco_C",
+      "Description": "Bank Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Barber_Sign_eco_C",
+      "Description": "Barber Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Blacksmith_Sign_eco_C",
+      "Description": "Blacksmith Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Breeding_Sign_eco_C",
+      "Description": "Breeding Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Doctor_Sign_eco_C",
+      "Description": "Doctor Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Goods_Sign_eco_C",
+      "Description": "Goods Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Inn_Sign_eco_C",
+      "Description": "Inn Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Law_Sign_eco_C",
+      "Description": "Law Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Library_Sign_eco_C",
+      "Description": "Library Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Pub_Sign_eco_C",
+      "Description": "Pub Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Restaurant_Sign_eco_C",
+      "Description": "Restaurant Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Shipyard_Sign_eco_C",
+      "Description": "Shipyard Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Shoes_Sign_eco_C",
+      "Description": "Shoes Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Stables_Sign_eco_C",
+      "Description": "Stables Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Tea_Sign_eco_C",
+      "Description": "Tea Sign",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Theater_Sign_eco_C",
+      "Description": "Theater Sign",
+      "Mod": "ecoShoppeDecor"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

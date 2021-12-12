@@ -1,21 +1,721 @@
 {
   "Application": "ark",
   "Version": "1.0.0",
-  "Created": "2019-03-20T00:00:00.0000000Z",
+  "Created": "2020-09-17T10:19:37.8563224Z",
   "Creatures": [],
   "Engrams": [
     {
-      "Level": 120,
+      "Level": 1,
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_TekDecor_CraftingTable_eco_C",
-      "Description": "Tek Decor",
-      "Mod": "eco's Tek Decor"
+      "Description": "eco\u0027s Tek Decor Crafting Table",
+      "Mod": "ecoTekDecor"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekDecor_CraftingTable_eco_C",
+      "Description": "eco\u0027s Tek Decor Crafting Table",
+      "Mod": "ecoTekDecor"
     },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallTekLightBlue_eco_C",
+      "Description": "Blue Wall Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallTekLightGreen_eco_C",
+      "Description": "Green Wall Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallTekLightRed_eco_C",
+      "Description": "Red Wall Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallTekLightYellow_eco_C",
+      "Description": "Yellow Wall Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKLightBlue_eco_C",
+      "Description": "Blue Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKLightGreen_eco_C",
+      "Description": "Green Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKLightRed_eco_C",
+      "Description": "Red Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKLightYellow_eco_C",
+      "Description": "Yellow Tek Light",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMetalCounterBlue_eco_C",
+      "Description": "Blue Metal Counter",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMetalCounterGreen_eco_C",
+      "Description": "Green Metal Counter",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMetalCounterRed_eco_C",
+      "Description": "Red Metal Counter",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMetalCounterYellow_eco_C",
+      "Description": "Yellow Metal Counter",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallStorageBlue_eco_C",
+      "Description": "Blue Wall Storage",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallStorageGreen_eco_C",
+      "Description": "Green Wall Storage",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallStorageRed_eco_C",
+      "Description": "Red Wall Storage",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKWallStorageYellow_eco_C",
+      "Description": "Yellow Wall Storage",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKTallStorageLockerBlue_eco_C",
+      "Description": "Blue Tall Storage Locker",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKTallStorageLockerGreen_eco_C",
+      "Description": "Green Tall Storage Locker",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKTallStorageLockerRed_eco_C",
+      "Description": "Red Tall Storage Locker",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKTallStorageLockerYellow_eco_C",
+      "Description": "Yellow Tall Storage Locker",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHologramMapDesk_eco_C",
+      "Description": "Hologram Island Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHologramCenterMapDesk_eco_C",
+      "Description": "Hologram Center Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHologramSEMapDesk_eco_C",
+      "Description": "Hologram Scorched Earth Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloMapRagnarok_eco_C",
+      "Description": "Holographic Ragnarok Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMapDesk_eco_C",
+      "Description": "Island Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMapDeskCenter_eco_C",
+      "Description": "Center Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKMapDeskSE_eco_C",
+      "Description": "SE Map",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKStool_eco_C",
+      "Description": "Tek Stool",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKTable_eco_C",
+      "Description": "Tek Table",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKLargeShelf_eco_C",
+      "Description": "Large Wall Shelf",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKGlassTable_eco_C",
+      "Description": "Glass Table",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKChairBlue_eco_C",
+      "Description": "Blue Tek Chair",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKChairGreen_eco_C",
+      "Description": "Green Tek Chair",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKChairRed_eco_C",
+      "Description": "Red Tek Chair",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKChairYellow_eco_C",
+      "Description": "Yellow Tek Chair",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKBed_eco_C",
+      "Description": "Tek Bed",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKBiopodBed_eco_C",
+      "Description": "Biopod Bed",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment16_eco_C",
+      "Description": "Experiment 16",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment233_eco_C",
+      "Description": "Experiment 233",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment238_eco_C",
+      "Description": "Experiment 238",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment461_eco_C",
+      "Description": "Experiment 461",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment54_eco_C",
+      "Description": "Experiment 54",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment741_eco_C",
+      "Description": "Experiment 741",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment882_eco_C",
+      "Description": "Experiment 882",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKExperiment93_eco_C",
+      "Description": "Experiment 93",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKTablet_eco_C",
+      "Description": "Tablet",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TK_HoloTablet_eco_C",
+      "Description": "Holo Tablet",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloAllo_eco_C",
+      "Description": "Holographic Allo",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloGiga_eco_C",
+      "Description": "Holographic Giga",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloQuetz_eco_C",
+      "Description": "Holographic Quetz",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloStego_eco_C",
+      "Description": "Holographic Stego",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloTrike_eco_C",
+      "Description": "Holographic Trike",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloElement_eco_C",
+      "Description": "Holographic Element",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloEndBoss_eco_C",
+      "Description": "Holographic EndBoss",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloBeacon_eco_C",
+      "Description": "Holographic Beacon",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloFemale_eco_C",
+      "Description": "Holographic Female",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloMale_eco_C",
+      "Description": "Holographic Male",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloPhoenix_eco_C",
+      "Description": "Holographic Phoenix",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloIceWyvern_eco_C",
+      "Description": "Holographic Ice Wyvern",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKHoloGriffin_eco_C",
+      "Description": "Holographic Griffin",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKGenerator_eco_C",
+      "Description": "Power Generator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKPaintingCapsule_eco_C",
+      "Description": "Painting Capsule",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKActuallyMagenta_eco_C",
+      "Description": "Magenta Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKBlack_eco_C",
+      "Description": "Black Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKBlue_eco_C",
+      "Description": "Blue Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKBrick_eco_C",
+      "Description": "Brick Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKBrown_eco_C",
+      "Description": "Brown Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKCantaloupe_eco_C",
+      "Description": "Cantaloupe Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKCyan_eco_C",
+      "Description": "Cyan Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKForest_eco_C",
+      "Description": "Forest Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKGreen_eco_C",
+      "Description": "Green Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKMud_eco_C",
+      "Description": "Mud Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKNavy_eco_C",
+      "Description": "Navy Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKOlive_eco_C",
+      "Description": "Olive Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKOrange_eco_C",
+      "Description": "Orange Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKParchment_eco_C",
+      "Description": "Parchement Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKPink_eco_C",
+      "Description": "Pink Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKPurple_eco_C",
+      "Description": "Purple Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKRed_eco_C",
+      "Description": "Red Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKRoyalty_eco_C",
+      "Description": "Royalty Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKSilver_eco_C",
+      "Description": "Silver Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKSky_eco_C",
+      "Description": "Sky Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKSlate_eco_C",
+      "Description": "Slate Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKTan_eco_C",
+      "Description": "Tan Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKTangerine_eco_C",
+      "Description": "Tangerine Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKWhite_eco_C",
+      "Description": "White Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_TKYellow_eco_C",
+      "Description": "Yellow Coloring",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKSmallRefrigerator_eco_C",
+      "Description": "Small Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKEmptyRefrigerator_eco_C",
+      "Description": "Empty Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKBrontoRefrigerator_eco_C",
+      "Description": "Chalicotherium Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKGigaRefrigerator_eco_C",
+      "Description": "Giga Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKMegatheriumRefrigerator_eco_C",
+      "Description": "Trike Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKRexRefrigerator_eco_C",
+      "Description": "T-Rex Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKStegoRefrigerator_eco_C",
+      "Description": "Stego Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKTherizinosaurusRefrigerator_eco_C",
+      "Description": "Spino Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKHumanRefrigerator_eco_C",
+      "Description": "Human Refrigerator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKBrokenIncubator_eco_C",
+      "Description": "Broken Incubator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TKIncubator_eco_C",
+      "Description": "Egg Incubator",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TK_Display_eco_C",
+      "Description": "Display",
+      "Mod": "ecoTekDecor"
+    }
   ],
   "MapSpawners": [],
   "SupplyCrates": [],
-  "Inventories": [],
-  "GameMaps": [],
-  "Mods": []
+  "Inventories": []
 }

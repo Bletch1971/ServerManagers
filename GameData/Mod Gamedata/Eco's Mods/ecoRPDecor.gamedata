@@ -1,0 +1,2265 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoRPDecor_FurnitureDecor_CraftingTable_C",
+      "Description": "Furniture and Decor Crafting Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoRPDecor_FoodTray_C",
+      "Description": "eco\u0027s Food Tray",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Book_EB_eco_C",
+      "Description": "Journal",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RPBadBox_eco_C",
+      "Description": "Bad Box",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RPCommunityBox_eco_C",
+      "Description": "Community Box",
+      "Mod": "ecoRPDecor"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPVegetableOil_eco_C",
+      "Description": "Vegetable Oil",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ecoRPDecor_FurnitureDecor_CraftingTable_C",
+      "Description": "Furniture and Decor Crafting Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponRPRingBox_eco_C",
+      "Description": "Ring Box",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CoffinBed_eco_C",
+      "Description": "Coffin Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SideTable_eco_C",
+      "Description": "Side Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LongTable_eco_C",
+      "Description": "Long Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RoundTable_eco_C",
+      "Description": "Round Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPLVDeskLamp_eco_C",
+      "Description": "Desk Lamp",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPLVChair_eco_C",
+      "Description": "Chair",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Sofa_eco_C",
+      "Description": "Rustic Sofa",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Throne_eco_C",
+      "Description": "Throne",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPRockwellThrone_eco_C",
+      "Description": "Rockwell Throne",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SkullThrone_eco_C",
+      "Description": "Skull Throne",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WoodenStool_eco_C",
+      "Description": "Wooden Stool",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FloorRunner_eco_C",
+      "Description": "Floor Runner",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FloorRunnerGreen_eco_C",
+      "Description": "Floor Runner",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FloorRunnerBlue_eco_C",
+      "Description": "Floor Runner",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FloorRunnerOld_eco_C",
+      "Description": "Floor Runner",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FloorRunnerPurple_eco_C",
+      "Description": "Floor Runner",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PersianRug_eco_C",
+      "Description": "Persian Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PersianRugGreen_eco_C",
+      "Description": "Green Persian Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PersianRugBlue_eco_C",
+      "Description": "Blue Persian Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PersianRugOld_eco_C",
+      "Description": "Old Persian Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PersianRugPurple_eco_C",
+      "Description": "Purple Persian Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPShagRug_eco_C",
+      "Description": "Shag Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPCurtains_eco_C",
+      "Description": "Curtains",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OldChair_eco_C",
+      "Description": "Old Chair",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_KitchenCabinet_eco_C",
+      "Description": "Kitchen Cabinet",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TrophyCase_eco_C",
+      "Description": "Trophy Case",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MapTable_eco_C",
+      "Description": "Map Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SEMapTable_eco_C",
+      "Description": "SE Map Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CenterMapTable_eco_C",
+      "Description": "Center Map Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RP_RagnarokMapTable_eco_C",
+      "Description": "Ragnarok Map Table",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FireplaceScreen_eco_C",
+      "Description": "Fireplace Screen",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Shelf_eco_C",
+      "Description": "Wall Shelf",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPBathroomWallShelf_eco_C",
+      "Description": "Bathroom Wall Shelf",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPShower_eco_C",
+      "Description": "Shower",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPToilet_eco_C",
+      "Description": "Toilet",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_GreenBox_eco_C",
+      "Description": "Green Box",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Shutter_eco_C",
+      "Description": "Wooden Shutter",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MetalBalcony_eco_C",
+      "Description": "Metal Balcony",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBathtub_eco_C",
+      "Description": "Bathtub",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Book1_eco_C",
+      "Description": "Fancy Book",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Book2_eco_C",
+      "Description": "Book of the Seas",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OpenBook_eco_C",
+      "Description": "Open Book",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Camera_eco_C",
+      "Description": "Camera",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BottledMessage_eco_C",
+      "Description": "Message in a Bottle",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ShipInABottle_eco_C",
+      "Description": "Ship in a Bottle",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PictureButterfly_eco_C",
+      "Description": "Butterfly Picture",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PictureDeer_eco_C",
+      "Description": "Deer Picture",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PictureSquid_eco_C",
+      "Description": "Squid Picture",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Globe_eco_C",
+      "Description": "Globe",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OldGlobe_eco_C",
+      "Description": "Older Globe",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Suitcase_eco_C",
+      "Description": "Suitcases",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BirdCage_eco_C",
+      "Description": "Birdcage",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedFish_eco_C",
+      "Description": "Mounted Fish",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSalmon_eco_C",
+      "Description": "Mounted Salmon",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedAnglerFish_eco_C",
+      "Description": "Mounted Angler Fish",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedArgent_eco_C",
+      "Description": "Mounted Argent",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedBear_eco_C",
+      "Description": "Mounted Bear",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedDeinonychus_eco_C",
+      "Description": "Mounted Deinonychus",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedDodoRex_eco_C",
+      "Description": "Mounted Dodo Rex",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedDunkleo_eco_C",
+      "Description": "Mounted Dunkleo",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedMammoth_eco_C",
+      "Description": "Mounted Mammoth",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedPandaBear_eco_C",
+      "Description": "Mounted Panda Bear",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedRex_eco_C",
+      "Description": "Mounted Rex",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSaber_eco_C",
+      "Description": "Mounted Saber",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedShark_eco_C",
+      "Description": "Mounted Shark",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSarco_eco_C",
+      "Description": "Mounted Sarco",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedStag_eco_C",
+      "Description": "Mounted Stag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedStego_eco_C",
+      "Description": "Mounted Stego",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedTrike_eco_C",
+      "Description": "Mounted Trike",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedWolf_eco_C",
+      "Description": "Mounted Wolf",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedTherizinosaurus_eco_C",
+      "Description": "Mounted Therizinosaurus",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedThyla_eco_C",
+      "Description": "Mounted Thylacoleo",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedFrog_eco_C",
+      "Description": "Mounted Frog",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedRhino_eco_C",
+      "Description": "Mounted Rhino",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedPachyrhino_eco_C",
+      "Description": "Mounted Pachyrhinosaurus",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedBary_eco_C",
+      "Description": "Mounted Baryonyx",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedEquus_eco_C",
+      "Description": "Mounted Equus",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedUnicorn_eco_C",
+      "Description": "Mounted Unicorn",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSheep_eco_C",
+      "Description": "Mounted Sheep",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSpino_eco_C",
+      "Description": "Mounted Spino",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedQuetz_eco_C",
+      "Description": "Mounted Quetz",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedAllo_eco_C",
+      "Description": "Mounted Allosaurus",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedTapejara_eco_C",
+      "Description": "Mounted Tapejara",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedIchthy_eco_C",
+      "Description": "Mounted Ichthy",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedGiga_eco_C",
+      "Description": "Mounted Giga",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedRaptor_eco_C",
+      "Description": "Mounted Raptor",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSquid_eco_C",
+      "Description": "Mounted Squid",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPMountedPhoenix_eco_C",
+      "Description": "Mounted Phoenix",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPMountedIceWyvern_eco_C",
+      "Description": "Mounted Ice Wyvern",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPMountedGriffin_eco_C",
+      "Description": "Mounted Griffin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPMountedChalicotherium_eco_C",
+      "Description": "Mounted Chalicotherium",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPMountedDaeodon_eco_C",
+      "Description": "Mounted Daeodon",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedPenguin_eco_C",
+      "Description": "Mounted Penguin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedForestOwl_eco_C",
+      "Description": "Mounted Forest Owl",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSnowOwl_eco_C",
+      "Description": "Mounted Snow Owl",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Anchor_eco_C",
+      "Description": "Anchor",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ShipWheel_eco_C",
+      "Description": "Ship Wheel",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSkull_eco_C",
+      "Description": "Mounted Skull",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SwordShield_eco_C",
+      "Description": "Sword and Shield",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPMediumCanvas_eco_C",
+      "Description": "Medium Painting Canvas",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPLargeCanvas_eco_C",
+      "Description": "Large Painting Canvas",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPXLCanvas_eco_C",
+      "Description": "XL Painting Canvas",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPMediumFrame_eco_C",
+      "Description": "Medium Picture Frame",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPLargeFrame_eco_C",
+      "Description": "Large Picture Frame",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPXLFrame_eco_C",
+      "Description": "XL Picture Frame",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BearRug_eco_C",
+      "Description": "Bear Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PolarBearRug_eco_C",
+      "Description": "Polar Bear Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPSaberRug_eco_C",
+      "Description": "Saber Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBrownBearRug_eco_C",
+      "Description": "Brown Bear Rug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPSmallCandle_eco_C",
+      "Description": "Small Candle",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPLargeCandle_eco_C",
+      "Description": "Large Candle",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WallCandle_eco_C",
+      "Description": "Wall Candle",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SmallTorch_eco_C",
+      "Description": "Small Torch",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SkullWallTorch_eco_C",
+      "Description": "Skull Wall Torch",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_LargeTorch_eco_C",
+      "Description": "Large Torch",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RP_Bonfire_eco_C",
+      "Description": "Bonfire",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RP_Fireplace_eco_C",
+      "Description": "Fireplace",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagArgent_eco_C",
+      "Description": "Argent War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagBear_eco_C",
+      "Description": "Bear War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagDodo_eco_C",
+      "Description": "Dodo War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagDunkleo_eco_C",
+      "Description": "Dunkleo War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagFrog_eco_C",
+      "Description": "Frog War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagMammoth_eco_C",
+      "Description": "Mammoth War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagPanda_eco_C",
+      "Description": "Panda War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagRex_eco_C",
+      "Description": "Rex War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagSaber_eco_C",
+      "Description": "Saber War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagSarco_eco_C",
+      "Description": "Sarco War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagShark_eco_C",
+      "Description": "Shark War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagStag_eco_C",
+      "Description": "Stag War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagThyla_eco_C",
+      "Description": "Thylacoleo War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagTrike_eco_C",
+      "Description": "Trike War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagWolf_eco_C",
+      "Description": "Wolf War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagAllo_eco_C",
+      "Description": "Allo War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagBary_eco_C",
+      "Description": "Bary War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagEquus_eco_C",
+      "Description": "Equus War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagGiga_eco_C",
+      "Description": "Giga War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagPenguin_eco_C",
+      "Description": "Penguin War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagQuetz_eco_C",
+      "Description": "Quetz War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagRaptor_eco_C",
+      "Description": "Raptor War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagRhino_eco_C",
+      "Description": "Rhino War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagSheep_eco_C",
+      "Description": "Sheep War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagSpino_eco_C",
+      "Description": "Spino War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagIchthy_eco_C",
+      "Description": "Ichthy War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagPachyrhino_eco_C",
+      "Description": "Pachyrhino War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagTapejara_eco_C",
+      "Description": "Tapejara War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPWarFlagPhoenix_eco_C",
+      "Description": "Phoenix War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPWarFlagGriffin_eco_C",
+      "Description": "Griffin War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPWarFlagIceWyvern_eco_C",
+      "Description": "Ice Wyvern War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPWarFlagChalicotherium_eco_C",
+      "Description": "Chalicotherium War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPWarFlagDaeodon_eco_C",
+      "Description": "Daeodon War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagUnicorn_eco_C",
+      "Description": "Unicorn War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagOwl_eco_C",
+      "Description": "Owl War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WarFlagPaintable_eco_C",
+      "Description": "Plain Paintable War Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBlackCF_eco_C",
+      "Description": "Black Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBlueCF_eco_C",
+      "Description": "Blue Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBrownCF_eco_C",
+      "Description": "Brown Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPGrayCF_eco_C",
+      "Description": "Gray Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPGreenCF_eco_C",
+      "Description": "Green Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPOrangeCF_eco_C",
+      "Description": "Orange Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPPinkCF_eco_C",
+      "Description": "Pink Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPPurpleCF_eco_C",
+      "Description": "Purple Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPRedCF_eco_C",
+      "Description": "Red Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPWhiteCF_eco_C",
+      "Description": "White Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPYellowCF_eco_C",
+      "Description": "Yellow Castle Flag",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsBlack_eco_C",
+      "Description": "Black Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsBlue_eco_C",
+      "Description": "Blue Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsBrown_eco_C",
+      "Description": "Brown Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsGray_eco_C",
+      "Description": "Gray Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsGreen_eco_C",
+      "Description": "Green Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsOrange_eco_C",
+      "Description": "Orange Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsPink_eco_C",
+      "Description": "Pink Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsPurple_eco_C",
+      "Description": "Purple Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsRed_eco_C",
+      "Description": "Red Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsWhite_eco_C",
+      "Description": "White Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FlagsYellow_eco_C",
+      "Description": "Yellow Flags",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedBlack_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedBlue_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedCyan_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedGray_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedGreen_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedOrange_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedPineapple_eco_C",
+      "Description": "Single Pineapple Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedPink_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedPurple_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedRed_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SingleBedYellow_eco_C",
+      "Description": "Single Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBunkBed_eco_C",
+      "Description": "Bunk Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPKingBed_eco_C",
+      "Description": "King Bed",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ecoRPDecor_FoodTray_C",
+      "Description": "eco\u0027s Food Tray",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatBerryPie_eco_C",
+      "Description": "Berry Pie",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatBiscuits_eco_C",
+      "Description": "Biscuits",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatDodoPotPie_eco_C",
+      "Description": "Dodo Pot Pie",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatFishAndChips_eco_C",
+      "Description": "Fish and Chips",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatHyaenodonHotdogs_eco_C",
+      "Description": "Hyaenodon Hotdogs",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatLegOfLamb_eco_C",
+      "Description": "Leg Of Lamb",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatMuffin_eco_C",
+      "Description": "Muffin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatBread_eco_C",
+      "Description": "Loaf of Bread",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatCookies_eco_C",
+      "Description": "Cookies",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatChocolateDonut_eco_C",
+      "Description": "Chocolate Donut with Sprinkles",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_EatPinkDonut_eco_C",
+      "Description": "Pink Donut with Sprinkles",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPPumpkinPieSlice_eco_C",
+      "Description": "Pumpkin Pie Slice",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bread_eco_C",
+      "Description": "Bread",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_VanillaCake_eco_C",
+      "Description": "Vanilla Cake",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ChocolateCake_eco_C",
+      "Description": "Chocolate Cake",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Muffin_eco_C",
+      "Description": "Muffin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Cookies_eco_C",
+      "Description": "Cookies",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RP_HolidayTreats_eco_C",
+      "Description": "Holiday Treats",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DonutChoc_eco_C",
+      "Description": "Chocolate Donut",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DonutChocSP_eco_C",
+      "Description": "Chocolate Donut with Sprinkles",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DonutPinkSP_eco_C",
+      "Description": "Pink Donut with Sprinkles",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RP_PumpkinPieSlice_eco_C",
+      "Description": "Pumpkin Pie Slice",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_HerbBasket_eco_C",
+      "Description": "Herb Basket",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_HangingHerbs_eco_C",
+      "Description": "Hanging Herbs",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_HangingPans_eco_C",
+      "Description": "Hanging Pans",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPEmptyTray_eco_C",
+      "Description": "Empty Tray",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FishTray_eco_C",
+      "Description": "Fish Tray",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Plate_eco_C",
+      "Description": "Plate",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bowl_eco_C",
+      "Description": "Bowl",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Mug_eco_C",
+      "Description": "Mug",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RP_HotChocolate_eco_C",
+      "Description": "Hot Chocolate",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RPBeerBottle_eco_C",
+      "Description": "Beer Bottle",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Pitcher_eco_C",
+      "Description": "Pitcher",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPKitchenJar_eco_C",
+      "Description": "Kitchen Jar",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RoastedPig_eco_C",
+      "Description": "Roasted Pig",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RP_Turkey_eco_C",
+      "Description": "Turkey",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPWaterBasin_eco_C",
+      "Description": "Water Basin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RP_WaterBucket_eco_C",
+      "Description": "Water Bucket",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RP_Sink_eco_C",
+      "Description": "Sink",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPMixingBowl_eco_C",
+      "Description": "Mixing Bowl",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBacon_eco_C",
+      "Description": "Bacon",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPCrispyBacon_eco_C",
+      "Description": "Crispy Bacon",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBlueberries_eco_C",
+      "Description": "Blueberries",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPFlour_eco_C",
+      "Description": "Flour",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPFWheat_eco_C",
+      "Description": "Wheat",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPGrapes_eco_C",
+      "Description": "Grapes",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPGreens_eco_C",
+      "Description": "Greens",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPLard_eco_C",
+      "Description": "Lard",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPMilk_eco_C",
+      "Description": "Milk",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPSalt_eco_C",
+      "Description": "Salt",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPStrawberries_eco_C",
+      "Description": "Strawberries",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPSugar_eco_C",
+      "Description": "Sugar",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPYeast_eco_C",
+      "Description": "Yeast",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RP_DyeMixer_eco_C",
+      "Description": "Dye Mixer",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPActuallyMagenta_eco_C",
+      "Description": "Magenta Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPBlack_eco_C",
+      "Description": "Black Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPBlue_eco_C",
+      "Description": "Blue Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPBrick_eco_C",
+      "Description": "Brick Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPBrown_eco_C",
+      "Description": "Brown Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPCantaloupe_eco_C",
+      "Description": "Cantaloupe Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPCyan_eco_C",
+      "Description": "Cyan Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPForest_eco_C",
+      "Description": "Forest Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPGreen_eco_C",
+      "Description": "Green Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPMud_eco_C",
+      "Description": "Mud Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPNavy_eco_C",
+      "Description": "Navy Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPOlive_eco_C",
+      "Description": "Olive Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPOrange_eco_C",
+      "Description": "Orange Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPParchment_eco_C",
+      "Description": "Parchement Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPPink_eco_C",
+      "Description": "Pink Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPPurple_eco_C",
+      "Description": "Purple Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPRed_eco_C",
+      "Description": "Red Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPRoyalty_eco_C",
+      "Description": "Royalty Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPSilver_eco_C",
+      "Description": "Silver Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPSky_eco_C",
+      "Description": "Sky Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPSlate_eco_C",
+      "Description": "Slate Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPTan_eco_C",
+      "Description": "Tan Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPTangerine_eco_C",
+      "Description": "Tangerine Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPWhite_eco_C",
+      "Description": "White Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemDye_RPYellow_eco_C",
+      "Description": "Yellow Coloring",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPCookingPot_eco_C",
+      "Description": "Cooking Pot",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPRecipeStation_eco_C",
+      "Description": "Recipe Station",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumableSoap_eco_C",
+      "Description": "Soap",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBakedPotato_eco_C",
+      "Description": "Baked Potato",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPCheese_eco_C",
+      "Description": "Cheese",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPPopcorn_eco_C",
+      "Description": "Popcorn",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBlueberryJam_eco_C",
+      "Description": "Blueberry Jam",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBlueberryPancakes_eco_C",
+      "Description": "Blueberry Pancakes",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPPancakes_eco_C",
+      "Description": "Pancakes",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBlueberryScones_eco_C",
+      "Description": "Blueberry Scones",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPScones_eco_C",
+      "Description": "Scones",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBreadedFish_eco_C",
+      "Description": "Breaded Fish",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBreadedFishChips_eco_C",
+      "Description": "Breaded Fish and Chips",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPGrapeJam_eco_C",
+      "Description": "Grape Jam",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPOmelette_eco_C",
+      "Description": "Omelette",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPSpringSalad_eco_C",
+      "Description": "Spring Salad",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPStrawberryJam_eco_C",
+      "Description": "Strawberry Jam",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPStrawberryPancakes_eco_C",
+      "Description": "Strawberry Pancakes",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPStrawberryScones_eco_C",
+      "Description": "Strawberry Scones",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPWheatBread_eco_C",
+      "Description": "Wheat Bread",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPBlueberryBread_eco_C",
+      "Description": "Blueberry Bread",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPWine_eco_C",
+      "Description": "Wine",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPRum_eco_C",
+      "Description": "Rum",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPCranberryJuice_eco_C",
+      "Description": "Cranberry Juice",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPGingerTea_eco_C",
+      "Description": "Ginger Tea",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPSweetenedAloeTea_eco_C",
+      "Description": "Sweetened Aloe Tea",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPLavenderChamomileTea_eco_C",
+      "Description": "Lavender Chamomile Tea",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPLemonTea_eco_C",
+      "Description": "Lemon Tea",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPGreenTea_eco_C",
+      "Description": "Green Tea",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPTeaMilkHoney_eco_C",
+      "Description": "Tea with Milk and Honey",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPTheWolfsWater_eco_C",
+      "Description": "The Wolfs Water - Black Tea with Cream",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPZelsHotToddy_eco_C",
+      "Description": "Zel\u0027s Hot Toddy",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_RPGovernorsTea_eco_C",
+      "Description": "Governor\u0027s Tea",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RP_Cooker_eco_C",
+      "Description": "Cooker",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPCounter_eco_C",
+      "Description": "Storage Counter",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPCounterWithDoors_eco_C",
+      "Description": "Counter with Doors",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPTallCounter_eco_C",
+      "Description": "Tall Counter",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPPantry_eco_C",
+      "Description": "Pantry",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPIcebox_eco_C",
+      "Description": "Ice Box",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Book_EB_eco_C",
+      "Description": "Journal",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPBadBox_eco_C",
+      "Description": "Bad Box",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPCommunityBox_eco_C",
+      "Description": "Community Box",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Guestbook_eco_C",
+      "Description": "Guestbook",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BulletinBoard_eco_C",
+      "Description": "Bulletin Board",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RPOutpost_eco_C",
+      "Description": "Outpost",
+      "Mod": "ecoRPDecor"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

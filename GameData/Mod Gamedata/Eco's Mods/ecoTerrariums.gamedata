@@ -1,0 +1,224 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ecoTerrariums_CraftingContainer_C",
+      "Description": "eco\u0027s Terrariums Crafting Container",
+      "Mod": "ecoTerrariums"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ecoTerrariums_CraftingContainer_C",
+      "Description": "eco\u0027s Terrariums Crafting Container",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SpiderTerrarium_eco_C",
+      "Description": "Spider Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DimetrodonTerrarium_eco_C",
+      "Description": "Dimetrodon Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FrogTerrarium_eco_C",
+      "Description": "Frog Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnakeTerrarium_eco_C",
+      "Description": "Snake Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TurtleTerrarium_eco_C",
+      "Description": "Turtle Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DesertTerrarium_eco_C",
+      "Description": "Desert Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SnowHabitat_eco_C",
+      "Description": "Snow Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Aquarium_eco_C",
+      "Description": "Aquarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SquidAquarium_eco_C",
+      "Description": "Squid Aquarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WallAquarium_eco_C",
+      "Description": "Huge Wall Aquarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_UnderwaterCave_eco_C",
+      "Description": "Underwater Cave",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MonkeyHabitat_eco_C",
+      "Description": "Monkey Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PandaHabitat_eco_C",
+      "Description": "Panda Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_CaveTerrarium_eco_C",
+      "Description": "Cave Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PenguinHabitat_eco_C",
+      "Description": "Penguin Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SwampTerrarium_eco_C",
+      "Description": "Swamp Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BeaverHabitat_eco_C",
+      "Description": "Beaver Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_QuetzalHabitat_eco_C",
+      "Description": "Quetzal Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WyvernHabitat_eco_C",
+      "Description": "Wyvern Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_BeeHabitat_eco_C",
+      "Description": "Bee Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MonkeyTempleTerrarium_eco_C",
+      "Description": "Monkey Temple Terrarium",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_OtterHabitat_eco_C",
+      "Description": "Otter Habitat",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_FertileBiome_eco_C",
+      "Description": "Fertile Biome",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bioluminescent_eco_C",
+      "Description": "Bio Luminescent Biome",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ElementsBiome_eco_C",
+      "Description": "Elements Biome",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ExtinctionCity_eco_C",
+      "Description": "Extinction City DLC",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_ExtinctionSulfurHabitat_eco_C",
+      "Description": "Extinction Sulfur Habitat DLC",
+      "Mod": "ecoTerrariums"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TR_Genesis_eco_C",
+      "Description": "Genesis Terrarium DLC",
+      "Mod": "ecoTerrariums"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}
