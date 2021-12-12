@@ -1,0 +1,4978 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-15T01:34:46.0441268Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 2,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCampfire_C",
+      "Description": "HG Campfire",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCompostBin_C",
+      "Description": "HG Compost Bin",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGFlareLauncher_C",
+      "Description": "HG Flare Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WaterWell_HG_C",
+      "Description": "HG Water Well",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGParachute_C",
+      "Description": "HG Parachute",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGFeedingTrough_C",
+      "Description": "HG Feeding Trough",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGrapplingHook_C",
+      "Description": "HG Grappling Hook",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 30,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDehytrator_C",
+      "Description": "HG Dehydrator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 62,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSimpleTranqBullet_C",
+      "Description": "HG Simple Tranq Bullet",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MetalHydrantIntake_C",
+      "Description": "HG Hydrant",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTranqPike_C",
+      "Description": "HG Tranq Pike",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGFirePike_C",
+      "Description": "HG Fire Pike",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIcePike_C",
+      "Description": "HG Ice Pike",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMiniFabricator_C",
+      "Description": "HG Mini-Fabricator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGrill_C",
+      "Description": "HG Industrial Grill",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGenerator_C",
+      "Description": "HG Electrical Generator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 70,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSedative_C",
+      "Description": "HG Sedative",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLamp_C",
+      "Description": "HG Lamp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPowerOutlet_C",
+      "Description": "HG Electrical Outlet",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PowerCable90_C",
+      "Description": "HG Electrical Cable 90\u00B0 right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PowerCable90r_C",
+      "Description": "HG Electrical Cable 90\u00B0 left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPowerCableStraight_C",
+      "Description": "HG Straight Electrical Cable",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPowerCableVertical_C",
+      "Description": "HG Vertical Electrical Cable",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPowerCableIncline_C",
+      "Description": "HG Inclined Electrical Cable",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPowerCableIntersection_C",
+      "Description": "HG Electrical Cable Intersection",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIceBox_C",
+      "Description": "HG Refrigerator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 64,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGrinder_C",
+      "Description": "HG Mini-Industrial Grinder",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 60,
+      "Points": 5,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EggIncubator_HG_C",
+      "Description": "HG Egg Incubator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 65,
+      "Points": 50,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPearlConverter_C",
+      "Description": "HG Pearl converter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTurret_C",
+      "Description": "HG Auto Turret",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_StorageBox_HGHuge_C",
+      "Description": "HG Mini-Vault",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 89,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIndustrialCookingPot_C",
+      "Description": "HG Industrial Cooker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGChemBench_C",
+      "Description": "HG Chemistry Bench",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 80,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIndustrialForge_C",
+      "Description": "HG Mini-Industrial Forge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 9999,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGOilPump_C",
+      "Description": "HG Oil Pump",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 9999,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Element_Refuse_C",
+      "Description": "Element Refuse",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGKibbleBench_C",
+      "Description": "HG Kibble Bench",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAchatinaBox_C",
+      "Description": "HG Achatina Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 55,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGEggCollector_C",
+      "Description": "HG Egg Collector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalBox_C",
+      "Description": "HG Metal Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWoodCeiling_C",
+      "Description": "HG Wooden Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWoodRailing_C",
+      "Description": "HG Wooden Railing",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWoodRamp_C",
+      "Description": "HG Wooden Ramp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalWall_1_C",
+      "Description": "HG GlassMetal Wall #1",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalWall_2_C",
+      "Description": "HG GlassMetal Wall #2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalCeiling_1_C",
+      "Description": "HG GlassMetal Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalCeiling_1p_C",
+      "Description": "HG Multi Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalWall_1p_C",
+      "Description": "HG Multi Wall #1",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalWall_2p_C",
+      "Description": "HG Multi Wall #2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalSlopedWall_Right_C",
+      "Description": "HG Sloped GlassMetal Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalSlopedWall_Left_C",
+      "Description": "HG Sloped GlassMetal Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalSlopedWall_Right_p_C",
+      "Description": "HG Sloped Multi Wall Right  Protected",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalSlopedWall_Left_p_C",
+      "Description": "HG Sloped Multi Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalRoof_C",
+      "Description": "HG Sloped GlassMetal Roof",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalRoof_p_C",
+      "Description": "HG Sloped Multi Roof",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GreenEnergy_C",
+      "Description": "HG Green Energy",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGShield_C",
+      "Description": "HG Shield",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalDoorframe_C",
+      "Description": "HG GlassMetal Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalDoorframe_p_C",
+      "Description": "HG Multi Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalDoor2_C",
+      "Description": "HG GlassMetal Door 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalDoor2p_C",
+      "Description": "HG Multi Door 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalGate_C",
+      "Description": "HG GlassMetal Dinosaur Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalGate_p_C",
+      "Description": "HG Multi Dinosaur Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalRamp_C",
+      "Description": "HG GlassMetal Ramp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalRamp_2_C",
+      "Description": "HG Multi Stairs",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalRamp_p_C",
+      "Description": "HG Multi Ramp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalGate_Large_C",
+      "Description": "HG GlassMetal Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalGate_Large_p_C",
+      "Description": "HG Multi Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalGateway_C",
+      "Description": "HG Metal Dinosaur Gateway",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalGateway_Large_C",
+      "Description": "HG Behemoth Gateway",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlassMetalFloor_C",
+      "Description": "HG Multi Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalFloor_C",
+      "Description": "HG Metal Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMultiStorageBox_C",
+      "Description": "HG Multi Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 36,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCropPlot_Large_C",
+      "Description": "HG Large Crop Plot",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLamppost_C",
+      "Description": "HG Lamp Post wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLamppostOmni_C",
+      "Description": "HG Omnidirectional Lamppost wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSpotlight_C",
+      "Description": "HG Spotlight wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG3Lamp_C",
+      "Description": "HG 3-Lamp wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 5,
+      "Points": 5,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIceBoxMini_C",
+      "Description": "HG Mini IceBox",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_LampPost_1_C",
+      "Description": "HG Lamp Post 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WallLamp_2_C",
+      "Description": "HG Wall Lamp 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlasMetalDoor3_C",
+      "Description": "HG GlassMetal Door 3",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 9,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGBola_C",
+      "Description": "HG Bola",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 7,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_StandingTorch_C",
+      "Description": "HG Auto Standing Torch",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 21,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWallTorch_C",
+      "Description": "HG Auto Wall Torch",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 7,
+      "Points": 8,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSimpleBed_C",
+      "Description": "HG Simple Bed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 2,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTorch_C",
+      "Description": "HG Torch",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAmmoStorageBox_C",
+      "Description": "HG Ammo Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 82,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HealSoup_HG_C",
+      "Description": "HG Healing Soup",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 82,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HungrySoup_HG_C",
+      "Description": "HG Hungry Soup",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 82,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XPPotion_HG_C",
+      "Description": "XP Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_CraftingStorageBox_C",
+      "Description": "HG Crafting Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_TreasureChest_C",
+      "Description": "HG Treasure Chest",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 21,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGScissors_C",
+      "Description": "HG Scissors",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSeedCrafter_C",
+      "Description": "HG Seed Crafter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 2,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSpear_C",
+      "Description": "HG Spear",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_StructureStorageBox_C",
+      "Description": "HG Structure Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_SaddleBox_C",
+      "Description": "HG Saddle Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 26,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGFlameArrow_C",
+      "Description": "HG Flame Arrow",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_PaintBox_C",
+      "Description": "HG Paint Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Hesperonis_Golden_C",
+      "Description": "Golden Hesperornis Egg",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_KeratineSpike_C",
+      "Description": "Deathworm Horn",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_SweetVeggieCake_C",
+      "Description": "Sweet Vegetable Cake",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_WyvernMilk_C",
+      "Description": "Wyvern Milk",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_NamelessVenom_C",
+      "Description": "Nameless Venom",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_CactusSap_C",
+      "Description": "Cactus Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Pearl_C",
+      "Description": "Pearl Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_PlantSpeciesZ_C",
+      "Description": "Plant Species Z Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_RareFlower_C",
+      "Description": "Rare Flower Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_RareMushroom_C",
+      "Description": "Rare Mushroom Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Sap_C",
+      "Description": "Red Wood Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Honey_C",
+      "Description": "Honey Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Silk_C",
+      "Description": "Silk Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTrackerGun_C",
+      "Description": "HG Tracker Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_AnglerGel_C",
+      "Description": "Angler Gel Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_OrganicPolymer_C",
+      "Description": "Organic Polymer Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 18,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSmithy_C",
+      "Description": "HG Smithy",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_PackStation_C",
+      "Description": "HG Pack Station",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 21,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGForge_C",
+      "Description": "HG Refining Forge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Afro_C",
+      "Description": "\u0022Afro\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Braids_C",
+      "Description": "\u0022Braids\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Dreadlocks_C",
+      "Description": "\u0022Dreadlocks\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Mohawk_C",
+      "Description": "\u0022Mohawk\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Ponytail_C",
+      "Description": "\u0022Ponytail\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Romantic_C",
+      "Description": "\u0022Romantic\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Head_Viking_C",
+      "Description": "\u0022Viking\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_CurlyBeard_C",
+      "Description": "\u0022Curly Beard\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_Dreadbeard_C",
+      "Description": "\u0022Dread Beard\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_Goatee_C",
+      "Description": "\u0022Goatee\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_Moustache_C",
+      "Description": "\u0022Moustache\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_MuttonChops_C",
+      "Description": "\u0022Mutton Chops\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_Romantic_C",
+      "Description": "\u0022Romantic\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Hair_Facial_VikingBeard_C",
+      "Description": "\u0022Viking Beard\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Emote_Evil_C",
+      "Description": "\u0022Evil\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Emote_Heart_C",
+      "Description": "\u0022Heart\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Emote_Snowball_C",
+      "Description": "\u0022Snowball\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Emote_Turkey_C",
+      "Description": "\u0022Turkey\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_BioToxin_C",
+      "Description": "Bio Toxin Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Crystal_C",
+      "Description": "Crystal Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_PlantSpeciesY_C",
+      "Description": "Plant Species Y Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 62,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlider_C",
+      "Description": "HG Glider Suit",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HideHelmetAlt_C",
+      "Description": "Hunter Hat",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Palm_C",
+      "Description": "Palm Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 13,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGFishbasket_C",
+      "Description": "Fish Basket",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Element_C",
+      "Description": "Element Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Gem_C",
+      "Description": "Gem Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGHeavyTurret_C",
+      "Description": "HG Heavy Auto Turret",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 5,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGrill_2_C",
+      "Description": "HG Grill",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_AnkyloBox_C",
+      "Description": "HG Ankylo Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_DoediBox_C",
+      "Description": "HG Doedi Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_DunkleosteusBox_C",
+      "Description": "HG Dunkleosteus Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_MantisBox_C",
+      "Description": "HG Mantis Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_TherizinoBox_C",
+      "Description": "HG Therizino Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 54,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWaterJar_C",
+      "Description": "HG Infinity Water Jar",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 81,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGScuba_Mask_C",
+      "Description": "HG SCUBA Mask",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoMindWipe_C",
+      "Description": "HG Dino Mindwipe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStackableMetalFloor_C",
+      "Description": "HG Stackable Metal Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_BlackPearl_C",
+      "Description": "Black Pearl Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSuperFertilizer_C",
+      "Description": "HG Super Fertilizer",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 36,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalCropPlot_Large_C",
+      "Description": "HG Metal Large Crop Plot",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoCon_C",
+      "Description": "HG DinoCon",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTriFoundation_Metal_C",
+      "Description": "HG Metal Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTriCeiling_Metal_C",
+      "Description": "HG Metal Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 68,
+      "Points": 40,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekDoor_C",
+      "Description": "HG Double Tek Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekGenerator_C",
+      "Description": "HG Tek Generator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWakeUp_Buff_C",
+      "Description": "HG Wake Up",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekCeiling_C",
+      "Description": "HG Tek Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_GenericBox_C",
+      "Description": "HG Generic Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoImprint_C",
+      "Description": "HG Dino Imprint",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTeleporter_C",
+      "Description": "HG Teleporter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMultiStorageBox_Metal_C",
+      "Description": "HG Multi Storage Box Metal",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_GachaBox_C",
+      "Description": "HG Gacha Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGExtinctionBox_C",
+      "Description": "HG Extinction Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCryoPotion_C",
+      "Description": "HG Cryo Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_CraftingStorageBox_Metal_C",
+      "Description": "HG Crafting Storage Box Metal",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIsFemale_C",
+      "Description": "HG Female Maker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGIsMale_C",
+      "Description": "HG Male Maker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCryoGlasses_C",
+      "Description": "HG Cryo Skin Glasses",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekWall_C",
+      "Description": "HG Tek Glass Wall",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_AmmoniteBile_C",
+      "Description": "Ammonite Bile Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_ElementOre_C",
+      "Description": "Element Ore Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 88,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCryoFridge_C",
+      "Description": "HG Cryofridge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGElement_C",
+      "Description": "Element",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Element_Inventory_C",
+      "Description": "Crosstravel Element",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Element_Shard_HG_C",
+      "Description": "Crosstravel",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Sulfur_C",
+      "Description": "Sulfur Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_ReMating_C",
+      "Description": "HG ReMating",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Leech_C",
+      "Description": "Leech Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 15,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalPipeIntake_C",
+      "Description": "HG Metal Irrigation Pipe - Intake",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekHelmetSkin_C",
+      "Description": "HG Tek Helmet",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 22,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTrophyWall_C",
+      "Description": "HG Trophy Wall-Mount",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGInvisibilityBuff_C",
+      "Description": "Invisibility Buff",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekCompostBin_C",
+      "Description": "HG Tek Compost Bin",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekFeedingTrough_C",
+      "Description": "HG Tek Feeding Trough",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekForge_C",
+      "Description": "HG Tek Forge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoSpeed_C",
+      "Description": "HG Dino Speed Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 10,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoSpeedInfinity_C",
+      "Description": "HG Infinity Dino Speed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekMiniReplicator_C",
+      "Description": "HG Mini Tek Replicator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStoneCeiling_C",
+      "Description": "HG Stone Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeCeiling_C",
+      "Description": "HG Adobe Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalCeiling_C",
+      "Description": "HG Metal Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_TekCeiling_C",
+      "Description": "HG Tek Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSuicide_C",
+      "Description": "HG Suicide Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_WeaponStorageBox_C",
+      "Description": "HG Weapon Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoKill_C",
+      "Description": "HG Dino Kill",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Chitin_C",
+      "Description": "Chitin Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGasCollector_C",
+      "Description": "HG Gas Collector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCrystalChanger_C",
+      "Description": "HG Crystal Changer",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ARKCoin_C",
+      "Description": "ARK Coin",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekTriCeiling_C",
+      "Description": "HG Tek Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlassMetalTriRoof_C",
+      "Description": "HG Multi Triangle Roof",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMegaloDaywalker_C",
+      "Description": "HG Megalo Daywalker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDemoGun_C",
+      "Description": "HG Demo Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGachaFeeding_C",
+      "Description": "HG Gacha Feeding",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Metal_C",
+      "Description": "HG Metal Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Adobe_C",
+      "Description": "HG Adobe Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Glass_C",
+      "Description": "HG Glass Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 43,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Greenhouse_C",
+      "Description": "HG Greenhouse Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Stone_C",
+      "Description": "HG Reinforced Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 4,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Thatch_C",
+      "Description": "HG Thatch Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDoor_Wood_C",
+      "Description": "HG Wood Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 57,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLargeGate_Metal_C",
+      "Description": "HG Metal Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 38,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLargeGate_Adobe_C",
+      "Description": "HG Behemoth Adobe Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLargeGate_Stone_C",
+      "Description": "HG Reinforced Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Westland_C",
+      "Description": "HG Westland Protection",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_WeightPotion_C",
+      "Description": "HG Weight Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGate_Adobe_C",
+      "Description": "HG Adobe Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGate_Metal_C",
+      "Description": "HG Metal Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGate_Stone_C",
+      "Description": "HG Reinforced Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGate_Wood_C",
+      "Description": "HG Wood Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGate_Glass_C",
+      "Description": "HG Glass Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_Obsidian_C",
+      "Description": "Obsidian Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCanopyTree_C",
+      "Description": "HG Canopy Tree",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMultiMushroom_C",
+      "Description": "HG Multi-Stalk Mushroom",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 8,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGCookingPot_C",
+      "Description": "HG Cooking Pot",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDedicatedBox_C",
+      "Description": "HG Dedicated Storage",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMakeGender_C",
+      "Description": "HG Make Gender",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekDinoCloning_C",
+      "Description": "HG Dino Cloning",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGColumn_C",
+      "Description": "HG Column",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 62,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGThorsHammer_Skin_C",
+      "Description": "Thors Hammer",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 62,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CptAmShield_C",
+      "Description": "Capt. Shield",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoArmor_C",
+      "Description": "HG Dino Armor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalSign_Large_C",
+      "Description": "HG Metal Billboard",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGUnderwaterBase_C",
+      "Description": "HG Vacuum Compartment",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGUnderwaterBase_Moonpool_C",
+      "Description": "HG Vacuum Compartment Moonpool",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGBossBox_C",
+      "Description": "HG Mini Obelisk",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSleepingPod_C",
+      "Description": "HG Sleeping Pod",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 55,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWaterTank_C",
+      "Description": "HG Water Tank",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPoisonGrenade_C",
+      "Description": "HG Poison Grenade",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPostBox_C",
+      "Description": "HG Post Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 25,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGBloodPack_C",
+      "Description": "Blood Pack",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PreservingSalt_HG_C",
+      "Description": "HG Preserving Salt",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWhip_C",
+      "Description": "Whip",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Adobe_HG_C",
+      "Description": "HG Adobe Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Glass_HG_C",
+      "Description": "HG Glass Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Greenhouse_HG_C",
+      "Description": "HG Greenhouse Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Metal_HG_C",
+      "Description": "HG Metal Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Stone_HG_C",
+      "Description": "HG Reinforced Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 18,
+      "Points": 4,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoor_Wood_HG_C",
+      "Description": "HG Wooden Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Adobe_HG_C",
+      "Description": "HG Adobe Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Glass_HG_C",
+      "Description": "HG Glass Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Greenhouse_HG_C",
+      "Description": "HG Greenhouse Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 52,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Metal_HG_C",
+      "Description": "HG Metal Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 31,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Stone_HG_C",
+      "Description": "HG Stone Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DoubleDoorframe_Wood_HG_C",
+      "Description": "HG Wooden Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekElevator_C",
+      "Description": "HG Tek Elevator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMutation_C",
+      "Description": "HG Mutation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeTriFoundation_C",
+      "Description": "HG Adobe Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 15,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeTriCeiling_C",
+      "Description": "HG Adobe Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTriCeiling_Wood_C",
+      "Description": "HG Wooden Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 11,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTriFoundation_Wood_C",
+      "Description": "HG Wooden Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTriCeiling_Stone_C",
+      "Description": "HG Stone Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTriFoundation_Stone_C",
+      "Description": "HG Stone Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGNoStealing_C",
+      "Description": "HG Theft \u0026 Bug Prevention",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 65,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekElevator_Tri_C",
+      "Description": "HG Triangle Tek Elevator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGHitchingPost_C",
+      "Description": "HG Hitching Post",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStairsWood_C",
+      "Description": "HG Wooden Stairs",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 24,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStairsStone_C",
+      "Description": "HG Stone Stairs",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 16,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTrapdoor_Adobe_C",
+      "Description": "HG Adobe Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTrapdoor_Glass_C",
+      "Description": "HG Glass Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTrapdoor_Metal_C",
+      "Description": "HG Metal Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStoneTrapdoor_C",
+      "Description": "HG Reinforced Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 13,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWoodTrapdoor_C",
+      "Description": "HG Wooden Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStoneTrapdoorGiant_C",
+      "Description": "HG Giant Reinforced Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 30,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStoneHatchframeGiant_C",
+      "Description": "HG Giant Stone Hatchframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeHatchframeGiant_C",
+      "Description": "HG Giant Adobe Hatchframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 34,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeTrapdoorGiant_C",
+      "Description": "HG Giant Adobe Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalHatchframeGiant_C",
+      "Description": "HG Giant Metal Hatchframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 54,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetalTrapdoorGiant_C",
+      "Description": "HG Giant Metal Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeSlopedWall_Left_C",
+      "Description": "HG Sloped Adobe Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 18,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGAdobeSlopedWall_Right_C",
+      "Description": "HG Sloped Adobe Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetaWall_Sloped_Left_C",
+      "Description": "HG Sloped Metal Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 47,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMetaWall_Sloped_Right_C",
+      "Description": "HG Sloped Metal Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStoneWall_Sloped_Left_C",
+      "Description": "Sloped Stone Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 27,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStoneWall_Sloped_Right_C",
+      "Description": "HG Sloped Stone Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWoodWall_Sloped_Left_C",
+      "Description": "Sloped Wood Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWoodWall_Sloped_Right_C",
+      "Description": "HG Sloped Wood Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGreenHouseSlopedWall_Left_C",
+      "Description": "HG Sloped Greenhouse Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 44,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGreenHouseSlopedWall_Right_C",
+      "Description": "HG Sloped Greenhouse Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_HGTekWall_Sloped_Left_C",
+      "Description": "HG Sloped Tek Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTekWall_Sloped_Right_C",
+      "Description": "HG Sloped Tek Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGMutator_C",
+      "Description": "HG Mutator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 68,
+      "Points": 40,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG4Wall_Forcefield_C",
+      "Description": "HG Large Forcefield Wall",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGHeatVision_C",
+      "Description": "HG Heat-Vision",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 45,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGWall_Glass_C",
+      "Description": "HG Glass Wall",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGBookShelf_C",
+      "Description": "HG Book Shelf Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGSkinBox_C",
+      "Description": "HG Skin Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStructurSelector_C",
+      "Description": "HG Structur Selector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGGlassProtector_C",
+      "Description": "HG Glass Protector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTexturSelector_C",
+      "Description": "HG Textur Selector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGNoCorrupt_C",
+      "Description": "HG Capture Corrupted Dino",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGLightSetter_C",
+      "Description": "HG Light Setter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoKillerGun_C",
+      "Description": "HG Dino Killer Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGOceanPlatform_Wood_C",
+      "Description": "HG Wood Ocean Platform",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 53,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGOceanPlatform_Metal_C",
+      "Description": "HG Metal Ocean Platform",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_MagicPotion_C",
+      "Description": "HG Magic Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDedicatedStorage_C",
+      "Description": "HG Dedicated Storage 2.0",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGConverter_C",
+      "Description": "HG Convert",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDedicatedSort_C",
+      "Description": "HG Dedicated Sort",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGChibiDisplay_C",
+      "Description": "HG Chibi Display",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGChibiSign_C",
+      "Description": "HG Chibi Sign",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGVisibilityTool_C",
+      "Description": "HG Visibility Tool",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 40,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGNanny_C",
+      "Description": "HG Zoe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HG_PrimalCrystal_C",
+      "Description": "Primal Crystal",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 10,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTaxidermy_Small_C",
+      "Description": "HG Small Taxidermy Base",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 21,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTaxidermy_Medium_C",
+      "Description": "HG Medium Taxidermy Base",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 32,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTaxidermy_Large_C",
+      "Description": "HG Large Taxidermy Base",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGPersonalTeleporter_C",
+      "Description": "HG Personal Teleporter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 90,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGTeleporterPlus_C",
+      "Description": "HG Teleporter Plus",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGDinoStorage_C",
+      "Description": "HG Dino Storage",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGBeetlejuice_C",
+      "Description": "HG Beetlejuice",
+      "Mod": "HG ARK Reloaded"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCampfire_C",
+      "Description": "HG Campfire",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCompostBin_C",
+      "Description": "HG Compost Bin",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Weapon_HGFlareGun_C",
+      "Description": "HG Flare Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterWell_HG_C",
+      "Description": "HG Water Well",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumableBuff_HGParachute_C",
+      "Description": "HG Parachute",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGFeedingTrough_C",
+      "Description": "HG Feeding Trough",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_HGGrapplingHook_C",
+      "Description": "HG Grappling Hook",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDehydrator_C",
+      "Description": "HG Dehydrator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_HGSimpleTranqBullet_C",
+      "Description": "HG Simple Tranq Bullet",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_MetalHydrantIntake_C",
+      "Description": "HG Hydrant",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponHGTranqPike_C",
+      "Description": "HG Tranq Pike",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponHGFirePike_C",
+      "Description": "HG Fire Pike",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponHGIcePike_C",
+      "Description": "HG Ice Pike",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMiniFabricator_C",
+      "Description": "HG Mini-Fabricator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGrill_C",
+      "Description": "HG Industrial Grill",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGenerator_C",
+      "Description": "HG Electrical Generator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGSedative_C",
+      "Description": "HG Sedative",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGLamp_C",
+      "Description": "HG Lamp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPowerOutlet_C",
+      "Description": "HG Electrical Outlet",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PowerCable90_C",
+      "Description": "HG Electrical Cable 90\u00B0 right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PowerCable90r_C",
+      "Description": "HG Electrical Cable 90\u00B0 left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPowerCableStraight_C",
+      "Description": "HG Straight Electrical Cable",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPowerCableVertical_C",
+      "Description": "HG Vertical Electrical Cable",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPowerCableIncline_C",
+      "Description": "HG Inclined Electrical Cable",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPowerCableIntersection_C",
+      "Description": "HG Electrical Cable Intersection",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGIceBox_C",
+      "Description": "HG Refrigerator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGrinder_C",
+      "Description": "HG Mini-Industrial Grinder",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EggIncubator_HG_C",
+      "Description": "HG Egg Incubator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPearlConverter_C",
+      "Description": "HG Pearl converter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTurret_C",
+      "Description": "HG Auto Turret",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_StorageBox_HGHuge_C",
+      "Description": "HG Mini-Vault",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGIndustrialCookingPot_C",
+      "Description": "HG Industrial Cooker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGChemBench_C",
+      "Description": "HG Chemistry Bench",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IndustrialHGForge_C",
+      "Description": "HG Mini-Industrial Forge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGOilPump_C",
+      "Description": "HG Oil Pump",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Element_Refuse_C",
+      "Description": "Element Refuse",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGKibbleBench_C",
+      "Description": "HG Kibble Bench",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAchatinaBox_C",
+      "Description": "HG Achatina Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGEggCollector_C",
+      "Description": "HG Egg Collector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalBox_C",
+      "Description": "HG Metal Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWoodCeiling_C",
+      "Description": "HG Wooden Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWoodRailing_C",
+      "Description": "HG Wooden Railing",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWoodRamp_C",
+      "Description": "HG Wooden Ramp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_1_C",
+      "Description": "HG GlassMetal Wall #1",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_2_C",
+      "Description": "HG GlassMetal Wall #2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalCeiling_1_C",
+      "Description": "HG GlassMetal Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalCeiling_1p_C",
+      "Description": "HG Multi Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_1p_C",
+      "Description": "HG Multi Wall #1",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_2p_C",
+      "Description": "HG Multi Wall #2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_Sloped_Right_C",
+      "Description": "HG Sloped GlassMetal Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_Sloped_Left_C",
+      "Description": "HG Sloped GlassMetal Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_Sloped_Right_p_C",
+      "Description": "HG Sloped Multi Wall Right  Protected",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalWall_Sloped_Left_p_C",
+      "Description": "HG Sloped Multi Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalRoof_C",
+      "Description": "HG Sloped GlassMetal Roof",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalRoof_p_C",
+      "Description": "HG Sloped Multi Roof",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_GreenEnergy_C",
+      "Description": "HG Green Energy",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGShield_C",
+      "Description": "HG Shield",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalDoorframe_C",
+      "Description": "HG GlassMetal Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalDoorframe_p_C",
+      "Description": "HG Multi Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalDoor2_C",
+      "Description": "HG GlassMetal Door 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalDoor2p_C",
+      "Description": "HG Multi Door 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalGate_C",
+      "Description": "HG GlassMetal Dinosaur Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalGate_p_C",
+      "Description": "HG Multi Dinosaur Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalRamp_C",
+      "Description": "HG GlassMetal Ramp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalRamp_2_C",
+      "Description": "HG Multi Stairs",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalRamp_p_C",
+      "Description": "HG Multi Ramp",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalGate_Large_C",
+      "Description": "HG GlassMetal Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalGate_Large_p_C",
+      "Description": "HG Multi Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalGateframe_C",
+      "Description": "HG Metal Dinosaur Gateway",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalGateframe_Large_C",
+      "Description": "HG Behemoth Gateway",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalFloor_C",
+      "Description": "HG Multi Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalFloor_C",
+      "Description": "HG Metal Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMultiStorageBox_C",
+      "Description": "HG Multi Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCropPlot_Large_C",
+      "Description": "HG Large Crop Plot",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGLamppost_C",
+      "Description": "HG Lamp Post wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGLamppostOmni_C",
+      "Description": "HG Omnidirectional Lamppost wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGSpotlight_C",
+      "Description": "HG Spotlight wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG3Lamp_C",
+      "Description": "HG 3-Lamp wireless",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGIceBoxMini_C",
+      "Description": "HG Mini IceBox",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LampPost_1_C",
+      "Description": "HG Lamp Post 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WallLamp_2_C",
+      "Description": "HG Wall Lamp 2",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlasMetalDoor3_C",
+      "Description": "HG GlassMetal Door 3",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponHGBola_C",
+      "Description": "HG Bola",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_StandingTorch_C",
+      "Description": "HG Auto Standing Torch",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWallTorch_C",
+      "Description": "HG Auto Wall Torch",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGSimpleBed_C",
+      "Description": "HG Simple Bed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGWeaponTorch_C",
+      "Description": "HG Torch",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAmmoStorageBox_C",
+      "Description": "HG Ammo Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HealSoup_HG_C",
+      "Description": "HG Healing Soup",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HungrySoup_HG_C",
+      "Description": "HG Hungry Soup",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_XPPotion_C",
+      "Description": "XP Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_CraftingStorageBox_C",
+      "Description": "HG Crafting Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_TreasureChest_C",
+      "Description": "HG Treasure Chest",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGWeaponScissors_C",
+      "Description": "HG Scissors",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGSeedCrafter_C",
+      "Description": "HG Seed Crafter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponSpear_Child_C",
+      "Description": "HG Spear",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_StructureStorageBox_C",
+      "Description": "HG Structure Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_SaddleBox_C",
+      "Description": "HG Saddle Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_HGArrowFlame_C",
+      "Description": "HG Flame Arrow",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_PaintBox_C",
+      "Description": "HG Paint Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_Hesperonis_Golden_HG_C",
+      "Description": "Golden Hesperornis Egg",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_KeratinSpike_HG_C",
+      "Description": "Deathworm Horn",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_SweetVeggieCake_HG_C",
+      "Description": "Sweet Vegetable Cake",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_WyvernMilk_HG_C",
+      "Description": "Wyvern Milk",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_NamelessVenom_HG_C",
+      "Description": "Nameless Venom",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Cactus_Barrel_C",
+      "Description": "Cactus Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Pearls_Barrel_C",
+      "Description": "Pearl Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesZ_Barrel_C",
+      "Description": "Plant Species Z Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_RareFlower_Barrel_C",
+      "Description": "Rare Flower Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_RareMushroom_Barrel_C",
+      "Description": "Rare Mushroom Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Sap_Barrel_C",
+      "Description": "Red Wood Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Honey_Barrel_C",
+      "Description": "Honey Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Silk_C",
+      "Description": "Silk Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponTrackerGun_C",
+      "Description": "HG Tracker Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_AnglerGel_Barrel_C",
+      "Description": "Angler Gel Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_OrganicPolymer_Barrel_C",
+      "Description": "Organic Polymer Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGSmithy_C",
+      "Description": "HG Smithy",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_PackStation_C",
+      "Description": "HG Pack Station",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGForge_C",
+      "Description": "HG Refining Forge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Head_Afro_C",
+      "Description": "\u0022Afro\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Head_Braids_C",
+      "Description": "\u0022Braids\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Head_Dreadlocks_C",
+      "Description": "\u0022Dreadlocks\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Head_Mohawk_C",
+      "Description": "\u0022Mohawk\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Head_Ponytail_C",
+      "Description": "\u0022Ponytail\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHairstyle_Head_Romantic_C",
+      "Description": "\u0022Romantic\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Head_Viking_C",
+      "Description": "\u0022Viking\u0022 Head Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Facial_CurlyBeard_C",
+      "Description": "\u0022Curly Beard\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Facial_Dreadbeard_C",
+      "Description": "\u0022Dread Beard\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Facial_Goatee_C",
+      "Description": "\u0022Goatee\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Facial_Moustache_C",
+      "Description": "\u0022Moustache\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Facial_MuttonChops_C",
+      "Description": "\u0022Mutton Chops\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHairstyle_Facial_Romantic_C",
+      "Description": "\u0022Romantic\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockHair_Facial_VikingBeard_C",
+      "Description": "\u0022Viking Beard\u0022 Facial Hair Style",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockEmote_Evil_C",
+      "Description": "\u0022Evil\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockEmote_Heart_C",
+      "Description": "\u0022Heart\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockEmote_Snowball_C",
+      "Description": "\u0022Snowball\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_UnlockEmote_Turkey_C",
+      "Description": "\u0022Turkey\u0022 Emote",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_BioToxin_Barrel_C",
+      "Description": "Bio Toxin Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Crystal_Berrel_C",
+      "Description": "Crystal Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesY_Barrel_C",
+      "Description": "Plant Species Y Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_HGGlider_C",
+      "Description": "HG Glider Suit",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_HideHelmetAlt_C",
+      "Description": "Hunter Hat",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Palm_Barrel_C",
+      "Description": "Palm Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGFishBasket_C",
+      "Description": "Fish Basket",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Element_Barrel_C",
+      "Description": "Element Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Gem_Barrel_C",
+      "Description": "Gem Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGHeavyTurret_C",
+      "Description": "HG Heavy Auto Turret",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGrill_2_C",
+      "Description": "HG Grill",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_AnkyloBox_C",
+      "Description": "HG Ankylo Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_DoediBox_C",
+      "Description": "HG Doedi Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_DunkleosteusBox_C",
+      "Description": "HG Dunkleosteus Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_MantisBox_C",
+      "Description": "HG Mantis Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_TherizinoBox_C",
+      "Description": "HG Therizino Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGWaterJar_C",
+      "Description": "HG Infinity Water Jar",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_HGScuba_Mask_C",
+      "Description": "HG SCUBA Mask",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGDinoMindWipe_C",
+      "Description": "HG Dino Mindwipe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStackableMetalFloor_C",
+      "Description": "HG Stackable Metal Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_BlackPearls_Barrel_C",
+      "Description": "Black Pearl Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_SuperFertilizer_Compost_HG_C",
+      "Description": "HG Super Fertilizer",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalCropPlot_Large_C",
+      "Description": "HG Metal Large Crop Plot",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDinoCon_C",
+      "Description": "HG DinoCon",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTriFoundation_Metal_C",
+      "Description": "HG Metal Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTriCeiling_Metal_C",
+      "Description": "HG Metal Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekDoor_C",
+      "Description": "HG Double Tek Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekGenerator_C",
+      "Description": "HG Tek Generator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGWakeUp_Buff_C",
+      "Description": "HG Wake Up",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekCeiling_C",
+      "Description": "HG Tek Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_GenericBox_C",
+      "Description": "HG Generic Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGDinoImprint_C",
+      "Description": "HG Dino Imprint",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTeleporter_C",
+      "Description": "HG Teleporter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMultiStorageBox_Metal_C",
+      "Description": "HG Multi Storage Box Metal",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_GachaBox_C",
+      "Description": "HG Gacha Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGExtinctionBox_C",
+      "Description": "HG Extinction Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGCryoPotion_C",
+      "Description": "HG Cryo Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_CraftingStorageBox_Metal_C",
+      "Description": "HG Crafting Storage Box Metal",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGIsFemale_C",
+      "Description": "HG Female Maker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGIsMale_C",
+      "Description": "HG Male Maker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_HGCryoGlasses_C",
+      "Description": "HG Cryo Skin Glasses",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekWall_C",
+      "Description": "HG Tek Glass Wall",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_AmmoniteBile_Barrel_C",
+      "Description": "Ammonite Bile Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_ElementOre_Barrel_C",
+      "Description": "Element Ore Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCryoFridge_C",
+      "Description": "HG Cryofridge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Element_A_Convert_C",
+      "Description": "Element",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Element_HG_C",
+      "Description": "Crosstravel Element",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ElementShard_A_Convert_C",
+      "Description": "Crosstravel",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Sulfur_Barrel_C",
+      "Description": "Sulfur Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGReMating_C",
+      "Description": "HG ReMating",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Leech_Berrel_C",
+      "Description": "Leech Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalPipeIntake_C",
+      "Description": "HG Metal Irrigation Pipe - Intake",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_HGTekHelmet_C",
+      "Description": "HG Tek Helmet",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTrophyWall_C",
+      "Description": "HG Trophy Wall-Mount",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGInvisibilityBuff_C",
+      "Description": "Invisibility Buff",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekCompostBin_C",
+      "Description": "HG Tek Compost Bin",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekFeedingTrough_C",
+      "Description": "HG Tek Feeding Trough",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekForge_C",
+      "Description": "HG Tek Forge",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGDinoSpeed_C",
+      "Description": "HG Dino Speed Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGDinoSpeedInfinity_C",
+      "Description": "HG Infinity Dino Speed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekMiniReplicator_C",
+      "Description": "HG Mini Tek Replicator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStoneCeiling_C",
+      "Description": "HG Stone Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeCeiling_C",
+      "Description": "HG Adobe Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalCeiling_C",
+      "Description": "HG Metal Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG_TekCeiling_C",
+      "Description": "HG Tek Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGSuicide_C",
+      "Description": "HG Suicide Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWeaponStorageBox_C",
+      "Description": "HG Weapon Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGDinoKill_C",
+      "Description": "HG Dino Kill",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Chitin_Barrel_C",
+      "Description": "Chitin Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGasCollector_C",
+      "Description": "HG Gas Collector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCrystalChanger_C",
+      "Description": "HG Crystal Changer",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ARKCoin_C",
+      "Description": "ARK Coin",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekTriCeiling_C",
+      "Description": "HG Tek Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGlassMetalTriRoof_C",
+      "Description": "HG Multi Triangle Roof",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGMagaloDaywalker_C",
+      "Description": "HG Megalo Daywalker",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGDemoGun_C",
+      "Description": "HG Demo Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGachaFeeding_C",
+      "Description": "HG Gacha Feeding",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Metal_C",
+      "Description": "HG Metal Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Adobe_C",
+      "Description": "HG Adobe Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Glass_C",
+      "Description": "HG Glass Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Greenhouse_C",
+      "Description": "HG Greenhouse Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Stone_C",
+      "Description": "HG Reinforced Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Thatch_C",
+      "Description": "HG Thatch Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDoor_Wood_C",
+      "Description": "HG Wood Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGLargeGate_Metal_C",
+      "Description": "HG Metal Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGLargeGate_Adobe_C",
+      "Description": "HG Behemoth Adobe Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGLargeGate_Stone_C",
+      "Description": "HG Reinforced Behemoth Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HG_Westland_C",
+      "Description": "HG Westland Protection",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HG_WeightPotion_C",
+      "Description": "HG Weight Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGate_Adobe_C",
+      "Description": "HG Adobe Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGate_Metal_C",
+      "Description": "HG Metal Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGate_Stone_C",
+      "Description": "HG Reinforced Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGate_Wood_C",
+      "Description": "HG Wood Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGate_Glass_C",
+      "Description": "HG Glass Gate",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Obsidian_Barrel_C",
+      "Description": "Obsidian Seed",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCanopyTree_C",
+      "Description": "HG Canopy Tree",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMultiMushroom_C",
+      "Description": "HG Multi-Stalk Mushroom",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGCookingPot_C",
+      "Description": "HG Cooking Pot",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDedicatedBox_C",
+      "Description": "HG Dedicated Storage",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGMakeGender_C",
+      "Description": "HG Make Gender",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekDinoCloning_C",
+      "Description": "HG Dino Cloning",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGColumn_C",
+      "Description": "HG Column",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_HGThorsHammer_C",
+      "Description": "Thors Hammer",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_CptAmShield_C",
+      "Description": "Capt. Shield",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemCostume_HGDinoArmor_C",
+      "Description": "HG Dino Armor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalSign_Large_C",
+      "Description": "HG Metal Billboard",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGUnderwaterBase_C",
+      "Description": "HG Vacuum Compartment",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGUnderwaterBase_Moonpool_C",
+      "Description": "HG Vacuum Compartment Moonpool",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGBossBox_C",
+      "Description": "HG Mini Obelisk",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGSleepingPod_C",
+      "Description": "HG Sleeping Pod",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWaterTank_C",
+      "Description": "HG Water Tank",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGPoisonGrenade_C",
+      "Description": "HG Poison Grenade",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGPostBox_C",
+      "Description": "HG Post Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BloodPack_HG_C",
+      "Description": "Blood Pack",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_PreservingSalt_HG_C",
+      "Description": "HG Preserving Salt",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGWhip_C",
+      "Description": "Whip",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Adobe_HG_C",
+      "Description": "HG Adobe Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Glass_HG_C",
+      "Description": "HG Glass Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Greenhouse_HG_C",
+      "Description": "HG Greenhouse Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Metal_HG_C",
+      "Description": "HG Metal Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Stone_HG_C",
+      "Description": "HG Reinforced Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoor_Wood_HG_C",
+      "Description": "HG Wooden Double Door",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Adobe_HG_C",
+      "Description": "HG Adobe Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Glass_HG_C",
+      "Description": "HG Glass Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Greenhouse_HG_C",
+      "Description": "HG Greenhouse Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Metal_HG_C",
+      "Description": "HG Metal Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Stone_HG_C",
+      "Description": "HG Stone Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DoubleDoorframe_Wood_HG_C",
+      "Description": "HG Wooden Double Doorframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekElevator_C",
+      "Description": "HG Tek Elevator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGMutation_C",
+      "Description": "HG Mutation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeTriFoundation_C",
+      "Description": "HG Adobe Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeTriCeiling_C",
+      "Description": "HG Adobe Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTriCeiling_Wood_C",
+      "Description": "HG Wooden Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTriFoundation_Wood_C",
+      "Description": "HG Wooden Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTriCeiling_Stone_C",
+      "Description": "HG Stone Triangle Ceiling",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTriFoundation_Stone_C",
+      "Description": "HG Stone Triangle Foundation",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGNoStealing_C",
+      "Description": "HG Theft \u0026 Bug Prevention",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekElevator_Tri_C",
+      "Description": "HG Triangle Tek Elevator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGHitchingPost_C",
+      "Description": "HG Hitching Post",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStairsWood_C",
+      "Description": "HG Wooden Stairs",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStairsStone_C",
+      "Description": "HG Stone Stairs",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTrapdoor_Adobe_C",
+      "Description": "HG Adobe Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTrapdoor_Glass_C",
+      "Description": "HG Glass Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTrapdoor_Metal_C",
+      "Description": "HG Metal Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStoneTrapdoor_C",
+      "Description": "HG Reinforced Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWoodTrapdoor_C",
+      "Description": "HG Wooden Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStoneCeilingDoorGiant_C",
+      "Description": "HG Giant Reinforced Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStoneHatchframeGiant_C",
+      "Description": "HG Giant Stone Hatchframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeHatchframeGiant_C",
+      "Description": "HG Giant Adobe Hatchframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeTrapDoorGiant_C",
+      "Description": "HG Giant Adobe Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalHatchframeGiant_C",
+      "Description": "HG Giant Metal Hatchframe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalTrapdoorGiant_C",
+      "Description": "HG Giant Metal Trapdoor",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeSlopedWall_Left_C",
+      "Description": "HG Sloped Adobe Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGAdobeSlopedWall_Right_C",
+      "Description": "HG Sloped Adobe Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalWall_Sloped_Left_C",
+      "Description": "HG Sloped Metal Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMetalWall_Sloped_Right_C",
+      "Description": "HG Sloped Metal Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStoneWall_Sloped_Left_C",
+      "Description": "Sloped Stone Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStoneWall_Sloped_Right_C",
+      "Description": "HG Sloped Stone Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWoodWall_Sloped_Left_C",
+      "Description": "Sloped Wood Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWoodWall_Sloped_Right_C",
+      "Description": "HG Sloped Wood Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGreenhouseWall_Sloped_Left_C",
+      "Description": "HG Sloped Greenhouse Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGGreenhouseWall_Sloped_Right_C",
+      "Description": "HG Sloped Greenhouse Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekWall_Sloped_Left_C",
+      "Description": "HG Sloped Tek Wall Left",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTekWall_Sloped_Right_C",
+      "Description": "HG Sloped Tek Wall Right",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGMutator_C",
+      "Description": "HG Mutator",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HG4Wall_Forcefield_C",
+      "Description": "HG Large Forcefield Wall",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGHeatVision_C",
+      "Description": "HG Heat-Vision",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGWall_Glass_C",
+      "Description": "HG Glass Wall",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGBookShelf_C",
+      "Description": "HG Book Shelf Storage Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGSkinBox_C",
+      "Description": "HG Skin Box",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGStructurSelector_C",
+      "Description": "HG Structur Selector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGGlassProtector_C",
+      "Description": "HG Glass Protector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGTexturSelector_C",
+      "Description": "HG Textur Selector",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HGNoCorrupt_C",
+      "Description": "HG Capture Corrupted Dino",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGLightSetter_C",
+      "Description": "HG Light Setter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGDinoKillerGun_C",
+      "Description": "HG Dino Killer Gun",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGOceanPlatform_Wood_C",
+      "Description": "HG Wood Ocean Platform",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGOceanPlatform_Metal_C",
+      "Description": "HG Metal Ocean Platform",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_HG_MagicPotion_C",
+      "Description": "HG Magic Potion",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDedicatedStorage_C",
+      "Description": "HG Dedicated Storage 2.0",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGConvert_C",
+      "Description": "HG Convert",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDedicatedSort_C",
+      "Description": "HG Dedicated Sort",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGChibiDisplay_C",
+      "Description": "HG Chibi Display",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGChibiSign_C",
+      "Description": "HG Chibi Sign",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGVisibilityTool_C",
+      "Description": "HG Visibility Tool",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGNanny_C",
+      "Description": "HG Zoe",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_Crystal_IslesPrimal_HG_C",
+      "Description": "Primal Crystal",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTaxidermy_Small_C",
+      "Description": "HG Small Taxidermy Base",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTaxidermy_Medium_C",
+      "Description": "HG Medium Taxidermy Base",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTaxidermy_Large_C",
+      "Description": "HG Large Taxidermy Base",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_HGPersonalTeleporter_C",
+      "Description": "HG Personal Teleporter",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGTeleporterPlus_C",
+      "Description": "HG Teleporter Plus",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGDinoStorage_C",
+      "Description": "HG Dino Storage",
+      "Mod": "HG ARK Reloaded"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGBeetlejuice_C",
+      "Description": "HG Beetlejuice",
+      "Mod": "HG ARK Reloaded"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}
