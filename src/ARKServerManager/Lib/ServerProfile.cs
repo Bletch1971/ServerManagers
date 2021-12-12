@@ -5762,9 +5762,9 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(AutoSavePeriodMinutesProperty, sourceProfile.AutoSavePeriodMinutes);
 
-            this.SetValue(MOTDProperty, sourceProfile.MOTD);
-            this.SetValue(MOTDDurationProperty, sourceProfile.MOTDDuration);
-            this.SetNullableValue(MOTDIntervalProperty, sourceProfile.MOTDInterval);
+            //this.SetValue(MOTDProperty, sourceProfile.MOTD);
+            //this.SetValue(MOTDDurationProperty, sourceProfile.MOTDDuration);
+            //this.SetNullableValue(MOTDIntervalProperty, sourceProfile.MOTDInterval);
 
             this.SetValue(EnableExtinctionEventProperty, sourceProfile.EnableExtinctionEvent);
             this.SetValue(ExtinctionEventTimeIntervalProperty, sourceProfile.ExtinctionEventTimeInterval);
@@ -5802,7 +5802,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(CrossplayProperty, sourceProfile.Crossplay);
             this.SetValue(EpicOnlyProperty, sourceProfile.EpicOnly);
             this.SetValue(EnablePublicIPForEpicProperty, sourceProfile.EnablePublicIPForEpic);
-            this.SetValue(AltSaveDirectoryNameProperty, sourceProfile.AltSaveDirectoryName);
+            //this.SetValue(AltSaveDirectoryNameProperty, sourceProfile.AltSaveDirectoryName);
             this.SetValue(CrossArkClusterIdProperty, sourceProfile.CrossArkClusterId);
             this.SetValue(ClusterDirOverrideProperty, sourceProfile.ClusterDirOverride);
 

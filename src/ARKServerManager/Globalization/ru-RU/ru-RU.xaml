@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">09.12.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">12.12.2021 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -56,6 +57,7 @@
     <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -1255,7 +1257,7 @@
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Увеличение множителя позволяет размещать структуры дальше от края платформы.</sys:String>
     <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesLabel">Макс количество ворот на седлах-платформах</sys:String>
     <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesTooltip">Ограничивает количество ворот, которые можно разместить на седлах-платформах. Этот вариант не имеет обратной силы, поэтому применение этого изменения потребует некоторой ручной административной работы, чтобы очистить все существующие платформы, превышающие лимит.</sys:String>
-    
+
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Включить перераспределение сложности</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">Если включено, это позволит изменить максимальный уровень существ в мире.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyLabel">Максимальный уровень динозавров:</sys:String>
@@ -1264,7 +1266,7 @@
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
     <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destroy Tames Over Level:</sys:String>
     <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Tames that exceed this level will be deleted on server start. To disable deletion set to 0.</sys:String>
-
+    
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Вкл загрузку из данных кластера</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если включено, это позволит загружать выживших/предметов/динозавров на сервер.</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Откл загрузку выживших на сервер</sys:String>

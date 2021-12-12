@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:DBAFCE91-2235-4B6C-AE9B-5E4EF9FEC8F5</id>
-    <title>1.1.411 (1.1.411.6)</title>
-    <summary>1.1.411.6</summary>
+    <title>1.1.411 (1.1.411.8)</title>
+    <summary>1.1.411.8</summary>
     <link href="" />
     <updated>2021-12-12T00:00:00Z</updated>
     <content type="xhtml">
@@ -35,6 +35,7 @@
           <ul>
             <li>Global Settings - Added reset button to the Data Directory Location.</li>
             <li>Server Monitor window now stores it's location.</li>
+            <li>Removed MOTD and Alternate Save Directory from the Administration section of the Sync.</li>
             <li>fr-FR Translation file updated.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>

@@ -8,6 +8,30 @@
   <updated>2021-12-12T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:76247C33-53B1-4947-8A4B-F4B933E8AE82</id>
+    <title>1.1.411 (1.1.411.8)</title>
+    <summary>1.1.411.8</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Removed MOTD and Alternate Save Directory from the Administration section of the Sync.</li>
+            <li>ru-RU Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:C02D44F9-E3AA-4CA0-BF2F-110F8C83CC21</id>
     <title>1.1.411 (1.1.411.7)</title>
     <summary>1.1.411.7</summary>
