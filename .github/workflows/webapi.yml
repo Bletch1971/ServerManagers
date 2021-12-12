@@ -36,7 +36,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/webapi
 
   deploy:
-    if: contains(github.ref, "master")
+    if: contains(github.ref, 'master'')
     runs-on: windows-latest
     needs: build
     environment:
