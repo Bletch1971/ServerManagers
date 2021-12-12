@@ -3,7 +3,8 @@ name: Build Server Managers
 on: 
   push:
     paths:
-    - 'src/**'
+      - 'src/**'
+      - '.github/workflows/msbuild.yml'
   workflow_dispatch:
 
 env:
