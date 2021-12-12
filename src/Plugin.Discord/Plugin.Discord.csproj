@@ -30,6 +30,7 @@
     <None Remove="DeployToGithub.cmd" />
     <None Remove="Globalization\de-DE\de-DE.xaml" />
     <None Remove="Globalization\en-US\en-US.xaml" />
+    <None Remove="Globalization\fr-FR\fr-FR.xaml" />
     <None Remove="Globalization\pt-BR\pt-BR.xaml" />
     <None Remove="Globalization\zh-CN\zh-CN.xaml" />
     <None Remove="MakeLatestBetaVersionGithub.ps1" />
@@ -63,6 +64,7 @@
     <Resource Include="Art\favicon.ico" />
     <Resource Include="Globalization\en-US\en-US.xaml" />
     <EmbeddedResource Include="Globalization\de-DE\de-DE.xaml" />
+    <EmbeddedResource Include="Globalization\fr-FR\fr-FR.xaml" />
     <EmbeddedResource Include="Globalization\pt-BR\pt-BR.xaml" />
     <EmbeddedResource Include="Globalization\zh-CN\zh-CN.xaml" />
   </ItemGroup>

@@ -119,7 +119,7 @@
     <sys:String x:Key="ConfigProfileWindow_TestErrorLabel">Ocorreu um erro ao tentar testar o perfil de configuração.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestEnabledErrorLabel">O perfil não está ativado e não pode ser testado.</sys:String>
 	
-    <sys:String x:Key="ConfigProfileWindow_TestAlertMessage">Testa '{0}' mensagem tipo de alerta para nome do perfil '{1}'</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestAlertMessage">Teste '{0}' tipo de alerta para nome do perfil '{1}'</sys:String>
     <!--#endregion-->
 
     <!--#region Version Feed Window -->
