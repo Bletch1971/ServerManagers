@@ -10,18 +10,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
-            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFECE1D4" Offset="1"/>
-                <GradientStop Color="#FFEAE8E6"/>
-            </LinearGradientBrush>
-
-            <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
-                <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-                <Setter Property="Background" Value="Transparent"/>
-            </Style>
         </ResourceDictionary>
     </Window.Resources>
     

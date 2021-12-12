@@ -3,15 +3,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
-        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
+        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:enum="clr-namespace:ServerManagerTool.Enums"
         xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
-        xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
         MinWidth="600" MinHeight="500" Width="900" Height="500" Left="50" Top="50" ResizeMode="CanResize"
-        Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" StateChanged="Window_StateChanged"
+        Loaded="ServerMonitorWindow_Loaded" SizeChanged="ServerMonitorWindow_SizeChanged" StateChanged="ServerMonitorWindow_StateChanged" LocationChanged="ServerMonitorWindow_LocationChanged"
         Name="ServerMonitorUI" Icon="../Art/favicon.ico" Title="{DynamicResource ServerMonitor_Title}">
     <Window.Resources>
         <ResourceDictionary>
@@ -19,17 +18,8 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-            <cc:CommaDelimitedStringCountConverter x:Key="CommaDelimitedStringCountConverter"/>
-            <cc:InstalledVersionConverter x:Key="InstalledVersionConverter"/>
+            
             <vm:MapNameValueConverter x:Key="MapNameValueConverter"/>
-
-            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFECE1D4" Offset="1"/>
-                <GradientStop Color="#FFEAE8E6"/>
-            </LinearGradientBrush>
-
         </ResourceDictionary>
     </Window.Resources>
     

@@ -4,8 +4,20 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     >
 
+    <!--#region Alert Types -->
+    <sys:String x:Key="AlertType_Backup">Backup</sys:String>
+    <sys:String x:Key="AlertType_Error">Erro</sys:String>
+    <sys:String x:Key="AlertType_ModUpdateDetected">Mod Update Detectado</sys:String>
+    <sys:String x:Key="AlertType_Shutdown">Desligar</sys:String>
+    <sys:String x:Key="AlertType_ShutdownMessage">Mensagem de desligamento</sys:String>
+    <sys:String x:Key="AlertType_ShutdownReason">Motivo de desligamento</sys:String>
+    <sys:String x:Key="AlertType_ServerStatusChange">Mudança de status do servidor</sys:String>
+    <sys:String x:Key="AlertType_Startup">Ligar</sys:String>
+    <sys:String x:Key="AlertType_UpdateResults">Resultados da atualização</sys:String>
+    <!--#endregion-->
+
     <!--#region Global -->
-    <sys:String x:Key="Global_CancelButtonLabel">Cancela</sys:String>
+    <sys:String x:Key="Global_CancelButtonLabel">Cancelar</sys:String>
     <sys:String x:Key="Global_CloseButtonLabel">Fechar</sys:String>
     <sys:String x:Key="Global_OkButtonLabel">OK</sys:String>
     <sys:String x:Key="Global_SaveButtonLabel">Salva</sys:String>
@@ -61,7 +73,7 @@
     <sys:String x:Key="ConfigProfileWindow_BotNameTooltip">Isso substituirá o nome que você configurou no seu webhook. Deixe em branco para usar o padrão.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_UseTTSLabel">Usar texto para fala (TTS)</sys:String>
     <sys:String x:Key="ConfigProfileWindow_UseTTSTooltip">Se ativado, fará o bot anunciar com Texto e Voz, caso contrário, desativará Texto e Voz.</sys:String>
-    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameLabel">Mensagem de prefixo com nome do perfil do Serve Manager</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameLabel">Mensagem em prefixo do perfil</sys:String>
     <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameTooltip">Se ativada, a mensagem de alerta será enviada com o prefixo do nome do perfil do Serve Manager.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_MessageOptionsLabel">Opções de mensagem</sys:String>
     <sys:String x:Key="ConfigProfileWindow_MessageOptionsBoldLabel">Negrito</sys:String>
@@ -86,7 +98,7 @@
     <sys:String x:Key="ConfigProfileWindow_ProfileNameColumnLabel">Nome do perfil do Serve Manager</sys:String>
     <sys:String x:Key="ConfigProfileWindow_AlertTypeColumnLabel">Tipo de alerta</sys:String>
 
-    <sys:String x:Key="ConfigProfileWindow_TestButtonLabel">Teste</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestButtonLabel">Testar</sys:String>
     
     <sys:String x:Key="ConfigProfileWindow_AddErrorTitle">Erro ao adicionar</sys:String>
     <sys:String x:Key="ConfigProfileWindow_AddAlertTypeErrorLabel">Ocorreu um erro ao tentar adicionar um tipo de alerta.</sys:String>
@@ -106,6 +118,8 @@
     <sys:String x:Key="ConfigProfileWindow_TestErrorTitle">Erro no teste</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestErrorLabel">Ocorreu um erro ao tentar testar o perfil de configuração.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestEnabledErrorLabel">O perfil não está ativado e não pode ser testado.</sys:String>
+	
+    <sys:String x:Key="ConfigProfileWindow_TestAlertMessage">Teste '{0}' tipo de alerta para nome do perfil '{1}'</sys:String>
     <!--#endregion-->
 
     <!--#region Version Feed Window -->

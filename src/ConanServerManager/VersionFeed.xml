@@ -5,7 +5,176 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2020-11-25T00:00:00Z</updated>
+  <updated>2021-12-12T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
+    <title>1.1.56 (1.1.56.6)</title>
+    <summary>1.1.56.6</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              A new Discord Bot has been added to the server manager.<br/>
+              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
+              <font color="#e62919">
+                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
+              </font>
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Added reset button to the Data Directory Location.</li>
+            <li>Server Monitor window now stores it's location.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A3A790A9-D511-4CE8-AC15-A36B3DAB4385</id>
+    <title>1.1.55 (1.1.55.2)</title>
+    <summary>1.1.55.2</summary>
+    <link href="" />
+    <updated>2021-12-05T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed some globalization key values (maps and branches).</li>
+            <li>Changed the way the data directory is selected and created on first startup of the server manager.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:38961ED8-0964-4C1A-B09C-8AE2C5FCF76E</id>
+    <title>1.1.54 (1.1.54.3)</title>
+    <summary>1.1.54.3</summary>
+    <link href="" />
+    <updated>2021-12-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added the Profile ID to the top of the profile window.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added globalization to the Main Window Start Mode setting in the Global Settings.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:80B2DFDC-E9BE-4B56-A1FE-DD57E64647D1</id>
+    <title>1.1.53 (1.1.53.1)</title>
+    <summary>1.1.53.1</summary>
+    <link href="" />
+    <updated>2021-11-24T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a crashing bug when CSM closes and is unable to find the backup location to save the config settings.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - added option to set the Main Window start mode - Normal, Maximized, Minimized.</li>
+            <li>Main Window - now stores the Left and Top positions of the window, when in Normal mode. Will restore the window position when started. Defaults to 50,50.</li>
+            <li>Server Settings - added resizing to all the grids, so the height can be increased/decreased. The height is also remembered, so when you reopen, it will size the grid correctly.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Fixed the steamcmd warning about 'Please use force_install_dir before login!'.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:285E9972-4FC6-49EA-8FAD-1086F7FC5354</id>
+    <title>1.1.52 (1.1.52.1)</title>
+    <summary>1.1.52.1</summary>
+    <link href="" />
+    <updated>2021-11-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Status checks - a few code tweaks to the server status checks.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:2B49A030-A742-476B-B811-6F0D7780B117</id>
+    <title>1.1.51 (1.1.51.1)</title>
+    <summary>1.1.51.1</summary>
+    <link href="" />
+    <updated>2021-08-22T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Added new server transfer options (server whitelist option in future version).</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:6914861A-2D4E-4F08-89A3-D3D7A77F74C1</id>

@@ -1,7 +1,7 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2018-11-07T11:00:00.0000000Z",
+  "Version": "1.1.0",
+  "Created": "2021-08-23T11:00:00.0000000Z",
   "Creatures": [
     {
       "NameTag": "Artho",
@@ -294,27 +294,11 @@
   ],
   "Engrams": [
     {
-      "Level": 88,
-      "Points": 60,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_CryoFridge_C",
-      "Description": "Cryofridge",
-      "Mod": "Extinction"
-    },
-    {
       "Level": 22,
       "Points": 6,
       "IsTekGram": false,
       "ClassName": "EngramEntry_DinoLeash_C",
       "Description": "Dino Leash",
-      "Mod": "Extinction"
-    },
-    {
-      "Level": 51,
-      "Points": 20,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_EmptyCryopod_C",
-      "Description": "Empty Cryopod",
       "Mod": "Extinction"
     },
     {
@@ -479,13 +463,6 @@
     }
   ],
   "Items": [
-    {
-      "Category": "Saddles",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItem_WeaponEmptyCryopod_C",
-      "Description": "Empty Cryopod",
-      "Mod": "Extinction"
-    },
     {
       "Category": "Saddles",
       "IsHarvestable": false,
@@ -846,15 +823,15 @@
     {
       "Category": "Spawner",
       "IsHarvestable": false,
-      "ClassName": "PrimalItem_Spawner_Mek_C",
-      "Description": "Unassembled Mek",
+      "ClassName": "PrimalItem_Spawner_Enforcer_CityTerminal_C",
+      "Description": "Unassembled Enforcer CityTerminal",
       "Mod": "Extinction"
     },
     {
-      "Category": "Structure",
+      "Category": "Spawner",
       "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_CryoFridge_C",
-      "Description": "Cryofridge",
+      "ClassName": "PrimalItem_Spawner_Mek_C",
+      "Description": "Unassembled Mek",
       "Mod": "Extinction"
     },
     {

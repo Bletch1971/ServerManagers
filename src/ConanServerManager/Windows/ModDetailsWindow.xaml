@@ -2,7 +2,6 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
-        xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
         MinWidth="600" MinHeight="480" Width="900" Height="480" ResizeMode="CanResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
         Loaded="Window_Loaded" Closing="Window_Closing"
         Name="ModDetailsUI" Icon="../Art/favicon.ico" Title="{DynamicResource ModDetails_Title}">
@@ -12,14 +11,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <cc:IsNullOrWhiteSpaceValueConverter x:Key="IsNullOrWhiteSpaceValueConverter"/>
-            <cc:InvertBooleanConverter x:Key="InvertBooleanConverter"/>
-
-            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFECE1D4" Offset="1"/>
-                <GradientStop Color="#FFEAE8E6"/>
-            </LinearGradientBrush>
         </ResourceDictionary>
     </Window.Resources>
     

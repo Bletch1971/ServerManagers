@@ -12,7 +12,7 @@ namespace ServerManagerTool {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
     public sealed partial class Config : global::System.Configuration.ApplicationSettingsBase {
         
         private static Config defaultInstance = ((Config)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Config())));
@@ -82,7 +82,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login anonymous +force_install_dir \"{0}\"  \"+app_update 376030 {1} {2}\" +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{0}\"  +login anonymous \"+app_update 376030 {1} {2}\" +quit")]
         public string SteamCmdInstallServerArgsFormat {
             get {
                 return ((string)(this["SteamCmdInstallServerArgsFormat"]));
@@ -578,7 +578,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login anonymous +force_install_dir \"{0}\"  \"+app_update 445400 {1} {2}\" +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{0}\"  +login anonymous \"+app_update 445400 {1} {2}\" +quit")]
         public string SteamCmdInstallServerArgsFormat_SotF {
             get {
                 return ((string)(this["SteamCmdInstallServerArgsFormat_SotF"]));
@@ -1339,7 +1339,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.azurewebsites.net/api/server/{0}/{1}/{2}/{3}")]
         public string ServerStatusUrlFormat {
             get {
                 return ((string)(this["ServerStatusUrlFormat"]));
@@ -1947,7 +1947,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ED89B8FA-0E0B-46CC-A90B-595E69AE9A7E")]
+        [global::System.Configuration.DefaultSettingValueAttribute("6DCE02B1-8F41-4AF8-A6EA-E2E026CAB023")]
         public string ServerManagerCode {
             get {
                 return ((string)(this["ServerManagerCode"]));
@@ -2561,6 +2561,429 @@ namespace ServerManagerTool {
             }
             set {
                 this["SectionPreventTransferOverridesEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength PreventTransferOverrideGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["PreventTransferOverrideGridHeight"]));
+            }
+            set {
+                this["PreventTransferOverrideGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCratesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCratesGridHeight"]));
+            }
+            set {
+                this["SupplyCratesGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCrateItemSetsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCrateItemSetsGridHeight"]));
+            }
+            set {
+                this["SupplyCrateItemSetsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCrateItemSetEntriesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCrateItemSetEntriesGridHeight"]));
+            }
+            set {
+                this["SupplyCrateItemSetEntriesGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength SupplyCrateItemsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["SupplyCrateItemsGridHeight"]));
+            }
+            set {
+                this["SupplyCrateItemsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength NPCSpawnSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["NPCSpawnSettingsGridHeight"]));
+            }
+            set {
+                this["NPCSpawnSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength StackSizeOverrideGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["StackSizeOverrideGridHeight"]));
+            }
+            set {
+                this["StackSizeOverrideGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CraftingOverrideItemGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CraftingOverrideItemGridHeight"]));
+            }
+            set {
+                this["CraftingOverrideItemGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomLevelsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomLevelsGridHeight"]));
+            }
+            set {
+                this["CustomLevelsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomEngineSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomEngineSettingsGridHeight"]));
+            }
+            set {
+                this["CustomEngineSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomGameSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomGameSettingsGridHeight"]));
+            }
+            set {
+                this["CustomGameSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength CustomGameUserSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["CustomGameUserSettingsGridHeight"]));
+            }
+            set {
+                this["CustomGameUserSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250")]
+        public global::System.Windows.GridLength ServerFilesGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["ServerFilesGridHeight"]));
+            }
+            set {
+                this["ServerFilesGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength EngramsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["EngramsGridHeight"]));
+            }
+            set {
+                this["EngramsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength EnvironmentListBoxHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["EnvironmentListBoxHeight"]));
+            }
+            set {
+                this["EnvironmentListBoxHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public global::System.Windows.GridLength DinoSettingsGridHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["DinoSettingsGridHeight"]));
+            }
+            set {
+                this["DinoSettingsGridHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public global::System.Windows.GridLength MOTDHeight {
+            get {
+                return ((global::System.Windows.GridLength)(this["MOTDHeight"]));
+            }
+            set {
+                this["MOTDHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.WindowState MainWindow_WindowState {
+            get {
+                return ((global::System.Windows.WindowState)(this["MainWindow_WindowState"]));
+            }
+            set {
+                this["MainWindow_WindowState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double MainWindow_Left {
+            get {
+                return ((double)(this["MainWindow_Left"]));
+            }
+            set {
+                this["MainWindow_Left"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double MainWindow_Top {
+            get {
+                return ((double)(this["MainWindow_Top"]));
+            }
+            set {
+                this["MainWindow_Top"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("asmdata")]
+        public string DefaultDataDirectoryName {
+            get {
+                return ((string)(this["DefaultDataDirectoryName"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotEnabled {
+            get {
+                return ((bool)(this["DiscordBotEnabled"]));
+            }
+            set {
+                this["DiscordBotEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("asm")]
+        public string DiscordBotPrefix {
+            get {
+                return ((string)(this["DiscordBotPrefix"]));
+            }
+            set {
+                this["DiscordBotPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiscordBotToken {
+            get {
+                return ((string)(this["DiscordBotToken"]));
+            }
+            set {
+                this["DiscordBotToken"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DiscordBotServerId {
+            get {
+                return ((string)(this["DiscordBotServerId"]));
+            }
+            set {
+                this["DiscordBotServerId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://discord.com/developers/applications")]
+        public string DiscordBotApplyUrl {
+            get {
+                return ((string)(this["DiscordBotApplyUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/thread/8764/get-own-discord-bot")]
+        public string DiscordBotHelpUrl {
+            get {
+                return ((string)(this["DiscordBotHelpUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SectionDiscordBotIsExpanded {
+            get {
+                return ((bool)(this["SectionDiscordBotIsExpanded"]));
+            }
+            set {
+                this["SectionDiscordBotIsExpanded"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordBackup {
+            get {
+                return ((bool)(this["AllowDiscordBackup"]));
+            }
+            set {
+                this["AllowDiscordBackup"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordUpdate {
+            get {
+                return ((bool)(this["AllowDiscordUpdate"]));
+            }
+            set {
+                this["AllowDiscordUpdate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordStart {
+            get {
+                return ((bool)(this["AllowDiscordStart"]));
+            }
+            set {
+                this["AllowDiscordStart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordRestart {
+            get {
+                return ((bool)(this["AllowDiscordRestart"]));
+            }
+            set {
+                this["AllowDiscordRestart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordShutdown {
+            get {
+                return ((bool)(this["AllowDiscordShutdown"]));
+            }
+            set {
+                this["AllowDiscordShutdown"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AllowDiscordStop {
+            get {
+                return ((bool)(this["AllowDiscordStop"]));
+            }
+            set {
+                this["AllowDiscordStop"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double ServerMonitorWindow_Left {
+            get {
+                return ((double)(this["ServerMonitorWindow_Left"]));
+            }
+            set {
+                this["ServerMonitorWindow_Left"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double ServerMonitorWindow_Top {
+            get {
+                return ((double)(this["ServerMonitorWindow_Top"]));
+            }
+            set {
+                this["ServerMonitorWindow_Top"] = value;
             }
         }
     }

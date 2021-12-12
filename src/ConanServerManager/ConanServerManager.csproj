@@ -37,7 +37,7 @@
     <SuiteName>Server Managers</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.1.51.%2a</ApplicationVersion>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>false</BootstrapperEnabled>
@@ -160,6 +160,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Delegates\ServerStatusChangeDelegate.cs" />
     <Compile Include="Lib\Model\PlayerListParameters.cs" />
     <Compile Include="Lib\Model\RconParameters.cs" />
     <Compile Include="Lib\Serialization\IniFileEntryAttribute.cs" />
@@ -171,6 +172,8 @@
     <Compile Include="Lib\ViewConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="Lib\ViewConverters\MapNameValueConverter.cs" />
     <Compile Include="Lib\ViewModel\PlayerInfo.cs" />
+    <Compile Include="Utils\DiscordBotHelper.cs" />
+    <Compile Include="Utils\DiscordPluginHelper.cs" />
     <Compile Include="Windows\AddUserWindow.xaml.cs">
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>
@@ -180,10 +183,13 @@
     <Compile Include="Windows\CommandLineWindow.xaml.cs">
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DataDirectoryWindow.xaml.cs">
+      <DependentUpon>DataDirectoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\GameDataWindow.xaml.cs">
       <DependentUpon>GameDataWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\GlobalSettingsControl.xaml.cs">
+    <Compile Include="UserControls\GlobalSettingsControl.xaml.cs">
       <DependentUpon>GlobalSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
@@ -216,7 +222,7 @@
     <Compile Include="Windows\ServerMonitorWindow.xaml.cs">
       <DependentUpon>ServerMonitorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServerSettingsControl.xaml.cs">
+    <Compile Include="UserControls\ServerSettingsControl.xaml.cs">
       <DependentUpon>ServerSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\SettingsWindow.xaml.cs">
@@ -305,11 +311,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\DataDirectoryWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\GameDataWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\GlobalSettingsControl.xaml">
+    <Page Include="UserControls\GlobalSettingsControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -353,7 +363,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\ServerSettingsControl.xaml">
+    <Page Include="UserControls\ServerSettingsControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -575,6 +585,10 @@
     <ProjectReference Include="..\ServerManager.Common\ServerManager.Common.csproj">
       <Project>{7c99d9f7-0c65-4116-927a-94eb018c88fd}</Project>
       <Name>ServerManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerManager.Discord\ServerManager.Discord.csproj">
+      <Project>{c4c8000d-5e45-497c-a218-b95a1567010e}</Project>
+      <Name>ServerManager.Discord</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServerManager.Updater\ServerManager.Updater.csproj">
       <Project>{3e0c9ee6-780f-4fef-ba03-e38062a5fdb6}</Project>

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using ServerManagerTool.Plugin.Common;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,27 +8,37 @@ namespace ServerManagerTool.Plugin.Discord
 {
     public static class WindowUtils
     {
-        public static void RemoveDefaultResourceDictionary(Window window, string defaultDictionary)
+        public static void UpdateResourceDictionary(Window window, string languageCode)
         {
-            if (window == null)
-                return;
-
-            var dictToRemove = window.Resources.MergedDictionaries.FirstOrDefault(d => d.Source.OriginalString.Contains(defaultDictionary));
-            if (dictToRemove != null)
+            var assembly = typeof(ResourceUtils).Assembly;
+            if (assembly != null)
             {
-                window.Resources.MergedDictionaries.Remove(dictToRemove);
+                var resourceUtilsType = assembly.GetType(typeof(ResourceUtils).FullName, false, true);
+                if (resourceUtilsType != null)
+                {
+                    var method = resourceUtilsType.GetMethod(nameof(UpdateResourceDictionary), new System.Type[] { typeof(Window), typeof(string) });
+                    if (method != null)
+                    {
+                        method.Invoke(null, new object[] { window, languageCode });
+                    }
+                }
             }
         }
 
-        public static void RemoveDefaultResourceDictionary(UserControl control, string defaultDictionary)
+        public static void UpdateResourceDictionary(UserControl control, string languageCode)
         {
-            if (control == null)
-                return;
-
-            var dictToRemove = control.Resources.MergedDictionaries.FirstOrDefault(d => d.Source.OriginalString.Contains(defaultDictionary));
-            if (dictToRemove != null)
+            var assembly = typeof(ResourceUtils).Assembly;
+            if (assembly != null)
             {
-                control.Resources.MergedDictionaries.Remove(dictToRemove);
+                var resourceUtilsType = assembly.GetType(typeof(ResourceUtils).FullName, false, true);
+                if (resourceUtilsType != null)
+                {
+                    var method = resourceUtilsType.GetMethod(nameof(UpdateResourceDictionary), new System.Type[] { typeof(UserControl), typeof(string) });
+                    if (method != null)
+                    {
+                        method.Invoke(null, new object[] { control, languageCode });
+                    }
+                }
             }
         }
 

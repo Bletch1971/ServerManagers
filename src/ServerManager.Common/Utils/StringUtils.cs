@@ -57,28 +57,38 @@ namespace ServerManagerTool.Common.Utils
         {
             if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
             {
-                bool boolValue;
-                bool.TryParse(value, out boolValue);
+                bool.TryParse(value, out bool boolValue);
                 property.SetValue(obj, boolValue);
             }
             else if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
             {
-                int intValue;
-                int.TryParse(value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out intValue);
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 property.SetValue(obj, intValue);
             }
             else if (property.PropertyType == typeof(float) || property.PropertyType == typeof(float?))
             {
                 var tempValue = value.Replace("f", "");
 
-                float floatValue;
-                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out floatValue);
+                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out float floatValue);
                 property.SetValue(obj, floatValue);
             }
             else if (property.PropertyType == typeof(NullableValue<int>))
             {
-                int intValue;
-                int.TryParse(value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out intValue);
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 var field = property.GetValue(obj) as NullableValue<int>;
                 property.SetValue(obj, field.SetValue(true, intValue));
             }
@@ -86,8 +96,7 @@ namespace ServerManagerTool.Common.Utils
             {
                 var tempValue = value.Replace("f", "");
 
-                float floatValue;
-                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out floatValue);
+                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out float floatValue);
                 var field = property.GetValue(obj) as NullableValue<float>;
                 property.SetValue(obj, field.SetValue(true, floatValue));
             }
@@ -121,8 +130,14 @@ namespace ServerManagerTool.Common.Utils
             }
             if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
             {
-                int intValue;
-                int.TryParse(value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out intValue);
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 property.SetValue(obj, intValue);
                 return true;
             }
@@ -130,15 +145,20 @@ namespace ServerManagerTool.Common.Utils
             {
                 var tempValue = value.Replace("f", "");
 
-                float floatValue;
-                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out floatValue);
+                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out float floatValue);
                 property.SetValue(obj, floatValue);
                 return true;
             }
             if (property.PropertyType == typeof(NullableValue<int>))
             {
-                int intValue;
-                int.TryParse(value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out intValue);
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 var field = property.GetValue(obj) as NullableValue<int>;
                 property.SetValue(obj, field.SetValue(true, intValue));
                 return true;
@@ -147,8 +167,7 @@ namespace ServerManagerTool.Common.Utils
             {
                 var tempValue = value.Replace("f", "");
 
-                float floatValue;
-                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out floatValue);
+                float.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out float floatValue);
                 var field = property.GetValue(obj) as NullableValue<float>;
                 property.SetValue(obj, field.SetValue(true, floatValue));
                 return true;

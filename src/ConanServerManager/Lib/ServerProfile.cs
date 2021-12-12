@@ -380,6 +380,22 @@ namespace ServerManagerTool.Lib
             set { SetValue(KickIdlePlayersPeriodProperty, value); }
         }
 
+        public static readonly DependencyProperty ServerTransferEnabledProperty = DependencyProperty.Register(nameof(ServerTransferEnabled), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.ServerSettings, IniSections.ServerSettings_ServerSettings, ServerProfileCategory.Administration)]
+        public bool ServerTransferEnabled
+        {
+            get { return (bool)GetValue(ServerTransferEnabledProperty); }
+            set { SetValue(ServerTransferEnabledProperty, value); }
+        }
+
+        public static readonly DependencyProperty CanImportDirectlyFromSameServerProperty = DependencyProperty.Register(nameof(CanImportDirectlyFromSameServer), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.ServerSettings, IniSections.ServerSettings_ServerSettings, ServerProfileCategory.Administration)]
+        public bool CanImportDirectlyFromSameServer
+        {
+            get { return (bool)GetValue(CanImportDirectlyFromSameServerProperty); }
+            set { SetValue(CanImportDirectlyFromSameServerProperty, value); }
+        }
+
         public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [DataMember]
         public string BranchName
@@ -548,6 +564,64 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(AutoRestartIfShutdownProperty); }
             set { SetValue(AutoRestartIfShutdownProperty, value); }
+        }
+        #endregion
+
+        #region Discord Bot
+        public static readonly DependencyProperty DiscordChannelIdProperty = DependencyProperty.Register(nameof(DiscordChannelId), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string DiscordChannelId
+        {
+            get { return (string)GetValue(DiscordChannelIdProperty); }
+            set { SetValue(DiscordChannelIdProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordBackupProperty = DependencyProperty.Register(nameof(AllowDiscordBackup), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordBackup
+        {
+            get { return (bool)GetValue(AllowDiscordBackupProperty); }
+            set { SetValue(AllowDiscordBackupProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordRestartProperty = DependencyProperty.Register(nameof(AllowDiscordRestart), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordRestart
+        {
+            get { return (bool)GetValue(AllowDiscordRestartProperty); }
+            set { SetValue(AllowDiscordRestartProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordShutdownProperty = DependencyProperty.Register(nameof(AllowDiscordShutdown), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordShutdown
+        {
+            get { return (bool)GetValue(AllowDiscordShutdownProperty); }
+            set { SetValue(AllowDiscordShutdownProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordStartProperty = DependencyProperty.Register(nameof(AllowDiscordStart), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordStart
+        {
+            get { return (bool)GetValue(AllowDiscordStartProperty); }
+            set { SetValue(AllowDiscordStartProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordStopProperty = DependencyProperty.Register(nameof(AllowDiscordStop), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordStop
+        {
+            get { return (bool)GetValue(AllowDiscordStopProperty); }
+            set { SetValue(AllowDiscordStopProperty, value); }
+        }
+
+        public static readonly DependencyProperty AllowDiscordUpdateProperty = DependencyProperty.Register(nameof(AllowDiscordUpdate), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordUpdate
+        {
+            get { return (bool)GetValue(AllowDiscordUpdateProperty); }
+            set { SetValue(AllowDiscordUpdateProperty, value); }
         }
         #endregion
 

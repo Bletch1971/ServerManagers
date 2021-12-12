@@ -249,6 +249,38 @@
       "Mod": "Ragnarok"
     }
   ],
+  "Inventories": [
+    {
+      "ClassName": "DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C",
+      "Description": "Boss Inventory - Dragon (Easy)",
+      "Mod": "Ragnarok"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C",
+      "Description": "Boss Inventory - Dragon (Medium)",
+      "Mod": "Ragnarok"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C",
+      "Description": "Boss Inventory - Dragon (Hard)",
+      "Mod": "Ragnarok"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C",
+      "Description": "Boss Inventory - Manticore (Easy)",
+      "Mod": "Ragnarok"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C",
+      "Description": "Boss Inventory - Manticore (Medium)",
+      "Mod": "Ragnarok"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C",
+      "Description": "Boss Inventory - Manticore (Hard)",
+      "Mod": "Ragnarok"
+    }
+  ],
   "GameMaps": [
     {
       "IsSotF": false,

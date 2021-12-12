@@ -13,7 +13,37 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
-    <!--#region Mods -->
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_TheIsland">The Island</sys:String>
+    <sys:String x:Key="Map_TheCenter">The Center</sys:String>
+    <sys:String x:Key="Map_ScorchedEarth_P">Scorched Earth</sys:String>
+    <sys:String x:Key="Map_Ragnarok">Ragnarok</sys:String>
+    <sys:String x:Key="Map_Aberration_P">Aberration</sys:String>
+    <sys:String x:Key="Map_Extinction">Extinction</sys:String>
+    <sys:String x:Key="Map_Valguero_P">Valguero</sys:String>
+    <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
+    <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <!--#endregion-->
+
+    <!--#region Total Conversion Names -->
+    <sys:String x:Key="TotalConv_111111111">Primitive Plus</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
+    <!--#region Event Names -->
+    <sys:String x:Key="Event_none">None</sys:String>
+    <sys:String x:Key="Event_vday">Valentines Day</sys:String>
+    <sys:String x:Key="Event_Easter">Easter</sys:String>
+    <sys:String x:Key="Event_FearEvolved">Fear Evolved (Halloween)</sys:String>
+    <sys:String x:Key="Event_TurkeyTrial">Turkey Trial</sys:String>
+    <sys:String x:Key="Event_WinterWonderland">Winter Wonderland</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Names -->
     <sys:String x:Key="Mod_All">All</sys:String>
     <sys:String x:Key="Mod_Unknown">Unknown</sys:String>
     <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
@@ -51,6 +81,12 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Run as Administrator</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">This application requires administration priviledges to access ALL functionality. Would you like to Run as Administrator?</sys:String>
@@ -66,8 +102,9 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Data Directory Selection Error</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">The directory you have chosen is on the desktop. This is not recommended, please choose another folder.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
 
@@ -126,6 +163,25 @@
 
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">Selected</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processor</sys:String>
+    <!--#endregion-->
+
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Data Folder Selection</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Select the drive where the data folder should be located.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Data Folder Name:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">The name of the server manager data folder.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Local Disk</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} free of {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Refresh</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">The data folder name you have entered is not valid.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Server Manager Restart Required</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">The data folder has been set, you must now restart the server manager to use the new settings.</sys:String>
     <!--#endregion-->
 
     <!--#region PlayerListWindow Window -->
@@ -421,6 +477,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Main Window Start Mode:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Manage Public IP automatically</sys:String>
@@ -756,6 +813,8 @@
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Profile ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">The unique ID assigned to the profile.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">The name for the server profile.  This is not the public name users will see in Ark.  For that, set the 'Server Name' field.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Installed Version:</sys:String>
@@ -1126,6 +1185,8 @@
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Enables hardcore mode (players can not respawn, a new character must be created).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Enable PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Enables Player vs Player mode (players are able to deal damage to or kill each other. In PvP players can also damage or destroy another tribe's buildings or kill their dinos).</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Enable Creative Mode</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">If enabled, allows creative mode.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Enable PvE Cave Building</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">If enabled, allows building in caves when PvE mode is enabled.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Enable PvE Cryo Sickness</sys:String>
@@ -1161,7 +1222,9 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Determines the maximum levels of creatures in the world. The higher the value, the higher the Maximum Creature Level.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Difficulty Offset:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Determines the maximum levels of creatures in the world. The higher the value, the higher the Maximum Creature Level.</sys:String>
-
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destroy Tames Over Level:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Tames that exceed this level will be deleted on server start. To disable deletion set to 0.</sys:String>
+    
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Enable Tribute Downloads</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">If enabled, this will allow downloading external survivors/items/dinos into your server.</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">No Survivor Downloads</sys:String>
@@ -1663,8 +1726,8 @@
     <sys:String x:Key="ServerSettings_EnablePvPStructureDecayTooltip">If enabled, structures in PvP will automatically decay if left unused after a period of time.</sys:String>
     <sys:String x:Key="ServerSettings_PvPZoneStructureDamageLabel">PvP Zone Structure Damage:</sys:String>
     <sys:String x:Key="ServerSettings_PvPZoneStructureDamageTooltip">Specifies the scaling factor for the damage structures take within caves/cave entrances, in PvP.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxStructuresVisibleLabel">Max Structures Visible:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxStructuresVisibleTooltip">The maximum number of structures which will be visible to the player.  Lower values may help with server speed.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxStructuresVisibleLabel">Max Structures in Range:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxStructuresVisibleTooltip">Specifies the maximum number of structures that can be constructed within a certain (currently hard-coded) range.</sys:String>
     <sys:String x:Key="ServerSettings_PerPlatformStructuresMultiplierLabel">Per-Platform Structures Multiplier:</sys:String>
     <sys:String x:Key="ServerSettings_PerPlatformStructuresMultiplierTooltip">Specifies the scaling factor for the maximum number of structures allowed on a single platform/saddle/raft.</sys:String>
     <sys:String x:Key="ServerSettings_MaxPlatformSaddleStructuresLabel">Max Platform Saddle Structures:</sys:String>
@@ -2460,36 +2523,6 @@
 
     <!--#region Settings window -->
     <sys:String x:Key="Settings_Title">Settings</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="TheIsland">The Island</sys:String>
-    <sys:String x:Key="TheCenter">The Center</sys:String>
-    <sys:String x:Key="ScorchedEarth_P">Scorched Earth</sys:String>
-    <sys:String x:Key="Ragnarok">Ragnarok</sys:String>
-    <sys:String x:Key="Aberration_P">Aberration</sys:String>
-    <sys:String x:Key="Extinction">Extinction</sys:String>
-    <sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis: Part 1</sys:String>
-    <sys:String x:Key="CrystalIsles">Crystal Isles</sys:String>
-    <sys:String x:Key="Gen2">Genesis: Part 2</sys:String>
-    <!--#endregion-->
-
-    <!--#region Total Conversion Names -->
-    <sys:String x:Key="111111111">Primitive Plus</sys:String>
-    <!--#endregion-->
-
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
-    <!--#endregion-->
-
-    <!--#region Event Names -->
-    <sys:String x:Key="none">None</sys:String>
-    <sys:String x:Key="vday">Valentines Day</sys:String>
-    <sys:String x:Key="Easter">Easter</sys:String>
-    <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
-    <sys:String x:Key="TurkeyTrial">Turkey Trial</sys:String>
-    <sys:String x:Key="WinterWonderland">Winter Wonderland</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature -->
@@ -3641,7 +3674,7 @@
 
     <!--#region Tekgram Class Names - Genesis -->
     <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">Astrocetus Tek Saddle</sys:String>
-    <sys:String x:Key="EngramEntry_TekClaws_C">Tek Shoulder Cannon</sys:String>
+    <sys:String x:Key="EngramEntry_TekClaws_C">Tek Claws</sys:String>
     <sys:String x:Key="EngramEntry_CruiseMissile_C">Tek Cruise Missile</sys:String>
     <sys:String x:Key="EngramEntry_TekGrenadeLauncher_C">Tek Grenade Launcher</sys:String>
     <sys:String x:Key="EngramEntry_HoverSkiff_C">Tek Hover Skiff</sys:String>

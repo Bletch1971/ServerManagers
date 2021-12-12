@@ -1,7 +1,6 @@
 ﻿<Window x:Class="ServerManagerTool.GuildProfileWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
         Width="600" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
         Icon="../Art/favicon.ico" Title="{Binding WindowTitle}">
     <Window.Resources>
@@ -10,26 +9,6 @@
                 <ResourceDictionary Source="..\Globalization\en-US\en-US.xaml"/>
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-            <cc:UnixTimeToDateTimeConverter x:Key="UnixTimeToDateTimeConverter"/>
-
-            <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
-            <LinearGradientBrush x:Key="BeigeGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFECE1D4" Offset="1"/>
-                <GradientStop Color="#FFEAE8E6"/>
-            </LinearGradientBrush>
-
-            <Style x:Key="GroupBoxStyle" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
-                <Setter Property="BorderBrush" Value="{StaticResource BeigeBorder}"/>
-            </Style>
-            <Style x:Key="OnlineListViewItemStyle" TargetType="{x:Type ListViewItem}">
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding IsOnline}" Value="True">
-                        <Setter Property="Foreground" Value="Green"/>
-                        <Setter Property="FontWeight" Value="Bold"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
         </ResourceDictionary>
     </Window.Resources>
     

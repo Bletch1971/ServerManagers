@@ -1,5 +1,4 @@
-﻿using ServerManagerTool.Common;
-using ServerManagerTool.Common.Utils;
+﻿using ServerManagerTool.Common.Utils;
 using System;
 using System.IO;
 using System.Reflection;
@@ -84,11 +83,7 @@ namespace ServerManagerTool
                 Config.Default.SteamCmd_UseAnonymousCredentials = true;
             }
 
-            Config.Default.Save();
-            CommonConfig.Default.Save();
-
-            Config.Default.Reload();
-            CommonConfig.Default.Reload();
+            App.SaveConfigFiles(false);
 
             base.OnClosed(e);
         }

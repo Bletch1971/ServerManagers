@@ -20,10 +20,11 @@ namespace ServerManagerTool.Plugin.Discord.Windows
 
         internal ConfigWindow(DiscordPlugin plugin, DiscordPluginConfig pluginConfig)
         {
-            this.Plugin = plugin ?? new DiscordPlugin();
-            this.PluginConfig = pluginConfig ?? new DiscordPluginConfig();
-
             InitializeComponent();
+            WindowUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
+
+            this.Plugin = plugin;
+            this.PluginConfig = pluginConfig;
 
             if (plugin.BetaEnabled)
                 Title = $"{Title} {ResourceUtils.GetResourceString(this.Resources, "Global_BetaModeLabel")}";
@@ -63,7 +64,10 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             if (PluginConfig.HasAnyChanges)
             {
                 if (MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_CloseLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_CloseTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                {
                     e.Cancel = true;
+                    return;
+                }
             }
         }
 
@@ -90,8 +94,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             try
             {
                 var profile = new ConfigProfile();
-
-                if (EditProfile(profile))
+                if (OpenConfigProfile(profile))
                     PluginConfig.ConfigProfiles.Add(profile);
             }
             catch (Exception ex)
@@ -142,7 +145,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             try
             {
                 var profile = ((ConfigProfile)((Button)e.Source).DataContext);
-                EditProfile(profile);
+                OpenConfigProfile(profile);
             }
             catch (Exception ex)
             {
@@ -172,32 +175,21 @@ namespace ServerManagerTool.Plugin.Discord.Windows
         {
             try
             {
-                BackupExistingConfig();
-                SaveConfig();
+                Plugin.BackupConfig();
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"ERROR: {nameof(Save_Click)}\r\n{ex.Message}");
-                MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_SaveErrorLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_SaveErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                Debug.WriteLine($"ERROR: {nameof(Save_Click)} - Backup\r\n{ex.Message}");
             }
-        }
-
-        private void BackupExistingConfig()
-        {
-            var configFile = Path.Combine(PluginHelper.PluginFolder, Config.Default.ConfigFile);
-            if (!File.Exists(configFile))
-                return;
-
-            var backupFile = Path.ChangeExtension(configFile, "bak");
 
             try
             {
-                File.Copy(configFile, backupFile, true);
+                Plugin.SaveConfig();
             }
-            catch
+            catch (Exception ex)
             {
-                // do nothing, just exit if cannot backup existing config file
-                throw;
+                Debug.WriteLine($"ERROR: {nameof(Save_Click)} - Save\r\n{ex.Message}");
+                MessageBox.Show(ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_SaveErrorLabel"), ResourceUtils.GetResourceString(this.Resources, "ConfigWindow_SaveErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -247,7 +239,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             }
         }
 
-        private bool EditProfile(ConfigProfile profile)
+        private bool OpenConfigProfile(ConfigProfile profile)
         {
             if (profile == null)
                 return false;
@@ -259,13 +251,6 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             this.BringIntoView();
 
             return dialogResult.HasValue && dialogResult.Value;
-        }
-
-        private void SaveConfig()
-        {
-            var configFile = Path.Combine(PluginHelper.PluginFolder, Config.Default.ConfigFile);
-            JsonUtils.SerializeToFile(PluginConfig, configFile);
-            PluginConfig?.CommitChanges();
         }
 
         #region Drag and Drop

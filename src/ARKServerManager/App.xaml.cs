@@ -1,16 +1,16 @@
 using ArkData;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Utils;
+using ServerManagerTool.DiscordBot;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -18,9 +18,9 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Xml;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -38,6 +38,7 @@ namespace ServerManagerTool
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private CancellationTokenSource _tokenSource;
         private GlobalizedApplication _globalizer;
         private bool _applicationStarted;
         private string _args;
@@ -176,11 +177,6 @@ namespace ServerManagerTool
             }
         }
 
-        private IList<Plugin.Common.Lib.Profile> FetchProfiles()
-        {
-            return ServerManager.Instance.Servers.Select(s => new ServerManagerTool.Plugin.Common.Lib.Profile() { ProfileName = s?.Profile?.ProfileName ?? string.Empty, InstallationFolder = s?.Profile?.InstallDirectory ?? string.Empty }).ToList();
-        }
-
         public static string GetLogFolder() => IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.LogsDir));
 
         public static string GetProfileLogFolder(string profileId) => IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.LogsDir, profileId.ToLower()));
@@ -311,7 +307,8 @@ namespace ServerManagerTool
             var installPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             PluginHelper.Instance.BetaEnabled = this.BetaVersion;
             PluginHelper.Instance.LoadPlugins(installPath, true);
-            PluginHelper.Instance.SetFetchProfileCallback(FetchProfiles);
+            PluginHelper.Instance.SetFetchProfileCallback(DiscordPluginHelper.FetchProfiles);
+            OnResourceDictionaryChanged(Thread.CurrentThread.CurrentCulture.Name);
 
             // check if we are starting ASM for the old server restart - no longer supported
             if (e.Args.Any(a => a.StartsWith(Constants.ARG_AUTORESTART, StringComparison.OrdinalIgnoreCase)))
@@ -410,68 +407,29 @@ namespace ServerManagerTool
 
             ApplicationStarted = true;
 
-            // Initial configuration setting
-            if (String.IsNullOrWhiteSpace(Config.Default.DataDir))
-            {
-                MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectoryLabel"), _globalizer.GetResourceString("Application_DataDirectoryTitle"), MessageBoxButton.OK, MessageBoxImage.Information);
+            var restartRequired = false;
+            if (string.IsNullOrWhiteSpace(Config.Default.DataDir))
+            {              
+                var dataDirectoryWindow = new DataDirectoryWindow();
+                dataDirectoryWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                var result = dataDirectoryWindow.ShowDialog();
 
-                var installationFolder = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                if (!installationFolder.EndsWith(@"\")) 
-                    installationFolder += @"\";
-
-                while (String.IsNullOrWhiteSpace(Config.Default.DataDir))
+                if (!result.HasValue || !result.Value)
                 {
-                    var dialog = new CommonOpenFileDialog
-                    {
-                        EnsureFileExists = true,
-                        IsFolderPicker = true,
-                        Multiselect = false,
-                        Title = _globalizer.GetResourceString("Application_DataDirectory_DialogTitle"),
-                        InitialDirectory = installationFolder
-                    };
-
-                    if (dialog.ShowDialog() != CommonFileDialogResult.Ok)
-                    {
-                        Environment.Exit(0);
-                    }
-
-                    MessageBoxResult confirm = MessageBoxResult.Cancel;
-
-                    // check if the folder is under the installation folder
-                    var newDataFolder = dialog.FileName;
-                    if (!newDataFolder.EndsWith(@"\")) 
-                        newDataFolder += @"\";
-
-                    if (newDataFolder.StartsWith(installationFolder))
-                    {
-                        confirm = MessageBoxResult.No;
-                        MessageBox.Show(_globalizer.GetResourceString("Application_DataDirectory_WithinInstallFolderErrorLabel"), _globalizer.GetResourceString("Application_DataDirectory_WithinInstallFolderErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    else
-                    {
-                        confirm = MessageBox.Show(String.Format(_globalizer.GetResourceString("Application_DataDirectory_ConfirmLabel"), Path.Combine(newDataFolder, Config.Default.ProfilesDir), Path.Combine(newDataFolder, Config.Default.SteamCmdDir)), _globalizer.GetResourceString("Application_DataDirectory_ConfirmTitle"), MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
-                    }
-
-                    if (confirm == MessageBoxResult.Cancel)
-                    {
-                        Environment.Exit(0);
-                    }
-                    else if (confirm == MessageBoxResult.Yes)
-                    {
-                        if (newDataFolder.EndsWith(@"\")) 
-                            newDataFolder = newDataFolder.Substring(0, newDataFolder.Length -1);
-
-                        Config.Default.DataDir = newDataFolder;
-                        ReconfigureLogging();
-                        break;
-                    }
+                    Environment.Exit(0);
                 }
+
+                restartRequired = true; 
             }
 
             Config.Default.ConfigDirectory = Path.Combine(Config.Default.DataDir, Config.Default.ProfilesDir);            
             System.IO.Directory.CreateDirectory(Config.Default.ConfigDirectory);
-            Config.Default.Save();
-            CommonConfig.Default.Save();
+            SaveConfigFiles();
+
+            if (restartRequired)
+            {
+                Environment.Exit(0);
+            }
 
             DataFileDetails.PlayerFileExtension = Config.Default.PlayerFileExtension;
             DataFileDetails.TribeFileExtension = Config.Default.TribeFileExtension;
@@ -490,6 +448,25 @@ namespace ServerManagerTool
 
                 StartupUri = new Uri("Windows/AutoUpdateWindow.xaml", UriKind.RelativeOrAbsolute);
             }
+
+            if (Config.Default.DiscordBotEnabled)
+            {
+                _tokenSource = new CancellationTokenSource();
+
+                Task discordTask = Task.Run(async () =>
+                {
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
+                }, _tokenSource.Token)
+                    .ContinueWith(t => {
+                        var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
+                        if (message.StartsWith("#"))
+                        {
+                            message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
+                        }
+
+                        MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    }, TaskContinuationOptions.OnlyOnFaulted);
+            }
         }
 
         protected override void OnExit(ExitEventArgs e)
@@ -502,6 +479,11 @@ namespace ServerManagerTool
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void OnResourceDictionaryChanged(string languageCode)
+        {
+            PluginHelper.Instance.OnResourceDictionaryChanged(languageCode);
         }
 
         public static void ReconfigureLogging()
@@ -525,6 +507,12 @@ namespace ServerManagerTool
 
         private void ShutDownApplication()
         {
+            if (!(_tokenSource is null))
+            {
+                _tokenSource.Cancel();
+                _tokenSource.Dispose();
+            }
+
             if (ApplicationStarted)
             {
                 foreach (var server in ServerManager.Instance.Servers)
@@ -538,13 +526,31 @@ namespace ServerManagerTool
                         MessageBox.Show(String.Format(_globalizer.GetResourceString("Application_Profile_SaveFailedLabel"), server.Profile.ProfileName, ex.Message, ex.StackTrace), _globalizer.GetResourceString("Application_Profile_SaveFailedTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
-                Config.Default.Save();
-                CommonConfig.Default.Save();
+                SaveConfigFiles();
             }
 
             PluginHelper.Instance?.Dispose();
 
             ApplicationStarted = false;
+        }
+
+        public static void SaveConfigFiles(bool includeBackup = true)
+        {
+            Config.Default.Save();
+            CommonConfig.Default.Save();
+
+            Config.Default.Reload();
+            CommonConfig.Default.Reload();
+
+            var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var backupFolder = includeBackup 
+                ? IOUtils.NormalizePath(string.IsNullOrWhiteSpace(Config.Default.BackupPath)
+                        ? Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)
+                        : Path.Combine(Config.Default.BackupPath))
+                : null;
+
+            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
+            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
         }
     }
 }

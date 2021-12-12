@@ -13,7 +13,37 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
-    <!--#region Mods -->
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_TheIsland">The Island</sys:String>
+    <sys:String x:Key="Map_TheCenter">The Center</sys:String>
+    <sys:String x:Key="Map_ScorchedEarth_P">Scorched Earth</sys:String>
+    <sys:String x:Key="Map_Ragnarok">Ragnarok</sys:String>
+    <sys:String x:Key="Map_Aberration_P">Aberration</sys:String>
+    <sys:String x:Key="Map_Extinction">Extinction</sys:String>
+    <sys:String x:Key="Map_Valguero_P">Valguero</sys:String>
+    <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
+    <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <!--#endregion-->
+
+    <!--#region Total Conversion Names -->
+    <sys:String x:Key="TotalConv_111111111">Primitive Plus</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
+    <!--#region Event Names -->
+    <sys:String x:Key="Event_none">Nenhum</sys:String>
+    <sys:String x:Key="Event_vday">Dia dos namorados</sys:String>
+    <sys:String x:Key="Event_Easter">Páscoa</sys:String>
+    <sys:String x:Key="Event_FearEvolved">Fear Evolved (Halloween)</sys:String>
+    <sys:String x:Key="Event_TurkeyTrial">Turkey Trial</sys:String>
+    <sys:String x:Key="Event_WinterWonderland">Winter Wonderland</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Names -->
     <sys:String x:Key="Mod_All">Todos</sys:String>
     <sys:String x:Key="Mod_Unknown">Desconhecido</sys:String>
     <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
@@ -51,6 +81,12 @@
     <sys:String x:Key="ProcessorAffinity_All">Todos</sys:String>
     <!--#endregion-->
 
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimizado</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximizado</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Executar como administrador</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">Este aplicativo requer privilégios de administração para acessar toda a funcionalidade. Você gostaria de executar como administrador?</sys:String>
@@ -66,9 +102,10 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Selecione um diretório de dados</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirme a localização</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">O Ark Server Manager armazenará os perfis e o SteamCMD nos seguintes diretórios:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\n Está tudo bem?</sys:String>
-	<sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Erro na seleção do diretório de dados</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">O diretório que você escolheu está dentro da pasta de instalação do gerenciador de servidor. Isso não é recomendado, escolha outra pasta.</sys:String>
-    <sys:String x:Key="Application_Profile_SaveFailedTitle">Não foi possível guardar o perfil</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Erro na seleção do diretório de dados</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">O diretório que você escolheu está dentro da pasta de instalação do gerenciador de servidor. Isso não é recomendado, escolha outra pasta.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">O diretório que você escolheu está na área de trabalho. Isso não é recomendado, escolha outra pasta.</sys:String>    
+	<sys:String x:Key="Application_Profile_SaveFailedTitle">Não foi possível guardar o perfil</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Não foi possível guardar o perfil {0}.  {1}\n{2}</sys:String>
 	
 	<sys:String x:Key="Application_NotifyIcon_ShowMainWindow">Mostrar janela principal</sys:String>
@@ -128,6 +165,25 @@
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processador</sys:String>
     <!--#endregion-->
 
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Seleção da pasta de dados</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">Parece que você não tem um conjunto de diretórios de dados. O diretório de dados é onde seus perfis e o SteamCMD serão armazenados. Não é o mesmo que o diretório de instalação do servidor, que você pode escolher para cada perfil.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Selecione a unidade onde a pasta de dados deve estar localizada.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Nome da pasta de dados:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">O nome da pasta de dados do server manager.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Disco local</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} livre de {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancelar</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Atualizar</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Erro de seleção no diretório de dados</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">O nome da pasta de dados que você digitou não é válido.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Reinicialização do Server Manager necessária</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">A pasta de dados foi configurada, você deve agora reiniciar o server manager para usar as novas configurações.</sys:String>
+    <!--#endregion-->
+	
     <!--#region PlayerListWindow Window -->
     <sys:String x:Key="PlayerList_CloseButtonLabel">Fechar</sys:String>
 
@@ -421,6 +477,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Redefinir</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Isso redefinirá TODAS as configurações globais do usuário para o gerenciador do servidor. O gerenciador do servidor será fechado se for bem-sucedido.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Ativar e executar como Prompt de Administrador na Inicialização</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Modo de início da janela principal:</sys:String>
 	<sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimizar para a bandeja</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gerenciar configurações de firewall automaticamente</sys:String>
 	<sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Gerenciar IP público automaticamente</sys:String>
@@ -445,6 +502,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Se ativado, as substituições do gerador de mapa serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Ativar substituições de Supply Crate</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Se habilitado, as substituições de supply crate serão gerenciadas pelo ASM.</sys:String>
+	<sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Ativar Prevenção de Substituição de Transferência</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Se habilitado, as substituições de transferência de prevenção serão gerenciadas pelo gerenciador do servidor.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Ativar configurações do Ark PGM</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">Se ativado, as configurações do PGM serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Ativar configurações SotF</sys:String>
@@ -552,6 +611,23 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Mostrar o motivo de desligamento com TODAS as mensagens de desligamento</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Se habilitado, o motivo do desligamento será mostrado com todas as mensagens de desligamento; caso contrário, ele será mostrado apenas no início do encerramento do servidor.</sys:String>
     
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Habilitar Discord Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Você precisará reiniciar o server manager se alterar alguma configuração do Discord Bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">O token associado ao bot discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">Server Id:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">O id do servidor discord que o bot usará.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">O prefixo que deve ser usado ao enviar um comando via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Obter Token...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Ajuda...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Se ativado, o comando de backup pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Se ativado, o comando de reiniciar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Se habilitado, o comando de desligar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">Se habilitado, o comando de iniciar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">Se habilitado, o comando de parar pode ser enviado do discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">Se ativado, o comando de atualizar pode ser enviado do discord.</sys:String>
+
 	<sys:String x:Key="GlobalSettings_EmailSettingsLabel">Configurações de email SMTP</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">O nome ou endereço IP do host usado para transmissões de SMTP.</sys:String>
@@ -603,6 +679,8 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">Alterar o diretório de dados moverá os perfis existentes para o novo local, mas não moverá nenhuma instalação do servidor. Você ainda quer mudar este diretório?</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Falha ao alterar o diretório de dados</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">Ocorreu um erro ao alterar o diretório de dados: {0}\r\nPor favor, corrija o erro e tente novamente ou entre em contato com o suporte técnico para obter assistência.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Confirmar redefinição do diretório de dados</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Clique em 'Sim' para confirmar que deseja redefinir a localização do diretório de dados. Uma vez reiniciado, o gerenciador do servidor será encerrado e você precisará reiniciá-lo.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Selecione o diretório de backup</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Selecione o diretório de cache</sys:String>
@@ -716,6 +794,9 @@
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstale o erro do SteamCMD</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">Ocorreu um erro ao tentar reinstalar o SteamCMD. Isso deixou o SteamCmd em um estado instável, tente reinstalar novamente ou informe isso.\R\nException: {0}</sys:String>
 
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot executando comandos</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">O bot discord tem um ou mais comandos em execução. Quer continuar fechando o server manager?</sys:String>
+
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Iniciar a confirmação do servidor</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">Você está prestes a iniciar o servidor, deseja continuar?</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Confirmação do servidor de desligamento</sys:String>
@@ -754,6 +835,8 @@
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Perfil ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">O ID exclusivo atribuído ao perfil.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">Perfil:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">O nome do perfil do servidor. Este nao e o nome publico que os usuários verao em Ark. Para isso, defina o campo 'Server Name'.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Versão Instalada:</sys:String>
@@ -1118,13 +1201,33 @@
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Se ativado, o servidor será reiniciado mesmo se o desligamento for Reinicializações Automáticas e Atualizações Automáticas.</sys:String>
     <!--#endregion-->
 
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Detalhes do Discord Bot</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Id do canal:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">O id do canal do discord que este perfil irá usar.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Permitir backup</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Se ativado, o perfil usará os comandos de backup pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Permitir Reinício</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">Se ativado, o perfil usará comandos de reinicialização pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Permitir desligamento</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">Se ativado, o perfil usará comandos de desligamento pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Permitir iníciar</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">Se ativado, o perfil usará os comandos de iníciar pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Permitir parar</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Se ativado, o perfil usará os comandos de parar pelo discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Permitir atualização</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Se ativado, o perfil usará os comandos de atualização pelo discord.</sys:String>
+    <!--#endregion-->
+
     <!--#region Server Settings - Rules -->
     <sys:String x:Key="ServerSettings_RulesLabel">Regras</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Ativar o modo Hardcore</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Ativa o modo hardcore (os jogadores não podem renascer, um novo personagem deve ser criado).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Ativar PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Ativa o modo Jogador contra Jogador (jogadores são capazes de causar dano ou matar uns aos outros. Em jogadores PvP também podem danificar ou destruir os edifícios de outra tribo ou matar seus dinossauros).</sys:String>
-    <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Ativar construçoes em Caverna PvE</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Ativar o modo criativo</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">Se ativado, permite o modo criativo.</sys:String>
+	<sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Ativar construçoes em Caverna PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Se habilitado, permite a construção em cavernas quando o modo PVE estiver habilitado.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Ativar doença criogênica do PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Se ativado, se você liberar uma criatura domesticada de um criodo, você terá um cronômetro de doença crio quando o modo PvE estiver ativado.</sys:String>
@@ -1159,6 +1262,8 @@
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Determina os níveis máximos de criaturas do mundo. Quanto maior o valor, maior o Nível Máximo de Criatura.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Dificuldade Offset:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Determina os níveis máximos de criaturas do mundo. Quanto maior o valor, maior o Nível Máximo de Criatura.</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destruir domados acima do nível:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Dinos que excedem esse nível serão excluídos ao iniciar o servidor. Para desativar a exclusão definida para 0.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Ativar downloads de tributo</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Se habilitado, isso permitirá o download de sobreviventes / itens / dinossauros externos em seu servidor.</sys:String>
@@ -1281,7 +1386,16 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeTooltip">Limite o número de itens descartados em uma área (junto com LimitNonPlayerDroppedItemsCount).</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limitar a contagem de itens descartados por não jogadores</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Limite o número de itens descartados em uma área (junto com LimitNonPlayerDroppedItemsRange).</sys:String>
-	
+
+	<sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Habilitar Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Se ativado, ajustará a quantidade de dano que uma criatura causa, por um período de tempo, após ter sido liberada de um criópode.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duração de Cryopod Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">A quantidade de tempo, em segundos, em que o ajuste de dano entrará em vigor para criaturas liberadas de um criópode.</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Multiplicador de Dano Criópode Nerf</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Especifica o multiplicador pelo dano causado pelas criaturas, depois que elas são liberadas de um criópode. Valores mais baixos significam que a vazão realizada será menor (por exemplo, 0,01 significa que 99% do dano é removido).</sys:String>
+	<sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Porcentagem do multiplicador de danos recebidos</sys:String>
+    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Especifica o aumento percentual no multiplicador de dano recebido de uma criatura, depois que ela é liberada de um criópode. Valores mais altos significam mais dano recebido à criatura (por exemplo, 0.25 = 25% a mais de dano).</sys:String>
+
 	<sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Permitir poderes do TekSuit</sys:String>
     <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">se ativado, permitirá que o jogador use TekSuit Powers no mapa Genesis.</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Desativar missões</sys:String>
@@ -1289,6 +1403,13 @@
 	
 	<sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Desativar TEK Suit no Spawn</sys:String>
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">Se habilitado, irá prevenir que o jogador de spawn com o TEK Suit.</sys:String>
+	
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">Desativar os Buffs do Mapa</sys:String>
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsTooltip">Se habilitado, desabilitará os efeitos das Missões completamente.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingLabel">Habilitar escala de Buff no Mapa</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">Se habilitado, fará com que os buffs do Mapa escalem seus benefícios multiplicativamente, ao invés de adicionar / subtrair uma quantia fixa ao valor em tempo de execução.</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">Buff de escalonamento global</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Especifica a escala global para reduzir / aumentar a eficácia dos buffs mundiais (por exemplo, 1 é o padrão, 0,5 seria 50% menos eficaz, 2,0 seria 2x mais eficaz).</sys:String>
 	
 	<sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
 	<sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Desativar Hexagon Store</sys:String>
@@ -1301,15 +1422,6 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Especifica o multiplicador para as recompensas dos Hexagons.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Multiplicador de custo Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Especifica o multiplicador para o custo Hexagons dos itens.</sys:String>
-	
-	<sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Habilitar Cryopod Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Se ativado, ajustará a quantidade de dano que uma criatura causa, por um período de tempo, após ter sido liberada de um criópode.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Duração de Cryopod Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDurationTooltip">A quantidade de tempo, em segundos, em que o ajuste de dano entrará em vigor para criaturas liberadas de um criópode.</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierLabel">Multiplicador de Dano Criópode Nerf</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Especifica o multiplicador pelo dano causado pelas criaturas, depois que elas são liberadas de um criópode. Valores mais baixos significam que a vazão realizada será menor (por exemplo, 0,01 significa que 99% do dano é removido).</sys:String>
-	<sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Porcentagem do multiplicador de danos recebidos</sys:String>
-    <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Especifica o aumento percentual no multiplicador de dano recebido de uma criatura, depois que ela é liberada de um criópode. Valores mais altos significam mais dano recebido à criatura (por exemplo, 0.25 = 25% a mais de dano).</sys:String>
 	
 	<sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">AVISO: Isso mudará permanentemente as estatísticas de qualquer item existente, portanto, certifique-se de fazer backup de seu salvamento atual antes de modificar e brincar com os valores de fixo.</sys:String>
@@ -1526,12 +1638,16 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Multiplicadores de estatísticas por nível (domado) - Adicionar</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Multiplicadores de estatísticas por nível (domado) - afinidade</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Multiplicadores de status por nível (wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Aumento de nível de Mutagen (Wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Aumento de nível de Mutagen (Bred)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Dino Multiplicadores de Reprodução</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Se habilitado, permite que os fatores de escala sejam aplicados a cada estatística base.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Se ativado, permite que os fatores de escala sejam aplicados a cada estatística.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">Se ativado, permite que os fatores de escala sejam aplicados à adição de domado para cada estatística.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">Se ativado, permite que os fatores de escala sejam aplicados ao Multiplicador da Dominação para cada estatística.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">Se habilitado, permite que os fatores de escala sejam aplicados ao aumento de status domado para cada estatística.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">Se ativado, permite que os fatores de escala sejam aplicados ao número de níveis que o Mutagen adiciona a domar dino selvagem.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">Se ativado, permite que os fatores de escala sejam aplicados ao número de níveis que o Mutagen adiciona a domados de bred.</sys:String>
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Redefinir todos os multiplicadores de volta aos padrões.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Redefinir todos os multiplicadores de volta aos padrões.</sys:String>
 
@@ -1551,7 +1667,7 @@
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">Quanto de efeito nas estatísticas a qualidade de Imprinti tem. Defina como 0 para desativar efetivamente o sistema.</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Escala de quantidade da impressão:</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Multiplicador aplicado à porcentagem que cada impressão fornece. Este multiplicador é global, o que significa que afetará a progressão imprinting de todas as espécies. Valores mais altos aumentam a quantidade de cada impressão.</sys:String>
-	<sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Intervalo de acaracia:</sys:String>
+	<sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Intervalo de acaricia:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Um multiplicador de quantas vezes os bebês querem abraçar. Valores mais baixos significam que você precisará acariciá-los com mais frequência para obter uma qualidade de impressão.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Período de carência</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Um multiplicador de quanto tempo depois de atrasar o aconchego com o bebê antes da qualidade da imprint começa a diminuir. Valores mais altos aumentam o período de carência.</sys:String>
@@ -2263,6 +2379,23 @@
     <!--#endregion-->
 
     <!--#endregion-->
+    
+    <!--#region Server Settings - Prevent Transfer Overrides -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Impedir sobreposições de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Impedir Transferências</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Impedir configurações de substituição de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">NOTA: Se quiser gerenciar suas substituições manualmente ou com outro aplicativo, você pode desabilitar a opção que impedirá o gerenciador do servidor de gerenciar as substituições. Veja as 'Opções de substituição personalizadas' nas configurações globais.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">AVISO: Adicionar dinossauros a esta lista impedirá que sejam transferidos para o servidor.</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Dino</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Dino Class String</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Adicionar item de prevenção de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">Excluir todos os itens de prevenção de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">Colar dados de itens de prevenção de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">Excluir item de impedimento de transferência</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">Salvar dados de itens de prevenção de transferência</sys:String>
+    <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
     <sys:String x:Key="Profile_PlayerSectionLabel">Detalhes do Jogador</sys:String>
@@ -2434,36 +2567,6 @@
 
     <!--#region Settings window -->
     <sys:String x:Key="Settings_Title">Definições</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="TheIsland">The Island</sys:String>
-    <sys:String x:Key="TheCenter">The Center</sys:String>
-    <sys:String x:Key="ScorchedEarth_P">Scorched Earth</sys:String>
-    <sys:String x:Key="Ragnarok">Ragnarok</sys:String>
-    <sys:String x:Key="Aberration_P">Aberration</sys:String>
-    <sys:String x:Key="Extinction">Extinction</sys:String>
-	<sys:String x:Key="Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Genesis">Genesis: Part 1</sys:String>
-    <sys:String x:Key="CrystalIsles">Crystal Isles</sys:String>
-    <sys:String x:Key="Gen2">Genesis: Part 2</sys:String>
-    <!--#endregion-->
-
-    <!--#region Total Conversion Names -->
-    <sys:String x:Key="111111111">Primitive Plus</sys:String>
-    <!--#endregion-->
-
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
-    <!--#endregion-->
-
-    <!--#region Event Names -->
-	<sys:String x:Key="none">Nenhum</sys:String>
-    <sys:String x:Key="vday">Dia dos namorados</sys:String>
-    <sys:String x:Key="Easter">Páscoa</sys:String>
-    <sys:String x:Key="FearEvolved">Fear Evolved (Halloween)</sys:String>
-    <sys:String x:Key="TurkeyTrial">Turkey Trial</sys:String>
-    <sys:String x:Key="WinterWonderland">Winter Wonderland</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature -->
@@ -5370,6 +5473,16 @@
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_C">Boss Inventory - Dragon (Medium)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_C">Boss Inventory - Dragon (Hard)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_EndBossMinion_C">Boss Inventory - End Boss Minion</sys:String>
+	
+	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Valguero_C">Boss Inventory - Dragon (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Valguero_C">Boss Inventory - Dragon (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Valguero_C">Boss Inventory - Dragon (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Valguero_C">Boss Inventory - Manticore (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Valguero_C">Boss Inventory - Manticore (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Valguero_C">Boss Inventory - Manticore (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Boss Inventory - Megapithecus (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Boss Inventory - Megapithecus (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Boss Inventory - Megapithecus (Hard)</sys:String>
 
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_C">Boss Inventory - Manticore (Easy)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_C">Boss Inventory - Manticore (Medium)</sys:String>
@@ -5390,6 +5503,13 @@
 	<sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss Inventory - Crystal Wyvern Queen (Gamma)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss Inventory - Crystal Wyvern Queen (Beta)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss Inventory - Crystal Wyvern Queen (Alpha)</sys:String>
+	
+	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss Inventory - Dragon (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss Inventory - Dragon (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C">Boss Inventory - Dragon (Alpha)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C">Boss Inventory - Manticore (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C">Boss Inventory - Manticore (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C">Boss Inventory - Manticore (Alpha)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
@@ -5444,6 +5564,7 @@
     <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Construindo informações do Spawner no mapa ...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Construindo informações de Supply Crate...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Construindo informações sobre o stack ...</sys:String>
+	<sys:String x:Key="ProfileSave_ConstructingPreventTransferInformation">Construindo Informações de Prevenção de Transferência ...</sys:String>
     <sys:String x:Key="ProfileSave_SavingProfileFile">Salvando arquivo de perfil...</sys:String>
     <sys:String x:Key="ProfileSave_SavingConfigFiles">Salvando arquivos de configuração...</sys:String>
     <sys:String x:Key="ProfileSave_SavingLauncherFile">Salvando arquivo do iniciador...</sys:String>
@@ -5461,6 +5582,34 @@
     <!--#region Server Update -->
     <sys:String x:Key="ServerUpdate_Title">Atualização do servidor</sys:String>
     <sys:String x:Key="ServerUpdate_WarningLabel">Ocorreu um problema ao executar a atualização do servidor. Isso pode deixar o servidor em um estado incompleto.\r\n\r\nDeseja continuar com a inicialização do servidor, isso pode causar problemas?</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">O discord bot requer um token válido para que possa se conectar ao servidor discord\r\nIsso pode ser definido nas configurações globais.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">O prefixo discord bot contém caracteres inválidos. Somente letras e números são permitidos.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">O comando '{0}' não foi habilitado.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Comando desconhecido '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Outro comando está sendo processado.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Outro comando '{0}' está em execução no perfil '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">O comando '{0}' foi desativado para o perfil '{1}'.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">O comando '{0}' requer um id de perfil.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">O perfil '{0}' não foi encontrado ou não está associado ao canal.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">O perfil '{0}' está em um estado '{1}' que não pode executar este comando.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">O perfil '{0}' está sendo atualizado.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">A chamada para o servidor '{0}' falhou.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">Uma solicitação de backup para o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">Um pedido de reinicialização do servidor '{0}' foi enviado.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">Um pedido de desligamento do servidor '{0}' foi enviado.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">Uma solicitação de iníciar para o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">Uma solicitação de parar o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">Uma solicitação de atualização para o servidor '{0}' foi enviada.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Quantidade:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Mapa:</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

@@ -1,0 +1,119 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    >
+
+    <!--#全球 -->
+    <sys:String x:Key="Global_CancelButtonLabel">取消</sys:String>
+    <sys:String x:Key="Global_CloseButtonLabel">关</sys:String>
+    <sys:String x:Key="Global_OkButtonLabel">OK</sys:String>
+    <sys:String x:Key="Global_SaveButtonLabel">保存</sys:String>
+
+    <sys:String x:Key="Global_BetaModeLabel"> (中等模式)</sys:String>
+    <sys:String x:Key="Global_NewVersionAvailableLabel">该插件的新版本可用.</sys:String>
+    <sys:String x:Key="Global_DownloadNewVersionTooltip">下载最新版本.</sys:String>
+    <!--#endregion-->
+
+    <!--#配置窗口 -->
+    <sys:String x:Key="ConfigWindow_Title">Discord（开黑）插件配置</sys:String>
+
+    <sys:String x:Key="ConfigWindow_PatchNotesTooltip">查看修补程序说明.</sys:String>
+    <sys:String x:Key="ConfigWindow_AddConfigProfileTooltip">添加配置文件</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearConfigProfilesTooltip">删除所有配置文件</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteConfigProfileTooltip">删除配置文件</sys:String>
+    <sys:String x:Key="ConfigWindow_EditConfigProfileTooltip">编辑配置文件</sys:String>
+
+    <sys:String x:Key="ConfigWindow_NameColumnLabel">名称</sys:String>
+
+    <sys:String x:Key="ConfigWindow_AddErrorTitle">添加操作错误</sys:String>
+    <sys:String x:Key="ConfigWindow_AddErrorLabel">尝试添加配置文件时出错.</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearTitle">确认删除所有操作</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearLabel">单击“是”确认要删除所有.</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearErrorTitle">删除所有操作错误</sys:String>
+    <sys:String x:Key="ConfigWindow_ClearErrorLabel">尝试删除所有配置文件时出错.</sys:String>
+    <sys:String x:Key="ConfigWindow_CloseTitle">确认关闭操作</sys:String>
+    <sys:String x:Key="ConfigWindow_CloseLabel">单击“是”确认要关闭表单。如果您有任何未保存的更改，它们将丢失.</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteTitle">确认删除操作</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteLabel">单击“是”确认要执行删除.</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteErrorTitle">单击“是”确认要执行删除操作错误</sys:String>
+    <sys:String x:Key="ConfigWindow_DeleteErrorLabel">尝试删除配置文件时出错.</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadErrorTitle">下载操作错误</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadErrorLabel">尝试执行下载时出错.</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadSuccessTitle">下载成功</sys:String>
+    <sys:String x:Key="ConfigWindow_DownloadSuccessLabel">最新版本已保存到您的桌面.</sys:String>
+    <sys:String x:Key="ConfigWindow_EditErrorTitle">最新版本已保存到桌面编辑操作错误</sys:String>
+    <sys:String x:Key="ConfigWindow_EditErrorLabel">尝试编辑配置文件时出错.</sys:String>
+    <sys:String x:Key="ConfigWindow_SaveErrorTitle">保存操作错误</sys:String>
+    <sys:String x:Key="ConfigWindow_SaveErrorLabel">尝试执行保存时出错.</sys:String>
+    <!--#endregion-->
+
+    <!--# 配置项窗口 -->
+    <sys:String x:Key="ConfigProfileWindow_Title">配置文件配置</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_NameLabel">名称:</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_NameTooltip">配置配置文件的名称.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_IsEnabledLabel">启用</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_IsEnabledTooltip">配置配置文件是否已启用.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_WebhookLabel">Webhook Url:</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_WebhookTooltip">这是你的 Webhook Url 由discord（开黑）提供.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_BotNameLabel">机器人名称:</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_BotNameTooltip">这将覆盖您在webhook中设置的名称。留空以使用默认值.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_UseTTSLabel">使用文本到语音 (TTS)</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_UseTTSTooltip">如果启用，将使bot通过文本到语音进行公告，否则将关闭文本到语音.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameLabel">为消息添加配置文件名前缀</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_PrefixMessageWithProfileNameTooltip">如果启用，将发送以服务器管理器配置文件名称为前缀的警报消息.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsLabel">消息选项</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsBoldLabel">黑体</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsBoldTooltip">如果启用，将以黑体显示消息.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsUnderlineLabel">下划线</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsUnderlineTooltip">如果启用，将显示带有下划线的消息.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsItalicLabel">斜体</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsItalicTooltip">如果启用，将以斜体显示消息.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsCodeBlockLabel">以代码的方式</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_MessageOptionsCodeBlockTooltip">启用CIf后，将以代码的方式.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ProfileNamesLabel">配置文件名称</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AlertTypesLabel">警报类型</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_AddProfileNameTooltip">添加服务器管理器配置文件名</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearProfileNamesTooltip">删除所有服务器管理器配置文件名称</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteProfileNameTooltip">删除服务器管理器配置文件名</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_AddAlertTypeTooltip">添加警报类型</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearAlertTypesTooltip">删除所有警报类型</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteAlertTypeTooltip">删除警报类型</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_ProfileNameColumnLabel">服务器管理器配置文件名称</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AlertTypeColumnLabel">警报类型</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_TestButtonLabel">测试</sys:String>
+    
+    <sys:String x:Key="ConfigProfileWindow_AddErrorTitle">添加操作错误</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AddAlertTypeErrorLabel">尝试添加警报类型时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_AddProfileNameErrorLabel">尝试添加配置文件名时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearTitle">确认删除所有操作</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearLabel">单击“是”确认要删除所有.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearErrorTitle">删除所有操作错误</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearAlertTypesErrorLabel">尝试删除所有警报类型时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_ClearProfileNamesErrorLabel">尝试删除所有配置文件名称时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_CloseTitle">确认关闭操作</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_CloseLabel">单击“是”确认要关闭表单。如果您有任何未保存的更改，它们将丢失.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteTitle">确认删除操作</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteLabel">单击“是”确认要执行删除.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteErrorTitle">删除操作错误</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteAlertTypeErrorLabel">尝试删除警报类型时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_DeleteProfileNameErrorLabel">尝试删除配置文件名时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestErrorTitle">测试时错误</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestErrorLabel">尝试测试配置配置文件时出错.</sys:String>
+    <sys:String x:Key="ConfigProfileWindow_TestEnabledErrorLabel">配置文件未启用，无法测试.</sys:String>
+    <!--#endregion-->
+
+    <!--#版本提要窗口 -->
+    <sys:String x:Key="VersionFeedWindow_Title">Discord（开黑）插件版本详细信息</sys:String>
+    <sys:String x:Key="VersionFeedWindow_Load_FailedTitle">加载进给错误</sys:String>
+
+    <sys:String x:Key="VersionFeedWindow_VersionFilterLabel">版本:</sys:String>
+    <sys:String x:Key="VersionFeedWindow_VersionFilterTooltip">选择要查看详细信息的版本.</sys:String>
+    <!--#endregion-->
+
+</ResourceDictionary>

@@ -1,9 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="Globals">
-    <SccProjectName>%24/Development/ServerManagers/Main/ConanServerManager.Common</SccProjectName>
-    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
-    <SccAuxPath>https://dev.azure.com/bretthewitson</SccAuxPath>
-    <SccLocalPath>.</SccLocalPath>
     <Configurations>Debug;Release;Debug - Beta</Configurations>
   </PropertyGroup>
   <PropertyGroup>
@@ -15,14 +11,6 @@
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="Enums\**" />
-    <Compile Remove="Lib\**" />
-    <EmbeddedResource Remove="Enums\**" />
-    <EmbeddedResource Remove="Lib\**" />
-    <None Remove="Enums\**" />
-    <None Remove="Lib\**" />
-  </ItemGroup>
   <ItemGroup>
     <None Remove="ConanServerManager.Common.csproj.vspscc" />
   </ItemGroup>

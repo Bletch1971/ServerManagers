@@ -24,12 +24,9 @@ namespace ServerManagerTool.Plugin.Discord
         public ObservableList<ConfigProfile> ConfigProfiles
         {
             get { return Get<ObservableList<ConfigProfile>>(); }
-            set { Set(value); }
+            private set { Set(value); }
         }
 
-        public override bool HasAnyChanges
-        {
-            get => base.HasChanges || (ConfigProfiles?.HasAnyChanges ?? false);
-        }
+        public override bool HasAnyChanges => base.HasChanges || ConfigProfiles.HasAnyChanges;
     }
 }

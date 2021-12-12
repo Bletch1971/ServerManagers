@@ -33,7 +33,7 @@ namespace ServerManagerTool.Lib
         public event EventHandler StatusUpdate;
 
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
+        private static readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private readonly List<PropertyChangeNotifier> profileNotifiers = new List<PropertyChangeNotifier>();
         private Process serverProcess;
         private IAsyncDisposable updateRegistration;
@@ -169,6 +169,9 @@ namespace ServerManagerTool.Lib
                     ServerProfile.ServerIPProperty,
                     ServerProfile.MaxPlayersProperty,
 
+                    ServerProfile.ServerPasswordProperty,
+                    ServerProfile.AdminPasswordProperty,
+
                     ServerProfile.ServerMapProperty,
                     ServerProfile.ServerModIdsProperty,
                     ServerProfile.TotalConversionModIdProperty,
@@ -177,7 +180,7 @@ namespace ServerManagerTool.Lib
                 },
                 (s, p) =>
                 {
-                    if (Status == ServerStatus.Stopped || Status == ServerStatus.Uninstalled || Status == ServerStatus.Unknown)
+                    if (Status == ServerStatus.Stopped || Status == ServerStatus.Uninstalled || Status == ServerStatus.Unknown || Status == ServerStatus.Updating)
                     {
                         AttachToProfileCore(profile);
                     }
@@ -198,16 +201,7 @@ namespace ServerManagerTool.Lib
                 return;
             }
 
-            if (!String.IsNullOrWhiteSpace(this.ProfileSnapshot.ServerIP) && IPAddress.TryParse(this.ProfileSnapshot.ServerIP, out IPAddress localServerIpAddress))
-            {
-                // Use the explicit Server IP
-                localServerQueryEndPoint = new IPEndPoint(localServerIpAddress, Convert.ToUInt16(this.ProfileSnapshot.QueryPort));
-            }
-            else
-            {
-                // No Server IP specified, use Loopback
-                localServerQueryEndPoint = new IPEndPoint(IPAddress.Loopback, Convert.ToUInt16(this.ProfileSnapshot.QueryPort));
-            }
+            localServerQueryEndPoint = new IPEndPoint(this.ProfileSnapshot.ServerIPAddress, Convert.ToUInt16(this.ProfileSnapshot.QueryPort));
 
             //
             // Get the public endpoint for querying Steam
@@ -281,13 +275,13 @@ namespace ServerManagerTool.Lib
 
                     case WatcherServerStatus.RunningLocalCheck:
                         if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.WaitingForPublication : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.Waiting : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
                         if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
                         break;
 
                     case WatcherServerStatus.RunningExternalCheck:
                         if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.WaitingForPublication, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Waiting, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
                         if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
                         break;
 
@@ -439,7 +433,7 @@ namespace ServerManagerTool.Lib
             }
 
             CheckServerWorldFileExists();
-            UpdateServerStatus(ServerStatus.Initializing, this.Availability, false);
+            UpdateServerStatus(ServerStatus.Initializing, false);
 
             try
             {
@@ -498,12 +492,12 @@ namespace ServerManagerTool.Lib
             }            
         }
 
-        public async Task<bool> UpgradeAsync(CancellationToken cancellationToken, bool updateServer, ServerBranchSnapshot branch, bool validate, bool updateMods, ProgressDelegate progressCallback)
+        public async Task<bool> UpgradeAsync(CancellationToken cancellationToken, bool updateServer, BranchSnapshot branch, bool validate, bool updateMods, ProgressDelegate progressCallback)
         {
             return await UpgradeAsync(cancellationToken, updateServer, branch, validate, updateMods, null, progressCallback);
         }
 
-        public async Task<bool> UpgradeAsync(CancellationToken cancellationToken, bool updateServer, ServerBranchSnapshot branch, bool validate, bool updateMods, string[] updateModIds, ProgressDelegate progressCallback)
+        public async Task<bool> UpgradeAsync(CancellationToken cancellationToken, bool updateServer, BranchSnapshot branch, bool validate, bool updateMods, string[] updateModIds, ProgressDelegate progressCallback)
         {
             if (updateServer && !Environment.Is64BitOperatingSystem)
             {
@@ -520,7 +514,7 @@ namespace ServerManagerTool.Lib
 
                 bool isNewInstallation = this.Status == ServerStatus.Uninstalled;
 
-                UpdateServerStatus(ServerStatus.Updating, Availability, false);
+                UpdateServerStatus(ServerStatus.Updating, false);
 
                 // Run the SteamCMD to install the server
                 var steamCmdFile = SteamCmdUpdater.GetSteamCmdFile(Config.Default.DataDir);
@@ -957,7 +951,7 @@ namespace ServerManagerTool.Lib
             finally
             {
                 this.lastModStatusQuery = DateTime.MinValue;
-                UpdateServerStatus(ServerStatus.Stopped, Availability, false);
+                UpdateServerStatus(ServerStatus.Stopped, false);
             }
         }
 
@@ -993,6 +987,11 @@ namespace ServerManagerTool.Lib
             this.lastModStatusQuery = DateTime.MinValue;
         }
 
+        public void UpdateServerStatus(ServerStatus serverStatus, bool sendAlert)
+        {
+            UpdateServerStatus(serverStatus, Availability, sendAlert);
+        }
+
         public void UpdateServerStatus(ServerStatus serverStatus, AvailabilityStatus availabilityStatus, bool sendAlert)
         {
             this.Status = serverStatus;
@@ -1006,32 +1005,29 @@ namespace ServerManagerTool.Lib
 
         public void UpdateServerStatusString()
         {
-            switch (Status)
+            StatusString = GetServerStatusString(Status);
+        }
+
+        public static string GetServerStatusString(ServerStatus status)
+        {
+            switch (status)
             {
                 case ServerStatus.Initializing:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusInitializingLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusInitializingLabel");
                 case ServerStatus.Running:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusRunningLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusRunningLabel");
                 case ServerStatus.Stopped:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppedLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppedLabel");
                 case ServerStatus.Stopping:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppingLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusStoppingLabel");
                 case ServerStatus.Uninstalled:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUninstalledLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUninstalledLabel");
                 case ServerStatus.Unknown:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
                 case ServerStatus.Updating:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUpdatingLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUpdatingLabel");
                 default:
-                    StatusString = _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
-                    break;
+                    return _globalizer.GetResourceString("ServerSettings_RuntimeStatusUnknownLabel");
             }
         }
 
@@ -1091,7 +1087,7 @@ namespace ServerManagerTool.Lib
 
             try
             {
-                var endPoint = new IPEndPoint(IPAddress.Parse(this.ProfileSnapshot.ServerIP), this.ProfileSnapshot.RCONPort);
+                var endPoint = new IPEndPoint(this.ProfileSnapshot.ServerIPAddress, this.ProfileSnapshot.RCONPort);
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
 
                 if (server == null)

@@ -6,6 +6,7 @@ using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
 using System.Diagnostics;
@@ -152,14 +153,17 @@ namespace ServerManagerTool
                 }
             }
 
+            this.Left = Config.Default.MainWindow_Left;
+            this.Top = Config.Default.MainWindow_Top;
             this.Height = Config.Default.MainWindow_Height;
             this.Width = Config.Default.MainWindow_Width;
+            this.WindowState = Config.Default.MainWindow_WindowState;
 
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             //
             // Kick off the initialization.
@@ -189,6 +193,32 @@ namespace ServerManagerTool
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
         }
 
+        private void MainWindow_LocationChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                Config.Default.MainWindow_Left = Math.Max(0D, this.Left);
+                Config.Default.MainWindow_Top = Math.Max(0D, this.Top);
+            }
+        }
+
+        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                Config.Default.MainWindow_Height = e.NewSize.Height;
+                Config.Default.MainWindow_Width = e.NewSize.Width;
+            }
+        }
+
+        private void MainWindow_StateChanged(object sender, EventArgs e)
+        {
+            if (Config.Default.MainWindow_MinimizeToTray && this.WindowState == WindowState.Minimized)
+            {
+                this.Hide();
+            }
+        }
+
         private void Window_Closed(object sender, EventArgs e)
         {
             if (sender is Window window)
@@ -197,37 +227,23 @@ namespace ServerManagerTool
             this.Activate();
         }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (this.WindowState != WindowState.Minimized)
-            {
-                Config.Default.MainWindow_Height = e.NewSize.Height;
-                Config.Default.MainWindow_Width = e.NewSize.Width;
-            }
-        }
-
-        private void Window_StateChanged(object sender, EventArgs e)
-        {
-            if (Config.Default.MainWindow_MinimizeToTray && this.WindowState == WindowState.Minimized)
-            {
-                this.Hide();
-            }
-        }
-
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
+            if (DiscordBotHelper.HasRunningCommands)
+            {
+                var result = MessageBox.Show(_globalizer.GetResourceString("MainWindow_DiscordBot_RunningCommandsLabel"), _globalizer.GetResourceString("MainWindow_DiscordBot_RunningCommandsTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+
             base.OnClosing(e);
             RconWindow.CloseAllWindows();
             PlayerListWindow.CloseAllWindows();
             ServerMonitorWindow.CloseAllWindows();
             this.versionChecker.DisposeAsync().DoNotWait();
-
-            var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var backupFolder = IOUtils.NormalizePath(string.IsNullOrWhiteSpace(Config.Default.BackupPath)
-                ? Path.Combine(Config.Default.DataPath, Config.Default.BackupRelativePath)
-                : Path.Combine(Config.Default.BackupPath));
-            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
-            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
         }
 
         private void ResourceDictionaryChangedEvent(object source, ResourceDictionaryChangedEventArgs e)

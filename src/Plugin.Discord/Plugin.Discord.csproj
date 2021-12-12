@@ -1,9 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="Globals">
-    <SccProjectName>%24/Development/ServerManagers/Main/Plugin.Discord</SccProjectName>
-    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
-    <SccAuxPath>https://dev.azure.com/bretthewitson</SccAuxPath>
-    <SccLocalPath>.</SccLocalPath>
     <Configurations>Debug;Release;Debug - Beta</Configurations>
   </PropertyGroup>
   <PropertyGroup>
@@ -30,8 +26,15 @@
     <None Remove="Art\Drag.ico" />
     <None Remove="Art\Edit.ico" />
     <None Remove="Art\favicon.ico" />
+    <None Remove="DeployBetaToGithub.cmd" />
+    <None Remove="DeployToGithub.cmd" />
+    <None Remove="Globalization\de-DE\de-DE.xaml" />
     <None Remove="Globalization\en-US\en-US.xaml" />
+    <None Remove="Globalization\fr-FR\fr-FR.xaml" />
     <None Remove="Globalization\pt-BR\pt-BR.xaml" />
+    <None Remove="Globalization\zh-CN\zh-CN.xaml" />
+    <None Remove="MakeLatestBetaVersionGithub.ps1" />
+    <None Remove="MakeLatestVersionGithub.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Windows\ConfigProfileWindow.xaml" />
@@ -60,9 +63,10 @@
     <Resource Include="Art\Edit.ico" />
     <Resource Include="Art\favicon.ico" />
     <Resource Include="Globalization\en-US\en-US.xaml" />
-    <Resource Include="Globalization\pt-BR\pt-BR.xaml">
-      <Generator></Generator>
-    </Resource>
+    <EmbeddedResource Include="Globalization\de-DE\de-DE.xaml" />
+    <EmbeddedResource Include="Globalization\fr-FR\fr-FR.xaml" />
+    <EmbeddedResource Include="Globalization\pt-BR\pt-BR.xaml" />
+    <EmbeddedResource Include="Globalization\zh-CN\zh-CN.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Config.Designer.cs">

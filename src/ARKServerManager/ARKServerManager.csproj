@@ -37,7 +37,7 @@
     <SuiteName>Server Managers</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.1.400.%2a</ApplicationVersion>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>false</BootstrapperEnabled>
@@ -106,6 +106,9 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetZip, Version=1.13.8.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetZip.1.13.8\lib\net40\DotNetZip.dll</HintPath>
@@ -173,6 +176,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Delegates\ServerStatusChangeDelegate.cs" />
     <Compile Include="Enums\LevelProgression.cs" />
     <Compile Include="Enums\LogEventType.cs" />
     <Compile Include="Enums\NPCSpawnContainerType.cs" />
@@ -191,23 +195,29 @@
     <Compile Include="Lib\Model\EngramAutoUnlock.cs" />
     <Compile Include="Lib\Model\PreventTransferOverride.cs" />
     <Compile Include="Lib\Model\StackSizeOverride.cs" />
+    <Compile Include="Lib\Model\StatsMultiplierIntegerArray.cs" />
     <Compile Include="Lib\Serialization\IniFileEntryAttribute.cs" />
     <Compile Include="Lib\Serialization\IniFiles.cs" />
     <Compile Include="Lib\Serialization\IniSections.cs" />
     <Compile Include="Lib\Serialization\SystemIniFile.cs" />
     <Compile Include="Lib\Model\PlayerListParameters.cs" />
-    <Compile Include="Lib\ServerBranchSnapshot.cs" />
+    <Compile Include="Lib\BranchSnapshot.cs" />
     <Compile Include="Lib\ServerPlayers.cs" />
     <Compile Include="Lib\ServerProfileSnapshot.cs" />
     <Compile Include="Lib\ViewConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="Lib\ViewConverters\MapNameValueConverter.cs" />
     <Compile Include="Lib\ViewModel\Engram.cs" />
     <Compile Include="Lib\ViewModel\EngramSettings.cs" />
+    <Compile Include="Utils\DiscordBotHelper.cs" />
+    <Compile Include="Utils\DiscordPluginHelper.cs" />
     <Compile Include="Utils\ModUtils.cs" />
     <Compile Include="Windows\AddUserWindow.xaml.cs">
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Lib\Model\StatsMultiplierArray.cs" />
+    <Compile Include="Lib\Model\StatsMultiplierFloatArray.cs" />
+    <Compile Include="Windows\DataDirectoryWindow.xaml.cs">
+      <DependentUpon>DataDirectoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PlayerListWindow.xaml.cs">
       <DependentUpon>PlayerListWindow.xaml</DependentUpon>
     </Compile>
@@ -239,9 +249,6 @@
     <Compile Include="Windows\ServerMonitorWindow.xaml.cs">
       <DependentUpon>ServerMonitorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\SupplyCrateOverridesWindow.xaml.cs">
-      <DependentUpon>SupplyCrateOverridesWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\VersionFeedWindow.xaml.cs">
       <DependentUpon>VersionFeedWindow.xaml</DependentUpon>
     </Compile>
@@ -271,7 +278,7 @@
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ErrorHandling.cs" />
-    <Compile Include="Windows\GlobalSettingsControl.xaml.cs">
+    <Compile Include="UserControls\GlobalSettingsControl.xaml.cs">
       <DependentUpon>GlobalSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lib\Model\NPCReplacement.cs" />
@@ -304,7 +311,7 @@
     <Compile Include="Windows\RCONWindow.xaml.cs">
       <DependentUpon>RCONWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServerSettingsControl.xaml.cs">
+    <Compile Include="UserControls\ServerSettingsControl.xaml.cs">
       <DependentUpon>ServerSettingsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lib\ServerStatusWatcher.cs" />
@@ -314,7 +321,15 @@
     <Compile Include="Windows\SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
+    <Resource Include="Art\StatusBad.ico" />
+    <Resource Include="Art\StatusGood.ico" />
+    <Resource Include="Art\StatusWarning.ico" />
+    <Resource Include="Art\Collapse.ico" />
+    <Resource Include="Art\Expand.ico" />
     <Content Include="GameData\Genesis2.gamedata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameData\LostIsland.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="VersionFeed.xml" />
@@ -389,6 +404,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\DataDirectoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\PlayerListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -414,10 +433,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\ServerMonitorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\SupplyCrateOverridesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -483,7 +498,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\GlobalSettingsControl.xaml">
+    <Page Include="UserControls\GlobalSettingsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -512,7 +527,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ServerSettingsControl.xaml">
+    <Page Include="UserControls\ServerSettingsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -607,6 +622,10 @@
     <ProjectReference Include="..\ServerManager.Common\ServerManager.Common.csproj">
       <Project>{7c99d9f7-0c65-4116-927a-94eb018c88fd}</Project>
       <Name>ServerManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerManager.Discord\ServerManager.Discord.csproj">
+      <Project>{c4c8000d-5e45-497c-a218-b95a1567010e}</Project>
+      <Name>ServerManager.Discord</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServerManager.Updater\ServerManager.Updater.csproj">
       <Project>{3e0c9ee6-780f-4fef-ba03-e38062a5fdb6}</Project>

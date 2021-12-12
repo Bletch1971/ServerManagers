@@ -4,6 +4,18 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     >
 
+    <!--#region Alert Types -->
+    <sys:String x:Key="AlertType_Backup">Backup</sys:String>
+    <sys:String x:Key="AlertType_Error">Error</sys:String>
+    <sys:String x:Key="AlertType_ModUpdateDetected">Mod Update Detected</sys:String>
+    <sys:String x:Key="AlertType_Shutdown">Shutdown</sys:String>
+    <sys:String x:Key="AlertType_ShutdownMessage">Shutdown Message</sys:String>
+    <sys:String x:Key="AlertType_ShutdownReason">Shutdown Reason</sys:String>
+    <sys:String x:Key="AlertType_ServerStatusChange">Server Status Change</sys:String>
+    <sys:String x:Key="AlertType_Startup">Startup</sys:String>
+    <sys:String x:Key="AlertType_UpdateResults">Update Results</sys:String>
+    <!--#endregion-->
+
     <!--#region Global -->
     <sys:String x:Key="Global_CancelButtonLabel">Cancel</sys:String>
     <sys:String x:Key="Global_CloseButtonLabel">Close</sys:String>
@@ -106,6 +118,8 @@
     <sys:String x:Key="ConfigProfileWindow_TestErrorTitle">Test Action Error</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestErrorLabel">An error occurred while trying to test the config profile.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestEnabledErrorLabel">The profile is not enabled and cannot be tested.</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_TestAlertMessage">Test '{0}' alert type message for profile name '{1}'</sys:String>
     <!--#endregion-->
 
     <!--#region Version Feed Window -->

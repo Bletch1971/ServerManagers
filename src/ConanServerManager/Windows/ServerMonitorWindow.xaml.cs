@@ -53,6 +53,8 @@ namespace ServerManagerTool.Windows
 
             SetWindowTitle();
 
+            this.Left = Config.Default.ServerMonitorWindow_Left;
+            this.Top = Config.Default.ServerMonitorWindow_Top;
             this.Height = Config.Default.ServerMonitorWindow_Height;
             this.Width = Config.Default.ServerMonitorWindow_Width;
 
@@ -86,7 +88,7 @@ namespace ServerManagerTool.Windows
             set { SetValue(IsStandAloneWindowProperty, value); }
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void ServerMonitorWindow_Loaded(object sender, RoutedEventArgs e)
         {
             if (ServerManager == null)
             {
@@ -120,12 +122,16 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void ServerMonitorWindow_LocationChanged(object sender, EventArgs e)
         {
-            this.Activate();
+            if (this.WindowState == WindowState.Normal)
+            {
+                Config.Default.ServerMonitorWindow_Left = Math.Max(0D, this.Left);
+                Config.Default.ServerMonitorWindow_Top = Math.Max(0D, this.Top);
+            }
         }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void ServerMonitorWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (this.WindowState != WindowState.Minimized)
             {
@@ -134,12 +140,17 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private void Window_StateChanged(object sender, EventArgs e)
+        private void ServerMonitorWindow_StateChanged(object sender, EventArgs e)
         {
             if (IsStandAloneWindow && Config.Default.MainWindow_MinimizeToTray && this.WindowState == WindowState.Minimized)
             {
                 this.Hide();
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Activate();
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -182,7 +193,7 @@ namespace ServerManagerTool.Windows
 
                 var profile = ServerProfileSnapshot.Create(server.Profile);
 
-                var exitCode = await Task.Run(() => app.PerformProfileBackup(profile));
+                var exitCode = await Task.Run(() => app.PerformProfileBackup(profile, CancellationToken.None));
                 if (exitCode != ServerApp.EXITCODE_NORMALEXIT && exitCode != ServerApp.EXITCODE_CANCELLED)
                 {
                     throw new ApplicationException($"An error occured during the backup process - ExitCode: {exitCode}");
@@ -620,7 +631,7 @@ namespace ServerManagerTool.Windows
 
                     await Task.Delay(1000);
 
-                    var branch = new BranchSnapshot() { BranchName = serverProfile.BranchName, BranchPassword = serverProfile.BranchPassword };
+                    var branch = BranchSnapshot.Create(serverProfile);
                     return await server.UpgradeAsync(_upgradeCancellationSource.Token, updateServer, branch, true, updateMods, (p, m, n) => { TaskUtils.RunOnUIThreadAsync(() => { window?.AddMessage(m, n); }).DoNotWait(); });
                 }
                 else

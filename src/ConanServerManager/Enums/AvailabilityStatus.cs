@@ -3,9 +3,9 @@
     public enum AvailabilityStatus
     {
         Unknown,
-        NeedPublicIP,
+        SetPublicIP,
         Unavailable,
-        WaitingForPublication,
+        Waiting,
         Available
     }
 }

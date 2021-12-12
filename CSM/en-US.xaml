@@ -13,6 +13,15 @@
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_ConanSandbox">The Exiled Lands</sys:String>
+    <sys:String x:Key="Map_/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
     <!--#region Mod Types -->
     <sys:String x:Key="ModType_Unknown">Unknown</sys:String>
     <sys:String x:Key="ModType_NotDownloaded">Not Downloaded</sys:String>
@@ -26,10 +35,6 @@
     <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
     <!--#endregion-->
 
-    <!--#region Branch Names -->
-    <sys:String x:Key="live">Live</sys:String>
-    <!--#endregion-->
-
     <!--#region Server Regions -->
     <sys:String x:Key="ServerRegion_0">Europe</sys:String>
     <sys:String x:Key="ServerRegion_1">North America</sys:String>
@@ -37,11 +42,6 @@
     <sys:String x:Key="ServerRegion_3">Australia</sys:String>
     <sys:String x:Key="ServerRegion_4">South America</sys:String>
     <sys:String x:Key="ServerRegion_5">Japan</sys:String>
-    <!--#endregion-->
-
-    <!--#region Game Map Names -->
-    <sys:String x:Key="ConanSandbox">The Exiled Lands</sys:String>
-    <sys:String x:Key="/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
     <!--#endregion-->
 
     <!--#region Process Priority -->
@@ -55,6 +55,12 @@
     <!--#region Processor Afinity -->
     <sys:String x:Key="ProcessorAffinity_Invalid">invalid</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
+    <!--#endregion-->
+
+    <!--#region Processor Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
     <!--#endregion-->
 
     <!--#region Unit strings -->
@@ -91,8 +97,9 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">Data Directory Selection Error</sys:String>
-    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">The directory you have chosen is on the desktop. This is not recommended, please choose another folder.</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
 
@@ -159,6 +166,25 @@
 
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">Selected</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processor</sys:String>
+    <!--#endregion-->
+
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Data Folder Selection</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Select the drive where the data folder should be located.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Data Folder Name:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">The name of the server manager data folder.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Local Disk</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} free of {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Refresh</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">The data folder name you have entered is not valid.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Server Manager Restart Required</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">The data folder has been set, you must now restart the server manager to use the new settings.</sys:String>
     <!--#endregion-->
 
     <!--#region Mod Details Window -->
@@ -623,6 +649,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Main Window Start Mode:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Manage Public IP automatically</sys:String>
@@ -840,6 +867,8 @@
 
     <!--#region Server Settings Control-->
     <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Profile ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">The unique ID assigned to the profile.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">The name for the server profile. This is not the public name users will see in the game. For that, set the 'Server Name' field.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Installed Version:</sys:String>
@@ -1043,6 +1072,10 @@
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodTooltip">Set the amount of AFK time before a character is kicked.</sys:String>
     <sys:String x:Key="ServerSettings_ServerRegionLabel">Server Region:</sys:String>
     <sys:String x:Key="ServerSettings_ServerRegionTooltip">Selecting a server region will affect how your server is filtered in the list. Select your region to help players find a server that is close to them.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerTransferEnabledLabel">Enable Server Transfers</sys:String>
+    <sys:String x:Key="ServerSettings_ServerTransferEnabledTooltip">If enabled, will enable character server transfers.</sys:String>
+    <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerLabel">Can Import Directly from Same Server</sys:String>
+    <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerTooltip">If enabled, will allow players to directly import characters that were exported from exactly the same server.</sys:String>
 
     <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>

@@ -5,21 +5,22 @@
   <title>Discord Plugin Version Feed</title>
   <subtitle>This is the Discord Plugin beta version feed.</subtitle>
   <link href="" />
-  <updated>2020-07-12T02:00:00Z</updated>
+  <updated>2021-12-12T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:4750D17C-2C8F-4D8C-AA17-B3512F002170</id>
-    <title>1.0.17 (1.0.17.2)</title>
-    <summary>1.0.17.2</summary>
+    <id>urn:uuid:DDB25735-1D20-4580-B5FE-1AD4BD107376</id>
+    <title>1.0.19 (1.0.19.3)</title>
+    <summary>1.0.19.3</summary>
     <link href="" />
-    <updated>2020-07-12T02:00:00Z</updated>
+    <updated>2021-12-12T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Added drag/drop feature to the config window.</li>
+            <li>fr-FR Translation file added.</li>
+            <li>pt-BR Translation file updated.</li>
           </ul>
         </p>
       </div>
@@ -31,18 +32,47 @@
   </entry>
 
   <entry>
-    <id>urn:uuid:D8974ABF-8444-4D40-A594-D4443921B3B8</id>
-    <title>1.0.17 (1.0.17.1)</title>
-    <summary>1.0.17.1</summary>
+    <id>urn:uuid:FD4F56C3-9E44-4422-A761-87E7F957454F</id>
+    <title>1.0.19 (1.0.19.2)</title>
+    <summary>1.0.19.2</summary>
     <link href="" />
-    <updated>2020-07-12T00:00:00Z</updated>
+    <updated>2021-12-09T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Profile name has been converted to a droplist and is now populated with the Server Manager Profile Names for selection.</li>
+            <li>Changed the plugin initialization so it throws an exception if unable to load config file, rather than creating a new config file.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A9EC2F32-E026-485F-BD7B-C657DBA95B54</id>
+    <title>1.0.19 (1.0.19.1)</title>
+    <summary>1.0.19.1</summary>
+    <link href="" />
+    <updated>2021-12-09T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed alert test message to support globalization.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>de-DE Translation file updated.</li>
+            <li>pt-BR Translation file updated.</li>
           </ul>
         </p>
       </div>

@@ -2,7 +2,7 @@
 
 namespace ServerManagerTool.Plugin.Discord
 {
-    public class ComboBoxItemList : ObservableCollection<ComboBoxItem>
+    public class ComboBoxItemList : SortableObservableCollection<ComboBoxItem>
     {
         public ComboBoxItemList()
         {

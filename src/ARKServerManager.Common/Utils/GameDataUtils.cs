@@ -37,7 +37,7 @@ namespace ServerManagerTool.Utils
                     data.SupplyCrates.AddRange(fileData.SupplyCrates);
                     data.Inventories.AddRange(fileData.Inventories);
                     data.GameMaps.AddRange(fileData.GameMaps);
-                    data.Mods.AddRange(fileData.Mods);
+                    data.TotalConversions.AddRange(fileData.TotalConversions);
                     data.PlayerLevels.AddRange(fileData.PlayerLevels);
                     data.CreatureLevels.AddRange(fileData.CreatureLevels);
                     data.Branches.AddRange(fileData.Branches);
@@ -117,7 +117,7 @@ namespace ServerManagerTool.Utils
         public List<GameMapDataItem> GameMaps = new List<GameMapDataItem>();
 
         [DataMember(IsRequired = false)]
-        public List<TotalConversionDataItem> Mods = new List<TotalConversionDataItem>();
+        public List<TotalConversionDataItem> TotalConversions = new List<TotalConversionDataItem>();
 
         [DataMember(IsRequired = false)]
         public List<PlayerLevelDataItem> PlayerLevels = new List<PlayerLevelDataItem>();
@@ -153,7 +153,7 @@ namespace ServerManagerTool.Utils
                 data.SupplyCrates.ForEach(c => c.IsUserData = isUserData);
                 data.Inventories.ForEach(c => c.IsUserData = isUserData);
                 data.GameMaps.ForEach(c => c.IsUserData = isUserData);
-                data.Mods.ForEach(c => c.IsUserData = isUserData);
+                data.TotalConversions.ForEach(c => c.IsUserData = isUserData);
                 data.Branches.ForEach(c => c.IsUserData = isUserData);
                 data.Events.ForEach(c => c.IsUserData = isUserData);
                 data.OfficialMods.ForEach(c => c.IsUserData = isUserData);

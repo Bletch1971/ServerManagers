@@ -18,10 +18,11 @@ namespace ServerManagerTool.Plugin.Discord.Windows
 
         public VersionFeedWindow(DiscordPlugin plugin, string feedUri)
         {
+            InitializeComponent();
+            WindowUtils.UpdateResourceDictionary(this, plugin.LanguageCode);
+
             this.Plugin = plugin ?? new DiscordPlugin();
             this.feedUri = feedUri;
-
-            InitializeComponent();
 
             this.DataContext = this;
         }
@@ -44,7 +45,7 @@ namespace ServerManagerTool.Plugin.Discord.Windows
             set { SetValue(SelectedFeedEntryProperty, value); }
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void VersionFeedWindow_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {

@@ -1,7 +1,7 @@
 {
   "Application": "ark",
-  "Version": "1.7.2",
-  "Created": "2020-12-03T00:00:00.0000000Z",
+  "Version": "1.7.3",
+  "Created": "2021-08-23T00:00:00.0000000Z",
   "Creatures": [
     {
       "NameTag": "Achatina",
@@ -4305,6 +4305,14 @@
       "Level": 0,
       "Points": 0,
       "IsTekGram": true,
+      "ClassName": "EngramEntry_TekATV_C",
+      "Description": "Tek ATV",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
       "ClassName": "EngramEntry_Tek_Gate_C",
       "Description": "Tek Dinosaur Gate",
       "Mod": "ArkPrime"
@@ -6851,6 +6859,13 @@
     {
       "Category": "Artifacts",
       "IsHarvestable": false,
+      "ClassName": "PrimalItemArtifactGeneric_C",
+      "Description": "Artifact Universal",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Artifacts",
+      "IsHarvestable": false,
       "ClassName": "PrimalItemArtifact_01_C",
       "Description": "Artifact of the Hunter",
       "Mod": "ArkPrime"
@@ -7602,6 +7617,48 @@
       "IsHarvestable": true,
       "ClassName": "PrimalItemConsumable_JellyVenom_C",
       "Description": "Bio Toxin",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_XSmall_C",
+      "Description": "Kibble (Basic)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Small_C",
+      "Description": "Kibble (Simple)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Medium_C",
+      "Description": "Kibble (Regular)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Large_C",
+      "Description": "Kibble (Superior)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_XLarge_C",
+      "Description": "Kibble (Exceptional)",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Kibble_Base_Special_C",
+      "Description": "Kibble (Extraordinary)",
       "Mod": "ArkPrime"
     },
     {

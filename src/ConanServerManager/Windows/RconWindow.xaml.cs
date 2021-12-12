@@ -316,7 +316,6 @@ namespace ServerManagerTool
                         inputBox.Visibility = Visibility.Collapsed;
                         dockPanel.IsEnabled = true;
 
-                        PlayerInfo player;
                         var inputText = inputTextBox.Text;
 
                         switch (this.CurrentInputWindowMode)
@@ -542,7 +541,7 @@ namespace ServerManagerTool
                     ProfileId = server.Runtime.ProfileSnapshot.ProfileId,
                     ProfileName = server.Runtime.ProfileSnapshot.ProfileName,
                     MaxPlayers = server.Runtime.MaxPlayers,
-                    RconHost = server.Runtime.ProfileSnapshot.ServerIP,
+                    RconHost = server.Runtime.ProfileSnapshot.ServerIPAddress.ToString(),
                     RconPort = server.Runtime.ProfileSnapshot.RconPort,
                     RconPassword = server.Runtime.ProfileSnapshot.RconPassword,
                 });

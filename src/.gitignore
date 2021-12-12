@@ -350,6 +350,6 @@ MigrationBackup/
 .ionide/
 
 # custom files
-Deploy*Github.cmd
-Installer.*
-MakeLatest*.ps1
+#Deploy*Github.cmd
+Installer.txt
+#MakeLatest*.ps1
