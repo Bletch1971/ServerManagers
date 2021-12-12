@@ -1,0 +1,408 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8553008Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DYN_RM_CraftingTable_eco_C",
+      "Description": "Crafting Table for Roman Empire",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DYN_RM_Smithy_eco_C",
+      "Description": "Roman Smithy",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DYN_RM_CulinaTent_eco_C",
+      "Description": "Roman Culina Tent",
+      "Mod": "ecoEmpiresRomans"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_CraftingTable_eco_C",
+      "Description": "Crafting Table for Roman Empire",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_Fence_eco_C",
+      "Description": "Roman Fence",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_FoodStorage_eco_C",
+      "Description": "Food Storage",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_SmallStorage_eco_C",
+      "Description": "Roman Small Storage",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_LargeStorage_eco_C",
+      "Description": "Roman Large Storage",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_Seat_eco_C",
+      "Description": "Roman Seat",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_LargeSeat_eco_C",
+      "Description": "Roman Large Seat",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_PedesBed_eco_C",
+      "Description": "Roman Pedes Bed",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FurnitureRM_FancyBed_eco_C",
+      "Description": "Roman Fancy Bed",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_SquareTable_eco_C",
+      "Description": "Roman Square Table",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_LongTable_eco_C",
+      "Description": "Roman Long Table",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_SmallTorch_eco_C",
+      "Description": "Roman Small Torch",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_LargeTorch_eco_C",
+      "Description": "Roman Large Torch",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_Banner_eco_C",
+      "Description": "Roman Banner",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_PedesTent_eco_C",
+      "Description": "Roman Pedes Tent",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_OptioTent_eco_C",
+      "Description": "Roman Optio Tent",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_CenturionTent_eco_C",
+      "Description": "Roman Centurion Tent",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_MeetingTent_eco_C",
+      "Description": "Roman Meeting Tent",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RM_Door_eco_C",
+      "Description": "Roman Door",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RM_DoubleDooor_eco_C",
+      "Description": "Double Door",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RM_PedesBuilding_eco_C",
+      "Description": "Pedes Building",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RM_OptioBuilding_eco_C",
+      "Description": "Optio Building",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RM_CenturionBuilding_eco_C",
+      "Description": "Centurion Building",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_Smithy_eco_C",
+      "Description": "Roman Smithy",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_DYN_RM_PedesHelmetSkin_eco_C",
+      "Description": "Pedes Roman Helmet",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_DYN_RM_OptioHelmetSkin_eco_C",
+      "Description": "Optio Roman Helmet",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_DYN_RM_CenturionHelmetSkin_eco_C",
+      "Description": "Centurion Roman Helmet",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponDYN_RM_GladiusSword_eco_C",
+      "Description": "Roman Gladius Sword",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Weapon_DYN_RM_PilumSpear_eco_C",
+      "Description": "Roman Pilum Spear",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DYN_RM_LongShield_eco_C",
+      "Description": "Roman Long Shield",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemCostume_DYN_RM_StandardBearer_eco_C",
+      "Description": "Roman Standard-Bearer",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DYN_RM_OptioHorseSaddlePrimitive_eco_C",
+      "Description": "Roman Optio Saddle",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DYN_RM_CenturionHorseSaddlePrimitive_eco_C",
+      "Description": "Roman Centurion Saddle",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DYN_RM_OptioHorseSaddleAscendant_eco_C",
+      "Description": "Roman Optio Saddle",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DYN_RM_CenturionHorseSaddleAscendant_eco_C",
+      "Description": "Roman Centurion Saddle",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_ChariotDECOR_eco_C",
+      "Description": "Roman Chariot Decor",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_RM_Boat_eco_C",
+      "Description": "Roman Empire Boat",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_CulinaTent_eco_C",
+      "Description": "Roman Culina Tent",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_Cup_eco_C",
+      "Description": "Roman Cup",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_Bowl_eco_C",
+      "Description": "Roman Bowl",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_Grinder_eco_C",
+      "Description": "Roman Grinding Mill",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_FreshSalt_eco_C",
+      "Description": "Fresh Salt",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_Spices_eco_C",
+      "Description": "Spices",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_Barley_eco_C",
+      "Description": "Barley",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_MixingTable_eco_C",
+      "Description": "Roman Mixing Table",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_MixedFruit_eco_C",
+      "Description": "Mixed Fruit",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_PoscaWine_eco_C",
+      "Description": "Posca Wine",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_MulsumHoneyWine_eco_C",
+      "Description": "Mulsum Honey Wine",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DYN_RM_Grill_eco_C",
+      "Description": "Roman Grill",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_BarleyBread_eco_C",
+      "Description": "Barley Bread",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_BarleyGruel_eco_C",
+      "Description": "Barley Gruel",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_DYN_RM_SaltedFish_eco_C",
+      "Description": "Salted Fish",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_DYN_RM_FancyCookedBird_eco_C",
+      "Description": "Fancy Cooked Bird",
+      "Mod": "ecoEmpiresRomans"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

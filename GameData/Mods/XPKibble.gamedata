@@ -1,0 +1,84 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-06-20T00:00:00.0000000Z",
+  "Engrams": [
+    {
+      "Level": 10,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XPKibble_Simple_C",
+      "Description": "XP Kibble Simple",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XPKibble_Regular_C",
+      "Description": "XP Kibble Regular",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XPKibble_Superior_C",
+      "Description": "XP Kibble Superior",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XPKibble_Exceptional_C",
+      "Description": "XP Kibble Exceptional",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_XPKibble_Tek_C",
+      "Description": "XP Kibble TEK",
+      "Mod": "XP Kibble"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_XPKibble_Simple_C",
+      "Description": "XP Kibble Simple",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_XPKibble_Regular_C",
+      "Description": "XP Kibble Regular",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_XPKibble_Superior_C",
+      "Description": "XP Kibble Superior",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_XPKibble_Exceptional_C",
+      "Description": "XP Kibble Exceptional",
+      "Mod": "XP Kibble"
+    },
+    {
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_XPKibble_Tek_C",
+      "Description": "XP Kibble TEK",
+      "Mod": "XP Kibble"
+    }
+  ]
+}

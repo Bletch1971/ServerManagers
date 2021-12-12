@@ -1,0 +1,219 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-04-19T22:00:55.6876809Z",
+  "Engrams": [
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_CommandTool_C",
+	"Description": "Command Tool",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 25,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_DemolishGun_C",
+	"Description": "Demolish Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_EuthanasiaGun_C",
+	"Description": "Euthanasia Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_InventoryAssistant_C",
+	"Description": "Inventory Assistant",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 8,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_PaintScraper_C",
+	"Description": "Paint Scraper",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 53,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_PressureWasher_C",
+	"Description": "Pressure Washer",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 9,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_Paintbrush_C",
+	"Description": "Paintbrush",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 53,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_PaintSprayer_C",
+	"Description": "Paint Sprayer",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 25,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_PickupGun_C",
+	"Description": "Pickup Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_RemoteControl_C",
+	"Description": "Remote Control",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_RepairTool_C",
+	"Description": "Repair Tool",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_Selector_C",
+	"Description": "Selector",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_TransferGun_C",
+	"Description": "Transfer Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Level": 1,
+	"Points": 0,
+	"IsTekGram": false,
+	"ClassName": "EngramEntry_UT_TransferTool_C",
+	"Description": "Transfer Tool",
+	"Mod": "Useful Tools"
+	}
+  ],
+  "Items": [
+    {
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_CommandTool_C",
+	"Description": "Command Tool",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_DemolishGun_C",
+	"Description": "Demolish Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_EuthanasiaGun_C",
+	"Description": "Euthanasia Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_InventoryAssistant_C",
+	"Description": "Inventory Assistant",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_PaintScraper_C",
+	"Description": "Paint Scraper",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_PressureWasher_C",
+	"Description": "Pressure Washer",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_Paintbrush_C",
+	"Description": "Paintbrush",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_PaintSprayer_C",
+	"Description": "Paint Sprayer",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_PickupGun_C",
+	"Description": "Pickup Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_RemoteControl_C",
+	"Description": "Remote Control",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_RepairTool_C",
+	"Description": "Repair Tool",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_Selector_C",
+	"Description": "Selector",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_TransferGun_C",
+	"Description": "Transfer Gun",
+	"Mod": "Useful Tools"
+	},
+	{
+	"Category": "Weapon",
+	"IsHarvestable": false,
+	"ClassName": "PrimalItem_UT_TransferTool_C",
+	"Description": "Transfer Tool",
+	"Mod": "Useful Tools"
+	}
+  ]
+}

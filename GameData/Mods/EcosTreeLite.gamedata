@@ -1,0 +1,158 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-03-01T02:22:40.5980963Z",
+  "Creatures": [],
+  "Engrams": [
+     {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_ecoTrees_CraftingTable_C",
+      "Description": "ecoTrees CraftingTable",
+      "Mod": "ecoTreesLite"
+   }
+  ],
+  "Items": [
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_ecoTrees_CraftingTable_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_CrystalBlue_Place_2_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_CrystalWhite_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_GiantPurple_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_GiantRed_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_RedCrystal_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Bench_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_HangingLightsSet_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Post_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_SmallLantern_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_LITE_AfricanOlive_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_LITE_TallMaple_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Azalea_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_BlueMushroomCluster_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_FlowerCluster_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_LargeBush_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_RedMushroomCluster_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_coral4_place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_coral4_place_2_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_LargePaver_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_SmallPaver_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_ChineseBan_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_JapaneseMaple_Place_2_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_LitTree1_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Redwood_Place_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Redwood_Place_2_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Trunk_eco_C",
+      "Mod": "ecoTreesLite"
+   },
+   {
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Furniture_Umbrella_Place_C",
+      "Mod": "ecoTreesLite"
+   }
+  ]
+}

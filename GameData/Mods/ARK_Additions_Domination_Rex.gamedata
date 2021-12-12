@@ -1,0 +1,48 @@
+{
+  "Application": "ark",
+  "Version": "1.1.0",
+  "Created": "2020-06-20T00:00:00.0000000Z",
+  "Engrams": [
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndominusRexEgg_C",
+      "Description": "Fertilized Domination Rex Egg",
+      "Mod": "ARK Additions: Domination Rex!"
+    },
+    {
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndominusRexEgg_AB_C",
+      "Description": "Fertilized Domination Rex Egg Abberation",
+      "Mod": "ARK Additions: Domination Rex!"
+    },
+	{
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndominusRexEgg_EXT_C",
+      "Description": "Fertilized Domination Rex Egg Extinction",
+      "Mod": "ARK Additions: Domination Rex!"
+    },
+	{
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndominusRexEgg_SE_C",
+      "Description": "Fertilized Domination Rex Egg Scorched Earth",
+      "Mod": "ARK Additions: Domination Rex!"
+    },
+	{
+      "Level": 100,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IndominusSaddle_C",
+      "Description": "Indominus Rex Saddle",
+      "Mod": "ARK Additions: Domination Rex!"
+    }
+  ],
+  "Items": []
+}

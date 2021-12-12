@@ -1,0 +1,1015 @@
+{
+  "Application": "ark",
+  "Version": "1.1.1",
+  "Created": "2020-03-15T00:00:00.0000000Z",
+  "Creatures": [
+      {
+      "NameTag": "Astrocetus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "SpaceWhale_Character_BP_C",
+      "Description": "Astrocetus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Megachelon",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "GiantTurtle_Character_BP_C",
+      "Description": "Megachelon",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Magmasaur",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Cherufe_Character_BP_C",
+      "Description": "Magmasaur",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Bloodstalker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "BogSpider_Character_BP_C",
+      "Description": "Bloodstalker",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Insect Swarm",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "InsectSwarmChar_BP_C",
+      "Description": "Insect Swarm",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Microbe Swarm",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "MicrobeSwarmChar_BP_C",
+      "Description": "Microbe Swarm",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelMinion_Character_BP_C",
+      "Description": "Eel Minion",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelMinion_Character_BP_Easy_C",
+      "Description": "Eel Minion (Easy Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelMinion_Character_BP_Medium_C",
+      "Description": "Eel Minion (Medium Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelMinion_Character_BP_Hard_C",
+      "Description": "Eel Minion (Hard Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelBoss_Character_BP_C",
+      "Description": "Moeder",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelBoss_Character_BP_Easy_C",
+      "Description": "Moeder (Easy Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelBoss_Character_BP_Medium_C",
+      "Description": "Moeder (Medium Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "EelBoss_Character_BP_Hard_C",
+      "Description": "Moeder (Hard Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRMainBoss_Character_BP_C",
+      "Description": "Corrupted Master Controller",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRMainBoss_Character_BP_Easy_C",
+      "Description": "Corrupted Master Controller (Easy Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRMainBoss_Character_BP_Medium_C",
+      "Description": "Corrupted Master Controller (Medium Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "null",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRMainBoss_Character_BP_Hard_C",
+      "Description": "Corrupted Master Controller (Hard Variant)",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Ferox",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Shapeshifter_Small_Character_BP_C",
+      "Description": "Ferox",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Parasaur",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Bog_Para_Character_BP_C",
+      "Description": "X-Parasaur",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Paraceratherium",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Bog_Paracer_Character_BP_C",
+      "Description": "X-Paraceratherium",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Raptor",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Bog_Raptor_Character_BP_C",
+      "Description": "X-Raptor",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Spino",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Bog_Spino_Character_BP_C",
+      "Description": "X-Spino",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Tapejara",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Bog_Tapejara_Character_BP_C",
+      "Description": "X-Tapejara",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Sabertooth Salmon",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Lunar_Salmon_Character_BP_C",
+      "Description": "X-Sabertooth Salmon",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Basilosaurus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Ocean_Basilosaurus_Character_BP_C",
+      "Description": "X-Basilosaurus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Ichthyosaurus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Ocean_Dolphin_Character_BP_C",
+      "Description": "X-Ichthyosaurus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Dunkleosteus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Ocean_Dunkle_Character_BP_C",
+      "Description": "X-Dunkleosteus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Megalodon",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Ocean_Megalodon_Character_BP_C",
+      "Description": "X-Megalodon",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Mosasaurus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Ocean_Mosa_Character_BP_C",
+      "Description": "X-Mosasaurus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Argentavis",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Snow_Argent_Character_BP_C",
+      "Description": "X-Argentavis",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Otter",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Snow_Otter_Character_BP_C",
+      "Description": "X-Otter",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Woolly Rhino",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Snow_Rhino_Character_BP_C",
+      "Description": "X-Woolly Rhino",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Sabertooth",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Snow_Saber_Character_BP_C",
+      "Description": "X-Sabertooth",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Yutyrannus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Snow_Yutyrannus_Character_BP_C",
+      "Description": "X-Yutyrannus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Dragon",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "Volcanic_Dragon_Character_BP_C",
+      "Description": "X-Dragon",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Allosaurus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Volcano_Allo_Character_BP_C",
+      "Description": "X-Allosaurus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Ankylosaurus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Volcano_Ankylo_Character_BP_C",
+      "Description": "X-Ankylosaurus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Rock Elemental",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Volcano_Golem_Character_BP_C",
+      "Description": "X-Rock Elemental",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Rex",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Volcano_Rex_Character_BP_C",
+      "Description": "X-Rex",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "X-Triceratops",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Volcano_Trike_Character_BP_C",
+      "Description": "X-Triceratops",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Hover Skiff",
+      "IsSpawnable": false,
+      "IsTameable": "ByCrafting",
+      "ClassName": "TekHoverSkiff_Character_BP_C",
+      "Description": "Hover Skiff",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Drone",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "EndDrone_Lunar_Character_BP_C",
+      "Description": "Drone",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Drone Tank",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "EndTank_Lunar_Character_BP_C",
+      "Description": "Drone Tank",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Lunar Reaper King",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "Xenomorph_Character_BP_Male_Lunar_C",
+      "Description": "Lunar Reaper King",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Daeodon",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRDaeodon_Character_BP_C",
+      "Description": "Virtual Daeodon",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Drone",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VREndDrone_Character_BP_C",
+      "Description": "Virtual Drone",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Giganotosaurus",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRGigant_Character_BP_C",
+      "Description": "Virtual Giganotosaurus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Raptor",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRRaptor_Character_BP_C",
+      "Description": "Virtual Raptor",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Reaper King",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRXenomorph_Character_BP_Male_Minion_C",
+      "Description": "Virtual Reaper King",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Rex",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRRex_Character_BP_C",
+      "Description": "Virtual Rex",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Triceratops",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRTrike_Character_BP_C",
+      "Description": "Virtual Triceratops",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Virtual Yutyrannus",
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "VRYutyrannus_Character_BP_C",
+      "Description": "Virtual Yutyrannus",
+      "Mod": "Genesis"
+    },
+    {
+      "NameTag": "Rare X-Sabertooth Salmon",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Rare_Lunar_Salmon_Character_BP_C",
+      "Description": "Rare X-Sabertooth Salmon",
+      "Mod": "Genesis"
+    },
+  ],
+  "Engrams": [
+    {
+      "Level": 6,
+      "Points": 4,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FishingNet_C",
+      "Description": "Fish Net",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 12,
+      "Points": 6,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PressurePlate_C",
+      "Description": "Pressure Plate",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 25,
+      "Points": 24,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_OceanPlatformWood_C",
+      "Description": "Wood Ocean Platform",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 45,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_GiantTurtleSaddle_C",
+      "Description": "Megachelon Platform Saddle",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 53,
+      "Points": 50,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_OceanPlatformMetal_C",
+      "Description": "Metal Ocean Platform",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 70,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_JumpPad_C",
+      "Description": "Tek Jump Pad",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 80,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MiningDrill_C",
+      "Description": "Mining Drill",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 95,
+      "Points": 35,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CherufeSaddle_C",
+      "Description": "Magmasaur Saddle",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_HoverSkiff_C",
+      "Description": "Unassembled Tek Hover Skiff",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_CruiseMissile_C",
+      "Description": "Tek Cruise Missile",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_ShoulderCannon_C",
+      "Description": "Tek Shoulder Cannon",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekClaws_C",
+      "Description": "Tek Claws",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekGrenadeLauncher_C",
+      "Description": "Tek Grenade Launcher",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekSpaceWhaleSaddle_C",
+      "Description": "Astrocetus Tek Saddle",
+      "Mod": "Genesis"
+    },
+    {
+      "Level": 0,
+      "Points": 0,
+      "IsTekGram": true,
+      "ClassName": "EngramEntry_TekAlarm_C",
+      "Description": "Tek Sensor",
+      "Mod": "Genesis"
+    }
+  ], 
+  "Items": [
+    {
+      "Category": "Resources",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_Ambergris_C",
+      "Description": "Ambergris",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Resources",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_GoldenNugget_C",
+      "Description": "Golden Nugget",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Resources",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_HighQualityPollen_C",
+      "Description": "High Quality Pollen",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Resources",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_TurtleShell_C",
+      "Description": "Shell Fragment",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_BogSpider_C",
+      "Description": "Bloodstalker Egg",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_Cherufe_C",
+      "Description": "Magmasaur Egg",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_GiantTurtle_C",
+      "Description": "Megachelon Egg",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_Trike_Bionic_C",
+      "Description": "Tek Trike Egg",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Consumables",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_Gigant_Fertilized_Bionic_C",
+      "Description": "Tek Giganotosaurus Egg",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_TrikeSkullHelmet_Retrieve_C",
+      "Description": "Alpha X-Triceratops Skull",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemTrophy_MasterController_C",
+      "Description": "Master Controller Trophy",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_TrikeSkullHelmet_Retrieve_C",
+      "Description": "Moeder Trophy",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Artifacts",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_RetrieveMegTooth_C",
+      "Description": "Golden Megalodon Tooth",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Artifacts",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_RetrieveReaperGland_C",
+      "Description": "Reaper Pheromone Gland",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Weapons",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponTekCruiseMissile_C",
+      "Description": "Tek Cruise Missile",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Weapons",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponSpear_Flame_Gauntlet_C",
+      "Description": "Flaming Spear",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Weapons",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponTekClaws_C",
+      "Description": "Tek Claws",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Weapons",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponTekGrenadeLauncher_C",
+      "Description": "Tek Grenade Launcher",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Weapons",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_ShoulderCannon_C",
+      "Description": "Tek Shoulder Cannon",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_SpaceWhaleSaddle_Tek_C",
+      "Description": "Astrocetus Tek Saddle",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_CherufeSaddle_C",
+      "Description": "Magmasaur Saddle",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_GiantTurtleSaddle_C",
+      "Description": "Megachelon Platform Saddle",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Spawner",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Spawner_HoverSkiff_C",
+      "Description": "Unassembled TEK Hover Skiff",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Metal_OceanPlatform_C",
+      "Description": "Metal Ocean Platform",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PressurePlate_C",
+      "Description": "Pressure Plate",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekAlarm_C",
+      "Description": "Tek Sensor",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Flag_VRBoss_C",
+      "Description": "VR Boss Flag",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Flag_EelBoss_C",
+      "Description": "Moeder Flag",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TekJumpPad_C",
+      "Description": "Tek Jump Pad",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Structures",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Wood_OceanPlatform_C",
+      "Description": "Wood Ocean Platform",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "SupplyCrates",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Lootcrate_lvl1_C",
+      "Description": "Lootcrate (Tier 1)",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "SupplyCrates",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Lootcrate_lvl2_C",
+      "Description": "Lootcrate (Tier 2)",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "SupplyCrates",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Lootcrate_lvl3_C",
+      "Description": "Lootcrate (Tier 3)",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponMiningDrill_C",
+      "Description": "Mining Drill",
+      "Mod": "Genesis"
+    },
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponFishingNet_C",
+      "Description": "Fish Net",
+      "Mod": "Genesis"
+    }
+  ],
+  "MapSpawners": [
+    {
+      "ClassName": "Gen1_Arctic_Cave_DinoSpawnEntries_C",
+      "Description": "Arctic_Cave",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_Ferox_DinoSpawnEntries_C",
+      "Description": "Arctic_Ferox",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_Forest_DinoSpawnEntries_C",
+      "Description": "Arctic_Forest",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_Forest_Nice_DinoSpawnEntries_C",
+      "Description": "Arctic_Forest_Nice",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_FrozenWater_DinoSpawnEntries_C",
+      "Description": "Arctic_FrozenWater",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_LakeArea_DinoSpawnEntries_C",
+      "Description": "Arctic_LakeArea",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_LakeArea_OttersOnly_DinoSpawnEntries_C",
+      "Description": "Arctic_LakeArea_OttersOnly",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Arctic_Wastes_DinoSpawnEntries_C",
+      "Description": "Arctic_Wastes",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Canopy_DinoSpawnEntries_C",
+      "Description": "Bog_Canopy",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Forest_DinoSpawnEntries_C",
+      "Description": "Bog_Forest",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_InsectSwarm_DinoSpawnEntries_C",
+      "Description": "Bog_InsectSwarm",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Plains_DinoSpawnEntries_C",
+      "Description": "Bog_Plains",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Spider_DinoSpawnEntries_C",
+      "Description": "Bog_Spider",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Spino_DinoSpawnEntries_C",
+      "Description": "Bog_Spino",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Springs_DinoSpawnEntries_C",
+      "Description": "Bog_Springs",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Bog_Water_DinoSpawnEntries_C",
+      "Description": "Bog_Water",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_CaveWater_DinoSpawnEntries_Cave_C",
+      "Description": "Lunar_Cave",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Cave_DinoSpawnEntries_Cave1_C",
+      "Description": "Lunar_Cave1",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Cave_DinoSpawnEntries_Cave2_C",
+      "Description": "Lunar_Cave2",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Cave_DinoSpawnEntries_Cave3_C",
+      "Description": "Lunar_Cave3",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Cave_DinoSpawnEntries_Cave4_C",
+      "Description": "Lunar_Cave4",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Cave_DinoSpawnEntries_Cave5_C",
+      "Description": "Lunar_Cave5",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Cave_DinoSpawnEntries_Cave6_C",
+      "Description": "Lunar_Cave6",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_DinoSpawnEntries_C",
+      "Description": "Lunar",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_SpaceWhale_DinoSpawnEntries_C",
+      "Description": "Lunar_SpaceWhale",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Lunar_Xenos_DinoSpawnEntries_C",
+      "Description": "Lunar_Xenos",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_OceanAboveWater_DinoSpawnEntries_C",
+      "Description": "OceanAboveWater",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_OceanAboveWater_Land_DinoSpawnEntries_C",
+      "Description": "OceanAboveWater_Land",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_OceanDeep_DinoSpawnEntries_C",
+      "Description": "OceanDeep",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_OceanLargerDinos_DinoSpawnEntries_C",
+      "Description": "OceanLargerDinos",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_OceanShallow_DinoSpawnEntries_C",
+      "Description": "OceanShallow",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_OceanTurtle_DinoSpawnEntries_C",
+      "Description": "OceanTurtle",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Ocean_CaveWater_DinoSpawnEntries_C",
+      "Description": "Ocean_CaveWater",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Volcano_Cave_DinoSpawnEntries_C",
+      "Description": "Volcano_Cave",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Volcano_DinoSpawnEntries_C",
+      "Description": "Volcano",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Gen1_Volcano_Magmasaur_DinoSpawnEntries_C",
+      "Description": "Volcano_Magmasaur",
+      "Mod": "Genesis"
+    }  
+  ],
+  "SupplyCrates": [
+    {
+      "ClassName": "Lootcrate_lvl1_C",
+      "Description": "Loot Crate (Tier 1)",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Lootcrate_lvl2_C",
+      "Description": "Loot Crate (Tier 2)",
+      "Mod": "Genesis"
+    },
+    {
+      "ClassName": "Lootcrate_lvl3_C",
+      "Description": "Loot Crate (Tier 3)",
+      "Mod": "Genesis"
+    }
+  ],
+  "GameMaps": [
+	{
+      "IsSotF": false,
+      "ClassName": "Genesis",
+      "Description": "Genesis",
+      "Mod": "Genesis"
+	}
+  ]
+}

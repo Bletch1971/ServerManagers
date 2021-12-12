@@ -1,0 +1,39 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-03-04T00:00:00.0000000Z",
+  "Engrams": [
+    {
+      "Level": 25,
+      "Points": 1,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DinoMobile_C",
+      "Description": "Dino tracker mobile",
+      "Mod": "Dinotracker"
+    },
+    {
+      "Level": 25,
+      "Points": 1,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Dinotracker_C",
+      "Description": "Dino tracker Watch",
+      "Mod": "Dinotracker"
+    }	
+  ],
+  "Items": [
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_DinoTracker_C",
+      "Description": "Dino tracker Watch",
+      "Mod": "Dinotracker"
+    },
+	{
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_DinoMobile_C",
+      "Description": "Dino tracker mobile",
+      "Mod": "Dinotracker"
+    }
+  ]
+}

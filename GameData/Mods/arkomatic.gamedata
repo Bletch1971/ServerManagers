@@ -1,0 +1,285 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-02-08T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticAutoCrafter_C",
+      "Description": "ARKomatic Dedicated Crafter",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 82,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticChemistryBench_C",
+      "Description": "ARKomatic Chemistry Bench",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticEarthquakeCollector_C",
+      "Description": "ARKomatic Earthquake Collector",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticEggCollector_C",
+      "Description": "ARKomatic Egg Collector",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 48,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticFabricator_C",
+      "Description": "ARKomatic Fabricator",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 80,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticForge_C",
+      "Description": "ARKomatic Forge",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticGachaCrystalCollector_C",
+      "Description": "ARKomatic Gacha Crystal Collector",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticGrill_C",
+      "Description": "ARKomatic Grill",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticMeatSpoiler_C",
+      "Description": "ARKomatic Meat Spoiler",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticPoopCollector_C",
+      "Description": "ARKomatic Poop Collector",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticRefrigerator_C",
+      "Description": "ARKomatic Refrigerator",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticVault_C",
+      "Description": "ARKomatic Vault",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 50,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticWoodBaker_C",
+      "Description": "ARKomatic Wood Baker",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticWorkbench_C",
+      "Description": "ARKomatic WorkBench",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 61,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EggIncubator_C",
+      "Description": "ARKomatic Egg Incubator",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 68,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TurretFiller_C",
+      "Description": "Turret Filler",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 49,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WirelessGenerator_C",
+      "Description": "Wireless Generator",
+      "Mod": "ARKomatic"
+    },
+	{
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ARKomaticSpyglass_C",
+      "Description": "ARKomatic Spyglass",
+      "Mod": "ARKomatic"
+    }
+   ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticAutoCrafter_C",
+      "Description": "ARKomatic Dedicated Crafter",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticChemistryBench_C",
+      "Description": "ARKomatic Chemistry Bench",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticEarthquakeCollector_C",
+      "Description": "ARKomatic Earthquake Collector",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticEggCollector_C",
+      "Description": "ARKomatic Egg Collector",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticFabricator_C",
+      "Description": "ARKomatic Fabricator",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticForge_C",
+      "Description": "ARKomatic Forge",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticGachaCrystalCollector_C",
+      "Description": "ARKomatic Gacha Crystal Collector",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticGrill_C",
+      "Description": "ARKomatic Grill",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticMeatSpoiler_C",
+      "Description": "ARKomatic Meat Spoiler",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticPoopCollector_C",
+      "Description": "ARKomatic Poop Collector",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticRefrigerator_C",
+      "Description": "ARKomatic Refrigerator",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticVault_C",
+      "Description": "ARKomatic Vault",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticWoodBaker_C",
+      "Description": "ARKomatic Wood Baker",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ARKomaticWorkbench_C",
+      "Description": "ARKomatic WorkBench",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_EggIncubator_C",
+      "Description": "ARKomatic Egg Incubator",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TurretFiller_C",
+      "Description": "Turret Filler",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WirelessGenerator_C",
+      "Description": "ARKomatic Wireless Generator",
+      "Mod": "ARKomatic"
+    },
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeapon_ARKomaticSpyglass_C",
+      "Description": "ARKomatic Spyglass",
+      "Mod": "ARKomatic"
+    }
+   ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

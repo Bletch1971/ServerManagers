@@ -1,0 +1,370 @@
+{
+  "Application": "ark",
+  "Version": "1.1.2",
+  "Created": "2020-07-19T00:00:00.0000000Z",
+  "Creatures": [
+    {
+      "NameTag": "Bee",
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "HoneyBee_Character_BP_C",
+      "Description": "Giant Worker Bee",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": "Tropeognathus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Tropeognathus_Character_BP_C",
+      "Description": "Tropeognathus",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": "Wyvern",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalWyvern_Character_BP_C",
+      "Description": "Crystal Wyvern",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalWyvern_Character_BP_WS_C",
+      "Description": "Tropical Crystal Wyvern",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalWyvern_Character_BP_Ember_C",
+      "Description": "Ember Crystal Wyvern",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "CrystalWyvern_Character_BP_Blood_C",
+      "Description": "Blood Crystal Wyvern",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Mega_C",
+      "Description": "Alpha Blood Crystal Wyvern",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Minion_WS_C",
+      "Description": "Tropical Crystal Wyvern Heir",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Minion_Ember_C",
+      "Description": "Ember Crystal Wyvern Heir",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": true,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Minion_Blood_C",
+      "Description": "Blood Crystal Wyvern Heir",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Boss_C",
+      "Description": "Crystal Wyvern Queen",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Boss_Easy_C",
+      "Description": "Crystal Wyvern Queen (Gamma)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Boss_Medium_C",
+      "Description": "Crystal Wyvern Queen (Beta)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "NameTag": null,
+      "IsSpawnable": false,
+      "IsTameable": "False",
+      "ClassName": "CrystalWyvern_Character_BP_Boss_Hard_C",
+      "Description": "Crystal Wyvern Queen (Alpha)",
+      "Mod": "CrystalIsles"
+    }
+  ],
+  "Engrams": [
+    {
+      "Level": 65,
+      "Points": 21,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Tropeognathus_C",
+      "Description": "Tropeognathus Saddle",
+      "Mod": "CrystalIsles"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Saddles",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_TropeSaddle_C",
+      "Description": "Tropeognathus Saddle",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Resources",
+      "IsHarvestable": true,
+      "ClassName": "PrimalItemResource_Crystal_IslesPrimal_C",
+      "Description": "Primal Crystal",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ApexDrop_CrystalWyvern_C",
+      "Description": "Crystal Talon",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_ApexDrop_AlphaCrystalWyvern_C",
+      "Description": "Alpha Crystal Talon",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_Tropeognathus_C",
+      "Description": "Tropeognathus Egg",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_Tropeognathus_Fertilized_C",
+      "Description": "Tropeognathus Egg (Fertilized)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalWyvern_C",
+      "Description": "Crystal Wyvern Egg",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalWyvern_Fertilized_WS_C",
+      "Description": "Tropical Crystal Wyvern Egg (Fertilized)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalWyvern_Fertilized_Ember_C",
+      "Description": "Ember Crystal Wyvern Egg (Fertilized)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Eggs",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Egg_CrystalWyvern_Fertilized_Bloodfall_C",
+      "Description": "Blood Crystal Wyvern Egg (Fertilized)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Flag",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Flag_CIBoss_C",
+      "Description": "Crystal Wyvern Queen Flag",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemTrophy_CIBoss_C",
+      "Description": "Crystal Wyvern Queen Trophy",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemTrophy_CIBoss_Gamma_C",
+      "Description": "Crystal Wyvern Queen Trophy (Gamma)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemTrophy_CIBoss_Beta_C",
+      "Description": "Crystal Wyvern Queen Trophy (Beta)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "Category": "Trophy",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemTrophy_CIBoss_Alpha_C",
+      "Description": "Crystal Wyvern Queen Trophy (Alpha)",
+      "Mod": "CrystalIsles"
+    }
+  ],
+  "MapSpawners": [
+    {
+      "ClassName": "CI_DinoSpawnEntries_AggressiveCrysWyv_C",
+      "Description": "CI_DinoSpawnEntries_AggressiveCrysWyv",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_Ants_C",
+      "Description": "CI_DinoSpawnEntries_Ants",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_Bog_C",
+      "Description": "CI_DinoSpawnEntries_Bog",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_CavernEasy_C",
+      "Description": "CI_DinoSpawnEntries_CavernEasy",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_DevilsWater_C",
+      "Description": "CI_DinoSpawnEntries_DevilsWater",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_ElementalChamber_C",
+      "Description": "CI_DinoSpawnEntries_ElementalChamber",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_ElementBubbles_Large_C",
+      "Description": "CI_DinoSpawnEntries_ElementBubbles_Large",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_FloatingIslands_Main_C",
+      "Description": "CI_DinoSpawnEntries_FloatingIslands_Main",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_FloatingIslands_Small_C",
+      "Description": "CI_DinoSpawnEntries_FloatingIslands_Small",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_OtterPonds_C",
+      "Description": "CI_DinoSpawnEntries_OtterPonds",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_PoohBears_C",
+      "Description": "CI_DinoSpawnEntries_PoohBears",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_SaberPride_C",
+      "Description": "CI_DinoSpawnEntries_SaberPride",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_Tropeo_C",
+      "Description": "CI_DinoSpawnEntries_Tropeo",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_WaterTunnels_C",
+      "Description": "CI_DinoSpawnEntries_WaterTunnels",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_DinoSpawnEntries_WolfPack_C",
+      "Description": "CI_DinoSpawnEntries_WolfPack",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "CI_HoneyBees_C",
+      "Description": "CI_HoneyBees",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_Griffin_C",
+      "Description": "DinoSpawnEntries_Griffin",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoSpawnentries_Icewyvern_C",
+      "Description": "DinoSpawnentries_Icewyvern",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoSpawnEntriesJungle_C",
+      "Description": "DinoSpawnEntriesJungle",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CW_Bloodfall_C",
+      "Description": "DinoSpawnEntries_CW_Bloodfall",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CW_Emberfall_C",
+      "Description": "DinoSpawnEntries_CW_Emberfall",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoSpawnEntries_CW_WhiteShoal_C",
+      "Description": "DinoSpawnEntries_CW_WhiteShoals",
+      "Mod": "CrystalIsles"
+    },
+  ],
+  "Inventories": [
+    {
+      "ClassName": "DinoDropInventoryComponent_CIBoss_Easy_C",
+      "Description": "Boss Inventory - Crystal Wyvern Queen (Gamma)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_CIBoss_Medium_C",
+      "Description": "Boss Inventory - Crystal Wyvern Queen (Beta)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_CIBoss_Hard_C",
+      "Description": "Boss Inventory - Crystal Wyvern Queen (Alpha)",
+      "Mod": "CrystalIsles"
+    },
+    {
+      "ClassName": "DinoDropInventoryComponent_Carnivore_Large_CrystalWyvern_C",
+      "Description": "Creature Inventory - Crystal Wyvern",
+      "Mod": "CrystalIsles"
+    }
+  ]
+}

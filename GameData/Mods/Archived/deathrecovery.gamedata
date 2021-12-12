@@ -1,0 +1,21 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:01:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Personal_Grave",
+      "Description": "Personal Grave",
+      "Mod": "Death Recovery Mod"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

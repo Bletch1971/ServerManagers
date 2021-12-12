@@ -1,0 +1,29 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ChBench_C",
+      "Description": "ChBench",
+      "Mod": "Dino Hybrids & more!"
+    },
+    {
+      "Level": 75,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DNABench_C",
+      "Description": "DNABench",
+      "Mod": "Dino Hybrids & more!"
+    }, 
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

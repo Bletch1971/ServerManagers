@@ -1,0 +1,31 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-06-20T00:00:00.0000000Z",
+  "Engrams": [
+    {
+      "Level": 30,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElementCraftingStation_C",
+      "Description": "Element Crafting Station",
+      "Mod": "Element Crafting Station"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ElementCraftingStation_C",
+      "Description": "Element Crafting Station",
+      "Mod": "Element Crafting Station"
+    },
+	{
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemResource_SimpleTekElement_C",
+      "Description": "Element",
+      "Mod": "Element Crafting Station"
+    }
+  ]
+}

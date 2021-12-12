@@ -1,0 +1,45 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:01:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TCsBA_ThreatSuppressor_C",
+      "Description": "Threat Suppressor",
+      "Mod": "TCSBA"
+    },
+	 {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TCsBA_ClaimBlock_C",
+      "Description": "ClaimBlock",
+      "Mod": "TCSBA"
+    },
+	 {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TCsBA_ClaimPatch_C",
+      "Description": "ClaimPatch",
+      "Mod": "TCSBA"
+    },
+	 {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TCsBA_ClaimMobile_C",
+      "Description": "ClaimMobile",
+      "Mod": "TCSBA"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

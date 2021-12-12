@@ -1,0 +1,60 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2018-11-20T00:00:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+	{
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Spyglass_SEL_C",
+      "Description": "SEL Spyglass",
+      "Mod": "SelVision"
+    },
+    {
+      "Level": 50,
+      "Points": 23,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_EnhancedScope_C",
+      "Description": "Enhanced Electronic Scope",
+      "Mod": "SelVision"
+    },
+    {
+      "Level": 52,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ElectronicBinoculars_C",
+      "Description": "Electronic Binoculars",
+      "Mod": "SelVision"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponSpyglass_SEL_C",
+      "Description": "SEL Spyglass",
+      "Mod": "SelVision"
+    },
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemWeaponAttachment_EnhancedScope_SEL_C",
+      "Description": "Enhanced Electronic Scope",
+      "Mod": "SelVision"
+    },
+    {
+      "Category": "Tools",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponElectronicBinoculars_SEL_C",
+      "Description": "Electronic Binoculars",
+      "Mod": "SelVision"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

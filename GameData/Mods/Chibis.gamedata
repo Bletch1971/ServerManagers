@@ -1,0 +1,854 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-11-12T00:00:00.0000000Z",
+  "Items": [
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_PartyRex_C",
+      "Description": "Chibi Party Rex",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Achatina",
+      "Description": "Chibi-Achatina",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Allosaurus_C",
+      "Description": "Chibi-Allosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Ammonite_C",
+      "Description": "Chibi-Ammonite",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Ankylosaurus_C",
+      "Description": "Chibi-Ankylosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Argent_C",
+      "Description": "Chibi-Argentavis",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Astrocetus_C",
+      "Description": "Chibi-Astrocetus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Astrodelphis",
+      "Description": "Chibi-Astrodelphis",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Baryonyx_C",
+      "Description": "Chibi-Baryonyx",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Basilisk_C",
+      "Description": "Chibi-Basilisk",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Beelzebufo_C",
+      "Description": "Chibi-Beelzebufo",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_BogSpider_C",
+      "Description": "Chibi-Bloodstalker",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_OtterBonnet_C",
+      "Description": "Chibi-Bonnet Otter",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Bronto_C",
+      "Description": "Chibi-Brontosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_BroodMother_C",
+      "Description": "Chibi-Broodmother",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Bulbdog_C",
+      "Description": "Chibi-Bulbdog",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Bunny_C",
+      "Description": "Chibi-Bunny",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Carbonemys_C",
+      "Description": "Chibi-Carbonemys",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Carnotaurus_C",
+      "Description": "Chibi-Carno",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Castroides_C",
+      "Description": "Chibi-Castroides",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Cnidaria_C",
+      "Description": "Chibi-Cnidaria",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_WyvernCrystal_C",
+      "Description": "Chibi-Crystal Wyvern",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Daeodon_C",
+      "Description": "Chibi-Daeodon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_DodoDealWithIt",
+      "Description": "Chibi-Deal With It Dodo",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Direbear_C",
+      "Description": "Chibi-Direbear",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Direwolf_C",
+      "Description": "Chibi-Direwolf",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Dodo_C",
+      "Description": "Chibi-Dodo",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Doedicurus_C",
+      "Description": "Chibi-Doedicurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Dunkleo_C",
+      "Description": "Chibi-Dunkleosteus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_EasterChick",
+      "Description": "Chibi-Easter Chick",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Enforcer_C",
+      "Description": "Chibi-Enforcer",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Equus_C",
+      "Description": "Chibi-Equus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Featherlight_C",
+      "Description": "Chibi-Featherlight",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Shapeshifter_Large_C",
+      "Description": "Chibi-Ferox (Large)",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Shapeshifter_Small_C",
+      "Description": "Chibi-Ferox (Small)",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_GachaClaus_C",
+      "Description": "Chibi-Gacha Claus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Gasbag_C",
+      "Description": "Chibi-Gasbag",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_BasiliskGhost_C",
+      "Description": "Chibi-Ghost Basilisk",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_DirewolfGhost_C",
+      "Description": "Chibi-Ghost Direwolf",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_MantisGhost_C",
+      "Description": "Chibi-Ghost Mantis",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_RexGhost_C",
+      "Description": "Chibi-Ghost Rex",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Gigant_C",
+      "Description": "Chibi-Giganotosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Gigantopithecus_C",
+      "Description": "Chibi-Gigantopithecus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Glowtail_C",
+      "Description": "Chibi-Glowtail",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Griffin_C",
+      "Description": "Chibi-Griffin",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Iguanodon_C",
+      "Description": "Chibi-Iguanodon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_JerboaBunny",
+      "Description": "Chibi-Jerbunny",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Karkinos_C",
+      "Description": "Chibi-Karkinos",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Kentrosaurus_C",
+      "Description": "Chibi-Kentrosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Maewing",
+      "Description": "Chibi-Maewing",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Cherufe_C",
+      "Description": "Chibi-Magmasaur",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Mammoth_C",
+      "Description": "Chibi-Mammoth",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Managarmr_C",
+      "Description": "Chibi-Managarmr",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Manta_C",
+      "Description": "Chibi-Manta",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Mantis_C",
+      "Description": "Chibi-Mantis",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Megalania_C",
+      "Description": "Chibi-Megalania",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Megaloceros_C",
+      "Description": "Chibi-Megaloceros",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Megalodon_C",
+      "Description": "Chibi-Megalodon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Megatherium_C",
+      "Description": "Chibi-Megatherium",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Mesopithecus_C",
+      "Description": "Chibi-Mesopithecus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Moschops_C",
+      "Description": "Chibi-Moschops",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_BrainSlug_C",
+      "Description": "Chibi-Noglin",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Otter_C",
+      "Description": "Chibi-Otter",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Oviraptor_C",
+      "Description": "Chibi-Oviraptor",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Sheep_C",
+      "Description": "Chibi-Ovis",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Paraceratherium_C",
+      "Description": "Chibi-Paraceratherium",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Parasaur_C",
+      "Description": "Chibi-Parasaur",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Phiomia_C",
+      "Description": "Chibi-Phiomia",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Phoenix_C",
+      "Description": "Chibi-Phoenix",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Plesiosaur_C",
+      "Description": "Chibi-Plesiosaur",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Procoptodon_C",
+      "Description": "Chibi-Procoptodon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Pteranodon_C",
+      "Description": "Chibi-Pteranodon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Pulmonoscorpius_C",
+      "Description": "Chibi-Pulmonoscorpius",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Quetzal_C",
+      "Description": "Chibi-Quetzal",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Raptor_C",
+      "Description": "Chibi-Raptor",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Reaper_C",
+      "Description": "Chibi-Reaper",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Reindeer_C",
+      "Description": "Chibi-Reindeer",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Rex_C",
+      "Description": "Chibi-Rex",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_WoollyRhino_C",
+      "Description": "Chibi-Rhino",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_RockDrake_C",
+      "Description": "Chibi-Rock Drake",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_RockGolem_C",
+      "Description": "Chibi-Rock Golem",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_MoleRat_C",
+      "Description": "Chibi-Rollrat",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Saber_C",
+      "Description": "Chibi-Sabertooth",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Sarco_C",
+      "Description": "Chibi-Sarco",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Seeker_C",
+      "Description": "Chibi-Seeker",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_ShadowMane_C",
+      "Description": "Chibi-Shadowmane (Genesis: Part 2)",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Shinehorn_C",
+      "Description": "Chibi-Shinehorn",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Bronto_Bone_C",
+      "Description": "Chibi-Skeletal Brontosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Carnotaurus_Bone_C",
+      "Description": "Chibi-Skeletal Carno",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Gigant_Bone_C",
+      "Description": "Chibi-Skeletal Giganotosaurus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Jerboa_Bone_C",
+      "Description": "Chibi-Skeletal Jerboa",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Quetzal_Bone_C",
+      "Description": "Chibi-Skeletal Quetzal",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Raptor_Bone_C",
+      "Description": "Chibi-Skeletal Raptor",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Rex_Bone_C",
+      "Description": "Chibi-Skeletal Rex",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Stego_Bone_C",
+      "Description": "Chibi-Skeletal Stego",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Trike_Bone_C",
+      "Description": "Chibi-Skeletal Trike",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Wyvern_Bone_C",
+      "Description": "Chibi-Skeletal Wyvern",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_SnowOwl_C",
+      "Description": "Chibi-Snow Owl",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Spino_C",
+      "Description": "Chibi-Spino",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Stego_C",
+      "Description": "Chibi-Stego",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_OtterStrawHat",
+      "Description": "Chibi-Straw Hat Otter",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Tapejara_C",
+      "Description": "Chibi-Tapejara",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_TerrorBird_C",
+      "Description": "Chibi-Terror Bird",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_WitchingOwl_C",
+      "Description": "Chibi-The Witching Owl",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Therizino_C",
+      "Description": "Chibi-Therizino",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_SpineyLizard",
+      "Description": "Chibi-Thorny Dragon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Thylacoleo_C",
+      "Description": "Chibi-Thylacoleo",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Trike_C",
+      "Description": "Chibi-Trike",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Troodon_C",
+      "Description": "Chibi-Troodon",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Tropeognathus_C",
+      "Description": "Chibi-Tropeognathus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Tuso_C",
+      "Description": "Chibi-Tusoteuthis",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Unicorn_C",
+      "Description": "Chibi-Unicorn",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Velonasaur_C",
+      "Description": "Chibi-Velonasaur",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_VoidWyvern",
+      "Description": "Chibi-Voidwyrm",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Wyvern_C",
+      "Description": "Chibi-Wyvern",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_SaberX",
+      "Description": "Chibi-X-Sabertooth",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Yutyrannus_C",
+      "Description": "Chibi-Yutyrannus",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Wyvern_Zombie_C",
+      "Description": "Chibi-Zombie Wyvern",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Pairosaurs_VDay_C",
+      "Description": "Pair-o-Saurs Chibi",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_Titano_C",
+      "Description": "Teeny Tiny Titano",
+      "Mod": "Ark Prime"
+    },
+    {
+      "Category": "Item",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_ChibiDino_TophatKairuku_C",
+      "Description": "White-Collar Kairuku Chibi",
+      "Mod": "Ark Prime"
+    }
+  ]
+}

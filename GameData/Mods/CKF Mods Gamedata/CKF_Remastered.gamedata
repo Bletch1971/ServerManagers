@@ -1,0 +1,1716 @@
+{
+  "Application": "ark",
+  "Version": "1.2.0",
+  "Created": "2021-06-05T10:19:37.8543037Z",
+  "Engrams": [
+   {
+      "Level": 89,
+      "Points": 60,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CKF_Cooking_Station_C",
+      "Description": "CKF Cooking Station",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Level": 50,
+      "Points": 40,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CKF_Grill_C",
+      "Description": "CKF Grill",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Level": 42,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CKF_CraftingTable_C",
+      "Description": "CKF CraftingTable",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Level": 10,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CKF_SettlerTable_C",
+      "Description": "CKF SettlerTable",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Level": 19,
+      "Points": 1,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CKF_VillagerTable_C",
+      "Description": "CKF VillagerTable",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Level": 80,
+      "Points": 90,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_CKF_Forge_C",
+      "Description": "CKF Forge",
+      "Mod": "CKF Remasterd"
+   }
+  ],
+  "Items": [
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_Hatch_Ceiling_BASE_C",
+      "Description": "Keep Double Hatch Ceiling BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_Door_SmallRomanArch_BASE_C",
+      "Description": "Keep Double Door SmallRomanArch BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_Hatch_Ramped_BASE_C",
+      "Description": "Keep Double Hatch Ramped BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Single_Door_SmallRomanArch_BASE_C",
+      "Description": "Keep Single Door SmallRomanArch BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_Hatch_Window_RomanArch_BASE_C",
+      "Description": "Keep Double Hatch Window RomanArch BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Ramped_Double_Doorway_BASE_C",
+      "Description": "Keep Ramped Double Doorway BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_SQ_BASE_C",
+      "Description": "Keep Roof SQ BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_SQ_Corner_BASE_C",
+      "Description": "Keep Roof SQ Corner BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_SQ_Corner_Valley_BASE_C",
+      "Description": "Keep Roof SQ Corner Valley BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_DoorAndWindowFrame_BASE_C",
+      "Description": "Keep DoorAndWindowFrame BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_DoorWay_Offset_RomanArch_BASE_C",
+      "Description": "Keep DoorWay Offset RomanArch BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Doorway_RomanArch_1x1_BASE_C",
+      "Description": "Keep Doorway RomanArch 1x1 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_BASE_C",
+      "Description": "Keep Gable BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_GateFrame_Keep_RomanArch_2x2_BASE_C",
+      "Description": "Keep GateFrame Keep RomanArch 2x2 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_GateFrame_RomanArch_2x3_BASE_C",
+      "Description": "Keep GateFrame RomanArch 2x3 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Short_WindowFrame_1_BASE_C",
+      "Description": "Keep Short WindowFrame 1 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Short_WindowFrame_2_BASE_C",
+      "Description": "Keep Short WindowFrame 2 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Sloped_Rail_BASE_C",
+      "Description": "Keep Sloped Rail BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Tall_WindowFrame_1_BASE_C",
+      "Description": "Keep Tall WindowFrame 1 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Tall_WindowFrame_2_BASE_C",
+      "Description": "Keep Tall WindowFrame 2 BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_BASE_C",
+      "Description": "Keep Wall BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_Half_Height_BASE_C",
+      "Description": "Keep Wall Half Height BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_WindowFrame_Offset_RomanArch_BASE_C",
+      "Description": "Keep WindowFrame Offset RomanArch BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Keep_Gable_Inverted_BASE_C",
+      "Description": "Keep Gable Inverted BASE",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Tool",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItem_CKF_Cosmetic_Tool_C",
+      "Description": "Cosmetic Tool",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKFR_AdminVault_C",
+      "Description": "CKFR AdminVault",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Cooking_Station_C",
+      "Description": "Cooking Station",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Grill_C",
+      "Description": "Grill",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_CraftingTable_C",
+      "Description": "CraftingTable",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_SettlerTable_C",
+      "Description": "SettlerTable",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_VillagerTable_C",
+      "Description": "VillagerTable",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Forge_C",
+      "Description": "Forge",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_CKF_TorchFuel_C",
+      "Description": "CKF TorchFuel",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Sconce_C",
+      "Description": "Sconce",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_StandingSconce_C",
+      "Description": "StandingSconce",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Bench_C",
+      "Description": "Bench",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Chair_C",
+      "Description": "Chair",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Table_C",
+      "Description": "Table",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Accent_C",
+      "Description": "Settler Roof Accent",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Wall_Accent_C",
+      "Description": "Settler Wall Accent",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Hatchway_Ceiling_C",
+      "Description": "Settler Hatchway Ceiling",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Ceiling_SQ_C",
+      "Description": "Settler Ceiling SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Ceiling_T_C",
+      "Description": "Settler Ceiling T",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Hatch_Ceiling_C",
+      "Description": "Settler Hatch Ceiling",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Doors_Double_C",
+      "Description": "Settler Doors Double",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Large_Gate_C",
+      "Description": "Settler Large Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Medium_Gate_C",
+      "Description": "Settler Medium Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Hatch_Ramped_C",
+      "Description": "Settler Hatch Ramped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Door_Single_C",
+      "Description": "Settler Door Single",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure__CKF_Settler_FenceFoundation_C",
+      "Description": "Settler FenceFoundation",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure__CKF_Settler_FenceSupport_C",
+      "Description": "Settler FenceSupport",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Foundation_SQ_C",
+      "Description": "Settler Foundation SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Foundation_T_C",
+      "Description": "Settler Foundation T",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Pillar_1_C",
+      "Description": "Settler Pillar 1",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Corner_C",
+      "Description": "Settler Roof Corner",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Ramped_Doorway_C",
+      "Description": "Settler Ramped Doorway",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Inversion_C",
+      "Description": "Settler Roof Inversion",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Peak_Square_C",
+      "Description": "Settler Roof Peak Square",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Ridge_C",
+      "Description": "Settler Roof Ridge",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Square_C",
+      "Description": "Settler Roof Square",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Triangle_C",
+      "Description": "Settler Roof Triangle",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Roof_Valley_C",
+      "Description": "Settler Roof Valley",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Gable_Wall_Scaffold_C",
+      "Description": "Settler Gable Wall Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Gable_Inverted_Scaffold_C",
+      "Description": "Settler Gable Inverted Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_HalfArch_Scaffold_C",
+      "Description": "Settler HalfArch Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_HammerHead_HalfArch_Scaffold_C",
+      "Description": "Settler HammerHead HalfArch Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Modular_Half_Scaffold_C",
+      "Description": "Settler Modular Half Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Wall_Scaffold_C",
+      "Description": "Settler Wall Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Stairs_SQ_C",
+      "Description": "Settler Stairs SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Double_DoorFrame_C",
+      "Description": "Settler Double DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Mixed_DoorFrame_C",
+      "Description": "Settler Mixed DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Offset_DoorFrame_C",
+      "Description": "Settler Offset DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Gable_Wall_C",
+      "Description": "Settler Gable Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Gable_Inverted_C",
+      "Description": "Settler Gable Inverted",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Gable_Peak_C",
+      "Description": "Settler Gable Peak",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Large_GateFrame_2x3_C",
+      "Description": "Settler Large GateFrame 2x3",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Medium_GateFrame_2x2_C",
+      "Description": "Settler Medium GateFrame 2x2",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Window_Bars_C",
+      "Description": "Settler Window Bars",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_HalfArch_C",
+      "Description": "Settler HalfArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Half_Rail_C",
+      "Description": "Settler Half Rail",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Half_Wall_C",
+      "Description": "Settler Half Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Short_Rail_C",
+      "Description": "Settler Short Rail",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Short_Wall_C",
+      "Description": "Settler Short Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Modular_CentreArch_C",
+      "Description": "Settler Modular CentreArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Modular_HalfArch_C",
+      "Description": "Settler Modular HalfArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Half_Wall_Sloped_C",
+      "Description": "Settler Half Wall Sloped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Half_Rail_Sloped_C",
+      "Description": "Settler Half Rail Sloped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Wall_C",
+      "Description": "Settler Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Double_WindowFrame_C",
+      "Description": "Settler Double WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_Offset_WindowFrame_C",
+      "Description": "Settler Offset WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Settler_WindowFrame_C",
+      "Description": "Settler WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Accent_C",
+      "Description": "Villager Roof Accent",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Wall_Accent_C",
+      "Description": "Villager Wall Accent",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Hatchway_Ceiling_C",
+      "Description": "Villager Hatchway Ceiling",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Ceiling_SQ_C",
+      "Description": "Villager Ceiling SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Ceiling_T_C",
+      "Description": "Villager Ceiling T",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Hatch_Ceiling_C",
+      "Description": "Villager Hatch Ceiling",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Doors_Double_C",
+      "Description": "Villager Doors Double",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Large_Gate_C",
+      "Description": "Villager Large Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Medium_Gate_C",
+      "Description": "Villager Medium Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Hatch_Ramped_C",
+      "Description": "Villager Hatch Ramped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Door_Single_C",
+      "Description": "Villager Door Single",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure__CKF_Villager_FenceFoundation_C",
+      "Description": "Villager FenceFoundation",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure__CKF_Villager_FenceSupport_C",
+      "Description": "Villager FenceSupport",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Foundation_SQ_C",
+      "Description": "Villager Foundation SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Foundation_T_C",
+      "Description": "Villager Foundation T",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Pillar_1_C",
+      "Description": "Villager Pillar 1",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Corner_C",
+      "Description": "Villager Roof Corner",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Ramped_Doorway_C",
+      "Description": "Villager Ramped Doorway",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Inversion_C",
+      "Description": "Villager Roof Inversion",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Peak_Square_C",
+      "Description": "Villager Roof Peak Square",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Ridge_C",
+      "Description": "Villager Roof Ridge",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Square_C",
+      "Description": "Villager Roof Square",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Triangle_C",
+      "Description": "Villager Roof Triangle",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Roof_Valley_C",
+      "Description": "Villager Roof Valley",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Gable_Wall_Scaffold_C",
+      "Description": "Villager Gable Wall Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Gable_Inverted_Scaffold_C",
+      "Description": "Villager Gable Inverted Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_HalfArch_Scaffold_C",
+      "Description": "Villager HalfArch Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_HalfArch_Inverted_Scaffold_C",
+      "Description": "Villager HalfArch Inverted Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_HammerHead_HalfArch_Scaffold_C",
+      "Description": "Villager HammerHead HalfArch Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Modular_Half_Scaffold_C",
+      "Description": "Villager Modular Half Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Wall_Scaffold_C",
+      "Description": "Villager Wall Scaffold",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Stairs_SQ_C",
+      "Description": "Villager Stairs SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Double_DoorFrame_C",
+      "Description": "Villager Double DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Mixed_DoorFrame_C",
+      "Description": "Villager Mixed DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Offset_DoorFrame_C",
+      "Description": "Villager Offset DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Gable_Wall_C",
+      "Description": "Villager Gable Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Gable_Inverted_C",
+      "Description": "Villager Gable Inverted",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Gable_Peak_C",
+      "Description": "Villager Gable Peak",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Large_GateFrame_2x3_C",
+      "Description": "Villager Large GateFrame 2x3",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Medium_GateFrame_2x2_C",
+      "Description": "Villager Medium GateFrame 2x2",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_GlassWindow_Short_C",
+      "Description": "Villager GlassWindow Short",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_HalfArch_C",
+      "Description": "Villager HalfArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_HalfArch_Inverted_C",
+      "Description": "Villager HalfArch Inverted",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Half_Rail_C",
+      "Description": "Villager Half Rail",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Half_Wall_C",
+      "Description": "Villager Half Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Short_Rail_C",
+      "Description": "Villager Short Rail",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Short_Wall_C",
+      "Description": "Villager Short Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Modular_CentreArch_C",
+      "Description": "Villager Modular CentreArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Modular_HalfArch_C",
+      "Description": "Villager Modular HalfArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Half_Wall_Sloped_C",
+      "Description": "Villager Half Wall Sloped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Half_Rail_Sloped_C",
+      "Description": "Villager Half Rail Sloped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Wall_C",
+      "Description": "Villager Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Double_WindowFrame_C",
+      "Description": "Villager Double WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_Offset_WindowFrame_C",
+      "Description": "Villager Offset WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Villager_WindowFrame_C",
+      "Description": "Villager WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Accent_C",
+      "Description": "Keep Roof Accent",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_Accent_C",
+      "Description": "Keep Wall Accent",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Modular_CentreArch_C",
+      "Description": "Keep Modular CentreArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Modular_HalfArch_C",
+      "Description": "Keep Modular HalfArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep__Battlement_Crenulated_C",
+      "Description": "Keep  Battlement Crenulated",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Battlement_Spikes_C",
+      "Description": "Keep Battlement Spikes",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Battlement_Tapered_C",
+      "Description": "Keep Battlement Tapered",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Hatchway_Ceiling_C",
+      "Description": "Keep Hatchway Ceiling",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Ceiling_SQ_C",
+      "Description": "Keep Ceiling SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Ceiling_T_C",
+      "Description": "Keep Ceiling T",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Hatch_Ceiling_C",
+      "Description": "Keep Hatch Ceiling",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Doors_Double_C",
+      "Description": "Keep Doors Double",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Medium_Gate_C",
+      "Description": "Keep Medium Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Hatch_Ramped_C",
+      "Description": "Keep Hatch Ramped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Door_Secret_C",
+      "Description": "Keep Door Secret",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Secret_DoorFrame_C",
+      "Description": "Keep Secret DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Door_Single_C",
+      "Description": "Keep Door Single",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Hatch_Window_C",
+      "Description": "Keep Hatch Window",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Doors_Double_Dungeon_C",
+      "Description": "Keep Doors Double Dungeon",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Door_Single_Dungeon_C",
+      "Description": "Keep Door Single Dungeon",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_Dungeon_C",
+      "Description": "Keep Wall Dungeon",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure__CKF_Keep_FenceFoundation_C",
+      "Description": "Keep FenceFoundation",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure__CKF_Keep_FenceSupport_C",
+      "Description": "Keep FenceSupport",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Foundation_SQ_C",
+      "Description": "Keep Foundation SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Foundation_T_C",
+      "Description": "Keep Foundation T",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Giant_GatePosts_C",
+      "Description": "Keep Giant GatePosts",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Large_GatePosts_C",
+      "Description": "Keep Large GatePosts",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Drawbridge_C",
+      "Description": "Keep Drawbridge",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Giant_Gate_C",
+      "Description": "Keep Giant Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Large_Gate_C",
+      "Description": "Keep Large Gate",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Medium_Portcullis_C",
+      "Description": "Keep Medium Portcullis",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Large_Portcullis_C",
+      "Description": "Keep Large Portcullis",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Small_Portcullis_C",
+      "Description": "Keep Small Portcullis",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Pillar_1_C",
+      "Description": "Keep Pillar 1",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Corner_C",
+      "Description": "Keep Roof Corner",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Peak_Square_C",
+      "Description": "Keep Roof Peak Square",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Ramped_Doorway_C",
+      "Description": "Keep Ramped Doorway",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Inversion_C",
+      "Description": "Keep Roof Inversion",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Ridge_C",
+      "Description": "Keep Roof Ridge",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Square_C",
+      "Description": "Keep Roof Square",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Triangle_C",
+      "Description": "Keep Roof Triangle",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Roof_Valley_C",
+      "Description": "Keep Roof Valley",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Stairs_SQ_C",
+      "Description": "Keep Stairs SQ",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Switch_Wall_C",
+      "Description": "Keep Switch Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Town_Bell_C",
+      "Description": "Keep Town Bell",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_ArrowLoop_C",
+      "Description": "Keep Double ArrowLoop",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Single_ArrowLoop_C",
+      "Description": "Keep Single ArrowLoop",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Crenulated_Wall_C",
+      "Description": "Keep Crenulated Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Offset_DoorFrame_C",
+      "Description": "Keep Offset DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Mixed_DoorFrame_C",
+      "Description": "Keep Mixed DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_DoorFrame_C",
+      "Description": "Keep Double DoorFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_Stepped_C",
+      "Description": "Keep Gable Stepped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_Glass_C",
+      "Description": "Keep Gable Glass",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_Glass_Invert_C",
+      "Description": "Keep Gable Glass Invert",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_Invert_C",
+      "Description": "Keep Gable Invert",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_Peak_C",
+      "Description": "Keep Gable Peak",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Gable_Wall_C",
+      "Description": "Keep Gable Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Large_GateFrame_2x3_C",
+      "Description": "Keep Large GateFrame 2x3",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Medium_GateFrame_2x2_C",
+      "Description": "Keep Medium GateFrame 2x2",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Rose_Glass_C",
+      "Description": "Rose Glass",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Rose_Glass_Large_C",
+      "Description": "Keep Rose Glass Large",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Glass_Large_C",
+      "Description": "Keep Glass Large",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Glass_Medium_C",
+      "Description": "Keep Glass Medium",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_GlassWindow_Short_C",
+      "Description": "Keep GlassWindow Short",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Glass_Tall_C",
+      "Description": "Keep Glass Tall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Half_Wall_Arched_C",
+      "Description": "Keep Half Wall Arched",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Half_Wall_C",
+      "Description": "Keep Half Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Half_Triple_Merlon_C",
+      "Description": "Keep Half Triple Merlon",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_HalfArch_C",
+      "Description": "Keep HalfArch",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_HalfArch_Inverted_C",
+      "Description": "Keep HalfArch Inverted",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_LargeWall_1x2_C",
+      "Description": "Keep LargeWall 1x2",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_LargeWall_2x2_C",
+      "Description": "Keep LargeWall 2x2",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_LargeWall_2x3_C",
+      "Description": "Keep LargeWall 2x3",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_DoorFrame_Seg_C",
+      "Description": "Keep Double DoorFrame Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Mixed_DoorFrame_Seg_C",
+      "Description": "Keep Mixed DoorFrame Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Offset_DoorFrame_Seg_C",
+      "Description": "Keep Offset DoorFrame Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_WindowFrame_Seg_C",
+      "Description": "Keep Double WindowFrame Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_WindowFrame_Tall_Seg_C",
+      "Description": "Keep Double WindowFrame Tall Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Offset_WindowFrame_Seg_C",
+      "Description": "Keep Offset WindowFrame Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_WindowFrame_Seg_C",
+      "Description": "Keep WindowFrame Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_WindowFrame_Tall_Seg_C",
+      "Description": "Keep WindowFrame Tall Seg",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Short_Wall_C",
+      "Description": "Keep Short Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Half_Wall_Sloped_C",
+      "Description": "Keep Half Wall Sloped",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_Adapter_C",
+      "Description": "Keep Wall Adapter",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_Vanilla_C",
+      "Description": "Keep Wall Vanilla",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Wall_C",
+      "Description": "Keep Wall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_WindowFrame_C",
+      "Description": "Keep Double WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Offset_WindowFrame_C",
+      "Description": "Keep Offset WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_WindowFrame_C",
+      "Description": "Keep WindowFrame",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_Double_WindowFrame_Tall_C",
+      "Description": "Keep Double WindowFrame Tall",
+      "Mod": "CKF Remasterd"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_CKF_Keep_WindowFrame_Tall_C",
+      "Description": "Keep WindowFrame Tall",
+      "Mod": "CKF Remasterd"
+   }
+  ]
+}

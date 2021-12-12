@@ -1,0 +1,339 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-06-20T00:00:00.0000000Z",
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BeeFe_Brew_Table_C",
+      "Description": "BeeFe Brew Table",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Builder_C",
+      "Description": "BBrew Builder",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Dizzy_C",
+      "Description": "BBrew Dizzy",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Food_C",
+      "Description": "BBrew Food",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FoodPlus_C",
+      "Description": "BBrew FoodPlus",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Freezing_C",
+      "Description": "BBrew Freezing",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Heal_C",
+      "Description": "BBrew Health",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HealMax_C",
+      "Description": "BBrew Max Health",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Lucky_C",
+      "Description": "BBrew Lucky",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_MindWipe_C",
+      "Description": "BBrew Mindwipe Tonic",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_NightVision_C",
+      "Description": "BBrew NightVision",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_O2_C",
+      "Description": "BBrew O2",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Radiation_C",
+      "Description": "BBrew Radiation",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Stamina_C",
+      "Description": "BBrew Stamina",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SubSpecial_C",
+      "Description": "BBrew SubSpecial",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Taming_C",
+      "Description": "BBrew Taming",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Torpor_C",
+      "Description": "BBrew Torpor",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_WakeUp_C",
+      "Description": "BBrew Wake up",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XP_C",
+      "Description": "BBrew XP",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_XP2_C",
+      "Description": "BBrew XP2",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BBrew_Death_C",
+      "Description": "BBrew Death",
+      "Mod": "BeeFe Brews"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BBrew_DinoDeath_C",
+      "Description": "BBrew Dino Death",
+      "Mod": "BeeFe Brews"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BeeFe_Brew_Table_C",
+      "Description": "BeeFe Brew Table",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewBuilder_C",
+      "Description": "BBrew Builder",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewDizzy_C",
+      "Description": "BBrew Dizzy",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewFood_C",
+      "Description": "BBrew Food",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewFoodPlus_C",
+      "Description": "BBrew FoodPlus",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewFreezing_C",
+      "Description": "BBrew Freezing",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewHeal_C",
+      "Description": "BBrew Health",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewHealMax_C",
+      "Description": "BBrew Max Health",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewLucky_C",
+      "Description": "BBrew Lucky",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewMindWipe_C",
+      "Description": "BBrew Mindwipe Tonic",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewNightVision_C",
+      "Description": "BBrew NightVision",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewO2_C",
+      "Description": "BBrew O2",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewRadiation_C",
+      "Description": "BBrew Radiation",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewStamina_C",
+      "Description": "BBrew Stamina",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewSubSpecial_C",
+      "Description": "BBrew SubSpecial",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewTaming_C",
+      "Description": "BBrew Taming",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewTorpor_C",
+      "Description": "BBrew Torpor",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewWakeup_C",
+      "Description": "BBrew Wake up",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewXP_C",
+      "Description": "BBrew XP",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewXP2_C",
+      "Description": "BBrew XP2",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewDeath_C",
+      "Description": "BBrew Death",
+      "Mod": "BeeFe Brews"
+    },
+	{
+      "Category": "Consumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BBrewDinoDeath_C",
+      "Description": "BBrew Dino Death",
+      "Mod": "BeeFe Brews"
+    }
+  ]
+}

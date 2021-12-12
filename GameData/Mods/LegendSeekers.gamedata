@@ -1,0 +1,209 @@
+{
+  "Application": "ark",
+  "Version": "2.0.0",
+  "Created": "2020-06-08T18:31:55.0000000Z",
+  "Creatures": [
+    {
+      "NameTag": "emberseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T1_emberseeker_character_bp_c",
+      "Description": "emberseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "flashseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T1_flashseeker_character_bp_c",
+      "Description": "flashseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Toxicseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T1_Toxicseeker_character_bp_c",
+      "Description": "Toxicseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Deathseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T2_Deathseeker_character_bp_c",
+      "Description": "Deathseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Flameseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T2_Flameseeker_character_bp_c",
+      "Description": "Flameseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Stormseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T2_Stormseeker_character_bp_c",
+      "Description": "Stormseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Dawnseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T3_Dawnseeker_character_bp_c",
+      "Description": "Dawnseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Dreamseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T3_Dreamseeker_character_bp_c",
+      "Description": "Dreamseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Plagueseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T3_Plagueseeker_character_bp_c",
+      "Description": "Plagueseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Frostseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T4_Frostseeker_character_bp_c",
+      "Description": "Frostseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Nightmareseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T4_Nightmareseeker_character_bp_c",
+      "Description": "Nightmareseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Trinityseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T4_Trinityseeker_character_bp_c",
+      "Description": "Trinityseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Droneseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T5_Droneseeker_character_bp_c",
+      "Description": "Droneseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Harvestseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T5_Harvestseeker_character_bp_c",
+      "Description": "Harvestseeker",
+      "Mod": "Legend Seeker"
+    },
+    {
+      "NameTag": "Primeseeker",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "T5_Primeseeker_character_bp_c",
+      "Description": "Primeseeker",
+      "Mod": "Legend Seeker"
+    }
+  ],
+  "Engrams": [],
+  "Items": [],
+  "MapSpawners": [
+    {
+       "ClassName": "T1_emberseeker_character_bp_c",
+      "Description": "emberseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T1_flashseeker_character_bp_c",
+      "Description": "flashseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T1_Toxicseeker_character_bp_c",
+      "Description": "Toxicseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T2_Deathseeker_character_bp_c",
+      "Description": "Deathseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T2_Flameseeker_character_bp_c",
+      "Description": "Flameseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T2_Stormseeker_character_bp_c",
+      "Description": "Stormseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T3_Dawnseeker_character_bp_c",
+      "Description": "Dawnseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T3_Dreamseeker_character_bp_c",
+      "Description": "Dreamseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T3_Plagueseeker_character_bp_c",
+      "Description": "Plagueseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T4_Frostseeker_character_bp_c",
+      "Description": "Frostseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T4_Nightmareseeker_character_bp_c",
+      "Description": "Nightmareseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T4_Trinityseeker_character_bp_c",
+      "Description": "Trinityseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T5_Droneseeker_character_bp_c",
+      "Description": "Droneseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T5_Harvestseeker_character_bp_c",
+      "Description": "Harvestseeker",
+      "Mod": "Legend Seekers"
+    },
+	{
+      "ClassName": "T5_Primeseeker_character_bp_c",
+      "Description": "Primeseeker",
+      "Mod": "Legend Seekers"
+    }
+  ],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": []
+}

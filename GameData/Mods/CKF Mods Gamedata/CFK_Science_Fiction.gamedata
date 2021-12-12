@@ -1,0 +1,1119 @@
+{
+    "Application": "ark",
+    "Version": "1.0.0",
+    "Created": "2020-06-21T00:00:00.0000000Z",
+    "Engrams": [
+      {
+        "Level": 19,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Cosmetic_Gun_C",
+        "Description": "Cosmetic Change Tool",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 42,
+        "Points": 1,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_CraftingTable_C",
+        "Description": "Composite Crafting Table",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_SQ_C",
+        "Description": "Composite Ceiling",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_SQ_Gantry_C",
+        "Description": "Composite Gantry",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_SQ_Glass_C",
+        "Description": "Composite Ceiling Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_T_C",
+        "Description": "Composite Ceiling Triangle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_T_Gantry_C",
+        "Description": "Composite Gantry Triangle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_T_Glass_C",
+        "Description": "Composite Ceiling Triangle Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Door_Single_C",
+        "Description": "Composite Door",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Door_Single_Glass_C",
+        "Description": "Composite Door Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Doors_Double_C",
+        "Description": "Composite Double Doors",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Doors_Double_Glass_C",
+        "Description": "Composite Double Doors Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Double_DoorFrame_C",
+        "Description": "Composite Double Doorframe",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Foundation_SQ_C",
+        "Description": "Composite Foundation",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Foundation_T_C",
+        "Description": "Composite Foundation Triangle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Full_Rail_C",
+        "Description": "Composite Full Rail",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Full_Trestle_C",
+        "Description": "Composite Full Trestle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_C",
+        "Description": "Composite Gable",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Glass_C",
+        "Description": "Composite Gable Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Inverted_C",
+        "Description": "Composite Gable Inverted",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Inverted_Glass_C",
+        "Description": "Composite Gable Inverted Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Inverted_Rail_C",
+        "Description": "Composite Gable Inverted Rail",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Inverted_Trestle_C",
+        "Description": "Composite Gable Inverted Trestle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Peak_C",
+        "Description": "Composite Gable Peak",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Rail_C",
+        "Description": "Composite Gable Rail",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Gable_Trestle_C",
+        "Description": "Composite Gable Trestle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Rail_C",
+        "Description": "Composite Half Rail",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Rail_Panelled_C",
+        "Description": "Composite Half Rail Panelled",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Rail_Sloped_C",
+        "Description": "Composite Half Rail Sloped",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Rail_Sloped_Short_C",
+        "Description": "Composite Sloped Half Rail (Half Stairs)",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Trestle_C",
+        "Description": "Composite Half Trestle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Wall_C",
+        "Description": "Composite Half Wall",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Wall_Glass_C",
+        "Description": "Composite Half Wall Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Wall_Sloped_C",
+        "Description": "Composite Half Wall Sloped",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Half_Wall_Sloped_Short_C",
+        "Description": "Composite Sloped Half Wall (Half Wall)",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Hatch_Ceiling_C",
+        "Description": "Composite Ceiling Hatch",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Hatch_Ramped_C",
+        "Description": "Composite Ramped Hatch",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Ceiling_HatchWay_C",
+        "Description": "Composite Ceiling Hatchway",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Large_Gate_Roller_C",
+        "Description": "Composite Large Gate",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Large_GateFrame_2x3_C",
+        "Description": "Composite Large Gateframe",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_LargeWall_1x2_C",
+        "Description": "Composite Wall 1x2",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_LargeWall_2x2_C",
+        "Description": "Composite Wall 2x2",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_LargeWall_2x3_C",
+        "Description": "Composite Wall 2x3",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Medium_Gate_Roller_C",
+        "Description": "Composite Medium Gate",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Medium_GateFrame_2x2_C",
+        "Description": "Composite Medium Gateframe",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Offset_DoorFrame_C",
+        "Description": "Composite Offset Doorframe",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Pillar_1x_C",
+        "Description": "Composite Pillar 1x",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Pillar_2x_C",
+        "Description": "Composite Pillar 2x",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Pillar_Half_C",
+        "Description": "Composite Pillar Half",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Protruding_Full_Rail_C",
+        "Description": "Composite Protruding Full Rail",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Protruding_Rail_C",
+        "Description": "Composite Protruding Rail",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Protruding_Rail_Panelled_C",
+        "Description": "Composite Protruding Rail Panelled",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Doorway_C",
+        "Description": "Composite Roof Hatchway",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Corner_C",
+        "Description": "Composite Roof Corner",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Inversion_C",
+        "Description": "Composite Roof Triangle Inversion",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Inversion_Glass_C",
+        "Description": "Composite Roof Triangle Glass Inversion",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Peak_Square_C",
+        "Description": "Composite Roof Peak",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Ridge_C",
+        "Description": "Composite Roof Ridge",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Square_C",
+        "Description": "Composite Roof",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Square_Glass_C",
+        "Description": "Composite Roof Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Triangle_C",
+        "Description": "Composite Roof Triangle",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Triangle_Glass_C",
+        "Description": "Composite Roof Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Roof_Valley_C",
+        "Description": "Composite Roof Valley",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Short_Wall_C",
+        "Description": "Composite Low Wall",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Stairs_Square_C",
+        "Description": "Composite Stairs",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Stairs_Square_Half_C",
+        "Description": "Composite Half Stairs",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Wall_C",
+        "Description": "Composite Wall",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Wall_Adapter_C",
+        "Description": "Composite Wall (Vanilla Adapter)",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Wall_Vanilla_C",
+        "Description": "Composite Wall (Vanilla)",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_WindowFrame_C",
+        "Description": "Composite Wall Glass",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 43,
+        "Points": 0,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Tier3_Wall_Accent_C",
+        "Description": "Composite Accent",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 49,
+        "Points": 16,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_Power_Junction_Wireless_C",
+        "Description": "Wireless Power Junction",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 49,
+        "Points": 5,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_PointLamp_Short_C",
+        "Description": "Area Lamp Short",
+        "Mod": "CFK: Science Fiction"
+    },
+    {
+        "Level": 49,
+        "Points": 24,
+        "IsTekGram": false,
+        "ClassName": "EngramEntry_CKFSF_ElectricGenerator_C",
+        "Description": "Civilian Power Generator",
+        "Mod": "CFK: Science Fiction"
+    }
+    ],
+  "Items": [
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_CKFSF_Cosmetic_Tool_C",
+      "Description": "Cosmetic Change Tool",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_CraftingTable_C",
+      "Description": "Composite Crafting Table",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ceiling_SQ_C",
+      "Description": "Composite Ceiling",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ceiling_SQ_Gantry_C",
+      "Description": "Composite Gantry",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ceiling_SQ_Glass_C",
+      "Description": "Composite Ceiling Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ceiling_T_C",
+      "Description": "Composite Ceiling Triangle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ceiling_T_Gantry_C",
+      "Description": "Composite Gantry Triangle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ceiling_T_Glass_C",
+      "Description": "Composite Ceiling Triangle Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Door_Single_C",
+      "Description": "Composite Door",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Door_Single_Glass_C",
+      "Description": "Composite Door Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Doors_Double_C",
+      "Description": "Composite Double Doors",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Doors_Double_Glass_C",
+      "Description": "Composite Double Doors Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Double_DoorFrame_C",
+      "Description": "Composite Double Doorframe",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Foundation_SQ_C",
+      "Description": "Composite Foundation",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Foundation_T_C",
+      "Description": "Composite Foundation Triangle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Full_Rail_C",
+      "Description": "Composite Full Rail",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Full_Trestle_C",
+      "Description": "Composite Full Trestle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_C",
+      "Description": "Composite Gable",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Glass_C",
+      "Description": "Composite Gable Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Inverted_C",
+      "Description": "Composite Gable Inverted",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Inverted_Glass_C",
+      "Description": "Composite Gable Inverted Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Inverted_Rail_C",
+      "Description": "Composite Gable Inverted Rail",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Inverted_Trestle_C",
+      "Description": "Composite Gable Inverted Trestle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Peak_C",
+      "Description": "Composite Gable Peak",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Rail_C",
+      "Description": "Composite Gable Rail",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Gable_Trestle_C",
+      "Description": "Composite Gable Trestle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Rail_C",
+      "Description": "Composite Half Rail",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Rail_Panelled_C",
+      "Description": "Composite Half Rail Panelled",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Rail_Sloped_C",
+      "Description": "Composite Half Rail Sloped",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Rail_Sloped_Short_C",
+      "Description": "Composite Sloped Half Rail (Half Stairs)",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Trestle_C",
+      "Description": "Composite Half Trestle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Wall_C",
+      "Description": "Composite Half Wall",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Wall_Glass_C",
+      "Description": "Composite Half Wall Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Wall_Sloped_C",
+      "Description": "Composite Half Wall Sloped",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Half_Wall_Sloped_Short_C",
+      "Description": "Composite Sloped Half Wall (Half Wall)",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Hatch_Ceiling_C",
+      "Description": "Composite Ceiling Hatch",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Hatch_Ramped_C",
+      "Description": "Composite Ramped Hatch",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Hatchway_Ceiling_C",
+      "Description": "Composite Ceiling Hatchway",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Large_Gate_Roller_C",
+      "Description": "Composite Large Gate",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Large_GateFrame_2x3_C",
+      "Description": "Composite Large Gateframe",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_LargeWall_1x2_C",
+      "Description": "Composite Wall 1x2",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_LargeWall_2x2_C",
+      "Description": "Composite Wall 2x2",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_LargeWall_2x3_C",
+      "Description": "Composite Wall 2x3",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Medium_Gate_Roller_C",
+      "Description": "Composite Medium Gate",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Medium_GateFrame_2x2_C",
+      "Description": "Composite Medium Gateframe",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Offset_DoorFrame_C",
+      "Description": "Composite Offset Doorframe",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Pillar_1x_C",
+      "Description": "Composite Pillar 1x",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Pillar_2x_C",
+      "Description": "Composite Pillar 2x",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Pillar_Half_C",
+      "Description": "Composite Pillar Half",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Protruding_Full_Rail_C",
+      "Description": "Composite Protruding Full Rail",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Protruding_Rail_C",
+      "Description": "Composite Protruding Rail",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Protruding_Rail_Panelled_C",
+      "Description": "Composite Protruding Rail Panelled",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Ramped_Doorway_C",
+      "Description": "Composite Roof Hatchway",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Corner_C",
+      "Description": "Composite Roof Corner",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Inversion_C",
+      "Description": "Composite Roof Triangle Inversion",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Inversion_Glass_C",
+      "Description": "Composite Roof Triangle Glass Inversion",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Peak_Square_C",
+      "Description": "Composite Roof Peak",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Ridge_C",
+      "Description": "Composite Roof Ridge",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Square_C",
+      "Description": "Composite Roof",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Square_Glass_C",
+      "Description": "Composite Roof Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Triangle_C",
+      "Description": "Composite Roof Triangle",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Triangle_Glass_C",
+      "Description": "Composite Roof Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Roof_Valley_C",
+      "Description": "Composite Roof Valley",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Short_Wall_C",
+      "Description": "Composite Low Wall",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Stairs_SQ_C",
+      "Description": "Composite Stairs",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Stairs_SQ_Half_C",
+      "Description": "Composite Half Stairs",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Wall_C",
+      "Description": "Composite Wall",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Wall_Adapter_C",
+      "Description": "Composite Wall (Vanilla Adapter)",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Wall_Vanilla_C",
+      "Description": "Composite Wall (Vanilla)",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_WindowFrame_C",
+      "Description": "Composite Wall Glass",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Comp_Wall_Accent_C",
+      "Description": "Composite Accent",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_Power_Junction_Wireless_C",
+      "Description": "Wireless Power Junction",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_PointLamp_Short_C",
+      "Description": "Area Lamp Short",
+      "Mod": "CFK: Science Fiction"
+  },
+  {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CKFSF_ElectricGenerator_C",
+      "Description": "Civilian Power Generator",
+      "Mod": "CFK: Science Fiction"
+  }
+    ]
+}

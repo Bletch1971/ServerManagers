@@ -1,0 +1,29 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2019-03-20T00:06:00.0000000Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 122,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_AlienJuke_C",
+      "Description": "AlienJuke",
+      "Mod": "KWAKA'S ALIEN JUKEBOX 2.0"
+    },
+	{
+      "Level": 122,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_DiscoTurtle_C",
+      "Description": "DiscoTurtle",
+      "Mod": "KWAKA'S ALIEN JUKEBOX 2.0"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}

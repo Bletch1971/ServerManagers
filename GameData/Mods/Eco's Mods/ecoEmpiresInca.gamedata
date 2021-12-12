@@ -1,0 +1,366 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8553008Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IN_CraftingTable_eco_C",
+      "Description": "Crafting Table for Inca Empire",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IN_ArmoryFood_eco_C",
+      "Description": "Inca Empire Armory and Food",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_IN_Fence_eco_C",
+      "Description": "Inca Empire Fence",
+      "Mod": "ecoEmpiresInca"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_CraftingTable_eco_C",
+      "Description": "Crafting Table for Inca Empire",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_Mat_eco_C",
+      "Description": "Inca Mat",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_Throne_eco_C",
+      "Description": "Inca Throne",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_SquareTable_eco_C",
+      "Description": "Square Table",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_LongTable_eco_C",
+      "Description": "Long Table",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_Storage_eco_C",
+      "Description": "Storage Table for Inca Empire",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_Torch_eco_C",
+      "Description": "Inca Torch",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_Banner_eco_C",
+      "Description": "Inca Banner",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_VillagerBed_eco_C",
+      "Description": "Inca Villager Bed",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_WarriorBed_eco_C",
+      "Description": "Inca Warrior Bed",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_EmperorBed_eco_C",
+      "Description": "Inca Emperor Bed",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_HutDoor_eco_C",
+      "Description": "Inca Empire Hut Door",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_VillagerHut_eco_C",
+      "Description": "Inca Villager Hut",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_WarriorHut_eco_C",
+      "Description": "Inca Warrior Hut",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_EmperorHut_eco_C",
+      "Description": "Inca Emperor Hut",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_Temple_eco_C",
+      "Description": "Inca Temple",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_ArmoryFood_eco_C",
+      "Description": "Inca Empire Armory and Food",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_Cup_eco_C",
+      "Description": "Cup",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_Plate_eco_C",
+      "Description": "Plate",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_Pitcher_eco_C",
+      "Description": "Pitcher",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_FoodStorage_eco_C",
+      "Description": "Food Storage",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_MixingTable_eco_C",
+      "Description": "Inca Mixing Table",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_RoyalHair_eco_C",
+      "Description": "Royal Hair",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_CornFlour_eco_C",
+      "Description": "Corn Flour",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_DriedQuinoa_eco_C",
+      "Description": "Dried Quinoa",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_Nuts_eco_C",
+      "Description": "Nuts",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_PepinoMelon_eco_C",
+      "Description": "Pepino Melon",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_SourCherries_eco_C",
+      "Description": "Sour Cherries",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_WildBerries_eco_C",
+      "Description": "Wild Berries",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_StoneOven_eco_C",
+      "Description": "Inca Stone Oven",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_Chicha_eco_C",
+      "Description": "Chicha Beer",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_Chuno_eco_C",
+      "Description": "Chuno",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_CookedQuinoa_eco_C",
+      "Description": "Cooked Quinoa",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_FishStew_eco_C",
+      "Description": "Fish Stew",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_MaizeCakes_eco_C",
+      "Description": "Maize Cakes",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_IN_Salmon_eco_C",
+      "Description": "Salmon",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IN_CookedVisacha_eco_C",
+      "Description": "Cooked Visacha",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_IN_VillagerSkin_eco_C",
+      "Description": "Inca Villager",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_IN_WarriorSkin_eco_C",
+      "Description": "Inca Warrior",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_IN_EmperorSkin_eco_C",
+      "Description": "Inca Emperor",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_IN_Shield_eco_C",
+      "Description": "Inca Shield",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Skin",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemSkin_IN_Macana_eco_C",
+      "Description": "Inca Macana",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_Weapon_INCA_FeatheredSpear_eco_C",
+      "Description": "Inca Feathered Spear",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_IN_Boat_eco_C",
+      "Description": "Inca Empire Boat",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_INCA_LlamaSaddlePrimitive_eco_C",
+      "Description": "Inca Empires Llama Saddle",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_INCA_LlamaSaddleAscendant_eco_C",
+      "Description": "Inca Empires Llama Saddle",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_IN_Fence_eco_C",
+      "Description": "Inca Empire Fence",
+      "Mod": "ecoEmpiresInca"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

@@ -1,0 +1,341 @@
+{
+  "Application": "ark",
+  "Version": "1.1.0",
+  "Created": "2021-03-01T02:22:40.5980963Z",
+  "Creatures": [],
+  "Engrams": [
+       {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Auctioneer_C",
+      "Description": "Auctioneer",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Auctioneer_Base_C",
+      "Description": "Auctioneer Base",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Auctioneer_Cart_C",
+      "Description": "Auctioneerart",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Auctioneer_Minimal_C",
+      "Description": "Auctioneer Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AuctionHouseExchanger_C",
+      "Description": "AuctionHouseExchanger",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AuctionHouseExchanger_Minimal_C",
+      "Description": "AuctionHouseExchanger Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AuctionHouseFlag_C",
+      "Description": "AuctionHouseFlag",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AH_Hatchery_C",
+      "Description": "AH Hatchery",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AH_Hatchery_Generic_C",
+      "Description": "AH Hatchery Generic",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AH_Hatchery_Minimal_C",
+      "Description": "AH Hatchery Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AuctionHouseMailbox_C",
+      "Description": "AuctionHouseMailbox",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AuctionHouseManifest_C",
+      "Description": "AuctionHouseManifest",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Stockman_C",
+      "Description": "Stockman",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Stockman_Base_C",
+      "Description": "Stockman Base",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_Stockman_Minimal_C",
+      "Description": "Stockman Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Level": 1,
+      "Points": 10,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_AuctionHouseTransporter_C",
+      "Description": "AuctionHouseTransporter",
+      "Mod": "Auction House"
+   }
+  ],
+  "Items": [
+   {
+      "Category": "Weapon",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemWeapon_AH_DinoDetector_C",
+      "Description": "Weapon AH DinoDetector",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AH_ItemDetector_C",
+      "Description": "AH ItemDetector",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Auctioneer_C",
+      "Description": "Auctioneer",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Auctioneer_Base_C",
+      "Description": "Auctioneer Base",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Auctioneer_Cart_C",
+      "Description": "Auctioneer Cart",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Auctioneer_Minimal_C",
+      "Description": "Auctioneer Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_AuctionHouseCoin_C",
+      "Description": "Coin",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_AuctionHouseCoin_Copper_C",
+      "Description": "Coin Copper",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_AuctionHouseCoin_Gold_C",
+      "Description": "Coin Gold",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_AuctionHouseCoin_Platinum_C",
+      "Description": "Coin Platinum",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Resource",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemResource_AuctionHouseCoin_Silver_C",
+      "Description": "Coin Silver",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Tools",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItem_AuctionHouseExchangerBlueprint_C",
+      "Description": "ExchangerBlueprint",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseExchanger_C",
+      "Description": "Exchanger",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseExchanger_Admin_C",
+      "Description": "Exchanger Admin",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseExchanger_BASE_C",
+      "Description": "Exchanger BASE",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseExchanger_Minimal_C",
+      "Description": "Exchanger Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseBackersFlag_C",
+      "Description": "BackersFlag",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseDebugFlag_C",
+      "Description": "DebugFlag",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseFlag_C",
+      "Description": "Flag",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseFlag_Generic_C",
+      "Description": "Flag Generic",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AH_Hatchery_C",
+      "Description": "AH Hatchery",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AH_Hatchery_Generic_C",
+      "Description": "AH Hatchery Generic",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AH_Hatchery_Minimal_C",
+      "Description": "AH Hatchery Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseMailbox_C",
+      "Description": "Mailbox",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Tools",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItem_AuctionHouseManifest_C",
+      "Description": "Manifest",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Stockman_C",
+      "Description": "Stockman",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Stockman_Base_C",
+      "Description": "Stockman Base",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_Stockman_Minimal_C",
+      "Description": "Stockman Minimal",
+      "Mod": "Auction House"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_AuctionHouseTransporter_C",
+      "Description": "Transporter",
+      "Mod": "Auction House"
+   }
+  ]
+}

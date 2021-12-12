@@ -1,0 +1,490 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_CraftingCabin_eco_C",
+      "Description": "SE Crafting Cabin",
+      "Mod": "ecoScorchedEarthDecor"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CraftingCabin_eco_C",
+      "Description": "SE Crafting Cabin",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Bronto_Skeleton_eco_C",
+      "Description": "Bronto Skeleton",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Carno_Skeleton_eco_C",
+      "Description": "Carno Skeleton",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Raptor_Skeleton_eco_C",
+      "Description": "Raptor Skeleton",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Stego_Skeleton_eco_C",
+      "Description": "Stego Skeleton",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TRex_Skeleton_eco_C",
+      "Description": "TRex Skeleton",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Trike_Skeleton_eco_C",
+      "Description": "Trike Skeleton",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SEStoneStatue_eco_C",
+      "Description": "Statue",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Cross_eco_C",
+      "Description": "Cross",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WallCross_eco_C",
+      "Description": "Wall Cross",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SEWoodenGate_eco_C",
+      "Description": "Wooden Gate",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SEWoodenGateFrame_eco_C",
+      "Description": "Wooden Gate Frame",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WoodenFence_eco_C",
+      "Description": "Wooden Fence",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallStorageBox_eco_C",
+      "Description": "Small Storage Box",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Barrel_eco_C",
+      "Description": "Storage Barrel",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WaterBasin_eco_C",
+      "Description": "Water Basin",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_SmallShelf_eco_C",
+      "Description": "Small Wall Shelf",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Counter_eco_C",
+      "Description": "Storage Counter",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CounterWithDoors_eco_C",
+      "Description": "Counter with Doors",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TallCounterWithDoors_eco_C",
+      "Description": "Ice Box",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_Podium_eco_C",
+      "Description": "Podium",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_WaterTrough_eco_C",
+      "Description": "Water Trough",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Outhouse_eco_C",
+      "Description": "Outhouse",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WoodenBench_eco_C",
+      "Description": "Wooden Bench",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_WoodenCart_eco_C",
+      "Description": "Wooden Cart",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedDeathWorm_eco_C",
+      "Description": "Mounted Death Worm",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedJugBug_eco_C",
+      "Description": "Mounted Jug Bug",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedMantis_eco_C",
+      "Description": "Mounted Mantis",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedFire_eco_C",
+      "Description": "Mounted Fire Wyvern",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedLightning_eco_C",
+      "Description": "Mounted Lightning Wyvern",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedPoison_eco_C",
+      "Description": "Mounted Poison Wyvern",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedManticore_eco_C",
+      "Description": "Mounted Manticore",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedMorellatops_eco_C",
+      "Description": "Mounted Morellatops",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedThorny_eco_C",
+      "Description": "Mounted Thorny Lizard",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SECrystal_eco_C",
+      "Description": "Crystal",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SmallRock_eco_C",
+      "Description": "Small Rock",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_LongRock_eco_C",
+      "Description": "Long Rock",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_RoundRock_eco_C",
+      "Description": "Round Rock",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SEBoulder_eco_C",
+      "Description": "Boulder",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_ArchRock_eco_C",
+      "Description": "Arched Rock",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_AgaveFern_eco_C",
+      "Description": "Agave Fern",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BarrelCactus_eco_C",
+      "Description": "Barrel Cactus",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_CardonCactus_eco_C",
+      "Description": "Cardon Cactus",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertBush_eco_C",
+      "Description": "Desert Bush",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertBushCluster_eco_C",
+      "Description": "Desert Bush Cluster",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertMarigold_eco_C",
+      "Description": "Desert Marigold",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertNightFork_eco_C",
+      "Description": "Desert Night Fork",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_YuccaFlower_eco_C",
+      "Description": "Yucca Flower",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_OcotilloFlowers_eco_C",
+      "Description": "Ocotillo Flowers",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertShrub_eco_C",
+      "Description": "Desert Shrub",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertWildflower_eco_C",
+      "Description": "Desert Wildflower",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DeadBush_eco_C",
+      "Description": "Dead Bush",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Globemallow_eco_C",
+      "Description": "Globemallow Flowers",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HedgehogCactus_eco_C",
+      "Description": "Hedgehog Cactus",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_OrganPipeCactus_eco_C",
+      "Description": "Organ Pipe Cactus",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaguaroCactus_eco_C",
+      "Description": "Saguaro Cactus",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SaguaroCactusWide_eco_C",
+      "Description": "Wide Saguaro Cactus",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_SEDeadTree_eco_C",
+      "Description": "Dead Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertUmbrellaTree_eco_C",
+      "Description": "Desert Umbrella Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DragonTree_eco_C",
+      "Description": "Dragon Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FanPalmTree_eco_C",
+      "Description": "Fan Palm Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FanPalmTreeTall_eco_C",
+      "Description": "Tall Fan Palm Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_IronWoodTree_eco_C",
+      "Description": "Iron Wood Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PaloVerdeTree_eco_C",
+      "Description": "Palo Verde Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PinyonPineTree_eco_C",
+      "Description": "Pinyon Pine Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertElmTreeShort_eco_C",
+      "Description": "Short Desert Elm Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_DesertElmTree_eco_C",
+      "Description": "Desert Elm Tree",
+      "Mod": "ecoScorchedEarthDecor"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

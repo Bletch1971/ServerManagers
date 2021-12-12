@@ -1,0 +1,136 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-03-25T10:19:37.8543037Z",
+  "Engrams": [
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MetalSign_Large_SignsPlus_C",
+      "Description": "MetalSign Large SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_WoodSign_Large_SignsPlus_C",
+      "Description": "WoodSign Large SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MetalSign_SignsPlus_C",
+      "Description": "MetalSign SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_WoodSign_SignsPlus_C",
+      "Description": "WoodSign SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MetalSign_Wall_Small_SignsPlus_C",
+      "Description": "MetalSign Wall Small SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_WoodSign_Wall_Small_SignsPlus_C",
+      "Description": "WoodSign Wall Small SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_MetalSign_Wall_SignsPlus_C",
+      "Description": "MetalSign Wall SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Level": 1000,
+      "Points": 1000,
+      "IsTekGram": "false",
+      "ClassName": "EngramEntry_WoodSign_Wall_SignsPlus_C",
+      "Description": "WoodSign Wall SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   }
+  ],
+  "Items": [
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_BaseSign_SignsPlus_C",
+      "Description": "BaseSign SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MetalSign_Large_SignsPlus_C",
+      "Description": "MetalSign Large SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_WoodSign_Large_SignsPlus_C",
+      "Description": "WoodSign Large SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MetalSign_Small_SignsPlus_C",
+      "Description": "MetalSign Small SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_WoodSign_Small_SignsPlus_C",
+      "Description": "WoodSign Small SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MetalSign_Wall_Small_SignsPlus_C",
+      "Description": "MetalSign Wall Small SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_WoodSign_Wall_Small_SignsPlus_C",
+      "Description": "WoodSign Wall Small SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_MetalSign_Wall_SignsPlus_C",
+      "Description": "MetalSign Wall SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   },
+   {
+      "Category": "Structure",
+      "IsHarvestable": "false",
+      "ClassName": "PrimalItemStructure_WoodSign_Wall_SignsPlus_C",
+      "Description": "WoodSign Wall SignsPlus",
+      "Mod": "Scribbles - Better Signs"
+   }
+  ]
+}
