@@ -32,6 +32,7 @@
     <None Remove="Globalization\en-US\en-US.xaml" />
     <None Remove="Globalization\fr-FR\fr-FR.xaml" />
     <None Remove="Globalization\pt-BR\pt-BR.xaml" />
+    <None Remove="Globalization\ru-RU\ru-RU.xaml" />
     <None Remove="Globalization\zh-CN\zh-CN.xaml" />
     <None Remove="MakeLatestBetaVersionGithub.ps1" />
     <None Remove="MakeLatestVersionGithub.ps1" />
@@ -66,6 +67,7 @@
     <EmbeddedResource Include="Globalization\de-DE\de-DE.xaml" />
     <EmbeddedResource Include="Globalization\fr-FR\fr-FR.xaml" />
     <EmbeddedResource Include="Globalization\pt-BR\pt-BR.xaml" />
+    <EmbeddedResource Include="Globalization\ru-RU\ru-RU.xaml" />
     <EmbeddedResource Include="Globalization\zh-CN\zh-CN.xaml" />
   </ItemGroup>
   <ItemGroup>
