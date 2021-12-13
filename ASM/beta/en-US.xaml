@@ -5495,6 +5495,23 @@
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss Inventory - Crystal Wyvern Queen (Gamma)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss Inventory - Crystal Wyvern Queen (Beta)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss Inventory - Crystal Wyvern Queen (Alpha)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss Inventory - Dragon (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss Inventory - Dragon (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C">Boss Inventory - Dragon (Alpha)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C">Boss Inventory - Manticore (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C">Boss Inventory - Manticore (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C">Boss Inventory - Manticore (Alpha)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Valguero_C">Boss Inventory - Dragon (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Valguero_C">Boss Inventory - Dragon (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Valguero_C">Boss Inventory - Dragon (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Valguero_C">Boss Inventory - Manticore (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Valguero_C">Boss Inventory - Manticore (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Valguero_C">Boss Inventory - Manticore (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Boss Inventory - Megapithecus (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Boss Inventory - Megapithecus (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Boss Inventory - Megapithecus (Hard)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
