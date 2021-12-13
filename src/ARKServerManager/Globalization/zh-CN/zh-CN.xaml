@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.12.09(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.12.13(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -5759,9 +5759,9 @@
 	<sys:String x:Key="Race_HoverSkiff_Easy_C">极品飞艇(简单){任务}</sys:String>
 	<sys:String x:Key="Race_HoverSkiff_Medium_C">极品飞艇(中等){任务}</sys:String>
 	<sys:String x:Key="Race_HoverSkiff_Hard_C">极品飞艇(困难){任务}</sys:String>
-	<sys:String x:Key="Lootcrate_lvl1_C">资源包1级</sys:String>
-	<sys:String x:Key="Lootcrate_lvl2_C">资源包2级</sys:String>
-	<sys:String x:Key="Lootcrate_lvl3_C">资源包3级</sys:String>
+	<sys:String x:Key="Lootcrate_lvl1_C">一等战利品箱</sys:String>
+	<sys:String x:Key="Lootcrate_lvl2_C">二等战利品箱</sys:String>
+	<sys:String x:Key="Lootcrate_lvl3_C">三等战利品箱</sys:String>
 	
 	<sys:String x:Key="SupplyCrate_Space_01_Ambergris_C">空投_白色(创世2)</sys:String>
 	<sys:String x:Key="SupplyCrate_Space_02_Crystal_C">空投_绿色(创世2)</sys:String>
@@ -5816,6 +5816,7 @@
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss 清单 - （水晶岛）水晶女王 (简单)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss 清单 - （水晶岛）水晶女王 (中等)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss 清单 - （水晶岛）水晶女王 (困难)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_Carnivore_Large_CrystalWyvern_C">水晶飞龙</sys:String>
 	
 	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss 清单 - 喷火龙 (简单)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss 清单 - 喷火龙 (中等)</sys:String>
