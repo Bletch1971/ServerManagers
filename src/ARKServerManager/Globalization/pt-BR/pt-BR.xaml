@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -56,6 +57,7 @@
     <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 	

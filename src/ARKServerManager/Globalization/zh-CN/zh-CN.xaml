@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">创世纪 1(Genesis: Part 1)</sys:String>
 	<sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
     <sys:String x:Key="Map_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
+	<sys:String x:Key="Map_LostIsland">迷失岛(Lost Island)</sys:String>
     <!--#endregion-->
 
     <!--#总转换名称 -->
@@ -57,6 +58,7 @@
 	<sys:String x:Key="Mod_Genesis2">创世纪 2(Genesis: Part 2)</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
     <sys:String x:Key="Mod_PGM">程序生成地图(PGM)</sys:String>
+	<sys:String x:Key="Mod_LostIsland">迷失岛(Lost Island)</sys:String>
     <sys:String x:Key="Mod_Valguero">瓦尔盖罗(Valguero)</sys:String>
     <!--#endregion-->
 
@@ -103,8 +105,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">选择一个数据目录</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">确认位置</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">方舟服务器管理工具将存储配置文件和steamcmd以下目录:\r\n\r\n配置文件: {0}\r\nSteamCMD: {1}\r\n\r\n这样可以吗？</sys:String>
-    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">数据目录选择错误</sys:String>
-    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">您选择的目录在服务器管理器安装文件夹中。 不建议这样做，请选择另一个文件夹。</sys:String>
+    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">数据目录选择错误</sys:String>
+    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">您选择的目录在服务器管理器安装文件夹中。 不建议这样做，请选择另一个文件夹。</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">保存配置文件失败</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">保存配置文件失败 {0}.  {1}\n{2}</sys:String>
 
@@ -383,9 +385,9 @@
     <sys:String x:Key="GameDataWindow_ValidateErrorMessage">该文件无效。 它可能包含错误或格式不正确。</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddDialogTitle">选择游戏数据文件</sys:String>
-    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">游戏数据</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String> 
     <sys:String x:Key="GameDataWindow_AddFilterLabel">游戏数据文件</sys:String>
-    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.游戏数据</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
     <!--#endregion-->
 
     <!-- 插件窗口 -->
