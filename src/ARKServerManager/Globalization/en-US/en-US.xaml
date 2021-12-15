@@ -127,6 +127,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Server download complete</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Complete</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Cancelled</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Failed</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 

@@ -23,13 +23,8 @@ namespace ServerManagerTool.Common.Lib
                 this.StatusKey = statusKey;
                 this.CompletionPercent = completionPercent;
                 this.Cancelled = false;
+                this.Failure = null;
                 this.FailureText = null;
-            }
-
-            public Update SetFailed(string failureText)
-            {
-                this.FailureText = failureText;
-                return this;
             }
 
             public static Update AsCompleted(string statusKey)
@@ -42,9 +37,17 @@ namespace ServerManagerTool.Common.Lib
                 return new Update { StatusKey = statusKey, CompletionPercent = 100, Cancelled = true };
             }
 
+            public Update SetFailed(Exception ex)
+            {
+                this.Failure = ex;
+                this.FailureText = ex.Message;
+                return this;
+            }
+
             public string StatusKey;
             public float CompletionPercent;
             public bool Cancelled;
+            public Exception Failure;
             public string FailureText;
         }
 
@@ -56,10 +59,11 @@ namespace ServerManagerTool.Common.Lib
             RunningSteamCmd,
             InstallSteamCmdComplete,
             Complete,
-            Cancelled
+            Cancelled,
+            Failed,
         }
 
-        Dictionary<Status, Update> statuses = new Dictionary<Status, Update>()
+        readonly Dictionary<Status, Update> statuses = new Dictionary<Status, Update>()
         {
            { Status.CleaningSteamCmd, new Update("AutoUpdater_Status_CleaningSteamCmd", 0) },
            { Status.DownloadingSteamCmd, new Update("AutoUpdater_Status_DownloadingSteamCmd", 10) },
@@ -67,7 +71,8 @@ namespace ServerManagerTool.Common.Lib
            { Status.RunningSteamCmd, new Update("AutoUpdater_Status_RunningSteamCmd", 50) },
            { Status.InstallSteamCmdComplete, new Update("AutoUpdater_Status_InstallSteamCmdComplete", 80) },
            { Status.Complete, Update.AsCompleted("AutoUpdater_Status_Complete") },
-           { Status.Cancelled, Update.AsCancelled("AutoUpdater_Status_Cancelled") }
+           { Status.Cancelled, Update.AsCancelled("AutoUpdater_Status_Cancelled") },
+           { Status.Failed, Update.AsCancelled("AutoUpdater_Status_Failed") },
         };
 
         public static string GetSteamCmdFile(string dataPath) => IOUtils.NormalizePath(Path.Combine(dataPath, CommonConfig.Default.SteamCmdRelativePath, CommonConfig.Default.SteamCmdExeFile));
@@ -99,7 +104,7 @@ namespace ServerManagerTool.Common.Lib
             }
             catch (Exception ex)
             {
-                reporter?.Report(statuses[Status.Complete].SetFailed(ex.ToString()));
+                reporter?.Report(statuses[Status.Failed].SetFailed(ex));
             }
         }
 
@@ -189,7 +194,7 @@ namespace ServerManagerTool.Common.Lib
             }
             catch(Exception ex)
             {
-                reporter?.Report(statuses[Status.Complete].SetFailed(ex.ToString()));
+                reporter?.Report(statuses[Status.Failed].SetFailed(ex));
             }
         }
     }

@@ -17,6 +17,7 @@
             <ProgressBar x:Name="CompletionProgress" Height="10"/>
             <Label x:Name="StatusLabel" Content="{DynamicResource AutoUpdater_Status}" HorizontalContentAlignment="Center"/>
             <Button Content="{DynamicResource AutoUpdater_CancelButtonLabel}" Width="75" HorizontalAlignment="Center" IsCancel="True" Click="Button_Click"/>
+            <TextBlock x:Name="ErrorLabel" Text="Error Text" Margin="0,2,0,0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource WarningMessage}"/>
         </StackPanel>
     </Grid>
 </Window>
