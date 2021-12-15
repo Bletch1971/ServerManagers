@@ -158,14 +158,24 @@ namespace ServerManagerTool
 
                 if (result == CommonFileDialogResult.Ok)
                 {
-                    if (!String.Equals(dialog.FileName, Config.Default.DataPath))
+                    if (!string.Equals(dialog.FileName, Config.Default.DataPath))
                     {
                         try
                         {
+                            var newDataDirectory = dialog.FileName;
+                            if (!string.IsNullOrWhiteSpace(newDataDirectory))
+                            {
+                                var root = Path.GetPathRoot(newDataDirectory);
+                                if (!root.EndsWith("\\"))
+                                {
+                                    newDataDirectory = newDataDirectory.Replace(root, root + "\\");
+                                }
+                            }
+
                             // Set up the destination directories
-                            string newConfigDirectory = Path.Combine(dialog.FileName, Config.Default.ProfilesRelativePath);
+                            string newConfigDirectory = Path.Combine(newDataDirectory, Config.Default.ProfilesRelativePath);
                             string oldSteamDirectory = Path.Combine(Config.Default.DataPath, CommonConfig.Default.SteamCmdRelativePath);
-                            string newSteamDirectory = Path.Combine(dialog.FileName, CommonConfig.Default.SteamCmdRelativePath);
+                            string newSteamDirectory = Path.Combine(newDataDirectory, CommonConfig.Default.SteamCmdRelativePath);
 
                             Directory.CreateDirectory(newConfigDirectory);
                             Directory.CreateDirectory(newSteamDirectory);
@@ -199,7 +209,7 @@ namespace ServerManagerTool
                             Directory.Delete(oldSteamDirectory, true);
 
                             // Update the config
-                            Config.Default.DataPath = dialog.FileName;
+                            Config.Default.DataPath = newDataDirectory;
                             Config.Default.ConfigPath = newConfigDirectory;
                             App.ReconfigureLogging();
                         }
@@ -238,9 +248,18 @@ namespace ServerManagerTool
 
             if (result == CommonFileDialogResult.Ok)
             {
-                if (!String.Equals(dialog.FileName, Config.Default.BackupPath))
+                if (!string.Equals(dialog.FileName, Config.Default.BackupPath))
                 {
                     Config.Default.BackupPath = dialog.FileName;
+
+                    if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+                    {
+                        var root = Path.GetPathRoot(Config.Default.BackupPath);
+                        if (!root.EndsWith("\\"))
+                        {
+                            Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
+                        }
+                    }
                 }
             }
         }
@@ -260,9 +279,18 @@ namespace ServerManagerTool
 
             if (result == CommonFileDialogResult.Ok)
             {
-                if (!String.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
+                if (!string.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
                 {
                     Config.Default.AutoUpdate_CacheDir = dialog.FileName;
+
+                    if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
+                    {
+                        var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
+                        if (!root.EndsWith("\\"))
+                        {
+                            Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
+                        }
+                    }
                 }
             }
         }

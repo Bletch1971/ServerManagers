@@ -148,14 +148,24 @@ namespace ServerManagerTool
 
                 if (result == CommonFileDialogResult.Ok)
                 {
-                    if (!String.Equals(dialog.FileName, Config.Default.DataDir))
+                    if (!string.Equals(dialog.FileName, Config.Default.DataDir))
                     {
                         try
                         {
+                            var newDataDirectory = dialog.FileName;
+                            if (!string.IsNullOrWhiteSpace(newDataDirectory))
+                            {
+                                var root = Path.GetPathRoot(newDataDirectory);
+                                if (!root.EndsWith("\\"))
+                                {
+                                    newDataDirectory = newDataDirectory.Replace(root, root + "\\");
+                                }
+                            }
+
                             // Set up the destination directories
-                            string newConfigDirectory = Path.Combine(dialog.FileName, Config.Default.ProfilesDir);
+                            string newConfigDirectory = Path.Combine(newDataDirectory, Config.Default.ProfilesDir);
                             string oldSteamDirectory = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir);
-                            string newSteamDirectory = Path.Combine(dialog.FileName, Config.Default.SteamCmdDir);
+                            string newSteamDirectory = Path.Combine(newDataDirectory, Config.Default.SteamCmdDir);
 
                             Directory.CreateDirectory(newConfigDirectory);
                             Directory.CreateDirectory(newSteamDirectory);
@@ -189,7 +199,7 @@ namespace ServerManagerTool
                             Directory.Delete(oldSteamDirectory, true);
 
                             // Update the config
-                            Config.Default.DataDir = dialog.FileName;
+                            Config.Default.DataDir = newDataDirectory;
                             Config.Default.ConfigDirectory = newConfigDirectory;
                             App.ReconfigureLogging();
                         }
@@ -228,9 +238,18 @@ namespace ServerManagerTool
 
             if (result == CommonFileDialogResult.Ok)
             {
-                if (!String.Equals(dialog.FileName, Config.Default.BackupPath))
+                if (!string.Equals(dialog.FileName, Config.Default.BackupPath))
                 {
                     Config.Default.BackupPath = dialog.FileName;
+
+                    if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+                    {
+                        var root = Path.GetPathRoot(Config.Default.BackupPath);
+                        if (!root.EndsWith("\\"))
+                        {
+                            Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
+                        }
+                    }
                 }
             }
         }
@@ -250,9 +269,18 @@ namespace ServerManagerTool
 
             if (result == CommonFileDialogResult.Ok)
             {
-                if (!String.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
+                if (!string.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
                 {
                     Config.Default.AutoUpdate_CacheDir = dialog.FileName;
+
+                    if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
+                    {
+                        var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
+                        if (!root.EndsWith("\\"))
+                        {
+                            Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
+                        }
+                    }
                 }
             }
         }

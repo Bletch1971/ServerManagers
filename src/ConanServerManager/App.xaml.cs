@@ -48,7 +48,45 @@ namespace ServerManagerTool
         public App()
         {
             if (string.IsNullOrWhiteSpace(Config.Default.ServerManagerUniqueKey))
+            {
                 Config.Default.ServerManagerUniqueKey = Guid.NewGuid().ToString();
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.DataPath))
+            {
+                var root = Path.GetPathRoot(Config.Default.DataPath);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.DataPath = Config.Default.DataPath.Replace(root, root + "\\");
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.ConfigPath))
+            {
+                var root = Path.GetPathRoot(Config.Default.ConfigPath);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.ConfigPath = Config.Default.ConfigPath.Replace(root, root + "\\");
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+            {
+                var root = Path.GetPathRoot(Config.Default.BackupPath);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
+            {
+                var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
+                }
+            }
 
             App.Instance = this;
             ApplicationStarted = false;
