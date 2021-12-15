@@ -3473,9 +3473,7 @@ namespace ServerManagerTool.Lib
         {
             InstallDirectory = folder;
 
-            LoadServerFileAdministrators();
-            LoadServerFileExclusive();
-            LoadServerFileWhitelisted();
+            LoadServerFiles(true, true, true);
             SetupServerFilesWatcher();
         }
 
@@ -3561,9 +3559,7 @@ namespace ServerManagerTool.Lib
             settings.MutagenLevelBoostBred.Reset();
             settings.PerLevelStatsMultiplier_Player.Reset();
             settings.PlayerBaseStatMultipliers.Reset();
-            settings.LoadServerFileAdministrators();
-            settings.LoadServerFileExclusive();
-            settings.LoadServerFileWhitelisted();
+            settings.LoadServerFiles(true, true, true);
             settings.SetupServerFilesWatcher();
             return settings;
         }
@@ -3597,7 +3593,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        private static Enum[] GetExclusions()
+        private static IEnumerable<Enum> GetExclusions()
         {
             var exclusions = new List<Enum>();
 
@@ -3641,7 +3637,7 @@ namespace ServerManagerTool.Lib
                 exclusions.Add(ServerProfileCategory.SOTF);
             }
 
-            return exclusions.ToArray();
+            return exclusions;
         }
 
         private LevelList GetLevelList(LevelProgression levelProgression)
@@ -4026,7 +4022,7 @@ namespace ServerManagerTool.Lib
             return profile;
         }
 
-        public static ServerProfile LoadFromINIFiles(string file, ServerProfile profile, Enum[] exclusions = null)
+        public static ServerProfile LoadFromINIFiles(string file, ServerProfile profile, IEnumerable<Enum> exclusions = null)
         {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
                 return null;
@@ -4140,9 +4136,7 @@ namespace ServerManagerTool.Lib
             if (Config.Default.SectionPreventTransferOverridesEnabled)
                 profile.PreventTransferForClassNames.RenderToView();
 
-            profile.LoadServerFileAdministrators();
-            profile.LoadServerFileExclusive();
-            profile.LoadServerFileWhitelisted();
+            profile.LoadServerFiles(true, true, true);
             profile.SetupServerFilesWatcher();
 
             profile._lastSaveLocation = file;
@@ -4400,7 +4394,7 @@ namespace ServerManagerTool.Lib
             SaveINIFile(configDir);
         }
 
-        public void SaveINIFile(string profileIniDir, Enum[] exclusions = null)
+        public void SaveINIFile(string profileIniDir, IEnumerable<Enum> exclusions = null)
         {
             if (exclusions == null)
                 exclusions = GetExclusions();
@@ -4424,7 +4418,7 @@ namespace ServerManagerTool.Lib
                 filteredValues.AddRange(this.PlayerLevels.ToINIValuesForEngramPoints());
             }
 
-            iniFile.WriteSection(IniFiles.Game, IniSections.Game_ShooterGameMode, filteredValues.ToArray());
+            iniFile.WriteSection(IniFiles.Game, IniSections.Game_ShooterGameMode, filteredValues);
         }
 
         public bool UpdateDirectoryPermissions()
@@ -4984,7 +4978,7 @@ namespace ServerManagerTool.Lib
             var csvMapper = new CsvDinoLevelMapping();
             var csvParser = new CsvParser<ImportLevel>(csvParserOptions, csvMapper);
 
-            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII).ToList();
+            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII);
             if (result.Any(r => !r.IsValid))
             {
                 var error = result.First(r => r.Error != null);
@@ -5011,7 +5005,7 @@ namespace ServerManagerTool.Lib
             var csvMapper = new CsvPlayerLevelMapping();
             var csvParser = new CsvParser<ImportLevel>(csvParserOptions, csvMapper);
 
-            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII).ToList();
+            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII);
             if (result.Any(r => !r.IsValid))
             {
                 var error = result.First(r => r.Error != null);
@@ -5866,7 +5860,7 @@ namespace ServerManagerTool.Lib
             this.CustomEngineSettings.Clear();
             foreach (var section in sourceProfile.CustomEngineSettings)
             {
-                this.CustomEngineSettings.Add(section.SectionName, section.ToIniValues().ToArray());
+                this.CustomEngineSettings.Add(section.SectionName, section.ToIniValues());
             }
         }
 
@@ -5875,7 +5869,7 @@ namespace ServerManagerTool.Lib
             this.CustomGameSettings.Clear();
             foreach (var section in sourceProfile.CustomGameSettings)
             {
-                this.CustomGameSettings.Add(section.SectionName, section.ToIniValues().ToArray());
+                this.CustomGameSettings.Add(section.SectionName, section.ToIniValues());
             }
         }
 
@@ -5884,7 +5878,7 @@ namespace ServerManagerTool.Lib
             this.CustomGameUserSettings.Clear();
             foreach (var section in sourceProfile.CustomGameUserSettings)
             {
-                this.CustomGameUserSettings.Add(section.SectionName, section.ToIniValues().ToArray());
+                this.CustomGameUserSettings.Add(section.SectionName, section.ToIniValues());
             }
         }
 
@@ -6364,18 +6358,24 @@ namespace ServerManagerTool.Lib
         #region Server Files
         private void ServerFilesWatcher_Changed(object sender, FileSystemEventArgs e)
         {
+            var adminFile = false;
+            var exclusiveFile = false;
+            var whitelistFile = false;
+
             if (e.Name.Equals(Config.Default.ArkAdminFile, StringComparison.OrdinalIgnoreCase))
             {
-                TaskUtils.RunOnUIThreadAsync(() => LoadServerFileAdministrators()).DoNotWait();
+                adminFile = true;
             }
-            else if (e.Name.Equals(Config.Default.ArkExclusiveFile, StringComparison.OrdinalIgnoreCase))
+            if (e.Name.Equals(Config.Default.ArkExclusiveFile, StringComparison.OrdinalIgnoreCase))
             {
-                TaskUtils.RunOnUIThreadAsync(() => LoadServerFileExclusive()).DoNotWait();
+                exclusiveFile = true;
             }
-            else if (e.Name.Equals(Config.Default.ArkWhitelistFile, StringComparison.OrdinalIgnoreCase))
+            if (e.Name.Equals(Config.Default.ArkWhitelistFile, StringComparison.OrdinalIgnoreCase))
             {
-                TaskUtils.RunOnUIThreadAsync(() => LoadServerFileWhitelisted()).DoNotWait();
+                whitelistFile = true;
             }
+
+            TaskUtils.RunOnUIThreadAsync(() => LoadServerFiles(adminFile, exclusiveFile, whitelistFile)).DoNotWait();
         }
 
         private void ServerFilesWatcher_Error(object sender, ErrorEventArgs e)
@@ -6447,74 +6447,76 @@ namespace ServerManagerTool.Lib
             _serverFilesWatcherSaved.EnableRaisingEvents = true;
         }
 
-        public void LoadServerFileAdministrators()
+        public void LoadServerFiles(bool adminFile, bool exclusiveFile, bool whitelistFile)
         {
             try
             {
-                var list = this.ServerFilesAdmins ?? new PlayerUserList();
+                var list1 = this.ServerFilesAdmins ?? new PlayerUserList();
+                var list2 = this.ServerFilesExclusive ?? new PlayerUserList();
+                var list3 = this.ServerFilesWhitelisted ?? new PlayerUserList();
 
-                var file = Path.Combine(InstallDirectory, Config.Default.SavedRelativePath, Config.Default.ArkAdminFile);
-                if (File.Exists(file))
+                var allSteamIds = new List<string>();
+                string[] adminSteamIds = null;
+                string[] exclusiveSteamIds = null;
+                string[] whitelistSteamIds = null;
+
+                if (adminFile)
                 {
-                    var steamIds = File.ReadAllLines(file);
-                    var steamUsers = SteamUtils.GetSteamUserDetails(steamIds.ToList());
-
-                    list = PlayerUserList.GetList(steamUsers, steamIds);
+                    var file = Path.Combine(InstallDirectory, Config.Default.SavedRelativePath, Config.Default.ArkAdminFile);
+                    if (File.Exists(file))
+                    {
+                        adminSteamIds = File.ReadAllLines(file);
+                        allSteamIds.AddRange(adminSteamIds);
+                    }
                 }
 
-                this.ServerFilesAdmins = list;
+                if (exclusiveFile)
+                {
+                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ArkExclusiveFile);
+                    if (File.Exists(file))
+                    {
+                        exclusiveSteamIds = File.ReadAllLines(file);
+                        allSteamIds.AddRange(exclusiveSteamIds);
+                    }
+                }
+
+                if (whitelistFile)
+                {
+                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ArkWhitelistFile);
+                    if (File.Exists(file))
+                    {
+                        whitelistSteamIds = File.ReadAllLines(file);
+                        allSteamIds.AddRange(whitelistSteamIds);
+                    }
+                }
+
+                // remove all duplicates
+                allSteamIds = allSteamIds.Distinct().ToList();
+
+                // fetch the details of all steam users in the list
+                var steamUsers = SteamUtils.GetSteamUserDetails(allSteamIds);
+
+                if (adminFile && adminSteamIds != null)
+                {
+                    list1 = PlayerUserList.GetList(steamUsers, adminSteamIds);
+                }
+
+                if (exclusiveFile && exclusiveSteamIds != null)
+                {
+                    list2 = PlayerUserList.GetList(steamUsers, exclusiveSteamIds);
+                }
+
+                if (whitelistFile && whitelistSteamIds != null)
+                {
+                    list3 = PlayerUserList.GetList(steamUsers, whitelistSteamIds);
+                }
+
+                this.ServerFilesAdmins = list1;
+                this.ServerFilesExclusive = list2;
+                this.ServerFilesWhitelisted = list3;
             }
             catch (Exception ex)
             {
-                this.ServerFilesAdmins = new PlayerUserList();
-                MessageBox.Show(ex.Message, _globalizer.GetResourceString("ServerSettings_ServerFilesLoadErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        public void LoadServerFileExclusive()
-        {
-            try
-            {
-                var list = this.ServerFilesExclusive ?? new PlayerUserList();
-
-                var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ArkExclusiveFile);
-                if (File.Exists(file))
-                {
-                    var steamIds = File.ReadAllLines(file);
-                    var steamUsers = SteamUtils.GetSteamUserDetails(steamIds.ToList());
-
-                    list = PlayerUserList.GetList(steamUsers, steamIds);
-                }
-
-                this.ServerFilesExclusive = list;
-            }
-            catch (Exception ex)
-            {
-                this.ServerFilesExclusive = new PlayerUserList();
-                MessageBox.Show(ex.Message, _globalizer.GetResourceString("ServerSettings_ServerFilesLoadErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        public void LoadServerFileWhitelisted()
-        {
-            try
-            {
-                var list = this.ServerFilesWhitelisted ?? new PlayerUserList();
-
-                var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ArkWhitelistFile);
-                if (File.Exists(file))
-                {
-                    var steamIds = File.ReadAllLines(file);
-                    var steamUsers = SteamUtils.GetSteamUserDetails(steamIds.ToList());
-
-                    list = PlayerUserList.GetList(steamUsers, steamIds);
-                }
-
-                this.ServerFilesWhitelisted = list;
-            }
-            catch (Exception ex)
-            {
-                this.ServerFilesWhitelisted = new PlayerUserList();
                 MessageBox.Show(ex.Message, _globalizer.GetResourceString("ServerSettings_ServerFilesLoadErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -6528,7 +6530,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ArkAdminFile);
-                File.WriteAllLines(file, this.ServerFilesAdmins.ToArray());
+                File.WriteAllLines(file, this.ServerFilesAdmins.ToEnumerable());
             }
             catch (Exception ex)
             {
@@ -6545,7 +6547,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ArkExclusiveFile);
-                File.WriteAllLines(file, this.ServerFilesExclusive.ToArray());
+                File.WriteAllLines(file, this.ServerFilesExclusive.ToEnumerable());
             }
             catch (Exception ex)
             {
@@ -6562,7 +6564,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ArkWhitelistFile);
-                File.WriteAllLines(file, this.ServerFilesWhitelisted.ToArray());
+                File.WriteAllLines(file, this.ServerFilesWhitelisted.ToEnumerable());
             }
             catch (Exception ex)
             {

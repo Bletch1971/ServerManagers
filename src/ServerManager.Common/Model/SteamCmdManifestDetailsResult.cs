@@ -18,7 +18,7 @@ namespace ServerManagerTool.Common.Model
                 var tableValue = value as VdfTable;
                 if (tableValue != null && tableValue.Count > 0)
                 {
-                    var betaKeyItems = tableValue.Where(v => v.Name.Equals("betakey", StringComparison.OrdinalIgnoreCase)).ToArray();
+                    var betaKeyItems = tableValue.Where(v => v.Name.Equals("betakey", StringComparison.OrdinalIgnoreCase));
                     foreach (var item in betaKeyItems)
                     {
                         tableValue.Remove(item);

@@ -49,7 +49,7 @@ namespace ServerManagerTool.Common.Utils
 
                 try
                 {
-                    var filesToDelete = new DirectoryInfo(backupPath).GetFiles($"{settingsFileName}_*{settingsFileExt}").Where(f => f.LastWriteTimeUtc.AddDays(7) < DateTime.UtcNow).ToArray();
+                    var filesToDelete = new DirectoryInfo(backupPath).GetFiles($"{settingsFileName}_*{settingsFileExt}").Where(f => f.LastWriteTimeUtc.AddDays(7) < DateTime.UtcNow);
                     foreach (var fileToDelete in filesToDelete)
                     {
                         try

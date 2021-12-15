@@ -86,7 +86,7 @@ namespace ServerManagerTool.Utils
                     Directory.CreateDirectory(modRootFolder);
 
                 // get the a list of the mod file into include in the mod file
-                var modFileItems = modIdList.Select(m => $"{m}.pak").ToArray();
+                var modFileItems = modIdList.Select(m => $"{m}.pak");
                 // create the mod file.
                 File.WriteAllLines(modListFile, modFileItems);
             }

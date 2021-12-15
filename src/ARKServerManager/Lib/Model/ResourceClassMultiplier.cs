@@ -1,5 +1,4 @@
 ﻿using ServerManagerTool.Common.Model;
-using ServerManagerTool.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,22 +17,20 @@ namespace ServerManagerTool.Lib
 
         public override void FromIniValues(IEnumerable<string> iniValues)
         {
-            var items = iniValues?.Select(AggregateIniValue.FromINIValue<ResourceClassMultiplier>).ToArray();
+            var items = iniValues?.Select(AggregateIniValue.FromINIValue<ResourceClassMultiplier>);
 
             Clear();
             if (this._resetFunc != null)
                 this.AddRange(this._resetFunc());
 
-            var itemsToAdd = items.Where(i => !this.Any(r => r.IsEquivalent(i))).ToArray();
-            AddRange(itemsToAdd);
+            AddRange(items.Where(i => !this.Any(r => r.IsEquivalent(i))));
 
-            var itemsToUpdate = items.Where(i => this.Any(r => r.IsEquivalent(i))).ToArray();
-            foreach (var item in itemsToUpdate)
+            foreach (var item in items.Where(i => this.Any(r => r.IsEquivalent(i))))
             {
                 this.FirstOrDefault(r => r.IsEquivalent(item)).Multiplier = item.Multiplier;
             }
 
-            IsEnabled = (items.Length > 0);
+            IsEnabled = (Count > 0);
 
             Sort(AggregateIniValue.SortKeySelector);
         }

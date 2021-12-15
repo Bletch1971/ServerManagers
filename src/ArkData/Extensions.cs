@@ -18,7 +18,7 @@ namespace ArkData
             return -1;
         }
 
-        public static int[] Locate(this byte[] self, byte[] candidate)
+        public static IEnumerable<int> Locate(this byte[] self, byte[] candidate)
         {
             if (IsEmptyLocate(self, candidate, 0))
                 return Empty;
@@ -29,7 +29,7 @@ namespace ArkData
                     list.Add(position);
 
             if (list.Count != 0)
-                return list.ToArray();
+                return list;
 
             return Empty;
         }

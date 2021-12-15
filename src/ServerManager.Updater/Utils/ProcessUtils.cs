@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -83,7 +84,7 @@ namespace ServerManagerTool.Updater
             return Process.GetProcessById(processId);
         }
 
-        public static Process[] GetProcesses(string processName, string executablePath)
+        public static IEnumerable<Process> GetProcesses(string processName, string executablePath)
         {
             var runningProcesses = Process.GetProcessesByName(processName).ToList();
 
@@ -95,7 +96,7 @@ namespace ServerManagerTool.Updater
                     runningProcesses.RemoveAt(i);
             }
 
-            return runningProcesses.ToArray();
+            return runningProcesses;
         }
 
         public static bool IsAlreadyRunning()

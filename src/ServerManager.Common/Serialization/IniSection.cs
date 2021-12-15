@@ -41,9 +41,9 @@ namespace ServerManagerTool.Common.Serialization
             return Keys?.FirstOrDefault(s => s.KeyName.Equals(keyName, StringComparison.OrdinalIgnoreCase));
         }
 
-        public string[] KeysToStringArray()
+        public IEnumerable<string> KeysToStringEnumerable()
         {
-            return Keys.Select(k => k.ToString()).ToArray();
+            return Keys.Select(k => k.ToString());
         }
 
         public void RemoveKey(string keyName)

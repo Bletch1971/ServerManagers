@@ -450,7 +450,7 @@ namespace ServerManagerTool.Lib
                 return new List<string>();
 
             // remove any players that do not have a player record.
-            var droppedPlayers = this._players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
+            var droppedPlayers = this._players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null);
             foreach (var droppedPlayer in droppedPlayers)
             {
                 _players.TryRemove(droppedPlayer.PlayerId, out PlayerInfo player);

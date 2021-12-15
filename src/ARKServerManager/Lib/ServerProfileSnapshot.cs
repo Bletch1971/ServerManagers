@@ -29,7 +29,7 @@ namespace ServerManagerTool.Lib
         public string ServerMap;
         public string ServerMapModId;
         public string TotalConversionModId;
-        public List<string> ServerModIds;
+        public IEnumerable<string> ServerModIds;
         public string MOTD;
         public int MotDDuration;
         public bool MOTDIntervalEnabled;

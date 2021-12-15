@@ -61,7 +61,7 @@ namespace ServerManagerTool.Lib
             int index = 0;
             int xpTotal = 0;
             int engramTotal = 0;
-            foreach (var existingLevel in this.OrderBy(l => l.XPRequired).ToArray())
+            foreach (var existingLevel in this.OrderBy(l => l.XPRequired))
             {
                 xpTotal += existingLevel.XPRequired;
                 engramTotal += existingLevel.EngramPoints;

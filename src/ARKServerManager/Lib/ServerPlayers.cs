@@ -223,7 +223,7 @@ namespace ServerManagerTool.Lib
                 token.ThrowIfCancellationRequested();
 
                 // remove any players that do not have a player file.
-                var droppedPlayers = _players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
+                var droppedPlayers = _players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null);
                 foreach (var droppedPlayer in droppedPlayers)
                 {
                     _players.TryRemove(droppedPlayer.PlayerId, out PlayerInfo player);

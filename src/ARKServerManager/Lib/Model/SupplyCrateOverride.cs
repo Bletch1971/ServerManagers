@@ -17,7 +17,7 @@ namespace ServerManagerTool.Lib
         {
         }
 
-        public string[] RenderToView()
+        public IEnumerable<string> RenderToView()
         {
             List<string> errors = new List<string>();
 
@@ -48,7 +48,7 @@ namespace ServerManagerTool.Lib
 
             Update();
 
-            return errors.ToArray();
+            return errors;
         }
 
         public void RenderToModel()

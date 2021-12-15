@@ -720,7 +720,7 @@ namespace ServerManagerTool
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);
 
-                ZipUtils.ZipFiles(zipFile, files.ToArray(), comment.ToString());
+                ZipUtils.ZipFiles(zipFile, files, comment.ToString());
                 foreach (var kvp in obfuscateFiles)
                 {
                     ZipUtils.ZipAFile(zipFile, kvp.Key, kvp.Value);
@@ -1130,7 +1130,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = Cursors.Wait);
                 await Task.Delay(500);
 
-                Settings.LoadServerFileBlacklisted();
+                Settings.LoadServerFiles(true, false);
             }
             catch (Exception ex)
             {
@@ -1151,7 +1151,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = Cursors.Wait);
                 await Task.Delay(500);
 
-                Settings.LoadServerFileWhitelisted();
+                Settings.LoadServerFiles(false, true);
             }
             catch (Exception ex)
             {

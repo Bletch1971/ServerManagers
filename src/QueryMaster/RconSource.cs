@@ -50,14 +50,7 @@ namespace QueryMaster
                     //consecutive rcon command replies start with an empty packet 
                     if (BitConverter.ToInt32(recvData[i], 4) == (int)PacketId.Empty)
                         continue;
-                    //if (recvData[i].Length - BitConverter.ToInt32(recvData[i], 0) == 4)
-                    //{
                     str.Append(RconUtil.ProcessPacket(recvData[i]).Body);
-                    //}
-                    //else
-                    //{
-                    //    str.Append(RconUtil.ProcessPacket(recvData[i]).Body + Util.BytesToString(recvData[++i].Take(recvData[i].Length - 2).ToArray()));
-                    //}
                 }
             }
             catch (Exception e)
