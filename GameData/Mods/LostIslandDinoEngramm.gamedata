@@ -1,0 +1,46 @@
+{
+  "Application": "ark",
+  "Version": "1.0.0",
+  "Created": "2021-12-15T00:00:00.0000000Z",
+  "Creatures": [
+	{
+      "NameTag": "Amargasaurus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Amargasaurus_Character_BP_C",
+      "Description": "Amargasaurus",
+      "Mod": "LostIsland"
+    },
+	{
+      "NameTag": "Sinomacrops",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Sinomacrops_Character_BP_C",
+      "Description": "Sinomacrops",
+      "Mod": "LostIsland"
+    },
+	{
+      "NameTag": "Dinopithecus",
+      "IsSpawnable": true,
+      "IsTameable": "True",
+      "ClassName": "Dinopithecus_Character_BP_C",
+      "Description": "Dinopithecus",
+      "Mod": "LostIsland"
+    },
+  ],
+  "Engrams": [
+    {
+      "Level": 60,
+      "Points": 30,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Amarga_C",
+      "Description": "Amargasaurus Saddle",
+      "Mod": "LostIsland"
+    },
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": [],
+  "GameMaps": [],
+  "Mods": []
+}
