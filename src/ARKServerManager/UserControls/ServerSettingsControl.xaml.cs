@@ -100,7 +100,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty BaseBranchesProperty = DependencyProperty.Register(nameof(BaseBranches), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BaseEventsProperty = DependencyProperty.Register(nameof(BaseEvents), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BetaVersionProperty = DependencyProperty.Register(nameof(BetaVersion), typeof(bool), typeof(ServerSettingsControl), new PropertyMetadata(false));
-        public static readonly DependencyProperty CurrentConfigProperty = DependencyProperty.Register(nameof(CurrentConfig), typeof(Config), typeof(ServerSettingsControl));
+        public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(ServerSettingsControl));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(ServerSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty NetworkInterfacesProperty = DependencyProperty.Register(nameof(NetworkInterfaces), typeof(List<NetworkAdapterEntry>), typeof(ServerSettingsControl), new PropertyMetadata(new List<NetworkAdapterEntry>()));
         public static readonly DependencyProperty RuntimeProperty = DependencyProperty.Register(nameof(Runtime), typeof(ServerRuntime), typeof(ServerSettingsControl));
@@ -201,10 +201,10 @@ namespace ServerManagerTool
             set { SetValue(BetaVersionProperty, value); }
         }
 
-        public Config CurrentConfig
+        public Config Config
         {
-            get { return GetValue(CurrentConfigProperty) as Config; }
-            set { SetValue(CurrentConfigProperty, value); }
+            get { return GetValue(ConfigProperty) as Config; }
+            set { SetValue(ConfigProperty, value); }
         }
 
         public bool IsAdministrator
@@ -367,7 +367,7 @@ namespace ServerManagerTool
         public ServerSettingsControl()
         {
             this.BetaVersion = App.Instance.BetaVersion;
-            this.CurrentConfig = Config.Default;
+            this.Config = Config.Default;
             this.CurrentCulture = Thread.CurrentThread.CurrentCulture;
 
             InitializeComponent();

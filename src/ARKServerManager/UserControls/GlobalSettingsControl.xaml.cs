@@ -27,7 +27,7 @@ namespace ServerManagerTool
         private GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
 
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
-        public static readonly DependencyProperty CurrentConfigProperty = DependencyProperty.Register(nameof(CurrentConfig), typeof(Config), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty CommonConfigProperty = DependencyProperty.Register(nameof(CommonConfig), typeof(CommonConfig), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
@@ -35,7 +35,7 @@ namespace ServerManagerTool
         {
             this.Version = GetDeployedVersion();
 
-            this.CurrentConfig = Config.Default;
+            this.Config = Config.Default;
             this.CommonConfig = CommonConfig.Default;
             this.DataContext = this;
 
@@ -53,10 +53,10 @@ namespace ServerManagerTool
             set;
         }
 
-        public Config CurrentConfig
+        public Config Config
         {
-            get { return GetValue(CurrentConfigProperty) as Config; }
-            set { SetValue(CurrentConfigProperty, value); }
+            get { return GetValue(ConfigProperty) as Config; }
+            set { SetValue(ConfigProperty, value); }
         }
 
         public CommonConfig CommonConfig
@@ -356,16 +356,16 @@ namespace ServerManagerTool
 
         private void LanguageSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CurrentConfig.CultureName = AvailableLanguages.Instance.SelectedLanguage;
+            Config.CultureName = AvailableLanguages.Instance.SelectedLanguage;
 
             PopulateWindowsStatesComboBox();
 
-            App.Instance.OnResourceDictionaryChanged(CurrentConfig.CultureName);
+            App.Instance.OnResourceDictionaryChanged(Config.CultureName);
         }
 
         private void StyleSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CurrentConfig.StyleName = AvailableStyles.Instance.SelectedStyle;
+            Config.StyleName = AvailableStyles.Instance.SelectedStyle;
         }
 
         private void HiddenField_GotFocus(object sender, RoutedEventArgs e)
@@ -447,7 +447,7 @@ namespace ServerManagerTool
 
         private void PopulateWindowsStatesComboBox()
         {
-            var selectedValue = this.WindowStateComboBox?.SelectedValue ?? CurrentConfig.MainWindow_WindowState;
+            var selectedValue = this.WindowStateComboBox?.SelectedValue ?? Config.MainWindow_WindowState;
             var windowStates = new ComboBoxItemList();
 
             foreach (WindowState windowState in Enum.GetValues(typeof(WindowState)))
