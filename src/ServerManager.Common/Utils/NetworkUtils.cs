@@ -81,8 +81,14 @@ namespace ServerManagerTool.Common.Utils
             {
                 try
                 {
-                    var publicIP = webClient.DownloadString(CommonConfig.Default.PublicIPCheckUrl);
-                    if (IPAddress.TryParse(publicIP, out IPAddress address))
+                    var publicIP = webClient.DownloadString(CommonConfig.Default.PublicIPCheckUrl1);
+                    if (IPAddress.TryParse(publicIP, out IPAddress address1))
+                    {
+                        return publicIP;
+                    }
+
+                    publicIP = webClient.DownloadString(CommonConfig.Default.PublicIPCheckUrl2);
+                    if (IPAddress.TryParse(publicIP, out IPAddress address2))
                     {
                         return publicIP;
                     }
@@ -102,8 +108,14 @@ namespace ServerManagerTool.Common.Utils
             {
                 try
                 {
-                    var publicIP = await webClient.DownloadStringTaskAsync(CommonConfig.Default.PublicIPCheckUrl);
-                    if (IPAddress.TryParse(publicIP, out IPAddress address))
+                    var publicIP = await webClient.DownloadStringTaskAsync(CommonConfig.Default.PublicIPCheckUrl1);
+                    if (IPAddress.TryParse(publicIP, out IPAddress address1))
+                    {
+                        return publicIP;
+                    }
+
+                    publicIP = await webClient.DownloadStringTaskAsync(CommonConfig.Default.PublicIPCheckUrl2);
+                    if (IPAddress.TryParse(publicIP, out IPAddress address2))
                     {
                         return publicIP;
                     }

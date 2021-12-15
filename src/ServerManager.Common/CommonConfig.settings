@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServerManagerTool.Common" GeneratedClassName="CommonConfig">
   <Profiles />
   <Settings>
-    <Setting Name="PublicIPCheckUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
-    </Setting>
     <Setting Name="SteamCmdRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">SteamCMD</Value>
     </Setting>
@@ -43,6 +40,12 @@
     </Setting>
     <Setting Name="SteamCmdRemoveQuit" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PublicIPCheckUrl1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.ipify.org</Value>
+    </Setting>
+    <Setting Name="PublicIPCheckUrl2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
     </Setting>
   </Settings>
 </SettingsFile>
