@@ -688,8 +688,7 @@ namespace ServerManagerTool.Lib
         {
             InstallDirectory = folder;
 
-            LoadServerFileBlacklisted();
-            LoadServerFileWhitelisted();
+            LoadServerFiles(true, true);
             SetupServerFilesWatcher();
         }
 
@@ -759,8 +758,7 @@ namespace ServerManagerTool.Lib
         internal static ServerProfile FromDefaults()
         {
             var settings = new ServerProfile();
-            settings.LoadServerFileBlacklisted();
-            settings.LoadServerFileWhitelisted();
+            settings.LoadServerFiles(true, true);
             settings.SetupServerFilesWatcher();
             return settings;
         }
@@ -949,8 +947,7 @@ namespace ServerManagerTool.Lib
                 profile = LoadFromConfigFiles(serverConfigFile, profile);
             }
 
-            profile.LoadServerFileBlacklisted();
-            profile.LoadServerFileWhitelisted();
+            profile.LoadServerFiles(true, true);
             profile.SetupServerFilesWatcher();
 
             profile._lastSaveLocation = file;
@@ -1536,14 +1533,19 @@ namespace ServerManagerTool.Lib
         #region Server Files 
         private void ServerFilesWatcher_Changed(object sender, FileSystemEventArgs e)
         {
+            var blacklistFile = false;
+            var whitelistFile = false;
+
             if (e.Name.Equals(Config.Default.ServerBlacklistFile, StringComparison.OrdinalIgnoreCase))
             {
-                TaskUtils.RunOnUIThreadAsync(() => LoadServerFileBlacklisted()).DoNotWait();
+                blacklistFile = true;
             }
             if (e.Name.Equals(Config.Default.ServerWhitelistFile, StringComparison.OrdinalIgnoreCase))
             {
-                TaskUtils.RunOnUIThreadAsync(() => LoadServerFileWhitelisted()).DoNotWait();
+                whitelistFile = true;
             }
+
+            TaskUtils.RunOnUIThreadAsync(() => LoadServerFiles(blacklistFile, whitelistFile)).DoNotWait();
         }
 
         private void ServerFilesWatcher_Error(object sender, ErrorEventArgs e)
@@ -1589,58 +1591,58 @@ namespace ServerManagerTool.Lib
             _serverFilesWatcher.EnableRaisingEvents = true;
         }
 
-        public void LoadServerFileBlacklisted()
+        public void LoadServerFiles(bool blacklistFile, bool whitelistFile)
         {
             try
             {
-                var list = this.ServerFilesBlacklisted ?? new PlayerUserList();
+                var list1 = this.ServerFilesBlacklisted ?? new PlayerUserList();
+                var list2 = this.ServerFilesWhitelisted ?? new PlayerUserList();
 
-                var file = Path.Combine(InstallDirectory, Config.Default.SavedFilesRelativePath, Config.Default.ServerBlacklistFile);
-                if (File.Exists(file))
+                var allSteamIds = new List<string>();
+                string[] blacklistSteamIds = null;
+                string[] whitelistSteamIds = null;
+
+                if (blacklistFile)
                 {
-                    var steamIds = File.ReadAllLines(file);
-                    var steamUsers = SteamUtils.GetSteamUserDetails(steamIds.ToList());
-
-                    list = PlayerUserList.GetList(steamUsers, steamIds);
+                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerBlacklistFile);
+                    if (File.Exists(file))
+                    {
+                        blacklistSteamIds = File.ReadAllLines(file);
+                        allSteamIds.AddRange(blacklistSteamIds);
+                    }
                 }
 
-                this.ServerFilesBlacklisted = list;
-            }
-            catch (IOException)
-            {
-                // do nothing
+                if (whitelistFile)
+                {
+                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerWhitelistFile);
+                    if (File.Exists(file))
+                    {
+                        whitelistSteamIds = File.ReadAllLines(file);
+                        allSteamIds.AddRange(whitelistSteamIds);
+                    }
+                }
+
+                // remove all duplicates
+                allSteamIds = allSteamIds.Distinct().ToList();
+
+                // fetch the details of all steam users in the list
+                var steamUsers = SteamUtils.GetSteamUserDetails(allSteamIds);
+
+                if (blacklistFile && blacklistSteamIds != null)
+                {
+                    list1 = PlayerUserList.GetList(steamUsers, blacklistSteamIds);
+                }
+
+                if (whitelistFile && whitelistSteamIds != null)
+                {
+                    list2 = PlayerUserList.GetList(steamUsers, whitelistSteamIds);
+                }
+
+                this.ServerFilesBlacklisted = list1;
+                this.ServerFilesWhitelisted = list2;
             }
             catch (Exception ex)
             {
-                this.ServerFilesBlacklisted = new PlayerUserList();
-                MessageBox.Show(ex.Message, _globalizer.GetResourceString("ServerSettings_ServerFilesLoadErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        public void LoadServerFileWhitelisted()
-        {
-            try
-            {
-                var list = this.ServerFilesWhitelisted ?? new PlayerUserList();
-
-                var file = Path.Combine(InstallDirectory, Config.Default.SavedFilesRelativePath, Config.Default.ServerWhitelistFile);
-                if (File.Exists(file))
-                {
-                    var steamIds = File.ReadAllLines(file);
-                    var steamUsers = SteamUtils.GetSteamUserDetails(steamIds.ToList());
-
-                    list = PlayerUserList.GetList(steamUsers, steamIds);
-                }
-
-                this.ServerFilesWhitelisted = list;
-            }
-            catch (IOException)
-            {
-                // do nothing
-            }
-            catch (Exception ex)
-            {
-                this.ServerFilesWhitelisted = new PlayerUserList();
                 MessageBox.Show(ex.Message, _globalizer.GetResourceString("ServerSettings_ServerFilesLoadErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

@@ -2693,7 +2693,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = Cursors.Wait);
                 await Task.Delay(500);
 
-                Settings.LoadServerFileAdministrators();
+                Settings.LoadServerFiles(true, false, false);
             }
             catch (Exception ex)
             {
@@ -2714,7 +2714,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = Cursors.Wait);
                 await Task.Delay(500);
 
-                Settings.LoadServerFileExclusive();
+                Settings.LoadServerFiles(false, true, false);
             }
             catch (Exception ex)
             {
@@ -2735,7 +2735,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = Cursors.Wait);
                 await Task.Delay(500);
 
-                Settings.LoadServerFileWhitelisted();
+                Settings.LoadServerFiles(false, false, true);
             }
             catch (Exception ex)
             {
