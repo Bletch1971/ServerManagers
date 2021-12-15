@@ -523,7 +523,7 @@ namespace ServerManagerTool.Utils
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
-                    ServerProcess = ServerProcessType.Shutdown,
+                    ServerProcess = ServerProcessType.Stop,
                     ShutdownInterval = 0,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {

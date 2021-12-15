@@ -422,6 +422,16 @@ namespace ServerManagerTool.Lib
                 LogProfileMessage("Starting shutdown timer...");
 
                 var minutesLeft = ShutdownInterval;
+                if (ServerProcess == ServerProcessType.Stop)
+                {
+                    LogProfileMessage($"Server shutdown type is {ServerProcess}, shutdown timer cancelled.");
+                    minutesLeft = 0;
+                }
+                else if (!CheckForOnlinePlayers)
+                {
+                    LogProfileMessage("CheckForOnlinePlayers disabled, shutdown timer will not perform online player check.");
+                }
+
                 while (minutesLeft > 0)
                 {
                     if (cancellationToken.IsCancellationRequested)
@@ -462,7 +472,6 @@ namespace ServerManagerTool.Lib
                     else
                     {
                         Debug.WriteLine($"CheckForOnlinePlayers disabled, shutdown timer cancelled.");
-                        break;
                     }
 
                     var message = string.Empty;

@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">Genesis</sys:String>
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -44,8 +45,8 @@
     <!--#endregion-->
 
     <!--#region Mod Names -->
-    <sys:String x:Key="Mod_All">All</sys:String>
-    <sys:String x:Key="Mod_Unknown">Unknown</sys:String>
+    <sys:String x:Key="Mod_All">Tout</sys:String>
+    <sys:String x:Key="Mod_Unknown">Inconnu</sys:String>
     <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
     <sys:String x:Key="Mod_TheCenter">The Center</sys:String>
     <sys:String x:Key="Mod_PrimitivePlus">Primitive Plus</sys:String>
@@ -56,6 +57,7 @@
     <sys:String x:Key="Mod_Genesis">Genesis</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -610,6 +612,23 @@
     <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">Ce message sera affiché lorsque la fermeture du serveur a été annulée.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Afficher le motif d'arrêt avec TOUS les messages d'arrêt</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Si elle est activée, la raison de l'arrêt s'affichera avec tous les messages d'arrêt; sinon, il ne sera affiché qu'au début de l'arrêt du serveur.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Activer le Bot Discord</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Vous devrez redémarrer le gestionnaire de serveur si vous modifiez les paramètres du Bot Discord..</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">Le token associé au bot discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">ID Serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">L'ID du serveur que le Bot discord écoutera.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefixe:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">Le préfixe qui doit être utilisé lors de l'envoi d'une commande via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Faire desToken...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Si activé, la commande de sauvegarde peut être envoyée du Discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Si activé, la commande de redémarrage peut être envoyée du discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Si activé, la commande d'arrêt peut être envoyée du discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">Si activé, la commande de démarrage peut être envoyée du discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">Si activé, la commande stop peut être envoyée du discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">Si activé, la commande de mise à jour peut être envoyée du discord.</sys:String>
     
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">Paramètres de messagerie SMTP</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
@@ -662,6 +681,8 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">La modification du répertoire de données déplacera tous les profils existants vers le nouvel emplacement, mais ne déplacera aucune installation de serveur. Voulez-vous toujours changer ce répertoire?</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Échec de la modification du répertoire de données</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">Une erreur s'est produite lors de la modification du répertoire de données: {0}\r\nVeuillez corriger l'erreur et réessayer, ou contactez le support technique pour obtenir de l'aide.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Confirmer la réinitialisation du répertoire de données</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Cliquez sur "Oui" pour confirmer que vous souhaitez réinitialiser l'emplacement du répertoire de données. Une fois réinitialisé, le gestionnaire de serveur va arrêter et vous devrez redémarrer.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Sélectionnez le répertoire de sauvegarde</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Sélectionnez le répertoire du cache</sys:String>
@@ -774,6 +795,9 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">Si vous continuez, l'intégralité du dossier SteamCMD sera supprimé, y compris tous les téléchargements de cache mod..\r\nÊtes-vous sûr de vouloir réinstaller SteamCMD??</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Erreur lors de la réinstallation de SteamCMD</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">Une erreur est survenue lors de la réinstallation de SteamCMD. Cela a laissé SteamCmd dans un état instable, essayez de le réinstaller à nouveau ou signalez-le.\r\nException: {0}</sys:String>
+
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot Exécute des commandes</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">Le Bot discord à une ou plusieurs commandes en cours d'exécution, voulez-vous continuer à arrêter le gestionnaire de serveur? </sys:String>
 
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Confirmer le démarage du serveur</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">Vous êtes sur le point de démarrer le serveur, voulez-vous continuer?</sys:String>
@@ -1177,6 +1201,24 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Si cette option est activée, le serveur sera périodiquement mis à jour pendant le cycle de mise à jour automatique. Voir les paramètres pour les options de mise à jour automatique.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Redémarrer le serveur en cas d'arrêt</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Si cette option est activée, le serveur sera redémarré même s'il est arrêté pour les redémarrages automatiques et les mises à jour automatiques.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Détail du bot Discord</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Id DU canal:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">L'ID du canal de Discord Server que ce profil écoutera.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Autoriser la sauvegarde</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Si activé, le profil écoutera les commandes de sauvegarde de discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Autoriser le redémarrage</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">Si activé, le profil écoutera les commandes de redémarrage de discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Autoriser l'arrêt</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">Si activé, le profil écoutera les commandes d'arrêt de discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Autoriser le démarrage</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">Si activé, le profil écoutera les commandes de démarrage de discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Autoriser l'arrêt</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Si activé, le profil écoutera les commandes d'arrêt de discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Autoriser la mise à jour</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Si activé, le profil écoutera les commandes de mise à jour de discord.</sys:String>
     <!--#endregion-->
     
     <!--#region Server Settings - Rules -->
@@ -1598,12 +1640,16 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Multiplicateurs de statistiques par niveau (apprivoisés) - Ajouter</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Multiplicateurs de statistiques par niveau (apprivoisés)- Affinité</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Multiplicateurs de statistiques par niveau (sauvage)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Boost de niveau mutagène (sauvage)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Boost de niveau mutagène (élevée)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Multiplicateurs d'élevage de dinosaures</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Si activé, permet d'appliquer des facteurs d'échelle à chaque statistique de base.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Si activé, permet d'appliquer des facteurs d'échelle à chaque statistique.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">Si activé, permet d'appliquer des facteurs d'échelle à l'ajout d'apprivoisement pour chaque statistique.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">Si activé, permet d'appliquer des facteurs d'échelle au multiplicateur d'apprivoisement pour chaque statistique.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">Si activé, permet d'appliquer des facteurs d'échelle à l'augmentation de la statistique apprivoisée pour chaque statistique.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">Si activé, permet aux facteurs d'échelle d'être appliqués au nombre de niveaux mutagen ajoute aux Tames avec une ascendance sauvage.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">Si activé, permet aux facteurs d'échelle d'être appliqués au nombre de niveaux mutagen ajoute aux Tames avec ascendance élevée.</sys:String>
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Réinitialiser tous les multiplicateurs aux valeurs par défaut.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Réinitialiser tous les multiplicateurs aux valeurs par défaut.</sys:String>
 
@@ -5449,6 +5495,23 @@
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss Inventory - Crystal Wyvern Queen (Gamma)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss Inventory - Crystal Wyvern Queen (Beta)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss Inventory - Crystal Wyvern Queen (Alpha)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss Inventory - Dragon (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss Inventory - Dragon (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C">Boss Inventory - Dragon (Alpha)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C">Boss Inventory - Manticore (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C">Boss Inventory - Manticore (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C">Boss Inventory - Manticore (Alpha)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Valguero_C">Boss Inventory - Dragon (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Valguero_C">Boss Inventory - Dragon (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Valguero_C">Boss Inventory - Dragon (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Valguero_C">Boss Inventory - Manticore (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Valguero_C">Boss Inventory - Manticore (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Valguero_C">Boss Inventory - Manticore (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Boss Inventory - Megapithecus (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Boss Inventory - Megapithecus (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Boss Inventory - Megapithecus (Hard)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
@@ -5521,6 +5584,34 @@
     <!--#region Server Update -->
     <sys:String x:Key="ServerUpdate_Title">Mise à jour du serveur</sys:String>
     <sys:String x:Key="ServerUpdate_WarningLabel">Un problème est survenu lors de la mise à jour du serveur. Cela peut laisser votre serveur dans un état incomplet.\r\n\r\n Souhaitez-vous continuer le démarrage du serveur, cela pourrait provoquer des problèmes?</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Erreur Bot Discord Bot</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">Le bot de la discussion nécessite un Token valide afin qu'il puisse se connecter au serveur de discord\r\nthis peut être défini dans les paramètres globaux..</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">Le préfixe du Bot discord contient des caractères non valides. Seules les lettres et les chiffres sont autorisés.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">Commande '{0}' n'a pas été activée.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Commande inconnue '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Une autre commande est en cours de traitement.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Une autre commande '{0}' fonctionne actuellement contre le profil'{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">Commande '{0}' a été désactivé pour le profil '{1}'.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' commande nécessite un ID du profil.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' n'a pas été trouvé ou n'est pas associé au canal.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' est dans un état '{1}' qui ne peut pas exécuter cette commande.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' est actuellement mis à jour.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">Appeler au serveur '{0}' a échoué.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">Une demande de sauvegarde pour serveur '{0}' a été envoyée.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">Une demande de redémarrage de serveur '{0}' a été envoyée.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">Une demande d'arrêt pour serveur '{0}' a été envoyée.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">Une demande de démarrage pour le serveur '{0}' a été envoyée.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">Une demande d'arrêt de serveur '{0}' a été envoyée.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">Une demande de mise à jour du serveur '{0}' a été envoyée.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Dénombrer:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

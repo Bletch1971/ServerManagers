@@ -544,9 +544,9 @@ namespace ServerManagerTool
 
             var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var backupFolder = includeBackup 
-                ? IOUtils.NormalizePath(string.IsNullOrWhiteSpace(Config.Default.BackupPath)
+                ? string.IsNullOrWhiteSpace(Config.Default.BackupPath)
                         ? Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)
-                        : Path.Combine(Config.Default.BackupPath))
+                        : Path.Combine(Config.Default.BackupPath)
                 : null;
 
             SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
