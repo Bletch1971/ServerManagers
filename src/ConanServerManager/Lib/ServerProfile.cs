@@ -792,11 +792,9 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        private static Enum[] GetExclusions()
+        private static IEnumerable<Enum> GetExclusions()
         {
-            var exclusions = new List<Enum>();
-
-            return exclusions.ToArray();
+            return new List<Enum>();
         }
 
         public string GetLauncherFile() => Path.Combine(GetProfileServerConfigDir(), Config.Default.LauncherFile);
@@ -885,7 +883,7 @@ namespace ServerManagerTool.Lib
             return profile;
         }
 
-        public static ServerProfile LoadFromConfigFiles(string file, ServerProfile profile, Enum[] exclusions = null)
+        public static ServerProfile LoadFromConfigFiles(string file, ServerProfile profile, IEnumerable<Enum> exclusions = null)
         {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
                 return null;
@@ -1108,7 +1106,7 @@ namespace ServerManagerTool.Lib
             SaveConfigFile(serverConfigDir);
         }
 
-        public void SaveConfigFile(string configDir, Enum[] exclusions = null)
+        public void SaveConfigFile(string configDir, IEnumerable<Enum> exclusions = null)
         {
             if (exclusions == null)
                 exclusions = GetExclusions();
@@ -1656,7 +1654,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ServerBlacklistFile);
-                File.WriteAllLines(file, this.ServerFilesBlacklisted.ToArray());
+                File.WriteAllLines(file, this.ServerFilesBlacklisted.ToEnumerable());
             }
             catch (Exception ex)
             {
@@ -1673,7 +1671,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ServerWhitelistFile);
-                File.WriteAllLines(file, this.ServerFilesWhitelisted.ToArray());
+                File.WriteAllLines(file, this.ServerFilesWhitelisted.ToEnumerable());
             }
             catch (Exception ex)
             {

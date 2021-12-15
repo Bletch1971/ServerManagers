@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
 
@@ -68,16 +69,15 @@ namespace ServerManagerTool.Common.Model
 
         public void Remove(string steamId)
         {
-            var items = this.Where(i => i.PlayerId.Equals(steamId, System.StringComparison.OrdinalIgnoreCase)).ToArray();
-            foreach (var item in items)
+            foreach (var item in this.Where(i => i.PlayerId.Equals(steamId, System.StringComparison.OrdinalIgnoreCase)))
             {
                 this.Remove(item);
             }
         }
 
-        public string[] ToArray()
+        public IEnumerable<string> ToEnumerable()
         {
-            return this.Select(i => i.PlayerId).ToArray();
+            return this.Select(i => i.PlayerId);
         }
 
         public string ToDelimitedString(string delimiter)

@@ -32,7 +32,7 @@ namespace ServerManagerTool.Common.Serialization
             get;
         }
 
-        public void Deserialize(object obj, Enum[] exclusions)
+        public void Deserialize(object obj, IEnumerable<Enum> exclusions)
         {
             var iniFiles = new Dictionary<string, IniFile>();
             var fields = obj.GetType()
@@ -168,7 +168,7 @@ namespace ServerManagerTool.Common.Serialization
             }
         }
 
-        public void Serialize(object obj, Enum[] exclusions)
+        public void Serialize(object obj, IEnumerable<Enum> exclusions)
         {
             var iniFiles = new Dictionary<string, IniFile>();
             var fields = obj.GetType()
@@ -205,7 +205,7 @@ namespace ServerManagerTool.Common.Serialization
 
                                     if (section.IsEnabled)
                                     {
-                                        WriteSection(iniFiles, attr.File, section.IniCollectionKey, section.ToIniValues().ToArray());
+                                        WriteSection(iniFiles, attr.File, section.IniCollectionKey, section.ToIniValues());
                                     }
                                 }
                             }
@@ -228,8 +228,7 @@ namespace ServerManagerTool.Common.Serialization
                             {
                                 var section = ReadSection(iniFiles, attr.File, attr.Section);
                                 var filteredSection = section
-                                    .Where(s => !s.StartsWith(collection.IniCollectionKey + (collection.IsArray ? "[" : "=")))
-                                    .ToArray();
+                                    .Where(s => !s.StartsWith(collection.IniCollectionKey + (collection.IsArray ? "[" : "=")));
                                 WriteSection(iniFiles, attr.File, attr.Section, filteredSection);
                             }
 
@@ -314,7 +313,7 @@ namespace ServerManagerTool.Common.Serialization
                                             result = result.Concat(collection.ToIniValues());
                                         }
 
-                                        WriteSection(iniFiles, attr.File, attr.Section, result?.ToArray());
+                                        WriteSection(iniFiles, attr.File, attr.Section, result);
                                     }
                                 }
                                 else
@@ -381,29 +380,29 @@ namespace ServerManagerTool.Common.Serialization
             SaveFiles(iniFiles);
         }
 
-        public string[] ReadSection(Enum iniFile, Enum section)
+        public IEnumerable<string> ReadSection(Enum iniFile, Enum section)
         {
             return ReadSection(iniFile, SectionNames[section]);
         }
 
-        public string[] ReadSection(Enum iniFile, string sectionName)
+        public IEnumerable<string> ReadSection(Enum iniFile, string sectionName)
         {
             var file = Path.Combine(this.BasePath, FileNames[iniFile]);
             return IniFileUtils.ReadSection(file, sectionName);
         }
 
-        public void WriteSection(Enum iniFile, Enum section, string[] values)
+        public void WriteSection(Enum iniFile, Enum section, IEnumerable<string> values)
         {
             WriteSection(iniFile, SectionNames[section], values);
         }
 
-        public void WriteSection(Enum iniFile, string sectionName, string[] values)
+        public void WriteSection(Enum iniFile, string sectionName, IEnumerable<string> values)
         {
             var file = Path.Combine(this.BasePath, FileNames[iniFile]);
             IniFileUtils.WriteSection(file, sectionName, values);
         }
 
-        private string[] ReadCustomSectionNames(Dictionary<string, IniFile> iniFiles, Enum iniFile)
+        private IEnumerable<string> ReadCustomSectionNames(Dictionary<string, IniFile> iniFiles, Enum iniFile)
         {
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
             {
@@ -415,15 +414,15 @@ namespace ServerManagerTool.Common.Serialization
                 }
             }
 
-            return iniFiles[FileNames[iniFile]].Sections.Select(s => s.SectionName).Where(s => !SectionNames.ContainsValue(s)).ToArray();
+            return iniFiles[FileNames[iniFile]].Sections.Select(s => s.SectionName).Where(s => !SectionNames.ContainsValue(s));
         }
 
-        private string[] ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section)
+        private IEnumerable<string> ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section)
         {
             return ReadSection(iniFiles, iniFile, SectionNames[section]);
         }
 
-        private string[] ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName)
+        private IEnumerable<string> ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName)
         {
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
             {
@@ -435,7 +434,7 @@ namespace ServerManagerTool.Common.Serialization
                 }
             }
 
-            return iniFiles[FileNames[iniFile]].GetSection(sectionName)?.KeysToStringArray() ?? new string[0];
+            return iniFiles[FileNames[iniFile]].GetSection(sectionName)?.KeysToStringEnumerable() ?? new string[0];
         }
 
         private string ReadValue(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section, string keyName)
@@ -453,12 +452,12 @@ namespace ServerManagerTool.Common.Serialization
             return iniFiles[FileNames[iniFile]].GetKey(SectionNames[section], keyName)?.KeyValue ?? string.Empty;
         }
 
-        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section, string[] values)
+        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section, IEnumerable<string> values)
         {
             WriteSection(iniFiles, iniFile, SectionNames[section], values);
         }
 
-        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName, string[] values)
+        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName, IEnumerable<string> values)
         {
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
             {

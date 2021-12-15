@@ -68,7 +68,7 @@ namespace ServerManagerTool.Common.Serialization
                 Sections.Remove(section);
         }
 
-        public bool WriteSection(string sectionName, string[] keysValuePairs)
+        public bool WriteSection(string sectionName, IEnumerable<string> keysValuePairs)
         {
             if (sectionName == null)
                 return false;
@@ -186,7 +186,7 @@ namespace ServerManagerTool.Common.Serialization
             {
                 result.AppendLine($"[{section.SectionName}]");
 
-                foreach (var keyString in section.KeysToStringArray())
+                foreach (var keyString in section.KeysToStringEnumerable())
                 {
                     result.AppendLine(keyString);
                 }

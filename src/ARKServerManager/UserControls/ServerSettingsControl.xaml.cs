@@ -990,7 +990,7 @@ namespace ServerManagerTool
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);
 
-                ZipUtils.ZipFiles(zipFile, files.ToArray(), comment.ToString());
+                ZipUtils.ZipFiles(zipFile, files, comment.ToString());
                 foreach (var kvp in obfuscateFiles)
                 {
                     ZipUtils.ZipAFile(zipFile, kvp.Key, kvp.Value);
@@ -1348,37 +1348,37 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var dinoSpawnWeightMultipliers = new AggregateIniValueList<DinoSpawn>(nameof(Server.Profile.DinoSpawnWeightMultipliers), null);
-                dinoSpawnWeightMultipliers.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{dinoSpawnWeightMultipliers.IniCollectionKey}=")));
+                dinoSpawnWeightMultipliers.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{dinoSpawnWeightMultipliers.IniCollectionKey}=")));
                 Server.Profile.DinoSpawnWeightMultipliers.AddRange(dinoSpawnWeightMultipliers);
                 Server.Profile.DinoSpawnWeightMultipliers.IsEnabled |= dinoSpawnWeightMultipliers.IsEnabled;
 
                 var preventDinoTameClassNames = new StringIniValueList(nameof(Server.Profile.PreventDinoTameClassNames), null);
-                preventDinoTameClassNames.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{preventDinoTameClassNames.IniCollectionKey}=")));
+                preventDinoTameClassNames.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{preventDinoTameClassNames.IniCollectionKey}=")));
                 Server.Profile.PreventDinoTameClassNames.AddRange(preventDinoTameClassNames);
                 Server.Profile.PreventDinoTameClassNames.IsEnabled |= preventDinoTameClassNames.IsEnabled;
 
                 var npcReplacements = new AggregateIniValueList<NPCReplacement>(nameof(Server.Profile.NPCReplacements), null);
-                npcReplacements.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{npcReplacements.IniCollectionKey}=")));
+                npcReplacements.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{npcReplacements.IniCollectionKey}=")));
                 Server.Profile.NPCReplacements.AddRange(npcReplacements);
                 Server.Profile.NPCReplacements.IsEnabled |= npcReplacements.IsEnabled;
 
                 var tamedDinoClassDamageMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(Server.Profile.TamedDinoClassDamageMultipliers), null);
-                tamedDinoClassDamageMultipliers.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{tamedDinoClassDamageMultipliers.IniCollectionKey}=")));
+                tamedDinoClassDamageMultipliers.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{tamedDinoClassDamageMultipliers.IniCollectionKey}=")));
                 Server.Profile.TamedDinoClassDamageMultipliers.AddRange(tamedDinoClassDamageMultipliers);
                 Server.Profile.TamedDinoClassDamageMultipliers.IsEnabled |= tamedDinoClassDamageMultipliers.IsEnabled;
 
                 var tamedDinoClassResistanceMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(Server.Profile.TamedDinoClassResistanceMultipliers), null);
-                tamedDinoClassResistanceMultipliers.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{tamedDinoClassResistanceMultipliers.IniCollectionKey}=")));
+                tamedDinoClassResistanceMultipliers.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{tamedDinoClassResistanceMultipliers.IniCollectionKey}=")));
                 Server.Profile.TamedDinoClassResistanceMultipliers.AddRange(tamedDinoClassResistanceMultipliers);
                 Server.Profile.TamedDinoClassResistanceMultipliers.IsEnabled |= tamedDinoClassResistanceMultipliers.IsEnabled;
 
                 var dinoClassDamageMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(Server.Profile.DinoClassDamageMultipliers), null);
-                dinoClassDamageMultipliers.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{dinoClassDamageMultipliers.IniCollectionKey}=")));
+                dinoClassDamageMultipliers.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{dinoClassDamageMultipliers.IniCollectionKey}=")));
                 Server.Profile.DinoClassDamageMultipliers.AddRange(dinoClassDamageMultipliers);
                 Server.Profile.DinoClassDamageMultipliers.IsEnabled |= dinoClassDamageMultipliers.IsEnabled;
 
                 var dinoClassResistanceMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(Server.Profile.DinoClassResistanceMultipliers), null);
-                dinoClassResistanceMultipliers.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{dinoClassResistanceMultipliers.IniCollectionKey}=")));
+                dinoClassResistanceMultipliers.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{dinoClassResistanceMultipliers.IniCollectionKey}=")));
                 Server.Profile.DinoClassResistanceMultipliers.AddRange(dinoClassResistanceMultipliers);
                 Server.Profile.DinoClassResistanceMultipliers.IsEnabled |= dinoClassResistanceMultipliers.IsEnabled;
             }
@@ -1458,7 +1458,7 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var harvestResourceItemAmountClassMultipliers = new AggregateIniValueList<ResourceClassMultiplier>(nameof(Server.Profile.HarvestResourceItemAmountClassMultipliers), null);
-                harvestResourceItemAmountClassMultipliers.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{harvestResourceItemAmountClassMultipliers.IniCollectionKey}=")));
+                harvestResourceItemAmountClassMultipliers.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{harvestResourceItemAmountClassMultipliers.IniCollectionKey}=")));
                 Server.Profile.HarvestResourceItemAmountClassMultipliers.AddRange(harvestResourceItemAmountClassMultipliers);
                 Server.Profile.HarvestResourceItemAmountClassMultipliers.IsEnabled |= harvestResourceItemAmountClassMultipliers.IsEnabled;
             }
@@ -1686,12 +1686,12 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var overrideNamedEngramEntries = new EngramEntryList(nameof(Server.Profile.OverrideNamedEngramEntries));
-                overrideNamedEngramEntries.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{overrideNamedEngramEntries.IniCollectionKey}=")));
+                overrideNamedEngramEntries.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{overrideNamedEngramEntries.IniCollectionKey}=")));
                 Server.Profile.OverrideNamedEngramEntries.AddRange(overrideNamedEngramEntries);
                 Server.Profile.OverrideNamedEngramEntries.IsEnabled |= overrideNamedEngramEntries.IsEnabled;
 
                 var engramEntryAutoUnlocks = new EngramAutoUnlockList(nameof(Server.Profile.EngramEntryAutoUnlocks));
-                engramEntryAutoUnlocks.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{engramEntryAutoUnlocks.IniCollectionKey}=")));
+                engramEntryAutoUnlocks.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{engramEntryAutoUnlocks.IniCollectionKey}=")));
                 Server.Profile.EngramEntryAutoUnlocks.AddRange(engramEntryAutoUnlocks);
                 Server.Profile.EngramEntryAutoUnlocks.IsEnabled |= engramEntryAutoUnlocks.IsEnabled;
             }
@@ -1790,7 +1790,7 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var configOverrideItemCraftingCosts = new AggregateIniValueList<CraftingOverride>(nameof(Server.Profile.ConfigOverrideItemCraftingCosts), null);
-                configOverrideItemCraftingCosts.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{configOverrideItemCraftingCosts.IniCollectionKey}=")));
+                configOverrideItemCraftingCosts.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{configOverrideItemCraftingCosts.IniCollectionKey}=")));
                 Server.Profile.ConfigOverrideItemCraftingCosts.AddRange(configOverrideItemCraftingCosts);
                 Server.Profile.ConfigOverrideItemCraftingCosts.IsEnabled |= configOverrideItemCraftingCosts.IsEnabled;
             }
@@ -1898,7 +1898,7 @@ namespace ServerManagerTool
                     // cycle through the sections, adding them to the custom section list. Will bypass any sections that are named as per the ARK default sections.
                     foreach (var section in iniFile.Sections.Where(s => !string.IsNullOrWhiteSpace(s.SectionName) && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
                     {
-                        Settings.CustomGameUserSettings.Add(section.SectionName, section.KeysToStringArray(), false);
+                        Settings.CustomGameUserSettings.Add(section.SectionName, section.KeysToStringEnumerable(), false);
                     }
 
                     MessageBox.Show(_globalizer.GetResourceString("ServerSettings_LoadCustomConfig_Label"), _globalizer.GetResourceString("ServerSettings_LoadCustomConfig_Title"), MessageBoxButton.OK, MessageBoxImage.Information);
@@ -1957,7 +1957,7 @@ namespace ServerManagerTool
             // cycle through the sections, adding them to the custom section list. Will bypass any sections that are named as per the ARK default sections.
             foreach (var section in iniFile.Sections.Where(s => !string.IsNullOrWhiteSpace(s.SectionName) && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
-                Settings.CustomGameUserSettings.Add(section.SectionName, section.KeysToStringArray(), false);
+                Settings.CustomGameUserSettings.Add(section.SectionName, section.KeysToStringEnumerable(), false);
             }
         }
 
@@ -1980,7 +1980,7 @@ namespace ServerManagerTool
 
                 var configIniFile = Path.Combine(ServerProfile.GetProfileServerConfigDir(Settings), Config.Default.ServerGameUserSettingsConfigFile);
                 // load only this section, using the full exclusion list
-                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions.ToArray());
+                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions);
                 // perform a profile sync
                 Settings.SyncSettings(ServerProfileCategory.CustomGameUserSettings, tempServerProfile);
             }
@@ -2059,7 +2059,7 @@ namespace ServerManagerTool
                     // cycle through the sections, adding them to the custom section list. Will bypass any sections that are named as per the ARK default sections.
                     foreach (var section in iniFile.Sections.Where(s => !string.IsNullOrWhiteSpace(s.SectionName) && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
                     {
-                        Settings.CustomGameSettings.Add(section.SectionName, section.KeysToStringArray(), false);
+                        Settings.CustomGameSettings.Add(section.SectionName, section.KeysToStringEnumerable(), false);
                     }
 
                     MessageBox.Show(_globalizer.GetResourceString("ServerSettings_LoadCustomConfig_Label"), _globalizer.GetResourceString("ServerSettings_LoadCustomConfig_Title"), MessageBoxButton.OK, MessageBoxImage.Information);
@@ -2118,7 +2118,7 @@ namespace ServerManagerTool
             // cycle through the sections, adding them to the custom section list. Will bypass any sections that are named as per the ARK default sections.
             foreach (var section in iniFile.Sections.Where(s => !string.IsNullOrWhiteSpace(s.SectionName) && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
-                Settings.CustomGameSettings.Add(section.SectionName, section.KeysToStringArray(), false);
+                Settings.CustomGameSettings.Add(section.SectionName, section.KeysToStringEnumerable(), false);
             }
         }
 
@@ -2141,7 +2141,7 @@ namespace ServerManagerTool
 
                 var configIniFile = Path.Combine(ServerProfile.GetProfileServerConfigDir(Settings), Config.Default.ServerGameUserSettingsConfigFile);
                 // load only this section, using the full exclusion list
-                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions.ToArray());
+                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions);
                 // perform a profile sync
                 Settings.SyncSettings(ServerProfileCategory.CustomGameSettings, tempServerProfile);
             }
@@ -2220,7 +2220,7 @@ namespace ServerManagerTool
                     // cycle through the sections, adding them to the custom section list. Will bypass any sections that are named as per the ARK default sections.
                     foreach (var section in iniFile.Sections.Where(s => !string.IsNullOrWhiteSpace(s.SectionName) && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
                     {
-                        Settings.CustomEngineSettings.Add(section.SectionName, section.KeysToStringArray(), false);
+                        Settings.CustomEngineSettings.Add(section.SectionName, section.KeysToStringEnumerable(), false);
                     }
 
                     MessageBox.Show(_globalizer.GetResourceString("ServerSettings_LoadCustomConfig_Label"), _globalizer.GetResourceString("ServerSettings_LoadCustomConfig_Title"), MessageBoxButton.OK, MessageBoxImage.Information);
@@ -2279,7 +2279,7 @@ namespace ServerManagerTool
             // cycle through the sections, adding them to the custom section list. Will bypass any sections that are named as per the ARK default sections.
             foreach (var section in iniFile.Sections.Where(s => !string.IsNullOrWhiteSpace(s.SectionName) && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
-                Settings.CustomEngineSettings.Add(section.SectionName, section.KeysToStringArray(), false);
+                Settings.CustomEngineSettings.Add(section.SectionName, section.KeysToStringEnumerable(), false);
             }
         }
 
@@ -2302,7 +2302,7 @@ namespace ServerManagerTool
 
                 var configIniFile = Path.Combine(ServerProfile.GetProfileServerConfigDir(Settings), Config.Default.ServerGameUserSettingsConfigFile);
                 // load only this section, using the full exclusion list
-                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions.ToArray());
+                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions);
                 // perform a profile sync
                 Settings.SyncSettings(ServerProfileCategory.CustomEngineSettings, tempServerProfile);
             }
@@ -2919,17 +2919,17 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var configAddNPCSpawnEntriesContainer = new NPCSpawnContainerList<NPCSpawnContainer>(nameof(Server.Profile.ConfigAddNPCSpawnEntriesContainer), NPCSpawnContainerType.Add);
-                configAddNPCSpawnEntriesContainer.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{configAddNPCSpawnEntriesContainer.IniCollectionKey}=")));
+                configAddNPCSpawnEntriesContainer.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{configAddNPCSpawnEntriesContainer.IniCollectionKey}=")));
                 Server.Profile.ConfigAddNPCSpawnEntriesContainer.AddRange(configAddNPCSpawnEntriesContainer);
                 Server.Profile.ConfigAddNPCSpawnEntriesContainer.IsEnabled |= configAddNPCSpawnEntriesContainer.IsEnabled;
 
                 var configSubtractNPCSpawnEntriesContainer = new NPCSpawnContainerList<NPCSpawnContainer>(nameof(Server.Profile.ConfigSubtractNPCSpawnEntriesContainer), NPCSpawnContainerType.Subtract);
-                configSubtractNPCSpawnEntriesContainer.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{configSubtractNPCSpawnEntriesContainer.IniCollectionKey}=")));
+                configSubtractNPCSpawnEntriesContainer.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{configSubtractNPCSpawnEntriesContainer.IniCollectionKey}=")));
                 Server.Profile.ConfigSubtractNPCSpawnEntriesContainer.AddRange(configSubtractNPCSpawnEntriesContainer);
                 Server.Profile.ConfigSubtractNPCSpawnEntriesContainer.IsEnabled |= configSubtractNPCSpawnEntriesContainer.IsEnabled;
 
                 var configOverrideNPCSpawnEntriesContainer = new NPCSpawnContainerList<NPCSpawnContainer>(nameof(Server.Profile.ConfigOverrideNPCSpawnEntriesContainer), NPCSpawnContainerType.Override);
-                configOverrideNPCSpawnEntriesContainer.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{configOverrideNPCSpawnEntriesContainer.IniCollectionKey}=")));
+                configOverrideNPCSpawnEntriesContainer.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{configOverrideNPCSpawnEntriesContainer.IniCollectionKey}=")));
                 Server.Profile.ConfigOverrideNPCSpawnEntriesContainer.AddRange(configOverrideNPCSpawnEntriesContainer);
                 Server.Profile.ConfigOverrideNPCSpawnEntriesContainer.IsEnabled |= configOverrideNPCSpawnEntriesContainer.IsEnabled;
             }
@@ -3123,7 +3123,7 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var configOverrideSupplyCrateItems = new SupplyCrateOverrideList(nameof(Server.Profile.ConfigOverrideSupplyCrateItems));
-                configOverrideSupplyCrateItems.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{configOverrideSupplyCrateItems.IniCollectionKey}=")));
+                configOverrideSupplyCrateItems.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{configOverrideSupplyCrateItems.IniCollectionKey}=")));
                 Server.Profile.ConfigOverrideSupplyCrateItems.AddRange(configOverrideSupplyCrateItems);
                 Server.Profile.ConfigOverrideSupplyCrateItems.IsEnabled |= configOverrideSupplyCrateItems.IsEnabled;
             }
@@ -3133,7 +3133,7 @@ namespace ServerManagerTool
             RefreshBaseSupplyCrateList();
             RefreshBasePrimalItemList();
 
-            if (errors.Length > 0)
+            if (errors.Any())
             {
                 var error = $"The following errors have been found:\r\n\r\n{string.Join("\r\n", errors)}";
 
@@ -3265,7 +3265,7 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var configOverrideItemMaxQuantity = new AggregateIniValueList<StackSizeOverride>(nameof(Server.Profile.ConfigOverrideItemMaxQuantity), null);
-                configOverrideItemMaxQuantity.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{configOverrideItemMaxQuantity.IniCollectionKey}=")));
+                configOverrideItemMaxQuantity.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{configOverrideItemMaxQuantity.IniCollectionKey}=")));
                 Server.Profile.ConfigOverrideItemMaxQuantity.AddRange(configOverrideItemMaxQuantity);
                 Server.Profile.ConfigOverrideItemMaxQuantity.IsEnabled |= configOverrideItemMaxQuantity.IsEnabled;
             }
@@ -3274,7 +3274,7 @@ namespace ServerManagerTool
 
             RefreshBasePrimalItemList();
 
-            if (errors.Length > 0)
+            if (errors.Any())
             {
                 var error = $"The following errors have been found:\r\n\r\n{string.Join("\r\n", errors)}";
 
@@ -3365,7 +3365,7 @@ namespace ServerManagerTool
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
                 var preventTransferForClassNames = new AggregateIniValueList<PreventTransferOverride>(nameof(Server.Profile.PreventTransferForClassNames), null);
-                preventTransferForClassNames.FromIniValues(section.KeysToStringArray().Where(s => s.StartsWith($"{preventTransferForClassNames.IniCollectionKey}=")));
+                preventTransferForClassNames.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{preventTransferForClassNames.IniCollectionKey}=")));
                 Server.Profile.PreventTransferForClassNames.AddRange(preventTransferForClassNames);
                 Server.Profile.PreventTransferForClassNames.IsEnabled |= preventTransferForClassNames.IsEnabled;
             }
@@ -3374,7 +3374,7 @@ namespace ServerManagerTool
 
             RefreshBaseDinoList();
 
-            if (errors.Length > 0)
+            if (errors.Any())
             {
                 var error = $"The following errors have been found:\r\n\r\n{string.Join("\r\n", errors)}";
 

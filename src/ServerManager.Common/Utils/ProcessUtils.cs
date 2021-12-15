@@ -285,7 +285,7 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static BigInteger[] GetProcessorAffinityList()
+        public static IEnumerable<BigInteger> GetProcessorAffinityList()
         {
             var processorCount = ProcessorCount;
             var results = new List<BigInteger>(processorCount + 1);
@@ -295,7 +295,7 @@ namespace ServerManagerTool.Common.Utils
             {
                 results.Add((BigInteger)Math.Pow(2, index));
             }
-            return results.ToArray();
+            return results;
         }
 
         public static string[] GetProcessPriorityList()

@@ -59,17 +59,16 @@ namespace ServerManagerTool.Common.Model
 
         public virtual void FromIniValues(IEnumerable<string> iniValues)
         {
-            var items = iniValues?.Select(AggregateIniValue.FromINIValue<T>).ToArray();
+            var items = iniValues?.Select(AggregateIniValue.FromINIValue<T>);
 
             Clear();
             AddRange(items);
-            IsEnabled = (Count != 0);
+            IsEnabled = (Count > 0);
 
             // Add any default values which were missing
             if (_resetFunc != null)
             {
-                var defaultItemsToAdd = _resetFunc().Where(r => !this.Any(v => v.IsEquivalent(r))).ToArray();
-                AddRange(defaultItemsToAdd);
+                AddRange(_resetFunc().Where(r => !this.Any(v => v.IsEquivalent(r))));
             }
 
             Sort(AggregateIniValue.SortKeySelector);

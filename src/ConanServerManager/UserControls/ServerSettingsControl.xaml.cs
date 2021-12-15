@@ -720,7 +720,7 @@ namespace ServerManagerTool
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);
 
-                ZipUtils.ZipFiles(zipFile, files.ToArray(), comment.ToString());
+                ZipUtils.ZipFiles(zipFile, files, comment.ToString());
                 foreach (var kvp in obfuscateFiles)
                 {
                     ZipUtils.ZipAFile(zipFile, kvp.Key, kvp.Value);

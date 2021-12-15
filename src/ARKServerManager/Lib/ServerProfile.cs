@@ -3593,7 +3593,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        private static Enum[] GetExclusions()
+        private static IEnumerable<Enum> GetExclusions()
         {
             var exclusions = new List<Enum>();
 
@@ -3637,7 +3637,7 @@ namespace ServerManagerTool.Lib
                 exclusions.Add(ServerProfileCategory.SOTF);
             }
 
-            return exclusions.ToArray();
+            return exclusions;
         }
 
         private LevelList GetLevelList(LevelProgression levelProgression)
@@ -4022,7 +4022,7 @@ namespace ServerManagerTool.Lib
             return profile;
         }
 
-        public static ServerProfile LoadFromINIFiles(string file, ServerProfile profile, Enum[] exclusions = null)
+        public static ServerProfile LoadFromINIFiles(string file, ServerProfile profile, IEnumerable<Enum> exclusions = null)
         {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
                 return null;
@@ -4394,7 +4394,7 @@ namespace ServerManagerTool.Lib
             SaveINIFile(configDir);
         }
 
-        public void SaveINIFile(string profileIniDir, Enum[] exclusions = null)
+        public void SaveINIFile(string profileIniDir, IEnumerable<Enum> exclusions = null)
         {
             if (exclusions == null)
                 exclusions = GetExclusions();
@@ -4418,7 +4418,7 @@ namespace ServerManagerTool.Lib
                 filteredValues.AddRange(this.PlayerLevels.ToINIValuesForEngramPoints());
             }
 
-            iniFile.WriteSection(IniFiles.Game, IniSections.Game_ShooterGameMode, filteredValues.ToArray());
+            iniFile.WriteSection(IniFiles.Game, IniSections.Game_ShooterGameMode, filteredValues);
         }
 
         public bool UpdateDirectoryPermissions()
@@ -5860,7 +5860,7 @@ namespace ServerManagerTool.Lib
             this.CustomEngineSettings.Clear();
             foreach (var section in sourceProfile.CustomEngineSettings)
             {
-                this.CustomEngineSettings.Add(section.SectionName, section.ToIniValues().ToArray());
+                this.CustomEngineSettings.Add(section.SectionName, section.ToIniValues());
             }
         }
 
@@ -5869,7 +5869,7 @@ namespace ServerManagerTool.Lib
             this.CustomGameSettings.Clear();
             foreach (var section in sourceProfile.CustomGameSettings)
             {
-                this.CustomGameSettings.Add(section.SectionName, section.ToIniValues().ToArray());
+                this.CustomGameSettings.Add(section.SectionName, section.ToIniValues());
             }
         }
 
@@ -5878,7 +5878,7 @@ namespace ServerManagerTool.Lib
             this.CustomGameUserSettings.Clear();
             foreach (var section in sourceProfile.CustomGameUserSettings)
             {
-                this.CustomGameUserSettings.Add(section.SectionName, section.ToIniValues().ToArray());
+                this.CustomGameUserSettings.Add(section.SectionName, section.ToIniValues());
             }
         }
 
@@ -6530,7 +6530,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ArkAdminFile);
-                File.WriteAllLines(file, this.ServerFilesAdmins.ToArray());
+                File.WriteAllLines(file, this.ServerFilesAdmins.ToEnumerable());
             }
             catch (Exception ex)
             {
@@ -6547,7 +6547,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ArkExclusiveFile);
-                File.WriteAllLines(file, this.ServerFilesExclusive.ToArray());
+                File.WriteAllLines(file, this.ServerFilesExclusive.ToEnumerable());
             }
             catch (Exception ex)
             {
@@ -6564,7 +6564,7 @@ namespace ServerManagerTool.Lib
                     Directory.CreateDirectory(folder);
 
                 var file = Path.Combine(folder, Config.Default.ArkWhitelistFile);
-                File.WriteAllLines(file, this.ServerFilesWhitelisted.ToArray());
+                File.WriteAllLines(file, this.ServerFilesWhitelisted.ToEnumerable());
             }
             catch (Exception ex)
             {

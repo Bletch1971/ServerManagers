@@ -1,5 +1,6 @@
 ﻿using Ionic.Zip;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -68,11 +69,11 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static void UpdateFiles(string zipFile, string[] filesToZip, string comment = "", bool preserveDirHierarchy = true, string directoryPathInArchive = "")
+        public static void UpdateFiles(string zipFile, IEnumerable<string> filesToZip, string comment = "", bool preserveDirHierarchy = true, string directoryPathInArchive = "")
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
-            if (filesToZip == null || filesToZip.Length == 0)
+            if (!filesToZip.Any())
                 return;
 
             if (!File.Exists(zipFile))
@@ -160,11 +161,11 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static void ZipFiles(string zipFile, string[] filesToZip, string comment = "", bool preserveDirHierarchy = true, string directoryPathInArchive = "")
+        public static void ZipFiles(string zipFile, IEnumerable<string> filesToZip, string comment = "", bool preserveDirHierarchy = true, string directoryPathInArchive = "")
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
-            if (filesToZip == null || filesToZip.Length == 0)
+            if (!filesToZip.Any())
                 throw new ArgumentNullException(nameof(filesToZip));
 
             using (var zip = new ZipFile(zipFile))

@@ -80,14 +80,13 @@ namespace ServerManagerTool.Lib.ViewModel
                     if (string.IsNullOrWhiteSpace(entry.EngramClassName))
                         continue;
 
-                    var engramSettings = this.Where(vi => vi.EngramClassName == entry.EngramClassName).ToArray();
-                    if (engramSettings == null || engramSettings.Length == 0)
+                    if (!this.Any(vi => vi.EngramClassName == entry.EngramClassName))
                     {
                         var engram = GameData.GetEngramForClass(entry.EngramClassName);
                         this.Add(CreateEngramSetting(entry.EngramClassName, engram?.Mod ?? GameData.MOD_UNKNOWN, engram?.KnownEngram ?? false, engram?.IsTekgram ?? false));
                     }
 
-                    engramSettings = this.Where(vi => vi.EngramClassName == entry.EngramClassName).ToArray();
+                    var engramSettings = this.Where(vi => vi.EngramClassName == entry.EngramClassName);
                     foreach (var engramSetting in engramSettings)
                     {
                         engramSetting.EngramLevelRequirement = entry.EngramLevelRequirement;
@@ -117,14 +116,13 @@ namespace ServerManagerTool.Lib.ViewModel
                     if (string.IsNullOrWhiteSpace(entry.EngramClassName))
                         continue;
 
-                    var engramSettings = this.Where(vi => vi.EngramClassName == entry.EngramClassName).ToArray();
-                    if (engramSettings == null || engramSettings.Length == 0)
+                    if (!this.Any(vi => vi.EngramClassName == entry.EngramClassName))
                     {
                         var engram = GameData.GetEngramForClass(entry.EngramClassName);
                         this.Add(CreateEngramSetting(entry.EngramClassName, engram?.Mod ?? GameData.MOD_UNKNOWN, engram?.KnownEngram ?? false, engram?.IsTekgram ?? false));
                     }
 
-                    engramSettings = this.Where(vi => vi.EngramClassName == entry.EngramClassName).ToArray();
+                    var engramSettings = this.Where(vi => vi.EngramClassName == entry.EngramClassName);
                     foreach (var engramSetting in engramSettings)
                     {
                         engramSetting.EngramAutoUnlock = true;

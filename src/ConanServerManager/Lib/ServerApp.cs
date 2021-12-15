@@ -1790,7 +1790,7 @@ namespace ServerManagerTool.Lib
                     comment.AppendLine($"Profile Name: {_profile.ProfileName}");
                     comment.AppendLine($"Process: {ServerProcess}");
 
-                    ZipUtils.ZipFiles(backupFile, files.ToArray(), comment.ToString(), false);
+                    ZipUtils.ZipFiles(backupFile, files, comment.ToString(), false);
 
                     LogProfileMessage($"Backup file created - {backupFile}");
                 }
@@ -1910,7 +1910,7 @@ namespace ServerManagerTool.Lib
 
                             ZipUtils.ZipAFile(backupFile, worldFileName, worldBackupFile, comment.ToString());
                             if (files.Count > 0)
-                                ZipUtils.UpdateFiles(backupFile, files.ToArray(), null, false, "");
+                                ZipUtils.UpdateFiles(backupFile, files, null, false, "");
 
                             LogProfileMessage($"Backed up world files - {saveFolder}");
                             LogProfileMessage($"Backup file created - {backupFile}");
@@ -2851,7 +2851,7 @@ namespace ServerManagerTool.Lib
                     if (ExitCode == EXITCODE_NORMALEXIT)
                     {
                         // get the profile associated with the branch
-                        var profiles = _profiles.Keys.Where(p => p.EnableAutoUpdate && p.BranchName.Equals(branch.BranchName, StringComparison.OrdinalIgnoreCase)).ToArray();
+                        var profiles = _profiles.Keys.Where(p => p.EnableAutoUpdate && p.BranchName.Equals(branch.BranchName, StringComparison.OrdinalIgnoreCase));
                         var profileExitCodes = new ConcurrentDictionary<ServerProfileSnapshot, int>();
 
                         if (Config.Default.AutoUpdate_ParallelUpdate)
@@ -3102,7 +3102,7 @@ namespace ServerManagerTool.Lib
 
                     if (exitCode == EXITCODE_NORMALEXIT)
                     {
-                        var branches = _profiles.Keys.Where(p => p.EnableAutoUpdate).Select(p => BranchSnapshot.Create(p)).Distinct(new BranchSnapshotComparer()).ToArray();
+                        var branches = _profiles.Keys.Where(p => p.EnableAutoUpdate).Select(p => BranchSnapshot.Create(p)).Distinct(new BranchSnapshotComparer());
                         var exitCodes = new ConcurrentDictionary<BranchSnapshot, int>();
 
                         // update the server cache for each branch
