@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8553008Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0233604Z",
+  "Mod": "1890886098",
   "Creatures": [],
   "Engrams": [
     {
@@ -308,6 +309,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemSkin_IN_EmperorSkin_eco_C",
       "Description": "Inca Emperor",
+      "Mod": "ecoEmpiresInca"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ChibiDino_IN_CTInvLlama_eco_C",
+      "Description": "Chibi - Llama",
       "Mod": "ecoEmpiresInca"
     },
     {

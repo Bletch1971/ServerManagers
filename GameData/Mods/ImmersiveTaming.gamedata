@@ -1,534 +1,520 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-07-11T00:00:00.0000000Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:50:52.3929424Z",
+  "Mod": "1251632107",
   "Creatures": [],
   "Engrams": [
-	{
-		"Level": 0,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_TamingJournal_C",
-		"Description": "Taming Journal",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 5,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_BaitStation_Food_C",
-		"Description": "Food Bait Station",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 60,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_BaitStation_Trophy_C",
-		"Description": "Trophy Bait Station",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 26,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_BaitStation_Kibble_C",
-		"Description": "Kibble Bait Station",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 12,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_BaitCooler_C",
-		"Description": "Bait Cooler",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 62,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_VialStation_C",
-		"Description": "Blood Vial Rack",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 10,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_HumanScent_C",
-		"Description": "Survivor Scent",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 20,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_BaitBalloon_C",
-		"Description": "Bait Balloon",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Level": 80,
-		"Points": 0,
-		"IsTekGram": false,
-		"ClassName": "EngramEntry_BaitDispenser_C",
-		"Description": "Bait Dispenser",
-		"Mod": "Immersive Taming"
-	}
+    {
+      "Level": 5,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BaitStation_Food_C",
+      "Description": "Food Bait Station",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 26,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BaitStation_Kibble_C",
+      "Description": "Kibble Bait Station",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 60,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BaitStation_Trophy_C",
+      "Description": "Trophy Bait Station",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 62,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_VialStation_C",
+      "Description": "Blood Vial Rack",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TamingJournal_C",
+      "Description": "Taming Journal",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 10,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HumanScent_C",
+      "Description": "Survivor Scent",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 12,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BaitCooler_C",
+      "Description": "Bait Cooler",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 20,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BaitBalloon_C",
+      "Description": "Bait Balloon",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Level": 80,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BaitDispenser_C",
+      "Description": "Bait Dispenser",
+      "Mod": "ImmersiveTaming"
+    }
   ],
   "Items": [
-     {
-      "Category": "Consumables",
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BaitStation_Food_C",
+      "Description": "Food Bait Station",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_BerryBag_C",
       "Description": "Berry Bag Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_BerryBag_C",
+      "Description": "Berry Bag Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_VeggieBag_C",
       "Description": "Veggie Bag Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_VeggieBag_C",
+      "Description": "Veggie Bag Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_BotanyBale_C",
       "Description": "Botany Bale Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_BotanyBale_C",
+      "Description": "Botany Bale Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_RawMeat_C",
       "Description": "Raw Meat Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_RawMeat_C",
+      "Description": "Raw Meat Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_RawPrimeMeat_C",
       "Description": "Raw Prime Meat Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_RawPrimeMeat_C",
+      "Description": "Raw Prime Meat Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_RawMutton_C",
       "Description": "Raw Mutton Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
+      "Category": "Ammo",
       "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Bait_RawFishMeat_C",
-      "Description": "Raw Fish Meat Bait",
-      "Mod": "Immersive Taming"
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_AberrantMushroom_C",
+      "Description": "Aberrant Mushroom Bag Bait Arrow",
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Bait_RawPrimeFishMeat_C",
-      "Description": "Raw Prime Fish Meat Bait",
-      "Mod": "Immersive Taming"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Bait_Blubber_C",
-      "Description": "Blubber Bait",
-      "Mod": "Immersive Taming"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Bait_SpoiledMeat_C",
-      "Description": "Spoiled Meat Bait",
-      "Mod": "Immersive Taming"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Bait_SulfurRock_C",
-      "Description": "Sulfur Rock Bait",
-      "Mod": "Immersive Taming"
-    },
-    {
-      "Category": "Consumables",
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "PrimalItemConsumable_Bait_AberrantMushroom_C",
       "Description": "Aberrant Mushroom Bag Bait",
-      "Mod": "Immersive Taming"
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Ammunition",
+      "Category": "MiscConsumable",
       "IsHarvestable": false,
-      "ClassName": "PrimalItemAmmo_Arrow_Bait_BerryBag_C",
-      "Description": "Berry Bag Bait Arrow",
-      "Mod": "Immersive Taming"
+      "ClassName": "PrimalItemConsumable_Bait_RawFishMeat_C",
+      "Description": "Raw Fish Meat Bait",
+      "Mod": "ImmersiveTaming"
     },
     {
-      "Category": "Ammunition",
+      "Category": "Ammo",
       "IsHarvestable": false,
-      "ClassName": "PrimalItemAmmo_Arrow_Bait_BerryBag_C",
-      "Description": "Berry Bag Bait Arrow",
-      "Mod": "Immersive Taming"
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_RawFishMeat_C",
+      "Description": "Raw Fish Meat Bait Arrow",
+      "Mod": "ImmersiveTaming"
     },
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_VeggieBag_C",
-		"Description": "Veggie Bag Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_BotanyBale_C",
-		"Description": "Botany Bale Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_RawMeat_C",
-		"Description": "Raw Meat Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_RawPrimeMeat_C",
-		"Description": "Raw Prime Meat Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_RawMutton_C",
-		"Description": "Raw Mutton Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_RawFishMeat_C",
-		"Description": "Raw Fish Meat Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_RawPrimeFishMeat_C",
-		"Description": "Raw Prime Fish Meat Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Blubber_C",
-		"Description": "Blubber Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_SpoiledMeat_C",
-		"Description": "Spoiled Meat Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_SulfurRock_C",
-		"Description": "Sulfur Rock Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_AberrantMushroom_C",
-		"Description": "Aberrant Mushroom Bag Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_RexArm_C",
-		"Description": "Rex Arm Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_SpinoSail_C",
-		"Description": "Spino Sail Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_YutyLungs_C",
-		"Description": "Yuty Lung Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_DrakeFeather_C",
-		"Description": "Drake Feather Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_GigaHeart_C",
-		"Description": "Giga Heart Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_WyvernTalonFire_C",
-		"Description": "Fire Wyvern Talon Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_WyvernTalonLightning_C",
-		"Description": "Lightning Wyvern Talon Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_WyvernTalonPoison_C",
-		"Description": "Poison Wyvern Talon Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_RexArm_C",
-		"Description": "Rex Arm Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_SpinoSail_C",
-		"Description": "Spino Sail Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_YutyLungs_C",
-		"Description": "Yuty Lung Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_DrakeFeather_C",
-		"Description": "Drake Feather Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_GigaHeart_C",
-		"Description": "Giga Heart Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_WyvernTalonFire_C",
-		"Description": "Fire Wyvern Talon Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_WyvernTalonLightning_C",
-		"Description": "Lightning Wyvern Talon Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_WyvernTalonPoison_C",
-		"Description": "Poison Wyvern Talon Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_Kibble_XSmall_C",
-		"Description": "Basic Kibble Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_Kibble_Small_C",
-		"Description": "Simple Kibble Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_Kibble_Medium_C",
-		"Description": "Regular Kibble Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_Kibble_Large_C",
-		"Description": "Superior Kibble Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_Kibble_XLarge_C",
-		"Description": "Exceptional Kibble Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_Bait_Kibble_Special_C",
-		"Description": "Extraordinary Kibble Bait",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_XSmall_C",
-		"Description": "Basic Kibble Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Small_C",
-		"Description": "Simple Kibble Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Medium_C",
-		"Description": "Regular Kibble Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Large_C",
-		"Description": "Superior Kibble Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_XLarge_C",
-		"Description": "Exceptional Kibble Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Special_C",
-		"Description": "Extraordinary Kibble Bait Arrow",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Ammunition",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemAmmo_BloodVialDart_C",
-		"Description": "Blood Vial Dart",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItem_WeaponHumanScent_C",
-		"Description": "Survivor Scent",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Consumables",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemConsumable_BaitBalloon_C",
-		"Description": "Bait Balloon",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Armor",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemArmor_Glider_RockDrake_C",
-		"Description": "Rock Drake Feather Glider Suit",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_TamingJournal_C",
-		"Description": "Taming Journal",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_BaitStation_Food_C",
-		"Description": "Food Bait Station",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_BaitStation_Trophy_C",
-		"Description": "Trophy Bait Station",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_BaitStation_Kibble_C",
-		"Description": "Kibble Bait Station",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_BaitCooler_C",
-		"Description": "Bait Cooler",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_VialStation_C",
-		"Description": "Blood Vial Rack",
-		"Mod": "Immersive Taming"
-	},
-	{
-		"Category": "Structure",
-		"IsHarvestable": false,
-		"ClassName": "PrimalItemStructure_BaitDispenser_C",
-		"Description": "Bait Dispenser",
-		"Mod": "Immersive Taming"
-	}
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_RawPrimeFishMeat_C",
+      "Description": "Raw Prime Fish Meat Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_RawPrimeFishMeat_C",
+      "Description": "Raw Prime Fish Meat Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Blubber_C",
+      "Description": "Blubber Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Blubber_C",
+      "Description": "Blubber Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_SpoiledMeat_C",
+      "Description": "Spoiled Meat Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_SpoiledMeat_C",
+      "Description": "Spoiled Meat Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_SulfurRock_C",
+      "Description": "Sulfur Rock Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_SulfurRock_C",
+      "Description": "Sulfur Rock Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_RawMutton_C",
+      "Description": "Raw Mutton Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BaitStation_Kibble_C",
+      "Description": "Kibble Bait Station",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Kibble_XSmall_C",
+      "Description": "Basic Kibble Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_XSmall_C",
+      "Description": "Basic Kibble Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Kibble_Small_C",
+      "Description": "Simple Kibble Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Small_C",
+      "Description": "Simple Kibble Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Kibble_Medium_C",
+      "Description": "Regular Kibble Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Special_C",
+      "Description": "Extraordinary Kibble Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Kibble_Special_C",
+      "Description": "Extraordinary Kibble Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Kibble_Large_C",
+      "Description": "Superior Kibble Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Large_C",
+      "Description": "Superior Kibble Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_Kibble_XLarge_C",
+      "Description": "Exceptional Kibble Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_XLarge_C",
+      "Description": "Exceptional Kibble Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_Kibble_Medium_C",
+      "Description": "Regular Kibble Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BaitStation_Trophy_C",
+      "Description": "Trophy Bait Station",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_RexArm_C",
+      "Description": "Rex Arm Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_RexArm_C",
+      "Description": "Rex Arm Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_SpinoSail_C",
+      "Description": "Spino Sail Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_SpinoSail_C",
+      "Description": "Spino Sail Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_YutyLungs_C",
+      "Description": "Yutyrannus Lung Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_YutyLungs_C",
+      "Description": "Yutyrannus Lung Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_DrakeFeather_C",
+      "Description": "Rock Drake Feather Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_WyvernTalonPoison_C",
+      "Description": "Poison Wyvern Talon Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_WyvernTalonPoison_C",
+      "Description": "Poison Wyvern Talon Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_GigaHeart_C",
+      "Description": "Giga Heart Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_GigaHeart_C",
+      "Description": "Giga Heart Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_WyvernTalonFire_C",
+      "Description": "Fire Wyvern Talon Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_WyvernTalonFire_C",
+      "Description": "Fire Wyvern Talon Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Bait_WyvernTalonLightning_C",
+      "Description": "Lightning Wyvern Talon Bait",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_WyvernTalonLightning_C",
+      "Description": "Lightning Wyvern Talon Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_Arrow_Bait_DrakeFeather_C",
+      "Description": "Rock Drake Feather Bait Arrow",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_VialStation_C",
+      "Description": "Blood Vial Rack",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Ammo",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemAmmo_BloodVialDart_C",
+      "Description": "Blood Vial Dart",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TamingJournal_C",
+      "Description": "Taming Journal",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponHumanScent_C",
+      "Description": "Survivor Scent",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BaitCooler_C",
+      "Description": "Bait Cooler",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "WeaponAttachment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_BaitBalloon_C",
+      "Description": "Bait Balloon",
+      "Mod": "ImmersiveTaming"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_BaitDispenser_C",
+      "Description": "Bait Dispenser",
+      "Mod": "ImmersiveTaming"
+    }
   ],
   "MapSpawners": [],
   "SupplyCrates": [],
-  "Inventories": [],
-  "GameMaps": []
+  "Inventories": []
 }

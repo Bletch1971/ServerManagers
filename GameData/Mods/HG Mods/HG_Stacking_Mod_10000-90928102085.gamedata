@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.2.0",
-  "Created": "2020-09-19T23:09:09.6305853Z",
+  "Version": "1.2.1",
+  "Created": "2021-12-12T23:50:52.3521251Z",
+  "Mod": "928102085",
   "Creatures": [],
   "Engrams": [
     {
@@ -275,6 +276,14 @@
       "ClassName": "EngramEntry_Travel_Element_HG_C",
       "Description": "Crosstravel Element",
       "Mod": "HG Stacking Mod 10000-90"
+    },
+    {
+      "Level": 25,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_HGStryderBox_C",
+      "Description": "HG Stryder Box",
+      "Mod": "HG Stacking Mod 10000-90"
     }
   ],
   "Items": [
@@ -514,6 +523,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItem_Travel_Element_HG_C",
       "Description": "Crosstravel Element",
+      "Mod": "HG Stacking Mod 10000-90"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_HGStryderBox_C",
+      "Description": "HG Stryder Box",
       "Mod": "HG Stacking Mod 10000-90"
     }
   ],

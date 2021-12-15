@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8543037Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0243575Z",
+  "Mod": "2147192126",
   "Creatures": [],
   "Engrams": [
     {
@@ -110,6 +111,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemSkin_VK_CrownSkin_eco_C",
       "Description": "Viking Crown",
+      "Mod": "ecoEmpiresViking"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ChibiDino_VK_CTInvHorses_eco_C",
+      "Description": "Chibi - Viking Horses",
       "Mod": "ecoEmpiresViking"
     },
     {

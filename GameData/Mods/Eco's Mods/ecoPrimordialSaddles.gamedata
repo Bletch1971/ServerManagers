@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0263528Z",
+  "Mod": "1741916864",
   "Creatures": [],
   "Engrams": [
     {
@@ -9,7 +10,7 @@
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_PRSaddlesCraftingTable_eco_C",
-      "Description": "Saddles Crafting Table for eco\u0027s Primordial Saddles",
+      "Description": "eco\u0027s Primordial Saddles Crafting Table",
       "Mod": "ecoPrimordialSaddles"
     }
   ],
@@ -18,7 +19,14 @@
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_PRSaddlesCraftingTable_eco_C",
-      "Description": "Saddles Crafting Table for eco\u0027s Primordial Saddles",
+      "Description": "eco\u0027s Primordial Saddles Crafting Table",
+      "Mod": "ecoPrimordialSaddles"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_PS_DodoSaddlePrimitive_eco_C",
+      "Description": "Dodo Saddle Bags",
       "Mod": "ecoPrimordialSaddles"
     },
     {
@@ -227,6 +235,20 @@
     {
       "Category": "Equipment",
       "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_PRTundraSaddleRhinoPrimitive_eco_C",
+      "Description": "Tundra Rhino Saddle",
+      "Mod": "ecoPrimordialSaddles"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_PS_DodoSaddleAscendant_eco_C",
+      "Description": "Dodo Saddle Bags",
+      "Mod": "ecoPrimordialSaddles"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
       "ClassName": "PrimalItemArmor_PRForestSaddleBearAscendant_eco_C",
       "Description": "Forest Bear Saddle",
       "Mod": "ecoPrimordialSaddles"
@@ -418,6 +440,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemArmor_PRS_BrineMosaSaddleAscendant_eco_C",
       "Description": "Brine Mosasaur Saddle",
+      "Mod": "ecoPrimordialSaddles"
+    },
+    {
+      "Category": "Equipment",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemArmor_PRTundraSaddleRhinoAscendant_eco_C",
+      "Description": "Tundra Rhino Saddle",
       "Mod": "ecoPrimordialSaddles"
     }
   ],
