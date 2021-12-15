@@ -3004,6 +3004,12 @@
 	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_Alpha_C">罗克韦尔节点 BOSS（困难）</sys:String>
 	<!--#endregion-->
 	
+	<!-- 恐龙/生物类名称 - 迷失岛 -->
+	<sys:String x:Key="Amargasaurus_Character_BP_C">阿马加龙</sys:String>
+	<sys:String x:Key="Sinomacrops_Character_BP_C">中华大眼翼龙</sys:String>
+	<sys:String x:Key="Dinopithecus_Character_BP_C">恐菲</sys:String>
+	<!--#endregion-->
+	
     <!--#endregion-->
 
     <!--#region Engrams -->
@@ -3768,6 +3774,10 @@
 	
 	<!--# 印痕技能 - 水晶岛 -->
 	<sys:String x:Key="EngramEntry_TropeSaddle_C">脊颌翼龙的鞍</sys:String>
+    <!--#endregion-->
+	
+	<!--# 印痕技能 - 迷失岛 -->
+	<sys:String x:Key="EngramEntry_Saddle_Amarga_C">阿马加龙鞍</sys:String>
     <!--#endregion-->
 	
     <!--#endregion-->

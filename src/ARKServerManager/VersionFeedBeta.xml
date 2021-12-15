@@ -21,6 +21,11 @@
           <ul>
             <li>Added additional validation when setting directories in the global setting, to ensure they are rooted correctly.</li>
           </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
         </p>
       </div>
     </content>
