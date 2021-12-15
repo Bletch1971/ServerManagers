@@ -171,8 +171,7 @@ namespace ServerManagerTool.Common.Model
                         kvPropertyValue = kvPropertyValue.Substring(0, kvPropertyValue.Length - 1);
                 }
 
-                var collection = property.GetValue(this) as IIniValuesCollection;
-                if (collection != null)
+                if (property.GetValue(this) is IIniValuesCollection collection)
                 {
                     var values = SplitCollectionValues(kvPropertyValue, DELIMITER);
                     values = values.Where(v => !string.IsNullOrWhiteSpace(v)).ToArray();
