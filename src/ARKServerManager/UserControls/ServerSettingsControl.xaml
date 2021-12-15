@@ -2729,6 +2729,9 @@
                                                             <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
                                                                 <Setter Property="Background" Value="#FFD6D6" />
                                                             </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
+                                                                <Setter Property="Background" Value="#D9F7C4" />
+                                                            </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
                                                 </DataGrid.RowStyle>
@@ -3120,6 +3123,9 @@
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
                                                                 <Setter Property="Background" Value="#FFD6D6" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
+                                                                <Setter Property="Background" Value="#D9F7C4" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
@@ -3639,6 +3645,9 @@
                                                         </DataTrigger>
                                                         <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
                                                             <Setter Property="Background" Value="#FFD6D6" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
+                                                            <Setter Property="Background" Value="#D9F7C4" />
                                                         </DataTrigger>
                                                     </Style.Triggers>
                                                 </Style>
