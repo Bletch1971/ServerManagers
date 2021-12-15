@@ -85,10 +85,14 @@ namespace ServerManagerTool.Common.Utils
         public static IniFile ReadFromFile(string file)
         {
             if (string.IsNullOrWhiteSpace(file))
+            {
                 return null;
+            }
 
             if (!File.Exists(file))
+            {
                 return new IniFile();
+            }
 
             var iniFile = new IniFile();
 
@@ -96,18 +100,24 @@ namespace ServerManagerTool.Common.Utils
             {
                 while (!reader.EndOfStream)
                 {
-                    var line = reader.ReadLine();
+                    var line = reader.ReadLine().Trim();
 
                     if (string.IsNullOrWhiteSpace(line) || line.StartsWith(";") || line.StartsWith("#"))
+                    {
                         continue;
+                    }
 
-                    var sectionName = Regex.Match(line, @"(?<=^\[).*(?=\]$)").Value.Trim();
+                    var sectionName = string.Empty;
+                    if (line.StartsWith("[") && line.EndsWith("]"))
+                    {
+                        sectionName = Regex.Match(line, @"(?<=^\[).*(?=\]$)").Value.Trim();
+                    }
 
                     var section = iniFile.AddSection(sectionName);
-                    if (section != null)
-                        continue;
-
-                    iniFile.AddKey(line);
+                    if (section is null)
+                    {
+                        iniFile.AddKey(line);
+                    }
                 }
 
                 reader.Close();
