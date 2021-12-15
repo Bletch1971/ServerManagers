@@ -696,7 +696,7 @@ namespace ServerManagerTool
                 comment.AppendLine($"ServerUpdate_OnServerStart: {Config.Default.ServerUpdate_OnServerStart}");
 
                 comment.AppendLine($"DiscordBotEnabled: {Config.Default.DiscordBotEnabled}");
-                comment.AppendLine($"HasDiscordBotToken: {string.IsNullOrWhiteSpace(Config.Default.DiscordBotToken)}");
+                comment.AppendLine($"HasDiscordBotToken: {!string.IsNullOrWhiteSpace(Config.Default.DiscordBotToken)}");
                 comment.AppendLine($"DiscordBotServerId: {Config.Default.DiscordBotServerId}");
                 comment.AppendLine($"DiscordBotPrefix: {Config.Default.DiscordBotPrefix}");
                 comment.AppendLine($"AllowDiscordBackup: {Config.Default.AllowDiscordBackup}");
