@@ -452,8 +452,8 @@ namespace ServerManagerTool.Lib
                     {
                         try
                         {
-                            var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim())).ToList();
-                            var playerCount = playerInfo?.Count ?? -1;
+                            var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim()));
+                            var playerCount = playerInfo?.Count() ?? -1;
 
                             // check if anyone is logged into the server
                             if (playerCount <= 0)

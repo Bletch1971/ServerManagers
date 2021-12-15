@@ -46,15 +46,15 @@ namespace ServerManagerTool.Utils
             }
         }
 
-        public static void AddOfficialMods(IEnumerable<string> modIds)
+        public static void AddOfficialMods(List<string> modIds)
         {
             if (OfficialMods == null)
                 OfficialMods = new List<string>();
 
             if (modIds != null)
             {
-                var modIdsToAdd = modIds.Where(m => !string.IsNullOrWhiteSpace(m) && !OfficialMods.Contains(m)).Distinct().ToList();
-                if (modIdsToAdd != null && modIdsToAdd.Count > 0)
+                var modIdsToAdd = modIds.Where(m => !string.IsNullOrWhiteSpace(m) && !OfficialMods.Contains(m)).Distinct();
+                if (modIdsToAdd.Any())
                 {
                     OfficialMods.AddRange(modIdsToAdd);
                 }
@@ -170,14 +170,14 @@ namespace ServerManagerTool.Utils
                 return string.Empty;
 
             // split the map string into parts, using the '/' separator.
-            var parts = serverMap.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            var parts = serverMap.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
 
             long mapModId;
-            if (parts.Count == 1 && long.TryParse(parts[0], out mapModId))
+            if (parts.Length == 1 && long.TryParse(parts[0], out mapModId))
                 return mapModId.ToString();
 
             // check if any parts were returned.
-            if (parts.Count != 4)
+            if (parts.Length != 4)
                 return string.Empty;
 
             // check if the first two parts match what is expected.
@@ -194,12 +194,12 @@ namespace ServerManagerTool.Utils
                 return string.Empty;
 
             // split the map string into parts, using the '/' separator.
-            var parts = serverMap.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            var parts = serverMap.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
 
             // check if any parts were returned.
-            if (parts.Count == 1)
+            if (parts.Length == 1)
                 return serverMap;
-            if (parts.Count != 4)
+            if (parts.Length != 4)
                 return string.Empty;
 
             // check if the first two parts match what is expected.
@@ -496,9 +496,9 @@ namespace ServerManagerTool.Utils
                 return new List<string>();
 
             // remove all null, empty, duplicate and Official mod ids.
-            var newModIdList = modIdList.Where(m => !string.IsNullOrWhiteSpace(m) && !IsOfficialMod(m)).Distinct().ToList();
+            var newModIdList = modIdList.Where(m => !string.IsNullOrWhiteSpace(m) && !IsOfficialMod(m)).Distinct();
 
-            return newModIdList;
+            return newModIdList.ToList();
         }
 
         public static void WriteModFile(string fileName, string modId, Dictionary<string, string> metaInformation, List<string> mapNames)

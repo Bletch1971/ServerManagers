@@ -456,8 +456,8 @@ namespace ServerManagerTool.Lib
                             // BH - commented out until Funcom fix the Online player status column in the world save database
                             //var gameFile = GetServerWorldFile();
                             //var playerCount = DataContainer.GetOnlinePlayerCount(gameFile);
-                            var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim())).ToList();
-                            var playerCount = playerInfo?.Count ?? -1;
+                            var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim()));
+                            var playerCount = playerInfo?.Count() ?? -1;
 
                             // check if anyone is logged into the server
                             if (playerCount <= 0)

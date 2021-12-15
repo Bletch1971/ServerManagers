@@ -23,7 +23,7 @@ namespace ServerManagerTool.Common.Model
             }
         }
 
-        public static PlayerUserList GetList(SteamUserDetailResponse response, string[] ids)
+        public static PlayerUserList GetList(SteamUserDetailResponse response, IEnumerable<string> ids)
         {
             var result = new PlayerUserList();
             if (ids != null)

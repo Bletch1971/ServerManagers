@@ -1406,7 +1406,8 @@ namespace ServerManagerTool
         {
             Settings.DinoSettings.RenderToModel();
 
-            var iniValues = Settings.DinoSpawnWeightMultipliers.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.DinoSpawnWeightMultipliers.ToIniValues());
             iniValues.AddRange(Settings.PreventDinoTameClassNames.ToIniValues());
             iniValues.AddRange(Settings.NPCReplacements.ToIniValues());
             iniValues.AddRange(Settings.DinoClassDamageMultipliers.ToIniValues());
@@ -1487,7 +1488,7 @@ namespace ServerManagerTool
 
         private void SaveCustomResources_Click(object sender, RoutedEventArgs e)
         {
-            var iniValues = Settings.HarvestResourceItemAmountClassMultipliers.ToIniValues().ToList();
+            var iniValues = Settings.HarvestResourceItemAmountClassMultipliers.ToIniValues();
             var iniValue = string.Join("\r\n", iniValues);
 
             var window = new CommandLineWindow(iniValue);
@@ -1716,7 +1717,8 @@ namespace ServerManagerTool
             Settings.EngramSettings.OnlyAllowSpecifiedEngrams = Settings.OnlyAllowSpecifiedEngrams;
             Settings.EngramSettings.RenderToModel();
 
-            var iniValues = Settings.OverrideNamedEngramEntries.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.OverrideNamedEngramEntries.ToIniValues());
             iniValues.AddRange(Settings.EngramEntryAutoUnlocks.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
 
@@ -1822,7 +1824,8 @@ namespace ServerManagerTool
 
         private void SaveCraftingOverride_Click(object sender, RoutedEventArgs e)
         {
-            var iniValues = Settings.ConfigOverrideItemCraftingCosts.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.ConfigOverrideItemCraftingCosts.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
 
             var window = new CommandLineWindow(iniValue);
@@ -2966,7 +2969,8 @@ namespace ServerManagerTool
         {
             Settings.NPCSpawnSettings.RenderToModel();
 
-            var iniValues = Settings.ConfigAddNPCSpawnEntriesContainer.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.ConfigAddNPCSpawnEntriesContainer.ToIniValues());
             iniValues.AddRange(Settings.ConfigSubtractNPCSpawnEntriesContainer.ToIniValues());
             iniValues.AddRange(Settings.ConfigOverrideNPCSpawnEntriesContainer.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
@@ -3199,7 +3203,8 @@ namespace ServerManagerTool
         {
             Settings.ConfigOverrideSupplyCrateItems.RenderToModel();
 
-            var iniValues = Settings.ConfigOverrideSupplyCrateItems.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.ConfigOverrideSupplyCrateItems.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
 
             var window = new CommandLineWindow(iniValue);
@@ -3301,7 +3306,8 @@ namespace ServerManagerTool
         {
             Settings.ConfigOverrideItemMaxQuantity.RenderToModel();
 
-            var iniValues = Settings.ConfigOverrideItemMaxQuantity.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.ConfigOverrideItemMaxQuantity.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
 
             var window = new CommandLineWindow(iniValue);
@@ -3401,7 +3407,8 @@ namespace ServerManagerTool
         {
             Settings.PreventTransferForClassNames.RenderToModel();
 
-            var iniValues = Settings.PreventTransferForClassNames.ToIniValues().ToList();
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.PreventTransferForClassNames.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
 
             var window = new CommandLineWindow(iniValue);
@@ -3442,7 +3449,7 @@ namespace ServerManagerTool
             var name = _globalizer.GetResourceString($"Mod_{value}");
             newList.Add(new Common.Model.ComboBoxItem(value, name));
 
-            var values = GameData.GetDinoSpawns().GroupBy(d => d.Mod).OrderBy(g => g.Key).Select(g => g.Key).ToList();
+            var values = GameData.GetDinoSpawns().GroupBy(d => d.Mod).OrderBy(g => g.Key).Select(g => g.Key);
             foreach (var modValue in values)
             {
                 if (string.IsNullOrWhiteSpace(modValue))
@@ -3472,7 +3479,7 @@ namespace ServerManagerTool
             var name = _globalizer.GetResourceString($"Mod_{value}");
             newList.Add(new Common.Model.ComboBoxItem(value, name));
 
-            var values = GameData.GetEngrams().GroupBy(d => d.Mod).OrderBy(g => g.Key).Select(g => g.Key).ToList();
+            var values = GameData.GetEngrams().GroupBy(d => d.Mod).OrderBy(g => g.Key).Select(g => g.Key);
             foreach (var modValue in values)
             {
                 if (string.IsNullOrWhiteSpace(modValue))
@@ -3502,7 +3509,7 @@ namespace ServerManagerTool
             var name = _globalizer.GetResourceString($"Mod_{value}");
             newList.Add(new Common.Model.ComboBoxItem(value, name));
 
-            var values = GameData.GetResourceMultipliers().GroupBy(d => d.Mod).OrderBy(g => g.Key).Select(g => g.Key).ToList();
+            var values = GameData.GetResourceMultipliers().GroupBy(d => d.Mod).OrderBy(g => g.Key).Select(g => g.Key);
             foreach (var modValue in values)
             {
                 if (string.IsNullOrWhiteSpace(modValue))

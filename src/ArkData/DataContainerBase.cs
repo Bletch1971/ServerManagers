@@ -45,7 +45,7 @@ namespace ArkData
         {
             try
             {
-                var online = Enumerable.OfType<PlayerInfo>(new SSQL().Players(new IPEndPoint(IPAddress.Parse(ipString), port))).ToList();
+                var online = Enumerable.OfType<PlayerInfo>(new SSQL().Players(new IPEndPoint(IPAddress.Parse(ipString), port)));
 
                 for (var i = 0; i < Players.Count; i++)
                 {
