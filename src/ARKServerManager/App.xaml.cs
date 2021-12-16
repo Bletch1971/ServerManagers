@@ -287,7 +287,8 @@ namespace ServerManagerTool
             }
             if (!Config.Default.DiscordBotPrefixFixed)
             {
-                Config.Default.DiscordBotPrefix += "!";
+                if (!Config.Default.DiscordBotPrefix.EndsWith("!"))
+                    Config.Default.DiscordBotPrefix += "!";
                 Config.Default.DiscordBotPrefixFixed = true;
                 Config.Default.Save();
                 Config.Default.Reload();
@@ -507,7 +508,7 @@ namespace ServerManagerTool
                         discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
                     }
 
-                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
                 }, _tokenSource.Token)
                     .ContinueWith(t => {
                         var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;

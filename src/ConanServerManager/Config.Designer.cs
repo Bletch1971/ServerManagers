@@ -1980,7 +1980,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("csm")]
+        [global::System.Configuration.DefaultSettingValueAttribute("csm!")]
         public string DiscordBotPrefix {
             get {
                 return ((string)(this["DiscordBotPrefix"]));
@@ -2143,8 +2143,7 @@ namespace ServerManagerTool {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
-            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
-            "tring />\r\n</ArrayOfString>")]
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" />")]
         public global::System.Collections.Specialized.StringCollection DiscordBotWhitelist {
             get {
                 return ((global::System.Collections.Specialized.StringCollection)(this["DiscordBotWhitelist"]));
@@ -2163,6 +2162,18 @@ namespace ServerManagerTool {
             }
             set {
                 this["DiscordBotPrefixFixed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Info")]
+        public global::ServerManagerTool.DiscordBot.Enums.LogLevel DiscordBotLogLevel {
+            get {
+                return ((global::ServerManagerTool.DiscordBot.Enums.LogLevel)(this["DiscordBotLogLevel"]));
+            }
+            set {
+                this["DiscordBotLogLevel"] = value;
             }
         }
     }

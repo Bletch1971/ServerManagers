@@ -32,6 +32,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty DiscordBotLogLevelsProperty = DependencyProperty.Register(nameof(DiscordBotLogLevels), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelist>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
@@ -42,7 +43,11 @@ namespace ServerManagerTool
             this.IsAdministrator = SecurityUtils.IsAdministrator();
             this.Version = GetDeployedVersion();
 
+            InitializeComponent();
+            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
             PopulateWindowsStatesComboBox();
+            PopulateDiscordBotLogLevelsComboBox();
 
             DiscordBotWhitelist = new List<DiscordBotWhitelist>();
             if (Config.DiscordBotWhitelist != null)
@@ -52,9 +57,6 @@ namespace ServerManagerTool
                     DiscordBotWhitelist.Add(new DiscordBotWhitelist() { BotId = item });
                 }
             }
-
-            InitializeComponent();
-            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
 
             this.DataContext = this;
         }
@@ -93,6 +95,12 @@ namespace ServerManagerTool
         {
             get;
             set;
+        }
+
+        public ComboBoxItemList DiscordBotLogLevels
+        {
+            get { return (ComboBoxItemList)GetValue(DiscordBotLogLevelsProperty); }
+            set { SetValue(DiscordBotLogLevelsProperty, value); }
         }
 
         public List<DiscordBotWhitelist> DiscordBotWhitelist
@@ -497,6 +505,24 @@ namespace ServerManagerTool
             if (this.WindowStateComboBox != null)
             {
                 this.WindowStateComboBox.SelectedValue = selectedValue;
+            }
+        }
+
+        private void PopulateDiscordBotLogLevelsComboBox()
+        {
+            var selectedValue = this.DiscordBotLogLevelComboBox?.SelectedValue ?? Config.DiscordBotLogLevel;
+            var comboBoxList = new ComboBoxItemList();
+
+            foreach (DiscordBot.Enums.LogLevel logLevel in Enum.GetValues(typeof(DiscordBot.Enums.LogLevel)))
+            {
+                var displayMember = _globalizer.GetResourceString($"DiscordBotLogLevel_{logLevel}") ?? logLevel.ToString();
+                comboBoxList.Add(new Common.Model.ComboBoxItem(logLevel.ToString(), displayMember));
+            }
+
+            this.DiscordBotLogLevels = comboBoxList;
+            if (this.DiscordBotLogLevelComboBox != null)
+            {
+                this.DiscordBotLogLevelComboBox.SelectedValue = selectedValue;
             }
         }
 

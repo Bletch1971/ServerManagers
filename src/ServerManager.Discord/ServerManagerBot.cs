@@ -6,6 +6,7 @@ using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServerManagerTool.DiscordBot.Delegates;
+using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Interfaces;
 using ServerManagerTool.DiscordBot.Models;
 using ServerManagerTool.DiscordBot.Services;
@@ -28,7 +29,7 @@ namespace ServerManagerTool.DiscordBot
         public CancellationToken Token { get; private set; }
         public bool Started { get; private set; }  
 
-        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
+        public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
             if (Started)
             {
@@ -42,11 +43,6 @@ namespace ServerManagerTool.DiscordBot
             }
 
             Token = token;
-
-            //if (commandPrefix.Any(c => !char.IsLetterOrDigit(c)))
-            //{
-            //    throw new Exception("#DiscordBot_InvalidPrefixError");
-            //}
 
             var settings = new Dictionary<string, string>
             {
@@ -62,12 +58,7 @@ namespace ServerManagerTool.DiscordBot
 
             var socketConfig = new DiscordSocketConfig
             {
-                //#if DEBUG
-                LogLevel = LogSeverity.Verbose,
-                //#else
-                //                LogLevel = LogSeverity.Info,
-                //#endif
-                // Tell Discord.Net to cache 1000 messages per channel
+                LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
                 MessageCacheSize = 1000,
             };
             if (Environment.OSVersion.Version < new Version(6, 2))
@@ -80,11 +71,7 @@ namespace ServerManagerTool.DiscordBot
             {
                 // Force all commands to run async
                 DefaultRunMode = RunMode.Async,
-                //#if DEBUG
-                LogLevel = LogSeverity.Verbose,
-                //#else
-                //                LogLevel = LogSeverity.Info,
-                //#endif
+                LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
             };
 
             var discordBotWhitelistConfig = new DiscordBotWhitelistConfig

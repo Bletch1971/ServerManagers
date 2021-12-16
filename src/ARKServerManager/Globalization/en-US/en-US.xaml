@@ -83,10 +83,19 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
-    <!--#region Processor Window States -->
+    <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Normal</sys:String>
     <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
     <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Critical</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Error</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Warning</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Verbose</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -622,6 +631,7 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">The id of the discord server the bot will listen to.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Log Level:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
