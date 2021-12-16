@@ -1,5 +1,4 @@
-﻿using Discord;
-using Discord.Addons.Interactive;
+﻿using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.Net.Providers.WS4Net;
 using Discord.WebSocket;
@@ -48,6 +47,7 @@ namespace ServerManagerTool.DiscordBot
             {
                 { "DiscordSettings:Token", discordToken },
                 { "DiscordSettings:Prefix", commandPrefix },
+                { "DiscordSettings:LogLevel", logLevel.ToString() },
                 { "ServerManager:DataDirectory", dataDirectory },
             };
 

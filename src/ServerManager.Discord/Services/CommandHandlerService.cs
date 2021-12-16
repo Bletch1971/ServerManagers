@@ -1,6 +1,8 @@
-﻿using Discord.Commands;
+﻿using Discord;
+using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
+using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Models;
 using System;
 using System.Linq;
@@ -12,14 +14,16 @@ namespace ServerManagerTool.DiscordBot.Services
     {
         private readonly DiscordSocketClient _discord;
         private readonly CommandService _commands;
+        private readonly LoggingService _logger;
         private readonly IConfigurationRoot _config;
         private readonly IServiceProvider _provider;
         private readonly DiscordBotWhitelistConfig _botWhitelist;
 
-        public CommandHandlerService(DiscordSocketClient discord, CommandService commands, IConfigurationRoot config, IServiceProvider provider, DiscordBotWhitelistConfig botWhitelist)
+        public CommandHandlerService(DiscordSocketClient discord, CommandService commands, LoggingService logger, IConfigurationRoot config, IServiceProvider provider, DiscordBotWhitelistConfig botWhitelist)
         {
             _discord = discord;
             _commands = commands;
+            _logger = logger;
             _config = config;
             _provider = provider;
             _botWhitelist = botWhitelist ?? new DiscordBotWhitelistConfig();
@@ -28,6 +32,11 @@ namespace ServerManagerTool.DiscordBot.Services
 
         private async Task OnMessageReceivedAsync(SocketMessage s)
         {
+            if (LogLevel.Debug.ToString().Equals(_config["DiscordSettings:LogLevel"]))
+            {
+                await _logger?.OnLogAsync(new LogMessage(LogSeverity.Debug, MessageSource.System.ToString(), $"Intercepted the following message from {s.Author.Username} ({s.Author.Id}) - {s.Content}"));
+            }
+
             // Ensure the message is from a user/bot
             if (!(s is SocketUserMessage msg))
             {

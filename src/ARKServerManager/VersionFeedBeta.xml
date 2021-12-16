@@ -19,6 +19,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>Added additional message logging when log level set to debug.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>
           </ul>
