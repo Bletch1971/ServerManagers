@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Interfaces;
+using ServerManagerTool.DiscordBot.Models;
 using ServerManagerTool.DiscordBot.Services;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace ServerManagerTool.DiscordBot
         public CancellationToken Token { get; private set; }
         public bool Started { get; private set; }  
 
-        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
+        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
             if (Started)
             {
@@ -91,6 +92,11 @@ namespace ServerManagerTool.DiscordBot
 #endif
             };
 
+            var discordBotWhitelistConfig = new DiscordBotWhitelistConfig
+            {
+                DiscordBotWhitelists = new List<DiscordBotWhitelist> ( botWhitelist.Select(i => new DiscordBotWhitelist { BotId = i }) )
+            };
+
             // Build the service provider
             var services = new ServiceCollection()
                 // Add the discord client to the service provider
@@ -105,6 +111,7 @@ namespace ServerManagerTool.DiscordBot
                 .AddSingleton<ShutdownService>()
                 .AddSingleton<Random>()
                 .AddSingleton(config)
+                .AddSingleton(discordBotWhitelistConfig)
                 .AddSingleton(handleCommandCallback)
                 .AddSingleton(handleTranslationCallback)
                 .AddSingleton<IServerManagerBot>(this);

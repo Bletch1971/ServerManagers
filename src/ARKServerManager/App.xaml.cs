@@ -11,6 +11,7 @@ using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -493,7 +494,13 @@ namespace ServerManagerTool
 
                 Task discordTask = Task.Run(async () =>
                 {
-                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
+                    var discordWhiteList = new List<string>();
+                    if (Config.Default.DiscordBotWhitelist != null)
+                    {
+                        discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
+                    }
+
+                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
                 }, _tokenSource.Token)
                     .ContinueWith(t => {
                         var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;

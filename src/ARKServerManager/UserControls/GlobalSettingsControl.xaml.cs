@@ -5,13 +5,16 @@ using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Xml;
 using WPFSharp.Globalizer;
@@ -24,12 +27,13 @@ namespace ServerManagerTool
     public partial class GlobalSettingsControl : UserControl
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        private GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
+        private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
 
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty CommonConfigProperty = DependencyProperty.Register(nameof(CommonConfig), typeof(CommonConfig), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelist>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
         {
@@ -40,6 +44,15 @@ namespace ServerManagerTool
             this.DataContext = this;
 
             PopulateWindowsStatesComboBox();
+
+            DiscordBotWhitelist = new List<DiscordBotWhitelist>();
+            if (Config.DiscordBotWhitelist != null)
+            {
+                foreach (var item in Config.DiscordBotWhitelist)
+                {
+                    DiscordBotWhitelist.Add(new DiscordBotWhitelist() { BotId = item });
+                }
+            }
 
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
@@ -75,6 +88,21 @@ namespace ServerManagerTool
         {
             get { return (ComboBoxItemList)GetValue(WindowStatesProperty); }
             set { SetValue(WindowStatesProperty, value); }
+        }
+
+        public List<DiscordBotWhitelist> DiscordBotWhitelist
+        {
+            get { return (List<DiscordBotWhitelist>)GetValue(DiscordBotWhitelistProperty); }
+            set { SetValue(DiscordBotWhitelistProperty, value); }
+        }
+
+        public void ApplyChangesToConfig()
+        {
+            if (Config.DiscordBotWhitelist is null)
+                Config.DiscordBotWhitelist = new System.Collections.Specialized.StringCollection();
+
+            Config.DiscordBotWhitelist.Clear();
+            Config.DiscordBotWhitelist.AddRange(DiscordBotWhitelist.Select(i => i.BotId).ToArray());
         }
 
         private string GetDeployedVersion()
@@ -462,5 +490,35 @@ namespace ServerManagerTool
                 this.WindowStateComboBox.SelectedValue = selectedValue;
             }
         }
+
+        #region Discord Bot Whitelist
+        private void AddDiscordBotWhitelist_Click(object sender, RoutedEventArgs e)
+        {
+            DiscordBotWhitelist.Add(new DiscordBotWhitelist());
+
+            CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
+        }
+
+        private void ClearDiscordBotWhitelists_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ClearLabel"), _globalizer.GetResourceString("ServerSettings_ClearTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            DiscordBotWhitelist.Clear();
+
+            CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
+        }
+
+        private void RemoveDiscordBotWhitelist_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_DeleteLabel"), _globalizer.GetResourceString("ServerSettings_DeleteTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            var item = ((DiscordBotWhitelist)((Button)e.Source).DataContext);
+            DiscordBotWhitelist.Remove(item);
+
+            CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
+        }
+        #endregion
     }
 }

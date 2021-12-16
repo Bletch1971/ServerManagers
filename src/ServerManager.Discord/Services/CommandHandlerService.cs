@@ -1,7 +1,9 @@
 ﻿using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
+using ServerManagerTool.DiscordBot.Models;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ServerManagerTool.DiscordBot.Services
@@ -12,14 +14,15 @@ namespace ServerManagerTool.DiscordBot.Services
         private readonly CommandService _commands;
         private readonly IConfigurationRoot _config;
         private readonly IServiceProvider _provider;
+        private readonly DiscordBotWhitelistConfig _botWhitelist;
 
-        public CommandHandlerService(DiscordSocketClient discord, CommandService commands, IConfigurationRoot config, IServiceProvider provider)
+        public CommandHandlerService(DiscordSocketClient discord, CommandService commands, IConfigurationRoot config, IServiceProvider provider, DiscordBotWhitelistConfig botWhitelist)
         {
             _discord = discord;
             _commands = commands;
             _config = config;
             _provider = provider;
-
+            _botWhitelist = botWhitelist ?? new DiscordBotWhitelistConfig();
             _discord.MessageReceived += OnMessageReceivedAsync;
         }
 
@@ -38,8 +41,8 @@ namespace ServerManagerTool.DiscordBot.Services
                 return;
             }
 
-            //Tell bot to ignore itself.
-            if (msg.Author.IsBot)
+            // Tell bot to ignore itself, unless on the whitelist
+            if (msg.Author.IsBot && !_botWhitelist.DiscordBotWhitelists.Any(b => b.BotId.Equals(msg.Author.Id)))
             {
                 return;
             }
