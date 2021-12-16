@@ -782,6 +782,12 @@
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">The id of the bot to whitelist.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Add Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Clear Whitelists</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Delete Whitelist</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">If enabled, the backup command can be sent from discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">If enabled, the restart command can be sent from discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">If enabled, the shutdown command can be sent from discord.</sys:String>
