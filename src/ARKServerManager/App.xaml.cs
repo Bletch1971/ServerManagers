@@ -285,6 +285,13 @@ namespace ServerManagerTool
                     CommonConfig.Default.Save();
                 }
             }
+            if (!Config.Default.DiscordBotPrefixFixed)
+            {
+                Config.Default.DiscordBotPrefix += "!";
+                Config.Default.DiscordBotPrefixFixed = true;
+                Config.Default.Save();
+                Config.Default.Reload();
+            }
 
             Config.Default.SteamCmdRedirectOutput = false;
         }

@@ -2153,5 +2153,17 @@ namespace ServerManagerTool {
                 this["DiscordBotWhitelist"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotPrefixFixed {
+            get {
+                return ((bool)(this["DiscordBotPrefixFixed"]));
+            }
+            set {
+                this["DiscordBotPrefixFixed"] = value;
+            }
+        }
     }
 }

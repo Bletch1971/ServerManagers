@@ -43,15 +43,10 @@ namespace ServerManagerTool.DiscordBot
 
             Token = token;
 
-            if (commandPrefix.Any(c => !char.IsLetterOrDigit(c)))
-            {
-                throw new Exception("#DiscordBot_InvalidPrefixError");
-            }
-
-            if (!commandPrefix.EndsWith(DiscordBot.PREFIX_DELIMITER))
-            {
-                commandPrefix += DiscordBot.PREFIX_DELIMITER;
-            }
+            //if (commandPrefix.Any(c => !char.IsLetterOrDigit(c)))
+            //{
+            //    throw new Exception("#DiscordBot_InvalidPrefixError");
+            //}
 
             var settings = new Dictionary<string, string>
             {
