@@ -968,6 +968,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(DiscordChannelIdProperty, value); }
         }
 
+        public static readonly DependencyProperty DiscordAliasProperty = DependencyProperty.Register(nameof(DiscordAlias), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string DiscordAlias
+        {
+            get { return (string)GetValue(DiscordAliasProperty); }
+            set { SetValue(DiscordAliasProperty, value); }
+        }
+
         public static readonly DependencyProperty AllowDiscordBackupProperty = DependencyProperty.Register(nameof(AllowDiscordBackup), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
         [DataMember]
         public bool AllowDiscordBackup

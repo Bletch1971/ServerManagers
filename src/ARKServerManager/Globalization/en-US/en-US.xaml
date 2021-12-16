@@ -1214,6 +1214,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel this profile will listen to.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">A unique name to identify your server when using the discord commands, can be used instead of the profile id.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Allow Backup</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">If enabled, the profile will listen for backup commands from discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Allow Restart</sys:String>
@@ -5604,8 +5606,9 @@
     <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
     <sys:String x:Key="DiscordBot_CommandDisabledProfile">Command '{0}' has been disabled for profile '{1}'.</sys:String>
 
-    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id or alias.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' was not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">Multiple profiles with '{0}' were found in the channel, command aborted.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
 

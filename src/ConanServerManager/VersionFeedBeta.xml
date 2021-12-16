@@ -8,6 +8,29 @@
   <updated>2021-12-16T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:F3C22842-A089-46F7-AB1A-5D3DED105412</id>
+    <title>1.1.58 (1.1.58.3)</title>
+    <summary>1.1.58.3</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:C566D9D2-3566-46DF-8AD4-39F5FC0FFEF2</id>
     <title>1.1.58 (1.1.58.2)</title>
     <summary>1.1.58.2</summary>
