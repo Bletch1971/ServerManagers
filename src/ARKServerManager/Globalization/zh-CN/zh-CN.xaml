@@ -3007,7 +3007,17 @@
 	<!-- 恐龙/生物类名称 - 迷失岛 -->
 	<sys:String x:Key="Amargasaurus_Character_BP_C">阿马加龙</sys:String>
 	<sys:String x:Key="Sinomacrops_Character_BP_C">中华大眼翼龙</sys:String>
-	<sys:String x:Key="Dinopithecus_Character_BP_C">恐菲</sys:String>
+	<sys:String x:Key="Dinopithecus_Character_BP_C">恐狒</sys:String>
+	<!--#endregion-->
+	
+	<!-- 恐龙/生物类名称 - 迷失岛-BOSS-->
+	<sys:String x:Key="BossDinopithecus_Character_BP_C">BOSS-恐狒</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Easy_C">BOSS-恐狒(简单)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Hard_C">BOSS-恐狒(中等)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Medium_C">BOSS-恐狒(困难)</sys:String>
+	<sys:String x:Key="Amargasaurus_Character_BP_Minion_C">狒狒BOSS爪牙[阿马加龙]</sys:String>
+	<sys:String x:Key="Dinopithecus_Character_BP_Minion_C">狒狒BOSS爪牙</sys:String>
+	<sys:String x:Key="Sinomacrops_Character_BP_Minion_C">狒狒BOSS爪牙[中华大眼翼龙]</sys:String>
 	<!--#endregion-->
 	
     <!--#endregion-->
@@ -5246,6 +5256,16 @@
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat_C">植物R-3 种子(腐肉)</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat_C">植物R-4 种子(优质生肉)</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C">植物R-5 种子(优质生鱼肉)</sys:String>
+	<!--#endregion-->
+	
+	<!--#项目类别名称 - 迷失岛 -->
+	<sys:String x:Key="PrimalItemArmor_AmargaSaddle_C">阿马加龙鞍</sys:String>
+	<sys:String x:Key="PrimalItemSkin_Costume_Dinopithecus_C">恐狒皮肤</sys:String>
+	<sys:String x:Key="PrimalItemResource_AmargaSpike_C">阿马加龙尖刺</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_BossDinopithecus_C">恐狒BOSS战利品(迷失岛)</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Easy_C">恐狒BOSS战利品(简单)(迷失岛)</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_BossDinopithecus_Hard_C">恐狒BOSS战利品(中等)(迷失岛)</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Medium_C">恐狒BOSS战利品(困难)(迷失岛)</sys:String>
 	<!--#endregion-->
 	
 	<!--#项目类别名称 - 新增（唯一集成模组） -->

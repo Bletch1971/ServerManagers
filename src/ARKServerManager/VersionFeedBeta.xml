@@ -9,6 +9,29 @@
 
   <entry>
     <id>urn:uuid:8958A494-DE13-4F6F-ACA2-10026D5FB8A9</id>
+    <title>1.1.413 (1.1.413.3)</title>
+    <summary>1.1.413.3</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:8958A494-DE13-4F6F-ACA2-10026D5FB8A9</id>
     <title>1.1.413 (1.1.413.2)</title>
     <summary>1.1.413.2</summary>
     <link href="" />
