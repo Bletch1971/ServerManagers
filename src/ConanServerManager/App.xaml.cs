@@ -38,7 +38,7 @@ namespace ServerManagerTool
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private CancellationTokenSource _tokenSource;
+        private CancellationTokenSource _tokenSourceDiscordBot;
         private GlobalizedApplication _globalizer;
         private bool _applicationStarted;
         private string _args;
@@ -147,6 +147,18 @@ namespace ServerManagerTool
                     _betaVersion = value;
                     OnPropertyChanged();
                 }
+            }
+        }
+
+        public bool DiscordBotStarted
+        {
+            get
+            {
+                return _tokenSourceDiscordBot != null;
+            }
+            set
+            {
+                OnPropertyChanged();
             }
         }
 
@@ -479,27 +491,7 @@ namespace ServerManagerTool
 
             if (Config.Default.DiscordBotEnabled)
             {
-                _tokenSource = new CancellationTokenSource();
-
-                Task discordTask = Task.Run(async () =>
-                {
-                    var discordWhiteList = new List<string>();
-                    if (Config.Default.DiscordBotWhitelist != null)
-                    {
-                        discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
-                    }
-
-                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken,Config.Default.DiscordBotPrefix, Config.Default.DataPath, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
-                }, _tokenSource.Token)
-                    .ContinueWith(t => {
-                        var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
-                        if (message.StartsWith("#"))
-                        {
-                            message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
-                        }
-
-                        MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    }, TaskContinuationOptions.OnlyOnFaulted);
+                StartDiscordBot();
             }
         }
 
@@ -541,11 +533,7 @@ namespace ServerManagerTool
 
         private void ShutDownApplication()
         {
-            if (!(_tokenSource is null))
-            {
-                _tokenSource.Cancel();
-                _tokenSource.Dispose();
-            }
+            StopDiscordBot();
 
             if (this.ApplicationStarted)
             {
@@ -585,6 +573,61 @@ namespace ServerManagerTool
 
             SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
             SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
+        }
+
+        public void StartDiscordBot()
+        {
+            if (_tokenSourceDiscordBot != null)
+            {
+                return;
+            }
+
+            _tokenSourceDiscordBot = new CancellationTokenSource();
+            DiscordBotStarted = true;
+
+            Task discordTask = Task.Run(async () =>
+            {
+                var discordWhiteList = new List<string>();
+                if (Config.Default.DiscordBotWhitelist != null)
+                {
+                    discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
+                }
+
+                await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataPath, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
+                
+                if (_tokenSourceDiscordBot != null)
+                {
+                    // cleanup the token
+                    _tokenSourceDiscordBot.Dispose();
+                    _tokenSourceDiscordBot = null;
+                }
+                DiscordBotStarted = false;
+            }, _tokenSourceDiscordBot.Token)
+                .ContinueWith(t => {
+                    var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
+                    if (message.StartsWith("#"))
+                    {
+                        message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
+                    }
+
+                    MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                    if (_tokenSourceDiscordBot != null)
+                    {
+                        // cleanup the token
+                        _tokenSourceDiscordBot.Dispose();
+                        _tokenSourceDiscordBot = null;
+                    }
+                    DiscordBotStarted = false;
+                }, TaskContinuationOptions.OnlyOnFaulted);
+        }
+
+        public void StopDiscordBot()
+        {
+            if (!(_tokenSourceDiscordBot is null))
+            {
+                _tokenSourceDiscordBot.Cancel();
+            }
         }
     }
 }

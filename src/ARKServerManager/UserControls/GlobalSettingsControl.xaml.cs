@@ -29,6 +29,7 @@ namespace ServerManagerTool
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
 
+        public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty CommonConfigProperty = DependencyProperty.Register(nameof(CommonConfig), typeof(CommonConfig), typeof(GlobalSettingsControl), new PropertyMetadata(null));
@@ -38,11 +39,11 @@ namespace ServerManagerTool
 
         public GlobalSettingsControl()
         {
-            this.Version = GetDeployedVersion();
-
+            this.AppInstance = App.Instance;
             this.Config = Config.Default;
             this.CommonConfig = CommonConfig.Default;
-            this.DataContext = this;
+            this.IsAdministrator = SecurityUtils.IsAdministrator();
+            this.Version = GetDeployedVersion();
 
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
@@ -59,7 +60,13 @@ namespace ServerManagerTool
                 }
             }
 
-            this.IsAdministrator = SecurityUtils.IsAdministrator();
+            this.DataContext = this;
+        }
+
+        public App AppInstance
+        {
+            get { return GetValue(AppInstanceProperty) as App; }
+            set { SetValue(AppInstanceProperty, value); }
         }
 
         public string Version
