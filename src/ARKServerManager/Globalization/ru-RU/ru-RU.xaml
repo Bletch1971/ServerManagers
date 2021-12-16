@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">12.12.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">16.12.2021 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -89,6 +89,15 @@
     <sys:String x:Key="WindowState_Maximized">По максимуму</sys:String>
     <!--#endregion-->
 
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Критично</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Ошибка</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Внимание</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Информация</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Многословный</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Отладка</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Запустить в режиме Администратора.</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">Это приложение требует Административных привилегий для доступа ко всем функциям. Вы хотите запустить как из режима Администратора?</sys:String>
@@ -127,6 +136,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Загрузка сервера завершена</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Завершено</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Отменено</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Ошибка</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Отмена</sys:String>
     <!--#endregion-->
 
@@ -621,8 +631,15 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">Идентификатор сервера Discord, который бот будет слушать.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Префикс:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">Префикс, который необходимо использовать при отправке команды через Discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Лог уровня:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Получить токен ...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Помощь...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Белый лист бота</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Бот ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">ID бота для внесения в белый список.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Добавить в белый лист</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Очистить белый лист</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Удалить белый лист</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Если включено, команду резервного копирования можно отправить из Discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Если этот параметр включен, команда перезапуска может быть отправлена из Discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Если включено, команду выключения можно отправить из Discord.</sys:String>
@@ -1207,6 +1224,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Детали бота Discord</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Канал Id:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">ID канала сервера Discord, который будет слушать этот профиль.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Псевдоним:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Вместо идентификатора профиля можно использовать уникальное имя для идентификации вашего сервера при использовании команд discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Разрешить Бекап</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Если этот параметр включен, профиль будет прослушивать команды Бекапа от Discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Разрешить Перезагрузку</sys:String>
@@ -5680,6 +5699,7 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">Для команды '{0}' требуется идентификатор профиля.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Профиль '{0}' не найден или не связан с каналом.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">В канале было обнаружено несколько профилей с "{0}", команда прервана.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', и эта команда не может быть запущена.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
 
