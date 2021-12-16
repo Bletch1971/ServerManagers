@@ -29,8 +29,7 @@ namespace ServerManagerTool.DiscordBot.Services
         private async Task OnMessageReceivedAsync(SocketMessage s)
         {
             // Ensure the message is from a user/bot
-            var msg = s as SocketUserMessage;
-            if (msg is null)
+            if (!(s is SocketUserMessage msg))
             {
                 return;
             }
@@ -41,10 +40,15 @@ namespace ServerManagerTool.DiscordBot.Services
                 return;
             }
 
-            // Tell bot to ignore itself, unless on the whitelist
-            if (msg.Author.IsBot && !_botWhitelist.DiscordBotWhitelists.Any(b => b.BotId.Equals(msg.Author.Id)))
+            // check if the author is a bot
+            if (msg.Author.IsBot)
             {
-                return;
+                // check if bot is on the whitelist
+                if (!_botWhitelist.DiscordBotWhitelists.Any(b => b.BotId.Equals(msg.Author.Id.ToString())))
+                {
+                    // Tell bot to ignore
+                    return;
+                }
             }
 
             // Create the command context
