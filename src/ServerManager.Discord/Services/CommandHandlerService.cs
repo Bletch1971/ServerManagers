@@ -51,13 +51,13 @@ namespace ServerManagerTool.DiscordBot.Services
                 }
             }
 
-            // Create the command context
-            var context = new SocketCommandContext(_discord, msg);
-
             // Check if the message has a valid command prefix
             var argPos = 0;
             if (msg.HasStringPrefix(_config["DiscordSettings:Prefix"], ref argPos) || msg.HasMentionPrefix(_discord.CurrentUser, ref argPos))
             {
+                // Create the command context
+                var context = new SocketCommandContext(_discord, msg);
+
                 // Execute the command
                 var result = await _commands.ExecuteAsync(context, argPos, _provider);
 

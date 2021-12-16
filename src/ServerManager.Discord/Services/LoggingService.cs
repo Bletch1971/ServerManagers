@@ -31,7 +31,7 @@ namespace ServerManagerTool.DiscordBot.Services
             _commands.Log += OnLogAsync;
         }
 
-        private async Task OnLogAsync(LogMessage message)
+        internal async Task OnLogAsync(LogMessage message)
         {
             // Create the log directory if it doesn't exist
             if (!Directory.Exists(LogDirectory))

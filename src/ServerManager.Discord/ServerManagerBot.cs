@@ -62,11 +62,11 @@ namespace ServerManagerTool.DiscordBot
 
             var socketConfig = new DiscordSocketConfig
             {
-#if DEBUG
+                //#if DEBUG
                 LogLevel = LogSeverity.Verbose,
-#else
-                LogLevel = LogSeverity.Info,
-#endif
+                //#else
+                //                LogLevel = LogSeverity.Info,
+                //#endif
                 // Tell Discord.Net to cache 1000 messages per channel
                 MessageCacheSize = 1000,
             };
@@ -80,11 +80,11 @@ namespace ServerManagerTool.DiscordBot
             {
                 // Force all commands to run async
                 DefaultRunMode = RunMode.Async,
-#if DEBUG
+                //#if DEBUG
                 LogLevel = LogSeverity.Verbose,
-#else
-                LogLevel = LogSeverity.Info,
-#endif
+                //#else
+                //                LogLevel = LogSeverity.Info,
+                //#endif
             };
 
             var discordBotWhitelistConfig = new DiscordBotWhitelistConfig
