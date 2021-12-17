@@ -44,6 +44,47 @@ namespace ServerManagerTool
         public static readonly DependencyProperty LatestServerManagerVersionProperty = DependencyProperty.Register(nameof(LatestServerManagerVersion), typeof(Version), typeof(MainWindow), new PropertyMetadata(new Version()));
         public static readonly DependencyProperty NewServerManagerAvailableProperty = DependencyProperty.Register(nameof(NewServerManagerAvailable), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
 
+        public MainWindow()
+        {
+            this.AppInstance = App.Instance;
+            this.Config = Config.Default;
+
+            InitializeComponent();
+            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
+            this.ServerManager = ServerManager.Instance;
+
+            this.DataContext = this;
+            this.versionChecker = new ActionQueue();
+            this.scheduledTaskChecker = new ActionQueue();
+
+            IsAdministrator = SecurityUtils.IsAdministrator();
+            if (!string.IsNullOrWhiteSpace(App.Instance.Title))
+            {
+                this.Title = App.Instance.Title;
+            }
+            else
+            {
+                if (IsAdministrator)
+                {
+                    this.Title = _globalizer.GetResourceString("MainWindow_TitleWithAdmin");
+                }
+                else
+                {
+                    this.Title = _globalizer.GetResourceString("MainWindow_Title");
+                }
+            }
+
+            this.Left = Config.Default.MainWindow_Left;
+            this.Top = Config.Default.MainWindow_Top;
+            this.Height = Config.Default.MainWindow_Height;
+            this.Width = Config.Default.MainWindow_Width;
+            this.WindowState = Config.Default.MainWindow_WindowState;
+
+            // hook into the language change event
+            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
+        }
+
         public App AppInstance
         {
             get { return GetValue(AppInstanceProperty) as App; }
@@ -120,47 +161,6 @@ namespace ServerManagerTool
         {
             get { return (bool)GetValue(NewServerManagerAvailableProperty); }
             set { SetValue(NewServerManagerAvailableProperty, value); }
-        }
-
-        public MainWindow()
-        {
-            this.AppInstance = App.Instance;
-            this.Config = Config.Default;
-
-            InitializeComponent();
-            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
-
-            this.ServerManager = ServerManager.Instance;
-
-            this.DataContext = this;
-            this.versionChecker = new ActionQueue();
-            this.scheduledTaskChecker = new ActionQueue();
-
-            IsAdministrator = SecurityUtils.IsAdministrator();
-            if (!string.IsNullOrWhiteSpace(App.Instance.Title))
-            {
-                this.Title = App.Instance.Title;
-            }
-            else
-            {
-                if (IsAdministrator)
-                {
-                    this.Title = _globalizer.GetResourceString("MainWindow_TitleWithAdmin");
-                }
-                else
-                {
-                    this.Title = _globalizer.GetResourceString("MainWindow_Title");
-                }
-            }
-
-            this.Left = Config.Default.MainWindow_Left;
-            this.Top = Config.Default.MainWindow_Top;
-            this.Height = Config.Default.MainWindow_Height;
-            this.Width = Config.Default.MainWindow_Width;
-            this.WindowState = Config.Default.MainWindow_WindowState;
-
-            // hook into the language change event
-            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)

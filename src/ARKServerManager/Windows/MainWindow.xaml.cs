@@ -27,63 +27,80 @@ namespace ServerManagerTool
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
-        public static MainWindow Instance
-        {
-            get;
-            private set;
-        }
-
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private readonly ActionQueue versionChecker;
         private readonly ActionQueue scheduledTaskChecker;
 
-        public static readonly DependencyProperty BetaVersionProperty = DependencyProperty.Register(nameof(BetaVersion), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
-        public static readonly DependencyProperty IsIpValidProperty = DependencyProperty.Register(nameof(IsIpValid), typeof(bool), typeof(MainWindow));
-        public static readonly DependencyProperty CurrentConfigProperty = DependencyProperty.Register(nameof(CurrentConfig), typeof(Config), typeof(MainWindow));
+        public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(MainWindow), new PropertyMetadata(null));
+        public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ServerManagerProperty = DependencyProperty.Register(nameof(ServerManager), typeof(ServerManager), typeof(MainWindow), new PropertyMetadata(null));
-        public static readonly DependencyProperty LatestASMVersionProperty = DependencyProperty.Register(nameof(LatestASMVersion), typeof(Version), typeof(MainWindow), new PropertyMetadata(new Version()));
-        public static readonly DependencyProperty NewASMAvailableProperty = DependencyProperty.Register(nameof(NewASMAvailable), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
         public static readonly DependencyProperty AutoBackupStateProperty = DependencyProperty.Register(nameof(AutoBackupState), typeof(Microsoft.Win32.TaskScheduler.TaskState), typeof(MainWindow), new PropertyMetadata(Microsoft.Win32.TaskScheduler.TaskState.Unknown));
         public static readonly DependencyProperty AutoBackupStateStringProperty = DependencyProperty.Register(nameof(AutoBackupStateString), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty AutoBackupNextRunTimeProperty = DependencyProperty.Register(nameof(AutoBackupNextRunTime), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty AutoUpdateStateProperty = DependencyProperty.Register(nameof(AutoUpdateState), typeof(Microsoft.Win32.TaskScheduler.TaskState), typeof(MainWindow), new PropertyMetadata(Microsoft.Win32.TaskScheduler.TaskState.Unknown));
         public static readonly DependencyProperty AutoUpdateStateStringProperty = DependencyProperty.Register(nameof(AutoUpdateStateString), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty AutoUpdateNextRunTimeProperty = DependencyProperty.Register(nameof(AutoUpdateNextRunTime), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
+        public static readonly DependencyProperty IsIpValidProperty = DependencyProperty.Register(nameof(IsIpValid), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
+        public static readonly DependencyProperty LatestServerManagerVersionProperty = DependencyProperty.Register(nameof(LatestServerManagerVersion), typeof(Version), typeof(MainWindow), new PropertyMetadata(new Version()));
+        public static readonly DependencyProperty NewServerManagerAvailableProperty = DependencyProperty.Register(nameof(NewServerManagerAvailable), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
 
-        public bool BetaVersion
+        public MainWindow()
         {
-            get { return (bool)GetValue(BetaVersionProperty); }
-            set { SetValue(BetaVersionProperty, value); }
+            this.AppInstance = App.Instance;
+            this.Config = Config.Default;
+
+            InitializeComponent();
+            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
+            this.ServerManager = ServerManager.Instance;
+
+            this.DataContext = this;
+            this.versionChecker = new ActionQueue();
+            this.scheduledTaskChecker = new ActionQueue();
+
+            IsAdministrator = SecurityUtils.IsAdministrator();
+            if (!string.IsNullOrWhiteSpace(App.Instance.Title))
+            {
+                this.Title = App.Instance.Title;
+            }
+            else
+            {
+                if (IsAdministrator)
+                {
+                    this.Title = _globalizer.GetResourceString("MainWindow_TitleWithAdmin");
+                }
+                else
+                {
+                    this.Title = _globalizer.GetResourceString("MainWindow_Title");
+                }
+            }
+
+            this.Left = Config.Default.MainWindow_Left;
+            this.Top = Config.Default.MainWindow_Top;
+            this.Height = Config.Default.MainWindow_Height;
+            this.Width = Config.Default.MainWindow_Width;
+            this.WindowState = Config.Default.MainWindow_WindowState;
+
+            // hook into the language change event
+            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
         }
 
-        public bool IsIpValid
+        public App AppInstance
         {
-            get { return (bool)GetValue(IsIpValidProperty); }
-            set { SetValue(IsIpValidProperty, value); }
+            get { return GetValue(AppInstanceProperty) as App; }
+            set { SetValue(AppInstanceProperty, value); }
         }
 
-        public Config CurrentConfig
+        public Config Config
         {
-            get { return GetValue(CurrentConfigProperty) as Config; }
-            set { SetValue(CurrentConfigProperty, value); }
+            get { return GetValue(ConfigProperty) as Config; }
+            set { SetValue(ConfigProperty, value); }
         }
 
         public ServerManager ServerManager
         {
             get { return (ServerManager)GetValue(ServerManagerProperty); }
             set { SetValue(ServerManagerProperty, value); }
-        }
-
-        public Version LatestASMVersion
-        {
-            get { return (Version)GetValue(LatestASMVersionProperty); }
-            set { SetValue(LatestASMVersionProperty, value); }
-        }
-
-        public bool NewASMAvailable
-        {
-            get { return (bool)GetValue(NewASMAvailableProperty); }
-            set { SetValue(NewASMAvailableProperty, value); }
         }
 
         public Microsoft.Win32.TaskScheduler.TaskState AutoBackupState
@@ -128,46 +145,22 @@ namespace ServerManagerTool
             set;
         }
 
-        public MainWindow()
+        public bool IsIpValid
         {
-            this.BetaVersion = App.Instance.BetaVersion;
-            this.CurrentConfig = Config.Default;
+            get { return (bool)GetValue(IsIpValidProperty); }
+            set { SetValue(IsIpValidProperty, value); }
+        }
 
-            InitializeComponent();
-            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+        public Version LatestServerManagerVersion
+        {
+            get { return (Version)GetValue(LatestServerManagerVersionProperty); }
+            set { SetValue(LatestServerManagerVersionProperty, value); }
+        }
 
-            MainWindow.Instance = this;
-            this.ServerManager = ServerManager.Instance;
-
-            this.DataContext = this;
-            this.versionChecker = new ActionQueue();
-            this.scheduledTaskChecker = new ActionQueue();
-
-            IsAdministrator = SecurityUtils.IsAdministrator();
-            if (!string.IsNullOrWhiteSpace(App.Instance.Title))
-            {
-                this.Title = $"{App.Instance.Title}";
-            }
-            else
-            {
-                if (IsAdministrator)
-                {
-                    this.Title = _globalizer.GetResourceString("MainWindow_TitleWithAdmin");
-                }
-                else
-                {
-                    this.Title = _globalizer.GetResourceString("MainWindow_Title");
-                }
-            }
-
-            this.Left = Config.Default.MainWindow_Left;
-            this.Top = Config.Default.MainWindow_Top;
-            this.Height = Config.Default.MainWindow_Height;
-            this.Width = Config.Default.MainWindow_Width;
-            this.WindowState = Config.Default.MainWindow_WindowState;
-
-            // hook into the language change event
-            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
+        public bool NewServerManagerAvailable
+        {
+            get { return (bool)GetValue(NewServerManagerAvailableProperty); }
+            set { SetValue(NewServerManagerAvailableProperty, value); }
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -263,10 +256,10 @@ namespace ServerManagerTool
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
         }
 
-        private void ASMPatchNotes_Click(object sender, RoutedEventArgs e)
+        private void PatchNotes_Click(object sender, RoutedEventArgs e)
         {
             var url = string.Empty;
-            if (BetaVersion)
+            if (AppInstance.BetaVersion)
                 url = Config.Default.ServerManagerVersionBetaFeedUrl;
             else
                 url = Config.Default.ServerManagerVersionFeedUrl;
@@ -280,7 +273,7 @@ namespace ServerManagerTool
             }
             else
             {
-                if (BetaVersion)
+                if (AppInstance.BetaVersion)
                     url = Config.Default.LatestASMBetaPatchNotesUrl;
                 else
                     url = Config.Default.LatestASMPatchNotesUrl;
@@ -424,7 +417,7 @@ namespace ServerManagerTool
 
         private async void Upgrade_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show(String.Format(_globalizer.GetResourceString("MainWindow_Upgrade_Label"), this.LatestASMVersion), _globalizer.GetResourceString("MainWindow_Upgrade_Title"), MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var result = MessageBox.Show(String.Format(_globalizer.GetResourceString("MainWindow_Upgrade_Label"), this.LatestServerManagerVersion), _globalizer.GetResourceString("MainWindow_Upgrade_Title"), MessageBoxButton.YesNo, MessageBoxImage.Question);
             if(result == MessageBoxResult.Yes)
             {
                 try
@@ -640,8 +633,8 @@ namespace ServerManagerTool
                     var appVersion = new Version();
                     Version.TryParse(App.Instance.Version, out appVersion);
 
-                    this.LatestASMVersion = newVersion;
-                    this.NewASMAvailable = appVersion < newVersion;
+                    this.LatestServerManagerVersion = newVersion;
+                    this.NewServerManagerAvailable = appVersion < newVersion;
 
                     Logger.Info($"{nameof(CheckForUpdates)} performed");
                 }

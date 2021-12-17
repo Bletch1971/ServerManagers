@@ -33,7 +33,7 @@
                         <Style TargetType="{x:Type DockPanel}">
                             <Setter Property="Background" Value="#4F4F4F"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding ElementName=Main, Path=BetaVersion}" Value="True">
+                                <DataTrigger Binding="{Binding AppInstance.BetaVersion}" Value="True">
                                     <Setter Property="Background" Value="#378CFB"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -52,7 +52,7 @@
                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
                                         <Setter Property="Content" Value="{DynamicResource MainWindow_VersionLabel}"/>
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ElementName=Main, Path=BetaVersion}" Value="True">
+                                            <DataTrigger Binding="{Binding AppInstance.BetaVersion}" Value="True">
                                                 <Setter Property="Content" Value="{DynamicResource MainWindow_BetaVersionLabel}"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -60,17 +60,17 @@
                                 </Label.Style>
                             </Label>
                             <Label Margin="5,0,0,0" Background="Transparent" Foreground="White" FontSize="12" Content="{Binding Source={x:Static local:App.Instance}, Path=Version}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <Button Margin="5" Click="ASMPatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}" Style="{StaticResource ButtonStyle1}">
+                            <Button Margin="5" Click="PatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}" Style="{StaticResource ButtonStyle1}">
                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/ChangeNotes.ico,Size=32}"/>
                             </Button>
-                            <Button Margin="5,0,0,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestASMVersion}" Click="Upgrade_Click" VerticalAlignment="Center" >
+                            <Button Margin="5,0,0,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestServerManagerVersion}" Click="Upgrade_Click" VerticalAlignment="Center" >
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding NewASMAvailable}" Value="True">
+                                            <DataTrigger Binding="{Binding NewServerManagerAvailable}" Value="True">
                                                 <Setter Property="Visibility" Value="Visible"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding NewASMAvailable}" Value="False">
+                                            <DataTrigger Binding="{Binding NewServerManagerAvailable}" Value="False">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -277,7 +277,7 @@
                                     </ControlTemplate>
                                 </Validation.ErrorTemplate>
                                 <TextBox.Text>
-                                    <Binding Path="CurrentConfig.MachinePublicIP" ElementName="Main">
+                                    <Binding Path="Config.MachinePublicIP" ElementName="Main">
                                         <Binding.ValidationRules>
                                             <cvr:IpValidationRule ValidatesOnTargetUpdated="true" />
                                         </Binding.ValidationRules>
@@ -310,7 +310,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusRunningLabel}"/>
@@ -318,7 +318,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusRunningLabel}"/>
                                                 </MultiDataTrigger>
@@ -329,7 +329,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusStoppedLabel}"/>
@@ -337,7 +337,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusStoppedLabel}"/>
                                                 </MultiDataTrigger>
