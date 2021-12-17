@@ -30,12 +30,17 @@ namespace ServerManagerTool.DiscordBot
 
         public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, bool allowAllBots, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
-            if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleTranslationCallback is null || handleCommandCallback is null)
+            if (string.IsNullOrWhiteSpace(discordToken))
             {
-                return;
+                throw new Exception("#DiscordBot_MissingTokenError");
             }
 
-            if (Started)
+            if (string.IsNullOrWhiteSpace(commandPrefix))
+            {
+                throw new Exception("#DiscordBot_MissingPrefixError");
+            }
+
+            if (Started || handleTranslationCallback is null || handleCommandCallback is null)
             {
                 return;
             }
