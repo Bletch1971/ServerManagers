@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0243575Z",
+  "Mod": "880871931",
   "Creatures": [],
   "Engrams": [
     {
@@ -215,6 +216,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_RoundFountainLarge_eco_C",
       "Description": "Large Fountain",
+      "Mod": "ecoGardenDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_GD_FancyFountain_eco_C",
+      "Description": "Fancy Fountain",
       "Mod": "ecoGardenDecor"
     },
     {

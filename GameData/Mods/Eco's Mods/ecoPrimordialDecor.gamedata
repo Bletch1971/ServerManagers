@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8553008Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0243575Z",
+  "Mod": "1435344008",
   "Creatures": [],
   "Engrams": [
     {
@@ -138,6 +139,78 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_PDMeatSpoiler_eco_C",
       "Description": "Meat Spoiler",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRAntBait_eco_C",
+      "Description": "Trap Bait for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRForestTrap_eco_C",
+      "Description": "Forest Ant Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PREvergladesTrap_eco_C",
+      "Description": "Everyglades Fish Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRTroposphereTrap_eco_C",
+      "Description": "Troposphere Hive Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRAridTrap_eco_C",
+      "Description": "Arid Compy Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRBrineTrap_eco_C",
+      "Description": "Brine Dolphin Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRSubterraneTrap_eco_C",
+      "Description": "Subterrane Beetle Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRTundraTrap_eco_C",
+      "Description": "Tundra Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_PRVolcanicTrap_eco_C",
+      "Description": "Volcanic Spider Trap for eco\u0027s Primordial Decor",
       "Mod": "ecoPrimordialDecor"
     }
   ],
@@ -1372,6 +1445,69 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_PRMeatSpoiler_eco_C",
       "Description": "Meat Spoiler",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_PRTrapBait_eco_C",
+      "Description": "Trap Bait for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRForestTrap_eco_C",
+      "Description": "Forest Ant Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PREvergladesTrap_eco_C",
+      "Description": "Everyglades Fish Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRTroposphereTrap_eco_C",
+      "Description": "Troposphere Hive Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRAridTrap_eco_C",
+      "Description": "Arid Compy Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRBrineTrap_eco_C",
+      "Description": "Brine Dolphin Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRSubterraneTrap_eco_C",
+      "Description": "Subterrane Beetle Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRTundraTrap_eco_C",
+      "Description": "Tundra Trap for eco\u0027s Primordial Decor",
+      "Mod": "ecoPrimordialDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_PRVolcanicTrap_eco_C",
+      "Description": "Volcanic Spider Trap for eco\u0027s Primordial Decor",
       "Mod": "ecoPrimordialDecor"
     }
   ],

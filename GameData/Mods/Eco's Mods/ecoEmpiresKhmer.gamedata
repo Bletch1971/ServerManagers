@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8553008Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0233604Z",
+  "Mod": "1846137966",
   "Creatures": [],
   "Engrams": [
     {
@@ -169,6 +170,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemSkin_KHM_KingSkin_eco_C",
       "Description": "Khmer King",
+      "Mod": "ecoEmpiresKhmer"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ChibiDino_KHM_CTInvMammoth_eco_C",
+      "Description": "Chibi - Khmer Mammoth",
       "Mod": "ecoEmpiresKhmer"
     },
     {

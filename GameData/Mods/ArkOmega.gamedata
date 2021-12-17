@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "2.3.0",
-  "Created": "2021-12-08T00:00:00.0000000Z",
+  "Version": "2.3.2",
+  "Created": "2021-12-13T00:00:00.0000000Z",
+  "Mod": "2447186973",
   "Creatures": [],
   "Engrams": [
     {
@@ -21,14 +22,6 @@
       "Mod": "Ark Omega"
     },
     {
-      "Level": 1,
-      "Points": 6,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_SeagullNecklace_ArkOmega_C",
-      "Description": "Ichthyornis Foot Necklace",
-      "Mod": "Ark Omega"
-    },
-	{
       "Level": 1,
       "Points": 6,
       "IsTekGram": false,
@@ -95,14 +88,6 @@
 	{
       "Level": 1,
       "Points": 3,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_FruitSeeder_C",
-      "Description": "Fruit Seeder",
-      "Mod": "Ark Omega"
-    },
-	{
-      "Level": 1,
-      "Points": 6,
       "IsTekGram": false,
       "ClassName": "EngramEntry_FruitSeeder_C",
       "Description": "Fruit Seeder",

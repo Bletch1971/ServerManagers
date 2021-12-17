@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0263528Z",
+  "Mod": "816908578",
   "Creatures": [],
   "Engrams": [
     {
@@ -439,6 +440,27 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_TKHoloGriffin_eco_C",
       "Description": "Holographic Griffin",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_TKAnimatedHolos_eco_C",
+      "Description": "Animated Holographics",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TK_CropPod_eco_C",
+      "Description": "Crop Pod",
+      "Mod": "ecoTekDecor"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_PlantSpeciesZ_Fruit_C",
+      "Description": "Plant Species Z Fruit",
       "Mod": "ecoTekDecor"
     },
     {
