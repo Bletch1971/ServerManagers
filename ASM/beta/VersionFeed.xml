@@ -8,6 +8,30 @@
   <updated>2021-12-16T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:8EE5659C-18E6-47D3-941D-C32B129D2E06</id>
+    <title>1.1.413 (1.1.413.7)</title>
+    <summary>1.1.413.7</summary>
+    <link href="" />
+    <updated>2021-12-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:65A7E6B1-98D1-422D-B42F-B0EBB1D20E41</id>
     <title>1.1.413 (1.1.413.6)</title>
     <summary>1.1.413.6</summary>
@@ -95,7 +119,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change the existing functionality, but you can now change it.</li>
+            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
             <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
