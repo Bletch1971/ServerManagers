@@ -1093,6 +1093,9 @@
                                 <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_DiscordBotChannelLabel}" ToolTip="{DynamicResource ServerSettings_DiscordBotChannelTooltip}" VerticalAlignment="Center"/>
                                 <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Text="{Binding DiscordChannelId, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_DiscordBotChannelTooltip}" VerticalContentAlignment="Center" />
 
+                                <Label Grid.Row="0" Grid.Column="2" Content="{DynamicResource ServerSettings_DiscordAliasLabel}" ToolTip="{DynamicResource ServerSettings_DiscordAliasTooltip}" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="0" Grid.Column="3" Margin="1" Text="{Binding DiscordAlias, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_DiscordAliasTooltip}" VerticalContentAlignment="Center" />
+
                                 <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding AllowDiscordBackup, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordBackupLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordBackupTooltip}"/>
                                 <CheckBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding AllowDiscordUpdate, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordUpdateLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordUpdateTooltip}"/>
                                 <CheckBox Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding AllowDiscordStart, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordStartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordStartTooltip}"/>

@@ -528,7 +528,7 @@
                 <ScrollViewer DataContext="{Binding Profile}" VerticalScrollBarVisibility="Visible">
                     <StackPanel CanVerticallyScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
-                        <Expander Name="SectionAdministration" IsExpanded="{Binding CurrentConfig.SectionAdministrationIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionAdministration" IsExpanded="{Binding Config.SectionAdministrationIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_AdministrationSectionLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -869,7 +869,7 @@
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="{Binding CurrentConfig.MOTDHeight, ElementName=SettingsControl, FallbackValue=100, Mode=TwoWay}" MinHeight="100"/>
+                                            <RowDefinition Height="{Binding Config.MOTDHeight, ElementName=SettingsControl, FallbackValue=100, Mode=TwoWay}" MinHeight="100"/>
                                             <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
@@ -1395,7 +1395,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionAutomaticManagement" IsExpanded="{Binding CurrentConfig.SectionAutomaticManagementIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionAutomaticManagement" IsExpanded="{Binding Config.SectionAutomaticManagementIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <DockPanel>
                                     <TextBlock DockPanel.Dock="Left" Text="{DynamicResource ServerSettings_AutomaticManagementLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -1579,7 +1579,7 @@
                             </StackPanel>
                         </Expander>
 
-                        <Expander Name="SectionDiscordBot" IsExpanded="{Binding CurrentConfig.SectionDiscordBotIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.DiscordBotEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionDiscordBot" IsExpanded="{Binding Config.SectionDiscordBotIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.DiscordBotEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_DiscordBotLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -1618,6 +1618,9 @@
                                 <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_DiscordBotChannelLabel}" ToolTip="{DynamicResource ServerSettings_DiscordBotChannelTooltip}" VerticalAlignment="Center"/>
                                 <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Text="{Binding DiscordChannelId, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_DiscordBotChannelTooltip}" VerticalContentAlignment="Center" />
 
+                                <Label Grid.Row="0" Grid.Column="2" Content="{DynamicResource ServerSettings_DiscordAliasLabel}" ToolTip="{DynamicResource ServerSettings_DiscordAliasTooltip}" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="0" Grid.Column="3" Margin="1" Text="{Binding DiscordAlias, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_DiscordAliasTooltip}" VerticalContentAlignment="Center" />
+
                                 <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding AllowDiscordBackup, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordBackupLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordBackupTooltip}"/>
                                 <CheckBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding AllowDiscordUpdate, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordUpdateLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordUpdateTooltip}"/>
                                 <CheckBox Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding AllowDiscordStart, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordStartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordStartTooltip}"/>
@@ -1628,7 +1631,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionRules" IsExpanded="{Binding CurrentConfig.SectionRulesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionRules" IsExpanded="{Binding Config.SectionRulesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_RulesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -2071,7 +2074,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionChatAndNotifications" IsExpanded="{Binding CurrentConfig.SectionChatAndNotificationsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionChatAndNotifications" IsExpanded="{Binding Config.SectionChatAndNotificationsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_ChatAndNotificationsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -2118,7 +2121,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionHUDAndVisuals" IsExpanded="{Binding CurrentConfig.SectionHUDAndVisualsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionHUDAndVisuals" IsExpanded="{Binding Config.SectionHUDAndVisualsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_HUDAndVisualsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -2170,7 +2173,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionPlayerSettings" IsExpanded="{Binding CurrentConfig.SectionPlayerSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionPlayerSettings" IsExpanded="{Binding Config.SectionPlayerSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_PlayerSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -2283,7 +2286,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionDinoSettings" IsExpanded="{Binding CurrentConfig.SectionDinoSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionDinoSettings" IsExpanded="{Binding Config.SectionDinoSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_DinoSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -2420,7 +2423,7 @@
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
-                                                <RowDefinition Height="{Binding CurrentConfig.DinoSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                                <RowDefinition Height="{Binding Config.DinoSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                                 <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                                 <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                             </Grid.RowDefinitions>
@@ -2729,6 +2732,9 @@
                                                             <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
                                                                 <Setter Property="Background" Value="#FFD6D6" />
                                                             </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
+                                                                <Setter Property="Background" Value="#D9F7C4" />
+                                                            </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
                                                 </DataGrid.RowStyle>
@@ -2976,7 +2982,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionEnvironment" IsExpanded="{Binding CurrentConfig.SectionEnvironmentIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionEnvironment" IsExpanded="{Binding Config.SectionEnvironmentIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_EnvironmentLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -3035,7 +3041,7 @@
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
-                                                <RowDefinition Height="{Binding CurrentConfig.EnvironmentListBoxHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                                <RowDefinition Height="{Binding Config.EnvironmentListBoxHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                                 <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                                 <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                             </Grid.RowDefinitions>
@@ -3121,6 +3127,9 @@
                                                             <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
                                                                 <Setter Property="Background" Value="#FFD6D6" />
                                                             </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
+                                                                <Setter Property="Background" Value="#D9F7C4" />
+                                                            </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
                                                 </ListBox.ItemContainerStyle>
@@ -3162,7 +3171,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionStructures" IsExpanded="{Binding CurrentConfig.SectionStructuresIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionStructures" IsExpanded="{Binding Config.SectionStructuresIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_StructuresLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -3283,7 +3292,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionEngrams" IsExpanded="{Binding CurrentConfig.SectionEngramsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionEngrams" IsExpanded="{Binding Config.SectionEngramsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_EngramsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -3312,7 +3321,7 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.EngramsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.EngramsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -3640,6 +3649,9 @@
                                                         <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
                                                             <Setter Property="Background" Value="#FFD6D6" />
                                                         </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
+                                                            <Setter Property="Background" Value="#D9F7C4" />
+                                                        </DataTrigger>
                                                     </Style.Triggers>
                                                 </Style>
                                             </DataGrid.RowStyle>
@@ -3651,7 +3663,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionServerFiles" IsExpanded="{Binding CurrentConfig.SectionServerFilesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionServerFiles" IsExpanded="{Binding Config.SectionServerFilesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_ServerFilesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -3675,7 +3687,7 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="{Binding CurrentConfig.ServerFilesGridHeight, ElementName=SettingsControl, FallbackValue=250, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.ServerFilesGridHeight, ElementName=SettingsControl, FallbackValue=250, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -3955,7 +3967,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionCustomGameUserSettings" IsExpanded="{Binding CurrentConfig.SectionCustomGameUserSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionCustomGameUserSettings" IsExpanded="{Binding Config.SectionCustomGameUserSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_CustomGameUserSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -3978,7 +3990,7 @@
 
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding CurrentConfig.CustomGameUserSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.CustomGameUserSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -4114,7 +4126,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionCustomGameSettings" IsExpanded="{Binding CurrentConfig.SectionCustomGameSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionCustomGameSettings" IsExpanded="{Binding Config.SectionCustomGameSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_CustomGameSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -4137,7 +4149,7 @@
 
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding CurrentConfig.CustomGameSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.CustomGameSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -4273,7 +4285,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionCustomEngineSettings" IsExpanded="{Binding CurrentConfig.SectionCustomEngineSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionCustomEngineSettingsEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionCustomEngineSettings" IsExpanded="{Binding Config.SectionCustomEngineSettingsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionCustomEngineSettingsEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_CustomEngineSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -4296,7 +4308,7 @@
 
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding CurrentConfig.CustomEngineSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.CustomEngineSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -4432,7 +4444,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionCustomLevels" IsExpanded="{Binding CurrentConfig.SectionCustomLevelsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                        <Expander Name="SectionCustomLevels" IsExpanded="{Binding Config.SectionCustomLevelsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_LevelProgressionsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -4464,7 +4476,7 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.CustomLevelsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.CustomLevelsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -4650,7 +4662,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionCraftingOverrides" IsExpanded="{Binding CurrentConfig.SectionCraftingOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionCraftingOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionCraftingOverrides" IsExpanded="{Binding Config.SectionCraftingOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionCraftingOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_CraftingOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -4680,7 +4692,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.CraftingOverrideItemGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.CraftingOverrideItemGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -4846,7 +4858,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionStackSizeOverrides" IsExpanded="{Binding CurrentConfig.SectionStackSizeOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionStackSizeOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionStackSizeOverrides" IsExpanded="{Binding Config.SectionStackSizeOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionStackSizeOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_StackSizeOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -4876,7 +4888,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.StackSizeOverrideGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.StackSizeOverrideGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -4985,7 +4997,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionMapSpawnerOverrides" IsExpanded="{Binding CurrentConfig.SectionMapSpawnerOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionMapSpawnerOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionMapSpawnerOverrides" IsExpanded="{Binding Config.SectionMapSpawnerOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionMapSpawnerOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_MapSpawnerOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -5014,7 +5026,7 @@
                             <Grid Margin="-8,0,2,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.NPCSpawnSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.NPCSpawnSettingsGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -5185,7 +5197,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionSupplyCrateOverrides" IsExpanded="{Binding CurrentConfig.SectionSupplyCrateOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionSupplyCrateOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionSupplyCrateOverrides" IsExpanded="{Binding Config.SectionSupplyCrateOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionSupplyCrateOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrateOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -5215,13 +5227,13 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCratesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.SupplyCratesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
-                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemSetsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.SupplyCrateItemSetsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
-                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemSetEntriesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.SupplyCrateItemSetEntriesGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
-                                    <RowDefinition Height="{Binding CurrentConfig.SupplyCrateItemsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.SupplyCrateItemsGridHeight, ElementName=SettingsControl, FallbackValue=200, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -5719,7 +5731,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionPreventTransferOverrides" IsExpanded="{Binding CurrentConfig.SectionPreventTransferOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionPreventTransferOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionPreventTransferOverrides" IsExpanded="{Binding Config.SectionPreventTransferOverridesIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionPreventTransferOverridesEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_PreventTransferOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -5749,7 +5761,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
-                                    <RowDefinition Height="{Binding CurrentConfig.PreventTransferOverrideGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
+                                    <RowDefinition Height="{Binding Config.PreventTransferOverrideGridHeight, ElementName=SettingsControl, FallbackValue=400, Mode=TwoWay}" MinHeight="200"/>
                                     <RowDefinition Height="Auto"/> <!--Splitter Row-->
                                     <RowDefinition Height="1" MinHeight="1"/> <!--Empty Row for Last Splitter-->
                                 </Grid.RowDefinitions>
@@ -5836,7 +5848,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionPGM" IsExpanded="{Binding CurrentConfig.SectionPGMIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionPGMEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionPGM" IsExpanded="{Binding Config.SectionPGMIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionPGMEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_PGMLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
@@ -6128,7 +6140,7 @@
                             </Grid>
                         </Expander>
 
-                        <Expander Name="SectionSOTF" IsExpanded="{Binding CurrentConfig.SectionSOTFIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding CurrentConfig.SectionSOTFEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Expander Name="SectionSOTF" IsExpanded="{Binding Config.SectionSOTFIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}" Visibility="{Binding Config.SectionSOTFEnabled, ElementName=SettingsControl, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_SOTFLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>

@@ -1980,7 +1980,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("csm")]
+        [global::System.Configuration.DefaultSettingValueAttribute("csm!")]
         public string DiscordBotPrefix {
             get {
                 return ((string)(this["DiscordBotPrefix"]));
@@ -2137,6 +2137,64 @@ namespace ServerManagerTool {
             }
             set {
                 this["ServerMonitorWindow_Top"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" />")]
+        public global::System.Collections.Specialized.StringCollection DiscordBotWhitelist {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["DiscordBotWhitelist"]));
+            }
+            set {
+                this["DiscordBotWhitelist"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotPrefixFixed {
+            get {
+                return ((bool)(this["DiscordBotPrefixFixed"]));
+            }
+            set {
+                this["DiscordBotPrefixFixed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Info")]
+        public global::ServerManagerTool.DiscordBot.Enums.LogLevel DiscordBotLogLevel {
+            get {
+                return ((global::ServerManagerTool.DiscordBot.Enums.LogLevel)(this["DiscordBotLogLevel"]));
+            }
+            set {
+                this["DiscordBotLogLevel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int DiscordBotStatusCheckTime {
+            get {
+                return ((int)(this["DiscordBotStatusCheckTime"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotAllowAllBots {
+            get {
+                return ((bool)(this["DiscordBotAllowAllBots"]));
+            }
+            set {
+                this["DiscordBotAllowAllBots"] = value;
             }
         }
     }

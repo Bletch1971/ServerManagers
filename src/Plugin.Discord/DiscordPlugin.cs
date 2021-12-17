@@ -115,7 +115,7 @@ namespace ServerManagerTool.Plugin.Discord
                                                                     && cp.AlertTypes.Any(pn => pn.Value.Equals(alertType))
                                                                     && cp.ProfileNames.Any(pn => pn.Value.Equals(profileName, StringComparison.OrdinalIgnoreCase))
                                                                     && !string.IsNullOrWhiteSpace(cp.DiscordWebhookUrl));
-                if (configProfiles == null || configProfiles.Count() == 0)
+                if (configProfiles == null || configProfiles.IsEmpty())
                 {
 #if DEBUG
                     var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordErrors.log");

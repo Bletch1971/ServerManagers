@@ -29,16 +29,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("backup", RunMode = RunMode.Async)]
         [Summary("Backup the server")]
-        [Remarks("backup profileId")]
+        [Remarks("backup profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task BackupServerAsync(string profileId)
+        public async Task BackupServerAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Backup, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Backup, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -60,16 +60,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("restart", RunMode = RunMode.Async)]
         [Summary("Restart the server")]
-        [Remarks("restart profileId")]
+        [Remarks("restart profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task RestartServerAsync(string profileId)
+        public async Task RestartServerAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Restart, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Restart, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -91,16 +91,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("shutdown", RunMode = RunMode.Async)]
         [Summary("Shuts down the server properly")]
-        [Remarks("shutdown profileId")]
+        [Remarks("shutdown profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task ShutdownServerAsync(string profileId)
+        public async Task ShutdownServerAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Shutdown, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Shutdown, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -122,16 +122,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("start", RunMode = RunMode.Async)]
         [Summary("Starts the server")]
-        [Remarks("start profileId")]
+        [Remarks("start profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task StartServerAsync(string profileId)
+        public async Task StartServerAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Start, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Start, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -153,16 +153,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("stop", RunMode = RunMode.Async)]
         [Summary("Forcibly stops the server")]
-        [Remarks("stop profileId")]
+        [Remarks("stop profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task StopServerAsync(string profileId)
+        public async Task StopServerAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Stop, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Stop, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -184,16 +184,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("update", RunMode = RunMode.Async)]
         [Summary("Updates the server")]
-        [Remarks("update profileId")]
+        [Remarks("update profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task UpdateServerAsync(string profileId)
+        public async Task UpdateServerAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Update, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Update, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");

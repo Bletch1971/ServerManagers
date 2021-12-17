@@ -1,4 +1,5 @@
 ﻿using ServerManagerTool.Common.Enums;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
@@ -741,7 +742,7 @@ namespace ServerManagerTool
                 yield return new RconOutput_Command($"> {command.rawCommand}");
             }
 
-            if (!command.suppressOutput && command.lines.Count() > 0)
+            if (!command.suppressOutput && !command.lines.IsEmpty())
             {
                 yield return new LineBreak();
             }

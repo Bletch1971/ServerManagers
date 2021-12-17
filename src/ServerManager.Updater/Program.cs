@@ -277,7 +277,7 @@ namespace ServerManagerTool.Updater
             var processes = ProcessUtils.GetProcesses(process.ProcessName, executablePath);
 
             // check if there is more than one instance of the application running
-            if (processes.Length != 1)
+            if (!processes.HasOne())
                 throw new Exception("The application to be updated has more than one instance running.");
 
             // get the command line of the process

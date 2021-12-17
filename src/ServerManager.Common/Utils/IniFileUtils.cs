@@ -1,5 +1,6 @@
 ﻿using ServerManagerTool.Common.Serialization;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -13,13 +14,13 @@ namespace ServerManagerTool.Common.Utils
         /// <param name="file">The name of the initialization file.</param>
         /// <param name="sectionName">The name of the section in the initialization file.</param>
         /// <returns>A string array containing the key name and value pairs associated with the named section.</returns>
-        public static string[] ReadSection(string file, string sectionName)
+        public static IEnumerable<string> ReadSection(string file, string sectionName)
         {
             if (sectionName == null)
                 return new string[0];
 
             var iniFile = ReadFromFile(file);
-            return iniFile?.GetSection(sectionName)?.KeysToStringArray() ?? new string[0];
+            return iniFile?.GetSection(sectionName)?.KeysToStringEnumerable() ?? new string[0];
         }
 
         /// <summary>
@@ -46,7 +47,7 @@ namespace ServerManagerTool.Common.Utils
         /// <param name="sectionName">The name of the section in which data is written.</param>
         /// <param name="keysValuePairs">An array of key names and associated values that are to be written to the named section.</param>
         /// <returns>True if the function succeeds; otherwise False.</returns>
-        public static bool WriteSection(string file, string sectionName, string[] keysValuePairs)
+        public static bool WriteSection(string file, string sectionName, IEnumerable<string> keysValuePairs)
         {
             if (sectionName == null)
                 return false;
@@ -85,10 +86,14 @@ namespace ServerManagerTool.Common.Utils
         public static IniFile ReadFromFile(string file)
         {
             if (string.IsNullOrWhiteSpace(file))
+            {
                 return null;
+            }
 
             if (!File.Exists(file))
+            {
                 return new IniFile();
+            }
 
             var iniFile = new IniFile();
 
@@ -96,18 +101,24 @@ namespace ServerManagerTool.Common.Utils
             {
                 while (!reader.EndOfStream)
                 {
-                    var line = reader.ReadLine();
+                    var line = reader.ReadLine().Trim();
 
                     if (string.IsNullOrWhiteSpace(line) || line.StartsWith(";") || line.StartsWith("#"))
+                    {
                         continue;
+                    }
 
-                    var sectionName = Regex.Match(line, @"(?<=^\[).*(?=\]$)").Value.Trim();
+                    var sectionName = string.Empty;
+                    if (line.StartsWith("[") && line.EndsWith("]"))
+                    {
+                        sectionName = Regex.Match(line, @"(?<=^\[).*(?=\]$)").Value.Trim();
+                    }
 
                     var section = iniFile.AddSection(sectionName);
-                    if (section != null)
-                        continue;
-
-                    iniFile.AddKey(line);
+                    if (section is null)
+                    {
+                        iniFile.AddKey(line);
+                    }
                 }
 
                 reader.Close();
@@ -155,7 +166,7 @@ namespace ServerManagerTool.Common.Utils
                 {
                     writer.WriteLine($"[{section.SectionName}]");
 
-                    foreach (var keyString in section.KeysToStringArray())
+                    foreach (var keyString in section.KeysToStringEnumerable())
                     {
                         writer.WriteLine(keyString);
                     }

@@ -16,6 +16,6 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <local:GlobalSettingsControl HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{StaticResource BeigeGradient}"/>
+        <local:GlobalSettingsControl x:Name="globalSettingsControl" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{StaticResource BeigeGradient}"/>
     </Grid>
 </Window>

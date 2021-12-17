@@ -5,14 +5,85 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-12-12T00:00:00Z</updated>
+  <updated>2021-12-17T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:3E33DCB2-ECFE-4489-B1A4-56F5D386F9DC</id>
+    <title>1.1.413 (1.1.413.8)</title>
+    <summary>1.1.413.8</summary>
+    <link href="" />
+    <updated>2021-12-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
+            <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
+            <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
+            <li>Discord Bot - removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
+            <li>Made changes to the code to help improve performance.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:18276A38-2C71-4BB8-9A83-96D5EBFE9C87</id>
+    <title>1.1.412 (1.1.412.4)</title>
+    <summary>1.1.412.4</summary>
+    <link href="" />
+    <updated>2021-12-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug with the Server Shutdown when the CheckForOnlinePlayers option not selected.</li>
+            <li>Fixed a bug when the backup path was a root directory that caused a 'Invalid URI: A Dos path must be rooted' crash.</li>
+            <li>Added additional validation when setting directories in the global setting, to ensure they are rooted correctly.</li>
+            <li>Fixed a bug when starting the server manager and it tries to download steamcmd, but fails as steamcmd is unavailable for download.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
+            <li>Added LostIsland to official mods in the SurvivalEvolved gamedata file.</li>
+            <li>Added coloring to the setting grids for the Lost Island DLC engrams, creatures and resources.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:DBAFCE91-2235-4B6C-AE9B-5E4EF9FEC8F5</id>
-    <title>1.1.411 (1.1.411.6)</title>
-    <summary>1.1.411.6</summary>
+    <title>1.1.411 (1.1.411.10)</title>
+    <summary>1.1.411.10</summary>
     <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
+    <updated>2021-12-14T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -35,6 +106,7 @@
           <ul>
             <li>Global Settings - Added reset button to the Data Directory Location.</li>
             <li>Server Monitor window now stores it's location.</li>
+            <li>Removed MOTD and Alternate Save Directory from the Administration section of the Sync.</li>
             <li>fr-FR Translation file updated.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>

@@ -12,7 +12,7 @@ namespace ServerManagerTool.Plugin.Discord {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
     internal sealed partial class Config : global::System.Configuration.ApplicationSettingsBase {
         
         private static Config defaultInstance = ((Config)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Config())));
@@ -29,15 +29,6 @@ namespace ServerManagerTool.Plugin.Discord {
         public string PluginCallUrlFormat {
             get {
                 return ((string)(this["PluginCallUrlFormat"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
-        public string PublicIPCheckUrl {
-            get {
-                return ((string)(this["PublicIPCheckUrl"]));
             }
         }
         
@@ -152,6 +143,24 @@ namespace ServerManagerTool.Plugin.Discord {
         public string VersionBetaFeedUrl {
             get {
                 return ((string)(this["VersionBetaFeedUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://api.ipify.org")]
+        public string PublicIPCheckUrl1 {
+            get {
+                return ((string)(this["PublicIPCheckUrl1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
+        public string PublicIPCheckUrl2 {
+            get {
+                return ((string)(this["PublicIPCheckUrl2"]));
             }
         }
     }

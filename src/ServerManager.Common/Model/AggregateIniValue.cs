@@ -171,16 +171,15 @@ namespace ServerManagerTool.Common.Model
                         kvPropertyValue = kvPropertyValue.Substring(0, kvPropertyValue.Length - 1);
                 }
 
-                var collection = property.GetValue(this) as IIniValuesCollection;
-                if (collection != null)
+                if (property.GetValue(this) is IIniValuesCollection collection)
                 {
-                    var values = SplitCollectionValues(kvPropertyValue, DELIMITER);
-                    values = values.Where(v => !string.IsNullOrWhiteSpace(v)).ToArray();
+                    var values = SplitCollectionValues(kvPropertyValue, DELIMITER)
+                        .Where(v => !string.IsNullOrWhiteSpace(v));
 
                     if (attr?.ListValueWithinBrackets ?? false)
                     {
-                        values = values.Select(v => v.Substring(1)).ToArray();
-                        values = values.Select(v => v.Substring(0, v.Length - 1)).ToArray();
+                        values = values.Select(v => v.Substring(1));
+                        values = values.Select(v => v.Substring(0, v.Length - 1));
                     }
                     collection.FromIniValues(values);
                 }
@@ -267,7 +266,7 @@ namespace ServerManagerTool.Common.Model
             return result.ToString();
         }
 
-        protected string[] SplitCollectionValues(string valueString, char delimiter)
+        protected IEnumerable<string> SplitCollectionValues(string valueString, char delimiter)
         {
             if (string.IsNullOrWhiteSpace(valueString))
                 return new string[0];
@@ -307,7 +306,7 @@ namespace ServerManagerTool.Common.Model
 
             result.Add(tempString.Substring(startIndex));
 
-            return result.ToArray();
+            return result;
         }
 
         public void Update(AggregateIniValue other)

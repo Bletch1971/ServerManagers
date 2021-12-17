@@ -1,5 +1,6 @@
 ﻿using ArkData;
 using NLog;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Interfaces;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
@@ -325,8 +326,8 @@ namespace ServerManagerTool.Lib
             else if (command.command.Equals(RCON_COMMAND_GETCHAT, StringComparison.OrdinalIgnoreCase))
             {
                 // TODO: Extract the player name from the chat
-                var lines = command.lines.Where(l => !String.IsNullOrEmpty(l) && l != NoResponseOutput).ToArray();
-                if (lines.Length == 0 && command.suppressCommand)
+                var lines = command.lines.Where(l => !string.IsNullOrEmpty(l) && l != NoResponseOutput);
+                if (lines.IsEmpty() && command.suppressCommand)
                 {
                     command.suppressOutput = true;
                 }
@@ -398,7 +399,7 @@ namespace ServerManagerTool.Lib
                     }
                 }
 
-                var droppedPlayers = this.players.Values.Where(p => onlinePlayers.FirstOrDefault(np => np.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
+                var droppedPlayers = this.players.Values.Where(p => onlinePlayers.FirstOrDefault(np => np.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null);
                 foreach (var droppedPlayer in droppedPlayers)
                 {
                     if (droppedPlayer.IsOnline)
@@ -604,7 +605,7 @@ namespace ServerManagerTool.Lib
                 token.ThrowIfCancellationRequested();
 
                 // remove any players that do not have a player file.
-                var droppedPlayers = this.players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
+                var droppedPlayers = this.players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null);
                 foreach (var droppedPlayer in droppedPlayers)
                 {
                     players.TryRemove(droppedPlayer.PlayerId, out PlayerInfo player);

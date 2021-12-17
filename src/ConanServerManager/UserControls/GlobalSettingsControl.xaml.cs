@@ -5,13 +5,16 @@ using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Xml;
 using WPFSharp.Globalizer;
@@ -24,11 +27,13 @@ namespace ServerManagerTool
     public partial class GlobalSettingsControl : UserControl
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        private GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
+        private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
 
         public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty DiscordBotLogLevelsProperty = DependencyProperty.Register(nameof(DiscordBotLogLevels), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelist>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
         {
@@ -38,10 +43,20 @@ namespace ServerManagerTool
             this.IsAdministrator = SecurityUtils.IsAdministrator();
             this.Version = GetDeployedVersion();
 
-            PopulateWindowsStatesComboBox();
-
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
+            PopulateWindowsStatesComboBox();
+            PopulateDiscordBotLogLevelsComboBox();
+
+            DiscordBotWhitelist = new List<DiscordBotWhitelist>();
+            if (Config.DiscordBotWhitelist != null)
+            {
+                foreach (var item in Config.DiscordBotWhitelist)
+                {
+                    DiscordBotWhitelist.Add(new DiscordBotWhitelist() { BotId = item });
+                }
+            }
 
             this.DataContext = this;
         }
@@ -80,6 +95,27 @@ namespace ServerManagerTool
         {
             get;
             set;
+        }
+
+        public ComboBoxItemList DiscordBotLogLevels
+        {
+            get { return (ComboBoxItemList)GetValue(DiscordBotLogLevelsProperty); }
+            set { SetValue(DiscordBotLogLevelsProperty, value); }
+        }
+
+        public List<DiscordBotWhitelist> DiscordBotWhitelist
+        {
+            get { return (List<DiscordBotWhitelist>)GetValue(DiscordBotWhitelistProperty); }
+            set { SetValue(DiscordBotWhitelistProperty, value); }
+        }
+
+        public void ApplyChangesToConfig()
+        {
+            if (Config.DiscordBotWhitelist is null)
+                Config.DiscordBotWhitelist = new System.Collections.Specialized.StringCollection();
+
+            Config.DiscordBotWhitelist.Clear();
+            Config.DiscordBotWhitelist.AddRange(DiscordBotWhitelist.Select(i => i.BotId).ToArray());
         }
 
         private string GetDeployedVersion()
@@ -158,14 +194,24 @@ namespace ServerManagerTool
 
                 if (result == CommonFileDialogResult.Ok)
                 {
-                    if (!String.Equals(dialog.FileName, Config.Default.DataPath))
+                    if (!string.Equals(dialog.FileName, Config.Default.DataPath))
                     {
                         try
                         {
+                            var newDataDirectory = dialog.FileName;
+                            if (!string.IsNullOrWhiteSpace(newDataDirectory))
+                            {
+                                var root = Path.GetPathRoot(newDataDirectory);
+                                if (!root.EndsWith("\\"))
+                                {
+                                    newDataDirectory = newDataDirectory.Replace(root, root + "\\");
+                                }
+                            }
+
                             // Set up the destination directories
-                            string newConfigDirectory = Path.Combine(dialog.FileName, Config.Default.ProfilesRelativePath);
+                            string newConfigDirectory = Path.Combine(newDataDirectory, Config.Default.ProfilesRelativePath);
                             string oldSteamDirectory = Path.Combine(Config.Default.DataPath, CommonConfig.Default.SteamCmdRelativePath);
-                            string newSteamDirectory = Path.Combine(dialog.FileName, CommonConfig.Default.SteamCmdRelativePath);
+                            string newSteamDirectory = Path.Combine(newDataDirectory, CommonConfig.Default.SteamCmdRelativePath);
 
                             Directory.CreateDirectory(newConfigDirectory);
                             Directory.CreateDirectory(newSteamDirectory);
@@ -199,7 +245,7 @@ namespace ServerManagerTool
                             Directory.Delete(oldSteamDirectory, true);
 
                             // Update the config
-                            Config.Default.DataPath = dialog.FileName;
+                            Config.Default.DataPath = newDataDirectory;
                             Config.Default.ConfigPath = newConfigDirectory;
                             App.ReconfigureLogging();
                         }
@@ -238,9 +284,18 @@ namespace ServerManagerTool
 
             if (result == CommonFileDialogResult.Ok)
             {
-                if (!String.Equals(dialog.FileName, Config.Default.BackupPath))
+                if (!string.Equals(dialog.FileName, Config.Default.BackupPath))
                 {
                     Config.Default.BackupPath = dialog.FileName;
+
+                    if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+                    {
+                        var root = Path.GetPathRoot(Config.Default.BackupPath);
+                        if (!root.EndsWith("\\"))
+                        {
+                            Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
+                        }
+                    }
                 }
             }
         }
@@ -260,9 +315,18 @@ namespace ServerManagerTool
 
             if (result == CommonFileDialogResult.Ok)
             {
-                if (!String.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
+                if (!string.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
                 {
                     Config.Default.AutoUpdate_CacheDir = dialog.FileName;
+
+                    if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
+                    {
+                        var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
+                        if (!root.EndsWith("\\"))
+                        {
+                            Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
+                        }
+                    }
                 }
             }
         }
@@ -443,5 +507,53 @@ namespace ServerManagerTool
                 this.WindowStateComboBox.SelectedValue = selectedValue;
             }
         }
+
+        private void PopulateDiscordBotLogLevelsComboBox()
+        {
+            var selectedValue = this.DiscordBotLogLevelComboBox?.SelectedValue ?? Config.DiscordBotLogLevel;
+            var comboBoxList = new ComboBoxItemList();
+
+            foreach (DiscordBot.Enums.LogLevel logLevel in Enum.GetValues(typeof(DiscordBot.Enums.LogLevel)))
+            {
+                var displayMember = _globalizer.GetResourceString($"DiscordBotLogLevel_{logLevel}") ?? logLevel.ToString();
+                comboBoxList.Add(new Common.Model.ComboBoxItem(logLevel.ToString(), displayMember));
+            }
+
+            this.DiscordBotLogLevels = comboBoxList;
+            if (this.DiscordBotLogLevelComboBox != null)
+            {
+                this.DiscordBotLogLevelComboBox.SelectedValue = selectedValue;
+            }
+        }
+
+        #region Discord Bot Whitelist
+        private void AddDiscordBotWhitelist_Click(object sender, RoutedEventArgs e)
+        {
+            DiscordBotWhitelist.Add(new DiscordBotWhitelist());
+
+            CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
+        }
+
+        private void ClearDiscordBotWhitelists_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ClearLabel"), _globalizer.GetResourceString("ServerSettings_ClearTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            DiscordBotWhitelist.Clear();
+
+            CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
+        }
+
+        private void RemoveDiscordBotWhitelist_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_DeleteLabel"), _globalizer.GetResourceString("ServerSettings_DeleteTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            var item = ((DiscordBotWhitelist)((Button)e.Source).DataContext);
+            DiscordBotWhitelist.Remove(item);
+
+            CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
+        }
+        #endregion
     }
 }

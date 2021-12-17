@@ -422,6 +422,16 @@ namespace ServerManagerTool.Lib
                 LogProfileMessage("Starting shutdown timer...");
 
                 var minutesLeft = ShutdownInterval;
+                if (ServerProcess == ServerProcessType.Stop)
+                {
+                    LogProfileMessage($"Server shutdown type is {ServerProcess}, shutdown timer cancelled.");
+                    minutesLeft = 0;
+                }
+                else if (!CheckForOnlinePlayers)
+                {
+                    LogProfileMessage("CheckForOnlinePlayers disabled, shutdown timer will not perform online player check.");
+                }
+
                 while (minutesLeft > 0)
                 {
                     if (cancellationToken.IsCancellationRequested)
@@ -442,8 +452,8 @@ namespace ServerManagerTool.Lib
                     {
                         try
                         {
-                            var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim())).ToList();
-                            var playerCount = playerInfo?.Count ?? -1;
+                            var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim()));
+                            var playerCount = playerInfo?.Count() ?? -1;
 
                             // check if anyone is logged into the server
                             if (playerCount <= 0)
@@ -462,7 +472,6 @@ namespace ServerManagerTool.Lib
                     else
                     {
                         Debug.WriteLine($"CheckForOnlinePlayers disabled, shutdown timer cancelled.");
-                        break;
                     }
 
                     var message = string.Empty;
@@ -1866,7 +1875,7 @@ namespace ServerManagerTool.Lib
                     comment.AppendLine($"PGM Server: {_profile.PGM_Enabled}");
                     comment.AppendLine($"Process: {ServerProcess}");
 
-                    ZipUtils.ZipFiles(backupFile, files.ToArray(), comment.ToString(), false);
+                    ZipUtils.ZipFiles(backupFile, files, comment.ToString(), false);
 
                     LogProfileMessage($"Backup file created - {backupFile}");
                 }
@@ -2016,7 +2025,7 @@ namespace ServerManagerTool.Lib
                             comment.AppendLine($"PGM Server: {_profile.PGM_Enabled}");
                             comment.AppendLine($"Process: {ServerProcess}");
 
-                            ZipUtils.ZipFiles(backupFile, files.ToArray(), comment.ToString(), false);
+                            ZipUtils.ZipFiles(backupFile, files, comment.ToString(), false);
 
                             LogProfileMessage($"Backed up world files - {saveFolder}");
                             LogProfileMessage($"Backup file created - {backupFile}");
@@ -2989,7 +2998,7 @@ namespace ServerManagerTool.Lib
                     if (ExitCode == EXITCODE_NORMALEXIT)
                     {
                         // get the profile associated with the branch
-                        var profiles = _profiles.Keys.Where(p => p.EnableAutoUpdate && p.BranchName.Equals(branch.BranchName, StringComparison.OrdinalIgnoreCase)).ToArray();
+                        var profiles = _profiles.Keys.Where(p => p.EnableAutoUpdate && p.BranchName.Equals(branch.BranchName, StringComparison.OrdinalIgnoreCase));
                         var profileExitCodes = new ConcurrentDictionary<ServerProfileSnapshot, int>();
 
                         if (Config.Default.AutoUpdate_ParallelUpdate)
@@ -3240,7 +3249,7 @@ namespace ServerManagerTool.Lib
 
                     if (exitCode == EXITCODE_NORMALEXIT)
                     {
-                        var branches = _profiles.Keys.Where(p => p.EnableAutoUpdate).Select(p => BranchSnapshot.Create(p)).Distinct(new BranchSnapshotComparer()).ToArray();
+                        var branches = _profiles.Keys.Where(p => p.EnableAutoUpdate).Select(p => BranchSnapshot.Create(p)).Distinct(new BranchSnapshotComparer());
                         var exitCodes = new ConcurrentDictionary<BranchSnapshot, int>();
 
                         // update the server cache for each branch

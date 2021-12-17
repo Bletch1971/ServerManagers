@@ -9,6 +9,7 @@
         xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:enum="clr-namespace:ServerManagerTool.Enums"
+        xmlns:bot="clr-namespace:ServerManagerTool.DiscordBot;assembly=ServerManager.Discord"
         MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50" WindowState="Normal"
         Loaded="MainWindow_Loaded" SizeChanged="MainWindow_SizeChanged" StateChanged="MainWindow_StateChanged" LocationChanged="MainWindow_LocationChanged"
         Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}">
@@ -33,7 +34,7 @@
                         <Style TargetType="{x:Type DockPanel}">
                             <Setter Property="Background" Value="#4F4F4F"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding ElementName=Main, Path=BetaVersion}" Value="True">
+                                <DataTrigger Binding="{Binding AppInstance.BetaVersion}" Value="True">
                                     <Setter Property="Background" Value="#378CFB"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -52,7 +53,7 @@
                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
                                         <Setter Property="Content" Value="{DynamicResource MainWindow_VersionLabel}"/>
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ElementName=Main, Path=BetaVersion}" Value="True">
+                                            <DataTrigger Binding="{Binding AppInstance.BetaVersion}" Value="True">
                                                 <Setter Property="Content" Value="{DynamicResource MainWindow_BetaVersionLabel}"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -60,17 +61,17 @@
                                 </Label.Style>
                             </Label>
                             <Label Margin="5,0,0,0" Background="Transparent" Foreground="White" FontSize="12" Content="{Binding Source={x:Static local:App.Instance}, Path=Version}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <Button Margin="5" Click="ASMPatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}" Style="{StaticResource ButtonStyle1}">
+                            <Button Margin="5" Click="PatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}" Style="{StaticResource ButtonStyle1}">
                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/ChangeNotes.ico,Size=32}"/>
                             </Button>
-                            <Button Margin="5,0,0,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestASMVersion}" Click="Upgrade_Click" VerticalAlignment="Center" >
+                            <Button Margin="5,0,0,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestServerManagerVersion}" Click="Upgrade_Click" VerticalAlignment="Center" >
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding NewASMAvailable}" Value="True">
+                                            <DataTrigger Binding="{Binding NewServerManagerAvailable}" Value="True">
                                                 <Setter Property="Visibility" Value="Visible"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding NewASMAvailable}" Value="False">
+                                            <DataTrigger Binding="{Binding NewServerManagerAvailable}" Value="False">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -129,6 +130,7 @@
 
                     <Grid DockPanel.Dock="Right" VerticalAlignment="Top" Margin="10,0,10,0">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -257,6 +259,61 @@
                                 </Button.Style>
                             </Button>
                         </StackPanel>
+
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" Margin="5,0,0,0">
+                            <Label Margin="0" Background="Transparent" Foreground="White" FontSize="10" Content="{DynamicResource MainWindow_DiscordBotStatusLabel}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <Label Margin="0" Background="Transparent" FontSize="10" Content="{Binding DiscordBotStateString}" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <Label.Style>
+                                    <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
+                                        <Setter Property="Foreground" Value="White"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Disabled}">
+                                                <Setter Property="Foreground" Value="DarkRed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Stopped}">
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Running}">
+                                                <Setter Property="Foreground" Value="LightGreen"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                            <Button Margin="5,0,0,0" Padding="1" BorderThickness="1" BorderBrush="White" Click="DiscordBotTaskState_Click" VerticalAlignment="Center">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="#00AA00"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                        <Setter Property="Content" Value="{DynamicResource MainWindow_DiscordBotTaskStartLabel}"/>
+                                        <Setter Property="ToolTip" Value="{DynamicResource MainWindow_DiscordBotTaskStartTooltip}"/>
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Stopped}"/>
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="Background" Value="#00AA00"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Setter Property="Content" Value="{DynamicResource MainWindow_DiscordBotTaskStartLabel}"/>
+                                                <Setter Property="ToolTip" Value="{DynamicResource MainWindow_DiscordBotTaskStartTooltip}"/>
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </MultiDataTrigger>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Running}"/>
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="Background" Value="#AA8A00"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Setter Property="Content" Value="{DynamicResource MainWindow_DiscordBotTaskStopLabel}"/>
+                                                <Setter Property="ToolTip" Value="{DynamicResource MainWindow_DiscordBotTaskStopTooltip}"/>
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
                     </Grid>
 
                     <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Margin="10,0,10,0" HorizontalAlignment="Center">
@@ -277,7 +334,7 @@
                                     </ControlTemplate>
                                 </Validation.ErrorTemplate>
                                 <TextBox.Text>
-                                    <Binding Path="CurrentConfig.MachinePublicIP" ElementName="Main">
+                                    <Binding Path="Config.MachinePublicIP" ElementName="Main">
                                         <Binding.ValidationRules>
                                             <cvr:IpValidationRule ValidatesOnTargetUpdated="true" />
                                         </Binding.ValidationRules>
@@ -310,7 +367,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusRunningLabel}"/>
@@ -318,7 +375,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusRunningLabel}"/>
                                                 </MultiDataTrigger>
@@ -329,7 +386,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="false"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusStoppedLabel}"/>
@@ -337,7 +394,7 @@
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}"/>
-                                                        <Condition Binding="{Binding CurrentConfig.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
+                                                        <Condition Binding="{Binding Config.ServerStatus_EnableActions, ElementName=Main}" Value="true"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusStoppedLabel}"/>
                                                 </MultiDataTrigger>

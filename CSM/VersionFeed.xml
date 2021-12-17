@@ -5,7 +5,69 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-02T00:00:00Z</updated>
+  <updated>2021-12-15T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:6383E79A-C31F-462B-9730-B26B28DC5EFF</id>
+    <title>1.1.57 (1.1.57.3)</title>
+    <summary>1.1.57.3</summary>
+    <link href="" />
+    <updated>2021-12-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug with the Server Shutdown when the CheckForOnlinePlayers option not selected.</li>
+            <li>Fixed a bug when the backup path was a root directory that caused a 'Invalid URI: A Dos path must be rooted' crash.</li>
+            <li>Added additional validation when setting directories in the global setting, to ensure they are rooted correctly.</li>
+            <li>Fixed a bug when starting the server manager and it tries to download steamcmd, but fails as steamcmd is unavailable for download.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
+    <title>1.1.56 (1.1.56.6)</title>
+    <summary>1.1.56.6</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              A new Discord Bot has been added to the server manager.<br/>
+              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
+              <font color="#e62919">
+                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
+              </font>
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Added reset button to the Data Directory Location.</li>
+            <li>Server Monitor window now stores it's location.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:A3A790A9-D511-4CE8-AC15-A36B3DAB4385</id>

@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.12.09(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.12.13(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">创世纪 1(Genesis: Part 1)</sys:String>
 	<sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
     <sys:String x:Key="Map_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
+	<sys:String x:Key="Map_LostIsland">迷失岛(Lost Island)</sys:String>
     <!--#endregion-->
 
     <!--#总转换名称 -->
@@ -57,6 +58,7 @@
 	<sys:String x:Key="Mod_Genesis2">创世纪 2(Genesis: Part 2)</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
     <sys:String x:Key="Mod_PGM">程序生成地图(PGM)</sys:String>
+	<sys:String x:Key="Mod_LostIsland">迷失岛(Lost Island)</sys:String>
     <sys:String x:Key="Mod_Valguero">瓦尔盖罗(Valguero)</sys:String>
     <!--#endregion-->
 
@@ -103,8 +105,8 @@
     <sys:String x:Key="Application_DataDirectory_DialogTitle">选择一个数据目录</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmTitle">确认位置</sys:String>
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">方舟服务器管理工具将存储配置文件和steamcmd以下目录:\r\n\r\n配置文件: {0}\r\nSteamCMD: {1}\r\n\r\n这样可以吗？</sys:String>
-    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">数据目录选择错误</sys:String>
-    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">您选择的目录在服务器管理器安装文件夹中。 不建议这样做，请选择另一个文件夹。</sys:String>
+    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorTitle">数据目录选择错误</sys:String>
+    <sys:String x:Key="Application_DataDirectory_WithinInstallFolderErrorLabel">您选择的目录在服务器管理器安装文件夹中。 不建议这样做，请选择另一个文件夹。</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedTitle">保存配置文件失败</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">保存配置文件失败 {0}.  {1}\n{2}</sys:String>
 
@@ -383,9 +385,9 @@
     <sys:String x:Key="GameDataWindow_ValidateErrorMessage">该文件无效。 它可能包含错误或格式不正确。</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddDialogTitle">选择游戏数据文件</sys:String>
-    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">游戏数据</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String> 
     <sys:String x:Key="GameDataWindow_AddFilterLabel">游戏数据文件</sys:String>
-    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.游戏数据</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
     <!--#endregion-->
 
     <!-- 插件窗口 -->
@@ -3002,6 +3004,22 @@
 	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_Alpha_C">罗克韦尔节点 BOSS（困难）</sys:String>
 	<!--#endregion-->
 	
+	<!-- 恐龙/生物类名称 - 迷失岛 -->
+	<sys:String x:Key="Amargasaurus_Character_BP_C">阿马加龙</sys:String>
+	<sys:String x:Key="Sinomacrops_Character_BP_C">中华大眼翼龙</sys:String>
+	<sys:String x:Key="Dinopithecus_Character_BP_C">恐狒</sys:String>
+	<!--#endregion-->
+	
+	<!-- 恐龙/生物类名称 - 迷失岛-BOSS-->
+	<sys:String x:Key="BossDinopithecus_Character_BP_C">BOSS-恐狒</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Easy_C">BOSS-恐狒(简单)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Hard_C">BOSS-恐狒(中等)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Medium_C">BOSS-恐狒(困难)</sys:String>
+	<sys:String x:Key="Amargasaurus_Character_BP_Minion_C">狒狒BOSS爪牙[阿马加龙]</sys:String>
+	<sys:String x:Key="Dinopithecus_Character_BP_Minion_C">狒狒BOSS爪牙</sys:String>
+	<sys:String x:Key="Sinomacrops_Character_BP_Minion_C">狒狒BOSS爪牙[中华大眼翼龙]</sys:String>
+	<!--#endregion-->
+	
     <!--#endregion-->
 
     <!--#region Engrams -->
@@ -3766,6 +3784,10 @@
 	
 	<!--# 印痕技能 - 水晶岛 -->
 	<sys:String x:Key="EngramEntry_TropeSaddle_C">脊颌翼龙的鞍</sys:String>
+    <!--#endregion-->
+	
+	<!--# 印痕技能 - 迷失岛 -->
+	<sys:String x:Key="EngramEntry_Saddle_Amarga_C">阿马加龙鞍</sys:String>
     <!--#endregion-->
 	
     <!--#endregion-->
@@ -5236,6 +5258,16 @@
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C">植物R-5 种子(优质生鱼肉)</sys:String>
 	<!--#endregion-->
 	
+	<!--#项目类别名称 - 迷失岛 -->
+	<sys:String x:Key="PrimalItemArmor_AmargaSaddle_C">阿马加龙鞍</sys:String>
+	<sys:String x:Key="PrimalItemSkin_Costume_Dinopithecus_C">恐狒皮肤</sys:String>
+	<sys:String x:Key="PrimalItemResource_AmargaSpike_C">阿马加龙尖刺</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_BossDinopithecus_C">恐狒BOSS战利品(迷失岛)</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Easy_C">恐狒BOSS战利品(简单)(迷失岛)</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_BossDinopithecus_Hard_C">恐狒BOSS战利品(中等)(迷失岛)</sys:String>
+	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Medium_C">恐狒BOSS战利品(困难)(迷失岛)</sys:String>
+	<!--#endregion-->
+	
 	<!--#项目类别名称 - 新增（唯一集成模组） -->
 	<sys:String x:Key="PrimalItem_xidianka_Weiyi_C">恐龙洗点卡</sys:String>
 	<sys:String x:Key="PrimalItem_TEK_unlock_Weiyi_C">泰克一键解锁</sys:String>
@@ -5757,9 +5789,9 @@
 	<sys:String x:Key="Race_HoverSkiff_Easy_C">极品飞艇(简单){任务}</sys:String>
 	<sys:String x:Key="Race_HoverSkiff_Medium_C">极品飞艇(中等){任务}</sys:String>
 	<sys:String x:Key="Race_HoverSkiff_Hard_C">极品飞艇(困难){任务}</sys:String>
-	<sys:String x:Key="Lootcrate_lvl1_C">资源包1级</sys:String>
-	<sys:String x:Key="Lootcrate_lvl2_C">资源包2级</sys:String>
-	<sys:String x:Key="Lootcrate_lvl3_C">资源包3级</sys:String>
+	<sys:String x:Key="Lootcrate_lvl1_C">一等战利品箱</sys:String>
+	<sys:String x:Key="Lootcrate_lvl2_C">二等战利品箱</sys:String>
+	<sys:String x:Key="Lootcrate_lvl3_C">三等战利品箱</sys:String>
 	
 	<sys:String x:Key="SupplyCrate_Space_01_Ambergris_C">空投_白色(创世2)</sys:String>
 	<sys:String x:Key="SupplyCrate_Space_02_Crystal_C">空投_绿色(创世2)</sys:String>
@@ -5814,6 +5846,7 @@
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss 清单 - （水晶岛）水晶女王 (简单)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss 清单 - （水晶岛）水晶女王 (中等)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss 清单 - （水晶岛）水晶女王 (困难)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_Carnivore_Large_CrystalWyvern_C">水晶飞龙</sys:String>
 	
 	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss 清单 - 喷火龙 (简单)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss 清单 - 喷火龙 (中等)</sys:String>

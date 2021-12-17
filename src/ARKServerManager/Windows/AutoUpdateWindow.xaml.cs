@@ -2,6 +2,7 @@
 using ServerManagerTool.Common.Utils;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using WPFSharp.Globalizer;
 
@@ -12,15 +13,16 @@ namespace ServerManagerTool
     /// </summary>
     public partial class AutoUpdateWindow : Window
     {
-        private GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
-
-        private SteamCmdUpdater updater = new SteamCmdUpdater();
+        private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
+        private readonly SteamCmdUpdater updater = new SteamCmdUpdater();
         private CancellationTokenSource cancelSource;
 
         public AutoUpdateWindow()
         {
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
+            this.ErrorLabel.Visibility = Visibility.Collapsed;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -32,10 +34,13 @@ namespace ServerManagerTool
                     this.StatusLabel.Content = message;
                     this.CompletionProgress.Value = u.CompletionPercent;
 
-                    if(u.FailureText != null)
+                    if (u.FailureText != null)
                     {
-                        // TODO: Report error through UI
-                        throw new Exception(u.FailureText);
+                        this.ErrorLabel.Text = u.FailureText;
+                        this.ErrorLabel.Visibility = Visibility.Visible;
+                        await Task.Delay(10000);
+
+                        Environment.Exit(1);
                     }
 
                     if (u.CompletionPercent >= 100 || u.Cancelled)

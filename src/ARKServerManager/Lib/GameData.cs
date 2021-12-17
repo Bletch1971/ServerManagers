@@ -52,7 +52,7 @@ namespace ServerManagerTool.Lib
             items = gameData.Items.ConvertAll(item => new PrimalItem { ClassName = item.ClassName, Mod = item.Mod, KnownItem = true, Category = item.Category }).ToArray();
 
             // resources
-            resourceMultipliers = gameData.Items.Where(item => item.IsHarvestable).ToList().ConvertAll(item => new ResourceClassMultiplier { ClassName = item.ClassName, Mod = item.Mod, KnownResource = true }).ToArray();
+            resourceMultipliers = gameData.Items.Where(item => item.IsHarvestable).Select(item => new ResourceClassMultiplier { ClassName = item.ClassName, Mod = item.Mod, KnownResource = true }).ToArray();
 
             // map spawners
             gameData.MapSpawners.AddRange(userGameData.MapSpawners);
@@ -77,9 +77,9 @@ namespace ServerManagerTool.Lib
             if (gameData.GameMaps.Count > 0)
             {
                 var maps1 = gameMaps.ToList();
-                maps1.AddRange(gameData.GameMaps.Where(item => !item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
+                maps1.AddRange(gameData.GameMaps.Where(item => !item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
                 var maps2 = gameMapsSotF.ToList();
-                maps2.AddRange(gameData.GameMaps.Where(item => item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
+                maps2.AddRange(gameData.GameMaps.Where(item => item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
 
                 gameMaps = maps1.ToArray();
                 gameMapsSotF = maps2.ToArray();
@@ -91,9 +91,9 @@ namespace ServerManagerTool.Lib
             if (gameData.TotalConversions.Count > 0)
             {
                 var mods1 = totalConversions.ToList();
-                mods1.AddRange(gameData.TotalConversions.Where(item => !item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
+                mods1.AddRange(gameData.TotalConversions.Where(item => !item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
                 var mods2 = totalConversionsSotF.ToList();
-                mods2.AddRange(gameData.TotalConversions.Where(item => item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
+                mods2.AddRange(gameData.TotalConversions.Where(item => item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.ClassName, DisplayMember = item.Description }));
 
                 totalConversions = mods1.ToArray();
                 totalConversionsSotF = mods2.ToArray();
@@ -130,9 +130,9 @@ namespace ServerManagerTool.Lib
             if (gameData.Branches.Count > 0)
             {
                 var branches1 = branches.ToList();
-                branches1.AddRange(gameData.Branches.Where(item => !item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.BranchName, DisplayMember = item.Description }));
+                branches1.AddRange(gameData.Branches.Where(item => !item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.BranchName, DisplayMember = item.Description }));
                 var branches2 = branchesSotF.ToList();
-                branches2.AddRange(gameData.Branches.Where(item => item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.BranchName, DisplayMember = item.Description }));
+                branches2.AddRange(gameData.Branches.Where(item => item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.BranchName, DisplayMember = item.Description }));
 
                 branches = branches1.ToArray();
                 branchesSotF = branches2.ToArray();
@@ -144,9 +144,9 @@ namespace ServerManagerTool.Lib
             if (gameData.Events.Count > 0)
             {
                 var events1 = events.ToList();
-                events1.AddRange(gameData.Events.Where(item => !item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.EventName, DisplayMember = item.Description }));
+                events1.AddRange(gameData.Events.Where(item => !item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.EventName, DisplayMember = item.Description }));
                 var events2 = eventsSotF.ToList();
-                events2.AddRange(gameData.Events.Where(item => item.IsSotF).ToList().ConvertAll(item => new ComboBoxItem { ValueMember = item.EventName, DisplayMember = item.Description }));
+                events2.AddRange(gameData.Events.Where(item => item.IsSotF).Select(item => new ComboBoxItem { ValueMember = item.EventName, DisplayMember = item.Description }));
 
                 events = events1.ToArray();
                 eventsSotF = events2.ToArray();
@@ -157,7 +157,7 @@ namespace ServerManagerTool.Lib
 
             if (gameData.OfficialMods.Count > 0)
             {
-                ModUtils.AddOfficialMods(gameData.OfficialMods.Where(m => !string.IsNullOrWhiteSpace(m.ModId)).Select(m => m.ModId));
+                ModUtils.AddOfficialMods(gameData.OfficialMods.Where(m => !string.IsNullOrWhiteSpace(m.ModId)).Select(m => m.ModId).ToList());
             }
         }
 

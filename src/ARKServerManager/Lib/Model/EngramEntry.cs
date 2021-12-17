@@ -18,15 +18,13 @@ namespace ServerManagerTool.Lib
 
         public override void FromIniValues(IEnumerable<string> iniValues)
         {
-            var items = iniValues?.Select(AggregateIniValue.FromINIValue<EngramEntry>).ToArray();
+            var items = iniValues?.Select(AggregateIniValue.FromINIValue<EngramEntry>);
 
             Clear();
 
-            var itemsToAdd = items.Where(i => !this.Any(e => e.IsEquivalent(i))).ToArray();
-            AddRange(itemsToAdd);
+            AddRange(items.Where(i => !this.Any(e => e.IsEquivalent(i))));
 
-            var itemsToUpdate = items.Where(i => this.Any(e => e.IsEquivalent(i))).ToArray();
-            foreach (var item in itemsToUpdate)
+            foreach (var item in items.Where(i => this.Any(e => e.IsEquivalent(i))))
             {
                 var e = this.FirstOrDefault(r => r.IsEquivalent(item));
                 e.EngramLevelRequirement = item.EngramLevelRequirement;

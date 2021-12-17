@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">09.12.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">16.12.2021 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -56,6 +57,7 @@
     <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -85,6 +87,15 @@
     <sys:String x:Key="WindowState_Normal">Обычный</sys:String>
     <sys:String x:Key="WindowState_Minimized">По минимуму</sys:String>
     <sys:String x:Key="WindowState_Maximized">По максимуму</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Критично</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Ошибка</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Внимание</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Информация</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Многословный</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Отладка</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -125,6 +136,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Загрузка сервера завершена</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Завершено</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Отменено</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Ошибка</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Отмена</sys:String>
     <!--#endregion-->
 
@@ -619,8 +631,15 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">Идентификатор сервера Discord, который бот будет слушать.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Префикс:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">Префикс, который необходимо использовать при отправке команды через Discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Лог уровня:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Получить токен ...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Помощь...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Белый лист бота</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Бот ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">ID бота для внесения в белый список.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Добавить в белый лист</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Очистить белый лист</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Удалить белый лист</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Если включено, команду резервного копирования можно отправить из Discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Если этот параметр включен, команда перезапуска может быть отправлена из Discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Если включено, команду выключения можно отправить из Discord.</sys:String>
@@ -1205,6 +1224,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Детали бота Discord</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Канал Id:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">ID канала сервера Discord, который будет слушать этот профиль.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Псевдоним:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Вместо идентификатора профиля можно использовать уникальное имя для идентификации вашего сервера при использовании команд discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Разрешить Бекап</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Если этот параметр включен, профиль будет прослушивать команды Бекапа от Discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Разрешить Перезагрузку</sys:String>
@@ -1255,7 +1276,7 @@
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Увеличение множителя позволяет размещать структуры дальше от края платформы.</sys:String>
     <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesLabel">Макс количество ворот на седлах-платформах</sys:String>
     <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesTooltip">Ограничивает количество ворот, которые можно разместить на седлах-платформах. Этот вариант не имеет обратной силы, поэтому применение этого изменения потребует некоторой ручной административной работы, чтобы очистить все существующие платформы, превышающие лимит.</sys:String>
-    
+
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Включить перераспределение сложности</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">Если включено, это позволит изменить максимальный уровень существ в мире.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyLabel">Максимальный уровень динозавров:</sys:String>
@@ -1264,7 +1285,7 @@
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Определяет максимальные уровни существ в мире. Чем выше значение, тем выше максимальный уровень существа.</sys:String>
     <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Destroy Tames Over Level:</sys:String>
     <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Tames that exceed this level will be deleted on server start. To disable deletion set to 0.</sys:String>
-
+    
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Вкл загрузку из данных кластера</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Если включено, это позволит загружать выживших/предметов/динозавров на сервер.</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Откл загрузку выживших на сервер</sys:String>
@@ -5678,6 +5699,7 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">Для команды '{0}' требуется идентификатор профиля.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Профиль '{0}' не найден или не связан с каналом.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">В канале было обнаружено несколько профилей с "{0}", команда прервана.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', и эта команда не может быть запущена.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
 

@@ -5,9 +5,6 @@
     <Setting Name="PluginCallUrlFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://servermanager.azurewebsites.net/api/plugin/call/{0}/{1}/</Value>
     </Setting>
-    <Setting Name="PublicIPCheckUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
-    </Setting>
     <Setting Name="CallHomeDelay" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">12</Value>
     </Setting>
@@ -43,6 +40,12 @@
     </Setting>
     <Setting Name="VersionBetaFeedUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/Plugins/Discord/beta/VersionFeed.xml</Value>
+    </Setting>
+    <Setting Name="PublicIPCheckUrl1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.ipify.org</Value>
+    </Setting>
+    <Setting Name="PublicIPCheckUrl2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -24,6 +24,7 @@
     <sys:String x:Key="Map_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -56,6 +57,7 @@
     <sys:String x:Key="Mod_Genesis">Genesis: Part 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
+    <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 	
@@ -81,10 +83,19 @@
     <sys:String x:Key="ProcessorAffinity_All">Todos</sys:String>
     <!--#endregion-->
 
-    <!--#region Processor Window States -->
+    <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Normal</sys:String>
     <sys:String x:Key="WindowState_Minimized">Minimizado</sys:String>
     <sys:String x:Key="WindowState_Maximized">Maximizado</sys:String>
+    <!--#endregion-->
+	
+	<!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Crítico</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Erro</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Aviso</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Informações</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Verboso</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -125,6 +136,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Download do servidor concluído</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Completo</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Cancelado</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Falhou</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Cancela</sys:String>
     <!--#endregion-->
 
@@ -619,8 +631,15 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">O id do servidor discord que o bot usará.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">O prefixo que deve ser usado ao enviar um comando via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Nível de registro:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Obter Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Ajuda...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">O id do bot a ser colocado na whitelist.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Add Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Limpar Whitelists</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Deletar Whitelist</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Se ativado, o comando de backup pode ser enviado do discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Se ativado, o comando de reiniciar pode ser enviado do discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Se habilitado, o comando de desligar pode ser enviado do discord.</sys:String>
@@ -1205,6 +1224,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Detalhes do Discord Bot</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Id do canal:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">O id do canal do discord que este perfil irá usar.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Nome exclusivo:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Um nome exclusivo para identificar seu servidor ao usar os comandos discord, pode ser usado em vez do ID do perfil.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Permitir backup</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Se ativado, o perfil usará os comandos de backup pelo discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Permitir Reinício</sys:String>
@@ -5504,6 +5525,10 @@
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss Inventory - Crystal Wyvern Queen (Beta)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss Inventory - Crystal Wyvern Queen (Alpha)</sys:String>
 	
+	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Easy_C">Boss Inventory - Dinopithecus (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Medium_C">Boss Inventory - Dinopithecus (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Hard_C">Boss Inventory - Dinopithecus (Alpha)</sys:String>
+	
 	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss Inventory - Dragon (Gamma)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss Inventory - Dragon (Beta)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C">Boss Inventory - Dragon (Alpha)</sys:String>
@@ -5597,6 +5622,7 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">O comando '{0}' requer um id de perfil.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">O perfil '{0}' não foi encontrado ou não está associado ao canal.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">Vários perfis com '{0}' foram encontrados no canal, comando abortado.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">O perfil '{0}' está em um estado '{1}' que não pode executar este comando.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">O perfil '{0}' está sendo atualizado.</sys:String>
 

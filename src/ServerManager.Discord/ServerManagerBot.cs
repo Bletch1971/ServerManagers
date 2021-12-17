@@ -1,12 +1,13 @@
-﻿using Discord;
-using Discord.Addons.Interactive;
+﻿using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.Net.Providers.WS4Net;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServerManagerTool.DiscordBot.Delegates;
+using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Interfaces;
+using ServerManagerTool.DiscordBot.Models;
 using ServerManagerTool.DiscordBot.Services;
 using System;
 using System.Collections.Generic;
@@ -27,35 +28,26 @@ namespace ServerManagerTool.DiscordBot
         public CancellationToken Token { get; private set; }
         public bool Started { get; private set; }  
 
-        public async Task StartAsync(string discordToken, string commandPrefix, string dataDirectory, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
+        public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, bool allowAllBots, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
-            if (Started)
-            {
-                return;
-            }
-            Started = true;
-
             if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleTranslationCallback is null || handleCommandCallback is null)
             {
                 return;
             }
 
+            if (Started)
+            {
+                return;
+            }
+
+            Started = true;
             Token = token;
-
-            if (commandPrefix.Any(c => !char.IsLetterOrDigit(c)))
-            {
-                throw new Exception("#DiscordBot_InvalidPrefixError");
-            }
-
-            if (!commandPrefix.EndsWith(DiscordBot.PREFIX_DELIMITER))
-            {
-                commandPrefix += DiscordBot.PREFIX_DELIMITER;
-            }
 
             var settings = new Dictionary<string, string>
             {
                 { "DiscordSettings:Token", discordToken },
                 { "DiscordSettings:Prefix", commandPrefix },
+                { "DiscordSettings:LogLevel", logLevel.ToString() },
                 { "ServerManager:DataDirectory", dataDirectory },
             };
 
@@ -66,12 +58,7 @@ namespace ServerManagerTool.DiscordBot
 
             var socketConfig = new DiscordSocketConfig
             {
-#if DEBUG
-                LogLevel = LogSeverity.Verbose,
-#else
-                LogLevel = LogSeverity.Info,
-#endif
-                // Tell Discord.Net to cache 1000 messages per channel
+                LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
                 MessageCacheSize = 1000,
             };
             if (Environment.OSVersion.Version < new Version(6, 2))
@@ -84,11 +71,14 @@ namespace ServerManagerTool.DiscordBot
             {
                 // Force all commands to run async
                 DefaultRunMode = RunMode.Async,
-#if DEBUG
-                LogLevel = LogSeverity.Verbose,
-#else
-                LogLevel = LogSeverity.Info,
-#endif
+                LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
+                CaseSensitiveCommands = false,
+            };
+
+            var discordBotConfig = new DiscordBotConfig
+            {
+                AllowAllBots = allowAllBots,
+                DiscordBotWhitelists = new List<DiscordBotWhitelist> ( botWhitelist.Select(i => new DiscordBotWhitelist { BotId = i }) ),
             };
 
             // Build the service provider
@@ -105,6 +95,7 @@ namespace ServerManagerTool.DiscordBot
                 .AddSingleton<ShutdownService>()
                 .AddSingleton<Random>()
                 .AddSingleton(config)
+                .AddSingleton(discordBotConfig)
                 .AddSingleton(handleCommandCallback)
                 .AddSingleton(handleTranslationCallback)
                 .AddSingleton<IServerManagerBot>(this);
@@ -132,6 +123,7 @@ namespace ServerManagerTool.DiscordBot
                 }
 
                 await provider?.GetRequiredService<ShutdownService>().StopAsync();
+                Started = false;
             }
         }
     }

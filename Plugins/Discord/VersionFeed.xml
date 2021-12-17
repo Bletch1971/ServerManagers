@@ -5,7 +5,39 @@
   <title>Discord Plugin Version Feed</title>
   <subtitle>This is the Discord Plugin release version feed.</subtitle>
   <link href="" />
-  <updated>2021-12-03T00:00:00Z</updated>
+  <updated>2021-12-12T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:A9EC2F32-E026-485F-BD7B-C657DBA95B54</id>
+    <title>1.0.19 (1.0.19.5)</title>
+    <summary>1.0.19.5</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed alert test message to support globalization.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the plugin initialization so it throws an exception if unable to load config file, rather than creating a new config file.</li>
+            <li>de-DE Translation file updated.</li>
+            <li>fr-FR Translation file added.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file added.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:C01A4AA0-D839-4732-9814-301DAC6EB094</id>

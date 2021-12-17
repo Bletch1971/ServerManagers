@@ -12,7 +12,7 @@ namespace ServerManagerTool.Common {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
     public sealed partial class CommonConfig : global::System.Configuration.ApplicationSettingsBase {
         
         private static CommonConfig defaultInstance = ((CommonConfig)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new CommonConfig())));
@@ -20,15 +20,6 @@ namespace ServerManagerTool.Common {
         public static CommonConfig Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
-        public string PublicIPCheckUrl {
-            get {
-                return ((string)(this["PublicIPCheckUrl"]));
             }
         }
         
@@ -158,6 +149,24 @@ namespace ServerManagerTool.Common {
             }
             set {
                 this["SteamCmdRemoveQuit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://api.ipify.org")]
+        public string PublicIPCheckUrl1 {
+            get {
+                return ((string)(this["PublicIPCheckUrl1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
+        public string PublicIPCheckUrl2 {
+            get {
+                return ((string)(this["PublicIPCheckUrl2"]));
             }
         }
     }

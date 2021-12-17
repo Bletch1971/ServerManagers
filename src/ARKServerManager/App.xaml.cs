@@ -11,6 +11,7 @@ using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -38,7 +39,7 @@ namespace ServerManagerTool
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private CancellationTokenSource _tokenSource;
+        private CancellationTokenSource _tokenSourceDiscordBot;
         private GlobalizedApplication _globalizer;
         private bool _applicationStarted;
         private string _args;
@@ -49,7 +50,45 @@ namespace ServerManagerTool
         public App()
         {
             if (string.IsNullOrWhiteSpace(Config.Default.ASMUniqueKey))
+            {
                 Config.Default.ASMUniqueKey = Guid.NewGuid().ToString();
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.DataDir))
+            {
+                var root = Path.GetPathRoot(Config.Default.DataDir);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.DataDir = Config.Default.DataDir.Replace(root, root + "\\");
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.ConfigDirectory))
+            {
+                var root = Path.GetPathRoot(Config.Default.ConfigDirectory);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.ConfigDirectory = Config.Default.ConfigDirectory.Replace(root, root + "\\");
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+            {
+                var root = Path.GetPathRoot(Config.Default.BackupPath);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
+            {
+                var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
+                if (!root.EndsWith("\\"))
+                {
+                    Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
+                }
+            }
 
             App.Instance = this;
             ApplicationStarted = false;
@@ -109,6 +148,18 @@ namespace ServerManagerTool
                     _betaVersion = value;
                     OnPropertyChanged();
                 }
+            }
+        }
+
+        public bool DiscordBotStarted
+        {
+            get
+            {
+                return _tokenSourceDiscordBot != null;
+            }
+            set
+            {
+                OnPropertyChanged();
             }
         }
 
@@ -245,6 +296,14 @@ namespace ServerManagerTool
                     CommonConfig.Default.SteamAPIKey = Config.Default.SteamAPIKey;
                     CommonConfig.Default.Save();
                 }
+            }
+            if (!Config.Default.DiscordBotPrefixFixed)
+            {
+                if (!Config.Default.DiscordBotPrefix.EndsWith("!"))
+                    Config.Default.DiscordBotPrefix += "!";
+                Config.Default.DiscordBotPrefixFixed = true;
+                Config.Default.Save();
+                Config.Default.Reload();
             }
 
             Config.Default.SteamCmdRedirectOutput = false;
@@ -451,21 +510,7 @@ namespace ServerManagerTool
 
             if (Config.Default.DiscordBotEnabled)
             {
-                _tokenSource = new CancellationTokenSource();
-
-                Task discordTask = Task.Run(async () =>
-                {
-                    await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSource.Token);
-                }, _tokenSource.Token)
-                    .ContinueWith(t => {
-                        var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
-                        if (message.StartsWith("#"))
-                        {
-                            message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
-                        }
-
-                        MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    }, TaskContinuationOptions.OnlyOnFaulted);
+                StartDiscordBot();
             }
         }
 
@@ -507,11 +552,7 @@ namespace ServerManagerTool
 
         private void ShutDownApplication()
         {
-            if (!(_tokenSource is null))
-            {
-                _tokenSource.Cancel();
-                _tokenSource.Dispose();
-            }
+            StopDiscordBot();
 
             if (ApplicationStarted)
             {
@@ -544,13 +585,68 @@ namespace ServerManagerTool
 
             var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var backupFolder = includeBackup 
-                ? IOUtils.NormalizePath(string.IsNullOrWhiteSpace(Config.Default.BackupPath)
+                ? string.IsNullOrWhiteSpace(Config.Default.BackupPath)
                         ? Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)
-                        : Path.Combine(Config.Default.BackupPath))
+                        : Path.Combine(Config.Default.BackupPath)
                 : null;
 
             SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
             SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
+        }
+
+        public void StartDiscordBot()
+        {
+            if (_tokenSourceDiscordBot != null)
+            {
+                return;
+            }
+
+            _tokenSourceDiscordBot = new CancellationTokenSource();
+            DiscordBotStarted = true;
+
+            Task discordTask = Task.Run(async () =>
+            {
+                var discordWhiteList = new List<string>();
+                if (Config.Default.DiscordBotWhitelist != null)
+                {
+                    discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
+                }
+
+                await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataDir, Config.Default.DiscordBotAllowAllBots, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
+
+                if (_tokenSourceDiscordBot != null)
+                {
+                    // cleanup the token
+                    _tokenSourceDiscordBot.Dispose();
+                    _tokenSourceDiscordBot = null;
+                }
+                DiscordBotStarted = false;
+            }, _tokenSourceDiscordBot.Token)
+                .ContinueWith(t => {
+                    var message = t.Exception.InnerException is null ? t.Exception.Message : t.Exception.InnerException.Message;
+                    if (message.StartsWith("#"))
+                    {
+                        message = _globalizer.GetResourceString(message.Substring(1)) ?? message.Substring(1);
+                    }
+
+                    MessageBox.Show(message, _globalizer.GetResourceString("DiscordBot_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                    if (_tokenSourceDiscordBot != null)
+                    {
+                        // cleanup the token
+                        _tokenSourceDiscordBot.Dispose();
+                        _tokenSourceDiscordBot = null;
+                    }
+                    DiscordBotStarted = false;
+                }, TaskContinuationOptions.OnlyOnFaulted);
+        }
+
+        public void StopDiscordBot()
+        {
+            if (!(_tokenSourceDiscordBot is null))
+            {
+                _tokenSourceDiscordBot.Cancel();
+            }
         }
     }
 }

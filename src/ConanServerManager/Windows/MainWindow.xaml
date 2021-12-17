@@ -9,6 +9,7 @@
         xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:enum="clr-namespace:ServerManagerTool.Enums"
+        xmlns:bot="clr-namespace:ServerManagerTool.DiscordBot;assembly=ServerManager.Discord"
         MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50" WindowState="Normal"
         Loaded="MainWindow_Loaded" SizeChanged="MainWindow_SizeChanged" StateChanged="MainWindow_StateChanged" LocationChanged="MainWindow_LocationChanged"
         Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}">
@@ -125,6 +126,7 @@
 
                     <Grid DockPanel.Dock="Right" VerticalAlignment="Top" Margin="10,0,10,0">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -246,6 +248,61 @@
                                                 </MultiDataTrigger.Conditions>
                                                 <Setter Property="Content" Value="{DynamicResource MainWindow_AutoUpdateTaskDisableLabel}"/>
                                                 <Setter Property="ToolTip" Value="{DynamicResource MainWindow_AutoUpdateTaskDisableTooltip}"/>
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" Margin="5,0,0,0">
+                            <Label Margin="0" Background="Transparent" Foreground="White" FontSize="10" Content="{DynamicResource MainWindow_DiscordBotStatusLabel}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <Label Margin="0" Background="Transparent" FontSize="10" Content="{Binding DiscordBotStateString}" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <Label.Style>
+                                    <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
+                                        <Setter Property="Foreground" Value="White"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Disabled}">
+                                                <Setter Property="Foreground" Value="DarkRed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Stopped}">
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Running}">
+                                                <Setter Property="Foreground" Value="LightGreen"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                            <Button Margin="5,0,0,0" Padding="1" BorderThickness="1" BorderBrush="White" Click="DiscordBotTaskState_Click" VerticalAlignment="Center">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="#00AA00"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                        <Setter Property="Content" Value="{DynamicResource MainWindow_DiscordBotTaskStartLabel}"/>
+                                        <Setter Property="ToolTip" Value="{DynamicResource MainWindow_DiscordBotTaskStartTooltip}"/>
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Stopped}"/>
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="Background" Value="#00AA00"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Setter Property="Content" Value="{DynamicResource MainWindow_DiscordBotTaskStartLabel}"/>
+                                                <Setter Property="ToolTip" Value="{DynamicResource MainWindow_DiscordBotTaskStartTooltip}"/>
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </MultiDataTrigger>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Running}"/>
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="Background" Value="#AA8A00"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Setter Property="Content" Value="{DynamicResource MainWindow_DiscordBotTaskStopLabel}"/>
+                                                <Setter Property="ToolTip" Value="{DynamicResource MainWindow_DiscordBotTaskStopTooltip}"/>
                                                 <Setter Property="Visibility" Value="Visible"/>
                                             </MultiDataTrigger>
                                         </Style.Triggers>

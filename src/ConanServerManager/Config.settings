@@ -549,7 +549,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="DiscordBotPrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">csm</Value>
+      <Value Profile="(Default)">csm!</Value>
     </Setting>
     <Setting Name="DiscordBotToken" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -589,6 +589,22 @@
     </Setting>
     <Setting Name="ServerMonitorWindow_Top" Type="System.Double" Scope="User">
       <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="DiscordBotWhitelist" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /&gt;</Value>
+    </Setting>
+    <Setting Name="DiscordBotPrefixFixed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DiscordBotLogLevel" Type="ServerManagerTool.DiscordBot.Enums.LogLevel" Scope="User">
+      <Value Profile="(Default)">Info</Value>
+    </Setting>
+    <Setting Name="DiscordBotStatusCheckTime" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="DiscordBotAllowAllBots" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

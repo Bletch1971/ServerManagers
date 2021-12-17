@@ -8,8 +8,9 @@
         AutoShutdown1,
         AutoShutdown2,
         Backup,
-        Shutdown,
         Restart,
+        Shutdown,
+        Stop,
         Update,
     }
 }

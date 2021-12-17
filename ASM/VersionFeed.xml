@@ -5,7 +5,84 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-12-05T00:00:00Z</updated>
+  <updated>2021-12-15T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:18276A38-2C71-4BB8-9A83-96D5EBFE9C87</id>
+    <title>1.1.412 (1.1.412.4)</title>
+    <summary>1.1.412.4</summary>
+    <link href="" />
+    <updated>2021-12-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug with the Server Shutdown when the CheckForOnlinePlayers option not selected.</li>
+            <li>Fixed a bug when the backup path was a root directory that caused a 'Invalid URI: A Dos path must be rooted' crash.</li>
+            <li>Added additional validation when setting directories in the global setting, to ensure they are rooted correctly.</li>
+            <li>Fixed a bug when starting the server manager and it tries to download steamcmd, but fails as steamcmd is unavailable for download.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
+            <li>Added LostIsland to official mods in the SurvivalEvolved gamedata file.</li>
+            <li>Added coloring to the setting grids for the Lost Island DLC engrams, creatures and resources.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:DBAFCE91-2235-4B6C-AE9B-5E4EF9FEC8F5</id>
+    <title>1.1.411 (1.1.411.10)</title>
+    <summary>1.1.411.10</summary>
+    <link href="" />
+    <updated>2021-12-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              A new Discord Bot has been added to the server manager.<br/>
+              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
+              <font color="#e62919">
+                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
+              </font>
+            </li>
+            <li>Server Settings - Dino Section - Added MutagenLevelBoost and MutagenLevelBoostBred settings.</li>
+            <li>Added gamedata file for the Lost Island DLC - only contains the map name for the Map droplist - do not use until the DLC is officially released!</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Added reset button to the Data Directory Location.</li>
+            <li>Server Monitor window now stores it's location.</li>
+            <li>Removed MOTD and Alternate Save Directory from the Administration section of the Sync.</li>
+            <li>fr-FR Translation file updated.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:BE37B3FD-B498-4B1C-9D4D-754EA0F4A357</id>

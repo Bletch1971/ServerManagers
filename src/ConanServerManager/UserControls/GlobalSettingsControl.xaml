@@ -534,11 +534,14 @@
 
                     <Grid IsEnabled="{Binding Config.DiscordBotEnabled}">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto" MinHeight="25"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" MinWidth="60"/>
@@ -565,6 +568,8 @@
                         <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Text="{Binding Config.DiscordBotServerId}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotServerTooltip}"/>
                         <Label Grid.Row="2" Grid.Column="3" Content="{DynamicResource GlobalSettings_DiscordBotPrefixLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="2" Grid.Column="4" Margin="1" Text="{Binding Config.DiscordBotPrefix}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotPrefixTooltip}"/>
+                        <Label Grid.Row="2" Grid.Column="6" Margin="1" Content="{DynamicResource GlobalSettings_DiscordBotLogLevelLabel}" VerticalAlignment="Center"/>
+                        <ComboBox Name="DiscordBotLogLevelComboBox" Grid.Row="2" Grid.Column="7" Margin="1" ItemsSource="{Binding ElementName=GlobalSettings, Path=DiscordBotLogLevels}" SelectedValue="{Binding Config.DiscordBotLogLevel}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" VerticalContentAlignment="Center" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
 
                         <CheckBox Grid.Row="3" Grid.Column="1" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordBackup}" Content="{DynamicResource ServerSettings_AllowDiscordBackupLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowBackupTooltip}"/>
                         <CheckBox Grid.Row="3" Grid.Column="4" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordUpdate}" Content="{DynamicResource ServerSettings_AllowDiscordUpdateLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowUpdateTooltip}"/>
@@ -573,6 +578,57 @@
                         <CheckBox Grid.Row="4" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordRestart}" Content="{DynamicResource ServerSettings_AllowDiscordRestartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowRestartTooltip}"/>
                         <CheckBox Grid.Row="4" Grid.Column="4" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordShutdown}" Content="{DynamicResource ServerSettings_AllowDiscordShutdownLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowShutdownTooltip}"/>
                         <CheckBox Grid.Row="4" Grid.Column="7" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordStop}" Content="{DynamicResource ServerSettings_AllowDiscordStopLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStopTooltip}"/>
+
+                        <GroupBox Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" MinHeight="200" IsEnabled="{Binding Config.DiscordBotAllowAllBots, Converter={StaticResource InvertBooleanConverter}}">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{DynamicResource GlobalSettings_DiscordBotWhitelistLabel}"/>
+                                    <Button Click="AddDiscordBotWhitelist_Click" Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_AddDiscordBotWhitelistTooltip}" Style="{StaticResource ButtonStyle1}">
+                                        <Image Source="../Art/Add.ico"/>
+                                    </Button>
+                                    <Button Click="ClearDiscordBotWhitelists_Click" Margin="5,0,0,0" ToolTip="{DynamicResource ServerSettings_ClearDiscordBotWhitelistTooltip}" Style="{StaticResource ButtonStyle1}">
+                                        <Image Source="../Art/Delete.ico"/>
+                                    </Button>
+                                </StackPanel>
+                            </GroupBox.Header>
+
+                            <DataGrid x:Name="DiscordBotWhitelistGrid" ItemsSource="{Binding DiscordBotWhitelist, ElementName=GlobalSettings}"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" IsReadOnly="False">
+                                <DataGrid.Resources>
+                                    <Style TargetType="{x:Type DataGridRow}">
+                                        <Style.Resources>
+                                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                                        </Style.Resources>
+                                    </Style>
+                                </DataGrid.Resources>
+
+                                <DataGrid.HorizontalGridLinesBrush>
+                                    <SolidColorBrush Color="#FFB4B4B4"/>
+                                </DataGrid.HorizontalGridLinesBrush>
+                                <DataGrid.VerticalGridLinesBrush>
+                                    <SolidColorBrush Color="#FFB4B4B4"/>
+                                </DataGrid.VerticalGridLinesBrush>
+
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn     Width="*" Binding="{Binding BotId}">
+                                        <DataGridTextColumn.Header>
+                                            <TextBlock Text="{DynamicResource GlobalSettings_DiscordBotWhitelistIdLabel}" />
+                                        </DataGridTextColumn.Header>
+                                    </DataGridTextColumn>
+                                    <DataGridTemplateColumn Width="30" CanUserReorder="False" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Width="22" Height="22" Margin="0" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RemoveDiscordBotWhitelist_Click" ToolTip="{DynamicResource ServerSettings_RemoveDiscordBotWhitelistTooltip}">
+                                                    <Image Source="../Art/Delete.ico"/>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </GroupBox>
+
+                        <CheckBox Grid.Row="6" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.DiscordBotAllowAllBots}" Content="{DynamicResource ServerSettings_DiscordBotAllowAllBotsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DiscordBotAllowAllBotsTooltip}"/>
                     </Grid>
                 </GroupBox>
 

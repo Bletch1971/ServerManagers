@@ -13,10 +13,17 @@ namespace ServerManagerTool.Plugin.Discord
             {
                 try
                 {
-                    var publicIP = await webClient.DownloadStringTaskAsync(Config.Default.PublicIPCheckUrl);
+                    var publicIP = await webClient.DownloadStringTaskAsync(Config.Default.PublicIPCheckUrl1);
+                    if (IPAddress.TryParse(publicIP, out IPAddress address1))
+                    {
+                        return address1;
+                    }
 
-                    if (IPAddress.TryParse(publicIP, out IPAddress address))
-                        return address;
+                    publicIP = await webClient.DownloadStringTaskAsync(Config.Default.PublicIPCheckUrl2);
+                    if (IPAddress.TryParse(publicIP, out IPAddress address2))
+                    {
+                        return address2;
+                    }
 
                     return IPAddress.None;
                 }

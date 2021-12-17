@@ -57,10 +57,19 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
-    <!--#region Processor Window States -->
+    <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Normal</sys:String>
     <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
     <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Critical</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Error</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Warning</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Verbose</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
     <!--#endregion-->
 
     <!--#region Unit strings -->
@@ -120,6 +129,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Server download complete</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Complete</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Cancelled</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Failed</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
@@ -605,12 +615,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Enable</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Enable the auto-update scheduled task</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Next Run Time:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord Bot:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Start</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Start the discord bot</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Stop</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Stop the discord bot</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Unknown</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Disabled</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">Queued</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Ready</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Running</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Stopped</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Profile failed to load</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">The profile at {0} failed to load. The error was: {1}\r\n{2}</sys:String>
@@ -779,8 +795,17 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">The id of the discord server the bot will listen to.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Log Level:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Allow All Bots</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">If enabled, the server manager bot will respond to all other bots, otherwise they will be ignored unless they are in the whitelist.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">The id of the bot to whitelist.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Add Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Clear Whitelists</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Delete Whitelist</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">If enabled, the backup command can be sent from discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">If enabled, the restart command can be sent from discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">If enabled, the shutdown command can be sent from discord.</sys:String>
@@ -1147,6 +1172,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel this profile will listen to.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">A unique name to identify your server when using the discord commands, can be used instead of the profile id.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Allow Backup</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">If enabled, the profile will listen for backup commands from discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Allow Restart</sys:String>
@@ -1244,8 +1271,9 @@
     <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
     <sys:String x:Key="DiscordBot_CommandDisabledProfile">Command '{0}' has been disabled for profile '{1}'.</sys:String>
 
-    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id or alias.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' was not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">Multiple profiles with '{0}' were found in the channel, command aborted.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
 

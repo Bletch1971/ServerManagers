@@ -1,5 +1,6 @@
 ﻿using ServerManagerTool.Common.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ServerManagerTool.Common.Model
@@ -14,12 +15,12 @@ namespace ServerManagerTool.Common.Model
             }
         }
 
-        public void Add(string sectionName, string[] values)
+        public void Add(string sectionName, IEnumerable<string> values)
         {
             Add(sectionName, values, true);
         }
 
-        public void Add(string sectionName, string[] values, bool clearExisting)
+        public void Add(string sectionName, IEnumerable<string> values, bool clearExisting)
         {
             var section = this.Items.FirstOrDefault(s => s.SectionName.Equals(sectionName, StringComparison.OrdinalIgnoreCase) && !s.IsDeleted);
             if (section == null)

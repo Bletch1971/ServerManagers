@@ -32,29 +32,38 @@ namespace ServerManagerTool.Common.Serialization
             get;
         }
 
-        public void Deserialize(object obj, Enum[] exclusions)
+        public void Deserialize(object obj, IEnumerable<Enum> exclusions)
         {
             var iniFiles = new Dictionary<string, IniFile>();
-            var fields = obj.GetType().GetProperties().Where(f => f.IsDefined(typeof(BaseIniFileEntryAttribute), false));
+            var fields = obj.GetType()
+                .GetProperties()
+                .Where(f => f.IsDefined(typeof(BaseIniFileEntryAttribute), false));
 
             if (exclusions == null)
+            {
                 exclusions = new Enum[0];
+            }
 
             foreach (var field in fields)
             {
-                var attributes = field.GetCustomAttributes(typeof(BaseIniFileEntryAttribute), false);
-                foreach (var attr in attributes.OfType<BaseIniFileEntryAttribute>())
+                var attributes = field
+                    .GetCustomAttributes(typeof(BaseIniFileEntryAttribute), false)
+                    .OfType<BaseIniFileEntryAttribute>()
+                    .Where(a => !exclusions.Contains(a.Category));
+
+                foreach (var attr in attributes)
                 {
                     if (exclusions.Contains(attr.Category))
+                    {
                         continue;
+                    }
 
                     try
                     {
                         if (attr.IsCustom)
                         {
                             // this code is to handle custom sections
-                            var collection = field.GetValue(obj) as IIniSectionCollection;
-                            if (collection != null)
+                            if (field.GetValue(obj) is IIniSectionCollection collection)
                             {
                                 ReadFile(iniFiles, attr.File);
 
@@ -77,61 +86,76 @@ namespace ServerManagerTool.Common.Serialization
                             }
                             else
                             {
-                                var iniValue = ReadValue(iniFiles, attr.File, attr.Section, keyName);
-                                var fieldType = field.PropertyType;
-                                var collection = field.GetValue(obj) as IIniValuesCollection;
-
-                                if (collection != null)
+                                if (field.GetValue(obj) is IIniValuesCollection collection)
                                 {
                                     var section = ReadSection(iniFiles, attr.File, attr.Section);
-                                    var filteredSection = collection.IsArray 
-                                        ? section.Where(s => s.StartsWith(collection.IniCollectionKey + "[")) 
+                                    var filteredSection = collection.IsArray
+                                        ? section.Where(s => s.StartsWith(collection.IniCollectionKey + "["))
                                         : section.Where(s => s.StartsWith(collection.IniCollectionKey + "="));
                                     collection.FromIniValues(filteredSection);
                                 }
-                                else if (fieldType == typeof(string))
-                                {
-                                    var stringValue = iniValue;
-                                    if (attr.QuotedString == QuotedStringType.True)
-                                    {
-                                        // remove the leading and trailing quotes, if any
-                                        if (stringValue.StartsWith("\""))
-                                            stringValue = stringValue.Substring(1);
-                                        if (stringValue.EndsWith("\""))
-                                            stringValue = stringValue.Substring(0, stringValue.Length - 1);
-                                    }
-                                    else if (attr.QuotedString == QuotedStringType.Remove)
-                                    {
-                                        // remove the leading and trailing quotes, if any
-                                        if (stringValue.StartsWith("\""))
-                                            stringValue = stringValue.Substring(1);
-                                        if (stringValue.EndsWith("\""))
-                                            stringValue = stringValue.Substring(0, stringValue.Length - 1);
-                                    }
-                                    if (attr.Multiline)
-                                    {
-                                        stringValue = stringValue.Replace(attr.MultilineSeparator, Environment.NewLine);
-                                    }
-                                    field.SetValue(obj, stringValue);
-                                }
                                 else
                                 {
-                                    if (string.IsNullOrWhiteSpace(iniValue))
+                                    var iniValue = ReadValue(iniFiles, attr.File, attr.Section, keyName);
+
+                                    var fieldType = field.PropertyType;
+                                    if (fieldType == typeof(string))
                                     {
-                                        // Skip non-string values which are not found
-                                        continue;
+                                        var stringValue = iniValue;
+                                        if (attr.QuotedString == QuotedStringType.True)
+                                        {
+                                            // remove the leading and trailing quotes, if any
+                                            if (stringValue.StartsWith("\""))
+                                            {
+                                                stringValue = stringValue.Substring(1);
+                                            }
+
+                                            if (stringValue.EndsWith("\""))
+                                            {
+                                                stringValue = stringValue.Substring(0, stringValue.Length - 1);
+                                            }
+                                        }
+                                        else if (attr.QuotedString == QuotedStringType.Remove)
+                                        {
+                                            // remove the leading and trailing quotes, if any
+                                            if (stringValue.StartsWith("\""))
+                                            {
+                                                stringValue = stringValue.Substring(1);
+                                            }
+
+                                            if (stringValue.EndsWith("\""))
+                                            {
+                                                stringValue = stringValue.Substring(0, stringValue.Length - 1);
+                                            }
+                                        }
+                                        if (attr.Multiline)
+                                        {
+                                            stringValue = stringValue.Replace(attr.MultilineSeparator, Environment.NewLine);
+                                        }
+                                        field.SetValue(obj, stringValue);
+                                    }
+                                    else
+                                    {
+                                        if (string.IsNullOrWhiteSpace(iniValue))
+                                        {
+                                            // Skip non-string values which are not found
+                                            continue;
+                                        }
+
+                                        // Update the ConditionedOn flag, if this field has one.
+                                        if (!string.IsNullOrWhiteSpace(attr.ConditionedOn))
+                                        {
+                                            var conditionField = obj.GetType().GetProperty(attr.ConditionedOn);
+                                            conditionField.SetValue(obj, true);
+                                        }
+
+                                        var valueSet = StringUtils.SetPropertyValue(iniValue, obj, field, attr);
+                                        if (!valueSet)
+                                        {
+                                            throw new ArgumentException($"Unexpected field type {fieldType} for INI key {keyName} in section {attr.Section}.");
+                                        }
                                     }
 
-                                    // Update the ConditionedOn flag, if this field has one.
-                                    if (!string.IsNullOrWhiteSpace(attr.ConditionedOn))
-                                    {
-                                        var conditionField = obj.GetType().GetProperty(attr.ConditionedOn);
-                                        conditionField.SetValue(obj, true);
-                                    }
-
-                                    var valueSet = StringUtils.SetPropertyValue(iniValue, obj, field, attr);
-                                    if (!valueSet)
-                                        throw new ArgumentException($"Unexpected field type {fieldType} for INI key {keyName} in section {attr.Section}.");
                                 }
                             }
                         }
@@ -144,29 +168,33 @@ namespace ServerManagerTool.Common.Serialization
             }
         }
 
-        public void Serialize(object obj, Enum[] exclusions)
+        public void Serialize(object obj, IEnumerable<Enum> exclusions)
         {
             var iniFiles = new Dictionary<string, IniFile>();
-            var fields = obj.GetType().GetProperties().Where(f => f.IsDefined(typeof(BaseIniFileEntryAttribute), false));
+            var fields = obj.GetType()
+                .GetProperties()
+                .Where(f => f.IsDefined(typeof(BaseIniFileEntryAttribute), false));
 
             if (exclusions == null)
+            {
                 exclusions = new Enum[0];
+            }
 
             foreach (var field in fields)
             {
-                var attributes = field.GetCustomAttributes(typeof(BaseIniFileEntryAttribute), false).OfType<BaseIniFileEntryAttribute>();
+                var attributes = field
+                    .GetCustomAttributes(typeof(BaseIniFileEntryAttribute), false)
+                    .OfType<BaseIniFileEntryAttribute>()
+                    .Where(a => !exclusions.Contains(a.Category));
+
                 foreach (var attr in attributes)
                 {
-                    if (exclusions.Contains(attr.Category))
-                        continue;
-
                     try
                     {
                         if (attr.IsCustom)
                         {
                             // this code is to handle custom sections
-                            var collection = field.GetValue(obj) as IIniSectionCollection;
-                            if (collection != null)
+                            if (field.GetValue(obj) is IIniSectionCollection collection)
                             {
                                 collection.Update();
 
@@ -177,7 +205,7 @@ namespace ServerManagerTool.Common.Serialization
 
                                     if (section.IsEnabled)
                                     {
-                                        WriteSection(iniFiles, attr.File, section.IniCollectionKey, section.ToIniValues().ToArray());
+                                        WriteSection(iniFiles, attr.File, section.IniCollectionKey, section.ToIniValues());
                                     }
                                 }
                             }
@@ -200,8 +228,7 @@ namespace ServerManagerTool.Common.Serialization
                             {
                                 var section = ReadSection(iniFiles, attr.File, attr.Section);
                                 var filteredSection = section
-                                    .Where(s => !s.StartsWith(collection.IniCollectionKey + (collection.IsArray ? "[" : "=")))
-                                    .ToArray();
+                                    .Where(s => !s.StartsWith(collection.IniCollectionKey + (collection.IsArray ? "[" : "=")));
                                 WriteSection(iniFiles, attr.File, attr.Section, filteredSection);
                             }
 
@@ -286,7 +313,7 @@ namespace ServerManagerTool.Common.Serialization
                                             result = result.Concat(collection.ToIniValues());
                                         }
 
-                                        WriteSection(iniFiles, attr.File, attr.Section, result?.ToArray());
+                                        WriteSection(iniFiles, attr.File, attr.Section, result);
                                     }
                                 }
                                 else
@@ -353,74 +380,94 @@ namespace ServerManagerTool.Common.Serialization
             SaveFiles(iniFiles);
         }
 
-        public string[] ReadSection(Enum iniFile, Enum section)
+        public IEnumerable<string> ReadSection(Enum iniFile, Enum section)
         {
             return ReadSection(iniFile, SectionNames[section]);
         }
 
-        public string[] ReadSection(Enum iniFile, string sectionName)
+        public IEnumerable<string> ReadSection(Enum iniFile, string sectionName)
         {
             var file = Path.Combine(this.BasePath, FileNames[iniFile]);
             return IniFileUtils.ReadSection(file, sectionName);
         }
 
-        public void WriteSection(Enum iniFile, Enum section, string[] values)
+        public void WriteSection(Enum iniFile, Enum section, IEnumerable<string> values)
         {
             WriteSection(iniFile, SectionNames[section], values);
         }
 
-        public void WriteSection(Enum iniFile, string sectionName, string[] values)
+        public void WriteSection(Enum iniFile, string sectionName, IEnumerable<string> values)
         {
             var file = Path.Combine(this.BasePath, FileNames[iniFile]);
-            var result = IniFileUtils.WriteSection(file, sectionName, values);
+            IniFileUtils.WriteSection(file, sectionName, values);
         }
 
-        private string[] ReadCustomSectionNames(Dictionary<string, IniFile> iniFiles, Enum iniFile)
+        private IEnumerable<string> ReadCustomSectionNames(Dictionary<string, IniFile> iniFiles, Enum iniFile)
         {
-            ReadFile(iniFiles, iniFile);
-
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
-                return new string[0];
+            {
+                ReadFile(iniFiles, iniFile);
 
-            return iniFiles[FileNames[iniFile]].Sections.Select(s => s.SectionName).Where(s => !SectionNames.ContainsValue(s)).ToArray();
+                if (!iniFiles.ContainsKey(FileNames[iniFile]))
+                {
+                    return new string[0];
+                }
+            }
+
+            return iniFiles[FileNames[iniFile]].Sections.Select(s => s.SectionName).Where(s => !SectionNames.ContainsValue(s));
         }
 
-        private string[] ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section)
+        private IEnumerable<string> ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section)
         {
             return ReadSection(iniFiles, iniFile, SectionNames[section]);
         }
 
-        private string[] ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName)
+        private IEnumerable<string> ReadSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName)
         {
-            ReadFile(iniFiles, iniFile);
-
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
-                return new string[0];
+            {
+                ReadFile(iniFiles, iniFile);
 
-            return iniFiles[FileNames[iniFile]].GetSection(sectionName)?.KeysToStringArray() ?? new string[0];
+                if (!iniFiles.ContainsKey(FileNames[iniFile]))
+                {
+                    return new string[0];
+                }
+            }
+
+            return iniFiles[FileNames[iniFile]].GetSection(sectionName)?.KeysToStringEnumerable() ?? new string[0];
         }
 
         private string ReadValue(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section, string keyName)
         {
-            ReadFile(iniFiles, iniFile);
-
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
-                return string.Empty;
+            {
+                ReadFile(iniFiles, iniFile);
+
+                if (!iniFiles.ContainsKey(FileNames[iniFile]))
+                {
+                    return string.Empty;
+                }
+            }
 
             return iniFiles[FileNames[iniFile]].GetKey(SectionNames[section], keyName)?.KeyValue ?? string.Empty;
         }
 
-        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section, string[] values)
+        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, Enum section, IEnumerable<string> values)
         {
             WriteSection(iniFiles, iniFile, SectionNames[section], values);
         }
 
-        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName, string[] values)
+        private void WriteSection(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName, IEnumerable<string> values)
         {
-            ReadFile(iniFiles, iniFile);
-
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
-                return;
+            {
+                ReadFile(iniFiles, iniFile);
+
+                if (!iniFiles.ContainsKey(FileNames[iniFile]))
+                {
+                    return;
+                }
+            }
 
             iniFiles[FileNames[iniFile]].WriteSection(sectionName, values);
         }
@@ -432,10 +479,15 @@ namespace ServerManagerTool.Common.Serialization
 
         private void WriteValue(Dictionary<string, IniFile> iniFiles, Enum iniFile, string sectionName, string keyName, string keyValue)
         {
-            ReadFile(iniFiles, iniFile);
-
             if (!iniFiles.ContainsKey(FileNames[iniFile]))
-                return;
+            {
+                ReadFile(iniFiles, iniFile);
+
+                if (!iniFiles.ContainsKey(FileNames[iniFile]))
+                {
+                    return;
+                }
+            }
 
             iniFiles[FileNames[iniFile]].WriteKey(sectionName, keyName, keyValue);
         }
@@ -454,7 +506,7 @@ namespace ServerManagerTool.Common.Serialization
             foreach (var iniFile in iniFiles)
             {
                 var file = Path.Combine(this.BasePath, iniFile.Key);
-                var result = IniFileUtils.SaveToFile(file, iniFile.Value);
+                IniFileUtils.SaveToFile(file, iniFile.Value);
             }
         }
     }

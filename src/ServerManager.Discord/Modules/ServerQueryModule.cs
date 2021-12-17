@@ -38,16 +38,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("info", RunMode = RunMode.Async)]
         [Summary("Poll server for information")]
-        [Remarks("info profileId")]
+        [Remarks("info profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task ServerInfoAsync(string profileId)
+        public async Task ServerInfoAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Info, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Info, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");
@@ -109,16 +109,16 @@ namespace ServerManagerTool.DiscordBot.Modules
 
         [Command("status", RunMode = RunMode.Async)]
         [Summary("Poll server for status")]
-        [Remarks("status profileId")]
+        [Remarks("status profileId|alias")]
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task ServerStatusAsync(string profileId)
+        public async Task ServerStatusAsync(string profileIdOrAlias)
         {
             try
             {
                 var serverId = Context?.Guild?.Id.ToString() ?? string.Empty;
                 var channelId = Context?.Channel?.Id.ToString() ?? string.Empty;
 
-                var response = _handleCommandCallback?.Invoke(CommandType.Status, serverId, channelId, profileId, _serverManagerBot.Token);
+                var response = _handleCommandCallback?.Invoke(CommandType.Status, serverId, channelId, profileIdOrAlias, _serverManagerBot.Token);
                 if (response is null)
                 {
                     await ReplyAsync("No servers associated with this channel.");

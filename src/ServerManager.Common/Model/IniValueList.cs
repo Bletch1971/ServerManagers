@@ -98,8 +98,7 @@ namespace ServerManagerTool.Common.Model
                 // Add any default values which were missing
                 if (this.ResetFunc != null)
                 {
-                    var defaultItemsToAdd = this.ResetFunc().Where(r => !this.Any(v => this.EquivalencyFunc(v, r))).ToArray();
-                    this.AddRange(defaultItemsToAdd);
+                    this.AddRange(this.ResetFunc().Where(r => !this.Any(v => this.EquivalencyFunc(v, r))));
                     this.Sort(this.SortKeySelectorFunc);
                 }
             }            

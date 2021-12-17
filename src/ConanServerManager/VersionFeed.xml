@@ -5,7 +5,67 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-12T00:00:00Z</updated>
+  <updated>2021-12-16T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:19B09A66-43F2-4D5F-AF33-5C77D7EA9A6B</id>
+    <title>1.1.58 (1.1.58.8)</title>
+    <summary>1.1.58.8</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
+            <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
+            <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
+            <li>Discord Bot - removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
+            <li>Made changes to the code to help improve performance.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6383E79A-C31F-462B-9730-B26B28DC5EFF</id>
+    <title>1.1.57 (1.1.57.3)</title>
+    <summary>1.1.57.3</summary>
+    <link href="" />
+    <updated>2021-12-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug with the Server Shutdown when the CheckForOnlinePlayers option not selected.</li>
+            <li>Fixed a bug when the backup path was a root directory that caused a 'Invalid URI: A Dos path must be rooted' crash.</li>
+            <li>Added additional validation when setting directories in the global setting, to ensure they are rooted correctly.</li>
+            <li>Fixed a bug when starting the server manager and it tries to download steamcmd, but fails as steamcmd is unavailable for download.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>

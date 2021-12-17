@@ -5,22 +5,45 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-12-12T00:00:00Z</updated>
+  <updated>2021-12-16T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:C02D44F9-E3AA-4CA0-BF2F-110F8C83CC21</id>
-    <title>1.1.411 (1.1.411.7)</title>
-    <summary>1.1.411.7</summary>
+    <id>urn:uuid:8EE5659C-18E6-47D3-941D-C32B129D2E06</id>
+    <title>1.1.413 (1.1.413.8)</title>
+    <summary>1.1.413.8</summary>
     <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
+    <updated>2021-12-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:8EE5659C-18E6-47D3-941D-C32B129D2E06</id>
+    <title>1.1.413 (1.1.413.7)</title>
+    <summary>1.1.413.7</summary>
+    <link href="" />
+    <updated>2021-12-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Added gamedata file for the Lost Island DLC - only contains the map name for the Map droplist - do not use until the DLC is officially released!</li>
-            <li>Added Lost Island to the language files for translation.</li>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
           </ul>
         </p>
       </div>
@@ -32,42 +55,18 @@
   </entry>
 
   <entry>
-    <id>urn:uuid:F75C6AFF-2A27-49BE-917A-7EAAACCCBF17</id>
-    <title>1.1.411 (1.1.411.6)</title>
-    <summary>1.1.411.6</summary>
+    <id>urn:uuid:65A7E6B1-98D1-422D-B42F-B0EBB1D20E41</id>
+    <title>1.1.413 (1.1.413.6)</title>
+    <summary>1.1.413.6</summary>
     <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
+    <updated>2021-12-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>fr-FR Translation file updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:0BCB8BBA-330F-4063-8B7E-5B144589999A</id>
-    <title>1.1.411 (1.1.411.5)</title>
-    <summary>1.1.411.5</summary>
-    <link href="" />
-    <updated>2021-12-10T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor window now stores it's location.</li>
-            <li>Reference library updates.</li>
+            <li>Added additional message logging when log level set to debug.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>
           </ul>
@@ -81,29 +80,69 @@
   </entry>
 
   <entry>
-    <id>urn:uuid:7697EBD7-DEF6-422B-B9A6-D4B77F31D572</id>
-    <title>1.1.411 (1.1.411.4)</title>
-    <summary>1.1.411.4</summary>
+    <id>urn:uuid:65A7E6B1-98D1-422D-B42F-B0EBB1D20E41</id>
+    <title>1.1.413 (1.1.413.5)</title>
+    <summary>1.1.413.5</summary>
     <link href="" />
-    <updated>2021-12-09T00:00:00Z</updated>
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:98FFBFA1-4E99-4801-BF2B-CA68BE300C27</id>
+    <title>1.1.413 (1.1.413.4)</title>
+    <summary>1.1.413.4</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fixed a minor issue when clicking the data directory reset button - fringe case that I found during testing.</li>
+            <li>Fixed a bug that would prevent a bot on the whitelist processing the message.</li>
           </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:8958A494-DE13-4F6F-ACA2-10026D5FB8A9</id>
+    <title>1.1.413 (1.1.413.3)</title>
+    <summary>1.1.413.3</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Settings - Dino Section - Added MutagenLevelBoost and MutagenLevelBoostBred settings.</li>
+            <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>pt-BR Translation file updated.</li>
-            <li>ru-RU Translation file updated.</li>
+            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
             <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
@@ -116,73 +155,41 @@
   </entry>
 
   <entry>
-    <id>urn:uuid:8290F43D-98F4-4F4D-8DD8-0A3EF5A45656</id>
-    <title>1.1.411 (1.1.411.3)</title>
-    <summary>1.1.411.3</summary>
+    <id>urn:uuid:8958A494-DE13-4F6F-ACA2-10026D5FB8A9</id>
+    <title>1.1.413 (1.1.413.2)</title>
+    <summary>1.1.413.2</summary>
     <link href="" />
-    <updated>2021-12-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed language translation of Data Directory window.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:ADBF3FE0-017C-4E23-8FE8-EFE75E7C8BA1</id>
-    <title>1.1.411 (1.1.411.2)</title>
-    <summary>1.1.411.2</summary>
-    <link href="" />
-    <updated>2021-12-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Global Settings - Added reset button to the Data Directory Location.</li>
-            <li>pt-BR Translation file updated.</li>
-            <li>zh-CN Translation file updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:DBAFCE91-2235-4B6C-AE9B-5E4EF9FEC8F5</id>
-    <title>1.1.411 (1.1.411.1)</title>
-    <summary>1.1.411.1</summary>
-    <link href="" />
-    <updated>2021-12-06T00:00:00Z</updated>
+    <updated>2021-12-16T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>
-              A new Discord Bot has been added to the server manager.<br/>
-              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
-              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
-              <font color="#e62919">
-                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
-              </font>
-            </li>
+            <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:3E33DCB2-ECFE-4489-B1A4-56F5D386F9DC</id>
+    <title>1.1.413 (1.1.413.1)</title>
+    <summary>1.1.413.1</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Made changes to the code to help improve performance.</li>
           </ul>
         </p>
       </div>

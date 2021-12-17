@@ -120,6 +120,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Server download complete</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Complete</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Cancelled</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Failed</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Cancel</sys:String>
     <!--#endregion-->
 
@@ -628,6 +629,9 @@
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
 
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot Running Commands</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">The discord bot has one or more running commands, do you want to continue shutting down the server manager?</sys:String>
+
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Start Server Confirmation</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">You are about to start the server, do you want to continue?</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Shutdown Server Confirmation</sys:String>
@@ -768,6 +772,23 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Show shutdown reason with ALL shutdown messages</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">If enabled, the shutdown reason will be shown with all shutdown message; otherwise it will only be shown at the start of the server shutdown.</sys:String>
 
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Enable Discord Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">You will need to restart the server manager if you change any settings for the Discord Bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">The token associated with the discord bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">Server Id:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">The id of the discord server the bot will listen to.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">If enabled, the backup command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">If enabled, the restart command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">If enabled, the shutdown command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">If enabled, the start command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">If enabled, the stop command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">If enabled, the update command can be sent from discord.</sys:String>
+
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP Email Settings</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">The name or IP address of the host used for SMTP transmissions.</sys:String>
@@ -815,6 +836,8 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">Changing the data directory will move any existing profiles to the new location, but it will not move any server installations. Do you still want to change this directory?</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Failed to change data directory</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">There was an error changing the data directory: {0}\r\nPlease correct the error and try again, or contact technical support for assistance.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Confirm Data Directory Reset</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Click 'Yes' to confirm you want to reset the location of the data directory. Once reset, the server manager will shutdown and you will need to restart.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Select Backup Directory</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Select Cache Directory</sys:String>
@@ -1121,6 +1144,24 @@
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Restarts and Auto-Updates.</sys:String>
     <!--#endregion-->
 
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel this profile will listen to.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Allow Backup</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">If enabled, the profile will listen for backup commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Allow Restart</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">If enabled, the profile will listen for restart commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Allow Shutdown</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">If enabled, the profile will listen for shutdown commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Allow Start</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">If enabled, the profile will listen for start commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Allow Stop</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">If enabled, the profile will listen for stop commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Allow Update</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">If enabled, the profile will listen for update commands from discord.</sys:String>
+    <!--#endregion-->
+
     <!--#region Server Settings - Server File Details -->
     <sys:String x:Key="ServerSettings_ServerFilesLabel">Server File Details</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesWarningLabel">NOTE: Any changes will require a server restart to take effect.</sys:String>
@@ -1191,6 +1232,34 @@
     <!--#region Server Update -->
     <sys:String x:Key="ServerUpdate_Title">Server Update</sys:String>
     <sys:String x:Key="ServerUpdate_WarningLabel">There was a problem while performing the server update. This may leave your server in a incomplete state.\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">Command '{0}' has not been enabled.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Unknown command '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Another command is currently being processed.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">Command '{0}' has been disabled for profile '{1}'.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' was not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">Call to server '{0}' failed.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">A backup request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">A restart request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">A shutdown request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">A start request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">A stop request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">An update request for server '{0}' has been sent.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Count:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

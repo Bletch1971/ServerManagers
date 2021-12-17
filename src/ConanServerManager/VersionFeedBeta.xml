@@ -5,114 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-12T00:00:00Z</updated>
+  <updated>2021-12-17T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:4C15C7A9-317C-4A9B-B426-6E885B918D3B</id>
-    <title>1.1.56 (1.1.56.6)</title>
-    <summary>1.1.56.6</summary>
+    <id>urn:uuid:9A427D82-9904-44F5-8C1E-7C943049869A</id>
+    <title>1.1.58 (1.1.58.8)</title>
+    <summary>1.1.58.8</summary>
     <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Reference library updates.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:126E8E9F-7FF2-4239-88D6-5FFC89925463</id>
-    <title>1.1.56 (1.1.56.5)</title>
-    <summary>1.1.56.5</summary>
-    <link href="" />
-    <updated>2021-12-10T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Monitor window now stores it's location.</li>
-            <li>Reference library updates.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:BECA74AB-1107-40B0-932A-A851E978EABF</id>
-    <title>1.1.56 (1.1.56.4)</title>
-    <summary>1.1.56.4</summary>
-    <link href="" />
-    <updated>2021-12-09T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed a minor issue when clicking the data directory reset button - fringe case that I found during testing.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:8C834060-F20F-4ACE-8F49-0B459531BA3C</id>
-    <title>1.1.56 (1.1.56.3)</title>
-    <summary>1.1.56.3</summary>
-    <link href="" />
-    <updated>2021-12-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed language translation of Data Directory window.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:339F72FC-920A-4425-AF86-AF9B34611A21</id>
-    <title>1.1.56 (1.1.56.2)</title>
-    <summary>1.1.56.2</summary>
-    <link href="" />
-    <updated>2021-12-08T00:00:00Z</updated>
+    <updated>2021-12-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings - Added reset button to the Data Directory Location.</li>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
           </ul>
         </p>
       </div>
@@ -124,25 +31,162 @@
   </entry>
 
   <entry>
-    <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
-    <title>1.1.56 (1.1.56.1)</title>
-    <summary>1.1.56.1</summary>
+    <id>urn:uuid:9A427D82-9904-44F5-8C1E-7C943049869A</id>
+    <title>1.1.58 (1.1.58.7)</title>
+    <summary>1.1.58.7</summary>
     <link href="" />
-    <updated>2021-12-06T00:00:00Z</updated>
+    <updated>2021-12-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>
-              A new Discord Bot has been added to the server manager.<br/>
-              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
-              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
-              <font color="#e62919">
-                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
-              </font>
-            </li>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A189668E-DA03-471A-9C5A-7FF2A7264F9C</id>
+    <title>1.1.58 (1.1.58.6)</title>
+    <summary>1.1.58.6</summary>
+    <link href="" />
+    <updated>2021-12-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added additional message logging when log level set to debug.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A189668E-DA03-471A-9C5A-7FF2A7264F9C</id>
+    <title>1.1.58 (1.1.58.5)</title>
+    <summary>1.1.58.5</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F3C22842-A089-46F7-AB1A-5D3DED105412</id>
+    <title>1.1.58 (1.1.58.4)</title>
+    <summary>1.1.58.4</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug that would prevent a bot on the whitelist processing the message.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F3C22842-A089-46F7-AB1A-5D3DED105412</id>
+    <title>1.1.58 (1.1.58.3)</title>
+    <summary>1.1.58.3</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C566D9D2-3566-46DF-8AD4-39F5FC0FFEF2</id>
+    <title>1.1.58 (1.1.58.2)</title>
+    <summary>1.1.58.2</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:19B09A66-43F2-4D5F-AF33-5C77D7EA9A6B</id>
+    <title>1.1.58 (1.1.58.1)</title>
+    <summary>1.1.58.1</summary>
+    <link href="" />
+    <updated>2021-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Made changes to the code to help improve performance.</li>
           </ul>
         </p>
       </div>

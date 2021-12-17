@@ -30,6 +30,9 @@ namespace ServerManagerTool
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private readonly ActionQueue versionChecker;
         private readonly ActionQueue scheduledTaskChecker;
+        private readonly ActionQueue discordBotChecker;
+
+        private bool discordBotStateClicked = false;
 
         public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(MainWindow), new PropertyMetadata(null));
@@ -40,9 +43,53 @@ namespace ServerManagerTool
         public static readonly DependencyProperty AutoUpdateStateProperty = DependencyProperty.Register(nameof(AutoUpdateState), typeof(Microsoft.Win32.TaskScheduler.TaskState), typeof(MainWindow), new PropertyMetadata(Microsoft.Win32.TaskScheduler.TaskState.Unknown));
         public static readonly DependencyProperty AutoUpdateStateStringProperty = DependencyProperty.Register(nameof(AutoUpdateStateString), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty AutoUpdateNextRunTimeProperty = DependencyProperty.Register(nameof(AutoUpdateNextRunTime), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
+        public static readonly DependencyProperty DiscordBotStateProperty = DependencyProperty.Register(nameof(DiscordBotState), typeof(DiscordBot.Enums.BotState), typeof(MainWindow), new PropertyMetadata(DiscordBot.Enums.BotState.Unknown));
+        public static readonly DependencyProperty DiscordBotStateStringProperty = DependencyProperty.Register(nameof(DiscordBotStateString), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty IsIpValidProperty = DependencyProperty.Register(nameof(IsIpValid), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
         public static readonly DependencyProperty LatestServerManagerVersionProperty = DependencyProperty.Register(nameof(LatestServerManagerVersion), typeof(Version), typeof(MainWindow), new PropertyMetadata(new Version()));
         public static readonly DependencyProperty NewServerManagerAvailableProperty = DependencyProperty.Register(nameof(NewServerManagerAvailable), typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
+
+        public MainWindow()
+        {
+            this.AppInstance = App.Instance;
+            this.Config = Config.Default;
+
+            InitializeComponent();
+            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
+            this.ServerManager = ServerManager.Instance;
+
+            this.DataContext = this;
+            this.versionChecker = new ActionQueue();
+            this.scheduledTaskChecker = new ActionQueue();
+            this.discordBotChecker = new ActionQueue();
+
+            IsAdministrator = SecurityUtils.IsAdministrator();
+            if (!string.IsNullOrWhiteSpace(App.Instance.Title))
+            {
+                this.Title = App.Instance.Title;
+            }
+            else
+            {
+                if (IsAdministrator)
+                {
+                    this.Title = _globalizer.GetResourceString("MainWindow_TitleWithAdmin");
+                }
+                else
+                {
+                    this.Title = _globalizer.GetResourceString("MainWindow_Title");
+                }
+            }
+
+            this.Left = Config.Default.MainWindow_Left;
+            this.Top = Config.Default.MainWindow_Top;
+            this.Height = Config.Default.MainWindow_Height;
+            this.Width = Config.Default.MainWindow_Width;
+            this.WindowState = Config.Default.MainWindow_WindowState;
+
+            // hook into the language change event
+            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
+        }
 
         public App AppInstance
         {
@@ -98,6 +145,18 @@ namespace ServerManagerTool
             set { SetValue(AutoUpdateNextRunTimeProperty, value); }
         }
 
+        public DiscordBot.Enums.BotState DiscordBotState
+        {
+            get { return (DiscordBot.Enums.BotState)GetValue(DiscordBotStateProperty); }
+            set { SetValue(DiscordBotStateProperty, value); }
+        }
+
+        public string DiscordBotStateString
+        {
+            get { return (string)GetValue(DiscordBotStateStringProperty); }
+            set { SetValue(DiscordBotStateStringProperty, value); }
+        }
+
         public bool IsAdministrator
         {
             get;
@@ -120,47 +179,6 @@ namespace ServerManagerTool
         {
             get { return (bool)GetValue(NewServerManagerAvailableProperty); }
             set { SetValue(NewServerManagerAvailableProperty, value); }
-        }
-
-        public MainWindow()
-        {
-            this.AppInstance = App.Instance;
-            this.Config = Config.Default;
-
-            InitializeComponent();
-            WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
-
-            this.ServerManager = ServerManager.Instance;
-
-            this.DataContext = this;
-            this.versionChecker = new ActionQueue();
-            this.scheduledTaskChecker = new ActionQueue();
-
-            IsAdministrator = SecurityUtils.IsAdministrator();
-            if (!string.IsNullOrWhiteSpace(App.Instance.Title))
-            {
-                this.Title = App.Instance.Title;
-            }
-            else
-            {
-                if (IsAdministrator)
-                {
-                    this.Title = _globalizer.GetResourceString("MainWindow_TitleWithAdmin");
-                }
-                else
-                {
-                    this.Title = _globalizer.GetResourceString("MainWindow_Title");
-                }
-            }
-
-            this.Left = Config.Default.MainWindow_Left;
-            this.Top = Config.Default.MainWindow_Top;
-            this.Height = Config.Default.MainWindow_Height;
-            this.Width = Config.Default.MainWindow_Width;
-            this.WindowState = Config.Default.MainWindow_WindowState;
-
-            // hook into the language change event
-            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -191,6 +209,7 @@ namespace ServerManagerTool
 
             this.versionChecker.PostAction(CheckForUpdates).DoNotWait();
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
+            this.discordBotChecker.PostAction(CheckForDiscordBot).DoNotWait();
         }
 
         private void MainWindow_LocationChanged(object sender, EventArgs e)
@@ -254,6 +273,7 @@ namespace ServerManagerTool
                 this.Title = _globalizer.GetResourceString("MainWindow_Title");
 
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
+            this.discordBotChecker.PostAction(CheckForDiscordBot).DoNotWait();
         }
 
         private void PatchNotes_Click(object sender, RoutedEventArgs e)
@@ -563,6 +583,36 @@ namespace ServerManagerTool
             }
         }
 
+        private async void DiscordBotTaskState_Click(object sender, RoutedEventArgs e)
+        {
+            if (discordBotStateClicked)
+                return;
+            discordBotStateClicked = true;
+
+            try
+            {
+                switch (DiscordBotState)
+                {
+                    case DiscordBot.Enums.BotState.Stopped:
+                        AppInstance.StartDiscordBot();
+                        break;
+                    case DiscordBot.Enums.BotState.Running:
+                        AppInstance.StopDiscordBot();
+                        break;
+                }
+
+                await Task.Delay(5000);
+            }
+            catch (Exception)
+            {
+                // Ignore.
+            }
+            finally
+            {
+                discordBotStateClicked = false;
+            }
+        }
+
         public ICommand ShowWindowCommand
         {
             get
@@ -654,8 +704,8 @@ namespace ServerManagerTool
                     this.AutoBackupState = backupState;
                     this.AutoUpdateState = updateState;
 
-                    this.AutoBackupStateString = GetTaskStateString(AutoBackupState);
-                    this.AutoUpdateStateString = GetTaskStateString(AutoUpdateState);
+                    this.AutoBackupStateString = GetTaskSchedulerStateString(AutoBackupState);
+                    this.AutoUpdateStateString = GetTaskSchedulerStateString(AutoUpdateState);
 
                     this.AutoBackupNextRunTime = backupnextRunTime == DateTime.MinValue ? string.Empty : $"{_globalizer.GetResourceString("MainWindow_TaskRunTimeLabel")} {backupnextRunTime:G}";
                     this.AutoUpdateNextRunTime = updatenextRunTime == DateTime.MinValue ? string.Empty : $"{_globalizer.GetResourceString("MainWindow_TaskRunTimeLabel")} {updatenextRunTime:G}";
@@ -672,7 +722,46 @@ namespace ServerManagerTool
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
         }
 
-        private string GetTaskStateString(Microsoft.Win32.TaskScheduler.TaskState taskState)
+        private async Task CheckForDiscordBot()
+        {
+            TaskUtils.RunOnUIThreadAsync(() =>
+            {
+                try
+                {
+                    var botState = DiscordBot.Enums.BotState.Unknown;
+                    if (AppInstance.DiscordBotStarted)
+                    {
+                        botState = DiscordBot.Enums.BotState.Running;
+                    }
+                    else
+                    {
+                        if (Config.DiscordBotEnabled)
+                        {
+                            botState = DiscordBot.Enums.BotState.Stopped;
+                        }
+                        else
+                        {
+                            botState = DiscordBot.Enums.BotState.Disabled;
+                        }
+                    }
+
+                    this.DiscordBotState = botState;
+
+                    this.DiscordBotStateString = GetDiscordBotStateString(botState);
+
+                    Logger.Info($"{nameof(CheckForDiscordBot)} performed");
+                }
+                catch (Exception)
+                {
+                    // Ignore.
+                }
+            }).DoNotWait();
+
+            await Task.Delay(Config.Default.DiscordBotStatusCheckTime * 1 * 1000);
+            this.discordBotChecker.PostAction(CheckForDiscordBot).DoNotWait();
+        }
+
+        private string GetTaskSchedulerStateString(Microsoft.Win32.TaskScheduler.TaskState taskState)
         {
             switch (taskState)
             {
@@ -686,6 +775,21 @@ namespace ServerManagerTool
                     return _globalizer.GetResourceString("MainWindow_TaskStateRunningLabel");
                 case Microsoft.Win32.TaskScheduler.TaskState.Unknown:
                     return _globalizer.GetResourceString("MainWindow_TaskStateUnknownLabel");
+                default:
+                    return _globalizer.GetResourceString("MainWindow_TaskStateUnknownLabel");
+            }
+        }
+
+        private string GetDiscordBotStateString(DiscordBot.Enums.BotState botState)
+        {
+            switch (botState)
+            {
+                case DiscordBot.Enums.BotState.Disabled:
+                    return _globalizer.GetResourceString("MainWindow_TaskStateDisabledLabel");
+                case DiscordBot.Enums.BotState.Running:
+                    return _globalizer.GetResourceString("MainWindow_TaskStateRunningLabel");
+                case DiscordBot.Enums.BotState.Stopped:
+                    return _globalizer.GetResourceString("MainWindow_TaskStateStoppedLabel");
                 default:
                     return _globalizer.GetResourceString("MainWindow_TaskStateUnknownLabel");
             }

@@ -8,6 +8,52 @@
   <updated>2021-12-12T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:A0D7BFD2-F2F0-481A-A22D-3C193BFB4C99</id>
+    <title>1.0.19 (1.0.19.5)</title>
+    <summary>1.0.19.5</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:38A61493-CA4E-479E-A3FD-266565E83D90</id>
+    <title>1.0.19 (1.0.19.4)</title>
+    <summary>1.0.19.4</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file added.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:DDB25735-1D20-4580-B5FE-1AD4BD107376</id>
     <title>1.0.19 (1.0.19.3)</title>
     <summary>1.0.19.3</summary>

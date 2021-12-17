@@ -22,6 +22,8 @@ namespace ServerManagerTool
 
         protected override void OnClosed(EventArgs e)
         {
+            globalSettingsControl.ApplyChangesToConfig();
+
             if (SecurityUtils.IsAdministrator())
             {
                 // check if the Auto Update has been enabled.
