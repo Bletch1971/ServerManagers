@@ -71,7 +71,7 @@ namespace ServerManagerTool.DiscordBot.Services
 
             // Check if the message has a valid command prefix
             var argPos = 0;
-            if (msg.HasStringPrefix(_config["DiscordSettings:Prefix"], ref argPos) || msg.HasMentionPrefix(_discord.CurrentUser, ref argPos))
+            if (msg.HasStringPrefix(_config["DiscordSettings:Prefix"], ref argPos, StringComparison.OrdinalIgnoreCase) || msg.HasMentionPrefix(_discord.CurrentUser, ref argPos))
             {
                 if (LogLevel.Debug.ToString().Equals(_config["DiscordSettings:LogLevel"]))
                     await _logger?.OnLogAsync(new LogMessage(LogSeverity.Debug, MessageSource.System.ToString(), $"Message prefix matched, message will be processed."));

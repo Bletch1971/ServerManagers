@@ -72,6 +72,7 @@ namespace ServerManagerTool.DiscordBot
                 // Force all commands to run async
                 DefaultRunMode = RunMode.Async,
                 LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
+                CaseSensitiveCommands = false,
             };
 
             var discordBotConfig = new DiscordBotConfig

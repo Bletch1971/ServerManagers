@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32.TaskScheduler;
 using NLog;
+using ServerManagerTool.Common.Extensions;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -202,7 +203,7 @@ namespace ServerManagerTool.Common.Utils
 
                 // Add/Edit the trigger that will fire every x minutes
                 var triggers = taskDefinition.Triggers.OfType<TimeTrigger>();
-                if (triggers.Count() == 0)
+                if (triggers.IsEmpty())
                 {
                     var trigger = new TimeTrigger
                     {
@@ -445,7 +446,7 @@ namespace ServerManagerTool.Common.Utils
                 if (onBoot)
                 {
                     var triggers = taskDefinition.Triggers.OfType<BootTrigger>();
-                    if (triggers.Count() == 0)
+                    if (triggers.IsEmpty())
                     {
                         var trigger = new BootTrigger
                         {
@@ -465,7 +466,7 @@ namespace ServerManagerTool.Common.Utils
                 else
                 {
                     var triggers = taskDefinition.Triggers.OfType<LogonTrigger>();
-                    if (triggers.Count() == 0)
+                    if (triggers.IsEmpty())
                     {
                         var trigger = new LogonTrigger
                         {
@@ -572,7 +573,7 @@ namespace ServerManagerTool.Common.Utils
 
                 // Add/Edit the trigger that will fire every x minutes
                 var triggers = taskDefinition.Triggers.OfType<TimeTrigger>();
-                if (triggers.Count() == 0)
+                if (triggers.IsEmpty())
                 {
                     var trigger = new TimeTrigger
                     {

@@ -1,5 +1,6 @@
 ﻿using ArkData;
 using NLog;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Interfaces;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
@@ -325,8 +326,8 @@ namespace ServerManagerTool.Lib
             else if (command.command.Equals(RCON_COMMAND_GETCHAT, StringComparison.OrdinalIgnoreCase))
             {
                 // TODO: Extract the player name from the chat
-                var lines = command.lines.Where(l => !String.IsNullOrEmpty(l) && l != NoResponseOutput);
-                if (!lines.Any() && command.suppressCommand)
+                var lines = command.lines.Where(l => !string.IsNullOrEmpty(l) && l != NoResponseOutput);
+                if (lines.IsEmpty() && command.suppressCommand)
                 {
                     command.suppressOutput = true;
                 }

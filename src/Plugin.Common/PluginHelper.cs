@@ -272,7 +272,7 @@ namespace ServerManagerTool.Plugin.Common
                 return false;
 
             var plugins = Plugins.Where(p => (p.PluginType is nameof(IAlertPlugin)) && (p.Plugin?.Enabled ?? false));
-            if (plugins.Count() == 0)
+            if (plugins.IsEmpty())
                 return false;
 
             lock (_syncLockProcessAlert)

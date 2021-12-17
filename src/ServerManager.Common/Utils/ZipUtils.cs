@@ -1,4 +1,5 @@
 ﻿using Ionic.Zip;
+using ServerManagerTool.Common.Extensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -73,7 +74,8 @@ namespace ServerManagerTool.Common.Utils
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
-            if (!filesToZip.Any())
+
+            if (filesToZip is null || filesToZip.IsEmpty())
                 return;
 
             if (!File.Exists(zipFile))
@@ -165,7 +167,8 @@ namespace ServerManagerTool.Common.Utils
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
-            if (!filesToZip.Any())
+
+            if (filesToZip is null || filesToZip.IsEmpty())
                 throw new ArgumentNullException(nameof(filesToZip));
 
             using (var zip = new ZipFile(zipFile))

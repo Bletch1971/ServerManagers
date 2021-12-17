@@ -1,4 +1,5 @@
 ﻿using QueryMaster;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.Enums;
@@ -109,14 +110,15 @@ namespace ServerManagerTool.Utils
 
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId) 
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase) 
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase) 
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -190,7 +192,7 @@ namespace ServerManagerTool.Utils
 
             TaskUtils.RunOnUIThreadAsync(() =>
             {
-                var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId));
+                var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase));
 
                 response.Add($"**{_globalizer.GetResourceString("DiscordBot_CountLabel")}** {serverList.Count()}");
                 foreach (var server in serverList)
@@ -211,8 +213,10 @@ namespace ServerManagerTool.Utils
 
             TaskUtils.RunOnUIThreadAsync(() =>
             {
-                var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId) 
-                    && (string.IsNullOrWhiteSpace(profileIdOrAlias) || Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                    && (string.IsNullOrWhiteSpace(profileIdOrAlias)
+                    || string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                    || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
                 response.Add($"**{_globalizer.GetResourceString("DiscordBot_CountLabel")}** {serverList.Count()}");
                 foreach (var server in serverList)
@@ -245,14 +249,15 @@ namespace ServerManagerTool.Utils
             {
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId)
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -299,8 +304,9 @@ namespace ServerManagerTool.Utils
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
                         {
-                            var server = ServerManager.Instance.Servers.First(s => Equals(channelId, s.Profile.DiscordChannelId)
-                                && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                            var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                                && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                                || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
                             server.Runtime.UpdateServerStatus(serverStatus, true);
                         }).Wait();
                     }
@@ -341,14 +347,15 @@ namespace ServerManagerTool.Utils
             {
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId)
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -398,8 +405,9 @@ namespace ServerManagerTool.Utils
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
                         {
-                            var server = ServerManager.Instance.Servers.First(s => Equals(channelId, s.Profile.DiscordChannelId)
-                                && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                            var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                                && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                                || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
                             server.Runtime.UpdateServerStatus(serverStatus, true);
                         }).Wait();
                     }
@@ -440,14 +448,15 @@ namespace ServerManagerTool.Utils
             {
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId)
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -497,8 +506,9 @@ namespace ServerManagerTool.Utils
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
                         {
-                            var server = ServerManager.Instance.Servers.First(s => Equals(channelId, s.Profile.DiscordChannelId)
-                                && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                            var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                                && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                                || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
                             server.Runtime.UpdateServerStatus(serverStatus, true);
                         }).Wait();
                     }
@@ -539,14 +549,15 @@ namespace ServerManagerTool.Utils
             {
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId)
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -597,8 +608,9 @@ namespace ServerManagerTool.Utils
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
                         {
-                            var server = ServerManager.Instance.Servers.First(s => Equals(channelId, s.Profile.DiscordChannelId)
-                                && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                            var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                                && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                                || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
                             server.Runtime.UpdateServerStatus(serverStatus, true);
                         }).Wait();
                     }
@@ -639,14 +651,15 @@ namespace ServerManagerTool.Utils
             {
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId)
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -697,8 +710,9 @@ namespace ServerManagerTool.Utils
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
                         {
-                            var server = ServerManager.Instance.Servers.First(s => Equals(channelId, s.Profile.DiscordChannelId)
-                                && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                            var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                                && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                                || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
                             server.Runtime.UpdateServerStatus(serverStatus, true);
                         }).Wait();
                     }
@@ -740,14 +754,15 @@ namespace ServerManagerTool.Utils
             {
                 TaskUtils.RunOnUIThreadAsync(() =>
                 {
-                    var serverList = ServerManager.Instance.Servers.Where(s => Equals(channelId, s.Profile.DiscordChannelId)
-                        && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                    var serverList = ServerManager.Instance.Servers.Where(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                        && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                        || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
 
-                    if (!serverList.Any())
+                    if (serverList.IsEmpty())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileNotFound"), profileIdOrAlias));
                     }
-                    if (serverList.Count() > 1)
+                    if (!serverList.HasOne())
                     {
                         throw new Exception(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileMultiples"), profileIdOrAlias));
                     }
@@ -799,8 +814,9 @@ namespace ServerManagerTool.Utils
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
                         {
-                            var server = ServerManager.Instance.Servers.First(s => Equals(channelId, s.Profile.DiscordChannelId)
-                                && (Equals(profileIdOrAlias, s.Profile.ProfileID) || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && Equals(profileIdOrAlias, s.Profile.DiscordAlias)));
+                            var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
+                                && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
+                                || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
                             server.Runtime.UpdateServerStatus(serverStatus, true);
                         }).Wait();
                     }

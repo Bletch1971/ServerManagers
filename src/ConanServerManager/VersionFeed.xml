@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:19B09A66-43F2-4D5F-AF33-5C77D7EA9A6B</id>
-    <title>1.1.58 (1.1.58.7)</title>
-    <summary>1.1.58.7</summary>
+    <title>1.1.58 (1.1.58.8)</title>
+    <summary>1.1.58.8</summary>
     <link href="" />
     <updated>2021-12-16T00:00:00Z</updated>
     <content type="xhtml">
@@ -28,8 +28,9 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
+            <li>Discord Bot - removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
             <li>Made changes to the code to help improve performance.</li>
-            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
           </ul>
         </p>
       </div>
