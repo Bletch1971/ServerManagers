@@ -9,6 +9,29 @@
 
   <entry>
     <id>urn:uuid:8EE5659C-18E6-47D3-941D-C32B129D2E06</id>
+    <title>1.1.413 (1.1.413.8)</title>
+    <summary>1.1.413.8</summary>
+    <link href="" />
+    <updated>2021-12-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:8EE5659C-18E6-47D3-941D-C32B129D2E06</id>
     <title>1.1.413 (1.1.413.7)</title>
     <summary>1.1.413.7</summary>
     <link href="" />
