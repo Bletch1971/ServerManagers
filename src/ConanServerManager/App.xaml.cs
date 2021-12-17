@@ -593,7 +593,7 @@ namespace ServerManagerTool
                     discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
                 }
 
-                await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataPath, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
+                await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataPath, Config.Default.DiscordBotAllowAllBots, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
                 
                 if (_tokenSourceDiscordBot != null)
                 {

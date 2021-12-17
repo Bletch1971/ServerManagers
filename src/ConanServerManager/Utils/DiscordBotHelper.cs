@@ -165,7 +165,9 @@ namespace ServerManagerTool.Utils
                         else
                         {
                             var mapName = _globalizer.GetResourceString($"Map_{info.Map}") ?? info.Map;
-                            response.Add($"```{info.Name}\n{_globalizer.GetResourceString("DiscordBot_MapLabel")} {mapName}\n{_globalizer.GetResourceString("ServerSettings_PlayersLabel")} {info.Players} / {info.MaxPlayers}```");
+                            response.Add($"```{info.Name}\n" +
+                                $"{_globalizer.GetResourceString("DiscordBot_MapLabel")} {mapName}\n" +
+                                $"{_globalizer.GetResourceString("ServerSettings_PlayersLabel")} {info.Players} / {info.MaxPlayers}```");
                         }
                     }
                 }
@@ -193,7 +195,10 @@ namespace ServerManagerTool.Utils
                 response.Add($"**{_globalizer.GetResourceString("DiscordBot_CountLabel")}** {serverList.Count()}");
                 foreach (var server in serverList)
                 {
-                    response.Add($"```{_globalizer.GetResourceString("ServerSettings_ProfileIdLabel")} {server.Profile.ProfileID}\n{_globalizer.GetResourceString("ServerSettings_DiscordAliasLabel")} {server.Profile.DiscordAlias}\n{_globalizer.GetResourceString("ServerSettings_ProfileLabel")} {server.Profile.ProfileName}\n{_globalizer.GetResourceString("ServerSettings_ServerNameLabel")} {server.Profile.ServerName}```");
+                    response.Add($"```{_globalizer.GetResourceString("ServerSettings_ProfileLabel")} {server.Profile.ProfileName}\n" +
+                        $"{_globalizer.GetResourceString("ServerSettings_ProfileIdLabel")} {server.Profile.ProfileID}\n" +
+                        (string.IsNullOrWhiteSpace(server.Profile.DiscordAlias) ? "" : $"{_globalizer.GetResourceString("ServerSettings_DiscordAliasLabel")} {server.Profile.DiscordAlias}\n") +
+                        $"{_globalizer.GetResourceString("ServerSettings_ServerNameLabel")} {server.Profile.ServerName}```");
                 }
             }).Wait();
 
@@ -212,7 +217,12 @@ namespace ServerManagerTool.Utils
                 response.Add($"**{_globalizer.GetResourceString("DiscordBot_CountLabel")}** {serverList.Count()}");
                 foreach (var server in serverList)
                 {
-                    response.Add($"```{_globalizer.GetResourceString("ServerSettings_ProfileLabel")} {server.Profile.ProfileName}\n{_globalizer.GetResourceString("ServerSettings_ServerNameLabel")} {server.Profile.ServerName}\n{_globalizer.GetResourceString("ServerSettings_StatusLabel")} {server.Runtime.StatusString}\n{_globalizer.GetResourceString("ServerSettings_AvailabilityLabel")} {_globalizer.GetResourceString($"ServerSettings_Availability_{server.Runtime.Availability}")}```");
+                    response.Add($"```{_globalizer.GetResourceString("ServerSettings_ProfileLabel")} {server.Profile.ProfileName}\n" +
+                        $"{_globalizer.GetResourceString("ServerSettings_ProfileIdLabel")} {server.Profile.ProfileID}\n" +
+                        (string.IsNullOrWhiteSpace(server.Profile.DiscordAlias) ? "" : $"{_globalizer.GetResourceString("ServerSettings_DiscordAliasLabel")} {server.Profile.DiscordAlias}\n") +
+                        $"{_globalizer.GetResourceString("ServerSettings_ServerNameLabel")} {server.Profile.ServerName}\n" +
+                        $"{_globalizer.GetResourceString("ServerSettings_StatusLabel")} {server.Runtime.StatusString}\n" +
+                        $"{_globalizer.GetResourceString("ServerSettings_AvailabilityLabel")} {_globalizer.GetResourceString($"ServerSettings_Availability_{server.Runtime.Availability}")}```");
                 }
             }).Wait();
 

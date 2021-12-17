@@ -28,7 +28,7 @@ namespace ServerManagerTool.DiscordBot
         public CancellationToken Token { get; private set; }
         public bool Started { get; private set; }  
 
-        public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
+        public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, bool allowAllBots, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
             if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleTranslationCallback is null || handleCommandCallback is null)
             {
@@ -74,9 +74,10 @@ namespace ServerManagerTool.DiscordBot
                 LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
             };
 
-            var discordBotWhitelistConfig = new DiscordBotWhitelistConfig
+            var discordBotConfig = new DiscordBotConfig
             {
-                DiscordBotWhitelists = new List<DiscordBotWhitelist> ( botWhitelist.Select(i => new DiscordBotWhitelist { BotId = i }) )
+                AllowAllBots = allowAllBots,
+                DiscordBotWhitelists = new List<DiscordBotWhitelist> ( botWhitelist.Select(i => new DiscordBotWhitelist { BotId = i }) ),
             };
 
             // Build the service provider
@@ -93,7 +94,7 @@ namespace ServerManagerTool.DiscordBot
                 .AddSingleton<ShutdownService>()
                 .AddSingleton<Random>()
                 .AddSingleton(config)
-                .AddSingleton(discordBotWhitelistConfig)
+                .AddSingleton(discordBotConfig)
                 .AddSingleton(handleCommandCallback)
                 .AddSingleton(handleTranslationCallback)
                 .AddSingleton<IServerManagerBot>(this);

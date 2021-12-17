@@ -534,12 +534,14 @@
 
                     <Grid IsEnabled="{Binding Config.DiscordBotEnabled}">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto" MinHeight="25"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="Auto" MinHeight="20"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" MinWidth="60"/>
@@ -577,7 +579,7 @@
                         <CheckBox Grid.Row="4" Grid.Column="4" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordShutdown}" Content="{DynamicResource ServerSettings_AllowDiscordShutdownLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowShutdownTooltip}"/>
                         <CheckBox Grid.Row="4" Grid.Column="7" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordStop}" Content="{DynamicResource ServerSettings_AllowDiscordStopLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStopTooltip}"/>
 
-                        <GroupBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" MinHeight="200">
+                        <GroupBox Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" MinHeight="200" IsEnabled="{Binding Config.DiscordBotAllowAllBots, Converter={StaticResource InvertBooleanConverter}}">
                             <GroupBox.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="{DynamicResource GlobalSettings_DiscordBotWhitelistLabel}"/>
@@ -625,6 +627,8 @@
                                 </DataGrid.Columns>
                             </DataGrid>
                         </GroupBox>
+
+                        <CheckBox Grid.Row="6" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.DiscordBotAllowAllBots}" Content="{DynamicResource ServerSettings_DiscordBotAllowAllBotsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DiscordBotAllowAllBotsTooltip}"/>
                     </Grid>
                 </GroupBox>
 

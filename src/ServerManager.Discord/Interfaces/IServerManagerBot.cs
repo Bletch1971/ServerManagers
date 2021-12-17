@@ -10,6 +10,6 @@ namespace ServerManagerTool.DiscordBot.Interfaces
     {
         CancellationToken Token { get; }
 
-        Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token);
+        Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, bool allowAllBots, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token);
     }
 }

@@ -2185,5 +2185,17 @@ namespace ServerManagerTool {
                 return ((int)(this["DiscordBotStatusCheckTime"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DiscordBotAllowAllBots {
+            get {
+                return ((bool)(this["DiscordBotAllowAllBots"]));
+            }
+            set {
+                this["DiscordBotAllowAllBots"] = value;
+            }
+        }
     }
 }

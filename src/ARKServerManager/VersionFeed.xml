@@ -19,16 +19,17 @@
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
             <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
             <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
             <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
-            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
             <li>Made changes to the code to help improve performance.</li>
-            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change the existing functionality, but you can now change it.</li>
+            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>
             <li>zh-CN Translation file updated.</li>

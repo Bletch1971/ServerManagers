@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
           </ul>
         </p>
       </div>
@@ -118,7 +119,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change the existing functionality, but you can now change it.</li>
+            <li>Removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
             <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
