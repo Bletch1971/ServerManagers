@@ -790,12 +790,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Enable</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Enable the auto-update scheduled task</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Next Run Time:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord Bot:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Start</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Start the discord bot</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Stop</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Stop the discord bot</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Unknown</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Disabled</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">Queued</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Ready</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Running</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Stopped</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Profile failed to load</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">The profile at {0} failed to load. The error was: {1}\r\n{2}</sys:String>

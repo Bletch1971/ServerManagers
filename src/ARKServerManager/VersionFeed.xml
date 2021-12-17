@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:3E33DCB2-ECFE-4489-B1A4-56F5D386F9DC</id>
-    <title>1.1.413 (1.1.413.6)</title>
-    <summary>1.1.413.6</summary>
+    <title>1.1.413 (1.1.413.7)</title>
+    <summary>1.1.413.7</summary>
     <link href="" />
     <updated>2021-12-17T00:00:00Z</updated>
     <content type="xhtml">
@@ -22,6 +22,7 @@
             <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
             <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
             <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>

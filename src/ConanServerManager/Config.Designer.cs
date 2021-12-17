@@ -2176,5 +2176,14 @@ namespace ServerManagerTool {
                 this["DiscordBotLogLevel"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int DiscordBotStatusCheckTime {
+            get {
+                return ((int)(this["DiscordBotStatusCheckTime"]));
+            }
+        }
     }
 }

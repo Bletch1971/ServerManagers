@@ -30,17 +30,17 @@ namespace ServerManagerTool.DiscordBot
 
         public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
-            if (Started)
-            {
-                return;
-            }
-            Started = true;
-
             if (string.IsNullOrWhiteSpace(commandPrefix) || string.IsNullOrWhiteSpace(discordToken) || handleTranslationCallback is null || handleCommandCallback is null)
             {
                 return;
             }
 
+            if (Started)
+            {
+                return;
+            }
+
+            Started = true;
             Token = token;
 
             var settings = new Dictionary<string, string>
@@ -121,6 +121,7 @@ namespace ServerManagerTool.DiscordBot
                 }
 
                 await provider?.GetRequiredService<ShutdownService>().StopAsync();
+                Started = false;
             }
         }
     }
