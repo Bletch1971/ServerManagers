@@ -5615,7 +5615,8 @@
 
     <!--#region Discord Bot -->
     <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
-    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server.\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">The discord bot requires a valid prefix.\r\nThis can be set in the global settings.</sys:String>
     <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
 
     <sys:String x:Key="DiscordBot_CommandNotEnabled">Command '{0}' has not been enabled.</sys:String>
