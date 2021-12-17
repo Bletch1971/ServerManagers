@@ -9,7 +9,7 @@
         xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:enum="clr-namespace:ServerManagerTool.Enums"
-        xmlns:bot="clr-namespace:ServerManagerTool.DiscordBot;assembly=ServerManager.Discord"
+        xmlns:botenum="clr-namespace:ServerManagerTool.DiscordBot.Enums;assembly=ServerManager.Discord"
         MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50" WindowState="Normal"
         Loaded="MainWindow_Loaded" SizeChanged="MainWindow_SizeChanged" StateChanged="MainWindow_StateChanged" LocationChanged="MainWindow_LocationChanged"
         Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}">
@@ -146,7 +146,7 @@
                                         <Setter Property="Foreground" Value="White"/>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding AutoBackupState}" Value="{x:Static tsk:TaskState.Disabled}">
-                                                <Setter Property="Foreground" Value="DarkRed"/>
+                                                <Setter Property="Foreground" Value="Orange"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding AutoBackupState}" Value="{x:Static tsk:TaskState.Ready}">
                                                 <Setter Property="Foreground" Value="White"/>
@@ -207,7 +207,7 @@
                                         <Setter Property="Foreground" Value="White"/>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding AutoUpdateState}" Value="{x:Static tsk:TaskState.Disabled}">
-                                                <Setter Property="Foreground" Value="DarkRed"/>
+                                                <Setter Property="Foreground" Value="Orange"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding AutoUpdateState}" Value="{x:Static tsk:TaskState.Ready}">
                                                 <Setter Property="Foreground" Value="White"/>
@@ -267,13 +267,13 @@
                                     <Style BasedOn="{StaticResource {x:Type Label}}" TargetType="{x:Type Label}">
                                         <Setter Property="Foreground" Value="White"/>
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Disabled}">
-                                                <Setter Property="Foreground" Value="DarkRed"/>
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static botenum:BotState.Disabled}">
+                                                <Setter Property="Foreground" Value="Orange"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Stopped}">
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static botenum:BotState.Stopped}">
                                                 <Setter Property="Foreground" Value="White"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Running}">
+                                            <DataTrigger Binding="{Binding DiscordBotState}" Value="{x:Static botenum:BotState.Running}">
                                                 <Setter Property="Foreground" Value="LightGreen"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -291,7 +291,7 @@
                                         <Style.Triggers>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Stopped}"/>
+                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static botenum:BotState.Stopped}"/>
                                                 </MultiDataTrigger.Conditions>
                                                 <Setter Property="Background" Value="#00AA00"/>
                                                 <Setter Property="Foreground" Value="White"/>
@@ -301,7 +301,7 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static bot:Enums.BotState.Running}"/>
+                                                    <Condition Binding="{Binding DiscordBotState}" Value="{x:Static botenum:BotState.Running}"/>
                                                 </MultiDataTrigger.Conditions>
                                                 <Setter Property="Background" Value="#AA8A00"/>
                                                 <Setter Property="Foreground" Value="White"/>
@@ -460,7 +460,7 @@
                                             <Setter Property="Foreground" Value="Black"/>
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding Profile.SOTF_Enabled}" Value="True">
-                                                    <Setter Property="Foreground" Value="DarkRed"/>
+                                                    <Setter Property="Foreground" Value="Red"/>
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding Profile.PGM_Enabled}" Value="True">
                                                     <Setter Property="Foreground" Value="#4E008B"/>
