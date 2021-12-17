@@ -1,89 +1,84 @@
 ﻿{
-  "Application": "ark",
-  "Version": "1.1.0",
-  "Created": "2021-12-16T06:25:00.0000000Z",
-  "Mod": "LostIsland"
-  "Creatures": [
-	{
-      "NameTag": "Amargasaurus",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "Amargasaurus_Character_BP_C",
-      "Description": "Amargasaurus",
-      "Mod": "LostIsland"
-    },
-	{
-      "NameTag": "Sinomacrops",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "Sinomacrops_Character_BP_C",
-      "Description": "Sinomacrops",
-      "Mod": "LostIsland"
-    },
-	{
-      "NameTag": "Dinopithecus",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "Dinopithecus_Character_BP_C",
-      "Description": "Dinopithecus",
-      "Mod": "LostIsland"
-    },
-  ],
-  "Items": [
-    {
-      "Category": "Trophy",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemTrophy_BossDinopithecus_C",
-      "Description": "Dinopithecus Trophy",
-      "Mod": "LostIsland"
-    },
-    {
-      "Category": "Trophy",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemTrophy_BossDinopithecus_Easy_C",
-      "Description": "Dinopithecus Trophy (Gamma)",
-      "Mod": "LostIsland"
-    },
-    {
-      "Category": "Trophy",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemTrophy_BossDinopithecus_Medium_C",
-      "Description": "Dinopithecus Trophy (Beta)",
-      "Mod": "LostIsland"
-    },
-    {
-      "Category": "Trophy",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemTrophy_BossDinopithecus_Hard_C",
-      "Description": "Dinopithecus Trophy (Alpha)",
-      "Mod": "LostIsland"
-    }
-  ],
-  "Inventories": [
-    {
-      "ClassName": "DinoDropInventoryComponent_BossDinopith_Easy_C",
-      "Description": "Boss Inventory - Dinopithecus (Gamma)",
-      "Mod": "LostIsland"
-    },
-    {
-      "ClassName": "DinoDropInventoryComponent_BossDinopith_Medium_C",
-      "Description": "Boss Inventory - Dinopithecus (Beta)",
-      "Mod": "LostIsland"
-    },
-    {
-      "ClassName": "DinoDropInventoryComponent_BossDinopith_Hard_C",
-      "Description": "Boss Inventory - Dinopithecus (Alpha)",
-      "Mod": "LostIsland"
-    },
-  ],
-  "Engrams": [
-    {
-      "Level": 60,
-      "Points": 30,
-      "IsTekGram": false,
-      "ClassName": "EngramEntry_Saddle_Amarga_C",
-      "Description": "Amargasaurus Saddle",
-      "Mod": "LostIsland"
-    },
-  ]
+	"Application": "ark",
+	"Version": "1.1.1",
+	"Created": "2021-12-16T09:25:00.0000000Z",
+	"Mod": "LostIsland",
+	"Creatures": [{
+			"NameTag": "Amargasaurus",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "Amargasaurus_Character_BP_C",
+			"Description": "Amargasaurus",
+			"Mod": "LostIsland"
+		},
+		{
+			"NameTag": "Sinomacrops",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "Sinomacrops_Character_BP_C",
+			"Description": "Sinomacrops",
+			"Mod": "LostIsland"
+		},
+		{
+			"NameTag": "Dinopithecus",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "Dinopithecus_Character_BP_C",
+			"Description": "Dinopithecus",
+			"Mod": "LostIsland"
+		}
+	],
+	"Items": [{
+			"Category": "Trophy",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemTrophy_BossDinopithecus_C",
+			"Description": "Dinopithecus Trophy",
+			"Mod": "LostIsland"
+		},
+		{
+			"Category": "Trophy",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemTrophy_BossDinopithecus_Easy_C",
+			"Description": "Dinopithecus Trophy (Gamma)",
+			"Mod": "LostIsland"
+		},
+		{
+			"Category": "Trophy",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemTrophy_BossDinopithecus_Medium_C",
+			"Description": "Dinopithecus Trophy (Beta)",
+			"Mod": "LostIsland"
+		},
+		{
+			"Category": "Trophy",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemTrophy_BossDinopithecus_Hard_C",
+			"Description": "Dinopithecus Trophy (Alpha)",
+			"Mod": "LostIsland"
+		}
+	],
+	"Inventories": [{
+			"ClassName": "DinoDropInventoryComponent_BossDinopith_Easy_C",
+			"Description": "Boss Inventory - Dinopithecus (Gamma)",
+			"Mod": "LostIsland"
+		},
+		{
+			"ClassName": "DinoDropInventoryComponent_BossDinopith_Medium_C",
+			"Description": "Boss Inventory - Dinopithecus (Beta)",
+			"Mod": "LostIsland"
+		},
+		{
+			"ClassName": "DinoDropInventoryComponent_BossDinopith_Hard_C",
+			"Description": "Boss Inventory - Dinopithecus (Alpha)",
+			"Mod": "LostIsland"
+		}
+	],
+	"Engrams": [{
+		"Level": 60,
+		"Points": 30,
+		"IsTekGram": false,
+		"ClassName": "EngramEntry_Saddle_Amarga_C",
+		"Description": "Amargasaurus Saddle",
+		"Mod": "LostIsland"
+	}]
 }
