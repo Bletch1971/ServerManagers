@@ -1,0 +1,59 @@
+{
+  "Application": "ark",
+  "Version": "1.1.1",
+  "Created": "2021-12-12T23:50:52.3949368Z",
+  "Mod": "1981064221",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_BowTurret_C",
+      "Description": "Crossbow Turret",
+      "Mod": "PrimitivTurrets"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_TranqBowTurret_C",
+      "Description": "Tranq Crossbow Turret",
+      "Mod": "PrimitivTurrets"
+    },
+    {
+      "Level": 35,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_FireBowTurret_C",
+      "Description": "Flame Crossbow Turret",
+      "Mod": "PrimitivTurrets"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TurretBow_C",
+      "Description": "Crossbow Turret",
+      "Mod": "PrimitivTurrets"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_TurretTranqBow_C",
+      "Description": "Tranq Crossbow Turret",
+      "Mod": "PrimitivTurrets"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_FireTurretBow_C",
+      "Description": "Flame Crossbow Turret",
+      "Mod": "PrimitivTurrets"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

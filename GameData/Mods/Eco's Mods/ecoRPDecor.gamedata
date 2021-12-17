@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0263528Z",
+  "Mod": "741203089",
   "Creatures": [],
   "Engrams": [
     {
@@ -252,29 +253,15 @@
     {
       "Category": "Structure",
       "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_RP_MapPin_eco_C",
+      "Description": "Map Pin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_MapTable_eco_C",
       "Description": "Map Table",
-      "Mod": "ecoRPDecor"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_Furniture_SEMapTable_eco_C",
-      "Description": "SE Map Table",
-      "Mod": "ecoRPDecor"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_Furniture_CenterMapTable_eco_C",
-      "Description": "Center Map Table",
-      "Mod": "ecoRPDecor"
-    },
-    {
-      "Category": "Structure",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemStructure_Furniture_RP_RagnarokMapTable_eco_C",
-      "Description": "Ragnarok Map Table",
       "Mod": "ecoRPDecor"
     },
     {
@@ -730,6 +717,34 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_MountedSnowOwl_eco_C",
       "Description": "Mounted Snow Owl",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedMaewing_eco_C",
+      "Description": "Mounted Maewing",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedNoglin_eco_C",
+      "Description": "Mounted Noglin",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedMagmasaur_eco_C",
+      "Description": "Mounted Magmasaur",
+      "Mod": "ecoRPDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_MountedSpaceDolphin_eco_C",
+      "Description": "Mounted Space Dolphin",
       "Mod": "ecoRPDecor"
     },
     {

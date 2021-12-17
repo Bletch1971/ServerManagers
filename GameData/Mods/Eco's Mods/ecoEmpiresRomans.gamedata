@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8553008Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0233604Z",
+  "Mod": "1846109576",
   "Creatures": [],
   "Engrams": [
     {
@@ -217,6 +218,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemSkin_DYN_RM_CenturionHelmetSkin_eco_C",
       "Description": "Centurion Roman Helmet",
+      "Mod": "ecoEmpiresRomans"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ChibiDino_RM_CTInvHorses_eco_C",
+      "Description": "Chibi - Roman Horses",
       "Mod": "ecoEmpiresRomans"
     },
     {

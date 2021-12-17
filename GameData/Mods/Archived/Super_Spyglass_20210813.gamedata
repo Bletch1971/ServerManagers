@@ -1,16 +1,17 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2021-06-07T20:10:00.0000000Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T18:00:00.0000000Z",
+  "Mod": "[793605978]",
   "Creatures": [],
   "Engrams": [
     {
-      "Level": 25,
+      "Level": 10,
       "Points": 0,
       "IsTekGram": false,
       "ClassName": "EngramEntry_SuperSpyglass_C",
-      "Description": "Super SpyGlass",
-      "Mod": "Super SpyGlass"
+      "Description": "super SpyGlass",
+      "Mod": "Super SpyGlass!"
     }
   ],
   "MapSpawners": [],
@@ -19,3 +20,6 @@
   "GameMaps": [],
   "Mods": []
 }
+
+
+

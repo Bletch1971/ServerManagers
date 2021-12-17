@@ -1,0 +1,74 @@
+{
+  "Application": "ark",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:12:55.2206176Z",
+  "Mod": "1609138312",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulTraps_DS_C",
+      "Description": "Soul Traps (DS)",
+      "Mod": "DinoStorage2"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulTerminal_DS_C",
+      "Description": "Soul Terminal (DS)",
+      "Mod": "DinoStorage2"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulGun_DS_C",
+      "Description": "Soul Gun (DS)",
+      "Mod": "DinoStorage2"
+    },
+    {
+      "Level": 1,
+      "Points": 0,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_SoulFinder_DS_C",
+      "Description": "Soul Finder (DS)",
+      "Mod": "DinoStorage2"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "SoulTraps_DS_C",
+      "Description": "Soul Traps (DS)",
+      "Mod": "DinoStorage2"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "SoulTerminal_DS_C",
+      "Description": "Soul Terminal (DS)",
+      "Mod": "DinoStorage2"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "SoulGun_DS_C",
+      "Description": "Soul Gun (DS)",
+      "Mod": "DinoStorage2"
+    },
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "SoulFinder_DS_C",
+      "Description": "Soul Finder (DS)",
+      "Mod": "DinoStorage2"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

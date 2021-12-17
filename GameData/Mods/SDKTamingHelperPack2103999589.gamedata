@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-19T22:42:32.8725243Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:50:52.3949368Z",
+  "Mod": "2103999589",
   "Creatures": [],
   "Engrams": [
     {
@@ -155,6 +156,30 @@
       "ClassName": "EngramEntry_PikePoison_C",
       "Description": "Pike Poision",
       "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 100,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RareMushroomSeed_C",
+      "Description": "Rare Mushroom Spore",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 100,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_ToxicSpores_C",
+      "Description": "Toxic Spores",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Level": 100,
+      "Points": 20,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_RareFlowerSeed_C",
+      "Description": "Rare Flower Seed",
+      "Mod": "SDKTamingPack"
     }
   ],
   "Items": [
@@ -231,8 +256,22 @@
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Seed_Sopurberry_C",
-      "Description": "Sopurberry Seed",
+      "ClassName": "PrimalItemConsumable_Seed_RareMushroom_C",
+      "Description": "Rare Mushroom Spore",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_ToxicSpores_C",
+      "Description": "Toxic Spores",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_RareFlower_C",
+      "Description": "Rare Flower Seed",
       "Mod": "SDKTamingPack"
     },
     {
@@ -240,6 +279,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_AlchemyTable_SDK_C",
       "Description": "Alchemy Table",
+      "Mod": "SDKTamingPack"
+    },
+    {
+      "Category": "MiscConsumable",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumable_Seed_Sopurberry_C",
+      "Description": "Sopurberry Seed",
       "Mod": "SDKTamingPack"
     },
     {

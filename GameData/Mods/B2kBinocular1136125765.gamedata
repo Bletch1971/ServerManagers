@@ -1,0 +1,29 @@
+{
+  "Application": "ark",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:12:55.2156321Z",
+  "Mod": "1136125765",
+  "Creatures": [],
+  "Engrams": [
+    {
+      "Level": 25,
+      "Points": 1,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_B2kBinocular_C",
+      "Description": "Bitou2k\u0027s Binocular",
+      "Mod": "B2kBinocular"
+    }
+  ],
+  "Items": [
+    {
+      "Category": "Weapon",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_WeaponB2kBinocular_C",
+      "Description": "Bitou2k\u0027s Binocular",
+      "Mod": "B2kBinocular"
+    }
+  ],
+  "MapSpawners": [],
+  "SupplyCrates": [],
+  "Inventories": []
+}

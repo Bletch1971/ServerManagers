@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8543037Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0243575Z",
+  "Mod": "2053416662",
   "Creatures": [],
   "Engrams": [
     {
@@ -497,6 +498,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemSkin_TGW_MaleEmperorSkin_eco_C",
       "Description": "Tokugawa Emperor",
+      "Mod": "ecoEmpiresTokugawa"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ChibiDino_TKW_TInvCrane_eco_C",
+      "Description": "Chibi - Crane",
       "Mod": "ecoEmpiresTokugawa"
     },
     {

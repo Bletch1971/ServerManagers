@@ -1,7 +1,8 @@
 {
   "Application": "ark",
-  "Version": "1.0.0",
-  "Created": "2020-09-17T10:19:37.8563224Z",
+  "Version": "1.0.1",
+  "Created": "2021-12-12T23:38:31.0263528Z",
+  "Mod": "902548451",
   "Creatures": [],
   "Engrams": [
     {
@@ -574,7 +575,7 @@
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_PlushieJugBug_eco_C",
-      "Description": "Jug Bug Plushie",
+      "Description": "Broodmother Plushie",
       "Mod": "ecoShoppeDecor"
     },
     {
@@ -588,7 +589,7 @@
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_PlushieMorellatops_eco_C",
-      "Description": "Morellatops Plushie",
+      "Description": "Rollrat Plushie",
       "Mod": "ecoShoppeDecor"
     },
     {
@@ -623,7 +624,7 @@
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_PlushieThornyDragon_eco_C",
-      "Description": "Thorny Dragon Plushie",
+      "Description": "Magmasaur Plushie",
       "Mod": "ecoShoppeDecor"
     },
     {
@@ -645,6 +646,20 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemStructure_Furniture_PlushieWolf_eco_C",
       "Description": "Wolf Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Structure",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemStructure_Furniture_PlushieLlama_eco_C",
+      "Description": "Llama Plushie",
+      "Mod": "ecoShoppeDecor"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItem_ChibiDino_SD_NEWLlama_eco_C",
+      "Description": "Chibi - Llama",
       "Mod": "ecoShoppeDecor"
     },
     {

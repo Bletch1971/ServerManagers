@@ -1,7 +1,8 @@
 {
   "Application": "ark",
   "Version": "1.4.1",
-  "Created": "2021-08-13T00:00:00.0000000Z",
+  "Created": "2021-12-12T23:50:52.3929424Z",
+  "Mod": "1967741708",
   "Creatures": [],
   "Engrams": [
     {
@@ -10,7 +11,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_BloodExtractor_LR_C",
       "Description": "Blood Extractor (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 9,
@@ -18,7 +19,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Bola_LR_C",
       "Description": "Bola (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 9,
@@ -26,7 +27,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Boomerang_LR_C",
       "Description": "Boomerang (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 50,
@@ -34,7 +35,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Camera_LR_C",
       "Description": "Camera (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 1,
@@ -42,7 +43,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_CameraPurpleDye_LR_C",
       "Description": "Camera Purple Coloring (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 34,
@@ -50,7 +51,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_ClimbingPick_LR_C",
       "Description": "Climbing Pick (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 20,
@@ -58,7 +59,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_ConverterWell_LR_C",
       "Description": "Converter Well (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 16,
@@ -66,7 +67,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_DeliveryCrate_LR_C",
       "Description": "Delivery Crate (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 13,
@@ -74,7 +75,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_FishBasket_LR_C",
       "Description": "Fish Basket (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 6,
@@ -82,7 +83,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_FishingNet_LR_C",
       "Description": "Fish Net (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 15,
@@ -90,7 +91,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_FlareGun_LR_C",
       "Description": "Flare Gun (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 85,
@@ -98,7 +99,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_GasMask_LR_C",
       "Description": "Gas Mask (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 62,
@@ -106,7 +107,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Glider_LR_C",
       "Description": "Glider Suit (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 10,
@@ -114,7 +115,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_GlowStick_LR_C",
       "Description": "Glow Stick (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 25,
@@ -122,7 +123,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_GrapplingBow_LR_C",
       "Description": "Grappling Bow (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 68,
@@ -130,7 +131,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_HazardBoots_LR_C",
       "Description": "Hazard Suit Boots (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 68,
@@ -138,7 +139,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_HazardGloves_LR_C",
       "Description": "Hazard Suit Gloves (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 68,
@@ -146,7 +147,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_HazardHelmet_LR_C",
       "Description": "Hazard Suit Hat (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 68,
@@ -154,7 +155,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_HazardPants_LR_C",
       "Description": "Hazard Suit Pants (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 68,
@@ -162,7 +163,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_HazardShirt_LR_C",
       "Description": "Hazard Suit Shirt (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 20,
@@ -170,7 +171,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Lasso_LR_C",
       "Description": "Lasso (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 100,
@@ -178,7 +179,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_MindWipe_LR_C",
       "Description": "Mindwipe Tonic (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 63,
@@ -186,7 +187,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_MinersHelmet_LR_C",
       "Description": "Heavy Miner\u0027s Helmet (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 86,
@@ -194,7 +195,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_NightVisionGoggles_LR_C",
       "Description": "Night Vision Goggles (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 22,
@@ -202,7 +203,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Parachute_LR_C",
       "Description": "Parachute (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 45,
@@ -210,7 +211,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Pliers_LR_C",
       "Description": "Pliers (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 38,
@@ -218,7 +219,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_ReFertilizer_LR_C",
       "Description": "Re-Fertilizer (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 21,
@@ -226,7 +227,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Scissors_LR_C",
       "Description": "Scissors (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 81,
@@ -234,7 +235,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_ScubaTank_LR_C",
       "Description": "SCUBA Tank (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 1,
@@ -242,7 +243,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Soap_LR_C",
       "Description": "Soap (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 2,
@@ -250,7 +251,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Spear_LR_C",
       "Description": "Spear (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 10,
@@ -258,7 +259,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_TaxidermyTool_LR_C",
       "Description": "Taxidermy Tool (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 7,
@@ -266,7 +267,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Tent_LR_C",
       "Description": "Tent (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 1,
@@ -274,7 +275,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Torch_LR_C",
       "Description": "Torch (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 41,
@@ -282,7 +283,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_WaterTank_LR_C",
       "Description": "Metal Water Reservoir (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Level": 20,
@@ -290,7 +291,7 @@
       "IsTekGram": false,
       "ClassName": "EngramEntry_Whip_LR_C",
       "Description": "Whip (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     }
   ],
   "Items": [
@@ -299,252 +300,252 @@
       "IsHarvestable": false,
       "ClassName": "BloodExtractor_LR_C",
       "Description": "Blood Extractor (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Bola_LR_C",
       "Description": "Bola (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Boomerang_LR_C",
       "Description": "Boomerang (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Camera_LR_C",
       "Description": "Camera (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "CameraPurpleDye_LR_C",
       "Description": "Camera Purple Coloring (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "ClimbingPick_LR_C",
       "Description": "Climbing Pick (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "ConverterWell_LR_C",
       "Description": "Converter Well (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "DeliveryCrate_LR_C",
       "Description": "Delivery Crate (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "FishBasket_LR_C",
       "Description": "Fish Basket (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "FishingNet_LR_C",
       "Description": "Fish Net (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "FlareGun_LR_C",
       "Description": "Flare Gun (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "GasMask_LR_C",
       "Description": "Gas Mask (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Skin",
       "IsHarvestable": false,
       "ClassName": "Glider_LR_C",
       "Description": "Glider Suit (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "GlowStick_LR_C",
       "Description": "Glow Stick (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "GrapplingBow_LR_C",
       "Description": "Grappling Bow (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "HazardBoots_LR_C",
       "Description": "Hazard Suit Boots (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "HazardGloves_LR_C",
       "Description": "Hazard Suit Gloves (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "HazardHelmet_LR_C",
       "Description": "Hazard Suit Hat (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "HazardPants_LR_C",
       "Description": "Hazard Suit Pants (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "HazardShirt_LR_C",
       "Description": "Hazard Suit Shirt (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Lasso_LR_C",
       "Description": "Lasso (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "MindWipe_LR_C",
       "Description": "Mindwipe Tonic (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "MinersHelmet_LR_C",
       "Description": "Heavy Miner\u0027s Helmet (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "NightVisionGoggles_LR_C",
       "Description": "Night Vision Goggles (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "Parachute_LR_C",
       "Description": "Parachute (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "Pliers_LR_C",
       "Description": "Pliers (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "ReFertilizer_LR_C",
       "Description": "Re-Fertilizer (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Scissors_LR_C",
       "Description": "Scissors (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Equipment",
       "IsHarvestable": false,
       "ClassName": "ScubaTank_LR_C",
       "Description": "SCUBA Tank (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "MiscConsumable",
       "IsHarvestable": false,
       "ClassName": "Soap_LR_C",
       "Description": "Soap (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Spear_LR_C",
       "Description": "Spear (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "TaxidermyTool_LR_C",
       "Description": "Taxidermy Tool (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "Tent_LR_C",
       "Description": "Tent (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Torch_LR_C",
       "Description": "Torch (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Structure",
       "IsHarvestable": false,
       "ClassName": "WaterTank_LR_C",
       "Description": "Metal Water Reservoir (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     },
     {
       "Category": "Weapon",
       "IsHarvestable": false,
       "ClassName": "Whip_LR_C",
       "Description": "Whip (LR)",
-      "Mod": "Lethals Reusables"
+      "Mod": "LethalReusable"
     }
   ],
   "MapSpawners": [],
