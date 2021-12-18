@@ -8,6 +8,32 @@
   <updated>2021-12-16T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:1B7448FB-E4E0-4E0F-BF87-AE8661AA7D93</id>
+    <title>1.1.413 (1.1.413.9)</title>
+    <summary>1.1.413.9</summary>
+    <link href="" />
+    <updated>2021-12-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - cleaned up the top area.</li>
+            <li>Discord Bot - added some additional logging and some code cleanup.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:8EE5659C-18E6-47D3-941D-C32B129D2E06</id>
     <title>1.1.413 (1.1.413.8)</title>
     <summary>1.1.413.8</summary>
