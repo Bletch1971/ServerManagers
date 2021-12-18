@@ -6,7 +6,6 @@ using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Interfaces;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace ServerManagerTool.DiscordBot.Modules
@@ -15,16 +14,14 @@ namespace ServerManagerTool.DiscordBot.Modules
     public sealed class ServerCommandModule : InteractiveBase
     {
         private readonly IServerManagerBot _serverManagerBot;
-        private readonly CommandService _service;
+        private readonly CommandService _commands;
         private readonly HandleCommandDelegate _handleCommandCallback;
-        private readonly IConfigurationRoot _config;
 
-        public ServerCommandModule(IServerManagerBot serverManagerBot, CommandService service, HandleCommandDelegate handleCommandCallback, IConfigurationRoot config)
+        public ServerCommandModule(IServerManagerBot serverManagerBot, CommandService commands, HandleCommandDelegate handleCommandCallback)
         {
-            _serverManagerBot = serverManagerBot;   
-            _service = service;
+            _serverManagerBot = serverManagerBot;
+            _commands = commands;
             _handleCommandCallback = handleCommandCallback;
-            _config = config;
         }
 
         [Command("backup", RunMode = RunMode.Async)]

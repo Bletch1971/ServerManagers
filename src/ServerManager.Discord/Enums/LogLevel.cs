@@ -21,5 +21,10 @@ namespace ServerManagerTool.DiscordBot.Enums
                 return logSeverity;
             return LogSeverity.Info;
         }
+
+        public static bool CheckLogLevel(LogLevel LogLevelToCheck, LogLevel configLogLevel)
+        {
+            return (int)configLogLevel >= (int)LogLevelToCheck;
+        }
     }
 }

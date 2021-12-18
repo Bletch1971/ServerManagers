@@ -1,12 +1,10 @@
 ﻿using Discord;
 using Discord.Addons.Interactive;
 using Discord.Commands;
-using Microsoft.Extensions.Configuration;
 using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Interfaces;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace ServerManagerTool.DiscordBot.Modules
@@ -15,16 +13,14 @@ namespace ServerManagerTool.DiscordBot.Modules
     public sealed class ServerQueryModule : InteractiveBase
     {
         private readonly IServerManagerBot _serverManagerBot;
-        private readonly CommandService _service;
+        private readonly CommandService _commands;
         private readonly HandleCommandDelegate _handleCommandCallback;
-        private readonly IConfigurationRoot _config;
 
-        public ServerQueryModule(IServerManagerBot serverManagerBot, CommandService service, HandleCommandDelegate handleCommandCallback, IConfigurationRoot config)
+        public ServerQueryModule(IServerManagerBot serverManagerBot, CommandService commands, HandleCommandDelegate handleCommandCallback)
         {
             _serverManagerBot = serverManagerBot;
-            _service = service;
+            _commands = commands;
             _handleCommandCallback = handleCommandCallback;
-            _config = config;
         }
 
         [Command("info", RunMode = RunMode.Async)]

@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">16.12.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">17.12.2021 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -634,6 +634,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Лог уровня:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Получить токен ...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Помощь...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Разрешить всем ботам</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Если включено, менеджер сервера будет отвечать всем остальным ботам, в противном случае они будут игнорироваться, если только они не находятся в белом списке.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Белый лист бота</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Бот ID</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">ID бота для внесения в белый список.</sys:String>
@@ -790,13 +792,19 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Включить</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Включить Авто-Обновленя по заданному времени</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Следующее время выполнения:</sys:String>
-
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord бот:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Старт</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Запуск бота Discord</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Стоп</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Остановить бот Discord</sys:String>
+    
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Отключено</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Выключено</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">В очереди</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Активно</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Запущено</sys:String>
-
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Остановлено</sys:String>
+    
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Профиль не загружен</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">Не удалось загрузить профиль в {0}. Ошибка: {1}\r\n{2}</sys:String>
     <sys:String x:Key="MainWindow_ProfileDelete_Title">Удалить Профиль {0}?</sys:String>
@@ -5689,6 +5697,7 @@
     <!--#region Discord Bot -->
     <sys:String x:Key="DiscordBot_ErrorTitle">Ошибка бота Discord</sys:String>
     <sys:String x:Key="DiscordBot_MissingTokenError">Бот Discord требует действующий токен, чтобы он мог войти на сервер Discord\r\nЭто можно установить в глобальных настройках.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">Для бота discord требуется действительный префикс.\r\nЭто можно установить в глобальных настройках.</sys:String>
     <sys:String x:Key="DiscordBot_InvalidPrefixError">Префикс бота Discord содержит недопустимые символы. Разрешены только буквы и цифры.</sys:String>
 
     <sys:String x:Key="DiscordBot_CommandNotEnabled">Команда '{0}' не активирована.</sys:String>

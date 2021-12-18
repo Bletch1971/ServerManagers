@@ -1,7 +1,7 @@
 ﻿using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-using Microsoft.Extensions.Configuration;
+using ServerManagerTool.DiscordBot.Models;
 using System;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -10,23 +10,23 @@ namespace ServerManagerTool.DiscordBot.Services
 {
     public class StartupService
     {
-        private readonly DiscordSocketClient _discord;
+        private readonly DiscordSocketClient _client;
         private readonly CommandService _commands;
-        private readonly IConfigurationRoot _config;
-        private readonly IServiceProvider _provider;
+        private readonly IServiceProvider _services;
+        private readonly DiscordBotConfig _botConfig;
 
-        public StartupService(DiscordSocketClient discord, CommandService commands, IConfigurationRoot config, IServiceProvider provider)
+        public StartupService(DiscordSocketClient client, CommandService commands, IServiceProvider services, DiscordBotConfig botConfig)
         {
-            _discord = discord;
+            _client = client;
             _commands = commands;
-            _config = config;
-            _provider = provider;
+            _services = services;
+            _botConfig = botConfig;
         }
 
         public async Task StartAsync()
         {
             // Get the discord token from the config file
-            var discordToken = _config["DiscordSettings:Token"];
+            var discordToken = _botConfig?.DiscordToken;
 
             if (string.IsNullOrWhiteSpace(discordToken))
             {
@@ -34,12 +34,12 @@ namespace ServerManagerTool.DiscordBot.Services
             }
 
             // Login to discord
-            await _discord.LoginAsync(TokenType.Bot, discordToken);
+            await _client.LoginAsync(TokenType.Bot, discordToken);
             // Connect to the websocket
-            await _discord.StartAsync();
+            await _client.StartAsync();
 
             // Load commands and modules into the command service
-            await _commands.AddModulesAsync(Assembly.GetExecutingAssembly(), _provider);
+            await _commands.AddModulesAsync(Assembly.GetExecutingAssembly(), _services);
         }
     }
 }

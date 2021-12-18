@@ -4,6 +4,7 @@ using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.DiscordBot;
+using ServerManagerTool.DiscordBot.Models;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
@@ -587,13 +588,20 @@ namespace ServerManagerTool
 
             Task discordTask = Task.Run(async () =>
             {
-                var discordWhiteList = new List<string>();
+                var config = new DiscordBotConfig
+                {
+                    LogLevel = Config.Default.DiscordBotLogLevel,
+                    DiscordToken = Config.Default.DiscordBotToken,
+                    CommandPrefix = Config.Default.DiscordBotPrefix,
+                    DataDirectory = Config.Default.DataPath,
+                    AllowAllBots = Config.Default.DiscordBotAllowAllBots,
+                };
                 if (Config.Default.DiscordBotWhitelist != null)
                 {
-                    discordWhiteList.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
+                    config.DiscordBotWhitelists = Config.Default.DiscordBotWhitelist.Cast<string>();
                 }
 
-                await ServerManagerBotFactory.GetServerManagerBot()?.StartAsync(Config.Default.DiscordBotLogLevel, Config.Default.DiscordBotToken, Config.Default.DiscordBotPrefix, Config.Default.DataPath, Config.Default.DiscordBotAllowAllBots, discordWhiteList, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
+                await ServerManagerBotFactory.GetServerManagerBot().RunAsync(config, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
                 
                 if (_tokenSourceDiscordBot != null)
                 {

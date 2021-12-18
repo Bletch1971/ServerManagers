@@ -1,7 +1,7 @@
 ﻿using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-using Microsoft.Extensions.Configuration;
+using ServerManagerTool.DiscordBot.Models;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -10,24 +10,24 @@ namespace ServerManagerTool.DiscordBot.Services
 {
     public class LoggingService
     {
-        private readonly DiscordSocketClient _discord;
+        private readonly DiscordSocketClient _client;
         private readonly CommandService _commands;
-        private readonly IConfigurationRoot _config;
+        private readonly DiscordBotConfig _botConfig;
 
         private string LogDirectory { get; }
         private string LogFile => Path.Combine(LogDirectory, $"ServerManager_DiscordBot.{DateTime.Now:yyyyMMdd}.log");
 
-        public LoggingService(DiscordSocketClient discord, CommandService commands, IConfigurationRoot config)
+        public LoggingService(DiscordSocketClient client, CommandService commands, DiscordBotConfig botConfig)
         {
-            _discord = discord;
+            _client = client;
             _commands = commands;
-            _config = config;
+            _botConfig = botConfig;
 
             // Get the data directory from the config file
-            var rootDirectory = _config["ServerManager:DataDirectory"] ?? AppContext.BaseDirectory;
+            var rootDirectory = _botConfig.DataDirectory ?? AppContext.BaseDirectory;
             LogDirectory = Path.Combine(rootDirectory, "logs");
 
-            _discord.Log += OnLogAsync;
+            _client.Log += OnLogAsync;
             _commands.Log += OnLogAsync;
         }
 

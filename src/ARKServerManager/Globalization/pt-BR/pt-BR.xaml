@@ -634,6 +634,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Nível de registro:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Obter Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Ajuda...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Permitir todos os bots</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Se ativado, o bot do gerenciador do servidor responderá a todos os outros bots, caso contrário, eles serão ignorados, a menos que estejam na lista de permissões.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">O id do bot a ser colocado na whitelist.</sys:String>
@@ -790,12 +792,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Habilitar</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Ativar a tarefa agendada de atualização automática</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Próximo tempo de execução:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord Bot:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Iniciar</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Inicia o discord bot</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Parar</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Para o discord bot</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Desconhecido</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Desativado</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">Na fila</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Pronto</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Running</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Parado</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">O perfil não foi carregado</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">O perfil em {0} falhou ao carregar. O erro foi: {1}\r\n{2}</sys:String>
@@ -5612,6 +5620,7 @@
     <!--#region Discord Bot -->
     <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
     <sys:String x:Key="DiscordBot_MissingTokenError">O discord bot requer um token válido para que possa se conectar ao servidor discord\r\nIsso pode ser definido nas configurações globais.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">O discord bot requer um prefixo válido.\r\nIsso pode ser definido nas configurações globais.</sys:String>
     <sys:String x:Key="DiscordBot_InvalidPrefixError">O prefixo discord bot contém caracteres inválidos. Somente letras e números são permitidos.</sys:String>
 
     <sys:String x:Key="DiscordBot_CommandNotEnabled">O comando '{0}' não foi habilitado.</sys:String>

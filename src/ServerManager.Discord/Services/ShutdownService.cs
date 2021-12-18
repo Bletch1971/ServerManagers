@@ -5,17 +5,17 @@ namespace ServerManagerTool.DiscordBot.Services
 {
     public class ShutdownService
     {
-        private readonly DiscordSocketClient _discord;
+        private readonly DiscordSocketClient _client;
 
-        public ShutdownService(DiscordSocketClient discord)
+        public ShutdownService(DiscordSocketClient client)
         {
-            _discord = discord;
+            _client = client;
         }
 
         public async Task StopAsync()
         {
-            await _discord.StopAsync();
-            await _discord.LogoutAsync();
+            await _client.StopAsync();
+            await _client.LogoutAsync();
         }
     }
 }

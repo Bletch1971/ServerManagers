@@ -1,6 +1,6 @@
 ﻿using Discord;
 using Discord.Commands;
-using Microsoft.Extensions.Configuration;
+using ServerManagerTool.DiscordBot.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +13,15 @@ namespace ServerManagerTool.DiscordBot.Modules
     {
         private const int MAX_VALUE_LENGTH = 1024;
 
-        private readonly CommandService _service;
-        private readonly IConfigurationRoot _config;
+        private readonly CommandService _commands;
+        private readonly DiscordBotConfig _botConfig;
         private readonly IServiceProvider _services;
 
-        public HelpModule(CommandService service, IConfigurationRoot config, IServiceProvider services)
+        public HelpModule(CommandService commands, IServiceProvider services, DiscordBotConfig botConfig)
         {
-            _service = service;
-            _config = config;
+            _commands = commands;
             _services = services;
+            _botConfig = botConfig;
         }
 
         [Command("help")]
@@ -29,7 +29,7 @@ namespace ServerManagerTool.DiscordBot.Modules
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task HelpAsync()
         {
-            var prefix = _config["DiscordSettings:Prefix"];
+            var prefix = _botConfig.CommandPrefix;
 
             var builder = new EmbedBuilder()
             {
@@ -37,7 +37,7 @@ namespace ServerManagerTool.DiscordBot.Modules
                 Description = "These are the commands you can use"
             };
 
-            foreach (var module in _service.Modules)
+            foreach (var module in _commands.Modules)
             {
                 var moduleName = module.Name;
 
@@ -106,7 +106,7 @@ namespace ServerManagerTool.DiscordBot.Modules
         [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
         public async Task HelpAsync(string command)
         {
-            var searchResults = _service.Search(Context, command);
+            var searchResults = _commands.Search(Context, command);
 
             if (!searchResults.IsSuccess)
             {
@@ -114,7 +114,7 @@ namespace ServerManagerTool.DiscordBot.Modules
                 return;
             }
 
-            var prefix = _config["DiscordSettings:Prefix"];
+            var prefix = _botConfig.CommandPrefix;
 
             var builder = new EmbedBuilder()
             {

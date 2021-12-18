@@ -10,9 +10,7 @@ using ServerManagerTool.DiscordBot.Interfaces;
 using ServerManagerTool.DiscordBot.Models;
 using ServerManagerTool.DiscordBot.Services;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,19 +26,24 @@ namespace ServerManagerTool.DiscordBot
         public CancellationToken Token { get; private set; }
         public bool Started { get; private set; }  
 
-        public async Task StartAsync(LogLevel logLevel, string discordToken, string commandPrefix, string dataDirectory, bool allowAllBots, IEnumerable<string> botWhitelist, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
+        public async Task RunAsync(DiscordBotConfig discordBotConfig, HandleCommandDelegate handleCommandCallback, HandleTranslationDelegate handleTranslationCallback, CancellationToken token)
         {
-            if (string.IsNullOrWhiteSpace(discordToken))
+            if (discordBotConfig is null || handleTranslationCallback is null || handleCommandCallback is null)
+            {
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(discordBotConfig.DiscordToken))
             {
                 throw new Exception("#DiscordBot_MissingTokenError");
             }
 
-            if (string.IsNullOrWhiteSpace(commandPrefix))
+            if (string.IsNullOrWhiteSpace(discordBotConfig.CommandPrefix))
             {
                 throw new Exception("#DiscordBot_MissingPrefixError");
             }
 
-            if (Started || handleTranslationCallback is null || handleCommandCallback is null)
+            if (Started)
             {
                 return;
             }
@@ -48,22 +51,13 @@ namespace ServerManagerTool.DiscordBot
             Started = true;
             Token = token;
 
-            var settings = new Dictionary<string, string>
-            {
-                { "DiscordSettings:Token", discordToken },
-                { "DiscordSettings:Prefix", commandPrefix },
-                { "DiscordSettings:LogLevel", logLevel.ToString() },
-                { "ServerManager:DataDirectory", dataDirectory },
-            };
-
             // Begin building the configuration file
             var config = new ConfigurationBuilder()
-                .AddInMemoryCollection(settings)
                 .Build();
 
             var socketConfig = new DiscordSocketConfig
             {
-                LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
+                LogLevel = LogLevelHelper.GetLogSeverity(discordBotConfig.LogLevel),
                 MessageCacheSize = 1000,
             };
             if (Environment.OSVersion.Version < new Version(6, 2))
@@ -76,14 +70,8 @@ namespace ServerManagerTool.DiscordBot
             {
                 // Force all commands to run async
                 DefaultRunMode = RunMode.Async,
-                LogLevel = LogLevelHelper.GetLogSeverity(logLevel),
+                LogLevel = LogLevelHelper.GetLogSeverity(discordBotConfig.LogLevel),
                 CaseSensitiveCommands = false,
-            };
-
-            var discordBotConfig = new DiscordBotConfig
-            {
-                AllowAllBots = allowAllBots,
-                DiscordBotWhitelists = new List<DiscordBotWhitelist> ( botWhitelist.Select(i => new DiscordBotWhitelist { BotId = i }) ),
             };
 
             // Build the service provider
