@@ -2208,9 +2208,6 @@ namespace ServerManagerTool.Lib
 
             if (LogManager.Configuration.FindTargetByName(loggerName) is null)
             {
-                if (!Directory.Exists(logFilePath))
-                    Directory.CreateDirectory(logFilePath);
-
                 var logFile = new FileTarget(loggerName)
                 {
                     FileName = Path.Combine(logFilePath, $"{logName}.log"),
@@ -2222,6 +2219,7 @@ namespace ServerManagerTool.Lib
                     ArchiveOldFileOnStartup = true,
                     MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
                     MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
+                    CreateDirs = true,
                 };
                 LogManager.Configuration.AddTarget(loggerName, logFile);
 

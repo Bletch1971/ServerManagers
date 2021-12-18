@@ -242,8 +242,6 @@ namespace ServerManagerTool
             if (LogManager.Configuration.FindTargetByName(loggerName) == null)
             {
                 var logFilePath = GetProfileLogFolder(profileId);
-                if (!System.IO.Directory.Exists(logFilePath))
-                    System.IO.Directory.CreateDirectory(logFilePath);
 
                 var logFile = new FileTarget(loggerName)
                 {
@@ -256,6 +254,7 @@ namespace ServerManagerTool
                     ArchiveOldFileOnStartup = true,
                     MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
                     MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
+                    CreateDirs = true,
                 };
                 LogManager.Configuration.AddTarget(loggerName, logFile);
 
@@ -536,6 +535,7 @@ namespace ServerManagerTool
                 fileTarget.ArchiveFileName = Path.Combine(logDir, $"{fileName}.{{#}}.log");
                 fileTarget.MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles;
                 fileTarget.MaxArchiveDays = Config.Default.LoggingMaxArchiveDays;
+                fileTarget.CreateDirs = true;
             }
 
             LogManager.ReconfigExistingLoggers();

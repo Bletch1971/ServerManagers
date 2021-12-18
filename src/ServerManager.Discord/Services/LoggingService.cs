@@ -68,9 +68,6 @@ namespace ServerManagerTool.DiscordBot.Services
 
             if (LogManager.Configuration.FindTargetByName(loggerName) is null)
             {
-                if (!Directory.Exists(logFilePath))
-                    Directory.CreateDirectory(logFilePath);
-
                 var logFile = new FileTarget(loggerName)
                 {
                     FileName = Path.Combine(logFilePath, $"{logName}.log"),                    
@@ -81,7 +78,8 @@ namespace ServerManagerTool.DiscordBot.Services
                     ArchiveDateFormat = "yyyyMMdd",
                     ArchiveOldFileOnStartup = true,
                     MaxArchiveFiles = maxArchiveFiles,
-                    MaxArchiveDays = maxArchiveDays,                    
+                    MaxArchiveDays = maxArchiveDays,
+                    CreateDirs = true,
                 };
                 LogManager.Configuration.AddTarget(loggerName, logFile);
 
