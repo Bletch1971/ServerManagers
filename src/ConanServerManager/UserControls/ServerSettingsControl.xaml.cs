@@ -26,20 +26,6 @@ using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
 {
-    public enum ServerSettingsResetAction
-    {
-        // Sections
-        AdministrationSection,
-
-        // Properties
-        RconWindowExtents,
-        PlayerMaxXpProperty,
-        ServerOptions,
-    }
-
-    /// <summary>
-    /// Interaction logic for ServerSettings.xaml
-    /// </summary>
     partial class ServerSettingsControl : UserControl
     {
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
@@ -1354,6 +1340,9 @@ namespace ServerManagerTool
                                 RefreshServerRegionsList();
                                 break;
 
+                            case ServerSettingsResetAction.DiscordBotSection:
+                                this.Settings.ResetDiscordBotSection();
+                                break;
 
                             // Properties
                             case ServerSettingsResetAction.RconWindowExtents:

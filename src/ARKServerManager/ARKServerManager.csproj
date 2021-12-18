@@ -184,6 +184,8 @@
     <Compile Include="Enums\ServerProcessStatus.cs" />
     <Compile Include="Enums\ServerProcessType.cs" />
     <Compile Include="Enums\ServerProfileCategory.cs" />
+    <Compile Include="Enums\ServerSettingsCustomLevelsAction.cs" />
+    <Compile Include="Enums\ServerSettingsResetAction.cs" />
     <Compile Include="Enums\ServerStatus.cs" />
     <Compile Include="Enums\StatsMultiplier.cs" />
     <Compile Include="Enums\AvailabilityStatus.cs" />

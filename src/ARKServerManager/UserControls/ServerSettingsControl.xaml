@@ -4,14 +4,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:mts="clr-namespace:Microsoft.Win32.TaskScheduler;assembly=Microsoft.Win32.TaskScheduler"
-             xmlns:local="clr-namespace:ServerManagerTool"
              xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
              xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
              xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
              xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
              xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
              xmlns:enum="clr-namespace:ServerManagerTool.Enums"
-             xmlns:acenum="clr-namespace:ServerManagerTool.Enums;assembly=ArkServerManager.Common"
+             xmlns:cenum="clr-namespace:ServerManagerTool.Enums;assembly=ArkServerManager.Common"
              xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
@@ -534,7 +533,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_AdministrationSectionLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionAdministration, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.AdministrationSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.AdministrationSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -709,7 +708,7 @@
                                         <Label    Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" Content="{DynamicResource ServerSettings_RCONLogBufferLabel}" ToolTip="{DynamicResource ServerSettings_RCONLogBufferTooltip}" VerticalAlignment="Center"/>
                                         <TextBox  Grid.Row="0" Grid.Column="3" Margin="1,1,0,1" Text="{Binding RCONServerGameLogBuffer}" ToolTip="{DynamicResource ServerSettings_RCONLogBufferTooltip}" IsEnabled="{Binding RCONEnabled}" VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left"/>
 
-                                        <Button   Grid.Row="0" Grid.Column="5" Margin="1" Content="{StaticResource ResetRCONButtonContent}" ToolTip="{DynamicResource ServerSettings_RCONResetTooltip}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.RCONWindowExtents}" HorizontalAlignment="Right"/>
+                                        <Button   Grid.Row="0" Grid.Column="5" Margin="1" Content="{StaticResource ResetRCONButtonContent}" ToolTip="{DynamicResource ServerSettings_RCONResetTooltip}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.RCONWindowExtents}" HorizontalAlignment="Right"/>
                                     </Grid>
                                 </GroupBox>
 
@@ -749,7 +748,7 @@
 
                                         <Label   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_TotalConversionLabel}" ToolTip="{DynamicResource ServerSettings_TotalConversionTooltip}" VerticalAlignment="Center"/>
                                         <ComboBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Name="TotalConversionComboBox" ItemsSource="{Binding BaseTotalConversions, ElementName=SettingsControl}" SelectedValue="{Binding TotalConversionModId, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" IsEditable="True" ToolTip="{DynamicResource ServerSettings_TotalConversionTooltip}" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
-                                        <Button  Grid.Row="1" Grid.Column="3" Width="22" Height="22" Margin="5,1,0,0" ToolTip="{DynamicResource ServerSettings_FindTotalConversionMapNameTooltip}" HorizontalAlignment="Left" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.MapNameTotalConversionProperty}">
+                                        <Button  Grid.Row="1" Grid.Column="3" Width="22" Height="22" Margin="5,1,0,0" ToolTip="{DynamicResource ServerSettings_FindTotalConversionMapNameTooltip}" HorizontalAlignment="Left" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.MapNameTotalConversionProperty}">
                                             <Button.Style>
                                                 <Style BasedOn="{StaticResource ButtonStyle1}" TargetType="{x:Type Button}">
                                                     <Setter Property="Visibility" Value="Visible"/>
@@ -965,7 +964,7 @@
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerOptionsLabel}"/>
-                                            <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                             </Button>
                                         </StackPanel>
@@ -1007,7 +1006,7 @@
                                         <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch">
                                             <CheckBox DockPanel.Dock="Left" Margin="5" Name="EnableBanListCheckbox" IsChecked="{Binding EnableBanListURL}" Content="{DynamicResource ServerSettings_UseBanListLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_UseBanListTooltip}"/>
                                             
-                                            <Button  DockPanel.Dock="Right" ToolTip="{DynamicResource ServerSettings_ResetBanlistTooltip}" Style="{StaticResource ButtonStyle1}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.BanListProperty}">
+                                            <Button  DockPanel.Dock="Right" ToolTip="{DynamicResource ServerSettings_ResetBanlistTooltip}" Style="{StaticResource ButtonStyle1}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.BanListProperty}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                             </Button>
 
@@ -1191,7 +1190,7 @@
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerLogOptionsLabel}"/>
-                                            <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerLogOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerLogOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                             </Button>
                                         </StackPanel>
@@ -1583,6 +1582,11 @@
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_DiscordBotLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
+                                    <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
+                                            IsEnabled="{Binding ElementName=SectionDiscordBot, Path=IsExpanded}"
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DiscordBotSection}">
+                                        <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
+                                    </Button>
                                 </StackPanel>
                             </Expander.Header>
 
@@ -1653,7 +1657,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_RulesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionRules, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.RulesSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.RulesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -2096,7 +2100,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_ChatAndNotificationsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionChatAndNotifications, Path=IsExpanded}" 
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.ChatAndNotificationsSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ChatAndNotificationsSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -2143,7 +2147,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_HUDAndVisualsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionHUDAndVisuals, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.HudAndVisualsSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.HudAndVisualsSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -2195,7 +2199,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_PlayerSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionPlayerSettings, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.PlayerSettingsSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.PlayerSettingsSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -2233,7 +2237,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnablePlayerBaseStatMultipliersCheckbox" Content="{DynamicResource ServerSettings_PlayerBaseStatMultipliersLabel}" IsChecked="{Binding PlayerBaseStatMultipliers.IsEnabled}" ToolTip="{DynamicResource ServerSettings_BaseStatMultipliersTooltip}" VerticalAlignment="Center"/>
-                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnablePlayerBaseStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.PlayerBaseStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetBaseStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnablePlayerBaseStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.PlayerBaseStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetBaseStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2268,7 +2272,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnablePlayerPerLevelStatMultipliersCheckbox" Content="{DynamicResource ServerSettings_PlayerPerLevelStatMultipliersLabel}" IsChecked="{Binding PerLevelStatsMultiplier_Player.IsEnabled}" ToolTip="{DynamicResource ServerSettings_PerLevelStatMultipliersTooltip}" VerticalAlignment="Center"/>
-                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnablePlayerPerLevelStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.PlayerPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnablePlayerPerLevelStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.PlayerPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2308,7 +2312,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_DinoSettingsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionDinoSettings, Path=IsExpanded}" 
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoSettingsSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoSettingsSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -2528,7 +2532,7 @@
                                                                     <DataTrigger Binding="{Binding HasClassName}" Value="False">
                                                                         <Setter Property="Visibility" Value="Hidden" />
                                                                     </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding IsTameable}" Value="{x:Static acenum:DinoTamable.False}">
+                                                                    <DataTrigger Binding="{Binding IsTameable}" Value="{x:Static cenum:DinoTamable.False}">
                                                                         <Setter Property="Visibility" Value="Hidden" />
                                                                     </DataTrigger>
                                                                 </Style.Triggers>
@@ -2630,7 +2634,7 @@
                                                                     <DataTrigger Binding="{Binding HasClassName}" Value="False">
                                                                         <Setter Property="Visibility" Value="Hidden" />
                                                                     </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding IsTameable}" Value="{x:Static acenum:DinoTamable.False}">
+                                                                    <DataTrigger Binding="{Binding IsTameable}" Value="{x:Static cenum:DinoTamable.False}">
                                                                         <Setter Property="Visibility" Value="Hidden" />
                                                                     </DataTrigger>
                                                                 </Style.Triggers>
@@ -2648,7 +2652,7 @@
                                                                     <DataTrigger Binding="{Binding HasClassName}" Value="False">
                                                                         <Setter Property="Visibility" Value="Hidden" />
                                                                     </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding IsTameable}" Value="{x:Static acenum:DinoTamable.False}">
+                                                                    <DataTrigger Binding="{Binding IsTameable}" Value="{x:Static cenum:DinoTamable.False}">
                                                                         <Setter Property="Visibility" Value="Hidden" />
                                                                     </DataTrigger>
                                                                 </Style.Triggers>
@@ -2764,7 +2768,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnableWildDinoPerLevelStatMultipliersCheckbox" Content="{DynamicResource ServerSettings_WildDinoPerLevelStatMultipliersLabel}" IsChecked="{Binding PerLevelStatsMultiplier_DinoWild.IsEnabled}" Margin="0,5,5,5" ToolTip="{DynamicResource ServerSettings_PerLevelStatMultipliersTooltip}"/>
-                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableWildDinoPerLevelStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoWildPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableWildDinoPerLevelStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoWildPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2798,7 +2802,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnableTamedDinoPerLevelStatMultipliersCheckbox" Content="{DynamicResource ServerSettings_TamedDinoPerLevelStatMultipliersLabel}" IsChecked="{Binding PerLevelStatsMultiplier_DinoTamed.IsEnabled}" Margin="0,5,5,5" ToolTip="{DynamicResource ServerSettings_PerLevelStatTamedMultipliersTooltip}"/>
-                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableTamedDinoPerLevelStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoTamedPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableTamedDinoPerLevelStatMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoTamedPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2832,7 +2836,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnableTamedDinoPerLevelStatAddMultipliersCheckbox" Content="{DynamicResource ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel}" IsChecked="{Binding PerLevelStatsMultiplier_DinoTamed_Add.IsEnabled}" Margin="0,5,5,5" ToolTip="{DynamicResource ServerSettings_PerLevelStatTamedAddMultipliersTooltip}"/>
-                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableTamedDinoPerLevelStatAddMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoTamedAddPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableTamedDinoPerLevelStatAddMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoTamedAddPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2866,7 +2870,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnableTamedDinoPerLevelStatAffinityMultipliersCheckbox" Content="{DynamicResource ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel}" IsChecked="{Binding PerLevelStatsMultiplier_DinoTamed_Affinity.IsEnabled}" Margin="0,5,5,5" ToolTip="{DynamicResource ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip}"/>
-                                                <Button Width="22" Height="22" Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableTamedDinoPerLevelStatAffinityMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoTamedAffinityPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Width="22" Height="22" Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableTamedDinoPerLevelStatAffinityMultipliersCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoTamedAffinityPerLevelStatMultipliers}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2900,7 +2904,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnableWildDinoMutagenLevelBoostCheckbox" Content="{DynamicResource ServerSettings_DinoWildMutagenLevelBoostLabel}" IsChecked="{Binding MutagenLevelBoost.IsEnabled}" Margin="0,5,5,5" ToolTip="{DynamicResource ServerSettings_DinoWildMutagenLevelBoostTooltip}"/>
-                                                <Button Width="22" Height="22" Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableWildDinoMutagenLevelBoostCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoWildMutagenLevelBoost}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Width="22" Height="22" Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableWildDinoMutagenLevelBoostCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoWildMutagenLevelBoost}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -2934,7 +2938,7 @@
                                         <GroupBox.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <CheckBox x:Name="EnableBredDinoMutagenLevelBoostCheckbox" Content="{DynamicResource ServerSettings_DinoBredMutagenLevelBoostLabel}" IsChecked="{Binding MutagenLevelBoostBred.IsEnabled}" Margin="0,5,5,5" ToolTip="{DynamicResource ServerSettings_DinoBredMutagenLevelBoostTooltip}"/>
-                                                <Button Width="22" Height="22" Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableBredDinoMutagenLevelBoostCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.DinoBredMutagenLevelBoost}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Button Width="22" Height="22" Margin="20,0,0,0" IsEnabled="{Binding ElementName=EnableBredDinoMutagenLevelBoostCheckbox, Path=IsChecked}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DinoBredMutagenLevelBoost}" ToolTip="{DynamicResource ServerSettings_ResetPerLevelStatMultipliersTooltip}" Style="{StaticResource ButtonStyle1}">
                                                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                                 </Button>
                                             </StackPanel>
@@ -3004,7 +3008,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_EnvironmentLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionEnvironment, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.EnvironmentSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.EnvironmentSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -3193,7 +3197,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_StructuresLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionStructures, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.StructuresSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.StructuresSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -3314,7 +3318,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_EngramsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionEngrams, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.EngramsSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.EngramsSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -4466,7 +4470,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_LevelProgressionsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionCustomLevels, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.CustomLevelsSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.CustomLevelsSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -4531,13 +4535,13 @@
                                             <Button Margin="5,0,0,0" Click="PlayerLevels_ResetOfficial" IsEnabled="{Binding EnableLevelProgressions}" ToolTip="{DynamicResource ServerSettings_ResetToOfficialDefaultsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                             </Button>
-                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_UpdateLevelsTooltip}" IsEnabled="{Binding EnableLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsCustomLevelsAction.UpdatePlayerXPCap}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_UpdateLevelsTooltip}" IsEnabled="{Binding EnableLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsCustomLevelsAction.UpdatePlayerXPCap}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
                                             </Button>
-                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ImportLevelsTooltip}" IsEnabled="{Binding EnableLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsCustomLevelsAction.ImportPlayerLevels}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ImportLevelsTooltip}" IsEnabled="{Binding EnableLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsCustomLevelsAction.ImportPlayerLevels}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/FolderImport.ico,Size=32}"/>
                                             </Button>
-                                            <Button Margin="5,0,0,0" ToolTip="{DynamicResource ServerSettings_ExportLevelsTooltip}" IsEnabled="{Binding EnableLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsCustomLevelsAction.ExportPlayerLevels}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="5,0,0,0" ToolTip="{DynamicResource ServerSettings_ExportLevelsTooltip}" IsEnabled="{Binding EnableLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsCustomLevelsAction.ExportPlayerLevels}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/FolderExport.ico,Size=32}"/>
                                             </Button>
                                         </StackPanel>
@@ -4622,13 +4626,13 @@
                                             <Button Margin="5,0,0,0" Click="DinoLevels_ResetOfficial"  IsEnabled="{Binding EnableDinoLevelProgressions}" ToolTip="{DynamicResource ServerSettings_ResetToOfficialDefaultsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                             </Button>
-                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_UpdateLevelsTooltip}" IsEnabled="{Binding EnableDinoLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsCustomLevelsAction.UpdateDinoXPCap}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_UpdateLevelsTooltip}" IsEnabled="{Binding EnableDinoLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsCustomLevelsAction.UpdateDinoXPCap}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Edit.ico,Size=32}"/>
                                             </Button>
-                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ImportLevelsTooltip}" IsEnabled="{Binding EnableDinoLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsCustomLevelsAction.ImportDinoLevels}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ImportLevelsTooltip}" IsEnabled="{Binding EnableDinoLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsCustomLevelsAction.ImportDinoLevels}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/FolderImport.ico,Size=32}"/>
                                             </Button>
-                                            <Button Margin="5,0,0,0" ToolTip="{DynamicResource ServerSettings_ExportLevelsTooltip}" IsEnabled="{Binding EnableDinoLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsCustomLevelsAction.ExportDinoLevels}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Margin="5,0,0,0" ToolTip="{DynamicResource ServerSettings_ExportLevelsTooltip}" IsEnabled="{Binding EnableDinoLevelProgressions}" Command="{Binding CustomLevelActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsCustomLevelsAction.ExportDinoLevels}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/FolderExport.ico,Size=32}"/>
                                             </Button>
                                         </StackPanel>
@@ -4684,7 +4688,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_CraftingOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionCraftingOverrides, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.CraftingOverridesSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.CraftingOverridesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -4880,7 +4884,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_StackSizeOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionStackSizeOverrides, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.StackSizeOverridesSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.StackSizeOverridesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -5019,7 +5023,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_MapSpawnerOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionMapSpawnerOverrides, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.MapSpawnerOverridesSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.MapSpawnerOverridesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -5219,7 +5223,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_SupplyCrateOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionSupplyCrateOverrides, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.SupplyCrateOverridesSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.SupplyCrateOverridesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -5753,7 +5757,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_PreventTransferOverridesLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionPreventTransferOverrides, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.PreventTransferOverridesSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.PreventTransferOverridesSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -5870,7 +5874,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_PGMLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionPGM, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.PGMSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.PGMSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -6162,7 +6166,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_SOTFLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionSOTF, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static local:ServerSettingsResetAction.SOTFSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.SOTFSection}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>

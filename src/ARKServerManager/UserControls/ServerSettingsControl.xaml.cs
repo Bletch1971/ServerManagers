@@ -28,60 +28,6 @@ using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
 {
-    public enum ServerSettingsCustomLevelsAction
-    {
-        ExportPlayerLevels,
-        ImportPlayerLevels,
-        UpdatePlayerXPCap,
-        ExportDinoLevels,
-        ImportDinoLevels,
-        UpdateDinoXPCap,
-    }
-
-    public enum ServerSettingsResetAction
-    {
-        // Sections
-        AdministrationSection,
-        RulesSection,
-        ChatAndNotificationsSection,
-        HudAndVisualsSection,
-        PlayerSettingsSection,
-        DinoSettingsSection,
-        EnvironmentSection,
-        StructuresSection,
-        EngramsSection,
-        CustomLevelsSection,
-        SOTFSection,
-        PGMSection,
-        MapSpawnerOverridesSection,
-        CraftingOverridesSection,
-        SupplyCrateOverridesSection,
-        StackSizeOverridesSection,
-        PreventTransferOverridesSection,
-
-        // Properties
-        MapNameTotalConversionProperty,
-        BanListProperty,
-
-        PlayerMaxXpProperty,
-        DinoMaxXpProperty,
-        PlayerBaseStatMultipliers,
-        PlayerPerLevelStatMultipliers,
-        DinoWildPerLevelStatMultipliers,
-        DinoTamedPerLevelStatMultipliers,
-        DinoTamedAddPerLevelStatMultipliers,
-        DinoTamedAffinityPerLevelStatMultipliers,
-        DinoWildMutagenLevelBoost,
-        DinoBredMutagenLevelBoost,
-        ItemStatClamps,
-        RCONWindowExtents,
-        ServerOptions,
-        ServerLogOptions,
-    }
-
-    /// <summary>
-    /// Interaction logic for ServerSettings.xaml
-    /// </summary>
     partial class ServerSettingsControl : UserControl
     {
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
@@ -4017,6 +3963,10 @@ namespace ServerManagerTool
                                 RefreshBaseBranchesList();
                                 RefreshBaseEventsList();
                                 RefreshProcessPrioritiesList();
+                                break;
+
+                            case ServerSettingsResetAction.DiscordBotSection:
+                                this.Settings.ResetDiscordBotSection();
                                 break;
 
                             case ServerSettingsResetAction.ChatAndNotificationsSection:

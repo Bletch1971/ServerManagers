@@ -1451,6 +1451,19 @@ namespace ServerManagerTool.Lib
             this.ClearValue(LauncherArgsProperty);
             this.ClearValue(AdditionalArgsProperty);
         }
+
+        public void ResetDiscordBotSection()
+        {
+            this.ClearValue(DiscordChannelIdProperty);
+            this.ClearValue(DiscordAliasProperty);
+
+            this.ClearValue(AllowDiscordBackupProperty);
+            this.ClearValue(AllowDiscordRestartProperty);
+            this.ClearValue(AllowDiscordShutdownProperty);
+            this.ClearValue(AllowDiscordStartProperty);
+            this.ClearValue(AllowDiscordStopProperty);
+            this.ClearValue(AllowDiscordUpdateProperty);
+        }
         #endregion
 
         #region Sync Methods
@@ -1466,6 +1479,9 @@ namespace ServerManagerTool.Lib
                     break;
                 case ServerProfileCategory.AutomaticManagement:
                     SyncAutomaticManagement(sourceProfile);
+                    break;
+                case ServerProfileCategory.DiscordBot:
+                    SyncDiscordBot(sourceProfile);
                     break;
                 case ServerProfileCategory.ServerFiles:
                     SyncServerFiles(sourceProfile);
@@ -1514,6 +1530,19 @@ namespace ServerManagerTool.Lib
             this.SetValue(RestartAfterShutdown2Property, sourceProfile.RestartAfterShutdown2);
             this.SetValue(UpdateAfterShutdown2Property, sourceProfile.UpdateAfterShutdown2);
             this.SetValue(AutoRestartIfShutdownProperty, sourceProfile.AutoRestartIfShutdown);
+        }
+
+        private void SyncDiscordBot(ServerProfile sourceProfile)
+        {
+            this.SetValue(DiscordChannelIdProperty, sourceProfile.DiscordChannelId);
+            this.SetValue(DiscordAliasProperty, sourceProfile.DiscordAlias);
+
+            this.SetValue(AllowDiscordBackupProperty, sourceProfile.AllowDiscordBackup);
+            this.SetValue(AllowDiscordRestartProperty, sourceProfile.AllowDiscordRestart);
+            this.SetValue(AllowDiscordShutdownProperty, sourceProfile.AllowDiscordShutdown);
+            this.SetValue(AllowDiscordStartProperty, sourceProfile.AllowDiscordStart);
+            this.SetValue(AllowDiscordStopProperty, sourceProfile.AllowDiscordStop);
+            this.SetValue(AllowDiscordUpdateProperty, sourceProfile.AllowDiscordUpdate);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)

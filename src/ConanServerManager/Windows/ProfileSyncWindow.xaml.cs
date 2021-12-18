@@ -215,6 +215,8 @@ namespace ServerManagerTool
 
             SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.Administration, SectionName = _globalizer.GetResourceString("ServerSettings_AdministrationSectionLabel") });
             SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.AutomaticManagement, SectionName = _globalizer.GetResourceString("ServerSettings_AutomaticManagementLabel") });
+            if (Config.Default.DiscordBotEnabled)
+                SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.DiscordBot, SectionName = _globalizer.GetResourceString("ServerSettings_DiscordBotLabel") });
             SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.ServerFiles, SectionName = _globalizer.GetResourceString("ServerSettings_ServerFilesLabel") });
         }
 

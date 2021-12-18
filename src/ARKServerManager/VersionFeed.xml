@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:3E33DCB2-ECFE-4489-B1A4-56F5D386F9DC</id>
-    <title>1.1.413 (1.1.413.9)</title>
-    <summary>1.1.413.9</summary>
+    <title>1.1.413 (1.1.413.10)</title>
+    <summary>1.1.413.10</summary>
     <link href="" />
     <updated>2021-12-18T00:00:00Z</updated>
     <content type="xhtml">
@@ -30,6 +30,8 @@
           <ul>
             <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
             <li>Discord Bot - removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
+            <li>Server Settings - Discord Bot section - Add a reset to default button.</li>
+            <li>Profile Sync - Added Discord Bot section to the list.</li>
             <li>Made changes to the code to help improve performance.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>

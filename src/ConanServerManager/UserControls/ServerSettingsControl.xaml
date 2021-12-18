@@ -4,7 +4,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:mts="clr-namespace:Microsoft.Win32.TaskScheduler;assembly=Microsoft.Win32.TaskScheduler"
-             xmlns:sm="clr-namespace:ServerManagerTool"
              xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
              xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
              xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
@@ -397,7 +396,7 @@
                                     <TextBlock Text="{DynamicResource ServerSettings_AdministrationSectionLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
                                     <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
                                             IsEnabled="{Binding ElementName=SectionAdministration, Path=IsExpanded}"
-                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static sm:ServerSettingsResetAction.AdministrationSection}">
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.AdministrationSection}">
                                         <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
                                 </StackPanel>
@@ -557,7 +556,7 @@
                                         <TextBox  Grid.Row="0" Grid.Column="3" Margin="1" VerticalContentAlignment="Center" Name="HideRconPasswordTextBox" Style="{StaticResource HiddenTextBoxStyle}" IsEnabled="{Binding RconEnabled}" GotFocus="HiddenField_GotFocus" Text="{DynamicResource ServerSettings_HidePasswordText}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}"/>
                                         <TextBox  Grid.Row="0" Grid.Column="3" Margin="1" VerticalContentAlignment="Center" Name="RconPasswordTextBox" Visibility="Collapsed" LostFocus="HiddenField_LostFocus" Text="{Binding RconPassword}" ToolTip="{DynamicResource ServerSettings_RconPasswordTooltip}"/>
 
-                                        <Button   Grid.Row="0" Grid.Column="5" Margin="1" Content="{StaticResource ResetRconButtonContent}" ToolTip="{DynamicResource ServerSettings_RconResetTooltip}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static sm:ServerSettingsResetAction.RconWindowExtents}" HorizontalAlignment="Right"/>
+                                        <Button   Grid.Row="0" Grid.Column="5" Margin="1" Content="{StaticResource ResetRconButtonContent}" ToolTip="{DynamicResource ServerSettings_RconResetTooltip}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.RconWindowExtents}" HorizontalAlignment="Right"/>
                                     </Grid>
                                 </GroupBox>
 
@@ -760,7 +759,7 @@
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerOptionsLabel}"/>
-                                            <Button Width="22" Height="22" Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static sm:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                            <Button Width="22" Height="22" Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Refresh.ico,Size=32}"/>
                                             </Button>
                                         </StackPanel>
@@ -1066,6 +1065,11 @@
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{DynamicResource ServerSettings_DiscordBotLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
+                                    <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
+                                            IsEnabled="{Binding ElementName=SectionDiscordBot, Path=IsExpanded}"
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.DiscordBotSection}">
+                                        <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Refresh.ico,Size=32}"/>
+                                    </Button>
                                 </StackPanel>
                             </Expander.Header>
 

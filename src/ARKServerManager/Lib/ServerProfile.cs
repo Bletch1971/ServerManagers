@@ -5349,6 +5349,19 @@ namespace ServerManagerTool.Lib
             this.DinoSettings.RenderToView();
         }
 
+        public void ResetDiscordBotSection()
+        {
+            this.ClearValue(DiscordChannelIdProperty);
+            this.ClearValue(DiscordAliasProperty);
+
+            this.ClearValue(AllowDiscordBackupProperty);
+            this.ClearValue(AllowDiscordRestartProperty);
+            this.ClearValue(AllowDiscordShutdownProperty);
+            this.ClearValue(AllowDiscordStartProperty);
+            this.ClearValue(AllowDiscordStopProperty);
+            this.ClearValue(AllowDiscordUpdateProperty);
+        }
+
         public void ResetEngramsSection()
         {
             this.ClearValue(AutoUnlockAllEngramsProperty);
@@ -5695,6 +5708,9 @@ namespace ServerManagerTool.Lib
                 case ServerProfileCategory.AutomaticManagement:
                     SyncAutomaticManagement(sourceProfile);
                     break;
+                case ServerProfileCategory.DiscordBot:
+                    SyncDiscordBot(sourceProfile);
+                    break;
                 case ServerProfileCategory.Rules:
                     SyncRulesSection(sourceProfile);
                     break;
@@ -6014,6 +6030,19 @@ namespace ServerManagerTool.Lib
 
             this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
             this.DinoSettings.RenderToView();
+        }
+
+        private void SyncDiscordBot(ServerProfile sourceProfile)
+        {
+            this.SetValue(DiscordChannelIdProperty, sourceProfile.DiscordChannelId);
+            this.SetValue(DiscordAliasProperty, sourceProfile.DiscordAlias);
+
+            this.SetValue(AllowDiscordBackupProperty, sourceProfile.AllowDiscordBackup);
+            this.SetValue(AllowDiscordRestartProperty, sourceProfile.AllowDiscordRestart);
+            this.SetValue(AllowDiscordShutdownProperty, sourceProfile.AllowDiscordShutdown);
+            this.SetValue(AllowDiscordStartProperty, sourceProfile.AllowDiscordStart);
+            this.SetValue(AllowDiscordStopProperty, sourceProfile.AllowDiscordStop);
+            this.SetValue(AllowDiscordUpdateProperty, sourceProfile.AllowDiscordUpdate);
         }
 
         private void SyncEngramsSection(ServerProfile sourceProfile)

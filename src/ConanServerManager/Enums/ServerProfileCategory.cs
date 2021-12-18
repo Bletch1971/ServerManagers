@@ -4,6 +4,7 @@
     {
         Administration,
         AutomaticManagement,
+        DiscordBot,
         ServerFiles,
     }
 }
