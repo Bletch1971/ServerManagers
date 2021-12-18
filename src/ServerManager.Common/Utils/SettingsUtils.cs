@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using ServerManagerTool.Common.Lib;
 using System;
+using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -8,7 +10,7 @@ namespace ServerManagerTool.Common.Utils
 {
     public static class SettingsUtils
     {
-        public static void BackupUserConfigSettings(System.Configuration.ApplicationSettingsBase settings, string fileName, string settingsPath, string backupPath)
+        public static void BackupUserConfigSettings(ApplicationSettingsBase settings, string fileName, string settingsPath, string backupPath)
         {
             if (settings == null || string.IsNullOrWhiteSpace(fileName))
                 return;
@@ -34,7 +36,7 @@ namespace ServerManagerTool.Common.Utils
             if (!string.IsNullOrWhiteSpace(backupPath))
             {
                 // create a backup of the settings file
-                var backupFile = IOUtils.NormalizePath(Path.Combine(backupPath, $"{settingsFileName}_{DateTime.UtcNow.ToString("yyyyMMdd_HHmmss")}{settingsFileExt}"));
+                var backupFile = IOUtils.NormalizePath(Path.Combine(backupPath, $"{settingsFileName}_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}{settingsFileExt}"));
 
                 try
                 {
@@ -46,30 +48,45 @@ namespace ServerManagerTool.Common.Utils
                 {
                     // do nothing, just exit
                 }
-
-                try
-                {
-                    var filesToDelete = new DirectoryInfo(backupPath).GetFiles($"{settingsFileName}_*{settingsFileExt}").Where(f => f.LastWriteTimeUtc.AddDays(7) < DateTime.UtcNow);
-                    foreach (var fileToDelete in filesToDelete)
-                    {
-                        try
-                        {
-                            fileToDelete.Delete();
-                        }
-                        catch (Exception)
-                        {
-                            // do nothing, just exit
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    // do nothing, just exit
-                }
             }
         }
 
-        public static void MigrateSettings(System.Configuration.ApplicationSettingsBase settings, string settingsFile)
+        public static void DeleteBackupUserConfigFiles(string fileName, string backupPath, int interval)
+        {
+            try
+            {
+                Debug.WriteLine("Deleting old config backup files started...");
+
+                var backupFileName = Path.GetFileNameWithoutExtension(fileName);
+                var backupFileExt = Path.GetExtension(fileName);
+                var backupFileFilter = $"{backupFileName}_*{backupFileExt}";
+                var backupDateFilter = DateTime.Now.AddDays(-interval);
+
+                var filesToDelete = new DirectoryInfo(backupPath).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
+                foreach (var fileToDelete in filesToDelete)
+                {
+                    try
+                    {
+                        fileToDelete.Delete();
+                        Debug.WriteLine($"{fileToDelete.Name} was deleted, last updated {fileToDelete.CreationTime}.");
+                    }
+                    catch
+                    {
+                        // if unable to delete, do not bother
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error deleting old server backup files.\r\n{ex.Message}");
+            }
+            finally
+            {
+                Debug.WriteLine("Deleting old config backup files finished.");
+            }
+        }
+
+        public static void MigrateSettings(ApplicationSettingsBase settings, string settingsFile)
         {
             if (settings == null || string.IsNullOrWhiteSpace(settingsFile) || !File.Exists(settingsFile))
                 return;

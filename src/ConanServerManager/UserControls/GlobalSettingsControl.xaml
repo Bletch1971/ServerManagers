@@ -340,7 +340,7 @@
                             </TextBox.Text>
                         </TextBox>
 
-                        <CheckBox Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_UseSmartCopyTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_DeleteOldFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                         <cctl:AnnotatedSlider Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,0,5,0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
 
                         <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupWorldSaveLabel}" VerticalAlignment="Center"/>

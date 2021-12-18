@@ -295,7 +295,7 @@ namespace ServerManagerTool.Utils
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -396,7 +396,7 @@ namespace ServerManagerTool.Utils
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -497,7 +497,7 @@ namespace ServerManagerTool.Utils
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -598,7 +598,7 @@ namespace ServerManagerTool.Utils
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -701,7 +701,7 @@ namespace ServerManagerTool.Utils
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -805,7 +805,7 @@ namespace ServerManagerTool.Utils
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,

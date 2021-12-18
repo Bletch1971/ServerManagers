@@ -1052,7 +1052,7 @@ namespace ServerManagerTool
 
                 var app = new ServerApp(true)
                 {
-                    DeleteOldServerBackupFiles = !Config.Default.AutoBackup_EnableBackup,
+                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     SendEmails = false,
                     OutputLogs = false,
                     ServerProcess = ServerProcessType.Backup,

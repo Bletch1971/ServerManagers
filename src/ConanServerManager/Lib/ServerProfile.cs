@@ -1320,7 +1320,7 @@ namespace ServerManagerTool.Lib
             var app = new ServerApp(true)
             {
                 BackupWorldFile = false,
-                DeleteOldServerBackupFiles = false,
+                DeleteOldBackupFiles = false,
                 SendAlerts = false,
                 SendEmails = false,
                 OutputLogs = false

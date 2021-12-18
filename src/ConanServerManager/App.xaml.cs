@@ -558,6 +558,9 @@ namespace ServerManagerTool
 
             SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
             SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
+
+            SettingsUtils.DeleteBackupUserConfigFiles("userconfig.json", backupFolder, ServerApp.BACKUP_DELETEINTERVAL);
+            SettingsUtils.DeleteBackupUserConfigFiles("commonconfig.json", backupFolder, ServerApp.BACKUP_DELETEINTERVAL);
         }
 
         private void ShutDownApplication()

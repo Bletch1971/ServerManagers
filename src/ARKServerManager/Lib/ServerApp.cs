@@ -35,8 +35,7 @@ namespace ServerManagerTool.Lib
 
         public const int MUTEX_TIMEOUT = 5;         // 5 minutes
         public const int MUTEX_ATTEMPTDELAY = 5000; // 5 seconds
-        private const int WRITELOG_ERRORRETRYDELAY = 2000; // 2 seconds
-        private const int BACKUP_DELETEINTERVAL = 7; // 7 days
+        public const int BACKUP_DELETEINTERVAL = 7; // 7 days
 
         private const int STEAM_MAXRETRIES = 10;
         private const int RCON_MAXRETRIES = 3;
@@ -100,7 +99,7 @@ namespace ServerManagerTool.Lib
         public bool BackupWorldFile = Config.Default.BackupWorldFile;
         public bool CheckForOnlinePlayers = Config.Default.ServerShutdown_CheckForOnlinePlayers;
         public bool SendMessages = Config.Default.ServerShutdown_SendShutdownMessages;
-        public bool DeleteOldServerBackupFiles = false;
+        public bool DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles;
         public int ExitCode = EXITCODE_NORMALEXIT;
         public bool OutputLogs = false;
         public bool SendAlerts = false;
@@ -1786,7 +1785,7 @@ namespace ServerManagerTool.Lib
             ExitCode = EXITCODE_NORMALEXIT;
         }
 
-        public void CheckServerWorldFileExists(ServerProfileSnapshot profile = null)
+        public void CheckServerWorldFileExists(ServerProfileSnapshot profile)
         {
             // do nothing if profile is null or SotF
             if (profile == null || profile.SotFEnabled)
@@ -1826,7 +1825,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public void CreateProfileBackupArchiveFile(ServerProfileSnapshot profile = null)
+        public void CreateProfileBackupArchiveFile(ServerProfileSnapshot profile)
         {
             // do nothing if profile is null
             if (profile == null)
@@ -1897,52 +1896,58 @@ namespace ServerManagerTool.Lib
                 }
 
                 // delete the old backup files
-                try
+                if (DeleteOldBackupFiles)
                 {
-                    LogProfileMessage("Delete old profile backup files started...");
-
-                    var backupFolder = GetProfileBackupFolder(_profile);
-                    var backupFileFilter = $"*{Config.Default.BackupExtension}";
-                    var backupDateFilter = DateTime.Now.AddDays(-BACKUP_DELETEINTERVAL);
-
-                    var backupFiles = new DirectoryInfo(backupFolder).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
-                    foreach (var backupFile in backupFiles)
+                    try
                     {
-                        try
+                        var deleteInterval = Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_DeleteInterval : BACKUP_DELETEINTERVAL;
+
+                        LogProfileMessage("Delete old profile backup files started...");
+
+                        var backupFolder = GetProfileBackupFolder(_profile);
+                        var backupFileFilter = $"*{Config.Default.BackupExtension}";
+                        var backupDateFilter = DateTime.Now.AddDays(-deleteInterval);
+
+                        var backupFiles = new DirectoryInfo(backupFolder).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
+                        foreach (var backupFile in backupFiles)
                         {
-                            LogProfileMessage($"{backupFile.Name} was deleted, last updated {backupFile.CreationTime}.");
-                            backupFile.Delete();
-                        }
-                        catch
-                        {
-                            // if unable to delete, do not bother
+                            try
+                            {
+                                LogProfileMessage($"{backupFile.Name} was deleted, last updated {backupFile.CreationTime}.");
+                                backupFile.Delete();
+                            }
+                            catch
+                            {
+                                // if unable to delete, do not bother
+                            }
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    LogProfileError($"Error deleting old profile backup files.\r\n{ex.Message}", false);
-                }
-                finally
-                {
-                    LogProfileMessage("Delete old profile backup files finished.");
-                }
-
-                // cleanup any backup folders from old backup process
-                try
-                {
-                    var backupFolder = GetProfileBackupFolder(_profile);
-
-                    var oldBackupFolders = new DirectoryInfo(backupFolder).GetDirectories();
-                    foreach (var oldBackupFolder in oldBackupFolders)
+                    catch (Exception ex)
                     {
-                        oldBackupFolder.Delete(true);
+                        LogProfileError($"Error deleting old profile backup files.\r\n{ex.Message}", false);
+                    }
+                    finally
+                    {
+                        LogProfileMessage("Delete old profile backup files finished.");
+                    }
+
+                    // cleanup any backup folders from old backup process
+                    try
+                    {
+                        var backupFolder = GetProfileBackupFolder(_profile);
+
+                        var oldBackupFolders = new DirectoryInfo(backupFolder).GetDirectories();
+                        foreach (var oldBackupFolder in oldBackupFolders)
+                        {
+                            oldBackupFolder.Delete(true);
+                        }
+                    }
+                    catch
+                    {
+                        // if unable to delete, do not bother
                     }
                 }
-                catch
-                {
-                    // if unable to delete, do not bother
-                }
+
             }
             finally
             {
@@ -1950,7 +1955,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public void CreateServerBackupArchiveFile(StringBuilder emailMessage, ServerProfileSnapshot profile = null)
+        public void CreateServerBackupArchiveFile(StringBuilder emailMessage, ServerProfileSnapshot profile)
         {
             // do nothing if profile is null or SotF
             if (profile == null || profile.SotFEnabled)
@@ -2087,7 +2092,7 @@ namespace ServerManagerTool.Lib
                 }
 
                 // delete the old backup files
-                if (DeleteOldServerBackupFiles)
+                if (DeleteOldBackupFiles)
                 {
                     try
                     {
@@ -3096,7 +3101,7 @@ namespace ServerManagerTool.Lib
                 Parallel.ForEach(_profiles.Keys.Where(p => p.EnableAutoBackup), profile => {
                     var app = new ServerApp
                     {
-                        DeleteOldServerBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
+                        DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
                         OutputLogs = true,
                         SendAlerts = true,
                         SendEmails = true,
