@@ -9,6 +9,30 @@
 
   <entry>
     <id>urn:uuid:9A427D82-9904-44F5-8C1E-7C943049869A</id>
+    <title>1.1.58 (1.1.58.9)</title>
+    <summary>1.1.58.9</summary>
+    <link href="" />
+    <updated>2021-12-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - cleaned up the top area.</li>
+            <li>Discord Bot - added some additional logging and some code cleanup.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:9A427D82-9904-44F5-8C1E-7C943049869A</id>
     <title>1.1.58 (1.1.58.8)</title>
     <summary>1.1.58.8</summary>
     <link href="" />
