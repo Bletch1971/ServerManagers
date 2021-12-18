@@ -64,10 +64,9 @@
                             <Button Margin="5" Click="PatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}" Style="{StaticResource ButtonStyle1}">
                                 <Image Source="{com:Icon Path=/ConanServerManager;component/Art/ChangeNotes.ico,Size=32}"/>
                             </Button>
-                            <Button Margin="5,0,0,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestServerManagerVersion, FallbackValue=1.0.0}" Click="Upgrade_Click" VerticalAlignment="Center" >
+                            <Button Margin="5,0,0,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestServerManagerVersion}" Click="Upgrade_Click" VerticalAlignment="Center" >
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
-                                        <Setter Property="Visibility" Value="Visible"/>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding NewServerManagerAvailable}" Value="True">
                                                 <Setter Property="Visibility" Value="Visible"/>
