@@ -567,6 +567,7 @@
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">How often to perform the server backup, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Delete Old Backup Files</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">If enabled, when the auto-backup runs the old backup files will be deleted.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Older Than:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">How old the backup file must be to be deleted in days.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">WorldSave Message:</sys:String>
