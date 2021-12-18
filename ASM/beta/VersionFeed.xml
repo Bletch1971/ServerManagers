@@ -8,6 +8,30 @@
   <updated>2021-12-16T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:D1CFECED-7968-47FD-B1DE-2FECD7878BDA</id>
+    <title>1.1.413 (1.1.413.10)</title>
+    <summary>1.1.413.10</summary>
+    <link href="" />
+    <updated>2021-12-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Discord Bot section - Add a reset to default button.</li>
+            <li>Profile Sync - Added Discord Bot section to the list.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:1B7448FB-E4E0-4E0F-BF87-AE8661AA7D93</id>
     <title>1.1.413 (1.1.413.9)</title>
     <summary>1.1.413.9</summary>
