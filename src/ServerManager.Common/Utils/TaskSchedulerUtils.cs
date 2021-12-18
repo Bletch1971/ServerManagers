@@ -183,8 +183,21 @@ namespace ServerManagerTool.Common.Utils
                 if (taskFolder == null)
                     return false;
 
-                var task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
-                var taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                Task task = null;
+                TaskDefinition taskDefinition = null;
+
+                try
+                {
+                    task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
+                    taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error($"{nameof(ScheduleAutoBackup)} - Unable to fetch the task definition. {ex.Message}\r\n{ex.StackTrace}");
+
+                    // just ignore
+                    taskDefinition = TaskService.Instance.NewTask();
+                }
 
                 if (taskDefinition == null)
                     return false;
@@ -294,8 +307,21 @@ namespace ServerManagerTool.Common.Utils
                 if (taskFolder == null)
                     return false;
 
-                var task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
-                var taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                Task task = null;
+                TaskDefinition taskDefinition = null;
+
+                try
+                {
+                    task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
+                    taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error($"{nameof(ScheduleAutoBackup)} - Unable to fetch the task definition. {ex.Message}\r\n{ex.StackTrace}");
+
+                    // just ignore
+                    taskDefinition = TaskService.Instance.NewTask();
+                }
 
                 if (taskDefinition == null)
                     return false;
@@ -424,8 +450,21 @@ namespace ServerManagerTool.Common.Utils
                 if (taskFolder == null)
                     return false;
 
-                var task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
-                var taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                Task task = null;
+                TaskDefinition taskDefinition = null;
+
+                try
+                {
+                    task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
+                    taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error($"{nameof(ScheduleAutoBackup)} - Unable to fetch the task definition. {ex.Message}\r\n{ex.StackTrace}");
+
+                    // just ignore
+                    taskDefinition = TaskService.Instance.NewTask();
+                }
 
                 if (taskDefinition == null)
                     return false;
@@ -553,8 +592,21 @@ namespace ServerManagerTool.Common.Utils
                 if (taskFolder == null)
                     return false;
 
-                var task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
-                var taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                Task task = null;
+                TaskDefinition taskDefinition = null;
+
+                try
+                {
+                    task = taskFolder.Tasks.Exists(taskName) ? taskFolder.Tasks[taskName] : null;
+                    taskDefinition = task?.Definition ?? TaskService.Instance.NewTask();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error($"{nameof(ScheduleAutoBackup)} - Unable to fetch the task definition. {ex.Message}\r\n{ex.StackTrace}");
+
+                    // just ignore
+                    taskDefinition = TaskService.Instance.NewTask();
+                }
 
                 if (taskDefinition == null)
                     return false;
