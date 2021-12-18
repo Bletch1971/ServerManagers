@@ -7,6 +7,10 @@ namespace ServerManagerTool.DiscordBot.Models
     {
         public LogLevel LogLevel { get; set; } = LogLevel.Info;
 
+        public int MaxArchiveDays { get; set; } = 30;
+
+        public int MaxArchiveFiles { get; set; } = 30;
+
         public string DiscordToken { get; set; } = string.Empty;
 
         public string CommandPrefix { get; set; } = string.Empty;

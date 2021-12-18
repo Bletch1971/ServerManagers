@@ -72,7 +72,7 @@ namespace ServerManagerTool.Lib
         {
             var registration = new ServerStatusUpdateRegistration 
             { 
-                AsmId = Config.Default.ASMUniqueKey,
+                AsmId = Config.Default.ServerManagerUniqueKey,
                 InstallDirectory = installDirectory,
                 ProfileId = profileId,
                 LocalEndpoint = localEndpoint, 

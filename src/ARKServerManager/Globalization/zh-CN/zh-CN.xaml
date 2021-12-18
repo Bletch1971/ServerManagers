@@ -89,6 +89,15 @@
     <sys:String x:Key="WindowState_Minimized">最小化</sys:String>
     <sys:String x:Key="WindowState_Maximized">最大化</sys:String>
     <!--#endregion-->
+	
+	<!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">关键的</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">错误</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">警告</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">信息</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">详细调试信息</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">排错</sys:String>
+    <!--#endregion-->
 
     <!-- 应用 -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">以管理员身份运行</sys:String>
@@ -616,6 +625,32 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">显示所有关机消息的关机原因</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">如果启用，关闭原因将显示所有关闭消息; 否则只会在服务器关机开始时显示。</sys:String>
     
+	<sys:String x:Key="GlobalSettings_DiscordBotLabel">启用Discord(开黑) 机器人</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">如果更改Discord(开黑)机器人的任何设置，则需要重新启动服务器管理器.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">令牌:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">与Discord(开黑)关联的令牌.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">地图配置ID:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">机器人将侦听的Discord(开黑)服务器的id.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">前缀:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">通过Discord(开黑)发送命令时必须使用的前缀.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">日志级别:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">领取令牌...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">帮助...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">允许所有机器人</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">如果启用，服务器管理器机器人将响应所有其他机器人，否则将忽略它们，除非它们在白名单中.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">机器人白名单</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">机器人ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">要加入白名单的机器人的id.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">添加白名单</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">清除白名单</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">删除白名单</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">如果启用，则可以从discord(开黑)发送备份命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">如果启用，可以从discord(开黑)发送重启命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">如果启用，可以从discord(开黑)发送关机命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">如果启用，则可以从discord(开黑)发送开始命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">如果启用，可以从discord(开黑)发送停止命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">如果启用，则可以从discord(开黑)发送更新命令.</sys:String>
+	
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP 电子邮箱设置</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">主机:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">主机名称或者地址使用SMTP发送.</sys:String>
@@ -757,12 +792,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">启用</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">启用自动更新计划任务</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">下次运行时间：</sys:String>
+	<sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord(开黑)机器人:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">开始</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">启动Discord(开黑)机器人</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">停止</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">停止Discord(开黑)机器人</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">未知</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">禁用</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">排队</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">准备</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">运行</sys:String>
+	<sys:String x:Key="MainWindow_TaskStateStoppedLabel">停止</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">配置文件无法加载</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">在配置文件 {0} 加载失败. 错误是: {1}\r\n{2}</sys:String>
@@ -1182,6 +1223,26 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">如果启用，服务器将按照周期，定期自动更新。请参阅自动更新选项的设置.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">如果已关闭，则重新启动服务器，</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">如果启用，即使关闭自动重启和自动更新，服务器也将重新启动。</sys:String>
+    <!--#endregion-->
+	
+	<!--#region 服务器设置-Discord(开黑) 机器人详细信息 -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord(开黑)机器人细节</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">频道ID:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">此配置文件将侦听的Discord(开黑)服务器通道的ID.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">名称:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">在使用Discord(开黑)命令时，可以使用唯一的名称来标识服务器，而不是配置文件id.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">允许备份</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">如果启用，配置文件将侦听来自Discord(开黑)的备份命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">允许重新启动</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">如果启用，配置文件将侦听来自Discord(开黑)的重新启动命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">允许关机</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">如果启用，配置文件将侦听来自Discord(开黑)的关机命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">允许启动</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">如果启用，配置文件将侦听来自Discord(开黑)的启动命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">允许停止</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">如果启用，配置文件将侦听来自Discord(开黑)的停止命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">允许更新</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">如果启用，配置文件将侦听来自Discord(开黑)的更新命令.</sys:String>
     <!--#endregion-->
 
     <!-- 服务器设置 - 规则 -->
@@ -6900,4 +6961,34 @@
 	<sys:String x:Key="EngramEntry_TurretZhongduan_Weiyi_C">炮塔终端</sys:String>
 	<sys:String x:Key="EngramEntry_xidianka_Weiyi_C">恐龙洗点卡</sys:String>
 	<!--#endregion-->
+	
+	<!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord(开黑)机器人错误</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">Discord(开黑)机器人需要有效的令牌，以便它可以登录到Discord(开黑)服务器。\r\n这可以在全局设置中设置.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">Discord(开黑)机器人需要有效的前缀。\r\n这可以在全局设置中设置.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">Discord(开黑)机器人前缀包含无效字符。只允许使用字母和数字.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">命令 '{0}'尚未启用.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">未知命令 '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">当前正在处理另一个命令.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">另一个命令 '{0}' 当前正在针对配置文件运行 '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">命令 '{0}' 已为配置文件禁用 '{1}'.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">这个 '{0}' 命令需要配置文件ID或别名。</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">简介 '{0}'找不到或与通道不关联.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">具有多个配置文件 '{0}' 在通道中找到，命令中止.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">简介 '{0}'他处于一种状态'{1}' 无法运行此命令的.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">简介 '{0}' 目前正在更新.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">对服务器'{0}'的调用失败.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">已发送服务器'{0}'的备份请求.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">已发送服务器'{0}'的重新启动请求.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">已发送服务器'{0}'的关闭请求.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">已发送服务器'{0}'的启动请求.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">已发送服务器'{0}'的停止请求.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">已发送服务器'{0}'的更新请求.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">总数:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">地图:</sys:String>
+    <!--#endregion-->
 </Globalization:GlobalizationResourceDictionary>

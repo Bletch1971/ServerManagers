@@ -116,6 +116,8 @@ namespace ServerManagerTool
 
             Config.DiscordBotWhitelist.Clear();
             Config.DiscordBotWhitelist.AddRange(DiscordBotWhitelist.Select(i => i.BotId).ToArray());
+
+            App.ReconfigureLogging();
         }
 
         private string GetDeployedVersion()

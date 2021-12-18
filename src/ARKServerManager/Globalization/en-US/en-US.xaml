@@ -691,6 +691,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Update Directory Permissions on Save</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Enable Logging</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">If enabled, all logging will be enabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Delete Logs After</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">How old the log files must be to be deleted in days.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Max Number of Logs</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">The maximum number of log files that will be kept.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
@@ -848,6 +854,7 @@
     <sys:String x:Key="SliderUnits_Hours">hours</sys:String>
     <sys:String x:Key="SliderUnits_Days">days</sys:String>
     <sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
+    <sys:String x:Key="SliderUnits_Files">files</sys:String>
     <sys:String x:Key="SliderUnits_Items">items</sys:String>
     <sys:String x:Key="SliderUnits_XP">xp</sys:String>
     <sys:String x:Key="SliderUnits_Players">players</sys:String>
@@ -1896,7 +1903,7 @@
     <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnTooltip">If enabled, will remove the prerequisites needed to unlock the engram.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnLabel">Auto Unlock</sys:String>
     <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnTooltip">If enabled, the engram will be automatically unlocked at the specified level.</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Unlock Level</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Auto Unlock Level</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnTooltip">Player level when the engram is automatically unlocked. Auto Unlock must be enabled.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemoveRecordTooltip">Remove this Engram</sys:String>
 

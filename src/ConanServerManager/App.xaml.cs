@@ -232,12 +232,12 @@ namespace ServerManagerTool
 
         public static string GetProfileLogFolder(string profileId) => IOUtils.NormalizePath(Path.Combine(Config.Default.DataPath, Config.Default.LogsRelativePath, profileId.ToLower()));
 
-        public static Logger GetProfileLogger(string profileId, string name, LogLevel minLevel, LogLevel maxLevel)
+        public static Logger GetProfileLogger(string profileId, string logName, LogLevel minLevel, LogLevel maxLevel)
         {
-            if (string.IsNullOrWhiteSpace(profileId) || string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(profileId) || string.IsNullOrWhiteSpace(logName))
                 return null;
 
-            var loggerName = $"{profileId.ToLower()}_{name}".Replace(" ", "_");
+            var loggerName = $"{profileId.ToLower()}_{logName}".Replace(" ", "_");
 
             if (LogManager.Configuration.FindTargetByName(loggerName) == null)
             {
@@ -247,12 +247,15 @@ namespace ServerManagerTool
 
                 var logFile = new FileTarget(loggerName)
                 {
-                    FileName = Path.Combine(logFilePath, $"{name}.log"),
-                    Layout = "${time} ${message}",
-                    ArchiveFileName = Path.Combine(logFilePath, $"{name}.{{#}}.log"),
+                    FileName = Path.Combine(logFilePath, $"{logName}.log"),
+                    Layout = "${time} [${level:uppercase=true}] ${message}",
+                    ArchiveFileName = Path.Combine(logFilePath, $"{logName}.{{#}}.log"),
                     ArchiveNumbering = ArchiveNumberingMode.DateAndSequence,
                     ArchiveEvery = FileArchivePeriod.Day,
-                    ArchiveDateFormat = "yyyyMMdd"
+                    ArchiveDateFormat = "yyyyMMdd",
+                    ArchiveOldFileOnStartup = true,
+                    MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
+                    MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
                 };
                 LogManager.Configuration.AddTarget(loggerName, logFile);
 
@@ -334,12 +337,12 @@ namespace ServerManagerTool
 
             TaskSchedulerUtils.TaskFolder = Config.Default.ScheduledTaskFolder;
 
-            this.Args = string.Join(" ", e.Args);
+            Args = string.Join(" ", e.Args);
 
             // check if we are starting server manager in BETA/TEST mode
             if (e.Args.Any(a => a.Equals(Constants.ARG_BETA, StringComparison.OrdinalIgnoreCase) || a.Equals(Constants.ARG_TEST, StringComparison.OrdinalIgnoreCase)))
             {
-                this.BetaVersion = true;
+                BetaVersion = true;
             }
 
             // check if we need to set the title
@@ -406,12 +409,14 @@ namespace ServerManagerTool
                 var result = MessageBox.Show(_globalizer.GetResourceString("Application_RunAsAdministratorLabel"), _globalizer.GetResourceString("Application_RunAsAdministratorTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    var processInfo = new ProcessStartInfo(Assembly.GetEntryAssembly().CodeBase);
+                    var processInfo = new ProcessStartInfo(Assembly.GetExecutingAssembly().CodeBase)
+                    {
 
-                    // The following properties run the new process as administrator
-                    processInfo.UseShellExecute = true;
-                    processInfo.Verb = "runas";
-                    processInfo.Arguments = string.Join(" ", e.Args);
+                        // The following properties run the new process as administrator
+                        UseShellExecute = true,
+                        Verb = "runas",
+                        Arguments = string.Join(" ", e.Args)
+                    };
 
                     // Start the new process
                     try
@@ -449,7 +454,7 @@ namespace ServerManagerTool
                 }
             }
 
-            this.ApplicationStarted = true;
+            ApplicationStarted = true;
 
             var restartRequired = false;
             if (string.IsNullOrWhiteSpace(Config.Default.DataPath))
@@ -515,7 +520,9 @@ namespace ServerManagerTool
 
         public static void ReconfigureLogging()
         {
-            string logDir = Path.Combine(Config.Default.DataPath, Config.Default.LogsRelativePath);
+            UpdateLoggingStatus();
+
+            var logDir = Path.Combine(Config.Default.DataPath, Config.Default.LogsRelativePath);
             if (!System.IO.Directory.Exists(logDir))
                 System.IO.Directory.CreateDirectory(logDir);
 
@@ -527,34 +534,11 @@ namespace ServerManagerTool
                 var fileName = Path.GetFileNameWithoutExtension(fileTarget.FileName.ToString());
                 fileTarget.FileName = Path.Combine(logDir, $"{fileName}.log");
                 fileTarget.ArchiveFileName = Path.Combine(logDir, $"{fileName}.{{#}}.log");
+                fileTarget.MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles;
+                fileTarget.MaxArchiveDays = Config.Default.LoggingMaxArchiveDays;
             }
 
             LogManager.ReconfigExistingLoggers();
-        }
-
-        private void ShutDownApplication()
-        {
-            StopDiscordBot();
-
-            if (this.ApplicationStarted)
-            {
-                foreach (var server in ServerManager.Instance.Servers)
-                {
-                    try
-                    {
-                        server.Profile.Save(false, false, null);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(String.Format(_globalizer.GetResourceString("Application_Profile_SaveFailedLabel"), server.Profile.ProfileName, ex.Message, ex.StackTrace), _globalizer.GetResourceString("Application_Profile_SaveFailedTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                }
-                App.SaveConfigFiles();
-            }
-
-            PluginHelper.Instance?.Dispose();
-
-            this.ApplicationStarted = false;
         }
 
         public static void SaveConfigFiles(bool includeBackup = true)
@@ -576,6 +560,33 @@ namespace ServerManagerTool
             SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
         }
 
+        private void ShutDownApplication()
+        {
+            StopDiscordBot();
+
+            if (ApplicationStarted)
+            {
+                foreach (var server in ServerManager.Instance.Servers)
+                {
+                    try
+                    {
+                        server.Profile.Save(false, false, null);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(String.Format(_globalizer.GetResourceString("Application_Profile_SaveFailedLabel"), server.Profile.ProfileName, ex.Message, ex.StackTrace), _globalizer.GetResourceString("Application_Profile_SaveFailedTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                SaveConfigFiles();
+            }
+
+            PluginHelper.Instance?.Dispose();
+            LogManager.Flush();
+            LogManager.Shutdown();
+
+            ApplicationStarted = false;
+        }
+
         public void StartDiscordBot()
         {
             if (_tokenSourceDiscordBot != null)
@@ -591,6 +602,8 @@ namespace ServerManagerTool
                 var config = new DiscordBotConfig
                 {
                     LogLevel = Config.Default.DiscordBotLogLevel,
+                    MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
+                    MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
                     DiscordToken = Config.Default.DiscordBotToken,
                     CommandPrefix = Config.Default.DiscordBotPrefix,
                     DataDirectory = Config.Default.DataPath,
@@ -602,7 +615,7 @@ namespace ServerManagerTool
                 }
 
                 await ServerManagerBotFactory.GetServerManagerBot().RunAsync(config, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);
-                
+
                 if (_tokenSourceDiscordBot != null)
                 {
                     // cleanup the token
@@ -636,6 +649,22 @@ namespace ServerManagerTool
             {
                 _tokenSourceDiscordBot.Cancel();
             }
+        }
+
+        public static void UpdateLoggingStatus()
+        {
+            if (Config.Default.LoggingEnabled)
+            {
+                while (!LogManager.IsLoggingEnabled())
+                    LogManager.EnableLogging();
+            }
+            else
+            {
+                while (LogManager.IsLoggingEnabled())
+                    LogManager.DisableLogging();
+            }
+
+            Debug.WriteLine($"Logging Enabled: {LogManager.IsLoggingEnabled()}");
         }
     }
 }

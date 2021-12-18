@@ -1761,7 +1761,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UpdateDirectoryPermissions {
             get {
                 return ((bool)(this["UpdateDirectoryPermissions"]));
@@ -2195,6 +2195,42 @@ namespace ServerManagerTool {
             }
             set {
                 this["DiscordBotAllowAllBots"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool LoggingEnabled {
+            get {
+                return ((bool)(this["LoggingEnabled"]));
+            }
+            set {
+                this["LoggingEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int LoggingMaxArchiveFiles {
+            get {
+                return ((int)(this["LoggingMaxArchiveFiles"]));
+            }
+            set {
+                this["LoggingMaxArchiveFiles"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int LoggingMaxArchiveDays {
+            get {
+                return ((int)(this["LoggingMaxArchiveDays"]));
+            }
+            set {
+                this["LoggingMaxArchiveDays"] = value;
             }
         }
     }

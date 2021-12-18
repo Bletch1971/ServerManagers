@@ -50,9 +50,9 @@ namespace ServerManagerTool
 
         public App()
         {
-            if (string.IsNullOrWhiteSpace(Config.Default.ASMUniqueKey))
+            if (string.IsNullOrWhiteSpace(Config.Default.ServerManagerUniqueKey))
             {
-                Config.Default.ASMUniqueKey = Guid.NewGuid().ToString();
+                Config.Default.ServerManagerUniqueKey = Guid.NewGuid().ToString();
             }
 
             if (!string.IsNullOrWhiteSpace(Config.Default.DataDir))
@@ -233,27 +233,30 @@ namespace ServerManagerTool
 
         public static string GetProfileLogFolder(string profileId) => IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.LogsDir, profileId.ToLower()));
 
-        public static Logger GetProfileLogger(string profileId, string name, LogLevel minLevel, LogLevel maxLevel)
+        public static Logger GetProfileLogger(string profileId, string logName, LogLevel minLevel, LogLevel maxLevel)
         {
-            if (string.IsNullOrWhiteSpace(profileId) || string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(profileId) || string.IsNullOrWhiteSpace(logName))
                 return null;
 
-            var loggerName = $"{profileId.ToLower()}_{name}".Replace(" ", "_");
+            var loggerName = $"{profileId.ToLower()}_{logName}".Replace(" ", "_");
 
             if (LogManager.Configuration.FindTargetByName(loggerName) == null)
-            {            
+            {
                 var logFilePath = GetProfileLogFolder(profileId);
                 if (!System.IO.Directory.Exists(logFilePath))
                     System.IO.Directory.CreateDirectory(logFilePath);
 
                 var logFile = new FileTarget(loggerName)
                 {
-                    FileName = Path.Combine(logFilePath, $"{name}.log"),
-                    Layout = "${time} ${message}",
-                    ArchiveFileName = Path.Combine(logFilePath, $"{name}.{{#}}.log"),
+                    FileName = Path.Combine(logFilePath, $"{logName}.log"),
+                    Layout = "${time} [${level:uppercase=true}] ${message}",
+                    ArchiveFileName = Path.Combine(logFilePath, $"{logName}.{{#}}.log"),
                     ArchiveNumbering = ArchiveNumberingMode.DateAndSequence,
                     ArchiveEvery = FileArchivePeriod.Day,
-                    ArchiveDateFormat = "yyyyMMdd"
+                    ArchiveDateFormat = "yyyyMMdd",
+                    ArchiveOldFileOnStartup = true,
+                    MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
+                    MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
                 };
                 LogManager.Configuration.AddTarget(loggerName, logFile);
 
@@ -291,12 +294,6 @@ namespace ServerManagerTool
                 SettingsUtils.MigrateSettings(Config.Default, settingsFile);
                 Config.Default.UpgradeConfig = false;
                 Config.Default.Save();
-
-                if (string.IsNullOrWhiteSpace(CommonConfig.Default.SteamAPIKey))
-                {
-                    CommonConfig.Default.SteamAPIKey = Config.Default.SteamAPIKey;
-                    CommonConfig.Default.Save();
-                }
             }
             if (!Config.Default.DiscordBotPrefixFixed)
             {
@@ -370,14 +367,14 @@ namespace ServerManagerTool
             PluginHelper.Instance.SetFetchProfileCallback(DiscordPluginHelper.FetchProfiles);
             OnResourceDictionaryChanged(Thread.CurrentThread.CurrentCulture.Name);
 
-            // check if we are starting ASM for the old server restart - no longer supported
+            // check if we are starting server manager for the old server restart - no longer supported
             if (e.Args.Any(a => a.StartsWith(Constants.ARG_AUTORESTART, StringComparison.OrdinalIgnoreCase)))
             {
                 // just exit
                 Environment.Exit(0);
             }
 
-            // check if we are starting ASM for server shutdown
+            // check if we are starting server manager for server shutdown
             if (e.Args.Any(a => a.StartsWith(Constants.ARG_AUTOSHUTDOWN1, StringComparison.OrdinalIgnoreCase)))
             {
                 var arg = e.Args.FirstOrDefault(a => a.StartsWith(Constants.ARG_AUTOSHUTDOWN1, StringComparison.OrdinalIgnoreCase));
@@ -387,7 +384,7 @@ namespace ServerManagerTool
                 Environment.Exit(exitCode);
             }
 
-            // check if we are starting ASM for server shutdown
+            // check if we are starting server manager for server shutdown
             if (e.Args.Any(a => a.StartsWith(Constants.ARG_AUTOSHUTDOWN2, StringComparison.OrdinalIgnoreCase)))
             {
                 var arg = e.Args.FirstOrDefault(a => a.StartsWith(Constants.ARG_AUTOSHUTDOWN2, StringComparison.OrdinalIgnoreCase));
@@ -397,7 +394,7 @@ namespace ServerManagerTool
                 Environment.Exit(exitCode);
             }
 
-            // check if we are starting ASM for server updating
+            // check if we are starting server manager for server updating
             if (e.Args.Any(a => a.Equals(Constants.ARG_AUTOUPDATE, StringComparison.OrdinalIgnoreCase)))
             {
                 var exitCode = ServerApp.PerformAutoUpdate();
@@ -406,7 +403,7 @@ namespace ServerManagerTool
                 Environment.Exit(exitCode);
             }
 
-            // check if we are starting ASM for server backups
+            // check if we are starting server manager for server backups
             if (e.Args.Any(a => a.Equals(Constants.ARG_AUTOBACKUP, StringComparison.OrdinalIgnoreCase)))
             {
                 var exitCode = ServerApp.PerformAutoBackup();
@@ -469,7 +466,7 @@ namespace ServerManagerTool
 
             var restartRequired = false;
             if (string.IsNullOrWhiteSpace(Config.Default.DataDir))
-            {              
+            {
                 var dataDirectoryWindow = new DataDirectoryWindow();
                 dataDirectoryWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 var result = dataDirectoryWindow.ShowDialog();
@@ -479,7 +476,7 @@ namespace ServerManagerTool
                     Environment.Exit(0);
                 }
 
-                restartRequired = true; 
+                restartRequired = true;
             }
 
             Config.Default.ConfigDirectory = Path.Combine(Config.Default.DataDir, Config.Default.ProfilesDir);            
@@ -533,8 +530,10 @@ namespace ServerManagerTool
         }
 
         public static void ReconfigureLogging()
-        {               
-            string logDir = Path.Combine(Config.Default.DataDir, Config.Default.LogsDir);
+        {
+            UpdateLoggingStatus();
+
+            var logDir = Path.Combine(Config.Default.DataDir, Config.Default.LogsDir);
             if (!System.IO.Directory.Exists(logDir))
                 System.IO.Directory.CreateDirectory(logDir);
 
@@ -546,10 +545,31 @@ namespace ServerManagerTool
                 var fileName = Path.GetFileNameWithoutExtension(fileTarget.FileName.ToString());
                 fileTarget.FileName = Path.Combine(logDir, $"{fileName}.log");
                 fileTarget.ArchiveFileName = Path.Combine(logDir, $"{fileName}.{{#}}.log");
+                fileTarget.MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles;
+                fileTarget.MaxArchiveDays = Config.Default.LoggingMaxArchiveDays;
             }
 
             LogManager.ReconfigExistingLoggers();
-        }   
+        }
+
+        public static void SaveConfigFiles(bool includeBackup = true)
+        {
+            Config.Default.Save();
+            CommonConfig.Default.Save();
+
+            Config.Default.Reload();
+            CommonConfig.Default.Reload();
+
+            var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var backupFolder = includeBackup
+                ? string.IsNullOrWhiteSpace(Config.Default.BackupPath)
+                        ? Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)
+                        : Path.Combine(Config.Default.BackupPath)
+                : null;
+
+            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
+            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
+        }
 
         private void ShutDownApplication()
         {
@@ -572,27 +592,10 @@ namespace ServerManagerTool
             }
 
             PluginHelper.Instance?.Dispose();
+            LogManager.Flush();
+            LogManager.Shutdown();
 
             ApplicationStarted = false;
-        }
-
-        public static void SaveConfigFiles(bool includeBackup = true)
-        {
-            Config.Default.Save();
-            CommonConfig.Default.Save();
-
-            Config.Default.Reload();
-            CommonConfig.Default.Reload();
-
-            var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var backupFolder = includeBackup 
-                ? string.IsNullOrWhiteSpace(Config.Default.BackupPath)
-                        ? Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)
-                        : Path.Combine(Config.Default.BackupPath)
-                : null;
-
-            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
-            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
         }
 
         public void StartDiscordBot()
@@ -610,6 +613,8 @@ namespace ServerManagerTool
                 var config = new DiscordBotConfig
                 {
                     LogLevel = Config.Default.DiscordBotLogLevel,
+                    MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
+                    MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
                     DiscordToken = Config.Default.DiscordBotToken,
                     CommandPrefix = Config.Default.DiscordBotPrefix,
                     DataDirectory = Config.Default.DataDir,
@@ -655,6 +660,22 @@ namespace ServerManagerTool
             {
                 _tokenSourceDiscordBot.Cancel();
             }
+        }
+
+        public static void UpdateLoggingStatus()
+        {
+            if (Config.Default.LoggingEnabled)
+            {
+                while (!LogManager.IsLoggingEnabled())
+                    LogManager.EnableLogging();
+            }
+            else
+            {
+                while (LogManager.IsLoggingEnabled())
+                    LogManager.DisableLogging();
+            }
+
+            Debug.WriteLine($"Logging Enabled: {LogManager.IsLoggingEnabled()}");
         }
     }
 }

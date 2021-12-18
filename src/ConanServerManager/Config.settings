@@ -492,7 +492,7 @@
       <Value Profile="(Default)">500</Value>
     </Setting>
     <Setting Name="UpdateDirectoryPermissions" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="AutoUpdate_VerifyServerAfterUpdate" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -605,6 +605,15 @@
     </Setting>
     <Setting Name="DiscordBotAllowAllBots" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LoggingEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LoggingMaxArchiveFiles" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="LoggingMaxArchiveDays" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
     </Setting>
   </Settings>
 </SettingsFile>

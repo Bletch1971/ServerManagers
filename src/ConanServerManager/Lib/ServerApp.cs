@@ -1,4 +1,7 @@
-﻿using ConanData;
+﻿using NLog;
+using NLog.Config;
+using NLog.Layouts;
+using NLog.Targets;
 using ServerManagerTool.Common;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
@@ -29,7 +32,6 @@ namespace ServerManagerTool.Lib
     {
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private readonly PluginHelper _pluginHelper = PluginHelper.Instance;
-
 
         public const int MUTEX_TIMEOUT = 5;         // 5 minutes
         public const int MUTEX_ATTEMPTDELAY = 5000; // 5 seconds
@@ -84,12 +86,12 @@ namespace ServerManagerTool.Lib
 
         private const int DIRECTORIES_PER_LINE = 200;
 
-        private static readonly object LockObjectMessage = new object();
-        private static readonly object LockObjectBranchMessage = new object();
-        private static readonly object LockObjectProfileMessage = new object();
         private static DateTime _startTime = DateTime.Now;
-        private static string _logPrefix = "";
         private static Dictionary<ServerProfileSnapshot, ServerProfile> _profiles = null;
+
+        private static Logger _loggerManager;
+        private Logger _loggerBranch;
+        private Logger _loggerProfile;
 
         private ServerProfileSnapshot _profile = null;
         private QueryMaster.Rcon _rconConsole = null;
@@ -100,7 +102,7 @@ namespace ServerManagerTool.Lib
         public bool SendMessages = Config.Default.ServerShutdown_SendShutdownMessages;
         public bool DeleteOldServerBackupFiles = false;
         public int ExitCode = EXITCODE_NORMALEXIT;
-        public bool OutputLogs = true;
+        public bool OutputLogs = false;
         public bool SendAlerts = false;
         public bool SendEmails = false;
         public string ShutdownReason = null;
@@ -156,7 +158,7 @@ namespace ServerManagerTool.Lib
                     if (!string.IsNullOrWhiteSpace(Config.Default.ServerBackup_WorldSaveMessage))
                     {
                         ProcessAlert(AlertType.Backup, Config.Default.ServerBackup_WorldSaveMessage);
-                        sent = SendMessageAsync(Config.Default.ServerBackup_WorldSaveMessage, CancellationToken.None).Result;
+                        sent = SendMessageAsync(Config.Default.ServerBackup_WorldSaveMessage, cancellationToken).Result;
                         if (sent)
                         {
                             emailMessage.AppendLine("sent server save message.");
@@ -172,8 +174,6 @@ namespace ServerManagerTool.Lib
                 }
                 catch (Exception ex)
                 {
-                    CloseRconConsole();
-
                     Debug.WriteLine($"RCON> {Config.Default.ServerSaveCommand} command.\r\n{ex.Message}");
                 }
             }
@@ -442,7 +442,7 @@ namespace ServerManagerTool.Lib
                         if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                         {
                             ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                            SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, CancellationToken.None).Wait();
+                            SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
                         }
 
                         ExitCode = EXITCODE_CANCELLED;
@@ -503,7 +503,6 @@ namespace ServerManagerTool.Lib
                     }
                     else if (minutesLeft > 1)
                     {
-                        message = string.Empty;
                         message = Config.Default.ServerShutdown_GraceMessage1.Replace("{minutes}", minutesLeft.ToString());
                         if (!string.IsNullOrWhiteSpace(UpdateReason))
                             message += $"\n\n{UpdateReason}";
@@ -525,7 +524,7 @@ namespace ServerManagerTool.Lib
                         {
                             ProcessAlert(AlertType.ShutdownReason, ShutdownReason);
 
-                            message = $"{message} {ShutdownReason}";
+                            message = $"{message}\r\n{ShutdownReason}";
                         }
 
                         sent = SendMessageAsync(message, cancellationToken).Result;
@@ -534,7 +533,7 @@ namespace ServerManagerTool.Lib
                     minutesLeft--;
                     try
                     {
-                        var delay = 60000;
+                        var delay = sent ? 60000 - Config.Default.SendMessageDelay : 60000;
                         Task.Delay(delay, cancellationToken).Wait(cancellationToken);
                     }
                     catch { }
@@ -576,7 +575,7 @@ namespace ServerManagerTool.Lib
                     if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                     {
                         ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                        SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, CancellationToken.None).Wait();
+                        SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
                     }
 
                     ExitCode = EXITCODE_CANCELLED;
@@ -594,7 +593,7 @@ namespace ServerManagerTool.Lib
                     {
                         ProcessAlert(AlertType.ShutdownReason, ShutdownReason);
 
-                        message = $"{message} {ShutdownReason}";
+                        message = $"{message}\r\n{ShutdownReason}";
                     }
 
                     SendMessageAsync(message, cancellationToken).Wait();
@@ -613,7 +612,7 @@ namespace ServerManagerTool.Lib
                 if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                 {
                     ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                    SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, CancellationToken.None).Wait();
+                    SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
                 }
 
                 ExitCode = EXITCODE_CANCELLED;
@@ -627,8 +626,8 @@ namespace ServerManagerTool.Lib
                 LogProfileMessage("Stopping server...");
                 ProcessAlert(AlertType.Shutdown, Config.Default.Alert_ServerShutdownMessage);
 
-                TaskCompletionSource<bool> ts = new TaskCompletionSource<bool>();
-                EventHandler handler = (s, e) => ts.TrySetResult(true);
+                var ts = new TaskCompletionSource<bool>();
+                void handler(object s, EventArgs e) => ts.TrySetResult(true);
 
                 if (process != null && !process.HasExited)
                 {
@@ -723,7 +722,7 @@ namespace ServerManagerTool.Lib
                 LogProfileMessage("Updating server from steam.\r\n");
 
                 downloadSuccessful = !Config.Default.SteamCmdRedirectOutput;
-                DataReceivedEventHandler serverOutputHandler = (s, e) =>
+                void serverOutputHandler(object s, DataReceivedEventArgs e)
                 {
                     var dataValue = e.Data ?? string.Empty;
                     LogProfileMessage(dataValue);
@@ -735,7 +734,7 @@ namespace ServerManagerTool.Lib
                     {
                         downloadSuccessful = true;
                     }
-                };
+                }
 
                 var steamCmdInstallServerArgsFormat = Config.Default.SteamCmdInstallServerArgsFormat;
                 var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, steamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, _profile.InstallDirectory, string.Empty, Config.Default.AppIdServer, string.Empty, validate ? "validate" : string.Empty);
@@ -744,7 +743,7 @@ namespace ServerManagerTool.Lib
                 if (steamCmdRemoveQuit)
                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Normal;
 
-                success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, _profile.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
+                success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, _profile.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? (DataReceivedEventHandler)serverOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
                 if (success && downloadSuccessful)
                 {
                     LogProfileMessage("Finished server update.");
@@ -773,6 +772,7 @@ namespace ServerManagerTool.Lib
                     ExitCode = EXITCODE_SERVERUPDATEFAILED;
                 }
 
+                // check if we need to update the mods
                 if (updateMods)
                 {
                     if (success)
@@ -1730,18 +1730,16 @@ namespace ServerManagerTool.Lib
 
         public void CreateProfileBackupArchiveFile(ServerProfileSnapshot profile = null)
         {
+            // do nothing if profile is null
+            if (profile == null)
+                return;
+
             var oldProfile = _profile;
 
             try
             {
-                if (profile != null)
-                    _profile = profile;
+                _profile = profile;
 
-                if (_profile == null)
-                {
-                    ExitCode = EXITCODE_BADPROFILE;
-                    return;
-                }
 
                 // create the backup file.
                 try
@@ -1859,18 +1857,15 @@ namespace ServerManagerTool.Lib
 
         public void CreateServerBackupArchiveFile(StringBuilder emailMessage, ServerProfileSnapshot profile = null)
         {
+            // do nothing if profile is null
+            if (profile == null)
+                return;
+
             var oldProfile = _profile;
 
             try
             {
-                if (profile != null)
-                    _profile = profile;
-
-                if (_profile == null)
-                {
-                    ExitCode = EXITCODE_BADPROFILE;
-                    return;
-                }
+                _profile = profile;
 
                 // check if the servers save folder exists
                 var saveFolder = GetServerSaveFolder();
@@ -2046,7 +2041,7 @@ namespace ServerManagerTool.Lib
                     continue;
 
                 // destination file does not exist, or is older. Override with the source file.
-                while(true)
+                while (true)
                 {
                     var retries = 0;
                     try
@@ -2066,11 +2061,48 @@ namespace ServerManagerTool.Lib
 
         public static string GetBranchName(string branchName) => string.IsNullOrWhiteSpace(branchName) ? Config.Default.DefaultServerBranchName : branchName;
 
-        public static string GetBranchLogFile(string branchName) => IOUtils.NormalizePath(Path.Combine(App.GetLogFolder(), _logPrefix, $"{_startTime:yyyyMMdd_HHmmss}{(string.IsNullOrWhiteSpace(branchName) ? string.Empty : $"_{branchName}")}.log"));
-
         private string GetLauncherFile() => IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.LauncherFile));
 
-        private static string GetLogFile() => IOUtils.NormalizePath(Path.Combine(App.GetLogFolder(), _logPrefix, $"{_startTime:yyyyMMdd_HHmmss}.log"));
+        private static string GetLogFolder(string logType) => IOUtils.NormalizePath(Path.Combine(App.GetLogFolder(), logType));
+
+        private static Logger GetLogger(string logFilePath, string logType, string logName)
+        {
+            return GetLogger(logFilePath, logType, logName ?? string.Empty, LogLevel.Debug, LogLevel.Fatal);
+        }
+
+        private static Logger GetLogger(string logFilePath, string logType, string logName, LogLevel minLevel, LogLevel maxLevel)
+        {
+            if (string.IsNullOrWhiteSpace(logFilePath) || string.IsNullOrWhiteSpace(logType) || string.IsNullOrWhiteSpace(logName))
+                return null;
+
+            var loggerName = $"{logType}_{logName}".Replace(" ", "_");
+
+            if (LogManager.Configuration.FindTargetByName(loggerName) is null)
+            {
+                if (!Directory.Exists(logFilePath))
+                    Directory.CreateDirectory(logFilePath);
+
+                var logFile = new FileTarget(loggerName)
+                {
+                    FileName = Path.Combine(logFilePath, $"{logName}.log"),
+                    Layout = "${time} [${level:uppercase=true}] ${message}",
+                    ArchiveFileName = Path.Combine(logFilePath, $"{logName}.{{#}}.log"),
+                    ArchiveNumbering = ArchiveNumberingMode.DateAndSequence,
+                    ArchiveEvery = FileArchivePeriod.Day,
+                    ArchiveDateFormat = "yyyyMMdd",
+                    ArchiveOldFileOnStartup = true,
+                    MaxArchiveFiles = Config.Default.LoggingMaxArchiveFiles,
+                    MaxArchiveDays = Config.Default.LoggingMaxArchiveDays,
+                };
+                LogManager.Configuration.AddTarget(loggerName, logFile);
+
+                var rule = new LoggingRule(loggerName, minLevel, maxLevel, logFile);
+                LogManager.Configuration.LoggingRules.Add(rule);
+                LogManager.ReconfigExistingLoggers();
+            }
+
+            return LogManager.GetLogger(loggerName);
+        }
 
         private List<string> GetModList()
         {
@@ -2111,7 +2143,7 @@ namespace ServerManagerTool.Lib
 
         private static string GetProfileFile(ServerProfileSnapshot profile) => IOUtils.NormalizePath(Path.Combine(Config.Default.ConfigPath, $"{profile.ProfileId.ToLower()}{Config.Default.ProfileExtension}"));
 
-        private string GetProfileLogFile() => _profile != null ? IOUtils.NormalizePath(Path.Combine(App.GetLogFolder(), _profile.ProfileId.ToLower(), _logPrefix, $"{_startTime:yyyyMMdd_HHmmss}.log")) : GetLogFile();
+        private string GetProfileLogFolder(string profileId, string logType) => IOUtils.NormalizePath(Path.Combine(App.GetProfileLogFolder(profileId), logType));
 
         public static string GetProfileServerConfigDir(ServerProfile profile) => Path.Combine(profile.InstallDirectory, Config.Default.ServerConfigRelativePath);
 
@@ -2123,7 +2155,7 @@ namespace ServerManagerTool.Lib
             {
                 StringBuilder builder = new StringBuilder();
 
-                var hashStr = Encoding.UTF8.GetBytes(directory ?? Assembly.GetEntryAssembly().Location);
+                var hashStr = Encoding.UTF8.GetBytes(directory ?? Assembly.GetExecutingAssembly().Location);
                 var hash = hashAlgo.ComputeHash(hashStr);
                 foreach (var b in hash)
                 {
@@ -2281,36 +2313,18 @@ namespace ServerManagerTool.Lib
             if (string.IsNullOrWhiteSpace(error))
                 return;
 
-            LogMessage($"***** ERROR: {error}");
+            _loggerManager?.Error(error);
+
+            Debug.WriteLine($"[ERROR] {error}");
         }
 
         private static void LogMessage(string message)
         {
             message = message ?? string.Empty;
 
-            var logFile = GetLogFile();
-            lock (LockObjectMessage)
-            {
-                if (!Directory.Exists(Path.GetDirectoryName(logFile)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(logFile));
+            _loggerManager?.Info(message);
 
-                int retries = 0;
-                while (retries < 3)
-                {
-                    try
-                    {
-                        File.AppendAllLines(logFile, new[] { $"{DateTime.Now.ToString("o", CultureInfo.CurrentCulture)}: {message}" }, Encoding.Unicode);
-                        break;
-                    }
-                    catch (IOException)
-                    {
-                        retries++;
-                        Task.Delay(WRITELOG_ERRORRETRYDELAY).Wait();
-                    }
-                }
-            }
-
-            Debug.WriteLine(message);
+            Debug.WriteLine($"[INFO] {message}");
         }
 
         private void LogBranchError(string branchName, string error, bool includeProgressCallback = true)
@@ -2318,45 +2332,24 @@ namespace ServerManagerTool.Lib
             if (string.IsNullOrWhiteSpace(error))
                 return;
 
-            LogBranchMessage(branchName, $"***** ERROR: {error}", includeProgressCallback);
+            _loggerBranch?.Error(error);
+
+            if (includeProgressCallback)
+                ProgressCallback?.Invoke(0, $"[ERROR] {error}");
+
+            Debug.WriteLine($"[ERROR] (Branch {GetBranchName(branchName) ?? "unknown"}) {error}");
         }
 
         private void LogBranchMessage(string branchName, string message, bool includeProgressCallback = true)
         {
             message = message ?? string.Empty;
 
-            if (OutputLogs)
-            {
-                var logFile = GetBranchLogFile(branchName);
-                lock (LockObjectBranchMessage)
-                {
-                    if (!Directory.Exists(Path.GetDirectoryName(logFile)))
-                        Directory.CreateDirectory(Path.GetDirectoryName(logFile));
-
-                    int retries = 0;
-                    while (retries < 3)
-                    {
-                        try
-                        {
-                            File.AppendAllLines(logFile, new[] { $"{DateTime.Now.ToString("o", CultureInfo.CurrentCulture)}: {message}" }, Encoding.Unicode);
-                            break;
-                        }
-                        catch (IOException)
-                        {
-                            retries++;
-                            Task.Delay(WRITELOG_ERRORRETRYDELAY).Wait();
-                        }
-                    }
-                }
-            }
+            _loggerBranch?.Info(message);
 
             if (includeProgressCallback)
-                ProgressCallback?.Invoke(0, message);
+                ProgressCallback?.Invoke(0, $"[INFO] {message}");
 
-            if (_profile != null)
-                Debug.WriteLine($"[Branch {GetBranchName(branchName) ?? "unknown"}] {message}");
-            else
-                Debug.WriteLine(message);
+            Debug.WriteLine($"[INFO] (Branch {GetBranchName(branchName) ?? "unknown"}) {message}");
         }
 
         private void LogProfileError(string error, bool includeProgressCallback = true)
@@ -2364,45 +2357,24 @@ namespace ServerManagerTool.Lib
             if (string.IsNullOrWhiteSpace(error))
                 return;
 
-            LogProfileMessage($"***** ERROR: {error}", includeProgressCallback);
+            _loggerProfile?.Error(error);
+
+            if (includeProgressCallback)
+                ProgressCallback?.Invoke(0, $"[ERROR] {error}");
+
+            Debug.WriteLine($"[ERROR] (Profile {_profile?.ProfileName ?? "unknown"}) {error}");
         }
 
         private void LogProfileMessage(string message, bool includeProgressCallback = true)
         {
             message = message ?? string.Empty;
 
-            if (OutputLogs)
-            {
-                var logFile = GetProfileLogFile();
-                lock (LockObjectProfileMessage)
-                {
-                    if (!Directory.Exists(Path.GetDirectoryName(logFile)))
-                        Directory.CreateDirectory(Path.GetDirectoryName(logFile));
-
-                    int retries = 0;
-                    while (retries < 3)
-                    {
-                        try
-                        {
-                            File.AppendAllLines(logFile, new[] { $"{DateTime.Now.ToString("o", CultureInfo.CurrentCulture)}: {message}" }, Encoding.Unicode);
-                            break;
-                        }
-                        catch (IOException)
-                        {
-                            retries++;
-                            Task.Delay(WRITELOG_ERRORRETRYDELAY).Wait();
-                        }
-                    }
-                }
-            }
+            _loggerProfile?.Info(message);
 
             if (includeProgressCallback)
-                ProgressCallback?.Invoke(0, message);
+                ProgressCallback?.Invoke(0, $"[INFO] {message}");
 
-            if (_profile != null)
-                Debug.WriteLine($"[Profile {_profile?.ProfileName ?? "unknown"}] {message}");
-            else
-                Debug.WriteLine(message);
+            Debug.WriteLine($"[INFO] (Profile {_profile?.ProfileName ?? "unknown"}) {message}");
         }
 
         private void ProcessAlert(AlertType alertType, string alertMessage)
@@ -2506,9 +2478,11 @@ namespace ServerManagerTool.Lib
                 StringBuilder messageBody = new StringBuilder(body);
                 Attachment attachment = null;
 
-                if (includeLogFile)
+                if (includeLogFile && _loggerProfile != null)
                 {
-                    var logFile = GetProfileLogFile();
+                    var fileTarget = LogManager.Configuration.FindTargetByName(_loggerProfile.Name) as FileTarget;
+                    var fileLayout = fileTarget?.FileName as SimpleLayout;
+                    var logFile = fileLayout?.Text ?? string.Empty;
                     if (!string.IsNullOrWhiteSpace(logFile) && File.Exists(logFile))
                     {
                         attachment = new Attachment(logFile);
@@ -2549,9 +2523,9 @@ namespace ServerManagerTool.Lib
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
                 if (server == null)
                 {
-//#if DEBUG
+#if DEBUG
                     LogProfileMessage($"FAILED: {nameof(SetupRconConsole)} - ServerQuery could not be created.", false);
-//#endif
+#endif
                     return;
                 }
 
@@ -2564,9 +2538,9 @@ namespace ServerManagerTool.Lib
                 _rconConsole = server.GetControl(_profile.AdminPassword);
                 if (_rconConsole == null)
                 {
-//#if DEBUG
+#if DEBUG
                     LogProfileMessage($"FAILED: {nameof(SetupRconConsole)} - RconConsole could not be created ({_profile.AdminPassword}).", false);
-//#endif
+#endif
                     return;
                 }
 
@@ -2576,10 +2550,10 @@ namespace ServerManagerTool.Lib
             }
             catch (Exception ex)
             {
-//#if DEBUG
+#if DEBUG
                 LogProfileMessage($"ERROR: {nameof(SetupRconConsole)}\r\n{ex.Message}", false);
                 LogProfileMessage($"ERROR: {nameof(SetupRconConsole)}\r\n{ex.StackTrace}", false);
-//#endif
+#endif
             }
         }
 
@@ -2594,6 +2568,9 @@ namespace ServerManagerTool.Lib
 
             Mutex mutex = null;
             var createdNew = false;
+
+            if (OutputLogs)
+                _loggerProfile = GetLogger(GetProfileLogFolder(profile.ProfileId, LOGPREFIX_AUTOBACKUP), $"{LOGPREFIX_AUTOBACKUP}_{profile.ProfileId}", "Backup");
 
             try
             {
@@ -2659,6 +2636,9 @@ namespace ServerManagerTool.Lib
 
             Mutex mutex = null;
             var createdNew = false;
+
+            if (OutputLogs)
+                _loggerProfile = GetLogger(GetProfileLogFolder(profile.ProfileId, LOGPREFIX_AUTOSHUTDOWN), $"{LOGPREFIX_AUTOSHUTDOWN}_{profile.ProfileId}", "Shutdown");
 
             try
             {
@@ -2753,6 +2733,9 @@ namespace ServerManagerTool.Lib
             Mutex mutex = null;
             var createdNew = false;
 
+            if (OutputLogs)
+                _loggerProfile = GetLogger(GetProfileLogFolder(profile.ProfileId, LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}_{profile.ProfileId}", "Update");
+
             try
             {
                 LogBranchMessage(branch.BranchName, $"[{_profile.ProfileName}] Started server update process.");
@@ -2824,6 +2807,9 @@ namespace ServerManagerTool.Lib
             Mutex mutex = null;
             var createdNew = false;
 
+            if (OutputLogs)
+                _loggerBranch = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}_{branch.BranchName}", GetBranchName(branch.BranchName));
+
             try
             {
                 LogBranchMessage(branch.BranchName, $"Started branch update process.");
@@ -2860,8 +2846,9 @@ namespace ServerManagerTool.Lib
                             {
                                 var app = new ServerApp
                                 {
-                                    SendAlerts = true,
-                                    SendEmails = true,
+                                    OutputLogs = OutputLogs,
+                                    SendAlerts = SendAlerts,
+                                    SendEmails = SendEmails,
                                     ServerProcess = ServerProcess,
                                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                                 };
@@ -2879,8 +2866,9 @@ namespace ServerManagerTool.Lib
 
                                 var app = new ServerApp
                                 {
-                                    SendAlerts = true,
-                                    SendEmails = true,
+                                    OutputLogs = OutputLogs,
+                                    SendAlerts = SendAlerts,
+                                    SendEmails = SendEmails,
                                     ServerProcess = ServerProcess,
                                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                                 };
@@ -2935,9 +2923,9 @@ namespace ServerManagerTool.Lib
 
         public static int PerformAutoBackup()
         {
-            _logPrefix = LOGPREFIX_AUTOBACKUP;
-
             int exitCode = EXITCODE_NORMALEXIT;
+
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOBACKUP), LOGPREFIX_AUTOBACKUP, "AutoBackup");
 
             try
             {
@@ -2951,9 +2939,10 @@ namespace ServerManagerTool.Lib
                 var exitCodes = new ConcurrentDictionary<ServerProfileSnapshot, int>();
 
                 Parallel.ForEach(_profiles.Keys.Where(p => p.EnableAutoBackup), profile => {
-                    var app = new ServerApp()
+                    var app = new ServerApp
                     {
                         DeleteOldServerBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
+                        OutputLogs = true,
                         SendAlerts = true,
                         SendEmails = true,
                         ServerProcess = ServerProcessType.AutoBackup
@@ -2983,9 +2972,9 @@ namespace ServerManagerTool.Lib
 
         public static int PerformAutoShutdown(string argument, ServerProcessType type)
         {
-            _logPrefix = LOGPREFIX_AUTOSHUTDOWN;
-
             int exitCode = EXITCODE_NORMALEXIT;
+
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOSHUTDOWN), LOGPREFIX_AUTOSHUTDOWN, "AutoShutdown");
 
             try
             {
@@ -3038,8 +3027,9 @@ namespace ServerManagerTool.Lib
                 if (!enableAutoShutdown)
                     return EXITCODE_AUTOSHUTDOWNNOTENABLED;
 
-                var app = new ServerApp()
+                var app = new ServerApp
                 {
+                    OutputLogs = true,
                     SendAlerts = true,
                     SendEmails = true,
                     ServerProcess = type,
@@ -3063,12 +3053,12 @@ namespace ServerManagerTool.Lib
 
         public static int PerformAutoUpdate()
         {
-            _logPrefix = LOGPREFIX_AUTOUPDATE;
-
             int exitCode = EXITCODE_NORMALEXIT;
 
             Mutex mutex = null;
             bool createdNew = false;
+
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), LOGPREFIX_AUTOUPDATE, "AutoUpdate");
 
             try
             {
@@ -3111,6 +3101,9 @@ namespace ServerManagerTool.Lib
                             Parallel.ForEach(branches, branch => {
                                 app = new ServerApp
                                 {
+                                    OutputLogs = true,
+                                    SendAlerts = true,
+                                    SendEmails = true,
                                     ServerProcess = ServerProcessType.AutoUpdate,
                                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                                 };
@@ -3129,6 +3122,9 @@ namespace ServerManagerTool.Lib
 
                                 app = new ServerApp
                                 {
+                                    OutputLogs = true,
+                                    SendAlerts = true,
+                                    SendEmails = true,
                                     ServerProcess = ServerProcessType.AutoUpdate,
                                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                                 };

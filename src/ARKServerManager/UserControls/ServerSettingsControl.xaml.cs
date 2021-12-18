@@ -848,7 +848,7 @@ namespace ServerManagerTool
                 comment.AppendLine($"Game Server Version: {this.Settings.LastInstalledVersion}");
                 comment.AppendLine($"Server Manager Version: {App.Instance.Version}");
                 comment.AppendLine($"Server Manager Code: {Config.Default.ServerManagerCode}");
-                comment.AppendLine($"Server Manager Key: {Config.Default.ASMUniqueKey}");
+                comment.AppendLine($"Server Manager Key: {Config.Default.ServerManagerUniqueKey}");
                 comment.AppendLine($"Server Manager Directory: {Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}");
 
                 comment.AppendLine($"MachinePublicIP: {Config.Default.MachinePublicIP}");

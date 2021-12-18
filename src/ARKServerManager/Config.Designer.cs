@@ -1451,18 +1451,6 @@ namespace ServerManagerTool {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SteamAPIKey {
-            get {
-                return ((string)(this["SteamAPIKey"]));
-            }
-            set {
-                this["SteamAPIKey"] = value;
-            }
-        }
-        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://steamcommunity.com/dev/apikey")]
@@ -1635,12 +1623,12 @@ namespace ServerManagerTool {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ASMUniqueKey {
+        public string ServerManagerUniqueKey {
             get {
-                return ((string)(this["ASMUniqueKey"]));
+                return ((string)(this["ServerManagerUniqueKey"]));
             }
             set {
-                this["ASMUniqueKey"] = value;
+                this["ServerManagerUniqueKey"] = value;
             }
         }
         
@@ -1803,9 +1791,9 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/board/22/plugins")]
-        public string ASMPluginUrl {
+        public string ServerManagerPluginUrl {
             get {
-                return ((string)(this["ASMPluginUrl"]));
+                return ((string)(this["ServerManagerPluginUrl"]));
             }
         }
         
@@ -2374,7 +2362,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UpdateDirectoryPermissions {
             get {
                 return ((bool)(this["UpdateDirectoryPermissions"]));
@@ -3042,6 +3030,42 @@ namespace ServerManagerTool {
             }
             set {
                 this["DiscordBotAllowAllBots"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool LoggingEnabled {
+            get {
+                return ((bool)(this["LoggingEnabled"]));
+            }
+            set {
+                this["LoggingEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int LoggingMaxArchiveFiles {
+            get {
+                return ((int)(this["LoggingMaxArchiveFiles"]));
+            }
+            set {
+                this["LoggingMaxArchiveFiles"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int LoggingMaxArchiveDays {
+            get {
+                return ((int)(this["LoggingMaxArchiveDays"]));
+            }
+            set {
+                this["LoggingMaxArchiveDays"] = value;
             }
         }
     }
