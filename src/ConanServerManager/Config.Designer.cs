@@ -191,7 +191,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1440")]
+        [global::System.Configuration.DefaultSettingValueAttribute("720")]
         public int UpdateCheckTime {
             get {
                 return ((int)(this["UpdateCheckTime"]));
@@ -1043,7 +1043,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
         public int ScheduledTasksCheckTime {
             get {
                 return ((int)(this["ScheduledTasksCheckTime"]));
