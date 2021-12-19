@@ -342,7 +342,7 @@ namespace ServerManagerTool.Lib
                 var startInfo = new ProcessStartInfo()
                 {
                     FileName = GetLauncherFile(),
-                    UseShellExecute = false,
+                    UseShellExecute = true,
                 };
 
                 process = Process.Start(startInfo);
@@ -735,8 +735,7 @@ namespace ServerManagerTool.Lib
                     }
                 }
 
-                var steamCmdInstallServerArgsFormat = Config.Default.SteamCmdInstallServerArgsFormat;
-                var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, steamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, _profile.InstallDirectory, string.Empty, Config.Default.AppIdServer, string.Empty, validate ? "validate" : string.Empty);
+                var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, _profile.InstallDirectory, string.Empty, Config.Default.AppIdServer, string.Empty, validate ? "validate" : string.Empty);
                 var workingDirectory = Config.Default.DataPath;
 
                 if (steamCmdRemoveQuit)
@@ -1675,8 +1674,7 @@ namespace ServerManagerTool.Lib
 
                 // update the server cache
                 var validate = Config.Default.AutoUpdate_ValidateServerFiles;
-                var steamCmdInstallServerArgsFormat = Config.Default.SteamCmdInstallServerArgsFormat;
-                var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(false, steamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, cacheFolder, Config.Default.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
+                var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(false, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, cacheFolder, Config.Default.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
                 var workingDirectory = Config.Default.DataPath;
 
                 var success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, cacheFolder, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, CancellationToken.None, SteamCMDProcessWindowStyle).Result;
@@ -1813,20 +1811,23 @@ namespace ServerManagerTool.Lib
                         LogProfileMessage("Delete old profile backup files started...");
 
                         var backupFolder = GetProfileBackupFolder(_profile);
-                        var backupFileFilter = $"*{Config.Default.BackupExtension}";
-                        var backupDateFilter = DateTime.Now.AddDays(-deleteInterval);
-
-                        var backupFiles = new DirectoryInfo(backupFolder).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
-                        foreach (var backupFile in backupFiles)
+                        if (Directory.Exists(backupFolder))
                         {
-                            try
+                            var backupFileFilter = $"*{Config.Default.BackupExtension}";
+                            var backupDateFilter = DateTime.Now.AddDays(-deleteInterval);
+
+                            var backupFiles = new DirectoryInfo(backupFolder).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
+                            foreach (var backupFile in backupFiles)
                             {
-                                LogProfileMessage($"{backupFile.Name} was deleted, last updated {backupFile.CreationTime}.");
-                                backupFile.Delete();
-                            }
-                            catch
-                            {
-                                // if unable to delete, do not bother
+                                try
+                                {
+                                    LogProfileMessage($"{backupFile.Name} was deleted, last updated {backupFile.CreationTime}.");
+                                    backupFile.Delete();
+                                }
+                                catch
+                                {
+                                    // if unable to delete, do not bother
+                                }
                             }
                         }
                     }
@@ -1843,11 +1844,13 @@ namespace ServerManagerTool.Lib
                     try
                     {
                         var backupFolder = GetProfileBackupFolder(_profile);
-
-                        var oldBackupFolders = new DirectoryInfo(backupFolder).GetDirectories();
-                        foreach (var oldBackupFolder in oldBackupFolders)
+                        if (Directory.Exists(backupFolder))
                         {
-                            oldBackupFolder.Delete(true);
+                            var oldBackupFolders = new DirectoryInfo(backupFolder).GetDirectories();
+                            foreach (var oldBackupFolder in oldBackupFolders)
+                            {
+                                oldBackupFolder.Delete(true);
+                            }
                         }
                     }
                     catch
@@ -1974,21 +1977,24 @@ namespace ServerManagerTool.Lib
                         LogProfileMessage("Delete old server backup files started...");
 
                         var backupFolder = GetServerBackupFolder(_profile);
-                        var saveFileName = Path.GetFileNameWithoutExtension(_profile.GameFile);
-                        var backupFileFilter = $"{saveFileName}_*{Config.Default.BackupExtension}";
-                        var backupDateFilter = DateTime.Now.AddDays(-deleteInterval);
-
-                        var backupFiles = new DirectoryInfo(backupFolder).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
-                        foreach (var backupFile in backupFiles)
+                        if (Directory.Exists(backupFolder))
                         {
-                            try
+                            var saveFileName = Path.GetFileNameWithoutExtension(_profile.GameFile);
+                            var backupFileFilter = $"{saveFileName}_*{Config.Default.BackupExtension}";
+                            var backupDateFilter = DateTime.Now.AddDays(-deleteInterval);
+
+                            var backupFiles = new DirectoryInfo(backupFolder).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
+                            foreach (var backupFile in backupFiles)
                             {
-                                LogProfileMessage($"{backupFile.Name} was deleted, last updated {backupFile.CreationTime}.");
-                                backupFile.Delete();
-                            }
-                            catch
-                            {
-                                // if unable to delete, do not bother
+                                try
+                                {
+                                    LogProfileMessage($"{backupFile.Name} was deleted, last updated {backupFile.CreationTime}.");
+                                    backupFile.Delete();
+                                }
+                                catch
+                                {
+                                    // if unable to delete, do not bother
+                                }
                             }
                         }
                     }
@@ -2294,6 +2300,9 @@ namespace ServerManagerTool.Lib
             }
 
             var profiles = new Dictionary<ServerProfileSnapshot, ServerProfile>();
+
+            ServerRuntime.EnableUpdateModStatus = false;
+            ServerProfile.EnableServerFilesWatcher = false;
 
             foreach (var profileFile in Directory.EnumerateFiles(Config.Default.ConfigPath, "*" + Config.Default.ProfileExtension))
             {
@@ -2739,7 +2748,10 @@ namespace ServerManagerTool.Lib
             var createdNew = false;
 
             if (OutputLogs)
+            {
+                _loggerBranch = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}", $"BranchUpdate_{GetBranchName(branch.BranchName)}");
                 _loggerProfile = GetLogger(GetProfileLogFolder(profile.ProfileId, LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}_{profile.ProfileId}", "Update");
+            }
 
             try
             {
@@ -2798,6 +2810,7 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            LogProfileMessage("");
             LogProfileMessage($"Exitcode = {ExitCode}");
             return ExitCode;
         }
@@ -2813,11 +2826,11 @@ namespace ServerManagerTool.Lib
             var createdNew = false;
 
             if (OutputLogs)
-                _loggerBranch = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}_{GetBranchName(branch.BranchName)}", $"Update_{GetBranchName(branch.BranchName)}");
+                _loggerBranch = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}", $"BranchUpdate_{GetBranchName(branch.BranchName)}");
 
             try
             {
-                LogBranchMessage(branch.BranchName, $"Started branch update process.");
+                LogMessage($"[{GetBranchName(branch.BranchName)}] Started branch update process.");
 
                 var cacheFolder = GetServerCacheFolder(branch.BranchName);
 
@@ -2863,7 +2876,7 @@ namespace ServerManagerTool.Lib
                         else
                         {
                             var delay = 0;
-                            foreach (var profile in _profiles.Keys.Where(p => p.EnableAutoUpdate))
+                            foreach (var profile in profiles)
                             {
                                 if (delay > 0)
                                     Task.Delay(delay * 1000).Wait();
@@ -2885,12 +2898,12 @@ namespace ServerManagerTool.Lib
                             ExitCode = EXITCODE_EXITWITHERRORS;
                     }
 
-                    LogBranchMessage(branch.BranchName, $"Finished branch update process.");
+                    LogMessage($"[{GetBranchName(branch.BranchName)}] Finished branch update process.");
                 }
                 else
                 {
                     ExitCode = EXITCODE_PROCESSALREADYRUNNING;
-                    LogBranchMessage(branch.BranchName, "Cancelled branch update process, could not lock branch folder.");
+                    LogMessage($"[{GetBranchName(branch.BranchName)}] Cancelled branch update process, could not lock branch folder.");
                 }
             }
             catch (Exception ex)
@@ -2922,6 +2935,7 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            LogBranchMessage(branch.BranchName, "");
             LogBranchMessage(branch.BranchName, $"Exitcode = {ExitCode}");
             return ExitCode;
         }
@@ -2930,7 +2944,7 @@ namespace ServerManagerTool.Lib
         {
             int exitCode = EXITCODE_NORMALEXIT;
 
-            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOBACKUP), LOGPREFIX_AUTOBACKUP, "Backup");
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOBACKUP), LOGPREFIX_AUTOBACKUP, "AutoBackup");
 
             try
             {
@@ -2979,7 +2993,7 @@ namespace ServerManagerTool.Lib
         {
             int exitCode = EXITCODE_NORMALEXIT;
 
-            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOSHUTDOWN), LOGPREFIX_AUTOSHUTDOWN, "Shutdown");
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOSHUTDOWN), LOGPREFIX_AUTOSHUTDOWN, "AutoShutdown");
 
             try
             {
@@ -3063,7 +3077,7 @@ namespace ServerManagerTool.Lib
             Mutex mutex = null;
             bool createdNew = false;
 
-            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), LOGPREFIX_AUTOUPDATE, "Update");
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), LOGPREFIX_AUTOUPDATE, "AutoUpdate");
 
             try
             {

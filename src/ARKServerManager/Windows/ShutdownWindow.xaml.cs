@@ -1,4 +1,5 @@
-﻿using ServerManagerTool.Common.Utils;
+﻿using ServerManagerTool.Common;
+using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
@@ -243,7 +244,7 @@ namespace ServerManagerTool
 
                 _shutdownCancellationSource = new CancellationTokenSource();
 
-                var exitCode = await Task.Run(() => app.PerformProfileShutdown(profile, restartServer, updateServer, false, _shutdownCancellationSource.Token));
+                var exitCode = await Task.Run(() => app.PerformProfileShutdown(profile, restartServer, updateServer, false, CommonConfig.Default.SteamCmdRemoveQuit, _shutdownCancellationSource.Token));
                 if (exitCode != ServerApp.EXITCODE_NORMALEXIT && exitCode != ServerApp.EXITCODE_CANCELLED)
                     throw new ApplicationException($"An error occured during the shutdown process - ExitCode: {exitCode}");
 

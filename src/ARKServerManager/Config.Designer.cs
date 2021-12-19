@@ -82,7 +82,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{0}\"  +login anonymous \"+app_update 376030 {1} {2}\" +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{1}\"  +login {0} \"+app_update {2} {3} {4}\" +quit")]
         public string SteamCmdInstallServerArgsFormat {
             get {
                 return ((string)(this["SteamCmdInstallServerArgsFormat"]));
@@ -578,15 +578,6 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+force_install_dir \"{0}\"  +login anonymous \"+app_update 445400 {1} {2}\" +quit")]
-        public string SteamCmdInstallServerArgsFormat_SotF {
-            get {
-                return ((string)(this["SteamCmdInstallServerArgsFormat_SotF"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://survivetheark.com/index.php?/forums/forum/5-changelog-patch-notes/")]
         public string ArkSE_PatchNotesUrl {
             get {
@@ -751,7 +742,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login {0} +workshop_download_item 346110 {1} +quit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+login {0} +workshop_download_item {1} {2} +quit")]
         public string SteamCmdInstallModArgsFormat {
             get {
                 return ((string)(this["SteamCmdInstallModArgsFormat"]));
@@ -1124,15 +1115,6 @@ namespace ServerManagerTool {
             }
             set {
                 this["ServerUpdate_OnServerStart"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+login {0} +workshop_download_item 407530 {1} +quit")]
-        public string SteamCmdInstallModArgsFormat_SotF {
-            get {
-                return ((string)(this["SteamCmdInstallModArgsFormat_SotF"]));
             }
         }
         

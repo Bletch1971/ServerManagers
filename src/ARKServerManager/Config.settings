@@ -21,7 +21,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SteamCmdInstallServerArgsFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+force_install_dir "{0}"  +login anonymous "+app_update 376030 {1} {2}" +quit</Value>
+      <Value Profile="(Default)">+force_install_dir "{1}"  +login {0} "+app_update {2} {3} {4}" +quit</Value>
     </Setting>
     <Setting Name="ServersInstallDir" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Servers</Value>
@@ -161,9 +161,6 @@
     <Setting Name="CustomLevelXPIncrease_Dino" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
-    <Setting Name="SteamCmdInstallServerArgsFormat_SotF" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+force_install_dir "{0}"  +login anonymous "+app_update 445400 {1} {2}" +quit</Value>
-    </Setting>
     <Setting Name="ArkSE_PatchNotesUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://survivetheark.com/index.php?/forums/forum/5-changelog-patch-notes/</Value>
     </Setting>
@@ -210,7 +207,7 @@
       <Value Profile="(Default)">RunServer.cmd</Value>
     </Setting>
     <Setting Name="SteamCmdInstallModArgsFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+login {0} +workshop_download_item 346110 {1} +quit</Value>
+      <Value Profile="(Default)">+login {0} +workshop_download_item {1} {2} +quit</Value>
     </Setting>
     <Setting Name="ArkSteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">steamapps\workshop\content\346110\</Value>
@@ -310,9 +307,6 @@
     </Setting>
     <Setting Name="ServerUpdate_OnServerStart" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="SteamCmdInstallModArgsFormat_SotF" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">+login {0} +workshop_download_item 407530 {1} +quit</Value>
     </Setting>
     <Setting Name="ArkSteamWorkshopFile_SotF" Type="System.String" Scope="Application">
       <Value Profile="(Default)">appworkshop_407530.acf</Value>

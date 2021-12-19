@@ -597,8 +597,7 @@ namespace ServerManagerTool.Lib
                     };
 
                     var steamCmdRemoveQuit = CommonConfig.Default.SteamCmdRemoveQuit && !Config.Default.SteamCmdRedirectOutput;
-                    var steamCmdInstallServerArgsFormat = this.ProfileSnapshot.SotFEnabled ? Config.Default.SteamCmdInstallServerArgsFormat_SotF : Config.Default.SteamCmdInstallServerArgsFormat;
-                    var steamCmdArgs = String.Format(steamCmdInstallServerArgsFormat, this.ProfileSnapshot.InstallDirectory, steamCmdInstallServerBetaArgs, validate ? "validate" : string.Empty);
+                    var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, this.ProfileSnapshot.InstallDirectory, Config.Default.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
                     var workingDirectory = Config.Default.DataDir;
 
                     success = await ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, this.ProfileSnapshot.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
@@ -776,20 +775,10 @@ namespace ServerManagerTool.Lib
 
                                         var steamCmdArgs = string.Empty;
                                         var steamCmdRemoveQuit = CommonConfig.Default.SteamCmdRemoveQuit && !Config.Default.SteamCmdRedirectOutput;
-                                        if (this.ProfileSnapshot.SotFEnabled)
-                                        {
-                                            if (Config.Default.SteamCmd_UseAnonymousCredentials)
-                                                steamCmdArgs = string.Format(Config.Default.SteamCmdInstallModArgsFormat_SotF, Config.Default.SteamCmd_AnonymousUsername, modId);
-                                            else
-                                                steamCmdArgs = string.Format(Config.Default.SteamCmdInstallModArgsFormat_SotF, Config.Default.SteamCmd_Username, modId);
-                                        }
+                                        if (Config.Default.SteamCmd_UseAnonymousCredentials)
+                                            steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_AnonymousUsername, this.ProfileSnapshot.SotFEnabled ? Config.Default.AppId_SotF : Config.Default.AppId, modId);
                                         else
-                                        {
-                                            if (Config.Default.SteamCmd_UseAnonymousCredentials)
-                                                steamCmdArgs = string.Format(Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_AnonymousUsername, modId);
-                                            else
-                                                steamCmdArgs = string.Format(Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, modId);
-                                        }
+                                            steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, this.ProfileSnapshot.SotFEnabled ? Config.Default.AppId_SotF : Config.Default.AppId, modId);
                                         var workingDirectory = Config.Default.DataDir;
 
                                         modSuccess = await ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);

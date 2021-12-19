@@ -415,7 +415,7 @@ namespace ServerManagerTool.Utils
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, true, false, false, token);
+                    app.PerformProfileShutdown(profile, true, false, false, false, token);
                     _currentProfileCommands.Remove(key);
                 });
 
@@ -516,7 +516,7 @@ namespace ServerManagerTool.Utils
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, false, false, false, token);
+                    app.PerformProfileShutdown(profile, false, false, false, false, token);
                     _currentProfileCommands.Remove(key);
                 });
 
@@ -618,7 +618,7 @@ namespace ServerManagerTool.Utils
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, false, false, false, token);
+                    app.PerformProfileShutdown(profile, false, false, false, false, token);
                     _currentProfileCommands.Remove(key);
                 });
 
@@ -720,7 +720,7 @@ namespace ServerManagerTool.Utils
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, true, false, false, token);
+                    app.PerformProfileShutdown(profile, true, false, false, false, token);
                     _currentProfileCommands.Remove(key);
                 });
 
@@ -824,7 +824,7 @@ namespace ServerManagerTool.Utils
 
                 task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, performRestart, true, false, token);
+                    app.PerformProfileShutdown(profile, performRestart, true, false, false, token);
                     _currentProfileCommands.Remove(key);
                 });
 
