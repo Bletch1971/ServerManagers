@@ -623,7 +623,7 @@ namespace ServerManagerTool
                 };
                 if (Config.Default.DiscordBotWhitelist != null)
                 {
-                    config.DiscordBotWhitelist.AddRange(Config.Default.DiscordBotWhitelist.Cast<string>());
+                    config.DiscordBotWhitelist.AddRange(Config.Default.DiscordBotWhitelist);
                 }
 
                 await ServerManagerBotFactory.GetServerManagerBot().RunAsync(config, DiscordBotHelper.HandleDiscordCommand, DiscordBotHelper.HandleTranslation, _tokenSourceDiscordBot.Token);

@@ -33,7 +33,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotLogLevelsProperty = DependencyProperty.Register(nameof(DiscordBotLogLevels), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
-        public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelist>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelistItem>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
         {
@@ -49,13 +49,10 @@ namespace ServerManagerTool
             PopulateWindowsStatesComboBox();
             PopulateDiscordBotLogLevelsComboBox();
 
-            DiscordBotWhitelist = new List<DiscordBotWhitelist>();
+            DiscordBotWhitelist = new List<DiscordBotWhitelistItem>();
             if (Config.DiscordBotWhitelist != null)
             {
-                foreach (var item in Config.DiscordBotWhitelist)
-                {
-                    DiscordBotWhitelist.Add(new DiscordBotWhitelist() { BotId = item });
-                }
+                DiscordBotWhitelist.AddRange(Config.DiscordBotWhitelist.Select(i => new DiscordBotWhitelistItem() { BotId = i }));
             }
 
             this.DataContext = this;
@@ -103,19 +100,21 @@ namespace ServerManagerTool
             set { SetValue(DiscordBotLogLevelsProperty, value); }
         }
 
-        public List<DiscordBotWhitelist> DiscordBotWhitelist
+        public List<DiscordBotWhitelistItem> DiscordBotWhitelist
         {
-            get { return (List<DiscordBotWhitelist>)GetValue(DiscordBotWhitelistProperty); }
+            get { return (List<DiscordBotWhitelistItem>)GetValue(DiscordBotWhitelistProperty); }
             set { SetValue(DiscordBotWhitelistProperty, value); }
         }
 
         public void ApplyChangesToConfig()
         {
             if (Config.DiscordBotWhitelist is null)
-                Config.DiscordBotWhitelist = new System.Collections.Specialized.StringCollection();
+            {
+                Config.DiscordBotWhitelist = new DiscordBot.Models.DiscordBotWhitelist();
+            }
 
             Config.DiscordBotWhitelist.Clear();
-            Config.DiscordBotWhitelist.AddRange(DiscordBotWhitelist.Select(i => i.BotId).ToArray());
+            Config.DiscordBotWhitelist.AddRange(DiscordBotWhitelist.Select(i => i.BotId));
 
             App.ReconfigureLogging();
         }
@@ -531,7 +530,7 @@ namespace ServerManagerTool
         #region Discord Bot Whitelist
         private void AddDiscordBotWhitelist_Click(object sender, RoutedEventArgs e)
         {
-            DiscordBotWhitelist.Add(new DiscordBotWhitelist());
+            DiscordBotWhitelist.Add(new DiscordBotWhitelistItem());
 
             CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
         }
@@ -551,7 +550,7 @@ namespace ServerManagerTool
             if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_DeleteLabel"), _globalizer.GetResourceString("ServerSettings_DeleteTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
                 return;
 
-            var item = ((DiscordBotWhitelist)((Button)e.Source).DataContext);
+            var item = ((DiscordBotWhitelistItem)((Button)e.Source).DataContext);
             DiscordBotWhitelist.Remove(item);
 
             CollectionViewSource.GetDefaultView(DiscordBotWhitelistGrid.ItemsSource).Refresh();
