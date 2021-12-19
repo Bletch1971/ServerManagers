@@ -36,14 +36,14 @@ namespace ServerManagerTool.Lib
         public bool Equals(BranchSnapshot x, BranchSnapshot y)
         {
             //Check whether the compared objects reference the same data.
-            if (Object.ReferenceEquals(x, y)) return true;
+            if (ReferenceEquals(x, y)) return true;
 
             //Check whether any of the compared objects is null.
             if (x is null || y is null)
                 return false;
 
             //Check whether the snapshot' properties are equal.
-            return x.BranchName == y.BranchName;
+            return string.Equals(x.BranchName ?? string.Empty, y.BranchName ?? string.Empty, StringComparison.OrdinalIgnoreCase);
         }
 
         public int GetHashCode(BranchSnapshot snapshot)

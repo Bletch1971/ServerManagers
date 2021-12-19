@@ -1083,6 +1083,7 @@ namespace ServerManagerTool.Lib
             LogProfileMessage("------------------------");
             LogProfileMessage($"Server Manager version: {App.Instance.Version}");
             LogProfileMessage($"Server branch: {GetBranchName(_profile.BranchName)}");
+            LogProfileMessage($"Profile Name: {_profile.ProfileName}");
 
             // check if the server needs to be updated
             var serverCacheLastUpdated = GetServerLatestTime(GetServerCacheTimeFile(_profile?.BranchName));
@@ -2810,7 +2811,7 @@ namespace ServerManagerTool.Lib
             var createdNew = false;
 
             if (OutputLogs)
-                _loggerBranch = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}_{branch.BranchName}", GetBranchName(branch.BranchName));
+                _loggerBranch = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), $"{LOGPREFIX_AUTOUPDATE}_{GetBranchName(branch.BranchName)}", $"Update_{GetBranchName(branch.BranchName)}");
 
             try
             {
@@ -2839,7 +2840,7 @@ namespace ServerManagerTool.Lib
                     if (ExitCode == EXITCODE_NORMALEXIT)
                     {
                         // get the profile associated with the branch
-                        var profiles = _profiles.Keys.Where(p => p.EnableAutoUpdate && p.BranchName.Equals(branch.BranchName, StringComparison.OrdinalIgnoreCase));
+                        var profiles = _profiles.Keys.Where(p => p.EnableAutoUpdate && string.Equals(p.BranchName, branch.BranchName, StringComparison.OrdinalIgnoreCase));
                         var profileExitCodes = new ConcurrentDictionary<ServerProfileSnapshot, int>();
 
                         if (Config.Default.AutoUpdate_ParallelUpdate)
@@ -2927,7 +2928,7 @@ namespace ServerManagerTool.Lib
         {
             int exitCode = EXITCODE_NORMALEXIT;
 
-            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOBACKUP), LOGPREFIX_AUTOBACKUP, "AutoBackup");
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOBACKUP), LOGPREFIX_AUTOBACKUP, "Backup");
 
             try
             {
@@ -2976,7 +2977,7 @@ namespace ServerManagerTool.Lib
         {
             int exitCode = EXITCODE_NORMALEXIT;
 
-            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOSHUTDOWN), LOGPREFIX_AUTOSHUTDOWN, "AutoShutdown");
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOSHUTDOWN), LOGPREFIX_AUTOSHUTDOWN, "Shutdown");
 
             try
             {
@@ -3060,7 +3061,7 @@ namespace ServerManagerTool.Lib
             Mutex mutex = null;
             bool createdNew = false;
 
-            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), LOGPREFIX_AUTOUPDATE, "AutoUpdate");
+            _loggerManager = GetLogger(GetLogFolder(LOGPREFIX_AUTOUPDATE), LOGPREFIX_AUTOUPDATE, "Update");
 
             try
             {
