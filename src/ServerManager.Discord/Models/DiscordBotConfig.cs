@@ -1,5 +1,4 @@
 ﻿using ServerManagerTool.DiscordBot.Enums;
-using System.Collections.Generic;
 
 namespace ServerManagerTool.DiscordBot.Models
 {
@@ -19,6 +18,6 @@ namespace ServerManagerTool.DiscordBot.Models
 
         public bool AllowAllBots { get; set; } = false;
 
-        public IEnumerable<string> DiscordBotWhitelists { get; set; } = new List<string>();
+        public DiscordBotWhitelist DiscordBotWhitelist { get; set; } = new DiscordBotWhitelist();
     }
 }

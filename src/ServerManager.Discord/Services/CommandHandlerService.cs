@@ -84,7 +84,7 @@ namespace ServerManagerTool.DiscordBot.Services
                     if (LogLevelHelper.CheckLogLevel(LogLevel.Debug, _botConfig.LogLevel))
                         await _logger?.OnLogAsync(new LogMessage(LogSeverity.Debug, MessageSource.System.ToString(), $"Message has come from another bot, checking if bot is in the whitelist."));
 
-                    if (!_botConfig.DiscordBotWhitelists.Any(botId => botId.Equals(msg.Author.Id.ToString())))
+                    if (!_botConfig.DiscordBotWhitelist.Any(botId => botId.Equals(msg.Author.Id.ToString())))
                     {
                         if (LogLevelHelper.CheckLogLevel(LogLevel.Debug, _botConfig.LogLevel))
                             await _logger?.OnLogAsync(new LogMessage(LogSeverity.Debug, MessageSource.System.ToString(), $"Message has come from another bot, bot is not in the whitelist, message will be ignored."));
