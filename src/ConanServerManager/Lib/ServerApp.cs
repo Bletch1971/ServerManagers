@@ -782,6 +782,8 @@ namespace ServerManagerTool.Lib
 
                         // build a list of mods to be processed
                         var modIdList = new List<string>();
+                        modIdList.AddRange(_profile.ServerModIds);
+
                         modIdList = ModUtils.ValidateModList(modIdList);
 
                         // get the details of the mods to be processed.
@@ -1885,8 +1887,8 @@ namespace ServerManagerTool.Lib
                             LogProfileMessage("Back up world files started...");
 
                             var worldFileName = Path.GetFileName(_profile.GameFile);
-                            var mapName = Path.GetFileNameWithoutExtension(_profile.GameFile);
                             var backupFolder = GetServerBackupFolder(_profile);
+                            var mapName = Path.GetFileNameWithoutExtension(_profile.GameFile);
                             var backupFileName = $"{mapName}_{_startTime:yyyyMMdd_HHmmss}{Config.Default.BackupExtension}";
                             var backupFile = IOUtils.NormalizePath(Path.Combine(backupFolder, backupFileName));
 

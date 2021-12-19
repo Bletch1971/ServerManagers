@@ -1265,7 +1265,6 @@ namespace ServerManagerTool.Lib
 
                             // update the version number
                             _profile.LastInstalledVersion = GetServerVersion(GetServerVersionFile()).ToString();
-                            _profile.ServerUpdated = true;
 
                             LogProfileMessage("Updated server from cache. See patch notes.");
                             LogProfileMessage($"Server version: {_profile.LastInstalledVersion}.");
@@ -1948,7 +1947,6 @@ namespace ServerManagerTool.Lib
                         // if unable to delete, do not bother
                     }
                 }
-
             }
             finally
             {
