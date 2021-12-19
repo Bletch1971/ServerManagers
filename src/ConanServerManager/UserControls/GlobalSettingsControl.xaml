@@ -323,6 +323,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -340,11 +341,11 @@
                             </TextBox.Text>
                         </TextBox>
 
-                        <CheckBox Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_DeleteOldFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <cctl:AnnotatedSlider Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,0,5,0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
+                        <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_DeleteOldFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,0,5,0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
 
-                        <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupWorldSaveLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Text="{Binding Config.ServerBackup_WorldSaveMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_BackupWorldSaveTooltip}"/>
+                        <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupWorldSaveLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Text="{Binding Config.ServerBackup_WorldSaveMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_BackupWorldSaveTooltip}"/>
 
                     </Grid>
                 </GroupBox>
@@ -361,9 +362,9 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
@@ -382,20 +383,19 @@
                             </TextBox.Text>
                         </TextBox>
 
-                        <CheckBox Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" Content="{DynamicResource GlobalSettings_ValidateServerFilesLabel}" IsChecked="{Binding Config.AutoUpdate_ValidateServerFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ValidateServerFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_UseSmartCopyLabel}" IsChecked="{Binding Config.AutoUpdate_UseSmartCopy, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_UseSmartCopyTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                        <CheckBox Grid.Row="1" Grid.Column="3" Margin="5,0,0,0" Content="{DynamicResource GlobalSettings_UseSmartCopyLabel}" IsChecked="{Binding Config.AutoUpdate_UseSmartCopy, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_UseSmartCopyTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="2" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ValidateServerFilesLabel}" IsChecked="{Binding Config.AutoUpdate_ValidateServerFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ValidateServerFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_RetryOnFailLabel}" IsChecked="{Binding Config.AutoUpdate_RetryOnFail, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_RetryOnFailTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                        <CheckBox Grid.Row="1" Grid.Column="4" Margin="5,0,0,0" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_RetryOnFailLabel}" IsChecked="{Binding Config.AutoUpdate_RetryOnFail, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_RetryOnFailTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
-                        <CheckBox Grid.Row="2" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_OverrideServerStartupLabel}" IsChecked="{Binding Config.AutoUpdate_OverrideServerStartup, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_OverrideServerStartupTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
-                        <CheckBox Grid.Row="3" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="3" Content="{DynamicResource GlobalSettings_ParallelUpdateLabel}" IsChecked="{Binding Config.AutoUpdate_ParallelUpdate, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ParallelUpdateTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="4" Margin="0,2,0,2" Label="{DynamicResource GlobalSettings_SequencialDelayPeriodLabel}" Value="{Binding Config.AutoUpdate_SequencialDelayPeriod}" Minimum="0" Maximum="1200" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_SequencialDelayPeriodTooltip}" IsEnabled="{Binding Config.AutoUpdate_ParallelUpdate, Converter={StaticResource InvertBooleanConverter}}"/>
+                        <CheckBox Grid.Row="3" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ParallelUpdateLabel}" IsChecked="{Binding Config.AutoUpdate_ParallelUpdate, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ParallelUpdateTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,2,0,2" Label="{DynamicResource GlobalSettings_SequencialDelayPeriodLabel}" Value="{Binding Config.AutoUpdate_SequencialDelayPeriod}" Minimum="0" Maximum="1200" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_SequencialDelayPeriodTooltip}" IsEnabled="{Binding Config.AutoUpdate_ParallelUpdate, Converter={StaticResource InvertBooleanConverter}}"/>
 
                         <CheckBox Grid.Row="4" Grid.Column="0" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ShowUpdateReasonLabel}" IsChecked="{Binding Config.AutoUpdate_ShowUpdateReason, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ShowUpdateReasonTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                         <Label    Grid.Row="4" Grid.Column="2" Margin="0,2,0,2" Content="{DynamicResource GlobalSettings_UpdateReasonPrefixLabel}" VerticalAlignment="Center"/>
-                        <TextBox  Grid.Row="4" Grid.Column="3" Margin="1"       Grid.ColumnSpan="2" IsEnabled="{Binding Config.AutoUpdate_ShowUpdateReason}" Text="{Binding Config.AutoUpdate_UpdateReasonPrefix}" MaxLength="50" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_UpdateReasonPrefixTooltip}"/>
+                        <TextBox  Grid.Row="4" Grid.Column="3" Margin="1" IsEnabled="{Binding Config.AutoUpdate_ShowUpdateReason}" Text="{Binding Config.AutoUpdate_UpdateReasonPrefix}" MaxLength="50" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_UpdateReasonPrefixTooltip}"/>
+
+                        <CheckBox Grid.Row="5" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="4" Content="{DynamicResource GlobalSettings_OverrideServerStartupLabel}" IsChecked="{Binding Config.AutoUpdate_OverrideServerStartup, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_OverrideServerStartupTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </Grid>
                 </GroupBox>
 
