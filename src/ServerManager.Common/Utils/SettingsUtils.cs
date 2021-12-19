@@ -53,14 +53,14 @@ namespace ServerManagerTool.Common.Utils
 
         public static void DeleteBackupUserConfigFiles(string fileName, string backupPath, int interval)
         {
+            var backupFileName = Path.GetFileNameWithoutExtension(fileName);
+            var backupFileExt = Path.GetExtension(fileName);
+            var backupFileFilter = $"{backupFileName}_*{backupFileExt}";
+            var backupDateFilter = DateTime.Now.AddDays(-interval);
+
             try
             {
                 Debug.WriteLine("Deleting old config backup files started...");
-
-                var backupFileName = Path.GetFileNameWithoutExtension(fileName);
-                var backupFileExt = Path.GetExtension(fileName);
-                var backupFileFilter = $"{backupFileName}_*{backupFileExt}";
-                var backupDateFilter = DateTime.Now.AddDays(-interval);
 
                 var filesToDelete = new DirectoryInfo(backupPath).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
                 foreach (var fileToDelete in filesToDelete)
@@ -78,7 +78,7 @@ namespace ServerManagerTool.Common.Utils
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error deleting old server backup files.\r\n{ex.Message}");
+                Debug.WriteLine($"Error deleting old config backup files.\r\n{ex.Message}");
             }
             finally
             {

@@ -550,14 +550,12 @@ namespace ServerManagerTool
             CommonConfig.Default.Reload();
 
             var installFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var backupFolder = includeBackup
-                ? string.IsNullOrWhiteSpace(Config.Default.BackupPath)
+            var backupFolder = string.IsNullOrWhiteSpace(Config.Default.BackupPath)
                         ? Path.Combine(Config.Default.DataPath, Config.Default.BackupRelativePath)
-                        : Path.Combine(Config.Default.BackupPath)
-                : null;
+                        : Path.Combine(Config.Default.BackupPath);
 
-            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, backupFolder);
-            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, backupFolder);
+            SettingsUtils.BackupUserConfigSettings(Config.Default, "userconfig.json", installFolder, includeBackup ? backupFolder : null);
+            SettingsUtils.BackupUserConfigSettings(CommonConfig.Default, "commonconfig.json", installFolder, includeBackup ? backupFolder : null);
 
             SettingsUtils.DeleteBackupUserConfigFiles("userconfig.json", backupFolder, ServerApp.BACKUP_DELETEINTERVAL);
             SettingsUtils.DeleteBackupUserConfigFiles("commonconfig.json", backupFolder, ServerApp.BACKUP_DELETEINTERVAL);
