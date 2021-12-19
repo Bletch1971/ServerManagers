@@ -567,6 +567,7 @@
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Intervalo de Backup:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Com que freqüência executar o backup do servidor, em horas e minutos (hh: mm). Defina como 00:00 para desativar.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Excluir arquivos de backup antigos</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Se ativado, quando o backup automático for executado, os arquivos de backup antigos serão excluídos.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Mais velho que:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Quantos dias o arquivo de backup deve ser excluído em dias.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">Mensagem do Save:</sys:String>
@@ -691,6 +692,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">Se ativado, depois que o servidor for atualizado a partir do cache, ele executará uma verificação do servidor usando o steamcmd.</sys:String>
 	<sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Atualizar permissões de diretório ao salvar</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">Se ativado, quando um salvamento for realizado, todas as pastas no diretório do servidor terão as permissões verificadas e, se necessário, corrigidas. AVISO: A desativação pode impedir que o servidor seja executado corretamente.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Habilitar Logs</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">Se habilitado, todos os registros serão habilitados.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Excluir logs após</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Quantos dias os arquivos de log devem ser excluídos em dias.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Número máximo de Logs</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">O número máximo de arquivos de log que serão mantidos.</sys:String>	
 	
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Redefinir configurações</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Clique em 'Sim' para confirmar que você deseja executar as configurações redefinidas.</sys:String>
@@ -848,6 +855,7 @@
     <sys:String x:Key="SliderUnits_Hours">horas</sys:String>
     <sys:String x:Key="SliderUnits_Days">dias</sys:String>
 	<sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
+    <sys:String x:Key="SliderUnits_Files">arquivos</sys:String>
     <sys:String x:Key="SliderUnits_Items">items</sys:String>
     <sys:String x:Key="SliderUnits_XP">xp</sys:String>
     <sys:String x:Key="SliderUnits_Players">jogadores</sys:String>
