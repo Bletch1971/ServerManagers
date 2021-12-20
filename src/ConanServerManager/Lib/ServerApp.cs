@@ -1399,6 +1399,9 @@ namespace ServerManagerTool.Lib
                 else
                     LogProfileMessage("The server files are already up to date, no updates required.");
 
+                var serverVersion = GetServerVersion(GetServerVersionFile()).ToString();
+                LogProfileMessage($"Server version: {serverVersion}");
+
                 _serverRunning = GetServerProcess() != null;
 
                 LogProfileMessage("");
