@@ -351,7 +351,7 @@ namespace ServerManagerTool.Lib
                 var modsRootFolder = Path.Combine(this.ProfileSnapshot.InstallDirectory, Config.Default.ServerModsRelativePath);
                 var modDetails = ModDetailList.GetModDetails(modIdList, modsRootFolder, null, response);
 
-                outOfdateModCount = modDetails.Count(m => !m.UpToDate);
+                outOfdateModCount = modDetails.Count(m => m.IsValid && !m.UpToDate);
             }
 
             if (outOfdateModCount > 0 && this.OutOfDateModCount != outOfdateModCount && !string.IsNullOrWhiteSpace(Config.Default.Alert_ModUpdateDetected))

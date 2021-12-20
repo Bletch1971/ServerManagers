@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:19B09A66-43F2-4D5F-AF33-5C77D7EA9A6B</id>
-    <title>1.1.58 (1.1.58.15)</title>
-    <summary>1.1.58.15</summary>
+    <title>1.1.58 (1.1.58.16)</title>
+    <summary>1.1.58.16</summary>
     <link href="" />
     <updated>2021-12-20T00:00:00Z</updated>
     <content type="xhtml">
@@ -40,6 +40,7 @@
             <li>Profile Sync - Added Discord Bot section to the list.</li>
             <li>Auto-Update process - have reworked parts of the process and the logging.</li>
             <li>Manual-Update process - have reworked parts of the logging.</li>
+            <li>Out of Date Mod Check - Added Valid mod check, so will not include mod that are invalid.</li>
             <li>Made changes to the code to help improve performance.</li>
           </ul>
         </p>
