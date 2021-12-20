@@ -541,6 +541,7 @@ namespace ServerManagerTool.Lib
 
                     progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Starting server update.");
                     progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Server branch: {ServerApp.GetBranchName(branch?.BranchName)}.");
+                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Profile name: {this.ProfileSnapshot.ProfileName}.");
 
                     // create the branch arguments
                     var steamCmdInstallServerBetaArgs = new StringBuilder();
@@ -578,8 +579,8 @@ namespace ServerManagerTool.Lib
                         }
                     }
 
-                    progressCallback?.Invoke(0, "\r\n");
-                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Updating server from steam.\r\n");
+                    progressCallback?.Invoke(0, "", true);
+                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Updating server from steam.");
 
                     downloadSuccessful = !Config.Default.SteamCmdRedirectOutput;
                     DataReceivedEventHandler serverOutputHandler = (s, e) =>
@@ -619,15 +620,14 @@ namespace ServerManagerTool.Lib
 
                             progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Server version: {this.Version}\r\n");
                         }
-
-                        progressCallback?.Invoke(0, "\r\n");
                     }
                     else
                     {
                         success = false;
                         progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ****************************");
                         progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ERROR: Failed server update.");
-                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ****************************\r\n");
+                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ****************************");
+                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Check steamcmd logs for more information why the server update failed.\r\n");
 
                         if (Config.Default.SteamCmdRedirectOutput)
                             progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} If the server update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the settings window.\r\n");
@@ -685,14 +685,12 @@ namespace ServerManagerTool.Lib
                                 downloadSuccessful = false;
 
                                 progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Started processing mod {index + 1} of {modIdList.Count}.");
-                                progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Mod {modId}.");
 
                                 // check if the steam information was downloaded
                                 var modDetail = modDetails.publishedfiledetails?.FirstOrDefault(m => m.publishedfileid.Equals(modId, StringComparison.OrdinalIgnoreCase));
                                 modTitle = $"{modId} - {modDetail?.title ?? "<unknown>"}";
 
-                                if (modDetail != null)
-                                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} {modDetail.title}.\r\n");
+                                progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Mod {modTitle}.");
 
                                 var modCachePath = ModUtils.GetModCachePath(modId, this.ProfileSnapshot.SotFEnabled);
                                 var cacheTimeFile = ModUtils.GetLatestModCacheTimeFile(modId, this.ProfileSnapshot.SotFEnabled);
@@ -771,7 +769,7 @@ namespace ServerManagerTool.Lib
                                             }
                                         };
 
-                                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Starting mod download.\r\n");
+                                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Starting mod download.");
 
                                         var steamCmdArgs = string.Empty;
                                         var steamCmdRemoveQuit = CommonConfig.Default.SteamCmdRemoveQuit && !Config.Default.SteamCmdRedirectOutput;
@@ -804,7 +802,7 @@ namespace ServerManagerTool.Lib
                                                 // update the last updated file with the steam updated time.
                                                 File.WriteAllText(cacheTimeFile, steamLastUpdated);
 
-                                                progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Mod Cache version: {steamLastUpdated}\r\n");
+                                                progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Mod Cache version: {steamLastUpdated}");
                                             }
                                         }
                                         else
@@ -812,7 +810,8 @@ namespace ServerManagerTool.Lib
                                             modSuccess = false;
                                             progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ***************************");
                                             progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ERROR: Mod download failed.");
-                                            progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ***************************\r\n");
+                                            progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ***************************");
+                                            progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Check steamcmd logs for more information why the mod update failed.\r\n");
 
                                             if (Config.Default.SteamCmdRedirectOutput)
                                                 progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} If the mod update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the settings window.\r\n");
@@ -865,7 +864,7 @@ namespace ServerManagerTool.Lib
                                                                                                                         count++;
                                                                                                                         progressCallback?.Invoke(0, ".", count % DIRECTORIES_PER_LINE == 0);
                                                                                                                     }), cancellationToken);
-                                                progressCallback?.Invoke(0, "\r\n");
+                                                progressCallback?.Invoke(0, "", true);
                                                 progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Finished mod copy.");
 
                                                 var modLastUpdated = ModUtils.GetModLatestTime(modTimeFile);
