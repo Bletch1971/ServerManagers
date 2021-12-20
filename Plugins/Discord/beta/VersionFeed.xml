@@ -5,120 +5,21 @@
   <title>Discord Plugin Version Feed</title>
   <subtitle>This is the Discord Plugin beta version feed.</subtitle>
   <link href="" />
-  <updated>2021-12-12T00:00:00Z</updated>
+  <updated>2021-12-20T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:A0D7BFD2-F2F0-481A-A22D-3C193BFB4C99</id>
-    <title>1.0.19 (1.0.19.5)</title>
-    <summary>1.0.19.5</summary>
+    <id>urn:uuid:F8987FDF-7A69-4E03-99D8-E04ADFFFF0BB</id>
+    <title>1.0.20 (1.0.20.1)</title>
+    <summary>1.0.20.1</summary>
     <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
+    <updated>2021-12-20T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>ru-RU Translation file updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:38A61493-CA4E-479E-A3FD-266565E83D90</id>
-    <title>1.0.19 (1.0.19.4)</title>
-    <summary>1.0.19.4</summary>
-    <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>ru-RU Translation file added.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:DDB25735-1D20-4580-B5FE-1AD4BD107376</id>
-    <title>1.0.19 (1.0.19.3)</title>
-    <summary>1.0.19.3</summary>
-    <link href="" />
-    <updated>2021-12-12T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>fr-FR Translation file added.</li>
-            <li>pt-BR Translation file updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:FD4F56C3-9E44-4422-A761-87E7F957454F</id>
-    <title>1.0.19 (1.0.19.2)</title>
-    <summary>1.0.19.2</summary>
-    <link href="" />
-    <updated>2021-12-09T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Changed the plugin initialization so it throws an exception if unable to load config file, rather than creating a new config file.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:A9EC2F32-E026-485F-BD7B-C657DBA95B54</id>
-    <title>1.0.19 (1.0.19.1)</title>
-    <summary>1.0.19.1</summary>
-    <link href="" />
-    <updated>2021-12-09T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed alert test message to support globalization.</li>
-          </ul>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>de-DE Translation file updated.</li>
-            <li>pt-BR Translation file updated.</li>
+            <li>Additional changes to config loading to prevent blanking the config file.</li>
           </ul>
         </p>
       </div>
