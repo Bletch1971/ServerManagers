@@ -1,7 +1,5 @@
-﻿using ServerManagerTool.Common.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -9,43 +7,16 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using NLog;
+using ServerManagerTool.Common.Interfaces;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
 
 namespace ServerManagerTool.Lib
 {
-    using NLog;
-    using ServerManagerTool;
-    using ServerManagerTool.Common.Utils;
-    using ServerManagerTool.Enums;
-    using StatusCallback = Action<IAsyncDisposable, ServerStatusWatcher.ServerStatusUpdate>;
-
     public class ServerStatusWatcher
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
-        public struct ServerStatusUpdate
-        {
-            public Process Process;
-            public WatcherServerStatus Status;
-            public QueryMaster.ServerInfo ServerInfo;
-            public int OnlinePlayerCount;
-        }
-
-        private class ServerStatusUpdateRegistration  : IAsyncDisposable
-        {
-            public string InstallDirectory;
-            public IPEndPoint LocalEndpoint;
-            public IPEndPoint SteamEndpoint;
-            public StatusCallback UpdateCallback;
-            public Func<Task> UnregisterAction;
-
-            public string AsmId;
-            public string ProfileId;
-
-            public async Task DisposeAsync()
-            {
-                await UnregisterAction();
-            }
-        }
 
         private readonly List<ServerStatusUpdateRegistration> _serverRegistrations = new List<ServerStatusUpdateRegistration>();
         private readonly ActionBlock<Func<Task>> _eventQueue;
@@ -72,7 +43,6 @@ namespace ServerManagerTool.Lib
         {
             var registration = new ServerStatusUpdateRegistration 
             { 
-                AsmId = Config.Default.ServerManagerUniqueKey,
                 InstallDirectory = installDirectory,
                 ProfileId = profileId,
                 LocalEndpoint = localEndpoint, 
@@ -212,7 +182,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        private void PostServerStatusUpdate(ServerStatusUpdateRegistration registration, StatusCallback callback, ServerStatusUpdate statusUpdate)
+        private void PostServerStatusUpdate(ServerStatusUpdateRegistration registration, Action<IAsyncDisposable, ServerStatusUpdate> callback, ServerStatusUpdate statusUpdate)
         {
             _eventQueue.Post(() =>
             {

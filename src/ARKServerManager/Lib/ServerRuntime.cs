@@ -237,7 +237,7 @@ namespace ServerManagerTool.Lib
 
         public string GetServerLauncherFile() => Path.Combine(this.ProfileSnapshot.InstallDirectory, Config.Default.ServerConfigRelativePath, Config.Default.LauncherFile);
 
-        private void ProcessStatusUpdate(IAsyncDisposable registration, ServerStatusWatcher.ServerStatusUpdate update)
+        private void ProcessStatusUpdate(IAsyncDisposable registration, ServerStatusUpdate update)
         {
             if(!Object.ReferenceEquals(registration, this.updateRegistration))
             {

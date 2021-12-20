@@ -14,7 +14,6 @@ namespace ServerManagerTool.Lib
         public Func<Task> UnregisterAction;
 
         public string ProfileId;
-        public string GameFile;
 
         public async Task DisposeAsync()
         {

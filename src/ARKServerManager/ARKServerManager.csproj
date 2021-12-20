@@ -232,6 +232,8 @@
     <Compile Include="Lib\BranchSnapshot.cs" />
     <Compile Include="Lib\ServerPlayers.cs" />
     <Compile Include="Lib\ServerProfileSnapshot.cs" />
+    <Compile Include="Lib\ServerStatusUpdate.cs" />
+    <Compile Include="Lib\ServerStatusUpdateRegistration.cs" />
     <Compile Include="Lib\ViewConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="Lib\ViewConverters\MapNameValueConverter.cs" />
     <Compile Include="Lib\ViewModel\Engram.cs" />
