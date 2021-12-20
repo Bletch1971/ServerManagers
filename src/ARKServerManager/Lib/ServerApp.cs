@@ -142,6 +142,7 @@ namespace ServerManagerTool.Lib
             if (process != null)
             {
                 _serverRunning = true;
+                LogProfileMessage("");
                 LogProfileMessage($"Server process found PID {process.Id}.");
             }
 
@@ -244,6 +245,7 @@ namespace ServerManagerTool.Lib
             LogProfileMessage($"Server Manager version: {App.Instance.Version}");
 
             // stop the server
+            LogProfileMessage("");
             StopServer(cancellationToken);
 
             if (ExitCode != EXITCODE_NORMALEXIT)
@@ -273,6 +275,7 @@ namespace ServerManagerTool.Lib
             {
                 try
                 {
+                    LogProfileMessage("");
                     ServerStatusChangeCallback?.Invoke(ServerStatus.Updating);
                     UpgradeLocal(true, true, steamCmdRemoveQuit, cancellationToken);
                 }
@@ -288,6 +291,7 @@ namespace ServerManagerTool.Lib
             // check if this is a shutdown only, or a shutdown and restart.
             if (restartServer)
             {
+                LogProfileMessage("");
                 StartServer();
 
                 if (ExitCode != EXITCODE_NORMALEXIT)
@@ -1208,7 +1212,6 @@ namespace ServerManagerTool.Lib
                 emailMessage.AppendLine($"Server Manager version: {App.Instance.Version}");
 
                 // make a backup of the current profile and config files.
-                LogProfileMessage("");
                 CreateProfileBackupArchiveFile(_profile);
 
                 if (ExitCode != EXITCODE_NORMALEXIT)
@@ -1217,7 +1220,6 @@ namespace ServerManagerTool.Lib
                 if (BackupWorldFile)
                 {
                     // make a backup of the current world file.
-                    LogProfileMessage("");
                     CreateServerBackupArchiveFile(emailMessage, _profile);
 
                     if (ExitCode != EXITCODE_NORMALEXIT)
@@ -1854,6 +1856,7 @@ namespace ServerManagerTool.Lib
                 // create the backup file.
                 try
                 {
+                    LogProfileMessage("");
                     LogProfileMessage("Back up profile and config files started...");
 
                     var backupFolder = GetProfileBackupFolder(_profile);
@@ -1916,6 +1919,7 @@ namespace ServerManagerTool.Lib
                     {
                         var deleteInterval = Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_DeleteInterval : BACKUP_DELETEINTERVAL;
 
+                        LogProfileMessage("");
                         LogProfileMessage("Delete old profile backup files started...");
 
                         var backupFolder = GetProfileBackupFolder(_profile);
@@ -1984,6 +1988,8 @@ namespace ServerManagerTool.Lib
             try
             {
                 _profile = profile;
+
+                LogProfileMessage("");
 
                 // check if the servers save folder exists
                 var saveFolder = GetServerSaveFolder();
@@ -2109,6 +2115,7 @@ namespace ServerManagerTool.Lib
                     {
                         var deleteInterval = Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_DeleteInterval : BACKUP_DELETEINTERVAL;
 
+                        LogProfileMessage("");
                         LogProfileMessage("Delete old server backup files started...");
 
                         var backupFolder = GetServerBackupFolder(_profile);
@@ -2809,6 +2816,7 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            LogProfileMessage("");
             LogProfileMessage($"Exitcode = {ExitCode}");
             return ExitCode;
         }
@@ -2905,6 +2913,7 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            LogProfileMessage("");
             LogProfileMessage($"Exitcode = {ExitCode}");
             return ExitCode;
         }
