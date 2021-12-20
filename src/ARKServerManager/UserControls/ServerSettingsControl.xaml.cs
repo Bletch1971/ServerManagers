@@ -1,15 +1,4 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
-using ServerManagerTool.Common;
-using ServerManagerTool.Common.Lib;
-using ServerManagerTool.Common.Model;
-using ServerManagerTool.Common.Serialization;
-using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
-using ServerManagerTool.Lib;
-using ServerManagerTool.Lib.ViewModel;
-using ServerManagerTool.Plugin.Common;
-using ServerManagerTool.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -24,6 +13,17 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Input;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using ServerManagerTool.Common;
+using ServerManagerTool.Common.Lib;
+using ServerManagerTool.Common.Model;
+using ServerManagerTool.Common.Serialization;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
+using ServerManagerTool.Lib;
+using ServerManagerTool.Lib.ViewModel;
+using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -638,19 +638,19 @@ namespace ServerManagerTool
 
         private void HelpSOTF_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(Config.Default.ArkSotfUrl))
+            if (string.IsNullOrWhiteSpace(Config.Default.AppUrl_SotF))
                 return;
 
-            Process.Start(Config.Default.ArkSotfUrl);
+            Process.Start(Config.Default.AppUrl_SotF);
         }
 
         private void PatchNotes_Click(object sender, RoutedEventArgs e)
         {
             var url = string.Empty;
             if (Settings.SOTF_Enabled)
-                url =Config.Default.ArkSotF_PatchNotesUrl;
+                url =Config.Default.AppPatchNotesUrlSotF;
             else
-                url = Config.Default.ArkSE_PatchNotesUrl;
+                url = Config.Default.AppPatchNotesUrl;
 
             if (string.IsNullOrWhiteSpace(url))
                 return;
@@ -791,9 +791,9 @@ namespace ServerManagerTool
 
                 // <data folder>\SteamCMD\steamapps\workshop\content\<app id>
                 if (this.Settings.SOTF_Enabled)
-                    folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.ArkSteamWorkshopFolderRelativePath_SotF);
+                    folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.AppSteamWorkshopFolderRelativePath_SotF);
                 else
-                    folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.ArkSteamWorkshopFolderRelativePath);
+                    folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.AppSteamWorkshopFolderRelativePath);
                 if (Directory.Exists(folder))
                 {
                     foreach (var modFolder in Directory.GetDirectories(folder))
@@ -915,6 +915,9 @@ namespace ServerManagerTool
                 comment.AppendLine($"HasDiscordBotToken: {!string.IsNullOrWhiteSpace(Config.Default.DiscordBotToken)}");
                 comment.AppendLine($"DiscordBotServerId: {Config.Default.DiscordBotServerId}");
                 comment.AppendLine($"DiscordBotPrefix: {Config.Default.DiscordBotPrefix}");
+                comment.AppendLine($"DiscordBotLogLevel: {Config.Default.DiscordBotLogLevel}");
+                comment.AppendLine($"DiscordBotAllowAllBots: {Config.Default.DiscordBotAllowAllBots}");
+                comment.AppendLine($"DiscordBotWhitelist: {string.Join(";", Config.Default.DiscordBotWhitelist)}");
                 comment.AppendLine($"AllowDiscordBackup: {Config.Default.AllowDiscordBackup}");
                 comment.AppendLine($"AllowDiscordRestart: {Config.Default.AllowDiscordRestart}");
                 comment.AppendLine($"AllowDiscordShutdown: {Config.Default.AllowDiscordShutdown}");
@@ -928,10 +931,15 @@ namespace ServerManagerTool
                 comment.AppendLine($"EmailNotify_ShutdownRestart: {Config.Default.EmailNotify_ShutdownRestart}");
 
                 comment.AppendLine($"ServerShutdown_UseShutdownCommand: {Config.Default.ServerShutdown_UseShutdownCommand}");
-                comment.AppendLine($"ServerShutdown_WorldSaveDelay: {Config.Default.ServerShutdown_WorldSaveDelay}");
                 comment.AppendLine($"BackupWorldFile: {Config.Default.BackupWorldFile}");
+                comment.AppendLine($"CloseShutdownWindowWhenFinished: {Config.Default.CloseShutdownWindowWhenFinished}");
                 comment.AppendLine($"AutoUpdate_VerifyServerAfterUpdate: {Config.Default.AutoUpdate_VerifyServerAfterUpdate}");
+                comment.AppendLine($"SteamCmdRemoveQuit: {CommonConfig.Default.SteamCmdRemoveQuit}");
                 comment.AppendLine($"UpdateDirectoryPermissions: {Config.Default.UpdateDirectoryPermissions}");
+                comment.AppendLine($"LoggingEnabled: {Config.Default.LoggingEnabled}");
+                comment.AppendLine($"LoggingMaxArchiveDays: {Config.Default.LoggingMaxArchiveDays}");
+                comment.AppendLine($"LoggingMaxArchiveFiles: {Config.Default.LoggingMaxArchiveFiles}");
+                comment.AppendLine($"ServerShutdown_WorldSaveDelay: {Config.Default.ServerShutdown_WorldSaveDelay}");
 
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);

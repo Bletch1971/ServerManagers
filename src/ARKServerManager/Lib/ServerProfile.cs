@@ -6399,15 +6399,15 @@ namespace ServerManagerTool.Lib
             var exclusiveFile = false;
             var whitelistFile = false;
 
-            if (e.Name.Equals(Config.Default.ArkAdminFile, StringComparison.OrdinalIgnoreCase))
+            if (e.Name.Equals(Config.Default.ServerAdminFile, StringComparison.OrdinalIgnoreCase))
             {
                 adminFile = true;
             }
-            if (e.Name.Equals(Config.Default.ArkExclusiveFile, StringComparison.OrdinalIgnoreCase))
+            if (e.Name.Equals(Config.Default.ServerExclusiveFile, StringComparison.OrdinalIgnoreCase))
             {
                 exclusiveFile = true;
             }
-            if (e.Name.Equals(Config.Default.ArkWhitelistFile, StringComparison.OrdinalIgnoreCase))
+            if (e.Name.Equals(Config.Default.ServerWhitelistFile, StringComparison.OrdinalIgnoreCase))
             {
                 whitelistFile = true;
             }
@@ -6499,7 +6499,7 @@ namespace ServerManagerTool.Lib
 
                 if (adminFile)
                 {
-                    var file = Path.Combine(InstallDirectory, Config.Default.SavedRelativePath, Config.Default.ArkAdminFile);
+                    var file = Path.Combine(InstallDirectory, Config.Default.SavedRelativePath, Config.Default.ServerAdminFile);
                     if (File.Exists(file))
                     {
                         adminSteamIds = File.ReadAllLines(file);
@@ -6509,7 +6509,7 @@ namespace ServerManagerTool.Lib
 
                 if (exclusiveFile)
                 {
-                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ArkExclusiveFile);
+                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerExclusiveFile);
                     if (File.Exists(file))
                     {
                         exclusiveSteamIds = File.ReadAllLines(file);
@@ -6519,7 +6519,7 @@ namespace ServerManagerTool.Lib
 
                 if (whitelistFile)
                 {
-                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ArkWhitelistFile);
+                    var file = Path.Combine(InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerWhitelistFile);
                     if (File.Exists(file))
                     {
                         whitelistSteamIds = File.ReadAllLines(file);
@@ -6566,7 +6566,7 @@ namespace ServerManagerTool.Lib
                 if (!Directory.Exists(folder))
                     Directory.CreateDirectory(folder);
 
-                var file = Path.Combine(folder, Config.Default.ArkAdminFile);
+                var file = Path.Combine(folder, Config.Default.ServerAdminFile);
                 File.WriteAllLines(file, this.ServerFilesAdmins.ToEnumerable());
             }
             catch (Exception ex)
@@ -6583,7 +6583,7 @@ namespace ServerManagerTool.Lib
                 if (!Directory.Exists(folder))
                     Directory.CreateDirectory(folder);
 
-                var file = Path.Combine(folder, Config.Default.ArkExclusiveFile);
+                var file = Path.Combine(folder, Config.Default.ServerExclusiveFile);
                 File.WriteAllLines(file, this.ServerFilesExclusive.ToEnumerable());
             }
             catch (Exception ex)
@@ -6600,7 +6600,7 @@ namespace ServerManagerTool.Lib
                 if (!Directory.Exists(folder))
                     Directory.CreateDirectory(folder);
 
-                var file = Path.Combine(folder, Config.Default.ArkWhitelistFile);
+                var file = Path.Combine(folder, Config.Default.ServerWhitelistFile);
                 File.WriteAllLines(file, this.ServerFilesWhitelisted.ToEnumerable());
             }
             catch (Exception ex)

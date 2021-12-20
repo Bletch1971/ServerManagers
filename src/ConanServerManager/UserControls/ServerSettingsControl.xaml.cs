@@ -1,12 +1,4 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
-using ServerManagerTool.Common;
-using ServerManagerTool.Common.Lib;
-using ServerManagerTool.Common.Model;
-using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
-using ServerManagerTool.Lib;
-using ServerManagerTool.Plugin.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -20,8 +12,15 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using ServerManagerTool.Common;
+using ServerManagerTool.Common.Lib;
+using ServerManagerTool.Common.Model;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
+using ServerManagerTool.Lib;
+using ServerManagerTool.Plugin.Common;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -685,6 +684,9 @@ namespace ServerManagerTool
                 comment.AppendLine($"HasDiscordBotToken: {!string.IsNullOrWhiteSpace(Config.Default.DiscordBotToken)}");
                 comment.AppendLine($"DiscordBotServerId: {Config.Default.DiscordBotServerId}");
                 comment.AppendLine($"DiscordBotPrefix: {Config.Default.DiscordBotPrefix}");
+                comment.AppendLine($"DiscordBotLogLevel: {Config.Default.DiscordBotLogLevel}");
+                comment.AppendLine($"DiscordBotAllowAllBots: {Config.Default.DiscordBotAllowAllBots}");
+                comment.AppendLine($"DiscordBotWhitelist: {string.Join(";", Config.Default.DiscordBotWhitelist)}");
                 comment.AppendLine($"AllowDiscordBackup: {Config.Default.AllowDiscordBackup}");
                 comment.AppendLine($"AllowDiscordRestart: {Config.Default.AllowDiscordRestart}");
                 comment.AppendLine($"AllowDiscordShutdown: {Config.Default.AllowDiscordShutdown}");
@@ -698,10 +700,15 @@ namespace ServerManagerTool
                 comment.AppendLine($"EmailNotify_ShutdownRestart: {Config.Default.EmailNotify_ShutdownRestart}");
 
                 comment.AppendLine($"ServerShutdown_UseShutdownCommand: {Config.Default.ServerShutdown_UseShutdownCommand}");
-                comment.AppendLine($"ServerShutdown_WorldSaveDelay: {Config.Default.ServerShutdown_WorldSaveDelay}");
                 comment.AppendLine($"BackupWorldFile: {Config.Default.BackupWorldFile}");
+                comment.AppendLine($"CloseShutdownWindowWhenFinished: {Config.Default.CloseShutdownWindowWhenFinished}");
                 comment.AppendLine($"AutoUpdate_VerifyServerAfterUpdate: {Config.Default.AutoUpdate_VerifyServerAfterUpdate}");
+                comment.AppendLine($"SteamCmdRemoveQuit: {CommonConfig.Default.SteamCmdRemoveQuit}");
                 comment.AppendLine($"UpdateDirectoryPermissions: {Config.Default.UpdateDirectoryPermissions}");
+                comment.AppendLine($"LoggingEnabled: {Config.Default.LoggingEnabled}");
+                comment.AppendLine($"LoggingMaxArchiveDays: {Config.Default.LoggingMaxArchiveDays}");
+                comment.AppendLine($"LoggingMaxArchiveFiles: {Config.Default.LoggingMaxArchiveFiles}");
+                comment.AppendLine($"ServerShutdown_WorldSaveDelay: {Config.Default.ServerShutdown_WorldSaveDelay}");
 
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);

@@ -1088,7 +1088,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool AutoUpdate_ParallelUpdate {
             get {
                 return ((bool)(this["AutoUpdate_ParallelUpdate"]));
@@ -1680,7 +1680,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int AutoUpdate_SequencialDelayPeriod {
             get {
                 return ((int)(this["AutoUpdate_SequencialDelayPeriod"]));

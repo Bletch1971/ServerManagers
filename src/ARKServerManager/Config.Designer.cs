@@ -579,36 +579,36 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://survivetheark.com/index.php?/forums/forum/5-changelog-patch-notes/")]
-        public string ArkSE_PatchNotesUrl {
+        public string AppPatchNotesUrl {
             get {
-                return ((string)(this["ArkSE_PatchNotesUrl"]));
+                return ((string)(this["AppPatchNotesUrl"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://survivetheark.com/index.php?/forums/forum/9-changelog-patch-notes/")]
-        public string ArkSotF_PatchNotesUrl {
+        public string AppPatchNotesUrlSotF {
             get {
-                return ((string)(this["ArkSotF_PatchNotesUrl"]));
+                return ((string)(this["AppPatchNotesUrlSotF"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://store.steampowered.com/app/346110/")]
-        public string ArkSEUrl {
+        public string AppUrl {
             get {
-                return ((string)(this["ArkSEUrl"]));
+                return ((string)(this["AppUrl"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://store.steampowered.com/app/407530/")]
-        public string ArkSotfUrl {
+        public string AppUrl_SotF {
             get {
-                return ((string)(this["ArkSotfUrl"]));
+                return ((string)(this["AppUrl_SotF"]));
             }
         }
         
@@ -752,9 +752,9 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\346110\\")]
-        public string ArkSteamWorkshopFolderRelativePath {
+        public string AppSteamWorkshopFolderRelativePath {
             get {
-                return ((string)(this["ArkSteamWorkshopFolderRelativePath"]));
+                return ((string)(this["AppSteamWorkshopFolderRelativePath"]));
             }
         }
         
@@ -1052,9 +1052,9 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_346110.acf")]
-        public string ArkSteamWorkshopFile {
+        public string AppSteamWorkshopFile {
             get {
-                return ((string)(this["ArkSteamWorkshopFile"]));
+                return ((string)(this["AppSteamWorkshopFile"]));
             }
         }
         
@@ -1121,18 +1121,18 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_407530.acf")]
-        public string ArkSteamWorkshopFile_SotF {
+        public string AppSteamWorkshopFile_SotF {
             get {
-                return ((string)(this["ArkSteamWorkshopFile_SotF"]));
+                return ((string)(this["AppSteamWorkshopFile_SotF"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\407530\\")]
-        public string ArkSteamWorkshopFolderRelativePath_SotF {
+        public string AppSteamWorkshopFolderRelativePath_SotF {
             get {
-                return ((string)(this["ArkSteamWorkshopFolderRelativePath_SotF"]));
+                return ((string)(this["AppSteamWorkshopFolderRelativePath_SotF"]));
             }
         }
         
@@ -1250,18 +1250,18 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("PlayersJoinNoCheckList.txt")]
-        public string ArkWhitelistFile {
+        public string ServerWhitelistFile {
             get {
-                return ((string)(this["ArkWhitelistFile"]));
+                return ((string)(this["ServerWhitelistFile"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("AllowedCheaterSteamIDs.txt")]
-        public string ArkAdminFile {
+        public string ServerAdminFile {
             get {
-                return ((string)(this["ArkAdminFile"]));
+                return ((string)(this["ServerAdminFile"]));
             }
         }
         
@@ -1280,9 +1280,9 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("PlayersExclusiveJoinList.txt")]
-        public string ArkExclusiveFile {
+        public string ServerExclusiveFile {
             get {
-                return ((string)(this["ArkExclusiveFile"]));
+                return ((string)(this["ServerExclusiveFile"]));
             }
         }
         
@@ -1652,7 +1652,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool AutoUpdate_ParallelUpdate {
             get {
                 return ((bool)(this["AutoUpdate_ParallelUpdate"]));
@@ -2108,18 +2108,18 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_376030.acf")]
-        public string ArkSteamManifestFile {
+        public string AppSteamManifestFile {
             get {
-                return ((string)(this["ArkSteamManifestFile"]));
+                return ((string)(this["AppSteamManifestFile"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_407530.acf")]
-        public string ArkSteamManifestFile_SotF {
+        public string AppSteamManifestFile_SotF {
             get {
-                return ((string)(this["ArkSteamManifestFile_SotF"]));
+                return ((string)(this["AppSteamManifestFile_SotF"]));
             }
         }
         
@@ -2227,7 +2227,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int AutoUpdate_SequencialDelayPeriod {
             get {
                 return ((int)(this["AutoUpdate_SequencialDelayPeriod"]));

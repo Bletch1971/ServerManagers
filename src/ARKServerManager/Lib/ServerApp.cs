@@ -804,7 +804,8 @@ namespace ServerManagerTool.Lib
                     success = false;
                     LogProfileMessage("****************************");
                     LogProfileMessage("ERROR: Failed server update.");
-                    LogProfileMessage("****************************\r\n");
+                    LogProfileMessage("****************************");
+                    LogProfileMessage("Check steamcmd logs for more information why the server update failed.\r\n");
 
                     if (Config.Default.SteamCmdRedirectOutput)
                         LogProfileMessage($"If the server update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the settings window.\r\n");
@@ -981,6 +982,7 @@ namespace ServerManagerTool.Lib
                                             LogProfileMessage("***************************");
                                             LogProfileMessage("ERROR: Mod download failed.");
                                             LogProfileMessage("***************************\r\n");
+                                            LogProfileMessage("Check steamcmd logs for more information why the mod update failed.\r\n");
 
                                             if (Config.Default.SteamCmdRedirectOutput)
                                                 LogProfileMessage($"If the mod update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the settings window.\r\n");
@@ -1195,6 +1197,7 @@ namespace ServerManagerTool.Lib
                 }
 
                 // stop the server
+                LogProfileMessage("");
                 StopServer(CancellationToken.None);
 
                 if (ExitCode != EXITCODE_NORMALEXIT)
@@ -1205,6 +1208,7 @@ namespace ServerManagerTool.Lib
                 emailMessage.AppendLine($"Server Manager version: {App.Instance.Version}");
 
                 // make a backup of the current profile and config files.
+                LogProfileMessage("");
                 CreateProfileBackupArchiveFile(_profile);
 
                 if (ExitCode != EXITCODE_NORMALEXIT)
@@ -1213,6 +1217,7 @@ namespace ServerManagerTool.Lib
                 if (BackupWorldFile)
                 {
                     // make a backup of the current world file.
+                    LogProfileMessage("");
                     CreateServerBackupArchiveFile(emailMessage, _profile);
 
                     if (ExitCode != EXITCODE_NORMALEXIT)
@@ -1227,6 +1232,7 @@ namespace ServerManagerTool.Lib
                     alertMessage.AppendLine(Config.Default.Alert_UpdateResults);
 
                 // check if the server needs to be updated
+                LogProfileMessage("");
                 if (updateServer)
                 {
                     Task.Delay(5000).Wait();
@@ -1259,16 +1265,14 @@ namespace ServerManagerTool.Lib
                             _profile.LastInstalledVersion = GetServerVersion(GetServerVersionFile()).ToString();
 
                             LogProfileMessage("Updated server from cache. See patch notes.");
-                            LogProfileMessage($"Server version: {_profile.LastInstalledVersion}.");
-
-                            LogProfileMessage(Config.Default.ArkSE_PatchNotesUrl);
+                            LogProfileMessage(Config.Default.AppPatchNotesUrl);
 
                             if (!string.IsNullOrWhiteSpace(Config.Default.Alert_ServerUpdate))
                                 alertMessage.AppendLine(Config.Default.Alert_ServerUpdate);
 
                             emailMessage.AppendLine();
                             emailMessage.AppendLine("Updated server from cache. See patch notes.");
-                            emailMessage.AppendLine(Config.Default.ArkSE_PatchNotesUrl);
+                            emailMessage.AppendLine(Config.Default.AppPatchNotesUrl);
 
                             _profile.ServerUpdated = true;
                         }
@@ -1289,10 +1293,16 @@ namespace ServerManagerTool.Lib
                     LogProfileMessage("Server is already up to date, no update required.");
                 }
 
+                var serverVersion = GetServerVersion(GetServerVersionFile()).ToString();
+                LogProfileMessage($"Server version: {serverVersion}");
+
+                emailMessage.AppendLine($"Server version: {serverVersion}");
+
                 if (ExitCode != EXITCODE_NORMALEXIT)
                     return;
 
                 // check if the mods need to be updated
+                LogProfileMessage("");
                 if (updateModIds.Count > 0)
                 {
                     Task.Delay(5000).Wait();
@@ -1389,12 +1399,14 @@ namespace ServerManagerTool.Lib
                 }
                 else
                 {
-                    LogProfileMessage("Mods are already up to date, no updates required.");
+                    if (modIdList.Count > 0)
+                        LogProfileMessage("Mods are already up to date, no updates required.");
                 }
 
                 if (ExitCode != EXITCODE_NORMALEXIT)
                     return;
 
+                LogProfileMessage("");
                 if (Config.Default.AutoUpdate_OverrideServerStartup)
                 {
                     if (_serverRunning)
@@ -1419,13 +1431,15 @@ namespace ServerManagerTool.Lib
             }
             else
             {
-                if (updateModIds.Count > 0)
+                LogProfileMessage("");
+                if (modIdList.Count > 0)
                     LogProfileMessage("The server and mods files are already up to date, no updates required.");
                 else
                     LogProfileMessage("The server files are already up to date, no updates required.");
 
                 _serverRunning = GetServerProcess() != null;
 
+                LogProfileMessage("");
                 if (Config.Default.AutoUpdate_OverrideServerStartup)
                 {
                     if (!_serverRunning)
@@ -1619,7 +1633,10 @@ namespace ServerManagerTool.Lib
                     {
                         // failed max limit reached
                         if (Config.Default.SteamCmdRedirectOutput)
+                        {
+                            LogMessage("Check steamcmd logs for more information why the mod cache update failed.\r\n");
                             LogMessage($"If the mod cache update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the Server Manager settings window.");
+                        }
 
                         ExitCode = EXITCODE_CACHEMODUPDATEFAILED;
                         return;
@@ -1738,7 +1755,10 @@ namespace ServerManagerTool.Lib
                 {
                     // failed max limit reached
                     if (Config.Default.SteamCmdRedirectOutput)
+                    {
+                        LogBranchMessage(branchName, $"Check steamcmd logs for more information why the server cache update failed.\r\n");
                         LogBranchMessage(branchName, $"If the server cache update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the ASM settings window.");
+                    }
 
                     ExitCode = EXITCODE_CACHESERVERUPDATEFAILED;
                     return;
@@ -1762,12 +1782,12 @@ namespace ServerManagerTool.Lib
                 }
                 else
                     LogBranchMessage(branchName, "No new version.");
-
-                var cacheVersion = GetServerVersion(GetServerCacheVersionFile(branchName)).ToString();
-                LogMessage($"Server cache version: {cacheVersion}");
             }
             else
                 LogBranchMessage(branchName, $"Server cache does not exist.");
+
+            var cacheVersion = GetServerVersion(GetServerCacheVersionFile(branchName)).ToString();
+            LogBranchMessage(branchName, $"Server cache version: {cacheVersion}");
 
             LogBranchMessage(branchName, "-----------------------------");
             LogBranchMessage(branchName, "Finished server cache update.");
@@ -2014,13 +2034,6 @@ namespace ServerManagerTool.Lib
                             {
                                 files.Add(file.FullName);
                             }
-
-                            //var playerImageFileFilter = $"*{Config.Default.PlayerImageFileExtension}";
-                            //var playerImageFiles = saveFolderInfo.GetFiles(playerImageFileFilter, SearchOption.TopDirectoryOnly);
-                            //foreach (var file in playerImageFiles)
-                            //{
-                            //    files.Add(file.FullName);
-                            //}
 
                             var comment = new StringBuilder();
                             comment.AppendLine($"Windows Platform: {Environment.OSVersion.Platform}");
@@ -2378,16 +2391,23 @@ namespace ServerManagerTool.Lib
         {
             if (!string.IsNullOrWhiteSpace(versionFile) && File.Exists(versionFile))
             {
-                var fileValue = File.ReadAllText(versionFile);
-
-                if (!string.IsNullOrWhiteSpace(fileValue))
+                try
                 {
-                    string versionString = fileValue.ToString();
-                    if (versionString.IndexOf('.') == -1)
-                        versionString = versionString + ".0";
+                    var fileValue = File.ReadAllText(versionFile);
 
-                    if (Version.TryParse(versionString, out Version version))
-                        return version;
+                    if (!string.IsNullOrWhiteSpace(fileValue))
+                    {
+                        string versionString = fileValue.ToString();
+                        if (versionString.IndexOf('.') == -1)
+                            versionString = versionString + ".0";
+
+                        if (Version.TryParse(versionString, out Version version))
+                            return version;
+                    }
+                }
+                catch (Exception)
+                {
+                    // do nothing, just leave
                 }
             }
 

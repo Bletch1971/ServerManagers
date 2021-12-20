@@ -161,16 +161,16 @@
     <Setting Name="CustomLevelXPIncrease_Dino" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
-    <Setting Name="ArkSE_PatchNotesUrl" Type="System.String" Scope="Application">
+    <Setting Name="AppPatchNotesUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://survivetheark.com/index.php?/forums/forum/5-changelog-patch-notes/</Value>
     </Setting>
-    <Setting Name="ArkSotF_PatchNotesUrl" Type="System.String" Scope="Application">
+    <Setting Name="AppPatchNotesUrlSotF" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://survivetheark.com/index.php?/forums/forum/9-changelog-patch-notes/</Value>
     </Setting>
-    <Setting Name="ArkSEUrl" Type="System.String" Scope="Application">
+    <Setting Name="AppUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://store.steampowered.com/app/346110/</Value>
     </Setting>
-    <Setting Name="ArkSotfUrl" Type="System.String" Scope="Application">
+    <Setting Name="AppUrl_SotF" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://store.steampowered.com/app/407530/</Value>
     </Setting>
     <Setting Name="RunAsAdministratorPrompt" Type="System.Boolean" Scope="User">
@@ -209,7 +209,7 @@
     <Setting Name="SteamCmdInstallModArgsFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">+login {0} +workshop_download_item {1} {2} +quit</Value>
     </Setting>
-    <Setting Name="ArkSteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
+    <Setting Name="AppSteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">steamapps\workshop\content\346110\</Value>
     </Setting>
     <Setting Name="ServerModsRelativePath" Type="System.String" Scope="Application">
@@ -290,7 +290,7 @@
     <Setting Name="SteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">steamapps\workshop</Value>
     </Setting>
-    <Setting Name="ArkSteamWorkshopFile" Type="System.String" Scope="Application">
+    <Setting Name="AppSteamWorkshopFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">appworkshop_346110.acf</Value>
     </Setting>
     <Setting Name="SteamCmd_Password" Type="System.String" Scope="User">
@@ -308,10 +308,10 @@
     <Setting Name="ServerUpdate_OnServerStart" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ArkSteamWorkshopFile_SotF" Type="System.String" Scope="Application">
+    <Setting Name="AppSteamWorkshopFile_SotF" Type="System.String" Scope="Application">
       <Value Profile="(Default)">appworkshop_407530.acf</Value>
     </Setting>
-    <Setting Name="ArkSteamWorkshopFolderRelativePath_SotF" Type="System.String" Scope="Application">
+    <Setting Name="AppSteamWorkshopFolderRelativePath_SotF" Type="System.String" Scope="Application">
       <Value Profile="(Default)">steamapps\workshop\content\407530\</Value>
     </Setting>
     <Setting Name="WorkshopCacheFile_SotF" Type="System.String" Scope="Application">
@@ -350,16 +350,16 @@
     <Setting Name="LatestASMBetaPatchNotesUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://arkservermanager.freeforums.net/board/11/beta-testers</Value>
     </Setting>
-    <Setting Name="ArkWhitelistFile" Type="System.String" Scope="Application">
+    <Setting Name="ServerWhitelistFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">PlayersJoinNoCheckList.txt</Value>
     </Setting>
-    <Setting Name="ArkAdminFile" Type="System.String" Scope="Application">
+    <Setting Name="ServerAdminFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">AllowedCheaterSteamIDs.txt</Value>
     </Setting>
     <Setting Name="SectionServerFilesIsExpanded" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ArkExclusiveFile" Type="System.String" Scope="Application">
+    <Setting Name="ServerExclusiveFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">PlayersExclusiveJoinList.txt</Value>
     </Setting>
     <Setting Name="EmailNotify_ShutdownRestart" Type="System.Boolean" Scope="User">
@@ -462,7 +462,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="AutoUpdate_ParallelUpdate" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="AutoUpdate_UpdateReasonPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">Server Update Reason:</Value>
@@ -590,10 +590,10 @@
     <Setting Name="ServerBranchFolderPrefix" Type="System.String" Scope="Application">
       <Value Profile="(Default)">__</Value>
     </Setting>
-    <Setting Name="ArkSteamManifestFile" Type="System.String" Scope="Application">
+    <Setting Name="AppSteamManifestFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">appmanifest_376030.acf</Value>
     </Setting>
-    <Setting Name="ArkSteamManifestFile_SotF" Type="System.String" Scope="Application">
+    <Setting Name="AppSteamManifestFile_SotF" Type="System.String" Scope="Application">
       <Value Profile="(Default)">appmanifest_407530.acf</Value>
     </Setting>
     <Setting Name="SteamManifestFolderRelativePath" Type="System.String" Scope="Application">
@@ -627,7 +627,7 @@
       <Value Profile="(Default)">ArkServerManager</Value>
     </Setting>
     <Setting Name="AutoUpdate_SequencialDelayPeriod" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="SectionStackSizeOverridesEnabled" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

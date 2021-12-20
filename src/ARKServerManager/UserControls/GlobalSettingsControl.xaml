@@ -789,7 +789,6 @@
                         <cctl:AnnotatedSlider Grid.Row="6" Grid.Column="0" Margin="0" Label="{DynamicResource GlobalSettings_LoggingMaxArchiveFilesLabel}" Value="{Binding Config.LoggingMaxArchiveFiles}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="5" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" SuffixRelativeMinWidth="40" Suffix="{DynamicResource SliderUnits_Files}" ToolTip="{DynamicResource GlobalSettings_LoggingMaxArchiveFilesTooltip}" IsEnabled="{Binding Config.LoggingEnabled}"/>
                     </Grid>
                 </GroupBox>
-
             </Grid>
         </ScrollViewer>
     </Grid>

@@ -300,7 +300,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="AutoUpdate_ParallelUpdate" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="AutoUpdate_UpdateReasonPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">Server Update Reason:</Value>
@@ -471,7 +471,7 @@
       <Value Profile="(Default)">-listen -nosteamclient -game -server -log</Value>
     </Setting>
     <Setting Name="AutoUpdate_SequencialDelayPeriod" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="BackupWorldFile" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
