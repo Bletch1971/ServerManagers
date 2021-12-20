@@ -29,11 +29,11 @@ namespace ServerManager.WebApplication.Controllers
 
         // GET: api/server/call/00000000-0000-0000-0000-000000000000/192.168.1.1
         [HttpGet()]
-        [Route("call/{managerCode}/{ipString}", Name = "Call_V1")]
+        [Route("call/{managerCode}/{ipString}", Name = "ServerCall_V1")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<bool> Call_V1([FromRoute] string managerCode, [FromRoute] string ipString)
+        public ActionResult<bool> ServerCall_V1([FromRoute] string managerCode, [FromRoute] string ipString)
         {
             try
             {

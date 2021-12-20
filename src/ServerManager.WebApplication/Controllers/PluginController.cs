@@ -22,11 +22,11 @@ namespace ServerManager.WebApplication.Controllers
 
         // GET: api/plugin/call/00000000-0000-0000-0000-000000000000/192.168.1.1
         [HttpGet()]
-        [Route("call/{pluginCode}/{ipString}", Name = "Call_V1")]
+        [Route("call/{pluginCode}/{ipString}", Name = "PluginCall_V1")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<bool> Call_V1([FromRoute] string pluginCode, [FromRoute] string ipString)
+        public ActionResult<bool> PluginCall_V1([FromRoute] string pluginCode, [FromRoute] string ipString)
         {
             try
             {
