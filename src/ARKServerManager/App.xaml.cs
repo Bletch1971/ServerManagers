@@ -196,6 +196,20 @@ namespace ServerManagerTool
             }
         }
 
+        private async Task CallHomeAsync()
+        {
+            try
+            {
+                var publicIP = await NetworkUtils.DiscoverPublicIPAsync();
+                var url = new Uri(string.Format(Config.Default.ServerCallUrlFormat, Config.Default.ServerManagerCode, publicIP));
+                await NetworkUtils.PerformCallToAPIAsync(url);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed calling home to API.\r\n{ex.Message}");
+            }
+        }
+
         public static void DiscoverMachinePublicIP(bool forceOverride)
         {
             if (forceOverride || string.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
@@ -509,6 +523,14 @@ namespace ServerManagerTool
             {
                 StartDiscordBot();
             }
+
+            if (Config.Default.ServerCallUrlLast.AddHours(Config.Default.ServerCallUrlDelay) < DateTime.Now)
+            {
+                CallHomeAsync().DoNotWait();
+
+                Config.Default.ServerCallUrlLast = DateTime.Now;
+                Config.Default.Save();
+            }
         }
 
         protected override void OnExit(ExitEventArgs e)
@@ -538,8 +560,7 @@ namespace ServerManagerTool
 
             LogManager.Configuration.Variables["logDir"] = logDir;
 
-            var fileTargets = LogManager.Configuration.AllTargets.OfType<FileTarget>();
-            foreach (var fileTarget in fileTargets)
+            foreach (var fileTarget in LogManager.Configuration.AllTargets.OfType<FileTarget>())
             {
                 var fileName = Path.GetFileNameWithoutExtension(fileTarget.FileName.ToString());
                 fileTarget.FileName = Path.Combine(logDir, $"{fileName}.log");

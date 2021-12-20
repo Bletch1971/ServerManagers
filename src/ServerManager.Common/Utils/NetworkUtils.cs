@@ -168,7 +168,7 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static async Task PerformServerCallToAPI(Uri uri, IPEndPoint endpoint)
+        public static async Task PerformCallToAPIAsync(Uri uri)
         {
             try
             {
@@ -179,7 +179,7 @@ namespace ServerManagerTool.Common.Utils
             }
             catch (Exception ex)
             {
-                _logger.Debug($"{nameof(PerformServerCallToAPI)} - Failed calling API for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
+                _logger.Debug($"{nameof(PerformCallToAPIAsync)} - Failed calling API.\r\n{ex.Message}");
             }
         }
     }

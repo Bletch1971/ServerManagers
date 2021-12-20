@@ -2231,5 +2231,35 @@ namespace ServerManagerTool {
                 this["LoggingMaxArchiveDays"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.azurewebsites.net/api/server/call/{0}/{1}/")]
+        public string ServerCallUrlFormat {
+            get {
+                return ((string)(this["ServerCallUrlFormat"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12")]
+        public int ServerCallUrlDelay {
+            get {
+                return ((int)(this["ServerCallUrlDelay"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2000-01-01")]
+        public global::System.DateTime ServerCallUrlLast {
+            get {
+                return ((global::System.DateTime)(this["ServerCallUrlLast"]));
+            }
+            set {
+                this["ServerCallUrlLast"] = value;
+            }
+        }
     }
 }

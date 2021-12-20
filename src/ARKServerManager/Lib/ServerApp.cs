@@ -2212,7 +2212,11 @@ namespace ServerManagerTool.Lib
 
         private static Logger GetLogger(string logFilePath, string logType, string logName)
         {
+#if DEBUG
             return GetLogger(logFilePath, logType, logName ?? string.Empty, LogLevel.Debug, LogLevel.Fatal);
+#else
+            return GetLogger(logFilePath, logType, logName ?? string.Empty, LogLevel.Info, LogLevel.Fatal);
+#endif
         }
 
         private static Logger GetLogger(string logFilePath, string logType, string logName, LogLevel minLevel, LogLevel maxLevel)
