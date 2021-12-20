@@ -174,7 +174,8 @@ namespace ServerManagerTool.Common.Utils
             {
                 using (var client = new WebClient())
                 {
-                    await client.DownloadStringTaskAsync(uri);
+                    var response = await client.DownloadStringTaskAsync(uri);
+                    _logger.Debug($"{nameof(PerformCallToAPIAsync)} - Response calling API: {response}");
                 }
             }
             catch (Exception ex)
