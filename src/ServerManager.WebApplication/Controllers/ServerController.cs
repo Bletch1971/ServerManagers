@@ -27,6 +27,24 @@ namespace ServerManager.WebApplication.Controllers
             _serverQueryService = serverQueryService;
         }
 
+        // GET: api/server/call/00000000-0000-0000-0000-000000000000/192.168.1.1
+        [HttpGet()]
+        [Route("call/{managerCode}/{ipString}", Name = "Call_V1")]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<bool> Call_V1([FromRoute] string managerCode, [FromRoute] string ipString)
+        {
+            try
+            {
+                return Ok(true);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, false);
+            }
+        }
+
         // GET: api/server/192.168.1.1/27017
         [HttpGet()]
         [Route("{ipString}/{port}", Name = "GetServerStatus_V1")]
