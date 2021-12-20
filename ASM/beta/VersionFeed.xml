@@ -8,6 +8,29 @@
   <updated>2021-12-20T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:D8C3D087-64DB-4FB8-829F-7FA665F77309</id>
+    <title>1.1.413 (1.1.413.16)</title>
+    <summary>1.1.413.16</summary>
+    <link href="" />
+    <updated>2021-12-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Out of Date Mod Check - Added Valid mod check, so will not include mod that are invalid.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:6E0126E3-4120-4F3A-9EF1-05762C2A5078</id>
     <title>1.1.413 (1.1.413.15)</title>
     <summary>1.1.413.15</summary>
