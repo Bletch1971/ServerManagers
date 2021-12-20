@@ -25,7 +25,7 @@ namespace ServerManagerTool.Plugin.Discord {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanager.azurewebsites.net/api/plugin/call/{0}/{1}/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.azurewebsites.net/api/plugin/call/{0}/{1}/")]
         public string PluginCallUrlFormat {
             get {
                 return ((string)(this["PluginCallUrlFormat"]));
@@ -35,9 +35,9 @@ namespace ServerManagerTool.Plugin.Discord {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("12")]
-        public int CallHomeDelay {
+        public int PluginCallUrlDelay {
             get {
-                return ((int)(this["CallHomeDelay"]));
+                return ((int)(this["PluginCallUrlDelay"]));
             }
         }
         

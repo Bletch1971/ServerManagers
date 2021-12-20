@@ -3,9 +3,9 @@
   <Profiles />
   <Settings>
     <Setting Name="PluginCallUrlFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://servermanager.azurewebsites.net/api/plugin/call/{0}/{1}/</Value>
+      <Value Profile="(Default)">http://servermanagers.azurewebsites.net/api/plugin/call/{0}/{1}/</Value>
     </Setting>
-    <Setting Name="CallHomeDelay" Type="System.Int32" Scope="Application">
+    <Setting Name="PluginCallUrlDelay" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">12</Value>
     </Setting>
     <Setting Name="RequestTimeout" Type="System.Int32" Scope="Application">

@@ -90,7 +90,7 @@ namespace ServerManagerTool.Plugin.Discord
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"ERROR: {nameof(PerformCallToAPIAsync)} - {pluginCode}; {ipAddress}\r\n{ex.Message}");
+                Debug.WriteLine($"{nameof(PerformCallToAPIAsync)} - Failed calling API.\r\n{ex.Message}");
             }
         }
     }

@@ -89,18 +89,10 @@ namespace ServerManagerTool.Plugin.Discord
             {
                 var publicIP = await NetworkUtils.DiscoverPublicIPAsync();
                 await NetworkUtils.PerformCallToAPIAsync(PluginCode, publicIP);
-#if DEBUG
-                var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordApiCalls.log");
-                File.AppendAllLines(logFile, new[] { "CallHomeAsync successful" }, Encoding.Unicode);
-#endif                
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Failed calling home {ex.Message}");
-#if DEBUG
-                var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordErrors.log");
-                File.AppendAllLines(logFile, new[] { $"Failed calling home {ex.Message}" }, Encoding.Unicode);
-#endif                
+                Debug.WriteLine($"Failed calling home to API.\r\n{ex.Message}");
             }
         }
 
@@ -117,10 +109,6 @@ namespace ServerManagerTool.Plugin.Discord
                                                                     && !string.IsNullOrWhiteSpace(cp.DiscordWebhookUrl));
                 if (configProfiles == null || configProfiles.IsEmpty())
                 {
-#if DEBUG
-                    var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordErrors.log");
-                    File.AppendAllLines(logFile, new[] { $"{alertType}; {profileName} - {alertMessage.Replace(Environment.NewLine, " ")} (No config profiles found)" }, Encoding.Unicode);
-#endif                
                     return;
                 }
 
@@ -192,27 +180,15 @@ namespace ServerManagerTool.Plugin.Discord
                 if (httpResponse.StatusCode == HttpStatusCode.OK)
                 {
                     Debug.WriteLine($"{nameof(HandleAlert)}\r\nResponse: {responseString}");
-#if DEBUG
-                    var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordSuccess.log");
-                    File.AppendAllLines(logFile, new[] { $"{alertType}; {profileName} - {alertMessage.Replace(Environment.NewLine, " ")} ({responseString})" }, Encoding.Unicode);
-#endif
                 }
                 else
                 {
                     Debug.WriteLine($"{nameof(HandleAlert)}\r\n{httpResponse.StatusCode}: {responseString}");
-#if DEBUG
-                    var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordErrors.log");
-                    File.AppendAllLines(logFile, new[] { $"{alertType}; {profileName} - {alertMessage.Replace(Environment.NewLine, " ")} ({responseString})" }, Encoding.Unicode);
-#endif
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"ERROR: {nameof(HandleAlert)}\r\n{ex.Message}");
-#if DEBUG
-                var logFile = Path.Combine(PluginHelper.PluginFolder, "DiscordExceptions.log");
-                File.AppendAllLines(logFile, new[] { $"{alertType}; {profileName} - {alertMessage.Replace(Environment.NewLine, " ")} ({ex.Message})" }, Encoding.Unicode);
-#endif
             }
         }
 
@@ -220,11 +196,11 @@ namespace ServerManagerTool.Plugin.Discord
         {
             LoadConfig();
 
-            if (PluginConfig.LastCallHome.AddHours(Config.Default.CallHomeDelay) < DateTime.Now)
+            if (PluginConfig.PluginCallUrlLast.AddHours(Config.Default.PluginCallUrlDelay) < DateTime.Now)
             {
-                //CallHomeAsync().DoNotWait();
+                CallHomeAsync().DoNotWait();
 
-                PluginConfig.LastCallHome = DateTime.Now;
+                PluginConfig.PluginCallUrlLast = DateTime.Now;
                 SaveConfig();
             }
         }
