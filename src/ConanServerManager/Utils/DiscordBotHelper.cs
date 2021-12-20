@@ -307,7 +307,7 @@ namespace ServerManagerTool.Utils
                             var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
                                 && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                                 || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
-                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                            server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
                         }).Wait();
                     }
                 };
@@ -408,7 +408,7 @@ namespace ServerManagerTool.Utils
                             var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
                                 && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                                 || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
-                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                            server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
                         }).Wait();
                     }
                 };
@@ -509,7 +509,7 @@ namespace ServerManagerTool.Utils
                             var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
                                 && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                                 || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
-                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                            server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
                         }).Wait();
                     }
                 };
@@ -611,7 +611,7 @@ namespace ServerManagerTool.Utils
                             var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
                                 && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                                 || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
-                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                            server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
                         }).Wait();
                     }
                 };
@@ -713,7 +713,7 @@ namespace ServerManagerTool.Utils
                             var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
                                 && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                                 || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
-                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                            server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
                         }).Wait();
                     }
                 };
@@ -817,7 +817,7 @@ namespace ServerManagerTool.Utils
                             var server = ServerManager.Instance.Servers.First(s => string.Equals(channelId, s.Profile.DiscordChannelId, StringComparison.OrdinalIgnoreCase)
                                 && (string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                                 || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)));
-                            server.Runtime.UpdateServerStatus(serverStatus, true);
+                            server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
                         }).Wait();
                     }
                 };

@@ -1,15 +1,15 @@
-﻿using ServerManagerTool.Common;
-using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
-using ServerManagerTool.Lib;
-using ServerManagerTool.Plugin.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using ServerManagerTool.Common;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
+using ServerManagerTool.Lib;
+using ServerManagerTool.Plugin.Common;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -230,6 +230,13 @@ namespace ServerManagerTool
                     SendAlerts = true,
                     ServerProcess = RestartServer ? ServerProcessType.Restart : ServerProcessType.Shutdown,
                     ProgressCallback = (p, m, n) => { TaskUtils.RunOnUIThreadAsync(() => { this.AddMessage(m, n); }).DoNotWait(); },
+                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
+                    {
+                        TaskUtils.RunOnUIThreadAsync(() =>
+                        {
+                            Server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
+                        }).Wait();
+                    }
                 };
 
                 // if restarting the serverm, then check and update the public IP address

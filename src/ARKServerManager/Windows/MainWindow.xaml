@@ -435,7 +435,7 @@
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusRunningLabel}"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
-                                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusOn.ico,Size=32}"/>
+                                                        <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusStarting.ico,Size=32}"/>
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_RuntimeStatusStoppingLabel}"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">

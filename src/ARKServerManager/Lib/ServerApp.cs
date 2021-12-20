@@ -256,6 +256,8 @@ namespace ServerManagerTool.Lib
                 return;
             }
 
+            ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
+
             // make a backup of the current profile and config files.
             CreateProfileBackupArchiveFile(_profile);
 
@@ -408,6 +410,7 @@ namespace ServerManagerTool.Lib
             }
 
             _serverRunning = true;
+            ServerStatusChangeCallback?.Invoke(ServerStatus.Stopping);
             LogProfileMessage($"Server process found PID {process.Id}.");
 
             QueryMaster.Server gameServer = null;
@@ -1206,6 +1209,8 @@ namespace ServerManagerTool.Lib
 
                 if (ExitCode != EXITCODE_NORMALEXIT)
                     return;
+
+                ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
 
                 emailMessage.AppendLine("Update Summary:");
                 emailMessage.AppendLine();
@@ -2542,7 +2547,7 @@ namespace ServerManagerTool.Lib
             _loggerBranch?.Info(message);
 
             if (includeProgressCallback)
-                ProgressCallback?.Invoke(0, $"[INFO] {message}");
+                ProgressCallback?.Invoke(0, $"{message}");
 
             Debug.WriteLine($"[INFO] (Branch {GetBranchName(branchName) ?? "unknown"}) {message}");
         }
@@ -2567,7 +2572,7 @@ namespace ServerManagerTool.Lib
             _loggerProfile?.Info(message);
 
             if (includeProgressCallback)
-                ProgressCallback?.Invoke(0, $"[INFO] {message}");
+                ProgressCallback?.Invoke(0, $"{message}");
 
             Debug.WriteLine($"[INFO] (Profile {_profile?.ProfileName ?? "unknown"}) {message}");
         }
@@ -2816,6 +2821,8 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            ServerStatusChangeCallback?.Invoke(ServerStatus.Unknown);
+
             LogProfileMessage("");
             LogProfileMessage($"Exitcode = {ExitCode}");
             return ExitCode;
@@ -2913,6 +2920,8 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            ServerStatusChangeCallback?.Invoke(ServerStatus.Unknown);
+
             LogProfileMessage("");
             LogProfileMessage($"Exitcode = {ExitCode}");
             return ExitCode;
@@ -2992,6 +3001,8 @@ namespace ServerManagerTool.Lib
                     }
                 }
             }
+
+            ServerStatusChangeCallback?.Invoke(ServerStatus.Unknown);
 
             LogProfileMessage("");
             LogProfileMessage($"Exitcode = {ExitCode}");

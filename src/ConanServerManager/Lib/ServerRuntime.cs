@@ -274,20 +274,32 @@ namespace ServerManagerTool.Lib
 
                     case WatcherServerStatus.RunningLocalCheck:
                         if (oldStatus != ServerStatus.Stopping)
+                        {
                             UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.Waiting : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                        if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                        }
+                        else
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
                         break;
 
                     case WatcherServerStatus.RunningExternalCheck:
                         if (oldStatus != ServerStatus.Stopping)
+                        {
                             UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Waiting, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                        if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                        }
+                        else
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
                         break;
 
                     case WatcherServerStatus.Published:
                         if (oldStatus != ServerStatus.Stopping)
+                        {
                             UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                        if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                        }
+                        else
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
                         break;
 
                     default:
@@ -965,7 +977,23 @@ namespace ServerManagerTool.Lib
 
         public void UpdateServerStatus(ServerStatus serverStatus, bool sendAlert)
         {
-            UpdateServerStatus(serverStatus, Availability, sendAlert);
+            var availability = Availability;
+
+            switch (serverStatus)
+            {
+                case ServerStatus.Stopped:
+                case ServerStatus.Stopping:
+                case ServerStatus.Uninstalled:
+                case ServerStatus.Updating:
+                    availability = AvailabilityStatus.Unavailable;
+                    break;
+                case ServerStatus.Unknown:
+                    availability = AvailabilityStatus.Unknown;
+                    sendAlert = false;
+                    break;
+            }
+
+            UpdateServerStatus(serverStatus, availability, sendAlert);
         }
 
         public void UpdateServerStatus(ServerStatus serverStatus, AvailabilityStatus availabilityStatus, bool sendAlert)
