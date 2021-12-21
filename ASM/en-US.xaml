@@ -83,10 +83,19 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
-    <!--#region Processor Window States -->
+    <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Normal</sys:String>
     <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
     <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Critical</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Error</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Warning</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Verbose</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -558,6 +567,7 @@
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">How often to perform the server backup, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Delete Old Backup Files</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">If enabled, when the auto-backup runs the old backup files will be deleted.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Older Than:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">How old the backup file must be to be deleted in days.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">WorldSave Message:</sys:String>
@@ -622,8 +632,17 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">The id of the discord server the bot will listen to.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Log Level:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Allow All Bots</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">If enabled, the server manager bot will respond to all other bots, otherwise they will be ignored unless they are in the whitelist.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">The id of the bot to whitelist.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Add Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Clear Whitelists</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Delete Whitelist</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">If enabled, the backup command can be sent from discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">If enabled, the restart command can be sent from discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">If enabled, the shutdown command can be sent from discord.</sys:String>
@@ -673,6 +692,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Update Directory Permissions on Save</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Enable Logging</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">If enabled, all logging will be enabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Delete Logs After</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">How old the log files must be to be deleted in days.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Max Number of Logs</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">The maximum number of log files that will be kept.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
@@ -774,12 +799,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Enable</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Enable the auto-update scheduled task</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Next Run Time:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord Bot:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Start</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Start the discord bot</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Stop</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Stop the discord bot</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Unknown</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Disabled</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">Queued</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Ready</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Running</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Stopped</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Profile failed to load</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">The profile at {0} failed to load. The error was: {1}\r\n{2}</sys:String>
@@ -824,6 +855,7 @@
     <sys:String x:Key="SliderUnits_Hours">hours</sys:String>
     <sys:String x:Key="SliderUnits_Days">days</sys:String>
     <sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
+    <sys:String x:Key="SliderUnits_Files">files</sys:String>
     <sys:String x:Key="SliderUnits_Items">items</sys:String>
     <sys:String x:Key="SliderUnits_XP">xp</sys:String>
     <sys:String x:Key="SliderUnits_Players">players</sys:String>
@@ -1208,6 +1240,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel this profile will listen to.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">A unique name to identify your server when using the discord commands, can be used instead of the profile id.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Allow Backup</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">If enabled, the profile will listen for backup commands from discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Allow Restart</sys:String>
@@ -1870,7 +1904,7 @@
     <sys:String x:Key="ServerSettings_EngramsRemovePrereqsColumnTooltip">If enabled, will remove the prerequisites needed to unlock the engram.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnLabel">Auto Unlock</sys:String>
     <sys:String x:Key="ServerSettings_EngramsAutoUnlockColumnTooltip">If enabled, the engram will be automatically unlocked at the specified level.</sys:String>
-    <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Unlock Level</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnLabel">Auto Unlock Level</sys:String>
     <sys:String x:Key="ServerSettings_EngramsLevelToAutoUnlockColumnTooltip">Player level when the engram is automatically unlocked. Auto Unlock must be enabled.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsRemoveRecordTooltip">Remove this Engram</sys:String>
 
@@ -5589,7 +5623,8 @@
 
     <!--#region Discord Bot -->
     <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
-    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server.\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">The discord bot requires a valid prefix.\r\nThis can be set in the global settings.</sys:String>
     <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
 
     <sys:String x:Key="DiscordBot_CommandNotEnabled">Command '{0}' has not been enabled.</sys:String>
@@ -5598,8 +5633,9 @@
     <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
     <sys:String x:Key="DiscordBot_CommandDisabledProfile">Command '{0}' has been disabled for profile '{1}'.</sys:String>
 
-    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id or alias.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' was not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">Multiple profiles with '{0}' were found in the channel, command aborted.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
 
