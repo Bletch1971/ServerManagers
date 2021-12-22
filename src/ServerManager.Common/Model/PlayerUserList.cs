@@ -25,17 +25,17 @@ namespace ServerManagerTool.Common.Model
 
         public static PlayerUserList GetList(SteamUserDetailResponse response, IEnumerable<string> ids)
         {
+            if (ids is null)
+                return new PlayerUserList();
+
             var result = new PlayerUserList();
-            if (ids != null)
+            foreach (var id in ids)
             {
-                foreach (var id in ids)
+                result.Add(new PlayerUserItem()
                 {
-                    result.Add(new PlayerUserItem()
-                    {
-                        PlayerId = id,
-                        PlayerName = "<not available>",
-                    });
-                }
+                    PlayerId = id,
+                    PlayerName = "<not available>",
+                });
             }
 
             if (response?.players != null)
@@ -43,17 +43,11 @@ namespace ServerManagerTool.Common.Model
                 foreach (var detail in response.players)
                 {
                     var item = result.FirstOrDefault(i => i.PlayerId == detail.steamid);
-                    if (item == null)
-                    {
-                        var newItem = PlayerUserItem.GetItem(detail);
-                        if (!string.IsNullOrWhiteSpace(newItem?.PlayerId))
-                            result.Add(newItem);
-                    }
-                    else
-                    {
-                        item.PlayerId = detail.steamid;
-                        item.PlayerName = detail.personaname ?? string.Empty;
-                    }
+                    if (item is null)
+                        continue;
+
+                    item.PlayerId = detail.steamid;
+                    item.PlayerName = detail.personaname ?? string.Empty;
                 }
             }
 
@@ -69,7 +63,8 @@ namespace ServerManagerTool.Common.Model
 
         public void Remove(string steamId)
         {
-            foreach (var item in this.Where(i => i.PlayerId.Equals(steamId, System.StringComparison.OrdinalIgnoreCase)))
+            var ids = this.Where(i => i.PlayerId.Equals(steamId, System.StringComparison.OrdinalIgnoreCase)).ToArray();
+            foreach (var item in ids)
             {
                 this.Remove(item);
             }
