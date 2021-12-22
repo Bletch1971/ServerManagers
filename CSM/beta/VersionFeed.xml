@@ -8,6 +8,29 @@
   <updated>2021-12-20T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:25F39F6F-E7FE-417D-9BC9-EC6EF7DEC1BC</id>
+    <title>1.1.58 (1.1.58.17)</title>
+    <summary>1.1.58.17</summary>
+    <link href="" />
+    <updated>2021-12-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added better status detection for stopping servers.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:0C184A8F-803D-4AC6-B9CB-599810F9AD29</id>
     <title>1.1.58 (1.1.58.16)</title>
     <summary>1.1.58.16</summary>
