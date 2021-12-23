@@ -458,7 +458,7 @@ namespace ServerManagerTool
             }
 
             // check if application is already running
-            if (ProcessUtils.IsAlreadyRunning())
+            if (Config.Default.CheckIfServerManagerRunningOnStartup && ProcessUtils.IsAlreadyRunning())
             {
                 var result = MessageBox.Show(_globalizer.GetResourceString("Application_SingleInstanceLabel"), _globalizer.GetResourceString("Application_SingleInstanceTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)

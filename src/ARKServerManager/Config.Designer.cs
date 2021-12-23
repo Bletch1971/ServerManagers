@@ -3078,5 +3078,17 @@ namespace ServerManagerTool {
                 this["ServerCallUrlLast"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CheckIfServerManagerRunningOnStartup {
+            get {
+                return ((bool)(this["CheckIfServerManagerRunningOnStartup"]));
+            }
+            set {
+                this["CheckIfServerManagerRunningOnStartup"] = value;
+            }
+        }
     }
 }

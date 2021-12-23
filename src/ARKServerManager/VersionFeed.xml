@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:A58CA1BE-3474-480D-9DCF-3B217C47F4B0</id>
-    <title>1.1.415 (1.1.415.1)</title>
-    <summary>1.1.415.1</summary>
+    <title>1.1.415 (1.1.415.2)</title>
+    <summary>1.1.415.2</summary>
     <link href="" />
     <updated>2021-12-23T00:00:00Z</updated>
     <content type="xhtml">
@@ -20,6 +20,11 @@
           <br/>
           <ul>
             <li>Fixed an error when deleting from a list while iterating over it.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added option to enable/disable the check for running server manager instance on startup.</li>
           </ul>
         </p>
       </div>
