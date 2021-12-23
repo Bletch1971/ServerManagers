@@ -62,7 +62,7 @@ namespace ServerManagerTool.Common.Utils
             {
                 Debug.WriteLine("Deleting old config backup files started...");
 
-                var filesToDelete = new DirectoryInfo(backupPath).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter);
+                var filesToDelete = new DirectoryInfo(backupPath).GetFiles(backupFileFilter).Where(f => f.LastWriteTime < backupDateFilter).ToArray();
                 foreach (var fileToDelete in filesToDelete)
                 {
                     try

@@ -605,7 +605,7 @@ namespace ServerManagerTool.Lib
                 token.ThrowIfCancellationRequested();
 
                 // remove any players that do not have a player file.
-                var droppedPlayers = this.players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null);
+                var droppedPlayers = this.players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
                 foreach (var droppedPlayer in droppedPlayers)
                 {
                     players.TryRemove(droppedPlayer.PlayerId, out PlayerInfo player);

@@ -8,8 +8,8 @@
     >
 
     <!--#region Generic -->
-    <sys:String x:Key="Generic_TranslatedByLabel">Letztes Updated von:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">Maxiel</sys:String>
+    <sys:String x:Key="Generic_TranslatedByLabel">Zuletzt gupdated von:</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">FreeFun</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Fehler</sys:String>
     <!--#endregion-->
 
@@ -21,7 +21,10 @@
     <sys:String x:Key="Map_Aberration_P">Aberration</sys:String>
     <sys:String x:Key="Map_Extinction">Extinction</sys:String>
     <sys:String x:Key="Map_Valguero_P">Valguero</sys:String>
-    <sys:String x:Key="Map_Genesis">Genesis</sys:String>
+    <sys:String x:Key="Map_Genesis">Genesis 1</sys:String>
+    <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Map_Gen2">Genesis 2</sys:String>
+    <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -33,6 +36,7 @@
     <!--#endregion-->
 
     <!--#region Event Names -->
+    <sys:String x:Key="Event_none">Keines</sys:String>
     <sys:String x:Key="Event_vday">Valentines Day</sys:String>
     <sys:String x:Key="Event_Easter">Easter</sys:String>
     <sys:String x:Key="Event_FearEvolved">Fear Evolved (Halloween)</sys:String>
@@ -42,7 +46,7 @@
 
     <!--#region Mod Names -->
     <sys:String x:Key="Mod_All">Alle</sys:String>
-    <sys:String x:Key="Mod_Unknown">Unbekannt</sys:String>
+    <sys:String x:Key="Mod_Unknown">Unknown</sys:String>
     <sys:String x:Key="Mod_ArkPrime">ARK Prime</sys:String>
     <sys:String x:Key="Mod_TheCenter">The Center</sys:String>
     <sys:String x:Key="Mod_PrimitivePlus">Primitive Plus</sys:String>
@@ -50,8 +54,10 @@
     <sys:String x:Key="Mod_Ragnarok">Ragnarok</sys:String>
     <sys:String x:Key="Mod_Aberration">Aberration</sys:String>
     <sys:String x:Key="Mod_Extinction">Extinction</sys:String>
-    <sys:String x:Key="Mod_Genesis">Genesis</sys:String>
+    <sys:String x:Key="Mod_Genesis">Genesis 1</sys:String>
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
+    <sys:String x:Key="Mod_Genesis2">Genesis 2</sys:String>
+    <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -77,6 +83,21 @@
     <sys:String x:Key="ProcessorAffinity_All">Alle</sys:String>
     <!--#endregion-->
 
+    <!--#region Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimiert</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximiert</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Kritisch</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Fehler</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Warnung</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Ausführlich</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Als Administrator ausführen</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">Diese Anwendung benötigt Administratorrechte, um auf ALLE Funktionen zugreifen zu können. Möchtest Du es als Administrator ausgeführen?</sys:String>
@@ -94,9 +115,10 @@
     <sys:String x:Key="Application_DataDirectory_ConfirmLabel">Der Server Manager speichert Profile und SteamCMD in den folgenden Verzeichnissen:\r\n\r\nProfile: {0}\r\nSteamCMD: {1}\r\n\r\nIst das in Ordnung?</sys:String>
     <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Fehler bei Auswahl des Datenverzeichnisses</sys:String>
     <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">Das von Dir ausgewählte Verzeichnis befindet sich im Installationsordner des Server-Managers. Dies wird nicht empfohlen, bitte wähle einen anderen Ordner.</sys:String>
-	<sys:String x:Key="Application_Profile_SaveFailedTitle">Profil konnte nicht gespeichert werden</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">Das von dir gewählte Verzeichnis befindet sich auf dem Desktop. Dies wird nicht empfohlen, wähle bitte einen anderen Ordner.</sys:String>
+    <sys:String x:Key="Application_Profile_SaveFailedTitle">Profil konnte nicht gespeichert werden</sys:String>
     <sys:String x:Key="Application_Profile_SaveFailedLabel">Profil konnte nicht gespeichert werden {0}.  {1}\n{2}</sys:String>
-	
+    
     <sys:String x:Key="Application_NotifyIcon_ShowMainWindow">Hauptfenster anzeigen</sys:String>
     <sys:String x:Key="Application_NotifyIcon_ShowServerMonitorWindow">Server Monitor anzeigen</sys:String>
     <!--#endregion-->
@@ -113,7 +135,8 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerVersion">Neue Serverversion herunterladen...</sys:String>
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Server Download abgeschlossen</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Abgeschlossen</sys:String>
-    <sys:String x:Key="AutoUpdater_Status_Cancelled">Abvgebrochen</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Cancelled">Abgebrochen</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Fehlgeschlagen</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Abbrechen</sys:String>
     <!--#endregion-->
 
@@ -152,6 +175,25 @@
 
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">Ausgewählt</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Prozessor</sys:String>
+    <!--#endregion-->
+
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Auswahl des Datenordners</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">Anscheinend hast du kein Datenverzeichnis eingestellt. Das Datenverzeichnis ist der Ort, an dem deine Profile und SteamCMD gespeichert werden. Es ist nicht dasselbe wie das Server Installations Verzeichnis, welches du für jedes Profil wählen kannst.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Wähle das Laufwerk, in dem sich der Datenordner befinden soll.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Datenverzeichnis Name:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">Der Name des Dateiverzeichnisses des Servermanagers.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Lokale Festplatte</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} frei von {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Abbrechen</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Aktualisieren</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Fehler bei der Auswahl des Datenverzeichnisses</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">Der von dir eingegebene Ordner-Name ist ungültig.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Server Manager Neustart erforderlich</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">Das Datenverzeichnis wurde festgelegt, nun musst du den Server Manager neu starten, um die neuen Einstellungen anzuwenden.</sys:String>
     <!--#endregion-->
 
     <!--#region PlayerListWindow Window -->
@@ -237,7 +279,7 @@
     <sys:String x:Key="WorkshopFiles_Refresh_FailedLabel">Das Laden der Workshop Informationen aus Steam ist fehlgeschlagen und wird stattdessen mit dem lokalen Cache gefüllt.</sys:String>
     <sys:String x:Key="WorkshopFiles_TotalCountLabel">Anzahl:</sys:String>
     <sys:String x:Key="WorkshopFiles_LastRefreshedLabel">Zuletzt aktualisiert:</sys:String>
-     <sys:String x:Key="WorkshopFiles_FilterExistingLabel">Filtere vorhandene Mods heraus</sys:String>
+    <sys:String x:Key="WorkshopFiles_FilterExistingLabel">Filtere vorhandene Mods heraus</sys:String>
 
     <sys:String x:Key="WorkshopFiles_SelectedColumnLabel">Ausgewählt</sys:String>
     <sys:String x:Key="WorkshopFiles_ModIdColumnLabel">Mod ID</sys:String>
@@ -447,8 +489,10 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Zurücksetzen</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Dadurch werden ALLE globalen Benutzereinstellungen für den Server Manager zurückgesetzt. Der Server Manager wird bei Erfolg geschlossen.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Aktiviert: Beim Start mit Administrator Bestätigung ausführen</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Hauptfenster Start Modus:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimiere in Taskleiste</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Verwaltet die Firewall Einstellungen automatisch</sys:String>
+    <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Öffentliche IP automatisch verwalten</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Datenverzeichnis:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Sicherungsverzeichnis:</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyLabel">Steam WebApi Schlüssel:</sys:String>
@@ -459,8 +503,8 @@
     
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Sprache</sys:String>
     
-    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Benutzerdefinierte Optionen</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Aktiviere benutzerdefinierte Engine.ini-Einstellungen</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Benutzerdefinierte Überschreibungsoptionen</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Aktiviere benutzerdefinierte Engine.ini Einstellungen</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Wenn aktiviert, werden die Einstellungen von engine.ini vom Server-Manager verwaltet.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingLabel">Aktiviere Crafting Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCraftingTooltip">Wenn aktiviert, werden die Crafting Overrides vom Server Manager verwaltet.</sys:String>
@@ -470,6 +514,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Wenn aktiviert, werden die Map Spawner Overrides vom Server Manager verwaltet.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Aktiviere Overrides von Versorgungskisten</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Wenn aktiviert, werden die Overrides der Versorgungskiste vom Server Manager verwaltet.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Transferüberschreibungen verhindern aktivieren.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Wenn diese Option aktiviert ist, werden die Transferüberschreibungen vom Server Manager verwaltet.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Aktiviere PGM Ark Einstellungen</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">Wenn aktiviert, werden die PGM Einstellungen vom Server Manager verwaltet.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Aktiviere die SotF Einstellungen</sys:String>
@@ -576,7 +622,32 @@
     <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">Diese Meldung wird angezeigt, wenn das Herunterfahren des Servers abgebrochen wurde.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Zeige den Grund für das Herunterfahren mit ALLEN Nachrichten zum Herunterfahren</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Wenn aktiviert, wird der Grund für das Herunterfahren mit allen Meldungen zum Herunterfahren angezeigt. Andernfalls wird es nur zu Beginn des Herunterfahrens des Servers angezeigt.</sys:String>
-    
+
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Discord Bot Aktivieren</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Nachdem du die Einstellungen für den Discord Bot geändert hast, musst du den Server Manager neu starten.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">Der Token, der mit dem Discord Bot verbunden ist.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">Server ID:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">Die ID des Discord Servers, den der Bot überwachen soll.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">Das Präfix, das beim Senden eines Befehls über Discord verwendet werden muss.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Log Stufe:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Token besorgen...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Hilfe...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Alle Bots erlauben</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Wenn diese Option aktiviert ist, antwortet der Server Manager Bot auf alle anderen Bots, andernfalls werden sie ignoriert, es sei denn, sie stehen auf der Whitelist.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">Die ID des Bots, der auf die Whitelist gesetzt werden soll.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Whitelist hinzufügen</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Whiteliste leeren</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Whiteliste löschen</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Wenn aktiviert, kann der Backup-Befehl von Discord aus gesendet werden.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Wenn aktiviert, kann der Neustart-Befehl von Discord aus gesendet werden.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Wenn diese Option aktiviert ist, kann der Befehl zum Herunterfahren von Discord aus gesendet werden.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">Wenn aktiviert, kann der Startbefehl von Discord aus gesendet werden.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">Wenn diese Option aktiviert ist, kann der Stopp-Befehl von Discord aus gesendet werden.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">Wenn aktiviert, kann der Aktualisierungsbefehl von Discord aus gesendet werden.</sys:String>
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP Email Einstellungen</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostTooltip">Der Name oder die IP-Adresse des Hosts, der für SMTP-Übertragungen verwendet wird.</sys:String>
@@ -619,6 +690,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">Wenn aktiviert, führt der Server nach der Aktualisierung aus dem Cache eine Serverüberprüfung mit Steamcmd durch.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Aktualisierung der Verzeichnisberechtigungen beim Speichern</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">Wenn aktiviert, werden beim Durchführen eines Speichervorgangs für alle Ordner im Serververzeichnis die Berechtigungsprüfungen durchgeführt und gegebenenfalls behoben. WARNUNG: Durch Deaktivieren kann der Server möglicherweise nicht ordnungsgemäß ausgeführt werden.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Protokollierung einschalten</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">Wenn diese Option aktiviert ist, wird die gesamte Protokollierung aktiviert.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Protokolle löschen nach</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Wie alt die Protokolldateien sein müssen, damit sie gelöscht werden, in Tagen.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Maximale Anzahl von Protokollen</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Die maximale Anzahl der Protokolldateien, die aufbewahrt werden sollen.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Bestätige das Zurücksetzen der Einstellungen</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Klicke auf "Ja", um zu bestätigen, dass Du die Einstellungen zurücksetzen möchtest.</sys:String>
@@ -628,7 +705,9 @@
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">Durch Ändern des Datenverzeichnisses werden vorhandene Profile an den neuen Speicherort verschoben, jedoch keine Serverinstallationen. Möchtest Du dieses Verzeichnis noch ändern??</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Datenverzeichnis konnte nicht geändert werden</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">Beim Ändern des Datenverzeichnisses ist ein Fehler aufgetreten: {0}\r\nBitte korrigiere den Fehler und versuche es erneut, oder wende dich an den technischen Support, um Unterstützung zu erhalten.</sys:String>
-
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Bestätigen des Zurücksetzens des Datenverzeichnisses</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Bitte bestätige mit "Ja", dass du den Speicherort des Datenverzeichnisses zurücksetzen möchtest. Nach dem Zurücksetzen wird der Server Manager heruntergefahren und kann neu gestartet werden.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Wähle Sicherungsverzeichnis</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Wähle Cache Verzeichnis</sys:String>
     <sys:String x:Key="GlobalSettings_CacheDirectory_ErrorTitle">Ungültiges Cache Verzeichnis</sys:String>
@@ -716,12 +795,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Aktiviere</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Aktiviere die geplante Aufgabe zur automatischen Aktualisierung</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Nächste Laufzeit:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord Bot:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Start</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Den Discord Bot starten</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Stopp</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Stoppt den Discord Bot.</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Unbekannt</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Deaktiviert</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">Warteschlange</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Bereit</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Läuft</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Gestoppt</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Profil konnte nicht geladen werden</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">Das Profil bei {0} konnte nicht geladen werden. Der Fehler war: {1}\r\n{2}</sys:String>
@@ -739,11 +824,13 @@
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Fehler bei SteamCMD Reinstallation</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">Beim Versuch, SteamCMD neu zu installieren, ist ein Fehler aufgetreten. Dies hat SteamCmd in einem instabilen Zustand belassen. Versuche erneut, es erneut zu installieren, oder melden dies.\r\nException: {0}</sys:String>
 
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Laufende Discord Bot Befehle</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">Der Discord Bot hat einen oder mehrere laufende Befehle, möchtest du den Server Manager weiter herunterfahren?</sys:String>
+    
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Bestätigung Server Start</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">Du bist im Begriff, den Server zu starten. Möchtest Du fortfahren?</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Bestätigung Server Herunterfahren</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionLabel">Du bist dabei, den Server herunterzufahren. Möchtes Du fortfahren?</sys:String>
-
     <sys:String x:Key="Updater_ProgressMessage_DownloadLabel">Herunterladen der neuesten Versionsdatei...</sys:String>
     <sys:String x:Key="Updater_ProgressMessage_PrepareLabel">Vorbereiten der heruntergeladenen Datei...</sys:String>
     <sys:String x:Key="Updater_ProgressMessage_ExtractLabel">Extrahieren der neuesten Version in den Staging Bereich...</sys:String>
@@ -769,15 +856,17 @@
     <sys:String x:Key="SliderUnits_Tribes">Stämme</sys:String>
     <sys:String x:Key="SliderUnits_Levels">Level</sys:String>
     <sys:String x:Key="SliderUnits_Units">Einheiten</sys:String>
-	
-	<sys:String x:Key="General_FilterLabel">Filter:</sys:String>
+    
+    <sys:String x:Key="General_FilterLabel">Filter:</sys:String>
     <sys:String x:Key="General_FilterButtonTooltip">Klicke hier, um den Filter anzuwenden.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings -->
 
     <!--#region Server Settings - General -->
-    <sys:String x:Key="ServerSettings_ProfileLabel">Profil:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Profil:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">Die eindeutige ID, die dem Profil zugewiesen wurde.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileTooltip">Der Name für das Serverprofil. Dies ist nicht der öffentliche Name, den Benutzer in Ark sehen. Setze dazu das Feld 'Servername'.</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionLabel">Installierte Version:</sys:String>
     <sys:String x:Key="ServerSettings_InstalledVersionTooltip">Die Version des Servers, die gerade heruntergeladen wird (HINWEIS: Wird erst aktualisiert, wenn der Server gestartet wird)..</sys:String>
@@ -898,7 +987,7 @@
     <sys:String x:Key="ServerSettings_ClearLabel">Klicke auf "Ja", um zu bestätigen, dass Du alles löschen möchtest.</sys:String>
     <sys:String x:Key="ServerSettings_DeleteTitle">Löschen bestätigen</sys:String>
     <sys:String x:Key="ServerSettings_DeleteLabel">Klicke auf "Ja", um zu bestätigen, dass Du den Löschvorgang durchführen möchtest.</sys:String>
-	<sys:String x:Key="ServerSettings_ReloadTitle">Bestätige das erneute Laden</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadTitle">Bestätige das erneute Laden</sys:String>
     <sys:String x:Key="ServerSettings_ReloadLabel">Klicke auf "Ja", um zu bestätigen, dass Du das Neuladen durchführen möchtest.</sys:String>
     <sys:String x:Key="ServerSettings_ReloadErrorTitle">Fehler beim erneuten Laden</sys:String>
     <sys:String x:Key="ServerSettings_ResetTitle">Reset bestätigen</sys:String>
@@ -923,6 +1012,8 @@
     <sys:String x:Key="ServerSettings_NetworkingLabel">Netzwerk</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortLabel">Serverport:</sys:String>
     <sys:String x:Key="ServerSettings_ServerPortTooltip">Der Port stellt eine Verbindung zu Ihrem Server her. Der Standardwert ist 7777. Ändern Sie diesen und den Abfrageport, wenn Sie mehrere Server auf einem Computer hosten möchten.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortLabel">Peer Port:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortTooltip">Pinger-Port, der zur Ermittlung der Serververfügbarkeit verwendet wird. Der Standardwert ist 7778.</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortLabel">Query-Port:</sys:String>
     <sys:String x:Key="ServerSettings_QueryPortTooltip">Der Port, über den Steam mit Ihrem Server kommuniziert. Der Standardwert ist 27015. Änder diesen und den Serverport, wenn mehrere Server auf einem Computer gehosten werden.</sys:String>
     <sys:String x:Key="ServerSettings_LocalIPLabel">Lokale IP:</sys:String>
@@ -1040,11 +1131,13 @@
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">Wenn aktiviert, werden die Kills des Anti-Meshing Spielers deaktiviert (Teleportation ist jedoch weiterhin zulässig).</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxLabel">Aktiviere Vivox</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxTooltip">Wenn aktiviert, wird Vivox aktiviert. HINWEIS: Nur Steam-Server.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowSharedConnectionsLabel">Gemeinsame Verbindungen zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowSharedConnectionsTooltip">Wenn deaktiviert, wird die gemeinsame Nutzung durch die Family-Sharing deaktiviert.</sys:String>
     <sys:String x:Key="ServerSettings_CrossplayLabel">Aktiviere Crossplay</sys:String>
     <sys:String x:Key="ServerSettings_CrossplayTooltip">Wenn aktiviert, wird das Crossplay aktiviert, sodass Spieler, die Clients von verschiedenen Anbietern verwenden, eine Verbindung zum dedizierten Server herstellen können.</sys:String>
     <sys:String x:Key="ServerSettings_EpicOnlyLabel">Nur Epic Store Spieler</sys:String>
     <sys:String x:Key="ServerSettings_EpicOnlyTooltip">Wenn aktiviert, können nur Spieler, die den Epic Store Client verwenden, eine Verbindung herstellen.</sys:String>
-	<sys:String x:Key="ServerSettings_EnablePublicIPForEpicLabel">Aktiviere öffentliche IP für Epic</sys:String>
+    <sys:String x:Key="ServerSettings_EnablePublicIPForEpicLabel">Aktiviere öffentliche IP für Epic</sys:String>
     <sys:String x:Key="ServerSettings_EnablePublicIPForEpicTooltip">Wenn aktiviert, wird ein Serverargument für die öffentliche IP hinzugefügt, mit der EPIC-Clients eine Verbindung herstellen können.</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Erzwinge beim Start neugenerieren der Dinos (verursacht eine Verzögerung nach 'Bereit' beim erneuten Auffüllen)</sys:String>
     <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">Wenn aktiviert, werden beim Starten des Servers ALLE wilden Kreaturen gelöscht und erneut angezeigt (dies zerstört nur wilde Kreaturen, die derzeit NICHT gezähmt werden).</sys:String>
@@ -1137,12 +1230,34 @@
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Wenn aktiviert, wird der Server neu gestartet, auch wenn er für automatische Neustarts und automatische Updates heruntergefahren wird.</sys:String>
     <!--#endregion-->
 
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Kanal-ID:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">Die ID des Discord Server Kanals, den dieses Profil abhören soll.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Ein eindeutiger Name zur Identifizierung deines Servers, der anstelle der Profil-ID verwendet werden kann.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Sicherung zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Wenn diese Option aktiviert ist, wird das Profil auf Sicherungsbefehle von Discord warten.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Neustart zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">Wenn diese Option aktiviert ist, wird das Profil auf Neustartbefehle von Discord warten.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Herunterfahren zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">Wenn diese Option aktiviert ist, wartet das Profil auf Herunterfahrbefehle von Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Start zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">Wenn diese Option aktiviert ist, wartet das Profil auf Startbefehle von Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Stoppen zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Wenn diese Option aktiviert ist, wartet das Profil auf Stopp-Befehle von Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Aktualisierung zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Wenn diese Option aktiviert ist, wird das Profil auf Aktualisierungsbefehle von Discord warten.</sys:String>
+    <!--#endregion-->
+
     <!--#region Server Settings - Rules -->
     <sys:String x:Key="ServerSettings_RulesLabel">Regeln</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Aktiviert den Hardcore Modus</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">Aktiviert den Hardcore Modus (Spieler können nicht wieder erscheinen, ein neuer Charakter muss erstellt werden).</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPLabel">Aktiviert PvP</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Aktiviert den Spieler gegen Spieler Modus (Spieler können sich gegenseitig Schaden zufügen oder sich gegenseitig töten. Im PvP können Spieler auch die Gebäude eines anderen Stammes beschädigen oder zerstören oder ihre Dinos töten).</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Aktivieren des Kreativmodus</sys:String>
+    <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">Wenn aktiviert, wird der Kreativmodus aktiviert.</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Aktiviere das PvE Höhlengebäude</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Wenn aktiviert, können Höhlen gebaut werden, wenn der PvE Modus aktiviert ist.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Aktiviere die PvE Kryokrankheit</sys:String>
@@ -1169,14 +1284,16 @@
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">Wennd aktiviert, sind mehrere Plattformböden auf Flößen und Sattelplattformen zulässig.</sys:String>
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierLabel">Multiplikator der Plattformsattel Baufläche</sys:String>
     <sys:String x:Key="ServerSettings_PlatformSaddleBuildAreaBoundsMultiplierTooltip">Durch Erhöhen des Multiplikators können Strukturen höher auf der Plattform gebaut werden.</sys:String>
-
+    <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesLabel">Maximale Tore auf Sätteln</sys:String>
+    <sys:String x:Key="ServerSettings_MaxGateFrameOnSaddlesTooltip">Begrenzt die Anzahl der Tore, die auf Plattformsätteln platziert werden können. Diese Option ist nicht rückwirkend, so dass die Anwendung dieser Änderung einige manuelle Verwaltungsarbeit erfordert, um alle bereits vorhandenen Plattformen, die das Limit überschreiten, zu bereinigen.</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideLabel">Aktiviere Schwierigkeitsänderung</sys:String>
     <sys:String x:Key="ServerSettings_EnableDifficultyOverrideTooltip">Wenn aktiviert, kann der maximale Level der Kreaturen auf der Welt geändert werden.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyLabel">Max Dino Level:</sys:String>
     <sys:String x:Key="ServerSettings_OverrideOfficialDifficultyTooltip">Bestimmt den maximalen Level der Kreaturen in der Welt. Je höher der Wert, desto höher die maximale Kreaturenstufe.</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetLabel">Schwierigkeitsgrad:</sys:String>
     <sys:String x:Key="ServerSettings_DifficultyOffsetTooltip">Bestimmt den maximalen Level der Kreaturen in der Welt. Je höher der Wert, desto höher die maximale Kreaturenstufe.</sys:String>
-
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Label">Zähmung über Level zerstören:</sys:String>
+    <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp﻿Tooltip">Zähmungen, die diesen Wert überschreiten, werden beim Start des Servers gelöscht. Um die Löschung zu deaktivieren, setzen Sie den Wert auf 0.</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeLabel">Aktiviere externes herunterladen</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Wenn aktiviert, können externe Überlebende/Gegenstände/Dinos auf Ihren Server heruntergeladen werden.</sys:String>
     <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Keine Überlebenden herunterladen</sys:String>
@@ -1196,7 +1313,7 @@
     <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Max Dinos hochladen</sys:String>
     <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">Wenn aktiviert, wird die Anzahl der Dinos begrenzt, die ein Spieler in den Obelisken speichern kann. HINWEIS: Wenn der Wert auf "Hoch" steht, kann dies zu einer Beschädigung des Clusters führen.</sys:String>
     <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Max Gegenstände hochladen</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">>Wenn aktiviert, wird die Anzahl der Gegenstände begrenzt, die ein Spieler in den Obelisken speichern kann. HINWEIS: Wenn der Wert auf "Hoch" steht, kann dies zu einer Beschädigung des Clusters führen.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">Wenn aktiviert, wird die Anzahl der Gegenstände begrenzt, die ein Spieler in den Obelisken speichern kann. HINWEIS: Wenn der Wert auf "Hoch" steht, kann dies zu einer Beschädigung des Clusters führen.</sys:String>
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Cluster Abgabe Optionen</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Keine Übertragung der Filterung</sys:String>
@@ -1299,11 +1416,6 @@
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Limit der nicht vom Spieler abgelegten Gegenstände</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Begrenzen die Anzahl der abgelegten Gegenstände in einem Bereich (zusammen mit LimitNonPlayerDroppedItemsRange).</sys:String>
 
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Erlaube TekSuit Powers</sys:String>
-    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">Wenn aktiviert, kann der Spieler TekSuit Powers auf der Genesis Karte verwenden.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Deaktiviere Missionen</sys:String>
-    <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">Wennaktiviert, werden alle Missionen auf der Genesis Karte deaktiviert.</sys:String>
-
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Aktiviere Kryopod Abschwächung</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryopodNerfTooltip">Wenn aktiviert, wird der Schaden, den eine Kreatur verursacht, für einen bestimmten Zeitraum angepasst, nachdem sie von einem Kryopod befreit wurde.</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfDurationLabel">Dauer</sys:String>
@@ -1312,6 +1424,44 @@
     <sys:String x:Key="ServerSettings_CryopodNerfDamageMultiplierTooltip">Gibt den Multiplikator für den Schaden an, den Kreaturen anrichten, nachdem sie von einem Kryopod befreit wurden. Niedrigere Werte bedeuten, dass der von der Kreatur verursachte Schaden geringer ist (z.B. 0,01 bedeutet, dass 99% des Schadens entfernt werden).</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentLabel">Multiplikator für eingehenden Schaden</sys:String>
     <sys:String x:Key="ServerSettings_CryopodNerfIncomingDamageMultPercentTooltip">Gibt die prozentuale Erhöhung des eingehenden Schadensmultiplikators einer Kreatur an, nachdem sie von einem Kryopod befreit wurde. Höhere Werte bedeuten, dass der Kreatur mehr Schaden zugefügt wird (z.B. 0,25 = 25% mehr Schaden).</sys:String>
+
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisLabel">Erlaube Tek Suit Powers</sys:String>
+    <sys:String x:Key="ServerSettings_AllowTekSuitPowersInGenesisTooltip">Wenn aktiviert, kann der Spieler TekSuit Powers auf der Genesis Karte verwenden.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Deaktiviere Missionen</sys:String>
+    <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">Wennaktiviert, werden alle Missionen auf der Genesis Karte deaktiviert.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Tek Suit bei Spawn deaktivieren</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">Wenn aktiviert, wird verhindert, dass der Spieler mit dem Tek Suit spawnt.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">Welt Buffs deaktivieren</sys:String>
+    <sys:String x:Key="ServerSettings_DisableWorldBuffsTooltip">Wenn diese Option aktiviert ist, werden die Welt-Effekte von Missionen komplett deaktiviert.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingLabel">Welt Buff Skalierung einschalten</sys:String>
+    <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">Wenn diese Option aktiviert ist, skalieren die Welt-Buffs ihren Nutzen multiplikativ, anstatt zur Laufzeit einen pauschalen Betrag zum Wert zu addieren/subtrahieren.</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">Welt Buff Skalierung Effektivität</sys:String>
+    <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Gibt den globalen Maßstab an, um die Effektivität von Weltbuffs zu verringern/erhöhen (z.B. 1 ist Standard, 0,5 wäre 50% weniger effektiv, 2,0 wäre 2x effektiver).</sys:String>
+
+    <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Hexagon Shop deaktivieren</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Wenn diese Option aktiviert ist, wird der Hexagon Shop deaktiviert.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Nur den Handel mit Engrammpunkten zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Ist diese Option aktiviert, können nur Engrammpunkte im Hexagon-Shop verkauft werden.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Maximale Hexagone pro Charakter</sys:String>
+    <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Gibt die maximale Anzahl von Hexagonen an, die jeder Spieler haben kann.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Hexagon Belohnungsmultiplikator</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Gibt den Multiplikator für die Belohnungen der Hexagone an.</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Kostenmultiplikator</sys:String>
+    <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Gibt den Multiplikator für die Hexagon-Kosten von Gegenständen an.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Gegenstand statische Clamps</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">ACHTUNG: Dadurch werden die Werte aller vorhandenen Gegenstände dauerhaft verändert. Sichert also unbedingt euren aktuellen Spielstand, bevor ihr die Clamping-Werte verändert und mit ihnen spielt.</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_GenericQualityLabel">Allgemeine Qualität</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">Rüstung</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">Maximale Haltbarkeit</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">Schaden der Waffe in Prozent</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">Waffe Clip Munition</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">Hypo-Isolierung</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">Gewicht</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">Hyper-Isolierung</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Chat and Notifications -->
@@ -1452,6 +1602,8 @@
     <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">Wenn aktiviert, können Flieger Höhlen betreten.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">Erlaube Ausdauer Wiederherstellung beim Fliegen</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">Wenn aktiviert, wird die Ausdauer wiederhergestellt, während Sie auf einem Flieger stehen.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Erlaube Fluggeschwindigkeit Leveln.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Wenn diese Option aktiviert ist, kann die Bewegungsgeschwindigkeit der Flugtiere angepasst werden.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Verhindert Dino Begleiter Bonus</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Wenn diese Option aktiviert ist, wird der Dino-Paar-Bonus deaktiviert.</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Deaktiviere Landung mit Sprengstoff</sys:String>
@@ -1515,12 +1667,16 @@
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Multiplikatoren pro Level (gezähmt) - Hinzufügen</sys:String>
     <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Multiplikatoren pro Level (gezähmt) - Verwandschaft</sys:String>
     <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Multiplikatoren pro Level (wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Mutation Level Boost (Wild)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Mutation Level Boost (Gezüchtet)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Dino Zucht Multiplikatoren</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Wenn aktiviert, können Skalierungsfaktoren auf jeden Basisstatus angewendet werden.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Wenn aktiviert, können Skalierungsfaktoren angewendet werden.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAddMultipliersTooltip">Wenn aktiviert, können Skalierungsfaktoren auf die Zähmungsaddition angewendet werden.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedAffinityMultipliersTooltip">Wenn aktiviert, können Skalierungsfaktoren für jeden Wert auf den Zähmungsmultiplikator angewendet werden.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatTamedMultipliersTooltip">Wenn aktiviert, können Skalierungsfaktoren auf die Erhöhung der gezähmten Statistik angewendet werden.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostTooltip">Wenn diese Option aktiviert ist, können Skalierungsfaktoren auf die Anzahl der Stufen angewendet werden, die Mutagen bei Zähmen mit wilder Abstammung hinzufügt.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostTooltip">Wenn diese Option aktiviert ist, können Skalierungsfaktoren auf die Anzahl der Stufen angewendet werden, die Mutationen bei Zähmen mit gezüchteter Abstammung hinzufügen.</sys:String>
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Setzt alle Multiplikatoren auf die Standardeinstellungen zurück.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Setzt alle Multiplikatoren auf die Standardeinstellungen zurück.</sys:String>
 
@@ -1751,6 +1907,20 @@
     <sys:String x:Key="ServerSettings_EngramsOverride_SelectAllConfirmLabel">Klicke auf "Ja", um zu bestätigen, dass Du alle Engramme auswählen möchtest.</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmTitle">Bestätige Alle Aktion abwählen</sys:String>
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmLabel">Klicke auf "Ja", um zu bestätigen, dass Du alle Engramme abwählen möchtest.</sys:String>
+
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportErrorTitle">Fehler beim Exportieren</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportDialogTitle">Engramm-Überschreibungsdatei auswählen</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportDefaultExtension">json</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportFilterLabel">JSON Datei</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ExportFilterExtension">*.json</sys:String>
+
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportConfirmationTitle">Bestätigung des Imports</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportConfirmationLabel">Du bist dabei, die Engrammdaten zu importieren. Dadurch werden die Engramme in der Liste mit Daten aus der Datei überschrieben. Möchtest du fortfahren?</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportErrorTitle">Importfehler</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportDialogTitle">Engramm-Überschreibungsdatei auswählen</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportDefaultExtension">json</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportFilterLabel">JSON Datei</sys:String>
+    <sys:String x:Key="ServerSettings_EngramsOverride_ImportFilterExtension">*.json</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Level Progressions -->
@@ -1795,27 +1965,29 @@
     <sys:String x:Key="ServerSettings_DinoLevels_ResetTitle">Bestätige Zurücksetzaktion</sys:String>
     <sys:String x:Key="ServerSettings_DinoLevels_ResetLabel">Klicke auf "Ja", um zu bestätigen, dass Du alle aktuellen Dino-Level zurücksetzen möchtest.</sys:String>
 
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Fehler</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportErrorTitle">Import Fehler</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_UpdateErrorTitle">Update Fehler</sys:String>
+
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportErrorTitle">Export Fehler</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportDialogTitle">Speichere Levelanpassungen</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportDialogTitle">Wähle die CSV-Datei für die Levelanpassung aus</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportDefaultExtension">csv</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportDefaultExtension">csv</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterLabel">CSV-Datei</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterLabel">CSV Datei</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ExportFilterExtension">*.csv</sys:String>
-    <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterLabel">CSV-Datei</sys:String>
+
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportErrorTitle">Import Fehler</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportDialogTitle">Wähle die CSV-Datei für die Levelanpassung aus</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportDefaultExtension">csv</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterLabel">CSV Datei</sys:String>
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterExtension">*.csv</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Custom Config Settings -->
     <sys:String x:Key="ServerSettings_CustomGameUserSettingsLabel">Benutzerdefinierte GameUserSettings.ini-Einstellungen</sys:String>
     <sys:String x:Key="ServerSettings_CustomGameSettingsLabel">Benutzerdefinierte Game.ini-Einstellungen</sys:String>
-	<sys:String x:Key="ServerSettings_CustomEngineSettingsLabel">Benutzerdefinierte Engine.ini-Einstellungen</sys:String>
+    <sys:String x:Key="ServerSettings_CustomEngineSettingsLabel">Benutzerdefinierte Engine.ini-Einstellungen</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomSettingsSectionsLabel">Benutzerdefinierte Abschnitte</sys:String>
     <sys:String x:Key="ServerSettings_CustomSettingsSectionNameColumnLabel">Abschnittsmame</sys:String>
-	<sys:String x:Key="ServerSettings_ReloadSectionsTooltip">Aus Konfigurationsdatei neu laden</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadSectionsTooltip">Aus Konfigurationsdatei neu laden</sys:String>
     <sys:String x:Key="ServerSettings_AddCustomSectionTooltip">Abschnitt hinzufügen</sys:String>
     <sys:String x:Key="ServerSettings_PasteCustomSectionsTooltip">Abschnittsdaten einfügen</sys:String>
     <sys:String x:Key="ServerSettings_ImportCustomSectionsTooltip">Daten aus Ini-Datei importieren</sys:String>
@@ -2234,6 +2406,23 @@
     <!--#endregion-->
 
     <!--#endregion-->
+    
+    <!--#region Server Settings - Prevent Transfer Overrides -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">Transferüberschreibungen verhindern</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">Verhindern von Transfers</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">Verhindern Transfer Einstellungen überschreiben</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">HINWEIS: Wenn du deine Überschreibungen manuell oder mit einer anderen Anwendung verwalten möchtest, kannst du die Option deaktivieren, die verhindert, dass der Servermanager die Überschreibungen verwaltet. Siehe die "Benutzerdefinierte Überschreibungsoptionen" in den globalen Einstellungen.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">WARNUNG: Das Hinzufügen von Dinos zu dieser Liste verhindert, dass sie zum und vom Server übertragen werden können.</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">Dino</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">Dino Class String</sys:String>
+
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">Hinzufügen von Items die nicht Transferiert werden</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">Alle zu verhindernden Transfers löschen</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">Fügt Items hinzu die nicht Transferiert werden</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">Löscht Items die nicht Transfers werden</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">Speichern von Daten zur Verhinderung des Transfers von Items.</sys:String>
+    <!--#endregion-->
 
     <!--#region Player/Tribe Profile Window -->
     <sys:String x:Key="Profile_PlayerSectionLabel">Spielerdetails</sys:String>
@@ -2339,7 +2528,7 @@
     <sys:String x:Key="RCON_Comments_Line5">Klicke mit der rechten Maustaste auf die Spieler in der Liste, um auf die Spielerbefehle zuzugreifen.</sys:String>
     <sys:String x:Key="RCON_Comments_Line6">Gebe {0} ein, um Hilfe zu erhalten.</sys:String>
 
-    <sys:String x:Key="RCON_Help_Keyword">/help</sys:String>
+    <sys:String x:Key="RCON_Help_Keyword">/hilfe</sys:String>
 
     <sys:String x:Key="RCON_Help_Line1">Bekannte Befehle:</sys:String>
     <sys:String x:Key="RCON_Help_Line2">AllowPlayerToJoinNoCheck &lt;steam id&gt; - Fügt den angegebenen Spieler zur Whitelist des Servers hinzu.</sys:String>
@@ -2543,17 +2732,11 @@
     <sys:String x:Key="SpiderL_Character_BP_Easy_C">Broodmother Lysrix (Easy Variant)</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Medium_C">Broodmother Lysrix (Medium Variant)</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Hard_C">Broodmother Lysrix (Hard Variant)</sys:String>
-    <sys:String x:Key="SpiderL_Character_BP_TheCenter_C">Broodmother Lysrix (Easy Variant)</sys:String>
-    <sys:String x:Key="SpiderL_Character_BP_TheCenterMedium_C">Broodmother Lysrix (Medium Variant)</sys:String>
-    <sys:String x:Key="SpiderL_Character_BP_TheCenterHard_C">Broodmother Lysrix (Hard Variant)</sys:String>
 
     <sys:String x:Key="Gorilla_Character_BP_C">Megapithecus</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Easy_C">Megapithecus (Easy Variant)</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Medium_C">Megapithecus (Medium Variant)</sys:String>
     <sys:String x:Key="Gorilla_Character_BP_Hard_C">Megapithecus (Hard Variant)</sys:String>
-    <sys:String x:Key="Gorilla_Character_BP_TheCenter_C">Megapithecus (Easy Variant)</sys:String>
-    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Medium_C">Megapithecus (Medium Variant)</sys:String>
-    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Hard_C">Megapithecus (Hard Variant)</sys:String>
 
     <sys:String x:Key="Dragon_Character_BP_Boss_C">Dragon</sys:String>
     <sys:String x:Key="Dragon_Character_BP_Boss_Easy_C">Dragon (Easy Variant)</sys:String>
@@ -2621,6 +2804,7 @@
     <sys:String x:Key="Griffin_Character_BP_C">Griffin</sys:String>
     <sys:String x:Key="Polar_Bear_C">Polar Bear</sys:String>
     <sys:String x:Key="Ragnarok_Wyvern_Override_Ice_C">Ice Wyvern</sys:String>
+    <sys:String x:Key="Iceworm_Character_Minion_BP_smaller_C">Iceworm</sys:String>
     <!--#endregion-->
 
     <!--#region Dino/Creature Class Names - Ragnarok - Bosses -->
@@ -2636,6 +2820,22 @@
     <sys:String x:Key="Manticore_Character_BP_Hard_Ragnarok_C">Manticore (Hard Variant)</sys:String>
     <!--#endregion-->
 
+    <!--#region Dino/Creature Class Names - The Center - Bosses -->
+    <sys:String x:Key="SpiderL_Character_BP_TheCenter_C">Broodmother Lysrix (Easy Variant)</sys:String>
+    <sys:String x:Key="SpiderL_Character_BP_TheCenterMedium_C">Broodmother Lysrix (Medium Variant)</sys:String>
+    <sys:String x:Key="SpiderL_Character_BP_TheCenterHard_C">Broodmother Lysrix (Hard Variant)</sys:String>
+
+    <sys:String x:Key="Gorilla_Character_BP_TheCenter_C">Megapithecus (Easy Variant)</sys:String>
+    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Medium_C">Megapithecus (Medium Variant)</sys:String>
+    <sys:String x:Key="Gorilla_Character_BP_TheCenter_Hard_C">Megapithecus (Hard Variant)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Valguero -->
+    <sys:String x:Key="Deinonychus_Character_BP_C">Deinonychus</sys:String>
+    <sys:String x:Key="IceGolem_Character_BP_C">Ice Golem</sys:String>
+    <sys:String x:Key="ChalkGolem_Character_BP_C">Chalk Golem</sys:String>
+    <sys:String x:Key="SpiderL_VAL_Character_BP_C">Broodmother (Lysrix)</sys:String>
+    <!--#endregion-->
     <!--#region Dino/Creature Class Names - Aberration -->
     <sys:String x:Key="Achatina_Character_BP_Aberrant_C">Aberrant Achatina</sys:String>
     <sys:String x:Key="Angler_Character_BP_Aberrant_C">Aberrant Anglerfish</sys:String>
@@ -2763,6 +2963,55 @@
     <sys:String x:Key="KingKaiju_Character_BP_C">King Titan (Gamma)</sys:String>
     <sys:String x:Key="KingKaiju_Character_BP_Alpha_C">King Titan (Alpha)</sys:String>
     <sys:String x:Key="KingKaiju_Character_BP_Beta_C">King Titan (Beta)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Genesis -->
+    <sys:String x:Key="SpaceWhale_Character_BP_C">Astrocetus</sys:String>
+    <sys:String x:Key="BogSpider_Character_BP_C">Bloodstalker</sys:String>
+    <sys:String x:Key="Cherufe_Character_BP_C">Magmasaur</sys:String>
+    <sys:String x:Key="GiantTurtle_Character_BP_C">Megachelon</sys:String>
+    <sys:String x:Key="Shapeshifter_Small_Character_BP_C">Ferox Small</sys:String>
+    <sys:String x:Key="Shapeshifter_Large_Character_BP_C">Ferox Large</sys:String>
+    <sys:String x:Key="InsectSwarmChar_BP_C">Insect Swarm</sys:String>
+    <sys:String x:Key="MicrobeSwarmChar_BP_C">Parakeet Fish School</sys:String>
+    <sys:String x:Key="TekHoverSkiff_Character_BP_C">Tek Hover Skiff</sys:String>
+    <sys:String x:Key="BionicTrike_Character_BP_C">Tek Triceratops</sys:String>
+    <sys:String x:Key="BionicGigant_Character_BP_C">Tek Giganotosaurus</sys:String>
+    <sys:String x:Key="Volcano_Allo_Character_BP_C">X-Allosaur</sys:String>
+    <sys:String x:Key="Volcano_Ankylo_Character_BP_C">X-Ankylosaur</sys:String>
+    <sys:String x:Key="Snow_Argent_Character_BP_C">X-Argentavis</sys:String>
+    <sys:String x:Key="Ocean_Basilosaurus_Character_BP_C">X-Basilosaurus</sys:String>
+    <sys:String x:Key="Ocean_Dunkle_Character_BP_C">X-Dunkleosteus</sys:String>
+    <sys:String x:Key="Ocean_Dolphin_Character_BP_C">X-Ichthyosaurus</sys:String>
+    <sys:String x:Key="Ocean_Megalodon_Character_BP_C">X-Megalodon</sys:String>
+    <sys:String x:Key="Ocean_Mosa_Character_BP_C">X-Mosasaur</sys:String>
+    <sys:String x:Key="Snow_Otter_Character_BP_C">X-Otter</sys:String>
+    <sys:String x:Key="Bog_Para_Character_BP_C">X-Parasaur</sys:String>
+    <sys:String x:Key="Bog_Raptor_Character_BP_C">X-Raptor</sys:String>
+    <sys:String x:Key="Volcano_Rex_Character_BP_C">X-Rex</sys:String>
+    <sys:String x:Key="Volcano_Golem_Character_BP_C">X-Rock Elemental</sys:String>
+    <sys:String x:Key="Snow_Saber_Character_BP_C">X-Sabertooth</sys:String>
+    <sys:String x:Key="Lunar_Salmon_Character_BP_C">X-Sabertooth Salmon</sys:String>
+    <sys:String x:Key="Rare_Lunar_Salmon_Character_BP_C">X-Sabertooth Salmon (Rare)</sys:String>
+    <sys:String x:Key="Bog_Spino_Character_BP_C">X-Spinosaur</sys:String>
+    <sys:String x:Key="Bog_Tapejara_Character_BP_C">X-Tapejara</sys:String>
+    <sys:String x:Key="Volcano_Trike_Character_BP_C">X-Triceratops</sys:String>
+    <sys:String x:Key="Snow_Rhino_Character_BP_C">X-Woolly Rhino</sys:String>
+    <sys:String x:Key="Snow_Yutyrannus_Character_BP_C">X-Yutyrannus</sys:String>
+    <!--#endregion-->
+
+    <!--#region Dino/Creature Class Names - Genesis - Bosses -->
+    <sys:String x:Key="EelBoss_Character_BP_Easy_C">Moeder, Master of the Ocean (Easy Variant)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Medium_C">Moeder, Master of the Ocean (Medium Variant)</sys:String>
+    <sys:String x:Key="EelBoss_Character_BP_Hard_C">Moeder, Master of the Ocean (Hard Variant)</sys:String>
+    
+    <sys:String x:Key="EelMinion_Character_BP_Easy_C">Eel Minion (Gamma)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Medium_C">Eel Minion (Beta)</sys:String>
+    <sys:String x:Key="EelMinion_Character_BP_Hard_C">Eel Minion (Alpha)</sys:String>
+    
+    <sys:String x:Key="VRMainBoss_Character_Easy_C">Corrupted Master Controller (Easy Variant)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Medium_C">Corrupted Master Controller (Medium Variant)</sys:String>
+    <sys:String x:Key="VRMainBoss_Character_Hard_C">Corrupted Master Controller (Hard Variant)</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -3481,6 +3730,27 @@
     <!--#region Tekgram Class Names - Extinction -->
     <sys:String x:Key="EngramEntry_TekBridge_C">Tek Brücke</sys:String>
     <sys:String x:Key="EngramEntry_TekGravityGrenade_C">Tek Schwerkraftgranate</sys:String>
+    <!--#endregion-->
+    
+    <!--#region Engram Class Names - Genesis -->
+    <sys:String x:Key="EngramEntry_CherufeSaddle_C">Magmasaur Sattel</sys:String>
+    <sys:String x:Key="EngramEntry_GiantTurtleSaddle_C">Megachelon Platform Sattel</sys:String>
+    <sys:String x:Key="EngramEntry_FishingNet_C">Fishing Net</sys:String>
+    <sys:String x:Key="EngramEntry_OceanPlatformWood_C">Wood Ocean Platform</sys:String>
+    <sys:String x:Key="EngramEntry_OceanPlatformMetal_C">Metal Ocean Platform</sys:String>
+    <sys:String x:Key="EngramEntry_PressurePlate_C">Pressure Plate</sys:String>
+    <sys:String x:Key="EngramEntry_MiningDrill_C">Mining Drill</sys:String>
+    <!--#endregion-->
+
+    <!--#region Tekgram Class Names - Genesis -->
+    <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">Astrocetus Tek Sattel</sys:String>
+    <sys:String x:Key="EngramEntry_TekClaws_C">Tek Claws</sys:String>
+    <sys:String x:Key="EngramEntry_CruiseMissile_C">Tek Cruise Missile</sys:String>
+    <sys:String x:Key="EngramEntry_TekGrenadeLauncher_C">Tek Grenade Launcher</sys:String>
+    <sys:String x:Key="EngramEntry_HoverSkiff_C">Tek Hover Skiff</sys:String>
+    <sys:String x:Key="EngramEntry_JumpPad_C">Tek Jump Pad</sys:String>
+    <sys:String x:Key="EngramEntry_TekAlarm_C">Tek Sensor</sys:String>
+    <sys:String x:Key="EngramEntry_ShoulderCannon_C">Tek Shoulder Cannon</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -4380,17 +4650,17 @@
     <sys:String x:Key="PrimalItem_WeaponWhip_C">Whip</sys:String>
     <sys:String x:Key="PrimalItemAmmo_Flamethrower_C">Flamethrower Ammo</sys:String>
     <sys:String x:Key="PrimalItemAmmo_RocketHomingMissile_C">Rocket Homing Missile</sys:String>
-    <sys:String x:Key="PrimalItemArmor_CamelsaurusSaddle_C">Morellatops Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_CamelsaurusSaddle_C">Morellatops Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_DesertClothBoots_C">Desert Cloth Boots</sys:String>
     <sys:String x:Key="PrimalItemArmor_DesertClothGloves_C">Desert Cloth Gloves</sys:String>
     <sys:String x:Key="PrimalItemArmor_DesertClothGogglesHelmet_C">Desert Goggles and Hat</sys:String>
     <sys:String x:Key="PrimalItemArmor_DesertClothPants_C">Desert Cloth Pants</sys:String>
     <sys:String x:Key="PrimalItemArmor_DesertClothShirt_C">Desert Cloth Shirt</sys:String>
-    <sys:String x:Key="PrimalItemArmor_MantisSaddle_C">Mantis Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_MothSaddle_C">Lymantria Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_RockGolemSaddle_C">Rock Golem Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MantisSaddle_C">Mantis Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MothSaddle_C">Lymantria Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_RockGolemSaddle_C">Rock Golem Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_SpineyLizardPromoSaddle_C">ARK Thorny Dragon Saddle Skin</sys:String>
-    <sys:String x:Key="PrimalItemArmor_SpineyLizardSaddle_C">Thorny Dragon Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_SpineyLizardSaddle_C">Thorny Dragon Sattel</sys:String>
     <sys:String x:Key="PrimalItemConsumable_CactusSap_C">Cactus Sap</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Camelsaurus_C">Camelsaurus Ei</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Mantis_C">Mantis Ei</sys:String>
@@ -4734,19 +5004,19 @@
     <sys:String x:Key="PrimalItem_WeaponClimbPick_C">Climbing Pick</sys:String>
     <sys:String x:Key="PrimalItem_WeaponRadioactiveLanternCharge_C">Charge Lantern</sys:String>
     <sys:String x:Key="PrimalItemAmmo_Zipline_C">Zip-Line Anchor</sys:String>
-    <sys:String x:Key="PrimalItemArmor_BasiliskSaddle_C">Basilisk Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_BasiliskSaddle_C">Basilisk Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_CavewolfPromoSaddle_C">Ravager Saddle Skin</sys:String>
-    <sys:String x:Key="PrimalItemArmor_CavewolfSaddle_C">Ravager Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_CrabSaddle_C">Karkinos Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_CavewolfSaddle_C">Ravager Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_CrabSaddle_C">Karkinos Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_Glider_C">Glider Suit</sys:String>
     <sys:String x:Key="PrimalItemArmor_HazardSuitBoots_C">Hazard Suit Boots</sys:String>
     <sys:String x:Key="PrimalItemArmor_HazardSuitGloves_C">Hazard Suit Gloves</sys:String>
     <sys:String x:Key="PrimalItemArmor_HazardSuitHelmet_C">Hazard Suit Hat</sys:String>
     <sys:String x:Key="PrimalItemArmor_HazardSuitPants_C">Hazard Suit Pants</sys:String>
     <sys:String x:Key="PrimalItemArmor_HazardSuitShirt_C">Hazard Suit Shirt</sys:String>
-    <sys:String x:Key="PrimalItemArmor_MoleRatSaddle_C">Roll Rat Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_RockDrakeSaddle_C">Rock Drake Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_RockDrakeSaddle_Tek_C">Tek Rock Drake Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_MoleRatSaddle_C">Roll Rat Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_RockDrakeSaddle_C">Rock Drake Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_RockDrakeSaddle_Tek_C">Tek Rock Drake Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_ZiplineMotor_C">Zip-Line Motor Attachment</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_Basilisk_C">Basilisk Ei</sys:String>
     <sys:String x:Key="PrimalItemConsumable_Egg_LanternBird_C">Featherlight Ei</sys:String>
@@ -4797,18 +5067,18 @@
     <sys:String x:Key="PrimalItem_WeaponTekGravityGrenade_C">Tek Gravity Grenade</sys:String>
     <sys:String x:Key="PrimalItemAmmo_CannonShell_C">Cannon Shell</sys:String>
     <sys:String x:Key="PrimalItemAmmo_RocketPod_C">Rocket Pod</sys:String>
-    <sys:String x:Key="PrimalItemArmor_DesertKaiju_C">Desert Titan Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_ForestKaiju_C">Forest Titan Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_DesertKaiju_C">Desert Titan Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_ForestKaiju_C">Forest Titan Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_GachaSaddle_C">PrimalItemArmor_GachaSaddle_C</sys:String>
-    <sys:String x:Key="PrimalItemArmor_GasBagsSaddle_C">Gasbags Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_IceJumperSaddle_C">Managarmr Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_IceKaiju_C">Ice Titan Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_GasBagsSaddle_C">Gasbags Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_IceJumperSaddle_C">Managarmr Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_IceKaiju_C">Ice Titan Sattel</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekBackpack_MissilePod_C">M.R.L.M. (Mek Rocket Launcher Module)</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekBackpack_Shield_C">M.D.S.M. (Mek Deployable Shield Module)</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekBackpack_SiegeCannon">M.D.S.M. (Mek Deployable Shield Module)</sys:String>
     <sys:String x:Key="PrimalItemArmor_MekTransformer_C">M.O.M.I. (MegaMek Operational Materialization Interface)</sys:String>
-    <sys:String x:Key="PrimalItemArmor_OwlSaddle_C">Snow Owl Saddle</sys:String>
-    <sys:String x:Key="PrimalItemArmor_SpindlesSaddle_C">Velonasaur Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_OwlSaddle_C">Snow Owl Sattel</sys:String>
+    <sys:String x:Key="PrimalItemArmor_SpindlesSaddle_C">Velonasaur Sattel</sys:String>
     <sys:String x:Key="PrimalItemArtifact_Extinction_DesertKaiju_C">Artifact of Chaos</sys:String>
     <sys:String x:Key="PrimalItemArtifact_Extinction_ForestKaiju_C">Artifact of Growth</sys:String>
     <sys:String x:Key="PrimalItemArtifact_Extinction_IceKaiju_C">Artifact of the Void</sys:String>
@@ -4860,6 +5130,50 @@
     <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Alpha_C">King Titan Trophy (Alpha)</sys:String>
     <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Beta_C">King Titan Trophy (Beta)</sys:String>
     <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Gamma_C">King Titan Trophy (Gamma)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Item Class Names - Genesis -->
+    <sys:String x:Key="PrimalItem_WeaponTekClaws_C">Tek Claws</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponTekGrenadeLauncher_C">Tek Grenade Launcher</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponFishingNet_C">Fish Net</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponTekCruiseMissile_C">Cruise Missile</sys:String>
+    <sys:String x:Key="PrimalItem_WeaponMiningDrill_C">Mining Drill</sys:String>
+    <sys:String x:Key="PrimalItemArmor_ShoulderCannon_C">Tek Shoulder Cannon</sys:String>
+    <sys:String x:Key="PrimalItemArmor_SpaceWhaleSaddle_Tek_C">Astrocetus Tek Saddle</sys:String>
+    <sys:String x:Key="PrimalItemArmor_CherufeSaddle_C">Magmasaur Saddle (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemArmor_GiantTurtleSaddle_C">Megachelon Platform Saddle (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl1_C">Tier 1 Lootcrate (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl2_C">Tier 2 Lootcrate (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Lootcrate_lvl3_C">Tier 3 Lootcrate (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_BogSpider_C">Bloodstalker Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Cherufe_C">Magmasaur Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_GiantTurtle_C">Megachelon Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemConsumable_Egg_Trike_Bionic_C">Tek Trike Egg (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemResource_Ambergris_C">Ambergris</sys:String>
+    <sys:String x:Key="PrimalItemResource_TurtleShell_C">Turtle Shell</sys:String>
+    <sys:String x:Key="PrimalItemResource_HighQualityPollen_C">High Quality Pollen</sys:String>
+    <sys:String x:Key="PrimalItemResource_GoldenNugget_C">Golden Nugget</sys:String>
+    <sys:String x:Key="PrimalItemResource_RetrieveReaperGland_C">Reaper King Pheromone Gland (Genesis)</sys:String>
+    <sys:String x:Key="PrimalItemSkin_TrikeSkullHelmet_Retrieve_C">Alpha X-Triceratops Skull</sys:String>
+    <sys:String x:Key="PrimalItemResource_RetrieveMegTooth_C">Golden Striped Megalodon Tooth</sys:String>
+    <sys:String x:Key="PrimalItemSkin_MasterControllerHelmet_C">Master Controller Helmet</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarHelmet_C">Corrupted Avatar Helmet Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarShirt_C">Corrupted Avatar Shirt Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarPants_C">Corrupted Avatar Pants Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatarGloves_C">Corrupted Avatar Gloves Skin</sys:String>
+    <sys:String x:Key="PrimalItemSkin_Gen1AvatartBoots_C">Corrupted Avatar Boots Skin</sys:String>
+    <sys:String x:Key="PrimalItem_Spawner_HoverSkiff_C">Unassembled TEK Hover Skiff</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_EelBoss_C">Moeder Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Flag_VRBoss_C">VR Boss Flag</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Metal_OceanPlatform_C">Metal Ocean Platform</sys:String>
+    <sys:String x:Key="PrimalItemStructure_PressurePlate_C">Pressure Plate</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekAlarm_C">Tek Sensor</sys:String>
+    <sys:String x:Key="PrimalItemStructure_TekJumpPad_C">Tek Jump Pad</sys:String>
+    <sys:String x:Key="PrimalItemStructure_Wood_OceanPlatform_C">Wood Ocean Platform</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_EelBoss_Gamma_C">Gamma Moeder Trophy (Гамма)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_EelBoss_Beta_C">Beta Moeder Trophy (Бета)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_EelBoss_Alpha_C">Alpha Moeder Trophy (Альфа)</sys:String>
+    <sys:String x:Key="PrimalItemTrophy_MasterController_C">Master Controller Trophy</sys:String>
     <!--#endregion-->
 
     <!--#endregion-->
@@ -5201,6 +5515,27 @@
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Desert_C">Boss Inventar - Desert Titan</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Forest_C">Boss Inventar - Forest Titan</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Kaiju_Ice_C">Boss Inventar - Ice Titan</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Easy_C">Boss Inventory - Crystal Wyvern Queen (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Medium_C">Boss Inventory - Crystal Wyvern Queen (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_CIBoss_Hard_C">Boss Inventory - Crystal Wyvern Queen (Alpha)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss Inventory - Dragon (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss Inventory - Dragon (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Ragnarok_C">Boss Inventory - Dragon (Alpha)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C">Boss Inventory - Manticore (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C">Boss Inventory - Manticore (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C">Boss Inventory - Manticore (Alpha)</sys:String>
+
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Valguero_C">Boss Inventory - Dragon (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Valguero_C">Boss Inventory - Dragon (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Valguero_C">Boss Inventory - Dragon (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Valguero_C">Boss Inventory - Manticore (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Valguero_C">Boss Inventory - Manticore (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Valguero_C">Boss Inventory - Manticore (Hard)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Boss Inventory - Megapithecus (Easy)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Boss Inventory - Megapithecus (Medium)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Boss Inventory - Megapithecus (Hard)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
@@ -5210,6 +5545,7 @@
     <sys:String x:Key="ProfileValidation_WarningLabel">Die folgenden Validierungsprobleme sind aufgetreten.\r\n\r\n{validateMessage}\r\n\r\nMöchten Sie mit dem Serverstart fortfahren, da dies zu Problemen führen könnte?</sys:String>
 
     <sys:String x:Key="ProfileValidation_ServerPort">Der Server-Port liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPeerPort">Der Peer-Port des Servers liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_QueryPort">Der Query Port liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
     <sys:String x:Key="ProfileValidation_RconPort">Der RCON Port liegt außerhalb des gültigen Bereichs ({PortMinimum}-{PortMaximum}).</sys:String>
 
@@ -5254,6 +5590,7 @@
     <sys:String x:Key="ProfileSave_ConstructingMapSpawnerInformation">Erstellung von Map Spawner Informationen...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingSupplyCrateInformation">Informationen zum Bau von Versorgungskisten...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingStackSizeInformation">Stack Size Informationen erstellen....</sys:String>
+    <sys:String x:Key="ProfileSave_ConstructingPreventTransferInformation">Erstellung von Informationen zur Verhinderung des Transfers...</sys:String>
     <sys:String x:Key="ProfileSave_SavingProfileFile">Speichere Profile Datei...</sys:String>
     <sys:String x:Key="ProfileSave_SavingConfigFiles">Speichere Config Dateien...</sys:String>
     <sys:String x:Key="ProfileSave_SavingLauncherFile">Speichere Launcher Datei...</sys:String>
@@ -5270,7 +5607,37 @@
 
     <!--#region Server Update -->
     <sys:String x:Key="ServerUpdate_Title">Server Update</sys:String>
-    <sys:String x:Key="ServerUpdate_WarningLabel">Bei der Durchführung des Server-Updates ist ein Problem aufgetreten. Dies kann dazu führen, dass sich Ihr Server in einem inkompletten Zustand befindet.\r\n\r\nMöchten Sie mit dem Serverstart fortfahren, da dies zu Problemen führen könnte?</sys:String>
+    <sys:String x:Key="ServerUpdate_WarningLabel">Bei der Durchführung des Server-Updates ist ein Problem aufgetreten. Dies kann dazu führen, dass sich dein Server in einem inkompletten Zustand befindet.\r\n\r\nMöchtest Du mit dem Serverstart fortfahren, da dies zu Problemen führen könnte?</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Fehler</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">Der Discord-Bot benötigt ein gültigen Token, um sich beim Discord-Server anzumelden.\r\nDies kann in den globalen Einstellungen eingestellt werden.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">Der Discord Bot benötigt ein gültiges Präfix.\r\n Dies kann in den globalen Einstellungen festgelegt werden.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">Das Präfix des Discord-Bots enthält ungültige Zeichen. Es sind nur Buchstaben und Zahlen erlaubt.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">Der Befehl '{0}' wurde nicht aktiviert.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Unbekannter Befehl '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Ein anderer Befehl wird gerade ausgeführt.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Ein anderer Befehl '{0}' läuft gerade unter dem Profil '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">Der Befehl '{0}' wurde für das Profil '{1}' deaktiviert.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">Der Befehl '{0}' erfordert eine Profil-ID oder einen Alias.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">Profil '{0}' wurde nicht gefunden oder ist nicht mit dem Kanal verbunden.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">Es wurden mehrere Profile mit '{0}' im Kanal gefunden, der Befehl wurde abgebrochen.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Das Profil '{0}' befindet sich in einem Zustand '{1}', in dem dieser Befehl nicht ausgeführt werden kann.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">Das Profil '{0}' wird gerade aktualisiert.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">Verbindung zum Server '{0}' fehlgeschlagen.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">Es wurde eine Sicherungsanfrage für Server '{0}' gesendet.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">Es wurde eine Neustartanforderung für Server '{0}' gesendet.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">Eine Herunterfahranforderung für Server '{0}' wurde gesendet.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">Es wurde eine Startanforderung für Server '{0}' gesendet.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">Es wurde eine Stoppanforderung für Server '{0}' gesendet.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">Es wurde eine Aktualisierungsanforderung für Server '{0}' gesendet.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Anzahl:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

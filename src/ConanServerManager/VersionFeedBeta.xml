@@ -5,21 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-22T00:00:00Z</updated>
+  <updated>2021-12-23T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:7531B516-6C68-452B-B484-25374A47C7A5</id>
-    <title>1.1.59 (1.1.59.1)</title>
-    <summary>1.1.59.1</summary>
+    <id>urn:uuid:656D558C-0D7C-47CF-BB80-527443B0EA5E</id>
+    <title>1.1.60 (1.1.60.1)</title>
+    <summary>1.1.60.1</summary>
     <link href="" />
-    <updated>2021-12-22T00:00:00Z</updated>
+    <updated>2021-12-23T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fixed the duplication of the Server Files for Steam Users.</li>
+            <li>Fixed an error when deleting from a list while iterating over it.</li>
           </ul>
         </p>
       </div>

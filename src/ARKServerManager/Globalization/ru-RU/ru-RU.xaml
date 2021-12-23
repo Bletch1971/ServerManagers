@@ -567,6 +567,7 @@
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Интервал сохранения:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Укажите интервал Авто-Бекапа в часах и минутах  (Ч:М). Укажите 00:00 для отключения.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Удалять Файлы Авто-Бекапа</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Если включено, то при запуске автоматического резервного копирования старые файлы резервных копий будут удалены.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">старее чем:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Укажите интервал, за кокой период будут сохранятся Авто-Бекапы, остальные будут удалены.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">Глобальное сообщение:</sys:String>
@@ -691,6 +692,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">Если этот параметр включен, после обновления сервера из кэша он выполнит проверку сервера с помощью steamcmd.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Обновить Права Дирректорий для сохранения</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">Если этот параметр включен, то при сохранении все папки в каталоге сервера будут иметь проверку прав доступа и, если необходимо, исправлены. ПРЕДУПРЕЖДЕНИЕ. Отключение может помешать правильной работе сервера.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Включить Логи</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">Если включено, все логи будет включено.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Удаление логов</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Сколько дней должны храниться логи до удаления.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Максимальное число логов</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Максимальное количество логов, которые будут храниться.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Подтвердить сброс настроек</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Нажмите «Да», для подтверждения, что вы хотите выполнить сброс настроек.</sys:String>
@@ -797,14 +804,14 @@
     <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Запуск бота Discord</sys:String>
     <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Стоп</sys:String>
     <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Остановить бот Discord</sys:String>
-    
+
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Отключено</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Выключено</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">В очереди</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Активно</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">Запущено</sys:String>
     <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Остановлено</sys:String>
-    
+
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Профиль не загружен</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">Не удалось загрузить профиль в {0}. Ошибка: {1}\r\n{2}</sys:String>
     <sys:String x:Key="MainWindow_ProfileDelete_Title">Удалить Профиль {0}?</sys:String>
@@ -848,6 +855,7 @@
     <sys:String x:Key="SliderUnits_Hours">часов</sys:String>
     <sys:String x:Key="SliderUnits_Days">дней</sys:String>
     <sys:String x:Key="SliderUnits_Dinos">динозавры</sys:String>
+    <sys:String x:Key="SliderUnits_Files">файлы</sys:String>
     <sys:String x:Key="SliderUnits_Items">предметы</sys:String>
     <sys:String x:Key="SliderUnits_XP">xp</sys:String>
     <sys:String x:Key="SliderUnits_Players">игроки</sys:String>
@@ -1702,7 +1710,7 @@
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Множитель того, через какое время начинает уменьшаться привязанность, если вы вовремя не уделяли внимание растущему дино. Более низкие значения замедляют потерю привязанности</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Количество потери привязанности:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Множитель того, насколько быстро в процентах начинает уменьшаться привязанность, если вы вовремя не уделяли внимание растущему дино. Более низкие значения замедляют потерю привязанности.</sys:String>
-    
+
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Подтвердить сброс</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Нажмите «Да», чтобы подтвердить, что вы хотите сбросить Max XP.</sys:String>
     <sys:String x:Key="ServerSettings_DinoCustomization_ResetTitle">Подтвердить сброс</sys:String>
@@ -1986,7 +1994,7 @@
     <sys:String x:Key="ServerSettings_CustomGameUserSettingsLabel">Пользовательские настройки GameUserSettings.ini</sys:String>
     <sys:String x:Key="ServerSettings_CustomGameSettingsLabel">Пользовательские настройки Game.ini</sys:String>
     <sys:String x:Key="ServerSettings_CustomEngineSettingsLabel">Пользовательские настройки Engine.ini</sys:String>
-    
+
     <sys:String x:Key="ServerSettings_CustomSettingsSectionsLabel">Пользовательские разделы</sys:String>
     <sys:String x:Key="ServerSettings_CustomSettingsSectionNameColumnLabel">Имя раздела</sys:String>
     <sys:String x:Key="ServerSettings_ReloadSectionsTooltip">Перезагрузить из файла конфигурации</sys:String>
