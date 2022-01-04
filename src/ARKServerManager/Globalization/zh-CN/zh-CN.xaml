@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.12.13(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2021.12.30(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -491,6 +491,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">重置</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">这将重置服务器管理器的所有用户全局设置。 成功后，服务器管理器将关闭。</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">启用作为启动管理员提示符下运行</sys:String>
+	<sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">检查服务器管理器是否在启动时运行</sys:String>
 	<sys:String x:Key="GlobalSettings_StartModeLabel">窗口启动模式:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">最小化到托盘</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">自动管理防火墙设置</sys:String>
@@ -693,6 +694,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">如果启用，则从缓存中更新服务器后，它将使用steamcmd执行服务器验证。</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">在保存时更新目录权限</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">如果启用，则在执行保存时，将对服务器目录下的所有文件夹进行权限检查，并在必要时进行修复。 警告：禁用可能会导致服务器无法正常运行。</sys:String>
+	<sys:String x:Key="GlobalSettings_EnableLoggingLabel">启用日志记录</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">如果启用，将启用所有日志记录.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">删除之后的日志</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">要在几天内删除日志文件，日志文件的时间必须为多少.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">最多日志数</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">将保留的最多日志文件数.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">确认设置重置动作</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">单击“是”确认您要执行设置重置。</sys:String>
@@ -845,6 +852,7 @@
     <sys:String x:Key="SliderUnits_Hours">小时</sys:String>
     <sys:String x:Key="SliderUnits_Days">天</sys:String>
     <sys:String x:Key="SliderUnits_Dinos">恐龙</sys:String>
+	<sys:String x:Key="SliderUnits_Files">文件</sys:String>
     <sys:String x:Key="SliderUnits_Items">物品</sys:String>
     <sys:String x:Key="SliderUnits_XP">经验</sys:String>
     <sys:String x:Key="SliderUnits_Players">玩家</sys:String>
