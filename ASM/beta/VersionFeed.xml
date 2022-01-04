@@ -5,21 +5,44 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2021-12-22T00:00:00Z</updated>
+  <updated>2021-12-23T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:AA87D3F1-80EA-4027-AA61-F1975D18128F</id>
-    <title>1.1.414 (1.1.414.1)</title>
-    <summary>1.1.414.1</summary>
+    <id>urn:uuid:0A99681B-B2F1-4149-A9C4-1B06FCC8494D</id>
+    <title>1.1.415 (1.1.415.2)</title>
+    <summary>1.1.415.2</summary>
     <link href="" />
-    <updated>2021-12-22T00:00:00Z</updated>
+    <updated>2021-12-23T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added option to enable/disable the check for running server manager instance on startup.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A58CA1BE-3474-480D-9DCF-3B217C47F4B0</id>
+    <title>1.1.415 (1.1.415.1)</title>
+    <summary>1.1.415.1</summary>
+    <link href="" />
+    <updated>2021-12-23T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fixed the duplication of the Server Files for Steam Users.</li>
+            <li>Fixed an error when deleting from a list while iterating over it.</li>
           </ul>
         </p>
       </div>
