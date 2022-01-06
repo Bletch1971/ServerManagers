@@ -909,6 +909,22 @@ namespace ServerManagerTool.Lib
 
         public static ServerProfile LoadFromProfileFile(string file, ServerProfile profile)
         {
+            profile = LoadFromProfileFileBasic(file, profile);
+
+            if (profile is null)
+                return null;
+
+            profile.CheckLauncherArgs();
+
+            profile.LoadServerFiles(true, true);
+            profile.SetupServerFilesWatcher();
+
+            profile._lastSaveLocation = file;
+            return profile;
+        }
+
+        public static ServerProfile LoadFromProfileFileBasic(string file, ServerProfile profile)
+        {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
                 return null;
 
@@ -945,16 +961,11 @@ namespace ServerManagerTool.Lib
                 }
             }
 
-            profile.CheckLauncherArgs();
-
             var serverConfigFile = Path.Combine(GetProfileServerConfigDir(profile), Config.Default.ServerGameConfigFile);
             if (File.Exists(serverConfigFile))
             {
                 profile = LoadFromConfigFiles(serverConfigFile, profile);
             }
-
-            profile.LoadServerFiles(true, true);
-            profile.SetupServerFilesWatcher();
 
             profile._lastSaveLocation = file;
             return profile;
@@ -1047,10 +1058,14 @@ namespace ServerManagerTool.Lib
 
         public void SaveProfile()
         {
+            var settings = new JsonSerializerSettings();
+            settings.Converters.Add(new NullableValueConverter<int>());
+            settings.Converters.Add(new NullableValueConverter<float>());
+
             //
             // Save the profile
             //
-            JsonUtils.SerializeToFile(this, GetProfileFile());
+            JsonUtils.SerializeToFile(this, GetProfileFile(), settings);
         }
 
         public void SaveLauncher()
