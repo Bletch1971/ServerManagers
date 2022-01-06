@@ -5,44 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-23T00:00:00Z</updated>
+  <updated>2022-01-05T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:832E12C1-F632-4B02-A5DF-21BF85D056ED</id>
-    <title>1.1.60 (1.1.60.2)</title>
-    <summary>1.1.60.2</summary>
+    <id>urn:uuid:189B95FA-8ACA-4E37-9A34-443B6C5E27EE</id>
+    <title>1.1.61 (1.1.61.1)</title>
+    <summary>1.1.61.1</summary>
     <link href="" />
-    <updated>2021-12-23T00:00:00Z</updated>
+    <updated>2022-01-05T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">NEW</u>
+          <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Added option to enable/disable the check for running server manager instance on startup.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:656D558C-0D7C-47CF-BB80-527443B0EA5E</id>
-    <title>1.1.60 (1.1.60.1)</title>
-    <summary>1.1.60.1</summary>
-    <link href="" />
-    <updated>2021-12-23T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed an error when deleting from a list while iterating over it.</li>
+            <li>Minor tweaks to the Auto-Update process to prevent intermittent exceptions.</li>
           </ul>
         </p>
       </div>

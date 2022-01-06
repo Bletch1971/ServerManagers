@@ -19,6 +19,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>Minor tweaks to the Auto-Update process to prevent intermittent exceptions.</li>
             <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
