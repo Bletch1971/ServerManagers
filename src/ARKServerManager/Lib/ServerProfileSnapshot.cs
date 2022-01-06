@@ -19,7 +19,6 @@ namespace ServerManagerTool.Lib
         public string PGM_Name;
         public string AdminPassword;
         public string ServerName;
-        public string ServerArgs;
         public IPAddress ServerIPAddress;
         public int ServerPort;
         public int ServerPeerPort;
@@ -70,7 +69,6 @@ namespace ServerManagerTool.Lib
                 PGM_Name = profile.PGM_Name,
                 AdminPassword = profile.AdminPassword,
                 ServerName = profile.ServerName,
-                ServerArgs = profile.GetServerArgs(),
                 ServerIPAddress = string.IsNullOrWhiteSpace(profile.ServerIP) ? IPAddress.Loopback : IPAddress.TryParse(profile.ServerIP.Trim(), out IPAddress ipAddress) ? ipAddress : IPAddress.Loopback,
                 ServerPort = profile.ServerPort,
                 ServerPeerPort = profile.ServerPeerPort,

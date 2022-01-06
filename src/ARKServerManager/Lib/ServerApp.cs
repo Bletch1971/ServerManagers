@@ -2494,9 +2494,7 @@ namespace ServerManagerTool.Lib
             {
                 try
                 {
-                    var profile = ServerProfile.LoadFrom(profileFile);
-                    profile.DestroyServerFilesWatcher();
-                    profile.SaveLauncher();
+                    var profile = ServerProfile.LoadFromProfileFileBasic(profileFile, null);
                     profiles.Add(ServerProfileSnapshot.Create(profile), profile);
                 }
                 catch (Exception ex)
@@ -3064,7 +3062,8 @@ namespace ServerManagerTool.Lib
                                     ServerProcess = ServerProcess,
                                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                                 };
-                                profileExitCodes.TryAdd(profile, app.PerformProfileUpdate(branch, profile));
+                                app.PerformProfileUpdate(branch, profile);
+                                profileExitCodes.TryAdd(profile, app.ExitCode);
                             });
                         }
                         else
@@ -3084,7 +3083,8 @@ namespace ServerManagerTool.Lib
                                     ServerProcess = ServerProcess,
                                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                                 };
-                                profileExitCodes.TryAdd(profile, app.PerformProfileUpdate(branch, profile));
+                                app.PerformProfileUpdate(branch, profile);
+                                profileExitCodes.TryAdd(profile, app.ExitCode);
                             }
                         }
 
@@ -3149,9 +3149,10 @@ namespace ServerManagerTool.Lib
                 // load all the profiles, do this at the very start in case the user changes one or more while the process is running.
                 LoadProfiles();
 
+                var profiles = _profiles.Keys.Where(p => p.EnableAutoBackup);
                 var exitCodes = new ConcurrentDictionary<ServerProfileSnapshot, int>();
 
-                Parallel.ForEach(_profiles.Keys.Where(p => p.EnableAutoBackup), profile => {
+                Parallel.ForEach(profiles, profile => {
                     var app = new ServerApp
                     {
                         DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
@@ -3160,7 +3161,8 @@ namespace ServerManagerTool.Lib
                         SendEmails = true,
                         ServerProcess = ServerProcessType.AutoBackup
                     };
-                    exitCodes.TryAdd(profile, app.PerformProfileBackup(profile, CancellationToken.None));
+                    app.PerformProfileBackup(profile, CancellationToken.None);
+                    exitCodes.TryAdd(profile, app.ExitCode);
                 });
 
                 foreach (var profile in _profiles.Keys)

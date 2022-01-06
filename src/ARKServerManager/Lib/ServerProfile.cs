@@ -4007,8 +4007,12 @@ namespace ServerManagerTool.Lib
             if (profile.PlayerLevels.Count == 0)
             {
                 profile.ResetLevelProgressionToOfficial(LevelProgression.Player);
-                profile.ResetLevelProgressionToOfficial(LevelProgression.Dino);
                 profile.EnableLevelProgressions = false;
+            }
+            if (profile.DinoLevels.Count == 0)
+            {
+                profile.ResetLevelProgressionToOfficial(LevelProgression.Dino);
+                profile.EnableDinoLevelProgressions = false;
             }
 
             //
@@ -4065,41 +4069,10 @@ namespace ServerManagerTool.Lib
 
         public static ServerProfile LoadFromProfileFile(string file, ServerProfile profile)
         {
-            if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
+            profile = LoadFromProfileFileBasic(file, profile);
+
+            if (profile is null)
                 return null;
-
-            if (Path.GetExtension(file) != Config.Default.ProfileExtension)
-                return null;
-
-            profile = profile ?? new ServerProfile();
-
-            try
-            {
-                var settings = new JsonSerializerSettings();
-                settings.Converters.Add(new NullableValueConverter<int>());
-                settings.Converters.Add(new NullableValueConverter<float>());
-
-                profile = JsonUtils.DeserializeFromFile<ServerProfile>(file, settings);
-                if (profile == null)
-                    return null;
-            }
-            catch
-            {
-                // could not load the profile file, just exit
-                return null;
-            }
-
-            // check if profile id and filename match
-            var fileName = Path.GetFileNameWithoutExtension(file);
-            if (Guid.TryParse(fileName, out Guid fileId) && Guid.TryParse(profile.ProfileID, out Guid profileId))
-            {
-                // filename is a guid - check it against the profile id
-                if (!Guid.Equals(fileId, profileId))
-                {
-                    // id values are not in sync, change the profile id to be the same as the filename
-                    profile.ProfileID = fileId.ToString();
-                }
-            }
 
             profile.CheckLauncherArgs();
 
@@ -4109,20 +4082,12 @@ namespace ServerManagerTool.Lib
             if (profile.SOTF_Enabled)
                 Config.Default.SectionSOTFEnabled = true;
 
-            var configIniPath = Path.Combine(GetProfileServerConfigDir(profile), Config.Default.ServerGameUserSettingsConfigFile);
-            if (File.Exists(configIniPath))
-            {
-                profile = LoadFromINIFiles(configIniPath, profile);
-            }
-
             if (profile.PlayerLevels.Count == 0)
             {
                 profile.ResetLevelProgressionToOfficial(LevelProgression.Player);
-                profile.ResetLevelProgressionToOfficial(LevelProgression.Dino);
                 profile.EnableLevelProgressions = false;
-                profile.EnableDinoLevelProgressions = false;
             }
-            else if (profile.DinoLevels.Count == 0)
+            if (profile.DinoLevels.Count == 0)
             {
                 profile.ResetLevelProgressionToOfficial(LevelProgression.Dino);
                 profile.EnableDinoLevelProgressions = false;
@@ -4146,6 +4111,43 @@ namespace ServerManagerTool.Lib
 
             profile.LoadServerFiles(true, true, true);
             profile.SetupServerFilesWatcher();
+
+            profile._lastSaveLocation = file;
+            return profile;
+        }
+
+        public static ServerProfile LoadFromProfileFileBasic(string file, ServerProfile profile)
+        {
+            if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
+                return null;
+
+            if (Path.GetExtension(file) != Config.Default.ProfileExtension)
+                return null;
+
+            if (profile is null)
+                profile = new ServerProfile();
+
+            try
+            {
+                var settings = new JsonSerializerSettings();
+                settings.Converters.Add(new NullableValueConverter<int>());
+                settings.Converters.Add(new NullableValueConverter<float>());
+
+                profile = JsonUtils.DeserializeFromFile<ServerProfile>(file, settings);
+                if (profile == null)
+                    return null;
+            }
+            catch
+            {
+                // could not load the profile file, just exit
+                return null;
+            }
+
+            var configIniPath = Path.Combine(GetProfileServerConfigDir(profile), Config.Default.ServerGameUserSettingsConfigFile);
+            if (File.Exists(configIniPath))
+            {
+                profile = LoadFromINIFiles(configIniPath, profile);
+            }
 
             profile._lastSaveLocation = file;
             return profile;
