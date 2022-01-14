@@ -1085,6 +1085,11 @@ namespace ServerManagerTool.Lib
                 commandArgs.Append("start");
                 commandArgs.Append($" \"{this.ProfileName}\"");
 
+                if (Config.Default.ServerStartMinimized)
+                {
+                    commandArgs.Append($" /min");
+                }
+
                 commandArgs.Append($" /{ProcessPriority}");
                 if (ProcessAffinity > 0 && ProcessUtils.IsProcessorAffinityValid(ProcessAffinity))
                 {

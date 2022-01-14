@@ -277,6 +277,7 @@
 
                         <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_ValidateProfileOnServerStartLabel}" IsChecked="{Binding Config.ValidateProfileOnServerStart, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ValidateProfileOnServerStartTooltip}" HorizontalAlignment="Left"/>
                         <CheckBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,0,5" Content="{DynamicResource GlobalSettings_ServerUpdateOnServerStartLabel}" IsChecked="{Binding Config.ServerUpdate_OnServerStart, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ServerUpdateOnServerStartTooltip}" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="1" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_ServerStartMinimizedLabel}" IsChecked="{Binding Config.ServerStartMinimized, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ServerStartMinimizedTooltip}" HorizontalAlignment="Left"/>
                     </Grid>
                 </GroupBox>
 

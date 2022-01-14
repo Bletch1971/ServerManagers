@@ -2273,5 +2273,17 @@ namespace ServerManagerTool {
                 this["CheckIfServerManagerRunningOnStartup"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ServerStartMinimized {
+            get {
+                return ((bool)(this["ServerStartMinimized"]));
+            }
+            set {
+                this["ServerStartMinimized"] = value;
+            }
+        }
     }
 }

@@ -538,6 +538,8 @@
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">If enabled, when you manually start the server, a basic validation is performed on the server and mod files. NOTE: Will not be performed if Ark Mod Management enabled.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Perform server and mod update on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">If enabled, when you manually start the server, the server and mod files will be updated to the latest version. NOTE: Will not be performed if Ark Mod Management enabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Start Server Minimized</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">If enabled, when the server is started the command window will be minimized, otherwise it will open in normally.</sys:String>
 
     <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Settings</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>

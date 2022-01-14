@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:189B95FA-8ACA-4E37-9A34-443B6C5E27EE</id>
-    <title>1.1.61 (1.1.61.2)</title>
-    <summary>1.1.61.2</summary>
+    <title>1.1.61 (1.1.61.3)</title>
+    <summary>1.1.61.3</summary>
     <link href="" />
     <updated>2022-01-14T00:00:00Z</updated>
     <content type="xhtml">
@@ -19,7 +19,8 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Minor tweaks to the Auto-Update process to prevent intermittent exceptions.</li>
+            <li>Global Settings - Server Startup Options - Added new option to start the server windows minimzed.</li>
+            <li>Minor tweaks to the Auto-Update process to help prevent intermittent exceptions.</li>
             <li>Server manager language will default to the computers language setting on first start, if possible.</li>
           </ul>
         </p>
