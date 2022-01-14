@@ -1,3 +1,15 @@
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
 using ArkData;
 using NLog;
 using NLog.Config;
@@ -11,18 +23,6 @@ using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;
 using ServerManagerTool.Windows;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -329,8 +329,14 @@ namespace ServerManagerTool
             _globalizer = GlobalizedApplication.Instance;
             try
             {
-                if (!string.IsNullOrWhiteSpace(Config.Default.CultureName))
-                    _globalizer.GlobalizationManager.SwitchLanguage(Config.Default.CultureName, true);
+                var langCode = GlobalizationManager.FallBackLanguage;
+
+                if (string.IsNullOrWhiteSpace(Config.Default.DataDir))
+                    langCode = CultureInfo.CurrentCulture.Name;
+                else if (!string.IsNullOrWhiteSpace(Config.Default.CultureName))
+                    langCode = Config.Default.CultureName;
+
+                _globalizer.GlobalizationManager.SwitchLanguage(langCode, true);
             }
             catch (Exception ex)
             {

@@ -5,14 +5,14 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2021-12-23T00:00:00Z</updated>
+  <updated>2022-01-14T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:189B95FA-8ACA-4E37-9A34-443B6C5E27EE</id>
-    <title>1.1.61 (1.1.61.1)</title>
-    <summary>1.1.61.1</summary>
+    <title>1.1.61 (1.1.61.2)</title>
+    <summary>1.1.61.2</summary>
     <link href="" />
-    <updated>2022-01-05T00:00:00Z</updated>
+    <updated>2022-01-14T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Minor tweaks to the Auto-Update process to prevent intermittent exceptions.</li>
+            <li>Server manager language will default to the computers language setting on first start, if possible.</li>
           </ul>
         </p>
       </div>

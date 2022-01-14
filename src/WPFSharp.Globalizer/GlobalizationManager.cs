@@ -15,7 +15,7 @@ namespace WPFSharp.Globalizer
     {
         #region Members
 
-        internal const string FallBackLanguage = "en-US";
+        public const string FallBackLanguage = "en-US";
 
         #endregion
 
@@ -35,13 +35,13 @@ namespace WPFSharp.Globalizer
         /// </summary>
         public void SwitchLanguage(string inFiveCharLang, bool inForceSwitch = false)
         {
-            if (CultureInfo.CurrentCulture.Name.Equals(inFiveCharLang) && !inForceSwitch)
-                return;
-
             if (!AvailableLanguages.Instance.Contains(inFiveCharLang))
             {
-                throw new CultureNotFoundException(string.Format("The language {0} is not available.", inFiveCharLang));
+                inFiveCharLang = FallBackLanguage;
             }
+
+            if (CultureInfo.CurrentCulture.Name.Equals(inFiveCharLang) && !inForceSwitch)
+                return;
 
             // Set the new language
             var ci = new CultureInfo(inFiveCharLang);
