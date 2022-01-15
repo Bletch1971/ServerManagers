@@ -118,6 +118,8 @@
     <sys:String x:Key="ConfigProfileWindow_TestErrorTitle">Erreur du test de l'action</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestErrorLabel">Une erreur s'est produite lors de la tentative de test du profil de configuration.</sys:String>
     <sys:String x:Key="ConfigProfileWindow_TestEnabledErrorLabel">Le profil n'est pas activé et ne peut pas être testé.</sys:String>
+
+    <sys:String x:Key="ConfigProfileWindow_TestAlertMessage">Test '{0}' Type d'alerte Message pour le nom du profil '{1}'</sys:String>
     <!--#endregion-->
 
     <!--#region Version Feed Window -->

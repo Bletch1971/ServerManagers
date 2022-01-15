@@ -89,6 +89,15 @@
     <sys:String x:Key="WindowState_Maximized">Maximisé</sys:String>
     <!--#endregion-->
 
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Critique</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Erreur</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Avertissement</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Verbeux</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Déboguer</sys:String>
+    <!--#endregion-->
+
     <!--#region Application -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">Exécuter en tant qu'administrateur</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">Cette application nécessite des privilèges d'administrateur pour accéder à toutes les fonctionnalités. Souhaitez-vous exécuter en tant qu'administrateur?</sys:String>
@@ -127,6 +136,7 @@
     <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Téléchargement du serveur terminé</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Complete">Achevée</sys:String>
     <sys:String x:Key="AutoUpdater_Status_Cancelled">Annulé</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">échoué</sys:String>
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">Annuler</sys:String>
     <!--#endregion-->
 
@@ -479,6 +489,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Réinitialiser</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Cela réinitialisera TOUS les paramètres globaux de l'utilisateur pour le gestionnaire de serveur. Le gestionnaire de serveur sera fermé en cas de succès.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Exécuter en tant qu'administrateur au démarrage</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Vérifiez si le gestionnaire de serveur s'exécute au démarrage</sys:String>
     <sys:String x:Key="GlobalSettings_StartModeLabel">Mode de démarrage de la fenêtre principale:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Réduire dans la barre des tâches </sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gérer les paramètres du pare-feu automatiquement</sys:String>
@@ -557,6 +568,7 @@
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Intervalle de sauvegarde:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Fréquence d'exécution de la sauvegarde du serveur, en heures et minutes (hh:mm). Mettre à 00:00 pour désactiver.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Supprimer les anciennes sauvegardes</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Si activé, lorsque la sauvegarde automatique est exécuté, les anciens fichiers de sauvegarde seront supprimées. .</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Plus âgé que:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Quel âge doit avoir le fichier de sauvegarde à supprimer en jours.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">Message en jeux:</sys:String>
@@ -621,8 +633,17 @@
     <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">L'ID du serveur que le Bot discord écoutera.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefixe:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">Le préfixe qui doit être utilisé lors de l'envoi d'une commande via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Niveau du log:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Faire desToken...</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Aide...</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Permettez à tous les bots</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Si activé, le gestionnaire de serveur Bot répondra à tous les autres bots, sinon ils seront ignorés à moins qu'ils ne soient dans la liste blanche..</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Liste blanche Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">ID Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">L'ID du bot à la Liste blanche.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Ajouter Liste blanche</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Nettoyer Liste blanche</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Supprimer Liste blanche</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">Si activé, la commande de sauvegarde peut être envoyée du Discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">Si activé, la commande de redémarrage peut être envoyée du discord.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">Si activé, la commande d'arrêt peut être envoyée du discord.</sys:String>
@@ -672,6 +693,12 @@
     <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">S'il est activé, après que le serveur a été mis à jour à partir du cache, il effectuera une vérification du serveur à l'aide de steamcmd.</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Mettre à jour les autorisations de répertoire lors de l'enregistrement</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">S'il est activé, lors d'une sauvegarde, tous les dossiers sous le répertoire du serveur auront la vérification des autorisations et si nécessaire corrigés. AVERTISSEMENT: la désactivation peut empêcher votre serveur de fonctionner correctement.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Activer la journalisation </sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">Si activé, toutes les log seront activées.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Supprimer les logs après</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Quel âge les fichiers log doivent être supprimés en jours.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Nombre maximum de logs</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Le nombre maximum de fichiers log qui seront conservés.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirmer la réinitialisation des paramètres</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Cliquez sur "Oui" pour confirmer que vous voulez réinitialiser les paramètres.</sys:String>
@@ -773,12 +800,18 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Activer</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Activer la tâche planifiée de mise à jour automatique</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">Prochain temps d'exécution:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Bot Discord:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Démarrer</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Démarrer le bot discord</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Arrêter</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Arrêter le bot discord</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Inconnu</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Désactivé</sys:String>
     <sys:String x:Key="MainWindow_TaskStateQueuedLabel">En file d'attente</sys:String>
     <sys:String x:Key="MainWindow_TaskStateReadyLabel">Prêt</sys:String>
     <sys:String x:Key="MainWindow_TaskStateRunningLabel">En fonction</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Arrêté</sys:String>
 
     <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Le profil n'a pas pu être chargé</sys:String>
     <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">Le profil sur {0} n'a pas pu être chargé. L'erreur était: {1}\r\n{2}</sys:String>
@@ -823,6 +856,7 @@
     <sys:String x:Key="SliderUnits_Hours">Heures</sys:String>
     <sys:String x:Key="SliderUnits_Days">Jours</sys:String>
     <sys:String x:Key="SliderUnits_Dinos">dinos</sys:String>
+    <sys:String x:Key="SliderUnits_Files">Fichiers</sys:String>
     <sys:String x:Key="SliderUnits_Items">Articles</sys:String>
     <sys:String x:Key="SliderUnits_XP">XP</sys:String>
     <sys:String x:Key="SliderUnits_Players">Joueurs</sys:String>
@@ -1207,6 +1241,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotLabel">Détail du bot Discord</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Id DU canal:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">L'ID du canal de Discord Server que ce profil écoutera.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Nom unique pour identifier votre serveur lors de l'utilisation des commandes Discord, peut être utilisé à la place de l'ID de profil.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Autoriser la sauvegarde</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Si activé, le profil écoutera les commandes de sauvegarde de discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Autoriser le redémarrage</sys:String>
@@ -5589,6 +5625,7 @@
     <!--#region Discord Bot -->
     <sys:String x:Key="DiscordBot_ErrorTitle">Erreur Bot Discord Bot</sys:String>
     <sys:String x:Key="DiscordBot_MissingTokenError">Le bot de la discussion nécessite un Token valide afin qu'il puisse se connecter au serveur de discord\r\nthis peut être défini dans les paramètres globaux..</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">Le bot de la discorde nécessite un préfixe valide.\R\n Ceci peut être défini dans les paramètres globaux.</sys:String>
     <sys:String x:Key="DiscordBot_InvalidPrefixError">Le préfixe du Bot discord contient des caractères non valides. Seules les lettres et les chiffres sont autorisés.</sys:String>
 
     <sys:String x:Key="DiscordBot_CommandNotEnabled">Commande '{0}' n'a pas été activée.</sys:String>
@@ -5599,6 +5636,7 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' commande nécessite un ID du profil.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' n'a pas été trouvé ou n'est pas associé au canal.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">Plusieurs profils avec '{0}' ont été trouvés dans le canal, commande avorté.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' est dans un état '{1}' qui ne peut pas exécuter cette commande.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' est actuellement mis à jour.</sys:String>
 

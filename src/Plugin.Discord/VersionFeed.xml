@@ -5,7 +5,30 @@
   <title>Discord Plugin Version Feed</title>
   <subtitle>This is the Discord Plugin release version feed.</subtitle>
   <link href="" />
-  <updated>2021-12-20T00:00:00Z</updated>
+  <updated>2022-01-15T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:91438110-415C-4B88-9637-DB107AEE4546</id>
+    <title>1.0.21 (1.0.21.1)</title>
+    <summary>1.0.21.1</summary>
+    <link href="" />
+    <updated>2022-01-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:F8987FDF-7A69-4E03-99D8-E04ADFFFF0BB</id>
