@@ -4993,7 +4993,7 @@ namespace ServerManagerTool.Lib
             var csvMapper = new CsvDinoLevelMapping();
             var csvParser = new CsvParser<ImportLevel>(csvParserOptions, csvMapper);
 
-            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII);
+            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII).ToList();
             if (result.Any(r => !r.IsValid))
             {
                 var error = result.First(r => r.Error != null);
@@ -5020,7 +5020,7 @@ namespace ServerManagerTool.Lib
             var csvMapper = new CsvPlayerLevelMapping();
             var csvParser = new CsvParser<ImportLevel>(csvParserOptions, csvMapper);
 
-            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII);
+            var result = csvParser.ReadFromFile(fileName, Encoding.ASCII).ToList();
             if (result.Any(r => !r.IsValid))
             {
                 var error = result.First(r => r.Error != null);

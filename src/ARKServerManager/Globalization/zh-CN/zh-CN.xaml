@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2021.12.30(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2022.01.19(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -540,6 +540,8 @@
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">如果启用，当您手动启动服务器时，在服务器和MOD文件上执行基本的验证。注意：如果打开方舟MOD自动管理，将不会执行.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">在服务器启动执行服务器和MOD更新</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">如果启用，当您手动启动服务器时，服务器和mod文件将更新为最新版本。 注意：如果启用了方舟MOD自动管理，将不会执行。</sys:String>
+	<sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">启动服务器最小化</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">如果启用，当服务器启动时，命令窗口将最小化，否则将正常打开.</sys:String>
 
     <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam设定</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">停止SteamCMD关闭（仅用于调试）</sys:String>
@@ -1606,8 +1608,8 @@
     <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">如果启用，允许生物在洞穴内飞行.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">允许飞行耐力恢复</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">如果启用，将允许玩家站在飞行单位上恢复耐力。</sys:String>
-	<sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">允许加点飞行速度</sys:String>
-    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">如果启用，允许加点飞行速度.</sys:String>
+	<sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">允许飞行龙加点</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">如果启用，允许飞行龙加点.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">防止恐龙交配</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">如果启用，恐龙交配将被禁用。</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">禁用带爆炸物的飞行物强制地面</sys:String>

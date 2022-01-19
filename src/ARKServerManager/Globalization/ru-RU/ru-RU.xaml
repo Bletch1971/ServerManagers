@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">17.12.2021 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">15.01.2022 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -489,6 +489,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Сброс</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Это приведет к сбросу всех глобальных параметров пользователя в диспетчере сервера. Менеджер сервера будет закрыт, если сброс будет успешным.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Запускать программу в режиме Администратора</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Проверить, работает ли ASM при запуске</sys:String>
     <sys:String x:Key="GlobalSettings_StartModeLabel">Режим запуска Главного окна:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Свернуть в трей</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Управление параметрами брандмауэра автоматически</sys:String>
@@ -521,13 +522,13 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Вкл SotF</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Если включено, Survival Of The Fittest появится в настройках ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">ПРЕДУПРЕЖДЕНИЕ: Если любой из этих параметров отключен, ASM не будет читать или записывать связанные с этип параметры переопределения. Повторное включение любого из этих параметров приведет к удалению всех существующих связанных переопределений в файле конфигурации.</sys:String>
-
+   
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Настройки активных иконок статуса сервера</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Вкл активную иконку</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">Если включено, при нажатии на иконку активности сервера, можно вызвать функцию включения или выключения.</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Показать подтверждения действий</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">Если включено, будет показан диалог подтверждения действия статуса сервера.</sys:String>
-
+   
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Настройки запуска сервера</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Увеличение уровня игрока:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">Количество XP будет увеличено при добавлении нового настраиваемого уровня.</sys:String>
@@ -537,6 +538,8 @@
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Если включено, при ручном запуске сервера выполняется базовая проверка сервера и файлов модов. ПРИМЕЧАНИЕ: Не будет выполнено, если включено авто-управление Ark Mod Management (автоматическое управление модами).</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Выполнение обновления сервера и модов при запуске сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Если включено, при ручном запуске сервера файлы сервера и мод будут обновлены до последней версии. ПРИМЕЧАНИЕ: Не будет выполнено, если включено управление Ark Mod Management(Автоматическое управление Модами).</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Сворачивать сервер при запуске</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">Если включено, то при запуске сервера командное окно будет свернуто, в противном случае оно откроется в обычном режиме.</sys:String>
 
     <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Настройки</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Остановить и закрыть SteamCMD (используйте только для отладки)</sys:String>
@@ -1186,14 +1189,14 @@
     <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Указывает URL-адрес, в котором хранится ваш скрипт прослушивания, ожидающий и готовый к отправке информации о вашем сервере.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmNote">ПРИМЕЧАНИЕ: ASM не предоставляет функциональность Web Alarms. ASM позволяет вам включать/отключать Web Alarms и создавать необходимые файлы AlarmPostCredentials.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Web оповещение об ошибке</sys:String>
-    
+
     <sys:String x:Key="ServerSettings_BranchLabel">Детали веток</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Имя веток:</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameTooltip">Имя загружаемой ветви (оставьте пустым для использования стандартной ветви выпуска).</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordLabel">Пароль ветки:</sys:String>
     <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Пароль, используемый для доступа к загрузке ветви.</sys:String>
     <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
-    
+
     <sys:String x:Key="ServerSettings_EventLabel">Event детали</sys:String>
     <sys:String x:Key="ServerSettings_EventNote">ПРИМЕЧАНИЕ: Включение события на вашем сервере должно выполняться только во время официального события. Если вы включите событие до или после официальных дат, событие может привести к нестабильной работе вашего сервера или вообще не работать.</sys:String>
     <sys:String x:Key="ServerSettings_EventNameLabel">Активный Event:</sys:String>
