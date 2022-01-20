@@ -3507,7 +3507,7 @@ namespace ServerManagerTool
                 if (string.IsNullOrWhiteSpace(dinoSetting.ReplacementClass))
                     continue;
 
-                if (!newList.Any(s => s.ValueMember.Equals(dinoSetting.ReplacementClass, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(s => s.ValueMember.Equals(dinoSetting.ReplacementClass)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3524,7 +3524,7 @@ namespace ServerManagerTool
                     if (string.IsNullOrWhiteSpace(spawnEntry.NPCClassString))
                         continue;
 
-                    if (!newList.Any(s => s.ValueMember.Equals(spawnEntry.NPCClassString, StringComparison.OrdinalIgnoreCase)))
+                    if (!newList.Any(s => s.ValueMember.Equals(spawnEntry.NPCClassString)))
                     {
                         newList.Add(new Common.Model.ComboBoxItem
                         {
@@ -3540,7 +3540,7 @@ namespace ServerManagerTool
                 if (string.IsNullOrWhiteSpace(preventTransfer.DinoClassString))
                     continue;
 
-                if (!newList.Any(s => s.ValueMember.Equals(preventTransfer.DinoClassString, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(s => s.ValueMember.Equals(preventTransfer.DinoClassString)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3586,7 +3586,7 @@ namespace ServerManagerTool
                 if (string.IsNullOrWhiteSpace(spawnSetting.NPCSpawnEntriesContainerClassString))
                     continue;
 
-                if (!newList.Any(s => s.ValueMember.Equals(spawnSetting.NPCSpawnEntriesContainerClassString, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(s => s.ValueMember.Equals(spawnSetting.NPCSpawnEntriesContainerClassString)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3628,7 +3628,7 @@ namespace ServerManagerTool
                 if (string.IsNullOrWhiteSpace(craftingItem.ItemClassString))
                     continue;
 
-                if (!newList.Any(s => s.ValueMember.Equals(craftingItem.ItemClassString, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(s => s.ValueMember.Equals(craftingItem.ItemClassString)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3642,7 +3642,7 @@ namespace ServerManagerTool
                     if (string.IsNullOrWhiteSpace(craftingResource.ResourceItemTypeString))
                         continue;
 
-                    if (!newList.Any(s => s.ValueMember.Equals(craftingResource.ResourceItemTypeString, StringComparison.OrdinalIgnoreCase)))
+                    if (!newList.Any(s => s.ValueMember.Equals(craftingResource.ResourceItemTypeString)))
                     {
                         newList.Add(new Common.Model.ComboBoxItem
                         {
@@ -3664,7 +3664,7 @@ namespace ServerManagerTool
                             if (string.IsNullOrWhiteSpace(itemClass.ItemClassString))
                                 continue;
 
-                            if (!newList.Any(s => s.ValueMember.Equals(itemClass.ItemClassString, StringComparison.OrdinalIgnoreCase)))
+                            if (!newList.Any(s => s.ValueMember.Equals(itemClass.ItemClassString)))
                             {
                                 newList.Add(new Common.Model.ComboBoxItem
                                 {
@@ -3682,7 +3682,7 @@ namespace ServerManagerTool
                 if (string.IsNullOrWhiteSpace(stackSize.ItemClassString))
                     continue;
 
-                if (!newList.Any(s => s.ValueMember.Equals(stackSize.ItemClassString, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(s => s.ValueMember.Equals(stackSize.ItemClassString)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3727,7 +3727,7 @@ namespace ServerManagerTool
 
             foreach (var supplyCrate in this.Settings.ConfigOverrideSupplyCrateItems)
             {
-                if (!newList.Any(s => s.ValueMember.Equals(supplyCrate.SupplyCrateClassString, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(s => s.ValueMember.Equals(supplyCrate.SupplyCrateClassString)))
                 {
                     if (string.IsNullOrWhiteSpace(supplyCrate.SupplyCrateClassString))
                         continue;
@@ -3775,7 +3775,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.ServerMap))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.ServerMap, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.ServerMap)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3812,7 +3812,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.TotalConversionModId))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.TotalConversionModId, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.TotalConversionModId)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3849,7 +3849,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.BranchName))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.BranchName, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.BranchName)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -3886,7 +3886,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.EventName))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.EventName, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.EventName)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {

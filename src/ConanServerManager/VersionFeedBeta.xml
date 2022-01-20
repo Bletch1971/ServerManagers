@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-01-14T00:00:00Z</updated>
+  <updated>2022-01-20T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:1BA6E671-7784-48FF-B463-D0962084277B</id>
+    <title>1.1.61 (1.1.61.4)</title>
+    <summary>1.1.61.4</summary>
+    <link href="" />
+    <updated>2022-01-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug when pasting ini config into paste window, resulting in blank record.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:BF3FA549-5DC9-4576-B225-6D8519ED3B98</id>

@@ -9,13 +9,18 @@
 
   <entry>
     <id>urn:uuid:189B95FA-8ACA-4E37-9A34-443B6C5E27EE</id>
-    <title>1.1.61 (1.1.61.3)</title>
-    <summary>1.1.61.3</summary>
+    <title>1.1.61 (1.1.61.4)</title>
+    <summary>1.1.61.4</summary>
     <link href="" />
-    <updated>2022-01-14T00:00:00Z</updated>
+    <updated>2022-01-20T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug when pasting ini config into paste window, resulting in blank record.</li>
+          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>

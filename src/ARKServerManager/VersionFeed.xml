@@ -5,14 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-01-19T00:00:00Z</updated>
+  <updated>2022-01-20T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:9B66118D-DDFE-4E72-9CB9-299642AD29FF</id>
-    <title>1.1.416 (1.1.416.5)</title>
-    <summary>1.1.416.5</summary>
+    <title>1.1.416 (1.1.416.6)</title>
+    <summary>1.1.416.6</summary>
     <link href="" />
-    <updated>2022-01-19T00:00:00Z</updated>
+    <updated>2022-01-20T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Fixed player and dino level import bug.</li>
+            <li>Fixed bug when pasting ini config into paste window, resulting in blank record.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>

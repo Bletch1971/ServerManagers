@@ -1212,7 +1212,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.ServerMap))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.ServerMap, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.ServerMap)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -1240,7 +1240,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.BranchName))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.BranchName, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.BranchName)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
@@ -1283,7 +1283,7 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(this.Settings.ServerRegion))
             {
-                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.ServerRegion, StringComparison.OrdinalIgnoreCase)))
+                if (!newList.Any(m => m.ValueMember.Equals(this.Settings.ServerRegion)))
                 {
                     newList.Add(new Common.Model.ComboBoxItem
                     {
