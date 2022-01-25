@@ -1366,6 +1366,7 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                             <RowDefinition/>
+                                            <RowDefinition/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" MinWidth="100"/>
@@ -1384,11 +1385,13 @@
 
                                         <Label      Grid.Row="1" Grid.Column="0" Content="{DynamicResource ServerSettings_LauncherArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_LauncherArgsTooltip}"/>
                                         <TextBox    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding LauncherArgs}" VerticalContentAlignment="Center" ToolTip="{DynamicResource ServerSettings_LauncherArgsTooltip}"/>
-                                        <CheckBox   Grid.Row="1" Grid.Column="4" Margin="5,0,0,0" IsChecked="{Binding LauncherArgsOverride}" Content="{DynamicResource ServerSettings_LauncherArgsOverrideLabel}" ToolTip="{DynamicResource ServerSettings_LauncherArgsOverrideTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                        
+                                        <CheckBox   Grid.Row="2" Grid.Column="1" Margin="1" IsChecked="{Binding LauncherArgsOverride}" Content="{DynamicResource ServerSettings_LauncherArgsOverrideLabel}" ToolTip="{DynamicResource ServerSettings_LauncherArgsOverrideTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                        <CheckBox   Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="1" IsChecked="{Binding LauncherArgsPrefix}" IsEnabled="{Binding LauncherArgsOverride, Converter={StaticResource InvertBooleanConverter}}" Content="{DynamicResource ServerSettings_LauncherArgsPrefixLabel}" ToolTip="{DynamicResource ServerSettings_LauncherArgsPrefixTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                                        <Label      Grid.Row="2" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}"/>
-                                        <TextBox    Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding AdditionalArgs}" VerticalContentAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}"/>
-                                        <Button     Grid.Row="2" Grid.Column="4" Margin="1" Content="{StaticResource ShowCmdButtonContent}" ToolTip="{DynamicResource ServerSettings_ShowCommandButtonTooltip}" Click="ShowCmd_Click"/>
+                                        <Label      Grid.Row="3" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}"/>
+                                        <TextBox    Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding AdditionalArgs}" VerticalContentAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}"/>
+                                        <Button     Grid.Row="3" Grid.Column="4" Margin="1" Content="{StaticResource ShowCmdButtonContent}" ToolTip="{DynamicResource ServerSettings_ShowCommandButtonTooltip}" Click="ShowCmd_Click"/>
                                     </Grid>
                                 </GroupBox>
                             </Grid>

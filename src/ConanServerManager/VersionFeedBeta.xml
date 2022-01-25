@@ -5,90 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-01-20T00:00:00Z</updated>
+  <updated>2022-01-25T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:1BA6E671-7784-48FF-B463-D0962084277B</id>
-    <title>1.1.61 (1.1.61.4)</title>
-    <summary>1.1.61.4</summary>
+    <id>urn:uuid:6F91598E-D62C-4F48-A205-C9C4A66BBB65</id>
+    <title>1.1.62 (1.1.62.1)</title>
+    <summary>1.1.62.1</summary>
     <link href="" />
-    <updated>2022-01-20T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed bug when pasting ini config into paste window, resulting in blank record.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:BF3FA549-5DC9-4576-B225-6D8519ED3B98</id>
-    <title>1.1.61 (1.1.61.3)</title>
-    <summary>1.1.61.3</summary>
-    <link href="" />
-    <updated>2022-01-14T00:00:00Z</updated>
+    <updated>2022-01-25T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings - Server Startup Options - Added new option to start the server windows minimzed.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:16704347-28FE-41BD-9913-465982E6C3C3</id>
-    <title>1.1.61 (1.1.61.2)</title>
-    <summary>1.1.61.2</summary>
-    <link href="" />
-    <updated>2022-01-14T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server manager language will default to the computers language setting on first start, if possible.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:189B95FA-8ACA-4E37-9A34-443B6C5E27EE</id>
-    <title>1.1.61 (1.1.61.1)</title>
-    <summary>1.1.61.1</summary>
-    <link href="" />
-    <updated>2022-01-05T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Minor tweaks to the Auto-Update process to help prevent intermittent exceptions.</li>
+            <li>Added prefix launcher option to launcher arguments.</li>
           </ul>
         </p>
       </div>

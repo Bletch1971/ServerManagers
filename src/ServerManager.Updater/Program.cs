@@ -56,6 +56,10 @@ namespace ServerManagerTool.Updater
             }
             catch (Exception ex)
             {
+                if (ex.InnerException != null)
+                {
+                    OutputError(ex.InnerException.Message, null);
+                }
                 OutputError(ex.Message, ex.StackTrace);
                 Environment.ExitCode = 1;
 
@@ -92,6 +96,10 @@ namespace ServerManagerTool.Updater
         private static void OutputError(string error, string stackTrace)
         {
             Console.WriteLine($"ERROR: {error}");
+#if DEBUG
+            if (!string.IsNullOrWhiteSpace(stackTrace))
+                Console.WriteLine(stackTrace);
+#endif
         }
 
         private static void OutputMessage(string message)

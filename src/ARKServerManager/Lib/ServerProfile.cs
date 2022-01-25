@@ -828,6 +828,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(AdditionalArgsProperty, value); }
         }
 
+        public static readonly DependencyProperty LauncherArgsProperty = DependencyProperty.Register(nameof(LauncherArgs), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string LauncherArgs
+        {
+            get { return (string)GetValue(LauncherArgsProperty); }
+            set { SetValue(LauncherArgsProperty, value); }
+        }
+
         public static readonly DependencyProperty LauncherArgsOverrideProperty = DependencyProperty.Register(nameof(LauncherArgsOverride), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [DataMember]
         public bool LauncherArgsOverride
@@ -836,12 +844,12 @@ namespace ServerManagerTool.Lib
             set { SetValue(LauncherArgsOverrideProperty, value); }
         }
 
-        public static readonly DependencyProperty LauncherArgsProperty = DependencyProperty.Register(nameof(LauncherArgs), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        public static readonly DependencyProperty LauncherArgsPrefixProperty = DependencyProperty.Register(nameof(LauncherArgsPrefix), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [DataMember]
-        public string LauncherArgs
+        public bool LauncherArgsPrefix
         {
-            get { return (string)GetValue(LauncherArgsProperty); }
-            set { SetValue(LauncherArgsProperty, value); }
+            get { return (bool)GetValue(LauncherArgsPrefixProperty); }
+            set { SetValue(LauncherArgsPrefixProperty, value); }
         }
         #endregion
 
@@ -3488,7 +3496,7 @@ namespace ServerManagerTool.Lib
         private void CheckLauncherArgs()
         {
             // do not process if overriding the launcher args
-            if (this.LauncherArgsOverride)
+            if (this.LauncherArgsOverride || this.LauncherArgsPrefix)
                 return;
 
             var launcherArgs = LauncherArgs?.ToLower() ?? string.Empty;
@@ -4357,6 +4365,11 @@ namespace ServerManagerTool.Lib
             }
             else
             {
+                if (this.LauncherArgsPrefix && !string.IsNullOrWhiteSpace(this.LauncherArgs))
+                {
+                    commandArgs.AppendLine(this.LauncherArgs);
+                }
+
                 commandArgs.Append("start");
                 commandArgs.Append($" \"{this.ProfileName}\"");
 
