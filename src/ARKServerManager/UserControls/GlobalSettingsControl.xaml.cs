@@ -48,7 +48,8 @@ namespace ServerManagerTool
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
 
-            PopulateWindowsStatesComboBox();
+            PopulateWindowsStatesMainWindowComboBox();
+            PopulateWindowsStatesServerMonitorWindowComboBox();
             PopulateDiscordBotLogLevelsComboBox();
 
             DiscordBotWhitelist = new List<DiscordBotWhitelistItem>();
@@ -402,7 +403,8 @@ namespace ServerManagerTool
         {
             Config.CultureName = AvailableLanguages.Instance.SelectedLanguage;
 
-            PopulateWindowsStatesComboBox();
+            PopulateWindowsStatesMainWindowComboBox();
+            PopulateWindowsStatesServerMonitorWindowComboBox();
 
             App.Instance.OnResourceDictionaryChanged(Config.CultureName);
         }
@@ -489,9 +491,9 @@ namespace ServerManagerTool
             }
         }
 
-        private void PopulateWindowsStatesComboBox()
+        private void PopulateWindowsStatesMainWindowComboBox()
         {
-            var selectedValue = this.WindowStateComboBox?.SelectedValue ?? Config.MainWindow_WindowState;
+            var selectedValue = this.WindowStateMainWindowComboBox?.SelectedValue ?? Config.MainWindow_WindowState;
             var comboBoxList = new ComboBoxItemList();
 
             foreach (WindowState windowState in Enum.GetValues(typeof(WindowState)))
@@ -501,9 +503,27 @@ namespace ServerManagerTool
             }
 
             this.WindowStates = comboBoxList;
-            if (this.WindowStateComboBox != null)
+            if (this.WindowStateMainWindowComboBox != null)
             {
-                this.WindowStateComboBox.SelectedValue = selectedValue;
+                this.WindowStateMainWindowComboBox.SelectedValue = selectedValue;
+            }
+        }
+
+        private void PopulateWindowsStatesServerMonitorWindowComboBox()
+        {
+            var selectedValue = this.WindowStateServerMonitorComboBox?.SelectedValue ?? Config.ServerMonitorWindow_WindowState;
+            var comboBoxList = new ComboBoxItemList();
+
+            foreach (WindowState windowState in Enum.GetValues(typeof(WindowState)))
+            {
+                var displayMember = _globalizer.GetResourceString($"WindowState_{windowState}") ?? windowState.ToString();
+                comboBoxList.Add(new Common.Model.ComboBoxItem(windowState.ToString(), displayMember));
+            }
+
+            this.WindowStates = comboBoxList;
+            if (this.WindowStateServerMonitorComboBox != null)
+            {
+                this.WindowStateServerMonitorComboBox.SelectedValue = selectedValue;
             }
         }
 

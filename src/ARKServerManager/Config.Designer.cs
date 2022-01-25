@@ -3102,5 +3102,17 @@ namespace ServerManagerTool {
                 this["ServerStartMinimized"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.WindowState ServerMonitorWindow_WindowState {
+            get {
+                return ((global::System.Windows.WindowState)(this["ServerMonitorWindow_WindowState"]));
+            }
+            set {
+                this["ServerMonitorWindow_WindowState"] = value;
+            }
+        }
     }
 }

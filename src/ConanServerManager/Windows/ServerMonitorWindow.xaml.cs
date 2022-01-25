@@ -57,6 +57,7 @@ namespace ServerManagerTool.Windows
             this.Top = Config.Default.ServerMonitorWindow_Top;
             this.Height = Config.Default.ServerMonitorWindow_Height;
             this.Width = Config.Default.ServerMonitorWindow_Width;
+            this.WindowState = Config.Default.ServerMonitorWindow_WindowState;
 
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
