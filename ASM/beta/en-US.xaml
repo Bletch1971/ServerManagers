@@ -491,6 +491,7 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
     <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Check if Server Manager Running on Startup</sys:String>
     <sys:String x:Key="GlobalSettings_StartModeLabel">Main Window Start Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeServerMonitorLabel">Server Monitor Window Start Mode:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Manage Public IP automatically</sys:String>
@@ -1213,6 +1214,8 @@
     <sys:String x:Key="ServerSettings_LauncherArgsTooltip">Additional command-line args for the server launcher. Use this with caution! For more information search 'Microsoft Start Command' on the internet.</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideLabel">Override Launcher</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideTooltip">If enabled, the RunServer.cmd file will only contain what is included in the Launcher Args field.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">Prefix Launcher</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixTooltip">If enabled, the RunServer.cmd file will include the Launcher Args field before the server start (will allow other files to be executed before the server is started).</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsLabel">Server Args:</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsTooltip">Additional command-line args for the server. If you specify this, add the args which start with ?'s first, followed by any other args.  For example: ?MaxPlayers=5?QueryPort=9999 -nosteamclient</sys:String>
     <sys:String x:Key="ServerSettings_ShowCommandButtonLabel">Show Command...</sys:String>
