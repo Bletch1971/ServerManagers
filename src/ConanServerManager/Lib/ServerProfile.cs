@@ -1088,7 +1088,7 @@ namespace ServerManagerTool.Lib
             {
                 if (this.LauncherArgsPrefix && !string.IsNullOrWhiteSpace(this.LauncherArgs))
                 {
-                    commandArgs.AppendLine(this.LauncherArgs);
+                    commandArgs.AppendLine(this.LauncherArgs.Trim());
                 }
 
                 commandArgs.Append("start");
@@ -1105,7 +1105,7 @@ namespace ServerManagerTool.Lib
                     commandArgs.Append($" /affinity {ProcessAffinity:X}");
                 }
 
-                if (!string.IsNullOrWhiteSpace(this.LauncherArgs))
+                if (!this.LauncherArgsPrefix && !string.IsNullOrWhiteSpace(this.LauncherArgs))
                 {
                     commandArgs.Append($" {this.LauncherArgs.Trim()}");
                 }
