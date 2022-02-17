@@ -5,14 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-01-25T00:00:00Z</updated>
+  <updated>2022-02-17T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:65FE9F13-6403-4A18-A8DB-366564B0456E</id>
-    <title>1.1.417 (1.1.417.2)</title>
-    <summary>1.1.417.2</summary>
+    <title>1.1.417 (1.1.417.3)</title>
+    <summary>1.1.417.3</summary>
     <link href="" />
-    <updated>2022-01-25T00:00:00Z</updated>
+    <updated>2022-02-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -21,6 +21,7 @@
           <ul>
             <li>Added prefix launcher option to launcher arguments.</li>
             <li>Added server monitor window startup state to global settings.</li>
+            <li>Added confirmation message box when stopping server.</li>
           </ul>
         </p>
       </div>
