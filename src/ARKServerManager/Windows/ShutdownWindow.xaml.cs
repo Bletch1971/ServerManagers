@@ -158,6 +158,10 @@ namespace ServerManagerTool
             if (ShutdownStarted)
                 return;
 
+            var result = MessageBox.Show(_globalizer.GetResourceString("ServerSettings_StartServer_StartingLabel"), _globalizer.GetResourceString("ServerSettings_StartServer_StartingTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.No)
+                return;
+
             try
             {
                 ShutdownType = 2;

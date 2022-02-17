@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">15.01.2022 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">27.01.2022 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -491,6 +491,7 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Запускать программу в режиме Администратора</sys:String>
     <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Проверить, работает ли ASM при запуске</sys:String>
     <sys:String x:Key="GlobalSettings_StartModeLabel">Режим запуска Главного окна:</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeServerMonitorLabel">Режим запуска окна Монитора сервера:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Свернуть в трей</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Управление параметрами брандмауэра автоматически</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Автоматическое управление общедоступным IP-адресом</sys:String>
@@ -1213,6 +1214,8 @@
     <sys:String x:Key="ServerSettings_LauncherArgsTooltip">Дополнительные аргументы командной строки для серверной пусковой установки. Используйте это с осторожностью! Для получения дополнительной информации найдите «Microsoft Start Command» в Интернете.</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideLabel">Использовать Launcher</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideTooltip">Если включено, файл RunServer.cmd будет содержать только то, что включено в поле Launcher Args.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">Префикс запуска</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixTooltip">Если включено, файл RunServer.cmd будет включать поле Аргументы запуска перед запуском сервера (позволит запускать другие файлы до запуска сервера).</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsLabel">Server Args:</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsTooltip">Дополнительные параметры командной строки для сервера. Если вы укажете это, добавьте аргументы, начинающиеся с "?" сначала, а затем любые другие аргументы. Например: ?MaxPlayers=5?QueryPort=9999 -nosteamclient</sys:String>
     <sys:String x:Key="ServerSettings_ShowCommandButtonLabel">Показать команды...</sys:String>

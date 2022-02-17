@@ -1009,8 +1009,8 @@
     <sys:String x:Key="ServerSettings_UpgradeServer_FailedTitle">Server Update Error</sys:String>
     <sys:String x:Key="ServerSettings_UpgradeServer_MutexFailedLabel">Could not lock the server, another process is using the server. Update process was cancelled.</sys:String>
     <sys:String x:Key="ServerSettings_StartServer_StartingTitle">Stop the server?</sys:String>
-    <sys:String x:Key="ServerSettings_StartServer_StartingLabel">This will shut down the server. Do you wish to proceed?</sys:String>
-    <sys:String x:Key="ServerSettings_StartServer_RunningTitle">Stop the server?</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_StartingLabel">This will stop the server. Do you wish to proceed?</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_RunningTitle">Shutdown the server?</sys:String>
     <sys:String x:Key="ServerSettings_StartServer_RunningLabel">This will shut down the server. Do you wish to proceed?\r\n\r\nClick Yes to shutdown with a timer.\r\nClick No to shutdown now.\r\nClick Cancel to cancel shutdown.</sys:String>
     <sys:String x:Key="ServerSettings_StartServer_FailedTitle">Starting Server Error</sys:String>
     <sys:String x:Key="ServerSettings_StartServer_MutexFailedLabel">Could not lock the server, another process is using the server. Server start was cancelled.</sys:String>

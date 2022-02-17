@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2022.01.19(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2022.01.25(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -493,6 +493,7 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">启用作为启动管理员提示符下运行</sys:String>
 	<sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">检查服务器管理器是否在启动时运行</sys:String>
 	<sys:String x:Key="GlobalSettings_StartModeLabel">窗口启动模式:</sys:String>
+	<sys:String x:Key="GlobalSettings_StartModeServerMonitorLabel">服务器监视器窗口启动模式:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">最小化到托盘</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">自动管理防火墙设置</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">自动管理公共IP</sys:String>
@@ -516,8 +517,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerLabel">启用地图刷新设置</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">如果启用，地图刷新设置将由方舟服务器管理器进行管理。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">启用光柱/补给箱/战利品设置</sys:String>
-	<sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">启用禁止恐龙传输覆盖</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">如果启用，禁止传输覆盖将由服务器管理器管理.</sys:String>
+	<sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">启用禁止恐龙传服设置</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">如果启用，禁止传服设置将由服务器管理器管理.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">如果启用，补给箱设置将由方舟服务器管理器进行管理。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">启用程序生成方舟设置</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMTooltip">如果启用，程序生成方舟设置将由方舟服务器管理器进行管理。</sys:String>
@@ -2401,21 +2402,21 @@
 
     <!--#endregion-->
 
-    <!--#region 服务器设置-禁止传输覆盖 -->
-    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">禁止恐龙传输覆盖</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">禁止传输</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">禁止传输覆盖设置</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">注意:如果您想手动或使用另一个应用程序管理您的覆盖，您可以禁用该选项，该选项将阻止服务器管理器管理覆盖。查看全局设置中的“自定义覆盖选项”.</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">警告:将恐龙添加到这个列表将阻止它们被传输到服务器或从服务器.</sys:String>
+    <!--#region 服务器设置-禁止传服设置 -->
+    <sys:String x:Key="ServerSettings_PreventTransferOverridesLabel">禁止恐龙传服设置</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ItemsLabel">禁止传服</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveTitle">禁止传服设置</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_DisableLabel">注意:如果您想手动或使用另一个应用程序管理您的设置，您可以禁用该选项，该选项将阻止服务器管理器管理设置。查看全局设置中的“自定义设置选项”.</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_WarningLabel">警告:将恐龙添加到这个列表将阻止它们被传服到服务器或从服务器.</sys:String>
 
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnLabel">恐龙</sys:String>
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_DinoClassColumnTooltip">恐龙类的目录</sys:String>
 
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">添加禁止传输</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">删除所有禁止传输</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">粘贴禁止传输数据</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">删除禁止传输</sys:String>
-    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">保存禁止传输数据</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_AddItemTooltip">添加禁止传服</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_ClearItemsTooltip">删除所有禁止传服</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_PasteItemsTooltip">粘贴禁止传服数据</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_RemoveItemTooltip">删除禁止传服</sys:String>
+    <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">保存禁止传服数据</sys:String>
     <!--#endregion-->
 	
     <!-- 玩家/部落档案窗口 -->

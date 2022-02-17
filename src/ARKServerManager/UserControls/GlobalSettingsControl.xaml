@@ -156,7 +156,6 @@
                                 </Style>
                             </CheckBox.Style>
                         </CheckBox>
-                        <CheckBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="4" Margin="5" Content="{DynamicResource GlobalSettings_SteamCmdRedirectOutputLabel}" IsChecked="{Binding Config.SteamCmdRedirectOutput, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_SteamCmdRedirectOutputTooltip}" HorizontalAlignment="Left" Visibility="Collapsed"/>
 
                         <Label    Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="9" Content="{DynamicResource GlobalSettings_SteamCMDAuthentication_DisabledTooltip}" VerticalAlignment="Center">
                             <Label.Style>
@@ -770,6 +769,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -787,11 +787,14 @@
                         <CheckBox Grid.Row="3" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_SteamCmdRemoveQuitLabel}" IsChecked="{Binding CommonConfig.SteamCmdRemoveQuit, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_SteamCmdRemoveQuitTooltip}" HorizontalAlignment="Left"/>
                         <CheckBox Grid.Row="3" Grid.Column="1" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_UpdateDirectoryPermissionsLabel}" IsChecked="{Binding Config.UpdateDirectoryPermissions, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_UpdateDirectoryPermissionsTooltip}" HorizontalAlignment="Left"/>
 
-                        <CheckBox Grid.Row="4" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_EnableLoggingLabel}" IsChecked="{Binding Config.LoggingEnabled, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_EnableLoggingTooltip}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <cctl:AnnotatedSlider Grid.Row="4" Grid.Column="1" Margin="0" Label="{DynamicResource GlobalSettings_WorldSaveDelayLabel}" Value="{Binding Config.ServerShutdown_WorldSaveDelay, Converter={cc:IntRangeValueConverter 10, 300}}" Minimum="10" Maximum="300" SmallChange="10" LargeChange="50" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_WorldSaveDelayTooltip}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_SteamCmdRedirectOutputLabel}" IsChecked="{Binding Config.SteamCmdRedirectOutput, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_SteamCmdRedirectOutputTooltip}" HorizontalAlignment="Left"/>
 
-                        <cctl:AnnotatedSlider Grid.Row="5" Grid.Column="0" Margin="0" Label="{DynamicResource GlobalSettings_LoggingMaxArchiveDaysLabel}" Value="{Binding Config.LoggingMaxArchiveDays}" Minimum="1" Maximum="365" SmallChange="1" LargeChange="5" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" SuffixRelativeMinWidth="40" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_LoggingMaxArchiveDaysTooltip}" IsEnabled="{Binding Config.LoggingEnabled}"/>
-                        <cctl:AnnotatedSlider Grid.Row="6" Grid.Column="0" Margin="0" Label="{DynamicResource GlobalSettings_LoggingMaxArchiveFilesLabel}" Value="{Binding Config.LoggingMaxArchiveFiles}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="5" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" SuffixRelativeMinWidth="40" Suffix="{DynamicResource SliderUnits_Files}" ToolTip="{DynamicResource GlobalSettings_LoggingMaxArchiveFilesTooltip}" IsEnabled="{Binding Config.LoggingEnabled}"/>
+                        <CheckBox Grid.Row="5" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_EnableLoggingLabel}" IsChecked="{Binding Config.LoggingEnabled, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_EnableLoggingTooltip}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <cctl:AnnotatedSlider Grid.Row="5" Grid.Column="1" Margin="0" Label="{DynamicResource GlobalSettings_WorldSaveDelayLabel}" Value="{Binding Config.ServerShutdown_WorldSaveDelay, Converter={cc:IntRangeValueConverter 10, 300}}" Minimum="10" Maximum="300" SmallChange="10" LargeChange="50" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_WorldSaveDelayTooltip}"/>
+
+                        <cctl:AnnotatedSlider Grid.Row="6" Grid.Column="0" Margin="0" Label="{DynamicResource GlobalSettings_LoggingMaxArchiveDaysLabel}" Value="{Binding Config.LoggingMaxArchiveDays}" Minimum="1" Maximum="365" SmallChange="1" LargeChange="5" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" SuffixRelativeMinWidth="40" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_LoggingMaxArchiveDaysTooltip}" IsEnabled="{Binding Config.LoggingEnabled}"/>
+                        
+                        <cctl:AnnotatedSlider Grid.Row="7" Grid.Column="0" Margin="0" Label="{DynamicResource GlobalSettings_LoggingMaxArchiveFilesLabel}" Value="{Binding Config.LoggingMaxArchiveFiles}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="5" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" SuffixRelativeMinWidth="40" Suffix="{DynamicResource SliderUnits_Files}" ToolTip="{DynamicResource GlobalSettings_LoggingMaxArchiveFilesTooltip}" IsEnabled="{Binding Config.LoggingEnabled}"/>
                     </Grid>
                 </GroupBox>
             </Grid>
