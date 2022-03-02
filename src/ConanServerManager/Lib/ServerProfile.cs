@@ -396,22 +396,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(CanImportDirectlyFromSameServerProperty, value); }
         }
 
-        public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
-        [DataMember]
-        public string BranchName
-        {
-            get { return (string)GetValue(BranchNameProperty); }
-            set { SetValue(BranchNameProperty, value); }
-        }
-
-        public static readonly DependencyProperty BranchPasswordProperty = DependencyProperty.Register(nameof(BranchPassword), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
-        [DataMember]
-        public string BranchPassword
-        {
-            get { return (string)GetValue(BranchPasswordProperty); }
-            set { SetValue(BranchPasswordProperty, value); }
-        }
-
         public static readonly DependencyProperty ProcessPriorityProperty = DependencyProperty.Register(nameof(ProcessPriority), typeof(string), typeof(ServerProfile), new PropertyMetadata("normal"));
         [DataMember]
         public string ProcessPriority
@@ -638,6 +622,24 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(AllowDiscordUpdateProperty); }
             set { SetValue(AllowDiscordUpdateProperty, value); }
+        }
+        #endregion
+
+        #region Server Details
+        public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string BranchName
+        {
+            get { return (string)GetValue(BranchNameProperty); }
+            set { SetValue(BranchNameProperty, value); }
+        }
+
+        public static readonly DependencyProperty BranchPasswordProperty = DependencyProperty.Register(nameof(BranchPassword), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string BranchPassword
+        {
+            get { return (string)GetValue(BranchPasswordProperty); }
+            set { SetValue(BranchPasswordProperty, value); }
         }
         #endregion
 
@@ -1470,9 +1472,6 @@ namespace ServerManagerTool.Lib
 
             ResetServerOptions();
 
-            this.ClearValue(BranchNameProperty);
-            this.ClearValue(BranchPasswordProperty);
-
             this.ClearValue(ProcessPriorityProperty);
             this.ClearValue(ProcessAffinityProperty);
 
@@ -1493,6 +1492,12 @@ namespace ServerManagerTool.Lib
             this.ClearValue(AllowDiscordStopProperty);
             this.ClearValue(AllowDiscordUpdateProperty);
         }
+
+        public void ResetServerDetailsSection()
+        {
+            this.ClearValue(BranchNameProperty);
+            this.ClearValue(BranchPasswordProperty);
+        }
         #endregion
 
         #region Sync Methods
@@ -1511,6 +1516,9 @@ namespace ServerManagerTool.Lib
                     break;
                 case ServerProfileCategory.DiscordBot:
                     SyncDiscordBot(sourceProfile);
+                    break;
+                case ServerProfileCategory.ServerDetails:
+                    SyncServerDetails(sourceProfile);
                     break;
                 case ServerProfileCategory.ServerFiles:
                     SyncServerFiles(sourceProfile);
@@ -1534,9 +1542,6 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(KickIdlePlayersPercentageProperty, sourceProfile.KickIdlePlayersPercentage);
             this.SetValue(KickIdlePlayersPeriodProperty, sourceProfile.KickIdlePlayersPeriod);
-
-            this.SetValue(BranchNameProperty, sourceProfile.BranchName);
-            this.SetValue(BranchPasswordProperty, sourceProfile.BranchPassword);
 
             this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
@@ -1572,6 +1577,12 @@ namespace ServerManagerTool.Lib
             this.SetValue(AllowDiscordStartProperty, sourceProfile.AllowDiscordStart);
             this.SetValue(AllowDiscordStopProperty, sourceProfile.AllowDiscordStop);
             this.SetValue(AllowDiscordUpdateProperty, sourceProfile.AllowDiscordUpdate);
+        }
+
+        private void SyncServerDetails(ServerProfile sourceProfile)
+        {
+            this.SetValue(BranchNameProperty, sourceProfile.BranchName);
+            this.SetValue(BranchPasswordProperty, sourceProfile.BranchPassword);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)

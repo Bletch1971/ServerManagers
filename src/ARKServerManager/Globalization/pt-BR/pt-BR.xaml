@@ -490,7 +490,8 @@
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Isso redefinirá TODAS as configurações globais do usuário para o gerenciador do servidor. O gerenciador do servidor será fechado se for bem-sucedido.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Ativar e executar como Prompt de Administrador na Inicialização</sys:String>
     <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Verificar se o Server Manager está em execução na inicialização</sys:String>
-    <sys:String x:Key="GlobalSettings_StartModeLabel">Modo de início da janela principal:</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Modo de iníciar a janela ASM:</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeServerMonitorLabel">Modo de iníciar O Monitor do servidor:</sys:String>
 	<sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimizar para a bandeja</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gerenciar configurações de firewall automaticamente</sys:String>
 	<sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Gerenciar IP público automaticamente</sys:String>
@@ -538,6 +539,8 @@
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Se ativado, quando você iniciar manualmente o servidor, uma validação básica será executada nos arquivos server e mod. NOTA: Não será realizado se o Ark Mod Management estiver ativado.</sys:String>
 	<sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Executar atualização do servidor e mod no início do servidor</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Se habilitado, quando você iniciar manualmente o servidor, o servidor e os arquivos mod serão atualizados para a versão mais recente. NOTA: Não será realizado se o Ark Mod Management estiver ativado.</sys:String>
+	<sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Iniciar servidor minimizado</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">Se ativado, quando o servidor for iniciado, a janela de comando será minimizada, caso contrário, abrirá normalmente.</sys:String>
 	
 	<sys:String x:Key="GlobalSettings_SteamSettingsLabel">Configurações da Steam</sys:String>
 	<sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Parar o fechamento do SteamCMD (use apenas para depuração)</sys:String>
@@ -1211,6 +1214,8 @@
     <sys:String x:Key="ServerSettings_LauncherArgsTooltip">Args de linha de comando adicionais para o ativador do servidor. Use isso com cautela! Para mais informações, consulte 'Microsoft Start Command' na internet.</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideLabel">Substituir lançador</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideTooltip">Se ativado, o arquivo RunServer.cmd conterá apenas o que está incluído no campo Argumentos do ativador.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">Prefixo Launcher</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixTooltip">Se ativado, o arquivo RunServer.cmd incluirá o campo Launcher Args antes do início do servidor (permitirá que outros arquivos sejam executados antes que o servidor seja iniciado).</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsLabel">Args do servidor:</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsTooltip">Args de linha de comando adicionais para o servidor. Se você especificar isso, adicione os argumentos que começam com? Primeiro, seguidos por quaisquer outros argumentos. Por exemplo:?MaxPlayers=5?QueryPort=9999-nosteamclient</sys:String>
     <sys:String x:Key="ServerSettings_ShowCommandButtonLabel">Mostrar comando ...</sys:String>

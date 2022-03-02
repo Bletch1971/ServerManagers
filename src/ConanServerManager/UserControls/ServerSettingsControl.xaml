@@ -800,57 +800,6 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_BranchLabel}" DataContext="{Binding Runtime, ElementName=SettingsControl}">
-                                    <GroupBox.Style>
-                                        <Style BasedOn="{StaticResource GroupBoxStyle}" TargetType="{x:Type GroupBox}">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Null}">
-                                                    <Setter Property="IsEnabled" Value="False"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Initializing}">
-                                                    <Setter Property="IsEnabled" Value="False"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Running}">
-                                                    <Setter Property="IsEnabled" Value="False"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Stopping}">
-                                                    <Setter Property="IsEnabled" Value="False"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Stopped}">
-                                                    <Setter Property="IsEnabled" Value="True"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Unknown}">
-                                                    <Setter Property="IsEnabled" Value="False"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Updating}">
-                                                    <Setter Property="IsEnabled" Value="False"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
-                                                    <Setter Property="IsEnabled" Value="True"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </GroupBox.Style>
-
-                                    <Grid DataContext="{Binding Settings, ElementName=SettingsControl}">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" MinWidth="100"/>
-                                            <ColumnDefinition Width="1*"/>
-                                            <ColumnDefinition Width="Auto" MinWidth="100" />
-                                            <ColumnDefinition Width="1*"/>
-                                        </Grid.ColumnDefinitions>
-
-                                        <Label    Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_BranchNameLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_BranchNameTooltip}"/>
-                                        <ComboBox Grid.Row="0" Grid.Column="1" Margin="1" Name="BranchComboBox" ItemsSource="{Binding BaseBranches, ElementName=SettingsControl}" SelectedValue="{Binding BranchName, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" IsEditable="True" ToolTip="{DynamicResource ServerSettings_BranchNameTooltip}" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
-                                        <Label    Grid.Row="0" Grid.Column="2" Content="{DynamicResource ServerSettings_BranchPasswordLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_BranchPasswordTooltip}"/>
-                                        <TextBox  Grid.Row="0" Grid.Column="3" Name="HideBranchPasswordTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}"  ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Margin="1" Style="{StaticResource HiddenTextBoxStyle}"/>
-                                        <TextBox  Grid.Row="0" Grid.Column="3" Name="BranchPasswordTextBox" Text="{Binding BranchPassword}" ToolTip="{DynamicResource ServerSettings_BranchPasswordTooltip}" LostFocus="HiddenField_LostFocus" VerticalContentAlignment="Center" Visibility="Collapsed" Margin="1"/>
-                                    </Grid>
-                                </GroupBox>
-
                                 <GroupBox Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_CommandLineLabel}" Style="{StaticResource GroupBoxStyle}">
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -1126,6 +1075,92 @@
                                 <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" IsChecked="{Binding AllowDiscordRestart, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordRestartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordRestartTooltip}"/>
                                 <CheckBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" IsChecked="{Binding AllowDiscordShutdown, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordShutdownLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordShutdownTooltip}"/>
                                 <CheckBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Margin="5" IsChecked="{Binding AllowDiscordStop, Mode=TwoWay}" Content="{DynamicResource ServerSettings_AllowDiscordStopLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowDiscordStopTooltip}"/>
+                            </Grid>
+                        </Expander>
+
+                        <Expander Name="SectionServerDetails" IsExpanded="{Binding Config.SectionServerDetailsIsExpanded, ElementName=SettingsControl, FallbackValue=True, Mode=TwoWay}">
+                            <Expander.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{DynamicResource ServerSettings_ServerDetailsLabel}" Style="{StaticResource ExpanderHeaderTextStyle}"/>
+                                    <Button Margin="20,0,0,0" ToolTip="{DynamicResource ServerSettings_ResetSectionTooltip}" Style="{StaticResource ButtonStyle1}"
+                                            IsEnabled="{Binding ElementName=SectionServerDetails, Path=IsExpanded}"
+                                            Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerDetailsSection}">
+                                        <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Refresh.ico,Size=32}"/>
+                                    </Button>
+                                </StackPanel>
+                            </Expander.Header>
+
+                            <Expander.Style>
+                                <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                </Style>
+                            </Expander.Style>
+
+                            <Grid Margin="-8,0,2,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <GroupBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_BranchLabel}" DataContext="{Binding Runtime, ElementName=SettingsControl}">
+                                    <GroupBox.Style>
+                                        <Style BasedOn="{StaticResource GroupBoxStyle}" TargetType="{x:Type GroupBox}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Null}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </GroupBox.Style>
+
+                                    <Grid DataContext="{Binding Settings, ElementName=SettingsControl}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="Auto" MinWidth="100" />
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label    Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_BranchNameLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_BranchNameTooltip}"/>
+                                        <ComboBox Grid.Row="0" Grid.Column="1" Margin="1" Name="BranchComboBox" ItemsSource="{Binding BaseBranches, ElementName=SettingsControl}" SelectedValue="{Binding BranchName, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" IsEditable="True" ToolTip="{DynamicResource ServerSettings_BranchNameTooltip}" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                        <Label    Grid.Row="0" Grid.Column="2" Content="{DynamicResource ServerSettings_BranchPasswordLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_BranchPasswordTooltip}"/>
+                                        <TextBox  Grid.Row="0" Grid.Column="3" Name="HideBranchPasswordTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}"  ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Margin="1" Style="{StaticResource HiddenTextBoxStyle}"/>
+                                        <TextBox  Grid.Row="0" Grid.Column="3" Name="BranchPasswordTextBox" Text="{Binding BranchPassword}" ToolTip="{DynamicResource ServerSettings_BranchPasswordTooltip}" LostFocus="HiddenField_LostFocus" VerticalContentAlignment="Center" Visibility="Collapsed" Margin="1"/>
+                                    </Grid>
+                                </GroupBox>
                             </Grid>
                         </Expander>
 

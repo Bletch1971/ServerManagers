@@ -1356,6 +1356,10 @@ namespace ServerManagerTool
                                 this.Settings.ResetRconWindowExtents();
                                 break;
 
+                            case ServerSettingsResetAction.ServerDetailsSection:
+                                this.Settings.ResetServerDetailsSection();
+                                break;
+
                             case ServerSettingsResetAction.ServerOptions:
                                 this.Settings.ResetServerOptions();
                                 break;

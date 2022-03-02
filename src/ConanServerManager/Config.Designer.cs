@@ -2297,5 +2297,17 @@ namespace ServerManagerTool {
                 this["ServerMonitorWindow_WindowState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SectionServerDetailsIsExpanded {
+            get {
+                return ((bool)(this["SectionServerDetailsIsExpanded"]));
+            }
+            set {
+                this["SectionServerDetailsIsExpanded"] = value;
+            }
+        }
     }
 }

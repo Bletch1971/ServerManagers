@@ -780,30 +780,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(ClusterDirOverrideProperty, value); }
         }
 
-        public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
-        [DataMember]
-        public string BranchName
-        {
-            get { return (string)GetValue(BranchNameProperty); }
-            set { SetValue(BranchNameProperty, value); }
-        }
-
-        public static readonly DependencyProperty BranchPasswordProperty = DependencyProperty.Register(nameof(BranchPassword), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
-        [DataMember]
-        public string BranchPassword
-        {
-            get { return (string)GetValue(BranchPasswordProperty); }
-            set { SetValue(BranchPasswordProperty, value); }
-        }
-
-        public static readonly DependencyProperty EventNameProperty = DependencyProperty.Register(nameof(EventName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
-        [DataMember]
-        public string EventName
-        {
-            get { return (string)GetValue(EventNameProperty); }
-            set { SetValue(EventNameProperty, value); }
-        }
-
         public static readonly DependencyProperty ProcessPriorityProperty = DependencyProperty.Register(nameof(ProcessPriority), typeof(string), typeof(ServerProfile), new PropertyMetadata("normal"));
         [DataMember]
         public string ProcessPriority
@@ -1030,6 +1006,32 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(AllowDiscordUpdateProperty); }
             set { SetValue(AllowDiscordUpdateProperty, value); }
+        }
+        #endregion
+
+        #region Server Details
+        public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string BranchName
+        {
+            get { return (string)GetValue(BranchNameProperty); }
+            set { SetValue(BranchNameProperty, value); }
+        }
+
+        public static readonly DependencyProperty BranchPasswordProperty = DependencyProperty.Register(nameof(BranchPassword), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string BranchPassword
+        {
+            get { return (string)GetValue(BranchPasswordProperty); }
+            set { SetValue(BranchPasswordProperty, value); }
+        }
+
+        public static readonly DependencyProperty EventNameProperty = DependencyProperty.Register(nameof(EventName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string EventName
+        {
+            get { return (string)GetValue(EventNameProperty); }
+            set { SetValue(EventNameProperty, value); }
         }
         #endregion
 
@@ -5253,10 +5255,6 @@ namespace ServerManagerTool.Lib
             this.ClearValue(CrossArkClusterIdProperty);
             this.ClearValue(ClusterDirOverrideProperty);
 
-            this.ClearValue(BranchNameProperty);
-            this.ClearValue(BranchPasswordProperty);
-            this.ClearValue(EventNameProperty);
-
             this.ClearValue(ProcessPriorityProperty);
             this.ClearValue(ProcessAffinityProperty);
 
@@ -5610,6 +5608,14 @@ namespace ServerManagerTool.Lib
             this.ClearNullableValue(ItemStatClamps_HyperthermalInsulationProperty);
         }
 
+        public void ResetServerDetailsSection()
+        {
+            this.ClearValue(BranchNameProperty);
+            this.ClearValue(BranchPasswordProperty);
+
+            this.ClearValue(EventNameProperty);
+        }
+
         public void ResetSOTFSection()
         {
             this.ClearValue(SOTF_EnabledProperty);
@@ -5730,6 +5736,9 @@ namespace ServerManagerTool.Lib
                     break;
                 case ServerProfileCategory.DiscordBot:
                     SyncDiscordBot(sourceProfile);
+                    break;
+                case ServerProfileCategory.ServerDetails:
+                    SyncServerDetails(sourceProfile);
                     break;
                 case ServerProfileCategory.Rules:
                     SyncRulesSection(sourceProfile);
@@ -5856,10 +5865,6 @@ namespace ServerManagerTool.Lib
             this.SetValue(EnableWebAlarmProperty, sourceProfile.EnableWebAlarm);
             this.SetValue(WebAlarmKeyProperty, sourceProfile.WebAlarmKey);
             this.SetValue(WebAlarmUrlProperty, sourceProfile.WebAlarmUrl);
-
-            this.SetValue(BranchNameProperty, sourceProfile.BranchName);
-            this.SetValue(BranchPasswordProperty, sourceProfile.BranchPassword);
-            this.SetValue(EventNameProperty, sourceProfile.EventName);
 
             this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
@@ -6316,6 +6321,14 @@ namespace ServerManagerTool.Lib
             this.SetNullableValue(ItemStatClamps_HypothermalInsulationProperty, sourceProfile.ItemStatClamps_HypothermalInsulation);
             this.SetNullableValue(ItemStatClamps_WeightProperty, sourceProfile.ItemStatClamps_Weight);
             this.SetNullableValue(ItemStatClamps_HyperthermalInsulationProperty, sourceProfile.ItemStatClamps_HyperthermalInsulation);
+        }
+
+        private void SyncServerDetails(ServerProfile sourceProfile)
+        {
+            this.SetValue(BranchNameProperty, sourceProfile.BranchName);
+            this.SetValue(BranchPasswordProperty, sourceProfile.BranchPassword);
+
+            this.SetValue(EventNameProperty, sourceProfile.EventName);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)

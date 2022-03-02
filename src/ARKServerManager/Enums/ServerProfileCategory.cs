@@ -6,6 +6,7 @@
         Administration,
         AutomaticManagement,
         DiscordBot,
+        ServerDetails,
         Rules,
         ChatAndNotifications,
         HudAndVisuals,

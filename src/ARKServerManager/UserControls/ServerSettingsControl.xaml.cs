@@ -4025,6 +4025,10 @@ namespace ServerManagerTool
                                 this.Settings.ResetRulesSection();
                                 break;
 
+                            case ServerSettingsResetAction.ServerDetailsSection:
+                                this.Settings.ResetServerDetailsSection();
+                                break;
+
                             case ServerSettingsResetAction.SOTFSection:
                                 this.Settings.ResetSOTFSection();
                                 break;

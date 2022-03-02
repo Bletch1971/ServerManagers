@@ -5,6 +5,7 @@
         Administration,
         AutomaticManagement,
         DiscordBot,
+        ServerDetails,
         ServerFiles,
     }
 }

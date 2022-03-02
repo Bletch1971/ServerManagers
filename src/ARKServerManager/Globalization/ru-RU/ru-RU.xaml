@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">27.01.2022 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">18.02.2022 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -328,17 +328,17 @@
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">Синхронизировать профиль - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">Ошибка при синхронизации профиля</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_Title">Процесс синхронизации профиля</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">Перезаписывание выбранных параметров раздела текущего профиля с настройками выбранного профиля. Вы не сможете отменить, вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">В указанных вами профилях будут перезаписаны параметры выбранных вами разделов настройками из текущего профиля. Операция не обратима, вы не сможете вернуть прежние настройки выбранных профилей. Хотите продолжить?</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">Ошибка процесса синхронизации профиля</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">Вы не выбрали профиль для копирования.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">Вы не выбрали разделы для копирования настроек.</sys:String>
-    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">Настройки из выбранных разделов были успешно скопированы из выбранного профиля в текущий профиль.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">Настройки выбранных разделов были успешно скопированы из текущего профиля в выбранные профили.</sys:String>
     <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">Выбрать все</sys:String>
     <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">Снять все выделения</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">Процесс</sys:String>
     <sys:String x:Key="ProfileSyncWindow_CloseButtonLabel">Отмена</sys:String>
 
-    <sys:String x:Key="ProfileSyncWindow_SyncInformationLabel">Эта форма скопирует выбранные настройки из выбранного профиля в текущий профиль.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_SyncInformationLabel">Эта форма скопирует указанные настройки из текущего профиля в выбранные профили.</sys:String>
 
     <sys:String x:Key="ProfileSyncWindow_SelectedColumnLabel">Копировать</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProfileNameColumnLabel">Профиль</sys:String>
