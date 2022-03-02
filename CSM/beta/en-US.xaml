@@ -1136,13 +1136,6 @@
     <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerLabel">Can Import Directly from Same Server</sys:String>
     <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerTooltip">If enabled, will allow players to directly import characters that were exported from exactly the same server.</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Set the application priority when starting the server.</sys:String>
@@ -1200,6 +1193,17 @@
     <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">If enabled, the profile will listen for stop commands from discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Allow Update</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">If enabled, the profile will listen for update commands from discord.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_ServerDetailsLabel">Server Details</sys:String>
+
+    <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Server File Details -->
