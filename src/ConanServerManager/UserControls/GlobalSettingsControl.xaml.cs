@@ -31,7 +31,8 @@ namespace ServerManagerTool
 
         public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(GlobalSettingsControl), new PropertyMetadata(false));
-        public static readonly DependencyProperty WindowStatesProperty = DependencyProperty.Register(nameof(WindowStates), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty WindowStatesMainWindowProperty = DependencyProperty.Register(nameof(WindowStatesMainWindow), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty WindowStatesServerMonitorProperty = DependencyProperty.Register(nameof(WindowStatesServerMonitor), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotLogLevelsProperty = DependencyProperty.Register(nameof(DiscordBotLogLevels), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelistItem>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
@@ -83,10 +84,16 @@ namespace ServerManagerTool
             set { SetValue(IsAdministratorProperty, value); }
         }
 
-        public ComboBoxItemList WindowStates
+        public ComboBoxItemList WindowStatesMainWindow
         {
-            get { return (ComboBoxItemList)GetValue(WindowStatesProperty); }
-            set { SetValue(WindowStatesProperty, value); }
+            get { return (ComboBoxItemList)GetValue(WindowStatesMainWindowProperty); }
+            set { SetValue(WindowStatesMainWindowProperty, value); }
+        }
+
+        public ComboBoxItemList WindowStatesServerMonitor
+        {
+            get { return (ComboBoxItemList)GetValue(WindowStatesServerMonitorProperty); }
+            set { SetValue(WindowStatesServerMonitorProperty, value); }
         }
 
         public string Version
@@ -504,7 +511,7 @@ namespace ServerManagerTool
                 windowStates.Add(new Common.Model.ComboBoxItem(windowState.ToString(), displayMember));
             }
 
-            this.WindowStates = windowStates;
+            this.WindowStatesMainWindow = windowStates;
             if (this.WindowStateMainWindowComboBox != null)
             {
                 this.WindowStateMainWindowComboBox.SelectedValue = selectedValue;
@@ -522,7 +529,7 @@ namespace ServerManagerTool
                 comboBoxList.Add(new Common.Model.ComboBoxItem(windowState.ToString(), displayMember));
             }
 
-            this.WindowStates = comboBoxList;
+            this.WindowStatesServerMonitor = comboBoxList;
             if (this.WindowStateServerMonitorComboBox != null)
             {
                 this.WindowStateServerMonitorComboBox.SelectedValue = selectedValue;
