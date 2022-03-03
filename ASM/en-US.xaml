@@ -1191,18 +1191,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: The server manager does not provide the Web Alarms functionality, it just allows you to enable/disable the Web Alarms and create the necessary AlarmPostCredentials file.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Web Alarm Error</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">Event Details</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">NOTE: Enabling an event on your server should only be done when the official event is running. If you enable the event before or after the official dates, the event may cause your server to become unstable, or may not work at all.</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">Active Event:</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Set the application priority when starting the server.</sys:String>
@@ -1260,6 +1248,22 @@
     <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">If enabled, the profile will listen for stop commands from discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Allow Update</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">If enabled, the profile will listen for update commands from discord.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_ServerDetailsLabel">Server Details</sys:String>
+
+    <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Event Details</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">NOTE: Enabling an event on your server should only be done when the official event is running. If you enable the event before or after the official dates, the event may cause your server to become unstable, or may not work at all.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Active Event:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
