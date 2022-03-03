@@ -1181,18 +1181,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmNote">ANMERKUNG: Der Server Manager bietet keine Webalarm Funktion, sondern ermöglicht lediglich das Aktivieren/Deaktivieren der Webalarme und das Erstellen der erforderlichen Meldungsdatei.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Fehler Webalarm</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Branchendetails</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Branchenname:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">Der Name des herunterzuladenden ARK Zweigs (leer lassen, um den Release Zweig zu verwenden).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branchenpassword:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Das Kennwort, mit dem auf den ARK Zweig Download zugegriffen wird.</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Lösche Branchenfehler</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">Ereignisdetails</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">HINWEIS: Das Aktivieren eines Ereignisses auf Deinem Server sollte nur erfolgen, wenn das offizielle Ereignis ausgeführt wird. Wenn Du das Ereignis vor oder nach dem Offiziellen aktivierst, kann das Ereignis dazu führen, dass Dein Server instabil wird oder überhaupt nicht funktioniert.</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">Aktives Ereignis:</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">Der Name des zu aktivierenden Ereignisses (leer lassen, um das Ereignis zu deaktivieren).</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Kommandozeile</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priorität:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Legen Sie die Anwendungspriorität beim Starten des Servers fest.</sys:String>
@@ -1248,6 +1236,20 @@
     <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Wenn diese Option aktiviert ist, wartet das Profil auf Stopp-Befehle von Discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Aktualisierung zulassen</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Wenn diese Option aktiviert ist, wird das Profil auf Aktualisierungsbefehle von Discord warten.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">Branchendetails</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Branchenname:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">Der Name des herunterzuladenden ARK Zweigs (leer lassen, um den Release Zweig zu verwenden).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branchenpassword:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Das Kennwort, mit dem auf den ARK Zweig Download zugegriffen wird.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Lösche Branchenfehler</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Ereignisdetails</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">HINWEIS: Das Aktivieren eines Ereignisses auf Deinem Server sollte nur erfolgen, wenn das offizielle Ereignis ausgeführt wird. Wenn Du das Ereignis vor oder nach dem Offiziellen aktivierst, kann das Ereignis dazu führen, dass Dein Server instabil wird oder überhaupt nicht funktioniert.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Aktives Ereignis:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">Der Name des zu aktivierenden Ereignisses (leer lassen, um das Ereignis zu deaktivieren).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->

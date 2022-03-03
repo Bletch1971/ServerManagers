@@ -1190,18 +1190,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmUrlTooltip">Especifica o URL em que seu script de escuta está armazenado, aguardando e pronto para receber as informações da postagem pelo servidor do jogo.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmNote">NOTA: O ASM não fornece a funcionalidade de alarmes da Web. O ASM permite apenas ativar / desativar os alarmes da Web e criar o arquivo de credenciais de registro de alarmes necessário.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Erro de alarme na Web</sys:String>
-	
-    <sys:String x:Key="ServerSettings_BranchLabel">Detalhes da Filial</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Nome da Filial:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">O nome da filial a ser baixada (deixe em branco para usar o ramo de liberação).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Senha da Filial:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">A senha usada para acessar o download da filial.</sys:String>
-	<sys:String x:Key="ServerSettings_BranchClearErrorTitle">Erro ao limpar filial</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">detalhes do evento</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">NOTA: A ativação de um evento no seu servidor só deve ser realizada quando o evento oficial estiver em execução. Se você ativar o evento antes ou depois das datas oficiais, o evento poderá causar instabilidade no servidor ou pode não funcionar.</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">Evento ativo:</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">O nome do evento a ser ativado (deixe em branco para desativar o evento).</sys:String>
 
     <sys:String x:Key="ServerSettings_CommandLineLabel">Linha de comando</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Prioridade:</sys:String>
@@ -1260,6 +1248,20 @@
     <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Se ativado, o perfil usará os comandos de parar pelo discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Permitir atualização</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Se ativado, o perfil usará os comandos de atualização pelo discord.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">Detalhes da Filial</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Nome da Filial:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">O nome da filial a ser baixada (deixe em branco para usar o ramo de liberação).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Senha da Filial:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">A senha usada para acessar o download da filial.</sys:String>
+	<sys:String x:Key="ServerSettings_BranchClearErrorTitle">Erro ao limpar filial</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">detalhes do evento</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">NOTA: A ativação de um evento no seu servidor só deve ser realizada quando o evento oficial estiver em execução. Se você ativar o evento antes ou depois das datas oficiais, o evento poderá causar instabilidade no servidor ou pode não funcionar.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Evento ativo:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">O nome do evento a ser ativado (deixe em branco para desativar o evento).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->

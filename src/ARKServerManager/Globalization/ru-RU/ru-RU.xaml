@@ -1191,18 +1191,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmNote">ПРИМЕЧАНИЕ: ASM не предоставляет функциональность Web Alarms. ASM позволяет вам включать/отключать Web Alarms и создавать необходимые файлы AlarmPostCredentials.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Web оповещение об ошибке</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Детали веток</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Имя веток:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">Имя загружаемой ветви (оставьте пустым для использования стандартной ветви выпуска).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Пароль ветки:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Пароль, используемый для доступа к загрузке ветви.</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">Event детали</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">ПРИМЕЧАНИЕ: Включение события на вашем сервере должно выполняться только во время официального события. Если вы включите событие до или после официальных дат, событие может привести к нестабильной работе вашего сервера или вообще не работать.</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">Активный Event:</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">Имя события, которое нужно включить (оставьте пустым, чтобы отключить событие).</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Командная строка</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Приоритет:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Установите приоритет приложения при запуске сервера.</sys:String>
@@ -1260,6 +1248,22 @@
     <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Если этот параметр включен, профиль будет прислушиваться к командам остановки от Discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Разрешить Обновление</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Если этот параметр включен, профиль будет прослушивать команды обновления от Discord.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_ServerDetailsLabel">Детали Сервера</sys:String>
+
+    <sys:String x:Key="ServerSettings_BranchLabel">Детали веток</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Имя веток:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">Имя загружаемой ветви (оставьте пустым для использования стандартной ветви выпуска).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Пароль ветки:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Пароль, используемый для доступа к загрузке ветви.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Event детали</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">ПРИМЕЧАНИЕ: Включение события на вашем сервере должно выполняться только во время официального события. Если вы включите событие до или после официальных дат, событие может привести к нестабильной работе вашего сервера или вообще не работать.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Активный Event:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">Имя события, которое нужно включить (оставьте пустым, чтобы отключить событие).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -5621,19 +5625,15 @@
     <sys:String x:Key="DinoDropInventoryComponent_Carnivore_Deathworm_C">Инвентарь - Червь смерти</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_Carnivore_DeathwormAlpha_C">Инвентарь - Альфа Червь смерти</sys:String>
 
-
-
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Инвентарь босса - Мегапитек (Легкий)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Инвентарь босса - Мегапитек (Средний)</sys:String>
-    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Инвентарь босса - Мегапитек (Сложный)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Valguero_C">Инвентарь босса - Дракон (Легкий)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Valguero_C">Инвентарь босса - Дракон (Средний)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Hard_Valguero_C">Инвентарь босса - Дракон (Сложный)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Valguero_C">Инвентарь босса - Мантикора (Легкая)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Valguero_C">Инвентарь босса - Мантикора (Средняя)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Valguero_C">Инвентарь босса - Мантикора (Сложная)</sys:String>
-
-
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Easy_Valguero_C">Инвентарь босса - Мегапитек (Легкий)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Medium_Valguero_C">Инвентарь босса - Мегапитек (Средний)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_BossGorilla_Hard_Valguero_C">Инвентарь босса - Мегапитек (Сложный)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->

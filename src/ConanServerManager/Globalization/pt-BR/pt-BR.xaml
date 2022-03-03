@@ -973,12 +973,6 @@
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodLabel">Kick AFK Time:</sys:String>
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodTooltip">Defina a quantidade de tempo de AFK antes de um personagem ser chutado.</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Detalhes da agência</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Nome da Filial:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">O nome da ramificação a ser baixada (deixe em branco para usar a ramificação de liberação).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Senha da Filial:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">A senha usada para acessar o download da filial.</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Linha de comando</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Prioridade:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Defina a prioridade do aplicativo ao iniciar o servidor.</sys:String>
@@ -1014,6 +1008,14 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Se ativado, o servidor será atualizado periodicamente durante o ciclo de atualização automática. Veja as configurações para as opções de atualização automática.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Reinicie o servidor se desligado</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Se ativado, o servidor será reiniciado mesmo se for encerrado para reinicializações automáticas e atualizações automáticas.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">Detalhes da agência</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Nome da Filial:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">O nome da ramificação a ser baixada (deixe em branco para usar a ramificação de liberação).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Senha da Filial:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">A senha usada para acessar o download da filial.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Server File Details -->

@@ -5,7 +5,31 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-03-02T00:00:00Z</updated>
+  <updated>2022-03-03T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:F70DF42B-2D85-43DA-93EC-D20DF620A119</id>
+    <title>1.1.418 (1.1.418.2)</title>
+    <summary>1.1.418.2</summary>
+    <link href="" />
+    <updated>2022-03-03T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file updated.</li>
+            <li>Misc. Language File Updates.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:F70DF42B-2D85-43DA-93EC-D20DF620A119</id>

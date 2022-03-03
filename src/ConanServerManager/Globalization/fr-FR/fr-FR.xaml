@@ -929,12 +929,6 @@
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodLabel">Timer Kick AFK:</sys:String>
     <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodTooltip">Définir la durée de l'AFK avant qu'un personnage ne soit kické.</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Détails de la branche du jeux </sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Nom de la branche du jeux:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">Le nom de la branche  Ark à télécharger (laissez vide pour utiliser la branche par défaut).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Mot de passe de la branche:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Le mot de passe utilisé pour accéder au téléchargement des branches Béta.</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Ligne de commande</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priorité:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Définir la priorité de l'application lors du démarrage du serveur.</sys:String>
@@ -970,6 +964,14 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Si cette option est activée, le serveur sera périodiquement mis à jour pendant le cycle de mise à jour automatique. Voir les paramètres pour les options de mise à jour automatique.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Redémarrer le serveur en cas d'arrêt</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Si cette option est activée, le serveur sera redémarré même s'il est arrêté pour les redémarrages automatiques et les mises à jour automatiques.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">Détails de la branche du jeux </sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Nom de la branche du jeux:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">Le nom de la branche  Ark à télécharger (laissez vide pour utiliser la branche par défaut).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Mot de passe de la branche:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Le mot de passe utilisé pour accéder au téléchargement des branches Béta.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Server File Details -->

@@ -1089,18 +1089,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmNote">NOTA: El gestor de servidores no provee la funcionalidad de alarmas web, tan sólo te permite activarlas y desactivarlas y crea el archivo AlarmPostCredentials.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Error en la alarma web</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Detalles de rama</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Nombre de rama:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">El nombre de la rama a descargar (dejar en blanco para ussar la rama pública).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Contraseña de rama:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">La contraseña usasda para acceder a la descarga de la rama.</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Error al limpiar la rama</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">Detalles de evento</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">NOTA: Sólo deberías activar un evento en tu servidor cuando se ejecute el evento oficailmente. Si activas un evento antes o después de las fechas oficiales, el evento puede volver inestable tu servidor o simplemente no funcionar.</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">Activar evento:</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">El nombre del evento a activar (dejar en blanco para desactivar el evento).</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Línea de comandos</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Prioridad:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Ajusta la prioridad de la aplicación al iniciar el servidor.</sys:String>
@@ -1136,6 +1124,20 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Si es activado, el servidor será actualizado periódicamente en el ciclo de actualización automática. Revisa los ajustes para las opciones de actualización automática.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Reiniciar servidor si estuviera apagado</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Si es activado, el servidor será reiniciado incluso si estuviera apagado en los reinicios y las actualizaciones automáticos.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">Detalles de rama</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Nombre de rama:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">El nombre de la rama a descargar (dejar en blanco para ussar la rama pública).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Contraseña de rama:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">La contraseña usasda para acceder a la descarga de la rama.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Error al limpiar la rama</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Detalles de evento</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">NOTA: Sólo deberías activar un evento en tu servidor cuando se ejecute el evento oficailmente. Si activas un evento antes o después de las fechas oficiales, el evento puede volver inestable tu servidor o simplemente no funcionar.</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Activar evento:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">El nombre del evento a activar (dejar en blanco para desactivar el evento).</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->

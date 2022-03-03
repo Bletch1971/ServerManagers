@@ -13,7 +13,7 @@
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
-    <!--#游戏地图名称 -->
+    <!--#region 游戏地图名称 -->
     <sys:String x:Key="Map_TheIsland">孤岛(The Island)</sys:String>
     <sys:String x:Key="Map_TheCenter">中心岛地图(The Center)</sys:String>
     <sys:String x:Key="Map_ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
@@ -27,11 +27,11 @@
 	<sys:String x:Key="Map_LostIsland">迷失岛(Lost Island)</sys:String>
     <!--#endregion-->
 
-    <!--#总转换名称 -->
+    <!--#region 总转换名称 -->
     <sys:String x:Key="TotalConv_111111111">原始服(Primitive Plus)</sys:String>
     <!--#endregion-->
 
-    <!--#区域分支名称 -->
+    <!--#region 区域分支名称 -->
     <sys:String x:Key="Branch_live">生存</sys:String>
     <!--#endregion-->
 
@@ -71,7 +71,7 @@
     <sys:String x:Key="ModType_TotalConversion">总转换</sys:String>
     <!--#endregion-->
 
-    <!--进程优先级 -->
+    <!--#region 进程优先级 -->
     <sys:String x:Key="Priority_low">低</sys:String>
     <sys:String x:Key="Priority_belownormal">低于正常</sys:String>
     <sys:String x:Key="Priority_normal">正常</sys:String>
@@ -79,12 +79,12 @@
     <sys:String x:Key="Priority_high">高</sys:String>
     <!--#endregion-->
 
-    <!--处理器亲和性-->
+    <!--#region 处理器亲和性-->
     <sys:String x:Key="ProcessorAffinity_Invalid">无效</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">所有</sys:String>
     <!--#endregion-->
-	
-	<!--#窗口启动模式 -->
+
+    <!--#region 窗口启动模式 -->
     <sys:String x:Key="WindowState_Normal">正常</sys:String>
     <sys:String x:Key="WindowState_Minimized">最小化</sys:String>
     <sys:String x:Key="WindowState_Maximized">最大化</sys:String>
@@ -99,7 +99,7 @@
     <sys:String x:Key="DiscordBotLogLevel_Debug">排错</sys:String>
     <!--#endregion-->
 
-    <!-- 应用 -->
+    <!--#region 应用 -->
     <sys:String x:Key="Application_RunAsAdministratorTitle">以管理员身份运行</sys:String>
     <sys:String x:Key="Application_RunAsAdministratorLabel">此应用程序需要管理权限的访问所有功能。你想以管理员身份运行？</sys:String>
     <sys:String x:Key="Application_RunAsAdministrator_FailedTitle">以管理员身份运行失败</sys:String>
@@ -123,7 +123,7 @@
     <sys:String x:Key="Application_NotifyIcon_ShowServerMonitorWindow">显示服务器监视器</sys:String>
     <!--#endregion-->
 
-    <!-- 更新窗口 -->
+    <!--#region 更新窗口 -->
     <sys:String x:Key="AutoUpdater_Title">方舟服务器管理器 - 更新中...</sys:String>
     <sys:String x:Key="AutoUpdater_Status">状态</sys:String>
     <sys:String x:Key="AutoUpdater_Status_CleaningSteamCmd">清除 SteamCMD...</sys:String>
@@ -139,7 +139,7 @@
     <sys:String x:Key="AutoUpdater_CancelButtonLabel">关闭</sys:String>
     <!--#endregion-->
 
-    <!-- 全局设置窗口 -->
+    <!--#region 全局设置窗口 -->
     <sys:String x:Key="CommandLine_Title">命令行</sys:String>
     <sys:String x:Key="CommandLine_CopyButtonLabel">复制到剪贴板</sys:String>
     <sys:String x:Key="CommandLine_CopyButton_ConfirmTitle">复制到剪贴板</sys:String>
@@ -148,20 +148,20 @@
     <sys:String x:Key="CommandLine_CopyButton_ErrorLabel">剪贴板无法打开。另一应用可能在使用它。请尝试关闭其他应用程序并再次尝试.</sys:String>
     <!--#endregion-->
 
-    <!-- 自定义配置数据窗口窗口 -->
+    <!--#region 自定义配置数据窗口窗口 -->
     <sys:String x:Key="CustomConfigData_Title">自定义配置数据</sys:String>
     <sys:String x:Key="CustomConfigData_ProcessButtonLabel">添加</sys:String>
     <sys:String x:Key="CustomConfigData_CancelButtonLabel">取消</sys:String>
     <!--#endregion-->
 
-    <!-- 全局设置窗口 -->
+    <!--#region 全局设置窗口 -->
     <sys:String x:Key="AddUser_Title">添加用户</sys:String>
     <sys:String x:Key="AddUser_InstructionLabel">输入一个或多个用户ID。每个ID都必须在新的一行。</sys:String>
     <sys:String x:Key="AddUser_ProcessButtonLabel">确定</sys:String>
     <sys:String x:Key="AddUser_CancelButtonLabel">取消</sys:String>
     <!--#endregion-->
 
-    <!-- 处理器亲和性窗口 -->
+    <!--#region 处理器亲和性窗口 -->
     <sys:String x:Key="ProcessorAffinity_Title">处理器关联</sys:String>
     <sys:String x:Key="ProcessorAffinity_ProfileTitle">处理器关联 - {0}</sys:String>
     <sys:String x:Key="ProcessorAffinity_InstructionLabel">哪些处理器可以运行服务器？</sys:String>
@@ -175,8 +175,8 @@
     <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">选择</sys:String>
     <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">处理器</sys:String>
     <!--#endregion-->
-	
-	<!--#数据目录窗口 -->
+
+    <!--#region 数据目录窗口 -->
     <sys:String x:Key="DataDirectory_Title">数据文件夹选择</sys:String>
     <sys:String x:Key="DataDirectory_InformationLabel">您似乎没有数据目录集. 数据目录是存储配置文件和streamcmd的地方.它与服务器安装目录不同,您可以为每个配置文件选择.</sys:String>
     <sys:String x:Key="DataDirectory_SelectionLabel">选择数据文件夹的硬盘号.</sys:String>
@@ -195,7 +195,7 @@
     <sys:String x:Key="DataDirectory_RestartLabel">数据文件夹已设置，现在必须重新启动服务器管理器才能使用新设置.</sys:String>
     <!--#endregion-->
 
-    <!-- 玩家列表窗口 -->
+    <!--#region 玩家列表窗口 -->
     <sys:String x:Key="PlayerList_CloseButtonLabel">关闭</sys:String>
 
     <sys:String x:Key="PlayerList_TitleLabel">玩家名单: {0}</sys:String>
@@ -222,7 +222,7 @@
     <sys:String x:Key="PlayerList_Menu_FilterInvalid">显示无效</sys:String>
     <!--#endregion-->
 
-    <!-- Mod详细信息窗口 -->
+    <!--#region Mod详细信息窗口 -->
     <sys:String x:Key="ModDetails_Title">MOD 详细</sys:String>
     <sys:String x:Key="ModDetails_ProfileTitle">MOD 详细 - {0}</sys:String>
     <sys:String x:Key="ModDetails_Load_FailedTitle">MOD 详细错误</sys:String>
@@ -272,7 +272,7 @@
     <sys:String x:Key="ModDetails_Clipboard_SaveTitle">MOD详细信息</sys:String>
     <!--#endregion-->
 
-    <!-- 创意工坊文件窗口 -->
+    <!--#region 创意工坊文件窗口 -->
     <sys:String x:Key="WorkshopFiles_Title">创意工坊详细</sys:String>
     <sys:String x:Key="WorkshopFiles_ProfileTitle">创意工坊详细 - {0}</sys:String>
     <sys:String x:Key="WorkshopFiles_Load_FailedTitle">加载创意工坊物品错误</sys:String>
@@ -297,7 +297,7 @@
     <sys:String x:Key="WorkshopFiles_UnselectTooltip">全部取消选择</sys:String>
     <!--#endregion-->
 
-    <!-- 世界保存恢复窗口 -->
+    <!--#region 世界保存恢复窗口 -->
     <sys:String x:Key="WorldSaveRestore_Title">恢复方舟存档</sys:String>
     <sys:String x:Key="WorldSaveRestore_ProfileTitle">恢复方舟存档 - {0}</sys:String>
     <sys:String x:Key="WorldSaveRestore_Load_FailedTitle">加载方舟存档文件错误</sys:String>
@@ -325,7 +325,7 @@
     <sys:String x:Key="WorldSaveRestore_RestoreSuccessLabel">备份文件已还原， {fileCount} 个文件已还原。</sys:String>
     <!--#endregion-->
 
-    <!-- 配置文件同步窗口 -->
+    <!--#region 配置文件同步窗口 -->
     <sys:String x:Key="ProfileSyncWindow_Title">配置文件同步</sys:String>
     <sys:String x:Key="ProfileSyncWindow_ProfileTitle">配置文件同步 - {0}</sys:String>
     <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">加载配置文件同步错误</sys:String>
@@ -347,7 +347,7 @@
     <sys:String x:Key="ProfileSyncWindow_SectionNameColumnLabel">部分</sys:String>
     <!--#endregion-->
 
-    <!-- 版本馈送窗口 -->
+    <!--#region 版本馈送窗口 -->
     <sys:String x:Key="VersionFeedWindow_Title">方舟服务器管理器版本详细信息</sys:String>
     <sys:String x:Key="VersionFeedWindow_Load_FailedTitle">载入馈送错误</sys:String>
 
@@ -355,13 +355,13 @@
     <sys:String x:Key="VersionFeedWindow_VersionFilterTooltip">选择要查看版本的详细信息。</sys:String>
     <!--#endregion-->
 
-    <!-- 进度窗口 -->
+    <!--#region 进度窗口 -->
     <sys:String x:Key="Progress_Title">进度</sys:String>
     <sys:String x:Key="Progress_UpgradeServer_WindowTitle">更新进度 - {0}</sys:String>
     <sys:String x:Key="Progress_ReinstallSteamCmd_WindowTitle">SteamCMD进度</sys:String>
     <!--#endregion-->
 
-    <!-- 游戏数据窗口 -->
+    <!--#region 游戏数据窗口 -->
     <sys:String x:Key="GameDataWindow_Title">游戏数据文件</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddGameDataTooltip">添加游戏数据文件</sys:String>
@@ -399,7 +399,7 @@
     <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
     <!--#endregion-->
 
-    <!-- 插件窗口 -->
+    <!--#region 插件窗口 -->
     <sys:String x:Key="PluginsWindow_Title">插件</sys:String>
 
     <sys:String x:Key="PluginsWindow_AddPluginTooltip">添加插件</sys:String>
@@ -430,7 +430,7 @@
     <sys:String x:Key="PluginsWindow_AddFilterExtension">*.DLL</sys:String>
     <!--#endregion-->
 
-    <!--服务器监视器窗口 -->
+    <!--#region 服务器监视器窗口 -->
     <sys:String x:Key="ServerMonitor_Title">服务器监控器</sys:String>
 
     <sys:String x:Key="ServerMonitor_TotalCountLabel">服务器总数：</sys:String>
@@ -455,7 +455,7 @@
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">您当前正在执行服务器更新，请关闭窗口，并断开与Steam cmd的连接。 您要继续关闭窗口吗？</sys:String>
     <!--#endregion-->
 
-    <!-- 关机窗口 -->
+    <!--#region 关机窗口 -->
     <sys:String x:Key="ShutdownWindow_Title">关闭服务器</sys:String>
     <sys:String x:Key="ShutdownWindow_ProfileTitle">关闭服务器 - {0}</sys:String>
     <sys:String x:Key="ShutdownWindow_ShutdownRestartOptionsLabel">关闭/重启 选项</sys:String>
@@ -485,7 +485,7 @@
     <sys:String x:Key="ShutdownWindow_CloseButtonTooltip">关闭窗口并取消服务器关机。</sys:String>
     <!--#endregion-->
 
-    <!-- 全局设置窗口 -->
+    <!--#region 全局设置窗口 -->
     <sys:String x:Key="GlobalSettings_Title">方舟: 生存进化™服务器管理器</sys:String>
     <sys:String x:Key="GlobalSettings_VersionLabel">当前版本:</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">重置</sys:String>
@@ -762,7 +762,7 @@
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">当服务器启动并且安排了野生恐龙清除时，将显示此消息。</sys:String>
     <!--#endregion-->
 
-    <!--主窗口 -->   
+    <!--#region 主窗口 -->   
     <sys:String x:Key="MainWindow_Title">方舟: 生存进化™服务器管理器</sys:String>
     <sys:String x:Key="MainWindow_TitleWithAdmin">方舟: 生存进化™服务器管理器(管理员)</sys:String>
     <sys:String x:Key="MainWindow_ArkNameLabel">方舟: 生存进化™服务器管理器</sys:String>
@@ -842,7 +842,7 @@
     <sys:String x:Key="Updater_ProgressMessage_UpgradeLabel">开始升级...</sys:String>
     <!--#endregion-->
 
-    <!-- 通用菜单字符串 -->
+    <!--#region 通用菜单字符串 -->
     <sys:String x:Key="Menu_File">_文件</sys:String>
     <sys:String x:Key="Menu_File_Exit">_退出</sys:String>
 
@@ -867,9 +867,9 @@
     <sys:String x:Key="General_FilterButtonTooltip">单击以应用筛选器。</sys:String>
     <!--#endregion-->
 
-    <!--服务器设置 -->
+    <!--#region 服务器设置 -->
 
-    <!--服务器设置 - 常规 -->
+    <!--#region 服务器设置 - 常规 -->
 	<sys:String x:Key="ServerSettings_ProfileIdLabel">配置文件ID:</sys:String>
     <sys:String x:Key="ServerSettings_ProfileIdTooltip">分配给配置文件的唯一ID.</sys:String>
     <sys:String x:Key="ServerSettings_ProfileLabel">配置名称:</sys:String>
@@ -918,7 +918,7 @@
     <sys:String x:Key="ServerSettings_SupportZipErrorTitle">支持Zip文件创建错误</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 一般按​​钮 -->
+    <!--#region 服务器设置 - 一般按​​钮 -->
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">创建支持Zip</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">创建一个zip文件，其中包含服务器管理器支持团队用来诊断问题所需的所有文件。</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">同步</sys:String>
@@ -1000,7 +1000,7 @@
     <sys:String x:Key="ServerSettings_ResetLabel">单击“是”以确认您要执行重置。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 管理员   -->
+    <!--#region 服务器设置 - 管理员   -->
     <sys:String x:Key="ServerSettings_AdministrationSectionLabel">基础管理</sys:String>
     <sys:String x:Key="ServerSettings_NameAndPasswordsLabel">名称和密码</sys:String>
     <sys:String x:Key="ServerSettings_ServerNameLabel">服务器名称:</sys:String>
@@ -1187,18 +1187,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmNote">注意：服务器管理器不提供Web警报功能。 服务器管理器允许您启用/禁用Web警报并创建必要的“报警发布凭据”文件。</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Web报警错误</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">分支细节</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">分支名称：</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">要下载的分支的名称(保留空白以使用发布分支)。</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">分支密码：</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">用于访问分支下载的密码。</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">清除分支错误</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">活动详情</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">注意：仅在正式事件运行时才应在服务器上启用事件。 如果您在正式日期之前或之后启用了该事件，则该事件可能会导致服务器变得不稳定或根本无法工作。</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">活动事件：</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">要启用的事件的名称（留空以禁用事件）。</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">命令行</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">优先：</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">设置启动服务器时的应用程序优先级。</sys:String>
@@ -1216,7 +1204,7 @@
     <sys:String x:Key="ServerSettings_ShowCommandButtonTooltip">查看服务器的命令行启动命令。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 自动化管理 -->
+    <!--#region 服务器设置 - 自动化管理 -->
     <sys:String x:Key="ServerSettings_AutomaticManagementLabel">自动管理</sys:String>
     <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">我为什么不能用这个？</sys:String>
     <sys:String x:Key="ServerSettings_ASMSettingLabel">方舟服务器管理器设置</sys:String>
@@ -1256,7 +1244,21 @@
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">如果启用，配置文件将侦听来自Discord(开黑)的更新命令.</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 规则 -->
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">分支细节</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">分支名称：</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">要下载的分支的名称(保留空白以使用发布分支)。</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">分支密码：</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">用于访问分支下载的密码。</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">清除分支错误</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">活动详情</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">注意：仅在正式事件运行时才应在服务器上启用事件。 如果您在正式日期之前或之后启用了该事件，则该事件可能会导致服务器变得不稳定或根本无法工作。</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">活动事件：</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">要启用的事件的名称（留空以禁用事件）。</sys:String>
+    <!--#endregion-->
+
+    <!--#region 服务器设置 - 规则 -->
     <sys:String x:Key="ServerSettings_RulesLabel">规则</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreLabel">启用极限模式</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreTooltip">开启极限模式（玩家死后无法重生，必须重新创建一个游戏角色才能进行游戏）.</sys:String>
@@ -1471,7 +1473,7 @@
     <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">超绝缘</sys:String>
 	<!--#endregion-->
 
-    <!-- 服务器设置 - 聊天和通知 -->
+    <!--#region 服务器设置 - 聊天和通知 -->
     <sys:String x:Key="ServerSettings_ChatAndNotificationsLabel">聊天和通知</sys:String>
     <sys:String x:Key="ServerSettings_EnableGlobalVoiceChatLabel">启用全服语音聊天</sys:String>
     <sys:String x:Key="ServerSettings_EnableGlobalVoiceChatTooltip">如果启用，服务器上的所有人能听到语音聊天。</sys:String>
@@ -1483,7 +1485,7 @@
     <sys:String x:Key="ServerSettings_EnablePlayerJoinedTooltip">如果启用，如果有人加入服务器玩家会收到通知。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - HUD和视觉效果 -->
+    <!--#region 服务器设置 - HUD和视觉效果 -->
     <sys:String x:Key="ServerSettings_HUDAndVisualsLabel">HUD和视觉效果设置</sys:String>
     <sys:String x:Key="ServerSettings_AllowCrosshairLabel">开启准心</sys:String>
     <sys:String x:Key="ServerSettings_AllowCrosshairTooltip">如果启用，每个玩家屏幕中心将显示一个十字准星。</sys:String>
@@ -1503,7 +1505,7 @@
     <sys:String x:Key="ServerSettings_AllowHitMarkersTooltip">如果启用，将显示远程攻击的命中标记.</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 玩家设置 -->
+    <!--#region 服务器设置 - 玩家设置 -->
     <sys:String x:Key="ServerSettings_PlayerSettingsLabel">玩家设置</sys:String>
     <sys:String x:Key="ServerSettings_EnableFlyerCarryLabel">启用 飞行-携带</sys:String>
     <sys:String x:Key="ServerSettings_EnableFlyerCarryTooltip">如果启用，在PVE模式下允许飞行的恐龙，拿起其他恐龙和玩家.</sys:String>
@@ -1576,7 +1578,7 @@
     <sys:String x:Key="ServerSettings_MaxFallSpeedMultiplierTooltip">指玩家受到坠落伤害时的抵抗倍数。如果将其设置为0.1，玩家有可能很容易摔死，将其设置为100.0玩家能够在从天上掉下来的情况下生存。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-恐龙设置 -->
+    <!--#region 服务器设置-恐龙设置 -->
     <sys:String x:Key="ServerSettings_MaxTamedDinosLabel">最大驯服的恐龙（服务器）：</sys:String>
     <sys:String x:Key="ServerSettings_MaxTamedDinosTooltip">设置服务器驯服的恐龙的最大数量。</sys:String>
     <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosLabel">最大驯服的恐龙（部落）：</sys:String>
@@ -1717,7 +1719,7 @@
     <sys:String x:Key="ServerSettings_DinoCustomization_ResetLabel">单击“是”确认要重置当前所有恐龙的自定义。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-环境 -->
+    <!--#region 服务器设置-环境 -->
     <sys:String x:Key="ServerSettings_EnvironmentLabel">环境设置</sys:String>
     <sys:String x:Key="ServerSettings_TamingSpeedLabel">驯服速度:</sys:String>
     <sys:String x:Key="ServerSettings_TamingSpeedTooltip">指恐龙驯服速度倍数。 较高的值可使驯服速度更快。</sys:String>
@@ -1794,7 +1796,7 @@
     <sys:String x:Key="ServerSettings_CustomHarvest_ResetLabel">单击“是”以确认要重置所有当前资源收获量倍数的变化.</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 建筑 -->
+    <!--#region 服务器设置 - 建筑 -->
     <sys:String x:Key="ServerSettings_StructuresLabel">建筑设置</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionLabel">禁用结构放置碰撞</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionTooltip">如果启用，将允许玩家将建筑放置在地形中。</sys:String>
@@ -1869,7 +1871,7 @@
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">如果启用，将禁用“创世纪”地图上任务区域的建筑。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 印痕技能 -->
+    <!--#region 服务器设置 - 印痕技能 -->
     <sys:String x:Key="ServerSettings_EngramsLabel">技能设置</sys:String>
     <sys:String x:Key="ServerSettings_AutoUnlockAllEngramsLabel">自动解锁所有印痕技能</sys:String>
     <sys:String x:Key="ServerSettings_AutoUnlockAllEngramsTooltip">如果启用，随着玩家等级的不同，印痕技能将自动解锁。</sys:String>
@@ -1919,7 +1921,7 @@
     <sys:String x:Key="ServerSettings_EngramsOverride_UnselectAllConfirmLabel">点击“是”确认要取消所有的技能痕迹。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 自定义级别级数 -->
+    <!--#region 服务器设置 - 自定义级别级数 -->
     <sys:String x:Key="ServerSettings_LevelProgressionsLabel">玩家和恐龙等级</sys:String>
     <sys:String x:Key="ServerSettings_MaxXPPlayerLabel">玩家最大经验值:</sys:String>
     <sys:String x:Key="ServerSettings_MaxXPPlayerTooltip">设置玩家的最大经验值上限。</sys:String>
@@ -1974,7 +1976,7 @@
     <sys:String x:Key="ServerSettings_CustomLevel_ImportFilterExtension">*.csv</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-自定义游戏用户设置的细节 -->
+    <!--#region 服务器设置-自定义游戏用户设置的细节 -->
     <sys:String x:Key="ServerSettings_CustomGameUserSettingsLabel">自定义GameUserSettings.ini设置</sys:String>
     <sys:String x:Key="ServerSettings_CustomGameSettingsLabel">自定义Game.ini设置</sys:String>
     <sys:String x:Key="ServerSettings_CustomEngineSettingsLabel">自定义Engine.ini设置</sys:String>
@@ -1997,7 +1999,7 @@
     <sys:String x:Key="ServerSettings_RemoveCustomItemTooltip">删除项目</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-服务器玩家细节 -->
+    <!--#region 服务器设置-服务器玩家细节 -->
     <sys:String x:Key="ServerSettings_ServerFilesLabel">服务器玩家详细信息</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesWarningLabel">注︰任何更改都需要服务器重启才能生效。</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesLoadErrorTitle">加载错误</sys:String>
@@ -2030,7 +2032,7 @@
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinTooltip">如果启用，仅专用加入列表中的玩家将能够登录到服务器.</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 适者生存 -->
+    <!--#region 服务器设置 - 适者生存 -->
     <sys:String x:Key="ServerSettings_SOTFLabel">适者生存模式设置</sys:String>
     <sys:String x:Key="ServerSettings_EnableSOTFLabel">开启适者生存模式</sys:String>
     <sys:String x:Key="ServerSettings_EnableSOTFTooltip">如果启用，配置服务器会作为“大逃杀”的服务器.</sys:String>
@@ -2072,7 +2074,7 @@
     <sys:String x:Key="ServerSettings_SOTF_HelpLabel">适者生存是一种替代的游戏，以生存进化，使用不同的服务器文件，并改变许多规则。见WEB更多的细节.</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-程序生成方舟 -->
+    <!--#region 服务器设置-程序生成方舟 -->
     <sys:String x:Key="ServerSettings_PGMLabel">程序生成方舟</sys:String>
     <sys:String x:Key="ServerSettings_PGM_EnableLabel">启用程序产生方舟</sys:String>
     <sys:String x:Key="ServerSettings_PGM_EnableTooltip">如果启用，配置使用程序产生的方舟服务器。</sys:String>
@@ -2235,7 +2237,7 @@
     <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3EndTooltip">西3区的结束位置（X，Y从0到1）。</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置 - 地图刷新设置 -->
+    <!--#region 服务器设置 - 地图刷新设置 -->
     <sys:String x:Key="ServerSettings_MapSpawnerOverridesLabel">地图刷新设置</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerLabel">箱子</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryLabel">项</sys:String>
@@ -2267,7 +2269,7 @@
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_SaveContainerTooltip">保存地图刷新容器</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-制作覆盖 -->
+    <!--#region 服务器设置-制作覆盖 -->
     <sys:String x:Key="ServerSettings_CraftingOverridesLabel">制作设置</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_ItemsLabel">制作物品</sys:String>
     <sys:String x:Key="ServerSettings_CraftingOverrides_ResourcesLabel">资源项目</sys:String>
@@ -2296,7 +2298,7 @@
     <sys:String x:Key="ServerSettings_CraftingOverrides_SaveItemTooltip">保存制作项目</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-光柱/补给箱/BOSS战利品和宝箱覆盖 -->
+    <!--#region 服务器设置-光柱/补给箱/BOSS战利品和宝箱覆盖 -->
     <sys:String x:Key="ServerSettings_SupplyCrateOverridesLabel">光柱/补给箱/战利品设置覆盖</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_CratesLabel">有关于光柱/补给箱/战利品/宝箱/河狸窝掉落的描述</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_ItemSetsLabel">物品分类(温馨提示请看概率)</sys:String>
@@ -2373,7 +2375,7 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">保存光柱/补给箱/战利品</sys:String>
     <!--#endregion-->
 
-    <!-- 服务器设置-叠加大小覆盖-->
+    <!--#region 服务器设置-叠加大小覆盖-->
     <sys:String x:Key="ServerSettings_StackSizeOverridesLabel">叠加大小设置</sys:String>
     <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierLabel">项目叠加大小倍数</sys:String>
     <sys:String x:Key="ServerSettings_ItemStackSizeMultiplierTooltip">这是全局修改，用于允许增加或减小项目叠加的大小。 注意：这仅适用于要堆叠的物品。</sys:String>
@@ -2394,7 +2396,7 @@
     <sys:String x:Key="ServerSettings_StackSizeOverrides_RemoveItemTooltip">删除叠加大小物品</sys:String>
     <sys:String x:Key="ServerSettings_StackSizeOverrides_SaveItemsTooltip">保存叠加大小物品数据</sys:String>
 
-    <!-- 服务器设置 - 覆盖 -->
+    <!--#region 服务器设置 - 覆盖 -->
     <sys:String x:Key="ServerSettings_OverlayMessage_SavingLabel">保存中...</sys:String>
     <sys:String x:Key="ServerSettings_OverlayMessage_PermissionsLabel">正在检查目录权限...</sys:String>
     <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">正在检查预定任务...</sys:String>
@@ -2419,7 +2421,7 @@
     <sys:String x:Key="ServerSettings_PreventTransferOverrides_SaveItemsTooltip">保存禁止传服数据</sys:String>
     <!--#endregion-->
 	
-    <!-- 玩家/部落档案窗口 -->
+    <!--#region 玩家/部落档案窗口 -->
     <sys:String x:Key="Profile_PlayerSectionLabel">玩家设置</sys:String>
     <sys:String x:Key="Profile_TribeSectionLabel">部落设置</sys:String>
     <sys:String x:Key="Profile_TribeMembersSectionLabel">部落成员</sys:String>
@@ -2444,7 +2446,7 @@
     <sys:String x:Key="Profile_WindowTitle_Tribe">部落配置文件 - {0}</sys:String>
     <!--#endregion-->
 
-    <!-- 控制台 窗口 -->
+    <!--#region 控制台 窗口 -->
     <sys:String x:Key="RCON_Menu_File">_文件</sys:String>
     <sys:String x:Key="RCON_Menu_ViewLogs">查看日志...</sys:String>
     <sys:String x:Key="RCON_Menu_ClearLogs">清除日志</sys:String>
@@ -2575,7 +2577,7 @@
     <sys:String x:Key="Player_Leave">玩家 '{0}' 离开了游戏。</sys:String>
     <!--#endregion-->
 
-    <!-- 打开控制台窗口 -->
+    <!--#region 打开控制台窗口 -->
     <sys:String x:Key="OpenRCON_Title">打开控制台会话</sys:String>
 
     <sys:String x:Key="OpenRCON_IPLabel">服务器IP地址:</sys:String>
@@ -2588,13 +2590,13 @@
     <sys:String x:Key="OpenRCON_WindowTitle">远程: {0}:{1}</sys:String>
     <!--#endregion-->
 
-    <!-- 设置窗口 -->
+    <!--#region 设置窗口 -->
     <sys:String x:Key="Settings_Title">设置</sys:String>
     <!--#endregion-->
 
-    <!--恐龙/生物 -->
+    <!--#region 恐龙/生物 -->
 
-    <!--恐龙/生物类别名称 -->
+    <!--#region 恐龙/生物类别名称 -->
     <sys:String x:Key="Achatina_Character_BP_C">玛瑙螺 </sys:String>
     <sys:String x:Key="Allo_Character_BP_C">异特龙</sys:String>
     <sys:String x:Key="Ammonite_Character_C">菊石</sys:String>
@@ -2723,7 +2725,7 @@
     <sys:String x:Key="Yeti_Character_BP_C">雪怪</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - Boss -->
+    <!--#region 恐龙/生物类名称 - Boss -->
     <sys:String x:Key="SpiderL_Character_BP_C">育母蜘蛛</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Easy_C">育母蜘蛛 (简单难度)</sys:String>
     <sys:String x:Key="SpiderL_Character_BP_Medium_C">育母蜘蛛 (中等难度)</sys:String>
@@ -2774,7 +2776,7 @@
     <sys:String x:Key="EndBossSpiderL_Character_BP_Hard_C">育母蜘蛛守护者 (困难难度)</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 焦土 -->
+    <!--#region 恐龙/生物类名称 - 焦土 -->
     <sys:String x:Key="camelsaurus_Character_BP_C">驼峰兽</sys:String>
     <sys:String x:Key="Deathworm_Character_BP_C">死亡蠕虫</sys:String>
     <sys:String x:Key="Jerboa_Character_BP_C">跳鼠</sys:String>
@@ -2795,21 +2797,21 @@
     <sys:String x:Key="Wyvern_Character_BP_Poison_C">毒属性双足飞龙</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 焦土 - Boss -->
+    <!--#region 恐龙/生物类名称 - 焦土 - Boss -->
     <sys:String x:Key="Manticore_Character_BP_C">狮身蝎尾兽</sys:String>
     <sys:String x:Key="Manticore_Character_BP_Easy_C">狮身蝎尾兽 (简单难度)</sys:String>
     <sys:String x:Key="Manticore_Character_BP_Medium_C">狮身蝎尾兽 (中等难度)</sys:String>
     <sys:String x:Key="Manticore_Character_BP_Hard_C">狮身蝎尾兽 (困难难度)</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 仙境传说 -->
+    <!--#region 恐龙/生物类名称 - 仙境传说 -->
     <sys:String x:Key="Griffin_Character_BP_C">狮鹫</sys:String>
     <sys:String x:Key="Polar_Bear_C">北极熊</sys:String>
     <sys:String x:Key="Ragnarok_Wyvern_Override_Ice_C">冰飞龙</sys:String>
 	<sys:String x:Key="Iceworm_Character_Minion_BP_smaller_C">死亡蠕虫</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 仙境传说 - Boss -->
+    <!--#region 恐龙/生物类名称 - 仙境传说 - Boss -->
     <sys:String x:Key="Iceworm_Queen_Character_BP_C">冰虫洞蠕虫女皇</sys:String>
     <sys:String x:Key="LavaGolem_Character_BP_C">熔岩石头人</sys:String>
 
@@ -2822,7 +2824,7 @@
     <sys:String x:Key="Manticore_Character_BP_Hard_Ragnarok_C">狮身蝎尾兽 (仙境传说困难难度)</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 畸变 -->
+    <!--#region 恐龙/生物类名称 - 畸变 -->
     <sys:String x:Key="Achatina_Character_BP_Aberrant_C">畸变玛瑙螺</sys:String>
     <sys:String x:Key="Angler_Character_BP_Aberrant_C">畸变鮟鱇鱼</sys:String>
     <sys:String x:Key="Ankylo_Character_BP_Aberrant_C">畸变甲龙</sys:String>
@@ -2897,7 +2899,7 @@
     <sys:String x:Key="Xenomorph_Character_BP_Male_Tamed_C">死神国王驯服</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 畸变 - BOSS -->
+    <!--#region 恐龙/生物类名称 - 畸变 - BOSS -->
     <sys:String x:Key="Rockwell_Character_BP_C">罗克韦尔</sys:String>
     <sys:String x:Key="Rockwell_Character_BP_Easy_C">罗克韦尔 (简单难度)</sys:String>
     <sys:String x:Key="Rockwell_Character_BP_Medium_C">罗克韦尔 (中等难度)</sys:String>
@@ -2908,7 +2910,7 @@
     <sys:String x:Key="RockwellTentacle_Character_BP_Gamma_C">罗克韦尔触手 (简单难度)</sys:String>
     <!--#endregion-->
 
-    <!--#恐龙/生物类名称 - 灭绝 -->
+    <!--#region 恐龙/生物类名称 - 灭绝 -->
     <sys:String x:Key="Arthro_Character_BP_Corrupt">腐化古马陆</sys:String>
     <sys:String x:Key="Carno_Character_BP_Corrupt_C">腐化牛龙</sys:String>
     <sys:String x:Key="Chalico_Character_BP_Corrupt_C">腐化砂矿兽</sys:String>
@@ -2941,7 +2943,7 @@
     <sys:String x:Key="Defender_Character_BP_C">机器人</sys:String>
     <!--#endregion-->
 
-    <!--#恐龙/生物类名称 - 灭绝 - BOSS -->
+    <!--#region 恐龙/生物类名称 - 灭绝 - BOSS -->
 	<sys:String x:Key="DesertKaiju_Character_BP_C">沙漠泰坦</sys:String>
 	<sys:String x:Key="IceKaiju_Character_BP_C">冰霜泰坦</sys:String>
 	<sys:String x:Key="ForestKaiju_Character_BP_C">森林泰坦</sys:String>
@@ -2950,17 +2952,17 @@
     <sys:String x:Key="KingKaiju_Character_BP_Beta_C">国王泰坦 (中等)</sys:String>
     <!--#endregion-->
 
-    <!-- 恐龙/生物类名称 - 瓦尔盖罗 -->
+    <!--#region 恐龙/生物类名称 - 瓦尔盖罗 -->
     <sys:String x:Key="Deinonychus_Character_BP_C">恐爪龙</sys:String>
     <sys:String x:Key="ChalkGolem_Character_BP_C">岩石巨人(苔藓)</sys:String>
     <sys:String x:Key="IceGolem_Character_BP_C">岩石巨人(冰)</sys:String>
 	<sys:String x:Key="SpiderL_VAL_Character_BP_C">育母蜘蛛 (Lysrix)</sys:String>
     <!--#endregion-->
-	
-	<!--#恐龙/生物类名称 - 瓦尔盖罗 - BOSS -->
+
+    <!--#region 恐龙/生物类名称 - 瓦尔盖罗 - BOSS -->
 	<!--#endregion-->
-	
-	<!--#恐龙/生物类名-创世记 （1）-->
+
+    <!--#region 恐龙/生物类名-创世记 （1）-->
     <sys:String x:Key="SpaceWhale_Character_BP_C">鲲</sys:String>
     <sys:String x:Key="BogSpider_Character_BP_C">血腥追猎者</sys:String>
     <sys:String x:Key="Cherufe_Character_BP_C">岩浆怪</sys:String>
@@ -2996,7 +2998,7 @@
     <sys:String x:Key="Snow_Yutyrannus_Character_BP_C">X-羽暴龙</sys:String>
     <!--#endregion-->
 	
-	<!-- 恐龙/生物类名称 - 水晶岛 -->
+	<!--#region 恐龙/生物类名称 - 水晶岛 -->
 	<sys:String x:Key="CrystalWyvern_Character_BP_Mega_C">精英水晶血飞龙</sys:String>
 	<sys:String x:Key="CrystalWyvern_Character_BP_Blood_C">水晶血飞龙</sys:String>
 	<sys:String x:Key="CrystalWyvern_Character_BP_Ember_C">灰烬水晶飞龙</sys:String>
@@ -3026,7 +3028,7 @@
     <sys:String x:Key="VRMainBoss_Character_Hard_C">VR BOSS (困难)</sys:String>
 	<!--#endregion-->
 	
-    <!-- 恐龙/生物类名称 - 创世记(2) -->
+    <!--#region 恐龙/生物类名称 - 创世记(2) -->
     <sys:String x:Key="SpaceDolphin_Character_BP_C">虚空海豚</sys:String>
 	<sys:String x:Key="MilkGlider_Character_BP_C">鸭嘴飞鼠</sys:String>
 	<sys:String x:Key="BrainSlug_Character_BP_C">诺格林</sys:String>
@@ -3064,7 +3066,7 @@
 	<sys:String x:Key="Exosuit_Character_BP_C">Exo-Mek机甲（做物品收物品）</sys:String>
     <!--#endregion-->
 	
-	<!-- 恐龙/生物类名称 - 创世记(2)-BOSS -->
+	<!--#region 恐龙/生物类名称 - 创世记(2)-BOSS -->
 	<sys:String x:Key="RockwellNode_Character_BP_Boss_C">罗克韦尔 BOSS（全盛时期）</sys:String>
 	<sys:String x:Key="RockwellNode_Character_BP_Boss_Gamma_C">罗克韦尔 BOSS（简单）</sys:String>
 	<sys:String x:Key="RockwellNode_Character_BP_Boss_Beta_C">罗克韦尔 BOSS（中等）</sys:String>
@@ -3076,13 +3078,13 @@
 	<sys:String x:Key="RockwellNode_Character_BP_FinalFight_Alpha_C">罗克韦尔节点 BOSS（困难）</sys:String>
 	<!--#endregion-->
 	
-	<!-- 恐龙/生物类名称 - 迷失岛 -->
+	<!--#region 恐龙/生物类名称 - 迷失岛 -->
 	<sys:String x:Key="Amargasaurus_Character_BP_C">阿马加龙</sys:String>
 	<sys:String x:Key="Sinomacrops_Character_BP_C">中华大眼翼龙</sys:String>
 	<sys:String x:Key="Dinopithecus_Character_BP_C">恐狒</sys:String>
 	<!--#endregion-->
 	
-	<!-- 恐龙/生物类名称 - 迷失岛-BOSS-->
+	<!--#region 恐龙/生物类名称 - 迷失岛-BOSS-->
 	<sys:String x:Key="BossDinopithecus_Character_BP_C">BOSS-恐狒</sys:String>
 	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Easy_C">BOSS-恐狒(简单)</sys:String>
 	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Hard_C">BOSS-恐狒(中等)</sys:String>
@@ -3475,7 +3477,7 @@
     <sys:String x:Key="EngramEntry_WoodWindow_C">木制窗</sys:String>
     <!--#endregion-->
 
-    <!--印痕技能泰克类 -->
+    <!--#region 印痕技能泰克类 -->
     <sys:String x:Key="EngramEntry_Tek_Gate_C">泰克恐龙门</sys:String>
     <sys:String x:Key="EngramEntry_Tek_Gate_Large_C">泰克巨兽门</sys:String>
     <sys:String x:Key="EngramEntry_Tek_Gategrame_C">泰克恐龙门框</sys:String>
@@ -3526,7 +3528,7 @@
     <sys:String x:Key="EngramEntry_TurretTek_C">泰克炮塔</sys:String>
     <!--#endregion-->
 
-    <!-- 印痕技能类 - 原始DLC -->
+    <!--#region 印痕技能类 - 原始DLC -->
     <sys:String x:Key="EngramEntry_AdobeCeiling_PP_C">黏土天花板</sys:String>
     <sys:String x:Key="EngramEntry_AdobeDoor_PP_C">黏土门</sys:String>
     <sys:String x:Key="EngramEntry_AdobeFloor_PP_C">黏土地基</sys:String>
@@ -3691,7 +3693,7 @@
     <sys:String x:Key="EngramEntry_Yurt_C">圆顶帐篷</sys:String>
     <!--#endregion-->
 
-    <!-- 印痕技能类 - 焦土 -->
+    <!--#region 印痕技能类 - 焦土 -->
     <sys:String x:Key="EngramEntry_AdobeCeiling_C">焦土天花板</sys:String>
     <sys:String x:Key="EngramEntry_AdobeCeilingDoorGiant_C">巨型焦土天窗</sys:String>
     <sys:String x:Key="EngramEntry_AdobeCeilingWithDoorWay_Giant_C">巨型焦土天窗框</sys:String>
@@ -3746,7 +3748,7 @@
     <sys:String x:Key="EngramEntry_WindTurbine_C">风力发电机</sys:String>
     <!--#endregion-->
 
-    <!-- 印痕技能类 - 畸变 -->
+    <!--#region 印痕技能类 - 畸变 -->
     <sys:String x:Key="EngramEntry_BasiliskSaddle_C">鞍-毒蜥</sys:String>
     <sys:String x:Key="EngramEntry_ChargeBattery_C">蓄电池</sys:String>
     <sys:String x:Key="EngramEntry_ChargeLantern_C">探照灯枪</sys:String>
@@ -3781,7 +3783,7 @@
     <sys:String x:Key="EngramEntry_TekSniper_C">泰克狙击枪</sys:String>
     <!--#endregion-->
 
-    <!--#印痕技能类 - 灭绝 -->
+    <!--#region 印痕技能类 - 灭绝 -->
     <sys:String x:Key="EngramEntry_CryoFridge_C">低温冰箱</sys:String>
     <sys:String x:Key="EngramEntry_DinoLeash_C">恐龙电子项圈</sys:String>
     <sys:String x:Key="EngramEntry_EmptyCryopod_C">空的低温舱</sys:String>
@@ -3805,12 +3807,12 @@
     <sys:String x:Key="EngramEntry_TaxidermyTool_C">标本工具</sys:String>
     <!--#endregion-->
 
-    <!--#印痕技能泰克类 - 灭绝 -->
+    <!--#region 印痕技能泰克类 - 灭绝 -->
     <sys:String x:Key="EngramEntry_TekBridge_C">泰克桥梁</sys:String>
     <sys:String x:Key="EngramEntry_TekGravityGrenade_C">泰克重力手雷</sys:String>
     <!--#endregion-->
-	
-    <!--#印痕技能类 - 创世 (1)-->
+
+    <!--#region 印痕技能类 - 创世 (1)-->
     <sys:String x:Key="EngramEntry_CherufeSaddle_C">鞍-岩喉龙</sys:String>
     <sys:String x:Key="EngramEntry_GiantTurtleSaddle_C">鞍-巨龟平台</sys:String>
     <sys:String x:Key="EngramEntry_FishingNet_C">渔网</sys:String>
@@ -3819,8 +3821,8 @@
     <sys:String x:Key="EngramEntry_PressurePlate_C">压力板</sys:String>
     <sys:String x:Key="EngramEntry_MiningDrill_C">矿枪</sys:String>
     <!--#endregion-->
-	
-    <!--# 印痕技能泰克类 - 创世（1） -->
+
+    <!--#region 印痕技能泰克类 - 创世（1） -->
     <sys:String x:Key="EngramEntry_TekSpaceWhaleSaddle_C">鲲-泰克鞍</sys:String>
     <sys:String x:Key="EngramEntry_TekClaws_C">泰克光刃</sys:String>
     <sys:String x:Key="EngramEntry_CruiseMissile_C">巡航导弹</sys:String>
@@ -3830,8 +3832,8 @@
     <sys:String x:Key="EngramEntry_TekAlarm_C">泰克传感器</sys:String>
     <sys:String x:Key="EngramEntry_ShoulderCannon_C">泰克肩炮</sys:String>
 	<!--#endregion-->
-	
-	<!--# 印痕技能泰克类 - 创世（2） -->
+
+    <!--#region 印痕技能泰克类 - 创世（2） -->
 	<sys:String x:Key="EngramEntry_TekHoverSail_C">泰克悬停帆</sys:String>
 	<sys:String x:Key="EngramEntry_TekPistol_C">泰克相枪</sys:String>
 	<sys:String x:Key="EngramEntry_AmmoBox_C">弹药箱</sys:String>
@@ -3849,22 +3851,21 @@
 	<sys:String x:Key="EngramEntry_TekCropPlot_C">泰克耕地</sys:String>
 	<sys:String x:Key="EngramEntry_TekExosuit_C">未组装的Exo-Mek机甲(做物品收物品)</sys:String>
     <!--#endregion-->
-	
-    <!--#印痕技能类 - 瓦尔盖罗 -->
+
+    <!--#region 印痕技能类 - 瓦尔盖罗 -->
     <sys:String x:Key="EngramEntry_Saddle_Deinonychus_C">鞍 - 恐爪龙</sys:String>
 	<!--#endregion-->
-	
-	<!--# 印痕技能 - 水晶岛 -->
+
+    <!--#region 印痕技能 - 水晶岛 -->
 	<sys:String x:Key="EngramEntry_TropeSaddle_C">脊颌翼龙的鞍</sys:String>
     <!--#endregion-->
-	
-	<!--# 印痕技能 - 迷失岛 -->
+
+    <!--#region 印痕技能 - 迷失岛 -->
 	<sys:String x:Key="EngramEntry_Saddle_Amarga_C">阿马加龙鞍</sys:String>
     <!--#endregion-->
 	
     <!--#endregion-->
-    <!--#endregion-->
-
+    
     <!--#region Items -->
 
     <!--#区域项目类名称 -->
@@ -4760,7 +4761,7 @@
     <sys:String x:Key="PrimalItemWeaponAttachment_Silencer_C">消音器附件</sys:String>
     <!--#endregion-->
 
-    <!-- 项目类的名称 - 焦土 -->
+    <!--#region 项目类的名称 - 焦土 -->
     <sys:String x:Key="PrimalItem_ChainSaw_C">电锯</sys:String>
     <sys:String x:Key="PrimalItem_WeapFlamethrower_C">喷火器</sys:String>
     <sys:String x:Key="PrimalItem_WeaponBoomerang_C">回旋镖</sys:String>
@@ -4846,7 +4847,7 @@
     <sys:String x:Key="PrimalItemTrophy_Manticore_Gamma_C">狮身蝎尾兽奖杯 (简单)</sys:String>
     <!--#endregion-->
 
-    <!-- 项目类的名称 - 原始 -->
+    <!--#region 项目类的名称 - 原始 -->
     <sys:String x:Key="PrimalItem_Mail_C">邮箱</sys:String>
     <sys:String x:Key="PrimalItem_VikingAxe_C">维京战斧</sys:String>
     <sys:String x:Key="PrimalItem_WeaponBattleAxe_C">战斧</sys:String>
@@ -5118,7 +5119,7 @@
     <sys:String x:Key="PrimalItemStructure_Yurt_C">圆顶帐篷</sys:String>
     <!--#endregion-->
 
-    <!-- 项目类别名称 - 畸变 -->
+    <!--#region 项目类别名称 - 畸变 -->
     <sys:String x:Key="PrimalItem_ChargeBattery_C">蓄电池</sys:String>
     <sys:String x:Key="PrimalItem_GlowStick_C">荧光棒</sys:String>
     <sys:String x:Key="PrimalItem_PlantSpeciesZ_Grenade_C">Z异种植物果实</sys:String>
@@ -5183,7 +5184,7 @@
     <sys:String x:Key="PrimalItemTrophy_Rockwell_Beta_Alpha_C">罗克韦尔战利品 (困难)</sys:String>
     <!--#endregion-->
 
-    <!--#项目类别名称 - 灭绝-->
+    <!--#region 项目类别名称 - 灭绝-->
     <sys:String x:Key="PrimalItem_WeaponEmptyCryopod_C">空的低温舱</sys:String>
     <sys:String x:Key="PrimalItem_WeaponTaxidermyTool_C">标本工具</sys:String>
     <sys:String x:Key="PrimalItem_WeaponTekGravityGrenade_C">泰克重力手雷</sys:String>
@@ -5256,11 +5257,11 @@
     <sys:String x:Key="PrimalItemTrophy_Kaiju_King_Gamma_C">国王泰坦奖杯 (简单)</sys:String>
     <!--#endregion-->
 
-    <!-- 项目类别名称 - 瓦尔盖罗 -->
+    <!--#region 项目类别名称 - 瓦尔盖罗 -->
     <sys:String x:Key="PrimalItemArmor_DeinonychusSaddle_C">鞍-恐爪龙</sys:String>
     <!--#endregion-->
-	
-	<!--#项目类别名称 - 创世(1)-->
+
+    <!--#region 项目类别名称 - 创世(1)-->
     <sys:String x:Key="PrimalItem_WeaponTekClaws_C">泰克光刃</sys:String>
 	<sys:String x:Key="PrimalItem_WeaponTekGrenadeLauncher_C">泰克榴弹发射器</sys:String>
 	<sys:String x:Key="PrimalItem_WeaponFishingNet_C">鱼网</sys:String>
@@ -5292,8 +5293,8 @@
     <sys:String x:Key="PrimalItemStructure_TekJumpPad_C">泰克弹跳器</sys:String>
     <sys:String x:Key="PrimalItemStructure_Wood_OceanPlatform_C">木制海洋平台</sys:String>
 	<!--#endregion-->
-	
-	<!--#项目类别名称 - 创世(2)-->
+
+    <!--#region 项目类别名称 - 创世(2)-->
 	<sys:String x:Key="PrimalItemConsumable_Mutagen_C">诱变剂</sys:String>
 	<sys:String x:Key="PrimalItemStructure_AmmoContainer_C">弹药箱</sys:String>
 	<sys:String x:Key="PrimalItemCanoe_C">独木舟</sys:String>
@@ -5329,8 +5330,8 @@
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat_C">植物R-4 种子(优质生肉)</sys:String>
 	<sys:String x:Key="PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C">植物R-5 种子(优质生鱼肉)</sys:String>
 	<!--#endregion-->
-	
-	<!--#项目类别名称 - 迷失岛 -->
+
+    <!--#region 项目类别名称 - 迷失岛 -->
 	<sys:String x:Key="PrimalItemArmor_AmargaSaddle_C">阿马加龙鞍</sys:String>
 	<sys:String x:Key="PrimalItemSkin_Costume_Dinopithecus_C">恐狒皮肤</sys:String>
 	<sys:String x:Key="PrimalItemResource_AmargaSpike_C">阿马加龙尖刺</sys:String>
@@ -5339,8 +5340,8 @@
 	<sys:String x:Key="PrimalItemTrophy_BossDinopithecus_Hard_C">恐狒BOSS战利品(中等)(迷失岛)</sys:String>
 	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Medium_C">恐狒BOSS战利品(困难)(迷失岛)</sys:String>
 	<!--#endregion-->
-	
-	<!--#项目类别名称 - 新增（唯一集成模组） -->
+
+    <!--#region 项目类别名称 - 新增（唯一集成模组） -->
 	<sys:String x:Key="PrimalItem_xidianka_Weiyi_C">恐龙洗点卡</sys:String>
 	<sys:String x:Key="PrimalItem_TEK_unlock_Weiyi_C">泰克一键解锁</sys:String>
 	<sys:String x:Key="PrimalItem_TurretZD_Weiyi_C">炮塔终端</sys:String>
@@ -5356,11 +5357,9 @@
 	<sys:String x:Key="PrimalItem_xinshoubao_weiyi_C">新手礼包</sys:String>
 	<!--#endregion-->
 	
-	<!--#endregion-->
+    <!--#region 地图生物生成 -->
 
-    <!--#地图生物生成 -->
-
-    <!--#地图生物生成类名称 -->
+    <!--#region 地图生物生成类名称 -->
     <sys:String x:Key="DinoSpawnEntries_Beavers_C">Beavers</sys:String>
     <sys:String x:Key="DinoSpawnEntries_DarkWater_C">DarkWater</sys:String>
     <sys:String x:Key="DinoSpawnEntries_DarkWater_Lio_C">DarkWater_Lio</sys:String>
@@ -5566,9 +5565,9 @@
 
     <!--#endregion-->
 
-    <!--#补给箱 -->
+    <!--#region 补给箱 -->
 
-    <!--#补给箱类名称 -->
+    <!--#region 补给箱类名称 -->
     <sys:String x:Key="SupplyCrate_Cave_QualityTier1_C">(老图孤岛) 洞穴战利品箱(绿色)</sys:String>
     <sys:String x:Key="SupplyCrate_Cave_QualityTier2_C">(老图孤岛) 洞穴战利品箱(蓝色)</sys:String>
     <sys:String x:Key="SupplyCrate_Cave_QualityTier3_C">(老图孤岛) 洞穴战利品箱(黄色)</sys:String>
@@ -5877,7 +5876,7 @@
 
     <!--#endregion-->
 
-    <!--Boss清单 -->
+    <!--#region Boss清单 -->
     <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Easy_C">Boss 清单 - 育母蜘蛛 (容易)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Medium_C">Boss 清单 - 育母蜘蛛 (中等)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossSpider_Hard_C">Boss 清单 - 育母蜘蛛 (困难)</sys:String>
@@ -5930,7 +5929,7 @@
     
     <!--#endregion-->
 
-    <!--#区域配置文件验证 -->
+    <!--#region 区域配置文件验证 -->
     <sys:String x:Key="ProfileValidation_Title">配置文件验证</sys:String>
     <sys:String x:Key="ProfileValidation_WarningLabel">遇到下列验证问题。\r\n\r\n{validateMessage}\r\n\r\n 是否要继续启动服务器，这可能会导致问题？</sys:String>
 
@@ -5971,7 +5970,7 @@
     <sys:String x:Key="ProfileValidation_ModSteamError">无法从steam检索MOD {modId} 详细信息。</sys:String>
     <!--#endregion-->
 
-    <!--#区域配置保存文件 -->
+    <!--#region 区域配置保存文件 -->
     <sys:String x:Key="ProfileSave_Saving">正在保存...</sys:String>
     <sys:String x:Key="ProfileSave_CheckingPlayerDinoMaxXP">正在检查玩家和恐龙的最大经验值信息...</sys:String>
     <sys:String x:Key="ProfileSave_ConstructingDinoInformation">正在构建恐龙信息...</sys:String>
@@ -5987,17 +5986,18 @@
     <sys:String x:Key="ProfileSave_CheckingScheduledTasks">正在检查计划任务...</sys:String>
     <!--#endregion-->
 
-    <!--#区域还原保存文件 -->
+    <!--#region 区域还原保存文件 -->
     <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">找不到备份文件或备份文件不存在。</sys:String>
     <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">找不到服务器保存文件夹或该文件夹不存在。\r\n{saveFolder}</sys:String>
     <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">备份不包含世界保存文件。</sys:String>
     <!--#endregion-->
 
-    <!--#区域服务器更新 -->
+    <!--#region 区域服务器更新 -->
     <sys:String x:Key="ServerUpdate_Title">服务器更新</sys:String>
     <sys:String x:Key="ServerUpdate_WarningLabel">执行服务器更新时出现问题。这可能会使服务器处于不完整状态。 \r\n\r\n 是否要继续启动服务器，这可能会导致问题？</sys:String>
     <!--#endregion-->
-    <!--#印痕技能类 - S+建筑结构 -->
+
+    <!--#region 印痕技能类 - S+建筑结构 -->
     <sys:String x:Key="EngramEntry_AirConditionerPlus_C">S +空调</sys:String>
     <sys:String x:Key="EngramEntry_AnimalTender_C">S +兔子恐龙产物收集器</sys:String>
     <sys:String x:Key="EngramEntry_AutoCrafter_C">S +泰克自动站</sys:String>
@@ -6404,8 +6404,8 @@
     <sys:String x:Key="EngramEntry_XLWall_Tek_C">S +泰克超高墙</sys:String>
     <sys:String x:Key="EngramEntry_XLWall_Wood_C">S +木头超高墙</sys:String>
     <!--#endregion-->
-	
-    <!--#印痕技能类 - EZ技能解锁 -->
+
+    <!--#region 印痕技能类 - EZ技能解锁 -->
     <sys:String x:Key="EngramEntry_EZAce_Unlock_Vanilla_C">解锁原始技能</sys:String>
     <sys:String x:Key="EngramEntry_EZAce_Unlock_Scorched_C">解锁焦土技能</sys:String>
     <sys:String x:Key="EngramEntry_EZAce_Unlock_Aberration_C">解锁畸变技能</sys:String>
@@ -6415,7 +6415,7 @@
     <sys:String x:Key="EngramEntry_EZAce_Unlock_Genesis_C">解锁创世纪技能</sys:String>
     <!--#endregion-->
     
-    <!-- 项目类别名称 - 创世纪 -->
+    <!--#region 项目类别名称 - 创世纪 -->
     <sys:String x:Key="PrimalItemSkin_FE_Underwear_Araneo_C">蜘蛛泳裤皮肤</sys:String>
     <sys:String x:Key="PrimalItemSkin_FE_SwimShirt_Araneo_C">蜘蛛上衣皮肤</sys:String>
     <sys:String x:Key="PrimalItemSkin_CupidBow_C">情人节爱心弓</sys:String>
@@ -6435,7 +6435,7 @@
     <sys:String x:Key="PrimalItemSkin_FE_SwimShirt_VampireDodo_C">吸血鬼上衣皮肤</sys:String>
     <!--#endregion-->
     
-    <!-- 项目类别名称 - S+建筑结构 -->
+    <!--#region 项目类别名称 - S+建筑结构 -->
     <sys:String x:Key="PrimalItemStructure_SPlusCraftingStation_C">S +圆桌工作台</sys:String>
     <sys:String x:Key="PrimalItemStructure_SmithyPlus_C">S +铁匠台</sys:String>
     <sys:String x:Key="PrimalItemStructure_MortarPestlePlus_C">S +研磨器</sys:String>
@@ -6857,8 +6857,8 @@
 	<sys:String x:Key="PrimalItemStructure_Tree_Wedge_Full_Glass_C">S+玻璃平台楔</sys:String>
 	<sys:String x:Key="APrimalItemStructure_Tree_Wedge_Full_Tek_C">S+泰克平台楔</sys:String>
     <!--#endregion-->
-	
-    <!--#印痕技能类 - 新增 -->
+
+    <!--#region 印痕技能类 - 新增 -->
     <sys:String x:Key="EngramEntry_DedicatedStorage_C">泰克专用储物箱</sys:String>
     <sys:String x:Key="EngramEntry_DoubleDoor_Adobe_C">黏土双开门</sys:String>
     <sys:String x:Key="EngramEntry_DoubleDoor_Greenhouse_C">温室双开门</sys:String>
@@ -6957,7 +6957,7 @@
     <sys:String x:Key="PrimalItemStructure_Wire_Flex_C">弹性电缆</sys:String>
     <!--#endregion-->
 
-    <!--#印痕技能类 - 新增（唯一集成模组） -->
+    <!--#region 印痕技能类 - 新增（唯一集成模组） -->
 	<sys:String x:Key="EngramEntry_chibang_weiyi _C">管理员翅膀</sys:String>
 	<sys:String x:Key="EngramEntry_feixingbao_weiyi_C">飞行背包</sys:String>
 	<sys:String x:Key="EngramEntry_jinshou_weiyi_C">金手指 2.0</sys:String>
@@ -7002,4 +7002,5 @@
     <sys:String x:Key="DiscordBot_CountLabel">总数:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">地图:</sys:String>
     <!--#endregion-->
+    
 </Globalization:GlobalizationResourceDictionary>

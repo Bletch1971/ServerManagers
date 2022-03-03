@@ -196,7 +196,7 @@
     <sys:String x:Key="DataDirectory_RestartLabel">Le dossier de données a été défini, vous devez maintenant redémarrer le gestionnaire de serveur pour utiliser les nouveaux paramètres.</sys:String>
     <!--#endregion-->
 
-    <!-- PlayerListWindow Window -->
+    <!--#region PlayerListWindow Window -->
     <sys:String x:Key="PlayerList_CloseButtonLabel">Fermer</sys:String>
 
     <sys:String x:Key="PlayerList_TitleLabel">Liste des joueurs: {0}</sys:String>
@@ -1188,18 +1188,6 @@
     <sys:String x:Key="ServerSettings_WebAlarmNote">NOTE: ASM ne fournit pas la fonctionnalité d'alarmes Web. ASM vous permet simplement d'activer / désactiver les alarmes Web et de créer le fichier de références d'alarme nécessaire.</sys:String>
     <sys:String x:Key="ServerSettings_WebAlarmErrorTitle">Erreur d'alarme Web</sys:String>
 
-    <sys:String x:Key="ServerSettings_BranchLabel">Détails de la branche du jeux </sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameLabel">Nom de la branche du jeux:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchNameTooltip">Le nom de la branche  Ark à télécharger (laissez vide pour utiliser la branche par défaut).</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Mot de passe de la branche:</sys:String>
-    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Le mot de passe utilisé pour accéder au téléchargement des branches Béta.</sys:String>
-    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Effacer l'erreur de branche</sys:String>
-
-    <sys:String x:Key="ServerSettings_EventLabel">Détails de l'évènement</sys:String>
-    <sys:String x:Key="ServerSettings_EventNote">REMARQUE: L'activation d'un événement sur votre serveur ne doit être effectuée que lorsque l'événement officiel est en cours d'exécution. Si vous activez l'événement avant ou après les dates officielles, l'événement peut rendre votre serveur instable ou ne pas fonctionner du tout..</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameLabel">Événement actif:</sys:String>
-    <sys:String x:Key="ServerSettings_EventNameTooltip">Le nom de l'événement à activer (laissez vide pour désactiver l'événement).</sys:String>
-
     <sys:String x:Key="ServerSettings_CommandLineLabel">Ligne de commande</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priorité:</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Définir la priorité de l'application lors du démarrage du serveur.</sys:String>
@@ -1256,7 +1244,21 @@
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Autoriser la mise à jour</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Si activé, le profil écoutera les commandes de mise à jour de discord.</sys:String>
     <!--#endregion-->
-    
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_BranchLabel">Détails de la branche du jeux </sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Nom de la branche du jeux:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">Le nom de la branche  Ark à télécharger (laissez vide pour utiliser la branche par défaut).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Mot de passe de la branche:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">Le mot de passe utilisé pour accéder au téléchargement des branches Béta.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Effacer l'erreur de branche</sys:String>
+
+    <sys:String x:Key="ServerSettings_EventLabel">Détails de l'évènement</sys:String>
+    <sys:String x:Key="ServerSettings_EventNote">REMARQUE: L'activation d'un événement sur votre serveur ne doit être effectuée que lorsque l'événement officiel est en cours d'exécution. Si vous activez l'événement avant ou après les dates officielles, l'événement peut rendre votre serveur instable ou ne pas fonctionner du tout..</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameLabel">Événement actif:</sys:String>
+    <sys:String x:Key="ServerSettings_EventNameTooltip">Le nom de l'événement à activer (laissez vide pour désactiver l'événement).</sys:String>
+    <!--#endregion-->
+
     <!--#region Server Settings - Rules -->
     <sys:String x:Key="ServerSettings_RulesLabel">Règles</sys:String>
     <sys:String x:Key="ServerSettings_EnableHardcoreLabel">Activer le mode Hardcore</sys:String>
