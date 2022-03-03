@@ -5,7 +5,31 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-02-17T00:00:00Z</updated>
+  <updated>2022-03-03T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:C6DE07B3-ADA8-4AE4-BFE4-1F87CDFF6284</id>
+    <title>1.1.63 (1.1.63.2)</title>
+    <summary>1.1.63.2</summary>
+    <link href="" />
+    <updated>2022-03-03T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Branch Details moved to new Server Details section, easier to perform profile sync.</li>
+            <li>Misc. Language File Updates.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:6F91598E-D62C-4F48-A205-C9C4A66BBB65</id>
