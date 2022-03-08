@@ -178,10 +178,10 @@
     <!--#endregion-->
 
     <!--#region Data Directory Window -->
-    <sys:String x:Key="DataDirectory_Title">Sélection de dossiers de données </sys:String>
+    <sys:String x:Key="DataDirectory_Title">Sélection de dossiers de données</sys:String>
     <sys:String x:Key="DataDirectory_InformationLabel">Il semble que vous n'ayez pas de répertoire de données défini. Le répertoire de données est où vos profils et vos profils SteamCMD seront stockés. Ce n'est pas la même chose que le répertoire d'installation du serveur, que vous pouvez choisir pour chaque profil.</sys:String>
     <sys:String x:Key="DataDirectory_SelectionLabel">Sélectionnez le lecteur où le dossier de données doit être localisé.</sys:String>
-    <sys:String x:Key="DataDirectory_FolderLabel">Nom du dossier de données :</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Nom du dossier de données:</sys:String>
     <sys:String x:Key="DataDirectory_FolderTooltip">Le nom du dossier Données du gestionnaire de serveur.</sys:String>
     <sys:String x:Key="DataDirectory_LocalDiskLabel">Disque local</sys:String>
     <sys:String x:Key="DataDirectory_DriveLine2Label">{0} libre de {1}</sys:String>
@@ -491,7 +491,8 @@
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Exécuter en tant qu'administrateur au démarrage</sys:String>
     <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Vérifiez si le gestionnaire de serveur s'exécute au démarrage</sys:String>
     <sys:String x:Key="GlobalSettings_StartModeLabel">Mode de démarrage de la fenêtre principale:</sys:String>
-    <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Réduire dans la barre des tâches </sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeServerMonitorLabel">Mode de démarrage de la fenêtre du moniteur de serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Réduire dans la barre des tâches</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Gérer les paramètres du pare-feu automatiquement</sys:String>
     <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Gérer automatiquement l'IP Public</sys:String>
     <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Répertoire de données:</sys:String>
@@ -538,6 +539,8 @@
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Si elle est activée, lorsque vous démarrez manuellement le serveur, une validation de base est effectuée sur le serveur et les fichiers mod. NOTE: Ne sera pas effectuée si Ark Mod Management est activé.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Effectuer la mise à jour du serveur et du mod au démarrage du serveur</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Si elle est activée, lorsque vous démarrez manuellement le serveur, les fichiers du serveur et du mod seront mis à jour avec la dernière version. NOTE: Ne sera pas effectuée si Ark Mod Management est activé.</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Démarrer le serveur minimisé</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">Si activé, lorsque le serveur est démarré, la fenêtre de commande sera minimisée, sinon elle s'ouvrira normalement.</sys:String>
     
     <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Paramètres Steam</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Arrêter la fermeture de SteamCMD (à utiliser uniquement pour le débogage)</sys:String>
@@ -1199,6 +1202,8 @@
     <sys:String x:Key="ServerSettings_LauncherArgsTooltip">Arguments de ligne de commande supplémentaires pour le lanceur de serveur. Utilisez ceci avec prudence! Pour plus d'informations, recherchez 'Microsoft Start Command' sur Internet.</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideLabel">Remplacer le lanceur</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideTooltip">Si activé, le fichier RunServer.cmd ne contiendra que ce qui est inclus dans le champ Lanceur Args.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">Prefix du lanceur</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixTooltip">Si activé, le fichier RunServer.cmd inclura le champ args Lanceur avant le démarrage du serveur (permettra d'exécuter d'autres fichiers avant le démarrage du serveur).</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsLabel">Serveur Args:</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsTooltip">Arguments de ligne de commande supplémentaires pour le serveur. Si vous spécifiez ceci, ajoutez les arguments commençant par? En premier, suivis de tout autre argument. Par exemple:?MaxPlayers=5?QueryPort=9999-nosteamclient</sys:String>
     <sys:String x:Key="ServerSettings_ShowCommandButtonLabel">Afficher la commande...</sys:String>
@@ -1246,6 +1251,8 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_ServerDetailsLabel">Détails du serveur </sys:String>
+
     <sys:String x:Key="ServerSettings_BranchLabel">Détails de la branche du jeux </sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Nom de la branche du jeux:</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameTooltip">Le nom de la branche  Ark à télécharger (laissez vide pour utiliser la branche par défaut).</sys:String>

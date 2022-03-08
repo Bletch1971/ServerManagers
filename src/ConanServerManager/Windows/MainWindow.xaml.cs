@@ -272,6 +272,7 @@ namespace ServerManagerTool
             else
                 this.Title = _globalizer.GetResourceString("MainWindow_Title");
 
+            this.versionChecker.PostAction(CheckForUpdates).DoNotWait();
             this.scheduledTaskChecker.PostAction(CheckForScheduledTasks).DoNotWait();
             this.discordBotChecker.PostAction(CheckForDiscordBot).DoNotWait();
         }
