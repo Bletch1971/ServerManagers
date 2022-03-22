@@ -1113,7 +1113,7 @@ namespace ServerManagerTool.Lib
 
                 Task.Delay(1000).Wait();
 
-                _rconConsole = server.GetControl(this.ProfileSnapshot.AdminPassword);
+                _rconConsole = server.GetControl(this.ProfileSnapshot.RCONPassword);
             }
             catch (Exception)
             {

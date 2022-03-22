@@ -59,7 +59,7 @@ namespace ServerManagerTool
                     ProfileId = $"{ServerIP}-{RCONPort}".Replace(".", "-"),
                     RCONHost = ServerIP,
                     RCONPort = RCONPort,
-                    AdminPassword = Password,
+                    RCONPassword = Password,
                     InstallDirectory = String.Empty,
                     AltSaveDirectoryName = String.Empty,
                     PGM_Enabled = false,

@@ -27,7 +27,7 @@ namespace ServerManagerTool.Lib
 
         public int RCONPort { get; set; }
 
-        public string AdminPassword { get; set; }
+        public string RCONPassword { get; set; }
 
         public int MaxPlayers
         {

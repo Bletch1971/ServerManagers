@@ -659,7 +659,6 @@ namespace ServerManagerTool
                     PlayerListWidth = server.Profile.RCONPlayerListWidth,
 
                     Server = server,
-                    AdminPassword = server.Runtime.ProfileSnapshot.AdminPassword,
                     InstallDirectory = server.Runtime.ProfileSnapshot.InstallDirectory,
                     AltSaveDirectoryName = server.Runtime.ProfileSnapshot.AltSaveDirectoryName,
                     ProfileId = server.Runtime.ProfileSnapshot.ProfileId,
@@ -667,6 +666,7 @@ namespace ServerManagerTool
                     MaxPlayers = server.Runtime.MaxPlayers,
                     RCONHost = server.Runtime.ProfileSnapshot.ServerIPAddress.ToString(),
                     RCONPort = server.Runtime.ProfileSnapshot.RCONPort,
+                    RCONPassword = server.Runtime.ProfileSnapshot.RCONPassword,
 
                     PGM_Enabled = server.Profile.PGM_Enabled,
                     PGM_Name = server.Profile.PGM_Name,

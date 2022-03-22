@@ -8,9 +8,9 @@
   <updated>2022-03-22T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:344B5D20-74E5-484C-A548-200A4ADAE3A2</id>
-    <title>1.1.419 (1.1.420.1)</title>
-    <summary>1.1.420.1</summary>
+    <id>urn:uuid:B6B3F1F1-610F-4294-9891-43DD245A5E0A</id>
+    <title>1.1.421 (1.1.421.1)</title>
+    <summary>1.1.421.1</summary>
     <link href="" />
     <updated>2022-03-22T00:00:00Z</updated>
     <content type="xhtml">
@@ -19,7 +19,7 @@
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fixed the issue where the Dino Tame settings would be reset when opening the server manager.</li>
+            <li>Fixed a bug that would prevent auto processes from sending through broadcast messages to the clients.</li>
           </ul>
         </p>
       </div>

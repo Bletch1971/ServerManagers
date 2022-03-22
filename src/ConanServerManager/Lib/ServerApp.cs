@@ -2443,6 +2443,18 @@ namespace ServerManagerTool.Lib
             Debug.WriteLine($"[INFO] (Branch {GetBranchName(branchName) ?? "unknown"}) {message}");
         }
 
+        private void LogProfileDebug(string message, bool includeProgressCallback = true)
+        {
+            message = message ?? string.Empty;
+
+            _loggerProfile?.Debug(message);
+
+            if (includeProgressCallback)
+                ProgressCallback?.Invoke(0, $"{message}");
+
+            Debug.WriteLine($"[DEBUG] (Profile {_profile?.ProfileName ?? "unknown"}) {message}");
+        }
+
         private void LogProfileError(string error, bool includeProgressCallback = true)
         {
             if (string.IsNullOrWhiteSpace(error))
@@ -2614,37 +2626,27 @@ namespace ServerManagerTool.Lib
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
                 if (server == null)
                 {
-#if DEBUG
-                    LogProfileMessage($"FAILED: {nameof(SetupRconConsole)} - ServerQuery could not be created.", false);
-#endif
+                    LogProfileDebug($"FAILED: {nameof(SetupRconConsole)} - ServerQuery could not be created.", false);
                     return;
                 }
 
-#if DEBUG
-                LogProfileMessage($"SUCCESS: {nameof(SetupRconConsole)} - ServerQuery was created.", false);
-#endif
+                LogProfileDebug($"SUCCESS: {nameof(SetupRconConsole)} - ServerQuery was created.", false);
 
                 Task.Delay(1000).Wait();
 
-                _rconConsole = server.GetControl(_profile.AdminPassword);
+                _rconConsole = server.GetControl(_profile.RconPassword);
                 if (_rconConsole == null)
                 {
-#if DEBUG
-                    LogProfileMessage($"FAILED: {nameof(SetupRconConsole)} - RconConsole could not be created ({_profile.AdminPassword}).", false);
-#endif
+                    LogProfileDebug($"FAILED: {nameof(SetupRconConsole)} - RconConsole could not be created ({_profile.RconPassword}).", false);
                     return;
                 }
 
-#if DEBUG
-                LogProfileMessage($"SUCCESS: {nameof(SetupRconConsole)} - RconConsole was created ({_profile.AdminPassword}).", false);
-#endif
+                LogProfileDebug($"SUCCESS: {nameof(SetupRconConsole)} - RconConsole was created ({_profile.RconPassword}).", false);
             }
             catch (Exception ex)
             {
-#if DEBUG
-                LogProfileMessage($"ERROR: {nameof(SetupRconConsole)}\r\n{ex.Message}", false);
-                LogProfileMessage($"ERROR: {nameof(SetupRconConsole)}\r\n{ex.StackTrace}", false);
-#endif
+                LogProfileDebug($"ERROR: {nameof(SetupRconConsole)}\r\n{ex.Message}", false);
+                LogProfileDebug($"ERROR: {nameof(SetupRconConsole)}\r\n{ex.StackTrace}", false);
             }
         }
 

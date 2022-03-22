@@ -25,12 +25,13 @@ namespace ServerManagerTool.Lib
         public int QueryPort;
         public bool RCONEnabled;
         public int RCONPort;
+        public string RCONPassword;
         public string ServerMap;
         public string ServerMapModId;
         public string TotalConversionModId;
         public IEnumerable<string> ServerModIds;
         public string MOTD;
-        public int MotDDuration;
+        public int MOTDDuration;
         public bool MOTDIntervalEnabled;
         public int MOTDInterval;
         public bool ForceRespawnDinos;
@@ -75,12 +76,13 @@ namespace ServerManagerTool.Lib
                 QueryPort = profile.QueryPort,
                 RCONEnabled = profile.RCONEnabled,
                 RCONPort = profile.RCONPort,
+                RCONPassword = profile.AdminPassword,
                 ServerMap = ServerProfile.GetProfileMapName(profile),
                 ServerMapModId = ServerProfile.GetProfileMapModId(profile),
                 TotalConversionModId = profile.TotalConversionModId ?? string.Empty,
                 ServerModIds = ModUtils.GetModIdList(profile.ServerModIds),
                 MOTD = profile.MOTD,
-                MotDDuration = Math.Max(profile.MOTDDuration, 10),
+                MOTDDuration = Math.Max(profile.MOTDDuration, 10),
                 MOTDIntervalEnabled = profile.MOTDInterval.HasValue && !string.IsNullOrWhiteSpace(profile.MOTD),
                 MOTDInterval = Math.Max(1, Math.Min(int.MaxValue, profile.MOTDInterval.Value)),
                 ForceRespawnDinos = profile.ForceRespawnDinos,

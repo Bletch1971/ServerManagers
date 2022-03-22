@@ -197,7 +197,7 @@ namespace ServerManagerTool.Lib
 
             var endpoint = new IPEndPoint(this.rconParams.RCONHostIP, this.rconParams.RCONPort);
             var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endpoint);
-            this.console = server.GetControl(this.rconParams.AdminPassword);
+            this.console = server.GetControl(this.rconParams.RCONPassword);
             return this.console != null;
         }
 
@@ -473,7 +473,7 @@ namespace ServerManagerTool.Lib
             }
 
             this.maxCommandRetries = 10;
-            _errorLogger.Error($"Failed to connect to RCON at {this.rconParams.RCONHostIP}:{this.rconParams.RCONPort} with {this.rconParams.AdminPassword}. {lastException.Message}");
+            _errorLogger.Error($"Failed to connect to RCON at {this.rconParams.RCONHostIP}:{this.rconParams.RCONPort} with {this.rconParams.RCONPassword}. {lastException.Message}");
             throw new Exception($"Command failed to send after {maxCommandRetries} attempts.  Last exception: {lastException.Message}", lastException);
         }
         #endregion
