@@ -121,7 +121,7 @@ namespace ServerManagerTool.Lib.ViewModel
             {
                 if (this.Any(d => d.ClassName == entry))
                 {
-                    foreach (var dinoSetting in this.Where(d => d.ClassName == entry && !d.CanTame))
+                    foreach (var dinoSetting in this.Where(d => d.ClassName == entry && d.CanTame))
                     {
                         dinoSetting.CanTame = false;
                     }
