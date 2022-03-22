@@ -523,6 +523,8 @@
     <sys:String x:Key="InputMode_Command">Command</sys:String>
     <sys:String x:Key="InputMode_Global">Global</sys:String>
     <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
+    <sys:String x:Key="InputMode_Alert">Alert (requires Pippi mod)</sys:String>
+    <sys:String x:Key="InputMode_Server">Server (requires Pippi mod)</sys:String>
 
     <sys:String x:Key="ConsoleStatus_Disconnected">Disconnected</sys:String>
     <sys:String x:Key="ConsoleStatus_Connected">Connected</sys:String>
@@ -922,6 +924,9 @@
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Creatures Warning:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild creature wipe is scheduled.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings Control-->

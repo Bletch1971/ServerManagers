@@ -12,7 +12,7 @@ namespace ServerManagerTool {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.1.0.0")]
     public sealed partial class Config : global::System.Configuration.ApplicationSettingsBase {
         
         private static Config defaultInstance = ((Config)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Config())));
@@ -2307,6 +2307,18 @@ namespace ServerManagerTool {
             }
             set {
                 this["SectionServerDetailsIsExpanded"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Broadcast")]
+        public string RCON_MessageCommand {
+            get {
+                return ((string)(this["RCON_MessageCommand"]));
+            }
+            set {
+                this["RCON_MessageCommand"] = value;
             }
         }
     }

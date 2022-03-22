@@ -71,20 +71,7 @@
 
                 <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="1" Label="{DynamicResource ShutdownWindow_ShutdownIntervalLabel}" Value="{Binding ShutdownInterval}" Minimum="0" Maximum="60" SmallChange="1" LargeChange="5" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Minutes}" IsEnabled="{Binding ShutdownStarted, Converter={StaticResource InvertBooleanConverter}}" ToolTip="{DynamicResource ShutdownWindow_ShutdownIntervalTooltip}"/>
 
-                <CheckBox Grid.Row="2" Grid.Column="0" Margin="5" Content="{DynamicResource ShutdownWindow_BackupWorldFileLabel}" IsChecked="{Binding BackupWorldFile}" IsEnabled="{Binding ShutdownStarted, Converter={StaticResource InvertBooleanConverter}}" ToolTip="{DynamicResource ShutdownWindow_BackupWorldFileTooltip}" HorizontalAlignment="Left">
-                    <CheckBox.Style>
-                        <Style BasedOn="{StaticResource {x:Type CheckBox}}" TargetType="{x:Type CheckBox}">
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Server.Profile.SOTF_Enabled}" Value="True">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                </DataTrigger>
-                                <DataTrigger Binding="{Binding Server.Profile.SOTF_Enabled}" Value="False">
-                                    <Setter Property="Visibility" Value="Visible"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </CheckBox.Style>
-                </CheckBox>
+                <CheckBox Grid.Row="2" Grid.Column="0" Margin="5" Content="{DynamicResource ShutdownWindow_BackupWorldFileLabel}" IsChecked="{Binding BackupWorldFile}" IsEnabled="{Binding ShutdownStarted, Converter={StaticResource InvertBooleanConverter}}" ToolTip="{DynamicResource ShutdownWindow_BackupWorldFileTooltip}" HorizontalAlignment="Left"/>
                 <CheckBox Grid.Row="2" Grid.Column="1" Margin="5" Content="{DynamicResource ShutdownWindow_UpdateServerLabel}" IsChecked="{Binding UpdateServer}" IsEnabled="{Binding ShutdownStarted, Converter={StaticResource InvertBooleanConverter}}" ToolTip="{DynamicResource ShutdownWindow_UpdateServerTooltip}" HorizontalAlignment="Left"/>
                 
                 <CheckBox Grid.Row="3" Grid.Column="0" Margin="5" Content="{DynamicResource ShutdownWindow_RestartServerLabel}" IsChecked="{Binding RestartServer}" IsEnabled="{Binding ShutdownStarted, Converter={StaticResource InvertBooleanConverter}}" ToolTip="{DynamicResource ShutdownWindow_RestartServerTooltip}" HorizontalAlignment="Left"/>

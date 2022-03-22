@@ -323,7 +323,8 @@ namespace ServerManagerTool.Lib
                 command.suppressOutput = false;
                 command.lines = HandleListPlayersCommand(command.lines);
             }
-            else if (command.command.Equals(RCON_COMMAND_GETCHAT, StringComparison.OrdinalIgnoreCase))
+
+            if (command.command.Equals(RCON_COMMAND_GETCHAT, StringComparison.OrdinalIgnoreCase))
             {
                 // TODO: Extract the player name from the chat
                 var lines = command.lines.Where(l => !string.IsNullOrEmpty(l) && l != NoResponseOutput);
@@ -342,12 +343,14 @@ namespace ServerManagerTool.Lib
                     }
                 }
             }
-            else if (command.command.Equals(RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
+
+            if (command.command.Equals(RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
             {
                 LogEvent(LogEventType.Chat, command.rawCommand);
                 command.suppressOutput = true;
             }
-            else if (command.command.Equals(RCON_COMMAND_SERVERCHAT, StringComparison.OrdinalIgnoreCase))
+            
+            if (command.command.Equals(RCON_COMMAND_SERVERCHAT, StringComparison.OrdinalIgnoreCase))
             {
                 LogEvent(LogEventType.Chat, command.rawCommand);
                 command.suppressOutput = true;

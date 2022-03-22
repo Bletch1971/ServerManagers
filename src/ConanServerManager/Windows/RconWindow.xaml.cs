@@ -27,8 +27,9 @@ namespace ServerManagerTool
     public enum InputMode
     {
         Command,
-        //Global,
         Broadcast,
+        Alert,
+        Server,
     }
 
     public enum InputWindowMode
@@ -633,12 +634,20 @@ namespace ServerManagerTool
 
                 switch (effectiveMode)
                 {
+                    case InputMode.Command:
+                        this.ServerRcon.IssueCommand(commandText);
+                        break;
+
                     case InputMode.Broadcast:
                         this.ServerRcon.IssueCommand($"{ServerRcon.RCON_COMMAND_BROADCAST} {commandText}");
                         break;
 
-                    case InputMode.Command:
-                        this.ServerRcon.IssueCommand(commandText);
+                    case InputMode.Alert:
+                        this.ServerRcon.IssueCommand($"{ServerRcon.RCON_COMMAND_ALERT} {commandText}");
+                        break;
+
+                    case InputMode.Server:
+                        this.ServerRcon.IssueCommand($"{ServerRcon.RCON_COMMAND_SERVER} {commandText}");
                         break;
                 }
 
@@ -734,6 +743,14 @@ namespace ServerManagerTool
         private IEnumerable<Inline> FormatCommandInput(ConsoleCommand command)
         {
             if (command.command.Equals(ServerRcon.RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
+            {
+                yield return new RconOutput_Broadcast(command.args);
+            }
+            else if(command.command.Equals(ServerRcon.RCON_COMMAND_ALERT, StringComparison.OrdinalIgnoreCase))
+            {
+                yield return new RconOutput_Broadcast(command.args);
+            }
+            else if(command.command.Equals(ServerRcon.RCON_COMMAND_SERVER, StringComparison.OrdinalIgnoreCase))
             {
                 yield return new RconOutput_Broadcast(command.args);
             }

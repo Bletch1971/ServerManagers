@@ -441,7 +441,7 @@ namespace ServerManagerTool
                     execute: (_) =>
                     {
                         var message = _globalizer.GetResourceString("RCON_SaveWorldLabel");
-                        this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_BROADCAST} {message}");
+                        this.ServerRCON.IssueCommand($"{Config.Default.RCON_MessageCommand.ToLower()} {message}");
 
                         this.ServerRCON.IssueCommand(Config.Default.ServerSaveCommand);
                     },
@@ -458,7 +458,7 @@ namespace ServerManagerTool
                     execute: (_) =>
                     {
                         var message = _globalizer.GetResourceString("RCON_DestroyWildDinosLabel");
-                        this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_BROADCAST} {message}");
+                        this.ServerRCON.IssueCommand($"{Config.Default.RCON_MessageCommand.ToLower()} {message}");
 
                         this.ServerRCON.IssueCommand(ServerRCON.RCON_COMMAND_WILDDINOWIPE);
                     },
@@ -801,6 +801,10 @@ namespace ServerManagerTool
 
                     switch (effectiveMode)
                     {
+                        case InputMode.Command:
+                            this.ServerRCON.IssueCommand(commandText);
+                            break;
+
                         case InputMode.Broadcast:
                             this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_BROADCAST} {commandText}");
                             break;
@@ -815,16 +819,6 @@ namespace ServerManagerTool
                                 this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_SERVERCHAT} {commandText}");
                             }
                             break;
-
-                        case InputMode.Command:
-                            this.ServerRCON.IssueCommand(commandText);
-                            break;
-
-#if false
-                    case InputMode.Chat:
-                        this.ServerRCON.IssueCommand(textBox.Text);
-                        break;
-#endif
                     }
                 }
 

@@ -860,5 +860,8 @@
     <Setting Name="SectionServerDetailsIsExpanded" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="RCON_MessageCommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Broadcast</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

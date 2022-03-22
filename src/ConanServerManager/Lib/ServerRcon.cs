@@ -27,6 +27,8 @@ namespace ServerManagerTool.Lib
         public const string NoResponseOutput = "NO_RESPONSE";
 
         public const string RCON_COMMAND_BROADCAST = "broadcast";
+        public const string RCON_COMMAND_ALERT = "alert";
+        public const string RCON_COMMAND_SERVER = "server";
         public const string RCON_COMMAND_LISTPLAYERS = "#managerplayerlist#";
 
         public event EventHandler PlayersCollectionUpdated;
@@ -245,16 +247,28 @@ namespace ServerManagerTool.Lib
             //
             // Perform per-command special processing to extract data
             //
+            if (command?.command?.Equals(RCON_COMMAND_LISTPLAYERS, StringComparison.OrdinalIgnoreCase) ?? false)
+            {
+                command.suppressCommand = true;
+                command.suppressOutput = false;
+            }
+
             if (command?.command?.Equals(RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase) ?? false)
             {
                 LogEvent(LogEventType.Chat, command.rawCommand);
                 command.suppressOutput = true;
             }
 
-            if (command?.command?.Equals(RCON_COMMAND_LISTPLAYERS, StringComparison.OrdinalIgnoreCase) ?? false)
+            if (command?.command?.Equals(RCON_COMMAND_ALERT, StringComparison.OrdinalIgnoreCase) ?? false)
             {
-                command.suppressCommand = true;
-                command.suppressOutput = false;
+                LogEvent(LogEventType.Chat, command.rawCommand);
+                command.suppressOutput = true;
+            }
+
+            if (command?.command?.Equals(RCON_COMMAND_SERVER, StringComparison.OrdinalIgnoreCase) ?? false)
+            {
+                LogEvent(LogEventType.Chat, command.rawCommand);
+                command.suppressOutput = true;
             }
         }
 

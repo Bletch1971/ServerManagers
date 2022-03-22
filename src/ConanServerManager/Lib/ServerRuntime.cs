@@ -1153,7 +1153,7 @@ namespace ServerManagerTool.Lib
             if (string.IsNullOrWhiteSpace(message))
                 return false;
 
-            var sent = await SendCommandAsync($"{ServerRcon.RCON_COMMAND_BROADCAST} {message}", false);
+            var sent = await SendCommandAsync($"{Config.Default.RCON_MessageCommand.ToLower()} {message}", false);
 
             if (sent)
             {
