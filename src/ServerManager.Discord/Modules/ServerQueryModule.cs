@@ -1,35 +1,26 @@
-﻿using Discord;
+﻿using System;
+using System.Threading.Tasks;
+using Discord;
 using Discord.Addons.Interactive;
 using Discord.Commands;
 using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Interfaces;
-using System;
-using System.Threading.Tasks;
 
 namespace ServerManagerTool.DiscordBot.Modules
 {
     [Name("Server Query")]
     public sealed class ServerQueryModule : InteractiveBase
     {
+        private const int COMMAND_RESPONSE_DELAY = 500;
+
         private readonly IServerManagerBot _serverManagerBot;
-        private readonly CommandService _commands;
         private readonly HandleCommandDelegate _handleCommandCallback;
 
-        public ServerQueryModule(IServerManagerBot serverManagerBot, CommandService commands, HandleCommandDelegate handleCommandCallback)
+        public ServerQueryModule(IServerManagerBot serverManagerBot, HandleCommandDelegate handleCommandCallback)
         {
             _serverManagerBot = serverManagerBot;
-            _commands = commands;
             _handleCommandCallback = handleCommandCallback;
-        }
-
-        [Command("info", RunMode = RunMode.Async)]
-        [Summary("Poll server for information")]
-        [Remarks("info")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task ServerInfoAsync()
-        {
-            await ServerInfoAsync(null);
         }
 
         [Command("info", RunMode = RunMode.Async)]
@@ -53,8 +44,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
@@ -84,23 +77,16 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
             {
                 await ReplyAsync($"'{Context.Message}' command sent and failed with exception ({ex.Message})");
             }
-        }
-
-        [Command("status", RunMode = RunMode.Async)]
-        [Summary("Poll server for status")]
-        [Remarks("status")]
-        [RequireBotPermission(ChannelPermission.ViewChannel | ChannelPermission.SendMessages)]
-        public async Task ServerStatusAsync()
-        {
-            await ServerStatusAsync(null);
         }
 
         [Command("status", RunMode = RunMode.Async)]
@@ -124,8 +110,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
