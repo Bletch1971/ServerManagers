@@ -5,7 +5,31 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-03-23T00:00:00Z</updated>
+  <updated>2022-04-14T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:B5B32577-54E7-49D3-9EDF-D623F54A47D9</id>
+    <title>1.1.422 (1.1.422.2)</title>
+    <summary>1.1.422.2</summary>
+    <link href="" />
+    <updated>2022-04-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - added new discord bot setting for an All Profiles alias. To disable to All Profiles feature, just clear the alias field.</li>
+            <li>Discord Bot - can now use the new All Profiles alias to send a command to all profiles associated with the channel.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:95C9671F-4AEC-4433-AD68-CF91854FEC1B</id>
