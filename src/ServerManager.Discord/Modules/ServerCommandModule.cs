@@ -1,26 +1,25 @@
-﻿using Discord;
+﻿using System;
+using System.Threading.Tasks;
+using Discord;
 using Discord.Addons.Interactive;
 using Discord.Commands;
-using Microsoft.Extensions.Configuration;
 using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Enums;
 using ServerManagerTool.DiscordBot.Interfaces;
-using System;
-using System.Threading.Tasks;
 
 namespace ServerManagerTool.DiscordBot.Modules
 {
     [Name("Server Commands")]
     public sealed class ServerCommandModule : InteractiveBase
     {
+        private const int COMMAND_RESPONSE_DELAY = 500;
+
         private readonly IServerManagerBot _serverManagerBot;
-        private readonly CommandService _commands;
         private readonly HandleCommandDelegate _handleCommandCallback;
 
-        public ServerCommandModule(IServerManagerBot serverManagerBot, CommandService commands, HandleCommandDelegate handleCommandCallback)
+        public ServerCommandModule(IServerManagerBot serverManagerBot, HandleCommandDelegate handleCommandCallback)
         {
             _serverManagerBot = serverManagerBot;
-            _commands = commands;
             _handleCommandCallback = handleCommandCallback;
         }
 
@@ -45,8 +44,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
@@ -76,8 +77,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
@@ -107,8 +110,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
@@ -138,8 +143,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
@@ -169,8 +176,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)
@@ -200,8 +209,10 @@ namespace ServerManagerTool.DiscordBot.Modules
                     foreach (var output in response)
                     {
                         await ReplyAsync(output.Replace("&", "_"));
-                        await Task.Delay(1000);
+                        await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
+
+                    await ReplyAsync($"'{Context.Message}' command complete.");
                 }
             }
             catch (Exception ex)

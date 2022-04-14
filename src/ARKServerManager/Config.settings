@@ -863,5 +863,8 @@
     <Setting Name="RCON_MessageCommand" Type="System.String" Scope="User">
       <Value Profile="(Default)">Broadcast</Value>
     </Setting>
+    <Setting Name="DiscordBotAllServersKeyword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

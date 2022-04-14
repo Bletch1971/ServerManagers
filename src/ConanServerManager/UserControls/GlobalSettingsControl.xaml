@@ -575,15 +575,18 @@
                         <Label Grid.Row="2" Grid.Column="6" Margin="1" Content="{DynamicResource GlobalSettings_DiscordBotLogLevelLabel}" VerticalAlignment="Center"/>
                         <ComboBox Name="DiscordBotLogLevelComboBox" Grid.Row="2" Grid.Column="7" Margin="1" ItemsSource="{Binding ElementName=GlobalSettings, Path=DiscordBotLogLevels}" SelectedValue="{Binding Config.DiscordBotLogLevel}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" VerticalContentAlignment="Center" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
 
-                        <CheckBox Grid.Row="3" Grid.Column="1" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordBackup}" Content="{DynamicResource ServerSettings_AllowDiscordBackupLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowBackupTooltip}"/>
-                        <CheckBox Grid.Row="3" Grid.Column="4" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordUpdate}" Content="{DynamicResource ServerSettings_AllowDiscordUpdateLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowUpdateTooltip}"/>
-                        <CheckBox Grid.Row="3" Grid.Column="7" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordStart}" Content="{DynamicResource ServerSettings_AllowDiscordStartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStartTooltip}"/>
+                        <Label Grid.Row="3" Grid.Column="0" Content="{DynamicResource GlobalSettings_DiscordBotAllServersKeywordLabel}" VerticalAlignment="Top" Margin="0,2,0,0"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Margin="1" Text="{Binding Config.DiscordBotAllServersKeyword}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllServersKeywordTooltip}"/>
 
-                        <CheckBox Grid.Row="4" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordRestart}" Content="{DynamicResource ServerSettings_AllowDiscordRestartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowRestartTooltip}"/>
-                        <CheckBox Grid.Row="4" Grid.Column="4" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordShutdown}" Content="{DynamicResource ServerSettings_AllowDiscordShutdownLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowShutdownTooltip}"/>
-                        <CheckBox Grid.Row="4" Grid.Column="7" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordStop}" Content="{DynamicResource ServerSettings_AllowDiscordStopLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStopTooltip}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="1" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordBackup}" Content="{DynamicResource ServerSettings_AllowDiscordBackupLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowBackupTooltip}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="4" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordUpdate}" Content="{DynamicResource ServerSettings_AllowDiscordUpdateLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowUpdateTooltip}"/>
+                        <CheckBox Grid.Row="4" Grid.Column="7" Margin="0,5,0,0" IsChecked="{Binding Config.AllowDiscordStart}" Content="{DynamicResource ServerSettings_AllowDiscordStartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStartTooltip}"/>
 
-                        <GroupBox Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" MinHeight="200" IsEnabled="{Binding Config.DiscordBotAllowAllBots, Converter={StaticResource InvertBooleanConverter}}">
+                        <CheckBox Grid.Row="5" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordRestart}" Content="{DynamicResource ServerSettings_AllowDiscordRestartLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowRestartTooltip}"/>
+                        <CheckBox Grid.Row="5" Grid.Column="4" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordShutdown}" Content="{DynamicResource ServerSettings_AllowDiscordShutdownLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowShutdownTooltip}"/>
+                        <CheckBox Grid.Row="5" Grid.Column="7" Margin="0,5,0,5" IsChecked="{Binding Config.AllowDiscordStop}" Content="{DynamicResource ServerSettings_AllowDiscordStopLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource GlobalSettings_DiscordBotAllowStopTooltip}"/>
+
+                        <GroupBox Grid.Row="6" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" MinHeight="200" IsEnabled="{Binding Config.DiscordBotAllowAllBots, Converter={StaticResource InvertBooleanConverter}}">
                             <GroupBox.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="{DynamicResource GlobalSettings_DiscordBotWhitelistLabel}"/>
@@ -632,7 +635,7 @@
                             </DataGrid>
                         </GroupBox>
 
-                        <CheckBox Grid.Row="6" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.DiscordBotAllowAllBots}" Content="{DynamicResource ServerSettings_DiscordBotAllowAllBotsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DiscordBotAllowAllBotsTooltip}"/>
+                        <CheckBox Grid.Row="7" Grid.Column="1" Margin="0,5,0,5" IsChecked="{Binding Config.DiscordBotAllowAllBots}" Content="{DynamicResource ServerSettings_DiscordBotAllowAllBotsLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DiscordBotAllowAllBotsTooltip}"/>
                     </Grid>
                 </GroupBox>
 

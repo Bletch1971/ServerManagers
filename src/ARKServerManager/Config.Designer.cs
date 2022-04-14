@@ -3138,5 +3138,17 @@ namespace ServerManagerTool {
                 this["RCON_MessageCommand"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string DiscordBotAllServersKeyword {
+            get {
+                return ((string)(this["DiscordBotAllServersKeyword"]));
+            }
+            set {
+                this["DiscordBotAllServersKeyword"] = value;
+            }
+        }
     }
 }
