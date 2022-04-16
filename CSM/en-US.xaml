@@ -812,6 +812,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Log Level:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordLabel">All Profiles Alias:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordTooltip">The alias to use when sending a command via discord to all profiles associated with a discord channel. Do not include spaces or special characters. To disable the All Profiles alias, clear the value.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Allow All Bots</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">If enabled, the server manager bot will respond to all other bots, otherwise they will be ignored unless they are in the whitelist.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
