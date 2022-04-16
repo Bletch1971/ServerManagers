@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">18.02.2022 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">14.04.2022 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -83,7 +83,7 @@
     <sys:String x:Key="ProcessorAffinity_All">Все</sys:String>
     <!--#endregion-->
 
-    <!--#region Processor Window States -->
+    <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Обычный</sys:String>
     <sys:String x:Key="WindowState_Minimized">По минимуму</sys:String>
     <sys:String x:Key="WindowState_Maximized">По максимуму</sys:String>
@@ -639,6 +639,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Лог уровня:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Получить токен ...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Помощь...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordLabel">Псевдоним всех Профилей:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordTooltip">Псевдоним, используемый при отправке команды через discord всем профилям, связанным с каналом discord. Не включайте пробелы или специальные символы. Чтобы отключить псевдоним для всех профилей, снимите это значение.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Разрешить всем ботам</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Если включено, менеджер сервера будет отвечать всем остальным ботам, в противном случае они будут игнорироваться, если только они не находятся в белом списке.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Белый лист бота</sys:String>
@@ -5726,7 +5728,7 @@
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', и эта команда не может быть запущена.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
 
-    <sys:String x:Key="DiscordBot_InfoFailed">Не удалось выполнить вызов сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_InfoFailed">Не удалось выполнить вызов сервера '{0}'.</sys:String>
     <sys:String x:Key="DiscordBot_BackupRequested">Отправлен запрос на резервное копирование для сервера "{0}".</sys:String>
     <sys:String x:Key="DiscordBot_RestartRequested">Отправлен запрос на перезапуск сервера "{0}".</sys:String>
     <sys:String x:Key="DiscordBot_ShutdownRequested">Отправлен запрос на завершение работы сервера "{0}".</sys:String>
