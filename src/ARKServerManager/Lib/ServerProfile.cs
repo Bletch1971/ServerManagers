@@ -960,6 +960,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(DiscordAliasProperty, value); }
         }
 
+        public static readonly DependencyProperty AllowDiscordClusterAliasProperty = DependencyProperty.Register(nameof(AllowDiscordClusterAlias), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool AllowDiscordClusterAlias
+        {
+            get { return (bool)GetValue(AllowDiscordClusterAliasProperty); }
+            set { SetValue(AllowDiscordClusterAliasProperty, value); }
+        }
+
         public static readonly DependencyProperty AllowDiscordBackupProperty = DependencyProperty.Register(nameof(AllowDiscordBackup), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
         [DataMember]
         public bool AllowDiscordBackup

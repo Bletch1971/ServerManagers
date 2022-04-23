@@ -6987,7 +6987,6 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">这个 '{0}' 命令需要配置文件ID或别名。</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">简介 '{0}'找不到或与通道不关联.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileMultiples">具有多个配置文件 '{0}' 在通道中找到，命令中止.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">简介 '{0}'他处于一种状态'{1}' 无法运行此命令的.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">简介 '{0}' 目前正在更新.</sys:String>
 

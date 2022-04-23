@@ -5724,7 +5724,6 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">Для команды '{0}' требуется идентификатор профиля.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Профиль '{0}' не найден или не связан с каналом.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileMultiples">В канале было обнаружено несколько профилей с "{0}", команда прервана.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', и эта команда не может быть запущена.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
 

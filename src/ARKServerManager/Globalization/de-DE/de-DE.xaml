@@ -5626,7 +5626,6 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">Der Befehl '{0}' erfordert eine Profil-ID oder einen Alias.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profil '{0}' wurde nicht gefunden oder ist nicht mit dem Kanal verbunden.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileMultiples">Es wurden mehrere Profile mit '{0}' im Kanal gefunden, der Befehl wurde abgebrochen.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Das Profil '{0}' befindet sich in einem Zustand '{1}', in dem dieser Befehl nicht ausgeführt werden kann.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Das Profil '{0}' wird gerade aktualisiert.</sys:String>
 

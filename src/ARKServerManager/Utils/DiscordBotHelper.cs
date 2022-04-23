@@ -111,6 +111,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -178,6 +179,8 @@ namespace ServerManagerTool.Utils
                 {
                     responseList.Add(string.Format(_globalizer.GetResourceString("DiscordBot_InfoFailed"), profile.ServerName));
                 }
+
+                _currentProfileCommands.Remove(profile.ProfileId);
             }
 
             return responseList;
@@ -231,6 +234,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -282,6 +286,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -382,6 +387,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -487,6 +493,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -591,6 +598,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -696,6 +704,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 
@@ -802,6 +811,7 @@ namespace ServerManagerTool.Utils
                         string.Equals(profileIdOrAlias, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(s.Profile.DiscordAlias) && string.Equals(profileIdOrAlias, s.Profile.DiscordAlias, StringComparison.OrdinalIgnoreCase)
                         || !string.IsNullOrWhiteSpace(Config.Default.DiscordBotAllServersKeyword) && string.Equals(profileIdOrAlias, Config.Default.DiscordBotAllServersKeyword, StringComparison.OrdinalIgnoreCase)
+                        || s.Profile.AllowDiscordClusterAlias && string.Equals(profileIdOrAlias, s.Profile.CrossArkClusterId, StringComparison.OrdinalIgnoreCase)
                     )
                 );
 

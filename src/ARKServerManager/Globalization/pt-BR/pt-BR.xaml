@@ -639,6 +639,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Nível de registro:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Obter Token...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Ajuda...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordLabel">Alias de todos os perfis:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordTooltip">Ao ser usado enviar um comando via discord para todos os perfis associados a um canal de discord. Não inclua espaços ou caracteres especiais. Para desabilitar o alias de Todos os Perfis, limpe o valor.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Permitir todos os bots</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Se ativado, o bot do gerenciador do servidor responderá a todos os outros bots, caso contrário, eles serão ignorados, a menos que estejam na lista de permissões.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
@@ -5649,9 +5651,9 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">O comando '{0}' requer um id de perfil.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">O perfil '{0}' não foi encontrado ou não está associado ao canal.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileMultiples">Vários perfis com '{0}' foram encontrados no canal, comando abortado.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">O perfil '{0}' está em um estado '{1}' que não pode executar este comando.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">O perfil '{0}' está sendo atualizado.</sys:String>
+    <sys:String x:Key="DiscordBot_NoChannelProfiles">Nenhum perfil está associado ao canal.</sys:String>
 
     <sys:String x:Key="DiscordBot_InfoFailed">A chamada para o servidor '{0}' falhou.</sys:String>
     <sys:String x:Key="DiscordBot_BackupRequested">Uma solicitação de backup para o servidor '{0}' foi enviada.</sys:String>

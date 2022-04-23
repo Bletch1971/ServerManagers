@@ -5645,7 +5645,6 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' commande nécessite un ID du profil.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' n'a pas été trouvé ou n'est pas associé au canal.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileMultiples">Plusieurs profils avec '{0}' ont été trouvés dans le canal, commande avorté.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' est dans un état '{1}' qui ne peut pas exécuter cette commande.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' est actuellement mis à jour.</sys:String>
 
