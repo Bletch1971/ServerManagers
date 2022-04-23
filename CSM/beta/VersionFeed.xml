@@ -5,22 +5,26 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-04-14T00:00:00Z</updated>
+  <updated>2022-04-23T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:243F602B-CD67-4691-BE25-61646590A07A</id>
-    <title>1.1.66 (1.1.66.1)</title>
-    <summary>1.1.66.1</summary>
+    <id>urn:uuid:E482A8A4-88C3-4517-A4DD-B954811F4F13</id>
+    <title>1.1.67 (1.1.67.1)</title>
+    <summary>1.1.67.1</summary>
     <link href="" />
-    <updated>2022-04-14T00:00:00Z</updated>
+    <updated>2022-04-23T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">CHANGE</u>
+          <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Global Settings - added new discord bot setting for an All Profiles alias. To disable to All Profiles feature, just clear the alias field.</li>
-            <li>Discord Bot - can now use the new All Profiles alias to send a command to all profiles associated with the channel.</li>
+            <li>Fixed the discord bot Info command, to release the profile once the command has finished running.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file added.</li>
           </ul>
         </p>
       </div>
