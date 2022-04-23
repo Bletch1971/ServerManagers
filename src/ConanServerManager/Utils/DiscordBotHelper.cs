@@ -178,6 +178,8 @@ namespace ServerManagerTool.Utils
                 {
                     responseList.Add(string.Format(_globalizer.GetResourceString("DiscordBot_InfoFailed"), profile.ServerName));
                 }
+
+                _currentProfileCommands.Remove(profile.ProfileId);
             }
 
             return responseList;
