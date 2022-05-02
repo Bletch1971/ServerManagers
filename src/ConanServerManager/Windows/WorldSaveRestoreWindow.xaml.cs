@@ -220,7 +220,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = System.Windows.Input.Cursors.Wait);
                 await Task.Delay(500);
 
-                var restoredFileCount = _profile.RestoreSaveFiles(item.File, item.IsArchiveFile);
+                var restoredFileCount = _profile.RestoreSaveFiles(item.File, item.IsArchiveFile, true);
 
                 var successMessage = _globalizer.GetResourceString("WorldSaveRestore_RestoreSuccessLabel");
                 successMessage = successMessage.Replace("{fileCount}", restoredFileCount.ToString());

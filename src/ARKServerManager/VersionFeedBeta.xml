@@ -5,28 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-04-23T00:00:00Z</updated>
+  <updated>2022-05-02T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:8AD6F2C4-D9BD-41D5-BE91-DA23F31A2FA4</id>
-    <title>1.1.423 (1.1.423.1)</title>
-    <summary>1.1.423.1</summary>
+    <id>urn:uuid:018EF426-73B9-4BF6-9602-77EE2CFD864C</id>
+    <title>1.1.424 (1.1.424.1)</title>
+    <summary>1.1.424.1</summary>
     <link href="" />
-    <updated>2022-04-23T00:00:00Z</updated>
+    <updated>2022-05-02T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed the discord bot Info command, to release the profile once the command has finished running.</li>
-          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Profile Discord Settings - added new checkbox to allow the profile to be included in discord commands using the Cluster Id as the alias.</li>
-            <li>Realigned the default Player and Creature levels to the wiki.</li>
-            <li>pt-BR Translation file updated.</li>
+            <li>World Save Backup - added the SaveGames folder to the to the backup zip file.</li>
+            <li>World Save Restore - now restores the SaveGames folder.</li>
           </ul>
         </p>
       </div>

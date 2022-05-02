@@ -21,7 +21,25 @@ namespace ServerManagerTool.Common.Utils
 
             using (var zip = ZipFile.Read(zipFile))
             {
-                return zip.Entries.Any(e => Path.GetFileName(e.FileName).Equals(entryName, StringComparison.OrdinalIgnoreCase));
+                return zip.Entries.Any(e => !e.IsDirectory && Path.GetFileName(e.FileName).Equals(entryName, StringComparison.OrdinalIgnoreCase));
+            }
+        }
+
+        public static bool DoesFolderExist(string zipFile, string folderName)
+        {
+            if (string.IsNullOrWhiteSpace(zipFile))
+                throw new ArgumentNullException(nameof(zipFile));
+            if (string.IsNullOrWhiteSpace(folderName))
+                throw new ArgumentNullException(nameof(folderName));
+
+            if (!File.Exists(zipFile))
+                throw new FileNotFoundException();
+
+            using (var zip = ZipFile.Read(zipFile))
+            {
+                return zip.Entries.Any(e => e.IsDirectory && e.FileName.EndsWith($"{folderName}/", StringComparison.OrdinalIgnoreCase)) 
+                    ? true 
+                    : zip.Entries.Any(e => !e.IsDirectory && (e.FileName.StartsWith($"{folderName.ToLower()}/", StringComparison.OrdinalIgnoreCase) || e.FileName.ToLower().Contains($"/{folderName.ToLower()}/")));
             }
         }
 
@@ -41,14 +59,14 @@ namespace ServerManagerTool.Common.Utils
 
             using (var zip = ZipFile.Read(zipFile))
             {
-                var selection = zip.Entries.Where(e => Path.GetFileName(e.FileName).Equals(entryName, StringComparison.OrdinalIgnoreCase));
+                var selection = zip.Entries.Where(e => Path.GetFileName(e.FileName).Equals(entryName, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 foreach (var entry in selection)
                 {
                     entry.Extract(destinationPath, ExtractExistingFileAction.OverwriteSilently);
                 }
 
-                return selection.Count();
+                return selection.Count;
             }
         }
 
@@ -67,6 +85,39 @@ namespace ServerManagerTool.Common.Utils
                 zip.ExtractAll(destinationPath, ExtractExistingFileAction.OverwriteSilently);
 
                 return zip.Entries.Count;
+            }
+        }
+
+        public static int ExtractFiles(string zipFile, string destinationPath, string sourceFolder = "", bool recurseFolders = false)
+        {
+            if (string.IsNullOrWhiteSpace(zipFile))
+                throw new ArgumentNullException(nameof(zipFile));
+            if (string.IsNullOrWhiteSpace(destinationPath))
+                throw new ArgumentNullException(nameof(destinationPath));
+
+            if (!Directory.Exists(destinationPath))
+                Directory.CreateDirectory(destinationPath);
+
+            if (sourceFolder is null)
+                sourceFolder = string.Empty;
+            if (sourceFolder.EndsWith("/"))
+                sourceFolder = sourceFolder.TrimEnd('/');
+
+            using (var zip = ZipFile.Read(zipFile))
+            {
+                var selection = new List<ZipEntry>();
+
+                if (recurseFolders)
+                    selection.AddRange(zip.Entries.Where(e => !e.IsDirectory && (e.FileName.StartsWith($"{sourceFolder.ToLower()}/", StringComparison.OrdinalIgnoreCase) || e.FileName.ToLower().Contains($"/{sourceFolder.ToLower()}/"))));
+                else
+                    selection.AddRange(zip.Entries.Where(e => !e.IsDirectory && Path.GetDirectoryName(e.FileName).Equals(sourceFolder, StringComparison.OrdinalIgnoreCase)));
+
+                foreach (var entry in selection)
+                {
+                    entry.Extract(destinationPath, ExtractExistingFileAction.OverwriteSilently);
+                }
+
+                return selection.Count;
             }
         }
 

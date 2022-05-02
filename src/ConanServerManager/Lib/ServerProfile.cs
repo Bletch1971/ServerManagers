@@ -1320,7 +1320,7 @@ namespace ServerManagerTool.Lib
             return JsonUtils.Serialize<ServerProfile>(this);
         }
 
-        public int RestoreSaveFiles(string restoreFile, bool isArchiveFile)
+        public int RestoreSaveFiles(string restoreFile, bool isArchiveFile, bool restoreAll)
         {
             if (string.IsNullOrWhiteSpace(restoreFile) || !File.Exists(restoreFile))
             {
@@ -1336,6 +1336,7 @@ namespace ServerManagerTool.Lib
             }
 
             var worldFileName = ServerMapSaveFileName;
+            var saveGamesFolder = GetProfileSaveGamesPath(this);
 
             // check if the archive file contains the world save file at minimum
             if (isArchiveFile)
@@ -1365,11 +1366,22 @@ namespace ServerManagerTool.Lib
             if (isArchiveFile)
             {
                 // create a list of files to be deleted
-                var files = new List<string>();
-                // add the current world save file
-                files.Add(worldFile);
+                var directories = new List<string>();
+                var files = new List<string>
+                {
+                    worldFile,
+                };
+
                 // add the world save support files
                 files.AddRange(Directory.GetFiles(saveFolder, $"{worldFileName}-*"));
+
+                if (restoreAll)
+                {
+                    if (Directory.Exists(saveGamesFolder) && ZipUtils.DoesFolderExist(restoreFile, Config.Default.SaveGamesRelativePath))
+                    {
+                        directories.Add(saveGamesFolder);
+                    }
+                }
 
                 // delete the selected files
                 foreach (var file in files)
@@ -1384,8 +1396,33 @@ namespace ServerManagerTool.Lib
                     }
                 }
 
-                // restore the files from the backup
-                restoredFileCount = ZipUtils.ExtractAFile(restoreFile, worldFileName, saveFolder);
+                foreach (var directory in directories)
+                {
+                    try
+                    {
+                        Directory.Delete(directory, true);
+                    }
+                    catch
+                    {
+                        // if unable to delete, do not bother
+                    }
+                }
+
+                if (restoreAll)
+                {
+                    // restore the files from the backup
+                    restoredFileCount += ZipUtils.ExtractFiles(restoreFile, saveFolder, sourceFolder: "", recurseFolders: false);
+
+                    if (ZipUtils.DoesFolderExist(restoreFile, Config.Default.SaveGamesRelativePath))
+                    {
+                        var rootSaveFolder = Path.GetDirectoryName(saveGamesFolder);
+                        restoredFileCount += ZipUtils.ExtractFiles(restoreFile, rootSaveFolder, Config.Default.SaveGamesRelativePath, recurseFolders: true);
+                    }
+                }
+                else
+                {
+                    restoredFileCount += ZipUtils.ExtractAFile(restoreFile, worldFileName, saveFolder);
+                }
             }
             else
             {
@@ -1766,6 +1803,16 @@ namespace ServerManagerTool.Lib
         public static string GetProfileMapName(string serverMap)
         {
             return ModUtils.GetMapName(serverMap);
+        }
+
+        public static string GetProfileSaveGamesPath(ServerProfile profile)
+        {
+            return GetProfileSaveGamesPath(profile?.InstallDirectory);
+        }
+
+        public static string GetProfileSaveGamesPath(string installDirectory)
+        {
+            return Path.Combine(installDirectory ?? string.Empty, Config.Default.SavedRelativePath, Config.Default.SaveGamesRelativePath);
         }
 
         public static string GetProfileSavePath(ServerProfile profile)

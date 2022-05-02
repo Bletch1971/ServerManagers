@@ -487,7 +487,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Saved")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ConanSandbox\\Saved")]
         public string SavedRelativePath {
             get {
                 return ((string)(this["SavedRelativePath"]));
@@ -2331,6 +2331,15 @@ namespace ServerManagerTool {
             }
             set {
                 this["DiscordBotAllServersKeyword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SaveGames")]
+        public string SaveGamesRelativePath {
+            get {
+                return ((string)(this["SaveGamesRelativePath"]));
             }
         }
     }

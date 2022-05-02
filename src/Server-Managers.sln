@@ -46,6 +46,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Discord.UnitTests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerManager.Discord", "ServerManager.Discord\ServerManager.Discord.csproj", "{C4C8000D-5E45-497C-A218-B95A1567010E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{A7B846EF-9884-44DB-AF8F-3173DF1B3B66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerManager.Common.UnitTests", "ServerManager.Common.UnitTests\ServerManager.Common.UnitTests.csproj", "{18271A4E-6135-466A-BCF8-80E25446F454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug - AutoBackup|Any CPU = Debug - AutoBackup|Any CPU
@@ -260,6 +264,18 @@ Global
 		{C4C8000D-5E45-497C-A218-B95A1567010E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4C8000D-5E45-497C-A218-B95A1567010E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4C8000D-5E45-497C-A218-B95A1567010E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - AutoBackup|Any CPU.ActiveCfg = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - AutoBackup|Any CPU.Build.0 = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - AutoShutdown|Any CPU.ActiveCfg = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - AutoShutdown|Any CPU.Build.0 = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - AutoUpdate|Any CPU.ActiveCfg = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - AutoUpdate|Any CPU.Build.0 = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - Beta|Any CPU.ActiveCfg = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug - Beta|Any CPU.Build.0 = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18271A4E-6135-466A-BCF8-80E25446F454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -274,6 +290,7 @@ Global
 		{4CA9C894-518F-42D7-BBE2-CFDFE7A03F8A} = {44D8A1A2-01FF-4DD3-A201-AD9A26F7798D}
 		{A8BFC452-5BE8-41E7-BD1D-C29B944185CE} = {F8DBCE70-4658-47CB-A508-B3951125F0ED}
 		{1434D87A-E9FC-48B9-BEC9-E5A3003F1F2E} = {F8DBCE70-4658-47CB-A508-B3951125F0ED}
+		{18271A4E-6135-466A-BCF8-80E25446F454} = {A7B846EF-9884-44DB-AF8F-3173DF1B3B66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4201246C-6E53-4209-883D-A4F084C19187}

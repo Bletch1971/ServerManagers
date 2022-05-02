@@ -135,7 +135,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="SavedRelativePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Saved</Value>
+      <Value Profile="(Default)">ConanSandbox\Saved</Value>
     </Setting>
     <Setting Name="SteamCmdRedirectOutput" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -640,6 +640,9 @@
     </Setting>
     <Setting Name="DiscordBotAllServersKeyword" Type="System.String" Scope="User">
       <Value Profile="(Default)">all</Value>
+    </Setting>
+    <Setting Name="SaveGamesRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SaveGames</Value>
     </Setting>
   </Settings>
 </SettingsFile>

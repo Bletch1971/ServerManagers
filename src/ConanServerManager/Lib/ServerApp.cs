@@ -1925,8 +1925,8 @@ namespace ServerManagerTool.Lib
                 if (Directory.Exists(saveFolder))
                 {
                     // make a backup of the current world file.
-                    var worldBackupFile = GetServerWorldBackupFile();
-                    if (File.Exists(worldBackupFile))
+                    var worldFile = GetServerWorldBackupFile();
+                    if (File.Exists(worldFile))
                     {
                         try
                         {
@@ -1944,8 +1944,6 @@ namespace ServerManagerTool.Lib
                             if (File.Exists(backupFile))
                                 File.Delete(backupFile);
 
-                            var files = new List<string>();
-
                             var comment = new StringBuilder();
                             comment.AppendLine($"Windows Platform: {Environment.OSVersion.Platform}");
                             comment.AppendLine($"Windows Version: {Environment.OSVersion.VersionString}");
@@ -1956,9 +1954,24 @@ namespace ServerManagerTool.Lib
                             comment.AppendLine($"Profile Name: {_profile.ProfileName}");
                             comment.AppendLine($"Process: {ServerProcess}");
 
-                            ZipUtils.ZipAFile(backupFile, worldFileName, worldBackupFile, comment.ToString());
-                            if (files.Count > 0)
-                                ZipUtils.UpdateFiles(backupFile, files, null, false, "");
+                            var saveFolderInfo = new DirectoryInfo(saveFolder);
+
+                            // backup the world save file
+                            ZipUtils.ZipAFile(backupFile, worldFileName, worldFile, comment.ToString());
+
+                            // backup the save games files
+                            var saveGamesFolder = GetServerSaveGamesFolder();
+                            if (Directory.Exists(saveGamesFolder))
+                            {
+                                var saveGamesFolderInfo = new DirectoryInfo(saveGamesFolder);
+
+                                var saveGamesFileFilter = $"*";
+                                var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
+                                foreach (var file in saveGamesFiles)
+                                {
+                                    ZipUtils.ZipAFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
+                                }
+                            }
 
                             LogProfileMessage($"Backed up world files - {saveFolder}");
                             LogProfileMessage($"Backup file created - {backupFile}");
@@ -1986,12 +1999,12 @@ namespace ServerManagerTool.Lib
                     }
                     else
                     {
-                        LogProfileMessage($"Server save file does not exist or could not be found '{worldBackupFile}'.");
+                        LogProfileMessage($"Server save file does not exist or could not be found '{worldFile}'.");
                         LogProfileMessage($"Backup not performed.");
 
                         emailMessage?.AppendLine();
                         emailMessage?.AppendLine($"Server save file does not exist or could not be found.");
-                        emailMessage?.AppendLine(worldBackupFile);
+                        emailMessage?.AppendLine(worldFile);
 
                         emailMessage?.AppendLine();
                         emailMessage?.AppendLine("Backup not performed.");
@@ -2288,6 +2301,8 @@ namespace ServerManagerTool.Lib
         private string GetServerTimeFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.LastUpdatedTimeFile));
 
         private string GetServerSaveFolder() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.SavedFilesRelativePath));
+
+        private string GetServerSaveGamesFolder() => IOUtils.NormalizePath(ServerProfile.GetProfileSaveGamesPath(_profile.InstallDirectory));
 
         private string GetServerVersionFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerExeFile));
 

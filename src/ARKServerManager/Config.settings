@@ -92,7 +92,7 @@
     <Setting Name="UpdateCheckTime" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">720</Value>
     </Setting>
-    <Setting Name="SavedArksRelativePath" Type="System.String" Scope="Application">
+    <Setting Name="SavedFilesRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ShooterGame\Saved\SavedArks</Value>
     </Setting>
     <Setting Name="UpgradeConfig" Type="System.Boolean" Scope="User">
@@ -865,6 +865,9 @@
     </Setting>
     <Setting Name="DiscordBotAllServersKeyword" Type="System.String" Scope="User">
       <Value Profile="(Default)">all</Value>
+    </Setting>
+    <Setting Name="SaveGamesRelativePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SaveGames</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -4830,6 +4830,7 @@ namespace ServerManagerTool.Lib
 
             var mapName = GetProfileMapFileName(this);
             var worldFileName = $"{mapName}{Config.Default.MapExtension}";
+            var saveGamesFolder = GetProfileSaveGamesPath(this);
 
             // check if the archive file contains the world save file at minimum
             if (isArchiveFile)
@@ -4854,11 +4855,12 @@ namespace ServerManagerTool.Lib
 
             var worldFile = IOUtils.NormalizePath(Path.Combine(saveFolder, worldFileName));
             var restoreFileInfo = new FileInfo(restoreFile);
-            int restoredFileCount;
+            var restoredFileCount = 0;
 
             if (isArchiveFile)
             {
                 // create a list of files to be deleted
+                var directories = new List<string>();
                 var files = new List<string>
                 {
                     worldFile
@@ -4892,13 +4894,10 @@ namespace ServerManagerTool.Lib
                         files.Add(file.FullName);
                     }
 
-                    //// get the player images files
-                    //var playerImageFileFilter = $"*{Config.Default.PlayerImageFileExtension}";
-                    //var playerImageFiles = saveFolderInfo.GetFiles(playerImageFileFilter, SearchOption.TopDirectoryOnly);
-                    //foreach (var file in playerImageFiles)
-                    //{
-                    //    files.Add(file.FullName);
-                    //}
+                    if (Directory.Exists(saveGamesFolder) && ZipUtils.DoesFolderExist(restoreFile, Config.Default.SaveGamesRelativePath))
+                    {
+                        directories.Add(saveGamesFolder);
+                    }
                 }
 
                 // delete the selected files
@@ -4914,14 +4913,32 @@ namespace ServerManagerTool.Lib
                     }
                 }
 
+                foreach (var directory in directories)
+                {
+                    try
+                    {
+                        Directory.Delete(directory, true);
+                    }
+                    catch
+                    {
+                        // if unable to delete, do not bother
+                    }
+                }
+
                 // restore the files from the backup
                 if (restoreAll)
                 {
-                    restoredFileCount = ZipUtils.ExtractAllFiles(restoreFile, saveFolder);
+                    restoredFileCount += ZipUtils.ExtractFiles(restoreFile, saveFolder, sourceFolder: "", recurseFolders: false);
+
+                    if (ZipUtils.DoesFolderExist(restoreFile, Config.Default.SaveGamesRelativePath))
+                    {
+                        var rootSaveFolder = Path.GetDirectoryName(saveGamesFolder);
+                        restoredFileCount += ZipUtils.ExtractFiles(restoreFile, rootSaveFolder, Config.Default.SaveGamesRelativePath, recurseFolders: true);
+                    }
                 }
                 else
                 {
-                    restoredFileCount = ZipUtils.ExtractAFile(restoreFile, worldFileName, saveFolder);
+                    restoredFileCount += ZipUtils.ExtractAFile(restoreFile, worldFileName, saveFolder);
                 }
             }
             else
@@ -6691,6 +6708,16 @@ namespace ServerManagerTool.Lib
             return ModUtils.GetMapName(serverMap);
         }
 
+        public static string GetProfileSaveGamesPath(ServerProfile profile)
+        {
+            return GetProfileSaveGamesPath(profile?.InstallDirectory);
+        }
+
+        public static string GetProfileSaveGamesPath(string installDirectory)
+        {
+            return Path.Combine(installDirectory ?? string.Empty, Config.Default.SavedRelativePath, Config.Default.SaveGamesRelativePath);
+        }
+
         public static string GetProfileSavePath(ServerProfile profile)
         {
             return GetProfileSavePath(profile?.InstallDirectory, profile?.AltSaveDirectoryName, profile?.PGM_Enabled ?? false, profile?.PGM_Name);
@@ -6706,8 +6733,8 @@ namespace ServerManagerTool.Lib
             }
 
             if (pgmEnabled)
-                return Path.Combine(installDirectory ?? string.Empty, Config.Default.SavedArksRelativePath, Config.Default.SavedPGMRelativePath, pgmName ?? string.Empty);
-            return Path.Combine(installDirectory ?? string.Empty, Config.Default.SavedArksRelativePath);
+                return Path.Combine(installDirectory ?? string.Empty, Config.Default.SavedFilesRelativePath, Config.Default.SavedPGMRelativePath, pgmName ?? string.Empty);
+            return Path.Combine(installDirectory ?? string.Empty, Config.Default.SavedFilesRelativePath);
         }
         #endregion
 

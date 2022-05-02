@@ -309,9 +309,9 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("ShooterGame\\Saved\\SavedArks")]
-        public string SavedArksRelativePath {
+        public string SavedFilesRelativePath {
             get {
-                return ((string)(this["SavedArksRelativePath"]));
+                return ((string)(this["SavedFilesRelativePath"]));
             }
         }
         
@@ -3148,6 +3148,15 @@ namespace ServerManagerTool {
             }
             set {
                 this["DiscordBotAllServersKeyword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SaveGames")]
+        public string SaveGamesRelativePath {
+            get {
+                return ((string)(this["SaveGamesRelativePath"]));
             }
         }
     }

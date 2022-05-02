@@ -2008,6 +2008,7 @@ namespace ServerManagerTool.Lib
                         {
                             LogProfileMessage("Back up world files started...");
 
+                            var worldFileName = Path.GetFileName(worldFile);
                             var backupFolder = GetServerBackupFolder(_profile);
                             var mapName = ServerProfile.GetProfileMapFileName(_profile.ServerMap, _profile.PGM_Enabled, _profile.PGM_Name);
                             var backupFileName = $"{mapName}_{_startTime:yyyyMMdd_HHmmss}{Config.Default.BackupExtension}";
@@ -2018,36 +2019,6 @@ namespace ServerManagerTool.Lib
 
                             if (File.Exists(backupFile))
                                 File.Delete(backupFile);
-
-                            var files = new List<string>
-                            {
-                                worldFile
-                            };
-
-                            // get the player files
-                            var saveFolderInfo = new DirectoryInfo(saveFolder);
-                            var playerFileFilter = $"*{Config.Default.PlayerFileExtension}";
-                            var playerFiles = saveFolderInfo.GetFiles(playerFileFilter, SearchOption.TopDirectoryOnly);
-                            foreach (var file in playerFiles)
-                            {
-                                files.Add(file.FullName);
-                            }
-
-                            // get the tribe files
-                            var tribeFileFilter = $"*{Config.Default.TribeFileExtension}";
-                            var tribeFiles = saveFolderInfo.GetFiles(tribeFileFilter, SearchOption.TopDirectoryOnly);
-                            foreach (var file in tribeFiles)
-                            {
-                                files.Add(file.FullName);
-                            }
-
-                            // get the tribute tribe files
-                            var tributeTribeFileFilter = $"*{Config.Default.TributeTribeFileExtension}";
-                            var tributeTribeFiles = saveFolderInfo.GetFiles(tributeTribeFileFilter, SearchOption.TopDirectoryOnly);
-                            foreach (var file in tributeTribeFiles)
-                            {
-                                files.Add(file.FullName);
-                            }
 
                             var comment = new StringBuilder();
                             comment.AppendLine($"Windows Platform: {Environment.OSVersion.Platform}");
@@ -2061,7 +2032,48 @@ namespace ServerManagerTool.Lib
                             comment.AppendLine($"PGM Server: {_profile.PGM_Enabled}");
                             comment.AppendLine($"Process: {ServerProcess}");
 
-                            ZipUtils.ZipFiles(backupFile, files, comment.ToString(), false);
+                            var saveFolderInfo = new DirectoryInfo(saveFolder);
+
+                            // backup the world save file
+                            ZipUtils.ZipAFile(backupFile, worldFileName, worldFile, comment.ToString());
+
+                            // backup the player files
+                            var playerFileFilter = $"*{Config.Default.PlayerFileExtension}";
+                            var playerFiles = saveFolderInfo.GetFiles(playerFileFilter, SearchOption.TopDirectoryOnly);
+                            foreach (var file in playerFiles)
+                            {
+                                ZipUtils.ZipAFile(backupFile, file.Name, file.FullName);
+                            }
+
+                            // backup the tribe files
+                            var tribeFileFilter = $"*{Config.Default.TribeFileExtension}";
+                            var tribeFiles = saveFolderInfo.GetFiles(tribeFileFilter, SearchOption.TopDirectoryOnly);
+                            foreach (var file in tribeFiles)
+                            {
+                                ZipUtils.ZipAFile(backupFile, file.Name, file.FullName);
+                            }
+
+                            // backup the tribute tribe files
+                            var tributeTribeFileFilter = $"*{Config.Default.TributeTribeFileExtension}";
+                            var tributeTribeFiles = saveFolderInfo.GetFiles(tributeTribeFileFilter, SearchOption.TopDirectoryOnly);
+                            foreach (var file in tributeTribeFiles)
+                            {
+                                ZipUtils.ZipAFile(backupFile, file.Name, file.FullName);
+                            }
+
+                            // backup the save games files
+                            var saveGamesFolder = GetServerSaveGamesFolder();
+                            if (Directory.Exists(saveGamesFolder))
+                            {
+                                var saveGamesFolderInfo = new DirectoryInfo(saveGamesFolder);
+
+                                var saveGamesFileFilter = $"*";
+                                var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
+                                foreach (var file in saveGamesFiles)
+                                {
+                                    ZipUtils.ZipAFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
+                                }
+                            }
 
                             LogProfileMessage($"Backed up world files - {saveFolder}");
                             LogProfileMessage($"Backup file created - {backupFile}");
@@ -2403,6 +2415,8 @@ namespace ServerManagerTool.Lib
         private string GetServerTimeFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.LastUpdatedTimeFile));
 
         private string GetServerSaveFolder() => IOUtils.NormalizePath(ServerProfile.GetProfileSavePath(_profile.InstallDirectory, _profile.AltSaveDirectoryName, _profile.PGM_Enabled, _profile.PGM_Name));
+
+        private string GetServerSaveGamesFolder() => IOUtils.NormalizePath(ServerProfile.GetProfileSaveGamesPath(_profile.InstallDirectory));
 
         private string GetServerVersionFile() => IOUtils.NormalizePath(Path.Combine(_profile.InstallDirectory, Config.Default.VersionFile));
 
