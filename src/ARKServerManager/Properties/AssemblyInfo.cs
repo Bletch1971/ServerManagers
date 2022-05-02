@@ -7,7 +7,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bletch1971")]
 [assembly: AssemblyProduct("Server Managers")]
-[assembly: AssemblyCopyright("Copyright © 2015-2021")]
+[assembly: AssemblyCopyright("Copyright © 2015-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

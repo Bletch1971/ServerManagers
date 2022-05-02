@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Betson Roy, Bletch1971")]
 [assembly: AssemblyProduct("QueryMaster")]
-[assembly: AssemblyCopyright("Copyright © 2014-2021")]
+[assembly: AssemblyCopyright("Copyright © 2014-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

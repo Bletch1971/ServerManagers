@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Rhyous, Bletch1971")]
 [assembly: AssemblyProduct("WPFSharp.Globalizer")]
-[assembly: AssemblyCopyright("Copyright © 2012-2021")]
+[assembly: AssemblyCopyright("Copyright © 2015-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,19 +1,19 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ServerManager Discord Plugin")]
-[assembly: AssemblyDescription("A Discord plugin that can be used with the server managers.")]
+[assembly: AssemblyTitle("ServerManager.Common.Tests")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bletch1971")]
-[assembly: AssemblyProduct("Server Managers")]
+[assembly: AssemblyProduct("ServerManager.Common.Tests")]
 [assembly: AssemblyCopyright("Copyright © 2015-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("936ef260-fecf-4e9e-a21e-092d65931c7d")]
+[assembly: Guid("a8fc1221-f1c0-4aad-8b46-2a0b0b349399")]
 
-// include semantic versioning - Plugin.Discord
+// exclude from semantic versioning
 [assembly: AssemblyVersion("1.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

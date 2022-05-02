@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AuthiQ, Bletch1971")]
 [assembly: AssemblyProduct("ArkData SDK")]
-[assembly: AssemblyCopyright("Copyright © 2015-2021")]
+[assembly: AssemblyCopyright("Copyright © 2015-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
