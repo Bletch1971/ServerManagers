@@ -19,7 +19,7 @@ namespace Plugin.Common.UnitTests
 
             // Assert
             Assert.IsNotNull(profileList);
-            Assert.IsTrue(profileList.Count == 3);
+            Assert.AreEqual(3, profileList.Count);
         }
 
         public IList<Profile> FetchProfiles()
