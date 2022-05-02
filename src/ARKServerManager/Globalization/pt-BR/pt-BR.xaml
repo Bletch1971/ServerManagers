@@ -1238,6 +1238,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">O id do canal do discord que este perfil irá usar.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasLabel">Nome exclusivo:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Um nome exclusivo para identificar seu servidor ao usar os comandos discord, pode ser usado em vez do ID do perfil.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasLabel">Permitir alias de cluster</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasTooltip">Se ativado, o ID do cluster pode ser usado como um alias de discórdia para executar comandos do servidor.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Permitir backup</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Se ativado, o perfil usará os comandos de backup pelo discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Permitir Reinício</sys:String>
