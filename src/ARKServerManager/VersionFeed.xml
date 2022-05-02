@@ -9,13 +9,18 @@
 
   <entry>
     <id>urn:uuid:018EF426-73B9-4BF6-9602-77EE2CFD864C</id>
-    <title>1.1.424 (1.1.424.2)</title>
-    <summary>1.1.424.2</summary>
+    <title>1.1.424 (1.1.424.3)</title>
+    <summary>1.1.424.3</summary>
     <link href="" />
     <updated>2022-05-02T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Shutdown window - when shutting down a server, the Cancel Shutdown button is now displayed.</li>
+          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>

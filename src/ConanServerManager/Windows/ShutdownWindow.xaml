@@ -150,7 +150,7 @@
                         <Style.Triggers>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding Server.Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}" />
+                                    <Condition Binding="{Binding Server.Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}" />
                                     <Condition Binding="{Binding ShutdownStarted}" Value="True" />
                                 </MultiDataTrigger.Conditions>
                                 <Setter Property="Visibility" Value="Visible"/>
