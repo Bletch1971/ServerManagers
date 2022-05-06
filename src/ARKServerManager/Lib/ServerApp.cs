@@ -2319,6 +2319,23 @@ namespace ServerManagerTool.Lib
             return ModUtils.ValidateModList(modIdList);
         }
 
+        public static string GetMutexName(string directory)
+        {
+            using (var hashAlgo = MD5.Create())
+            {
+                StringBuilder builder = new StringBuilder();
+
+                var hashStr = Encoding.UTF8.GetBytes(directory ?? Assembly.GetExecutingAssembly().Location);
+                var hash = hashAlgo.ComputeHash(hashStr);
+                foreach (var b in hash)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
+        }
+
         private static string GetProfileBackupFolder(ServerProfileSnapshot profile)
         {
             if (string.IsNullOrWhiteSpace(Config.Default.BackupPath))
@@ -2335,20 +2352,15 @@ namespace ServerManagerTool.Lib
 
         public static string GetProfileServerConfigDir(ServerProfileSnapshot profile) => Path.Combine(profile.InstallDirectory, Config.Default.ServerConfigRelativePath);
 
-        public static string GetMutexName(string directory)
+        private static string GetRconMessageCommand(string commandValue)
         {
-            using (var hashAlgo = MD5.Create())
+            switch (commandValue.ToLower())
             {
-                StringBuilder builder = new StringBuilder();
+                case "global":
+                    return ServerRCON.RCON_COMMAND_SERVERCHAT;
 
-                var hashStr = Encoding.UTF8.GetBytes(directory ?? Assembly.GetExecutingAssembly().Location);
-                var hash = hashAlgo.ComputeHash(hashStr);
-                foreach (var b in hash)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-
-                return builder.ToString();
+                default:
+                    return ServerRCON.RCON_COMMAND_BROADCAST;
             }
         }
 
@@ -2669,7 +2681,7 @@ namespace ServerManagerTool.Lib
             if (string.IsNullOrWhiteSpace(message) || !SendMessages)
                 return false;
 
-            var sent = await SendCommandAsync($"{Config.Default.RCON_MessageCommand.ToLower()} {message}", false);
+            var sent = await SendCommandAsync($"{GetRconMessageCommand(Config.Default.RCON_MessageCommand)} {message}", false);
 
             if (sent)
             {

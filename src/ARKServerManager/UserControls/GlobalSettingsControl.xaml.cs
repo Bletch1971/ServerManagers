@@ -37,6 +37,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty WindowStatesServerMonitorProperty = DependencyProperty.Register(nameof(WindowStatesServerMonitor), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotLogLevelsProperty = DependencyProperty.Register(nameof(DiscordBotLogLevels), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelistItem>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty RconMessageModesProperty = DependencyProperty.Register(nameof(RconMessageModes), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
         {
@@ -52,6 +53,7 @@ namespace ServerManagerTool
             PopulateWindowsStatesMainWindowComboBox();
             PopulateWindowsStatesServerMonitorWindowComboBox();
             PopulateDiscordBotLogLevelsComboBox();
+            PopulateRconMessageModesComboBox();
 
             DiscordBotWhitelist = new List<DiscordBotWhitelistItem>();
             if (Config.DiscordBotWhitelist != null)
@@ -114,6 +116,12 @@ namespace ServerManagerTool
         {
             get { return (List<DiscordBotWhitelistItem>)GetValue(DiscordBotWhitelistProperty); }
             set { SetValue(DiscordBotWhitelistProperty, value); }
+        }
+
+        public ComboBoxItemList RconMessageModes
+        {
+            get { return (ComboBoxItemList)GetValue(RconMessageModesProperty); }
+            set { SetValue(RconMessageModesProperty, value); }
         }
 
         public void ApplyChangesToConfig()
@@ -412,6 +420,7 @@ namespace ServerManagerTool
 
             PopulateWindowsStatesMainWindowComboBox();
             PopulateWindowsStatesServerMonitorWindowComboBox();
+            PopulateRconMessageModesComboBox();
 
             App.Instance.OnResourceDictionaryChanged(Config.CultureName);
         }
@@ -549,6 +558,27 @@ namespace ServerManagerTool
             if (this.DiscordBotLogLevelComboBox != null)
             {
                 this.DiscordBotLogLevelComboBox.SelectedValue = selectedValue;
+            }
+        }
+
+        private void PopulateRconMessageModesComboBox()
+        {
+            var selectedValue = this.RconMessageModesComboBox?.SelectedValue ?? Config.RCON_MessageCommand;
+            var list = new ComboBoxItemList();
+
+            foreach (InputMode inputMode in Enum.GetValues(typeof(InputMode)))
+            {
+                if (inputMode == InputMode.Command)
+                    continue;
+
+                var displayMember = _globalizer.GetResourceString($"InputMode_{inputMode}") ?? inputMode.ToString();
+                list.Add(new Common.Model.ComboBoxItem(inputMode.ToString(), displayMember));
+            }
+
+            this.RconMessageModes = list;
+            if (this.RconMessageModesComboBox != null)
+            {
+                this.RconMessageModesComboBox.SelectedValue = selectedValue;
             }
         }
 
