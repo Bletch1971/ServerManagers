@@ -5,68 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-05-02T00:00:00Z</updated>
+  <updated>2022-05-06T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:730AEAAD-1804-432C-8ABB-C0B970D86B23</id>
-    <title>1.1.424 (1.1.424.3)</title>
-    <summary>1.1.424.3</summary>
+    <id>urn:uuid:2C48A585-72D2-43FB-8987-6B5F0B3E460F</id>
+    <title>1.1.425 (1.1.425.1)</title>
+    <summary>1.1.425.1</summary>
     <link href="" />
-    <updated>2022-05-02T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Server Shutdown window - when shutting down a server, the Cancel Shutdown button is now displayed.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:9AC8F213-3411-475D-8E43-8AB67AF81BD8</id>
-    <title>1.1.424 (1.1.424.2)</title>
-    <summary>1.1.424.2</summary>
-    <link href="" />
-    <updated>2022-05-02T00:00:00Z</updated>
+    <updated>2022-05-06T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>pt-BR Translation file updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:018EF426-73B9-4BF6-9602-77EE2CFD864C</id>
-    <title>1.1.424 (1.1.424.1)</title>
-    <summary>1.1.424.1</summary>
-    <link href="" />
-    <updated>2022-05-02T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>World Save Backup - added the SaveGames folder to the to the backup zip file.</li>
-            <li>World Save Restore - now restores the SaveGames folder.</li>
+            <li>Global Settings - added RCON broadcast mode droplist, so auto processes can send messages via RCON using this mode.</li>
+            <li>Auto Processes - changed the message broadcast to use the new config setting, not a hardcoded value.</li>
           </ul>
         </p>
       </div>

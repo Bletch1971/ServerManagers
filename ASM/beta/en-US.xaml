@@ -763,6 +763,9 @@
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Dinos Warning:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild dino wipe is scheduled.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
     <!--#endregion-->
 
     <!--#region Main Window -->   
