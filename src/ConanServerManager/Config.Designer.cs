@@ -2345,7 +2345,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Broadcast")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string RCON_BackupMessageCommand {
             get {
                 return ((string)(this["RCON_BackupMessageCommand"]));

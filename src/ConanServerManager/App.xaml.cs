@@ -378,6 +378,11 @@ namespace ServerManagerTool
             // check and update the public IP address
             DiscoverMachinePublicIP(Config.Default.ManagePublicIPAutomatically);
 
+            if (string.IsNullOrWhiteSpace(Config.Default.RCON_BackupMessageCommand))
+            {
+                Config.Default.RCON_BackupMessageCommand = Config.Default.RCON_MessageCommand;
+            }
+
             var installPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             PluginHelper.Instance.BetaEnabled = this.BetaVersion;
             PluginHelper.Instance.LoadPlugins(installPath, true);

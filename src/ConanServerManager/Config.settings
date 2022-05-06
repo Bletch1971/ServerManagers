@@ -645,7 +645,7 @@
       <Value Profile="(Default)">SaveGames</Value>
     </Setting>
     <Setting Name="RCON_BackupMessageCommand" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Broadcast</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
