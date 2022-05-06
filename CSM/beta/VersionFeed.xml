@@ -8,6 +8,29 @@
   <updated>2022-05-06T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:92A777C4-75B2-468F-BC46-F42327A4D2D1</id>
+    <title>1.1.69 (1.1.69.3)</title>
+    <summary>1.1.69.3</summary>
+    <link href="" />
+    <updated>2022-05-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Security Protocol Changes - updated the security protocols to use TLS12 and TLS13.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:6AC9586B-1678-46B5-9FD7-86B20FB67293</id>
     <title>1.1.69 (1.1.69.2)</title>
     <summary>1.1.69.2</summary>
