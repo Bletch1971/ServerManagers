@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:AD8ABBB5-093A-4FDB-B473-FCED2DB46781</id>
-    <title>1.1.69 (1.1.69.1)</title>
-    <summary>1.1.69.1</summary>
+    <title>1.1.69 (1.1.69.3)</title>
+    <summary>1.1.69.3</summary>
     <link href="" />
     <updated>2022-05-06T00:00:00Z</updated>
     <content type="xhtml">
@@ -25,6 +25,7 @@
           <br/>
           <ul>
             <li>Auto Backup Settings - added RCON broadcast mode droplist, so backup processes can send messages via RCON using this mode.</li>
+            <li>Security Protocol Changes - updated the security protocols to use TLS12 and TLS13.</li>
           </ul>
         </p>
       </div>

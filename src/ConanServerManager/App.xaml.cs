@@ -97,6 +97,7 @@ namespace ServerManagerTool
             Title = string.Empty;
             Version = AppUtils.GetDeployedVersion(Assembly.GetEntryAssembly());
 
+            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(0xC00 + 0x3000); // TLS12, TLS13
             AppDomain.CurrentDomain.UnhandledException += ErrorHandling.CurrentDomain_UnhandledException;
 
             MigrateSettings();
@@ -322,8 +323,6 @@ namespace ServerManagerTool
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
             _globalizer = GlobalizedApplication.Instance;
             try

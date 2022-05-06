@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.DirectoryServices.AccountManagement;
 using System.IO;
+using System.Net;
 using System.Security;
 using System.Security.AccessControl;
 using System.Security.Principal;
@@ -283,6 +284,13 @@ namespace ServerManagerTool.Common.Utils
                 secureString.AppendChar(sourceChar);
             }
             return secureString;
+        }
+
+        public static SecurityProtocolType GetSecurityProtocol(int securityProtocolValue)
+        {
+            if (Enum.TryParse(securityProtocolValue.ToString(), out SecurityProtocolType securityProtocol))
+                return securityProtocol;
+            return SecurityProtocolType.Tls12;
         }
     }
 }
