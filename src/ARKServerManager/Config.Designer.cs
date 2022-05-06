@@ -3159,5 +3159,17 @@ namespace ServerManagerTool {
                 return ((string)(this["SaveGamesRelativePath"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Broadcast")]
+        public string RCON_BackupMessageCommand {
+            get {
+                return ((string)(this["RCON_BackupMessageCommand"]));
+            }
+            set {
+                this["RCON_BackupMessageCommand"] = value;
+            }
+        }
     }
 }

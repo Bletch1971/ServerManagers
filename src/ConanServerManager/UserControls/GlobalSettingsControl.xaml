@@ -332,10 +332,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <Label   Grid.Row="0" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupIntervalLabel}" VerticalAlignment="Center"/>
@@ -345,11 +342,16 @@
                             </TextBox.Text>
                         </TextBox>
 
+                        <StackPanel Grid.Row="0" Grid.Column="2" Margin="0" Orientation="Horizontal">
+                            <Label Content="{DynamicResource GlobalSettings_RCON_ModeLabel}" VerticalAlignment="Center"/>
+                            <ComboBox Name="RconBackupMessageModesComboBox" Margin="1" ItemsSource="{Binding ElementName=GlobalSettings, Path=RconMessageModes}" SelectedValue="{Binding Config.RCON_BackupMessageCommand}" ToolTip="{DynamicResource GlobalSettings_RCON_ModeTooltip}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                        </StackPanel>
+
                         <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_DeleteOldFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,0,5,0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
+                        <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="2" Margin="0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
 
                         <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupWorldSaveLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Margin="1" Text="{Binding Config.ServerBackup_WorldSaveMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_BackupWorldSaveTooltip}"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="1,0,0,0" Text="{Binding Config.ServerBackup_WorldSaveMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_BackupWorldSaveTooltip}"/>
 
                     </Grid>
                 </GroupBox>

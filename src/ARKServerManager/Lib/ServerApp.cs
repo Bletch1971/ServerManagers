@@ -158,7 +158,7 @@ namespace ServerManagerTool.Lib
                     if (!string.IsNullOrWhiteSpace(Config.Default.ServerBackup_WorldSaveMessage))
                     {
                         ProcessAlert(AlertType.Backup, Config.Default.ServerBackup_WorldSaveMessage);
-                        sent = SendMessageAsync(Config.Default.ServerBackup_WorldSaveMessage, cancellationToken).Result;
+                        sent = SendMessageAsync(Config.Default.RCON_BackupMessageCommand, Config.Default.ServerBackup_WorldSaveMessage, cancellationToken).Result;
                         if (sent)
                         {
                             emailMessage.AppendLine("sent server save message.");
@@ -2664,6 +2664,7 @@ namespace ServerManagerTool.Lib
                             LogProfileMessage($"{ex.StackTrace}", false);
                         }
 
+                        await Task.Delay(100);
                         retries++;
                     }
                 }
@@ -2678,10 +2679,15 @@ namespace ServerManagerTool.Lib
 
         private async Task<bool> SendMessageAsync(string message, CancellationToken token)
         {
+            return await SendMessageAsync(Config.Default.RCON_MessageCommand, message, token);
+        }
+
+        private async Task<bool> SendMessageAsync(string mode, string message, CancellationToken token)
+        {
             if (string.IsNullOrWhiteSpace(message) || !SendMessages)
                 return false;
 
-            var sent = await SendCommandAsync($"{GetRconMessageCommand(Config.Default.RCON_MessageCommand)} {message}", false);
+            var sent = await SendCommandAsync($"{GetRconMessageCommand(mode)} {message}", false);
 
             if (sent)
             {

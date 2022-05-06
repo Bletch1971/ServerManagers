@@ -8,6 +8,29 @@
   <updated>2022-05-06T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:E6701920-FF1E-48B7-B70A-18B9BC3592F7</id>
+    <title>1.1.425 (1.1.425.2)</title>
+    <summary>1.1.425.2</summary>
+    <link href="" />
+    <updated>2022-05-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto Backup Settings - added RCON broadcast mode droplist, so backup processes can send messages via RCON using this mode.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:2C48A585-72D2-43FB-8987-6B5F0B3E460F</id>
     <title>1.1.425 (1.1.425.1)</title>
     <summary>1.1.425.1</summary>
