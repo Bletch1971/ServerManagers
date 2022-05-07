@@ -2607,8 +2607,8 @@
     <sys:String x:Key="ConsoleStatus_Disconnected">Disconnected</sys:String>
     <sys:String x:Key="ConsoleStatus_Connected">Connected</sys:String>
 
-    <sys:String x:Key="Player_Join">Player '{0}' joined the game.</sys:String>
-    <sys:String x:Key="Player_Leave">Player '{0}' left the game.</sys:String>
+    <sys:String x:Key="Player_Join">'{0}' joined the game.</sys:String>
+    <sys:String x:Key="Player_Leave">'{0}' left the game.</sys:String>
     <!--#endregion-->
 
     <!--#region Open RCON window -->

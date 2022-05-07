@@ -5,7 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-05-07T00:00:00Z</updated>
+  <updated>2022-05-08T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:CEA21F86-5943-46F9-8807-604695E42A25</id>
+    <title>1.1.425 (1.1.425.5)</title>
+    <summary>1.1.425.5</summary>
+    <link href="" />
+    <updated>2022-05-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Rcon Window - minor changes to the player list, online player count and server status.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:358E0063-27AE-4D5F-BDA5-BD9723EE353E</id>
