@@ -1,4 +1,5 @@
-﻿using ServerManagerTool.Common.Extensions;
+﻿using ServerManagerTool.Common.Enums;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
@@ -911,7 +912,7 @@ namespace ServerManagerTool
             ConsoleContent.Blocks.Add(b);            
         }
 
-        private IEnumerable<Inline> FormatCommandInput(ServerRCON.ConsoleCommand command)
+        private IEnumerable<Inline> FormatCommandInput(ConsoleCommand command)
         {
             if (command.command.Equals(ServerRCON.RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
             {
@@ -928,7 +929,7 @@ namespace ServerManagerTool
             }
         }
 
-        private IEnumerable<Inline> FormatCommandOutput(ServerRCON.ConsoleCommand command)
+        private IEnumerable<Inline> FormatCommandOutput(ConsoleCommand command)
         {
             bool firstLine = true;
 
@@ -1009,13 +1010,13 @@ namespace ServerManagerTool
 
         private void RenderConnectionStateChange(DependencyPropertyChangedEventArgs e)
         {
-            var oldStatus = (ServerRCON.ConsoleStatus)e.OldValue;
-            var newStatus = (ServerRCON.ConsoleStatus)e.NewValue;
+            var oldStatus = (ConsoleStatus)e.OldValue;
+            var newStatus = (ConsoleStatus)e.NewValue;
 
             if(oldStatus != newStatus)
             {
                 var p = new Paragraph();
-                if (newStatus == ServerRCON.ConsoleStatus.Connected)
+                if (newStatus == ConsoleStatus.Connected)
                 {
                     p.Inlines.Add(new RCONOutput_ConnectionChanged(true));
                 }
@@ -1028,7 +1029,7 @@ namespace ServerManagerTool
             }
         }
 
-        private void RenderRCONCommandOutput(ServerRCON.ConsoleCommand command)
+        private void RenderRCONCommandOutput(ConsoleCommand command)
         {
             //
             // Format output

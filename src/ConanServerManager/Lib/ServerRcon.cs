@@ -29,16 +29,16 @@ namespace ServerManagerTool.Lib
         public const string RCON_COMMAND_BROADCAST = "broadcast";
         public const string RCON_COMMAND_ALERT = "alert";
         public const string RCON_COMMAND_SERVER = "server";
-        public const string RCON_COMMAND_LISTPLAYERS = "#managerplayerlist#";
+        public const string RCON_COMMAND_LISTPLAYERS = "listplayers";
 
         public event EventHandler PlayersCollectionUpdated;
 
+        public static readonly DependencyProperty StatusProperty = DependencyProperty.Register(nameof(Status), typeof(ConsoleStatus), typeof(ServerRcon), new PropertyMetadata(ConsoleStatus.Disconnected));
         public static readonly DependencyProperty PlayersProperty = DependencyProperty.Register(nameof(Players), typeof(SortableObservableCollection<PlayerInfo>), typeof(ServerRcon), new PropertyMetadata(null));
         public static readonly DependencyProperty CountPlayersProperty = DependencyProperty.Register(nameof(CountPlayers), typeof(int), typeof(ServerRcon), new PropertyMetadata(0));
         public static readonly DependencyProperty CountInvalidPlayersProperty = DependencyProperty.Register(nameof(CountInvalidPlayers), typeof(int), typeof(ServerRcon), new PropertyMetadata(0));
         public static readonly DependencyProperty CountOnlinePlayersProperty = DependencyProperty.Register(nameof(CountOnlinePlayers), typeof(int), typeof(ServerRcon), new PropertyMetadata(0));
 
-        private static readonly ConcurrentDictionary<string, bool> locks = new ConcurrentDictionary<string, bool>();
         private static readonly char[] lineSplitChars = new char[] { '\n' };
         private static readonly char[] argsSplitChars = new char[] { ' ' };
 
@@ -48,7 +48,7 @@ namespace ServerManagerTool.Lib
 
         private RconParameters _rconParameters;
         private QueryMaster.Rcon _console;
-        private int maxCommandRetries = 3;
+        private int _maxCommandRetries = 3;
 
         private readonly ConcurrentDictionary<string, PlayerInfo> _players = new ConcurrentDictionary<string, PlayerInfo>();
         private readonly object _updatePlayerCollectionLock = new object();
@@ -63,16 +63,15 @@ namespace ServerManagerTool.Lib
 
         public ServerRcon(RconParameters parameters)
         {
-            this._rconParameters = parameters;
+            _rconParameters = parameters;
+
+            _allLogger = App.GetProfileLogger(_rconParameters.ProfileId, "Rcon_All", LogLevel.Info, LogLevel.Info);
+            _chatLogger = App.GetProfileLogger(_rconParameters.ProfileId, "Rcon_Chat", LogLevel.Info, LogLevel.Info);
+            _eventLogger = App.GetProfileLogger(_rconParameters.ProfileId, "Rcon_Event", LogLevel.Info, LogLevel.Info);
+            _debugLogger = App.GetProfileLogger(_rconParameters.ProfileId, "Rcon_Debug", LogLevel.Trace, LogLevel.Debug);
+            _errorLogger = App.GetProfileLogger(_rconParameters.ProfileId, "Rcon_Error", LogLevel.Error, LogLevel.Fatal);
+
             this.Players = new SortableObservableCollection<PlayerInfo>();
-
-            _allLogger = App.GetProfileLogger(this._rconParameters.ProfileId, "Rcon_All", LogLevel.Info, LogLevel.Info);
-            _chatLogger = App.GetProfileLogger(this._rconParameters.ProfileId, "Rcon_Chat", LogLevel.Info, LogLevel.Info);
-            _eventLogger = App.GetProfileLogger(this._rconParameters.ProfileId, "Rcon_Event", LogLevel.Info, LogLevel.Info);
-            _debugLogger = App.GetProfileLogger(this._rconParameters.ProfileId, "Rcon_Debug", LogLevel.Trace, LogLevel.Debug);
-            _errorLogger = App.GetProfileLogger(this._rconParameters.ProfileId, "Rcon_Error", LogLevel.Error, LogLevel.Fatal);
-
-            UpdatePlayersAsync().DoNotWait();
         }
 
         public async Task DisposeAsync()
@@ -81,18 +80,25 @@ namespace ServerManagerTool.Lib
             {
                 _cancellationTokenSource.Cancel();
             }
-            await this._commandProcessor.DisposeAsync();
-            await this._outputProcessor.DisposeAsync();
 
-            for (int index = this._commandListeners.Count - 1; index >= 0; index--)
+            await _commandProcessor.DisposeAsync();
+            await _outputProcessor.DisposeAsync();
+
+            for (int index = _commandListeners.Count - 1; index >= 0; index--)
             {
-                this._commandListeners[index].Dispose();
+                _commandListeners[index].Dispose();
             }
 
             _disposed = true;
         }
 
         #region Properties
+        public ConsoleStatus Status
+        {
+            get { return (ConsoleStatus)GetValue(StatusProperty); }
+            set { SetValue(StatusProperty, value); }
+        }
+
         public SortableObservableCollection<PlayerInfo> Players
         {
             get { return (SortableObservableCollection<PlayerInfo>)GetValue(PlayersProperty); }
@@ -119,6 +125,12 @@ namespace ServerManagerTool.Lib
         #endregion
 
         #region Methods
+        public void Initialize()
+        {
+            _commandProcessor.PostAction(AutoPlayerList);
+            UpdatePlayersAsync().DoNotWait();
+        }
+
         private void LogEvent(LogEventType eventType, string message)
         {
             switch (eventType)
@@ -144,32 +156,46 @@ namespace ServerManagerTool.Lib
 
         private bool Reconnect()
         {
-            if (this._console != null)
+            if (_console != null)
             {
-                this._console.Dispose();
-                this._console = null;
+                _console.Dispose();
+                _console = null;
             }
 
-            var endpoint = new IPEndPoint(this._rconParameters.RconHostIP, this._rconParameters.RconPort);
+            var endpoint = new IPEndPoint(_rconParameters.RconHostIP, _rconParameters.RconPort);
             var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endpoint, sendTimeOut: 10000, receiveTimeOut: 10000);
-            this._console = server.GetControl(this._rconParameters.RconPassword);
-            return this._console != null;
+            _console = server.GetControl(_rconParameters.RconPassword);
+            return _console != null;
         }
 
         public IDisposable RegisterCommandListener(Action<ConsoleCommand> callback)
         {
             var listener = new CommandListener { Callback = callback, DisposeAction = UnregisterCommandListener };
-            this._commandListeners.Add(listener);
+            _commandListeners.Add(listener);
             return listener;
         }
 
         private void UnregisterCommandListener(CommandListener listener)
         {
-            this._commandListeners.Remove(listener);
+            _commandListeners.Remove(listener);
         }
         #endregion
 
         #region Process Methods
+        private Task AutoPlayerList()
+        {
+            return _commandProcessor.PostAction(() =>
+            {
+                ProcessInput(new ConsoleCommand() { rawCommand = RCON_COMMAND_LISTPLAYERS, suppressCommand = true, suppressOutput = true });
+                Task.Delay(PLAYER_LIST_INTERVAL).ContinueWith(t => _commandProcessor.PostAction(AutoPlayerList)).DoNotWait();
+            });
+        }
+
+        public Task<bool> IssueCommand(string userCommand)
+        {
+            return _commandProcessor.PostAction(() => ProcessInput(new ConsoleCommand() { rawCommand = userCommand }));
+        }
+
         private bool ProcessInput(ConsoleCommand command)
         {
             try
@@ -214,14 +240,14 @@ namespace ServerManagerTool.Lib
 
                 command.status = ConsoleStatus.Connected;
 
-                this._outputProcessor.PostAction(() => ProcessOutput(command));
+                _outputProcessor.PostAction(() => ProcessOutput(command));
                 return true;
             }
             catch (Exception ex)
             {
                 _errorLogger?.Error($"Failed to send command '{command.rawCommand}'. {ex.Message}");
                 command.status = ConsoleStatus.Disconnected;
-                this._outputProcessor.PostAction(() => ProcessOutput(command));
+                _outputProcessor.PostAction(() => ProcessOutput(command));
                 return false;
             }
         }
@@ -236,11 +262,6 @@ namespace ServerManagerTool.Lib
             NotifyCommand(command);
         }
 
-        public Task<bool> IssueCommand(string userCommand)
-        {
-            return this._commandProcessor.PostAction(() => ProcessInput(new ConsoleCommand() { rawCommand = userCommand }));
-        }
-
         // This is bound to the UI thread
         private void HandleCommand(ConsoleCommand command)
         {
@@ -249,8 +270,8 @@ namespace ServerManagerTool.Lib
             //
             if (command?.command?.Equals(RCON_COMMAND_LISTPLAYERS, StringComparison.OrdinalIgnoreCase) ?? false)
             {
-                command.suppressCommand = true;
-                command.suppressOutput = false;
+                command.lines = HandleListPlayersCommand(command.lines);
+                command.suppressOutput = command.lines.Count() == 0;
             }
 
             if (command?.command?.Equals(RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase) ?? false)
@@ -270,6 +291,87 @@ namespace ServerManagerTool.Lib
                 LogEvent(LogEventType.Chat, command.rawCommand);
                 command.suppressOutput = true;
             }
+        }
+
+        // This is bound to the UI thread
+        private List<string> HandleListPlayersCommand(IEnumerable<string> commandLines)
+        {
+            var output = new List<string>();
+            var onlinePlayers = new List<PlayerInfo>();
+
+            var playerLines = commandLines?.ToList() ?? new List<string>();
+            if (playerLines.Count > 1)
+            {
+                // remove the first line, as it is a header row
+                playerLines.RemoveAt(0);
+
+                foreach (var line in playerLines)
+                {
+                    var elements = line.Split('|');
+                    if (elements.Length != 6)
+                        // Invalid data. Ignore it.
+                        continue;
+
+                    var id = elements[3]?.Trim();
+
+                    if (onlinePlayers.FirstOrDefault(p => p.PlayerId.Equals(id, StringComparison.OrdinalIgnoreCase)) != null)
+                        // Duplicate data. Ignore it.
+                        continue;
+
+                    var newPlayer = new PlayerInfo()
+                    {
+                        PlayerId = id,
+                        PlayerName = elements[2].Substring(0, elements[2].IndexOf('#')).Trim(),
+                        CharacterName = elements[1].Trim(),
+                        IsOnline = true,
+                    };
+                    onlinePlayers.Add(newPlayer);
+
+                    var playerJoined = false;
+                    _players.AddOrUpdate(newPlayer.PlayerId,
+                        (k) =>
+                        {
+                            playerJoined = true;
+                            return newPlayer;
+                        },
+                        (k, v) =>
+                        {
+                            playerJoined = !v.IsOnline;
+                            v.PlayerName = newPlayer.PlayerName;
+                            v.IsOnline = newPlayer.IsOnline;
+                            return v;
+                        }
+                    );
+
+                    if (playerJoined)
+                    {
+                        var messageFormat = GlobalizedApplication.Instance.GetResourceString("Player_Join") ?? "'{0}' joined the game.";
+                        var message = string.Format(messageFormat, newPlayer.CharacterName);
+                        output.Add(message);
+                        LogEvent(LogEventType.Event, message);
+                        LogEvent(LogEventType.All, message);
+                    }
+                }
+            }
+
+            var droppedPlayers = _players.Values.Where(p => onlinePlayers.FirstOrDefault(np => np.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null);
+            foreach (var droppedPlayer in droppedPlayers)
+            {
+                if (droppedPlayer.IsOnline)
+                {
+                    droppedPlayer.IsOnline = false;
+
+                    var messageFormat = GlobalizedApplication.Instance.GetResourceString("Player_Leave") ?? "'{0}' left the game.";
+                    var message = string.Format(messageFormat, droppedPlayer.CharacterName);
+                    output.Add(message);
+                    LogEvent(LogEventType.Event, message);
+                    LogEvent(LogEventType.All, message);
+                }
+            }
+
+            UpdatePlayerCollection();
+
+            return output;
         }
 
         // This is bound to the UI thread
@@ -295,13 +397,13 @@ namespace ServerManagerTool.Lib
             Exception lastException = null;
             int retries = 0;
 
-            while (retries < maxCommandRetries)
+            while (retries < _maxCommandRetries)
             {
-                if (this._console != null)
+                if (_console != null)
                 {
                     try
                     {
-                        return this._console.SendCommand(command);
+                        return _console.SendCommand(command);
                     }
                     catch (Exception ex)
                     {
@@ -324,32 +426,25 @@ namespace ServerManagerTool.Lib
                 retries++;
             }
 
-            this.maxCommandRetries = 10;
-            _errorLogger?.Error($"Failed to connect to Rcon at {this._rconParameters.RconHostIP}:{this._rconParameters.RconPort} with {this._rconParameters.RconPassword}. {lastException.Message}");
-            throw new Exception($"Command failed to send after {maxCommandRetries} attempts.  Last exception: {lastException.Message}", lastException);
+            _maxCommandRetries = 10;
+            _errorLogger?.Error($"Failed to connect to Rcon at {_rconParameters.RconHostIP}:{_rconParameters.RconPort} with {_rconParameters.RconPassword}. {lastException.Message}");
+            throw new Exception($"Command failed to send after {_maxCommandRetries} attempts.  Last exception: {lastException.Message}", lastException);
         }
         #endregion
 
         private async Task UpdatePlayersAsync()
         {
-            if (this._disposed)
+            if (_disposed)
                 return;
 
             _cancellationTokenSource = new CancellationTokenSource();
-            var token = _cancellationTokenSource.Token;
 
-            var output = await UpdatePlayerDetailsAsync(_cancellationTokenSource.Token);
+            await UpdatePlayerDetailsAsync(_cancellationTokenSource.Token);
             var cancelled = _cancellationTokenSource.IsCancellationRequested;
 
             if (!cancelled)
             {
-                await TaskUtils.RunOnUIThreadAsync(() =>
-                {
-                    UpdatePlayerCollection();
-
-                    var command = new ConsoleCommand() { rawCommand = RCON_COMMAND_LISTPLAYERS, command = RCON_COMMAND_LISTPLAYERS, lines = output };
-                    ProcessOutput(command);
-                });
+                await TaskUtils.RunOnUIThreadAsync(() => UpdatePlayerCollection());
             }
 
             _cancellationTokenSource.Dispose();
@@ -357,19 +452,19 @@ namespace ServerManagerTool.Lib
 
             if (!cancelled)
             {
-                await Task.Delay(PLAYER_LIST_INTERVAL).ContinueWith(t => UpdatePlayersAsync());
+                await Task.Delay(PLAYER_LIST_INTERVAL)
+                    .ContinueWith(t => UpdatePlayersAsync());
             }
         }
 
-        private async Task<List<string>> UpdatePlayerDetailsAsync(CancellationToken token)
+        private async Task UpdatePlayerDetailsAsync(CancellationToken token)
         {
-            if (this._disposed)
-                return new List<string>();
+            if (_disposed)
+                return;
 
             if (string.IsNullOrWhiteSpace(_rconParameters.GameFile) || !File.Exists(_rconParameters.GameFile))
-                return new List<string>();
+                return;
 
-            var savedPath = ServerProfile.GetProfileSavePath(_rconParameters.InstallDirectory);
             DataContainer dataContainer = null;
 
             try
@@ -379,12 +474,12 @@ namespace ServerManagerTool.Lib
             }
             catch (Exception ex)
             {
-                _errorLogger?.Error($"{nameof(UpdatePlayerDetailsAsync)} - Error: CreateAsync. {ex.Message}\r\n{ex.StackTrace}");
-                return new List<string>();
+                _errorLogger.Error($"{nameof(UpdatePlayerDetailsAsync)} - Error: CreateAsync. {ex.Message}\r\n{ex.StackTrace}");
+                return;
             }
 
             if (token.IsCancellationRequested)
-                return new List<string>();
+                return;
 
             await Task.Run(() =>
             {
@@ -395,61 +490,41 @@ namespace ServerManagerTool.Lib
                     if (string.IsNullOrWhiteSpace(id))
                         continue;
 
-                    this._players.TryGetValue(id, out PlayerInfo player);
+                    _players.TryGetValue(id, out PlayerInfo player);
                     player?.UpdatePlatformData(playerData);
                 }
             }, token);
 
             if (token.IsCancellationRequested)
-                return new List<string>();
-
-            var totalPlayers = dataContainer.Players.Count;
-            var output = new List<string>();
+                return;
 
             foreach (var playerData in dataContainer.Players)
             {
-                token.ThrowIfCancellationRequested();
+                if (token.IsCancellationRequested)
+                    return;
+
                 await Task.Run(async () =>
                 {
                     var id = playerData.PlayerId;
-                    if (!string.IsNullOrWhiteSpace(id))
+                    if (string.IsNullOrWhiteSpace(id))
+                    {
+                        _debugLogger?.Debug($"{nameof(UpdatePlayerDetailsAsync)} - Error: corrupted profile.\r\n{playerData.CharacterId}.");
+                    }
+                    else
                     {
                         var validPlayer = new PlayerInfo()
                         {
                             PlayerId = id,
                             PlayerName = playerData.PlayerName,
+                            CharacterName = playerData.CharacterName,
                             IsValid = true,
                         };
 
-                        this._players.AddOrUpdate(id, validPlayer, (k, v) => { v.PlayerName = playerData.PlayerName; v.IsValid = true; return v; });
-                    }
-                    else
-                    {
-                        _debugLogger?.Debug($"{nameof(UpdatePlayerDetailsAsync)} - Error: corrupted profile.\r\n{playerData.CharacterId}.");
+                        _players.AddOrUpdate(id, validPlayer, (k, v) => { v.PlayerName = playerData.PlayerName; v.CharacterName = playerData.CharacterName;  v.IsValid = true; return v; });
                     }
 
-                    if (this._players.TryGetValue(id, out PlayerInfo player) && player != null)
+                    if (_players.TryGetValue(id, out PlayerInfo player) && player != null)
                     {
-                        if (player.IsOnline != playerData.Online)
-                        {
-                            if (playerData.Online)
-                            {
-                                var messageFormat = GlobalizedApplication.Instance.GetResourceString("Player_Join") ?? "Player '{0}' joined the game.";
-                                var message = string.Format(messageFormat, playerData.CharacterName);
-                                output.Add(message);
-                                LogEvent(LogEventType.Event, message);
-                                LogEvent(LogEventType.All, message);
-                            }
-                            else
-                            {
-                                var messageFormat = GlobalizedApplication.Instance.GetResourceString("Player_Leave") ?? "Player '{0}' left the game.";
-                                var message = string.Format(messageFormat, playerData.CharacterName);
-                                output.Add(message);
-                                LogEvent(LogEventType.Event, message);
-                                LogEvent(LogEventType.All, message);
-                            }
-                        }
-
                         player.UpdateData(playerData);
 
                         await TaskUtils.RunOnUIThreadAsync(() =>
@@ -461,16 +536,14 @@ namespace ServerManagerTool.Lib
             }
 
             if (token.IsCancellationRequested)
-                return new List<string>();
+                return;
 
-            // remove any players that do not have a player record.
-            var droppedPlayers = this._players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
+            // remove any players that do not have a player file.
+            var droppedPlayers = _players.Values.Where(p => dataContainer.Players.FirstOrDefault(pd => pd.PlayerId.Equals(p.PlayerId, StringComparison.OrdinalIgnoreCase)) == null).ToArray();
             foreach (var droppedPlayer in droppedPlayers)
             {
                 _players.TryRemove(droppedPlayer.PlayerId, out PlayerInfo player);
             }
-
-            return output;
         }
 
         private void UpdatePlayerCollection()

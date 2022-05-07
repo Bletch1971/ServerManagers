@@ -311,8 +311,7 @@ namespace ServerManagerTool.Lib
 
                 try
                 {
-                    // load the player data from the files.
-                    onlinePlayerCount = DataContainer.GetOnlinePlayerCount(gameFile);
+                    onlinePlayerCount = serverInfo?.Players ?? 0;
                 }
                 catch (Exception)
                 {

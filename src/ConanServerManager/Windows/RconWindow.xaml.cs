@@ -206,6 +206,8 @@ namespace ServerManagerTool
                 this.MaxPlayerLabel.Visibility = Visibility.Collapsed;
             }
 
+            this.ServerRcon.Initialize();
+
             this.DataContext = this;
 
             RenderCommentsBlock(
@@ -867,12 +869,9 @@ namespace ServerManagerTool
                 }
             }
 
-            if (!(command.suppressCommand && command.suppressOutput))
+            if (p.Inlines.Count > 0)
             {
-                if (p.Inlines.Count > 0)
-                {
-                    AddBlockContent(p);
-                }
+                AddBlockContent(p);
             }
         }
         #endregion

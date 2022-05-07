@@ -115,7 +115,7 @@ namespace ServerManagerTool.Lib.ViewModel
             this.CharacterId = playerData?.CharacterId ?? 0L;
             this.CharacterName = playerData?.CharacterName;
             this.GuildName = playerData?.Guild?.GuildName;
-            this.IsOnline = playerData?.Online ?? false;
+            //this.IsOnline = playerData?.Online ?? false;
             this.LastOnline = playerData?.LastOnline;
         }
 

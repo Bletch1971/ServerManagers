@@ -9,10 +9,10 @@
 
   <entry>
     <id>urn:uuid:2C48A585-72D2-43FB-8987-6B5F0B3E460F</id>
-    <title>1.1.425 (1.1.425.4)</title>
-    <summary>1.1.425.4</summary>
+    <title>1.1.425 (1.1.425.5)</title>
+    <summary>1.1.425.5</summary>
     <link href="" />
-    <updated>2022-05-07T00:00:00Z</updated>
+    <updated>2022-05-08T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -24,6 +24,7 @@
             <li>Auto Backup Settings - added RCON broadcast mode droplist, so backup processes can send messages via RCON using this mode.</li>
             <li>Global Backup Settings - added option to include/exclude the SaveGames folder in the worldsave backup (default exclude).</li>
             <li>Global Alert Settings - added new textbox allowing the formatting of the ipaddress and port in the server startup message (default {ipaddress}:{port}).</li>
+            <li>Rcon Window - minor changes to the player list, online player count and server status.</li>
             <li>Security Protocol Changes - updated the security protocols to use TLS12 and TLS13.</li>
           </ul>
         </p>

@@ -310,8 +310,7 @@ namespace ServerManagerTool.Lib
 
                     try
                     {
-                        var players = server?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim()));
-                        onlinePlayerCount = players?.Count() ?? 0;
+                        onlinePlayerCount = serverInfo?.Players ?? 0;
                     }
                     catch (Exception) 
                     {
