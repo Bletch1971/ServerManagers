@@ -504,6 +504,19 @@
     <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Help...</sys:String>
     
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
+
+    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">If enabled, the Steamcmd window will not be closed when finished. You will need to manually close it or type quit. Note: does not affect auto-update.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">The user name associated with the steam account.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">The password associated with the steam account.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authenticate...</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Output SteamCMD to the progress window</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">If enabled, the SteamCMD output will be shown in the progress window instead of the command window. NOTE: if enabled, this could cause your server and mods updates to fail.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use Anonymous Credentials with SteamCMD</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controls whether the anonymous user is used to download from SteamCMD.</sys:String>
     
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Custom Override Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Enable Custom Engine.ini Settings</sys:String>
@@ -523,6 +536,12 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Enable SotF Settings</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">If enabled, the SotF settings will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">WARNING: While any of these options are disabled, the server manager will not read or write the associated overrides settings. Re-enabling any of these options will cause ALL existing associated overrides to be removed from the config file.</sys:String>
+
+    <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Custom Level Options</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Player Level Increase:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Dino Level Increase:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
     
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
@@ -531,29 +550,12 @@
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">If enabled, a dialogue will be shown to confirmation the server status action.</sys:String>
     
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Server Startup Options</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Player Level Increase:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Dino Level Increase:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Validate profile on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">If enabled, when you manually start the server, a basic validation is performed on the server and mod files. NOTE: Will not be performed if Ark Mod Management enabled.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Perform server and mod update on server start</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">If enabled, when you manually start the server, the server and mod files will be updated to the latest version. NOTE: Will not be performed if Ark Mod Management enabled.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Start Server Minimized</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">If enabled, when the server is started the command window will be minimized, otherwise it will open in normally.</sys:String>
-
-    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Settings</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">If enabled, the Steamcmd window will not be closed when finished. You will need to manually close it or type quit. Note: does not affect auto-update.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Username:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">The user name associated with the steam account.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Password:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">The password associated with the steam account.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authenticate...</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Output SteamCMD to the progress window</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">If enabled, the SteamCMD output will be shown in the progress window instead of the command window. NOTE: if enabled, this could cause your server and mods updates to fail.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use Anonymous Credentials with SteamCMD</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controls whether the anonymous user is used to download from SteamCMD.</sys:String>
 
     <sys:String x:Key="GlobalSettings_UpdateModSettingsLabel">Mod Update Settings</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateModWithServerLabel">Update mods when updating server</sys:String>
@@ -566,16 +568,20 @@
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Workshop Cache Expiry</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">The number of hours since the last refresh the workshop cache will be considered old and will auto refresh. Set to 0 to never expire the cache, you must manually refresh the cache.</sys:String>
-    
-    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">How often to perform the server backup, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Backup Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Include the SaveGames folder when performing a WorldSave backup</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">If enabled, when a worldsave backup runs it will include the SaveGames folder used to store mod data files.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Delete Old Backup Files</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">If enabled, when the auto-backup runs the old backup files will be deleted.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Older Than:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">How old the backup file must be to be deleted in days.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">WorldSave Message:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">This message will be displayed upon backup when the world is about to be saved.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">How often to perform the server backup, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
     
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Enable Auto Update</sys:String>
     <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Game Server</sys:String>
@@ -627,6 +633,34 @@
     <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">This message will be displayed when the server shutdown has been cancelled.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Show shutdown reason with ALL shutdown messages</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">If enabled, the shutdown reason will be shown with all shutdown message; otherwise it will only be shown at the start of the server shutdown.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AlertsLabel">Alert Options</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Server Stop Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">This message will be displayed when the server is being stopped.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Server Shutdown Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">This message will be displayed when the server is being shutdown.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Server Start Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">This message will be displayed when the server is being started.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Include Public IP and Port in Start Message</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">The startup message will include the Public IP and Port.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Backup Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">This message will be displayed when the auto-backup process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Shutdown Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">This message will be displayed when the auto-shutdown process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Restart Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">This message will be displayed when the auto-restart process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Update Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">This message will be displayed when the auto-update process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Update Results:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">This message will be displayed when the auto-update process finds something to update.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Server Update Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">This message will be displayed when the game server has been updated.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Server Status Change:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">This message will be displayed when the status of the server changes.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mod Update Detected:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Dinos Warning:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild dino wipe is scheduled.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DiscordBotLabel">Enable Discord Bot</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">You will need to restart the server manager if you change any settings for the Discord Bot.</sys:String>
@@ -704,6 +738,8 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">How old the log files must be to be deleted in days.</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Max Number of Logs</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">The maximum number of log files that will be kept.</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
@@ -735,37 +771,6 @@
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTitle">SteamCmd Authentication Disabled</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledLabel">You have chosen to redirect the steamcmd output to the progress window. You are not able to use your steam credentials, you must use anonymous credentials.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTooltip">To use your steam credentials you must turn off the Output SteamCMD to the progress window option.</sys:String>
-
-    <sys:String x:Key="GlobalSettings_AlertsLabel">Alert Options</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Server Stop Message:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">This message will be displayed when the server is being stopped.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Server Shutdown Message:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">This message will be displayed when the server is being shutdown.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Server Start Message:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">This message will be displayed when the server is being started.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Include Public IP and Port in Start Message</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">The startup message will include the Public IP and Port.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Backup Process Error:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">This message will be displayed when the auto-backup process encountered an error.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Shutdown Process Error:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">This message will be displayed when the auto-shutdown process encountered an error.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Restart Process Error:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">This message will be displayed when the auto-restart process encountered an error.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Update Process Error:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">This message will be displayed when the auto-update process encountered an error.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Update Results:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">This message will be displayed when the auto-update process finds something to update.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Server Update Message:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">This message will be displayed when the game server has been updated.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Server Status Change:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">This message will be displayed when the status of the server changes.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mod Update Detected:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Dinos Warning:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild dino wipe is scheduled.</sys:String>
-
-    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
-    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
     <!--#endregion-->
 
     <!--#region Main Window -->   

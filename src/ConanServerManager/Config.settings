@@ -647,5 +647,11 @@
     <Setting Name="RCON_BackupMessageCommand" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="AutoBackup_IncludeSaveGamesFolder" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Alert_ServerStartedMessageIPandPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{ipaddress}:{port}</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

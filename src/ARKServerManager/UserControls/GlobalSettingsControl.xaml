@@ -45,6 +45,8 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -60,30 +62,23 @@
                     <Label DockPanel.Dock="Right" Content="{DynamicResource GlobalSettings_VersionLabel}" FontSize="15" VerticalAlignment="Center" />
                 </DockPanel>
 
-                <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_RunAsAdministratorLabel}" IsChecked="{Binding Config.RunAsAdministratorPrompt, Mode=TwoWay}" HorizontalAlignment="Left"/>
-                <CheckBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_CheckIfServerManagerRunningOnStartupLabel}" IsChecked="{Binding Config.CheckIfServerManagerRunningOnStartup, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,2,0,2" Content="{DynamicResource GlobalSettings_RunAsAdministratorLabel}" IsChecked="{Binding Config.RunAsAdministratorPrompt, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <CheckBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,2,0,2" Content="{DynamicResource GlobalSettings_CheckIfServerManagerRunningOnStartupLabel}" IsChecked="{Binding Config.CheckIfServerManagerRunningOnStartup, Mode=TwoWay}" HorizontalAlignment="Left"/>
 
-                <Label    Grid.Row="2" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_StartModeLabel}" VerticalAlignment="Center"/>
-                <ComboBox Name="WindowStateMainWindowComboBox" Grid.Row="2" Grid.Column="1" Margin="5" ItemsSource="{Binding ElementName=GlobalSettings, Path=WindowStatesMainWindow}" SelectedValue="{Binding Config.MainWindow_WindowState}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
-                <CheckBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_MinimizeToTrayLabel}" IsChecked="{Binding Config.MainWindow_MinimizeToTray, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,2,0,2" Content="{DynamicResource GlobalSettings_ManageFirewallLabel}" IsChecked="{Binding Config.ManageFirewallAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <CheckBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,2,0,2" Content="{DynamicResource GlobalSettings_ManagePublicIPLabel}" IsChecked="{Binding Config.ManagePublicIPAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
 
-                <Label    Grid.Row="3" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_StartModeServerMonitorLabel}" VerticalAlignment="Center"/>
-                <ComboBox Name="WindowStateServerMonitorComboBox" Grid.Row="3" Grid.Column="1" Margin="5" ItemsSource="{Binding ElementName=GlobalSettings, Path=WindowStatesServerMonitor}" SelectedValue="{Binding Config.ServerMonitorWindow_WindowState}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                <Label    Grid.Row="3" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_StartModeLabel}" VerticalAlignment="Center"/>
+                <ComboBox Name="WindowStateMainWindowComboBox" Grid.Row="3" Grid.Column="1" Margin="1,2,1,2" ItemsSource="{Binding ElementName=GlobalSettings, Path=WindowStatesMainWindow}" SelectedValue="{Binding Config.MainWindow_WindowState}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                <CheckBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,2,0,2" Content="{DynamicResource GlobalSettings_MinimizeToTrayLabel}" IsChecked="{Binding Config.MainWindow_MinimizeToTray, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                <CheckBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_ManageFirewallLabel}" IsChecked="{Binding Config.ManageFirewallAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
-                <CheckBox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_ManagePublicIPLabel}" IsChecked="{Binding Config.ManagePublicIPAutomatically, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <Label    Grid.Row="4" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_StartModeServerMonitorLabel}" VerticalAlignment="Center"/>
+                <ComboBox Name="WindowStateServerMonitorComboBox" Grid.Row="4" Grid.Column="1" Margin="1,2,1,2" ItemsSource="{Binding ElementName=GlobalSettings, Path=WindowStatesServerMonitor}" SelectedValue="{Binding Config.ServerMonitorWindow_WindowState}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
 
                 <Label    Grid.Row="5" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_DataDirectoryLabel}" VerticalAlignment="Center"/>
                 <TextBox  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.DataDir, Mode=TwoWay}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" />
                 <Button   Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,1,0,1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{DynamicResource DataDirectoryButtonContent}" Click="SetDataDir_Click" Visibility="Hidden" />
                 <Button   Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,1,0,1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{DynamicResource DataDirectoryResetButtonContent}" Click="ResetDataDir_Click" />
-
-                <Label    Grid.Row="6" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_BackupDirectoryLabel}" VerticalAlignment="Center"/>
-                <TextBox  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.BackupPath, Mode=TwoWay}"  IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center"/>
-                <StackPanel Grid.Row="6" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button  Margin="5,1,0,1" VerticalAlignment="Center" Content="{DynamicResource BackupDirectoryButtonContent}" Click="SetBackupDir_Click"/>
-                    <Button  Margin="5,1,0,1" VerticalAlignment="Center" Content="{DynamicResource ClearButtonContent}" Click="ClearBackupDir_Click"/>
-                </StackPanel>
 
                 <GroupBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
@@ -145,7 +140,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
-                        <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" IsChecked="{Binding Config.SteamCmd_UseAnonymousCredentials}" Content="{DynamicResource GlobalSettings_SteamCmdCredentialsLabel}" VerticalAlignment="Bottom" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_SteamCmdCredentialsTooltip}" HorizontalAlignment="Left">
+                        <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,2,0,2" IsChecked="{Binding Config.SteamCmd_UseAnonymousCredentials}" Content="{DynamicResource GlobalSettings_SteamCmdCredentialsLabel}" VerticalAlignment="Bottom" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_SteamCmdCredentialsTooltip}" HorizontalAlignment="Left">
                             <CheckBox.Style>
                                 <Style BasedOn="{StaticResource {x:Type CheckBox}}" TargetType="{x:Type CheckBox}">
                                     <Style.Triggers>
@@ -367,7 +362,43 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}" IsEnabled="{Binding IsAdministrator}">
+                <GroupBox Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" Header="{DynamicResource GlobalSettings_BackupSettingsLabel}" Style="{StaticResource GroupBoxStyle}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label    Grid.Row="0" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_BackupDirectoryLabel}" VerticalAlignment="Center"/>
+                        <TextBox  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.BackupPath, Mode=TwoWay}"  IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center"/>
+                        <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button  Margin="1,1,0,1" VerticalAlignment="Center" Content="{DynamicResource BackupDirectoryButtonContent}" Click="SetBackupDir_Click"/>
+                            <Button  Margin="1,1,0,1" VerticalAlignment="Center" Content="{DynamicResource ClearButtonContent}" Click="ClearBackupDir_Click"/>
+                        </StackPanel>
+
+                        <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,2,0,2" IsChecked="{Binding Config.AutoBackup_IncludeSaveGamesFolder, Mode=TwoWay}" Content="{DynamicResource GlobalSettings_BackupIncludeSaveGamesFolderLabel}" ToolTip="{DynamicResource GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip}" HorizontalAlignment="Left"/>
+
+                        <CheckBox Grid.Row="2" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_DeleteOldFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <cctl:AnnotatedSlider Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Content="{DynamicResource GlobalSettings_RCON_ModeLabel}" VerticalAlignment="Center"/>
+                        <ComboBox Grid.Row="3" Grid.Column="1" Name="RconBackupMessageModesComboBox" Margin="1" ItemsSource="{Binding ElementName=GlobalSettings, Path=RconMessageModes}" SelectedValue="{Binding Config.RCON_BackupMessageCommand}" ToolTip="{DynamicResource GlobalSettings_RCON_ModeTooltip}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupWorldSaveLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding Config.ServerBackup_WorldSaveMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_BackupWorldSaveTooltip}"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}" IsEnabled="{Binding IsAdministrator}">
                     <GroupBox.Header>
                         <CheckBox IsChecked="{Binding Config.AutoBackup_EnableBackup}" Content="{DynamicResource GlobalSettings_AutoBackupLabel}" VerticalAlignment="Center"/>
                     </GroupBox.Header>
@@ -379,8 +410,8 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
@@ -390,22 +421,10 @@
                                 <Binding Path="Config.AutoBackup_BackupPeriod" Converter="{StaticResource MinutesToTimeValueConverter}"/>
                             </TextBox.Text>
                         </TextBox>
-
-                        <StackPanel Grid.Row="0" Grid.Column="2" Margin="0" Orientation="Horizontal">
-                            <Label Content="{DynamicResource GlobalSettings_RCON_ModeLabel}" VerticalAlignment="Center"/>
-                            <ComboBox Name="RconBackupMessageModesComboBox" Margin="1" ItemsSource="{Binding ElementName=GlobalSettings, Path=RconMessageModes}" SelectedValue="{Binding Config.RCON_BackupMessageCommand}" ToolTip="{DynamicResource GlobalSettings_RCON_ModeTooltip}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
-                        </StackPanel>
-
-                        <CheckBox Grid.Row="1" Grid.Column="0" Margin="0" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_DeleteOldFilesLabel}" IsChecked="{Binding Config.AutoBackup_DeleteOldFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_DeleteOldFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="2" Margin="0" Label="{DynamicResource GlobalSettings_DeleteIntervalLabel}" Value="{Binding Config.AutoBackup_DeleteInterval}" Minimum="1" Maximum="1000" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Days}" ToolTip="{DynamicResource GlobalSettings_DeleteIntervalTooltip}" IsEnabled="{Binding Config.AutoBackup_DeleteOldFiles}"/>
-
-                        <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_BackupWorldSaveLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.ServerBackup_WorldSaveMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_BackupWorldSaveTooltip}"/>
-
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}" IsEnabled="{Binding IsAdministrator}">
+                <GroupBox Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}" IsEnabled="{Binding IsAdministrator}">
                     <GroupBox.Header>
                         <CheckBox IsChecked="{Binding Config.AutoUpdate_EnableUpdate}" Content="{DynamicResource GlobalSettings_AutoUpdateLabel}" VerticalAlignment="Center"/>
                     </GroupBox.Header>
@@ -420,16 +439,16 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
+                            <ColumnDefinition Width="Auto" MinWidth="100"/>
                             <ColumnDefinition/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <Label   Grid.Row="0" Grid.Column="0" Content="{DynamicResource GlobalSettings_CacheDirectoryLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Grid.ColumnSpan="4" Text="{Binding Config.AutoUpdate_CacheDir}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_CacheDirectoryTooltip}"/>
-                        <Button  Grid.Row="0" Grid.Column="5" Margin="5,1,0,1" Content="{StaticResource CacheDirectoryButtonContent}" VerticalAlignment="Center" Click="SetCacheDir_Click"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Grid.ColumnSpan="3" Text="{Binding Config.AutoUpdate_CacheDir}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_CacheDirectoryTooltip}"/>
+                        <Button  Grid.Row="0" Grid.Column="5" Margin="1,1,0,1" Content="{StaticResource CacheDirectoryButtonContent}" VerticalAlignment="Center" Click="SetCacheDir_Click"/>
 
                         <Label   Grid.Row="1" Grid.Column="0" Content="{DynamicResource GlobalSettings_UpdateIntervalLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Width="100" HorizontalAlignment="Left"  VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_UpdateIntervalTooltip}">
@@ -440,21 +459,21 @@
 
                         <CheckBox Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_UseSmartCopyLabel}" IsChecked="{Binding Config.AutoUpdate_UseSmartCopy, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_UseSmartCopyTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                        <CheckBox Grid.Row="2" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ValidateServerFilesLabel}" IsChecked="{Binding Config.AutoUpdate_ValidateServerFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ValidateServerFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="2" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ValidateServerFilesLabel}" IsChecked="{Binding Config.AutoUpdate_ValidateServerFiles, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ValidateServerFilesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                         <CheckBox Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_RetryOnFailLabel}" IsChecked="{Binding Config.AutoUpdate_RetryOnFail, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_RetryOnFailTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                        <CheckBox Grid.Row="3" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ParallelUpdateLabel}" IsChecked="{Binding Config.AutoUpdate_ParallelUpdate, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ParallelUpdateTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="3" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ParallelUpdateLabel}" IsChecked="{Binding Config.AutoUpdate_ParallelUpdate, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ParallelUpdateTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                         <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,2,0,2" Label="{DynamicResource GlobalSettings_SequencialDelayPeriodLabel}" Value="{Binding Config.AutoUpdate_SequencialDelayPeriod}" Minimum="0" Maximum="1200" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_SequencialDelayPeriodTooltip}" IsEnabled="{Binding Config.AutoUpdate_ParallelUpdate, Converter={StaticResource InvertBooleanConverter}}"/>
 
-                        <CheckBox Grid.Row="4" Grid.Column="0" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ShowUpdateReasonLabel}" IsChecked="{Binding Config.AutoUpdate_ShowUpdateReason, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ShowUpdateReasonTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="4" Grid.Column="0" Margin="5,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ShowUpdateReasonLabel}" IsChecked="{Binding Config.AutoUpdate_ShowUpdateReason, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ShowUpdateReasonTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                         <Label    Grid.Row="4" Grid.Column="2" Margin="0,2,0,2" Content="{DynamicResource GlobalSettings_UpdateReasonPrefixLabel}" VerticalAlignment="Center"/>
                         <TextBox  Grid.Row="4" Grid.Column="3" Margin="1" IsEnabled="{Binding Config.AutoUpdate_ShowUpdateReason}" Text="{Binding Config.AutoUpdate_UpdateReasonPrefix}" MaxLength="50" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_UpdateReasonPrefixTooltip}"/>
 
-                        <CheckBox Grid.Row="5" Grid.Column="0" Margin="0,2,0,2" Grid.ColumnSpan="4" Content="{DynamicResource GlobalSettings_OverrideServerStartupLabel}" IsChecked="{Binding Config.AutoUpdate_OverrideServerStartup, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_OverrideServerStartupTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="5" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_OverrideServerStartupLabel}" IsChecked="{Binding Config.AutoUpdate_OverrideServerStartup, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_OverrideServerStartupTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_AutoRestartLabel}"/>
                     </GroupBox.Header>
@@ -472,7 +491,7 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Text="{DynamicResource GlobalSettings_RestartGraceIntervalInformationLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource WarningMessage}"/>
 
-                        <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_EnableRestartGraceIntervalLabel}" IsChecked="{Binding Config.AutoRestart_EnabledGracePeriod, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_EnableRestartGraceIntervalTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="1" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_EnableRestartGraceIntervalLabel}" IsChecked="{Binding Config.AutoRestart_EnabledGracePeriod, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_EnableRestartGraceIntervalTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
                         <Label   Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_RestartGraceIntervalLabel}" ToolTip="{DynamicResource GlobalSettings_RestartGraceIntervalTooltip}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Width="100" HorizontalAlignment="Left"  VerticalContentAlignment="Center" IsEnabled="{Binding Config.AutoRestart_EnabledGracePeriod}" ToolTip="{DynamicResource GlobalSettings_RestartGraceIntervalTooltip}">
@@ -483,7 +502,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_ShutdownLabel}"/>
                     </GroupBox.Header>
@@ -510,8 +529,8 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Text="{DynamicResource GlobalSettings_ShutdownMessageInformationLabel}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource WarningMessage}"/>
 
-                        <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_CheckForOnlinePlayersLabel}" IsChecked="{Binding Config.ServerShutdown_CheckForOnlinePlayers, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_CheckForOnlinePlayersTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <CheckBox Grid.Row="1" Grid.Column="2" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_SendShutdownMessagesLabel}" IsChecked="{Binding Config.ServerShutdown_SendShutdownMessages, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_SendShutdownMessagesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="1" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_CheckForOnlinePlayersLabel}" IsChecked="{Binding Config.ServerShutdown_CheckForOnlinePlayers, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_CheckForOnlinePlayersTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="1" Grid.Column="2" Margin="0,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_SendShutdownMessagesLabel}" IsChecked="{Binding Config.ServerShutdown_SendShutdownMessages, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_SendShutdownMessagesTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
                         <cctl:AnnotatedSlider Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="1" Label="{DynamicResource GlobalSettings_ShutdownGraceIntervalLabel}" Value="{Binding Config.ServerShutdown_GracePeriod}" Minimum="0" Maximum="60" SmallChange="1" LargeChange="5" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Minutes}" ToolTip="{DynamicResource GlobalSettings_ShutdownGraceIntervalTooltip}"/>
 
@@ -527,11 +546,11 @@
                         <Label Grid.Row="8" Grid.Column="0" Content="{DynamicResource GlobalSettings_ShutdownCancelLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding Config.ServerShutdown_CancelMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_ShutdownCancelTooltip}"/>
 
-                        <CheckBox Grid.Row="9" Grid.Column="0" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ShutdownAllMessagesShowReasonLabel}" IsChecked="{Binding Config.ServerShutdown_AllMessagesShowReason, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ShutdownAllMessagesShowReasonTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="9" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ShutdownAllMessagesShowReasonLabel}" IsChecked="{Binding Config.ServerShutdown_AllMessagesShowReason, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ShutdownAllMessagesShowReasonTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_AlertsLabel}"/>
                     </GroupBox.Header>
@@ -554,38 +573,52 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" MinWidth="100"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ServerStopMessageLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ServerStopMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStopMessageTooltip}"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ServerStopMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStopMessageTooltip}"/>
+                        
                         <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ServerShutdownMessageLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ServerShutdownMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerShutdownMessageTooltip}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ServerShutdownMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerShutdownMessageTooltip}"/>
+                        
                         <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ServerStartedMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageTooltip}"/>
-                        <CheckBox Grid.Row="3" Grid.Column="1" Margin="0,2,20,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel}" IsChecked="{Binding Config.Alert_ServerStartedMessageIncludeIPandPort, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ServerStartedMessage}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageTooltip}"/>
+                        
+                        <CheckBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Content="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel}" IsChecked="{Binding Config.Alert_ServerStartedMessageIncludeIPandPort, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <TextBox Grid.Row="3" Grid.Column="2" Margin="1" Text="{Binding Config.Alert_ServerStartedMessageIPandPort}" IsEnabled="{Binding Config.Alert_ServerStartedMessageIncludeIPandPort}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip}"/>
+                        
                         <Label Grid.Row="4" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_BackupProcessErrorLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_BackupProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_BackupProcessErrorTooltip}"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_BackupProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_BackupProcessErrorTooltip}"/>
+                        
                         <Label Grid.Row="5" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ShutdownProcessErrorLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="5" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ShutdownProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ShutdownProcessErrorTooltip}"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ShutdownProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ShutdownProcessErrorTooltip}"/>
+                        
                         <Label Grid.Row="6" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_RestartProcessErrorLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="6" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_RestartProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_RestartProcessErrorTooltip}"/>
+                        <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_RestartProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_RestartProcessErrorTooltip}"/>
+                        
                         <Label Grid.Row="7" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_UpdateProcessErrorLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="7" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_UpdateProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_UpdateProcessErrorTooltip}"/>
+                        <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_UpdateProcessError}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_UpdateProcessErrorTooltip}"/>
+                        
                         <Label Grid.Row="8" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_UpdateResultsLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="8" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_UpdateResults}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_UpdateResultsTooltip}"/>
+                        <TextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_UpdateResults}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_UpdateResultsTooltip}"/>
+                        
                         <Label Grid.Row="9" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ServerUpdateLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="9" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ServerUpdate}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerUpdateTooltip}"/>
+                        <TextBox Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ServerUpdate}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerUpdateTooltip}"/>
+                        
                         <Label Grid.Row="10" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ServerStatusChangeLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="10" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ServerStatusChange}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStatusChangeTooltip}"/>
+                        <TextBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ServerStatusChange}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ServerStatusChangeTooltip}"/>
+                        
                         <Label Grid.Row="11" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ModUpdateDetectedLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="11" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ModUpdateDetected}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ModUpdateDetectedTooltip}"/>
+                        <TextBox Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ModUpdateDetected}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ModUpdateDetectedTooltip}"/>
+                        
                         <Label Grid.Row="12" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="12" Grid.Column="1" Margin="1" Text="{Binding Config.Alert_ForceRespawnDinos}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosTooltip}"/>
+                        <TextBox Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ForceRespawnDinos}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosTooltip}"/>
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <CheckBox IsChecked="{Binding Config.DiscordBotEnabled}" Content="{DynamicResource GlobalSettings_DiscordBotLabel}" VerticalAlignment="Center"/>
                     </GroupBox.Header>
@@ -693,7 +726,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="22" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_EmailSettingsLabel}"/>
                     </GroupBox.Header>
@@ -731,12 +764,12 @@
                         <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource GlobalSettings_EmailFromLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Text="{Binding Config.Email_From}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_EmailFromTooltip}"/>
                         <Label Grid.Row="2" Grid.Column="3" Content="{DynamicResource GlobalSettings_EmailToLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" Margin="1" Text="{Binding Config.Email_To}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_EmailToTooltip}"/>
+                        <TextBox Grid.Row="2" Grid.Column="4" Margin="1" Text="{Binding Config.Email_To}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_EmailToTooltip}"/>
                         <Button Grid.Row="2" Grid.Column="7" Margin="1" Padding="5,2,5,0" Content="{DynamicResource GlobalSettings_EmailTestButtonLabel}" Click="SendTestEmail_Click" HorizontalAlignment="Right"/>
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="23" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_EmailNotifySettingsLabel}"/>
                     </GroupBox.Header>
@@ -760,7 +793,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="22" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="24" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_AdvancedSettingsLabel}"/>
                     </GroupBox.Header>

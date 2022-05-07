@@ -3171,5 +3171,29 @@ namespace ServerManagerTool {
                 this["RCON_BackupMessageCommand"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoBackup_IncludeSaveGamesFolder {
+            get {
+                return ((bool)(this["AutoBackup_IncludeSaveGamesFolder"]));
+            }
+            set {
+                this["AutoBackup_IncludeSaveGamesFolder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("{ipaddress}:{port}")]
+        public string Alert_ServerStartedMessageIPandPort {
+            get {
+                return ((string)(this["Alert_ServerStartedMessageIPandPort"]));
+            }
+            set {
+                this["Alert_ServerStartedMessageIPandPort"] = value;
+            }
+        }
     }
 }

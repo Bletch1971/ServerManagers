@@ -561,8 +561,13 @@ namespace ServerManagerTool.Windows
                             await server.StartAsync();
 
                             var startupMessage = Config.Default.Alert_ServerStartedMessage;
-                            if (Config.Default.Alert_ServerStartedMessageIncludeIPandPort)
-                                startupMessage += $" {Config.Default.MachinePublicIP}:{serverProfile.QueryPort}";
+                            if (Config.Default.Alert_ServerStartedMessageIncludeIPandPort && !string.IsNullOrWhiteSpace(Config.Default.Alert_ServerStartedMessageIPandPort))
+                            {
+                                var ipAndPortMessage = Config.Default.Alert_ServerStartedMessageIPandPort
+                                    .Replace("{ipaddress}", Config.Default.MachinePublicIP)
+                                    .Replace("{port}", serverProfile.QueryPort.ToString());
+                                startupMessage += $" {ipAndPortMessage}";
+                            }
                             PluginHelper.Instance.ProcessAlert(AlertType.Startup, serverProfile.ProfileName, startupMessage);
 
                             if (serverProfile.ForceRespawnDinos)

@@ -824,8 +824,13 @@ namespace ServerManagerTool
                     await server.StartAsync();
 
                     var startupMessage = Config.Default.Alert_ServerStartedMessage;
-                    if (Config.Default.Alert_ServerStartedMessageIncludeIPandPort)
-                        startupMessage += $" {Config.Default.MachinePublicIP}:{server.Profile.QueryPort}";
+                    if (Config.Default.Alert_ServerStartedMessageIncludeIPandPort && !string.IsNullOrWhiteSpace(Config.Default.Alert_ServerStartedMessageIPandPort))
+                    {
+                        var ipAndPortMessage = Config.Default.Alert_ServerStartedMessageIPandPort
+                            .Replace("{ipaddress}", Config.Default.MachinePublicIP)
+                            .Replace("{port}", server.Profile.QueryPort.ToString());
+                        startupMessage += $" {ipAndPortMessage}";
+                    }
                     PluginHelper.Instance.ProcessAlert(AlertType.Startup, server.Profile.ProfileName, startupMessage);
 
                     await Task.Delay(2000);

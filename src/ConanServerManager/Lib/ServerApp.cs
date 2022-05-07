@@ -370,8 +370,13 @@ namespace ServerManagerTool.Lib
                     SendEmail($"{_profile.ProfileName} server started", Config.Default.Alert_ServerStartedMessage, false);
 
                 var startupMessage = Config.Default.Alert_ServerStartedMessage;
-                if (Config.Default.Alert_ServerStartedMessageIncludeIPandPort)
-                    startupMessage += $" {Config.Default.MachinePublicIP}:{_profile.QueryPort}";
+                if (Config.Default.Alert_ServerStartedMessageIncludeIPandPort && !string.IsNullOrWhiteSpace(Config.Default.Alert_ServerStartedMessageIPandPort))
+                {
+                    var ipAndPortMessage = Config.Default.Alert_ServerStartedMessageIPandPort
+                        .Replace("{ipaddress}", Config.Default.MachinePublicIP)
+                        .Replace("{port}", _profile.QueryPort.ToString());
+                    startupMessage += $" {ipAndPortMessage}";
+                }
                 ProcessAlert(AlertType.Startup, startupMessage);
             }
             else
@@ -1959,17 +1964,20 @@ namespace ServerManagerTool.Lib
                             // backup the world save file
                             ZipUtils.ZipAFile(backupFile, worldFileName, worldFile, comment.ToString());
 
-                            // backup the save games files
-                            var saveGamesFolder = GetServerSaveGamesFolder();
-                            if (Directory.Exists(saveGamesFolder))
+                            if (Config.Default.AutoBackup_IncludeSaveGamesFolder)
                             {
-                                var saveGamesFolderInfo = new DirectoryInfo(saveGamesFolder);
-
-                                var saveGamesFileFilter = $"*";
-                                var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
-                                foreach (var file in saveGamesFiles)
+                                // backup the save games files
+                                var saveGamesFolder = GetServerSaveGamesFolder();
+                                if (Directory.Exists(saveGamesFolder))
                                 {
-                                    ZipUtils.ZipAFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
+                                    var saveGamesFolderInfo = new DirectoryInfo(saveGamesFolder);
+
+                                    var saveGamesFileFilter = $"*";
+                                    var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
+                                    foreach (var file in saveGamesFiles)
+                                    {
+                                        ZipUtils.ZipAFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
+                                    }
                                 }
                             }
 

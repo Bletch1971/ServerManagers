@@ -763,6 +763,9 @@
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Esta mensagem será exibida quando o gerenciador do servidor detectar que um ou mais mods estão desatualizados.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Força Respawn de Dinos:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Esta mensagem será exibida quando o servidor estiver sendo iniciado e um wipe do dino selvagem estiver programado.</sys:String>
+	
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Modo RCON Broadcast:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Selecione o modo usado pelo serve manager, para enviar mensagens de broadcast automático no jogo via RCON.</sys:String>
     <!--#endregion-->
 
     <!--#region Main Window -->   

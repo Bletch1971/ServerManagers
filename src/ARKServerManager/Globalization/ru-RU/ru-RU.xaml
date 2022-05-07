@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">14.04.2022 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">06.05.2022 от Varlonec, Эдван</sys:String>      
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -1238,6 +1238,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">ID канала сервера Discord, который будет слушать этот профиль.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasLabel">Псевдоним:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Вместо идентификатора профиля можно использовать уникальное имя для идентификации вашего сервера при использовании команд discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasLabel">Разрешить псевдоним кластера</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasTooltip">Если этот параметр включен, идентификатор кластера можно использовать в качестве псевдонима discord для выполнения команд сервера.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Разрешить Бекап</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Если этот параметр включен, профиль будет прослушивать команды Бекапа от Discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Разрешить Перезагрузку</sys:String>
@@ -5724,6 +5726,7 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">Для команды '{0}' требуется идентификатор профиля.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Профиль '{0}' не найден или не связан с каналом.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMultiples">В канале было обнаружено несколько профилей с "{0}", команда прервана.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', и эта команда не может быть запущена.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
 
