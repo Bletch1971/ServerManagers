@@ -206,69 +206,60 @@ namespace ServerManagerTool
                 dialog.InitialDirectory = Config.Default.DataDir;
                 var result = dialog.ShowDialog(Window.GetWindow(this));
 
-                if (result == CommonFileDialogResult.Ok)
+                if (result != CommonFileDialogResult.Ok)
+                    return;
+
+                if (string.Equals(dialog.FileName, Config.Default.DataDir, StringComparison.OrdinalIgnoreCase))
+                    return;
+
+                try
                 {
-                    if (!string.Equals(dialog.FileName, Config.Default.DataDir))
+                    var newDataDirectory = IOUtils.NormalizeFolder(dialog.FileName);
+
+                    // Set up the destination directories
+                    string newConfigDirectory = Path.Combine(newDataDirectory, Config.Default.ProfilesDir);
+                    string oldSteamDirectory = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir);
+                    string newSteamDirectory = Path.Combine(newDataDirectory, Config.Default.SteamCmdDir);
+
+                    Directory.CreateDirectory(newConfigDirectory);
+                    Directory.CreateDirectory(newSteamDirectory);
+
+                    // Copy the Profiles
+                    foreach (var file in Directory.EnumerateFiles(Config.Default.ConfigDirectory, "*.*", SearchOption.AllDirectories))
                     {
-                        try
+                        string sourceWithoutRoot = file.Substring(Config.Default.ConfigDirectory.Length + 1);
+                        string destination = Path.Combine(newConfigDirectory, sourceWithoutRoot);
+                        if (!File.Exists(destination))
                         {
-                            var newDataDirectory = dialog.FileName;
-                            if (!string.IsNullOrWhiteSpace(newDataDirectory))
-                            {
-                                var root = Path.GetPathRoot(newDataDirectory);
-                                if (!root.EndsWith("\\"))
-                                {
-                                    newDataDirectory = newDataDirectory.Replace(root, root + "\\");
-                                }
-                            }
-
-                            // Set up the destination directories
-                            string newConfigDirectory = Path.Combine(newDataDirectory, Config.Default.ProfilesDir);
-                            string oldSteamDirectory = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir);
-                            string newSteamDirectory = Path.Combine(newDataDirectory, Config.Default.SteamCmdDir);
-
-                            Directory.CreateDirectory(newConfigDirectory);
-                            Directory.CreateDirectory(newSteamDirectory);
-
-                            // Copy the Profiles
-                            foreach (var file in Directory.EnumerateFiles(Config.Default.ConfigDirectory, "*.*", SearchOption.AllDirectories))
-                            {
-                                string sourceWithoutRoot = file.Substring(Config.Default.ConfigDirectory.Length + 1);
-                                string destination = Path.Combine(newConfigDirectory, sourceWithoutRoot);
-                                if (!File.Exists(destination))
-                                {
-                                    Directory.CreateDirectory(Path.GetDirectoryName(destination));
-                                    File.Copy(file, destination);
-                                }
-                            }
-
-                            // Copy the SteamCMD files
-                            foreach (var file in Directory.EnumerateFiles(oldSteamDirectory, "*.*", SearchOption.AllDirectories))
-                            {
-                                string sourceWithoutRoot = file.Substring(oldSteamDirectory.Length + 1);
-                                string destination = Path.Combine(newSteamDirectory, sourceWithoutRoot);
-                                if (!File.Exists(destination))
-                                {
-                                    Directory.CreateDirectory(Path.GetDirectoryName(destination));
-                                    File.Copy(file, destination);
-                                }
-                            }
-
-                            // Remove the old directories
-                            Directory.Delete(Config.Default.ConfigDirectory, true);
-                            Directory.Delete(oldSteamDirectory, true);
-
-                            // Update the config
-                            Config.Default.DataDir = newDataDirectory;
-                            Config.Default.ConfigDirectory = newConfigDirectory;
-                            App.ReconfigureLogging();
+                            Directory.CreateDirectory(Path.GetDirectoryName(destination));
+                            File.Copy(file, destination);
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(String.Format(_globalizer.GetResourceString("GlobalSettings_DataDirectoryChange_FailedLabel"), ex.Message), _globalizer.GetResourceString("GlobalSettings_DataDirectoryChange_FailedTitle"), MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                        }
-
                     }
+
+                    // Copy the SteamCMD files
+                    foreach (var file in Directory.EnumerateFiles(oldSteamDirectory, "*.*", SearchOption.AllDirectories))
+                    {
+                        string sourceWithoutRoot = file.Substring(oldSteamDirectory.Length + 1);
+                        string destination = Path.Combine(newSteamDirectory, sourceWithoutRoot);
+                        if (!File.Exists(destination))
+                        {
+                            Directory.CreateDirectory(Path.GetDirectoryName(destination));
+                            File.Copy(file, destination);
+                        }
+                    }
+
+                    // Remove the old directories
+                    Directory.Delete(Config.Default.ConfigDirectory, true);
+                    Directory.Delete(oldSteamDirectory, true);
+
+                    // Update the config
+                    Config.Default.DataDir = newDataDirectory;
+                    Config.Default.ConfigDirectory = newConfigDirectory;
+                    App.ReconfigureLogging();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(String.Format(_globalizer.GetResourceString("GlobalSettings_DataDirectoryChange_FailedLabel"), ex.Message), _globalizer.GetResourceString("GlobalSettings_DataDirectoryChange_FailedTitle"), MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
             }
         }
@@ -296,22 +287,13 @@ namespace ServerManagerTool
             dialog.InitialDirectory = Config.Default.BackupPath;
             var result = dialog.ShowDialog(Window.GetWindow(this));
 
-            if (result == CommonFileDialogResult.Ok)
-            {
-                if (!string.Equals(dialog.FileName, Config.Default.BackupPath))
-                {
-                    Config.Default.BackupPath = dialog.FileName;
+            if (result != CommonFileDialogResult.Ok)
+                return;
 
-                    if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
-                    {
-                        var root = Path.GetPathRoot(Config.Default.BackupPath);
-                        if (!root.EndsWith("\\"))
-                        {
-                            Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
-                        }
-                    }
-                }
-            }
+            if (string.Equals(dialog.FileName, Config.Default.BackupPath, StringComparison.OrdinalIgnoreCase))
+                return;
+
+            Config.Default.BackupPath = IOUtils.NormalizeFolder(dialog.FileName);
         }
 
         private void ClearBackupDir_Click(object sender, RoutedEventArgs e)
@@ -327,22 +309,13 @@ namespace ServerManagerTool
             dialog.InitialDirectory = Config.Default.DataDir;
             var result = dialog.ShowDialog(Window.GetWindow(this));
 
-            if (result == CommonFileDialogResult.Ok)
-            {
-                if (!string.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir))
-                {
-                    Config.Default.AutoUpdate_CacheDir = dialog.FileName;
+            if (result != CommonFileDialogResult.Ok)
+                return;
 
-                    if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
-                    {
-                        var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
-                        if (!root.EndsWith("\\"))
-                        {
-                            Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
-                        }
-                    }
-                }
-            }
+            if (string.Equals(dialog.FileName, Config.Default.AutoUpdate_CacheDir, StringComparison.OrdinalIgnoreCase))
+                return;
+
+            Config.Default.AutoUpdate_CacheDir = IOUtils.NormalizeFolder(dialog.FileName);
         }
 
         private void SteamAPIKeyHelp_Click(object sender, RoutedEventArgs e)

@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:AD8ABBB5-093A-4FDB-B473-FCED2DB46781</id>
-    <title>1.1.69 (1.1.69.6)</title>
-    <summary>1.1.69.6</summary>
+    <title>1.1.69 (1.1.69.7)</title>
+    <summary>1.1.69.7</summary>
     <link href="" />
     <updated>2022-05-08T00:00:00Z</updated>
     <content type="xhtml">
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Fixed an issue that would not send through the auto process messages via RCON using the correct mode selected in the global settings.</li>
+            <li>Fixed an issue with the path normalization, where it would add extra '\' characters to the end of the path, when the path was a Unc path.</li>
             <li>World Save Backup - fixed the backup of the files.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>

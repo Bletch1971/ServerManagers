@@ -57,38 +57,22 @@ namespace ServerManagerTool
 
             if (!string.IsNullOrWhiteSpace(Config.Default.DataDir))
             {
-                var root = Path.GetPathRoot(Config.Default.DataDir);
-                if (!root.EndsWith("\\"))
-                {
-                    Config.Default.DataDir = Config.Default.DataDir.Replace(root, root + "\\");
-                }
+                Config.Default.DataDir = IOUtils.NormalizeFolder(Config.Default.DataDir);
             }
 
             if (!string.IsNullOrWhiteSpace(Config.Default.ConfigDirectory))
             {
-                var root = Path.GetPathRoot(Config.Default.ConfigDirectory);
-                if (!root.EndsWith("\\"))
-                {
-                    Config.Default.ConfigDirectory = Config.Default.ConfigDirectory.Replace(root, root + "\\");
-                }
+                Config.Default.ConfigDirectory = IOUtils.NormalizeFolder(Config.Default.ConfigDirectory);
             }
 
             if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
             {
-                var root = Path.GetPathRoot(Config.Default.BackupPath);
-                if (!root.EndsWith("\\"))
-                {
-                    Config.Default.BackupPath = Config.Default.BackupPath.Replace(root, root + "\\");
-                }
+                Config.Default.BackupPath = IOUtils.NormalizeFolder(Config.Default.BackupPath);
             }
 
             if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
             {
-                var root = Path.GetPathRoot(Config.Default.AutoUpdate_CacheDir);
-                if (!root.EndsWith("\\"))
-                {
-                    Config.Default.AutoUpdate_CacheDir = Config.Default.AutoUpdate_CacheDir.Replace(root, root + "\\");
-                }
+                Config.Default.AutoUpdate_CacheDir = IOUtils.NormalizeFolder(Config.Default.AutoUpdate_CacheDir);
             }
 
             App.Instance = this;
