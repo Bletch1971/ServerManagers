@@ -505,6 +505,19 @@
 	
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Linguagem</sys:String>
 	
+	<sys:String x:Key="GlobalSettings_SteamSettingsLabel">Configurações da Steam</sys:String>
+	<sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Parar o fechamento do SteamCMD (use apenas para depuração)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">Se ativada, a janela Steamcmd não será fechada quando terminar. Você precisará fechá-lo manualmente ou digitar quit. Nota: não afeta a atualização automática.</sys:String>
+	<sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Nome de usuário:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">O nome de usuário associado à conta steam.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Senha:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">A senha associada à conta steam.</sys:String>
+	<sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Autenticar</sys:String>
+	<sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Saída do SteamCMD para a janela de progresso</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Se habilitado, a saída do SteamCMD será mostrada na janela de progresso ao invés da janela de comando. OBSERVAÇÃO: se ativado, isso pode fazer com que o servidor e as atualizações de mods falhem.</sys:String>
+	<sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use credenciais anônimas</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controla se o usuário anônimo é usado para fazer o download do SteamCMD.</sys:String>
+	
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Opções de substituição personalizadas</sys:String>
 	<sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Habilitar configurações personalizadas do Engine.ini</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Se ativada, as configurações de engine.ini serão gerenciadas pelo gerenciador do servidor.</sys:String>
@@ -523,7 +536,13 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Ativar configurações SotF</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Se ativado, as configurações do SotF serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">AVISO: Embora qualquer uma dessas opções esteja desativada, o ASM não lerá nem gravará as configurações de substituições associadas. A reativação de qualquer uma dessas opções fará com que TODAS as substituições associadas existentes sejam removidas do arquivo de configuração.</sys:String>
-    
+ 
+    <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Opções de nível personalizado</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Aumento do nível do jogador:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">A quantidade de XP a ser aumentada ao adicionar um novo nível personalizado.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Aumento do nível de Dino:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">A quantidade de XP a ser aumentada ao adicionar um novo nível personalizado.</sys:String>	
+	
 	<sys:String x:Key="GlobalSettings_ServerStatusLabel">Opções de status do servidor</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Ativar ações de status do servidor</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">Se ativado, clicar nos ícones de status do servidor pode executar uma ou mais ações.</sys:String>
@@ -531,29 +550,12 @@
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">Se ativado, um diálogo será mostrado para confirmar a ação de status do servidor.</sys:String>
 	
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Opções de Inicialização do Servidor</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Aumento do nível do jogador:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">A quantidade de XP a ser aumentada ao adicionar um novo nível personalizado.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Aumento do nível de Dino:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">A quantidade de XP a ser aumentada ao adicionar um novo nível personalizado.</sys:String>
 	<sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Validar perfil no início do servidor</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Se ativado, quando você iniciar manualmente o servidor, uma validação básica será executada nos arquivos server e mod. NOTA: Não será realizado se o Ark Mod Management estiver ativado.</sys:String>
 	<sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Executar atualização do servidor e mod no início do servidor</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Se habilitado, quando você iniciar manualmente o servidor, o servidor e os arquivos mod serão atualizados para a versão mais recente. NOTA: Não será realizado se o Ark Mod Management estiver ativado.</sys:String>
 	<sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Iniciar servidor minimizado</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">Se ativado, quando o servidor for iniciado, a janela de comando será minimizada, caso contrário, abrirá normalmente.</sys:String>
-	
-	<sys:String x:Key="GlobalSettings_SteamSettingsLabel">Configurações da Steam</sys:String>
-	<sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Parar o fechamento do SteamCMD (use apenas para depuração)</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">Se ativada, a janela Steamcmd não será fechada quando terminar. Você precisará fechá-lo manualmente ou digitar quit. Nota: não afeta a atualização automática.</sys:String>
-	<sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Nome de usuário:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">O nome de usuário associado à conta steam.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Senha:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">A senha associada à conta steam.</sys:String>
-	<sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Autenticar</sys:String>
-	<sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Saída do SteamCMD para a janela de progresso</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Se habilitado, a saída do SteamCMD será mostrada na janela de progresso ao invés da janela de comando. OBSERVAÇÃO: se ativado, isso pode fazer com que o servidor e as atualizações de mods falhem.</sys:String>
-	<sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use credenciais anônimas</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controla se o usuário anônimo é usado para fazer o download do SteamCMD.</sys:String>
 	
     <sys:String x:Key="GlobalSettings_UpdateModSettingsLabel">Atualizar configurações de Mods</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateModWithServerLabel">Atualize mods ao atualizar o servidor</sys:String>
@@ -567,15 +569,19 @@
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Expiração do Cache do Workshop</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">O número de horas desde a última atualização do cache da oficina será considerado antigo e será atualizado automaticamente.</sys:String>
 	
-    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Ativar backup automático</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Intervalo de Backup:</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Com que freqüência executar o backup do servidor, em horas e minutos (hh: mm). Defina como 00:00 para desativar.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Configurações de backup</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Inclua a pasta SaveGames ao realizar um backup do WorldSave</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">Se ativado, quando um backup do worldsave for executado, ele incluirá a pasta SaveGames usada para armazenar os arquivos de dados do mod.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Excluir arquivos de backup antigos</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Se ativado, quando o backup automático for executado, os arquivos de backup antigos serão excluídos.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Mais velho que:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Quantos dias o arquivo de backup deve ser excluído em dias.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">Mensagem do Save:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">Esta mensagem será exibida no backup quando o mundo estiver prestes a ser salvo.</sys:String>
+	
+    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Ativar backup automático</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Intervalo de backup:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Com que frequência realizar o backup do servidor, em horas e minutos (hh:mm). Defina como 00:00 para desabilitar.</sys:String>
 	
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Ativar atualização automática</sys:String>
 	<sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Atualização do Ark Survival</sys:String>
@@ -628,6 +634,34 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Mostrar o motivo de desligamento com TODAS as mensagens de desligamento</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Se habilitado, o motivo do desligamento será mostrado com todas as mensagens de desligamento; caso contrário, ele será mostrado apenas no início do encerramento do servidor.</sys:String>
     
+    <sys:String x:Key="GlobalSettings_AlertsLabel">Opções de alerta</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Mensagem de Parada do Servidor:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">Esta mensagem será exibida quando o servidor estiver sendo parado.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Mensagem de desligamento do servidor:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Esta mensagem será exibida quando o servidor estiver sendo desligado.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Mensagem iniciada pelo servidor:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Esta mensagem será exibida quando o servidor estiver sendo iniciado.</sys:String>
+	<sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Incluir IP Público e Porta na Mensagem Inicial</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">A mensagem de inicialização incluirá o IP público e a porta no Discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Erro no processo de backup:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Esta mensagem será exibida quando o processo de backup automático encontrar um erro.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Erro no processo de desligamento:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">Esta mensagem será exibida quando o processo de desligamento automático encontrar um erro.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Erro no processo de reiniciar:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">Esta mensagem será exibida quando o processo de reinicialização automática encontrar um erro.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Erro no processo de atualizar:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">Esta mensagem será exibida quando o processo de atualização automática encontrar um erro.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Resultado da atualização</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">Esta mensagem será exibida quando o processo de atualização automática encontrar algo para atualizar.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Mensagem de atualização do servidor:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">Esta mensagem será exibida quando o servidor do jogo tiver sido atualizado.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Status do servidor:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Esta mensagem será exibida quando o status do servidor for alterado.</sys:String>
+	<sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Atualização de mods detectada:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Esta mensagem será exibida quando o gerenciador do servidor detectar que um ou mais mods estão desatualizados.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Força Respawn de Dinos:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Esta mensagem será exibida quando o servidor estiver sendo iniciado e um wipe do dino selvagem estiver programado.</sys:String>	
+
     <sys:String x:Key="GlobalSettings_DiscordBotLabel">Habilitar Discord Bot</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Você precisará reiniciar o server manager se alterar alguma configuração do Discord Bot.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
@@ -704,6 +738,8 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Quantos dias os arquivos de log devem ser excluídos em dias.</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Número máximo de Logs</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">O número máximo de arquivos de log que serão mantidos.</sys:String>	
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Modo RCON Broadcast:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Selecione o modo usado pelo serve manager, para enviar mensagens de broadcast automático no jogo via RCON.</sys:String>
 	
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Redefinir configurações</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Clique em 'Sim' para confirmar que você deseja executar as configurações redefinidas.</sys:String>
@@ -735,37 +771,6 @@
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTitle">Autenticação SteamCmd desativada</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledLabel">Você escolheu redirecionar a saída do steamcmd para a janela de progresso. Você não é capaz de usar suas credenciais de vapor, você deve usar credenciais anônimas.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTooltip">Para usar suas credenciais de vapor, você deve desativar a Output SteamCMD na opção de janela de progresso.</sys:String>
-
-    <sys:String x:Key="GlobalSettings_AlertsLabel">Opções de alerta</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Mensagem de Parada do Servidor:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">Esta mensagem será exibida quando o servidor estiver sendo parado.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Mensagem de desligamento do servidor:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Esta mensagem será exibida quando o servidor estiver sendo desligado.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Mensagem iniciada pelo servidor:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Esta mensagem será exibida quando o servidor estiver sendo iniciado.</sys:String>
-	<sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Incluir IP Público e Porta na Mensagem Inicial</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">A mensagem de inicialização incluirá o IP público e a porta no Discord.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Erro no processo de backup:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Esta mensagem será exibida quando o processo de backup automático encontrar um erro.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Erro no processo de desligamento:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">Esta mensagem será exibida quando o processo de desligamento automático encontrar um erro.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Erro no processo de reiniciar:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">Esta mensagem será exibida quando o processo de reinicialização automática encontrar um erro.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Erro no processo de atualizar:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">Esta mensagem será exibida quando o processo de atualização automática encontrar um erro.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Resultado da atualização</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">Esta mensagem será exibida quando o processo de atualização automática encontrar algo para atualizar.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Mensagem de atualização do servidor:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">Esta mensagem será exibida quando o servidor do jogo tiver sido atualizado.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Status do servidor:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Esta mensagem será exibida quando o status do servidor for alterado.</sys:String>
-	<sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Atualização de mods detectada:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Esta mensagem será exibida quando o gerenciador do servidor detectar que um ou mais mods estão desatualizados.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Força Respawn de Dinos:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Esta mensagem será exibida quando o servidor estiver sendo iniciado e um wipe do dino selvagem estiver programado.</sys:String>
-	
-    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Modo RCON Broadcast:</sys:String>
-    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Selecione o modo usado pelo serve manager, para enviar mensagens de broadcast automático no jogo via RCON.</sys:String>
     <!--#endregion-->
 
     <!--#region Main Window -->   
