@@ -1962,7 +1962,7 @@ namespace ServerManagerTool.Lib
                             var saveFolderInfo = new DirectoryInfo(saveFolder);
 
                             // backup the world save file
-                            ZipUtils.ZipAFile(backupFile, worldFileName, worldFile, comment.ToString());
+                            ZipUtils.ZipFile(backupFile, worldFileName, worldFile, comment.ToString());
 
                             if (Config.Default.AutoBackup_IncludeSaveGamesFolder)
                             {
@@ -1976,7 +1976,7 @@ namespace ServerManagerTool.Lib
                                     var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
                                     foreach (var file in saveGamesFiles)
                                     {
-                                        ZipUtils.ZipAFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
+                                        ZipUtils.ZipFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
                                     }
                                 }
                             }

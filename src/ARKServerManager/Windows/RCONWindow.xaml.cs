@@ -176,7 +176,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty PlayersViewProperty = DependencyProperty.Register(nameof(PlayersView), typeof(ICollectionView), typeof(RCONWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty RCONParametersProperty = DependencyProperty.Register(nameof(RCONParameters), typeof(RCONParameters), typeof(RCONWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ScrollOnNewInputProperty = DependencyProperty.Register(nameof(ScrollOnNewInput), typeof(bool), typeof(RCONWindow), new PropertyMetadata(true));
-        public static readonly DependencyProperty ServerRCONProperty = DependencyProperty.Register(nameof(ServerRCON), typeof(ServerRCON), typeof(RCONWindow), new PropertyMetadata(null));
+        public static readonly DependencyProperty ServerRCONProperty = DependencyProperty.Register(nameof(ServerRCON), typeof(ServerRcon), typeof(RCONWindow), new PropertyMetadata(null));
 
         public RCONWindow(RCONParameters parameters)
         {
@@ -187,7 +187,7 @@ namespace ServerManagerTool
             this.PlayerFiltering = (PlayerFilterType)Config.Default.RCON_PlayerListFilter;
             this.PlayerSorting = (PlayerSortType)Config.Default.RCON_PlayerListSort;
             this.RCONParameters = parameters;
-            this.ServerRCON = new ServerRCON(parameters);
+            this.ServerRCON = new ServerRcon(parameters);
             this.ServerRCON.RegisterCommandListener(RenderRCONCommandOutput);
             this.ServerRCON.Players.CollectionChanged += Players_CollectionChanged;
             this.ServerRCON.PlayersCollectionUpdated += Players_CollectionUpdated;
@@ -195,7 +195,7 @@ namespace ServerManagerTool
             this.PlayersView = CollectionViewSource.GetDefaultView(this.ServerRCON.Players);
             this.PlayersView.Filter = new Predicate<object>(PlayerFilter);
 
-            var notifier = new PropertyChangeNotifier(this.ServerRCON, ServerRCON.StatusProperty, (o, e) =>
+            var notifier = new PropertyChangeNotifier(this.ServerRCON, ServerRcon.StatusProperty, (o, e) =>
             {
                 this.RenderConnectionStateChange(e);
             });
@@ -301,9 +301,9 @@ namespace ServerManagerTool
             set { SetValue(ScrollOnNewInputProperty, value); }
         }
 
-        public ServerRCON ServerRCON
+        public ServerRcon ServerRCON
         {
-            get { return (ServerRCON)GetValue(ServerRCONProperty); }
+            get { return (ServerRcon)GetValue(ServerRCONProperty); }
             set { SetValue(ServerRCONProperty, value); }
         }
         #endregion
@@ -461,7 +461,7 @@ namespace ServerManagerTool
                         var message = _globalizer.GetResourceString("RCON_DestroyWildDinosLabel");
                         this.ServerRCON.IssueCommand($"{Config.Default.RCON_MessageCommand.ToLower()} {message}");
 
-                        this.ServerRCON.IssueCommand(ServerRCON.RCON_COMMAND_WILDDINOWIPE);
+                        this.ServerRCON.IssueCommand(ServerRcon.RCON_COMMAND_WILDDINOWIPE);
                     },
                     canExecute: (_) => true
                 );
@@ -807,17 +807,17 @@ namespace ServerManagerTool
                             break;
 
                         case InputMode.Broadcast:
-                            this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_BROADCAST} {commandText}");
+                            this.ServerRCON.IssueCommand($"{ServerRcon.RCON_COMMAND_BROADCAST} {commandText}");
                             break;
 
                         case InputMode.Global:
                             if (!String.IsNullOrWhiteSpace(Config.Default.RCON_AdminName))
                             {
-                                this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_SERVERCHAT} [{Config.Default.RCON_AdminName}] {commandText}");
+                                this.ServerRCON.IssueCommand($"{ServerRcon.RCON_COMMAND_SERVERCHAT} [{Config.Default.RCON_AdminName}] {commandText}");
                             }
                             else
                             {
-                                this.ServerRCON.IssueCommand($"{ServerRCON.RCON_COMMAND_SERVERCHAT} {commandText}");
+                                this.ServerRCON.IssueCommand($"{ServerRcon.RCON_COMMAND_SERVERCHAT} {commandText}");
                             }
                             break;
                     }
@@ -914,7 +914,7 @@ namespace ServerManagerTool
 
         private IEnumerable<Inline> FormatCommandInput(ConsoleCommand command)
         {
-            if (command.command.Equals(ServerRCON.RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
+            if (command.command.Equals(ServerRcon.RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
             {
                 yield return new RCONOutput_Broadcast(command.args);
             }
@@ -933,7 +933,7 @@ namespace ServerManagerTool
         {
             bool firstLine = true;
 
-            if (command.command.Equals(ServerRCON.RCON_COMMAND_LISTPLAYERS, StringComparison.OrdinalIgnoreCase))
+            if (command.command.Equals(ServerRcon.RCON_COMMAND_LISTPLAYERS, StringComparison.OrdinalIgnoreCase))
             {
                 foreach (var output in command.lines)
                 {
@@ -945,7 +945,7 @@ namespace ServerManagerTool
                     }
                     firstLine = false;
 
-                    if (trimmed == ServerRCON.NoResponseOutput)
+                    if (trimmed == ServerRcon.NoResponseOutput)
                     {
                         yield return new RCONOutput_NoResponse();
                     }
@@ -975,7 +975,7 @@ namespace ServerManagerTool
                     }
                     firstLine = false;
 
-                    if (trimmed == ServerRCON.NoResponseOutput)
+                    if (trimmed == ServerRcon.NoResponseOutput)
                     {
                         yield return new RCONOutput_NoResponse();
                     }

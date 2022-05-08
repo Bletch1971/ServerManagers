@@ -721,7 +721,7 @@ namespace ServerManagerTool
                 ZipUtils.ZipFiles(zipFile, files, comment.ToString());
                 foreach (var kvp in obfuscateFiles)
                 {
-                    ZipUtils.ZipAFile(zipFile, kvp.Key, kvp.Value);
+                    ZipUtils.ZipContent(zipFile, kvp.Key, kvp.Value);
                 }
 
                 var message = _globalizer.GetResourceString("ServerSettings_SupportZipSuccessLabel").Replace("{filename}", Path.GetFileName(zipFile));

@@ -8,6 +8,29 @@
   <updated>2022-05-08T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:973E001F-223C-4B57-89F7-8B8040900A7C</id>
+    <title>1.1.425 (1.1.425.6)</title>
+    <summary>1.1.425.6</summary>
+    <link href="" />
+    <updated>2022-05-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>World Save Backup - fixed the backup of the files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:CEA21F86-5943-46F9-8807-604695E42A25</id>
     <title>1.1.425 (1.1.425.5)</title>
     <summary>1.1.425.5</summary>

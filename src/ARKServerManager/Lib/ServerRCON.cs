@@ -7,12 +7,10 @@ using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
-using ServerManagerTool.Lib.ViewModel;
 using ServerManagerTool.Lib.ViewModel.RCON;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -23,7 +21,7 @@ using WPFSharp.Globalizer;
 
 namespace ServerManagerTool.Lib
 {
-    public class ServerRCON : DependencyObject, IAsyncDisposable
+    public class ServerRcon : DependencyObject, IAsyncDisposable
     {
         private const int STEAM_UPDATE_INTERVAL = 60;
         private const int PLAYER_LIST_INTERVAL = 5000;
@@ -39,11 +37,11 @@ namespace ServerManagerTool.Lib
 
         public event EventHandler PlayersCollectionUpdated;
 
-        public static readonly DependencyProperty StatusProperty = DependencyProperty.Register(nameof(Status), typeof(ConsoleStatus), typeof(ServerRCON), new PropertyMetadata(ConsoleStatus.Disconnected));
-        public static readonly DependencyProperty PlayersProperty = DependencyProperty.Register(nameof(Players), typeof(SortableObservableCollection<PlayerInfo>), typeof(ServerRCON), new PropertyMetadata(null));
-        public static readonly DependencyProperty CountPlayersProperty = DependencyProperty.Register(nameof(CountPlayers), typeof(int), typeof(ServerRCON), new PropertyMetadata(0));
-        public static readonly DependencyProperty CountInvalidPlayersProperty = DependencyProperty.Register(nameof(CountInvalidPlayers), typeof(int), typeof(ServerRCON), new PropertyMetadata(0));
-        public static readonly DependencyProperty CountOnlinePlayersProperty = DependencyProperty.Register(nameof(CountOnlinePlayers), typeof(int), typeof(ServerRCON), new PropertyMetadata(0));
+        public static readonly DependencyProperty StatusProperty = DependencyProperty.Register(nameof(Status), typeof(ConsoleStatus), typeof(ServerRcon), new PropertyMetadata(ConsoleStatus.Disconnected));
+        public static readonly DependencyProperty PlayersProperty = DependencyProperty.Register(nameof(Players), typeof(SortableObservableCollection<PlayerInfo>), typeof(ServerRcon), new PropertyMetadata(null));
+        public static readonly DependencyProperty CountPlayersProperty = DependencyProperty.Register(nameof(CountPlayers), typeof(int), typeof(ServerRcon), new PropertyMetadata(0));
+        public static readonly DependencyProperty CountInvalidPlayersProperty = DependencyProperty.Register(nameof(CountInvalidPlayers), typeof(int), typeof(ServerRcon), new PropertyMetadata(0));
+        public static readonly DependencyProperty CountOnlinePlayersProperty = DependencyProperty.Register(nameof(CountOnlinePlayers), typeof(int), typeof(ServerRcon), new PropertyMetadata(0));
 
         private static readonly char[] lineSplitChars = new char[] { '\n' };
         private static readonly char[] argsSplitChars = new char[] { ' ' };
@@ -67,7 +65,7 @@ namespace ServerManagerTool.Lib
         private readonly Logger _errorLogger;
         private bool _disposed = false;
 
-        public ServerRCON(RCONParameters parameters)
+        public ServerRcon(RCONParameters parameters)
         {
             _rconParameters = parameters;
 
@@ -363,20 +361,23 @@ namespace ServerManagerTool.Lib
                     onlinePlayers.Add(newPlayer);
 
                     var playerJoined = false;
-                    _players.AddOrUpdate(newPlayer.PlayerId, 
-                        (k) => 
-                        { 
-                            playerJoined = true; 
-                            return newPlayer; 
-                        }, 
-                        (k, v) => 
-                        { 
-                            playerJoined = !v.IsOnline;
-                            v.PlayerName = newPlayer.PlayerName;
-                            v.IsOnline = newPlayer.IsOnline; 
-                            return v; 
-                        }
-                    );
+                    if (!string.IsNullOrWhiteSpace(newPlayer.PlayerName))
+                    {
+                        _players.AddOrUpdate(newPlayer.PlayerId,
+                            (k) =>
+                            {
+                                playerJoined = true;
+                                return newPlayer;
+                            },
+                            (k, v) =>
+                            {
+                                playerJoined = !v.IsOnline;
+                                v.PlayerName = newPlayer.PlayerName;
+                                v.IsOnline = newPlayer.IsOnline;
+                                return v;
+                            }
+                        );
+                    }
 
                     if (playerJoined)
                     {

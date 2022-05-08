@@ -19,7 +19,7 @@ namespace ServerManagerTool.Common.Utils
             if (!File.Exists(zipFile))
                 throw new FileNotFoundException();
 
-            using (var zip = ZipFile.Read(zipFile))
+            using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
             {
                 return zip.Entries.Any(e => !e.IsDirectory && Path.GetFileName(e.FileName).Equals(entryName, StringComparison.OrdinalIgnoreCase));
             }
@@ -35,7 +35,7 @@ namespace ServerManagerTool.Common.Utils
             if (!File.Exists(zipFile))
                 throw new FileNotFoundException();
 
-            using (var zip = ZipFile.Read(zipFile))
+            using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
             {
                 return zip.Entries.Any(e => e.IsDirectory && e.FileName.EndsWith($"{folderName}/", StringComparison.OrdinalIgnoreCase)) 
                     ? true 
@@ -57,7 +57,7 @@ namespace ServerManagerTool.Common.Utils
             if (!Directory.Exists(destinationPath))
                 Directory.CreateDirectory(destinationPath);
 
-            using (var zip = ZipFile.Read(zipFile))
+            using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
             {
                 var selection = zip.Entries.Where(e => Path.GetFileName(e.FileName).Equals(entryName, StringComparison.OrdinalIgnoreCase)).ToList();
 
@@ -80,7 +80,7 @@ namespace ServerManagerTool.Common.Utils
             if (!Directory.Exists(destinationPath))
                 Directory.CreateDirectory(destinationPath);
 
-            using (var zip = ZipFile.Read(zipFile))
+            using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
             {
                 zip.ExtractAll(destinationPath, ExtractExistingFileAction.OverwriteSilently);
 
@@ -103,7 +103,7 @@ namespace ServerManagerTool.Common.Utils
             if (sourceFolder.EndsWith("/"))
                 sourceFolder = sourceFolder.TrimEnd('/');
 
-            using (var zip = ZipFile.Read(zipFile))
+            using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
             {
                 var selection = new List<ZipEntry>();
 
@@ -135,7 +135,7 @@ namespace ServerManagerTool.Common.Utils
             }
             else
             {
-                using (var zip = ZipFile.Read(zipFile))
+                using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
                 {
                     zip.AddFiles(filesToZip.Where(f => !string.IsNullOrWhiteSpace(f) && File.Exists(f)), preserveDirHierarchy, directoryPathInArchive);
 
@@ -147,7 +147,7 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static void ZipAFile(string zipFile, string entryName, string content)
+        public static void ZipContent(string zipFile, string entryName, string content)
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
@@ -169,7 +169,7 @@ namespace ServerManagerTool.Common.Utils
             }
             else
             {
-                using (var zip = ZipFile.Read(zipFile))
+                using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
                 {
                     zip.AddEntry(entryName, content);
 
@@ -178,20 +178,27 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static void ZipAFile(string zipFile, string entryName, string content, string comment)
+        public static void ZipFile(string zipFile, string entryName, string fileToZip)
+        {
+            ZipFile(zipFile, entryName, fileToZip, null);
+        }
+
+        public static void ZipFile(string zipFile, string entryName, string fileToZip, string comment)
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
             if (string.IsNullOrWhiteSpace(entryName))
                 throw new ArgumentNullException(nameof(entryName));
-            if (string.IsNullOrWhiteSpace(content))
-                throw new ArgumentNullException(nameof(content));
+            if (string.IsNullOrWhiteSpace(fileToZip))
+                throw new ArgumentNullException(nameof(fileToZip));
+            if (!File.Exists(fileToZip))
+                throw new ArgumentException($"{fileToZip} does not exist or could not be found.");
 
             if (!File.Exists(zipFile))
             {
                 using (var zip = new ZipFile())
                 {
-                    zip.AddEntry(entryName, File.ReadAllBytes(content));
+                    zip.AddEntry(entryName, File.ReadAllBytes(fileToZip));
 
                     zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
                     if (!string.IsNullOrWhiteSpace(comment))
@@ -202,9 +209,9 @@ namespace ServerManagerTool.Common.Utils
             }
             else
             {
-                using (var zip = ZipFile.Read(zipFile))
+                using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
                 {
-                    zip.AddEntry(entryName, File.ReadAllBytes(content));
+                    zip.AddEntry(entryName, File.ReadAllBytes(fileToZip));
 
                     if (!string.IsNullOrWhiteSpace(comment))
                         zip.Comment = comment;

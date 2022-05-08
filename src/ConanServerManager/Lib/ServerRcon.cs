@@ -328,20 +328,23 @@ namespace ServerManagerTool.Lib
                     onlinePlayers.Add(newPlayer);
 
                     var playerJoined = false;
-                    _players.AddOrUpdate(newPlayer.PlayerId,
-                        (k) =>
-                        {
-                            playerJoined = true;
-                            return newPlayer;
-                        },
-                        (k, v) =>
-                        {
-                            playerJoined = !v.IsOnline;
-                            v.PlayerName = newPlayer.PlayerName;
-                            v.IsOnline = newPlayer.IsOnline;
-                            return v;
-                        }
-                    );
+                    if (!string.IsNullOrWhiteSpace(newPlayer.PlayerName))
+                    {
+                        _players.AddOrUpdate(newPlayer.PlayerId,
+                            (k) =>
+                            {
+                                playerJoined = true;
+                                return newPlayer;
+                            },
+                            (k, v) =>
+                            {
+                                playerJoined = !v.IsOnline;
+                                v.PlayerName = newPlayer.PlayerName;
+                                v.IsOnline = newPlayer.IsOnline;
+                                return v;
+                            }
+                        );
+                    }
 
                     if (playerJoined)
                     {

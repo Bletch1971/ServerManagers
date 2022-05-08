@@ -321,7 +321,7 @@
     <Compile Include="Lib\Model\Level.cs" />
     <Compile Include="Lib\Server.cs" />
     <Compile Include="Lib\ServerProfile.cs" />
-    <Compile Include="Lib\ServerRCON.cs" />
+    <Compile Include="Lib\ServerRcon.cs" />
     <Compile Include="Lib\ServerApp.cs" />
     <Compile Include="Lib\ServerRuntime.cs" />
     <Compile Include="Lib\ViewConverters\DifficultyOffsetValueConverter.cs" />

@@ -2040,14 +2040,14 @@ namespace ServerManagerTool.Lib
                             var saveFolderInfo = new DirectoryInfo(saveFolder);
 
                             // backup the world save file
-                            ZipUtils.ZipAFile(backupFile, worldFileName, worldFile, comment.ToString());
+                            ZipUtils.ZipFile(backupFile, worldFileName, worldFile, comment.ToString());
 
                             // backup the player files
                             var playerFileFilter = $"*{Config.Default.PlayerFileExtension}";
                             var playerFiles = saveFolderInfo.GetFiles(playerFileFilter, SearchOption.TopDirectoryOnly);
                             foreach (var file in playerFiles)
                             {
-                                ZipUtils.ZipAFile(backupFile, file.Name, file.FullName);
+                                ZipUtils.ZipFile(backupFile, file.Name, file.FullName);
                             }
 
                             // backup the tribe files
@@ -2055,7 +2055,7 @@ namespace ServerManagerTool.Lib
                             var tribeFiles = saveFolderInfo.GetFiles(tribeFileFilter, SearchOption.TopDirectoryOnly);
                             foreach (var file in tribeFiles)
                             {
-                                ZipUtils.ZipAFile(backupFile, file.Name, file.FullName);
+                                ZipUtils.ZipFile(backupFile, file.Name, file.FullName);
                             }
 
                             // backup the tribute tribe files
@@ -2063,7 +2063,7 @@ namespace ServerManagerTool.Lib
                             var tributeTribeFiles = saveFolderInfo.GetFiles(tributeTribeFileFilter, SearchOption.TopDirectoryOnly);
                             foreach (var file in tributeTribeFiles)
                             {
-                                ZipUtils.ZipAFile(backupFile, file.Name, file.FullName);
+                                ZipUtils.ZipFile(backupFile, file.Name, file.FullName);
                             }
 
                             if (Config.Default.AutoBackup_IncludeSaveGamesFolder)
@@ -2078,7 +2078,7 @@ namespace ServerManagerTool.Lib
                                     var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
                                     foreach (var file in saveGamesFiles)
                                     {
-                                        ZipUtils.ZipAFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
+                                        ZipUtils.ZipFile(backupFile, file.FullName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath), file.FullName);
                                     }
                                 }
                             }
@@ -2365,10 +2365,10 @@ namespace ServerManagerTool.Lib
             switch (commandValue.ToLower())
             {
                 case "global":
-                    return ServerRCON.RCON_COMMAND_SERVERCHAT;
+                    return ServerRcon.RCON_COMMAND_SERVERCHAT;
 
                 default:
-                    return ServerRCON.RCON_COMMAND_BROADCAST;
+                    return ServerRcon.RCON_COMMAND_BROADCAST;
             }
         }
 
