@@ -178,17 +178,15 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static void ZipFile(string zipFile, string entryName, string fileToZip)
+        public static void ZipFile(string zipFile, string directoryPath, string fileToZip)
         {
-            ZipFile(zipFile, entryName, fileToZip, null);
+            ZipFile(zipFile, directoryPath, fileToZip, null);
         }
 
-        public static void ZipFile(string zipFile, string entryName, string fileToZip, string comment)
+        public static void ZipFile(string zipFile, string directoryPath, string fileToZip, string comment)
         {
             if (string.IsNullOrWhiteSpace(zipFile))
                 throw new ArgumentNullException(nameof(zipFile));
-            if (string.IsNullOrWhiteSpace(entryName))
-                throw new ArgumentNullException(nameof(entryName));
             if (string.IsNullOrWhiteSpace(fileToZip))
                 throw new ArgumentNullException(nameof(fileToZip));
             if (!File.Exists(fileToZip))
@@ -198,7 +196,7 @@ namespace ServerManagerTool.Common.Utils
             {
                 using (var zip = new ZipFile())
                 {
-                    zip.AddEntry(entryName, File.ReadAllBytes(fileToZip));
+                    zip.AddFile(fileToZip, directoryPath);
 
                     zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
                     if (!string.IsNullOrWhiteSpace(comment))
@@ -211,7 +209,7 @@ namespace ServerManagerTool.Common.Utils
             {
                 using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
                 {
-                    zip.AddEntry(entryName, File.ReadAllBytes(fileToZip));
+                    zip.AddFile(fileToZip, directoryPath);
 
                     if (!string.IsNullOrWhiteSpace(comment))
                         zip.Comment = comment;
