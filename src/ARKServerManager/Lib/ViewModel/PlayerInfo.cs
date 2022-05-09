@@ -124,7 +124,8 @@ namespace ServerManagerTool.Lib.ViewModel.RCON
             if (playerData == null)
                 return;
 
-            playerData.PlayerName = PlayerData?.PlayerName;
+            if (PlayerData?.PlayerName != null)
+                playerData.PlayerName = PlayerData.PlayerName;
             playerData.LastPlatformUpdateUtc = PlayerData?.LastPlatformUpdateUtc ?? DateTime.MinValue;
         }
 

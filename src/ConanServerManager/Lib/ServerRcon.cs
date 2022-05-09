@@ -296,6 +296,11 @@ namespace ServerManagerTool.Lib
         // This is bound to the UI thread
         private List<string> HandleListPlayersCommand(IEnumerable<string> commandLines)
         {
+            /*
+                > listplayers
+                Idx | Char name        | Player name  | User ID          | Platform ID       | Platform Name
+                0 | Alora Truthrider | Bletch#80041 | CE9DBB451DD05733 | 76561197991984752 | Steam
+            */
             var output = new List<string>();
             var onlinePlayers = new List<PlayerInfo>();
 
@@ -312,7 +317,7 @@ namespace ServerManagerTool.Lib
                         // Invalid data. Ignore it.
                         continue;
 
-                    var id = elements[3]?.Trim();
+                    var id = elements[3].Trim();
 
                     if (onlinePlayers.FirstOrDefault(p => p.PlayerId.Equals(id, StringComparison.OrdinalIgnoreCase)) != null)
                         // Duplicate data. Ignore it.
@@ -321,7 +326,7 @@ namespace ServerManagerTool.Lib
                     var newPlayer = new PlayerInfo()
                     {
                         PlayerId = id,
-                        PlayerName = elements[2].Substring(0, elements[2].IndexOf('#')).Trim(),
+                        PlayerName = elements[2].Trim(),
                         CharacterName = elements[1].Trim(),
                         IsOnline = true,
                     };

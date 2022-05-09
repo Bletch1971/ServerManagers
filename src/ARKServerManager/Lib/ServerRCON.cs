@@ -332,21 +332,25 @@ namespace ServerManagerTool.Lib
         // This is bound to the UI thread
         private List<string> HandleListPlayersCommand(IEnumerable<string> commandLines)
         {
+            /*
+                > listplayers
+                0. Bletch, 76561197991984752 <- steam
+                0. Bletch, 7171521174456260817 <- epic
+            */
             var output = new List<string>();
             var onlinePlayers = new List<PlayerInfo>();
-
             var playerLines = commandLines?.ToList() ?? new List<string>();
+
             if (playerLines.Count > 0)
             {
-
                 foreach (var line in playerLines)
                 {
-                    var elements = line.Split(',');
-                    if (elements.Length != 2)
+                    var elements = line.Split(',', '.');
+                    if (elements.Length != 3)
                         // Invalid data. Ignore it.
                         continue;
 
-                    var id = elements[1]?.Trim();
+                    var id = elements[2].Trim();
 
                     if (onlinePlayers.FirstOrDefault(p => p.PlayerId.Equals(id, StringComparison.OrdinalIgnoreCase)) != null)
                         // Duplicate data. Ignore it.
@@ -355,7 +359,7 @@ namespace ServerManagerTool.Lib
                     var newPlayer = new PlayerInfo()
                     {
                         PlayerId = id,
-                        PlayerName = elements[0].Substring(elements[0].IndexOf('.') + 1).Trim(),
+                        PlayerName = elements[1].Trim(),
                         IsOnline = true,
                     };
                     onlinePlayers.Add(newPlayer);
