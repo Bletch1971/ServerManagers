@@ -5,161 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-05-08T00:00:00Z</updated>
+  <updated>2022-05-09T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:3DDB3838-5020-4CA3-A054-423479FFB667</id>
-    <title>1.1.69 (1.1.69.7)</title>
-    <summary>1.1.69.7</summary>
+    <id>urn:uuid:86CF3CE5-C935-4C04-8D31-224B2E1DD203</id>
+    <title>1.1.70 (1.1.70.1)</title>
+    <summary>1.1.70.1</summary>
     <link href="" />
-    <updated>2022-05-08T00:00:00Z</updated>
+    <updated>2022-05-09T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Fixed an issue with the path normalization, where it would add extra '\' characters to the end of the path, when the path was a Unc path.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:72CA1005-0061-41A3-9883-F826B8F9F27F</id>
-    <title>1.1.69 (1.1.69.6)</title>
-    <summary>1.1.69.6</summary>
-    <link href="" />
-    <updated>2022-05-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>World Save Backup - fixed the backup of the files.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:68ECEA73-1C9C-4DCB-807B-0D812E986993</id>
-    <title>1.1.69 (1.1.69.5)</title>
-    <summary>1.1.69.5</summary>
-    <link href="" />
-    <updated>2022-05-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Rcon Window - minor changes to the player list, online player count and server status.</li>
-            <li>Online Player Count - fixed the online player count to display the correct value.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:D886601C-8260-4E06-8B2A-D8F77F1F1B58</id>
-    <title>1.1.69 (1.1.69.4)</title>
-    <summary>1.1.69.4</summary>
-    <link href="" />
-    <updated>2022-05-07T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Global Backup Settings - added option to include/exclude the SaveGames folder in the worldsave backup (default exclude).</li>
-            <li>Global Alert Settings - added new textbox allowing the formatting of the ipaddress and port in the server startup message (default {ipaddress}:{port}).</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:92A777C4-75B2-468F-BC46-F42327A4D2D1</id>
-    <title>1.1.69 (1.1.69.3)</title>
-    <summary>1.1.69.3</summary>
-    <link href="" />
-    <updated>2022-05-06T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Security Protocol Changes - updated the security protocols to use TLS12 and TLS13.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6AC9586B-1678-46B5-9FD7-86B20FB67293</id>
-    <title>1.1.69 (1.1.69.2)</title>
-    <summary>1.1.69.2</summary>
-    <link href="" />
-    <updated>2022-05-06T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Auto Backup Settings - added RCON broadcast mode droplist, so backup processes can send messages via RCON using this mode.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:AD8ABBB5-093A-4FDB-B473-FCED2DB46781</id>
-    <title>1.1.69 (1.1.69.1)</title>
-    <summary>1.1.69.1</summary>
-    <link href="" />
-    <updated>2022-05-06T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>Fixed an issue that would not send through the auto process messages via RCON using the correct mode selected in the global settings.</li>
+            <li>Rcon Player List - fixed a bug when displaying the player details for Epic Players.</li>
           </ul>
         </p>
       </div>
