@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:86CF3CE5-C935-4C04-8D31-224B2E1DD203</id>
-    <title>1.1.70 (1.1.70.1)</title>
-    <summary>1.1.70.1</summary>
+    <title>1.1.70 (1.1.70.2)</title>
+    <summary>1.1.70.2</summary>
     <link href="" />
     <updated>2022-05-09T00:00:00Z</updated>
     <content type="xhtml">
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Rcon Player List - fixed a bug when displaying the player details for Epic Players.</li>
+            <li>Removed TLS13 from the list of accepted security protocols, as not all OS support TLS13.</li>
           </ul>
         </p>
       </div>

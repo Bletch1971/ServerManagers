@@ -32,7 +32,7 @@ namespace ServerManagerTool.Updater
         {
             Console.Title = "Server Manager Updater";
 
-            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(0xC00 + 0x3000); // TLS12, TLS13
+            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(0xC00); // TLS12
 
             var updaterArgs = args;
             ApplicationArgs = null;

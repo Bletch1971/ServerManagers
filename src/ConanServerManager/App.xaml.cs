@@ -81,7 +81,7 @@ namespace ServerManagerTool
             Title = string.Empty;
             Version = AppUtils.GetDeployedVersion(Assembly.GetEntryAssembly());
 
-            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(0xC00 + 0x3000); // TLS12, TLS13
+            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(0xC00); // TLS12
             AppDomain.CurrentDomain.UnhandledException += ErrorHandling.CurrentDomain_UnhandledException;
 
             MigrateSettings();
