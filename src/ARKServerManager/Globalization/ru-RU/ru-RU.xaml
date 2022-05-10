@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">06.05.2022 от Varlonec, Эдван</sys:String>      
+    <sys:String x:Key="Generic_TranslatedBy">09.05.2022 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -502,9 +502,22 @@
     <sys:String x:Key="GlobalSettings_ClearButtonLabel">Очистить</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyButtonLabel">Получить WebApi Ключ...</sys:String>
     <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Помощь...</sys:String>
-
+    
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Языки</sys:String>
 
+    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Настройки</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Остановить и закрыть SteamCMD (используйте только для отладки)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">Если включено, окно Steamcmd не будет закрыто после завершения. Вам нужно будет закрыть его вручную или набрать quit. Примечание: не влияет на автоматическое обновление.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Логин:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">Имя пользователя учетной записи Steam аккаунта.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Пароль:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">Пароль пользователя учетной записи Steam аккаунта.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Авторизация</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Вывести SteamCMD в окно выполнения</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Если включено, выход SteamCMD будет отображаться в окне выполнения, а не в окне команд. ПРИМЕЧАНИЕ: Если этот параметр включен, это может привести к сбою обновления вашего сервера и мод.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Анонимная учетная запись</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Используется анонимная учетная запись для загрузки из SteamCMD.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Пользовательские настройки</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Вкл пользовательские настройки Engine.ini</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Если включено, то настройки engine.ini будут менеджерами сервера.</sys:String>
@@ -523,37 +536,26 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Вкл SotF</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Если включено, Survival Of The Fittest появится в настройках ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">ПРЕДУПРЕЖДЕНИЕ: Если любой из этих параметров отключен, ASM не будет читать или записывать связанные с этип параметры переопределения. Повторное включение любого из этих параметров приведет к удалению всех существующих связанных переопределений в файле конфигурации.</sys:String>
-   
+
+    <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Параметры Пользовательского Уровня</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Увеличение уровня игрока:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">Количество XP будет увеличено при добавлении нового настраиваемого уровня.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Увеличение уровня динозавров:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">Количество XP, которое должно быть увеличено при добавлении нового настраиваемого уровня.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Настройки активных иконок статуса сервера</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Вкл активную иконку</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">Если включено, при нажатии на иконку активности сервера, можно вызвать функцию включения или выключения.</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Показать подтверждения действий</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">Если включено, будет показан диалог подтверждения действия статуса сервера.</sys:String>
-   
-    <sys:String x:Key="GlobalSettings_ServerStartupLabel">Настройки запуска сервера</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Увеличение уровня игрока:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">Количество XP будет увеличено при добавлении нового настраиваемого уровня.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Увеличение уровня динозавров:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">Количество XP, которое должно быть увеличено при добавлении нового настраиваемого уровня.</sys:String>
+    
+    <sys:String x:Key="GlobalSettings_ServerStartupLabel">Настройки активных иконок статуса сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Проверить профиль при старте сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Если включено, при ручном запуске сервера выполняется базовая проверка сервера и файлов модов. ПРИМЕЧАНИЕ: Не будет выполнено, если включено авто-управление Ark Mod Management (автоматическое управление модами).</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Выполнение обновления сервера и модов при запуске сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Если включено, при ручном запуске сервера файлы сервера и мод будут обновлены до последней версии. ПРИМЕЧАНИЕ: Не будет выполнено, если включено управление Ark Mod Management(Автоматическое управление Модами).</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Сворачивать сервер при запуске</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">Если включено, то при запуске сервера командное окно будет свернуто, в противном случае оно откроется в обычном режиме.</sys:String>
-
-    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Настройки</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Остановить и закрыть SteamCMD (используйте только для отладки)</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">Если включено, окно Steamcmd не будет закрыто после завершения. Вам нужно будет закрыть его вручную или набрать quit. Примечание: не влияет на автоматическое обновление.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Логин:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">Имя пользователя учетной записи Steam аккаунта.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Пароль:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">Пароль пользователя учетной записи Steam аккаунта.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Авторизация</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Вывести SteamCMD в окно выполнения</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Если включено, выход SteamCMD будет отображаться в окне выполнения, а не в окне команд. ПРИМЕЧАНИЕ: Если этот параметр включен, это может привести к сбою обновления вашего сервера и мод.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Анонимная учетная запись</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Используется анонимная учетная запись для загрузки из SteamCMD.</sys:String>
 
     <sys:String x:Key="GlobalSettings_UpdateModSettingsLabel">Настройки обновления Модов</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateModWithServerLabel">Обновить Моды при обновлении Сервера</sys:String>
@@ -567,15 +569,19 @@
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Хранение Кеша Мастерской</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">Количество часов с момента последнего обновления кеша Мастерской, будет считаться старым и будет автоматически обновляться.</sys:String>
 
-    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Включить Авто-Бекап</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Интервал сохранения:</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Укажите интервал Авто-Бекапа в часах и минутах  (Ч:М). Укажите 00:00 для отключения.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Настройки резервного копирования</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Включите папку SaveGames при выполнении резервного копирования World Save</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">Если этот параметр включен, при запуске резервной копии world save в нее будет включена папка SaveGames, используемая для хранения файлов данных mod.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Удалять Файлы Авто-Бекапа</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Если включено, то при запуске автоматического резервного копирования старые файлы резервных копий будут удалены.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">старее чем:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Укажите интервал, за кокой период будут сохранятся Авто-Бекапы, остальные будут удалены.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">Глобальное сообщение:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">Укажите глобальное сообщение, которое увидят все игроки при сохранении мира.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Включить Авто-Бекап</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Интервал сохранения:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Укажите интервал Авто-Бекапа в часах и минутах  (Ч:М). Укажите 00:00 для отключения.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Включить Авто-Обновление</sys:String>
     <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Игровой Сервер</sys:String>
@@ -627,6 +633,34 @@
     <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">Это сообщение будет отображаться, когда выключение сервера было отменено.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Показывать причину отключения со всеми сообщениями о завершении работы.</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Если включено, причина отключения будет показана со всем сообщением о завершении работы; в противном случае это будет отображаться только в начале выключения сервера.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AlertsLabel">Параметры предупреждения</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Сообщение о остановке сервера:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">Это сообщение будет отображаться при остановке сервера.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Сообщение выключения сервера:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Это сообщение будет отображаться при завершении работы сервера.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Сообщение при запуска сервера:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Это сообщение будет отображаться при запуске сервера.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Включите общедоступный IP-адрес и порт в начальное сообщение</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">Сообщение запуска будет включать общедоступный IP-адрес и порт.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Ошибка процесса сохранения:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического резервного сохранения возникла ошибка.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Ошибка процесса завершения работы:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического выключения возникла ошибка.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Ошибка процесса перезапуска:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического перезапуска произошла ошибка.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Ошибка процесса обновления:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического обновления возникла ошибка.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Обновить результаты:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">Это сообщение будет отображаться, когда процесс автоматического обновления обнаружит что-то для обновления.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Сообщение об обновлении сервера:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">Это сообщение будет отображаться при обновлении игрового сервера.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Изменение статуса сервера:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Это сообщение будет отображаться при изменении состояния сервера.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Обнаружено обновление мода:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Это сообщение будет отображаться, когда менеджер сервера обнаружит, что один или несколько модов устарели.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Предупреждение о респавне динозавров:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Это сообщение будет отображаться при запуске сервера и оповещение о запланированном респе динозавров</sys:String>
 
     <sys:String x:Key="GlobalSettings_DiscordBotLabel">Включить Discord бота</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Вам нужно будет перезапустить ASM, если вы измените какие-либо настройки для бота Discord.</sys:String>
@@ -704,7 +738,9 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Сколько дней должны храниться логи до удаления.</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Максимальное число логов</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Максимальное количество логов, которые будут храниться.</sys:String>
-
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Выберите метод, используемый менеджером сервера для отправки сообщений автоматической обработки игровым клиентам через RCON.</sys:String>
+    
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Подтвердить сброс настроек</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Нажмите «Да», для подтверждения, что вы хотите выполнить сброс настроек.</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_FailedTitle">Не удалось выполнить сброс настроек</sys:String>
@@ -735,34 +771,6 @@
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTitle">Идентификация SteamCmd отключена</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledLabel">Вы выбрали перенаправление вывода SteamCMD в окно выполнения. Вы не можете использовать свои парольные учетные данные, вы должны использовать анонимные учетные данные.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTooltip">Чтобы использовать парольные учетные данные, вы должны отключить вывод SteamCMD в окне окна выполнения.</sys:String>
-
-    <sys:String x:Key="GlobalSettings_AlertsLabel">Параметры предупреждения</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Сообщение о остановке сервера:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">Это сообщение будет отображаться при остановке сервера.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Сообщение выключения сервера:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Это сообщение будет отображаться при завершении работы сервера.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Сообщение при запуска сервера:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Это сообщение будет отображаться при запуске сервера.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Включите общедоступный IP-адрес и порт в начальное сообщение</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">Сообщение запуска будет включать общедоступный IP-адрес и порт.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Ошибка процесса сохранения:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического резервного сохранения возникла ошибка.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Ошибка процесса завершения работы:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического выключения возникла ошибка.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Ошибка процесса перезапуска:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического перезапуска произошла ошибка.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Ошибка процесса обновления:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">Это сообщение будет отображаться, если в процессе автоматического обновления возникла ошибка.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Обновить результаты:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">Это сообщение будет отображаться, когда процесс автоматического обновления обнаружит что-то для обновления.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Сообщение об обновлении сервера:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">Это сообщение будет отображаться при обновлении игрового сервера.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Изменение статуса сервера:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Это сообщение будет отображаться при изменении состояния сервера.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Обнаружено обновление мода:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Это сообщение будет отображаться, когда менеджер сервера обнаружит, что один или несколько модов устарели.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Предупреждение о респавне динозавров:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Это сообщение будет отображаться при запуске сервера и оповещение о запланированном респе динозавров</sys:String>
     <!--#endregion-->
 
     <!--#region Main Window -->   
@@ -3030,7 +3038,7 @@
     <sys:String x:Key="EelBoss_Character_BP_Easy_C">Модер, Хозяин Океана (Гамма)</sys:String>
     <sys:String x:Key="EelBoss_Character_BP_Medium_C">Модер, Хозяин Океана (Бета)</sys:String>
     <sys:String x:Key="EelBoss_Character_BP_Hard_C">Модер, Хозяин Океана (Альфа)</sys:String>
-	
+
     <sys:String x:Key="EelMinion_Character_BP_Easy_C">Электрофорус Миньон (Гамма)</sys:String>
     <sys:String x:Key="EelMinion_Character_BP_Medium_C">Электрофорус Миньон (Бета)</sys:String>
     <sys:String x:Key="EelMinion_Character_BP_Hard_C">Электрофорус Миньон (Альфа)</sys:String>
