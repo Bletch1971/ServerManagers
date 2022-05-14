@@ -159,18 +159,18 @@ namespace ServerManagerTool.Lib
                     if (!string.IsNullOrWhiteSpace(Config.Default.ServerBackup_WorldSaveMessage))
                     {
                         ProcessAlert(AlertType.Backup, Config.Default.ServerBackup_WorldSaveMessage);
-                        sent = SendMessageAsync(Config.Default.RCON_BackupMessageCommand, Config.Default.ServerBackup_WorldSaveMessage, cancellationToken).Result;
+                        sent = SendMessage(Config.Default.RCON_BackupMessageCommand, Config.Default.ServerBackup_WorldSaveMessage, cancellationToken);
                         if (sent)
                         {
                             emailMessage.AppendLine("sent server save message.");
                         }
                     }
 
-                    sent = SendCommandAsync(Config.Default.ServerSaveCommand, false).Result;
+                    sent = SendCommand(Config.Default.ServerSaveCommand, cancellationToken);
                     if (sent)
                     {
                         emailMessage.AppendLine("sent server save command.");
-                        Task.Delay(Config.Default.ServerShutdown_WorldSaveDelay * 1000).Wait();
+                        Task.Delay(Config.Default.ServerShutdown_WorldSaveDelay * 1000, cancellationToken).Wait(cancellationToken);
                     }
                 }
                 catch (Exception ex)
@@ -416,6 +416,7 @@ namespace ServerManagerTool.Lib
 
             QueryMaster.Server gameServer = null;
             bool sent = false;
+            var serverAccessible = true;
 
             try
             {
@@ -429,7 +430,7 @@ namespace ServerManagerTool.Lib
                     LogProfileMessage("Sending shutdown reason...");
 
                     ProcessAlert(AlertType.ShutdownReason, ShutdownReason);
-                    SendMessageAsync(ShutdownReason, cancellationToken).Wait();
+                    SendMessage(ShutdownReason, cancellationToken);
                 }
 
                 LogProfileMessage("Starting shutdown timer...");
@@ -454,7 +455,7 @@ namespace ServerManagerTool.Lib
                         if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                         {
                             ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                            SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
+                            SendMessage(Config.Default.ServerShutdown_CancelMessage, cancellationToken);
                         }
 
                         ExitCode = EXITCODE_CANCELLED;
@@ -463,31 +464,57 @@ namespace ServerManagerTool.Lib
 
                     if (CheckForOnlinePlayers)
                     {
+                        var playerCount = -1;
+
                         try
                         {
                             // BH - commented out until Funcom fix the Online player status column in the world save database
                             //var gameFile = GetServerWorldFile();
                             //var playerCount = DataContainer.GetOnlinePlayerCount(gameFile);
                             var playerInfo = gameServer?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim()));
-                            var playerCount = playerInfo?.Count() ?? -1;
-
-                            // check if anyone is logged into the server
-                            if (playerCount <= 0)
-                            {
-                                LogProfileMessage("No online players, shutdown timer cancelled.");
-                                break;
-                            }
+                            playerCount = playerInfo?.Count() ?? -1;
 
                             LogProfileMessage($"Online players: {playerCount}.");
                         }
                         catch (Exception ex)
                         {
-                            Debug.WriteLine($"Error getting/displaying online players.\r\n{ex.Message}");
+                            serverAccessible = false;
+
+                            LogProfileError("Error getting online players.", false);
+                            LogProfileError(ex.Message, false);
+                            LogProfileError("", false);
+                        }
+
+                        if (!serverAccessible)
+                        {
+                            LogProfileMessage("Server not accessible, shutdown timer cancelled.");
+                            break;
+                        }
+
+                        // check if anyone is logged into the server
+                        if (playerCount == 0)
+                        {
+                            LogProfileMessage("No online players, shutdown timer cancelled.");
+                            break;
+                        }
+
+                        if (playerCount < 0)
+                        {
+                            LogProfileMessage("Unknown online players, shutdown timer cancelled.");
+                            break;
                         }
                     }
                     else
                     {
-                        Debug.WriteLine($"CheckForOnlinePlayers disabled, shutdown timer cancelled.");
+                        try
+                        {
+                            var serverInfo = gameServer?.GetInfo();
+                            serverAccessible = true;
+                        }
+                        catch
+                        {
+                            serverAccessible = false;
+                        }
                     }
 
                     var message = string.Empty;
@@ -539,7 +566,7 @@ namespace ServerManagerTool.Lib
                             message = $"{message}\r\n{ShutdownReason}";
                         }
 
-                        sent = SendMessageAsync(message, cancellationToken).Result;
+                        sent = SendMessage(message, cancellationToken);
                     }
 
                     minutesLeft--;
@@ -553,7 +580,7 @@ namespace ServerManagerTool.Lib
 
                 // BH - commented out until funcom provide a way to send a save command
                 // check if we need to perform a world save
-                //if (Config.Default.ServerShutdown_EnableWorldSave)
+                //if (serverAccessible && Config.Default.ServerShutdown_EnableWorldSave)
                 //{
                 //    try
                 //    {
@@ -562,10 +589,10 @@ namespace ServerManagerTool.Lib
                 //        {
                 //            LogProfileMessage(Config.Default.ServerShutdown_WorldSaveMessage);
                 //            ProcessAlert(AlertType.ShutdownMessage, Config.Default.ServerShutdown_WorldSaveMessage);
-                //            SendMessageAsync(Config.Default.ServerShutdown_WorldSaveMessage, cancellationToken).Wait(cancellationToken);
+                //            SendMessage(Config.Default.ServerShutdown_WorldSaveMessage, cancellationToken);
                 //        }
 
-                //        if (SendCommandAsync(Config.Default.ServerSaveCommand, false).Result)
+                //        if (SendCommandAsync(Config.Default.ServerSaveCommand).Result)
                 //        {
                 //            try
                 //            {
@@ -587,7 +614,7 @@ namespace ServerManagerTool.Lib
                     if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                     {
                         ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                        SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
+                        SendMessage(Config.Default.ServerShutdown_CancelMessage, cancellationToken);
                     }
 
                     ExitCode = EXITCODE_CANCELLED;
@@ -608,7 +635,7 @@ namespace ServerManagerTool.Lib
                         message = $"{message}\r\n{ShutdownReason}";
                     }
 
-                    SendMessageAsync(message, cancellationToken).Wait();
+                    SendMessage(message, cancellationToken);
                 }
             }
             finally
@@ -624,7 +651,7 @@ namespace ServerManagerTool.Lib
                 if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_CancelMessage))
                 {
                     ProcessAlert(AlertType.Shutdown, Config.Default.ServerShutdown_CancelMessage);
-                    SendMessageAsync(Config.Default.ServerShutdown_CancelMessage, cancellationToken).Wait();
+                    SendMessage(Config.Default.ServerShutdown_CancelMessage, cancellationToken);
                 }
 
                 ExitCode = EXITCODE_CANCELLED;
@@ -1943,6 +1970,8 @@ namespace ServerManagerTool.Lib
                             var backupFileName = $"{mapName}_{_startTime:yyyyMMdd_HHmmss}{Config.Default.BackupExtension}";
                             var backupFile = IOUtils.NormalizePath(Path.Combine(backupFolder, backupFileName));
 
+                            LogProfileMessage($"{worldFileName} last write time: {File.GetLastWriteTime(worldFile):yyyy-MM-dd HH:mm:ss}");
+
                             if (!Directory.Exists(backupFolder))
                                 Directory.CreateDirectory(backupFolder);
 
@@ -2529,48 +2558,46 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        private async Task<bool> SendCommandAsync(string command, bool retryIfFailed)
+        private bool SendCommand(string command, CancellationToken token)
         {
             if (_profile == null || !_profile.RconEnabled)
                 return false;
             if (string.IsNullOrWhiteSpace(command))
                 return false;
 
-            int retries = 0;
-            int rconRetries = 0;
-            int maxRetries = retryIfFailed ? RCON_MAXRETRIES : 1;
+            var rconRetries = RCON_MAXRETRIES;
+            var sent = false;
 
             try
             {
-                while (retries < maxRetries && rconRetries < RCON_MAXRETRIES)
+                while (rconRetries > 0)
                 {
+                    if (token.IsCancellationRequested)
+                        break;
+
                     SetupRconConsole();
+
+                    LogProfileMessage($"RCON> {command}");
 
                     if (_rconConsole == null)
                     {
-                        LogProfileMessage($"RCON> {command} - attempt {rconRetries + 1} (a).", false);
-                        LogProfileMessage("RCON connection could not be created.", false);
-                        rconRetries++;
+                        LogProfileError("RCON connection could not be created.", false);
+                        rconRetries--;
                     }
                     else
                     {
-                        rconRetries = 0;
                         try
                         {
                             _rconConsole.SendCommand(command);
-                            LogProfileMessage($"RCON> {command}");
-
-                            return true;
+                            sent = true;
                         }
                         catch (Exception ex)
                         {
-                            LogProfileMessage($"RCON> {command} - attempt {retries + 1} (b).", false);
-                            LogProfileMessage($"{ex.Message}", false);
-                            LogProfileMessage($"{ex.StackTrace}", false);
+                            LogProfileError(ex.Message, false);
+                            LogProfileError(ex.StackTrace, false);
                         }
 
-                        await Task.Delay(100);
-                        retries++;
+                        break;
                     }
                 }
             }
@@ -2579,20 +2606,20 @@ namespace ServerManagerTool.Lib
                 CloseRconConsole();
             }
 
-            return false;
+            return sent;
         }
 
-        private async Task<bool> SendMessageAsync(string message, CancellationToken token)
+        private bool SendMessage(string message, CancellationToken token)
         {
-            return await SendMessageAsync(Config.Default.RCON_MessageCommand, message, token);
+            return SendMessage(Config.Default.RCON_MessageCommand, message, token);
         }
 
-        private async Task<bool> SendMessageAsync(string mode, string message, CancellationToken token)
+        private bool SendMessage(string mode, string message, CancellationToken token)
         {
             if (string.IsNullOrWhiteSpace(message) || !SendMessages)
                 return false;
 
-            var sent = await SendCommandAsync($"{GetRconMessageCommand(mode)} {message}", false);
+            var sent = SendCommand($"{GetRconMessageCommand(mode)} {message}", token);
 
             if (sent)
             {
@@ -2650,6 +2677,8 @@ namespace ServerManagerTool.Lib
         {
             if (_rconConsole != null)
             {
+                LogProfileMessage($"Closing RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).");
+
                 _rconConsole.Dispose();
                 _rconConsole = null;
 
@@ -2666,6 +2695,9 @@ namespace ServerManagerTool.Lib
 
             try
             {
+                LogProfileMessage("");
+                LogProfileMessage($"Creating RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).");
+
                 var endPoint = new IPEndPoint(_profile.ServerIPAddress, _profile.RconPort);
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
                 if (server == null)
@@ -2677,6 +2709,8 @@ namespace ServerManagerTool.Lib
                 LogProfileDebug($"SUCCESS: {nameof(SetupRconConsole)} - ServerQuery was created.", false);
 
                 Task.Delay(1000).Wait();
+
+                LogProfileMessage($"Opening RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).");
 
                 _rconConsole = server.GetControl(_profile.RconPassword);
                 if (_rconConsole == null)
@@ -2712,13 +2746,22 @@ namespace ServerManagerTool.Lib
             try
             {
                 // try to establish a mutex for the profile.
-                mutex = new Mutex(true, GetMutexName(_profile.InstallDirectory), out createdNew);
+                var mutexName = GetMutexName(_profile.InstallDirectory);
+                LogProfileMessage($"Attempting to establish a lock on the server ({mutexName})");
+
+                mutex = new Mutex(true, mutexName, out createdNew);
                 if (!createdNew)
-                    createdNew = mutex.WaitOne(new TimeSpan(0, MUTEX_TIMEOUT, 0));
+                {
+                    var timeout = new TimeSpan(0, MUTEX_TIMEOUT, 0);
+                    LogProfileMessage($"Could not lock server, waiting for server to unlock - timeout set to {timeout}.");
+                    createdNew = mutex.WaitOne(timeout);
+                }
 
                 // check if the mutex was established
                 if (createdNew)
                 {
+                    LogProfileMessage("Server lock established.\r\n");
+
                     BackupServer(cancellationToken);
 
                     if (ExitCode != EXITCODE_NORMALEXIT)
@@ -2791,13 +2834,22 @@ namespace ServerManagerTool.Lib
                 else
                 {
                     // try to establish a mutex for the profile.
-                    mutex = new Mutex(true, GetMutexName(_profile.InstallDirectory), out createdNew);
+                    var mutexName = GetMutexName(_profile.InstallDirectory);
+                    LogProfileMessage($"Attempting to establish a lock on the server ({mutexName})");
+
+                    mutex = new Mutex(true, mutexName, out createdNew);
                     if (!createdNew)
-                        createdNew = mutex.WaitOne(new TimeSpan(0, MUTEX_TIMEOUT, 0));
+                    {
+                        var timeout = new TimeSpan(0, MUTEX_TIMEOUT, 0);
+                        LogProfileMessage($"Could not lock server, waiting for server to unlock - timeout set to {timeout}.");
+                        createdNew = mutex.WaitOne(timeout);
+                    }
 
                     // check if the mutex was established
                     if (createdNew)
                     {
+                        LogProfileMessage("Server lock established.\r\n");
+
                         ShutdownServer(performRestart, performUpdate, steamCmdRemoveQuit, cancellationToken);
 
                         if (ExitCode != EXITCODE_NORMALEXIT)
@@ -2887,13 +2939,22 @@ namespace ServerManagerTool.Lib
                 LogBranchMessage(branch.BranchName, $"[{_profile.ProfileName}] Started server update process.");
 
                 // try to establish a mutex for the profile.
-                mutex = new Mutex(true, GetMutexName(_profile.InstallDirectory), out createdNew);
+                var mutexName = GetMutexName(_profile.InstallDirectory);
+                LogProfileMessage($"Attempting to establish a lock on the server ({mutexName})");
+
+                mutex = new Mutex(true, mutexName, out createdNew);
                 if (!createdNew)
-                    createdNew = mutex.WaitOne(new TimeSpan(0, MUTEX_TIMEOUT, 0));
+                {
+                    var timeout = new TimeSpan(0, MUTEX_TIMEOUT, 0);
+                    LogProfileMessage($"Could not lock server, waiting for server to unlock - timeout set to {timeout}.");
+                    createdNew = mutex.WaitOne(timeout);
+                }
 
                 // check if the mutex was established
                 if (createdNew)
                 {
+                    LogProfileMessage("Server lock established.\r\n");
+
                     UpdateFiles();
 
                     LogBranchMessage(branch.BranchName, $"[{_profile.ProfileName}] Finished server update process.");
@@ -2908,6 +2969,7 @@ namespace ServerManagerTool.Lib
                 else
                 {
                     ExitCode = EXITCODE_PROCESSALREADYRUNNING;
+                    LogProfileMessage("Cancelled server update process, could not lock server.");
                     LogBranchMessage(branch.BranchName, $"[{_profile.ProfileName}] Cancelled server update process, could not lock server.");
                 }
             }
@@ -2966,13 +3028,22 @@ namespace ServerManagerTool.Lib
                 var cacheFolder = GetServerCacheFolder(branch.BranchName);
 
                 // try to establish a mutex for the profile.
-                mutex = new Mutex(true, GetMutexName(cacheFolder), out createdNew);
+                var mutexName = GetMutexName(cacheFolder);
+                LogBranchMessage(branch.BranchName, $"Attempting to establish a lock on the cache ({mutexName})");
+
+                mutex = new Mutex(true, mutexName, out createdNew);
                 if (!createdNew)
-                    createdNew = mutex.WaitOne(new TimeSpan(0, MUTEX_TIMEOUT, 0));
+                {
+                    var timeout = new TimeSpan(0, MUTEX_TIMEOUT, 0);
+                    LogBranchMessage(branch.BranchName, $"Could not lock cache, waiting for cache to unlock - timeout set to {timeout}.");
+                    createdNew = mutex.WaitOne(timeout);
+                }
 
                 // check if the mutex was established
                 if (createdNew)
                 {
+                    LogBranchMessage(branch.BranchName, "Cache lock established.\r\n");
+
                     // update the server cache for the branch
                     UpdateServerCache(branch.BranchName, branch.BranchPassword);
 
@@ -3036,7 +3107,7 @@ namespace ServerManagerTool.Lib
                 else
                 {
                     ExitCode = EXITCODE_PROCESSALREADYRUNNING;
-                    LogMessage($"[{GetBranchName(branch.BranchName)}] Cancelled branch update process, could not lock branch folder.");
+                    LogMessage($"[{GetBranchName(branch.BranchName)}] Cancelled branch update process, could not lock cache.");
                 }
             }
             catch (Exception ex)

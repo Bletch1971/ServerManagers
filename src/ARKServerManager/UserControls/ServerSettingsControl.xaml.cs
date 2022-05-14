@@ -784,12 +784,12 @@ namespace ServerManagerTool
                     var profileFile = ServerProfile.LoadFromProfileFile(file, null);
                     if (profileFile != null)
                     {
-                        profileFile.AdminPassword = "obfuscated";
-                        profileFile.ServerPassword = "obfuscated";
-                        profileFile.SpectatorPassword = "obfuscated";
-                        profileFile.WebAlarmKey = "obfuscated";
-                        profileFile.WebAlarmUrl = "obfuscated";
-                        profileFile.BranchPassword = "obfuscated";
+                        profileFile.AdminPassword = string.IsNullOrWhiteSpace(profileFile.AdminPassword) ? "empty" : "obfuscated";
+                        profileFile.ServerPassword = string.IsNullOrWhiteSpace(profileFile.ServerPassword) ? "empty" : "obfuscated";
+                        profileFile.SpectatorPassword = string.IsNullOrWhiteSpace(profileFile.SpectatorPassword) ? "empty" : "obfuscated";
+                        profileFile.WebAlarmKey = string.IsNullOrWhiteSpace(profileFile.WebAlarmKey) ? "empty" : "obfuscated";
+                        profileFile.WebAlarmUrl = string.IsNullOrWhiteSpace(profileFile.WebAlarmUrl) ? "empty" : "obfuscated";
+                        profileFile.BranchPassword = string.IsNullOrWhiteSpace(profileFile.BranchPassword) ? "empty" : "obfuscated";
                         obfuscateFiles.Add(file, profileFile.ToOutputString());
                     }
                 }
@@ -859,10 +859,6 @@ namespace ServerManagerTool
                 comment.AppendLine($"MachinePublicIP: {Config.Default.MachinePublicIP}");
                 comment.AppendLine($"Data Directory: {Config.Default.DataDir}");
                 comment.AppendLine($"Profiles Directory: {Config.Default.ConfigDirectory}");
-                if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
-                    comment.AppendLine($"Backup Directory: {Config.Default.BackupPath}");
-                else
-                    comment.AppendLine($"Backup Directory: *{Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)}");
                 comment.AppendLine($"Server Directory: {this.Settings.InstallDirectory}");
 
                 comment.AppendLine($"SotF Server: {this.Settings.SOTF_Enabled}");
@@ -870,69 +866,95 @@ namespace ServerManagerTool
 
                 comment.AppendLine($"IsAdministrator: {SecurityUtils.IsAdministrator()}");
                 comment.AppendLine($"RunAsAdministratorPrompt: {Config.Default.RunAsAdministratorPrompt}");
+                comment.AppendLine($"CheckIfServerManagerRunningOnStartup: {Config.Default.CheckIfServerManagerRunningOnStartup}");
+                comment.AppendLine($"ManageFirewallAutomatically: {Config.Default.ManageFirewallAutomatically}");
+                comment.AppendLine($"ManagePublicIPAutomatically: {Config.Default.ManagePublicIPAutomatically}");
                 comment.AppendLine($"MainWindow_WindowState: {Config.Default.MainWindow_WindowState}");
                 comment.AppendLine($"MainWindow_MinimizeToTray: {Config.Default.MainWindow_MinimizeToTray}");
-                comment.AppendLine($"ManageFirewallAutomatically: {Config.Default.ManageFirewallAutomatically}");
-                comment.AppendLine($"ValidateProfileOnServerStart: {Config.Default.ValidateProfileOnServerStart}");
+                comment.AppendLine($"ServerMonitorWindow_WindowState: {Config.Default.ServerMonitorWindow_WindowState}");
+
                 comment.AppendLine($"SteamCMD File: {SteamCmdUpdater.GetSteamCmdFile(Config.Default.DataDir)}");
-                comment.AppendLine($"SteamCmdRedirectOutput: {Config.Default.SteamCmdRedirectOutput}");
                 comment.AppendLine($"SteamCmd_UseAnonymousCredentials: {Config.Default.SteamCmd_UseAnonymousCredentials}");
                 comment.AppendLine($"SteamCmd_Username Set: {!string.IsNullOrWhiteSpace(Config.Default.SteamCmd_Username)}");
                 comment.AppendLine($"SteamCmd_Password Set: {!string.IsNullOrWhiteSpace(Config.Default.SteamCmd_Password)}");
                 comment.AppendLine($"SteamAPIKey: {!string.IsNullOrWhiteSpace(CommonConfig.Default.SteamAPIKey)}");
 
-                comment.AppendLine($"SectionSOTFEnabled: {Config.Default.SectionSOTFEnabled}");
-                comment.AppendLine($"SectionPGMEnabled: {Config.Default.SectionPGMEnabled}");
                 comment.AppendLine($"SectionCraftingOverridesEnabled: {Config.Default.SectionCraftingOverridesEnabled}");
+                comment.AppendLine($"SectionStackSizeOverridesEnabled: {Config.Default.SectionStackSizeOverridesEnabled}");
+                comment.AppendLine($"SectionCustomEngineSettingsEnabled: {Config.Default.SectionCustomEngineSettingsEnabled}");
                 comment.AppendLine($"SectionMapSpawnerOverridesEnabled: {Config.Default.SectionMapSpawnerOverridesEnabled}");
                 comment.AppendLine($"SectionSupplyCrateOverridesEnabled: {Config.Default.SectionSupplyCrateOverridesEnabled}");
-                comment.AppendLine($"SectionStackSizeOverridesEnabled: {Config.Default.SectionStackSizeOverridesEnabled}");
                 comment.AppendLine($"SectionPreventTransferOverridesEnabled: {Config.Default.SectionPreventTransferOverridesEnabled}");
+                comment.AppendLine($"SectionPGMEnabled: {Config.Default.SectionPGMEnabled}");
+                comment.AppendLine($"SectionSOTFEnabled: {Config.Default.SectionSOTFEnabled}");
+
+                comment.AppendLine($"CustomLevelXPIncrease_Player: {Config.Default.CustomLevelXPIncrease_Player}");
+                comment.AppendLine($"CustomLevelXPIncrease_Dino: {Config.Default.CustomLevelXPIncrease_Dino}");
+
+                comment.AppendLine($"ServerStatus_EnableActions: {Config.Default.ServerStatus_EnableActions}");
+                comment.AppendLine($"ServerStatus_ShowActionConfirmation: {Config.Default.ServerStatus_ShowActionConfirmation}");
+
+                comment.AppendLine($"ValidateProfileOnServerStart: {Config.Default.ValidateProfileOnServerStart}");
+                comment.AppendLine($"ServerUpdate_OnServerStart: {Config.Default.ServerUpdate_OnServerStart}");
+                comment.AppendLine($"ServerStartMinimized: {Config.Default.ServerStartMinimized}");
+
+                comment.AppendLine($"ServerUpdate_UpdateModsWhenUpdatingServer: {Config.Default.ServerUpdate_UpdateModsWhenUpdatingServer}");
+                comment.AppendLine($"ServerUpdate_ForceUpdateMods: {Config.Default.ServerUpdate_ForceUpdateMods}");
+                comment.AppendLine($"ServerUpdate_ForceCopyMods: {Config.Default.ServerUpdate_ForceCopyMods}");
+                comment.AppendLine($"ServerUpdate_ForceUpdateModsIfNoSteamInfo: {Config.Default.ServerUpdate_ForceUpdateModsIfNoSteamInfo}");
+                comment.AppendLine($"WorkshopCache_ExpiredHours: {Config.Default.WorkshopCache_ExpiredHours}");
+
+                if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+                    comment.AppendLine($"Backup Directory: {Config.Default.BackupPath}");
+                else
+                    comment.AppendLine($"Backup Directory: *{Path.Combine(Config.Default.DataDir, Config.Default.BackupDir)}");
+                comment.AppendLine($"AutoBackup_IncludeSaveGamesFolder: {Config.Default.AutoBackup_IncludeSaveGamesFolder}");
+                comment.AppendLine($"AutoBackup_DeleteOldFiles: {Config.Default.AutoBackup_DeleteOldFiles}");
+                comment.AppendLine($"AutoBackup_DeleteInterval: {Config.Default.AutoBackup_DeleteInterval}");
+                comment.AppendLine($"RCON_BackupMessageCommand: {Config.Default.RCON_BackupMessageCommand}");
+                comment.AppendLine($"ServerBackup_WorldSaveMessage: {Config.Default.ServerBackup_WorldSaveMessage}");
 
                 comment.AppendLine($"AutoBackup_EnableBackup: {Config.Default.AutoBackup_EnableBackup}");
                 comment.AppendLine($"AutoBackup_BackupPeriod: {Config.Default.AutoBackup_BackupPeriod}");
-                comment.AppendLine($"AutoBackup_DeleteOldFiles: {Config.Default.AutoBackup_DeleteOldFiles}");
-                comment.AppendLine($"AutoBackup_DeleteInterval: {Config.Default.AutoBackup_DeleteInterval}");
 
                 comment.AppendLine($"AutoUpdate_EnableUpdate: {Config.Default.AutoUpdate_EnableUpdate}");
                 comment.AppendLine($"AutoUpdate_CacheDir: {Config.Default.AutoUpdate_CacheDir}");
                 comment.AppendLine($"AutoUpdate_UpdatePeriod: {Config.Default.AutoUpdate_UpdatePeriod}");
                 comment.AppendLine($"AutoUpdate_UseSmartCopy: {Config.Default.AutoUpdate_UseSmartCopy}");
-                comment.AppendLine($"AutoUpdate_RetryOnFail: {Config.Default.AutoUpdate_RetryOnFail}");
-                comment.AppendLine($"AutoUpdate_ShowUpdateReason: {Config.Default.AutoUpdate_ShowUpdateReason}");
                 comment.AppendLine($"AutoUpdate_ValidateServerFiles: {Config.Default.AutoUpdate_ValidateServerFiles}");
+                comment.AppendLine($"AutoUpdate_RetryOnFail: {Config.Default.AutoUpdate_RetryOnFail}");
+                comment.AppendLine($"AutoUpdate_ParallelUpdate: {Config.Default.AutoUpdate_ParallelUpdate}");
+                comment.AppendLine($"AutoUpdate_SequencialDelayPeriod: {Config.Default.AutoUpdate_SequencialDelayPeriod}");
+                comment.AppendLine($"AutoUpdate_ShowUpdateReason: {Config.Default.AutoUpdate_ShowUpdateReason}");
+                comment.AppendLine($"AutoUpdate_ShowUpdateReason: {Config.Default.AutoUpdate_UpdateReasonPrefix}");
                 comment.AppendLine($"AutoUpdate_OverrideServerStartup: {Config.Default.AutoUpdate_OverrideServerStartup}");
 
                 comment.AppendLine($"AutoRestart_EnabledGracePeriod: {Config.Default.AutoRestart_EnabledGracePeriod}");
                 comment.AppendLine($"AutoRestart_GracePeriod: {Config.Default.AutoRestart_GracePeriod}");
 
-                comment.AppendLine($"ServerShutdown_EnableWorldSave: {Config.Default.ServerShutdown_EnableWorldSave}");
                 comment.AppendLine($"ServerShutdown_CheckForOnlinePlayers: {Config.Default.ServerShutdown_CheckForOnlinePlayers}");
                 comment.AppendLine($"ServerShutdown_SendShutdownMessages: {Config.Default.ServerShutdown_SendShutdownMessages}");
                 comment.AppendLine($"ServerShutdown_GracePeriod: {Config.Default.ServerShutdown_GracePeriod}");
-                comment.AppendLine($"ServerUpdate_UpdateModsWhenUpdatingServer: {Config.Default.ServerUpdate_UpdateModsWhenUpdatingServer}");
-                comment.AppendLine($"ServerUpdate_ForceCopyMods: {Config.Default.ServerUpdate_ForceCopyMods}");
-                comment.AppendLine($"ServerUpdate_ForceUpdateMods: {Config.Default.ServerUpdate_ForceUpdateMods}");
-                comment.AppendLine($"ServerUpdate_ForceUpdateModsIfNoSteamInfo: {Config.Default.ServerUpdate_ForceUpdateModsIfNoSteamInfo}");
-                comment.AppendLine($"ServerUpdate_OnServerStart: {Config.Default.ServerUpdate_OnServerStart}");
+                comment.AppendLine($"ServerShutdown_AllMessagesShowReason: {Config.Default.ServerShutdown_AllMessagesShowReason}");
 
                 comment.AppendLine($"DiscordBotEnabled: {Config.Default.DiscordBotEnabled}");
                 comment.AppendLine($"HasDiscordBotToken: {!string.IsNullOrWhiteSpace(Config.Default.DiscordBotToken)}");
                 comment.AppendLine($"DiscordBotServerId: {Config.Default.DiscordBotServerId}");
                 comment.AppendLine($"DiscordBotPrefix: {Config.Default.DiscordBotPrefix}");
                 comment.AppendLine($"DiscordBotLogLevel: {Config.Default.DiscordBotLogLevel}");
-                comment.AppendLine($"DiscordBotAllowAllBots: {Config.Default.DiscordBotAllowAllBots}");
-                comment.AppendLine($"DiscordBotWhitelist: {string.Join(";", Config.Default.DiscordBotWhitelist)}");
+                comment.AppendLine($"DiscordBotAllServersKeyword: {Config.Default.DiscordBotAllServersKeyword}");
                 comment.AppendLine($"AllowDiscordBackup: {Config.Default.AllowDiscordBackup}");
                 comment.AppendLine($"AllowDiscordRestart: {Config.Default.AllowDiscordRestart}");
                 comment.AppendLine($"AllowDiscordShutdown: {Config.Default.AllowDiscordShutdown}");
                 comment.AppendLine($"AllowDiscordStart: {Config.Default.AllowDiscordStart}");
                 comment.AppendLine($"AllowDiscordStop: {Config.Default.AllowDiscordStop}");
                 comment.AppendLine($"AllowDiscordUpdate: {Config.Default.AllowDiscordUpdate}");
+                comment.AppendLine($"DiscordBotAllowAllBots: {Config.Default.DiscordBotAllowAllBots}");
+                comment.AppendLine($"DiscordBotWhitelist: {string.Join(";", Config.Default.DiscordBotWhitelist)}");
 
-                comment.AppendLine($"EmailNotify_AutoRestart: {Config.Default.EmailNotify_AutoRestart}");
                 comment.AppendLine($"EmailNotify_AutoBackup: {Config.Default.EmailNotify_AutoBackup}");
                 comment.AppendLine($"EmailNotify_AutoUpdate: {Config.Default.EmailNotify_AutoUpdate}");
+                comment.AppendLine($"EmailNotify_AutoRestart: {Config.Default.EmailNotify_AutoRestart}");
                 comment.AppendLine($"EmailNotify_ShutdownRestart: {Config.Default.EmailNotify_ShutdownRestart}");
 
                 comment.AppendLine($"ServerShutdown_UseShutdownCommand: {Config.Default.ServerShutdown_UseShutdownCommand}");
@@ -941,10 +963,12 @@ namespace ServerManagerTool
                 comment.AppendLine($"AutoUpdate_VerifyServerAfterUpdate: {Config.Default.AutoUpdate_VerifyServerAfterUpdate}");
                 comment.AppendLine($"SteamCmdRemoveQuit: {CommonConfig.Default.SteamCmdRemoveQuit}");
                 comment.AppendLine($"UpdateDirectoryPermissions: {Config.Default.UpdateDirectoryPermissions}");
+                comment.AppendLine($"SteamCmdRedirectOutput: {Config.Default.SteamCmdRedirectOutput}");
                 comment.AppendLine($"LoggingEnabled: {Config.Default.LoggingEnabled}");
                 comment.AppendLine($"LoggingMaxArchiveDays: {Config.Default.LoggingMaxArchiveDays}");
                 comment.AppendLine($"LoggingMaxArchiveFiles: {Config.Default.LoggingMaxArchiveFiles}");
                 comment.AppendLine($"ServerShutdown_WorldSaveDelay: {Config.Default.ServerShutdown_WorldSaveDelay}");
+                comment.AppendLine($"RCON_MessageCommand: {Config.Default.RCON_MessageCommand}");
 
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -307,15 +308,16 @@ namespace ServerManagerTool.Lib
                     {
                         serverInfo = null;
                     }
-                }
 
-                try
-                {
-                    onlinePlayerCount = serverInfo?.Players ?? 0;
-                }
-                catch (Exception)
-                {
-                    onlinePlayerCount = 0;
+                    try
+                    {
+                        var playerInfo = server?.GetPlayers()?.Where(p => !string.IsNullOrWhiteSpace(p.Name?.Trim()));
+                        onlinePlayerCount = playerInfo?.Count() ?? 0;
+                    }
+                    catch (Exception)
+                    {
+                        onlinePlayerCount = 0;
+                    }
                 }
             }
             catch (SocketException ex)
