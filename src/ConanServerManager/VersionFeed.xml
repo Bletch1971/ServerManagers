@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:E367ACB5-E38A-4B3A-A089-E43D011A97E4</id>
-    <title>1.1.72 (1.1.72.1)</title>
-    <summary>1.1.72.1</summary>
+    <title>1.1.72 (1.1.72.2)</title>
+    <summary>1.1.72.2</summary>
     <link href="" />
     <updated>2022-05-15T00:00:00Z</updated>
     <content type="xhtml">
@@ -20,6 +20,11 @@
           <br/>
           <ul>
             <li>Server Shutdown/Restart - have rewritten the code that sends the RCON commands to prevent the hangs after the RCON command fails.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto Process Task Priorities - Have added task priority droplists to the global settings, allowing the priority for each auto process task to be changed.</li>
           </ul>
         </p>
       </div>

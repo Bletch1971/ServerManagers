@@ -38,6 +38,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty DiscordBotLogLevelsProperty = DependencyProperty.Register(nameof(DiscordBotLogLevels), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty DiscordBotWhitelistProperty = DependencyProperty.Register(nameof(DiscordBotWhitelist), typeof(List<DiscordBotWhitelistItem>), typeof(GlobalSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty RconMessageModesProperty = DependencyProperty.Register(nameof(RconMessageModes), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty TaskPrioritiesProperty = DependencyProperty.Register(nameof(TaskPriorities), typeof(ComboBoxItemList), typeof(GlobalSettingsControl), new PropertyMetadata(null));
 
         public GlobalSettingsControl()
         {
@@ -54,6 +55,7 @@ namespace ServerManagerTool
             PopulateWindowsStatesServerMonitorWindowComboBox();
             PopulateDiscordBotLogLevelsComboBox();
             PopulateRconMessageModesComboBox();
+            PopulateTaskPrioritiesComboBox();
 
             DiscordBotWhitelist = new List<DiscordBotWhitelistItem>();
             if (Config.DiscordBotWhitelist != null)
@@ -122,6 +124,12 @@ namespace ServerManagerTool
         {
             get { return (ComboBoxItemList)GetValue(RconMessageModesProperty); }
             set { SetValue(RconMessageModesProperty, value); }
+        }
+
+        public ComboBoxItemList TaskPriorities
+        {
+            get { return (ComboBoxItemList)GetValue(TaskPrioritiesProperty); }
+            set { SetValue(TaskPrioritiesProperty, value); }
         }
 
         public void ApplyChangesToConfig()
@@ -394,6 +402,7 @@ namespace ServerManagerTool
             PopulateWindowsStatesMainWindowComboBox();
             PopulateWindowsStatesServerMonitorWindowComboBox();
             PopulateRconMessageModesComboBox();
+            PopulateTaskPrioritiesComboBox();
 
             App.Instance.OnResourceDictionaryChanged(Config.CultureName);
         }
@@ -552,6 +561,39 @@ namespace ServerManagerTool
             if (this.RconMessageModesComboBox != null)
             {
                 this.RconMessageModesComboBox.SelectedValue = selectedValue;
+            }
+        }
+
+        private void PopulateTaskPrioritiesComboBox()
+        {
+            var selectedValueAutoBackup = this.TaskPriorityAutoBackupComboBox?.SelectedValue ?? Config.AutoBackup_TaskPriority;
+            var selectedValueAutoUpdate = this.TaskPriorityAutoUpdateComboBox?.SelectedValue ?? Config.AutoUpdate_TaskPriority;
+            var selectedValueAutoShutdown = this.TaskPriorityAutoShutdownComboBox?.SelectedValue ?? Config.AutoShutdown_TaskPriority;
+            var selectedValueAutoStart = this.TaskPriorityAutoStartComboBox?.SelectedValue ?? Config.AutoStart_TaskPriority;
+            var list = new ComboBoxItemList();
+
+            foreach (ProcessPriorityClass priority in Enum.GetValues(typeof(ProcessPriorityClass)))
+            {
+                var displayMember = _globalizer.GetResourceString($"TaskPriority_{priority}") ?? priority.ToString();
+                list.Add(new Common.Model.ComboBoxItem(priority.ToString(), displayMember));
+            }
+
+            this.TaskPriorities = list;
+            if (this.TaskPriorityAutoBackupComboBox != null)
+            {
+                this.TaskPriorityAutoBackupComboBox.SelectedValue = selectedValueAutoBackup;
+            }
+            if (this.TaskPriorityAutoUpdateComboBox != null)
+            {
+                this.TaskPriorityAutoUpdateComboBox.SelectedValue = selectedValueAutoUpdate;
+            }
+            if (this.TaskPriorityAutoShutdownComboBox != null)
+            {
+                this.TaskPriorityAutoShutdownComboBox.SelectedValue = selectedValueAutoShutdown;
+            }
+            if (this.TaskPriorityAutoStartComboBox != null)
+            {
+                this.TaskPriorityAutoStartComboBox.SelectedValue = selectedValueAutoStart;
             }
         }
 

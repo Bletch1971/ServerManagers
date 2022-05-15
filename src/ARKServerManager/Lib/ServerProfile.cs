@@ -4482,18 +4482,18 @@ namespace ServerManagerTool.Lib
 
             var taskKey = GetProfileKey();
 
-            if(!TaskSchedulerUtils.ScheduleAutoStart(taskKey, null, this.EnableAutoStart, GetLauncherFile(), ProfileName, true))
+            if(!TaskSchedulerUtils.ScheduleAutoStart(taskKey, null, this.EnableAutoStart, GetLauncherFile(), ProfileName, true, Config.Default.AutoStart_TaskPriority))
             {
                 return false;
             }
 
             var command = Assembly.GetEntryAssembly().Location;
-            if (!TaskSchedulerUtils.ScheduleAutoShutdown(taskKey, "#1", command, this.EnableAutoShutdown1 ? (TimeSpan.TryParseExact(this.AutoShutdownTime1, "g", null, out TimeSpan shutdownTime) ? shutdownTime : (TimeSpan?)null) : null, ShutdownDaysOfTheWeek1, ProfileName, TaskSchedulerUtils.ShutdownType.Shutdown1))
+            if (!TaskSchedulerUtils.ScheduleAutoShutdown(taskKey, "#1", command, this.EnableAutoShutdown1 ? (TimeSpan.TryParseExact(this.AutoShutdownTime1, "g", null, out TimeSpan shutdownTime) ? shutdownTime : (TimeSpan?)null) : null, ShutdownDaysOfTheWeek1, ProfileName, TaskSchedulerUtils.ShutdownType.Shutdown1, Config.Default.AutoShutdown_TaskPriority))
             {
                 return false;
             }
 
-            if (!TaskSchedulerUtils.ScheduleAutoShutdown(taskKey, "#2", command, this.EnableAutoShutdown2 ? (TimeSpan.TryParseExact(this.AutoShutdownTime2, "g", null, out shutdownTime) ? shutdownTime : (TimeSpan?)null) : null, ShutdownDaysOfTheWeek2, ProfileName, TaskSchedulerUtils.ShutdownType.Shutdown2))
+            if (!TaskSchedulerUtils.ScheduleAutoShutdown(taskKey, "#2", command, this.EnableAutoShutdown2 ? (TimeSpan.TryParseExact(this.AutoShutdownTime2, "g", null, out shutdownTime) ? shutdownTime : (TimeSpan?)null) : null, ShutdownDaysOfTheWeek2, ProfileName, TaskSchedulerUtils.ShutdownType.Shutdown2, Config.Default.AutoShutdown_TaskPriority))
             {
                 return false;
             }

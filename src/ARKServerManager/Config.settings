@@ -878,5 +878,17 @@
     <Setting Name="Alert_ServerStartedMessageIPandPort" Type="System.String" Scope="User">
       <Value Profile="(Default)">{ipaddress}:{port}</Value>
     </Setting>
+    <Setting Name="AutoBackup_TaskPriority" Type="System.Diagnostics.ProcessPriorityClass" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="AutoUpdate_TaskPriority" Type="System.Diagnostics.ProcessPriorityClass" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="AutoShutdown_TaskPriority" Type="System.Diagnostics.ProcessPriorityClass" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="AutoStart_TaskPriority" Type="System.Diagnostics.ProcessPriorityClass" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

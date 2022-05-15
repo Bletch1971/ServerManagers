@@ -159,7 +159,7 @@ namespace ServerManagerTool.Common.Utils
             task.Run();
         }
 
-        public static bool ScheduleAutoBackup(string taskKey, string taskSuffix, string command, int autoBackupPeriod)
+        public static bool ScheduleAutoBackup(string taskKey, string taskSuffix, string command, int autoBackupPeriod, ProcessPriorityClass priority)
         {
             var taskName = GetScheduledTaskName(TaskType.AutoBackup, taskKey, taskSuffix);
             var taskFolder = TaskService.Instance.RootFolder.SubFolders.Exists(TaskFolder) ? TaskService.Instance.RootFolder.SubFolders[TaskFolder] : null;
@@ -212,7 +212,7 @@ namespace ServerManagerTool.Common.Utils
                 taskDefinition.RegistrationInfo.Version = appVersion;
 
                 taskDefinition.Settings.ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT);
-                taskDefinition.Settings.Priority = ProcessPriorityClass.Normal;
+                taskDefinition.Settings.Priority = priority;
 
                 // Add/Edit the trigger that will fire every x minutes
                 var triggers = taskDefinition.Triggers.OfType<TimeTrigger>();
@@ -278,12 +278,12 @@ namespace ServerManagerTool.Common.Utils
             return false;
         }
 
-        public static bool ScheduleAutoShutdown(string taskKey, string taskSuffix, string command, TimeSpan? restartTime, string profileName, ShutdownType type)
+        public static bool ScheduleAutoShutdown(string taskKey, string taskSuffix, string command, TimeSpan? restartTime, string profileName, ShutdownType type, ProcessPriorityClass priority)
         {
-            return ScheduleAutoShutdown(taskKey, taskSuffix, command, restartTime, DaysOfTheWeek.AllDays, profileName, type);
+            return ScheduleAutoShutdown(taskKey, taskSuffix, command, restartTime, DaysOfTheWeek.AllDays, profileName, type, priority);
         }
 
-        public static bool ScheduleAutoShutdown(string taskKey, string taskSuffix, string command, TimeSpan? restartTime, DaysOfTheWeek daysOfTheWeek, string profileName, ShutdownType type)
+        public static bool ScheduleAutoShutdown(string taskKey, string taskSuffix, string command, TimeSpan? restartTime, DaysOfTheWeek daysOfTheWeek, string profileName, ShutdownType type, ProcessPriorityClass priority)
         {
             var taskName = GetScheduledTaskName(TaskType.AutoShutdown, taskKey, taskSuffix);
             var taskFolder = TaskService.Instance.RootFolder.SubFolders.Exists(TaskFolder) ? TaskService.Instance.RootFolder.SubFolders[TaskFolder] : null;
@@ -336,7 +336,7 @@ namespace ServerManagerTool.Common.Utils
                 taskDefinition.RegistrationInfo.Version = appVersion;
 
                 taskDefinition.Settings.ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT);
-                taskDefinition.Settings.Priority = ProcessPriorityClass.Normal;
+                taskDefinition.Settings.Priority = priority;
 
                 // Add/Edit the trigger that will fire every day at the specified restart time
                 var triggers = taskDefinition.Triggers.OfType<WeeklyTrigger>().ToList();
@@ -426,7 +426,7 @@ namespace ServerManagerTool.Common.Utils
             return false;
         }
 
-        public static bool ScheduleAutoStart(string taskKey, string taskSuffix, bool enableAutoStart, string command, string profileName, bool onBoot)
+        public static bool ScheduleAutoStart(string taskKey, string taskSuffix, bool enableAutoStart, string command, string profileName, bool onBoot, ProcessPriorityClass priority)
         {
             var taskName = GetScheduledTaskName(TaskType.AutoStart, taskKey, taskSuffix);
             var taskFolder = TaskService.Instance.RootFolder.SubFolders.Exists(TaskFolder) ? TaskService.Instance.RootFolder.SubFolders[TaskFolder] : null;
@@ -479,7 +479,7 @@ namespace ServerManagerTool.Common.Utils
                 taskDefinition.RegistrationInfo.Version = appVersion;
 
                 taskDefinition.Settings.ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT);
-                taskDefinition.Settings.Priority = ProcessPriorityClass.Normal;
+                taskDefinition.Settings.Priority = priority;
 
                 // Add a trigger that will fire after the machine has started
                 if (onBoot)
@@ -567,7 +567,7 @@ namespace ServerManagerTool.Common.Utils
             return false;
         }
 
-        public static bool ScheduleAutoUpdate(string taskKey, string taskSuffix, string command, int autoUpdatePeriod)
+        public static bool ScheduleAutoUpdate(string taskKey, string taskSuffix, string command, int autoUpdatePeriod, ProcessPriorityClass priority)
         {
             var taskName = GetScheduledTaskName(TaskType.AutoUpdate, taskKey, taskSuffix);
             var taskFolder = TaskService.Instance.RootFolder.SubFolders.Exists(TaskFolder) ? TaskService.Instance.RootFolder.SubFolders[TaskFolder] : null;
@@ -621,7 +621,7 @@ namespace ServerManagerTool.Common.Utils
                 taskDefinition.RegistrationInfo.Version = appVersion;
 
                 taskDefinition.Settings.ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT);
-                taskDefinition.Settings.Priority = ProcessPriorityClass.Normal;
+                taskDefinition.Settings.Priority = priority;
 
                 // Add/Edit the trigger that will fire every x minutes
                 var triggers = taskDefinition.Triggers.OfType<TimeTrigger>();

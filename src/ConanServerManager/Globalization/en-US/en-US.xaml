@@ -57,6 +57,15 @@
     <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
     <!--#endregion-->
 
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_idle">Idle</sys:String>
+    <sys:String x:Key="TaskPriority_belownormal">Below Normal</sys:String>
+    <sys:String x:Key="TaskPriority_normal">Normal</sys:String>
+    <sys:String x:Key="TaskPriority_abovenormal">Above Normal</sys:String>
+    <sys:String x:Key="TaskPriority_high">High</sys:String>
+    <sys:String x:Key="TaskPriority_realtime">RealTime</sys:String>
+    <!--#endregion-->
+
     <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Normal</sys:String>
     <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
@@ -902,6 +911,13 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">The maximum number of log files that will be kept.</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Any changes to these priorities will take effect after the task has been created or saved.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Select the priority used by the windows task manager when running this task.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">Auto Backup Task Priority:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Auto Update Task Priority:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Auto Shutdown/Restart Task Priority:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Auto Start Task Priority:</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>

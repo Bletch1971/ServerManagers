@@ -46,7 +46,7 @@ namespace ServerManagerTool
                 var taskKey = TaskSchedulerUtils.ComputeKey(Config.Default.DataDir);
 
                 var command = Assembly.GetEntryAssembly().Location;
-                if (!TaskSchedulerUtils.ScheduleAutoUpdate(taskKey, null, command, Config.Default.AutoUpdate_EnableUpdate ? Config.Default.AutoUpdate_UpdatePeriod : 0))
+                if (!TaskSchedulerUtils.ScheduleAutoUpdate(taskKey, null, command, Config.Default.AutoUpdate_EnableUpdate ? Config.Default.AutoUpdate_UpdatePeriod : 0, Config.Default.AutoUpdate_TaskPriority))
                 {
                     MessageBox.Show(_globalizer.GetResourceString("GlobalSettings_CacheTaskUpdate_ErrorLabel"), _globalizer.GetResourceString("GlobalSettings_CacheTaskUpdate_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
                 }
@@ -62,7 +62,7 @@ namespace ServerManagerTool
                     }
                 }
 
-                if (!TaskSchedulerUtils.ScheduleAutoBackup(taskKey, null, command, Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_BackupPeriod : 0))
+                if (!TaskSchedulerUtils.ScheduleAutoBackup(taskKey, null, command, Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_BackupPeriod : 0, Config.Default.AutoBackup_TaskPriority))
                 {
                     MessageBox.Show(_globalizer.GetResourceString("GlobalSettings_BackupTaskUpdate_ErrorLabel"), _globalizer.GetResourceString("GlobalSettings_BackupTaskUpdate_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
                 }

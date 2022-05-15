@@ -12,7 +12,7 @@ namespace ServerManagerTool {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
     public sealed partial class Config : global::System.Configuration.ApplicationSettingsBase {
         
         private static Config defaultInstance = ((Config)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Config())));
@@ -2376,6 +2376,54 @@ namespace ServerManagerTool {
             }
             set {
                 this["Alert_ServerStartedMessageIPandPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Diagnostics.ProcessPriorityClass AutoBackup_TaskPriority {
+            get {
+                return ((global::System.Diagnostics.ProcessPriorityClass)(this["AutoBackup_TaskPriority"]));
+            }
+            set {
+                this["AutoBackup_TaskPriority"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Diagnostics.ProcessPriorityClass AutoUpdate_TaskPriority {
+            get {
+                return ((global::System.Diagnostics.ProcessPriorityClass)(this["AutoUpdate_TaskPriority"]));
+            }
+            set {
+                this["AutoUpdate_TaskPriority"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Diagnostics.ProcessPriorityClass AutoShutdown_TaskPriority {
+            get {
+                return ((global::System.Diagnostics.ProcessPriorityClass)(this["AutoShutdown_TaskPriority"]));
+            }
+            set {
+                this["AutoShutdown_TaskPriority"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Diagnostics.ProcessPriorityClass AutoStart_TaskPriority {
+            get {
+                return ((global::System.Diagnostics.ProcessPriorityClass)(this["AutoStart_TaskPriority"]));
+            }
+            set {
+                this["AutoStart_TaskPriority"] = value;
             }
         }
     }
