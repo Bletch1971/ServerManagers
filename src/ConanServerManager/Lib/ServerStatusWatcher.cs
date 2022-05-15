@@ -109,7 +109,8 @@ namespace ServerManagerTool.Lib
                 {
                     var commandLine = ProcessUtils.GetCommandLineForProcess(process.Id)?.ToLower();
 
-                    if (commandLine != null && commandLine.Contains(updateContext.InstallDirectory.ToLower()) && commandLine.Contains(Config.Default.ServerExeFile.ToLower()))
+                    if (commandLine != null &&
+                        (commandLine.StartsWith(serverExePath, StringComparison.OrdinalIgnoreCase) || commandLine.StartsWith($"\"{serverExePath}\"", StringComparison.OrdinalIgnoreCase)))
                     {
                         // Does this match our server exe and port?
                         var serverArgMatch = String.Format(Config.Default.ServerCommandLineArgsPortMatchFormat, updateContext.LocalEndpoint.Port).ToLower();
