@@ -166,8 +166,8 @@
                         </Label.Style>
                     </Label>
                 </StackPanel>
-                
-                <ListBox DockPanel.Dock="Top" ItemsSource="{Binding ServerRcon.Players}" BorderBrush="LightGray" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+
+                <ListBox DockPanel.Dock="Top" ItemsSource="{Binding ServerRcon.Players}" BorderBrush="LightGray" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="-3,0,-3,0">
                     <ListBox.Resources>
                         <clib:BindingProxy x:Key="proxy" Data="{Binding ElementName=RCON}"/>
                     </ListBox.Resources>
@@ -190,13 +190,13 @@
                             <Border BorderThickness="2" Padding="1" Style="{DynamicResource PlayerStatus}">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" ToolTip="{Binding PlayerId}">
-                                        <StackPanel Orientation="Horizontal" Margin="0" >
+                                    <StackPanel Grid.Column="0" Margin="5,0,5,0" HorizontalAlignment="Stretch" ToolTip="{Binding PlayerId}">
+                                        <StackPanel Orientation="Horizontal" >
                                             <Label Content="{Binding CharacterName}" Padding="0,-1,0,-1"/>
-                                            <TextBlock Text="{Binding PlayerData.Level, StringFormat=({0})}" Margin="5,0,0,0" Padding="0,-1,0,-1" />
+                                            <TextBlock Text="{Binding PlayerData.Level, StringFormat=({0})}" Margin="5,0,0,0" />
                                         </StackPanel>
                                         <Label Padding="0,-1,0,-1" Style="{DynamicResource GuildName}"/>
                                     </StackPanel>
