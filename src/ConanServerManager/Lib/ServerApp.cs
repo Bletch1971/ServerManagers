@@ -2677,7 +2677,7 @@ namespace ServerManagerTool.Lib
         {
             if (_rconConsole != null)
             {
-                LogProfileMessage($"Closing RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).");
+                LogProfileMessage($"Closing RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).", false);
 
                 _rconConsole.Dispose();
                 _rconConsole = null;
@@ -2696,7 +2696,7 @@ namespace ServerManagerTool.Lib
             try
             {
                 LogProfileMessage("");
-                LogProfileMessage($"Creating RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).");
+                LogProfileMessage($"Creating RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).", false);
 
                 var endPoint = new IPEndPoint(_profile.ServerIPAddress, _profile.RconPort);
                 var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
@@ -2710,7 +2710,7 @@ namespace ServerManagerTool.Lib
 
                 Task.Delay(1000).Wait();
 
-                LogProfileMessage($"Opening RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).");
+                LogProfileMessage($"Opening RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).", false);
 
                 _rconConsole = server.GetControl(_profile.RconPassword);
                 if (_rconConsole == null)
