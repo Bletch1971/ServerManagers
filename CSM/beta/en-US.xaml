@@ -58,12 +58,12 @@
     <!--#endregion-->
 
     <!--#region Task Priority -->
-    <sys:String x:Key="TaskPriority_idle">Idle</sys:String>
-    <sys:String x:Key="TaskPriority_belownormal">Below Normal</sys:String>
-    <sys:String x:Key="TaskPriority_normal">Normal</sys:String>
-    <sys:String x:Key="TaskPriority_abovenormal">Above Normal</sys:String>
-    <sys:String x:Key="TaskPriority_high">High</sys:String>
-    <sys:String x:Key="TaskPriority_realtime">RealTime</sys:String>
+    <sys:String x:Key="TaskPriority_Idle">Idle</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">Below Normal</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Normal</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Above Normal</sys:String>
+    <sys:String x:Key="TaskPriority_High">High</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">RealTime</sys:String>
     <!--#endregion-->
 
     <!--#region Window States -->
