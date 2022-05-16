@@ -400,6 +400,7 @@
     <!--#region Server Monitor Window -->
     <sys:String x:Key="ServerMonitor_Title">Server Monitor</sys:String>
 
+    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selected</sys:String>
     <sys:String x:Key="ServerMonitor_TotalCountLabel">Total Servers:</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
@@ -409,6 +410,13 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Start the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonTooltip">Stop the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Restart the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonTooltip">Update the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Backup the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">Select all servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">Unselect all servers.</sys:String>
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
@@ -419,7 +427,21 @@
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Server Update Error</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Another server is being upgraded, wait until the upgrade has finished and try again.</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Confirm Window Close</sys:String>
-    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">You are currently perform a server update, closing the window with disconnect you from steamcmd. Do you want to continue closing the window?</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">You are currently performing a server update, closing the window will disconnect you from steamcmd. Do you want to continue closing the window?</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmTitle">Confirm Start Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmLabel">You are about to start the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmTitle">Confirm Stop Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmLabel">You are about to stop the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmTitle">Confirm Restart Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmLabel">You are about to restart the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmTitle">Confirm Update Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmLabel">You are about to update the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmTitle">Confirm Backup Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmLabel">You are about to backup the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">Selected Servers Error</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorLabel">You have not selected any servers. Selected one or more servers in the list and try again.</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmTitle">Close Server Monitor Error</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmLabel">The server monitor window cannot be closed at this time. One or more of the servers is currently starting, shutting down or restarting.</sys:String>
     <!--#endregion-->
 
     <!--#region Shutdown Window -->

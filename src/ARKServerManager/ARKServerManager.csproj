@@ -366,6 +366,7 @@
     <Resource Include="Art\StatusWarning.ico" />
     <Resource Include="Art\Collapse.ico" />
     <Resource Include="Art\Expand.ico" />
+    <Resource Include="Art\Restart.ico" />
     <Content Include="GameData\Genesis2.gamedata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
