@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:2E2A14AE-EE5B-4384-8143-BF5D1C8A487D</id>
-    <title>1.1.428 (1.1.428.4)</title>
-    <summary>1.1.428.4</summary>
+    <title>1.1.428 (1.1.428.5)</title>
+    <summary>1.1.428.5</summary>
     <link href="" />
     <updated>2022-05-15T00:00:00Z</updated>
     <content type="xhtml">
@@ -26,6 +26,7 @@
           <ul>
             <li>Auto Process Task Priorities - Have added task priority droplists to the global settings, allowing the priority for each auto process task to be changed.</li>
             <li>Player List - adjusted the margin around the border of the players in the player list.</li>
+            <li>de-DE Translation file updated.</li>
             <li>pt-BR Translation file updated.</li>
             <li>ru-RU Translation file updated.</li>
           </ul>

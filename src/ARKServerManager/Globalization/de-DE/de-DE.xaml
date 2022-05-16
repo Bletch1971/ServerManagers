@@ -489,6 +489,7 @@
     <sys:String x:Key="GlobalSettings_ResetButtonLabel">Zurücksetzen</sys:String>
     <sys:String x:Key="GlobalSettings_ResetButtonTooltip">Dadurch werden ALLE globalen Benutzereinstellungen für den Server Manager zurückgesetzt. Der Server Manager wird bei Erfolg geschlossen.</sys:String>
     <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Aktiviert: Beim Start mit Administrator Bestätigung ausführen</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Prüfen, ob der ASM beim Start ausgeführt wird</sys:String>
     <sys:String x:Key="GlobalSettings_StartModeLabel">Hauptfenster Start Modus:</sys:String>
     <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimiere in Taskleiste</sys:String>
     <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Verwaltet die Firewall Einstellungen automatisch</sys:String>
@@ -566,6 +567,9 @@
     <sys:String x:Key="GlobalSettings_AutoBackupLabel">Aktiviere automatische Sicherung</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Sicherungsintervall:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Wie oft die Server Sicherung in Stunden und Minuten (hh:mm) durchgeführt werden soll. Zum Deaktivieren auf 00:00 setzen.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Backup Einstellungen</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Einbeziehen des SaveGames Ordners bei der Erstellung einer Weltsicherung (WorldSave)</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">Wenn diese Option aktiviert ist, wird der SaveGames Ordner, in dem die Moddateien gespeichert werden, mitgesichert, wenn eine Weltsicherung durchgeführt wird.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Alte Sicherungsdateien löschen</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Älter als:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Wie alt die Sicherungsdatei in Tagen sein muss, um gelöscht zu werden.</sys:String>
@@ -735,6 +739,8 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Diese Meldung wird angezeigt, wenn der Server heruntergefahren wird.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Server Starten Nachricht:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Diese Meldung wird angezeigt, wenn der Server gestartet wird.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Öffentliche IP und Port in Startnachricht einschließen</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">Die Startnachricht enthält die öffentliche IP und den Port.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Sicherung Fehler:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Diese Meldung wird angezeigt, wenn bei der automatischen Sicherung ein Fehler aufgetreten ist.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Fehler beim Herunterfahren:</sys:String>
@@ -1224,6 +1230,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">Die ID des Discord Server Kanals, den dieses Profil abhören soll.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Ein eindeutiger Name zur Identifizierung deines Servers, der anstelle der Profil-ID verwendet werden kann.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasLabel">Cluster Alias zulassen</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasTooltip">Wenn aktiviert, kann die Cluster-ID als Discord-Alias verwendet werden, um Serverbefehle auszuführen.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Sicherung zulassen</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Wenn diese Option aktiviert ist, wird das Profil auf Sicherungsbefehle von Discord warten.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Neustart zulassen</sys:String>
