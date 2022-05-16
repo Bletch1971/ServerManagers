@@ -57,6 +57,15 @@
     <sys:String x:Key="ProcessorAffinity_All">Все</sys:String>
     <!--#endregion-->
 
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_Idle">Праздный</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">Ниже Нормы</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Нормальный</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Выше Нормы</sys:String>
+    <sys:String x:Key="TaskPriority_High">Высокий</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">В реальном времени</sys:String>
+    <!--#endregion-->
+
     <!--#region Window States -->
     <sys:String x:Key="WindowState_Normal">Нормальный</sys:String>
     <sys:String x:Key="WindowState_Minimized">Свёрнутый</sys:String>
@@ -580,7 +589,7 @@
 
     <!--#region Main Window -->
     <sys:String x:Key="MainWindow_Title">Conan Exiles™ Server Manager</sys:String>
-    <sys:String x:Key="MainWindow_TitleWithAdmin">Conan Exiles™ Server Manager (Administrator)</sys:String>
+    <sys:String x:Key="MainWindow_TitleWithAdmin">Conan Exiles™ Server Manager (Администратор)</sys:String>
     <sys:String x:Key="MainWindow_Label">Conan Exiles™ Server Manager</sys:String>
     <sys:String x:Key="MainWindow_NewProfileTooltip">Создать новый профиль сервера.</sys:String>
     <sys:String x:Key="MainWindow_CloseProfileTooltip">Удалить профиль сервера.</sys:String>
@@ -926,7 +935,14 @@
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild creature wipe is scheduled.</sys:String>
 
     <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Режим оповещений RCON:</sys:String>
-    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Выберите метод, используемый менеджером сервера для отправки сообщений автоматической обработки игровым клиентам через RCON.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Любые изменения в этих приоритетах вступят в силу после создания или сохранения задачи.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Выберите приоритет, используемый диспетчером задач Windows при выполнении этой задачи.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">Приоритет задачи Автоматического резервного Копирования:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Приоритет задачи Автоматического Обновления:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Приоритет задачи Автоматического Выключения/Перезапуска:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Приоритет задачи Автоматического Запуска:</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings Control-->
@@ -1181,23 +1197,25 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Discord Bot Details -->
-    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
-    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
-    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel this profile will listen to.</sys:String>
-    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
-    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">A unique name to identify your server when using the discord commands, can be used instead of the profile id.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Allow Backup</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">If enabled, the profile will listen for backup commands from discord.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Allow Restart</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">If enabled, the profile will listen for restart commands from discord.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Allow Shutdown</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">If enabled, the profile will listen for shutdown commands from discord.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Allow Start</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">If enabled, the profile will listen for start commands from discord.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Allow Stop</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">If enabled, the profile will listen for stop commands from discord.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Allow Update</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">If enabled, the profile will listen for update commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Детали бота Discord</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Канал Id:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">ID канала сервера Discord, который будет слушать этот профиль.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Псевдоним:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Вместо идентификатора профиля можно использовать уникальное имя для идентификации вашего сервера при использовании команд discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasLabel">Разрешить псевдоним кластера</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasTooltip">Если этот параметр включен, идентификатор кластера можно использовать в качестве псевдонима discord для выполнения команд сервера.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Разрешить Бекап</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Если этот параметр включен, профиль будет прослушивать команды Бекапа от Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Разрешить Перезагрузку</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">Если этот параметр включен, профиль будет прослушивать команды перезапуска от Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Разрешить Выключение</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">Если этот параметр включен, профиль будет прослушивать команды выключения из Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Разрешить Запуск</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">Если этот параметр включен, профиль будет прислушиваться к командам запуска от Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Разрешить Остановку</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">Если этот параметр включен, профиль будет прислушиваться к командам остановки от Discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Разрешить Обновление</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">Если этот параметр включен, профиль будет прослушивать команды обновления от Discord.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Server Details -->
@@ -1244,23 +1262,23 @@
 
     <!--#region Profile Validation -->
     <sys:String x:Key="ProfileValidation_Title">Проверка профиля</sys:String>
-    <sys:String x:Key="ProfileValidation_WarningLabel">The following validation problems were encountered.\r\n\r\n{validateMessage}\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+    <sys:String x:Key="ProfileValidation_WarningLabel">Следующие проблемы проверки были обнаружены.\r\n\r\n{validateMessage}\r\n\r\nХотите продолжить запуск сервера, это может вызвать проблемы?</sys:String>
 
-    <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
-    <sys:String x:Key="ProfileValidation_ServerPeerPort">The server peer port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
-    <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
-    <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPort">Порт сервера находится за пределами допустимого диапазона ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPeerPort">Дополнительный порт сервера находится за пределами допустимого диапазона({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_QueryPort">Порт запроса находится за пределами допустимого диапазона ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_RconPort">Порт rcon находится за пределами допустимого диапазона ({PortMinimum}-{PortMaximum}).</sys:String>
 
-    <sys:String x:Key="ProfileValidation_MapNameBlank">The map name has not been entered.</sys:String>
+    <sys:String x:Key="ProfileValidation_MapNameBlank">Название карты не было введено.</sys:String>
 
-    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Server files have not been downloaded, server folder does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Server files have not been downloaded properly, server executable file ({ServerExe}) does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">The server files are for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Файлы сервера не были загружены, папка сервера не существует.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Файлы сервера не были загружены должным образом, исполняемый файл сервера ({ServerExe}) does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">Файлы сервера предназначены для другого приложения.</sys:String>
 
-    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Mod {modId} has not been downloaded, mod file does not exist.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Mod {modId} is for a different application.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModOutdated">Mod {modId} is outdated.</sys:String>
-    <sys:String x:Key="ProfileValidation_ModSteamError">Mod {modId} details could not be retrieved from steam.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Мод {modId} не был загружен должным образом, файл мода не существует.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Мод {modId} для другого приложения.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModOutdated">Мод {modId} устарел.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModSteamError">Мод {modId} детали не могут быть получены из Steam.</sys:String>
     <!--#endregion-->
 
     <!--#region Profile Save -->
@@ -1273,9 +1291,9 @@
     <!--#endregion-->
 
     <!--#region Restore Save Files -->
-    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Backup file could not be found or does not exist.</sys:String>
-    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">The server save folder could not be found or does not exist.\r\n{saveFolder}</sys:String>
-    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">The backup does not contain the world save file.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Файл резервной копии не найден или не существует.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">Папка сохранения на сервере не найдена или не существует.\r\n{saveFolder}</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">Резервная копия не содержит файл сохранения мира.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Update -->
@@ -1284,31 +1302,32 @@
     <!--#endregion-->
 
     <!--#region Discord Bot -->
-    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
-    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
-    <sys:String x:Key="DiscordBot_MissingPrefixError">The discord bot requires a valid prefix.\r\nThis can be set in the global settings.</sys:String>
-    <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
+    <sys:String x:Key="DiscordBot_ErrorTitle">Ошибка бота Discord</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">Бот Discord требует действующий токен, чтобы он мог войти на сервер Discord\r\nЭто можно установить в глобальных настройках.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">Для бота discord требуется действительный префикс.\r\nЭто можно установить в глобальных настройках.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">Префикс бота Discord содержит недопустимые символы. Разрешены только буквы и цифры.</sys:String>
 
-    <sys:String x:Key="DiscordBot_CommandNotEnabled">Command '{0}' has not been enabled.</sys:String>
-    <sys:String x:Key="DiscordBot_CommandUnknown">Unknown command '{0}'.</sys:String>
-    <sys:String x:Key="DiscordBot_CommandRunning">Another command is currently being processed.</sys:String>
-    <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
-    <sys:String x:Key="DiscordBot_CommandDisabledProfile">Command '{0}' has been disabled for profile '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">Команда '{0}' не активирована.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Неизвестная команда '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">В настоящее время обрабатывается другая команда.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Другая команда '{0}' в настоящее время выполняется для профиля '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">Команда '{0}' отключена для профиля '{1}'.</sys:String>
 
-    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id or alias.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileNotFound">Profile/Alias '{0}' was not found or is not associated with the channel.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileMissing">Для команды '{0}' требуется идентификатор профиля.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">Профиль '{0}' не найден или не связан с каналом.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', которое не может выполнить эту команду.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
+    <sys:String x:Key="DiscordBot_NoChannelProfiles">Никакие профили не связаны с каналом.</sys:String>
 
-    <sys:String x:Key="DiscordBot_InfoFailed">Call to server '{0}' failed.</sys:String>
-    <sys:String x:Key="DiscordBot_BackupRequested">A backup request for server '{0}' has been sent.</sys:String>
-    <sys:String x:Key="DiscordBot_RestartRequested">A restart request for server '{0}' has been sent.</sys:String>
-    <sys:String x:Key="DiscordBot_ShutdownRequested">A shutdown request for server '{0}' has been sent.</sys:String>
-    <sys:String x:Key="DiscordBot_StartRequested">A start request for server '{0}' has been sent.</sys:String>
-    <sys:String x:Key="DiscordBot_StopRequested">A stop request for server '{0}' has been sent.</sys:String>
-    <sys:String x:Key="DiscordBot_UpdateRequested">An update request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_InfoFailed">Не удалось выполнить вызов сервера '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">Отправлен запрос на резервное копирование для сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">Отправлен запрос на перезапуск сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">Отправлен запрос на завершение работы сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">Отправлен запрос на запуск сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">Отправлен запрос на остановку сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">Отправлен запрос на обновление для сервера "{0}".</sys:String>
 
-    <sys:String x:Key="DiscordBot_CountLabel">Количество:</sys:String>
+    <sys:String x:Key="DiscordBot_CountLabel">Итог:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Карта:</sys:String>
     <!--#endregion-->
 

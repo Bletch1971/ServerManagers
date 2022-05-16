@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">09.05.2022 от Varlonec, Эдван</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">15.05.2022 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -81,6 +81,15 @@
     <!--#region Processor Afinity -->
     <sys:String x:Key="ProcessorAffinity_Invalid">Недействительный</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">Все</sys:String>
+    <!--#endregion-->
+
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_Idle">Праздный</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">Ниже Нормы</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Нормальный</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Выше Нормы</sys:String>
+    <sys:String x:Key="TaskPriority_High">Высокий</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">В реальном времени</sys:String>
     <!--#endregion-->
 
     <!--#region Window States -->
@@ -717,7 +726,7 @@
     <sys:String x:Key="GlobalSettings_EmailNotify_AutoRestartTooltip">Если включено, по Email будет отправлено письмо о том что сервер выполняет Авто-Выключение.</sys:String>
     <sys:String x:Key="GlobalSettings_EmailNotify_ShutdownRestartLabel">Выключение/Перезагрузка</sys:String>
     <sys:String x:Key="GlobalSettings_EmailNotify_ShutdownRestartTooltip">Если включено, по Email будет отправлено письмо о том что сервер выполняет Выключение/Перезагрузку.</sys:String>
-
+   
     <sys:String x:Key="GlobalSettings_AdvancedSettingsLabel">Расширенные настройки</sys:String>
     <sys:String x:Key="GlobalSettings_AdvancedSettingsInformationLabel">Не прикасайтесь к этим настройкам, если вы не знаете, что делаете</sys:String>
     <sys:String x:Key="GlobalSettings_UseShutdownCommandLabel">Использовать команду завершения работы сервера</sys:String>
@@ -738,9 +747,16 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Сколько дней должны храниться логи до удаления.</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Максимальное число логов</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Максимальное количество логов, которые будут храниться.</sys:String>
-    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Режим оповещений RCON:</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Выберите метод, используемый менеджером сервера для отправки сообщений автоматической обработки игровым клиентам через RCON.</sys:String>
-    
+
+    <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Любые изменения в этих приоритетах вступят в силу после создания или сохранения задачи.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Выберите приоритет, используемый диспетчером задач Windows при выполнении этой задачи.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">Приоритет задачи Автоматического резервного Копирования:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Приоритет задачи Автоматического Обновления:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Приоритет задачи Автоматического Выключения/Перезапуска:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Приоритет задачи Автоматического Запуска:</sys:String>
+
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Подтвердить сброс настроек</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Нажмите «Да», для подтверждения, что вы хотите выполнить сброс настроек.</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_FailedTitle">Не удалось выполнить сброс настроек</sys:String>
@@ -775,8 +791,8 @@
 
     <!--#region Main Window -->   
     <sys:String x:Key="MainWindow_Title">ARK: Survival Evolved™ Server Manager</sys:String>
-    <sys:String x:Key="MainWindow_TitleWithAdmin">ARK: Survival Evolved™ Server Manager (Administrator)</sys:String>
-    <sys:String x:Key="MainWindow_ArkNameLabel">ARK: Survival Evolved™ Server Manager</sys:String>       
+    <sys:String x:Key="MainWindow_TitleWithAdmin">ARK: Survival Evolved™ Server Manager (Администратор)</sys:String>
+    <sys:String x:Key="MainWindow_ArkNameLabel">ARK: Survival Evolved™ Server Manager</sys:String>
     <sys:String x:Key="MainWindow_NewProfileTooltip">Создать новый Профиль Сервера.</sys:String>
     <sys:String x:Key="MainWindow_CloseProfileTooltip">Удалить Профиль Сервера</sys:String>
     <sys:String x:Key="MainWindow_VersionLabel">Версия:</sys:String>
@@ -2046,24 +2062,24 @@
     <sys:String x:Key="ServerSettings_ClearAdminPlayerTooltip">Очистить Администраторов</sys:String>
     <sys:String x:Key="ServerSettings_ReloadAdminPlayerTooltip">Перезагрузить из Файла</sys:String>
     <sys:String x:Key="ServerSettings_RemoveAdminPlayerTooltip">Удалить Администратора</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">Имя</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">ID Игрока</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">Имя Игрока</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistLabel">Белый лист</sys:String>
     <sys:String x:Key="ServerSettings_AddWhitelistPlayerTooltip">Добавить игрока в белый список</sys:String>
     <sys:String x:Key="ServerSettings_ClearWhitelistPlayerTooltip">Очистить белый список игроков</sys:String>
     <sys:String x:Key="ServerSettings_ReloadWhitelistPlayerTooltip">Перезагрузить из Файла</sys:String>
     <sys:String x:Key="ServerSettings_RemoveWhitelistPlayerTooltip">Удалить белый список игроков</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">Имя</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">ID Игрока</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">Имя Игрока</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesExclusiveLabel">Эксклюзив присоединился</sys:String>
     <sys:String x:Key="ServerSettings_AddExclusivePlayerTooltip">Добавить эксклюзивного игрока</sys:String>
     <sys:String x:Key="ServerSettings_ClearExclusivePlayerTooltip">Очистить список эксклюзивных игроков</sys:String>
     <sys:String x:Key="ServerSettings_ReloadExclusivePlayerTooltip">Перезагрузить из Файла</sys:String>
     <sys:String x:Key="ServerSettings_RemoveExclusivePlayerTooltip">Удалить эксклюзивный список игроков</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">Имя</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">ID Игрока</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">Имя Игрока</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinLabel">Включено Эксклюзивное подключение</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinTooltip">Если включено, только игроки в списке Эксклюзив, смогут войти на сервер.</sys:String>
     <!--#endregion-->
@@ -2868,7 +2884,7 @@
     <sys:String x:Key="ChalkGolem_Character_BP_C">Меловой Горный Элементаль</sys:String>
     <sys:String x:Key="SpiderL_VAL_Character_BP_C">Праматерь (Lysrix)</sys:String>
     <!--#endregion-->
-	
+
     <!--#region Dino/Creature Class Names - Aberration -->
     <sys:String x:Key="Achatina_Character_BP_Aberrant_C">Aberrant Ахатина</sys:String>
     <sys:String x:Key="Angler_Character_BP_Aberrant_C">Aberrant Удильщик</sys:String>
@@ -5734,9 +5750,9 @@
 
     <sys:String x:Key="DiscordBot_ProfileMissing">Для команды '{0}' требуется идентификатор профиля.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileNotFound">Профиль '{0}' не найден или не связан с каналом.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileMultiples">В канале было обнаружено несколько профилей с "{0}", команда прервана.</sys:String>
-    <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', и эта команда не может быть запущена.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Профиль '{0}' находится в состоянии '{1}', которое не может выполнить эту команду.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Профиль '{0}' в настоящее время обновляется.</sys:String>
+    <sys:String x:Key="DiscordBot_NoChannelProfiles">Никакие профили не связаны с каналом.</sys:String>
 
     <sys:String x:Key="DiscordBot_InfoFailed">Не удалось выполнить вызов сервера '{0}'.</sys:String>
     <sys:String x:Key="DiscordBot_BackupRequested">Отправлен запрос на резервное копирование для сервера "{0}".</sys:String>

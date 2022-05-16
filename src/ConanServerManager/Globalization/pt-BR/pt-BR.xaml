@@ -39,6 +39,15 @@
     <sys:String x:Key="ProcessorAffinity_All">Todos</sys:String>
     <!--#endregion-->
 
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_Idle">Baixo</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">Acima do baixo</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Normal</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Acima do normal</sys:String>
+    <sys:String x:Key="TaskPriority_High">Alta</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">Acima do alto</sys:String>
+    <!--#endregion-->
+
     <!--#region Unit strings -->
     <sys:String x:Key="SliderUnits_Multiplier">x</sys:String>
     <sys:String x:Key="SliderUnits_Percentage">%</sys:String>

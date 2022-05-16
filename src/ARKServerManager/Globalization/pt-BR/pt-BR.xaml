@@ -72,7 +72,7 @@
 
     <!--#region Process Priority -->
     <sys:String x:Key="Priority_low">Baixo</sys:String>
-    <sys:String x:Key="Priority_belownormal">Abaixo do normal</sys:String>
+    <sys:String x:Key="Priority_belownormal">Acima do baixo</sys:String>
     <sys:String x:Key="Priority_normal">Normal</sys:String>
     <sys:String x:Key="Priority_abovenormal">Acima do normal</sys:String>
     <sys:String x:Key="Priority_high">Alto</sys:String>
@@ -81,6 +81,15 @@
     <!--#region Processor Afinity -->
     <sys:String x:Key="ProcessorAffinity_Invalid">inválido</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">Todos</sys:String>
+    <!--#endregion-->
+
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_Idle">Baixo</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">Acima do baixo</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Normal</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Acima do normal</sys:String>
+    <sys:String x:Key="TaskPriority_High">Alta</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">Acima do alto</sys:String>
     <!--#endregion-->
 
     <!--#region Window States -->
@@ -740,6 +749,13 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">O número máximo de arquivos de log que serão mantidos.</sys:String>	
     <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Modo RCON Broadcast:</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Selecione o modo usado pelo serve manager, para enviar mensagens de broadcast automático no jogo via RCON.</sys:String>
+	
+    <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Quaisquer alterações nessas prioridade entrarão em vigor depois que a tarefa for criada ou salva.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Selecione a prioridade usada pelo gerenciador de tarefas do Windows ao executar esta tarefa.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">Prioridade da tarefa - backup automático:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Prioridade da tarefa - atualização automática:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Prioridade da tarefa - desligamento/reinicialização automática:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Prioridade da tarefa - iniciar automático:</sys:String>
 	
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Redefinir configurações</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Clique em 'Sim' para confirmar que você deseja executar as configurações redefinidas.</sys:String>
