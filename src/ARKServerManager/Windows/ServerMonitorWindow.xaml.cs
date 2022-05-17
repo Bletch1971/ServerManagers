@@ -53,6 +53,7 @@ namespace ServerManagerTool.Windows
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private CancellationTokenSource _upgradeCancellationSource = null;
         private ActionQueue _versionChecker;
+        private ActionQueue _canExecuteChecker;
         private readonly Dictionary<string, CommandType> _currentProfileCommands = new Dictionary<string, CommandType>();
 
         private bool HasRunningCommands => _currentProfileCommands.Count > 0;
@@ -152,6 +153,9 @@ namespace ServerManagerTool.Windows
                 _versionChecker = new ActionQueue();
                 _versionChecker.PostAction(CheckForUpdates).DoNotWait();
             }
+
+            _canExecuteChecker = new ActionQueue();
+            _canExecuteChecker.PostAction(RaiseCanExecuteChanged).DoNotWait();
         }
 
         private void ServerMonitorWindow_LocationChanged(object sender, EventArgs e)
@@ -205,7 +209,9 @@ namespace ServerManagerTool.Windows
             }
 
             Windows.Remove(this);
+
             _versionChecker?.DisposeAsync().DoNotWait();
+            _canExecuteChecker?.DisposeAsync().DoNotWait();
 
             base.OnClosing(e);
         }
@@ -517,6 +523,14 @@ namespace ServerManagerTool.Windows
             return new ServerMonitorWindow(serverManager);
         }
 
+        public async Task RaiseCanExecuteChanged()
+        {
+            await TaskUtils.RunOnUIThreadAsync(() => CommandManager.InvalidateRequerySuggested());
+            await Task.Delay(5000);
+
+            _canExecuteChecker?.PostAction(RaiseCanExecuteChanged).DoNotWait();
+        }
+
         private void SetWindowTitle()
         {
             if (!string.IsNullOrWhiteSpace(App.Instance.Title))
@@ -764,6 +778,114 @@ namespace ServerManagerTool.Windows
             }
         }
 
+        public ICommand BackupServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        await BackupSelectedServersAsync();
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand RestartServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        await RestartSelectedServersAsync();
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand ShutdownServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        await StopSelectedServersAsync(true);
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand StartServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        await StartSelectedServersAsync();
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand StopServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        await StopSelectedServersAsync(false);
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand UpdateServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        await UpdateSelectedServersAsync();
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
         #region Drag and Drop
 
         public static readonly DependencyProperty DraggedItemProperty = DependencyProperty.Register(nameof(DraggedItem), typeof(Server), typeof(ServerMonitorWindow), new PropertyMetadata(null));
@@ -879,7 +1001,23 @@ namespace ServerManagerTool.Windows
 
         #endregion
 
-        private async void BackupServers_Click(object sender, RoutedEventArgs e)
+        private void SelectAllServers_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var server in ServerManager.Servers)
+            {
+                server.Selected = true;
+            }
+        }
+
+        private void UnselectAllServers_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var server in ServerManager.Servers)
+            {
+                server.Selected = false;
+            }
+        }
+
+        private async Task BackupSelectedServersAsync()
         {
             if (CancellationTokenSource != null)
                 return;
@@ -972,7 +1110,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async void RestartServers_Click(object sender, RoutedEventArgs e)
+        private async Task RestartSelectedServersAsync()
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1070,7 +1208,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async void StartServers_Click(object sender, RoutedEventArgs e)
+        private async Task StartSelectedServersAsync()
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1169,7 +1307,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async void StopServers_Click(object sender, RoutedEventArgs e)
+        private async Task StopSelectedServersAsync(bool shutdown)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1181,7 +1319,9 @@ namespace ServerManagerTool.Windows
                 return;
             }
 
-            var result = MessageBox.Show(_globalizer.GetResourceString("ServerMonitor_StopServers_ConfirmLabel"), _globalizer.GetResourceString("ServerMonitor_StopServers_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var result = shutdown
+                ? MessageBox.Show(_globalizer.GetResourceString("ServerMonitor_ShutdownServers_ConfirmLabel"), _globalizer.GetResourceString("ServerMonitor_ShutdownServers_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question)
+                : MessageBox.Show(_globalizer.GetResourceString("ServerMonitor_StopServers_ConfirmLabel"), _globalizer.GetResourceString("ServerMonitor_StopServers_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result != MessageBoxResult.Yes)
                 return;
 
@@ -1225,11 +1365,13 @@ namespace ServerManagerTool.Windows
             {
                 var app = new ServerApp(true)
                 {
+                    BackupWorldFile = shutdown,
                     DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
+                    PerformWorldSave = shutdown,
                     SendAlerts = true,
                     SendEmails = false,
-                    ServerProcess = ServerProcessType.Shutdown,
+                    ServerProcess = shutdown ? ServerProcessType.Shutdown : ServerProcessType.Stop,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -1243,6 +1385,9 @@ namespace ServerManagerTool.Windows
                     }
                 };
 
+                if (!shutdown)
+                    app.ShutdownInterval = 0;
+
                 var task = Task.Run(() =>
                 {
                     app.PerformProfileShutdown(profile, false, false, false, false, token);
@@ -1251,7 +1396,10 @@ namespace ServerManagerTool.Windows
 
                 tasks.Add(task);
 
-                AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ShutdownRequested"), profile.ServerName));
+                if (shutdown)
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ShutdownRequested"), profile.ServerName));
+                else
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StopRequested"), profile.ServerName));
             }
 
             try
@@ -1266,7 +1414,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async void UpdateServers_Click(object sender, RoutedEventArgs e)
+        private async Task UpdateSelectedServersAsync()
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1366,22 +1514,6 @@ namespace ServerManagerTool.Windows
             {
                 CancellationTokenSource?.Dispose();
                 CancellationTokenSource = null;
-            }
-        }
-
-        private void SelectAllServers_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (var server in ServerManager.Servers)
-            {
-                server.Selected = true;
-            }
-        }
-
-        private void UnselectAllServers_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (var server in ServerManager.Servers)
-            {
-                server.Selected = false;
             }
         }
     }

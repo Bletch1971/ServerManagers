@@ -31,10 +31,7 @@ namespace ServerManagerTool.Common.Lib
         /// <param name="canExecute">The execution status logic.</param>
         public RelayCommand(Action<T> execute, Predicate<T> canExecute)
         {
-            if (execute == null)
-                throw new ArgumentNullException("execute");
-
-            _execute = execute;
+            _execute = execute ?? throw new ArgumentNullException("execute");
             _canExecute = canExecute;
         }
 
@@ -53,7 +50,7 @@ namespace ServerManagerTool.Common.Lib
         {
             try
             {
-                return _canExecute == null ? true : _canExecute((T)parameter);
+                return _canExecute == null || _canExecute((T)parameter);
             }
             catch (Exception)
             {

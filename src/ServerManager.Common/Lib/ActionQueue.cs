@@ -19,7 +19,6 @@ namespace ServerManagerTool.Common.Lib
         public ActionQueue(TaskScheduler scheduler = null)
         {
             this.workQueue = new ActionBlock<Action>(a => a.Invoke(), new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = 1, TaskScheduler = scheduler ?? TaskScheduler.Default });
-
         }
        
         public Task<T> PostAction<T>(Func<T> action)

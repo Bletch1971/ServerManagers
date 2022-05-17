@@ -6,9 +6,9 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:sm="clr-namespace:ServerManagerTool"
-        xmlns:smw="clr-namespace:ServerManagerTool.Windows"
         xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
+        xmlns:controls="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
         xmlns:enum="clr-namespace:ServerManagerTool.Enums"
         xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
         mc:Ignorable="d"
@@ -24,6 +24,13 @@
 
             <sm:ScrollToBottomAction x:Key="ScrollToBottomAction" />
             <vm:MapNameValueConverter x:Key="MapNameValueConverter"/>
+
+            <DataTemplate x:Key="StopButtonContent">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
+                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/DropArrow.ico,Size=32}" Width="8" Margin="2,0,0,0" VerticalAlignment="Center"/>
+                </StackPanel>
+            </DataTemplate>
         </ResourceDictionary>
     </Window.Resources>
 
@@ -54,87 +61,47 @@
                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Shortcut.ico,Size=32}"/>
                 </Button>
 
-                <Button Grid.Row="0" Grid.Column="1" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="StartServers_Click" ToolTip="{DynamicResource ServerMonitor_StartServersButtonTooltip}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="IsEnabled" Value="False"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding CancellationTokenSource}" Value="{x:Null}">
-                                    <Setter Property="IsEnabled" Value="True"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Start.ico,Size=32}"/>
-                </Button>
-
-                <Button Grid.Row="0" Grid.Column="2" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="StopServers_Click" ToolTip="{DynamicResource ServerMonitor_StopServersButtonTooltip}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="IsEnabled" Value="False"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding CancellationTokenSource}" Value="{x:Null}">
-                                    <Setter Property="IsEnabled" Value="True"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}"/>
-                </Button>
-
-                <Button Grid.Row="0" Grid.Column="3" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RestartServers_Click" ToolTip="{DynamicResource ServerMonitor_RestartServersButtonTooltip}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="IsEnabled" Value="False"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding CancellationTokenSource}" Value="{x:Null}">
-                                    <Setter Property="IsEnabled" Value="True"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Restart.ico,Size=32}"/>
-                </Button>
-
-                <Button Grid.Row="0" Grid.Column="4" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="UpdateServers_Click" ToolTip="{DynamicResource ServerMonitor_UpdateServersButtonTooltip}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="IsEnabled" Value="False"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding CancellationTokenSource}" Value="{x:Null}">
-                                    <Setter Property="IsEnabled" Value="True"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Download.ico,Size=32}"/>
-                </Button>
-
-                <Button Grid.Row="0" Grid.Column="5" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BackupServers_Click" ToolTip="{DynamicResource ServerMonitor_BackupServersButtonTooltip}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="IsEnabled" Value="False"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding CancellationTokenSource}" Value="{x:Null}">
-                                    <Setter Property="IsEnabled" Value="True"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Save.ico,Size=32}"/>
-                </Button>
-
-                <Button Grid.Row="0" Grid.Column="6" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SelectAllServers_Click" ToolTip="{DynamicResource ServerMonitor_SelectAllServersButtonTooltip}">
+                <Button Grid.Row="0" Grid.Column="1" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SelectAllServers_Click" ToolTip="{DynamicResource ServerMonitor_SelectAllServersButtonTooltip}">
                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Checked.ico,Size=32}"/>
                 </Button>
 
-                <Button Grid.Row="0" Grid.Column="7" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="UnselectAllServers_Click" ToolTip="{DynamicResource ServerMonitor_UnselectAllServersButtonTooltip}">
+                <Button Grid.Row="0" Grid.Column="2" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="UnselectAllServers_Click" ToolTip="{DynamicResource ServerMonitor_UnselectAllServersButtonTooltip}">
                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Unchecked.ico,Size=32}"/>
+                </Button>
+
+                <Button Grid.Row="0" Grid.Column="3" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding StartServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_StartServersButtonTooltip}">
+                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Start.ico,Size=32}"/>
+                </Button>
+
+                <Button Grid.Row="0" Grid.Column="4" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding RestartServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_RestartServersButtonTooltip}">
+                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Restart.ico,Size=32}"/>
+                </Button>
+
+                <controls:DropDownButton Grid.Row="0" Grid.Column="5" Width="35" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <ContentControl ContentTemplate="{StaticResource StopButtonContent}" />
+                    
+                    <controls:DropDownButton.Menu>
+                        <ContextMenu>
+                            <MenuItem Header="{DynamicResource ServerMonitor_ShutdownServersButtonLabel}" Command="{Binding ShutdownServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_ShutdownServersButtonTooltip}">
+                                <MenuItem.Icon>
+                                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="{DynamicResource ServerMonitor_StopServersButtonLabel}" Command="{Binding StopServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_StopServersButtonTooltip}">
+                                <MenuItem.Icon>
+                                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Stop.ico,Size=32}"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </controls:DropDownButton.Menu>
+                </controls:DropDownButton>
+
+                <Button Grid.Row="0" Grid.Column="6" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" Command="{Binding UpdateServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_UpdateServersButtonTooltip}">
+                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Download.ico,Size=32}"/>
+                </Button>
+
+                <Button Grid.Row="0" Grid.Column="7" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding BackupServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_BackupServersButtonTooltip}">
+                    <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Save.ico,Size=32}"/>
                 </Button>
 
                 <StackPanel Grid.Row="0" Grid.Column="8" Orientation="Horizontal">
