@@ -36,7 +36,6 @@ namespace ServerManagerTool.Lib
 
         public const int MUTEX_TIMEOUT = 5;         // 5 minutes
         public const int MUTEX_ATTEMPTDELAY = 5000; // 5 seconds
-        public const int BACKUP_DELETEINTERVAL = 7; // 7 days
 
         private const int STEAM_MAXRETRIES = 10;
         private const int RCON_MAXRETRIES = 3;
@@ -1878,7 +1877,7 @@ namespace ServerManagerTool.Lib
                 {
                     try
                     {
-                        var deleteInterval = Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_DeleteInterval : BACKUP_DELETEINTERVAL;
+                        var deleteInterval = Config.Default.AutoBackup_DeleteInterval;
 
                         LogProfileMessage("");
                         LogProfileMessage("Delete old profile backup files started...");
@@ -2075,7 +2074,7 @@ namespace ServerManagerTool.Lib
                 {
                     try
                     {
-                        var deleteInterval = Config.Default.AutoBackup_EnableBackup ? Config.Default.AutoBackup_DeleteInterval : BACKUP_DELETEINTERVAL;
+                        var deleteInterval = Config.Default.AutoBackup_DeleteInterval;
 
                         LogProfileMessage("");
                         LogProfileMessage("Delete old server backup files started...");
