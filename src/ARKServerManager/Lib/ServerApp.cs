@@ -2069,9 +2069,10 @@ namespace ServerManagerTool.Lib
                             var saveFolderInfo = new DirectoryInfo(saveFolder);
 
                             // backup the world save file
+                            var key = string.Empty;
                             var files = new Dictionary<string, List<string>>
                             {
-                                { "", new List<string> { worldFile } }
+                                { key, new List<string> { worldFile } }
                             };
 
                             // backup the player files
@@ -2079,7 +2080,7 @@ namespace ServerManagerTool.Lib
                             var playerFiles = saveFolderInfo.GetFiles(playerFileFilter, SearchOption.TopDirectoryOnly);
                             foreach (var file in playerFiles)
                             {
-                                files[""].Add(file.FullName);
+                                files[key].Add(file.FullName);
                             }
 
                             // backup the tribe files
@@ -2087,7 +2088,7 @@ namespace ServerManagerTool.Lib
                             var tribeFiles = saveFolderInfo.GetFiles(tribeFileFilter, SearchOption.TopDirectoryOnly);
                             foreach (var file in tribeFiles)
                             {
-                                files[""].Add(file.FullName);
+                                files[key].Add(file.FullName);
                             }
 
                             // backup the tribute tribe files
@@ -2095,7 +2096,7 @@ namespace ServerManagerTool.Lib
                             var tributeTribeFiles = saveFolderInfo.GetFiles(tributeTribeFileFilter, SearchOption.TopDirectoryOnly);
                             foreach (var file in tributeTribeFiles)
                             {
-                                files[""].Add(file.FullName);
+                                files[key].Add(file.FullName);
                             }
 
                             if (Config.Default.AutoBackup_IncludeSaveGamesFolder)
@@ -2110,7 +2111,7 @@ namespace ServerManagerTool.Lib
                                     var saveGamesFiles = saveGamesFolderInfo.GetFiles(saveGamesFileFilter, SearchOption.AllDirectories);
                                     foreach (var file in saveGamesFiles)
                                     {
-                                        var key = file.DirectoryName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath);
+                                        key = file.DirectoryName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath);
                                         if (files.ContainsKey(key))
                                             files[key].Add(file.FullName);
                                         else
