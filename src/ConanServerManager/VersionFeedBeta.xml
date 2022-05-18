@@ -8,6 +8,29 @@
   <updated>2022-05-18T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:BA7B98BC-F986-4D46-A4C1-264D781798EC</id>
+    <title>1.1.73 (1.1.73.3)</title>
+    <summary>1.1.73.3</summary>
+    <link href="" />
+    <updated>2022-05-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Monitor - added new functionality to bulk start, restart, stop, shutdown, update and backup your servers.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:661C8C8B-B1DC-4368-95E7-A9C29C274B5B</id>
     <title>1.1.73 (1.1.73.2)</title>
     <summary>1.1.73.2</summary>
