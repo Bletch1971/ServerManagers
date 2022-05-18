@@ -108,9 +108,13 @@ namespace ServerManagerTool.Common.Utils
                 var selection = new List<ZipEntry>();
 
                 if (recurseFolders)
+                {
                     selection.AddRange(zip.Entries.Where(e => !e.IsDirectory && (e.FileName.StartsWith($"{sourceFolder.ToLower()}/", StringComparison.OrdinalIgnoreCase) || e.FileName.ToLower().Contains($"/{sourceFolder.ToLower()}/"))));
+                }
                 else
+                {
                     selection.AddRange(zip.Entries.Where(e => !e.IsDirectory && Path.GetDirectoryName(e.FileName).Equals(sourceFolder, StringComparison.OrdinalIgnoreCase)));
+                }
 
                 foreach (var entry in selection)
                 {
@@ -140,7 +144,9 @@ namespace ServerManagerTool.Common.Utils
                     zip.AddFiles(filesToZip.Where(f => !string.IsNullOrWhiteSpace(f) && File.Exists(f)), preserveDirHierarchy, directoryPathInArchive);
 
                     if (!string.IsNullOrWhiteSpace(comment))
+                    {
                         zip.Comment = comment;
+                    }
 
                     zip.Save();
                 }
@@ -200,7 +206,9 @@ namespace ServerManagerTool.Common.Utils
 
                     zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
                     if (!string.IsNullOrWhiteSpace(comment))
+                    {
                         zip.Comment = comment;
+                    }
 
                     zip.Save(zipFile);
                 }
@@ -212,7 +220,9 @@ namespace ServerManagerTool.Common.Utils
                     zip.AddFile(fileToZip, directoryPath);
 
                     if (!string.IsNullOrWhiteSpace(comment))
+                    {
                         zip.Comment = comment;
+                    }
 
                     zip.Save();
                 }
@@ -233,7 +243,34 @@ namespace ServerManagerTool.Common.Utils
 
                 zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
                 if (!string.IsNullOrWhiteSpace(comment))
+                {
                     zip.Comment = comment;
+                }
+
+                zip.Save();
+            }
+        }
+
+        public static void ZipFiles(string zipFile, Dictionary<string, List<string>> filesToZip, string comment = "")
+        {
+            if (string.IsNullOrWhiteSpace(zipFile))
+                throw new ArgumentNullException(nameof(zipFile));
+
+            if (filesToZip is null || filesToZip.IsEmpty())
+                throw new ArgumentNullException(nameof(filesToZip));
+
+            using (var zip = new ZipFile(zipFile))
+            {
+                foreach (var zipFolder in filesToZip.Keys)
+                {
+                    zip.AddFiles(filesToZip[zipFolder].Where(f => !string.IsNullOrWhiteSpace(f) && File.Exists(f)), false, zipFolder);
+                }
+
+                zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
+                if (!string.IsNullOrWhiteSpace(comment))
+                {
+                    zip.Comment = comment;
+                }
 
                 zip.Save();
             }

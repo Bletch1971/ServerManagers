@@ -5,7 +5,30 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-05-15T00:00:00Z</updated>
+  <updated>2022-05-18T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:D0681B47-5715-473E-99D3-63F475A997C4</id>
+    <title>1.1.73 (1.1.72.1)</title>
+    <summary>1.1.73.1</summary>
+    <link href="" />
+    <updated>2022-05-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>World Save Zipping - have changed the way the zip file is created. All files are now added to the zip in one pass, rather than as separate files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:E367ACB5-E38A-4B3A-A089-E43D011A97E4</id>
