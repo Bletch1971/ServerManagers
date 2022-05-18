@@ -8,6 +8,29 @@
   <updated>2022-05-15T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:661C8C8B-B1DC-4368-95E7-A9C29C274B5B</id>
+    <title>1.1.429 (1.1.429.2)</title>
+    <summary>1.1.429.2</summary>
+    <link href="" />
+    <updated>2022-05-18T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Backup Interval Changes - The backup interval has been changed to use the value in the global settings, when auto-backup is enabled or not.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:D0681B47-5715-473E-99D3-63F475A997C4</id>
     <title>1.1.429 (1.1.429.1)</title>
     <summary>1.1.429.1</summary>
