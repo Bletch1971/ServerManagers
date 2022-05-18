@@ -102,6 +102,7 @@ namespace ServerManagerTool.Lib
         public bool DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles;
         public int ExitCode = EXITCODE_NORMALEXIT;
         public bool OutputLogs = false;
+        public bool PerformWorldSave = Config.Default.ServerShutdown_EnableWorldSave;
         public bool SendAlerts = false;
         public bool SendEmails = false;
         public string ShutdownReason = null;
@@ -258,11 +259,14 @@ namespace ServerManagerTool.Lib
 
             ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
 
-            // make a backup of the current profile and config files.
-            CreateProfileBackupArchiveFile(_profile);
+            if (ServerProcess != ServerProcessType.Stop)
+            {
+                // make a backup of the current profile and config files.
+                CreateProfileBackupArchiveFile(_profile);
 
-            if (ExitCode != EXITCODE_NORMALEXIT)
-                return;
+                if (ExitCode != EXITCODE_NORMALEXIT)
+                    return;
+            }
 
             if (BackupWorldFile)
             {
@@ -285,10 +289,10 @@ namespace ServerManagerTool.Lib
                 {
                     ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
                 }
-            }
 
-            if (ExitCode != EXITCODE_NORMALEXIT)
-                return;
+                if (ExitCode != EXITCODE_NORMALEXIT)
+                    return;
+            }
 
             // check if this is a shutdown only, or a shutdown and restart.
             if (restartServer)
@@ -579,7 +583,7 @@ namespace ServerManagerTool.Lib
 
                 // BH - commented out until funcom provide a way to send a save command
                 // check if we need to perform a world save
-                //if (serverAccessible && Config.Default.ServerShutdown_EnableWorldSave)
+                //if (serverAccessible && PerformWorldSave)
                 //{
                 //    try
                 //    {
@@ -716,6 +720,7 @@ namespace ServerManagerTool.Lib
                 if (process.HasExited)
                 {
                     process.Close();
+
                     if (Config.Default.EmailNotify_ShutdownRestart)
                         SendEmail($"{_profile.ProfileName} server shutdown", $"The server has been shutdown to perform the {ServerProcess} process.", false);
                 }

@@ -101,6 +101,7 @@ namespace ServerManagerTool.Lib
         public bool DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles;
         public int ExitCode = EXITCODE_NORMALEXIT;
         public bool OutputLogs = false;
+        public bool PerformWorldSave = Config.Default.ServerShutdown_EnableWorldSave;
         public bool SendAlerts = false;
         public bool SendEmails = false;
         public string ShutdownReason = null;
@@ -257,11 +258,14 @@ namespace ServerManagerTool.Lib
 
             ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
 
-            // make a backup of the current profile and config files.
-            CreateProfileBackupArchiveFile(_profile);
+            if (ServerProcess != ServerProcessType.Stop)
+            {
+                // make a backup of the current profile and config files.
+                CreateProfileBackupArchiveFile(_profile);
 
-            if (ExitCode != EXITCODE_NORMALEXIT)
-                return;
+                if (ExitCode != EXITCODE_NORMALEXIT)
+                    return;
+            }
 
             if (BackupWorldFile)
             {
@@ -284,10 +288,10 @@ namespace ServerManagerTool.Lib
                 {
                     ServerStatusChangeCallback?.Invoke(ServerStatus.Stopped);
                 }
-            }
 
-            if (ExitCode != EXITCODE_NORMALEXIT)
-                return;
+                if (ExitCode != EXITCODE_NORMALEXIT)
+                    return;
+            }
 
             // check if this is a shutdown only, or a shutdown and restart.
             if (restartServer)
@@ -579,7 +583,7 @@ namespace ServerManagerTool.Lib
                 }
 
                 // check if we need to perform a world save (not required for SotF servers)
-                if (serverAccessible && Config.Default.ServerShutdown_EnableWorldSave && !_profile.SotFEnabled)
+                if (serverAccessible && PerformWorldSave && !_profile.SotFEnabled)
                 {
                     try
                     {
@@ -670,35 +674,38 @@ namespace ServerManagerTool.Lib
                 process.Exited += handler;
 
                 // Method 1 - Shutdown Command
-                if (serverAccessible && _profile.RCONEnabled && Config.Default.ServerShutdown_UseShutdownCommand)
+                if (ServerProcess != ServerProcessType.Stop)
                 {
-                    try
+                    if (serverAccessible && _profile.RCONEnabled && Config.Default.ServerShutdown_UseShutdownCommand)
                     {
-                        sent = SendCommand(Config.Default.ServerShutdownCommand, cancellationToken);
-                        if (sent)
+                        try
                         {
-                            Task.Delay(10000, cancellationToken).Wait(cancellationToken);
+                            sent = SendCommand(Config.Default.ServerShutdownCommand, cancellationToken);
+                            if (sent)
+                            {
+                                Task.Delay(10000, cancellationToken).Wait(cancellationToken);
+                            }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine($"RCON> {Config.Default.ServerShutdownCommand} command.\r\n{ex.Message}");
-                    }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine($"RCON> {Config.Default.ServerShutdownCommand} command.\r\n{ex.Message}");
+                        }
 
-                    if (sent && !process.HasExited)
-                    {
-                        ts.Task.Wait(60000);   // 1 minute
-                    }
+                        if (sent && !process.HasExited)
+                        {
+                            ts.Task.Wait(60000);   // 1 minute
+                        }
 
-                    if (process.HasExited)
-                    {
-                        LogProfileMessage($"Exited server successfully.");
-                        LogProfileMessage("");
-                        ExitCode = EXITCODE_NORMALEXIT;
-                        return;
-                    }
+                        if (process.HasExited)
+                        {
+                            LogProfileMessage($"Exited server successfully.");
+                            LogProfileMessage("");
+                            ExitCode = EXITCODE_NORMALEXIT;
+                            return;
+                        }
 
-                    LogProfileMessage("Exiting server timed out, attempting to close the server.");
+                        LogProfileMessage("Exiting server timed out, attempting to close the server.");
+                    }
                 }
 
                 // Method 2 - Close the process
