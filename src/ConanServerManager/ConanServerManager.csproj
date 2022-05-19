@@ -198,6 +198,7 @@
     </ApplicationDefinition>
     <Compile Include="Delegates\ServerStatusChangeDelegate.cs" />
     <Compile Include="Enums\ServerSettingsResetAction.cs" />
+    <Compile Include="Enums\ServerUpdateType.cs" />
     <Compile Include="Lib\Model\PlayerListParameters.cs" />
     <Compile Include="Lib\Model\RconParameters.cs" />
     <Compile Include="Lib\Serialization\IniFileEntryAttribute.cs" />

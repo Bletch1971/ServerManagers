@@ -6,6 +6,7 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:sm="clr-namespace:ServerManagerTool"
+        xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
         xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:controls="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
@@ -31,6 +32,12 @@
                     <Image Source="{com:Icon Path=/ConanServerManager;component/Art/DropArrow.ico,Size=32}" Width="8" Margin="2,0,0,0" VerticalAlignment="Center"/>
                 </StackPanel>
             </DataTemplate>
+            <DataTemplate x:Key="UpdateButtonContent">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
+                    <Image Source="{com:Icon Path=/ConanServerManager;component/Art/DropArrow.ico,Size=32}" Width="8" Margin="2,0,0,0" VerticalAlignment="Center"/>
+                </StackPanel>
+            </DataTemplate>
         </ResourceDictionary>
     </Window.Resources>
     
@@ -39,11 +46,14 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*" MinHeight="200"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto" MinHeight="100"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -82,34 +92,39 @@
 
                     <controls:DropDownButton.Menu>
                         <ContextMenu>
-                            <MenuItem Header="{DynamicResource ServerMonitor_ShutdownServersButtonLabel}" Command="{Binding ShutdownServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_ShutdownServersButtonTooltip}">
-                                <MenuItem.Icon>
-                                    <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Header="{DynamicResource ServerMonitor_StopServersButtonLabel}" Command="{Binding StopServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_StopServersButtonTooltip}">
-                                <MenuItem.Icon>
-                                    <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
+                            <MenuItem Header="{DynamicResource ServerMonitor_ShutdownServersButtonLabel}" Command="{Binding ShutdownServersCommand}" CommandParameter="{Binding}"/>
+                            <MenuItem Header="{DynamicResource ServerMonitor_StopServersButtonLabel}" Command="{Binding StopServersCommand}" CommandParameter="{Binding}"/>
                         </ContextMenu>
                     </controls:DropDownButton.Menu>
                 </controls:DropDownButton>
 
-                <Button Grid.Row="0" Grid.Column="6" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" Command="{Binding UpdateServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_UpdateServersButtonTooltip}">
-                    <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}"/>
-                </Button>
+                <controls:DropDownButton Grid.Row="0" Grid.Column="6" Width="35" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <ContentControl ContentTemplate="{StaticResource UpdateButtonContent}" />
+
+                    <controls:DropDownButton.Menu>
+                        <ContextMenu>
+                            <MenuItem Header="{DynamicResource ServerMonitor_UpdateServersButtonLabel}" Command="{Binding UpdateServersCommand}" CommandParameter="{Binding}"/>
+                            <MenuItem Header="{DynamicResource ServerMonitor_UpdateModsButtonLabel}" Command="{Binding UpdateModsCommand}" CommandParameter="{Binding}"/>
+                        </ContextMenu>
+                    </controls:DropDownButton.Menu>
+                </controls:DropDownButton>
 
                 <Button Grid.Row="0" Grid.Column="7" Width="22" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding BackupServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_BackupServersButtonTooltip}">
                     <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Save.ico,Size=32}"/>
                 </Button>
 
-                <StackPanel Grid.Row="0" Grid.Column="8" Orientation="Horizontal">
+                <Button Grid.Row="0" Grid.Column="8" Width="22" Height="22" Margin="10,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding CancelServersCommand}" CommandParameter="{Binding}" ToolTip="{DynamicResource ServerMonitor_CancelServersButtonTooltip}">
+                    <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
+                </Button>
+
+                <CheckBox Grid.Row="0" Grid.Column="9" Content="{DynamicResource ServerMonitor_ProcessServersSequentiallyLabel}" IsChecked="{Binding ProcessServersSequentially}" Margin="10,5,5,0" VerticalAlignment="Center" ToolTip="{DynamicResource ServerMonitor_ProcessServersSequentiallyTooltip}"/>
+                
+                <StackPanel Grid.Row="0" Grid.Column="10" Orientation="Horizontal">
                     <TextBlock Margin="30,5,5,0" Text="{DynamicResource ServerMonitor_TotalCountLabel}" VerticalAlignment="Center" />
                     <TextBlock Margin="5,5,5,0" Text="{Binding ServerManager.Servers.Count}" VerticalAlignment="Center" />
                 </StackPanel>
 
-                <Button Grid.Row="0" Grid.Column="9" Height="22" Margin="5,5,5,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestServerManagerVersion}" Click="UpgradeApplication_Click" VerticalAlignment="Center" >
+                <Button Grid.Row="0" Grid.Column="11" Height="22" Margin="5,5,5,0" Background="#00AA00" Foreground="White" Padding="1" BorderThickness="1" BorderBrush="White" ContentStringFormat="{DynamicResource MainWindow_UpdateToLabelFormat}" Content="{Binding LatestServerManagerVersion}" Click="UpgradeApplication_Click" VerticalAlignment="Center" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Style.Triggers>
@@ -124,7 +139,7 @@
                     </Button.Style>
                 </Button>
 
-                <Button Grid.Row="0" Grid.Column="10" Width="22" Height="22" Margin="5,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}">
+                <Button Grid.Row="0" Grid.Column="12" Width="22" Height="22" Margin="5,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PatchNotes_Click" ToolTip="{DynamicResource ServerSettings_PatchNotesTooltip}">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Style.Triggers>
@@ -141,7 +156,9 @@
                     <Image Source="{com:Icon Path=/ConanServerManager;component/Art/ChangeNotes.ico,Size=32}"/>
                 </Button>
 
-                <DataGrid Name="ServersGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="11" Margin="5,5,5,0" HorizontalAlignment="Stretch" ItemsSource="{Binding ServerManager.Servers}" GridLinesVisibility="Horizontal" HeadersVisibility="All" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" SelectionMode="Single" PreviewMouseLeftButtonDown="OnMouseLeftButtonDown">
+                <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="13" Margin="1" Label="{DynamicResource ServerMonitor_SequentialProcessDelayLabel}" Value="{Binding SequentialProcessDelay}" Minimum="0" Maximum="300" SmallChange="1" LargeChange="5" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" Visibility="{Binding ProcessServersSequentially, Converter={StaticResource BooleanToVisibilityConverter}}" ToolTip="{DynamicResource ServerMonitor_SequentialProcessDelayTooltip}"/>
+
+                <DataGrid Name="ServersGrid" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="13" Margin="5,5,5,0" HorizontalAlignment="Stretch" ItemsSource="{Binding ServerManager.Servers}" GridLinesVisibility="Horizontal" HeadersVisibility="All" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" SelectionMode="Single" PreviewMouseLeftButtonDown="OnMouseLeftButtonDown">
                     <DataGrid.Resources>
                         <ResourceDictionary>
                             <Style TargetType="{x:Type DataGridCell}">
@@ -211,9 +228,9 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn Width="Auto" MinWidth="100">
                             <DataGridTemplateColumn.Header>
-                                <TextBlock Text="{DynamicResource ServerMonitor_ServerColumnLabel}" />
+                                <TextBlock Text="{DynamicResource ServerMonitor_ProfileColumnLabel}" />
                             </DataGridTemplateColumn.Header>
 
                             <DataGridTemplateColumn.CellTemplate>
@@ -228,7 +245,24 @@
                             </DataGridTemplateColumn.CellStyle>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Width="Auto" MinWidth="150">
+                        <DataGridTemplateColumn Width="*" MinWidth="100">
+                            <DataGridTemplateColumn.Header>
+                                <TextBlock Text="{DynamicResource ServerMonitor_ServerColumnLabel}" />
+                            </DataGridTemplateColumn.Header>
+
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Profile.ServerName}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                            <DataGridTemplateColumn.CellStyle>
+                                <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTemplateColumn.CellStyle>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Width="Auto" MinWidth="100">
                             <DataGridTemplateColumn.Header>
                                 <TextBlock Text="{DynamicResource ServerMonitor_MapColumnLabel}" />
                             </DataGridTemplateColumn.Header>
@@ -602,9 +636,9 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="11" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+                <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="13" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
 
-                <RichTextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="11" Margin="5,0,5,5" BorderBrush="LightGray" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" IsReadOnlyCaretVisible="True" IsReadOnly="True" IsTabStop="False">
+                <RichTextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="13" Margin="5,0,5,5" BorderBrush="LightGray" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" IsReadOnlyCaretVisible="True" IsReadOnly="True" IsTabStop="False">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="TextChanged" >
                             <sm:ScrollToBottomAction IsEnabled="True"/>

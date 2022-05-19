@@ -29,6 +29,17 @@ namespace ServerManagerTool.Windows
     /// </summary>
     public partial class ServerMonitorWindow : Window
     {
+        public class ServerMonitorOutput_Critical : Run
+        {
+            public ServerMonitorOutput_Critical(string value)
+                : base(value)
+            {
+                Foreground = Brushes.Red;
+                FontWeight = FontWeights.Bold;
+                FontSize = FontSize + 2;
+            }
+        }
+
         public class ServerMonitorOutput_Error : Run
         {
             public ServerMonitorOutput_Error(string value)
@@ -44,6 +55,16 @@ namespace ServerManagerTool.Windows
                 : base(value)
             {
                 Foreground = Brushes.Green;
+            }
+        }
+
+        public class ServerMonitorOutput_Warning : Run
+        {
+            public ServerMonitorOutput_Warning(string value)
+                : base(value)
+            {
+                Foreground = Brushes.Orange;
+                FontWeight = FontWeights.Bold;
             }
         }
 
@@ -63,6 +84,8 @@ namespace ServerManagerTool.Windows
         public static readonly DependencyProperty ShowUpdateButtonProperty = DependencyProperty.Register(nameof(ShowUpdateButton), typeof(bool), typeof(ServerMonitorWindow), new PropertyMetadata(false));
         public static readonly DependencyProperty IsStandAloneWindowProperty = DependencyProperty.Register(nameof(IsStandAloneWindow), typeof(bool), typeof(ServerMonitorWindow), new PropertyMetadata(false));
         public static readonly DependencyProperty CancellationTokenSourceProperty = DependencyProperty.Register(nameof(CancellationTokenSource), typeof(CancellationTokenSource), typeof(ServerMonitorWindow));
+        public static readonly DependencyProperty ProcessServersSequentiallyProperty = DependencyProperty.Register(nameof(ProcessServersSequentially), typeof(bool), typeof(ServerMonitorWindow), new PropertyMetadata(false));
+        public static readonly DependencyProperty SequentialProcessDelayProperty = DependencyProperty.Register(nameof(SequentialProcessDelay), typeof(int), typeof(ServerMonitorWindow), new PropertyMetadata(10));
 
         public ServerMonitorWindow() : this(null)
         {
@@ -119,6 +142,18 @@ namespace ServerManagerTool.Windows
         {
             get { return (CancellationTokenSource)GetValue(CancellationTokenSourceProperty); }
             set { SetValue(CancellationTokenSourceProperty, value); }
+        }
+
+        public bool ProcessServersSequentially
+        {
+            get { return (bool)GetValue(ProcessServersSequentiallyProperty); }
+            set { SetValue(ProcessServersSequentiallyProperty, value); }
+        }
+
+        public int SequentialProcessDelay
+        {
+            get { return (int)GetValue(SequentialProcessDelayProperty); }
+            set { SetValue(SequentialProcessDelayProperty, value); }
         }
 
         private void ServerMonitorWindow_Loaded(object sender, RoutedEventArgs e)
@@ -454,22 +489,52 @@ namespace ServerManagerTool.Windows
             }
         }
 
+        public void AddCriticalBlockContent(string message)
+        {
+            TaskUtils.RunOnUIThreadAsync(() =>
+            {
+                var p = new Paragraph();
+
+                p.Inlines.Add(new ServerMonitorOutput_Critical(message));
+
+                ConsoleContent.Blocks.Add(p);
+            }).DoNotWait();
+        }
+
         public void AddErrorBlockContent(string message)
         {
-            var p = new Paragraph();
+            TaskUtils.RunOnUIThreadAsync(() =>
+            {
+                var p = new Paragraph();
 
-            p.Inlines.Add(new ServerMonitorOutput_Error(message));
+                p.Inlines.Add(new ServerMonitorOutput_Error(message));
 
-            ConsoleContent.Blocks.Add(p);
+                ConsoleContent.Blocks.Add(p);
+            }).DoNotWait();
         }
 
         public void AddMessageBlockContent(string message)
         {
-            var p = new Paragraph();
+            TaskUtils.RunOnUIThreadAsync(() =>
+            {
+                var p = new Paragraph();
 
-            p.Inlines.Add(new ServerMonitorOutput_Success(message));
+                p.Inlines.Add(new ServerMonitorOutput_Success(message));
 
-            ConsoleContent.Blocks.Add(p);
+                ConsoleContent.Blocks.Add(p);
+            }).DoNotWait();
+        }
+
+        public void AddWarningBlockContent(string message)
+        {
+            TaskUtils.RunOnUIThreadAsync(() =>
+            {
+                var p = new Paragraph();
+
+                p.Inlines.Add(new ServerMonitorOutput_Warning(message));
+
+                ConsoleContent.Blocks.Add(p);
+            }).DoNotWait();
         }
 
         public void ClearBlockContents()
@@ -785,12 +850,34 @@ namespace ServerManagerTool.Windows
                 return new RelayCommand<object>(
                     execute: async (_) =>
                     {
-                        await BackupSelectedServersAsync();
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await BackupSelectedServersAsync(processServersSequentially, sequentialProcessDelay);
                     },
                     canExecute: (_) =>
                     {
                         return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
                             && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand CancelServersCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: (_) =>
+                    {
+                        CancellationTokenSource.Cancel();
+
+                        AddWarningBlockContent(_globalizer.GetResourceString("ServerMonitor_ProcessServer_CancelRequestedLabel"));
+                    },
+                    canExecute: (_) =>
+                    {
+                        return CancellationTokenSource != null && !CancellationTokenSource.IsCancellationRequested;
                     }
                 );
             }
@@ -803,7 +890,10 @@ namespace ServerManagerTool.Windows
                 return new RelayCommand<object>(
                     execute: async (_) =>
                     {
-                        await RestartSelectedServersAsync();
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await StartSelectedServersAsync(restart: true, processServersSequentially, sequentialProcessDelay);
                     },
                     canExecute: (_) =>
                     {
@@ -821,7 +911,10 @@ namespace ServerManagerTool.Windows
                 return new RelayCommand<object>(
                     execute: async (_) =>
                     {
-                        await StopSelectedServersAsync(true);
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await StopSelectedServersAsync(shutdown: true, processServersSequentially, sequentialProcessDelay);
                     },
                     canExecute: (_) =>
                     {
@@ -839,7 +932,10 @@ namespace ServerManagerTool.Windows
                 return new RelayCommand<object>(
                     execute: async (_) =>
                     {
-                        await StartSelectedServersAsync();
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await StartSelectedServersAsync(restart: false, processServersSequentially, sequentialProcessDelay);
                     },
                     canExecute: (_) =>
                     {
@@ -857,7 +953,31 @@ namespace ServerManagerTool.Windows
                 return new RelayCommand<object>(
                     execute: async (_) =>
                     {
-                        await StopSelectedServersAsync(false);
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await StopSelectedServersAsync(shutdown: false, processServersSequentially, sequentialProcessDelay);
+                    },
+                    canExecute: (_) =>
+                    {
+                        return ServerManager?.Servers != null && ServerManager.Servers.Count > 0 && ServerManager.Servers.Any(s => s.Selected) && ServerManager.Servers.All(s => s.Runtime.Status != ServerStatus.Unknown)
+                            && CancellationTokenSource == null;
+                    }
+                );
+            }
+        }
+
+        public ICommand UpdateModsCommand
+        {
+            get
+            {
+                return new RelayCommand<object>(
+                    execute: async (_) =>
+                    {
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await UpdateSelectedServersAsync(updateModsOnly: true, processServersSequentially, sequentialProcessDelay);
                     },
                     canExecute: (_) =>
                     {
@@ -875,7 +995,10 @@ namespace ServerManagerTool.Windows
                 return new RelayCommand<object>(
                     execute: async (_) =>
                     {
-                        await UpdateSelectedServersAsync();
+                        var processServersSequentially = ProcessServersSequentially;
+                        var sequentialProcessDelay = SequentialProcessDelay;
+
+                        await UpdateSelectedServersAsync(updateModsOnly: false, processServersSequentially, sequentialProcessDelay);
                     },
                     canExecute: (_) =>
                     {
@@ -1017,7 +1140,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async Task BackupSelectedServersAsync()
+        private async Task BackupSelectedServersAsync(bool processServersSequentially, int sequentialProcessDelay)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1042,7 +1165,7 @@ namespace ServerManagerTool.Windows
                 // check if another command is being run against the profile
                 if (_currentProfileCommands.ContainsKey(server.Profile.ProfileID))
                 {
-                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ProfileName));
+                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ServerName));
                     continue;
                 }
 
@@ -1053,7 +1176,7 @@ namespace ServerManagerTool.Windows
                     case ServerStatus.Uninstalled:
                     case ServerStatus.Unknown:
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
                         continue;
                 }
 
@@ -1069,7 +1192,6 @@ namespace ServerManagerTool.Windows
             {
                 var app = new ServerApp(true)
                 {
-                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -1090,6 +1212,10 @@ namespace ServerManagerTool.Windows
                 var task = Task.Run(() =>
                 {
                     app.PerformProfileBackup(profile, token);
+
+                    Task.Delay(5000).Wait();
+
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
@@ -1102,113 +1228,22 @@ namespace ServerManagerTool.Windows
             {
                 await Task.WhenAll(tasks);
             }
-            catch { }
+            catch (OperationCanceledException)
+            {
+                AddCriticalBlockContent(_globalizer.GetResourceString("ServerMonitor_ProcessServer_CancelledLabel"));
+            }
+            catch (Exception)
+            {
+            }
             finally
             {
+                _currentProfileCommands.Clear();
                 CancellationTokenSource?.Dispose();
                 CancellationTokenSource = null;
             }
         }
 
-        private async Task RestartSelectedServersAsync()
-        {
-            if (CancellationTokenSource != null)
-                return;
-
-            var serverList = ServerManager.Servers.Where(s => s.Selected);
-            if (serverList.IsEmpty())
-            {
-                MessageBox.Show(_globalizer.GetResourceString("ServerMonitor_NoServersSelected_ErrorLabel"), _globalizer.GetResourceString("ServerMonitor_NoServersSelected_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            var result = MessageBox.Show(_globalizer.GetResourceString("ServerMonitor_RestartServers_ConfirmLabel"), _globalizer.GetResourceString("ServerMonitor_RestartServers_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (result != MessageBoxResult.Yes)
-                return;
-
-            ClearBlockContents();
-
-            var profileList = new List<ServerProfileSnapshot>();
-
-            foreach (var server in serverList)
-            {
-                // check if another command is being run against the profile
-                if (_currentProfileCommands.ContainsKey(server.Profile.ProfileID))
-                {
-                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ProfileName));
-                    continue;
-                }
-
-                switch (server.Runtime.Status)
-                {
-                    case ServerStatus.Initializing:
-                    case ServerStatus.Stopping:
-                    case ServerStatus.Uninstalled:
-                    case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
-                        continue;
-
-                    case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
-                        continue;
-                }
-
-                _currentProfileCommands.Add(server.Profile.ProfileID, CommandType.Restart);
-                var profile = ServerProfileSnapshot.Create(server.Profile);
-                profile.AutoRestartIfShutdown = true;
-                profileList.Add(profile);
-            }
-
-            CancellationTokenSource = new CancellationTokenSource();
-            var token = CancellationTokenSource.Token;
-            var tasks = new List<Task>();
-
-            foreach (var profile in profileList)
-            {
-                var app = new ServerApp(true)
-                {
-                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
-                    OutputLogs = false,
-                    SendAlerts = true,
-                    SendEmails = false,
-                    ServerProcess = ServerProcessType.Restart,
-                    ServerStatusChangeCallback = (ServerStatus serverStatus) =>
-                    {
-                        TaskUtils.RunOnUIThreadAsync(() =>
-                        {
-                            var server = ServerManager.Instance.Servers.FirstOrDefault(s => string.Equals(profile.ProfileId, s.Profile.ProfileID, StringComparison.OrdinalIgnoreCase));
-                            if (server != null)
-                            {
-                                server.Runtime.UpdateServerStatus(serverStatus, serverStatus != ServerStatus.Unknown);
-                            }
-                        }).Wait(token);
-                    }
-                };
-
-                var task = Task.Run(() =>
-                {
-                    app.PerformProfileShutdown(profile, true, false, false, false, token);
-                    _currentProfileCommands.Remove(profile.ProfileId);
-                }, token);
-
-                tasks.Add(task);
-
-                AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_RestartRequested"), profile.ServerName));
-            }
-
-            try
-            {
-                await Task.WhenAll(tasks);
-            }
-            catch { }
-            finally
-            {
-                CancellationTokenSource?.Dispose();
-                CancellationTokenSource = null;
-            }
-        }
-
-        private async Task StartSelectedServersAsync()
+        private async Task StartSelectedServersAsync(bool restart, bool processServersSequentially, int sequentialProcessDelay)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1233,7 +1268,7 @@ namespace ServerManagerTool.Windows
                 // check if another command is being run against the profile
                 if (_currentProfileCommands.ContainsKey(server.Profile.ProfileID))
                 {
-                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ProfileName));
+                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ServerName));
                     continue;
                 }
 
@@ -1241,18 +1276,25 @@ namespace ServerManagerTool.Windows
                 {
                     case ServerStatus.Initializing:
                     case ServerStatus.Stopping:
-                    case ServerStatus.Running:
                     case ServerStatus.Uninstalled:
                     case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
                         continue;
 
+                    case ServerStatus.Running:
+                        if (!restart)
+                        {
+                            AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
+                            continue;
+                        }
+                        break;
+
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ServerName));
                         continue;
                 }
 
-                _currentProfileCommands.Add(server.Profile.ProfileID, CommandType.Start);
+                _currentProfileCommands.Add(server.Profile.ProfileID, restart ? CommandType.Restart : CommandType.Start);
                 var profile = ServerProfileSnapshot.Create(server.Profile);
                 profile.AutoRestartIfShutdown = true;
                 profileList.Add(profile);
@@ -1266,7 +1308,6 @@ namespace ServerManagerTool.Windows
             {
                 var app = new ServerApp(true)
                 {
-                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -1286,28 +1327,42 @@ namespace ServerManagerTool.Windows
 
                 var task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, true, false, false, false, token);
+                    app.PerformProfileShutdown(profile, true, ServerUpdateType.None, false, false, token);
+
+                    Task.Delay(5000).Wait();
+
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
                 tasks.Add(task);
 
-                AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StartRequested"), profile.ServerName));
+                if (restart)
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_RestartRequested"), profile.ServerName));
+                else
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StartRequested"), profile.ServerName));
             }
 
             try
             {
                 await Task.WhenAll(tasks);
             }
-            catch { }
+            catch (OperationCanceledException)
+            {
+                AddCriticalBlockContent(_globalizer.GetResourceString("ServerMonitor_ProcessServer_CancelledLabel"));
+            }
+            catch (Exception)
+            {
+            }
             finally
             {
+                _currentProfileCommands.Clear();
                 CancellationTokenSource?.Dispose();
                 CancellationTokenSource = null;
             }
         }
 
-        private async Task StopSelectedServersAsync(bool shutdown)
+        private async Task StopSelectedServersAsync(bool shutdown, bool processServersSequentially, int sequentialProcessDelay)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1334,7 +1389,7 @@ namespace ServerManagerTool.Windows
                 // check if another command is being run against the profile
                 if (_currentProfileCommands.ContainsKey(server.Profile.ProfileID))
                 {
-                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ProfileName));
+                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ServerName));
                     continue;
                 }
 
@@ -1345,11 +1400,11 @@ namespace ServerManagerTool.Windows
                     case ServerStatus.Stopped:
                     case ServerStatus.Uninstalled:
                     case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
                         continue;
 
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ServerName));
                         continue;
                 }
 
@@ -1366,7 +1421,6 @@ namespace ServerManagerTool.Windows
                 var app = new ServerApp(true)
                 {
                     BackupWorldFile = shutdown,
-                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     PerformWorldSave = shutdown,
                     SendAlerts = true,
@@ -1390,7 +1444,11 @@ namespace ServerManagerTool.Windows
 
                 var task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, false, false, false, false, token);
+                    app.PerformProfileShutdown(profile, false, ServerUpdateType.None, false, false, token);
+
+                    Task.Delay(5000).Wait();
+
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
@@ -1406,15 +1464,22 @@ namespace ServerManagerTool.Windows
             {
                 await Task.WhenAll(tasks);
             }
-            catch { }
+            catch (OperationCanceledException)
+            {
+                AddCriticalBlockContent(_globalizer.GetResourceString("ServerMonitor_ProcessServer_CancelledLabel"));
+            }
+            catch (Exception)
+            {
+            }
             finally
             {
+                _currentProfileCommands.Clear();
                 CancellationTokenSource?.Dispose();
                 CancellationTokenSource = null;
             }
         }
 
-        private async Task UpdateSelectedServersAsync()
+        private async Task UpdateSelectedServersAsync(bool updateModsOnly, bool processServersSequentially, int sequentialProcessDelay)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1441,7 +1506,7 @@ namespace ServerManagerTool.Windows
                 // check if another command is being run against the profile
                 if (_currentProfileCommands.ContainsKey(server.Profile.ProfileID))
                 {
-                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ProfileName));
+                    AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandRunningProfile"), _currentProfileCommands[server.Profile.ProfileID], server.Profile.ServerName));
                     continue;
                 }
 
@@ -1454,11 +1519,11 @@ namespace ServerManagerTool.Windows
                     case ServerStatus.Initializing:
                     case ServerStatus.Stopping:
                     case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
                         continue;
 
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ServerName));
                         continue;
                 }
 
@@ -1476,7 +1541,6 @@ namespace ServerManagerTool.Windows
             {
                 var app = new ServerApp(true)
                 {
-                    DeleteOldBackupFiles = !Config.Default.AutoBackup_EnableBackup,
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
@@ -1496,7 +1560,11 @@ namespace ServerManagerTool.Windows
 
                 var task = Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, profile.RestartAfterShutdown1, true, false, false, token);
+                    app.PerformProfileShutdown(profile, profile.RestartAfterShutdown1, updateModsOnly ? ServerUpdateType.Mods : ServerUpdateType.ServerAndMods, false, false, token);
+
+                    Task.Delay(5000).Wait();
+
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
@@ -1509,9 +1577,16 @@ namespace ServerManagerTool.Windows
             {
                 await Task.WhenAll(tasks);
             }
-            catch { }
+            catch (OperationCanceledException)
+            {
+                AddCriticalBlockContent(_globalizer.GetResourceString("ServerMonitor_ProcessServer_CancelledLabel"));
+            }
+            catch (Exception)
+            {
+            }
             finally
             {
+                _currentProfileCommands.Clear();
                 CancellationTokenSource?.Dispose();
                 CancellationTokenSource = null;
             }

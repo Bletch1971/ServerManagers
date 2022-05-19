@@ -672,7 +672,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="ServerStatusWatcher_LocalStatusQueryDelay" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">15000</Value>
+      <Value Profile="(Default)">5000</Value>
     </Setting>
     <Setting Name="ServerStatusWatcher_RemoteStatusQueryDelay" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">120000</Value>

@@ -224,7 +224,7 @@ namespace ServerManagerTool
                 var app = new ServerApp(true)
                 {
                     CheckForOnlinePlayers = this.CheckForOnlinePlayers,
-                    SendMessages = this.SendShutdownMessages,
+                    SendShutdownMessages = this.SendShutdownMessages,
                     BackupWorldFile = this.BackupWorldFile,
                     ShutdownInterval = this.ShutdownInterval,
                     ShutdownReason = this.ShutdownReason,
@@ -253,7 +253,7 @@ namespace ServerManagerTool
 
                 _shutdownCancellationSource = new CancellationTokenSource();
 
-                var exitCode = await Task.Run(() => app.PerformProfileShutdown(profile, restartServer, updateServer, false, CommonConfig.Default.SteamCmdRemoveQuit, _shutdownCancellationSource.Token));
+                var exitCode = await Task.Run(() => app.PerformProfileShutdown(profile, restartServer, updateServer ? ServerUpdateType.ServerAndMods : ServerUpdateType.None, false, CommonConfig.Default.SteamCmdRemoveQuit, _shutdownCancellationSource.Token));
                 if (exitCode != ServerApp.EXITCODE_NORMALEXIT && exitCode != ServerApp.EXITCODE_CANCELLED)
                     throw new ApplicationException($"An error occured during the shutdown process - ExitCode: {exitCode}");
 

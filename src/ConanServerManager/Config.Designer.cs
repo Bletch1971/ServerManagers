@@ -1833,7 +1833,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("15000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
         public int ServerStatusWatcher_LocalStatusQueryDelay {
             get {
                 return ((int)(this["ServerStatusWatcher_LocalStatusQueryDelay"]));

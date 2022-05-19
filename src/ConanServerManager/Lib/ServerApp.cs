@@ -37,9 +37,14 @@ namespace ServerManagerTool.Lib
         public const int MUTEX_TIMEOUT = 5;         // 5 minutes
         public const int MUTEX_ATTEMPTDELAY = 5000; // 5 seconds
 
-        private const int STEAM_MAXRETRIES = 10;
-        private const int RCON_MAXRETRIES = 3;
-        private const int FILECOPY_MAXRETRIES = 3;
+        private const int MAXRETRIES_FILECOPY = 3;
+        private const int MAXRETRIES_RCON = 3;
+        private const int MAXRETRIES_STEAM = 10;
+
+        private const int DELAY_RCONCONNECTION = 1000; // 1 seconds
+        private const int DELAY_RCONRETRY = 10000; // 10 seconds
+
+        private const int DIRECTORIES_PER_LINE = 200;
 
         public const int EXITCODE_NORMALEXIT = 0;
         private const int EXITCODE_EXITWITHERRORS = 98;
@@ -83,8 +88,6 @@ namespace ServerManagerTool.Lib
         public const string LOGPREFIX_AUTOSHUTDOWN = "#AutoShutdownLogs";
         public const string LOGPREFIX_AUTOUPDATE = "#AutoUpdateLogs";
 
-        private const int DIRECTORIES_PER_LINE = 200;
-
         private static DateTime _startTime = DateTime.Now;
         private static Dictionary<ServerProfileSnapshot, ServerProfile> _profiles = null;
 
@@ -96,22 +99,22 @@ namespace ServerManagerTool.Lib
         private QueryMaster.Rcon _rconConsole = null;
         private bool _serverRunning = false;
 
-        public bool BackupWorldFile = Config.Default.BackupWorldFile;
-        public bool CheckForOnlinePlayers = Config.Default.ServerShutdown_CheckForOnlinePlayers;
-        public bool SendMessages = Config.Default.ServerShutdown_SendShutdownMessages;
-        public bool DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles;
-        public int ExitCode = EXITCODE_NORMALEXIT;
-        public bool OutputLogs = false;
-        public bool PerformWorldSave = Config.Default.ServerShutdown_EnableWorldSave;
-        public bool SendAlerts = false;
-        public bool SendEmails = false;
-        public string ShutdownReason = null;
-        public string UpdateReason = null;
-        public ServerProcessType ServerProcess = ServerProcessType.Unknown;
-        public int ShutdownInterval = Config.Default.ServerShutdown_GracePeriod;
-        public ProgressDelegate ProgressCallback = null;
-        public ProcessWindowStyle SteamCMDProcessWindowStyle = ProcessWindowStyle.Minimized;
-        public ServerStatusChangeDelegate ServerStatusChangeCallback = null;
+        public bool BackupWorldFile { get; set; } = Config.Default.BackupWorldFile;
+        public bool CheckForOnlinePlayers { get; set; } = Config.Default.ServerShutdown_CheckForOnlinePlayers;
+        public bool DeleteOldBackupFiles { get; set; } = Config.Default.AutoBackup_DeleteOldFiles;
+        public int ExitCode { get; set; } = EXITCODE_NORMALEXIT;
+        public bool OutputLogs { get; set; } = false;
+        public bool PerformWorldSave { get; set; } = Config.Default.ServerShutdown_EnableWorldSave;
+        public bool SendAlerts { get; set; } = false;
+        public bool SendEmails { get; set; } = false;
+        public ProgressDelegate ProgressCallback { get; set; } = null;
+        public bool SendShutdownMessages { get; set; } = Config.Default.ServerShutdown_SendShutdownMessages;
+        public ServerProcessType ServerProcess { get; set; } = ServerProcessType.Unknown;
+        public ServerStatusChangeDelegate ServerStatusChangeCallback { get; set; } = null;
+        public int ShutdownInterval { get; set; } = Config.Default.ServerShutdown_GracePeriod;
+        public string ShutdownReason { get; set; } = null;
+        public ProcessWindowStyle SteamCMDProcessWindowStyle { get; set; } = ProcessWindowStyle.Minimized;
+        public string UpdateReason { get; set; } = null;
 
         public ServerApp(bool resetStartTime = false)
         {
@@ -223,7 +226,7 @@ namespace ServerManagerTool.Lib
             ExitCode = EXITCODE_NORMALEXIT;
         }
 
-        private void ShutdownServer(bool restartServer, bool updateServer, bool steamCmdRemoveQuit, CancellationToken cancellationToken)
+        private void ShutdownServer(bool restartServer, ServerUpdateType updateType, bool steamCmdRemoveQuit, CancellationToken cancellationToken)
         {
             if (_profile == null)
             {
@@ -277,13 +280,13 @@ namespace ServerManagerTool.Lib
                     return;
             }
 
-            if (updateServer)
+            if (updateType != ServerUpdateType.None)
             {
                 try
                 {
                     LogProfileMessage("");
                     ServerStatusChangeCallback?.Invoke(ServerStatus.Updating);
-                    UpgradeLocal(true, true, steamCmdRemoveQuit, cancellationToken);
+                    UpgradeLocal(updateType, true, steamCmdRemoveQuit, cancellationToken);
                 }
                 finally
                 {
@@ -419,7 +422,6 @@ namespace ServerManagerTool.Lib
 
             QueryMaster.Server gameServer = null;
             bool sent = false;
-            var serverAccessible = true;
 
             try
             {
@@ -481,17 +483,9 @@ namespace ServerManagerTool.Lib
                         }
                         catch (Exception ex)
                         {
-                            serverAccessible = false;
-
                             LogProfileError("Error getting online players.", false);
                             LogProfileError(ex.Message, false);
                             LogProfileError("", false);
-                        }
-
-                        if (!serverAccessible)
-                        {
-                            LogProfileMessage("Server not accessible, shutdown timer cancelled.");
-                            break;
                         }
 
                         // check if anyone is logged into the server
@@ -499,24 +493,6 @@ namespace ServerManagerTool.Lib
                         {
                             LogProfileMessage("No online players, shutdown timer cancelled.");
                             break;
-                        }
-
-                        if (playerCount < 0)
-                        {
-                            LogProfileMessage("Unknown online players, shutdown timer cancelled.");
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        try
-                        {
-                            var serverInfo = gameServer?.GetInfo();
-                            serverAccessible = true;
-                        }
-                        catch
-                        {
-                            serverAccessible = false;
                         }
                     }
 
@@ -583,7 +559,7 @@ namespace ServerManagerTool.Lib
 
                 // BH - commented out until funcom provide a way to send a save command
                 // check if we need to perform a world save
-                //if (serverAccessible && PerformWorldSave)
+                //if (PerformWorldSave)
                 //{
                 //    try
                 //    {
@@ -731,7 +707,7 @@ namespace ServerManagerTool.Lib
             ExitCode = EXITCODE_SHUTDOWN_TIMEOUT;
         }
 
-        private void UpgradeLocal(bool validate, bool updateMods, bool steamCmdRemoveQuit, CancellationToken cancellationToken)
+        private void UpgradeLocal(ServerUpdateType updateType, bool validate, bool steamCmdRemoveQuit, CancellationToken cancellationToken)
         {
             if (_profile == null)
             {
@@ -756,67 +732,93 @@ namespace ServerManagerTool.Lib
                 var downloadSuccessful = false;
                 var success = false;
 
-                // *********************
-                // Server Update Section
-                // *********************
-
-                LogProfileMessage("\r\n");
-                LogProfileMessage("Starting server update.");
-                LogProfileMessage("Updating server from steam.\r\n");
-
-                downloadSuccessful = !Config.Default.SteamCmdRedirectOutput;
-                void serverOutputHandler(object s, DataReceivedEventArgs e)
-                {
-                    var dataValue = e.Data ?? string.Empty;
-                    LogProfileMessage(dataValue);
-                    if (!gotNewVersion && dataValue.Contains("downloading,"))
-                    {
-                        gotNewVersion = true;
-                    }
-                    if (dataValue.StartsWith("Success!"))
-                    {
-                        downloadSuccessful = true;
-                    }
-                }
-
-                var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, _profile.InstallDirectory, string.Empty, Config.Default.AppIdServer, string.Empty, validate ? "validate" : string.Empty);
+                var steamCmdArgs = string.Empty;
                 var workingDirectory = Config.Default.DataPath;
 
-                if (steamCmdRemoveQuit)
-                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Normal;
-
-                success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, _profile.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? (DataReceivedEventHandler)serverOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
-                if (success && downloadSuccessful)
+                if ((updateType & ServerUpdateType.Server) == ServerUpdateType.Server)
                 {
-                    LogProfileMessage("Finished server update.");
-
-                    if (Directory.Exists(_profile.InstallDirectory))
-                    {
-                        if (!Config.Default.SteamCmdRedirectOutput)
-                            // check if any of the server files have changed.
-                            gotNewVersion = HasNewServerVersion(_profile.InstallDirectory, startTime);
-
-                        LogProfileMessage($"New server version - {gotNewVersion.ToString().ToUpperInvariant()}.");
-                    }
+                    // *********************
+                    // Server Update Section
+                    // *********************
 
                     LogProfileMessage("\r\n");
+                    LogProfileMessage("Starting server update.");
+                    LogProfileMessage("Updating server from steam.\r\n");
+
+                    downloadSuccessful = !Config.Default.SteamCmdRedirectOutput;
+                    void serverOutputHandler(object s, DataReceivedEventArgs e)
+                    {
+                        var dataValue = e.Data ?? string.Empty;
+                        LogProfileMessage(dataValue);
+                        if (!gotNewVersion && dataValue.Contains("downloading,"))
+                        {
+                            gotNewVersion = true;
+                        }
+                        if (dataValue.StartsWith("Success!"))
+                        {
+                            downloadSuccessful = true;
+                        }
+                    }
+
+                    // create the branch arguments
+                    var steamCmdInstallServerBetaArgs = new StringBuilder();
+                    if (!string.IsNullOrWhiteSpace(_profile.BranchName))
+                    {
+                        steamCmdInstallServerBetaArgs.AppendFormat(Config.Default.SteamCmdInstallServerBetaNameArgsFormat, _profile.BranchName);
+                        if (!string.IsNullOrWhiteSpace(_profile.BranchPassword))
+                        {
+                            steamCmdInstallServerBetaArgs.Append(" ");
+                            steamCmdInstallServerBetaArgs.AppendFormat(Config.Default.SteamCmdInstallServerBetaPasswordArgsFormat, _profile.BranchPassword);
+                        }
+                    }
+
+                    steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, _profile.InstallDirectory, Config.Default.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
+                    if (steamCmdRemoveQuit)
+                    {
+                        SteamCMDProcessWindowStyle = ProcessWindowStyle.Normal;
+                    }
+
+                    success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, _profile.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? (DataReceivedEventHandler)serverOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
+                    if (success && downloadSuccessful)
+                    {
+                        LogProfileMessage("Finished server update.");
+
+                        if (Directory.Exists(_profile.InstallDirectory))
+                        {
+                            if (!Config.Default.SteamCmdRedirectOutput)
+                            {
+                                // check if any of the server files have changed.
+                                gotNewVersion = HasNewServerVersion(_profile.InstallDirectory, startTime);
+                            }
+
+                            LogProfileMessage($"New server version - {gotNewVersion.ToString().ToUpperInvariant()}.");
+                        }
+
+                        LogProfileMessage("\r\n");
+                    }
+                    else
+                    {
+                        success = false;
+                        LogProfileMessage("****************************");
+                        LogProfileMessage("ERROR: Failed server update.");
+                        LogProfileMessage("****************************");
+                        LogProfileMessage("Check steamcmd logs for more information why the server update failed.\r\n");
+
+                        if (Config.Default.SteamCmdRedirectOutput)
+                        {
+                            LogProfileMessage($"If the server update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the settings window.\r\n");
+                        }
+
+                        ExitCode = EXITCODE_SERVERUPDATEFAILED;
+                    }
                 }
                 else
                 {
-                    success = false;
-                    LogProfileMessage("****************************");
-                    LogProfileMessage("ERROR: Failed server update.");
-                    LogProfileMessage("****************************");
-                    LogProfileMessage("Check steamcmd logs for more information why the server update failed.\r\n");
-
-                    if (Config.Default.SteamCmdRedirectOutput)
-                        LogProfileMessage($"If the server update keeps failing try disabling the '{_globalizer.GetResourceString("GlobalSettings_SteamCmdRedirectOutputLabel")}' option in the settings window.\r\n");
-
-                    ExitCode = EXITCODE_SERVERUPDATEFAILED;
+                    success = true;
                 }
 
                 // check if we need to update the mods
-                if (updateMods)
+                if ((updateType & ServerUpdateType.Mods) == ServerUpdateType.Mods)
                 {
                     if (success)
                     {
@@ -861,7 +863,9 @@ namespace ServerManagerTool.Lib
                                 modTitle = $"{modId} - {modDetail?.title ?? "<unknown>"}";
 
                                 if (modDetail != null)
+                                {
                                     LogProfileMessage($"{modDetail.title}.\r\n");
+                                }
 
                                 var modCachePath = ModUtils.GetModCachePath(modId);
                                 var cacheTimeFile = ModUtils.GetLatestModCacheTimeFile(modId);
@@ -944,9 +948,13 @@ namespace ServerManagerTool.Lib
 
                                         steamCmdArgs = string.Empty;
                                         if (Config.Default.SteamCmd_UseAnonymousCredentials)
+                                        {
                                             steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_AnonymousUsername, Config.Default.AppId, modId);
+                                        }
                                         else
+                                        {
                                             steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, Config.Default.AppId, modId);
+                                        }
 
                                         modSuccess = ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
                                         if (modSuccess && downloadSuccessful)
@@ -990,10 +998,14 @@ namespace ServerManagerTool.Lib
                                         }
                                     }
                                     else
+                                    {
                                         modSuccess = !updateError;
+                                    }
                                 }
                                 else
+                                {
                                     modSuccess = !updateError;
+                                }
 
                                 if (copyMod)
                                 {
@@ -1258,7 +1270,7 @@ namespace ServerManagerTool.Lib
                             {
                                 // perform a steamcmd validate to confirm all the files
                                 LogProfileMessage("Validating server files (*new*).");
-                                UpgradeLocal(true, false, false, CancellationToken.None);
+                                UpgradeLocal(ServerUpdateType.Server, true, false, CancellationToken.None);
                                 LogProfileMessage("Validated server files (*new*).");
                             }
 
@@ -1637,7 +1649,7 @@ namespace ServerManagerTool.Lib
                     LogError(logError);
 
                     // check if we have reached the max failed attempt limit.
-                    if (!Config.Default.AutoUpdate_RetryOnFail || attempt >= STEAM_MAXRETRIES)
+                    if (!Config.Default.AutoUpdate_RetryOnFail || attempt >= MAXRETRIES_STEAM)
                     {
                         // failed max limit reached
                         if (Config.Default.SteamCmdRedirectOutput)
@@ -1759,7 +1771,7 @@ namespace ServerManagerTool.Lib
                 LogBranchError(branchName, logError);
 
                 // check if we have reached the max failed attempt limit.
-                if (!Config.Default.AutoUpdate_RetryOnFail || attempt >= STEAM_MAXRETRIES)
+                if (!Config.Default.AutoUpdate_RetryOnFail || attempt >= MAXRETRIES_STEAM)
                 {
                     // failed max limit reached
                     if (Config.Default.SteamCmdRedirectOutput)
@@ -2173,7 +2185,7 @@ namespace ServerManagerTool.Lib
                     catch (IOException)
                     {
                         retries++;
-                        if (retries >= FILECOPY_MAXRETRIES) throw;
+                        if (retries >= MAXRETRIES_FILECOPY) throw;
                         Task.Delay(5000).Wait();
                     }
                 }
@@ -2579,8 +2591,7 @@ namespace ServerManagerTool.Lib
             if (string.IsNullOrWhiteSpace(command))
                 return false;
 
-            var rconRetries = RCON_MAXRETRIES;
-            var sent = false;
+            var rconRetries = MAXRETRIES_RCON;
 
             try
             {
@@ -2596,23 +2607,23 @@ namespace ServerManagerTool.Lib
                     if (_rconConsole == null)
                     {
                         LogProfileError("RCON connection could not be created.", false);
-                        rconRetries--;
                     }
                     else
                     {
                         try
                         {
                             _rconConsole.SendCommand(command);
-                            sent = true;
+                            return true;
                         }
                         catch (Exception ex)
                         {
                             LogProfileError(ex.Message, false);
                             LogProfileError(ex.StackTrace, false);
                         }
-
-                        break;
                     }
+
+                    rconRetries--;
+                    Task.Delay(DELAY_RCONRETRY).Wait();
                 }
             }
             finally
@@ -2620,7 +2631,7 @@ namespace ServerManagerTool.Lib
                 CloseRconConsole();
             }
 
-            return sent;
+            return false;
         }
 
         private bool SendMessage(string message, CancellationToken token)
@@ -2630,7 +2641,7 @@ namespace ServerManagerTool.Lib
 
         private bool SendMessage(string mode, string message, CancellationToken token)
         {
-            if (string.IsNullOrWhiteSpace(message) || !SendMessages)
+            if (string.IsNullOrWhiteSpace(message) || !SendShutdownMessages)
                 return false;
 
             var sent = SendCommand($"{GetRconMessageCommand(mode)} {message}", token);
@@ -2696,7 +2707,7 @@ namespace ServerManagerTool.Lib
                 _rconConsole.Dispose();
                 _rconConsole = null;
 
-                Task.Delay(1000).Wait();
+                Task.Delay(DELAY_RCONCONNECTION).Wait();
             }
         }
 
@@ -2722,7 +2733,7 @@ namespace ServerManagerTool.Lib
 
                 LogProfileDebug($"SUCCESS: {nameof(SetupRconConsole)} - ServerQuery was created.", false);
 
-                Task.Delay(1000).Wait();
+                Task.Delay(DELAY_RCONCONNECTION).Wait();
 
                 LogProfileMessage($"Opening RCON connection to server ({_profile.ServerIPAddress}:{_profile.RconPort}).", false);
 
@@ -2822,7 +2833,7 @@ namespace ServerManagerTool.Lib
             return ExitCode;
         }
 
-        public int PerformProfileShutdown(ServerProfileSnapshot profile, bool performRestart, bool performUpdate, bool checkGracePeriod, bool steamCmdRemoveQuit, CancellationToken cancellationToken)
+        public int PerformProfileShutdown(ServerProfileSnapshot profile, bool performRestart, ServerUpdateType updateType, bool checkGracePeriod, bool steamCmdRemoveQuit, CancellationToken cancellationToken)
         {
             _profile = profile;
 
@@ -2864,7 +2875,7 @@ namespace ServerManagerTool.Lib
                     {
                         LogProfileMessage("Server lock established.\r\n");
 
-                        ShutdownServer(performRestart, performUpdate, steamCmdRemoveQuit, cancellationToken);
+                        ShutdownServer(performRestart, updateType, steamCmdRemoveQuit, cancellationToken);
 
                         if (ExitCode != EXITCODE_NORMALEXIT)
                         {
@@ -3274,7 +3285,7 @@ namespace ServerManagerTool.Lib
                     ServerProcess = type,
                     SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
                 };
-                exitCode = app.PerformProfileShutdown(profile, performRestart, performUpdate, true, false, CancellationToken.None);
+                exitCode = app.PerformProfileShutdown(profile, performRestart, performUpdate ? ServerUpdateType.ServerAndMods : ServerUpdateType.None, true, false, CancellationToken.None);
 
                 if (profile.ServerUpdated)
                 {

@@ -224,6 +224,7 @@
     <Compile Include="Enums\ServerSettingsCustomLevelsAction.cs" />
     <Compile Include="Enums\ServerSettingsResetAction.cs" />
     <Compile Include="Enums\ServerStatus.cs" />
+    <Compile Include="Enums\ServerUpdateType.cs" />
     <Compile Include="Enums\StatsMultiplier.cs" />
     <Compile Include="Enums\AvailabilityStatus.cs" />
     <Compile Include="Enums\WatcherServerStatus.cs" />
