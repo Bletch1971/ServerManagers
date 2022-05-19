@@ -433,7 +433,7 @@
     <sys:String x:Key="ServerMonitor_InstallServerTooltip">Install the server.</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Update/Verify the server.</sys:String>
 
-    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">The process was cancelled by the user. You will need to the status of your servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">The process was cancelled by the user. You will need to check the status of your servers.</sys:String>
     <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">A process cancellation request has been sent.</sys:String>
 
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Server Update Error</sys:String>

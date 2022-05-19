@@ -442,17 +442,20 @@ namespace ServerManagerTool.Lib
                     SendMessage(ShutdownReason, cancellationToken);
                 }
 
-                LogProfileMessage("Starting shutdown timer...");
-
                 var minutesLeft = ShutdownInterval;
                 if (ServerProcess == ServerProcessType.Stop)
                 {
-                    LogProfileMessage($"Server shutdown type is {ServerProcess}, shutdown timer cancelled.");
+                    LogProfileMessage($"Server shutdown type is {ServerProcess}, shutdown timer will be skipped.");
                     minutesLeft = 0;
                 }
-                else if (!CheckForOnlinePlayers)
+                else
                 {
-                    LogProfileMessage("CheckForOnlinePlayers disabled, shutdown timer will not perform online player check.");
+                    LogProfileMessage("Starting shutdown timer...");
+
+                    if (!CheckForOnlinePlayers)
+                    {
+                        LogProfileMessage("CheckForOnlinePlayers disabled, shutdown timer will not perform online player check.");
+                    }
                 }
 
                 while (minutesLeft > 0)

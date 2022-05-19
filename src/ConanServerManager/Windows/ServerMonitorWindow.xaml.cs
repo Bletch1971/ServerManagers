@@ -68,6 +68,8 @@ namespace ServerManagerTool.Windows
             }
         }
 
+        private const int DELAY_PROCESSCOMPLETE = 5000; // 5 seconds
+
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private static readonly List<ServerMonitorWindow> Windows = new List<ServerMonitorWindow>();
 
@@ -1173,7 +1175,7 @@ namespace ServerManagerTool.Windows
                     case ServerStatus.Uninstalled:
                     case ServerStatus.Unknown:
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
                         continue;
                 }
 
@@ -1206,24 +1208,45 @@ namespace ServerManagerTool.Windows
                     }
                 };
 
-                var task = Task.Run(() =>
+                var task = new Task(() =>
                 {
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_BackupRequested"), profile.ServerName));
+
                     app.PerformProfileBackup(profile, token);
 
-                    Task.Delay(5000).Wait();
+                    Task.Delay(DELAY_PROCESSCOMPLETE).Wait();
 
                     AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
                 tasks.Add(task);
-
-                AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_BackupRequested"), profile.ServerName));
             }
 
             try
             {
-                await Task.WhenAll(tasks);
+                if (processServersSequentially)
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                        await task;
+
+                        await Task.Delay(sequentialProcessDelay * 1000, token);
+                    }
+                }
+                else
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                    }
+                    await Task.WhenAll(tasks);
+                }
             }
             catch (OperationCanceledException)
             {
@@ -1275,19 +1298,19 @@ namespace ServerManagerTool.Windows
                     case ServerStatus.Stopping:
                     case ServerStatus.Uninstalled:
                     case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
                         continue;
 
                     case ServerStatus.Running:
                         if (!restart)
                         {
-                            AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
+                            AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
                             continue;
                         }
                         break;
 
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ServerName));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
                         continue;
                 }
 
@@ -1322,27 +1345,48 @@ namespace ServerManagerTool.Windows
                     }
                 };
 
-                var task = Task.Run(() =>
+                var task = new Task(() =>
                 {
+                    if (restart)
+                        AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_RestartRequested"), profile.ServerName));
+                    else
+                        AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StartRequested"), profile.ServerName));
+
                     app.PerformProfileShutdown(profile, true, ServerUpdateType.None, false, false, token);
 
-                    Task.Delay(5000).Wait();
+                    Task.Delay(DELAY_PROCESSCOMPLETE).Wait();
 
                     AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
                 tasks.Add(task);
-
-                if (restart)
-                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_RestartRequested"), profile.ServerName));
-                else
-                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StartRequested"), profile.ServerName));
             }
 
             try
             {
-                await Task.WhenAll(tasks);
+                if (processServersSequentially)
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                        await task;
+
+                        await Task.Delay(sequentialProcessDelay * 1000, token);
+                    }
+                }
+                else
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                    }
+                    await Task.WhenAll(tasks);
+                }
             }
             catch (OperationCanceledException)
             {
@@ -1392,16 +1436,23 @@ namespace ServerManagerTool.Windows
 
                 switch (server.Runtime.Status)
                 {
-                    case ServerStatus.Initializing:
                     case ServerStatus.Stopping:
                     case ServerStatus.Stopped:
                     case ServerStatus.Uninstalled:
                     case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
                         continue;
 
+                    case ServerStatus.Initializing:
+                        if (shutdown)
+                        {
+                            AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
+                            continue;
+                        }
+                        break;
+
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ServerName));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
                         continue;
                 }
 
@@ -1439,27 +1490,48 @@ namespace ServerManagerTool.Windows
                 if (!shutdown)
                     app.ShutdownInterval = 0;
 
-                var task = Task.Run(() =>
+                var task = new Task(() =>
                 {
+                    if (shutdown)
+                        AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ShutdownRequested"), profile.ServerName));
+                    else
+                        AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StopRequested"), profile.ServerName));
+
                     app.PerformProfileShutdown(profile, false, ServerUpdateType.None, false, false, token);
 
-                    Task.Delay(5000).Wait();
+                    Task.Delay(DELAY_PROCESSCOMPLETE).Wait();
 
                     AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
                 tasks.Add(task);
-
-                if (shutdown)
-                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ShutdownRequested"), profile.ServerName));
-                else
-                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_StopRequested"), profile.ServerName));
             }
 
             try
             {
-                await Task.WhenAll(tasks);
+                if (processServersSequentially)
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                        await task;
+
+                        await Task.Delay(sequentialProcessDelay * 1000, token);
+                    }
+                }
+                else
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                    }
+                    await Task.WhenAll(tasks);
+                }
             }
             catch (OperationCanceledException)
             {
@@ -1516,11 +1588,11 @@ namespace ServerManagerTool.Windows
                     case ServerStatus.Initializing:
                     case ServerStatus.Stopping:
                     case ServerStatus.Unknown:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ServerName, server.Runtime.StatusString));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileBadStatus"), server.Profile.ProfileName, server.Runtime.StatusString));
                         continue;
 
                     case ServerStatus.Updating:
-                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ServerName));
+                        AddErrorBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_ProfileUpdating"), server.Profile.ProfileName));
                         continue;
                 }
 
@@ -1555,24 +1627,45 @@ namespace ServerManagerTool.Windows
                     }
                 };
 
-                var task = Task.Run(() =>
+                var task = new Task(() =>
                 {
+                    AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_UpdateRequested"), profile.ServerName));
+
                     app.PerformProfileShutdown(profile, profile.RestartAfterShutdown1, updateModsOnly ? ServerUpdateType.Mods : ServerUpdateType.ServerAndMods, false, false, token);
 
-                    Task.Delay(5000).Wait();
+                    Task.Delay(DELAY_PROCESSCOMPLETE).Wait();
 
                     AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_CommandComplete"), profile.ServerName));
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
                 tasks.Add(task);
-
-                AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_UpdateRequested"), profile.ServerName));
             }
 
             try
             {
-                await Task.WhenAll(tasks);
+                if (processServersSequentially)
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                        await task;
+
+                        await Task.Delay(sequentialProcessDelay * 1000, token);
+                    }
+                }
+                else
+                {
+                    foreach (var task in tasks)
+                    {
+                        token.ThrowIfCancellationRequested();
+
+                        task.Start();
+                    }
+                    await Task.WhenAll(tasks);
+                }
             }
             catch (OperationCanceledException)
             {
