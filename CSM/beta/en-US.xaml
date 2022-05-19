@@ -400,8 +400,9 @@
     <!--#region Server Monitor Window -->
     <sys:String x:Key="ServerMonitor_Title">Server Monitor</sys:String>
 
-    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selected</sys:String>
     <sys:String x:Key="ServerMonitor_TotalCountLabel">Total Servers:</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selected</sys:String>
+    <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Profile</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
@@ -410,22 +411,30 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
-    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Start the selected servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">Shutdown Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_ShutdownServersButtonTooltip">Shutdown the selected servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">Stop Selected Servers</sys:String>
-    <sys:String x:Key="ServerMonitor_StopServersButtonTooltip">Stop the selected servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Restart the selected servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServersButtonTooltip">Update the selected servers.</sys:String>
-    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Backup the selected servers.</sys:String>
     <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">Select all servers.</sys:String>
     <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">Unselect all servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Start the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">Shutdown Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">Stop Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Restart the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">Update/Verify Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">Update Mods Only on Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Backup the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">Cancel processing the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">Process Servers Sequentially</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">If enabled, servers will be processed one after the other; otherwise they will all be processed at the same time.</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">Sequential Process Delay</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">The number of seconds to wait before the next server will be processed.</sys:String>
+
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
     <sys:String x:Key="ServerMonitor_StopServerTooltip">Stop the server.</sys:String>
     <sys:String x:Key="ServerMonitor_InstallServerTooltip">Install the server.</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Update/Verify the server.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">The process was cancelled by the user. You will need to check the status of your servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">A process cancellation request has been sent.</sys:String>
 
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Server Update Error</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Another server is being upgraded, wait until the upgrade has finished and try again.</sys:String>
@@ -1356,6 +1365,7 @@
     <sys:String x:Key="DiscordBot_StartRequested">A start request for server '{0}' has been sent.</sys:String>
     <sys:String x:Key="DiscordBot_StopRequested">A stop request for server '{0}' has been sent.</sys:String>
     <sys:String x:Key="DiscordBot_UpdateRequested">An update request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandComplete">The request for server '{0}' has completed.</sys:String>
 
     <sys:String x:Key="DiscordBot_CountLabel">Count:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
