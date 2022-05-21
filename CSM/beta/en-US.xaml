@@ -1198,6 +1198,8 @@
     <sys:String x:Key="ServerSettings_ServerTransferEnabledTooltip">If enabled, will enable character server transfers.</sys:String>
     <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerLabel">Can Import Directly from Same Server</sys:String>
     <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerTooltip">If enabled, will allow players to directly import characters that were exported from exactly the same server.</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogLabel">Output Server Log to Server Console</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogTooltip">If enabled, the server logs will be output to the server console.</sys:String>
 
     <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
