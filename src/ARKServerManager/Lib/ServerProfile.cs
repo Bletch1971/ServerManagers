@@ -724,6 +724,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(UseVivoxProperty, value); }
         }
 
+        public static readonly DependencyProperty OutputServerLogProperty = DependencyProperty.Register(nameof(OutputServerLog), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool OutputServerLog
+        {
+            get { return (bool)GetValue(OutputServerLogProperty); }
+            set { SetValue(OutputServerLogProperty, value); }
+        }
+
         public static readonly DependencyProperty AllowSharedConnectionsProperty = DependencyProperty.Register(nameof(AllowSharedConnections), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration)]
         public bool AllowSharedConnections
@@ -4002,6 +4010,11 @@ namespace ServerManagerTool.Lib
             serverArgs.Append(' ');
             serverArgs.Append(Config.Default.ServerCommandLineStandardArgs);
 
+            if (this.OutputServerLog)
+            {
+                serverArgs.Append($" -log");
+            }
+
             return serverArgs.ToString();
         }
 
@@ -5217,6 +5230,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(CrossplayProperty);
             this.ClearValue(EpicOnlyProperty);
             this.ClearValue(EnablePublicIPForEpicProperty);
+            this.ClearValue(OutputServerLogProperty);
 
             this.ClearValue(AltSaveDirectoryNameProperty);
             this.ClearValue(CrossArkClusterIdProperty);
@@ -5874,6 +5888,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(CrossplayProperty, sourceProfile.Crossplay);
             this.SetValue(EpicOnlyProperty, sourceProfile.EpicOnly);
             this.SetValue(EnablePublicIPForEpicProperty, sourceProfile.EnablePublicIPForEpic);
+            this.SetValue(OutputServerLogProperty, sourceProfile.OutputServerLog);
             //this.SetValue(AltSaveDirectoryNameProperty, sourceProfile.AltSaveDirectoryName);
             this.SetValue(CrossArkClusterIdProperty, sourceProfile.CrossArkClusterId);
             this.SetValue(ClusterDirOverrideProperty, sourceProfile.ClusterDirOverride);

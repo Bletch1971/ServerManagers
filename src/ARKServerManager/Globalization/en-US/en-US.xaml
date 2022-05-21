@@ -1171,6 +1171,8 @@
     <sys:String x:Key="ServerSettings_UseBattlEyeLabel">Enable BattlEye Anti-Cheat System</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">If enabled, the BattlEye Anti-Cheat System will be enabled.</sys:String>
     <sys:String x:Key="ServerSettings_AntiSpeedHackBiasUnits">x</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogLabel">Output Server Log to Server Console</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogTooltip">If enabled, the server logs will be output to the server console.</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresLabel">Use All Available Cores</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresTooltip">If enabled, all of your CPU cores will be used, if all of them are not being utilized after using this launch option, then try to disable it.</sys:String>
     <sys:String x:Key="ServerSettings_UseCacheLabel">Use Cache</sys:String>

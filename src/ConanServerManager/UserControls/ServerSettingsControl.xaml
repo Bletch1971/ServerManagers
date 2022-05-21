@@ -772,6 +772,7 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                             <RowDefinition/>
+                                            <RowDefinition/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" MinWidth="100"/>
@@ -797,6 +798,8 @@
 
                                         <CheckBox             Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" Content="{DynamicResource ServerSettings_ServerTransferEnabledLabel}" IsChecked="{Binding ServerTransferEnabled}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerTransferEnabledTooltip}" HorizontalAlignment="Left"/>
                                         <CheckBox             Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,5,5,0" Content="{DynamicResource ServerSettings_CanImportDirectlyFromSameServerLabel}" IsChecked="{Binding CanImportDirectlyFromSameServer}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_CanImportDirectlyFromSameServerTooltip}" HorizontalAlignment="Left"/>
+
+                                        <CheckBox             Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" Content="{DynamicResource ServerSettings_OutputServerLogLabel}" IsChecked="{Binding OutputServerLog}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_OutputServerLogTooltip}" HorizontalAlignment="Left"/>
                                     </Grid>
                                 </GroupBox>
 

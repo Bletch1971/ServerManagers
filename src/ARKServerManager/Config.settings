@@ -45,7 +45,7 @@
       <Value Profile="(Default)">?QueryPort={0}</Value>
     </Setting>
     <Setting Name="ServerCommandLineStandardArgs" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">-nosteamclient -game -server -log</Value>
+      <Value Profile="(Default)">-nosteamclient -game -server</Value>
     </Setting>
     <Setting Name="ProfilesDir" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Profiles</Value>

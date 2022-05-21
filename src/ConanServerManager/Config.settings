@@ -468,7 +468,7 @@
       <Value Profile="(Default)">whitelist.txt</Value>
     </Setting>
     <Setting Name="ServerCommandLineStandardArgs" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">-listen -nosteamclient -game -server -log</Value>
+      <Value Profile="(Default)">-listen -nosteamclient -game -server</Value>
     </Setting>
     <Setting Name="AutoUpdate_SequencialDelayPeriod" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>

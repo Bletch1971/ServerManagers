@@ -154,7 +154,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-nosteamclient -game -server -log")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-nosteamclient -game -server")]
         public string ServerCommandLineStandardArgs {
             get {
                 return ((string)(this["ServerCommandLineStandardArgs"]));

@@ -396,6 +396,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(CanImportDirectlyFromSameServerProperty, value); }
         }
 
+        public static readonly DependencyProperty OutputServerLogProperty = DependencyProperty.Register(nameof(OutputServerLog), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [DataMember]
+        public bool OutputServerLog
+        {
+            get { return (bool)GetValue(OutputServerLogProperty); }
+            set { SetValue(OutputServerLogProperty, value); }
+        }
+
         public static readonly DependencyProperty ProcessPriorityProperty = DependencyProperty.Register(nameof(ProcessPriority), typeof(string), typeof(ServerProfile), new PropertyMetadata("normal"));
         [DataMember]
         public string ProcessPriority
@@ -867,6 +875,11 @@ namespace ServerManagerTool.Lib
 
             serverArgs.Append(" ");
             serverArgs.Append(Config.Default.ServerCommandLineStandardArgs);
+
+            if (this.OutputServerLog)
+            {
+                serverArgs.Append($" -log");
+            }
 
             return serverArgs.ToString();
         }
@@ -1481,6 +1494,10 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(KickIdlePlayersPercentageProperty);
             this.ClearValue(KickIdlePlayersPeriodProperty);
+
+            this.ClearValue(ServerTransferEnabledProperty);
+            this.ClearValue(CanImportDirectlyFromSameServerProperty);
+            this.ClearValue(OutputServerLogProperty);
         }
 
         // section reset methods
@@ -1579,6 +1596,10 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(KickIdlePlayersPercentageProperty, sourceProfile.KickIdlePlayersPercentage);
             this.SetValue(KickIdlePlayersPeriodProperty, sourceProfile.KickIdlePlayersPeriod);
+
+            this.SetValue(ServerTransferEnabledProperty, sourceProfile.ServerTransferEnabled);
+            this.SetValue(CanImportDirectlyFromSameServerProperty, sourceProfile.CanImportDirectlyFromSameServer);
+            this.SetValue(OutputServerLogProperty, sourceProfile.OutputServerLog);
 
             this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
