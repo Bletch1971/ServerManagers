@@ -21,6 +21,7 @@
           <ul>
             <li>Server Monitor - added new functionality to bulk start, restart, stop, shutdown, update and backup your servers.</li>
           </ul>
+          <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
             <li>World Save Zipping - have changed the way the zip file is created. All files are now added to the zip in one pass, rather than as separate files.</li>
