@@ -1,2208 +1,2200 @@
 {
-  "Application": "ark",
-  "Version": "2.1.7",
-  "Created": "2021-12-14T05:17:00.0000000Z",
-  "Mod": "Genesis2",
-  "Creatures": [
-    {
-      "NameTag": "Maewing",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "MilkGlider_Character_BP_C",
-      "Description": "Maewing",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Astrodelphis",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "SpaceDolphin_Character_BP_C",
-      "Description": "Astrodelphis",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Shadowmane",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "LionfishLion_Character_BP_C",
-      "Description": "Shadowmane",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Noglin",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "BrainSlug_Character_BP_C",
-      "Description": "Noglin",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Stryder",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "TekStrider_Character_BP_C",
-      "Description": "TekStryder",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Summoner",
-      "IsSpawnable": true,
-      "IsTameable": "false",
-      "ClassName": "Summoner_Character_BP_C",
-      "Description": "Summoner",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Macrophage_Swarm",
-      "IsSpawnable": true,
-      "IsTameable": "false",
-      "ClassName": "Macrophage_Swarm_Character_BP_C",
-      "Description": "MacrophageSwarm",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "R_Allosaurus",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Allo_Character_BP_Rockwell_C",
-      "Description": "R_Allosaurus",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "R_Carno",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Carno_Character_BP_Rockwell_C",
-      "Description": "R_Carno",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "R_Dilo",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Dilo_Character_BP_Rockwell_C",
-      "Description": "R_Dilo",
-      "Mod": "Genesis2"
-    }, 
-   {
-      "NameTag": "R_ReaperKing",
-      "IsSpawnable": true,
-      "IsTameable": "false",
-      "ClassName": "Xenomorph_Character_BP_Male_Gen2_C",
-      "Description": "R_ReaperKing",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "R_ReaperQueen",
-      "IsSpawnable": true,
-      "IsTameable": "false",
-      "ClassName": "Xenomorph_Character_BP_Female_Gen2_C",
-      "Description": "R_ReaperQueen",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "R_Bronto",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Sauropod_Character_BP_Rockwell_C",
-      "Description": "R_Bronto",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "R_Velonasaur",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Spindles_Character_BP_Rockwell_C",
-      "Description": "R_Velonasaur",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "R_Carbonemys",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Turtle_Character_BP_Rockwell_C",
-      "Description": "R_Carbonemys",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "R_Quetzal",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Quetz_Character_BP_Rockwell_C",
-      "Description": "R_Quetzal",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "R_Giga",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Gigant_Character_BP_Rockwell_C",
-      "Description": "R_Giga",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Daeodon",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Daeodon_Character_BP_Eden_C",
-      "Description": "E_Daeodon",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_DireWolf",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Direwolf_Character_BP_Eden_C",
-      "Description": "E_DireWolf",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Equus",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Equus_Character_BP_Eden_C",
-      "Description": "E_Equus",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_GasBags",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "GasBags_Character_BP_Eden_C",
-      "Description": "E_GasBags",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Megatherium",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Megatherium_Character_BP_Eden_C",
-      "Description": "E_Megatherium",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Owl",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Owl_Character_BP_Eden_C",
-      "Description": "E_Owl",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Parasaur",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Para_Character_BP_Eden_C",
-      "Description": "E_Parasaur",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Procoptodon",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Procoptodon_Character_BP_Eden_C",
-      "Description": "E_Procoptodon",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "E_Thylacoleo",
-      "IsSpawnable": true,
-      "IsTameable": "true",
-      "ClassName": "Thylacoleo_Character_BP_Eden_C",
-      "Description": "E_Thylacoleo",
-      "Mod": "Genesis2"
-    },
-    {
-      "NameTag": "Voidwyrm",
-      "IsSpawnable": true,
-      "IsTameable": "True",
-      "ClassName": "TekWyvern_Character_BP_C",
-      "Description": "Voidwyrm",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Brute ferox",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Shapeshifter_Large_Character_BP_Hunt_C",
-      "Description": "Brute ferox",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Male Human",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "PlayerPawnTest_Male_C",
-      "Description": "Variant Male Human",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Female Human",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "PlayerPawnTest_Female_C",
-      "Description": "Variant Female Human",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Survivor",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "CorruptHuman_Character_BP_BASE_C",
-      "Description": "Variant Corrupted Survivor",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant DodoRex (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "DodoRex_Character_BP_STA_C",
-      "Description": "Variant DodoRex (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Experimental Giganotosaurus",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Gigant_Character_BP_ExpG_C",
-      "Description": "Experimental Giganotosaurus",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Griffin (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Griffin_Character_BP_STA_C",
-      "Description": "Variant Griffin (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant attack drone",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "EndDrone_Character_BP_STA_C",
-      "Description": "Variant attack drone",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Attack Drone",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "EndDrone_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Attack Drone",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Attack Drone (Shmup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "EndDrone_Character_BP_WhaleRescue_C",
-      "Description": "Variant Attack Drone (Shmup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Defense Unit",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "EndTank_Character_BP_STA_C",
-      "Description": "Variant Defense Unit",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Defense Unit",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "EndTank_Character_BP_LifeSupport_C",
-      "Description": "Variant Malfunctioned Defense Unit",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Defense Unit (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "EndTank_Character_BP_ExpG_C",
-      "Description": "Variant Defense Unit (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Enforcer",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_STA_C",
-      "Description": "Variant Enforcer",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Enforcer",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Enforcer",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Enforcer",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_TameSTA_C",
-      "Description": "Variant VR Enforcer",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Enforcer (Race2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_Race_C",
-      "Description": "Variant Enforcer (Race2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Exo-Mek",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Exosuit_Character_BP_C",
-      "Description": "Variant Exo-Mek",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Exo-Mek (Final Battle)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Exosuit_Character_BP_FinalFight_C",
-      "Description": "Variant Exo-Mek (Final Battle)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Mek",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Mek_Character_BP_STA_C",
-      "Description": "Variant Mek",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Mek Knight",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Mek_Character_BP_LifeSupport_C",
-      "Description": "Variant Malfunctioned Mek Knight",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant X-Raptor (Hunt2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_Hunt_Enemy_C",
-      "Description": "Variant X-Raptor (Hunt2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Raptor (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_STA_C",
-      "Description": "Variant Raptor (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Raptor (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_STA_Corrupted_C",
-      "Description": "Variant Corrupted Raptor (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Raptor (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_TameSTA_C",
-      "Description": "Variant VR Raptor (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Raptor (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BionicRaptor_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Raptor (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Raptor (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_ExpG_C",
-      "Description": "Variant VR Raptor (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Raptor (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Raptor (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Raptor (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Raptor (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Stegosaurus (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Stego_Character_BP_Summoned_C",
-      "Description": "Variant Stegosaurus (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Stegosaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Stego_Character_BP_STA_C",
-      "Description": "Variant Stegosaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Stegosaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Stego_Character_BP_TameSTA_C",
-      "Description": "Variant VR Stegosaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BionicStego_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Tek Stryder (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "TekStrider_Character_BP_STA_C",
-      "Description": "Variant Tek Stryder (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Stryder (Life Support)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "TekStrider_Character_BP_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Stryder (Life Support)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Triceratops (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_Summoned_C",
-      "Description": "Variant Triceratops (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Triceratops (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_STA_C",
-      "Description": "Variant Triceratops (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Triceratops (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_STA_Corrupted_C",
-      "Description": "Variant Corrupted Triceratops (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Triceratops (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_TameSTA_C",
-      "Description": "Variant VR Triceratops (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BionicTrike_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Phoenix (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Phoenix_Character_BP_STA_C",
-      "Description": "Variant Phoenix (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Rock Drake (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "RockDrake_Character_BP_Summoned_C",
-      "Description": "Variant Rock Drake (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Allosaurus (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Allo_Character_BP_Rockwell_Summoned_C",
-      "Description": "Variant R-Allosaurus (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Allosaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Allo_Character_BP_STA_C",
-      "Description": "Variant R-Allosaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Allosaurus",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Allo_Character_BP_TameSTA_C",
-      "Description": "Variant VR Allosaurus",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Allosaurus (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Allo_Character_BP_ExpG_Pod_C",
-      "Description": "Variant R-Allosaurus (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Araneo (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpiderS_Character_BP_Summoned_C",
-      "Description": "Variant Araneo (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Araneo (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpiderS_Character_BP_STA_C",
-      "Description": "Variant Araneo (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Araneo (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpiderS_Character_BP_ExpG_C",
-      "Description": "Variant VR Araneo (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Araneo (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpiderS_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Araneo (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Argentavis (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Argent_Character_BP_Summoned_C",
-      "Description": "Variant Argentavis (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Argentavis (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Argent_Character_BP_STA_C",
-      "Description": "Variant Argentavis (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Argentavis (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Argent_Character_BP_LifeSupport_C",
-      "Description": "Variant VR Argentavis (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Argentavis (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Argent_Character_BP_ExpG_C",
-      "Description": "Variant VR Argentavis (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Astrodelphis (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpaceDolphin_Character_BP_STA_C",
-      "Description": "Variant Astrodelphis (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Astrodelphis (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpaceDolphin_Character_BP_TameSTA_C",
-      "Description": "Variant VR Astrodelphis (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Astrodelphis (Shmup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpaceDolphin_Character_BP_WhaleRescue_C",
-      "Description": "Variant Astrodelphis (Shmup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Astrodelphis (Shmup bot)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpaceDolphin_Character_BP_WhaleRescue_Bot_C",
-      "Description": "Variant Astrodelphis (Shmup bot)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Astrodelphis (Race2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "SpaceDolphin_Character_BP_Race_C",
-      "Description": "Variant Astrodelphis (Race2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Bloodstalker (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BogSpider_Character_BP_Summoned_C",
-      "Description": "Variant Bloodstalker (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Bloodstalker (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BogSpider_Character_STA_C",
-      "Description": "Variant Bloodstalker (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Bloodstalker (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BogSpider_Character_TameSTA_C",
-      "Description": "Variant VR Bloodstalker (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Carnotaurus (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Carno_Character_BP_Rockwell_Summoned_C",
-      "Description": "Variant R-Carnotaurus (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Carnotaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Carno_Character_BP_STA_C",
-      "Description": "Variant Carnotaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Carnotaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Carno_Character_BP_STA_Corrupted_C",
-      "Description": "Variant Corrupted Carnotaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Carnotaurus (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Carno_Character_BP_ExpG_C",
-      "Description": "Variant Corrupted Carnotaurus (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Carnotaurus (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Carno_Character_BP_CorrMaze_C",
-      "Description": "Variant Corrupted Carnotaurus (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Chalicotherium (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Chalico_Character_BP_STA_C",
-      "Description": "Variant Chalicotherium (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Chalicotherium (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Chalico_Character_BP_ExpG_C",
-      "Description": "Variant VR Chalicotherium (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Chalicotherium (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Chalico_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Chalicotherium (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Dilophosaur (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dilo_Character_BP_Rockwell_Summoned_C",
-      "Description": "Variant R-Dilophosaur (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Dilophosaur (Hunt)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dilo_Character_BP_Hunt_C",
-      "Description": "Variant Dilophosaur (Hunt)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Dilophosaur (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dilo_Character_BP_STA_C",
-      "Description": "Variant Dilophosaur (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Dilophosaur (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dilo_Character_BP_ExpG_C",
-      "Description": "Variant Dilophosaur (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Dilophosaur",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dilo_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Dilophosaur",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Dimorphodon (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dimorph_Character_BP_STA_C",
-      "Description": "Variant Dimorphodon (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Dimorphodon (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Dimorph_Character_BP_TameSTA_C",
-      "Description": "Variant VR Dimorphodon (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Enforcer",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Enforcer",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Enforcer",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_TameSTA_C",
-      "Description": "Variant VR Enforcer",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Enforcer (Race2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Enforcer_Character_BP_Race_C",
-      "Description": "Variant Enforcer (Race2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Ferox (Large) (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Shapeshifter_Large_Character_BP_Summoned_C",
-      "Description": "Variant Ferox (Large) (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Ferox (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Shapeshifter_Large_Character_BP_STA_C",
-      "Description": "Variant Ferox (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Ferox (Large) (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Shapeshifter_Large_Character_BP_TameSTA_C",
-      "Description": "Variant VR Ferox (Large) (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Kaprosuchus (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Kaprosuchus_Character_BP_Summoned_C",
-      "Description": "Variant Kaprosuchus (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Kaprosuchus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Kaprosuchus_Character_BP_STA_C",
-      "Description": "Variant Kaprosuchus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Kaprosuchus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Kaprosuchus_Character_BP_TameSTA_C",
-      "Description": "Variant VR Kaprosuchus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Kaprosuchus (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Kaprosuchus_Character_BP_ExpG_C",
-      "Description": "Variant VR Kaprosuchus (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Kaprosuchus (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Kaprosuchus_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Kaprosuchus (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Karkinos (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Crab_Character_BP_Summoned_C",
-      "Description": "Variant Karkinos (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Karkinos (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Crab_Character_BP_STA_C",
-      "Description": "Variant Karkinos (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Karkinos (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Crab_Character_BP_TameSTA_C",
-      "Description": "Variant VR Karkinos (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Lymantria (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Moth_Character_BP_STA_C",
-      "Description": "Variant Lymantria (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Lymantria (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Moth_Character_BP_TameSTA_C",
-      "Description": "Variant VR Lymantria (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Lymantria (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Moth_Character_BP_ExpG_C",
-      "Description": "Variant VR Lymantria (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Lymantria (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Moth_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Lymantria (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Mantis (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Mantis_Character_BP_Summoned_C",
-      "Description": "Variant Mantis (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Mantis (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Mantis_Character_BP_STA_C",
-      "Description": "Variant Mantis (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Mantis (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Mantis_Character_BP_TameSTA_C",
-      "Description": "Variant VR Mantis (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Mantis (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Mantis_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Mantis (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Megalania (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Megalania_Character_BP_STA_C",
-      "Description": "Variant Megalania (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Megalania (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Megalania_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Megalania (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Megatherium (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Megatherium_Character_BP_Eden_Summoned_C",
-      "Description": "Variant R-Megatherium (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Megatherium (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Megatherium_Character_BP_STA_C",
-      "Description": "Variant Megatherium (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Megatherium (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Megatherium_Character_BP_ExpG_C",
-      "Description": "Variant VR Megatherium (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Megatherium (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Megatherium_Character_BP_ExpG_Pod_C",
-      "Description": "Variant R-Megatherium (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Onyc (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Bat_Character_BP_Summoned_C",
-      "Description": "Variant Onyc (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Onyc (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Bat_Character_BP_STA_C",
-      "Description": "Variant Onyc (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Onyc (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Bat_Character_BP_ExpG_C",
-      "Description": "Variant VR Onyc (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Onyc (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Bat_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Onyc (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Pachy (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Pachy_Character_BP_STA_C",
-      "Description": "Variant Pachy (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Pachy",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Pachy_Character_BP_ExpG_C",
-      "Description": "Variant VR Pachy",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Parasaur (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Para_Character_BP_LifeSupport_C",
-      "Description": "Variant VR Parasaur (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Parasaur (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Para_Character_BP_ExpG_C",
-      "Description": "Variant VR Parasaur (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Parasaur (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Para_Character_BP_ExpG_Pod_C",
-      "Description": "Variant R-Parasaur (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Pulmonoscorpius (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Scorpion_Character_BP_STA_C",
-      "Description": "Variant Pulmonoscorpius (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Pulmonoscorpius (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Scorpion_Character_BP_ExpG_C",
-      "Description": "Variant VR Pulmonoscorpius (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant X-Raptor (Hunt2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_Hunt_Enemy_C",
-      "Description": "Variant X-Raptor (Hunt2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Raptor (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_STA_C",
-      "Description": "Variant Raptor (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Raptor (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_STA_Corrupted_C",
-      "Description": "Variant Corrupted Raptor (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Raptor (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_TameSTA_C",
-      "Description": "Variant VR Raptor (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Raptor (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BionicRaptor_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Raptor (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Raptor (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_ExpG_C",
-      "Description": "Variant VR Raptor (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Raptor (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Raptor (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Raptor (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Raptor_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Raptor (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Ravager (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "CaveWolf_Character_BP_Summoned_C",
-      "Description": "Variant Ravager (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Ravager (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "CaveWolf_Character_BP_STA_C",
-      "Description": "Variant Ravager (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Ravager (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "CaveWolf_Character_BP_TameSTA_C",
-      "Description": "Variant VR Ravager (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Rex (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_Summoned_C",
-      "Description": "Variant Rex (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Rex (Hunt2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_Hunt_Enemy_C",
-      "Description": "Variant Rex (Hunt2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Rex (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_STA_C",
-      "Description": "Variant Rex (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Rex (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_STA_Corrupted_C",
-      "Description": "Variant Corrupted Rex (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Rex (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_LifeSupport_C",
-      "Description": "Variant VR Rex (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Rex (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_ExpG_C",
-      "Description": "Variant VR Rex (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Rex (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Rex_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Rex (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Shadowmane (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "LionfishLion_Character_BP_Summoned_C",
-      "Description": "Variant Shadowmane (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Shadowmane (Hunt2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "LionfishLion_Character_BP_Hunt_C",
-      "Description": "Variant Shadowmane (Hunt2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Shadowmane (Hunt2 Alpha)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "LionfishLion_Character_BP_Hunt_Alpha_C",
-      "Description": "Variant Shadowmane (Hunt2 Alpha)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Shadowmane (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "LionfishLion_Character_BP_STA_C",
-      "Description": "Variant Shadowmane (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Shadowmane (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "LionfishLion_Character_BP_TameSTA_C",
-      "Description": "Variant VR Shadowmane (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Stegosaurus (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Stego_Character_BP_Summoned_C",
-      "Description": "Variant Stegosaurus (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Stegosaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Stego_Character_BP_STA_C",
-      "Description": "Variant Stegosaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Stegosaurus (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Stego_Character_BP_TameSTA_C",
-      "Description": "Variant VR Stegosaurus (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BionicStego_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Tapejara (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Tapejara_Character_BP_STA_C",
-      "Description": "Variant Tapejara (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Tapejara (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Tapejara_Character_BP_ExpG_C",
-      "Description": "Variant VR Tapejara (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Tapejara (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Tapejara_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Tapejara (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Terror Bird (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "TerrorBird_Character_BP_Summoned_C",
-      "Description": "Variant Terror Bird (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Terror Bird (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "TerrorBird_Character_BP_STA_C",
-      "Description": "Variant Terror Bird (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Terror Bird (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "TerrorBird_Character_BP_ExpG_C",
-      "Description": "Variant VR Terror Bird (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Terror Bird (Mashup)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "TerrorBird_Character_BP_ExpG_Pod_C",
-      "Description": "Variant Terror Bird (Mashup)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Titanoboa (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BoaFrill_Character_BP_Summoned_C",
-      "Description": "Variant Titanoboa (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Titanoboa (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BoaFrill_Character_BP_STA_C",
-      "Description": "Variant Titanoboa (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Titanoboa (Maze)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BoaFrill_Character_BP_CorrMaze_C",
-      "Description": "Variant VR Titanoboa (Maze)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Triceratops (Summoned)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_Summoned_C",
-      "Description": "Variant Triceratops (Summoned)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Triceratops (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_STA_C",
-      "Description": "Variant Triceratops (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Corrupted Triceratops (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_STA_Corrupted_C",
-      "Description": "Variant Corrupted Triceratops (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Triceratops (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Trike_Character_BP_TameSTA_C",
-      "Description": "Variant VR Triceratops (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "BionicTrike_Character_BP_Malfunctioned_LifeSupport_C",
-      "Description": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant R-Velonasaur (Hunt2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Spindles_Character_BP_Rockwell_Hunt_C",
-      "Description": "Variant R-Velonasaur (Hunt2)",
-      "Mod": "Genesis2"
-    },   {
-      "NameTag": "Variant R-Velonasaur (Hunt2 Alpha)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Spindles_Character_BP_Rockwell_Hunt_Alpha_C",
-      "Description": "Variant R-Velonasaur (Hunt2 Alpha)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Variant VR Velonasaur (Gauntlet2)",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "Spindles_Character_BP_STA_C",
-      "Description": "Variant VR Velonasaur (Gauntlet2)",
-      "Mod": "Genesis2"
-    },
-   {
-      "NameTag": "Rockwell Prime",
-      "IsSpawnable": false,
-      "IsTameable": "false",
-      "ClassName": "RockwellNode_Character_BP_FinalFight_C",
-      "Description": "Rockwell Prime",
-      "Mod": "Genesis2"
-    }
-  ],
-  "Engrams": [
-     {
-      "Level": 29,
-      "Points": 24,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_AmmoBox_C",
-      "Description": "Ammo Box",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 35,
-      "Points": 18,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_Boulder_Fire_C",
-      "Description": "Boulder Fire",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 8,
-      "Points": 10,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_Canoe_C",
-      "Description": "Canoe",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 89,
-      "Points": 55,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_EggIncubator_C",
-      "Description": "Egg Incubator",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 23,
-      "Points": 8,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_LoadoutMannequin_C",
-      "Description": "LoadoutMannequin",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 19,
-      "Points": 24,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_Milkglider_Saddle_C",
-      "Description": "Maewing Saddle",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 94,
-      "Points": 35,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_Minigun_C",
-      "Description": "Minigun",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 43,
-      "Points": 12,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_NetGun_Ammo_C",
-      "Description": "Net Projectile",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 120,
-      "Points": 60,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_SpaceDolphin_Saddle_C",
-      "Description": "Astrodelphis Saddle",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 116,
-      "Points": 53,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekBow_C",
-      "Description": "Tek Bow",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 101,
-      "Points": 6,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekCanteen_C",
-      "Description": "Tek Canteen",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 104,
-      "Points": 32,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekCropPlot_C",
-      "Description": "Tek CropPlot",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 120,
-      "Points": 20,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekExosuit_C",
-      "Description": "Exo Mek",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 112,
-      "Points": 45,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekHoverSail_C",
-      "Description": "Tek HoverSail",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 118,
-      "Points": 55,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekPistol_C",
-      "Description": "Tek Pistol",
-      "Mod": "Genesis2"
-   },
-   {
-      "Level": 108,
-      "Points": 60,
-      "IsTekGram": "false",
-      "ClassName": "EngramEntry_TekSecuirtyConsole_C",
-      "Description": "Tek Surveillance Console",
-      "Mod": "Genesis2"
-   }
-  ], 
-  "Items": [
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Egg_MilkGlider_Special_C",
-      "Description": "Extraordinary Maewing egg",
-      "Mod": "Genesis2"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Egg_MilkGlider_XLarge_C",
-      "Description": "Exceptional Maewing egg",
-      "Mod": "Genesis2"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Egg_MilkGlider_Large_C",
-      "Description": "Superior Maewing egg",
-      "Mod": "Genesis2"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Egg_MilkGlider_Medium_C",
-      "Description": "Regular Maewing egg",
-      "Mod": "Genesis2"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Egg_MilkGlider_Small_C",
-      "Description": "Simple Maewing egg",
-      "Mod": "Genesis2"
-    },
-    {
-      "Category": "Consumables",
-      "IsHarvestable": false,
-      "ClassName": "PrimalItemConsumable_Egg_MilkGlider_XSmall_C",
-      "Description": "Basic Maewing egg",
-      "Mod": "Genesis2"
-    },
-  {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_RawMeat_C",
-      "Description": "R-1(Raw Meat) Seed",
-      "Mod": "Genesis2"
-   },
-  {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_RawFish_C",
-      "Description": "R-2(Raw Fish) Seed",
-      "Mod": "Genesis2"
-   },
-  {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat_C",
-      "Description": "R-3(Spoiled Meat) Seed",
-      "Mod": "Genesis2"
-   },
-  {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat_C",
-      "Description": "R-4(Prime Meat) Seed",
-      "Mod": "Genesis2"
-   },
-  {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C",
-      "Description": "R-5(Prime Fish) Seed",
-      "Mod": "Genesis2"
-   },
-  {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Mutagel_C",
-      "Description": "Mutagel",
-      "Mod": "Genesis2"
-    },
-   {
-      "Category": "Consumable",
-      "IsHarvestable": "true",
-      "ClassName": "PrimalItemConsumable_Mutagen_C",
-      "Description": "Mutagen",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Tool",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItem_PurchasableEngram_C",
-      "Description": "PurchasableEngram",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Consumable",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemConsumable_TekCanteenCraftable_C",
-      "Description": "TekCanteenCraftable",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Consumable",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemConsumable_TekCanteenRefill_C",
-      "Description": "TekCanteenRefill",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Skin",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemSkin_Costume_MutatedSurvivor_C",
-      "Description": "Costume MutatedSurvivor",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekBoots_Gen2_C",
-      "Description": "TekBoots Gen2",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekGloves_Gen2_C",
-      "Description": "TekGloves Gen2",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekHelmet_Gen2_C",
-      "Description": "TekHelmet Gen2",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekPants_Gen2_C",
-      "Description": "TekPants Gen2",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekShirt_Gen2_C",
-      "Description": "TekShirt Gen2",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderAttachment_Base_C",
-      "Description": "TekStriderAttachment Base",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderHarvester_C",
-      "Description": "TekStriderHarvester",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderLargeCannon_C",
-      "Description": "TekStriderLargeCannon",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderMachinegun_C",
-      "Description": "TekStriderMachinegun",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderOnesidedShield_C",
-      "Description": "TekStriderOnesidedShield",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderOnesidedShield_Mission_C",
-      "Description": "TekStriderOnesidedShield Mission",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderRadar_C",
-      "Description": "TekStriderRadar",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderSaddle_Platform_C",
-      "Description": "TekStriderSaddle Platform",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderSaddlebags_C",
-      "Description": "TekStriderSaddlebags",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderShield_C",
-      "Description": "TekStriderShield",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Armor",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItemArmor_TekStriderSilenceCannon_C",
-      "Description": "TekStriderSilenceCannon",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Tool",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItem_TekRifle_Gauntlet_STA_C",
-      "Description": "TekRifle Gauntlet STA",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Tool",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItem_WeaponMinigun_Gauntlet_C",
-      "Description": "WeaponMinigun Gauntlet",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Tool",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItem_WeaponTekBow_Gauntlet_C",
-      "Description": "WeaponTekBow Gauntlet",
-      "Mod": "Genesis2"
-   },
-   {
-      "Category": "Tool",
-      "IsHarvestable": "false",
-      "ClassName": "PrimalItem_WeaponTekPistol_Gauntlet_C",
-      "Description": "WeaponTekPistol Gauntlet",
-      "Mod": "Genesis2"
-   }
-  ],
-  "MapSpawners": [
-   {
-      "ClassName": "DinoSpawnEntriesBeach_Gen2_C",
-      "Description": "Beach",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesForest_Gen2_C",
-      "Description": "Forest",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardensMountain_Edges_Gen2_C",
-      "Description": "Garden MountainsEdges",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardensMountain_Gen2_C",
-      "Description": "Gardens Mountain",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardensMountain_North_Gen2_C",
-      "Description": "Gardens MountainsNorth",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_CentralIslands_Gen2_C",
-      "Description": "Garden CentralIslands",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_FootHills_Gen2_C",
-      "Description": "Gardens FootHills",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_InnerRivers_Gen2_C",
-      "Description": "Gardens InnerRivers",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_Plains_Gen2_C",
-      "Description": "Gardens Plains",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_RiversLand_Gen2_C",
-      "Description": "Gardens RiversLand",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_Swamps_Gen2_C",
-      "Description": "Gardens Swamps",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_TrenchBorder_Gen2_C",
-      "Description": "Gardens TrenchBorder",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_TrenchForest_Gen2_C",
-      "Description": "Gardens TrenchForest",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_UpperHills1_C",
-      "Description": "Gardens UpperHills1",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_UpperHills2_C",
-      "Description": "Garden UpperHills2",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_UpperHills3_C",
-      "Description": "gardens UpperHills3",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGardens_UpperHills4_C",
-      "Description": "Garden UpperHills4",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGigant_Gen2_C",
-      "Description": "Gigant",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGrassland_Easy_Gen2_C",
-      "Description": "Grassland easy",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesGrassland_Gen2_C",
-      "Description": "Grassland",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesHardForest_Gen2_C",
-      "Description": "HardForest",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesMeanJungle_Gen2_C",
-      "Description": "MeanJungle",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesMountain_Easy_Gen2_C",
-      "Description": "Mountain Easy",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesMountain_Gen2_C",
-      "Description": "Mountains",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesMountain_Hard_Gen2_C",
-      "Description": "Mountain Hard",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesMountain_VeryHard_Gen2_C",
-      "Description": "Mountain VeryHard",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesNiceJungle_Gen2_C",
-      "Description": "NiceJungle",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesOceanWaterDeep_Gen2_C",
-      "Description": "OceanWaterDeep",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesOceanWaterDeep_Special1_Gen2_C",
-      "Description": "OceanWaterDeep Special1",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesQuetz_Gen2_C",
-      "Description": "Quetzal",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesQuetz_Rockwell_Gen2_C",
-      "Description": "Quetzal Rockwell",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesRiverLand_Easy_Gen2_C",
-      "Description": "RiverLand Easy",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesRiverLand_Hard_Gen2_C",
-      "Description": "RiverLand Hard",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesRiverLand_Medium_Gen2_C",
-      "Description": "RiverLand Medium",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesRockwellGiga_C",
-      "Description": "RockwellGiga",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesSpace_Gen2_C",
-      "Description": "Space",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesTekWyvern_C",
-      "Description": "TekWyvern",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesTrenchTek_C",
-      "Description": "TrenchTek",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesWaterSpillways_Aquatic_C",
-      "Description": "WaterSpillways Aquatic",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesWaterSpillways_Aquatic_Hard_C",
-      "Description": "WaterSpillways Aquatic Hard",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntriesWaterSpillways_Aquatic_Lake_C",
-      "Description": "WaterSpillways Aquatic Lake",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_Corruption_Gen2_C",
-      "Description": "Corruption",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_EdenSharkTank_C",
-      "Description": "EdenSharkTank",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_GardensLake_Gen2_C",
-      "Description": "GardensLake",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_GardensLake_Water_Gen2_C",
-      "Description": "GardensLake Water",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_GardensSwamp_Water_Gen2_C",
-      "Description": "GardensSwamp Water",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_GardensWater_Gen2_C",
-      "Description": "GardensWater",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "DinoSpawnEntries_ReaperQueen_Gen2_C",
-      "Description": "ReaperQueen",
-      "Mod": "Genesis2"
-   },
-
-   {
-      "ClassName": "DinoSpawnEntries_Summoner_Gen2_C",
-      "Description": "Summoner",
-      "Mod": "Genesis2"
-   }  
-  ],
-  "SupplyCrates": [
-   {
-      "ClassName": "SupplyCrate_Space_01_Ambergris_C",
-      "Description": "SupplyCrate (white)",
-      "Mod": "Genesis2"
-   },
-   {
-      "ClassName": "SupplyCrate_Space_02_Crystal_C",
-      "Description": "SupplyCrate (green)",
-      "Mod": "Genesis2"
-    },
-    {
-      "ClassName": "SupplyCrate_Space_03_Sulfur_C",
-      "Description": "SupplyCrate (blue)",
-      "Mod": "Genesis2"
-    },
-    {
-      "ClassName": "SupplyCrate_Space_04_ElementShards_C",
-      "Description": "SupplyCrate (purple)",
-      "Mod": "Genesis2"
-    },
-    {
-      "ClassName": "SupplyCrate_Space_05_Obsidian_C",
-      "Description": "SupplyCrate (yellow)",
-      "Mod": "Genesis2"
-    },
-    {
-      "ClassName": "SupplyCrate_Space_06_Oil_C",
-      "Description": "SupplyCrate (red)",
-      "Mod": "Genesis2"
-    },
-    {
-      "ClassName": "SupplyCrate_Space_07_ElementDust_C",
-      "Description": "SupplyCrate (cyanblue)",
-      "Mod": "Genesis2"
-    },
-    {
-      "ClassName": "SupplyCrate_Space_08_BlackPearls_C",
-      "Description": "SupplyCrate (orange)",
-      "Mod": "Genesis2"
-    }
-  ],
-  "GameMaps": [
-	{
-      "IsSotF": false,
-      "ClassName": "Gen2",
-      "Description": "Genesis 2",
-      "Mod": "Genesis2"
-	}
-  ]
+	"Application": "ark",
+	"Version": "2.1.7",
+	"Created": "2021-12-14T05:17:00.0000000Z",
+	"Mod": "Genesis2",
+	"Creatures": [
+		{
+			"NameTag": "Maewing",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "MilkGlider_Character_BP_C",
+			"Description": "Maewing",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Astrodelphis",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "SpaceDolphin_Character_BP_C",
+			"Description": "Astrodelphis",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Shadowmane",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "LionfishLion_Character_BP_C",
+			"Description": "Shadowmane",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Noglin",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "BrainSlug_Character_BP_C",
+			"Description": "Noglin",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Stryder",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "TekStrider_Character_BP_C",
+			"Description": "TekStryder",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Summoner",
+			"IsSpawnable": true,
+			"IsTameable": "false",
+			"ClassName": "Summoner_Character_BP_C",
+			"Description": "Summoner",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Macrophage_Swarm",
+			"IsSpawnable": true,
+			"IsTameable": "false",
+			"ClassName": "Macrophage_Swarm_Character_BP_C",
+			"Description": "MacrophageSwarm",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Allosaurus",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Allo_Character_BP_Rockwell_C",
+			"Description": "R_Allosaurus",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Carno",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Carno_Character_BP_Rockwell_C",
+			"Description": "R_Carno",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Dilo",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Dilo_Character_BP_Rockwell_C",
+			"Description": "R_Dilo",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_ReaperKing",
+			"IsSpawnable": true,
+			"IsTameable": "false",
+			"ClassName": "Xenomorph_Character_BP_Male_Gen2_C",
+			"Description": "R_ReaperKing",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_ReaperQueen",
+			"IsSpawnable": true,
+			"IsTameable": "false",
+			"ClassName": "Xenomorph_Character_BP_Female_Gen2_C",
+			"Description": "R_ReaperQueen",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Bronto",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Sauropod_Character_BP_Rockwell_C",
+			"Description": "R_Bronto",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Velonasaur",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Spindles_Character_BP_Rockwell_C",
+			"Description": "R_Velonasaur",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Carbonemys",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Turtle_Character_BP_Rockwell_C",
+			"Description": "R_Carbonemys",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Quetzal",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Quetz_Character_BP_Rockwell_C",
+			"Description": "R_Quetzal",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "R_Giga",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Gigant_Character_BP_Rockwell_C",
+			"Description": "R_Giga",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Daeodon",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Daeodon_Character_BP_Eden_C",
+			"Description": "E_Daeodon",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_DireWolf",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Direwolf_Character_BP_Eden_C",
+			"Description": "E_DireWolf",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Equus",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Equus_Character_BP_Eden_C",
+			"Description": "E_Equus",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_GasBags",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "GasBags_Character_BP_Eden_C",
+			"Description": "E_GasBags",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Megatherium",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Megatherium_Character_BP_Eden_C",
+			"Description": "E_Megatherium",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Owl",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Owl_Character_BP_Eden_C",
+			"Description": "E_Owl",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Parasaur",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Para_Character_BP_Eden_C",
+			"Description": "E_Parasaur",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Procoptodon",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Procoptodon_Character_BP_Eden_C",
+			"Description": "E_Procoptodon",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "E_Thylacoleo",
+			"IsSpawnable": true,
+			"IsTameable": "true",
+			"ClassName": "Thylacoleo_Character_BP_Eden_C",
+			"Description": "E_Thylacoleo",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Voidwyrm",
+			"IsSpawnable": true,
+			"IsTameable": "True",
+			"ClassName": "TekWyvern_Character_BP_C",
+			"Description": "Voidwyrm",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Brute ferox",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Shapeshifter_Large_Character_BP_Hunt_C",
+			"Description": "Brute ferox",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Male Human",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "PlayerPawnTest_Male_C",
+			"Description": "Variant Male Human",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Female Human",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "PlayerPawnTest_Female_C",
+			"Description": "Variant Female Human",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Survivor",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "CorruptHuman_Character_BP_BASE_C",
+			"Description": "Variant Corrupted Survivor",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant DodoRex (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "DodoRex_Character_BP_STA_C",
+			"Description": "Variant DodoRex (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Experimental Giganotosaurus",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Gigant_Character_BP_ExpG_C",
+			"Description": "Experimental Giganotosaurus",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Griffin (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Griffin_Character_BP_STA_C",
+			"Description": "Variant Griffin (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant attack drone",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "EndDrone_Character_BP_STA_C",
+			"Description": "Variant attack drone",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Attack Drone",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "EndDrone_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Attack Drone",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Attack Drone (Shmup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "EndDrone_Character_BP_WhaleRescue_C",
+			"Description": "Variant Attack Drone (Shmup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Defense Unit",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "EndTank_Character_BP_STA_C",
+			"Description": "Variant Defense Unit",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Defense Unit",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "EndTank_Character_BP_LifeSupport_C",
+			"Description": "Variant Malfunctioned Defense Unit",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Defense Unit (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "EndTank_Character_BP_ExpG_C",
+			"Description": "Variant Defense Unit (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Enforcer",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_STA_C",
+			"Description": "Variant Enforcer",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Enforcer",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Enforcer",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Enforcer",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_TameSTA_C",
+			"Description": "Variant VR Enforcer",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Enforcer (Race2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_Race_C",
+			"Description": "Variant Enforcer (Race2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Exo-Mek",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Exosuit_Character_BP_C",
+			"Description": "Variant Exo-Mek",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Exo-Mek (Final Battle)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Exosuit_Character_BP_FinalFight_C",
+			"Description": "Variant Exo-Mek (Final Battle)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Mek",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Mek_Character_BP_STA_C",
+			"Description": "Variant Mek",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Mek Knight",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Mek_Character_BP_LifeSupport_C",
+			"Description": "Variant Malfunctioned Mek Knight",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant X-Raptor (Hunt2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_Hunt_Enemy_C",
+			"Description": "Variant X-Raptor (Hunt2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Raptor (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_STA_C",
+			"Description": "Variant Raptor (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Raptor (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_STA_Corrupted_C",
+			"Description": "Variant Corrupted Raptor (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Raptor (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_TameSTA_C",
+			"Description": "Variant VR Raptor (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Raptor (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BionicRaptor_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Raptor (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Raptor (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_ExpG_C",
+			"Description": "Variant VR Raptor (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Raptor (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Raptor (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Raptor (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Raptor (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Stegosaurus (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Stego_Character_BP_Summoned_C",
+			"Description": "Variant Stegosaurus (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Stegosaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Stego_Character_BP_STA_C",
+			"Description": "Variant Stegosaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Stegosaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Stego_Character_BP_TameSTA_C",
+			"Description": "Variant VR Stegosaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BionicStego_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Tek Stryder (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "TekStrider_Character_BP_STA_C",
+			"Description": "Variant Tek Stryder (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Stryder (Life Support)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "TekStrider_Character_BP_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Stryder (Life Support)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Triceratops (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_Summoned_C",
+			"Description": "Variant Triceratops (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Triceratops (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_STA_C",
+			"Description": "Variant Triceratops (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Triceratops (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_STA_Corrupted_C",
+			"Description": "Variant Corrupted Triceratops (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Triceratops (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_TameSTA_C",
+			"Description": "Variant VR Triceratops (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BionicTrike_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Phoenix (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Phoenix_Character_BP_STA_C",
+			"Description": "Variant Phoenix (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Rock Drake (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "RockDrake_Character_BP_Summoned_C",
+			"Description": "Variant Rock Drake (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Allosaurus (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Allo_Character_BP_Rockwell_Summoned_C",
+			"Description": "Variant R-Allosaurus (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Allosaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Allo_Character_BP_STA_C",
+			"Description": "Variant R-Allosaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Allosaurus",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Allo_Character_BP_TameSTA_C",
+			"Description": "Variant VR Allosaurus",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Allosaurus (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Allo_Character_BP_ExpG_Pod_C",
+			"Description": "Variant R-Allosaurus (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Araneo (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpiderS_Character_BP_Summoned_C",
+			"Description": "Variant Araneo (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Araneo (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpiderS_Character_BP_STA_C",
+			"Description": "Variant Araneo (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Araneo (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpiderS_Character_BP_ExpG_C",
+			"Description": "Variant VR Araneo (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Araneo (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpiderS_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Araneo (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Argentavis (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Argent_Character_BP_Summoned_C",
+			"Description": "Variant Argentavis (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Argentavis (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Argent_Character_BP_STA_C",
+			"Description": "Variant Argentavis (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Argentavis (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Argent_Character_BP_LifeSupport_C",
+			"Description": "Variant VR Argentavis (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Argentavis (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Argent_Character_BP_ExpG_C",
+			"Description": "Variant VR Argentavis (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Astrodelphis (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpaceDolphin_Character_BP_STA_C",
+			"Description": "Variant Astrodelphis (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Astrodelphis (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpaceDolphin_Character_BP_TameSTA_C",
+			"Description": "Variant VR Astrodelphis (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Astrodelphis (Shmup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpaceDolphin_Character_BP_WhaleRescue_C",
+			"Description": "Variant Astrodelphis (Shmup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Astrodelphis (Shmup bot)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpaceDolphin_Character_BP_WhaleRescue_Bot_C",
+			"Description": "Variant Astrodelphis (Shmup bot)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Astrodelphis (Race2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "SpaceDolphin_Character_BP_Race_C",
+			"Description": "Variant Astrodelphis (Race2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Bloodstalker (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BogSpider_Character_BP_Summoned_C",
+			"Description": "Variant Bloodstalker (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Bloodstalker (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BogSpider_Character_STA_C",
+			"Description": "Variant Bloodstalker (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Bloodstalker (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BogSpider_Character_TameSTA_C",
+			"Description": "Variant VR Bloodstalker (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Carnotaurus (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Carno_Character_BP_Rockwell_Summoned_C",
+			"Description": "Variant R-Carnotaurus (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Carnotaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Carno_Character_BP_STA_C",
+			"Description": "Variant Carnotaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Carnotaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Carno_Character_BP_STA_Corrupted_C",
+			"Description": "Variant Corrupted Carnotaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Carnotaurus (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Carno_Character_BP_ExpG_C",
+			"Description": "Variant Corrupted Carnotaurus (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Carnotaurus (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Carno_Character_BP_CorrMaze_C",
+			"Description": "Variant Corrupted Carnotaurus (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Chalicotherium (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Chalico_Character_BP_STA_C",
+			"Description": "Variant Chalicotherium (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Chalicotherium (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Chalico_Character_BP_ExpG_C",
+			"Description": "Variant VR Chalicotherium (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Chalicotherium (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Chalico_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Chalicotherium (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Dilophosaur (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dilo_Character_BP_Rockwell_Summoned_C",
+			"Description": "Variant R-Dilophosaur (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Dilophosaur (Hunt)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dilo_Character_BP_Hunt_C",
+			"Description": "Variant Dilophosaur (Hunt)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Dilophosaur (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dilo_Character_BP_STA_C",
+			"Description": "Variant Dilophosaur (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Dilophosaur (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dilo_Character_BP_ExpG_C",
+			"Description": "Variant Dilophosaur (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Dilophosaur",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dilo_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Dilophosaur",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Dimorphodon (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dimorph_Character_BP_STA_C",
+			"Description": "Variant Dimorphodon (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Dimorphodon (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Dimorph_Character_BP_TameSTA_C",
+			"Description": "Variant VR Dimorphodon (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Enforcer",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Enforcer",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Enforcer",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_TameSTA_C",
+			"Description": "Variant VR Enforcer",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Enforcer (Race2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Enforcer_Character_BP_Race_C",
+			"Description": "Variant Enforcer (Race2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Ferox (Large) (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Shapeshifter_Large_Character_BP_Summoned_C",
+			"Description": "Variant Ferox (Large) (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Ferox (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Shapeshifter_Large_Character_BP_STA_C",
+			"Description": "Variant Ferox (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Ferox (Large) (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Shapeshifter_Large_Character_BP_TameSTA_C",
+			"Description": "Variant VR Ferox (Large) (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Kaprosuchus (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Kaprosuchus_Character_BP_Summoned_C",
+			"Description": "Variant Kaprosuchus (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Kaprosuchus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Kaprosuchus_Character_BP_STA_C",
+			"Description": "Variant Kaprosuchus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Kaprosuchus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Kaprosuchus_Character_BP_TameSTA_C",
+			"Description": "Variant VR Kaprosuchus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Kaprosuchus (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Kaprosuchus_Character_BP_ExpG_C",
+			"Description": "Variant VR Kaprosuchus (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Kaprosuchus (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Kaprosuchus_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Kaprosuchus (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Karkinos (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Crab_Character_BP_Summoned_C",
+			"Description": "Variant Karkinos (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Karkinos (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Crab_Character_BP_STA_C",
+			"Description": "Variant Karkinos (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Karkinos (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Crab_Character_BP_TameSTA_C",
+			"Description": "Variant VR Karkinos (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Lymantria (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Moth_Character_BP_STA_C",
+			"Description": "Variant Lymantria (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Lymantria (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Moth_Character_BP_TameSTA_C",
+			"Description": "Variant VR Lymantria (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Lymantria (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Moth_Character_BP_ExpG_C",
+			"Description": "Variant VR Lymantria (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Lymantria (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Moth_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Lymantria (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Mantis (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Mantis_Character_BP_Summoned_C",
+			"Description": "Variant Mantis (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Mantis (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Mantis_Character_BP_STA_C",
+			"Description": "Variant Mantis (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Mantis (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Mantis_Character_BP_TameSTA_C",
+			"Description": "Variant VR Mantis (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Mantis (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Mantis_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Mantis (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Megalania (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Megalania_Character_BP_STA_C",
+			"Description": "Variant Megalania (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Megalania (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Megalania_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Megalania (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Megatherium (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Megatherium_Character_BP_Eden_Summoned_C",
+			"Description": "Variant R-Megatherium (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Megatherium (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Megatherium_Character_BP_STA_C",
+			"Description": "Variant Megatherium (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Megatherium (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Megatherium_Character_BP_ExpG_C",
+			"Description": "Variant VR Megatherium (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Megatherium (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Megatherium_Character_BP_ExpG_Pod_C",
+			"Description": "Variant R-Megatherium (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Onyc (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Bat_Character_BP_Summoned_C",
+			"Description": "Variant Onyc (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Onyc (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Bat_Character_BP_STA_C",
+			"Description": "Variant Onyc (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Onyc (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Bat_Character_BP_ExpG_C",
+			"Description": "Variant VR Onyc (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Onyc (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Bat_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Onyc (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Pachy (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Pachy_Character_BP_STA_C",
+			"Description": "Variant Pachy (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Pachy",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Pachy_Character_BP_ExpG_C",
+			"Description": "Variant VR Pachy",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Parasaur (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Para_Character_BP_LifeSupport_C",
+			"Description": "Variant VR Parasaur (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Parasaur (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Para_Character_BP_ExpG_C",
+			"Description": "Variant VR Parasaur (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Parasaur (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Para_Character_BP_ExpG_Pod_C",
+			"Description": "Variant R-Parasaur (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Pulmonoscorpius (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Scorpion_Character_BP_STA_C",
+			"Description": "Variant Pulmonoscorpius (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Pulmonoscorpius (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Scorpion_Character_BP_ExpG_C",
+			"Description": "Variant VR Pulmonoscorpius (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant X-Raptor (Hunt2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_Hunt_Enemy_C",
+			"Description": "Variant X-Raptor (Hunt2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Raptor (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_STA_C",
+			"Description": "Variant Raptor (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Raptor (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_STA_Corrupted_C",
+			"Description": "Variant Corrupted Raptor (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Raptor (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_TameSTA_C",
+			"Description": "Variant VR Raptor (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Raptor (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BionicRaptor_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Raptor (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Raptor (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_ExpG_C",
+			"Description": "Variant VR Raptor (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Raptor (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Raptor (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Raptor (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Raptor_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Raptor (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Ravager (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "CaveWolf_Character_BP_Summoned_C",
+			"Description": "Variant Ravager (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Ravager (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "CaveWolf_Character_BP_STA_C",
+			"Description": "Variant Ravager (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Ravager (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "CaveWolf_Character_BP_TameSTA_C",
+			"Description": "Variant VR Ravager (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Rex (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_Summoned_C",
+			"Description": "Variant Rex (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Rex (Hunt2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_Hunt_Enemy_C",
+			"Description": "Variant Rex (Hunt2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Rex (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_STA_C",
+			"Description": "Variant Rex (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Rex (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_STA_Corrupted_C",
+			"Description": "Variant Corrupted Rex (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Rex (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_LifeSupport_C",
+			"Description": "Variant VR Rex (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Rex (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_ExpG_C",
+			"Description": "Variant VR Rex (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Rex (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Rex_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Rex (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Shadowmane (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "LionfishLion_Character_BP_Summoned_C",
+			"Description": "Variant Shadowmane (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Shadowmane (Hunt2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "LionfishLion_Character_BP_Hunt_C",
+			"Description": "Variant Shadowmane (Hunt2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Shadowmane (Hunt2 Alpha)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "LionfishLion_Character_BP_Hunt_Alpha_C",
+			"Description": "Variant Shadowmane (Hunt2 Alpha)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Shadowmane (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "LionfishLion_Character_BP_STA_C",
+			"Description": "Variant Shadowmane (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Shadowmane (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "LionfishLion_Character_BP_TameSTA_C",
+			"Description": "Variant VR Shadowmane (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Stegosaurus (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Stego_Character_BP_Summoned_C",
+			"Description": "Variant Stegosaurus (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Stegosaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Stego_Character_BP_STA_C",
+			"Description": "Variant Stegosaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Stegosaurus (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Stego_Character_BP_TameSTA_C",
+			"Description": "Variant VR Stegosaurus (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BionicStego_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Stegosaurus (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Tapejara (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Tapejara_Character_BP_STA_C",
+			"Description": "Variant Tapejara (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Tapejara (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Tapejara_Character_BP_ExpG_C",
+			"Description": "Variant VR Tapejara (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Tapejara (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Tapejara_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Tapejara (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Terror Bird (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "TerrorBird_Character_BP_Summoned_C",
+			"Description": "Variant Terror Bird (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Terror Bird (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "TerrorBird_Character_BP_STA_C",
+			"Description": "Variant Terror Bird (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Terror Bird (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "TerrorBird_Character_BP_ExpG_C",
+			"Description": "Variant VR Terror Bird (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Terror Bird (Mashup)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "TerrorBird_Character_BP_ExpG_Pod_C",
+			"Description": "Variant Terror Bird (Mashup)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Titanoboa (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BoaFrill_Character_BP_Summoned_C",
+			"Description": "Variant Titanoboa (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Titanoboa (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BoaFrill_Character_BP_STA_C",
+			"Description": "Variant Titanoboa (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Titanoboa (Maze)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BoaFrill_Character_BP_CorrMaze_C",
+			"Description": "Variant VR Titanoboa (Maze)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Triceratops (Summoned)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_Summoned_C",
+			"Description": "Variant Triceratops (Summoned)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Triceratops (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_STA_C",
+			"Description": "Variant Triceratops (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Corrupted Triceratops (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_STA_Corrupted_C",
+			"Description": "Variant Corrupted Triceratops (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Triceratops (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Trike_Character_BP_TameSTA_C",
+			"Description": "Variant VR Triceratops (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "BionicTrike_Character_BP_Malfunctioned_LifeSupport_C",
+			"Description": "Variant Malfunctioned Tek Triceratops (LifeSupport)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Velonasaur (Hunt2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Spindles_Character_BP_Rockwell_Hunt_C",
+			"Description": "Variant R-Velonasaur (Hunt2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant R-Velonasaur (Hunt2 Alpha)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Spindles_Character_BP_Rockwell_Hunt_Alpha_C",
+			"Description": "Variant R-Velonasaur (Hunt2 Alpha)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Variant VR Velonasaur (Gauntlet2)",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "Spindles_Character_BP_STA_C",
+			"Description": "Variant VR Velonasaur (Gauntlet2)",
+			"Mod": "Genesis2"
+		},
+		{
+			"NameTag": "Rockwell Prime",
+			"IsSpawnable": false,
+			"IsTameable": "false",
+			"ClassName": "RockwellNode_Character_BP_FinalFight_C",
+			"Description": "Rockwell Prime",
+			"Mod": "Genesis2"
+		}
+	],
+	"Engrams": [
+		{
+			"Level": 29,
+			"Points": 24,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_AmmoBox_C",
+			"Description": "Ammo Box",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 35,
+			"Points": 18,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_Boulder_Fire_C",
+			"Description": "Boulder Fire",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 8,
+			"Points": 10,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_Canoe_C",
+			"Description": "Canoe",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 89,
+			"Points": 55,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_EggIncubator_C",
+			"Description": "Egg Incubator",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 23,
+			"Points": 8,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_LoadoutMannequin_C",
+			"Description": "LoadoutMannequin",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 19,
+			"Points": 24,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_Milkglider_Saddle_C",
+			"Description": "Maewing Saddle",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 94,
+			"Points": 35,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_Minigun_C",
+			"Description": "Minigun",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 43,
+			"Points": 12,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_NetGun_Ammo_C",
+			"Description": "Net Projectile",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 120,
+			"Points": 60,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_SpaceDolphin_Saddle_C",
+			"Description": "Astrodelphis Saddle",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 116,
+			"Points": 53,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekBow_C",
+			"Description": "Tek Bow",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 101,
+			"Points": 6,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekCanteen_C",
+			"Description": "Tek Canteen",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 104,
+			"Points": 32,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekCropPlot_C",
+			"Description": "Tek CropPlot",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 120,
+			"Points": 20,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekExosuit_C",
+			"Description": "Exo Mek",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 112,
+			"Points": 45,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekHoverSail_C",
+			"Description": "Tek HoverSail",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 118,
+			"Points": 55,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekPistol_C",
+			"Description": "Tek Pistol",
+			"Mod": "Genesis2"
+		},
+		{
+			"Level": 108,
+			"Points": 60,
+			"IsTekGram": "false",
+			"ClassName": "EngramEntry_TekSecuirtyConsole_C",
+			"Description": "Tek Surveillance Console",
+			"Mod": "Genesis2"
+		}
+	],
+	"Items": [
+		{
+			"Category": "Consumables",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemConsumable_Egg_MilkGlider_Special_C",
+			"Description": "Extraordinary Maewing egg",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumables",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemConsumable_Egg_MilkGlider_XLarge_C",
+			"Description": "Exceptional Maewing egg",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumables",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemConsumable_Egg_MilkGlider_Large_C",
+			"Description": "Superior Maewing egg",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumables",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemConsumable_Egg_MilkGlider_Medium_C",
+			"Description": "Regular Maewing egg",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumables",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemConsumable_Egg_MilkGlider_Small_C",
+			"Description": "Simple Maewing egg",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumables",
+			"IsHarvestable": false,
+			"ClassName": "PrimalItemConsumable_Egg_MilkGlider_XSmall_C",
+			"Description": "Basic Maewing egg",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_RawMeat_C",
+			"Description": "R-1(Raw Meat) Seed",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_RawFish_C",
+			"Description": "R-2(Raw Fish) Seed",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat_C",
+			"Description": "R-3(Spoiled Meat) Seed",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat_C",
+			"Description": "R-4(Prime Meat) Seed",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C",
+			"Description": "R-5(Prime Fish) Seed",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Mutagel_C",
+			"Description": "Mutagel",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "true",
+			"ClassName": "PrimalItemConsumable_Mutagen_C",
+			"Description": "Mutagen",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Tool",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItem_PurchasableEngram_C",
+			"Description": "PurchasableEngram",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemConsumable_TekCanteenCraftable_C",
+			"Description": "TekCanteenCraftable",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Consumable",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemConsumable_TekCanteenRefill_C",
+			"Description": "TekCanteenRefill",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Skin",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemSkin_Costume_MutatedSurvivor_C",
+			"Description": "Costume MutatedSurvivor",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekBoots_Gen2_C",
+			"Description": "TekBoots Gen2",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekGloves_Gen2_C",
+			"Description": "TekGloves Gen2",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekHelmet_Gen2_C",
+			"Description": "TekHelmet Gen2",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekPants_Gen2_C",
+			"Description": "TekPants Gen2",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekShirt_Gen2_C",
+			"Description": "TekShirt Gen2",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderAttachment_Base_C",
+			"Description": "TekStriderAttachment Base",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderHarvester_C",
+			"Description": "TekStriderHarvester",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderLargeCannon_C",
+			"Description": "TekStriderLargeCannon",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderMachinegun_C",
+			"Description": "TekStriderMachinegun",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderOnesidedShield_C",
+			"Description": "TekStriderOnesidedShield",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderOnesidedShield_Mission_C",
+			"Description": "TekStriderOnesidedShield Mission",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderRadar_C",
+			"Description": "TekStriderRadar",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderSaddle_Platform_C",
+			"Description": "TekStriderSaddle Platform",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderSaddlebags_C",
+			"Description": "TekStriderSaddlebags",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderShield_C",
+			"Description": "TekStriderShield",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Armor",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItemArmor_TekStriderSilenceCannon_C",
+			"Description": "TekStriderSilenceCannon",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Tool",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItem_TekRifle_Gauntlet_STA_C",
+			"Description": "TekRifle Gauntlet STA",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Tool",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItem_WeaponMinigun_Gauntlet_C",
+			"Description": "WeaponMinigun Gauntlet",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Tool",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItem_WeaponTekBow_Gauntlet_C",
+			"Description": "WeaponTekBow Gauntlet",
+			"Mod": "Genesis2"
+		},
+		{
+			"Category": "Tool",
+			"IsHarvestable": "false",
+			"ClassName": "PrimalItem_WeaponTekPistol_Gauntlet_C",
+			"Description": "WeaponTekPistol Gauntlet",
+			"Mod": "Genesis2"
+		}
+	],
+	"MapSpawners": [
+		{
+			"ClassName": "DinoSpawnEntriesBeach_Gen2_C",
+			"Description": "Beach",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesForest_Gen2_C",
+			"Description": "Forest",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardensMountain_Edges_Gen2_C",
+			"Description": "Garden MountainsEdges",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardensMountain_Gen2_C",
+			"Description": "Gardens Mountain",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardensMountain_North_Gen2_C",
+			"Description": "Gardens MountainsNorth",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_CentralIslands_Gen2_C",
+			"Description": "Garden CentralIslands",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_FootHills_Gen2_C",
+			"Description": "Gardens FootHills",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_InnerRivers_Gen2_C",
+			"Description": "Gardens InnerRivers",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_Plains_Gen2_C",
+			"Description": "Gardens Plains",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_RiversLand_Gen2_C",
+			"Description": "Gardens RiversLand",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_Swamps_Gen2_C",
+			"Description": "Gardens Swamps",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_TrenchBorder_Gen2_C",
+			"Description": "Gardens TrenchBorder",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_TrenchForest_Gen2_C",
+			"Description": "Gardens TrenchForest",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_UpperHills1_C",
+			"Description": "Gardens UpperHills1",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_UpperHills2_C",
+			"Description": "Garden UpperHills2",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_UpperHills3_C",
+			"Description": "gardens UpperHills3",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGardens_UpperHills4_C",
+			"Description": "Garden UpperHills4",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGigant_Gen2_C",
+			"Description": "Gigant",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGrassland_Easy_Gen2_C",
+			"Description": "Grassland easy",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesGrassland_Gen2_C",
+			"Description": "Grassland",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesHardForest_Gen2_C",
+			"Description": "HardForest",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesMeanJungle_Gen2_C",
+			"Description": "MeanJungle",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesMountain_Easy_Gen2_C",
+			"Description": "Mountain Easy",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesMountain_Gen2_C",
+			"Description": "Mountains",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesMountain_Hard_Gen2_C",
+			"Description": "Mountain Hard",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesMountain_VeryHard_Gen2_C",
+			"Description": "Mountain VeryHard",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesNiceJungle_Gen2_C",
+			"Description": "NiceJungle",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesOceanWaterDeep_Gen2_C",
+			"Description": "OceanWaterDeep",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesOceanWaterDeep_Special1_Gen2_C",
+			"Description": "OceanWaterDeep Special1",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesQuetz_Gen2_C",
+			"Description": "Quetzal",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesQuetz_Rockwell_Gen2_C",
+			"Description": "Quetzal Rockwell",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesRiverLand_Easy_Gen2_C",
+			"Description": "RiverLand Easy",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesRiverLand_Hard_Gen2_C",
+			"Description": "RiverLand Hard",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesRiverLand_Medium_Gen2_C",
+			"Description": "RiverLand Medium",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesRockwellGiga_C",
+			"Description": "RockwellGiga",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesSpace_Gen2_C",
+			"Description": "Space",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesTekWyvern_C",
+			"Description": "TekWyvern",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesTrenchTek_C",
+			"Description": "TrenchTek",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesWaterSpillways_Aquatic_C",
+			"Description": "WaterSpillways Aquatic",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesWaterSpillways_Aquatic_Hard_C",
+			"Description": "WaterSpillways Aquatic Hard",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntriesWaterSpillways_Aquatic_Lake_C",
+			"Description": "WaterSpillways Aquatic Lake",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_Corruption_Gen2_C",
+			"Description": "Corruption",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_EdenSharkTank_C",
+			"Description": "EdenSharkTank",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_GardensLake_Gen2_C",
+			"Description": "GardensLake",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_GardensLake_Water_Gen2_C",
+			"Description": "GardensLake Water",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_GardensSwamp_Water_Gen2_C",
+			"Description": "GardensSwamp Water",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_GardensWater_Gen2_C",
+			"Description": "GardensWater",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_ReaperQueen_Gen2_C",
+			"Description": "ReaperQueen",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "DinoSpawnEntries_Summoner_Gen2_C",
+			"Description": "Summoner",
+			"Mod": "Genesis2"
+		}
+	],
+	"SupplyCrates": [
+		{
+			"ClassName": "SupplyCrate_Space_01_Ambergris_C",
+			"Description": "SupplyCrate (white)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_02_Crystal_C",
+			"Description": "SupplyCrate (green)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_03_Sulfur_C",
+			"Description": "SupplyCrate (blue)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_04_ElementShards_C",
+			"Description": "SupplyCrate (purple)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_05_Obsidian_C",
+			"Description": "SupplyCrate (yellow)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_06_Oil_C",
+			"Description": "SupplyCrate (red)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_07_ElementDust_C",
+			"Description": "SupplyCrate (cyanblue)",
+			"Mod": "Genesis2"
+		},
+		{
+			"ClassName": "SupplyCrate_Space_08_BlackPearls_C",
+			"Description": "SupplyCrate (orange)",
+			"Mod": "Genesis2"
+		}
+	]
 }
