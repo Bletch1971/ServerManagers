@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">15.05.2022 от Varlonec, Эдван</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">22.05.2022 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -441,6 +441,8 @@
     <sys:String x:Key="ServerMonitor_Title">Монитор сервера</sys:String>
 
     <sys:String x:Key="ServerMonitor_TotalCountLabel">Всего серверов:</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Выбранный</sys:String>
+    <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Профиль</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Cервер</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Карта</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Моды</sys:String>
@@ -449,6 +451,21 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Статус</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Создайте ярлык на рабочем столе, чтобы открыть эту форму напрямую.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">Выберать все серверы.</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">Отмените выбор всех серверов.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Запустить выбранные серверы.</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">Завершение работы выбранных серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">Остановить выбранные серверы</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Перезапустите выбранные серверы.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">Обновление/Проверка выбранных серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">Обновить моды только на выбранных серверах</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Создайте резервную копию выбранных серверов.</sys:String>
+    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">Отменить обработку выбранных серверов.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">Обрабатывайть серверы последовательно</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">Если этот параметр включен, серверы будут обрабатываться один за другим; в противном случае все будут обрабатываться одновременно.</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">Задержка между процессами</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">Количество секунд, которые необходимо подождать, прежде чем будет обработан следующий сервер.</sys:String>
+
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Откройте окно списка игроков.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Откройте окно RCON.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Запустите сервер.</sys:String>
@@ -456,10 +473,29 @@
     <sys:String x:Key="ServerMonitor_InstallServerTooltip">Установите сервер.</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Обновить/Проверить сервер.</sys:String>
 
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">Процесс был отменен пользователем. Вам нужно будет проверить состояние ваших серверов.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">Был отправлен запрос на отмену процесса.</sys:String>
+
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Ошибка обновления сервера</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Обновляется другой сервер, дождитесь завершения обновления и повторите попытку.</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Подтвердите закрытие окна</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">В настоящее время вы выполняете обновление сервера, закрывая окно с отключением вас от steamcmd. Вы хотите продолжить закрывать окно?</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmTitle">Подтвердите Завершение работы серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmLabel">Вы собираетесь завершить работу выбранных серверов. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmTitle">Подтвердите запуск серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmLabel">Вы собираетесь запустить выбранные серверы. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmTitle">Подтвердите остановку серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmLabel">Вы собираетесь остановить выбранные серверы. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmTitle">Подтвердите перезапуск серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmLabel">Вы собираетесь перезапустить выбранные серверы. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmTitle">Подтвердите обновление серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmLabel">Вы собираетесь обновить выбранные серверы. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmTitle">Подтверждение резервной копии серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmLabel">Вы собираетесь создать резервную копию выбранных серверов. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">Ошибка выбранных серверов</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorLabel">Вы не выбрали ни одного сервера. Выберите один или несколько серверов в списке и повторите попытку.</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmTitle">Ошибка Монитора закрытия сервера</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmLabel">В настоящее время окно монитора сервера не может быть закрыто. Один или несколько серверов в данный момент запускаются, выключаются или перезапускаются.</sys:String>
     <!--#endregion-->
 
     <!--#region Shutdown Window -->
@@ -1135,6 +1171,8 @@
     <sys:String x:Key="ServerSettings_UseBattlEyeLabel">Вкл. BattlEye Анти-Чит Систему</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">Если опция включена, BattlEye Анти-Чит Система будет включена.</sys:String>
     <sys:String x:Key="ServerSettings_AntiSpeedHackBiasUnits">x</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogLabel">Вывод журнала сервера на консоль сервера</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogTooltip">Если этот параметр включен, журналы сервера будут выводиться на консоль сервера.</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresLabel">Использовать все ядра Процессора</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresTooltip">Если включено, все ваши ядра процессора будут использоваться, если все они не будут использоваться после использования этого параметра запуска, отключить его.</sys:String>
     <sys:String x:Key="ServerSettings_UseCacheLabel">Использовать Кеш</sys:String>
@@ -5761,6 +5799,7 @@
     <sys:String x:Key="DiscordBot_StartRequested">Отправлен запрос на запуск сервера "{0}".</sys:String>
     <sys:String x:Key="DiscordBot_StopRequested">Отправлен запрос на остановку сервера "{0}".</sys:String>
     <sys:String x:Key="DiscordBot_UpdateRequested">Отправлен запрос на обновление для сервера "{0}".</sys:String>
+    <sys:String x:Key="DiscordBot_CommandComplete">Запрос на сервер '{0}' завершен.</sys:String>
 
     <sys:String x:Key="DiscordBot_CountLabel">Итог:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Карта:</sys:String>

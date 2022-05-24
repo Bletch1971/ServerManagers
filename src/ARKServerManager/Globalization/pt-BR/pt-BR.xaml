@@ -441,6 +441,8 @@
     <sys:String x:Key="ServerMonitor_Title">Monitor de servidor</sys:String>
 
     <sys:String x:Key="ServerMonitor_TotalCountLabel">Total de servidores:</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selecionar</sys:String>
+    <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Perfil</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Servidor</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Mapa</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
@@ -449,6 +451,21 @@
     <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
 
     <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Crie um atalho na área de trabalho para abrir este formulário diretamente.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">Seleciona todos os servidores.</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">Desmarque todos os servidores.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Inicia os servidores selecionados.</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">Desliga os servidores selecionados</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">Para os servidores selecionados</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Reinicia os servidores selecionados.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">Atualizar/Verificar os servidores selecionados</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">Atualizar Mods apenas em servidores selecionados</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Faça backup dos servidores selecionados.</sys:String>
+    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">Cancelar o processamento dos servidores selecionados.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">Processar Servidores Sequencialmente</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">Se habilitado, os servidores serão processados um após o outro, caso contrário todos serão processados ao mesmo tempo.</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">Delay no Processo Sequencial</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">O número de segundos para esperar, antes que o próximo servidor seja processado.</sys:String>	
+	
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Abri a janela da lista de jogadores.</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Abri a janela RCON.</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">Iniciar o servidor.</sys:String>
@@ -456,10 +473,29 @@
     <sys:String x:Key="ServerMonitor_InstallServerTooltip">Instala o servidor.</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Atualizar / verifica o servidor.</sys:String>
 
-    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Erro de atualização do servidor</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">O processo foi cancelado pelo usuário. Você precisará verificar o status de seus servidores.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">Uma solicitação de cancelamento de processo foi enviada.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Erro na atualização do servidor</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Outro servidor está sendo atualizado, aguarde até a atualização terminar e tente novamente.</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Confirmar fechar janela</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">No momento, você está executando uma atualização do servidor, fechando a janela desconectando-o do steamcmd. Deseja continuar fechando a janela?</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmTitle">Confirmar o desligamento dos servidores</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmLabel">Você está prestes a desligar os servidores selecionados. Você quer continuar?</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmTitle">Iniciar Servidores</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmLabel">Você está prestes a iniciar os servidores selecionados. Você quer continuar?</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmTitle">Parar Servidores</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmLabel">Você está prestes a parar os servidores selecionados. Você quer continuar?</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmTitle">Reiniciar servidores</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmLabel">Você está prestes a reiniciar os servidores selecionados. Você quer continuar?</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmTitle">Atualizar servidores</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmLabel">Você está prestes a atualizar os servidores selecionados. Você quer continuar?</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmTitle">Backup servidores</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmLabel">Você está prestes a fazer backup dos servidores selecionados. Você quer continuar?</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">Erro nos servidores selecionados</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorLabel">Você não selecionou nenhum servidor. Selecionou um ou mais servidores na lista e tente novamente.</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmTitle">Erro ao fechar o monitor do servidor</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmLabel">A Monitor do servidor não pode ser fechada neste momento. Um ou mais servidores estão iniciando, desligando ou reiniciando no momento.</sys:String>
     <!--#endregion-->
 
     <!--#region Shutdown Window -->
@@ -1135,6 +1171,8 @@
     <sys:String x:Key="ServerSettings_UseBattlEyeLabel">Ativar BattlEye Anti-Cheat System</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">Se ativado, o BattlEye Anti-Cheat System será ativado.</sys:String>
     <sys:String x:Key="ServerSettings_AntiSpeedHackBiasUnits">x</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogLabel">Saída de logs do servidor</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogTooltip">Se ativado, os logs do servidor serão enviados para o console do servidor.</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresLabel">Usa todos os núcleos disponíveis</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresTooltip">Se habilitado, todos os núcleos da sua CPU serão usados, se todos eles não estiverem sendo utilizados após o uso desta opção de inicialização, então tente desabilitá-la.</sys:String>
     <sys:String x:Key="ServerSettings_UseCacheLabel">Use Cache</sys:String>
