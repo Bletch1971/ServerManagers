@@ -4558,14 +4558,14 @@
                                     <Button DockPanel.Dock="Right" ToolTip="{DynamicResource ServerSettings_ResetMaxXPTooltip}" Click="MaxXPPlayer_Reset" Style="{StaticResource ButtonStyle1}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
-                                    <cctl:AnnotatedCheckBoxAndIntegerSlider DockPanel.Dock="Right" Margin="0,1,0,1" Label="{DynamicResource ServerSettings_MaxXPPlayerLabel}" Value="{Binding OverrideMaxExperiencePointsPlayer}" Suffix="{DynamicResource SliderUnits_XP}" Minimum="0" Maximum="1000000000" SmallChange="5000" LargeChange="100000" TickFrequency="50000" ToolTip="{DynamicResource ServerSettings_MaxXPPlayerTooltip}"/>
+                                    <cctl:AnnotatedCheckBoxAndLongSlider DockPanel.Dock="Right" Margin="0,1,0,1" Label="{DynamicResource ServerSettings_MaxXPPlayerLabel}" Value="{Binding OverrideMaxExperiencePointsPlayer}" Suffix="{DynamicResource SliderUnits_XP}" Minimum="0" Maximum="10000000000" SmallChange="5000" LargeChange="100000" TickFrequency="50000" ToolTip="{DynamicResource ServerSettings_MaxXPPlayerTooltip}"/>
                                 </DockPanel>
 
                                 <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
                                     <Button DockPanel.Dock="Right" Click="MaxXPDino_Reset" ToolTip="{DynamicResource ServerSettings_ResetMaxXPTooltip}" Style="{StaticResource ButtonStyle1}">
                                         <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
                                     </Button>
-                                    <cctl:AnnotatedCheckBoxAndIntegerSlider DockPanel.Dock="Right" Margin="0,1,0,1" Label="{DynamicResource ServerSettings_MaxXPDinoLabel}" Value="{Binding OverrideMaxExperiencePointsDino}" Suffix="{DynamicResource SliderUnits_XP}" Minimum="0" Maximum="1000000000" SmallChange="5000" LargeChange="100000" TickFrequency="50000" ToolTip="{DynamicResource ServerSettings_MaxXPDinoTooltip}"/>
+                                    <cctl:AnnotatedCheckBoxAndLongSlider DockPanel.Dock="Right" Margin="0,1,0,1" Label="{DynamicResource ServerSettings_MaxXPDinoLabel}" Value="{Binding OverrideMaxExperiencePointsDino}" Suffix="{DynamicResource SliderUnits_XP}" Minimum="0" Maximum="10000000000" SmallChange="5000" LargeChange="100000" TickFrequency="50000" ToolTip="{DynamicResource ServerSettings_MaxXPDinoTooltip}"/>
                                 </DockPanel>
 
                                 <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Text="{Binding CustomLevelProgressionsInformation, ElementName=SettingsControl, FallbackValue=NOTE: Custom Player and Dino levels..}" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>

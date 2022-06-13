@@ -128,17 +128,17 @@ namespace ServerManagerTool.Lib
                     break;
                 }
 
-                int xpRequired;
-                if (!int.TryParse(xpResult.Groups["xp"].Value, out xpRequired))
+                long xpRequired;
+                if (!long.TryParse(xpResult.Groups["xp"].Value, out xpRequired))
                 {
                     Debug.WriteLine(String.Format("Invalid xm required value: '{0}'", xpResult.Groups["xp"].Value));
                     break;
                 }
 
-                int engramPoints = 0;
+                long engramPoints = 0;
                 if (engramResult != null)
                 {
-                    if (!int.TryParse(engramResult.Groups["points"].Value, out engramPoints))
+                    if (!long.TryParse(engramResult.Groups["points"].Value, out engramPoints))
                     {
                         Debug.WriteLine(String.Format("Invalid engram points value: '{0}'", engramResult.Groups["points"].Value));
                         break;

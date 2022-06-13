@@ -12,6 +12,9 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Controls\AnnotatedCheckBoxAndLongSlider.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.13.8" />
     <PackageReference Include="Microsoft.Tpl.Dataflow" Version="4.5.24" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -21,6 +24,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\AnnotatedCheckBoxAndFloatSlider.xaml" />
+    <Page Include="Controls\AnnotatedCheckBoxAndLongSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AnnotatedCheckBoxAndIntegerSlider.xaml" />
     <Page Include="Controls\AnnotatedSlider.xaml" />
   </ItemGroup>
