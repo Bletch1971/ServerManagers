@@ -35,6 +35,8 @@ namespace ServerManagerTool.Common.Utils
 
             if (property.PropertyType == typeof(int) || property.PropertyType == typeof(NullableValue<int>))
                 convertedVal = Convert.ToString(value, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE));
+            else if (property.PropertyType == typeof(long) || property.PropertyType == typeof(NullableValue<long>))
+                convertedVal = Convert.ToString(value, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE));
             else if (property.PropertyType == typeof(float) || property.PropertyType == typeof(NullableValue<float>))
                 convertedVal = ((float)value).ToString("0.000000####", CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE));
             else if (property.PropertyType == typeof(bool))
@@ -72,6 +74,18 @@ namespace ServerManagerTool.Common.Utils
                 int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 property.SetValue(obj, intValue);
             }
+            else if (property.PropertyType == typeof(long) || property.PropertyType == typeof(long?))
+            {
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                long.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out long longValue);
+                property.SetValue(obj, longValue);
+            }
             else if (property.PropertyType == typeof(float) || property.PropertyType == typeof(float?))
             {
                 var tempValue = value.Replace("f", "");
@@ -91,6 +105,19 @@ namespace ServerManagerTool.Common.Utils
                 int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 var field = property.GetValue(obj) as NullableValue<int>;
                 property.SetValue(obj, field.SetValue(true, intValue));
+            }
+            else if (property.PropertyType == typeof(NullableValue<long>))
+            {
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                long.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out long longValue);
+                var field = property.GetValue(obj) as NullableValue<long>;
+                property.SetValue(obj, field.SetValue(true, longValue));
             }
             else if (property.PropertyType == typeof(NullableValue<float>))
             {
@@ -141,6 +168,19 @@ namespace ServerManagerTool.Common.Utils
                 property.SetValue(obj, intValue);
                 return true;
             }
+            if (property.PropertyType == typeof(long) || property.PropertyType == typeof(long?))
+            {
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                long.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out long longValue);
+                property.SetValue(obj, longValue);
+                return true;
+            }
             if (property.PropertyType == typeof(float) || property.PropertyType == typeof(float?))
             {
                 var tempValue = value.Replace("f", "");
@@ -161,6 +201,20 @@ namespace ServerManagerTool.Common.Utils
                 int.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int intValue);
                 var field = property.GetValue(obj) as NullableValue<int>;
                 property.SetValue(obj, field.SetValue(true, intValue));
+                return true;
+            }
+            if (property.PropertyType == typeof(NullableValue<long>))
+            {
+                string decimalSeparator = CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE).NumberFormat.NumberDecimalSeparator;
+                var tempValue = value;
+                if (tempValue.Contains(decimalSeparator))
+                {
+                    tempValue = tempValue.Substring(0, tempValue.IndexOf(decimalSeparator));
+                }
+
+                long.TryParse(tempValue, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out long longValue);
+                var field = property.GetValue(obj) as NullableValue<long>;
+                property.SetValue(obj, field.SetValue(true, longValue));
                 return true;
             }
             if (property.PropertyType == typeof(NullableValue<float>))

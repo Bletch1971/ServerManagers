@@ -252,16 +252,16 @@ namespace ServerManagerTool.Utils
     public class PlayerLevelDataItem
     {
         [DataMember]
-        public int XPRequired = 0;
+        public long XPRequired = 0;
         [DataMember]
-        public int EngramPoints = 0;
+        public long EngramPoints = 0;
     }
 
     [DataContract]
     public class CreatureLevelDataItem
     {
         [DataMember]
-        public int XPRequired = 0;
+        public long XPRequired = 0;
     }
 
     [DataContract]

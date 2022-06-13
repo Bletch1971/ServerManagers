@@ -18,8 +18,8 @@ namespace ServerManagerTool.Lib
         public static string MainDataFolder = Path.Combine(Environment.CurrentDirectory, Config.Default.GameDataDir);
         public static string UserDataFolder = Path.Combine(Config.Default.DataDir, Config.Default.GameDataDir);
 
-        public static int DefaultMaxExperiencePointsDino = 10;
-        public static int DefaultMaxExperiencePointsPlayer = 5;
+        public static long DefaultMaxExperiencePointsDino = 10;
+        public static long DefaultMaxExperiencePointsPlayer = 5;
 
         private static MainGameData gameData = null;
 

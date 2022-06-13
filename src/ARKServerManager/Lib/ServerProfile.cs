@@ -3138,19 +3138,19 @@ namespace ServerManagerTool.Lib
         #endregion
 
         #region Custom Levels
-        public static readonly DependencyProperty OverrideMaxExperiencePointsPlayerProperty = DependencyProperty.Register(nameof(OverrideMaxExperiencePointsPlayer), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, GameData.DefaultMaxExperiencePointsPlayer)));
+        public static readonly DependencyProperty OverrideMaxExperiencePointsPlayerProperty = DependencyProperty.Register(nameof(OverrideMaxExperiencePointsPlayer), typeof(NullableValue<long>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<long>(false, GameData.DefaultMaxExperiencePointsPlayer)));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.CustomLevels)]
-        public NullableValue<int> OverrideMaxExperiencePointsPlayer
+        public NullableValue<long> OverrideMaxExperiencePointsPlayer
         {
-            get { return (NullableValue<int>)GetValue(OverrideMaxExperiencePointsPlayerProperty); }
+            get { return (NullableValue<long>)GetValue(OverrideMaxExperiencePointsPlayerProperty); }
             set { SetValue(OverrideMaxExperiencePointsPlayerProperty, value); }
         }
 
-        public static readonly DependencyProperty OverrideMaxExperiencePointsDinoProperty = DependencyProperty.Register(nameof(OverrideMaxExperiencePointsDino), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, GameData.DefaultMaxExperiencePointsDino)));
+        public static readonly DependencyProperty OverrideMaxExperiencePointsDinoProperty = DependencyProperty.Register(nameof(OverrideMaxExperiencePointsDino), typeof(NullableValue<long>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<long>(false, GameData.DefaultMaxExperiencePointsDino)));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.CustomLevels)]
-        public NullableValue<int> OverrideMaxExperiencePointsDino
+        public NullableValue<long> OverrideMaxExperiencePointsDino
         {
-            get { return (NullableValue<int>)GetValue(OverrideMaxExperiencePointsDinoProperty); }
+            get { return (NullableValue<long>)GetValue(OverrideMaxExperiencePointsDinoProperty); }
             set { SetValue(OverrideMaxExperiencePointsDinoProperty, value); }
         }
 

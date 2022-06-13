@@ -59,8 +59,8 @@ namespace ServerManagerTool.Lib
         public void UpdateTotals()
         {
             int index = 0;
-            int xpTotal = 0;
-            int engramTotal = 0;
+            long xpTotal = 0;
+            long engramTotal = 0;
             foreach (var existingLevel in this.OrderBy(l => l.XPRequired))
             {
                 xpTotal += existingLevel.XPRequired;
@@ -162,10 +162,10 @@ namespace ServerManagerTool.Lib
     public class Level : DependencyObject
     {
         public static readonly DependencyProperty LevelIndexProperty = DependencyProperty.Register(nameof(LevelIndex), typeof(int), typeof(Level), new PropertyMetadata(0));
-        public static readonly DependencyProperty XPRequiredProperty = DependencyProperty.Register(nameof(XPRequired), typeof(int), typeof(Level), new PropertyMetadata(0));
-        public static readonly DependencyProperty EngramPointsProperty = DependencyProperty.Register(nameof(EngramPoints), typeof(int), typeof(Level), new PropertyMetadata(0));
-        public static readonly DependencyProperty XPTotalProperty = DependencyProperty.Register(nameof(XPTotal), typeof(int), typeof(Level), new PropertyMetadata(0));
-        public static readonly DependencyProperty EngramTotalProperty = DependencyProperty.Register(nameof(EngramTotal), typeof(int), typeof(Level), new PropertyMetadata(0));
+        public static readonly DependencyProperty XPRequiredProperty = DependencyProperty.Register(nameof(XPRequired), typeof(long), typeof(Level), new PropertyMetadata(0L));
+        public static readonly DependencyProperty EngramPointsProperty = DependencyProperty.Register(nameof(EngramPoints), typeof(long), typeof(Level), new PropertyMetadata(0L));
+        public static readonly DependencyProperty XPTotalProperty = DependencyProperty.Register(nameof(XPTotal), typeof(long), typeof(Level), new PropertyMetadata(0L));
+        public static readonly DependencyProperty EngramTotalProperty = DependencyProperty.Register(nameof(EngramTotal), typeof(long), typeof(Level), new PropertyMetadata(0L));
         public static readonly DependencyProperty ShowColoredProperty = DependencyProperty.Register(nameof(ShowColored), typeof(bool), typeof(Level), new PropertyMetadata(false));
 
         [DataMember]
@@ -176,30 +176,30 @@ namespace ServerManagerTool.Lib
         }
 
         [DataMember]
-        public int XPRequired
+        public long XPRequired
         {
-            get { return (int)GetValue(XPRequiredProperty); }
+            get { return (long)GetValue(XPRequiredProperty); }
             set { SetValue(XPRequiredProperty, value); }
         }
 
         [DataMember]
-        public int EngramPoints
+        public long EngramPoints
         {
-            get { return (int)GetValue(EngramPointsProperty); }
+            get { return (long)GetValue(EngramPointsProperty); }
             set { SetValue(EngramPointsProperty, value); }
         }
 
         [XmlIgnore()]
-        public int XPTotal
+        public long XPTotal
         {
-            get { return (int)GetValue(XPTotalProperty); }
+            get { return (long)GetValue(XPTotalProperty); }
             set { SetValue(XPTotalProperty, value); }
         }
 
         [XmlIgnore()]
-        public int EngramTotal
+        public long EngramTotal
         {
-            get { return (int)GetValue(EngramTotalProperty); }
+            get { return (long)GetValue(EngramTotalProperty); }
             set { SetValue(EngramTotalProperty, value); }
         }
 
@@ -249,8 +249,8 @@ namespace ServerManagerTool.Lib
     public class ImportLevel
     {
         public int LevelIndex { get; set; }
-        public int XPRequired { get; set; }
-        public int EngramPoints { get; set; }
+        public long XPRequired { get; set; }
+        public long EngramPoints { get; set; }
 
         public Level AsLevel()
         {
