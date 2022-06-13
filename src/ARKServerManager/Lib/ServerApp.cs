@@ -2841,7 +2841,7 @@ namespace ServerManagerTool.Lib
                 LogProfileMessage($"Creating RCON connection to server ({_profile.ServerIPAddress}:{_profile.RCONPort}).", false);
 
                 var endPoint = new IPEndPoint(_profile.ServerIPAddress, _profile.RCONPort);
-                var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 10000, receiveTimeOut: 10000);
+                var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint, sendTimeOut: 30000, receiveTimeOut: 30000);
                 if (server == null)
                 {
                     LogProfileDebug($"FAILED: {nameof(SetupRconConsole)} - ServerQuery could not be created.", false);
