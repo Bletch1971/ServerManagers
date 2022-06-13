@@ -8,113 +8,23 @@
   <updated>2022-05-21T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:C3F997CA-7A24-4679-9FA8-F458A351C64D</id>
-    <title>1.1.429 (1.1.429.5)</title>
-    <summary>1.1.429.5</summary>
+    <id>urn:uuid:727E9DFF-08EA-4600-B75B-31DF15083056</id>
+    <title>1.1.430 (1.1.430.1)</title>
+    <summary>1.1.430.1</summary>
     <link href="" />
-    <updated>2022-05-21T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Added option to remove the -log settings from the command line.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:BA7B98BC-F986-4D46-A4C1-264D781798EC</id>
-    <title>1.1.429 (1.1.429.4)</title>
-    <summary>1.1.429.4</summary>
-    <link href="" />
-    <updated>2022-05-19T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Monitor - refined the bulk server processing.</li>
-            <li>Server Monitor - added sequential server processing.</li>
-            <li>Server Monitor - added process cancelation button.</li>
-            <li>Server Shutdown - added a retry when sending RCON commands that fail.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:BA7B98BC-F986-4D46-A4C1-264D781798EC</id>
-    <title>1.1.429 (1.1.429.3)</title>
-    <summary>1.1.429.3</summary>
-    <link href="" />
-    <updated>2022-05-18T00:00:00Z</updated>
+    <updated>2022-06-13T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">NEW</u>
           <br/>
           <ul>
-            <li>Server Monitor - added new functionality to bulk start, restart, stop, shutdown, update and backup your servers.</li>
+            <li>Gamedata files - new file for Fjordur map.</li>
           </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:661C8C8B-B1DC-4368-95E7-A9C29C274B5B</id>
-    <title>1.1.429 (1.1.429.2)</title>
-    <summary>1.1.429.2</summary>
-    <link href="" />
-    <updated>2022-05-18T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Backup Interval Changes - The backup interval has been changed to use the value in the global settings, when auto-backup is enabled or not.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:D0681B47-5715-473E-99D3-63F475A997C4</id>
-    <title>1.1.429 (1.1.429.1)</title>
-    <summary>1.1.429.1</summary>
-    <link href="" />
-    <updated>2022-05-18T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>World Save Zipping - have changed the way the zip file is created. All files are now added to the zip in one pass, rather than as separate files.</li>
+            <li>Updated querymaster to use the defined timeouts.</li>
           </ul>
         </p>
       </div>

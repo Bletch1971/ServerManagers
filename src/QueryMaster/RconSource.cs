@@ -9,14 +9,14 @@ namespace QueryMaster
     class RconSource : Rcon
     {
         internal TcpQuery socket;
-        private RconSource(IPEndPoint address)
+        private RconSource(IPEndPoint address, int sendTimeOut, int receiveTimeOut)
         {
-            socket = new TcpQuery(address, 3000, 3000);
+            socket = new TcpQuery(address, sendTimeOut, receiveTimeOut);
         }
 
-        internal static Rcon Authorize(IPEndPoint address, string msg)
+        internal static Rcon Authorize(IPEndPoint address, string msg, int sendTimeOut, int receiveTimeOut)
         {
-            RconSource obj = new RconSource(address);
+            RconSource obj = new RconSource(address, sendTimeOut, receiveTimeOut);
             byte[] recvData = new byte[50];
             RconSrcPacket packet = new RconSrcPacket() { Body = msg, Id = (int)PacketId.ExecCmd, Type = (int)PacketType.Auth };
             recvData = obj.socket.GetResponse(RconUtil.GetBytes(packet));
