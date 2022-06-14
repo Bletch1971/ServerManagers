@@ -2306,17 +2306,7 @@ namespace ServerManagerTool.Lib
 
         private static string GetRconMessageCommand(string commandValue)
         {
-            switch (commandValue.ToLower())
-            {
-                case "alert":
-                    return ServerRcon.RCON_COMMAND_ALERT;
-
-                case "server":
-                    return ServerRcon.RCON_COMMAND_SERVER;
-
-                default:
-                    return ServerRcon.RCON_COMMAND_BROADCAST;
-            }
+            return commandValue.ToLower();
         }
 
         public static string GetServerBackupFolder(ServerProfile profile)

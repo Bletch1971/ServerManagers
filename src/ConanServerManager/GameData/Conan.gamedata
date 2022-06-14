@@ -47,5 +47,19 @@
       "RegionNumber": "5",
       "Description": "Japan"
     }
+  ],
+  "RconInputModes": [
+    {
+      "Command": "Broadcast",
+      "Description": "Broadcast"
+    },
+    {
+      "Command": "Alert",
+      "Description": "Alert (requires Pippi mod)"
+    },
+    {
+      "Command": "Server",
+      "Description": "Server (requires Pippi mod)"
+    }
   ]
 }

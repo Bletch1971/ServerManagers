@@ -15,6 +15,8 @@ namespace ServerManagerTool.Lib
         public const string MOD_ALL = "All";
         public const string MOD_UNKNOWN = "Unknown";
 
+        public const string RCONINPUTMODE_COMMAND = "Command";
+
         public static string MainDataFolder = Path.Combine(Environment.CurrentDirectory, Config.Default.GameDataDir);
         public static string UserDataFolder = Path.Combine(Config.Default.DataDir, Config.Default.GameDataDir);
 
@@ -158,6 +160,17 @@ namespace ServerManagerTool.Lib
             if (gameData.OfficialMods.Count > 0)
             {
                 ModUtils.AddOfficialMods(gameData.OfficialMods.Where(m => !string.IsNullOrWhiteSpace(m.ModId)).Select(m => m.ModId).ToList());
+            }
+
+            // rcon input modes
+            gameData.RconInputModes.AddRange(userGameData.RconInputModes);
+
+            if (gameData.RconInputModes.Count > 0)
+            {
+                var modes1 = rconInputModes.ToList();
+                modes1.AddRange(gameData.RconInputModes.Select(item => new ComboBoxItem { ValueMember = item.Command, DisplayMember = item.Description }));
+
+                rconInputModes = modes1.ToArray();
             }
         }
 
@@ -429,6 +442,19 @@ namespace ServerManagerTool.Lib
         public static IEnumerable<ComboBoxItem> GetEventsSotF() => eventsSotF.Select(d => d.Duplicate());
 
         public static string FriendlyEventSotFName(string eventName, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(eventName) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("Event_" + eventName) ?? gameData?.Events?.FirstOrDefault(i => i.EventName.Equals(eventName) && i.IsSotF)?.Description ?? (returnEmptyIfNotFound ? string.Empty : eventName);
+        #endregion
+
+        #region Rcon input Modes
+        private static ComboBoxItem[] rconInputModes = new[]
+        {
+            new ComboBoxItem { ValueMember=RCONINPUTMODE_COMMAND, DisplayMember=FriendlyNameForClass($"InputMode_{RCONINPUTMODE_COMMAND}") },
+        };
+
+        public static IEnumerable<ComboBoxItem> GetAllRconInputModes() => rconInputModes.Select(m => m.Duplicate());
+
+        public static IEnumerable<ComboBoxItem> GetMessageRconInputModes() => rconInputModes.Where(m => !m.ValueMember.Equals(RCONINPUTMODE_COMMAND, StringComparison.OrdinalIgnoreCase)).Select(m => m.Duplicate());
+
+        public static string FriendlyRconInputModeName(string rconInputMode, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(rconInputMode) ? string.Empty : GlobalizedApplication.Instance.GetResourceString("InputMode_" + rconInputMode) ?? gameData?.RconInputModes?.FirstOrDefault(i => i.Command.Equals(rconInputMode))?.Description ?? (returnEmptyIfNotFound ? string.Empty : rconInputMode);
         #endregion
     }
 }

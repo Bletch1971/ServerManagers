@@ -2437,7 +2437,7 @@ namespace ServerManagerTool.Lib
                     return ServerRcon.RCON_COMMAND_SERVERCHAT;
 
                 default:
-                    return ServerRcon.RCON_COMMAND_BROADCAST;
+                    return commandValue.ToLower();
             }
         }
 

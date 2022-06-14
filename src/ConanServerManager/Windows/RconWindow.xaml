@@ -20,12 +20,6 @@
             </ResourceDictionary.MergedDictionaries>
 
             <sm:ScrollToBottomAction x:Key="ScrollToBottomAction" />
-            
-            <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}" x:Key="InputModes">
-                <ObjectDataProvider.MethodParameters>
-                    <x:Type TypeName="sm:InputMode" />
-                </ObjectDataProvider.MethodParameters>
-            </ObjectDataProvider>
         </ResourceDictionary>
     </Window.Resources>
 
@@ -215,7 +209,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="{DynamicResource RCON_ModeLabel}"/>
-                <ComboBox Name="InputModesComboBox" Grid.Column="1" ItemsSource="{Binding Source={StaticResource InputModes}}" SelectedItem="{Binding CurrentInputMode, Mode=TwoWay}" Margin="0,0,2,0"/>
+                <ComboBox Name="InputModesComboBox" Grid.Column="1" ItemsSource="{Binding ElementName=RCON, Path=RconInputModes}" SelectedValue="{Binding ElementName=RCON, Path=CurrentInputMode, Mode=TwoWay}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" Margin="0,0,2,0"/>
                 <TextBox Name="ConsoleInput" TabIndex="0" Grid.Column="2" KeyUp="ConsoleInput_KeyUp" BorderBrush="LightGray" VerticalContentAlignment="Center" IsTabStop="True"/>
             </Grid>
         </Grid>

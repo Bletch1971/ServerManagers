@@ -4,6 +4,7 @@ using ServerManagerTool.Common;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Lib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -550,13 +551,10 @@ namespace ServerManagerTool
             var selectedValue = this.RconMessageModesComboBox?.SelectedValue ?? Config.RCON_MessageCommand;
             var list = new ComboBoxItemList();
 
-            foreach (InputMode inputMode in Enum.GetValues(typeof(InputMode)))
+            foreach (var item in GameData.GetMessageRconInputModes())
             {
-                if (inputMode == InputMode.Command)
-                    continue;
-
-                var displayMember = _globalizer.GetResourceString($"InputMode_{inputMode}") ?? inputMode.ToString();
-                list.Add(new Common.Model.ComboBoxItem(inputMode.ToString(), displayMember));
+                item.DisplayMember = GameData.FriendlyRconInputModeName(item.ValueMember);
+                list.Add(item);
             }
 
             this.RconMessageModes = list;

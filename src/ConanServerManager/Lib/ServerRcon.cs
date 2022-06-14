@@ -26,9 +26,6 @@ namespace ServerManagerTool.Lib
         private const string NoResponseMatch = "Server received, But no response!!";
         public const string NoResponseOutput = "NO_RESPONSE";
 
-        public const string RCON_COMMAND_BROADCAST = "broadcast";
-        public const string RCON_COMMAND_ALERT = "alert";
-        public const string RCON_COMMAND_SERVER = "server";
         public const string RCON_COMMAND_LISTPLAYERS = "listplayers";
 
         public event EventHandler PlayersCollectionUpdated;
@@ -274,22 +271,13 @@ namespace ServerManagerTool.Lib
                 command.suppressOutput = command.lines.Count() == 0;
             }
 
-            if (command?.command?.Equals(RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase) ?? false)
+            foreach (var item in GameData.GetMessageRconInputModes())
             {
-                LogEvent(LogEventType.Chat, command.rawCommand);
-                command.suppressOutput = true;
-            }
-
-            if (command?.command?.Equals(RCON_COMMAND_ALERT, StringComparison.OrdinalIgnoreCase) ?? false)
-            {
-                LogEvent(LogEventType.Chat, command.rawCommand);
-                command.suppressOutput = true;
-            }
-
-            if (command?.command?.Equals(RCON_COMMAND_SERVER, StringComparison.OrdinalIgnoreCase) ?? false)
-            {
-                LogEvent(LogEventType.Chat, command.rawCommand);
-                command.suppressOutput = true;
+                if (command?.command?.Equals(item.ValueMember, StringComparison.OrdinalIgnoreCase) ?? false)
+                {
+                    LogEvent(LogEventType.Chat, command.rawCommand);
+                    command.suppressOutput = true;
+                }
             }
         }
 

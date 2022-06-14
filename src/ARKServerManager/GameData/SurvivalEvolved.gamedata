@@ -13450,6 +13450,20 @@
     {
       "ModId": "LostIsland",
       "ModName": "Lost Island"
+    },
+    {
+      "ModId": "Fjordur",
+      "ModName": "Fjordur"
+    }
+  ],
+  "RconInputModes": [
+    {
+      "Command": "Global",
+      "Description": "Global"
+    },
+    {
+      "Command": "Broadcast",
+      "Description": "Broadcast"
     }
   ]
 }

@@ -32,6 +32,7 @@ namespace ServerManagerTool.Utils
                     data.GameMaps.AddRange(fileData.GameMaps);
                     data.Branches.AddRange(fileData.Branches);
                     data.ServerRegions.AddRange(fileData.ServerRegions);
+                    data.RconInputModes.AddRange(fileData.RconInputModes);
                 }
                 catch
                 {
@@ -90,6 +91,9 @@ namespace ServerManagerTool.Utils
         [DataMember(IsRequired = false)]
         public List<ServerRegionDataItem> ServerRegions = new List<ServerRegionDataItem>();
 
+        [DataMember(IsRequired = false)]
+        public List<RconInputModeItem> RconInputModes = new List<RconInputModeItem>();
+
         public static MainGameData Load(string file, bool isUserData)
         {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
@@ -102,6 +106,7 @@ namespace ServerManagerTool.Utils
                 data.GameMaps.ForEach(c => c.IsUserData = isUserData);
                 data.Branches.ForEach(c => c.IsUserData = isUserData);
                 data.ServerRegions.ForEach(c => c.IsUserData = isUserData);
+                data.RconInputModes.ForEach(c => c.IsUserData = isUserData);
             }
             return data;
         }
@@ -143,6 +148,17 @@ namespace ServerManagerTool.Utils
     {
         [DataMember]
         public string RegionNumber = string.Empty;
+        [DataMember]
+        public string Description = string.Empty;
+
+        public bool IsUserData = false;
+    }
+
+    [DataContract]
+    public class RconInputModeItem
+    {
+        [DataMember]
+        public string Command = string.Empty;
         [DataMember]
         public string Description = string.Empty;
 

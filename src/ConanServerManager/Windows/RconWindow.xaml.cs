@@ -1,6 +1,6 @@
-﻿using ServerManagerTool.Common.Enums;
-using ServerManagerTool.Common.Extensions;
+﻿using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Lib;
+using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
@@ -23,15 +23,6 @@ using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
 {
-    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
-    public enum InputMode
-    {
-        Command,
-        Broadcast,
-        Alert,
-        Server,
-    }
-
     public enum InputWindowMode
     {
         None,
@@ -169,7 +160,7 @@ namespace ServerManagerTool
         private GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
 
         public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(RconWindow), new PropertyMetadata(Config.Default));
-        public static readonly DependencyProperty CurrentInputModeProperty = DependencyProperty.Register(nameof(CurrentInputMode), typeof(InputMode), typeof(RconWindow), new PropertyMetadata(InputMode.Command));
+        public static readonly DependencyProperty CurrentInputModeProperty = DependencyProperty.Register(nameof(CurrentInputMode), typeof(string), typeof(RconWindow), new PropertyMetadata(GameData.RCONINPUTMODE_COMMAND));
         public static readonly DependencyProperty PlayerFilteringProperty = DependencyProperty.Register(nameof(PlayerFiltering), typeof(PlayerFilterType), typeof(RconWindow), new PropertyMetadata(PlayerFilterType.Online | PlayerFilterType.Offline));
         public static readonly DependencyProperty PlayerFilterStringProperty = DependencyProperty.Register(nameof(PlayerFilterString), typeof(string), typeof(RconWindow), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty PlayerSortingProperty = DependencyProperty.Register(nameof(PlayerSorting), typeof(PlayerSortType), typeof(RconWindow), new PropertyMetadata(PlayerSortType.Online));
@@ -177,11 +168,14 @@ namespace ServerManagerTool
         public static readonly DependencyProperty RconParametersProperty = DependencyProperty.Register(nameof(RconParameters), typeof(RconParameters), typeof(RconWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ScrollOnNewInputProperty = DependencyProperty.Register(nameof(ScrollOnNewInput), typeof(bool), typeof(RconWindow), new PropertyMetadata(true));
         public static readonly DependencyProperty ServerRconProperty = DependencyProperty.Register(nameof(ServerRcon), typeof(ServerRcon), typeof(RconWindow), new PropertyMetadata(null));
+        public static readonly DependencyProperty RconInputModesProperty = DependencyProperty.Register(nameof(RconInputModes), typeof(ComboBoxItemList), typeof(RconWindow), new PropertyMetadata(null));
 
         public RconWindow(RconParameters parameters)
         {
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
+
+            PopulateRconInputModesComboBox();
 
             this.CurrentInputWindowMode = InputWindowMode.None;
             this.PlayerFiltering = (PlayerFilterType)Config.Default.RCON_PlayerListFilter;
@@ -215,8 +209,7 @@ namespace ServerManagerTool
                 _globalizer.GetResourceString("RCON_Comments_Line2"),
                 _globalizer.GetResourceString("RCON_Comments_Line3"),
                 _globalizer.GetResourceString("RCON_Comments_Line4"),
-                _globalizer.GetResourceString("RCON_Comments_Line5"),
-                String.Format(_globalizer.GetResourceString("RCON_Comments_Line6"), _globalizer.GetResourceString("RCON_Help_Keyword"))
+                _globalizer.GetResourceString("RCON_Comments_Line5")
             );
 
             if (this.RconParameters.WindowExtents.Width > 50 && this.RconParameters.WindowExtents.Height > 50)
@@ -254,9 +247,9 @@ namespace ServerManagerTool
             set { SetValue(ConfigProperty, value); }
         }
 
-        public InputMode CurrentInputMode
+        public string CurrentInputMode
         {
-            get { return (InputMode)GetValue(CurrentInputModeProperty); }
+            get { return (string)GetValue(CurrentInputModeProperty); }
             set { SetValue(CurrentInputModeProperty, value); }
         }
 
@@ -300,6 +293,12 @@ namespace ServerManagerTool
         {
             get { return (ServerRcon)GetValue(ServerRconProperty); }
             set { SetValue(ServerRconProperty, value); }
+        }
+
+        public ComboBoxItemList RconInputModes
+        {
+            get { return (ComboBoxItemList)GetValue(RconInputModesProperty); }
+            set { SetValue(RconInputModesProperty, value); }
         }
         #endregion
 
@@ -557,13 +556,7 @@ namespace ServerManagerTool
 
         private void ResourceDictionaryChangedEvent(object source, ResourceDictionaryChangedEventArgs e)
         {
-            // refresh the InputModes combobox list
-            this.InputModesComboBox.Items.Refresh();
-
-            // refresh the InputModes combobox value
-            var currentInputMode = CurrentInputMode;
-            this.InputModesComboBox.SelectedItem = null;
-            this.InputModesComboBox.SelectedItem = currentInputMode;
+            PopulateRconInputModesComboBox();
         }
 
         protected override void OnClosed(EventArgs e)
@@ -630,26 +623,18 @@ namespace ServerManagerTool
 
                 if (commandText.StartsWith("/"))
                 {
-                    effectiveMode = InputMode.Command;
+                    effectiveMode = GameData.RCONINPUTMODE_COMMAND;
                     commandText = commandText.Substring(1);
                 }
 
                 switch (effectiveMode)
                 {
-                    case InputMode.Command:
+                    case GameData.RCONINPUTMODE_COMMAND:
                         this.ServerRcon.IssueCommand(commandText);
                         break;
 
-                    case InputMode.Broadcast:
-                        this.ServerRcon.IssueCommand($"{ServerRcon.RCON_COMMAND_BROADCAST} {commandText}");
-                        break;
-
-                    case InputMode.Alert:
-                        this.ServerRcon.IssueCommand($"{ServerRcon.RCON_COMMAND_ALERT} {commandText}");
-                        break;
-
-                    case InputMode.Server:
-                        this.ServerRcon.IssueCommand($"{ServerRcon.RCON_COMMAND_SERVER} {commandText}");
+                    default:
+                        this.ServerRcon.IssueCommand($"{effectiveMode} {commandText}");
                         break;
                 }
 
@@ -708,6 +693,24 @@ namespace ServerManagerTool
                 this.playerListColumn.Width = new GridLength(value, GridUnitType.Pixel);
         }
 
+        private void PopulateRconInputModesComboBox()
+        {
+            var selectedValue = this.InputModesComboBox?.SelectedValue ?? GameData.RCONINPUTMODE_COMMAND;
+            var list = new ComboBoxItemList();
+
+            foreach (var item in GameData.GetAllRconInputModes())
+            {
+                item.DisplayMember = GameData.FriendlyRconInputModeName(item.ValueMember);
+                list.Add(item);
+            }
+
+            this.RconInputModes = list;
+            if (this.InputModesComboBox != null)
+            {
+                this.InputModesComboBox.SelectedValue = selectedValue;
+            }
+        }
+
         public void SortPlayers()
         {
             this.PlayersView.SortDescriptions.Clear();
@@ -744,19 +747,23 @@ namespace ServerManagerTool
 
         private IEnumerable<Inline> FormatCommandInput(ConsoleCommand command)
         {
-            if (command.command.Equals(ServerRcon.RCON_COMMAND_BROADCAST, StringComparison.OrdinalIgnoreCase))
+            var commandValue = command?.command?.ToLower() ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(commandValue))
             {
-                yield return new RconOutput_Broadcast(command.args);
+                yield return new LineBreak();
             }
-            else if(command.command.Equals(ServerRcon.RCON_COMMAND_ALERT, StringComparison.OrdinalIgnoreCase))
+
+            var found = false;
+            foreach (var item in GameData.GetMessageRconInputModes())
             {
-                yield return new RconOutput_Broadcast(command.args);
+                if (item.ValueMember.Equals(commandValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    found = true;
+                    yield return new RconOutput_Broadcast(command.args);
+                }
             }
-            else if(command.command.Equals(ServerRcon.RCON_COMMAND_SERVER, StringComparison.OrdinalIgnoreCase))
-            {
-                yield return new RconOutput_Broadcast(command.args);
-            }
-            else
+
+            if (!found)
             {
                 yield return new RconOutput_Command($"> {command.rawCommand}");
             }

@@ -43,6 +43,7 @@ namespace ServerManagerTool.Utils
                     data.Branches.AddRange(fileData.Branches);
                     data.Events.AddRange(fileData.Events);
                     data.OfficialMods.AddRange(fileData.OfficialMods);
+                    data.RconInputModes.AddRange(fileData.RconInputModes);
 
                     if (fileData.PlayerAdditionalLevels > 0 && fileData.PlayerAdditionalLevels > data.PlayerAdditionalLevels)
                         data.PlayerAdditionalLevels = fileData.PlayerAdditionalLevels;
@@ -137,6 +138,9 @@ namespace ServerManagerTool.Utils
         [DataMember(IsRequired = false)]
         public List<OfficialModItem> OfficialMods = new List<OfficialModItem>();
 
+        [DataMember(IsRequired = false)]
+        public List<RconInputModeItem> RconInputModes = new List<RconInputModeItem>();
+
         public static MainGameData Load(string file, bool isUserData)
         {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
@@ -157,6 +161,7 @@ namespace ServerManagerTool.Utils
                 data.Branches.ForEach(c => c.IsUserData = isUserData);
                 data.Events.ForEach(c => c.IsUserData = isUserData);
                 data.OfficialMods.ForEach(c => c.IsUserData = isUserData);
+                data.RconInputModes.ForEach(c => c.IsUserData = isUserData);
             }
             return data;
         }
@@ -297,6 +302,17 @@ namespace ServerManagerTool.Utils
         public string ModId = string.Empty;
         [DataMember]
         public string ModName = string.Empty;
+
+        public bool IsUserData = false;
+    }
+
+    [DataContract]
+    public class RconInputModeItem
+    {
+        [DataMember]
+        public string Command = string.Empty;
+        [DataMember]
+        public string Description = string.Empty;
 
         public bool IsUserData = false;
     }
