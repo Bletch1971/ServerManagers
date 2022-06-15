@@ -23,6 +23,7 @@
             <li>Prevent Transfer Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for creatures not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing creatures.</li>
             <li>Map Spawner Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for spawners/creatures not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing spawners/creatures.</li>
             <li>Stack Size Grid - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for items not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing items.</li>
+            <li>Server Monitor - added shutdown reason.</li>
           </ul>
         </p>
       </div>

@@ -98,6 +98,7 @@ namespace ServerManagerTool.Lib
         private QueryMaster.Rcon _rconConsole = null;
         private bool _serverRunning = false;
 
+        public bool AllMessagesShowShutdownReason { get; set; } = Config.Default.ServerShutdown_AllMessagesShowReason;
         public bool BackupWorldFile { get; set; } = Config.Default.BackupWorldFile;
         public bool CheckForOnlinePlayers { get; set; } = Config.Default.ServerShutdown_CheckForOnlinePlayers;
         public bool DeleteOldBackupFiles { get; set; } = Config.Default.AutoBackup_DeleteOldFiles;
@@ -434,7 +435,7 @@ namespace ServerManagerTool.Lib
                 gameServer = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endPoint);
 
                 // check if there is a shutdown reason
-                if (!string.IsNullOrWhiteSpace(ShutdownReason) && !Config.Default.ServerShutdown_AllMessagesShowReason)
+                if (!string.IsNullOrWhiteSpace(ShutdownReason) && !AllMessagesShowShutdownReason)
                 {
                     LogProfileMessage("Sending shutdown reason...");
 
@@ -542,7 +543,7 @@ namespace ServerManagerTool.Lib
                         ProcessAlert(AlertType.ShutdownMessage, message);
 
                         // check if there is a shutdown reason
-                        if (!string.IsNullOrWhiteSpace(ShutdownReason) && Config.Default.ServerShutdown_AllMessagesShowReason)
+                        if (!string.IsNullOrWhiteSpace(ShutdownReason) && AllMessagesShowShutdownReason)
                         {
                             ProcessAlert(AlertType.ShutdownReason, ShutdownReason);
 
@@ -569,9 +570,19 @@ namespace ServerManagerTool.Lib
                         // perform a world save
                         if (!string.IsNullOrWhiteSpace(Config.Default.ServerShutdown_WorldSaveMessage))
                         {
-                            LogProfileMessage(Config.Default.ServerShutdown_WorldSaveMessage);
-                            ProcessAlert(AlertType.ShutdownMessage, Config.Default.ServerShutdown_WorldSaveMessage);
-                            SendMessage(Config.Default.ServerShutdown_WorldSaveMessage, cancellationToken);
+                            var message = Config.Default.ServerShutdown_WorldSaveMessage;
+
+                            LogProfileMessage(message);
+                            ProcessAlert(AlertType.ShutdownMessage, message);
+
+                            if (!string.IsNullOrWhiteSpace(ShutdownReason) && AllMessagesShowShutdownReason)
+                            {
+                                ProcessAlert(AlertType.ShutdownReason, ShutdownReason);
+
+                                message = $"{message}\r\n{ShutdownReason}";
+                            }
+
+                            SendMessage(message, cancellationToken);
                         }
 
                         if (SendCommand(Config.Default.ServerSaveCommand, cancellationToken))
@@ -610,7 +621,7 @@ namespace ServerManagerTool.Lib
                     ProcessAlert(AlertType.ShutdownMessage, message);
 
                     // check if there is a shutdown reason
-                    if (!string.IsNullOrWhiteSpace(ShutdownReason) && Config.Default.ServerShutdown_AllMessagesShowReason)
+                    if (!string.IsNullOrWhiteSpace(ShutdownReason) && AllMessagesShowShutdownReason)
                     {
                         ProcessAlert(AlertType.ShutdownReason, ShutdownReason);
 

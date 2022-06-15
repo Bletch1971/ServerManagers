@@ -88,6 +88,7 @@ namespace ServerManagerTool.Windows
         public static readonly DependencyProperty CancellationTokenSourceProperty = DependencyProperty.Register(nameof(CancellationTokenSource), typeof(CancellationTokenSource), typeof(ServerMonitorWindow));
         public static readonly DependencyProperty ProcessServersSequentiallyProperty = DependencyProperty.Register(nameof(ProcessServersSequentially), typeof(bool), typeof(ServerMonitorWindow), new PropertyMetadata(false));
         public static readonly DependencyProperty SequentialProcessDelayProperty = DependencyProperty.Register(nameof(SequentialProcessDelay), typeof(int), typeof(ServerMonitorWindow), new PropertyMetadata(10));
+        public static readonly DependencyProperty ShutdownReasonProperty = DependencyProperty.Register(nameof(ShutdownReason), typeof(string), typeof(ServerMonitorWindow), new PropertyMetadata(null));
 
         public ServerMonitorWindow() : this(null)
         {
@@ -156,6 +157,12 @@ namespace ServerManagerTool.Windows
         {
             get { return (int)GetValue(SequentialProcessDelayProperty); }
             set { SetValue(SequentialProcessDelayProperty, value); }
+        }
+
+        public string ShutdownReason
+        {
+            get { return (string)GetValue(ShutdownReasonProperty); }
+            set { SetValue(ShutdownReasonProperty, value); }
         }
 
         private void ServerMonitorWindow_Loaded(object sender, RoutedEventArgs e)
@@ -894,8 +901,9 @@ namespace ServerManagerTool.Windows
                     {
                         var processServersSequentially = ProcessServersSequentially;
                         var sequentialProcessDelay = SequentialProcessDelay;
+                        var shutdownReason = ShutdownReason;
 
-                        await StartSelectedServersAsync(restart: true, processServersSequentially, sequentialProcessDelay);
+                        await StartSelectedServersAsync(restart: true, processServersSequentially, sequentialProcessDelay, shutdownReason);
                     },
                     canExecute: (_) =>
                     {
@@ -915,8 +923,9 @@ namespace ServerManagerTool.Windows
                     {
                         var processServersSequentially = ProcessServersSequentially;
                         var sequentialProcessDelay = SequentialProcessDelay;
+                        var shutdownReason = ShutdownReason;
 
-                        await StopSelectedServersAsync(shutdown: true, processServersSequentially, sequentialProcessDelay);
+                        await StopSelectedServersAsync(shutdown: true, processServersSequentially, sequentialProcessDelay, shutdownReason);
                     },
                     canExecute: (_) =>
                     {
@@ -937,7 +946,7 @@ namespace ServerManagerTool.Windows
                         var processServersSequentially = ProcessServersSequentially;
                         var sequentialProcessDelay = SequentialProcessDelay;
 
-                        await StartSelectedServersAsync(restart: false, processServersSequentially, sequentialProcessDelay);
+                        await StartSelectedServersAsync(restart: false, processServersSequentially, sequentialProcessDelay, shutdownReason: null);
                     },
                     canExecute: (_) =>
                     {
@@ -957,8 +966,9 @@ namespace ServerManagerTool.Windows
                     {
                         var processServersSequentially = ProcessServersSequentially;
                         var sequentialProcessDelay = SequentialProcessDelay;
+                        var shutdownReason = ShutdownReason;
 
-                        await StopSelectedServersAsync(shutdown: false, processServersSequentially, sequentialProcessDelay);
+                        await StopSelectedServersAsync(shutdown: false, processServersSequentially, sequentialProcessDelay, shutdownReason);
                     },
                     canExecute: (_) =>
                     {
@@ -978,8 +988,9 @@ namespace ServerManagerTool.Windows
                     {
                         var processServersSequentially = ProcessServersSequentially;
                         var sequentialProcessDelay = SequentialProcessDelay;
+                        var shutdownReason = ShutdownReason;
 
-                        await UpdateSelectedServersAsync(updateModsOnly: true, processServersSequentially, sequentialProcessDelay);
+                        await UpdateSelectedServersAsync(updateModsOnly: true, processServersSequentially, sequentialProcessDelay, shutdownReason);
                     },
                     canExecute: (_) =>
                     {
@@ -999,8 +1010,9 @@ namespace ServerManagerTool.Windows
                     {
                         var processServersSequentially = ProcessServersSequentially;
                         var sequentialProcessDelay = SequentialProcessDelay;
+                        var shutdownReason = ShutdownReason;
 
-                        await UpdateSelectedServersAsync(updateModsOnly: false, processServersSequentially, sequentialProcessDelay);
+                        await UpdateSelectedServersAsync(updateModsOnly: false, processServersSequentially, sequentialProcessDelay, shutdownReason);
                     },
                     canExecute: (_) =>
                     {
@@ -1266,7 +1278,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async Task StartSelectedServersAsync(bool restart, bool processServersSequentially, int sequentialProcessDelay)
+        private async Task StartSelectedServersAsync(bool restart, bool processServersSequentially, int sequentialProcessDelay, string shutdownReason)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1334,6 +1346,7 @@ namespace ServerManagerTool.Windows
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
+                    ShutdownReason = shutdownReason,
                     ServerProcess = ServerProcessType.Restart,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
@@ -1406,7 +1419,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async Task StopSelectedServersAsync(bool shutdown, bool processServersSequentially, int sequentialProcessDelay)
+        private async Task StopSelectedServersAsync(bool shutdown, bool processServersSequentially, int sequentialProcessDelay, string shutdownReason)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1476,6 +1489,7 @@ namespace ServerManagerTool.Windows
                     PerformWorldSave = shutdown,
                     SendAlerts = true,
                     SendEmails = false,
+                    ShutdownReason = shutdownReason,
                     ServerProcess = shutdown ? ServerProcessType.Shutdown : ServerProcessType.Stop,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
@@ -1551,7 +1565,7 @@ namespace ServerManagerTool.Windows
             }
         }
 
-        private async Task UpdateSelectedServersAsync(bool updateModsOnly, bool processServersSequentially, int sequentialProcessDelay)
+        private async Task UpdateSelectedServersAsync(bool updateModsOnly, bool processServersSequentially, int sequentialProcessDelay, string shutdownReason)
         {
             if (CancellationTokenSource != null)
                 return;
@@ -1616,6 +1630,7 @@ namespace ServerManagerTool.Windows
                     OutputLogs = false,
                     SendAlerts = true,
                     SendEmails = false,
+                    ShutdownReason = shutdownReason,
                     ServerProcess = ServerProcessType.Update,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {

@@ -47,6 +47,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*" MinHeight="200"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto" MinHeight="100"/>
@@ -156,9 +157,19 @@
                     <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/ChangeNotes.ico,Size=32}"/>
                 </Button>
 
-                <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="13" Margin="1" Label="{DynamicResource ServerMonitor_SequentialProcessDelayLabel}" Value="{Binding SequentialProcessDelay}" Minimum="0" Maximum="300" SmallChange="1" LargeChange="5" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" Visibility="{Binding ProcessServersSequentially, Converter={StaticResource BooleanToVisibilityConverter}}" ToolTip="{DynamicResource ServerMonitor_SequentialProcessDelayTooltip}"/>
+                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="13" Margin="1,2,5,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <DataGrid Name="ServersGrid" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="13" Margin="5,5,5,0" HorizontalAlignment="Stretch" ItemsSource="{Binding ServerManager.Servers}" GridLinesVisibility="Horizontal" HeadersVisibility="All" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" SelectionMode="Single" PreviewMouseLeftButtonDown="OnMouseLeftButtonDown">
+                    <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ShutdownWindow_ShutdownReasonLabel}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}" VerticalAlignment="Center"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ShutdownReason}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}" VerticalContentAlignment="Center"/>
+                </Grid>
+
+                <cctl:AnnotatedSlider Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="13" Margin="1" Label="{DynamicResource ServerMonitor_SequentialProcessDelayLabel}" Value="{Binding SequentialProcessDelay}" Minimum="0" Maximum="300" SmallChange="1" LargeChange="5" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" Visibility="{Binding ProcessServersSequentially, Converter={StaticResource BooleanToVisibilityConverter}}" ToolTip="{DynamicResource ServerMonitor_SequentialProcessDelayTooltip}"/>
+
+                <DataGrid Name="ServersGrid" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="13" Margin="5,5,5,0" HorizontalAlignment="Stretch" ItemsSource="{Binding ServerManager.Servers}" GridLinesVisibility="Horizontal" HeadersVisibility="All" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" RowHeaderWidth="25" SelectionMode="Single" PreviewMouseLeftButtonDown="OnMouseLeftButtonDown">
                     <DataGrid.Resources>
                         <ResourceDictionary>
                             <Style TargetType="{x:Type DataGridCell}">
@@ -636,9 +647,9 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="13" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
+                <GridSplitter Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="13" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
 
-                <RichTextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="13" Margin="5,0,5,5" BorderBrush="LightGray" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" IsReadOnlyCaretVisible="True" IsReadOnly="True" IsTabStop="False">
+                <RichTextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="13" Margin="5,0,5,5" BorderBrush="LightGray" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" IsReadOnlyCaretVisible="True" IsReadOnly="True" IsTabStop="False">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="TextChanged" >
                             <sm:ScrollToBottomAction IsEnabled="True"/>
