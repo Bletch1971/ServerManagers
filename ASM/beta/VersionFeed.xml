@@ -5,7 +5,59 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-    <updated>2022-06-13T00:00:00Z</updated>
+  <updated>2022-06-16T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:84F46053-C944-4740-B030-C500310F9074</id>
+    <title>1.1.431 (1.1.431.4)</title>
+    <summary>1.1.431.4</summary>
+    <link href="" />
+    <updated>2022-06-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Global Settings - fixed the bug that cleared the Backup Rcon message mode when changing languages.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>pt-BR Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D3CE3BBC-97AC-40D5-B698-1E65CED7AB52</id>
+    <title>1.1.431 (1.1.431.3)</title>
+    <summary>1.1.431.3</summary>
+    <link href="" />
+    <updated>2022-06-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>RCON Message Modes - now loads them from the gamedata file, so they can be extended without a code change.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:2ADA47E8-6DD0-4231-BAB9-AE3CEE5FA72C</id>
