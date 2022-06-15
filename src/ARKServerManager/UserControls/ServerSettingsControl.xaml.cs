@@ -1081,6 +1081,29 @@ namespace ServerManagerTool
             MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ArkAutoSettings_ErrorLabel"), _globalizer.GetResourceString("ServerSettings_ArkAutoSettings_ErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        private async void ResetServer_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ResetServer_ConfirmationLabel"), _globalizer.GetResourceString("ServerSettings_ResetServer_Title"), MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes)
+                return;
+
+            try
+            {
+                Application.Current.Dispatcher.Invoke(() => this.Cursor = System.Windows.Input.Cursors.Wait);
+
+                await this.Server.ResetAsync();
+
+                MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ResetServer_SuccessfulLabel"), _globalizer.GetResourceString("ServerSettings_ResetServer_Title"), MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, _globalizer.GetResourceString("ServerSettings_ResetServer_FailedTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                Application.Current.Dispatcher.Invoke(() => this.Cursor = null);
+            }
+        }
+
         private async void SaveBackup_Click(object sender, RoutedEventArgs e)
         {
             try

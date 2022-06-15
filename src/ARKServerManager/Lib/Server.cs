@@ -1,5 +1,6 @@
 ﻿using ServerManagerTool.Common.Lib;
 using System;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -100,6 +101,42 @@ namespace ServerManagerTool.Lib
             var success = await this.Runtime.UpgradeAsync(cancellationToken, updateServer, branch, validate, updateMods, progressCallback);
             this.Profile.LastInstalledVersion = this.Runtime.Version.ToString();
             return success;
+        }
+
+        public async Task ResetAsync()
+        {
+            // delete the world, player and tribe files (SavedArks)
+            var saveFolder = ServerProfile.GetProfileSavePath(Profile);
+            if (Directory.Exists(saveFolder))
+            {
+                await Task.Run(() =>
+                {
+                    foreach (var file in Directory.GetFiles(saveFolder, "*.*", SearchOption.TopDirectoryOnly))
+                    {
+                        File.Delete(file);
+                    }
+                });
+            };
+
+            // delete the mod files (SaveGames)
+            var saveGamesFolder = ServerProfile.GetProfileSaveGamesPath(Profile);
+            if (Directory.Exists(saveGamesFolder))
+            {
+                await Task.Run(() =>
+                {
+                    Directory.Delete(saveGamesFolder, true);
+                });
+            }
+
+            // delete the log files (Logs)
+            var logsFolder = Path.Combine(Profile.InstallDirectory, Config.Default.SavedRelativePath, Config.Default.LogsDir);
+            if (Directory.Exists(logsFolder))
+            {
+                await Task.Run(() =>
+                {
+                    Directory.Delete(logsFolder, true);
+                });
+            }
         }
     }
 }

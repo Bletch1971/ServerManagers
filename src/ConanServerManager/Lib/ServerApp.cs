@@ -2011,9 +2011,9 @@ namespace ServerManagerTool.Lib
 
                             // backup the world save file
                             var key = string.Empty;
-                            var files = new Dictionary<string, List<string>>
+                            var files = new Dictionary<string, List<(string, string)>>
                             {
-                                { key, new List<string> { worldFile } }
+                                { key, new List<(string, string)> { (worldFile, worldFileName) } }
                             };
 
                             if (Config.Default.AutoBackup_IncludeSaveGamesFolder)
@@ -2030,9 +2030,9 @@ namespace ServerManagerTool.Lib
                                     {
                                         key = file.DirectoryName.Replace(saveGamesFolder, Config.Default.SaveGamesRelativePath);
                                         if (files.ContainsKey(key))
-                                            files[key].Add(file.FullName);
+                                            files[key].Add((file.FullName, file.Name));
                                         else
-                                            files.Add(key, new List<string> { file.FullName });
+                                            files.Add(key, new List<(string, string)> { (file.FullName, file.Name) });
                                     }
                                 }
                             }

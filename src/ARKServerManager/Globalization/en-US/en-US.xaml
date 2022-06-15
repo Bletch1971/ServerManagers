@@ -1039,6 +1039,10 @@
     <sys:String x:Key="ServerSettings_BackupServer_Title">Backup Server</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Backup Server Error</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">The backup was successful.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">Reset Server</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">Reset Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">This will delete all the server, player and tribe files and reset your server back to new. Do you wish to proceed?</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">The reset was successful.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Shutdown Server Error</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Shutdown Server Cancelled</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">The shutdown window is already open for this server.</sys:String>
@@ -1128,6 +1132,8 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">A comma-separated list of mod ids, in the order in which they should be applied.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">View the mod details.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Upgrade to the latest version of the mods that is currently available to download.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonLabel">Reset</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">Deletes all the server, player and tribe files and resets your server back to new.</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">Saves</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Auto Save Period:</sys:String>

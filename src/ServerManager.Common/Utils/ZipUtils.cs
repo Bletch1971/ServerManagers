@@ -275,5 +275,44 @@ namespace ServerManagerTool.Common.Utils
                 zip.Save();
             }
         }
+
+        public static void ZipFiles(string zipFile, Dictionary<string, List<(string file, string entryName)>> filesToZip, string comment = "")
+        {
+            if (string.IsNullOrWhiteSpace(zipFile))
+                throw new ArgumentNullException(nameof(zipFile));
+
+            if (filesToZip is null || filesToZip.IsEmpty())
+                throw new ArgumentNullException(nameof(filesToZip));
+
+            using (var zip = new ZipFile(zipFile))
+            {
+                foreach (var zipFolder in filesToZip.Keys)
+                {
+                    filesToZip[zipFolder]
+                        .Where(f => !string.IsNullOrWhiteSpace(f.file) && File.Exists(f.file)).ToList()
+                        .ForEach(f =>
+                        {
+                            var zipEntry = zip.AddFile(f.file, zipFolder);
+                            var entryName = string.IsNullOrWhiteSpace(f.entryName) ? Path.GetFileName(f.file) : f.entryName;
+                            if (string.IsNullOrWhiteSpace(zipFolder))
+                            {
+                                zipEntry.FileName = entryName;
+                            }
+                            else
+                            {
+                                zipEntry.FileName = $"{zipFolder}/{entryName}";
+                            }
+                        });
+                }
+
+                zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
+                if (!string.IsNullOrWhiteSpace(comment))
+                {
+                    zip.Comment = comment;
+                }
+
+                zip.Save();
+            }
+        }
     }
 }

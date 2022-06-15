@@ -576,6 +576,40 @@
 
                                         <Label    Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_MapPathLabel}" ToolTip="{DynamicResource ServerSettings_MapPathTooltip}"/>
                                         <ComboBox Grid.Row="0" Grid.Column="1" Margin="1" Name="GameMapComboBox" IsEditable="True" ItemsSource="{Binding BaseGameMaps, ElementName=SettingsControl, UpdateSourceTrigger=PropertyChanged}" SelectedValue="{Binding ServerMap, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel" SourceUpdated="MapName_SourceUpdated" ToolTip="{DynamicResource ServerSettings_MapPathTooltip}"/>
+                                        <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,1,0,0" DataContext="{Binding Runtime, ElementName=SettingsControl}" Click="ResetServer_Click">
+                                            <Button.Style>
+                                                <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+                                                    <Setter Property="Content" Value="{DynamicResource ServerSettings_ResetServerButtonLabel}"/>
+                                                    <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_ResetServerButtonTooltip}" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                            <Setter Property="IsEnabled" Value="True"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                            <Setter Property="IsEnabled" Value="False"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
+                                        </Button>
 
                                         <Label   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_MapSaveNameLabel}" ToolTip="{DynamicResource ServerSettings_MapSaveNameTooltip}"/>
                                         <TextBox Grid.Row="1" Grid.Column="1" Margin="1" VerticalContentAlignment="Center" Text="{Binding ServerMapSaveFileName}" ToolTip="{DynamicResource ServerSettings_MapSaveNameTooltip}"/>
