@@ -1,10 +1,46 @@
 ﻿using ServerManagerTool.Common.Attibutes;
 using ServerManagerTool.Common.Model;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using System.Windows;
 
 namespace ServerManagerTool.Lib
 {
+    [DataContract]
+    public class CraftingOverrideList : AggregateIniValueList<CraftingOverride>
+    {
+        public CraftingOverrideList(string aggregateValueName)
+            : base(aggregateValueName, null)
+        {
+        }
+
+        public IEnumerable<string> RenderToView()
+        {
+            List<string> errors = new List<string>();
+
+            Update();
+
+            return errors;
+        }
+
+        public void RenderToModel()
+        {
+        }
+
+        public void UpdateForLocalization()
+        {
+        }
+
+        public void Update(bool recursive = true)
+        {
+            IsEnabled = this.Count > 0;
+
+            foreach (var craftingOverride in this)
+                craftingOverride.Update(recursive);
+        }
+    }
+
     [DataContract]
     public class CraftingOverride : AggregateIniValue
     {
@@ -44,7 +80,10 @@ namespace ServerManagerTool.Lib
         public override void InitializeFromINIValue(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
+            {
+                Update();
                 return;
+            }
 
             var kvPair = value.Split(new[] { '=' }, 2);
             var kvValue = kvPair[1].Trim(' ');
@@ -64,6 +103,25 @@ namespace ServerManagerTool.Lib
         public string DisplayName => GameData.FriendlyItemNameForClass(ItemClassString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(ItemClassString) && BaseCraftingResourceRequirements.Count > 0;
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(CraftingOverride), new PropertyMetadata("N"));
+
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && BaseCraftingResourceRequirements != null)
+            {
+                foreach (var resource in BaseCraftingResourceRequirements)
+                    resource.Update();
+            }
+
+            ValidStatus = IsValid ? (BaseCraftingResourceRequirements.Any(i => i.ValidStatus == "N") ? "N" : (BaseCraftingResourceRequirements.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 
     [DataContract]
@@ -119,5 +177,18 @@ namespace ServerManagerTool.Lib
         public string DisplayName => GameData.FriendlyItemNameForClass(ResourceItemTypeString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(ResourceItemTypeString);
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(CraftingResourceRequirement), new PropertyMetadata("N"));
+
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update()
+        {
+            ValidStatus = IsValid ? (GameData.HasItemForClass(ResourceItemTypeString) ? "Y" : "W") : "N";
+        }
     }
 }

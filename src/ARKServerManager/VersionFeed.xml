@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:93A04A12-C632-4C2B-AC76-42D9E476431C</id>
-    <title>1.1.432 (1.1.432.1)</title>
-    <summary>1.1.432.1</summary>
+    <title>1.1.432 (1.1.432.3)</title>
+    <summary>1.1.432.3</summary>
     <link href="" />
     <updated>2022-06-13T00:00:00Z</updated>
     <content type="xhtml">
@@ -25,6 +25,7 @@
           <br/>
           <ul>
             <li>Gamedata Files - changed the Fjordur official mod to the correct mod id.</li>
+            <li>Crafting Override Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for resources not familiar with (raw class names, not loaded via gamedata files), Errors will show for empty resources.</li>
           </ul>
         </p>
       </div>

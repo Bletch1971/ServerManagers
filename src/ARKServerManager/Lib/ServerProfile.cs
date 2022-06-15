@@ -93,7 +93,7 @@ namespace ServerManagerTool.Lib
             this.EngramEntryAutoUnlocks = new EngramAutoUnlockList(nameof(EngramEntryAutoUnlocks));
             this.EngramSettings = new EngramSettingsList(this.OverrideNamedEngramEntries, this.EngramEntryAutoUnlocks);
 
-            this.ConfigOverrideItemCraftingCosts = new AggregateIniValueList<CraftingOverride>(nameof(ConfigOverrideItemCraftingCosts), null);
+            this.ConfigOverrideItemCraftingCosts = new CraftingOverrideList(nameof(ConfigOverrideItemCraftingCosts));
             this.ConfigOverrideItemMaxQuantity = new StackSizeOverrideList(nameof(ConfigOverrideItemMaxQuantity));
             this.ConfigOverrideSupplyCrateItems = new SupplyCrateOverrideList(nameof(ConfigOverrideSupplyCrateItems));
             this.PreventTransferForClassNames = new PreventTransferOverrideList(nameof(PreventTransferForClassNames));
@@ -3128,11 +3128,11 @@ namespace ServerManagerTool.Lib
         #endregion
 
         #region Crafting Overrides
-        public static readonly DependencyProperty ConfigOverrideItemCraftingCostsProperty = DependencyProperty.Register(nameof(ConfigOverrideItemCraftingCosts), typeof(AggregateIniValueList<CraftingOverride>), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty ConfigOverrideItemCraftingCostsProperty = DependencyProperty.Register(nameof(ConfigOverrideItemCraftingCosts), typeof(CraftingOverrideList), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.CraftingOverrides)]
-        public AggregateIniValueList<CraftingOverride> ConfigOverrideItemCraftingCosts
+        public CraftingOverrideList ConfigOverrideItemCraftingCosts
         {
-            get { return (AggregateIniValueList<CraftingOverride>)GetValue(ConfigOverrideItemCraftingCostsProperty); }
+            get { return (CraftingOverrideList)GetValue(ConfigOverrideItemCraftingCostsProperty); }
             set { SetValue(ConfigOverrideItemCraftingCostsProperty, value); }
         }
         #endregion
@@ -4057,6 +4057,8 @@ namespace ServerManagerTool.Lib
                 profile.NPCSpawnSettings.RenderToView();
             if (Config.Default.SectionSupplyCrateOverridesEnabled)
                 profile.ConfigOverrideSupplyCrateItems.RenderToView();
+            if (Config.Default.SectionCraftingOverridesEnabled)
+                profile.ConfigOverrideItemCraftingCosts.RenderToView();
             if (Config.Default.SectionStackSizeOverridesEnabled)
                 profile.ConfigOverrideItemMaxQuantity.RenderToView();
             if (Config.Default.SectionPreventTransferOverridesEnabled)
@@ -4135,6 +4137,8 @@ namespace ServerManagerTool.Lib
                 profile.NPCSpawnSettings.RenderToView();
             if (Config.Default.SectionSupplyCrateOverridesEnabled)
                 profile.ConfigOverrideSupplyCrateItems.RenderToView();
+            if (Config.Default.SectionCraftingOverridesEnabled)
+                profile.ConfigOverrideItemCraftingCosts.RenderToView();
             if (Config.Default.SectionStackSizeOverridesEnabled)
                 profile.ConfigOverrideItemMaxQuantity.RenderToView();
             if (Config.Default.SectionPreventTransferOverridesEnabled)
@@ -4272,6 +4276,12 @@ namespace ServerManagerTool.Lib
             {
                 progressCallback?.Invoke(0, _globalizer.GetResourceString("ProfileSave_ConstructingSupplyCrateInformation"));
                 this.ConfigOverrideSupplyCrateItems.RenderToModel();
+            }
+
+            if (Config.Default.SectionCraftingOverridesEnabled)
+            {
+                progressCallback?.Invoke(0, _globalizer.GetResourceString("ProfileSave_ConstructingCraftingOverridesInformation"));
+                this.ConfigOverrideItemCraftingCosts.RenderToModel();
             }
 
             if (Config.Default.SectionStackSizeOverridesEnabled)
@@ -5312,7 +5322,7 @@ namespace ServerManagerTool.Lib
 
         public void ResetCraftingOverridesSection()
         {
-            this.ConfigOverrideItemCraftingCosts = new AggregateIniValueList<CraftingOverride>(nameof(ConfigOverrideItemCraftingCosts), null);
+            this.ConfigOverrideItemCraftingCosts = new CraftingOverrideList(nameof(ConfigOverrideItemCraftingCosts));
             this.ConfigOverrideItemCraftingCosts.Reset();
         }
 
@@ -5939,9 +5949,12 @@ namespace ServerManagerTool.Lib
 
         private void SyncCraftingOverridesSection(ServerProfile sourceProfile)
         {
+            sourceProfile.ConfigOverrideItemCraftingCosts.RenderToModel();
+
             this.ConfigOverrideItemCraftingCosts.Clear();
             this.ConfigOverrideItemCraftingCosts.FromIniValues(sourceProfile.ConfigOverrideItemCraftingCosts.ToIniValues());
             this.ConfigOverrideItemCraftingCosts.IsEnabled = this.ConfigOverrideItemCraftingCosts.Count > 0;
+            this.ConfigOverrideItemCraftingCosts.RenderToView();
         }
 
         private void SyncCustomEngineSettingsSection(ServerProfile sourceProfile)

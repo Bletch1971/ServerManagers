@@ -1314,6 +1314,11 @@ namespace ServerManagerTool
             Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
+        private void CraftingOverrideGrids_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            Settings.ConfigOverrideItemCraftingCosts.Update();
+        }
+
         #region Dinos
         private void DinoCustomization_Reset(object sender, RoutedEventArgs e)
         {
@@ -1749,7 +1754,7 @@ namespace ServerManagerTool
         private void AddCraftingOverride_Click(object sender, RoutedEventArgs e)
         {
             Settings.ConfigOverrideItemCraftingCosts.Add(new CraftingOverride());
-            Settings.ConfigOverrideItemCraftingCosts.IsEnabled = true;
+            Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
         private void AddCraftingOverrideResource_Click(object sender, RoutedEventArgs e)
@@ -1761,6 +1766,7 @@ namespace ServerManagerTool
             }
 
             SelectedCraftingOverride.BaseCraftingResourceRequirements.Add(new CraftingResourceRequirement());
+            Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
         private void ClearCraftingOverrides_Click(object sender, RoutedEventArgs e)
@@ -1770,7 +1776,7 @@ namespace ServerManagerTool
 
             SelectedCraftingOverride = null;
             Settings.ConfigOverrideItemCraftingCosts.Clear();
-            Settings.ConfigOverrideItemCraftingCosts.IsEnabled = false;
+            Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
         private void ClearCraftingOverrideResources_Click(object sender, RoutedEventArgs e)
@@ -1779,6 +1785,7 @@ namespace ServerManagerTool
                 return;
 
             SelectedCraftingOverride?.BaseCraftingResourceRequirements.Clear();
+            Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
         private void PasteCraftingOverride_Click(object sender, RoutedEventArgs e)
@@ -1794,6 +1801,8 @@ namespace ServerManagerTool
             // read the pasted data into an ini file.
             var iniFile = IniFileUtils.ReadString(window.ConfigData.Replace(" ", ""));
 
+            Server.Profile.ConfigOverrideItemCraftingCosts.RenderToModel();
+
             // cycle through the sections, adding them to the engrams list. Will bypass any sections that are named as per the ARK default sections.
             foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
             {
@@ -1802,6 +1811,8 @@ namespace ServerManagerTool
                 Server.Profile.ConfigOverrideItemCraftingCosts.AddRange(configOverrideItemCraftingCosts);
                 Server.Profile.ConfigOverrideItemCraftingCosts.IsEnabled |= configOverrideItemCraftingCosts.IsEnabled;
             }
+
+            var errors = Server.Profile.ConfigOverrideItemCraftingCosts.RenderToView();
 
             RefreshBasePrimalItemList();
         }
@@ -1813,7 +1824,7 @@ namespace ServerManagerTool
 
             var item = ((CraftingOverride)((Button)e.Source).DataContext);
             Settings.ConfigOverrideItemCraftingCosts.Remove(item);
-            Settings.ConfigOverrideItemCraftingCosts.IsEnabled = Settings.ConfigOverrideItemCraftingCosts.Count > 0;
+            Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
         private void RemoveCraftingOverrideResource_Click(object sender, RoutedEventArgs e)
@@ -1826,10 +1837,13 @@ namespace ServerManagerTool
 
             var item = ((CraftingResourceRequirement)((Button)e.Source).DataContext);
             SelectedCraftingOverride.BaseCraftingResourceRequirements.Remove(item);
+            Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
         private void SaveCraftingOverride_Click(object sender, RoutedEventArgs e)
         {
+            Settings.ConfigOverrideItemCraftingCosts.RenderToModel();
+
             var iniValues = new List<string>();
             iniValues.AddRange(Settings.ConfigOverrideItemCraftingCosts.ToIniValues());
             var iniValue = string.Join("\r\n", iniValues);
@@ -1847,6 +1861,8 @@ namespace ServerManagerTool
             var item = ((CraftingOverride)((Button)e.Source).DataContext);
             if (item == null)
                 return;
+
+            Settings.ConfigOverrideItemCraftingCosts.RenderToModel();
 
             var iniName = Settings.ConfigOverrideItemCraftingCosts.IniCollectionKey;
             var iniValue = $"{iniName}={item.ToINIValue()}";

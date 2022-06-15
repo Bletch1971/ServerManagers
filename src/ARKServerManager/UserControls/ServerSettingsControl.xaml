@@ -4836,7 +4836,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid Name="CraftingOverrideItemGrid" ItemsSource="{Binding ConfigOverrideItemCraftingCosts}" SelectedItem="{Binding Path=SelectedCraftingOverride, ElementName=SettingsControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid Name="CraftingOverrideItemGrid" ItemsSource="{Binding ConfigOverrideItemCraftingCosts}" SelectedItem="{Binding Path=SelectedCraftingOverride, ElementName=SettingsControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False"  RowHeaderWidth="25" SourceUpdated="CraftingOverrideGrids_SourceUpdated">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -4853,6 +4853,28 @@
                                             <SolidColorBrush Color="#FFB4B4B4"/>
                                         </DataGrid.VerticalGridLinesBrush>
 
+                                        <DataGrid.RowHeaderTemplate>
+                                            <DataTemplate>
+                                                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                                                    <Image.Style>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="Y">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="N">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="W">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </DataTemplate>
+                                        </DataGrid.RowHeaderTemplate>
+
                                         <DataGrid.Columns>
                                             <DataGridTemplateColumn Width="2*" CanUserSort="True" SortMemberPath="DisplayName">
                                                 <DataGridTemplateColumn.Header>
@@ -4860,7 +4882,7 @@
                                                 </DataGridTemplateColumn.Header>
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BasePrimalItemList, ElementName=SettingsControl}" SelectedValue="{Binding ItemClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BasePrimalItemList, ElementName=SettingsControl}" SelectedValue="{Binding ItemClassString, Mode=TwoWay, UpdateSourceTrigger=Explicit, NotifyOnSourceUpdated=True}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
@@ -4901,7 +4923,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid Name="CraftingOverrideResourceGrid" ItemsSource="{Binding Path=SelectedCraftingOverride.BaseCraftingResourceRequirements, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid Name="CraftingOverrideResourceGrid" ItemsSource="{Binding Path=SelectedCraftingOverride.BaseCraftingResourceRequirements, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeRows="False" RowHeaderWidth="25" SourceUpdated="CraftingOverrideGrids_SourceUpdated">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -4918,6 +4940,28 @@
                                             <SolidColorBrush Color="#FFB4B4B4"/>
                                         </DataGrid.VerticalGridLinesBrush>
 
+                                        <DataGrid.RowHeaderTemplate>
+                                            <DataTemplate>
+                                                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16">
+                                                    <Image.Style>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="Y">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusGood.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="N">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusBad.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Path=DataContext.ValidStatus, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="W">
+                                                                    <Setter Property="Source" Value="{com:Icon Path=/Ark Server Manager;component/Art/StatusWarning.ico,Size=32}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </DataTemplate>
+                                        </DataGrid.RowHeaderTemplate>
+
                                         <DataGrid.Columns>
                                             <DataGridTemplateColumn Width="2*" CanUserSort="True" SortMemberPath="DisplayName">
                                                 <DataGridTemplateColumn.Header>
@@ -4925,12 +4969,12 @@
                                                 </DataGridTemplateColumn.Header>
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BasePrimalItemList, ElementName=SettingsControl}" SelectedValue="{Binding ResourceItemTypeString, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding BasePrimalItemList, ElementName=SettingsControl}" SelectedValue="{Binding ResourceItemTypeString, Mode=TwoWay, UpdateSourceTrigger=Explicit, NotifyOnSourceUpdated=True}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
-                                            
-                                            <DataGridTextColumn     Width="100" Binding="{Binding BaseResourceRequirement}" ElementStyle="{StaticResource CenteredTextBlockStyle}" >
+
+                                            <DataGridTextColumn     Width="100" Binding="{Binding BaseResourceRequirement, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ElementStyle="{StaticResource CenteredTextBlockStyle}" >
                                                 <DataGridTextColumn.Header>
                                                     <TextBlock Text="{DynamicResource ServerSettings_CraftingOverrides_ResourceQuantityColumnLabel}" ToolTip="{DynamicResource ServerSettings_CraftingOverrides_ResourceQuantityColumnTooltip}" />
                                                 </DataGridTextColumn.Header>
