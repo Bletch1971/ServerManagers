@@ -546,7 +546,8 @@ namespace ServerManagerTool
 
         private void PopulateRconMessageModesComboBox()
         {
-            var selectedValue = this.RconMessageModesComboBox?.SelectedValue ?? Config.RCON_MessageCommand;
+            var selectedValueBackup = this.RconBackupMessageModesComboBox?.SelectedValue ?? Config.RCON_BackupMessageCommand;
+            var selectedValueAll = this.RconMessageModesComboBox?.SelectedValue ?? Config.RCON_MessageCommand;
             var list = new ComboBoxItemList();
 
             foreach (var item in GameData.GetMessageRconInputModes())
@@ -556,9 +557,13 @@ namespace ServerManagerTool
             }
 
             this.RconMessageModes = list;
+            if (this.RconBackupMessageModesComboBox != null)
+            {
+                this.RconBackupMessageModesComboBox.SelectedValue = selectedValueBackup;
+            }
             if (this.RconMessageModesComboBox != null)
             {
-                this.RconMessageModesComboBox.SelectedValue = selectedValue;
+                this.RconMessageModesComboBox.SelectedValue = selectedValueAll;
             }
         }
 

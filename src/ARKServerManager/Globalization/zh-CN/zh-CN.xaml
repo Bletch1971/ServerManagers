@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2022.05.23(叶凡) -有问题加QQ群:109949666反馈</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2022.06.13(叶凡) --交流群:109949666反馈</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -25,6 +25,7 @@
 	<sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
     <sys:String x:Key="Map_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
 	<sys:String x:Key="Map_LostIsland">迷失岛(Lost Island)</sys:String>
+	<sys:String x:Key="Map_Fjordur">维京岛(Fjordur)</sys:String>
     <!--#endregion-->
 
     <!--#region 总转换名称 -->
@@ -60,6 +61,7 @@
     <sys:String x:Key="Mod_PGM">程序生成地图(PGM)</sys:String>
 	<sys:String x:Key="Mod_LostIsland">迷失岛(Lost Island)</sys:String>
     <sys:String x:Key="Mod_Valguero">瓦尔盖罗(Valguero)</sys:String>
+	<sys:String x:Key="Mod_Fjordur">维京岛(Fjordur)</sys:String>
     <!--#endregion-->
 
     <!--#region Mod 类型 -->
@@ -82,15 +84,6 @@
     <!--#region 处理器亲和性-->
     <sys:String x:Key="ProcessorAffinity_Invalid">无效</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">所有</sys:String>
-    <!--#endregion-->
-	
-	<!--#region 任务优先级 -->
-    <sys:String x:Key="TaskPriority_Idle">闲置</sys:String>
-    <sys:String x:Key="TaskPriority_BelowNormal">低于正常水平</sys:String>
-    <sys:String x:Key="TaskPriority_Normal">正常</sys:String>
-    <sys:String x:Key="TaskPriority_AboveNormal">高于正常水平</sys:String>
-    <sys:String x:Key="TaskPriority_High">高</sys:String>
-    <sys:String x:Key="TaskPriority_RealTime">实时</sys:String>
     <!--#endregion-->
 
     <!--#region 窗口启动模式 -->
@@ -445,44 +438,45 @@
     <sys:String x:Key="ServerMonitor_TotalCountLabel">服务器总数：</sys:String>
 	<sys:String x:Key="ServerMonitor_SelectedColumnLabel">选择</sys:String>
     <sys:String x:Key="ServerMonitor_ProfileColumnLabel">配置名称</sys:String>
-    <sys:String x:Key="ServerMonitor_ServerColumnLabel">服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_ServerColumnLabel">服务器名称</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">地图</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">MOD</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">版本</sys:String>
-    <sys:String x:Key="ServerMonitor_PlayersColumnLabel">玩家</sys:String>
-    <sys:String x:Key="ServerMonitor_StatusColumnLabel">状态</sys:String>
+    <sys:String x:Key="ServerMonitor_PlayersColumnLabel">当前玩家/玩家总数</sys:String>
+    <sys:String x:Key="ServerMonitor_StatusColumnLabel">服务器状态</sys:String>
 
-    <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">创建一个桌面快捷方式以直接打开此表单。</sys:String>
-	<sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">选择所有服务器。</sys:String>
-	<sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">取消选择所有服务器。</sys:String>
-    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">启动选定的服务器。</sys:String>
-    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">关闭选定的服务器</sys:String>
-    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">停止选定的服务器</sys:String>
-    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">重新启动选定的服务器。</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">更新/验证选定的服务器</sys:String>
-    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">只更新选定服务器上的Mod</sys:String>
-    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">备份选定的服务器。</sys:String>
-    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">取消对所选服务器的处理。</sys:String>
-    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">按循序启动所有服务器</sys:String>
-    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">如果启用，将依次处理服务器;否则它们将同时被处理。</sys:String>
-    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">顺序过程的延迟</sys:String>
-    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">在处理下一个服务器之前要等待的秒数。</sys:String>
 	
+	<sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">创建一个桌面快捷方式以直接打开此表单。.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">选择所有服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">取消选择所有服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">启动所选的服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">关闭所选服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">停止选择的服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">重新启动所选的服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">更新/验证所选服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">只在选定的服务器上更新MOD</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">备份选定的服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">取消处理选定的服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">按顺序处理服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">如果启用，服务器将被一个接一个地处理；否则它们将同时被处理</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">顺序过程延迟</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">在处理下一个服务器之前要等待的秒数</sys:String>
+
     <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">打开玩家列表窗口。</sys:String>
     <sys:String x:Key="ServerMonitor_RCONButtonTooltip">打开“ RCON”窗口。</sys:String>
     <sys:String x:Key="ServerMonitor_StartServerTooltip">启动服务器。</sys:String>
     <sys:String x:Key="ServerMonitor_StopServerTooltip">停止服务器。</sys:String>
     <sys:String x:Key="ServerMonitor_InstallServerTooltip">安装服务器。</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">更新/验证服务器。</sys:String>
-	
-	<sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">该进程被用户取消了。你将需要检查你的服务器的状态。</sys:String>
+
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">该进程被用户取消了。你将需要检查你的服务器的状态。</sys:String>
     <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">已经发送了一个进程取消请求。</sys:String>
 
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">服务器更新错误</sys:String>
     <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">另一台服务器正在升级，请等待升级完成，然后重试。</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">确认关闭窗口</sys:String>
     <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">您当前正在执行服务器更新，请关闭窗口，并断开与Steam cmd的连接。 您要继续关闭窗口吗？</sys:String>
-	<sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmTitle">确认关闭服务器</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmTitle">确认关闭服务器</sys:String>
     <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmLabel">你即将关闭选定的服务器。你想继续吗？</sys:String>
     <sys:String x:Key="ServerMonitor_StartServers_ConfirmTitle">确认启动服务器</sys:String>
     <sys:String x:Key="ServerMonitor_StartServers_ConfirmLabel">你即将启动选定的服务器。你想继续吗？</sys:String>
@@ -494,7 +488,7 @@
     <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmLabel">你即将更新选定的服务器。你想继续吗？</sys:String>
     <sys:String x:Key="ServerMonitor_BackupServers_ConfirmTitle">确认备份服务器</sys:String>
     <sys:String x:Key="ServerMonitor_BackupServers_ConfirmLabel">你即将备份所选的服务器。你想继续吗？</sys:String>
-    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">选定的服务器错误</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">所选服务器错误</sys:String>
     <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorLabel">你没有选择任何服务器。在列表中选择一个或多个服务器，再试一次。</sys:String>
     <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmTitle">关闭服务器监控错误</sys:String>
     <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmLabel">服务器监控窗口此时不能关闭。一个或多个服务器目前正在启动、关闭或重新启动。</sys:String>
@@ -577,8 +571,8 @@
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">显示服务器状态操作确认</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">如果启用，将显示一个对话框来确认服务器状态操作。</sys:String>
     
-    <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">自定义等级选项</sys:String>
-	<sys:String x:Key="GlobalSettings_ServerStartupLabel">服务器启动选项</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartupLabel">服务器启动选项</sys:String>
+	<sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">自定义等级选项</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">玩家等级提升:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">添加新自定义级别时要增加经验的数值。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">恐龙等级提升:</sys:String>
@@ -615,18 +609,18 @@
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">创意工坊缓存到期</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">自上次刷新创意工坊缓存后的数小时将被视为旧的，并将自动刷新。</sys:String>
     
-    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">备份设置</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">在进行世界保存备份时包括SaveGames文件夹</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">如果启用，当运行世界保存备份时，它将包括用于存储mod数据文件的SaveGames文件夹。</sys:String>
-	<sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">删除旧备份文件</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBackupLabel">启用自动备份</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">备份间隔:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">以小时和分钟（hh：mm）执行服务器备份的频率。 设置为00:00以禁用。</sys:String>
+	<sys:String x:Key="GlobalSettings_BackupSettingsLabel">备份设置</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">在进行WorldSave备份时包括SaveGames文件夹</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">如果启用，当运行worldsave备份时，它将包括用于存储mod数据文件的SaveGames文件夹。</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">如果启用，当自动备份运行时，旧的备份文件将被删除。</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">删除旧备份文件</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">过期时间:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">必须以天为单位删除备份文件的历史天数。</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">方舟存档消息:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">当该方舟存档即将被保存时，该消息将在备份时显示。</sys:String>
-	
-	<sys:String x:Key="GlobalSettings_AutoBackupLabel">启用自动备份</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">备份间隔:</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">以小时和分钟（hh：mm）执行服务器备份的频率。 设置为00:00以禁用。</sys:String>
     
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">启用自动更新</sys:String>
     <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">游戏服务器</sys:String>
@@ -754,14 +748,14 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">最多日志数</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">将保留的最多日志文件数.</sys:String>
 	<sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON广播模式:</sys:String>
-	<sys:String x:Key="GlobalSettings_RCON_ModeTooltip">选择服务器管理者通过RCON向游戏客户端发送自动进程信息的方法。</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">选择服务器管理者通过RCON向游戏客户端发送自动进程信息的方法。</sys:String>
 	
 	<sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">对这些优先级的任何改变将在任务创建或保存后生效。</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">选择windows任务管理器在运行该任务时使用的优先级。</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">自动备份任务优先级:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">自动更新任务优先级:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">自动关机/重启任务优先级:</sys:String>
-    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">自动启动任务优先级：</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">自动启动任务优先级:</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">确认设置重置动作</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">单击“是”确认您要执行设置重置。</sys:String>
@@ -1164,6 +1158,8 @@
     <sys:String x:Key="ServerSettings_UseBattlEyeLabel">使BattlEye防外挂系统</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">如果启用,BattlEye防外挂系统将启用。</sys:String>
     <sys:String x:Key="ServerSettings_AntiSpeedHackBiasUnits">倍</sys:String>
+	<sys:String x:Key="ServerSettings_OutputServerLogLabel">输出服务器日志到服务器控制台</sys:String>
+	<sys:String x:Key="ServerSettings_OutputServerLogTooltip">如果启用，服务器日志将被输出到服务器控制台</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresLabel">使用所有可用内核</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresTooltip">如果启用，将使用您的所有CPU核心，如果在使用此启动选项后没有使用所有核心，则尝试禁用它。</sys:String>
     <sys:String x:Key="ServerSettings_UseCacheLabel">使用缓存</sys:String>
@@ -1249,7 +1245,7 @@
     <sys:String x:Key="ServerSettings_CommandLineLabel">命令行</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityLabel">优先：</sys:String>
     <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">设置启动服务器时的应用程序优先级。</sys:String>
-    <sys:String x:Key="ServerSettings_ProcessorAffinityLabel">CPU权重核心：</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessorAffinityLabel">亲和力 - CPU：</sys:String>
     <sys:String x:Key="ServerSettings_ProcessorAffinityTooltip">将处理器关联指定为十六进制数。进程只能在这些处理器上运行。</sys:String>
     <sys:String x:Key="ServerSettings_ProcessorAffinityButtonLabel">...</sys:String>
     <sys:String x:Key="ServerSettings_ProcessorAffinityButtonTooltip">打开“亲和力选择”窗口。</sys:String>
@@ -1257,7 +1253,7 @@
     <sys:String x:Key="ServerSettings_LauncherArgsTooltip">服务器启动器的附加命令行参数。小心使用！有关更多信息，请在互联网上搜索“Microsoft Start Command”微软启动命令。</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideLabel">覆盖启动器</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsOverrideTooltip">如果启用，RunServer.cmd文件将只包含启动器参数字段中包含的内容</sys:String>
-	<sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">前缀启动器</sys:String>
+	<sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">前缀启动程序</sys:String>
     <sys:String x:Key="ServerSettings_LauncherArgsPrefixTooltip">如果启用，RunServer.cmd文件将在服务器启动前包括Launcher Args字段（将允许在服务器启动前执行其他文件）。</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsLabel">服务器参数:</sys:String>
     <sys:String x:Key="ServerSettings_ServerArgsTooltip">服务器的其他命令行参数。如果指定此项，请添加以?开头，然后是其他参数。例如：?MaxPlayers=5?QueryPort=9999 -nosteamclient</sys:String>
@@ -1530,7 +1526,7 @@
     <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">护甲</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">最大耐久</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">武器伤害</sys:String>
-    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">武器弹夹药量</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">武器弹药量</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">低温抗性</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">重量</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">高温抗性</sys:String>
@@ -2068,7 +2064,7 @@
     <sys:String x:Key="ServerSettings_ServerFilesLoadErrorTitle">加载错误</sys:String>
     <sys:String x:Key="ServerSettings_ServerFilesSaveErrorTitle">保存错误</sys:String>
 
-    <sys:String x:Key="ServerSettings_ServerFilesAdminLabel">管理员</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminLabel">服主、管理员</sys:String>
     <sys:String x:Key="ServerSettings_AddAdminPlayerTooltip">添加管理员</sys:String>
     <sys:String x:Key="ServerSettings_ClearAdminPlayerTooltip">清除管理员</sys:String>
     <sys:String x:Key="ServerSettings_ReloadAdminPlayerTooltip">从文件重新加载</sys:String>
@@ -2569,8 +2565,8 @@
     <sys:String x:Key="RCON_ConnectionLostLabel">失去连接.</sys:String>
     <sys:String x:Key="RCON_NoCommandResponseLabel">命令返回任何数据</sys:String>
 
-    <sys:String x:Key="RCON_SaveWorldLabel">即将进行世界保存，在这个过程中你可能会遇到一些滞后。请耐心等待。</sys:String>
-    <sys:String x:Key="RCON_DestroyWildDinosLabel">即将消灭所有的野生生物，在这个过程中你可能会遇到一些滞后。请耐心等待。</sys:String>
+    <sys:String x:Key="RCON_SaveWorldLabel">世界将要进行保存，在此过程中您可能会遇到一些延迟。 请耐心等待。</sys:String>
+    <sys:String x:Key="RCON_DestroyWildDinosLabel">即将消灭所有野生生物时，您可能会在此过程中遇到一些滞后。 请耐心等待。</sys:String>
 
     <sys:String x:Key="RCON_ChatPlayerLabel">发送聊天消息 :</sys:String>
     <sys:String x:Key="RCON_RenamePlayerLabel">重命名 玩家 从 :</sys:String>
@@ -3155,6 +3151,34 @@
 	<sys:String x:Key="Amargasaurus_Character_BP_Minion_C">狒狒BOSS爪牙[阿马加龙]</sys:String>
 	<sys:String x:Key="Dinopithecus_Character_BP_Minion_C">狒狒BOSS爪牙</sys:String>
 	<sys:String x:Key="Sinomacrops_Character_BP_Minion_C">狒狒BOSS爪牙[中华大眼翼龙]</sys:String>
+	<!--#endregion-->
+	
+	<!--#region 恐龙/生物类名称 - 维京岛 -->
+	<sys:String x:Key="Fjordhawk_Character_BP_C">峡鹰</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_C">芬里尔冰霜巨狼</sys:String>
+	<sys:String x:Key="Andrewsarchus_Character_BP_C">安氏兽</sys:String>
+	<sys:String x:Key="Desmodus_Character_BP_C">吸血蝙蝠</sys:String>
+	<!--#endregion-->
+	
+	<!--#region 恐龙/生物类名称 - 维京岛-BOSS-->
+	<sys:String x:Key="BeylaMinion_Character_BP_C">爪牙仆从</sys:String>
+	<sys:String x:Key="Beyla_Character_BP_C">爪牙</sys:String>
+	<sys:String x:Key="SpiderL_Character_BP_Easy_FJ_C">牧羊人 (简单)</sys:String>
+	<sys:String x:Key="SpiderL_Character_BP_Hard_FJ_C">牧羊人 (困难)</sys:String>
+	<sys:String x:Key="SpiderL_Character_BP_Medium_FJ_C">牧羊人 (中等)</sys:String>
+	<sys:String x:Key="Dragon_Character_BP_Boss_Easy_FJ_C">蜻蜓（简单）</sys:String>
+	<sys:String x:Key="Dragon_Character_BP_Boss_Hard_FJ_C">蜻蜓（困难）</sys:String>
+	<sys:String x:Key="Dragon_Character_BP_Boss_Medium_FJ_C">蜻蜓（中等）</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_MiniBoss_Hati_C">哈蒂</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_MiniBoss_Skoll_C">斯库尔</sys:String>
+	<sys:String x:Key="Steinbjorn_Character_BP_C">斯坦比约恩</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_Minion_C">芬里厄的奴才</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_Boss_Easy_C">芬里尔巨狼（简单）</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_Boss_Medium_C">芬里尔巨狼（中等）</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_Boss_Hard_C">芬里尔巨狼（困难）</sys:String>
+	<sys:String x:Key="Gorilla_Character_BP_Easy_FJ_C">巨齿兽(简单)</sys:String>
+	<sys:String x:Key="Gorilla_Character_BP_Medium_FJ_C">巨齿兽(中等)</sys:String>
+	<sys:String x:Key="Gorilla_Character_BP_Hard_FJ_C">巨齿兽(困难)</sys:String>
 	<!--#endregion-->
 	
     <!--#endregion-->
@@ -3925,6 +3949,11 @@
 
     <!--#region 印痕技能 - 迷失岛 -->
 	<sys:String x:Key="EngramEntry_Saddle_Amarga_C">阿马加龙鞍</sys:String>
+    <!--#endregion-->
+	
+	<!--#region 印痕技能 - 维京岛 -->
+	<sys:String x:Key="EngramEntry_Saddle_Andrewsarchus_C">安氏兽鞍</sys:String>
+	<sys:String x:Key="EngramEntry_Saddle_Desmodus_C">吸血蝙蝠鞍</sys:String>
     <!--#endregion-->
 	
     <!--#endregion-->
@@ -5422,7 +5451,7 @@
 	
     <!--#region 地图生物生成 -->
 
-    <!--#region 地图生物生成类名称 -->
+    <!--#region 地图刷新生成类名称 -->
     <sys:String x:Key="DinoSpawnEntries_Beavers_C">Beavers</sys:String>
     <sys:String x:Key="DinoSpawnEntries_DarkWater_C">DarkWater</sys:String>
     <sys:String x:Key="DinoSpawnEntries_DarkWater_Lio_C">DarkWater_Lio</sys:String>
@@ -5935,6 +5964,13 @@
 	<sys:String x:Key="SupplyCrate_Space_06_Oil_C">空投_红色(创世2)</sys:String>
 	<sys:String x:Key="SupplyCrate_Space_07_ElementDust_C">空投_青色(创世2)</sys:String>
 	<sys:String x:Key="SupplyCrate_Space_08_BlackPearls_C">空投_橙色(创世2)</sys:String>
+	
+	<sys:String x:Key="SupplyCrate_Level45_LostIsland_C">黄色灯塔(维京岛)</sys:String>
+	<sys:String x:Key="SupplyCrate_Level45_LostIsland_Double_C">黄色灯塔双份(维京岛)</sys:String>
+	<sys:String x:Key="SupplyCrate_Level60_LostIsland_C">红色灯塔(维京岛)</sys:String>
+	<sys:String x:Key="SupplyCrate_Level60_LostIsland_Double_C">红色灯塔双份(维京岛)</sys:String>
+	<sys:String x:Key="SupplyCrate_Ruins_LostIsland_C">废墟地牢箱子(维京岛)</sys:String>	
+	
     <!--#endregion-->
 
     <!--#endregion-->

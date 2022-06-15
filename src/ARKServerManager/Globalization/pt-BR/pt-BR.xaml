@@ -25,6 +25,7 @@
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
+    <sys:String x:Key="Map_Fjordur">Fjordur</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -58,6 +59,7 @@
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
+    <sys:String x:Key="Mod_Fjordur">Fjordur</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 	
@@ -105,6 +107,12 @@
     <sys:String x:Key="DiscordBotLogLevel_Info">Informações</sys:String>
     <sys:String x:Key="DiscordBotLogLevel_Verbose">Verboso</sys:String>
     <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
+    <!--#endregion-->
+	
+    <!--#region Rcon Message Modes -->
+    <sys:String x:Key="InputMode_Command">Command</sys:String>
+    <sys:String x:Key="InputMode_Global">Global</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -2653,10 +2661,6 @@
     <sys:String x:Key="RCON_ClearLogs_Label">Logs {0} excluídos.</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Não é possível abrir logs</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Não é possível abrir o diretório de logs em {0}. Verifique se esse diretório existe e se você tem permissão para acessá-lo.\nException: {1}</sys:String>
-
-    <sys:String x:Key="InputMode_Command">Comandos</sys:String>
-    <sys:String x:Key="InputMode_Global">Global</sys:String>
-    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
 
     <sys:String x:Key="ConsoleStatus_Disconnected">Desconectado</sys:String>
     <sys:String x:Key="ConsoleStatus_Connected">Conectado</sys:String>
@@ -5620,6 +5624,10 @@
 	<sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Easy_C">Boss Inventory - Dinopithecus King (Gamma)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Medium_C">Boss Inventory - Dinopithecus King (Beta)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDinopith_Hard_C">Boss Inventory - Dinopithecus King (Alpha)</sys:String>
+	
+	<sys:String x:Key="DinoDropInventoryComponent_FenrirBoss_Easy_C">Boss Inventory - Fenrir (Gamma)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_FenrirBoss_Medium_C">Boss Inventory - Fenrir (Beta)</sys:String>
+    <sys:String x:Key="DinoDropInventoryComponent_FenrirBoss_Hard_C">Boss Inventory - Fenrir (Alpha)</sys:String>
 	
 	<sys:String x:Key="DinoDropInventoryComponent_BossDragon_Easy_Ragnarok_C">Boss Inventory - Dragon (Gamma)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossDragon_Medium_Ragnarok_C">Boss Inventory - Dragon (Beta)</sys:String>
