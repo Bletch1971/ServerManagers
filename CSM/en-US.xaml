@@ -81,6 +81,14 @@
     <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
     <!--#endregion-->
 
+    <!--#region Rcon Message Modes -->
+    <sys:String x:Key="InputMode_Command">Command</sys:String>
+    <sys:String x:Key="InputMode_Global">Global</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
+    <sys:String x:Key="InputMode_Alert">Alert (requires Pippi mod)</sys:String>
+    <sys:String x:Key="InputMode_Server">Server (requires Pippi mod)</sys:String>
+    <!--#endregion-->
+
     <!--#region Unit strings -->
     <sys:String x:Key="SliderUnits_Multiplier">x</sys:String>
     <sys:String x:Key="SliderUnits_Percentage">%</sys:String>
@@ -564,12 +572,6 @@
     <sys:String x:Key="RCON_ClearLogs_Label">Logs in {0} deleted.</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Can't open logs</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Unable to open the logs directory at {0}. Please make sure this directory exists and that you have permission to access it.\nException: {1}</sys:String>
-
-    <sys:String x:Key="InputMode_Command">Command</sys:String>
-    <sys:String x:Key="InputMode_Global">Global</sys:String>
-    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
-    <sys:String x:Key="InputMode_Alert">Alert (requires Pippi mod)</sys:String>
-    <sys:String x:Key="InputMode_Server">Server (requires Pippi mod)</sys:String>
 
     <sys:String x:Key="ConsoleStatus_Disconnected">Disconnected</sys:String>
     <sys:String x:Key="ConsoleStatus_Connected">Connected</sys:String>
