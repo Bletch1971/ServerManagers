@@ -2808,7 +2808,7 @@
                                                                 <Setter Property="Background" Value="Beige" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="Extinction">
-                                                                <Setter Property="Background" Value="#FFD6D6" />
+                                                                <Setter Property="Background" Value="#FF8B8B" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="Genesis">
                                                                 <Setter Property="Background" Value="#B3EBFF" />
@@ -2832,10 +2832,13 @@
                                                                 <Setter Property="Background" Value="#FBFBBE" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="CrystalIsles">
-                                                                <Setter Property="Background" Value="#FFD6D6" />
+                                                                <Setter Property="Background" Value="#FFFFD6D6" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
                                                                 <Setter Property="Background" Value="#D9F7C4" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="Fjordur">
+                                                                <Setter Property="Background" Value="#98BBCC" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
@@ -3203,7 +3206,7 @@
                                                                 <Setter Property="Background" Value="Beige" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="Extinction">
-                                                                <Setter Property="Background" Value="#FFD6D6" />
+                                                                <Setter Property="Background" Value="#FF8B8B" />
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="Genesis">
                                                                 <Setter Property="Background" Value="#B3EBFF" />
@@ -3231,6 +3234,9 @@
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
                                                                 <Setter Property="Background" Value="#D9F7C4" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Mod}" Value="Fjordur">
+                                                                <Setter Property="Background" Value="#98BBCC" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
@@ -3725,7 +3731,7 @@
                                                             <Setter Property="Background" Value="Beige" />
                                                         </DataTrigger>
                                                         <DataTrigger Binding="{Binding Mod}" Value="Extinction">
-                                                            <Setter Property="Background" Value="#FFD6D6" />
+                                                            <Setter Property="Background" Value="#FF8B8B" />
                                                         </DataTrigger>
                                                         <DataTrigger Binding="{Binding Mod}" Value="Genesis">
                                                             <Setter Property="Background" Value="#B3EBFF" />
@@ -3753,6 +3759,9 @@
                                                         </DataTrigger>
                                                         <DataTrigger Binding="{Binding Mod}" Value="LostIsland">
                                                             <Setter Property="Background" Value="#D9F7C4" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Mod}" Value="Fjordur">
+                                                            <Setter Property="Background" Value="#98BBCC" />
                                                         </DataTrigger>
                                                     </Style.Triggers>
                                                 </Style>

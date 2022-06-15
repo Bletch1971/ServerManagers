@@ -21,6 +21,11 @@
           <ul>
             <li>Reset Server - added new button to reset your server. This will delete all server, player and tribe files and reset your server back to new.</li>
           </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Gamedata Files - changed the Fjordur official mod to the correct mod id.</li>
+          </ul>
         </p>
       </div>
     </content>
