@@ -27,6 +27,8 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            Update();
+
             return errors;
         }
 
@@ -44,6 +46,14 @@ namespace ServerManagerTool.Lib
 
         public void UpdateForLocalization()
         {
+        }
+
+        public void Update()
+        {
+            IsEnabled = this.Count > 0;
+
+            foreach (var stackSize in this)
+                stackSize.Update();
         }
     }
 
@@ -99,7 +109,10 @@ namespace ServerManagerTool.Lib
         public override void InitializeFromINIValue(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
+            {
+                Update();
                 return;
+            }
 
             var kvPair = value.Split(new[] { '=' }, 2);
             var kvValue = kvPair[1].Trim(' ');
@@ -135,6 +148,19 @@ namespace ServerManagerTool.Lib
         public override bool ShouldSave()
         {
             return IsValid;
+        }
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(StackSizeOverride), new PropertyMetadata("N"));
+
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update()
+        {
+            ValidStatus = IsValid ? (GameData.HasItemForClass(ItemClassString) ? "Y" : "W") : "N";
         }
     }
 

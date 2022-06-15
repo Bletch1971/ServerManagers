@@ -1329,6 +1329,11 @@ namespace ServerManagerTool
             Settings.NPCSpawnSettings.Update();
         }
 
+        private void StackSizeOverrideGrids_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            Settings.ConfigOverrideItemMaxQuantity.Update();
+        }
+
         #region Dinos
         private void DinoCustomization_Reset(object sender, RoutedEventArgs e)
         {
@@ -3277,7 +3282,7 @@ namespace ServerManagerTool
         private void AddStackSizeOverride_Click(object sender, RoutedEventArgs e)
         {
             Settings.ConfigOverrideItemMaxQuantity.Add(new StackSizeOverride());
-            Settings.ConfigOverrideItemMaxQuantity.IsEnabled = true;
+            Settings.ConfigOverrideItemMaxQuantity.Update();
         }
 
         private void ClearStackSizeOverrides_Click(object sender, RoutedEventArgs e)
@@ -3286,7 +3291,7 @@ namespace ServerManagerTool
                 return;
 
             Settings.ConfigOverrideItemMaxQuantity.Clear();
-            Settings.ConfigOverrideItemMaxQuantity.IsEnabled = false;
+            Settings.ConfigOverrideItemMaxQuantity.Update();
         }
 
         private void PasteStackSizeOverride_Click(object sender, RoutedEventArgs e)
@@ -3337,7 +3342,7 @@ namespace ServerManagerTool
 
             var item = ((StackSizeOverride)((Button)e.Source).DataContext);
             Settings.ConfigOverrideItemMaxQuantity.Remove(item);
-            Settings.ConfigOverrideItemMaxQuantity.IsEnabled = Settings.ConfigOverrideItemMaxQuantity.Count > 0;
+            Settings.ConfigOverrideItemMaxQuantity.Update();
         }
 
         private void SaveStackSizeOverride_Click(object sender, RoutedEventArgs e)
@@ -3361,6 +3366,8 @@ namespace ServerManagerTool
             var item = ((StackSizeOverride)((Button)e.Source).DataContext);
             if (item == null)
                 return;
+
+            Settings.ConfigOverrideItemMaxQuantity.RenderToModel();
 
             var iniName = Settings.ConfigOverrideItemMaxQuantity.IniCollectionKey;
             var iniValue = $"{iniName}={item.ToINIValue()}";
