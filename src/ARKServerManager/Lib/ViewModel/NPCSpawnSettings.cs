@@ -20,7 +20,8 @@ namespace ServerManagerTool.Lib.ViewModel
             Reset();
         }
 
-        public NPCSpawnSettingsList(NPCSpawnContainerList<NPCSpawnContainer> configAddNPCSpawnEntriesContainer,
+        public NPCSpawnSettingsList(
+            NPCSpawnContainerList<NPCSpawnContainer> configAddNPCSpawnEntriesContainer,
             NPCSpawnContainerList<NPCSpawnContainer> configSubtractNPCSpawnEntriesContainer,
             NPCSpawnContainerList<NPCSpawnContainer> configOverrideNPCSpawnEntriesContainer)
         {
@@ -138,6 +139,8 @@ namespace ServerManagerTool.Lib.ViewModel
 
                 this.Add(spawnSettings);
             }
+
+            Update();
         }
 
         public void RenderToModel()
@@ -194,6 +197,12 @@ namespace ServerManagerTool.Lib.ViewModel
 
         public void UpdateForLocalization()
         {
+        }
+
+        public void Update(bool recursive = true)
+        {
+            foreach (var npcSpawn in this)
+                npcSpawn.Update(recursive);
         }
     }
 
@@ -280,6 +289,26 @@ namespace ServerManagerTool.Lib.ViewModel
         {
             return NPCSpawnEntrySettings.GetEnumerator();
         }
+
+        public bool IsViewValid => !string.IsNullOrWhiteSpace(NPCSpawnEntriesContainerClassString) && (NPCSpawnEntrySettings?.Count ?? 0) > 0;
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(NPCSpawnSettings), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update(bool recursive = true)
+        {
+            if (recursive && NPCSpawnEntrySettings != null)
+            {
+                foreach (var itemSet in NPCSpawnEntrySettings)
+                    itemSet.Update();
+            }
+
+            ValidStatus = IsViewValid ? (NPCSpawnEntrySettings.Any(i => i.ValidStatus == "N") ? "N" : (NPCSpawnEntrySettings.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+        }
     }
 
     public class NPCSpawnEntrySettings : DependencyObject
@@ -315,5 +344,17 @@ namespace ServerManagerTool.Lib.ViewModel
         public string DisplayName => GameData.FriendlyCreatureNameForClass(NPCClassString);
 
         public bool IsValid => !string.IsNullOrWhiteSpace(NPCClassString);
+
+        public static readonly DependencyProperty ValidStatusProperty = DependencyProperty.Register(nameof(ValidStatus), typeof(string), typeof(NPCSpawnEntrySettings), new PropertyMetadata("N"));
+        public string ValidStatus
+        {
+            get { return (string)GetValue(ValidStatusProperty); }
+            set { SetValue(ValidStatusProperty, value); }
+        }
+
+        public void Update()
+        {
+            ValidStatus = IsValid ? (GameData.HasCreatureForClass(NPCClassString) ? "Y" : "W") : "N";
+        }
     }
 }

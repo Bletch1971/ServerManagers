@@ -1319,6 +1319,16 @@ namespace ServerManagerTool
             Settings.ConfigOverrideItemCraftingCosts.Update();
         }
 
+        private void PreventTransferOverrideGrids_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            Settings.PreventTransferForClassNames.Update();
+        }
+
+        private void NPCSpawnSettingsGrids_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            Settings.NPCSpawnSettings.Update();
+        }
+
         #region Dinos
         private void DinoCustomization_Reset(object sender, RoutedEventArgs e)
         {
@@ -2895,6 +2905,7 @@ namespace ServerManagerTool
         private void AddNPCSpawn_Click(object sender, RoutedEventArgs e)
         {
             Settings.NPCSpawnSettings.Add(new NPCSpawnSettings());
+            Settings.NPCSpawnSettings.Update();
         }
 
         private void AddNPCSpawnEntry_Click(object sender, RoutedEventArgs e)
@@ -2906,6 +2917,7 @@ namespace ServerManagerTool
             }
 
             SelectedNPCSpawnSetting.NPCSpawnEntrySettings.Add(new NPCSpawnEntrySettings());
+            Settings.NPCSpawnSettings.Update();
         }
 
         private void ClearNPCSpawn_Click(object sender, RoutedEventArgs e)
@@ -2915,6 +2927,7 @@ namespace ServerManagerTool
 
             SelectedNPCSpawnSetting = null;
             Settings.NPCSpawnSettings.Clear();
+            Settings.NPCSpawnSettings.Update();
         }
 
         private void ClearNPCSpawnEntry_Click(object sender, RoutedEventArgs e)
@@ -2923,6 +2936,7 @@ namespace ServerManagerTool
                 return;
 
             SelectedNPCSpawnSetting?.NPCSpawnEntrySettings.Clear();
+            Settings.NPCSpawnSettings.Update();
         }
 
         private void PasteNPCSpawn_Click(object sender, RoutedEventArgs e)
@@ -2973,6 +2987,7 @@ namespace ServerManagerTool
 
             var item = ((NPCSpawnSettings)((Button)e.Source).DataContext);
             Settings.NPCSpawnSettings.Remove(item);
+            Settings.NPCSpawnSettings.Update();
         }
 
         private void RemoveNPCSpawnEntry_Click(object sender, RoutedEventArgs e)
@@ -2985,6 +3000,7 @@ namespace ServerManagerTool
 
             var item = ((NPCSpawnEntrySettings)((Button)e.Source).DataContext);
             SelectedNPCSpawnSetting.NPCSpawnEntrySettings.Remove(item);
+            Settings.NPCSpawnSettings.Update();
         }
 
         private void SaveNPCSpawns_Click(object sender, RoutedEventArgs e)
@@ -3007,11 +3023,11 @@ namespace ServerManagerTool
 
         private void SaveNPCSpawn_Click(object sender, RoutedEventArgs e)
         {
-            Settings.NPCSpawnSettings.RenderToModel();
-
             var item = ((NPCSpawnSettings)((Button)e.Source).DataContext);
             if (item == null)
                 return;
+
+            Settings.NPCSpawnSettings.RenderToModel();
 
             string iniName = null;
             string iniValue = null;
@@ -3362,7 +3378,7 @@ namespace ServerManagerTool
         private void AddPreventTransferOverride_Click(object sender, RoutedEventArgs e)
         {
             Settings.PreventTransferForClassNames.Add(new PreventTransferOverride());
-            Settings.PreventTransferForClassNames.IsEnabled = true;
+            Settings.PreventTransferForClassNames.Update();
         }
 
         private void ClearPreventTransferOverrides_Click(object sender, RoutedEventArgs e)
@@ -3371,7 +3387,7 @@ namespace ServerManagerTool
                 return;
 
             Settings.PreventTransferForClassNames.Clear();
-            Settings.PreventTransferForClassNames.IsEnabled = false;
+            Settings.PreventTransferForClassNames.Update();
         }
 
         private void PastePreventTransferOverride_Click(object sender, RoutedEventArgs e)
@@ -3422,7 +3438,7 @@ namespace ServerManagerTool
 
             var item = ((PreventTransferOverride)((Button)e.Source).DataContext);
             Settings.PreventTransferForClassNames.Remove(item);
-            Settings.PreventTransferForClassNames.IsEnabled = Settings.PreventTransferForClassNames.Count > 0;
+            Settings.PreventTransferForClassNames.Update();
         }
 
         private void SavePreventTransferOverride_Click(object sender, RoutedEventArgs e)
@@ -3446,6 +3462,8 @@ namespace ServerManagerTool
             var item = ((PreventTransferOverride)((Button)e.Source).DataContext);
             if (item == null)
                 return;
+
+            Settings.PreventTransferForClassNames.RenderToModel();
 
             var iniName = Settings.PreventTransferForClassNames.IniCollectionKey;
             var iniValue = $"{iniName}={item.ToINIValue()}";

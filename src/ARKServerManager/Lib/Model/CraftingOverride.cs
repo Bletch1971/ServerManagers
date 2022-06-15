@@ -17,11 +17,9 @@ namespace ServerManagerTool.Lib
 
         public IEnumerable<string> RenderToView()
         {
-            List<string> errors = new List<string>();
-
             Update();
 
-            return errors;
+            return new List<string>();
         }
 
         public void RenderToModel()

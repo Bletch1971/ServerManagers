@@ -26,6 +26,8 @@
           <ul>
             <li>Gamedata Files - changed the Fjordur official mod to the correct mod id.</li>
             <li>Crafting Override Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for resources not familiar with (raw class names, not loaded via gamedata files), Errors will show for empty resources.</li>
+            <li>Prevent Transfer Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for creatures not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing creatures.</li>
+            <li>Map Spawner Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for spawners/creatures not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing spawners/creatures.</li>
           </ul>
         </p>
       </div>

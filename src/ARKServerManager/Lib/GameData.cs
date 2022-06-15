@@ -183,6 +183,8 @@ namespace ServerManagerTool.Lib
 
         public static IEnumerable<NPCReplacement> GetNPCReplacements() => dinoSpawns.Select(d => new NPCReplacement() { FromClassName = d.ClassName, ToClassName = d.ClassName });
 
+        public static bool HasCreatureForClass(string className) => !string.IsNullOrWhiteSpace(className) && dinoSpawns.Any(e => e.ClassName.Equals(className));
+
         public static bool IsSpawnableForClass(string className) => gameData?.Creatures?.FirstOrDefault(c => c.ClassName.Equals(className))?.IsSpawnable ?? true;
 
         public static DinoTamable IsTameableForClass(string className) => gameData?.Creatures?.FirstOrDefault(c => c.ClassName.Equals(className))?.IsTameable ?? DinoTamable.True;
