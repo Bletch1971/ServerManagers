@@ -2145,6 +2145,21 @@
                                         </Grid>
                                     </GroupBox>
 
+                                    <GroupBox Header="{DynamicResource ServerSettings_FjordurLabel}" Style="{StaticResource GroupBoxStyle}">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding UseFjordurTraversalBuff}" Content="{DynamicResource ServerSettings_UseFjordurTraversalBuffLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseFjordurTraversalBuffTooltip}"/>
+                                        </Grid>
+                                    </GroupBox>
+
                                     <GroupBox Header="{DynamicResource ServerSettings_ItemStatClampsLabel}" Style="{StaticResource GroupBoxStyle}">
                                         <Grid>
                                             <Grid.RowDefinitions>

@@ -1811,6 +1811,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(HexagonCostMultiplierProperty, value); }
         }
 
+        public static readonly DependencyProperty UseFjordurTraversalBuffProperty = DependencyProperty.Register(nameof(UseFjordurTraversalBuff), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
+        public bool UseFjordurTraversalBuff
+        {
+            get { return (bool)GetValue(UseFjordurTraversalBuffProperty); }
+            set { SetValue(UseFjordurTraversalBuffProperty, value); }
+        }
+
         public bool ClampItemStats
         {
             get
@@ -5647,6 +5655,8 @@ namespace ServerManagerTool.Lib
             this.ClearValue(HexagonRewardMultiplierProperty);
             this.ClearValue(HexagonCostMultiplierProperty);
 
+            this.ClearValue(UseFjordurTraversalBuffProperty);
+
             this.ClearNullableValue(ItemStatClamps_GenericQualityProperty);
             this.ClearNullableValue(ItemStatClamps_ArmorProperty);
             this.ClearNullableValue(ItemStatClamps_MaxDurabilityProperty);
@@ -6365,6 +6375,8 @@ namespace ServerManagerTool.Lib
             this.SetValue(HexStoreAllowOnlyEngramTradeOptionProperty, sourceProfile.HexStoreAllowOnlyEngramTradeOption);
             this.SetValue(HexagonRewardMultiplierProperty, sourceProfile.HexagonRewardMultiplier);
             this.SetValue(HexagonCostMultiplierProperty, sourceProfile.HexagonCostMultiplier);
+
+            this.SetValue(UseFjordurTraversalBuffProperty, sourceProfile.UseFjordurTraversalBuff);
 
             this.SetNullableValue(ItemStatClamps_GenericQualityProperty, sourceProfile.ItemStatClamps_GenericQuality);
             this.SetNullableValue(ItemStatClamps_ArmorProperty, sourceProfile.ItemStatClamps_Armor);

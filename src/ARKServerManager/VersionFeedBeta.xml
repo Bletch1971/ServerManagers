@@ -8,7 +8,30 @@
   <updated>2022-06-16T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:93A04A12-C632-4C2B-AC76-42D9E476431C</id>
+    <id>urn:uuid:DB240E90-17B0-4DE1-B60B-0D5E4753810F</id>
+    <title>1.1.432 (1.1.432.4)</title>
+    <summary>1.1.432.4</summary>
+    <link href="" />
+    <updated>2022-06-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Profile Settings - Rules Section - Added UseFjordurTraversalBuff setting. Located in the Fjordur group at the bottom of the Rules section.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:EB7309A6-5E1F-4F97-A813-CDCFC51A9A7C</id>
     <title>1.1.432 (1.1.432.3)</title>
     <summary>1.1.432.3</summary>
     <link href="" />
