@@ -1540,15 +1540,19 @@
 
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
-    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Is enabled, the hexagon store will be disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">If enabled, the hexagon store will be disabled.</sys:String>
     <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Allow Only Engram Points Trade</sys:String>
-    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Is enabled, only engram points can be sold on the Hexagon store.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">If enabled, only engram points can be sold on the Hexagon store.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Max Hexagons per Character</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Specifies the maximum number of hexagons that each player can have.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Hexagon Reward Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Specifies the multiplier for the hexagons rewards.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
+
+    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Enable Fjordur Biome Teleport</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">If enabled, will allow biome teleport on Fjordur map.</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">WARNING: This will permanently change the stats of any existing items so make sure to backup your current save before modifying and playing with the clamping values.</sys:String>
