@@ -5,44 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-06-16T00:00:00Z</updated>
+  <updated>2022-06-17T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:4E189446-9861-4B64-9B27-0E3E655CD1CA</id>
-    <title>1.1.75 (1.1.75.2)</title>
-    <summary>1.1.75.2</summary>
+    <id>urn:uuid:15FEC514-38B7-4367-BE79-1E00983E7EBB</id>
+    <title>1.1.76 (1.1.76.1)</title>
+    <summary>1.1.76.1</summary>
     <link href="" />
-    <updated>2022-06-16T00:00:00Z</updated>
+    <updated>2022-06-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Server Monitor - added shutdown reason.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:4E189446-9861-4B64-9B27-0E3E655CD1CA</id>
-    <title>1.1.75 (1.1.75.1)</title>
-    <summary>1.1.75.1</summary>
-    <link href="" />
-    <updated>2022-06-16T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">NEW</u>
-          <br/>
-          <ul>
-            <li>Reset Server - added new button to reset your server. This will delete all server files and reset your server back to new.</li>
+            <li>Gamedata Files - when adding, deleteing or reloading the gamedata files via the gamedata window, the server manager will reload them and update the settings window.</li>
           </ul>
         </p>
       </div>
