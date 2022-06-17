@@ -65,6 +65,8 @@ namespace ServerManagerTool
             }
 
             this.DataContext = this;
+
+            GameData.GameDataLoaded += GameData_GameDataLoaded;
         }
 
         public App AppInstance
@@ -396,14 +398,20 @@ namespace ServerManagerTool
             e.Handled = true;
         }
 
+        private void GameData_GameDataLoaded(object sender, EventArgs e)
+        {
+            PopulateRconMessageModesComboBox();
+        }
+
         private void LanguageSelectionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Config.CultureName = AvailableLanguages.Instance.SelectedLanguage;
 
             PopulateWindowsStatesMainWindowComboBox();
             PopulateWindowsStatesServerMonitorWindowComboBox();
-            PopulateRconMessageModesComboBox();
             PopulateTaskPrioritiesComboBox();
+
+            GameData_GameDataLoaded(sender, e);
 
             App.Instance.OnResourceDictionaryChanged(Config.CultureName);
         }
@@ -488,6 +496,11 @@ namespace ServerManagerTool
             {
                 Environment.Exit(exitCode);
             }
+        }
+
+        public void CloseControl()
+        {
+            GameData.GameDataLoaded -= GameData_GameDataLoaded;
         }
 
         private void PopulateWindowsStatesMainWindowComboBox()

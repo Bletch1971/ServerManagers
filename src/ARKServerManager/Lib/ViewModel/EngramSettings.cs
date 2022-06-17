@@ -174,10 +174,6 @@ namespace ServerManagerTool.Lib.ViewModel
             }
         }
 
-        public void UpdateForLocalization()
-        {
-        }
-
         #region INotifyPropertyChanged
         private Dictionary<string, object> _properties = new Dictionary<string, object>();
 

@@ -252,6 +252,8 @@
     <Compile Include="Lib\ViewConverters\MapNameValueConverter.cs" />
     <Compile Include="Lib\ViewModel\Engram.cs" />
     <Compile Include="Lib\ViewModel\EngramSettings.cs" />
+    <Compile Include="Lib\ViewModel\GameDataFile.cs" />
+    <Compile Include="Lib\ViewModel\GameDataFileList.cs" />
     <Compile Include="Utils\DiscordBotHelper.cs" />
     <Compile Include="Utils\DiscordPluginHelper.cs" />
     <Compile Include="Utils\ModUtils.cs" />

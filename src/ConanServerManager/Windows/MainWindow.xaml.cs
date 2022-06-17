@@ -246,6 +246,13 @@ namespace ServerManagerTool
             this.Activate();
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent -= ResourceDictionaryChangedEvent;
+
+            base.OnClosed(e);
+        }
+
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             if (DiscordBotHelper.HasRunningCommands)

@@ -1,5 +1,6 @@
 ﻿using ServerManagerTool.Common.Utils;
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 using System.Windows;
@@ -20,8 +21,15 @@ namespace ServerManagerTool
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
         }
 
+        private void SettingsWindow_Closing(object sender, CancelEventArgs e)
+        {
+            if (!globalSettingsControl.IsEnabled)
+                e.Cancel = true;
+        }
+
         protected override void OnClosed(EventArgs e)
         {
+            globalSettingsControl.CloseControl();
             globalSettingsControl.ApplyChangesToConfig();
 
             if (SecurityUtils.IsAdministrator())

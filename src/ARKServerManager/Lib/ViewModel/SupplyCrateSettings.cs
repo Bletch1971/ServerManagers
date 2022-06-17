@@ -40,7 +40,11 @@ namespace ServerManagerTool.Lib.ViewModel
 
         public void Update()
         {
-            ValidStatus = IsViewValid ? (GameData.HasItemForClass(ItemClassString) ? "Y" : "W") : "N";
+            ValidStatus = IsViewValid 
+                ? (GameData.HasItemForClass(ItemClassString) 
+                    ? "Y" 
+                    : "W") 
+                : "N";
         }
     }
 }

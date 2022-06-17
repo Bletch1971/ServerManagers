@@ -153,9 +153,18 @@ namespace ServerManagerTool
 
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
+            GameData.GameDataLoaded += GameData_GameDataLoaded;
         }
 
         #region Event Methods
+        private void GameData_GameDataLoaded(object sender, EventArgs e)
+        {
+            this.RefreshBaseGameMapsList();
+            this.RefreshBaseBranchesList();
+            this.RefreshProcessPrioritiesList();
+            this.RefreshServerRegionsList();
+        }
+
         private static void ServerPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var ssc = (ServerSettingsControl)d;
@@ -184,11 +193,8 @@ namespace ServerManagerTool
         {
             this.CurrentCulture = Thread.CurrentThread.CurrentCulture;
 
-            this.RefreshBaseGameMapsList();
-            this.RefreshBaseBranchesList();
-            this.RefreshProcessPrioritiesList();
-            this.RefreshServerRegionsList();
             this.UpdateLastStartedDetails(false);
+            GameData_GameDataLoaded(source, e);
 
             Runtime.UpdateServerStatusString();
         }
@@ -1248,6 +1254,12 @@ namespace ServerManagerTool
         #endregion
 
         #region Methods
+        public void CloseControl()
+        {
+            GameData.GameDataLoaded -= GameData_GameDataLoaded;
+            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent -= ResourceDictionaryChangedEvent;
+        }
+
         public void RefreshBaseGameMapsList()
         {
             var newList = new ComboBoxItemList();

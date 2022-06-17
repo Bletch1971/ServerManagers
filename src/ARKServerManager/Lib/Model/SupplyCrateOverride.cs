@@ -72,10 +72,6 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public void UpdateForLocalization()
-        {
-        }
-
         public void Update(bool recursive = true)
         {
             IsEnabled = this.Count > 0;
@@ -226,7 +222,15 @@ namespace ServerManagerTool.Lib
                     itemSet.Update(recursive);
             }
 
-            ValidStatus = IsViewValid ? (ItemSets.Any(i => i.ValidStatus == "N") ? "N" : (ItemSets.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+            ValidStatus = IsViewValid 
+                ? (ItemSets.Any(i => i.ValidStatus == "N") 
+                    ? "N" 
+                    : (ItemSets.Any(i => i.ValidStatus == "W") 
+                        ? "W"
+                        : (GameData.HasSupplyCrateForClass(SupplyCrateClassString)
+                            ? "Y"
+                            : "W")))
+                : "N";
         }
     }
 
@@ -340,7 +344,13 @@ namespace ServerManagerTool.Lib
                     itemEntry.Update(recursive);
             }
 
-            ValidStatus = IsViewValid ? (ItemEntries.Any(i => i.ValidStatus == "N") ? "N" : (ItemEntries.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+            ValidStatus = IsViewValid 
+                ? (ItemEntries.Any(i => i.ValidStatus == "N") 
+                    ? "N" 
+                    : (ItemEntries.Any(i => i.ValidStatus == "W") 
+                        ? "W" 
+                        : "Y")) 
+                : "N";
         }
     }
 
@@ -495,7 +505,13 @@ namespace ServerManagerTool.Lib
                     item.Update();
             }
 
-            ValidStatus = IsViewValid ? (Items.Any(i => i.ValidStatus == "N") ? "N" : (Items.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+            ValidStatus = IsViewValid 
+                ? (Items.Any(i => i.ValidStatus == "N") 
+                    ? "N" 
+                    : (Items.Any(i => i.ValidStatus == "W") 
+                        ? "W" 
+                        : "Y")) 
+                : "N";
         }
     }
 }

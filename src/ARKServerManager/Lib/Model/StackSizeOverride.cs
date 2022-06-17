@@ -44,10 +44,6 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public void UpdateForLocalization()
-        {
-        }
-
         public void Update()
         {
             IsEnabled = this.Count > 0;
@@ -160,7 +156,11 @@ namespace ServerManagerTool.Lib
 
         public void Update()
         {
-            ValidStatus = IsValid ? (GameData.HasItemForClass(ItemClassString) ? "Y" : "W") : "N";
+            ValidStatus = IsValid 
+                ? (GameData.HasItemForClass(ItemClassString) 
+                    ? "Y" 
+                    : "W") 
+                : "N";
         }
     }
 

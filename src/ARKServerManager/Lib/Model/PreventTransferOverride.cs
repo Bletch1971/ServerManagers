@@ -25,10 +25,6 @@ namespace ServerManagerTool.Lib
         {
         }
 
-        public void UpdateForLocalization()
-        {
-        }
-
         public void Update()
         {
             IsEnabled = this.Count > 0;
@@ -98,7 +94,11 @@ namespace ServerManagerTool.Lib
 
         public void Update()
         {
-            ValidStatus = IsValid ? (GameData.HasCreatureForClass(DinoClassString) ? "Y" : "W") : "N";
+            ValidStatus = IsValid 
+                ? (GameData.HasCreatureForClass(DinoClassString) 
+                    ? "Y" 
+                    : "W") 
+                : "N";
         }
     }
 }
