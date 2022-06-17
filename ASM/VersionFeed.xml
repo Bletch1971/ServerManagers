@@ -8,6 +8,40 @@
   <updated>2022-06-16T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:93A04A12-C632-4C2B-AC76-42D9E476431C</id>
+    <title>1.1.432 (1.1.432.4)</title>
+    <summary>1.1.432.4</summary>
+    <link href="" />
+    <updated>2022-06-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Reset Server - added new button to reset your server. This will delete all server, player and tribe files and reset your server back to new.</li>
+            <li>Profile Settings - Rules Section - Added UseFjordurTraversalBuff setting. Located in the Fjordur group at the bottom of the Rules section.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Gamedata Files - changed the Fjordur official mod to the correct mod id.</li>
+            <li>Crafting Override Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for resources not familiar with (raw class names, not loaded via gamedata files), Errors will show for empty resources.</li>
+            <li>Prevent Transfer Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for creatures not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing creatures.</li>
+            <li>Map Spawner Grids - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for spawners/creatures not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing spawners/creatures.</li>
+            <li>Stack Size Grid - Added new icons to show Good (green), Warning (orange) or Bad (red). Warnings will show for items not familiar with (raw class names, not loaded via gamedata files), Errors will show for missing items.</li>
+            <li>Server Monitor - added shutdown reason.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:2ADA47E8-6DD0-4231-BAB9-AE3CEE5FA72C</id>
     <title>1.1.431 (1.1.431.4)</title>
     <summary>1.1.431.4</summary>

@@ -1039,6 +1039,10 @@
     <sys:String x:Key="ServerSettings_BackupServer_Title">Backup Server</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Backup Server Error</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">The backup was successful.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">Reset Server</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">Reset Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">This will delete all the server, player and tribe files and reset your server back to new. Do you wish to proceed?</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">The reset was successful.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Shutdown Server Error</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Shutdown Server Cancelled</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">The shutdown window is already open for this server.</sys:String>
@@ -1128,6 +1132,8 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">A comma-separated list of mod ids, in the order in which they should be applied.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">View the mod details.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Upgrade to the latest version of the mods that is currently available to download.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonLabel">Reset</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">Deletes all the server, player and tribe files and resets your server back to new.</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">Saves</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Auto Save Period:</sys:String>
@@ -1534,15 +1540,19 @@
 
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
-    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">Is enabled, the hexagon store will be disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">If enabled, the hexagon store will be disabled.</sys:String>
     <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">Allow Only Engram Points Trade</sys:String>
-    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">Is enabled, only engram points can be sold on the Hexagon store.</sys:String>
+    <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionTooltip">If enabled, only engram points can be sold on the Hexagon store.</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterLabel">Max Hexagons per Character</sys:String>
     <sys:String x:Key="ServerSettings_MaxHexagonsPerCharacterTooltip">Specifies the maximum number of hexagons that each player can have.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierLabel">Hexagon Reward Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Specifies the multiplier for the hexagons rewards.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
+
+    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Enable Fjordur Biome Teleport</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">If enabled, will allow biome teleport on Fjordur map.</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">WARNING: This will permanently change the stats of any existing items so make sure to backup your current save before modifying and playing with the clamping values.</sys:String>
