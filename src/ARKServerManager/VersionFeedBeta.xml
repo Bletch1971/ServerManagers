@@ -9,6 +9,29 @@
 
   <entry>
     <id>urn:uuid:1AE0925B-64EB-4177-B834-7A75FA46E807</id>
+    <title>1.1.433 (1.1.433.2)</title>
+    <summary>1.1.433.2</summary>
+    <link href="" />
+    <updated>2022-06-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:1AE0925B-64EB-4177-B834-7A75FA46E807</id>
     <title>1.1.433 (1.1.433.1)</title>
     <summary>1.1.433.1</summary>
     <link href="" />
@@ -20,7 +43,6 @@
           <br/>
           <ul>
             <li>Gamedata Files - when adding, deleteing or reloading the gamedata files via the gamedata window, the server manager will reload them and update the settings window.</li>
-            <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
       </div>
