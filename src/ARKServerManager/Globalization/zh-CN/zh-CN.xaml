@@ -1098,7 +1098,7 @@
     <sys:String x:Key="ServerSettings_MapPathTooltip">标准地图名称 (例如. TheIsland,TheCenter,ScorchedEarth_P,Ragnarok).或本地MOD地图 例如:(/Game/Mods/504122600/Valhalla) 数字是MOD ID 后面是MOD地图名字，记得更新你的服务器下载MOD地图。</sys:String>
     <sys:String x:Key="ServerSettings_TotalConversionLabel">总转换MOD ID:</sys:String>
     <sys:String x:Key="ServerSettings_TotalConversionTooltip">总转换MOD ID，是方舟里的一个模式转换！.</sys:String>
-        <sys:String x:Key="ServerSettings_FindTotalConversionMapNameTooltip">读取总转换MOD ID找到地图名称</sys:String>
+    <sys:String x:Key="ServerSettings_FindTotalConversionMapNameTooltip">读取总转换MOD ID找到地图名称</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameSuccessTitle">查找总转换地图名称</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameSuccessLabel">地图名称已更新。</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameErrorTitle">查找总转换地图名称错误</sys:String>
@@ -1107,6 +1107,8 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">每个Mod ID编号之间请使用“,”小写逗号来分开，以及以启动顺序来排列.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">查看MOD详细信息.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">升级/下载 MOD到目前可用的最新版本。</sys:String>
+	<sys:String x:Key="ServerSettings_ResetServerButtonLabel">重置</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">删除所有的服务器、玩家和部落文件，并将你的服务器重新设置为新的。</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">保存</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">自动保存时间:</sys:String>
@@ -1180,7 +1182,7 @@
     <sys:String x:Key="ServerSettings_StasisKeepControllersTooltip">如果启用，服务器可以通过将人工智能保存在静态生物的内存中来获得性能。 注意:你的服务器必须有大量的内存，否则你的服务器会有很大的内存开销。</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionLabel">无挂起检测</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionTooltip">如果启用，可防止因挂起而导致的某些类型的崩溃(服务器挂起时，可能会出现服务器滞后的情况)。</sys:String>
-   <sys:String x:Key="ServerSettings_NoDinosLabel">没有恐龙</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinosLabel">没有恐龙</sys:String>
     <sys:String x:Key="ServerSettings_NoDinosTooltip">如果启用，则不会在地图上产生恐龙。</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselLabel">服务器允许NVIDIA Ansel技术</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">如果启用，在单个玩家中激活NVIDIA Ansel支持。 连接到服务器时，即使通电和点亮，这也会导致大多数灯（灯）不再起作用。</sys:String>
@@ -1519,6 +1521,10 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">设置六角币获得倍数.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">六角币消耗倍数</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">设置六角币消耗倍数.</sys:String>
+	
+	<sys:String x:Key="ServerSettings_FjordurLabel">维京岛Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">启用维京生物群落的传送装置</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">如果启用，将允许在维京地图上进行生物群落传送。</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">物品品质设置</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">注意：这将永久改变现有物品的品质.</sys:String>
