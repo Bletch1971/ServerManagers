@@ -245,6 +245,7 @@ namespace ServerManagerTool
 
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
+            GameData.GameDataLoaded += GameData_GameDataLoaded;
         }
 
         #region Properties
@@ -684,13 +685,19 @@ namespace ServerManagerTool
             return new RCONWindow(parameters);
         }
 
-        private void ResourceDictionaryChangedEvent(object source, ResourceDictionaryChangedEventArgs e)
+        private void GameData_GameDataLoaded(object sender, EventArgs e)
         {
             PopulateRconInputModesComboBox();
         }
 
+        private void ResourceDictionaryChangedEvent(object source, ResourceDictionaryChangedEventArgs e)
+        {
+            GameData_GameDataLoaded(source, e);
+        }
+
         protected override void OnClosed(EventArgs e)
         {
+            GameData.GameDataLoaded -= GameData_GameDataLoaded;
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent -= ResourceDictionaryChangedEvent;
 
             if (this.RCONParameters?.Server?.Runtime != null)

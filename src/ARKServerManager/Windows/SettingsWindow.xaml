@@ -3,9 +3,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ServerManagerTool"
+        xmlns:sm="clr-namespace:ServerManagerTool"
         mc:Ignorable="d" 
         MinWidth="800" MinHeight="600" Width="800" Height="700" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        Closing="SettingsWindow_Closing"
         Icon="../Art/favicon.ico" Title="{DynamicResource Settings_Title}" >
     <Window.Resources>
         <ResourceDictionary>
@@ -16,6 +17,6 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <local:GlobalSettingsControl x:Name="globalSettingsControl" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{StaticResource BeigeGradient}"/>
+        <sm:GlobalSettingsControl x:Name="globalSettingsControl" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{StaticResource BeigeGradient}"/>
     </Grid>
 </Window>

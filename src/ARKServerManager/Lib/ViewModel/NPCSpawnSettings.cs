@@ -195,10 +195,6 @@ namespace ServerManagerTool.Lib.ViewModel
             }
         }
 
-        public void UpdateForLocalization()
-        {
-        }
-
         public void Update(bool recursive = true)
         {
             foreach (var npcSpawn in this)
@@ -307,7 +303,15 @@ namespace ServerManagerTool.Lib.ViewModel
                     itemSet.Update();
             }
 
-            ValidStatus = IsViewValid ? (NPCSpawnEntrySettings.Any(i => i.ValidStatus == "N") ? "N" : (NPCSpawnEntrySettings.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+            ValidStatus = IsViewValid 
+                ? (NPCSpawnEntrySettings.Any(i => i.ValidStatus == "N") 
+                    ? "N" 
+                    : (NPCSpawnEntrySettings.Any(i => i.ValidStatus == "W") 
+                        ? "W"
+                        : (GameData.HasMapSpawnerForClass(NPCSpawnEntriesContainerClassString)
+                            ? "Y"
+                            : "W")))
+                : "N";
         }
     }
 
@@ -354,7 +358,11 @@ namespace ServerManagerTool.Lib.ViewModel
 
         public void Update()
         {
-            ValidStatus = IsValid ? (GameData.HasCreatureForClass(NPCClassString) ? "Y" : "W") : "N";
+            ValidStatus = IsValid 
+                ? (GameData.HasCreatureForClass(NPCClassString) 
+                    ? "Y" 
+                    : "W") 
+                : "N";
         }
     }
 }

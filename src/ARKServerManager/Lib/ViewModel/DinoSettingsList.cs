@@ -317,13 +317,5 @@ namespace ServerManagerTool.Lib.ViewModel
                 }
             }
         }
-
-        public void UpdateForLocalization()
-        {
-            //foreach (var dinoSetting in this)
-            //{
-            //    dinoSetting.FriendlyName = GameData.FriendlyNameForClass(dinoSetting.ClassName);
-            //}
-        }
     }
 }

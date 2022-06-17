@@ -17,6 +17,8 @@ namespace ServerManagerTool.Lib
 
         public const string RCONINPUTMODE_COMMAND = "Command";
 
+        public static event EventHandler GameDataLoaded;
+
         public static string MainDataFolder = Path.Combine(Environment.CurrentDirectory, Config.Default.GameDataDir);
         public static string UserDataFolder = Path.Combine(Config.Default.DataDir, Config.Default.GameDataDir);
 
@@ -26,6 +28,12 @@ namespace ServerManagerTool.Lib
         private static MainGameData gameData = null;
 
         public static void Initialize()
+        {
+            Load();
+            OnGameDataLoaded();
+        }
+
+        private static void Load()
         {
             // read static game data
             GameDataUtils.ReadAllData(out gameData, MainDataFolder, Config.Default.GameDataExtension, Config.Default.GameDataApplication);
@@ -172,6 +180,19 @@ namespace ServerManagerTool.Lib
 
                 rconInputModes = modes1.ToArray();
             }
+        }
+
+        private static void OnGameDataLoaded()
+        {
+            GameDataLoaded?.Invoke(null, EventArgs.Empty);
+        }
+
+        public static void Reload()
+        {
+            gameData = null;
+
+            Load();
+            OnGameDataLoaded();
         }
 
         public static string FriendlyNameForClass(string className, bool returnNullIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? (returnNullIfNotFound ? null : string.Empty) : GlobalizedApplication.Instance.GetResourceString(className) ?? (returnNullIfNotFound ? null : className);

@@ -13,22 +13,12 @@ namespace ServerManagerTool
     /// </summary>
     public partial class SettingsWindow : Window
     {
-        public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(SettingsWindow), new PropertyMetadata(null));
-
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
 
         public SettingsWindow()
         {
-            this.AppInstance = App.Instance;
-
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
-        }
-
-        public App AppInstance
-        {
-            get { return GetValue(AppInstanceProperty) as App; }
-            set { SetValue(AppInstanceProperty, value); }
         }
 
         private void SettingsWindow_Closing(object sender, CancelEventArgs e)
@@ -39,6 +29,7 @@ namespace ServerManagerTool
 
         protected override void OnClosed(EventArgs e)
         {
+            globalSettingsControl.CloseControl();
             globalSettingsControl.ApplyChangesToConfig();
 
             if (SecurityUtils.IsAdministrator())

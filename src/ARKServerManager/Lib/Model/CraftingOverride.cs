@@ -26,10 +26,6 @@ namespace ServerManagerTool.Lib
         {
         }
 
-        public void UpdateForLocalization()
-        {
-        }
-
         public void Update(bool recursive = true)
         {
             IsEnabled = this.Count > 0;
@@ -118,7 +114,15 @@ namespace ServerManagerTool.Lib
                     resource.Update();
             }
 
-            ValidStatus = IsValid ? (BaseCraftingResourceRequirements.Any(i => i.ValidStatus == "N") ? "N" : (BaseCraftingResourceRequirements.Any(i => i.ValidStatus == "W") ? "W" : "Y")) : "N";
+            ValidStatus = IsValid 
+                ? (BaseCraftingResourceRequirements.Any(i => i.ValidStatus == "N") 
+                    ? "N" 
+                    : (BaseCraftingResourceRequirements.Any(i => i.ValidStatus == "W") 
+                        ? "W" 
+                        : (GameData.HasItemForClass(ItemClassString) 
+                            ? "Y" 
+                            : "W"))) 
+                : "N";
         }
     }
 
@@ -186,7 +190,11 @@ namespace ServerManagerTool.Lib
 
         public void Update()
         {
-            ValidStatus = IsValid ? (GameData.HasItemForClass(ResourceItemTypeString) ? "Y" : "W") : "N";
+            ValidStatus = IsValid 
+                ? (GameData.HasItemForClass(ResourceItemTypeString) 
+                    ? "Y" 
+                    : "W") 
+                : "N";
         }
     }
 }

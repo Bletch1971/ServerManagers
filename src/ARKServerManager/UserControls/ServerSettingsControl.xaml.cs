@@ -342,9 +342,36 @@ namespace ServerManagerTool
 
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
+            GameData.GameDataLoaded += GameData_GameDataLoaded;
         }
 
         #region Event Methods
+        private void GameData_GameDataLoaded(object sender, EventArgs e)
+        {
+            this.RefreshBaseDinoModList();
+            this.RefreshBaseEngramModList();
+            this.RefreshBaseResourceModList();
+
+            this.RefreshBaseDinoList();
+            this.RefreshBaseMapSpawnerList();
+            this.RefreshBasePrimalItemList();
+            this.RefreshBaseSupplyCrateList();
+            this.RefreshBaseGameMapsList();
+            this.RefreshBaseTotalConversionsList();
+            this.RefreshBaseBranchesList();
+            this.RefreshBaseEventsList();
+            this.RefreshProcessPrioritiesList();
+            this.RefreshCustomLevelProgressionsInformation();
+
+            this.HarvestResourceItemAmountClassMultipliersListBox.Items.Refresh();
+
+            this.Settings.ConfigOverrideItemCraftingCosts.Update();
+            this.Settings.ConfigOverrideItemMaxQuantity.Update();
+            this.Settings.ConfigOverrideSupplyCrateItems.Update();
+            this.Settings.NPCSpawnSettings.Update();
+            this.Settings.PreventTransferForClassNames.Update();
+        }
+
         private static void ServerPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var ssc = (ServerSettingsControl)d;
@@ -378,30 +405,8 @@ namespace ServerManagerTool
         {
             this.CurrentCulture = Thread.CurrentThread.CurrentCulture;
 
-            this.Settings.DinoSettings.UpdateForLocalization();
-            this.Settings.EngramSettings.UpdateForLocalization();
-            this.Settings.NPCSpawnSettings.UpdateForLocalization();
-            this.Settings.ConfigOverrideSupplyCrateItems.UpdateForLocalization();
-            this.Settings.ConfigOverrideItemMaxQuantity.UpdateForLocalization();
-
-            this.RefreshBaseDinoModList();
-            this.RefreshBaseEngramModList();
-            this.RefreshBaseResourceModList();
-
-            this.RefreshBaseDinoList();
-            this.RefreshBaseMapSpawnerList();
-            this.RefreshBasePrimalItemList();
-            this.RefreshBaseSupplyCrateList();
-            this.RefreshBaseGameMapsList();
-            this.RefreshBaseTotalConversionsList();
-            this.RefreshBaseBranchesList();
-            this.RefreshBaseEventsList();
-            this.RefreshProcessPrioritiesList();
-
-            this.HarvestResourceItemAmountClassMultipliersListBox.Items.Refresh();
-
-            this.RefreshCustomLevelProgressionsInformation();
             this.UpdateLastStartedDetails(false);
+            GameData_GameDataLoaded(source, e);
 
             Runtime.UpdateServerStatusString();
         }
@@ -3487,6 +3492,12 @@ namespace ServerManagerTool
         #endregion
 
         #region Methods
+        public void CloseControl()
+        {
+            GameData.GameDataLoaded -= GameData_GameDataLoaded;
+            GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent -= ResourceDictionaryChangedEvent;
+        }
+
         public void RefreshBaseDinoModList()
         {
             var selectedValue = SelectedModDino;
