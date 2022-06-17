@@ -94,37 +94,34 @@
                             <ColumnDefinition MinWidth="25"/>
                             <ColumnDefinition MinWidth="25"/>
                             <ColumnDefinition MinWidth="25"/>
-                            <ColumnDefinition MinWidth="25"/>
-                            <ColumnDefinition MinWidth="25"/>
                         </Grid.ColumnDefinitions>
 
-                        <Button Grid.Row="0" Grid.Column="5" Margin="5,2,0,0" Grid.ColumnSpan="3" Click="Donate_Click" ToolTip="{DynamicResource MainWindow_DonateTooltip}" Style="{StaticResource ButtonStyle3}">
+                        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="5,2,0,0" HorizontalAlignment="Right" Click="Donate_Click" ToolTip="{DynamicResource MainWindow_DonateTooltip}" Style="{StaticResource ButtonStyle3}">
                             <Image Source="../Art/Donate.png"/>
                         </Button>
-
-                        <Button Grid.Row="2" Grid.Column="0" Margin="5,0,0,0"  Click="ServerMonitor_Click" ToolTip="{DynamicResource MainWindow_OpenServerMonitorTooltip}" Style="{StaticResource ButtonStyle1}">
-                            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Servers.ico,Size=32}"/>
+                        <Button Grid.Row="0" Grid.Column="5" Margin="5,2,0,0" HorizontalAlignment="Right" Click="Help_Click" ToolTip="{DynamicResource MainWindow_OpenHelpTooltip}" Style="{StaticResource ButtonStyle1}">
+                            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Help.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="1" Margin="5,0,0,0" HorizontalAlignment="Right" Click="GameData_Click" ToolTip="{DynamicResource MainWindow_OpenGameDataTooltip}" Style="{StaticResource ButtonStyle1}">
+
+                        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Margin="5,0,0,0" Height="26" HorizontalAlignment="Right" Click="ServerMonitor_Click" Content="{StaticResource ServerMonitorButtonContent}" ToolTip="{DynamicResource MainWindow_OpenServerMonitorTooltip}"/>
+                        
+                        <Button Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" HorizontalAlignment="Right" Click="GameData_Click" ToolTip="{DynamicResource MainWindow_OpenGameDataTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Document.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" HorizontalAlignment="Right" Click="Plugins_Click" ToolTip="{DynamicResource MainWindow_OpenPluginsTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="2" Grid.Column="1" Margin="5,0,0,0" HorizontalAlignment="Right" Click="Plugins_Click" ToolTip="{DynamicResource MainWindow_OpenPluginsTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Plugin.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="3" Margin="5,0,0,0" HorizontalAlignment="Right" Click="OpenLogFolder_Click" ToolTip="{DynamicResource MainWindow_OpenLogFolderTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" HorizontalAlignment="Right" Click="OpenLogFolder_Click" ToolTip="{DynamicResource MainWindow_OpenLogFolderTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Logs.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="4" Margin="5,0,0,0" HorizontalAlignment="Right" Click="RCON_Click" ToolTip="{DynamicResource MainWindow_OpenRCONTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="2" Grid.Column="3" Margin="5,0,0,0" HorizontalAlignment="Right" Click="RCON_Click" ToolTip="{DynamicResource MainWindow_OpenRCONTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Command.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="5" Margin="5,0,0,0" HorizontalAlignment="Right" Click="SteamCMD_Click" ToolTip="{DynamicResource MainWindow_SteamCMDTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="2" Grid.Column="4" Margin="5,0,0,0" HorizontalAlignment="Right" Click="SteamCMD_Click" ToolTip="{DynamicResource MainWindow_SteamCMDTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Steam.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="6" Margin="5,0,0,0" HorizontalAlignment="Right" Click="Settings_Click" ToolTip="{DynamicResource MainWindow_OpenSettingsTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="2" Grid.Column="5" Margin="5,0,0,0" HorizontalAlignment="Right" Click="Settings_Click" ToolTip="{DynamicResource MainWindow_OpenSettingsTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Settings.ico,Size=32}"/>
-                        </Button>
-                        <Button Grid.Row="2" Grid.Column="7" Margin="5,2,0,0" HorizontalAlignment="Right" Click="Help_Click" ToolTip="{DynamicResource MainWindow_OpenHelpTooltip}" Style="{StaticResource ButtonStyle1}">
-                            <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Help.ico,Size=32}"/>
                         </Button>
                     </Grid>
 
@@ -353,11 +350,11 @@
                     </Grid>
                 </DockPanel>
 
-                <eo:TabControl Name="Tabs" Grid.Row ="1" Margin="0,5,0,0" ShowCloseTabButton="True" ShowNewTabButton="True" NewItemRequested="Servers_AddNew" PreviewItemClose="Servers_Remove" ItemsSource="{Binding ServerManager.Servers}">
+                <eo:TabControl Name="Tabs" Grid.Row="1" Margin="0" ShowCloseTabButton="True" ShowNewTabButton="True" NewItemRequested="Servers_AddNew" PreviewItemClose="Servers_Remove" ItemsSource="{Binding ServerManager.Servers}">
                     <eo:TabControl.HeaderTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Button Grid.Row="0" Grid.Column="4" Margin="5,0,0,0" Command="{Binding StatusButtonCommand, ElementName=Main}" CommandParameter="{Binding}">
+                            <StackPanel Orientation="Horizontal" Height="20">
+                                <Button Margin="0" Command="{Binding StatusButtonCommand, ElementName=Main}" CommandParameter="{Binding}">
                                     <Button.Style>
                                         <Style BasedOn="{StaticResource ButtonStyle5}" TargetType="{x:Type Button}">
                                             <Style.Triggers>
@@ -418,7 +415,7 @@
                                             </Style.Triggers>
                                         </Style>
                                     </Button.Style>
-                                    <Image Margin="0,2" VerticalAlignment="Center" Width="16" Height="16">
+                                    <Image Margin="0" VerticalAlignment="Center" Width="16" Height="16">
                                         <Image.Style>
                                             <Style TargetType="{x:Type Image}">
                                                 <Style.Triggers>
@@ -459,7 +456,7 @@
                                         </Image.Style>
                                     </Image>
                                 </Button>
-                                <TextBlock Margin="2" VerticalAlignment="Center" Text="{Binding Profile.ProfileName}" ToolTip="{Binding Profile.ProfileToolTip}">
+                                <TextBlock Margin="0" VerticalAlignment="Center" Text="{Binding Profile.ProfileName}">
                                     <TextBlock.Style>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Setter Property="Foreground" Value="Black"/>
@@ -505,7 +502,7 @@
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate>
-                                        <Image Margin="0,2" VerticalAlignment="Center" Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}" Width="16" Height="16" ToolTip="{DynamicResource MainWindow_CloseProfileTooltip}"/>
+                                        <Image Margin="2" VerticalAlignment="Center" Source="{com:Icon Path=/Ark Server Manager;component/Art/Delete.ico,Size=32}" Width="10" Height="10" ToolTip="{DynamicResource MainWindow_CloseProfileTooltip}"/>
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
