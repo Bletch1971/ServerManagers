@@ -19,6 +19,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>Main Window - when changing the location of the server, it will reload the profile with the config settings in the new location.</li>
             <li>Main Window - added discord server button.</li>
             <li>Main Window - re-organised the buttons.</li>
           </ul>

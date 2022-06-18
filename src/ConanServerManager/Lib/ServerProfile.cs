@@ -213,7 +213,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(QueryPortProperty, value); }
         }
 
-        public static readonly DependencyProperty ServerMapProperty = DependencyProperty.Register(nameof(ServerMap), typeof(string), typeof(ServerProfile), new PropertyMetadata("ConanSandbox"));
+        public static readonly DependencyProperty ServerMapProperty = DependencyProperty.Register(nameof(ServerMap), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [DataMember]
         public string ServerMap
         {
@@ -225,7 +225,7 @@ namespace ServerManagerTool.Lib
             }
         }
 
-        public static readonly DependencyProperty ServerMapSaveFileNameProperty = DependencyProperty.Register(nameof(ServerMapSaveFileName), typeof(string), typeof(ServerProfile), new PropertyMetadata("game.db"));
+        public static readonly DependencyProperty ServerMapSaveFileNameProperty = DependencyProperty.Register(nameof(ServerMapSaveFileName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [DataMember]
         public string ServerMapSaveFileName
         {
@@ -710,9 +710,22 @@ namespace ServerManagerTool.Lib
         #region Methods
 
         #region Common Methods
-        public void ChangeInstallationFolder(string folder)
+        public void ChangeInstallationFolder(string folder, bool reloadConfigFiles)
         {
             InstallDirectory = folder;
+
+            if (reloadConfigFiles)
+            {
+                var serverConfigPath = GetProfileServerConfigDir();
+                if (Directory.Exists(serverConfigPath))
+                {
+                    var serverConfigFile = Path.Combine(serverConfigPath, Config.Default.ServerGameConfigFile);
+                    if (File.Exists(serverConfigFile))
+                    {
+                        LoadFromConfigFiles(serverConfigFile, this, exclusions: null);
+                    }
+                }
+            }
 
             LoadServerFiles(true, true);
             SetupServerFilesWatcher();
@@ -903,12 +916,12 @@ namespace ServerManagerTool.Lib
                 return LoadFromProfileFile(file, profile);
 
             var filePath = Path.GetDirectoryName(file);
-            profile = LoadFromConfigFiles(file, profile);
+            profile = LoadFromConfigFiles(file, profile, exclusions: null);
 
             if (filePath.EndsWith(Config.Default.ServerConfigRelativePath))
             {
                 var installDirectory = filePath.Replace(Config.Default.ServerConfigRelativePath, string.Empty).TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-                profile.ChangeInstallationFolder(installDirectory);
+                profile.ChangeInstallationFolder(installDirectory, reloadConfigFiles: false);
             }
 
             return profile;
@@ -926,6 +939,13 @@ namespace ServerManagerTool.Lib
             var iniFile = new SystemIniFile(iniPath);
             profile = profile ?? new ServerProfile();
             iniFile.Deserialize(profile, exclusions);
+
+            if (string.IsNullOrWhiteSpace(profile.ServerModIds) && iniPath.EndsWith(Config.Default.ServerConfigRelativePath))
+            {
+                var installDirectory = iniPath.Replace(Config.Default.ServerConfigRelativePath, string.Empty).TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+                var modIds = ModUtils.ReadModListFile(installDirectory);
+                profile.ServerModIds = string.Join(",", modIds);
+            }
 
             return profile;
         }

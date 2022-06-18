@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ServerManagerTool.Common.Extensions
 {
@@ -12,6 +13,11 @@ namespace ServerManagerTool.Common.Extensions
                 throw new ArgumentException($"{nameof(comparisonType)} is not a member of StringComparison", nameof(comparisonType));
 
             return value.IndexOf(substring, comparisonType) >= 0;
+        }
+
+        public static bool IsNumeric(this string value)
+        {
+            return value.All(char.IsNumber);
         }
     }
 }

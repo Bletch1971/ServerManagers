@@ -796,7 +796,7 @@ namespace ServerManagerTool
                 IsFolderPicker = true,
                 Title = _globalizer.GetResourceString("ServerSettings_InstallServer_Title")
             };
-            if (!String.IsNullOrWhiteSpace(Settings.InstallDirectory))
+            if (!string.IsNullOrWhiteSpace(Settings.InstallDirectory))
             {
                 dialog.InitialDirectory = Settings.InstallDirectory;
             }
@@ -804,7 +804,10 @@ namespace ServerManagerTool
             var result = dialog.ShowDialog(Window.GetWindow(this));
             if (result == CommonFileDialogResult.Ok)
             {
-                Settings.ChangeInstallationFolder(dialog.FileName);
+                Settings.ServerMap = string.Empty;
+                Settings.ServerMapSaveFileName = string.Empty;
+
+                Settings.ChangeInstallationFolder(dialog.FileName, reloadConfigFiles: true);
             }
         }
 

@@ -1,11 +1,11 @@
 ﻿using ServerManagerTool.Common;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace ServerManagerTool.Utils
 {
@@ -168,6 +168,28 @@ namespace ServerManagerTool.Utils
                 default:
                     return false;
             }
+        }
+
+        public static List<string> ReadModListFile(string installDirectory)
+        {
+            if (string.IsNullOrWhiteSpace(installDirectory) || !Directory.Exists(installDirectory))
+                return new List<string>();
+
+            // get the folder/file details
+            var modRootFolder = GetModRootPath(installDirectory);
+            var modListFileName = Config.Default.ServerModListFile;
+            var modListFile = IOUtils.NormalizePath(Path.Combine(modRootFolder, modListFileName));
+
+            // check if the folder/file exists
+            if (!Directory.Exists(modRootFolder) || !File.Exists(modListFile))
+                return new List<string>();
+
+            var modFiles = File.ReadAllLines(modListFile);
+            return modFiles
+                .Select(m => Path.GetFileNameWithoutExtension(m))
+                .Where(m => m.IsNumeric())
+                .Where(m => !string.IsNullOrWhiteSpace(m))
+                .ToList();
         }
 
         public static List<string> ValidateModList(List<string> modIdList)

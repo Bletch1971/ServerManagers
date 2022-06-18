@@ -70,7 +70,7 @@ namespace ServerManagerTool.Lib
 
         public static Server FromPath(string path)
         {
-            var loadedProfile = ServerProfile.LoadFrom(path);
+            var loadedProfile = ServerProfile.LoadFrom(path, profile: null);
             if (loadedProfile == null)
                 return null;
             return new Server(loadedProfile);

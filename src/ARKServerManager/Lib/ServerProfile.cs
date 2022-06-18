@@ -3511,9 +3511,22 @@ namespace ServerManagerTool.Lib
         #region Methods
 
         #region Common Methods
-        public void ChangeInstallationFolder(string folder)
+        public void ChangeInstallationFolder(string folder, bool reloadConfigFiles)
         {
             InstallDirectory = folder;
+
+            if (reloadConfigFiles)
+            {
+                var serverConfigPath = GetProfileServerConfigDir();
+                if (Directory.Exists(serverConfigPath))
+                {
+                    var serverConfigFile = Path.Combine(serverConfigPath, Config.Default.ServerGameUserSettingsConfigFile);
+                    if (File.Exists(serverConfigFile))
+                    {
+                        LoadFromConfigFiles(serverConfigFile, this, exclusions: null);
+                    }
+                }
+            }
 
             LoadServerFiles(true, true, true);
             SetupServerFilesWatcher();
@@ -4035,12 +4048,12 @@ namespace ServerManagerTool.Lib
                 return LoadFromProfileFile(file, profile);
 
             var filePath = Path.GetDirectoryName(file);
-            profile = LoadFromINIFiles(file, profile);
+            profile = LoadFromConfigFiles(file, profile, exclusions: null);
 
             if (filePath.EndsWith(Config.Default.ServerConfigRelativePath))
             {
                 var installDirectory = filePath.Replace(Config.Default.ServerConfigRelativePath, string.Empty).TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-                profile.ChangeInstallationFolder(installDirectory);
+                profile.ChangeInstallationFolder(installDirectory, reloadConfigFiles: false);
             }
 
             if (profile.PlayerLevels.Count == 0)
@@ -4075,7 +4088,7 @@ namespace ServerManagerTool.Lib
             return profile;
         }
 
-        public static ServerProfile LoadFromINIFiles(string file, ServerProfile profile, IEnumerable<Enum> exclusions = null)
+        public static ServerProfile LoadFromConfigFiles(string file, ServerProfile profile, IEnumerable<Enum> exclusions = null)
         {
             if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
                 return null;
@@ -4186,10 +4199,10 @@ namespace ServerManagerTool.Lib
                 return null;
             }
 
-            var configIniPath = Path.Combine(GetProfileServerConfigDir(profile), Config.Default.ServerGameUserSettingsConfigFile);
-            if (File.Exists(configIniPath))
+            var serverConfigFile = Path.Combine(GetProfileServerConfigDir(profile), Config.Default.ServerGameUserSettingsConfigFile);
+            if (File.Exists(serverConfigFile))
             {
-                profile = LoadFromINIFiles(configIniPath, profile);
+                profile = LoadFromConfigFiles(serverConfigFile, profile, exclusions: null);
             }
 
             profile._lastSaveLocation = file;
@@ -4460,10 +4473,10 @@ namespace ServerManagerTool.Lib
             //
             string configDir = GetProfileServerConfigDir();
             Directory.CreateDirectory(configDir);
-            SaveINIFile(configDir);
+            SaveConfigFile(configDir);
         }
 
-        public void SaveINIFile(string profileIniDir, IEnumerable<Enum> exclusions = null)
+        public void SaveConfigFile(string profileIniDir, IEnumerable<Enum> exclusions = null)
         {
             if (exclusions == null)
                 exclusions = GetExclusions();

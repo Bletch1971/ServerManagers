@@ -25,6 +25,7 @@
           <br/>
           <ul>
             <li>Gamedata Files - when adding, deleteing or reloading the gamedata files via the gamedata window, the server manager will reload them and update the settings window.</li>
+            <li>Main Window - when changing the location of the server, it will reload the profile with the config settings in the new location.</li>
             <li>Main Window - added discord server button.</li>
             <li>Main Window - re-organised the buttons.</li>
             <li>pt-BR Translation file updated.</li>

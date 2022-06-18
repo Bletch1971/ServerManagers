@@ -1036,10 +1036,12 @@ namespace ServerManagerTool
 
         private void SelectInstallDirectory_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = true;
-            dialog.Title = _globalizer.GetResourceString("ServerSettings_InstallServer_Title");
-            if (!String.IsNullOrWhiteSpace(Settings.InstallDirectory))
+            var dialog = new CommonOpenFileDialog
+            {
+                IsFolderPicker = true,
+                Title = _globalizer.GetResourceString("ServerSettings_InstallServer_Title")
+            };
+            if (!string.IsNullOrWhiteSpace(Settings.InstallDirectory))
             {
                 dialog.InitialDirectory = Settings.InstallDirectory;
             }
@@ -1047,7 +1049,10 @@ namespace ServerManagerTool
             var result = dialog.ShowDialog(Window.GetWindow(this));
             if (result == CommonFileDialogResult.Ok)
             {
-                Settings.ChangeInstallationFolder(dialog.FileName);
+                Settings.ServerMap = string.Empty;
+                Settings.TotalConversionModId = string.Empty;
+
+                Settings.ChangeInstallationFolder(dialog.FileName, reloadConfigFiles: true);
             }
         }
 
@@ -2047,7 +2052,7 @@ namespace ServerManagerTool
 
                 var configIniFile = Path.Combine(ServerProfile.GetProfileServerConfigDir(Settings), Config.Default.ServerGameUserSettingsConfigFile);
                 // load only this section, using the full exclusion list
-                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions);
+                var tempServerProfile = ServerProfile.LoadFromConfigFiles(configIniFile, null, exclusions);
                 // perform a profile sync
                 Settings.SyncSettings(ServerProfileCategory.CustomGameUserSettings, tempServerProfile);
             }
@@ -2208,7 +2213,7 @@ namespace ServerManagerTool
 
                 var configIniFile = Path.Combine(ServerProfile.GetProfileServerConfigDir(Settings), Config.Default.ServerGameUserSettingsConfigFile);
                 // load only this section, using the full exclusion list
-                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions);
+                var tempServerProfile = ServerProfile.LoadFromConfigFiles(configIniFile, null, exclusions);
                 // perform a profile sync
                 Settings.SyncSettings(ServerProfileCategory.CustomGameSettings, tempServerProfile);
             }
@@ -2369,7 +2374,7 @@ namespace ServerManagerTool
 
                 var configIniFile = Path.Combine(ServerProfile.GetProfileServerConfigDir(Settings), Config.Default.ServerGameUserSettingsConfigFile);
                 // load only this section, using the full exclusion list
-                var tempServerProfile = ServerProfile.LoadFromINIFiles(configIniFile, null, exclusions);
+                var tempServerProfile = ServerProfile.LoadFromConfigFiles(configIniFile, null, exclusions);
                 // perform a profile sync
                 Settings.SyncSettings(ServerProfileCategory.CustomEngineSettings, tempServerProfile);
             }
