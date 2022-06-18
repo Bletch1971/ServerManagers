@@ -1,4 +1,16 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ServerManagerTool.Common;
+using ServerManagerTool.Common.Controls;
+using ServerManagerTool.Common.Lib;
+using ServerManagerTool.Common.Model;
+using ServerManagerTool.Common.Serialization;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
+using ServerManagerTool.Lib;
+using ServerManagerTool.Lib.ViewModel;
+using ServerManagerTool.Plugin.Common;
+using ServerManagerTool.Utils;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -13,17 +25,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Input;
-using Microsoft.WindowsAPICodePack.Dialogs;
-using ServerManagerTool.Common;
-using ServerManagerTool.Common.Lib;
-using ServerManagerTool.Common.Model;
-using ServerManagerTool.Common.Serialization;
-using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
-using ServerManagerTool.Lib;
-using ServerManagerTool.Lib.ViewModel;
-using ServerManagerTool.Plugin.Common;
-using ServerManagerTool.Utils;
+using System.Windows.Media;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool
@@ -32,6 +34,8 @@ namespace ServerManagerTool
     {
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private CancellationTokenSource _upgradeCancellationSource = null;
+        private FindSettingWindow _findSettingWindow = null;
+        private Control _lastFoundControl = null;
 
         // Using a DependencyProperty as the backing store for ServerManager.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty BaseDinoModListProperty = DependencyProperty.Register(nameof(BaseDinoModList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
@@ -426,6 +430,12 @@ namespace ServerManagerTool
                 ((ModDetailsWindow)sender).SavePerformed -= ModDetailsWindow_SavePerformed;
                 RefreshBaseGameMapsList();
                 RefreshBaseTotalConversionsList();
+            }
+
+            if (sender is FindSettingWindow)
+            {
+                _findSettingWindow = null;
+                UnselectControl();
             }
         }
 
@@ -1149,6 +1159,18 @@ namespace ServerManagerTool
             window.ShowDialog();
         }
 
+        private void SettingFind_Click(object sender, RoutedEventArgs e)
+        {
+            if (_findSettingWindow is null)
+            {
+                _findSettingWindow = new FindSettingWindow(this);
+                _findSettingWindow.Owner = Window.GetWindow(this);
+                _findSettingWindow.Closed += Window_Closed;
+            }
+            _findSettingWindow.Show();
+            _findSettingWindow.Focus();
+        }
+
         private void HiddenField_GotFocus(object sender, RoutedEventArgs e)
         {
             var hideTextBox = sender as TextBox;
@@ -1282,7 +1304,7 @@ namespace ServerManagerTool
 
         private void EnableSOTFCheckbox_SourceUpdated(object sender, DataTransferEventArgs e)
         {
-            var checkBox = sender as CheckBox;
+            var checkBox = sender as CheckBoxAndTextBlock;
             if (checkBox == null || checkBox != EnableSOTFCheckbox)
                 return;
 
@@ -4331,6 +4353,65 @@ namespace ServerManagerTool
                     }
                 );
             }
+        }
+
+        public void SelectControl(Control control)
+        {
+            if (control is null)
+                return;
+
+            bool focused = false;
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                Window.GetWindow(this)?.Activate();
+
+                UnselectControl();
+
+                var parent = WindowUtils.TryFindParent<Expander>(control);
+                if (parent != null)
+                {
+                    parent.IsExpanded = true;
+                }
+
+                control.Background = Brushes.AliceBlue;
+                control.BringIntoView();
+
+                if (control is AnnotatedSlider)
+                {
+                    focused = ((AnnotatedSlider)control).Focus();
+                }
+                else if (control is AnnotatedCheckBoxAndFloatSlider)
+                {
+                    focused = ((AnnotatedCheckBoxAndFloatSlider)control).Focus();
+                }
+                else if (control is AnnotatedCheckBoxAndIntegerSlider)
+                {
+                    focused = ((AnnotatedCheckBoxAndIntegerSlider)control).Focus();
+                }
+                else if (control is AnnotatedCheckBoxAndLongSlider)
+                {
+                    focused = ((AnnotatedCheckBoxAndLongSlider)control).Focus();
+                }
+                else if (control is CheckBoxAndTextBlock)
+                {
+                    focused = ((CheckBoxAndTextBlock)control).Focus();
+                }
+                else
+                {
+                    focused = control.Focus();
+                }
+
+                _lastFoundControl = control;
+            });
+        }
+
+        public void UnselectControl()
+        {
+            if (_lastFoundControl is null)
+                return;
+
+            _lastFoundControl.Background = null;
+            _lastFoundControl = null;
         }
 
         private async Task<bool> UpdateServer(bool establishLock, bool updateServer, bool updateMods, bool closeProgressWindow)

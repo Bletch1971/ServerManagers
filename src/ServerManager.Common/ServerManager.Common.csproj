@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\AnnotatedCheckBoxAndLongSlider.xaml" />
+    <None Remove="Controls\CheckBoxAndTextBlock.xaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.13.8" />
@@ -30,6 +31,10 @@
     </Page>
     <Page Include="Controls\AnnotatedCheckBoxAndIntegerSlider.xaml" />
     <Page Include="Controls\AnnotatedSlider.xaml" />
+    <Page Include="Controls\CheckBoxAndTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeXtVdf\NeXt.Vdf.csproj" />

@@ -31,6 +31,7 @@ namespace ServerManagerTool.Common.Controls
         {
             InitializeComponent();
 
+            this.Focusable = true;
             Value = new NullableValue<long>();
 
             (this.Content as FrameworkElement).DataContext = this;
@@ -147,6 +148,14 @@ namespace ServerManagerTool.Common.Controls
                     Value.Value = (long)e.NewValue;
                 }
             }
+        }
+
+        public new bool Focus()
+        {
+            if (this.CheckBox.IsChecked ?? false == true)
+                return Slider.Focus();
+            else
+                return this.CheckBox.Focus();
         }
     }
 }
