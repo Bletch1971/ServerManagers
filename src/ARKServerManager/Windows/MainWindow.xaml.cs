@@ -513,6 +513,14 @@ namespace ServerManagerTool
             }
         }
 
+        private void Discord_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Config.Default.DiscordUrl))
+                return;
+
+            Process.Start(Config.Default.DiscordUrl);
+        }
+
         public void Servers_AddNew(object sender, NewItemRequestedEventArgs e)
         {
             var index = this.ServerManager.AddNew();

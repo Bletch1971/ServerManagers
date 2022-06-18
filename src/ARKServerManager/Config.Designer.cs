@@ -3243,5 +3243,14 @@ namespace ServerManagerTool {
                 this["AutoStart_TaskPriority"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://discord.gg/cJdHJSG")]
+        public string DiscordUrl {
+            get {
+                return ((string)(this["DiscordUrl"]));
+            }
+        }
     }
 }

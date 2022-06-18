@@ -304,6 +304,7 @@
     <Resource Include="Art\Filter.ico" />
     <Resource Include="Art\DropArrow.ico" />
     <Resource Include="Art\Restart.ico" />
+    <Resource Include="Art\Discord.ico" />
     <Content Include="Globalization\en-US\en-US.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

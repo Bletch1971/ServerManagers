@@ -119,8 +119,10 @@
         <Setter Property="Padding" Value="0"/>
     </Style>
     <Style x:Key="ButtonStyle4" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="#00ffffff"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Height" Value="22"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
         <Setter Property="Margin" Value="2"/>
         <Setter Property="Padding" Value="0"/>
     </Style>
@@ -515,8 +517,8 @@
 
     <ContentControl x:Key="ServerMonitorButtonContent">
         <StackPanel Orientation="Horizontal" Height="20" Margin="0,0,5,0">
-            <Image Margin="5,1,5,0" Source="{com:Icon Path=/ConanServerManager;component/Art/Servers.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
-            <Label Content="{DynamicResource ServerMonitor_Title}" VerticalAlignment="Center" Padding="0"/>
+            <Image Margin="5,1,5,0" Source="{com:Icon Path=/ConanServerManager;component/Art/Servers.ico,Size=64}" Width="20" VerticalAlignment="Center"/>
+            <Label Content="{DynamicResource ServerMonitor_Title}" VerticalAlignment="Center" Padding="0" FontWeight="Bold"/>
         </StackPanel>
     </ContentControl>
     <ContentControl x:Key="SupportZipButtonContent">

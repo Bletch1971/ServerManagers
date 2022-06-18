@@ -93,30 +93,33 @@
                             <ColumnDefinition MinWidth="25"/>
                             <ColumnDefinition MinWidth="25"/>
                             <ColumnDefinition MinWidth="25"/>
+                            <ColumnDefinition MinWidth="25"/>
                         </Grid.ColumnDefinitions>
 
-                        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,2,0,0" HorizontalAlignment="Right" Click="Donate_Click" ToolTip="{DynamicResource MainWindow_DonateTooltip}" Style="{StaticResource ButtonStyle3}">
+                        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="5,2,0,0" HorizontalAlignment="Right" Click="Donate_Click" ToolTip="{DynamicResource MainWindow_DonateTooltip}" Style="{StaticResource ButtonStyle3}">
                             <Image Source="../Art/Donate.png"/>
                         </Button>
-                        <Button Grid.Row="0" Grid.Column="4" Margin="5,0,0,0" Click="Help_Click" ToolTip="{DynamicResource MainWindow_OpenHelpTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="0" Grid.Column="5" Margin="5,0,0,0" Click="Help_Click" ToolTip="{DynamicResource MainWindow_OpenHelpTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Help.ico,Size=32}"/>
                         </Button>
 
-                        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="5,0,0,0" Height="26" HorizontalAlignment="Right" Click="ServerMonitor_Click" Content="{StaticResource ServerMonitorButtonContent}" ToolTip="{DynamicResource MainWindow_OpenServerMonitorTooltip}"/>
-
-                        <Button Grid.Row="2" Grid.Column="0" Margin="5,0,0,0" HorizontalAlignment="Right" Click="GameData_Click" ToolTip="{DynamicResource MainWindow_OpenGameDataTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Discord_Click" ToolTip="{DynamicResource MainWindow_JoinDiscordTooltip}" Style="{StaticResource ButtonStyle4}">
+                            <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Discord.ico,Size=64}"/>
+                        </Button>
+                        <Button Grid.Row="1" Grid.Column="3" Margin="5,0,0,0" HorizontalAlignment="Right" Click="GameData_Click" ToolTip="{DynamicResource MainWindow_OpenGameDataTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Document.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="1" Margin="5,0,0,0" Click="Plugins_Click" ToolTip="{DynamicResource MainWindow_OpenPluginsTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="1" Grid.Column="4" Margin="5,0,0,0" Click="Plugins_Click" ToolTip="{DynamicResource MainWindow_OpenPluginsTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Plugin.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" Click="OpenLogFolder_Click" ToolTip="{DynamicResource MainWindow_OpenLogFolderTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="1" Grid.Column="5" Margin="5,0,0,0" Click="OpenLogFolder_Click" ToolTip="{DynamicResource MainWindow_OpenLogFolderTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Logs.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="3" Margin="5,0,0,0" Click="SteamCMD_Click" ToolTip="{DynamicResource MainWindow_SteamCMDTooltip}" Style="{StaticResource ButtonStyle1}">
+                        
+                        <Button Grid.Row="2" Grid.Column="4" Margin="5,0,0,0" Click="SteamCMD_Click" ToolTip="{DynamicResource MainWindow_SteamCMDTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Steam.ico,Size=32}"/>
                         </Button>
-                        <Button Grid.Row="2" Grid.Column="4" Margin="5,0,0,0" Click="Settings_Click" ToolTip="{DynamicResource MainWindow_OpenSettingsTooltip}" Style="{StaticResource ButtonStyle1}">
+                        <Button Grid.Row="2" Grid.Column="5" Margin="5,0,0,0" Click="Settings_Click" ToolTip="{DynamicResource MainWindow_OpenSettingsTooltip}" Style="{StaticResource ButtonStyle1}">
                             <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Settings.ico,Size=32}"/>
                         </Button>
                     </Grid>
@@ -314,37 +317,42 @@
                         </StackPanel>
                     </Grid>
 
-                    <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Margin="10,0,10,0" HorizontalAlignment="Center">
+                    <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Margin="10,0,10,0" HorizontalAlignment="Center" Height="88" Width="180">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        
-                        <Label Grid.Row="0" Margin="0,-2,0,-3" Background="Transparent" Foreground="White" FontWeight="Bold" FontSize="11" Content="{DynamicResource MainWindow_MyIpLabel}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="5,0,0,0">
-                            <TextBox FontSize="12"  Height="22" Width="120" VerticalAlignment="Bottom" Margin="0" VerticalContentAlignment="Center" ToolTip="{DynamicResource MainWindow_MyIpTooltip}">
-                                <Validation.ErrorTemplate>
-                                    <ControlTemplate>
-                                        <StackPanel>
-                                            <!-- Placeholder for the TextBox itself -->
-                                            <AdornedElementPlaceholder x:Name="textBox"/>
-                                            <TextBlock Text="{DynamicResource MainWindow_MyIpError}" Background="Red" Foreground="White"/>
-                                        </StackPanel>
-                                    </ControlTemplate>
-                                </Validation.ErrorTemplate>
-                                <TextBox.Text>
-                                    <Binding Path="Config.MachinePublicIP" ElementName="Main">
-                                        <Binding.ValidationRules>
-                                            <cvr:IpValidationRule ValidatesOnTargetUpdated="true" />
-                                        </Binding.ValidationRules>
-                                    </Binding>
-                                </TextBox.Text>
-                            </TextBox>
-                            <Button Grid.Row="1" Margin="5,0,0,0" Click="RefreshPublicIP_Click" ToolTip="{DynamicResource MainWindow_RefreshMyIpTooltip}" Style="{StaticResource ButtonStyle2}">
-                                <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Reload.ico,Size=32}"/>
-                            </Button>
-                        </StackPanel>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,-2,0,-3" Background="Transparent" Foreground="White" FontWeight="Bold" FontSize="11" Content="{DynamicResource MainWindow_MyIpLabel}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                        <TextBox Grid.Row="1" Grid.Column="0" Margin="0" FontSize="12" Height="22" VerticalAlignment="Bottom" VerticalContentAlignment="Center" ToolTip="{DynamicResource MainWindow_MyIpTooltip}">
+                            <Validation.ErrorTemplate>
+                                <ControlTemplate>
+                                    <StackPanel>
+                                        <!-- Placeholder for the TextBox itself -->
+                                        <AdornedElementPlaceholder x:Name="textBox"/>
+                                        <TextBlock Text="{DynamicResource MainWindow_MyIpError}" Background="Red" Foreground="White"/>
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Validation.ErrorTemplate>
+                            <TextBox.Text>
+                                <Binding Path="Config.MachinePublicIP" ElementName="Main">
+                                    <Binding.ValidationRules>
+                                        <cvr:IpValidationRule ValidatesOnTargetUpdated="true" />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                        <Button Grid.Row="1" Grid.Column="1" Margin="2,0,0,0" Click="RefreshPublicIP_Click" ToolTip="{DynamicResource MainWindow_RefreshMyIpTooltip}" Style="{StaticResource ButtonStyle2}">
+                            <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Reload.ico,Size=32}"/>
+                        </Button>
+
+                        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,2" Height="26" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Click="ServerMonitor_Click" Content="{StaticResource ServerMonitorButtonContent}" ToolTip="{DynamicResource MainWindow_OpenServerMonitorTooltip}"/>
                     </Grid>
                 </DockPanel>
 
@@ -352,7 +360,7 @@
                     <eo:TabControl.HeaderTemplate>
                         <DataTemplate >
                             <StackPanel Orientation="Horizontal" Height="20">
-                                <Button Margin="0" Command="{Binding StatusButtonCommand, ElementName=Main}" CommandParameter="{Binding}">
+                                <Button Margin="-5,0,0,0" Command="{Binding StatusButtonCommand, ElementName=Main}" CommandParameter="{Binding}">
                                     <Button.Style>
                                         <Style BasedOn="{StaticResource ButtonStyle5}" TargetType="{x:Type Button}">
                                             <Style.Triggers>
@@ -454,7 +462,7 @@
                                         </Image.Style>
                                     </Image>
                                 </Button>
-                                <TextBlock Margin="0" VerticalAlignment="Center" Text="{Binding Profile.ProfileName}"/>
+                                <TextBlock Margin="2,0,0,0" VerticalAlignment="Center" Text="{Binding Profile.ProfileName}"/>
                             </StackPanel>
                         </DataTemplate>
                     </eo:TabControl.HeaderTemplate>
@@ -486,7 +494,7 @@
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate>
-                                        <Image Margin="2" VerticalAlignment="Center" Source="{com:Icon Path=/ConanServerManager;component/Art/Delete.ico,Size=32}" Width="10" Height="10" ToolTip="{DynamicResource MainWindow_CloseProfileTooltip}"/>
+                                        <Image Margin="10,2,0,0" VerticalAlignment="Top" Source="{com:Icon Path=/ConanServerManager;component/Art/Delete.ico,Size=32}" Width="8" Height="8" ToolTip="{DynamicResource MainWindow_CloseProfileTooltip}"/>
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>

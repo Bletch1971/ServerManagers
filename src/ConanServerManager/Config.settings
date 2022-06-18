@@ -665,5 +665,8 @@
     <Setting Name="AutoStart_TaskPriority" Type="System.Diagnostics.ProcessPriorityClass" Scope="User">
       <Value Profile="(Default)">Normal</Value>
     </Setting>
+    <Setting Name="DiscordUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://discord.gg/cJdHJSG</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
