@@ -4355,10 +4355,10 @@ namespace ServerManagerTool
             }
         }
 
-        public void SelectControl(Control control)
+        public bool SelectControl(Control control)
         {
-            if (control is null)
-                return;
+            if (control is null || control.Visibility != Visibility.Visible)
+                return false;
 
             bool focused = false;
             Application.Current.Dispatcher.Invoke(() =>
@@ -4403,6 +4403,8 @@ namespace ServerManagerTool
 
                 _lastFoundControl = control;
             });
+
+            return true;
         }
 
         public void UnselectControl()

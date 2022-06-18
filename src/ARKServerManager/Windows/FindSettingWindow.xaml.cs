@@ -61,8 +61,9 @@ namespace ServerManagerTool
 
                 _serverSettingsControl.UnselectControl();
 
+                var findSettingString = FindSettingString.Trim();
                 var foundControls = _settingControls
-                    .Where(s => s.setting.Contains(FindSettingString, StringComparison.OrdinalIgnoreCase))
+                    .Where(s => s.setting.Contains(findSettingString, StringComparison.OrdinalIgnoreCase))
                     .Select(s => s.control)
                     .ToArray();
                 if (foundControls.Length == 0)
@@ -72,16 +73,25 @@ namespace ServerManagerTool
                 }
 
                 var oldIndex = _controlIndex;
-                var newIndex = oldIndex + 1;
-                if (newIndex >= foundControls.Length)
-                {
-                    _controlIndex = -1;
-                    MessageBox.Show(string.Format(_globalizer.GetResourceString("FindSettingWindow_NotFoundErrorLabel"), FindSettingString), _globalizer.GetResourceString("FindSettingWindow_Title"), MessageBoxButton.OK, MessageBoxImage.Information);
-                    return;
-                }
+                var newIndex = oldIndex;
 
-                _serverSettingsControl.SelectControl(foundControls[newIndex]);
-                _controlIndex = newIndex;
+                while (true)
+                {
+                    newIndex += 1;
+                    if (newIndex >= foundControls.Length)
+                    {
+                        _controlIndex = -1;
+                        MessageBox.Show(string.Format(_globalizer.GetResourceString("FindSettingWindow_NotFoundErrorLabel"), FindSettingString), _globalizer.GetResourceString("FindSettingWindow_Title"), MessageBoxButton.OK, MessageBoxImage.Information);
+                        return;
+                    }
+
+                    var selected = _serverSettingsControl.SelectControl(foundControls[newIndex]);
+                    if (selected)
+                    {
+                        _controlIndex = newIndex;
+                        break;
+                    }
+                }
             }
             catch (Exception ex)
             {
