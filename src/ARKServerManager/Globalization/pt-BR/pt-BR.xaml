@@ -1039,6 +1039,10 @@
 	<sys:String x:Key="ServerSettings_BackupServer_Title">Backup do servidor</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Erro no backup do servidor</sys:String>
 	<sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">O backup foi bem sucedido.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">Resetar Servidor</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">Erro ao resetar o servidor</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">Isso excluirá todos os arquivos do servidor, jogador e tribo e redefinirá seu servidor para novo. Você deseja continuar?</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">O resete do servidor foi bem-sucedido.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Erro no desligamento do servidor</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Desligamento do servidor cancelado</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">A janela de desligamento já está aberta para este servidor.</sys:String>
@@ -1128,6 +1132,8 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">Uma lista separada por vírgulas de ids de mod, na ordem em que devem ser aplicados.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">Veja os detalhes do mod.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Atualize para a versão mais recente dos mods que estão atualmente disponíveis para download.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonLabel">Resetar</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">Exclui todos os arquivos do servidor, jogador e tribo e redefine seu servidor para novo.</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">Salva</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Período de salvamento automático:</sys:String>
@@ -1543,6 +1549,10 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Especifica o multiplicador para as recompensas dos Hexagons.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Multiplicador de custo Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Especifica o multiplicador para o custo Hexagons dos itens.</sys:String>
+	
+    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Ativar Teleporte do Bioma Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">Se ativado, permitirá o teleporte para bioma do mapa Fjordur.</sys:String>
 	
 	<sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">AVISO: Isso mudará permanentemente as estatísticas de qualquer item existente, portanto, certifique-se de fazer backup de seu salvamento atual antes de modificar e brincar com os valores de fixo.</sys:String>
