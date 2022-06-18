@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using ServerManagerTool.Common.Controls;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -66,10 +69,11 @@ namespace ServerManagerTool.Common.Utils
         {
             if (child == null) return null;
             var contentElement = child as ContentElement;
+            DependencyObject parent = null;
 
             if (contentElement != null)
             {
-                var parent = ContentOperations.GetParent(contentElement);
+                parent = ContentOperations.GetParent(contentElement);
                 if (parent != null) return parent;
 
                 var fce = contentElement as FrameworkContentElement;
@@ -77,7 +81,10 @@ namespace ServerManagerTool.Common.Utils
             }
 
             //if it's not a ContentElement, rely on VisualTreeHelper
-            return VisualTreeHelper.GetParent(child);
+            parent = VisualTreeHelper.GetParent(child);
+            if (parent is null)
+                parent = LogicalTreeHelper.GetParent(child);
+            return parent;
         }
 
         /// <summary>
@@ -117,6 +124,49 @@ namespace ServerManagerTool.Common.Utils
             if (element == null) return null;
             if (element is T) return (T)element;
             return TryFindParent<T>(element);
+        }
+
+        private static Dictionary<string, DependencyProperty> BindingProperties = new Dictionary<string, DependencyProperty>
+        {
+            { "System.Windows.Controls.CheckBox", CheckBox.IsCheckedProperty },
+            { "System.Windows.Controls.ComboBox", ComboBox.ItemsSourceProperty },
+            { "System.Windows.Controls.TextBox", TextBox.TextProperty },
+            { "System.Windows.Controls.Slider", Slider.ValueProperty },
+            { "System.Windows.Controls.DataGrid", DataGrid.ItemsSourceProperty },
+            { "ServerManagerTool.Common.Controls.AnnotatedSlider", AnnotatedSlider.ValueProperty },
+            { "ServerManagerTool.Common.Controls.AnnotatedCheckBoxAndFloatSlider", AnnotatedCheckBoxAndFloatSlider.ValueProperty },
+            { "ServerManagerTool.Common.Controls.AnnotatedCheckBoxAndIntegerSlider", AnnotatedCheckBoxAndIntegerSlider.ValueProperty },
+            { "ServerManagerTool.Common.Controls.AnnotatedCheckBoxAndLongSlider", AnnotatedCheckBoxAndLongSlider.ValueProperty },
+            { "ServerManagerTool.Common.Controls.CheckBoxAndTextBlock", CheckBoxAndTextBlock.IsCheckedProperty },
+        };
+
+        public static List<(string setting, Control control)> GetLogicalTreeControls(DependencyObject parent)
+        {
+            var results = new List<(string setting, Control control)>();
+
+            var children = LogicalTreeHelper.GetChildren(parent).OfType<DependencyObject>();
+            foreach (var child in children)
+            {
+                var recurse = true;
+                if (child is Visual childControl)
+                {
+                    var bindingProperty = BindingProperties.FirstOrDefault(b => b.Key.Equals(childControl.GetType().FullName)).Value;
+                    if (bindingProperty != null)
+                    {
+                        var binding = BindingOperations.GetBinding(childControl, bindingProperty);
+                        if (binding != null)
+                        {
+                            results.Add((binding.Path.Path, child as Control));
+                            recurse = false;
+                        }
+                    }
+                }
+
+                if (recurse)
+                    results.AddRange(GetLogicalTreeControls(child));
+            }
+
+            return results;
         }
     }
 }

@@ -26,6 +26,15 @@ namespace ServerManagerTool.Common.Controls
         public static readonly DependencyProperty SuffixRelativeWidthProperty = DependencyProperty.Register(nameof(SuffixRelativeWidth), typeof(string), typeof(AnnotatedSlider), new PropertyMetadata("1*"));
         public static readonly DependencyProperty SuffixRelativeMinWidthProperty = DependencyProperty.Register(nameof(SuffixRelativeMinWidth), typeof(string), typeof(AnnotatedSlider), new PropertyMetadata("0"));
 
+        public AnnotatedSlider()
+        {
+            InitializeComponent();
+
+            this.Focusable = true;
+
+            (this.Content as FrameworkElement).DataContext = this;
+        }
+
         public string Label
         {
             get { return (string)GetValue(LabelProperty); }
@@ -128,12 +137,6 @@ namespace ServerManagerTool.Common.Controls
             set { SetValue(SuffixRelativeMinWidthProperty, value); }
         }
 
-        public AnnotatedSlider()
-        {
-            InitializeComponent();
-            (this.Content as FrameworkElement).DataContext = this;
-        }
-
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if(Slider.IsFocused)
@@ -143,6 +146,11 @@ namespace ServerManagerTool.Common.Controls
                     Value = (float)e.NewValue;
                 }
             }
+        }
+
+        public new bool Focus()
+        {
+            return Slider.Focus();
         }
     }
 }

@@ -264,6 +264,9 @@
     <Compile Include="Windows\DataDirectoryWindow.xaml.cs">
       <DependentUpon>DataDirectoryWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\FindSettingWindow.xaml.cs">
+      <DependentUpon>FindSettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PlayerListWindow.xaml.cs">
       <DependentUpon>PlayerListWindow.xaml</DependentUpon>
     </Compile>
@@ -455,6 +458,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\DataDirectoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\FindSettingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

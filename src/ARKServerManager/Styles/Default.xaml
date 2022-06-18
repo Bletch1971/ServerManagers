@@ -576,6 +576,12 @@
             <Label Content="{DynamicResource ServerMonitor_Title}" VerticalAlignment="Center" Padding="0"/>
         </StackPanel>
     </ContentControl>
+    <ContentControl x:Key="SettingFindButtonContent">
+        <StackPanel Orientation="Horizontal" Height="27">
+            <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Find.ico,Size=32}" Width="16" VerticalAlignment="Center"/>
+            <Label Content="{DynamicResource ServerSettings_SettingFindButtonLabel}" VerticalAlignment="Center"/>
+        </StackPanel>
+    </ContentControl>
     <ContentControl x:Key="SupportZipButtonContent">
         <StackPanel Orientation="Horizontal" Height="27">
             <Image Margin="5,0,5,0" Source="{com:Icon Path=/Ark Server Manager;component/Art/Zip.ico,Size=32}" Width="16" VerticalAlignment="Center"/>

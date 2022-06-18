@@ -5,17 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-06-17T00:00:00Z</updated>
+  <updated>2022-06-18T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:1AE0925B-64EB-4177-B834-7A75FA46E807</id>
-    <title>1.1.433 (1.1.433.2)</title>
-    <summary>1.1.433.2</summary>
+    <title>1.1.433 (1.1.433.3)</title>
+    <summary>1.1.433.3</summary>
     <link href="" />
-    <updated>2022-06-17T00:00:00Z</updated>
+    <updated>2022-06-18T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - added new find button to find settings by name.</li>
+          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>

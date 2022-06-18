@@ -993,6 +993,8 @@
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
+    <sys:String x:Key="ServerSettings_SettingFindButtonLabel">Find</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonTooltip">Find Setting</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Create Support Zip</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Create a zip file that contains all the files necessary for use by the server manager support team to diagnose a problem.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sync</sys:String>
@@ -5740,6 +5742,14 @@
 
     <sys:String x:Key="DiscordBot_CountLabel">Count:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
+    <!--#endregion-->
+    
+    <!--#region Find Setting Window -->
+    <sys:String x:Key="FindSettingWindow_Title">Find Settings</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_NotFoundErrorLabel">The setting was not found: {0}</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_FindButtonLabel">Find</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>
