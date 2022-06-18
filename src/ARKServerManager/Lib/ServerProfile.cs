@@ -5330,6 +5330,7 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(AdditionalArgsProperty);
             this.ClearValue(LauncherArgsOverrideProperty);
+            this.ClearValue(LauncherArgsPrefixProperty);
             this.ClearValue(LauncherArgsProperty);
         }
 
@@ -5881,10 +5882,6 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(AutoSavePeriodMinutesProperty, sourceProfile.AutoSavePeriodMinutes);
 
-            //this.SetValue(MOTDProperty, sourceProfile.MOTD);
-            //this.SetValue(MOTDDurationProperty, sourceProfile.MOTDDuration);
-            //this.SetNullableValue(MOTDIntervalProperty, sourceProfile.MOTDInterval);
-
             this.SetValue(EnableExtinctionEventProperty, sourceProfile.EnableExtinctionEvent);
             this.SetValue(ExtinctionEventTimeIntervalProperty, sourceProfile.ExtinctionEventTimeInterval);
             this.SetValue(ExtinctionEventUTCProperty, sourceProfile.ExtinctionEventUTC);
@@ -5939,8 +5936,9 @@ namespace ServerManagerTool.Lib
             this.SetValue(WebAlarmKeyProperty, sourceProfile.WebAlarmKey);
             this.SetValue(WebAlarmUrlProperty, sourceProfile.WebAlarmUrl);
 
-            this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
+            this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
+            this.SetValue(LauncherArgsPrefixProperty, sourceProfile.LauncherArgsPrefix);
             this.SetValue(AdditionalArgsProperty, sourceProfile.AdditionalArgs);
         }
 

@@ -596,7 +596,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label   Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerNameLabel}" ToolTip="{DynamicResource ServerSettings_ServerNameTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerNameLabel}" ToolTip="{DynamicResource ServerSettings_ServerNameTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding ServerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ToolTip="{DynamicResource ServerSettings_ServerNameTooltip}" VerticalContentAlignment="Center" SourceUpdated="ServerName_SourceUpdated" />
                                         <StackPanel Grid.Row="0" Grid.Column="4" Orientation="Horizontal">
                                             <Label  Content="{DynamicResource ServerSettings_ServerNameLengthLabel}" VerticalAlignment="Center">
@@ -625,15 +625,15 @@
                                             </Label>
                                         </StackPanel>
 
-                                        <Label   Grid.Row="1" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerPasswordLabel}" ToolTip="{DynamicResource ServerSettings_ServerPasswordTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="1" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerPasswordLabel}" ToolTip="{DynamicResource ServerSettings_ServerPasswordTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="1" Name="HideServerPasswordTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}"  ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Margin="1" Style="{StaticResource HiddenTextBoxStyle}"/>
                                         <TextBox Grid.Row="1" Grid.Column="1" Name="ServerPasswordTextBox" Text="{Binding ServerPassword}" ToolTip="{DynamicResource ServerSettings_ServerPasswordTooltip}" LostFocus="HiddenField_LostFocus" VerticalContentAlignment="Center" Visibility="Collapsed" Margin="1"/>
 
-                                        <Label   Grid.Row="1" Grid.Column="2" Content="{DynamicResource ServerSettings_AdminPasswordLabel}" ToolTip="{DynamicResource ServerSettings_AdminPasswordTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="1" Grid.Column="2" Content="{DynamicResource ServerSettings_AdminPasswordLabel}" ToolTip="{DynamicResource ServerSettings_AdminPasswordTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="3" Name="HideAdminPasswordTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Margin="1" Style="{StaticResource HiddenTextBoxStyle}"/>
                                         <TextBox Grid.Row="1" Grid.Column="3" Name="AdminPasswordTextBox" Text="{Binding AdminPassword}" ToolTip="{DynamicResource ServerSettings_AdminPasswordTooltip}" LostFocus="HiddenField_LostFocus" VerticalContentAlignment="Center" Visibility="Collapsed" Margin="1"/>
 
-                                        <Label   Grid.Row="1" Grid.Column="4" Content="{DynamicResource ServerSettings_SpectatorPasswordLabel}" ToolTip="{DynamicResource ServerSettings_SpectatorPasswordTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="1" Grid.Column="4" Content="{DynamicResource ServerSettings_SpectatorPasswordLabel}" ToolTip="{DynamicResource ServerSettings_SpectatorPasswordTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="5" Name="HideSpectatorPasswordTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Margin="1" Style="{StaticResource HiddenTextBoxStyle}"/>
                                         <TextBox Grid.Row="1" Grid.Column="5" Name="SpectatorPasswordTextBox" Text="{Binding SpectatorPassword}" ToolTip="{DynamicResource ServerSettings_SpectatorPasswordTooltip}" LostFocus="HiddenField_LostFocus" VerticalContentAlignment="Center" Visibility="Collapsed" Margin="1"/>
                                     </Grid>
@@ -657,7 +657,7 @@
 
                                         <DockPanel Grid.Row="0" Grid.Column="0">
                                         </DockPanel>
-                                        <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_LocalIPLabel}" ToolTip="{DynamicResource ServerSettings_LocalIPTooltip}" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_LocalIPLabel}" ToolTip="{DynamicResource ServerSettings_LocalIPTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <ComboBox  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ItemsSource="{Binding ElementName=SettingsControl, Path=NetworkInterfaces}" SelectedValue="{Binding ServerIP}" SelectedValuePath="IPAddress" ToolTip="{DynamicResource ServerSettings_LocalIPTooltip}" Margin="1" PreviewMouseWheel="ComboBox_PreviewMouseWheel">
                                             <ComboBox.ItemTemplate>
                                                 <DataTemplate>
@@ -671,14 +671,14 @@
                                         <Button Grid.Row="0" Grid.Column="3" Width="22" Height="22" Margin="1" HorizontalAlignment="Left" Click="RefreshLocalIPs_Click" ToolTip="{DynamicResource ServerSettings_RefreshLocalIPTooltip}" Style="{StaticResource ButtonStyle1}">
                                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Reload.ico,Size=32}"/>
                                         </Button>
-                                        
-                                        <Label   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ServerPortLabel}" ToolTip="{DynamicResource ServerSettings_ServerPortTooltip}"/>
+
+                                        <Label   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ServerPortLabel}" ToolTip="{DynamicResource ServerSettings_ServerPortTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding ServerPort, Mode=TwoWay, Converter={cc:IntRangeValueConverter 1, 65535}, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" SourceUpdated="ServerPort_SourceUpdated" ToolTip="{DynamicResource ServerSettings_ServerPortTooltip}"/>
 
-                                        <Label   Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ServerPeerPortLabel}" ToolTip="{DynamicResource ServerSettings_ServerPeerPortTooltip}"/>
+                                        <Label   Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ServerPeerPortLabel}" ToolTip="{DynamicResource ServerSettings_ServerPeerPortTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="3" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding ServerPeerPort}" ToolTip="{DynamicResource ServerSettings_ServerPeerPortTooltip}" IsEnabled="False"/>
 
-                                        <Label   Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_QueryPortLabel}" ToolTip="{DynamicResource ServerSettings_QueryPortTooltip}"/>
+                                        <Label   Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_QueryPortLabel}" ToolTip="{DynamicResource ServerSettings_QueryPortTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="5" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding QueryPort, Converter={cc:IntRangeValueConverter 1, 65535}}" ToolTip="{DynamicResource ServerSettings_QueryPortTooltip}"/>
                                     </Grid>
                                 </GroupBox>
@@ -704,10 +704,10 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label    Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_RCONPortLabel}" ToolTip="{DynamicResource ServerSettings_RCONPortTooltip}" VerticalAlignment="Center"/>
+                                        <Label    Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_RCONPortLabel}" ToolTip="{DynamicResource ServerSettings_RCONPortTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox  Grid.Row="0" Grid.Column="1" Margin="1,1,0,1" Text="{Binding RCONPort}" VerticalContentAlignment="Center" ToolTip="{DynamicResource ServerSettings_RCONPortTooltip}" IsEnabled="{Binding RCONEnabled}" Width="100" HorizontalAlignment="Left"/>
 
-                                        <Label    Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" Content="{DynamicResource ServerSettings_RCONLogBufferLabel}" ToolTip="{DynamicResource ServerSettings_RCONLogBufferTooltip}" VerticalAlignment="Center"/>
+                                        <Label    Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" Content="{DynamicResource ServerSettings_RCONLogBufferLabel}" ToolTip="{DynamicResource ServerSettings_RCONLogBufferTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox  Grid.Row="0" Grid.Column="3" Margin="1,1,0,1" Text="{Binding RCONServerGameLogBuffer}" ToolTip="{DynamicResource ServerSettings_RCONLogBufferTooltip}" IsEnabled="{Binding RCONEnabled}" VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left"/>
 
                                         <Button   Grid.Row="0" Grid.Column="5" Margin="1" Content="{StaticResource ResetRCONButtonContent}" ToolTip="{DynamicResource ServerSettings_RCONResetTooltip}" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.RCONWindowExtents}" HorizontalAlignment="Right"/>
@@ -734,7 +734,7 @@
                                             <ColumnDefinition Width="30"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label   Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_MapPathLabel}" ToolTip="{DynamicResource ServerSettings_MapPathTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="0" Grid.Column="0" Content="{DynamicResource ServerSettings_MapPathLabel}" ToolTip="{DynamicResource ServerSettings_MapPathTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <ComboBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" Margin="1" Name="GameMapComboBox" ItemsSource="{Binding BaseGameMaps, ElementName=SettingsControl}" SelectedValue="{Binding ServerMap, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" IsEditable="True" ToolTip="{DynamicResource ServerSettings_MapPathTooltip}" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel">
                                             <ComboBox.Style>
                                                 <Style BasedOn="{StaticResource {x:Type ComboBox}}" TargetType="{x:Type ComboBox}">
@@ -782,7 +782,7 @@
                                             </Button.Style>
                                         </Button>
 
-                                        <Label   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_TotalConversionLabel}" ToolTip="{DynamicResource ServerSettings_TotalConversionTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_TotalConversionLabel}" ToolTip="{DynamicResource ServerSettings_TotalConversionTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <ComboBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Name="TotalConversionComboBox" ItemsSource="{Binding BaseTotalConversions, ElementName=SettingsControl}" SelectedValue="{Binding TotalConversionModId, Mode=TwoWay, UpdateSourceTrigger=Explicit}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" IsEditable="True" ToolTip="{DynamicResource ServerSettings_TotalConversionTooltip}" LostFocus="ComboBoxItemList_LostFocus" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                         <Button  Grid.Row="1" Grid.Column="3" Width="22" Height="22" Margin="5,1,0,0" ToolTip="{DynamicResource ServerSettings_FindTotalConversionMapNameTooltip}" HorizontalAlignment="Left" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.MapNameTotalConversionProperty}">
                                             <Button.Style>
@@ -900,7 +900,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}" Foreground="{DynamicResource UnSyncedSetting}">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
@@ -973,10 +973,11 @@
 
                                         <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Height="5" ShowsPreview="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" Opacity="0"/>
 
-                                        <Label Grid.Row="3" Grid.Column="0" Margin="1" Content="{DynamicResource ServerSettings_MOTDDurationLabel}"/>
+                                        <Label Grid.Row="3" Grid.Column="0" Margin="1" Content="{DynamicResource ServerSettings_MOTDDurationLabel}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Value="{Binding MOTDDuration}" Suffix="{DynamicResource ServerSettings_MOTDDurationUnits}" Minimum="1" Maximum="30" TickFrequency="5" SmallChange="1" LargeChange="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDDurationTooltip}" />
 
-                                        <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="1" Label="{DynamicResource ServerSettings_MOTDIntervalEnabledLabel}" Value="{Binding MOTDInterval}" Suffix="{DynamicResource ServerSettings_MOTDIntervalUnits}" Minimum="10" Maximum="1440" TickFrequency="60" SmallChange="10" LargeChange="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDIntervalTooltip}" />
+                                        <Label Grid.Row="4" Grid.Column="0" Margin="1" Content="{DynamicResource ServerSettings_MOTDIntervalEnabledLabel}" Foreground="{DynamicResource UnSyncedSetting}"/>
+                                        <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="-2,1,1,1" Value="{Binding MOTDInterval}" Suffix="{DynamicResource ServerSettings_MOTDIntervalUnits}" Minimum="10" Maximum="1440" TickFrequency="60" SmallChange="10" LargeChange="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MOTDIntervalTooltip}" />
                                     </Grid>
                                 </GroupBox>
 
@@ -1067,7 +1068,7 @@
 
                                         <cctl:AnnotatedSlider Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="4" Margin="20,1,5,1" Label="{DynamicResource ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel}" Value="{Binding ServerAutoForceRespawnWildDinosInterval, Converter={StaticResource SecondsToHoursConverter}}" Suffix="{DynamicResource SliderUnits_Hours}" Minimum="1" Maximum="720" SmallChange="1" LargeChange="24" TickFrequency="24" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip}" IsEnabled="{Binding EnableServerAutoForceRespawnWildDinosInterval, FallbackValue=False}"/>
 
-                                        <Label Grid.Row="17" Grid.Column="0" Margin="20,0,5,0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_AltSaveDirectoryNameLabel}" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}" VerticalAlignment="Center" MinWidth="200"/>
+                                        <Label Grid.Row="17" Grid.Column="0" Margin="20,0,5,0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_AltSaveDirectoryNameLabel}" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}" VerticalAlignment="Center" MinWidth="200" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="17" Grid.Column="2" Margin="1,1,0,1" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}">
                                             <Validation.ErrorTemplate>
                                                 <ControlTemplate>
@@ -1307,10 +1308,10 @@
                                             <ColumnDefinition Width="Auto" MinWidth="100"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label      Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ProcessPriorityLabel}" ToolTip="{DynamicResource ServerSettings_ProcessPriorityTooltip}"/>
+                                        <Label      Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ProcessPriorityLabel}" ToolTip="{DynamicResource ServerSettings_ProcessPriorityTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <ComboBox   Grid.Row="0" Grid.Column="1" Name="ProcessPriorityComboBox" Margin="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" MinWidth="150" Width="Auto" ItemsSource="{Binding ProcessPriorities, ElementName=SettingsControl}" SelectedValue="{Binding ProcessPriority}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" ToolTip="{DynamicResource ServerSettings_ProcessPriorityTooltip}" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
 
-                                        <Label      Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ProcessorAffinityLabel}" ToolTip="{DynamicResource ServerSettings_ProcessorAffinityTooltip}"/>
+                                        <Label      Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ProcessorAffinityLabel}" ToolTip="{DynamicResource ServerSettings_ProcessorAffinityTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox    Grid.Row="0" Grid.Column="3" Margin="1" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" MinWidth="100" Width="Auto" Text="{Binding ProcessAffinity, Converter={StaticResource ProcessorAffinityConverter}}" ToolTip="{DynamicResource ServerSettings_ProcessorAffinityTooltip}" IsEnabled="False"/>
                                         <Button     Grid.Row="0" Grid.Column="4" Margin="1" Width="22" HorizontalAlignment="Left" Click="OpenAffinity_Click" Content="{DynamicResource ServerSettings_ProcessorAffinityButtonLabel}" ToolTip="{DynamicResource ServerSettings_ProcessorAffinityButtonTooltip}"/>
 

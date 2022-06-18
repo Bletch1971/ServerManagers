@@ -1549,8 +1549,9 @@ namespace ServerManagerTool.Lib
             this.ClearValue(ProcessPriorityProperty);
             this.ClearValue(ProcessAffinityProperty);
 
-            this.ClearValue(LauncherArgsOverrideProperty);
             this.ClearValue(LauncherArgsProperty);
+            this.ClearValue(LauncherArgsOverrideProperty);
+            this.ClearValue(LauncherArgsPrefixProperty);
             this.ClearValue(AdditionalArgsProperty);
         }
 
@@ -1604,10 +1605,6 @@ namespace ServerManagerTool.Lib
         {
             this.SetValue(ServerModIdsProperty, sourceProfile.ServerModIds);
 
-            this.SetValue(MOTDProperty, sourceProfile.MOTD);
-            this.SetValue(MOTDIntervalEnabledProperty, sourceProfile.MOTDIntervalEnabled);
-            this.SetValue(MOTDIntervalProperty, sourceProfile.MOTDInterval);
-
             this.SetValue(UseVACProperty, sourceProfile.UseVAC);
             this.SetValue(UseBattlEyeProperty, sourceProfile.UseBattlEye);
             this.SetValue(AllowFamilySharedAccountProperty, sourceProfile.AllowFamilySharedAccount);
@@ -1621,8 +1618,9 @@ namespace ServerManagerTool.Lib
             this.SetValue(CanImportDirectlyFromSameServerProperty, sourceProfile.CanImportDirectlyFromSameServer);
             this.SetValue(OutputServerLogProperty, sourceProfile.OutputServerLog);
 
-            this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
+            this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
+            this.SetValue(LauncherArgsPrefixProperty, sourceProfile.LauncherArgsPrefix);
             this.SetValue(AdditionalArgsProperty, sourceProfile.AdditionalArgs);
         }
 

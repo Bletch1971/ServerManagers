@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Main Window - when changing the location of the server, it will reload the profile with the config settings in the new location.</li>
+            <li>Main Window - colored the settings (orange) that are NOT included in the profile sync.</li>
             <li>Main Window - added discord server button.</li>
             <li>Main Window - re-organised the buttons.</li>
           </ul>
