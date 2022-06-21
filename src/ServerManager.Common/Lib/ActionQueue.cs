@@ -1,5 +1,4 @@
-﻿using ServerManagerTool.Common.Interfaces;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
@@ -44,7 +43,7 @@ namespace ServerManagerTool.Common.Lib
             return PostAction(() => { action.Invoke(); return true; });
         }
 
-        public async Task DisposeAsync()
+        public async ValueTask DisposeAsync()
         {
             await PostAction(() => this.workQueue.Complete());
         }

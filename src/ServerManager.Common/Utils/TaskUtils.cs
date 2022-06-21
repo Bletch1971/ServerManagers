@@ -12,6 +12,11 @@ namespace ServerManagerTool.Common.Utils
             // Do nothing, let the task continue.  Eliminates compiler warning about non-awaited tasks in an async method.
         }
 
+        public static void DoNotWait(this ValueTask task)
+        {
+            // Do nothing, let the task continue.  Eliminates compiler warning about non-awaited tasks in an async method.
+        }
+
         public static async Task RunOnUIThreadAsync(Action action)
         {
             var app = Application.Current;

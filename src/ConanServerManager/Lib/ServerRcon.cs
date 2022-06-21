@@ -1,7 +1,6 @@
 ﻿using ConanData;
 using NLog;
 using ServerManagerTool.Common.Enums;
-using ServerManagerTool.Common.Interfaces;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;
@@ -71,7 +70,7 @@ namespace ServerManagerTool.Lib
             this.Players = new SortableObservableCollection<PlayerInfo>();
         }
 
-        public async Task DisposeAsync()
+        public async ValueTask DisposeAsync()
         {
             if (_cancellationTokenSource != null)
             {

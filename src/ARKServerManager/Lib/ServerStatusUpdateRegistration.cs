@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
-using ServerManagerTool.Common.Interfaces;
 
 namespace ServerManagerTool.Lib
 {
@@ -15,7 +14,7 @@ namespace ServerManagerTool.Lib
 
         public string ProfileId;
 
-        public async Task DisposeAsync()
+        public async ValueTask DisposeAsync()
         {
             await UnregisterAction();
         }
