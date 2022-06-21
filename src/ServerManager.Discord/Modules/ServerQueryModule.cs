@@ -43,6 +43,8 @@ namespace ServerManagerTool.DiscordBot.Modules
                 {
                     foreach (var output in response)
                     {
+                        if (output is null)
+                            continue;
                         await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
@@ -76,6 +78,8 @@ namespace ServerManagerTool.DiscordBot.Modules
                 {
                     foreach (var output in response)
                     {
+                        if (output is null)
+                            continue;
                         await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }
@@ -109,6 +113,8 @@ namespace ServerManagerTool.DiscordBot.Modules
                 {
                     foreach (var output in response)
                     {
+                        if (output is null)
+                            continue;
                         await ReplyAsync(output.Replace("&", "_"));
                         await Task.Delay(COMMAND_RESPONSE_DELAY);
                     }

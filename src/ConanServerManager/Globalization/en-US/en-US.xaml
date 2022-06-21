@@ -1368,6 +1368,7 @@
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile/Alias '{0}' was not found or is not associated with the channel.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
+    <sys:String x:Key="DiscordBot_NoChannelProfiles">No profiles are associated with the channel.</sys:String>
 
     <sys:String x:Key="DiscordBot_InfoFailed">Call to server '{0}' failed.</sys:String>
     <sys:String x:Key="DiscordBot_BackupRequested">A backup request for server '{0}' has been sent.</sys:String>
