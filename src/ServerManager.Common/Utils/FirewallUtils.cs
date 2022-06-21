@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using WindowsFirewallHelper;
-using WindowsFirewallHelper.FirewallAPIv2.Rules;
+using WindowsFirewallHelper.FirewallRules;
 
 /*
 WindowsFirewallHelper
@@ -39,12 +39,12 @@ namespace ServerManagerTool.Common.Utils
     /// </summary>
     public static class FirewallUtils
     {
-        public static bool CreateFirewallRules(string exeName, List<int> ports, string ruleName, string description = "")
+        public static bool CreateFirewallRules(string exeName, List<int> ports, string ruleName, string description = "", string group = "")
         {
-            var firewallManager = FirewallManager.Instance;
-
-            if (firewallManager.IsSupported)
+            if (FirewallWAS.IsSupported(new COMTypeResolver()))
             {
+                var firewallManager = FirewallManager.Instance;
+
                 DeleteFirewallRules(exeName);
 
                 // create the TCP rule
@@ -54,10 +54,11 @@ namespace ServerManagerTool.Common.Utils
                     rule.Direction = FirewallDirection.Inbound;
                     rule.IsEnable = true;
                     rule.LocalPorts = ports.Select(p => (ushort)p).ToArray();
-                    
-                    if (rule is StandardRule)
+
+                    if (rule is FirewallWASRule wasRule)
                     {
-                        ((StandardRule)rule).Description = description;
+                        wasRule.Description = description;
+                        wasRule.Grouping = group;
                     }
                     firewallManager.Rules.Add(rule);
                 }
@@ -70,9 +71,10 @@ namespace ServerManagerTool.Common.Utils
                     rule.IsEnable = true;
                     rule.LocalPorts = ports.Select(p => (ushort)p).ToArray();
 
-                    if (rule is StandardRule)
+                    if (rule is FirewallWASRule wasRule)
                     {
-                        ((StandardRule)rule).Description = description;
+                        wasRule.Description = description;
+                        wasRule.Grouping = group;
                     }
                     firewallManager.Rules.Add(rule);
                 }
@@ -85,12 +87,12 @@ namespace ServerManagerTool.Common.Utils
 
         public static bool DeleteFirewallRules(string exeName)
         {
-            var firewallManager = FirewallManager.Instance;
-
-            if (firewallManager.IsSupported)
+            if (FirewallWAS.IsSupported(new COMTypeResolver()))
             {
+                var firewallManager = FirewallManager.Instance;
+
                 // check for existing rules
-                var rulesToDelete = firewallManager.Rules.Cast<StandardRule>().Where(r => !string.IsNullOrWhiteSpace(r.ApplicationName) && r.ApplicationName.Equals(exeName, StringComparison.OrdinalIgnoreCase)).ToList();
+                var rulesToDelete = firewallManager.Rules.Cast<IFirewallRule>().Where(r => !string.IsNullOrWhiteSpace(r.ApplicationName) && r.ApplicationName.Equals(exeName, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 if (rulesToDelete != null && rulesToDelete.Count > 0)
                 {

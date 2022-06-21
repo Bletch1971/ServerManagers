@@ -22,7 +22,7 @@
     <PackageReference Include="NLog" Version="4.7.2" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <PackageReference Include="TaskScheduler" Version="2.8.19" />
-    <PackageReference Include="WindowsFirewallHelper" Version="1.6.3.40" />
+    <PackageReference Include="WindowsFirewallHelper" Version="2.2.0.86" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\AnnotatedCheckBoxAndFloatSlider.xaml" />

@@ -342,7 +342,7 @@
       <Value Profile="(Default)">ConanServerManager</Value>
     </Setting>
     <Setting Name="FirewallRulePrefix" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ConanServer:</Value>
+      <Value Profile="(Default)">Conan Server:</Value>
     </Setting>
     <Setting Name="DonationUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=bletch1971%40hotmail%2ecom&amp;lc=US&amp;item_name=Server%20Manager&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted</Value>

@@ -432,7 +432,7 @@ namespace ServerManagerTool.Lib
                         ports.Add(this.ProfileSnapshot.RconPort);
                     }
 
-                    if (!FirewallUtils.CreateFirewallRules(serverExe, ports, $"{Config.Default.FirewallRulePrefix} {this.ProfileSnapshot.ServerName}"))
+                    if (!FirewallUtils.CreateFirewallRules(serverExe, ports, $"{Config.Default.FirewallRulePrefix} {this.ProfileSnapshot.ServerName}", description: "", group: Config.Default.FirewallRulePrefix.Replace(":", "")))
                     {
                         var result = MessageBox.Show("Failed to automatically set firewall rules. If you are running custom firewall software, you may need to set your firewall rules manually. You may turn off automatic firewall management in Settings.\r\n\r\nWould you like to continue running the server anyway?", "Automatic Firewall Management Error", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                         if (result == MessageBoxResult.No)

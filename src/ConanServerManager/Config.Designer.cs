@@ -1244,7 +1244,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ConanServer:")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Conan Server:")]
         public string FirewallRulePrefix {
             get {
                 return ((string)(this["FirewallRulePrefix"]));
