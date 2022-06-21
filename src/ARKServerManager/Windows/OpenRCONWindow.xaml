@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Width="350" SizeToContent="Height" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" HorizontalAlignment="Left" VerticalAlignment="Top" ResizeMode="NoResize" WindowStyle="ToolWindow"
-        Icon="../Art/favicon.ico" Title="{DynamicResource OpenRCON_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource OpenRCON_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=ServerIPTextBox}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -28,7 +29,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource OpenRCON_IPLabel}" Margin="1" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ServerIP}" TabIndex="0" Margin="1,5,6,1" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="ServerIPTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding ServerIP}" TabIndex="0" Margin="1,5,6,1" VerticalContentAlignment="Center"/>
 
         <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource OpenRCON_PortLabel}" Margin="1" VerticalAlignment="Center"/>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding RCONPort}" TabIndex="1" Margin="1,1,6,1" VerticalContentAlignment="Center"/>

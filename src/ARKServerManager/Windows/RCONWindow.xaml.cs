@@ -241,8 +241,6 @@ namespace ServerManagerTool
 
             SetPlayerListWidth(this.RCONParameters.PlayerListWidth);
 
-            this.ConsoleInput.Focus();
-
             // hook into the language change event
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent += ResourceDictionaryChangedEvent;
             GameData.GameDataLoaded += GameData_GameDataLoaded;

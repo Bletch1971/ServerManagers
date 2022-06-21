@@ -15,6 +15,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              d:DesignWidth="900"
+             FocusManager.FocusedElement="{Binding ElementName=ProfileNameTextBox}"
              x:Name="SettingsControl">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -223,7 +224,7 @@
 
                     <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="2" DataContext="{Binding Profile}" VerticalAlignment="Center" >
                         <Label DockPanel.Dock="Left" FontSize="15" Content="{DynamicResource ServerSettings_ProfileLabel}" ToolTip="{Binding ProfileToolTip}"/>
-                        <TextBox VerticalContentAlignment="Center" SourceUpdated="ProfileName_SourceUpdated">
+                        <TextBox x:Name="ProfileNameTextBox" VerticalContentAlignment="Center" SourceUpdated="ProfileName_SourceUpdated">
                             <Validation.ErrorTemplate>
                                 <ControlTemplate>
                                     <StackPanel>

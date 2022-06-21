@@ -6,7 +6,8 @@
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         MinWidth="400" MinHeight="400" Width="640" Height="480" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip"
         Loaded="Window_Loaded"
-        Icon="../Art/favicon.ico" Title="{DynamicResource VersionFeedWindow_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource VersionFeedWindow_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=FeedEntriesComboxBox}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -28,7 +29,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Margin="5,5,0,0" Content="{DynamicResource VersionFeedWindow_VersionFilterLabel}"/>
-        <ComboBox  Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" ItemsSource="{Binding FeedEntries}" SelectedValue="{Binding SelectedFeedEntry}" ToolTip="{DynamicResource VersionFeedWindow_VersionFilterTooltip}">
+        <ComboBox x:Name="FeedEntriesComboxBox" Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" ItemsSource="{Binding FeedEntries}" SelectedValue="{Binding SelectedFeedEntry}" ToolTip="{DynamicResource VersionFeedWindow_VersionFilterTooltip}">
             <ComboBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ComboBoxItem}" >
                     <Setter Property="Height" Value="20" />

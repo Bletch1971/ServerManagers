@@ -7,7 +7,8 @@
         mc:Ignorable="d" 
         MinWidth="800" MinHeight="600" Width="800" Height="700" ResizeMode="CanResizeWithGrip" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
         Closing="SettingsWindow_Closing"
-        Icon="../Art/favicon.ico" Title="{DynamicResource Settings_Title}" >
+        Icon="../Art/favicon.ico" Title="{DynamicResource Settings_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=globalSettingsControl}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

@@ -8,10 +8,11 @@
         xmlns:en="clr-namespace:ServerManagerTool.Enums"
         xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Width="1024" Height="768" MinWidth="640" MinHeight="480" ResizeMode="CanResizeWithGrip" 
         SizeChanged="RCON_SizeChanged" LocationChanged="RCON_LocationChanged"
-        Name="RCON" Icon="../Art/favicon.ico" Title="{Binding RconParameters.WindowTitle}">
+        Icon="../Art/favicon.ico" Title="{Binding RconParameters.WindowTitle}"
+        FocusManager.FocusedElement="{Binding ElementName=ConsoleInput}"
+        Name="RCON">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

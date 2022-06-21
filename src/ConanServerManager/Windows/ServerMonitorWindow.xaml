@@ -15,7 +15,9 @@
         mc:Ignorable="d"
         MinWidth="600" MinHeight="500" Width="900" Height="500" Left="50" Top="50" ResizeMode="CanResize"
         Loaded="ServerMonitorWindow_Loaded" SizeChanged="ServerMonitorWindow_SizeChanged" StateChanged="ServerMonitorWindow_StateChanged" LocationChanged="ServerMonitorWindow_LocationChanged"
-        Name="ServerMonitorUI" Icon="../Art/favicon.ico" Title="{DynamicResource ServerMonitor_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource ServerMonitor_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=ShutdownReasonTextBox}"
+        Name="ServerMonitorUI">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -164,7 +166,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource ShutdownWindow_ShutdownReasonLabel}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}" VerticalAlignment="Center"/>
-                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ShutdownReason}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="ShutdownReasonTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding ShutdownReason}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}" VerticalContentAlignment="Center"/>
                 </Grid>
 
                 <cctl:AnnotatedSlider Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="13" Margin="1" Label="{DynamicResource ServerMonitor_SequentialProcessDelayLabel}" Value="{Binding SequentialProcessDelay}" Minimum="0" Maximum="300" SmallChange="1" LargeChange="5" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" Visibility="{Binding ProcessServersSequentially, Converter={StaticResource BooleanToVisibilityConverter}}" ToolTip="{DynamicResource ServerMonitor_SequentialProcessDelayTooltip}"/>

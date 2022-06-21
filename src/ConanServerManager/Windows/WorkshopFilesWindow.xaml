@@ -4,7 +4,8 @@
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         MinWidth="700" MinHeight="480" Width="800" Height="480" ResizeMode="CanResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
         Loaded="Window_Loaded" 
-        Icon="../Art/favicon.ico" Title="{DynamicResource WorkshopFiles_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource WorkshopFiles_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=WorkshopFilterStringTextBox}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -42,7 +43,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,5,0,0" Orientation="Horizontal" Height="30" DataContext="{Binding}">
             <TextBlock Margin="5,0,5,0" Text="{DynamicResource General_FilterLabel}" VerticalAlignment="Center" />
-            <TextBox   Margin="5,0,5,0" Text="{Binding WorkshopFilterString, Mode=TwoWay}" Width="200" Padding="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="WorkshopFilterStringTextBox" Margin="5,0,5,0" Text="{Binding WorkshopFilterString, Mode=TwoWay}" Width="200" Padding="2" VerticalAlignment="Center"/>
             <Button Margin="5,0,5,0" Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Click="FilterWorkshopFiles_Click" ToolTip="{DynamicResource General_FilterButtonTooltip}">
                 <Image Source="{com:Icon Path=/ConanServerManager;component/Art/Filter.ico,Size=32}"/>
             </Button>

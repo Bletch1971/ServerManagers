@@ -5,7 +5,8 @@
         xmlns:en="clr-namespace:ServerManagerTool.Enums"
         Width="600" ResizeMode="CanMinimize" SizeToContent="Height" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="True" 
         Closing="Window_Closing" Closed="Window_Closed"
-        Icon="../Art/favicon.ico" Title="{DynamicResource ShutdownWindow_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource ShutdownWindow_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=ShutdownReasonTextBox}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -95,7 +96,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Column="0" Content="{DynamicResource ShutdownWindow_ShutdownReasonLabel}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}"/>
-                    <TextBox Grid.Column="1" Text="{Binding ShutdownReason}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}"/>
+                    <TextBox x:Name="ShutdownReasonTextBox" Grid.Column="1" Text="{Binding ShutdownReason}" ToolTip="{DynamicResource ShutdownWindow_ShutdownReasonTooltip}"/>
                 </Grid>
                 
                 <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Name="MessageOutput" Margin="1" Height="200" HorizontalAlignment="Stretch" IsReadOnly="True" IsReadOnlyCaretVisible="True" TextWrapping="NoWrap" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">

@@ -3,8 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         MinWidth="600" MinHeight="480" Width="900" Height="480" ResizeMode="CanResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
-        Loaded="Window_Loaded" Closing="Window_Closing"
-        Name="ModDetailsUI" Icon="../Art/favicon.ico" Title="{DynamicResource ModDetails_Title}">
+        Loaded="Window_Loaded" Closing="Window_Closing" 
+        Icon="../Art/favicon.ico" Title="{DynamicResource ModDetails_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=ModDetailsFilterStringTextBox}"
+        Name="ModDetailsUI">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -75,7 +77,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,5,0,0"  Grid.ColumnSpan="9" Orientation="Horizontal" Height="30" DataContext="{Binding}">
             <TextBlock Margin="5,0,5,0" Text="{DynamicResource General_FilterLabel}" VerticalAlignment="Center" />
-            <TextBox   Margin="5,0,5,0" Text="{Binding ModDetailsFilterString, Mode=TwoWay}" Width="200" Padding="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="ModDetailsFilterStringTextBox" Margin="5,0,5,0" Text="{Binding ModDetailsFilterString, Mode=TwoWay}" Width="200" Padding="2" VerticalAlignment="Center"/>
             <Button Margin="5,0,5,0" Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Click="FilterMods_Click" ToolTip="{DynamicResource General_FilterButtonTooltip}">
                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Filter.ico,Size=32}"/>
             </Button>

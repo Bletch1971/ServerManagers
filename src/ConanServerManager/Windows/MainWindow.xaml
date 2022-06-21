@@ -12,7 +12,8 @@
         xmlns:botenum="clr-namespace:ServerManagerTool.DiscordBot.Enums;assembly=ServerManager.Discord"
         MinWidth="900" MinHeight="600" Width="1100" Height="900" Left="50" Top="50" WindowState="Normal"
         Loaded="MainWindow_Loaded" SizeChanged="MainWindow_SizeChanged" StateChanged="MainWindow_StateChanged" LocationChanged="MainWindow_LocationChanged"
-        Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}">
+        Name="Main" Icon="../Art/favicon.ico" Title="{DynamicResource MainWindow_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=MachinePublicIPTextBox}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -330,7 +331,7 @@
 
                         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,-2,0,-3" Background="Transparent" Foreground="White" FontWeight="Bold" FontSize="11" Content="{DynamicResource MainWindow_MyIpLabel}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-                        <TextBox Grid.Row="1" Grid.Column="0" Margin="0" FontSize="12" Height="22" VerticalAlignment="Bottom" VerticalContentAlignment="Center" ToolTip="{DynamicResource MainWindow_MyIpTooltip}">
+                        <TextBox x:Name="MachinePublicIPTextBox" Grid.Row="1" Grid.Column="0" Margin="0" FontSize="12" Height="22" VerticalAlignment="Bottom" VerticalContentAlignment="Center" ToolTip="{DynamicResource MainWindow_MyIpTooltip}">
                             <Validation.ErrorTemplate>
                                 <ControlTemplate>
                                     <StackPanel>

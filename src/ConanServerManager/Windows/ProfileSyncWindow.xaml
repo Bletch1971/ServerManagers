@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         MinWidth="400" MinHeight="640" Width="640" Height="500" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResize"
         Loaded="Window_Loaded"
-        Icon="../Art/favicon.ico" Title="{DynamicResource ProfileSyncWindow_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource ProfileSyncWindow_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=CloseButton}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -100,7 +101,7 @@
             </DockPanel>
 
             <DockPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
-                <Button DockPanel.Dock="Right" Content="{DynamicResource ProfileSyncWindow_CloseButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" IsCancel="True"/>
+                <Button x:Name="CloseButton" DockPanel.Dock="Right" Content="{DynamicResource ProfileSyncWindow_CloseButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" IsCancel="True"/>
                 <Button DockPanel.Dock="Right" Content="{DynamicResource ProfileSyncWindow_ProcessButtonLabel}" Margin="5" MinWidth="75" HorizontalAlignment="Right" Click="Process_Click"/>
             </DockPanel>
         </Grid>

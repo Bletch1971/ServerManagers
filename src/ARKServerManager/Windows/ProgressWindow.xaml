@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Width="640" Height="480" ResizeMode="CanResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
         Closing="Window_Closing"
-        Icon="../Art/favicon.ico" Title="{DynamicResource Progress_Title}">
+        Icon="../Art/favicon.ico" Title="{DynamicResource Progress_Title}"
+        FocusManager.FocusedElement="{Binding ElementName=MessageOutput}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -12,6 +13,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    
     <Grid Background="{StaticResource BeigeGradient}">
         <Grid.RowDefinitions>
             <RowDefinition Height="400*"/>
