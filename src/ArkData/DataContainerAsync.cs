@@ -60,12 +60,13 @@ namespace ArkData
         /// <returns>The async task context.</returns>
         public async Task<DateTime> LoadSteamAsync(string apiKey, int steamUpdateInterval = 0)
         {
-            const int MAX_STEAM_IDS = 100;
-
             // need to make multiple calls of 100 steam id's.
             var lastSteamUpdateUtc = DateTime.UtcNow;
             var startIndex = 0;
-            var playerSteamIds = Players.Where(p => p.LastPlatformUpdateUtc.AddMinutes(steamUpdateInterval) < DateTime.UtcNow).Select(p => p.PlayerId);
+            var playerSteamIds = Players
+                .Where(p => p.LastPlatformUpdateUtc.AddMinutes(steamUpdateInterval) < DateTime.UtcNow && p.NoUpdateCount < MAX_INVALID_COUNT)
+                .Select(p => p.PlayerId)
+                .ToArray();
 
             while (true)
             {
@@ -78,7 +79,7 @@ namespace ArkData
 
                 using (var client = new HttpClient())
                 {
-                    client.BaseAddress = new System.Uri("https://api.steampowered.com/");
+                    client.BaseAddress = new Uri("https://api.steampowered.com/");
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -86,7 +87,7 @@ namespace ArkData
                     if (response.IsSuccessStatusCode)
                         using (var reader = new StreamReader(await response.Content.ReadAsStreamAsync()))
                         {
-                            LinkSteamProfiles(await reader.ReadToEndAsync(), lastSteamUpdateUtc);
+                            LinkSteamProfiles(await reader.ReadToEndAsync(), lastSteamUpdateUtc, playerSteamIds);
                         }
                     else
                         throw new System.Net.WebException("The Steam API request was unsuccessful. Are you using a valid key?");

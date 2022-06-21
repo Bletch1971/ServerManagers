@@ -20,5 +20,6 @@ namespace ArkData
         public virtual List<TribeData> OwnedTribes { get; set; }
 
         public DateTime LastPlatformUpdateUtc { get; set; }
-    }
+        public int NoUpdateCount { get; set; }
+}
 }

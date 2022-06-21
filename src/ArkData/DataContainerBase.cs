@@ -13,6 +13,9 @@ namespace ArkData
 {
     public partial class DataContainer
     {
+        const int MAX_STEAM_IDS = 100;
+        const int MAX_INVALID_COUNT = 10;
+
         /// <summary>
         /// A list of all players registered on the server.
         /// </summary>
@@ -86,7 +89,7 @@ namespace ArkData
         /// Deserializes JSON from Steam API and links Steam profile to player profile.
         /// </summary>
         /// <param name="jsonString">The JSON data string.</param>
-        private void LinkSteamProfiles(string jsonString, DateTime lastSteamUpdateUtc)
+        private void LinkSteamProfiles(string jsonString, DateTime lastSteamUpdateUtc, string[] playerSteamIds)
         {
             var profiles = JsonConvert.DeserializeObject<Models.SteamResponse<Models.SteamProfile>>(jsonString).response.players;
 
@@ -95,6 +98,13 @@ namespace ArkData
                 var player = Players.Single(p => p.PlayerId == profiles[i].steamid);
                 player.PlayerName = profiles[i].personaname;
                 player.LastPlatformUpdateUtc = lastSteamUpdateUtc;
+            }
+
+            for (var i = 0; i < playerSteamIds.Length; i++)
+            {
+                var player = Players.SingleOrDefault(p => p.PlayerId == playerSteamIds[i]);
+                if (player != null && player.LastPlatformUpdateUtc == DateTime.MinValue)
+                    player.NoUpdateCount = Math.Min(MAX_INVALID_COUNT, player.NoUpdateCount + 1);
             }
         }
     }

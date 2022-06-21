@@ -127,6 +127,7 @@ namespace ServerManagerTool.Lib.ViewModel.RCON
             if (PlayerData?.PlayerName != null)
                 playerData.PlayerName = PlayerData.PlayerName;
             playerData.LastPlatformUpdateUtc = PlayerData?.LastPlatformUpdateUtc ?? DateTime.MinValue;
+            playerData.NoUpdateCount = PlayerData?.NoUpdateCount ?? 0;
         }
 
         #region INotifyPropertyChanged
