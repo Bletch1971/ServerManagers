@@ -1,5 +1,5 @@
-﻿using Discord.Addons.Interactive;
-using Discord.Commands;
+﻿using Discord.Commands;
+using Discord.Interactions;
 using Discord.Net.Providers.WS4Net;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
@@ -69,26 +69,33 @@ namespace ServerManagerTool.DiscordBot
             var commandConfig = new CommandServiceConfig
             {
                 // Force all commands to run async
-                DefaultRunMode = RunMode.Async,
+                DefaultRunMode = Discord.Commands.RunMode.Async,
                 LogLevel = LogLevelHelper.GetLogSeverity(discordBotConfig.LogLevel),
                 CaseSensitiveCommands = false,
             };
 
+            var interactionConfig = new InteractionServiceConfig
+            {
+                // Force all interactions to run async
+                DefaultRunMode = Discord.Interactions.RunMode.Async,
+                LogLevel = LogLevelHelper.GetLogSeverity(discordBotConfig.LogLevel),
+            };
+
             // Build the service provider
             var services = new ServiceCollection()
+                .AddSingleton(config)
+                .AddSingleton(discordBotConfig)
                 // Add the discord client to the service provider
                 .AddSingleton(new DiscordSocketClient(socketConfig))
                 // Add the command service to the service provider
                 .AddSingleton(new CommandService(commandConfig))
+                .AddSingleton(x => new InteractionService(x.GetRequiredService<DiscordSocketClient>(), interactionConfig))
                 // Add remaining services to the provider
                 .AddSingleton<CommandHandlerService>()
-                .AddSingleton<InteractiveService>()
                 .AddSingleton<LoggingService>()
                 .AddSingleton<StartupService>()
                 .AddSingleton<ShutdownService>()
                 .AddSingleton<Random>()
-                .AddSingleton(config)
-                .AddSingleton(discordBotConfig)
                 .AddSingleton(handleCommandCallback)
                 .AddSingleton(handleTranslationCallback)
                 .AddSingleton<IServerManagerBot>(this);

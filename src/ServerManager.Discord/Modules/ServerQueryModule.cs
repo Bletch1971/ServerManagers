@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Discord;
-using Discord.Addons.Interactive;
 using Discord.Commands;
 using ServerManagerTool.DiscordBot.Delegates;
 using ServerManagerTool.DiscordBot.Enums;
@@ -10,7 +9,7 @@ using ServerManagerTool.DiscordBot.Interfaces;
 namespace ServerManagerTool.DiscordBot.Modules
 {
     [Name("Server Query")]
-    public sealed class ServerQueryModule : InteractiveBase
+    public sealed class ServerQueryModule : ModuleBase<SocketCommandContext>
     {
         private const int COMMAND_RESPONSE_DELAY = 500;
 

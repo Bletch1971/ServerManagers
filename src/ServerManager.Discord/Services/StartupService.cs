@@ -33,13 +33,13 @@ namespace ServerManagerTool.DiscordBot.Services
                 throw new Exception("#DiscordBot_MissingTokenError");
             }
 
+            // Load commands and modules into the command service
+            await _commands.AddModulesAsync(Assembly.GetExecutingAssembly(), _services);
+
             // Login to discord
             await _client.LoginAsync(TokenType.Bot, discordToken);
             // Connect to the websocket
             await _client.StartAsync();
-
-            // Load commands and modules into the command service
-            await _commands.AddModulesAsync(Assembly.GetExecutingAssembly(), _services);
         }
     }
 }
