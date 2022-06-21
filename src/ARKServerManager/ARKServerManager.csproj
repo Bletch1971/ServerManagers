@@ -203,8 +203,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TinyCsvParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=d7df35b038077099, processorArchitecture=MSIL">
-      <HintPath>..\packages\TinyCsvParser.2.5.2\lib\net45\TinyCsvParser.dll</HintPath>
+    <Reference Include="TinyCsvParser, Version=2.7.0.0, Culture=neutral, PublicKeyToken=d7df35b038077099, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyCsvParser.2.7.0\lib\netstandard2.0\TinyCsvParser.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
