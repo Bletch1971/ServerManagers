@@ -11,7 +11,7 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.112.1" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.116" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
