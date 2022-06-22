@@ -10,6 +10,7 @@
         GUS_GameSession,
         GUS_MultiHome,
         GUS_MessageOfTheDay,
+        GUS_Ragnarok,
 
         // Game.ini
         Game_ShooterGameMode,

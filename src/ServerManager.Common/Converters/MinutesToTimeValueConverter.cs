@@ -27,11 +27,8 @@ namespace ServerManagerTool.Common.Converters
                 return 0;
             }
 
-            int hours;
-            Int32.TryParse(split[0], out hours);
-
-            int minutes;
-            Int32.TryParse(split[1], out minutes);
+            int.TryParse(split[0], out int hours);
+            int.TryParse(split[1], out int minutes);
 
             return hours * 60 + minutes;
         }

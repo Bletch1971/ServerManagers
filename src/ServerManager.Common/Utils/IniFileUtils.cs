@@ -58,7 +58,7 @@ namespace ServerManagerTool.Common.Utils
             if (!result)
                 return false;
 
-            return result = SaveToFile(file, iniFile);
+            return SaveToFile(file, iniFile);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace ServerManagerTool.Common.Utils
             if (!result)
                 return false;
 
-            return result = SaveToFile(file, iniFile);
+            return SaveToFile(file, iniFile);
         }
 
         public static IniFile ReadFromFile(string file)

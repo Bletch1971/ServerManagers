@@ -1811,21 +1811,68 @@ namespace ServerManagerTool.Lib
             set { SetValue(HexagonCostMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty EnableFjordurSettingsProperty = DependencyProperty.Register(nameof(EnableFjordurSettings), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool EnableFjordurSettings
+        public static readonly DependencyProperty Ragnarok_EnableSettingsProperty = DependencyProperty.Register(nameof(Ragnarok_EnableSettings), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        public bool Ragnarok_EnableSettings
         {
-            get { return (bool)GetValue(EnableFjordurSettingsProperty); }
-            set { SetValue(EnableFjordurSettingsProperty, value); }
+            get { return (bool)GetValue(Ragnarok_EnableSettingsProperty); }
+            set { SetValue(Ragnarok_EnableSettingsProperty, value); }
+        }
+
+        public static readonly DependencyProperty Ragnarok_AllowMultipleTamedUnicornsProperty = DependencyProperty.Register(nameof(Ragnarok_AllowMultipleTamedUnicorns), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "AllowMultipleTamedUnicorns", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
+        public bool Ragnarok_AllowMultipleTamedUnicorns
+        {
+            get { return (bool)GetValue(Ragnarok_AllowMultipleTamedUnicornsProperty); }
+            set { SetValue(Ragnarok_AllowMultipleTamedUnicornsProperty, value); }
+        }
+
+        public static readonly DependencyProperty Ragnarok_UnicornSpawnIntervalProperty = DependencyProperty.Register(nameof(Ragnarok_UnicornSpawnInterval), typeof(int), typeof(ServerProfile), new PropertyMetadata(24));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "UnicornSpawnInterval", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
+        public int Ragnarok_UnicornSpawnInterval
+        {
+            get { return (int)GetValue(Ragnarok_UnicornSpawnIntervalProperty); }
+            set { SetValue(Ragnarok_UnicornSpawnIntervalProperty, value); }
+        }
+
+        public static readonly DependencyProperty Ragnarok_EnableVolcanoProperty = DependencyProperty.Register(nameof(Ragnarok_EnableVolcano), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "EnableVolcano", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
+        public bool Ragnarok_EnableVolcano
+        {
+            get { return (bool)GetValue(Ragnarok_EnableVolcanoProperty); }
+            set { SetValue(Ragnarok_EnableVolcanoProperty, value); }
+        }
+
+        public static readonly DependencyProperty Ragnarok_VolcanoIntervalProperty = DependencyProperty.Register(nameof(Ragnarok_VolcanoInterval), typeof(int), typeof(ServerProfile), new PropertyMetadata(0));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "VolcanoInterval", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
+        public int Ragnarok_VolcanoInterval
+        {
+            get { return (int)GetValue(Ragnarok_VolcanoIntervalProperty); }
+            set { SetValue(Ragnarok_VolcanoIntervalProperty, value); }
+        }
+
+        public static readonly DependencyProperty Ragnarok_VolcanoIntensityProperty = DependencyProperty.Register(nameof(Ragnarok_VolcanoIntensity), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "VolcanoIntensity", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
+        public float Ragnarok_VolcanoIntensity
+        {
+            get { return (float)GetValue(Ragnarok_VolcanoIntensityProperty); }
+            set { SetValue(Ragnarok_VolcanoIntensityProperty, value); }
+        }
+
+        public static readonly DependencyProperty Fjordur_EnableSettingsProperty = DependencyProperty.Register(nameof(Fjordur_EnableSettings), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        public bool Fjordur_EnableSettings
+        {
+            get { return (bool)GetValue(Fjordur_EnableSettingsProperty); }
+            set { SetValue(Fjordur_EnableSettingsProperty, value); }
         }
 
         public static readonly DependencyProperty UseFjordurTraversalBuffProperty = DependencyProperty.Register(nameof(UseFjordurTraversalBuff), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
-        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, ConditionedOn = nameof(EnableFjordurSettings))]
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, ConditionedOn = nameof(Fjordur_EnableSettings))]
         public bool UseFjordurTraversalBuff
         {
             get { return (bool)GetValue(UseFjordurTraversalBuffProperty); }
             set { SetValue(UseFjordurTraversalBuffProperty, value); }
         }
+
 
         public bool ClampItemStats
         {
@@ -5677,6 +5724,14 @@ namespace ServerManagerTool.Lib
             this.ClearValue(HexagonRewardMultiplierProperty);
             this.ClearValue(HexagonCostMultiplierProperty);
 
+            this.ClearValue(Ragnarok_EnableSettingsProperty);
+            this.ClearValue(Ragnarok_AllowMultipleTamedUnicornsProperty);
+            this.ClearValue(Ragnarok_UnicornSpawnIntervalProperty);
+            this.ClearValue(Ragnarok_EnableVolcanoProperty);
+            this.ClearValue(Ragnarok_VolcanoIntervalProperty);
+            this.ClearValue(Ragnarok_VolcanoIntensityProperty);
+
+            this.ClearValue(Fjordur_EnableSettingsProperty);
             this.ClearValue(UseFjordurTraversalBuffProperty);
 
             this.ClearNullableValue(ItemStatClamps_GenericQualityProperty);
@@ -6395,6 +6450,14 @@ namespace ServerManagerTool.Lib
             this.SetValue(HexagonRewardMultiplierProperty, sourceProfile.HexagonRewardMultiplier);
             this.SetValue(HexagonCostMultiplierProperty, sourceProfile.HexagonCostMultiplier);
 
+            this.SetValue(Ragnarok_EnableSettingsProperty, sourceProfile.Ragnarok_EnableSettings);
+            this.SetValue(Ragnarok_AllowMultipleTamedUnicornsProperty, sourceProfile.Ragnarok_AllowMultipleTamedUnicorns);
+            this.SetValue(Ragnarok_UnicornSpawnIntervalProperty, sourceProfile.Ragnarok_UnicornSpawnInterval);
+            this.SetValue(Ragnarok_EnableVolcanoProperty, sourceProfile.Ragnarok_EnableVolcano);
+            this.SetValue(Ragnarok_VolcanoIntervalProperty, sourceProfile.Ragnarok_VolcanoInterval);
+            this.SetValue(Ragnarok_VolcanoIntensityProperty, sourceProfile.Ragnarok_VolcanoIntensity);
+
+            this.SetValue(Fjordur_EnableSettingsProperty, sourceProfile.Fjordur_EnableSettings);
             this.SetValue(UseFjordurTraversalBuffProperty, sourceProfile.UseFjordurTraversalBuff);
 
             this.SetNullableValue(ItemStatClamps_GenericQualityProperty, sourceProfile.ItemStatClamps_GenericQuality);

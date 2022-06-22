@@ -9,7 +9,7 @@ namespace ServerManagerTool.Common.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double scaledValue = System.Convert.ToInt32(value);
+            var scaledValue = System.Convert.ToInt32(value);
             return scaledValue == 0 ? Visibility.Collapsed : Visibility.Visible;
         }
 

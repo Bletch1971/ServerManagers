@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
 
 namespace ServerManagerTool.Common.Converters
@@ -12,13 +8,13 @@ namespace ServerManagerTool.Common.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if(value == null)
+            if (value == null)
             {
                 return false;
             }
 
             var strValue = value as string;
-            if(String.IsNullOrWhiteSpace(strValue))
+            if (string.IsNullOrWhiteSpace(strValue))
             {
                 return false;
             }

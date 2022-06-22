@@ -23,6 +23,7 @@ namespace ServerManagerTool.Lib
             { IniSections.GUS_GameSession, "/Script/Engine.GameSession"},
             { IniSections.GUS_MultiHome, "MultiHome" },
             { IniSections.GUS_MessageOfTheDay, "MessageOfTheDay" },
+            { IniSections.GUS_Ragnarok, "Ragnarok" },
 
             // GameUserSettings sections, not used by server manager
 

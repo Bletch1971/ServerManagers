@@ -2151,10 +2151,62 @@
 
                                     <GroupBox Style="{StaticResource GroupBoxStyle}">
                                         <GroupBox.Header>
-                                            <cctl:CheckBoxAndTextBlock IsChecked="{Binding EnableFjordurSettings, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FjordurLabel}" />
+                                            <cctl:CheckBoxAndTextBlock IsChecked="{Binding Ragnarok_EnableSettings, Mode=TwoWay}" Text="{DynamicResource ServerSettings_RagnarokLabel}" />
                                         </GroupBox.Header>
 
-                                        <Grid IsEnabled="{Binding EnableFjordurSettings}">
+                                        <Grid IsEnabled="{Binding Ragnarok_EnableSettings}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" HorizontalAlignment="Left" 
+                                                    IsChecked="{Binding Ragnarok_AllowMultipleTamedUnicorns, Mode=TwoWay}" 
+                                                    Text="{DynamicResource ServerSettings_Ragnarok_AllowMultipleTamedUnicornsLabel}" 
+                                                    ToolTip="{DynamicResource ServerSettings_Ragnarok_AllowMultipleTamedUnicornsTooltip}"/>
+
+                                            <cctl:AnnotatedIntSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0"
+                                                    Minimum="1" Maximum="48" SmallChange="1" LargeChange="1" TickFrequency="6"
+                                                    Label="{DynamicResource ServerSettings_Ragnarok_UnicornSpawnIntervalLabel}" 
+                                                    Value="{Binding Ragnarok_UnicornSpawnInterval, Converter={cc:IntRangeValueConverter 1, 48}}" 
+                                                    Suffix="{DynamicResource SliderUnits_Hours}"  
+                                                    ToolTip="{DynamicResource ServerSettings_Ragnarok_UnicornSpawnIntervalTooltip}"/>
+
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="2" Grid.Column="0" Margin="5,5,5,0" HorizontalAlignment="Left" 
+                                                    IsChecked="{Binding Ragnarok_EnableVolcano, Mode=TwoWay}" 
+                                                    Text="{DynamicResource ServerSettings_Ragnarok_EnableVolcanoLabel}" 
+                                                    ToolTip="{DynamicResource ServerSettings_Ragnarok_EnableVolcanoTooltip}"/>
+
+                                            <cctl:AnnotatedIntSlider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding Ragnarok_EnableVolcano}"
+                                                    Minimum="0" Maximum="10" SmallChange="1" LargeChange="1" TickFrequency="1"
+                                                    Label="{DynamicResource ServerSettings_Ragnarok_VolcanoIntervalLabel}" 
+                                                    Value="{Binding Ragnarok_VolcanoInterval, Converter={cc:IntRangeValueConverter 0, 100}}"
+                                                    Suffix="{DynamicResource SliderUnits_Multiplier}"  
+                                                    ToolTip="{DynamicResource ServerSettings_Ragnarok_VolcanoIntervalTooltip}"/>
+
+                                            <cctl:AnnotatedSlider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding Ragnarok_EnableVolcano}"
+                                                    Minimum="0.25" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1"
+                                                    Label="{DynamicResource ServerSettings_Ragnarok_VolcanoIntensityLabel}" 
+                                                    Value="{Binding Ragnarok_VolcanoIntensity, Converter={cc:FloatRangeValueConverter 0.25, 10.0}}" 
+                                                    Suffix="{DynamicResource SliderUnits_Multiplier}"  
+                                                    ToolTip="{DynamicResource ServerSettings_Ragnarok_VolcanoIntensityTooltip}"/>
+                                        </Grid>
+                                    </GroupBox>
+
+                                    <GroupBox Style="{StaticResource GroupBoxStyle}">
+                                        <GroupBox.Header>
+                                            <cctl:CheckBoxAndTextBlock IsChecked="{Binding Fjordur_EnableSettings, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FjordurLabel}" />
+                                        </GroupBox.Header>
+
+                                        <Grid IsEnabled="{Binding Fjordur_EnableSettings}">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
                                             </Grid.RowDefinitions>

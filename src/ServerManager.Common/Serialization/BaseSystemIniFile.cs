@@ -218,6 +218,7 @@ namespace ServerManagerTool.Common.Serialization
                             if (attr.ClearSection)
                             {
                                 WriteValue(iniFiles, attr.File, attr.Section, null, null);
+                                ClearSectionIfEmpty(iniFiles, attr);
                             }
 
                             //
@@ -240,6 +241,7 @@ namespace ServerManagerTool.Common.Serialization
                                 {
                                     // The condition value was not set to true, so clear this attribute instead of writing it
                                     WriteValue(iniFiles, attr.File, attr.Section, keyName, null);
+                                    ClearSectionIfEmpty(iniFiles, attr);
                                     continue;
                                 }
                             }
@@ -252,6 +254,7 @@ namespace ServerManagerTool.Common.Serialization
                                 {
                                     // The attributed value was set to false, so clear this attribute instead of writing it
                                     WriteValue(iniFiles, attr.File, attr.Section, keyName, null);
+                                    ClearSectionIfEmpty(iniFiles, attr);
                                 }
                                 continue;
                             }
@@ -325,6 +328,7 @@ namespace ServerManagerTool.Common.Serialization
                                     {
                                         // The attributed value does not have a value, so clear this attribute instead of writing it.
                                         WriteValue(iniFiles, attr.File, attr.Section, keyName, null);
+                                        ClearSectionIfEmpty(iniFiles, attr);
                                         continue;
                                     }
 
@@ -338,6 +342,7 @@ namespace ServerManagerTool.Common.Serialization
                                         {
                                             // The attributed value is the same as the specified value, so clear this attribute instead of writing it.
                                             WriteValue(iniFiles, attr.File, attr.Section, keyName, null);
+                                            ClearSectionIfEmpty(iniFiles, attr);
                                             continue;
                                         }
                                     }
@@ -369,6 +374,8 @@ namespace ServerManagerTool.Common.Serialization
                                 }
                             }
                         }
+
+                        ClearSectionIfEmpty(iniFiles, attr);
                     }
                     catch (Exception)
                     {
@@ -378,6 +385,19 @@ namespace ServerManagerTool.Common.Serialization
             }
 
             SaveFiles(iniFiles);
+        }
+
+        private void ClearSectionIfEmpty(Dictionary<string, IniFile> iniFiles, BaseIniFileEntryAttribute attr)
+        {
+            if (attr.ClearSectionIfEmpty)
+            {
+                var section = ReadSection(iniFiles, attr.File, attr.Section);
+                var hasKeys = section?.Any() ?? false;
+                if (!hasKeys)
+                {
+                    WriteValue(iniFiles, attr.File, attr.Section, null, null);
+                }
+            }
         }
 
         public IEnumerable<string> ReadSection(Enum iniFile, Enum section)

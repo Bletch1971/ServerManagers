@@ -9,7 +9,7 @@ namespace ServerManagerTool.Common.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int unixTimestamp = (int)value;
+            var unixTimestamp = System.Convert.ToInt32(value);
             return DateTimeUtils.UnixTimeStampToDateTime(unixTimestamp).ToString(culture);
         }
 

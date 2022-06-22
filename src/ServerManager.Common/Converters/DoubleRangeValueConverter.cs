@@ -30,7 +30,7 @@ namespace ServerManagerTool.Common.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double scaledValue = System.Convert.ToDouble(value);
+            var scaledValue = System.Convert.ToDouble(value);
 
             var sliderValue = scaledValue;
             sliderValue = Math.Max(MinValue, sliderValue);

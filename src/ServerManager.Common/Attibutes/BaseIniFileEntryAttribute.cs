@@ -68,6 +68,12 @@ namespace ServerManagerTool.Common.Attibutes
         public bool ClearSection;
 
         /// <summary>
+        /// Clear the section after processing this value and the section is empty.
+        /// NOTE: DO NOT USE this setting for the standard setting sections, only use for custom sections or mod sections.
+        /// </summary>
+        public bool ClearSectionIfEmpty;
+
+        /// <summary>
         /// If true, the value will always be written with quotes, if remove, the value will always be written without quotes even if added.
         /// </summary>
         public QuotedStringType QuotedString;

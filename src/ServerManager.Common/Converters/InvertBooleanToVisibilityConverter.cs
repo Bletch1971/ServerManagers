@@ -9,7 +9,7 @@ namespace ServerManagerTool.Common.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            bool flag = false;
+            var flag = false;
             if (value is bool)
             {
                 flag = (bool)value;

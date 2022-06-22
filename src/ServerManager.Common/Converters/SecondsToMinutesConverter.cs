@@ -11,7 +11,7 @@ namespace ServerManagerTool.Common.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double scaledValue = System.Convert.ToInt32(value);
+            var scaledValue = System.Convert.ToInt32(value);
 
             var sliderValue = (int)TimeSpan.FromSeconds(scaledValue).TotalMinutes;
             sliderValue = Math.Max(MIN_VALUE, sliderValue);

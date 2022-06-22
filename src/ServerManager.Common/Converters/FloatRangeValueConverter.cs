@@ -5,25 +5,25 @@ using System.Windows.Markup;
 
 namespace ServerManagerTool.Common.Converters
 {
-    public class IntRangeValueConverter : MarkupExtension, IValueConverter
+    public class FloatRangeValueConverter : MarkupExtension, IValueConverter
     {
         public const string DEFAULT_CULTURE_CODE = "en-US";
-        protected int MinValue { get; set; }
-        protected int MaxValue { get; set; }
+        protected float MinValue { get; set; }
+        protected float MaxValue { get; set; }
 
-        public IntRangeValueConverter()
+        public FloatRangeValueConverter()
         {
-            MinValue = int.MinValue;
-            MaxValue = int.MaxValue;
+            MinValue = float.MinValue;
+            MaxValue = float.MaxValue;
         }
 
-        public IntRangeValueConverter(int minValue)
+        public FloatRangeValueConverter(float minValue)
         {
             MinValue = minValue;
-            MaxValue = int.MaxValue;
+            MaxValue = float.MaxValue;
         }
 
-        public IntRangeValueConverter(int minValue, int maxValue)
+        public FloatRangeValueConverter(float minValue, float maxValue)
         {
             MinValue = minValue;
             MaxValue = maxValue;
@@ -31,7 +31,7 @@ namespace ServerManagerTool.Common.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var scaledValue = System.Convert.ToInt32(value);
+            var scaledValue = System.Convert.ToSingle(value);
 
             var sliderValue = scaledValue;
             sliderValue = Math.Max(MinValue, sliderValue);
@@ -44,7 +44,7 @@ namespace ServerManagerTool.Common.Converters
             if (value is null || value.ToString() == string.Empty)
                 return default;
 
-            if (!int.TryParse(value.ToString(), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out int sliderValue))
+            if (!float.TryParse(value.ToString(), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.GetCultureInfo(DEFAULT_CULTURE_CODE), out float sliderValue))
                 return default;
 
             sliderValue = Math.Max(MinValue, sliderValue);

@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\AnnotatedCheckBoxAndLongSlider.xaml" />
+    <None Remove="Controls\AnnotatedIntSlider.xaml" />
     <None Remove="Controls\CheckBoxAndTextBlock.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -32,6 +33,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\AnnotatedCheckBoxAndIntegerSlider.xaml" />
+    <Page Include="Controls\AnnotatedIntSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AnnotatedSlider.xaml" />
     <Page Include="Controls\CheckBoxAndTextBlock.xaml">
       <SubType>Designer</SubType>
