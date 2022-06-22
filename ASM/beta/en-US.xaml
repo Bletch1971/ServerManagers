@@ -1553,7 +1553,19 @@
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Hexagon Cost Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Specifies the multiplier for the hexagon cost of items.</sys:String>
 
-    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_RagnarokLabel">Enable Ragnarok Settings</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsLabel">Allow Multiple Tamed Unicorns</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsTooltip">If enabled, will allow one wild and unlimited tamed Unicorns on the map. Otherwise only one unicorn on the map at a time.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalLabel">Unicorn Spawn Interval</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalTooltip">How long the game should wait before spawning a new Unicorn if the wild one is killed (or tamed, if AllowMultipleTamedUnicorns is enabled). This value sets the minimum amount of time (in hours), and the maximum is equal to 2x this value.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoLabel">Enable Volcano</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoTooltip">If enabled, will allow the volcano to become active.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalLabel">Volcano Interval</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalTooltip">0 = 5000 (min) - 15000 (max) seconds between instances of the volcano becoming active. Any number above 0 acts as a multiplier.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityLabel">Volcano Intensity</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityTooltip">The lower the value, the more intense the volcano's eruption will be. Recommended to leave at 1.0, the minimum value is 0.25, and for multiplayer games, it should not go below 0.5. Very high numbers will basically disable the flaming rocks flung out of the volcano.</sys:String>
+
+    <sys:String x:Key="ServerSettings_FjordurLabel">Enable Fjordur Settings</sys:String>
     <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Enable Fjordur Biome Teleport</sys:String>
     <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">If enabled, will allow biome teleport on Fjordur map.</sys:String>
 
