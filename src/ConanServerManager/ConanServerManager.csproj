@@ -250,6 +250,8 @@
     <Compile Include="Windows\WorldSaveRestoreWindow.xaml.cs">
       <DependentUpon>WorldSaveRestoreWindow.xaml</DependentUpon>
     </Compile>
+    <Content Include="x64\SQLite.Interop.dll" />
+    <Content Include="x86\SQLite.Interop.dll" />
     <Resource Include="Art\StatusOff.ico" />
     <Resource Include="Art\StatusOn.ico" />
     <Resource Include="Art\StatusStarting.ico" />
