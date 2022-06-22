@@ -377,7 +377,7 @@
     <Setting Name="ServerCommandLineArgsIPMatchFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">-MultiHome={0}</Value>
     </Setting>
-    <Setting Name="ServerCommandLineArgsPortMatchFormat" Type="System.String" Scope="Application">
+    <Setting Name="ServerCommandLineArgsMatchFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">-QueryPort={0}</Value>
     </Setting>
     <Setting Name="BackupPath" Type="System.String" Scope="User">

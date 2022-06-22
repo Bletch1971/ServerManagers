@@ -875,7 +875,7 @@ namespace ServerManagerTool.Lib
             }
             serverArgs.Append($" -Port={this.ServerPort}");
             serverArgs.Append(" ");
-            serverArgs.AppendFormat(Config.Default.ServerCommandLineArgsPortMatchFormat, this.QueryPort);
+            serverArgs.AppendFormat(Config.Default.ServerCommandLineArgsMatchFormat, this.QueryPort);
             if (this.RconEnabled)
             {
                 serverArgs.AppendFormat($" -RconPort={this.RconPort}");

@@ -1370,9 +1370,9 @@ namespace ServerManagerTool {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("-QueryPort={0}")]
-        public string ServerCommandLineArgsPortMatchFormat {
+        public string ServerCommandLineArgsMatchFormat {
             get {
-                return ((string)(this["ServerCommandLineArgsPortMatchFormat"]));
+                return ((string)(this["ServerCommandLineArgsMatchFormat"]));
             }
         }
         

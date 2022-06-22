@@ -1,4 +1,6 @@
-﻿using NLog;
+﻿using Newtonsoft.Json.Linq;
+using NLog;
+using QueryMaster;
 using ServerManagerTool.Common.Enums;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
@@ -30,7 +32,7 @@ namespace ServerManagerTool.Lib
         private ServerStatusWatcher()
         {
             _eventQueue = new ActionBlock<Func<Task>>(async f => await f.Invoke(), new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = 1 });
-            _eventQueue.Post(DoLocalUpdate);
+            _eventQueue.Post(DoUpdateAsync);
         }
 
         public static ServerStatusWatcher Instance
@@ -39,7 +41,7 @@ namespace ServerManagerTool.Lib
             private set;
         }
 
-        public IAsyncDisposable RegisterForUpdates(string installDirectory, string profileId, string gameFile, IPEndPoint localEndpoint, IPEndPoint steamEndpoint, Action<IAsyncDisposable, ServerStatusUpdate> updateCallback)
+        public IAsyncDisposable RegisterForUpdates(string installDirectory, string profileId, IPEndPoint localEndpoint, IPEndPoint steamEndpoint, Action<IAsyncDisposable, ServerStatusUpdate> updateCallback)
         {
             var registration = new ServerStatusUpdateRegistration 
             { 
@@ -84,125 +86,42 @@ namespace ServerManagerTool.Lib
             return registration;
         }
 
-        private static ServerProcessStatus GetServerProcessStatus(ServerStatusUpdateRegistration updateContext, out Process serverProcess)
-        {
-            serverProcess = null;
-            if (String.IsNullOrWhiteSpace(updateContext.InstallDirectory))
-            {
-                return ServerProcessStatus.NotInstalled;
-            }
-
-            var serverExePath = Path.Combine(updateContext.InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerExeFile);
-            if(!File.Exists(serverExePath))
-            {
-                return ServerProcessStatus.NotInstalled;
-            }
-
-            //
-            // The server appears to be installed, now determine if it is running or stopped.
-            //
-            try
-            {
-                foreach (var process in Process.GetProcessesByName(Config.Default.ServerProcessName))
-                {
-                    var commandLine = ProcessUtils.GetCommandLineForProcess(process.Id)?.ToLower();
-
-                    if (commandLine != null &&
-                        (commandLine.StartsWith(serverExePath, StringComparison.OrdinalIgnoreCase) || commandLine.StartsWith($"\"{serverExePath}\"", StringComparison.OrdinalIgnoreCase)))
-                    {
-                        // Does this match our server exe and port?
-                        var serverArgMatch = String.Format(Config.Default.ServerCommandLineArgsPortMatchFormat, updateContext.LocalEndpoint.Port).ToLower();
-                        if (commandLine.Contains(serverArgMatch))
-                        {
-                            // Was an IP set on it?
-                            var anyIpArgMatch = String.Format(Config.Default.ServerCommandLineArgsIPMatchFormat, String.Empty).ToLower();
-                            if (commandLine.Contains(anyIpArgMatch))
-                            {
-                                // If we have a specific IP, check for it.
-                                var ipArgMatch = String.Format(Config.Default.ServerCommandLineArgsIPMatchFormat, updateContext.LocalEndpoint.Address.ToString()).ToLower();
-                                if (!commandLine.Contains(ipArgMatch))
-                                {
-                                    // Specific IP set didn't match
-                                    continue;
-                                }
-
-                                // Specific IP matched
-                            }
-
-                            // Either specific IP matched or no specific IP was set and we will claim this is ours.
-
-                            process.EnableRaisingEvents = true;
-                            if (process.HasExited)
-                            {
-                                return ServerProcessStatus.Stopped;
-                            }
-
-                            serverProcess = process;
-                            return ServerProcessStatus.Running;
-                        }
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                Logger.Error($"{nameof(GetServerProcessStatus)}. {ex.Message}\r\n{ex.StackTrace}");
-            }
-
-            return ServerProcessStatus.Stopped;
-        }
-
-        private async Task DoLocalUpdate()
+        private async Task DoUpdateAsync()
         {
             try
             {
-                foreach (var registration in this._serverRegistrations)
+                foreach (var registration in _serverRegistrations)
                 {
-                    ServerStatusUpdate statusUpdate = new ServerStatusUpdate();
+                    var statusUpdate = new ServerStatusUpdate();
+
                     try
                     {
-                        Logger.Info($"{nameof(DoLocalUpdate)} Start: {registration.LocalEndpoint}");
-                        statusUpdate = await GenerateServerStatusUpdateAsync(registration);
+                        Logger.Info($"{nameof(DoUpdateAsync)} Start: {registration.LocalEndpoint}, {registration.PublicEndpoint}");
+                        statusUpdate = await DoServerStatusUpdateAsync(registration);
                         
-                        PostServerStatusUpdate(registration, registration.UpdateCallback, statusUpdate);
+                        PostServerStatusUpdate(registration, statusUpdate);
                     }
                     catch (Exception ex)
                     {
                         // We don't want to stop other registration queries or break the ActionBlock
-                        Logger.Error($"{nameof(DoLocalUpdate)} - Exception in local update. {ex.Message}\r\n{ex.StackTrace}");
+                        Logger.Error($"{nameof(DoUpdateAsync)} - Exception in local update. {ex.Message}\r\n{ex.StackTrace}");
                         Debugger.Break();
                     }
                     finally
                     {
-                        Logger.Info($"{nameof(DoLocalUpdate)} End: {registration.LocalEndpoint}: {statusUpdate.Status}");
+                        Logger.Info($"{nameof(DoUpdateAsync)} End: {registration.LocalEndpoint}, {registration.PublicEndpoint}, Status: {statusUpdate.Status}");
                     }
                 }
             }
             finally
             {
-                Task.Delay(Config.Default.ServerStatusWatcher_LocalStatusQueryDelay).ContinueWith(_ => _eventQueue.Post(DoLocalUpdate)).DoNotWait();
+                Task.Delay(Config.Default.ServerStatusWatcher_LocalStatusQueryDelay)
+                    .ContinueWith(_ => _eventQueue.Post(DoUpdateAsync))
+                    .DoNotWait();
             }
         }
 
-        private void PostServerStatusUpdate(ServerStatusUpdateRegistration registration, Action<IAsyncDisposable, ServerStatusUpdate> callback, ServerStatusUpdate statusUpdate)
-        {
-            _eventQueue.Post(() =>
-            {
-                if (this._serverRegistrations.Contains(registration))
-                {
-                    try
-                    {
-                        callback(registration, statusUpdate);
-                    }
-                    catch (Exception ex)
-                    {
-                        DebugUtils.WriteFormatThreadSafeAsync("Exception during local status update callback: {0}\n{1}", ex.Message, ex.StackTrace).DoNotWait();
-                    }
-                }
-                return TaskUtils.FinishedTask;
-            });
-        }
-
-        private async Task<ServerStatusUpdate> GenerateServerStatusUpdateAsync(ServerStatusUpdateRegistration registration)
+        private async Task<ServerStatusUpdate> DoServerStatusUpdateAsync(ServerStatusUpdateRegistration registration)
         {
             var registrationKey = registration.PublicEndpoint.ToString();
 
@@ -234,22 +153,23 @@ namespace ServerManagerTool.Lib
             //
             // If the process was running do we then perform network checks.
             //
-            Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server local network status at {registration.LocalEndpoint}");
+            Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server local network status at {registration.LocalEndpoint}");
 
             // get the server information direct from the server using local connection.
-            GetLocalNetworkStatus(registration.LocalEndpoint, out QueryMaster.ServerInfo localInfo, out int onlinePlayerCount);
+            var serverStatus = GetLocalNetworkStatus(registration.LocalEndpoint, out ServerInfo localInfo, out int onlinePlayerCount);
 
-            if (localInfo != null)
+            if (serverStatus)
             {
                 currentStatus = WatcherServerStatus.RunningLocalCheck;
 
                 //
                 // Now that it's running, we can check the publication status.
                 //
-                Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server public (directly) status at {registration.PublicEndpoint}");
+                Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server public (directly) status at {registration.PublicEndpoint}");
 
                 // get the server information direct from the server using public connection.
-                var serverStatus = CheckServerStatusDirect(registration.PublicEndpoint);
+                serverStatus = GetPublicNetworkStatusDirectly(registration.PublicEndpoint);
+
                 // check if the server returned the information.
                 if (!serverStatus)
                 {
@@ -261,11 +181,11 @@ namespace ServerManagerTool.Lib
 
                         if (!string.IsNullOrWhiteSpace(Config.Default.ServerStatusUrlFormat))
                         {
-                            Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server public (via api) status at {registration.PublicEndpoint}");
+                            Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server public (via api) status at {registration.PublicEndpoint}");
 
                             // get the server information direct from the server using external connection.
                             var uri = new Uri(string.Format(Config.Default.ServerStatusUrlFormat, Config.Default.ServerManagerCode, App.Instance.Version, registration.PublicEndpoint.Address, registration.PublicEndpoint.Port));
-                            serverStatus = await NetworkUtils.CheckServerStatusViaAPI(uri, registration.PublicEndpoint);
+                            serverStatus = await GetPublicNetworkStatusViaAPIAsync(uri, registration.PublicEndpoint);
                         }
 
                         _nextExternalStatusQuery[registrationKey] = DateTime.Now.AddMilliseconds(Config.Default.ServerStatusWatcher_RemoteStatusQueryDelay);
@@ -290,18 +210,85 @@ namespace ServerManagerTool.Lib
             return await Task.FromResult(statusUpdate);
         }
 
-        private static bool GetLocalNetworkStatus(IPEndPoint endpoint, out QueryMaster.ServerInfo serverInfo, out int onlinePlayerCount)
+        private static ServerProcessStatus GetServerProcessStatus(ServerStatusUpdateRegistration updateContext, out Process serverProcess)
+        {
+            serverProcess = null;
+            if (string.IsNullOrWhiteSpace(updateContext.InstallDirectory))
+            {
+                return ServerProcessStatus.NotInstalled;
+            }
+
+            var serverExePath = Path.Combine(updateContext.InstallDirectory, Config.Default.ServerBinaryRelativePath, Config.Default.ServerExeFile);
+            if(!File.Exists(serverExePath))
+            {
+                return ServerProcessStatus.NotInstalled;
+            }
+
+            //
+            // The server appears to be installed, now determine if it is running or stopped.
+            //
+            try
+            {
+                foreach (var process in Process.GetProcessesByName(Config.Default.ServerProcessName))
+                {
+                    var commandLine = ProcessUtils.GetCommandLineForProcess(process.Id)?.ToLower();
+
+                    if (commandLine != null &&
+                        (commandLine.StartsWith(serverExePath, StringComparison.OrdinalIgnoreCase) || commandLine.StartsWith($"\"{serverExePath}\"", StringComparison.OrdinalIgnoreCase)))
+                    {
+                        // Does this match our server exe and port?
+                        var serverArgMatch = string.Format(Config.Default.ServerCommandLineArgsMatchFormat, updateContext.LocalEndpoint.Port).ToLower();
+                        if (commandLine.Contains(serverArgMatch))
+                        {
+                            // Was an IP set on it?
+                            var anyIpArgMatch = string.Format(Config.Default.ServerCommandLineArgsIPMatchFormat, string.Empty).ToLower();
+                            if (commandLine.Contains(anyIpArgMatch))
+                            {
+                                // If we have a specific IP, check for it.
+                                var ipArgMatch = string.Format(Config.Default.ServerCommandLineArgsIPMatchFormat, updateContext.LocalEndpoint.Address.ToString()).ToLower();
+                                if (!commandLine.Contains(ipArgMatch))
+                                {
+                                    // Specific IP set didn't match
+                                    continue;
+                                }
+
+                                // Specific IP matched
+                            }
+
+                            // Either specific IP matched or no specific IP was set and we will claim this is ours.
+
+                            process.EnableRaisingEvents = true;
+                            if (process.HasExited)
+                            {
+                                return ServerProcessStatus.Stopped;
+                            }
+
+                            serverProcess = process;
+                            return ServerProcessStatus.Running;
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Logger.Error($"{nameof(GetServerProcessStatus)}. {ex.Message}\r\n{ex.StackTrace}");
+            }
+
+            return ServerProcessStatus.Stopped;
+        }
+
+        private static bool GetLocalNetworkStatus(IPEndPoint endpoint, out ServerInfo serverInfo, out int onlinePlayerCount)
         {
             serverInfo = null;
             onlinePlayerCount = 0;
 
             try
             {
-                using (var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endpoint))
+                using (var server = ServerQuery.GetServerInstance(EngineType.Source, endpoint))
                 {
                     try
                     {
-                        serverInfo = server.GetInfo();
+                        serverInfo = server?.GetInfo();
                     }
                     catch (Exception)
                     {
@@ -318,23 +305,29 @@ namespace ServerManagerTool.Lib
                         onlinePlayerCount = 0;
                     }
                 }
+
+                return serverInfo != null;
             }
             catch (SocketException ex)
             {
-                // Common when the server is unreachable. Log and Ignore it.
-                Logger.Debug($"{nameof(GetLocalNetworkStatus)} failed: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
+                // Common when the server is unreachable.  Ignore it.
+                Logger.Debug($"{nameof(GetLocalNetworkStatus)} - Failed checking local status for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Logger.Debug($"{nameof(GetLocalNetworkStatus)} - Failed checking local status for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
             }
 
-            return true;
+            return false;
         }
 
-        private static bool CheckServerStatusDirect(IPEndPoint endpoint)
+        private static bool GetPublicNetworkStatusDirectly(IPEndPoint endpoint)
         {
+            ServerInfo serverInfo;
+
             try
             {
-                QueryMaster.ServerInfo serverInfo;
-
-                using (var server = QueryMaster.ServerQuery.GetServerInstance(QueryMaster.EngineType.Source, endpoint))
+                using (var server = ServerQuery.GetServerInstance(EngineType.Source, endpoint))
                 {
                     serverInfo = server.GetInfo();
                 }
@@ -343,9 +336,69 @@ namespace ServerManagerTool.Lib
             }
             catch (Exception ex)
             {
-                Logger.Debug($"{nameof(CheckServerStatusDirect)} - Failed checking status direct for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
-                return false;
+                Logger.Debug($"{nameof(GetPublicNetworkStatusDirectly)} - Failed checking public status for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
             }
+
+            return false;
+        }
+
+        public static async Task<bool> GetPublicNetworkStatusViaAPIAsync(Uri uri, IPEndPoint endpoint)
+        {
+            try
+            {
+                string jsonString;
+                using (var client = new WebClient())
+                {
+                    jsonString = await client.DownloadStringTaskAsync(uri);
+                }
+
+                if (jsonString == null)
+                {
+                    Logger.Debug($"Server info request returned null string for {endpoint.Address}:{endpoint.Port}");
+                    return false;
+                }
+
+                JObject query = JObject.Parse(jsonString);
+                if (query == null)
+                {
+                    Logger.Debug($"Server info request failed to parse for {endpoint.Address}:{endpoint.Port} - '{jsonString}'");
+                    return false;
+                }
+
+                var available = query.SelectToken("available");
+                if (available == null)
+                {
+                    Logger.Debug($"Server at {endpoint.Address}:{endpoint.Port} returned no availability.");
+                    return false;
+                }
+
+                return (bool)available;
+            }
+            catch (Exception ex)
+            {
+                Logger.Debug($"{nameof(GetPublicNetworkStatusViaAPIAsync)} - Failed checking public status for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
+            }
+
+            return false;
+        }
+
+        private void PostServerStatusUpdate(ServerStatusUpdateRegistration registration, ServerStatusUpdate statusUpdate)
+        {
+            _eventQueue.Post(() =>
+            {
+                if (_serverRegistrations.Contains(registration))
+                {
+                    try
+                    {
+                        registration.UpdateCallback(registration, statusUpdate);
+                    }
+                    catch (Exception ex)
+                    {
+                        DebugUtils.WriteFormatThreadSafeAsync("Exception during server status update callback: {0}\n{1}", ex.Message, ex.StackTrace).DoNotWait();
+                    }
+                }
+                return TaskUtils.FinishedTask;
+            });
         }
     }
 }

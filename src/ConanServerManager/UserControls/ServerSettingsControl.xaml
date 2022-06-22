@@ -285,12 +285,19 @@
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding Availability}" Value="{x:Static ce:AvailabilityStatus.Unavailable}">
                                                     <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_Unavailable}"/>
+                                                    <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_Availability_UnavailableTootip}"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static ce:AvailabilityStatus.Waiting}">
-                                                    <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_Waiting}"/>
+                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static ce:AvailabilityStatus.LocalOnly}">
+                                                    <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_LocalOnly}"/>
+                                                    <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_Availability_LocalOnlyTootip}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Availability}" Value="{x:Static ce:AvailabilityStatus.PublicOnly}">
+                                                    <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_PublicOnly}"/>
+                                                    <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_Availability_PublicOnlyTootip}"/>
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding Availability}" Value="{x:Static ce:AvailabilityStatus.Available}">
                                                     <Setter Property="Content" Value="{DynamicResource ServerSettings_Availability_Available}"/>
+                                                    <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_Availability_AvailableTootip}"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>

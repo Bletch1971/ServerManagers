@@ -163,8 +163,8 @@ namespace ServerManagerTool.Lib
                 new[] {
                     ServerProfile.ProfileNameProperty,
                     ServerProfile.InstallDirectoryProperty,
-                    ServerProfile.QueryPortProperty,
                     ServerProfile.ServerPortProperty,
+                    ServerProfile.QueryPortProperty,
                     ServerProfile.ServerIPProperty,
                     ServerProfile.MaxPlayersProperty,
 
@@ -196,7 +196,7 @@ namespace ServerManagerTool.Lib
             //
             if (!ushort.TryParse(this.ProfileSnapshot.QueryPort.ToString(), out _))
             {
-                Debug.WriteLine($"Port is out of range ({this.ProfileSnapshot.QueryPort})");
+                _logger.Error($"Port is out of range ({this.ProfileSnapshot.QueryPort})");
                 return;
             }
 
@@ -206,7 +206,7 @@ namespace ServerManagerTool.Lib
             // Get the public endpoint for querying Steam
             //
             steamServerQueryEndPoint = null;
-            if (!String.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
+            if (!string.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
             {
                 if (IPAddress.TryParse(Config.Default.MachinePublicIP, out IPAddress steamServerIpAddress))
                 {
@@ -226,7 +226,7 @@ namespace ServerManagerTool.Lib
                     }
                     catch (Exception ex)
                     {
-                        Debug.WriteLine("Failed to resolve DNS address {0}: {1}\r\n{2}", Config.Default.MachinePublicIP, ex.Message, ex.StackTrace);
+                        _logger.Error($"{nameof(GetServerEndpoints)} - Failed to resolve DNS address {Config.Default.MachinePublicIP}. {ex.Message}\r\n{ex.StackTrace}");
                     }
                 }
             }
@@ -238,7 +238,7 @@ namespace ServerManagerTool.Lib
 
         private void ProcessStatusUpdate(IAsyncDisposable registration, ServerStatusUpdate update)
         {
-            if(!Object.ReferenceEquals(registration, this.updateRegistration))
+            if (!ReferenceEquals(registration, this.updateRegistration))
             {
                 return;
             }
@@ -246,64 +246,90 @@ namespace ServerManagerTool.Lib
             TaskUtils.RunOnUIThreadAsync(() =>
             {
                 var oldStatus = this.Status;
+                var oldAvailability = this.Availability;
+
                 switch (update.Status)
                 {
+                    case WatcherServerStatus.Unknown:
+                        if (oldStatus != ServerStatus.Updating)
+                            UpdateServerStatus(ServerStatus.Unknown, AvailabilityStatus.Unknown, false);
+
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
+                        break;
+
                     case WatcherServerStatus.NotInstalled:
                         if (oldStatus != ServerStatus.Updating)
                             UpdateServerStatus(ServerStatus.Uninstalled, AvailabilityStatus.Unavailable, false);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
-                        break;
 
-                    case WatcherServerStatus.Initializing:
-                        if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Initializing, AvailabilityStatus.Unavailable, oldStatus != ServerStatus.Initializing && oldStatus != ServerStatus.Unknown);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
 
                     case WatcherServerStatus.Stopped:
                         if (oldStatus != ServerStatus.Updating)
                             UpdateServerStatus(ServerStatus.Stopped, AvailabilityStatus.Unavailable, oldStatus == ServerStatus.Initializing || oldStatus == ServerStatus.Running || oldStatus == ServerStatus.Stopping);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
 
-                    case WatcherServerStatus.Unknown:
-                        if (oldStatus != ServerStatus.Updating)
-                            UpdateServerStatus(ServerStatus.Unknown, AvailabilityStatus.Unknown, false);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                    case WatcherServerStatus.Initializing:
+                        if (oldStatus != ServerStatus.Stopping)
+                            UpdateServerStatus(ServerStatus.Initializing, AvailabilityStatus.Unavailable, oldStatus != ServerStatus.Initializing && oldStatus != ServerStatus.Unknown);
+
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
 
                     case WatcherServerStatus.RunningLocalCheck:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.Waiting : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            UpdateServerStatus(ServerStatus.Running, oldAvailability != AvailabilityStatus.Available ? AvailabilityStatus.LocalOnly : AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                                this.motdIntervalTimer.Start();
                         }
                         else
-                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                                this.motdIntervalTimer.Stop();
+                        }
                         break;
 
                     case WatcherServerStatus.RunningExternalCheck:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Waiting, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.PublicOnly, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                                this.motdIntervalTimer.Start();
                         }
                         else
-                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                                this.motdIntervalTimer.Stop();
+                        }
                         break;
 
                     case WatcherServerStatus.Published:
                         if (oldStatus != ServerStatus.Stopping)
                         {
                             UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                                this.motdIntervalTimer.Start();
                         }
                         else
-                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                                this.motdIntervalTimer.Stop();
+                        }
                         break;
 
                     default:
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
                 }
 
@@ -316,7 +342,7 @@ namespace ServerManagerTool.Lib
                     if (match.Success && match.Groups.Count >= 2)
                     {
                         var serverVersion = match.Groups[1].Value;
-                        if (!String.IsNullOrWhiteSpace(serverVersion) && Version.TryParse(serverVersion, out Version temp))
+                        if (!string.IsNullOrWhiteSpace(serverVersion) && Version.TryParse(serverVersion, out Version temp))
                         {
                             this.Version = temp;
                         }
@@ -512,7 +538,7 @@ namespace ServerManagerTool.Lib
         {
             if (updateServer && !Environment.Is64BitOperatingSystem)
             {
-                var result = MessageBox.Show("The ARK server requires a 64-bit operating system to run. Your operating system is 32-bit and therefore the Ark Server Manager will be unable to start the server, but you may still install it or load and save profiles and settings files for use on other machines.\r\n\r\nDo you wish to continue?", "64-bit OS Required", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                var result = MessageBox.Show("The server requires a 64-bit operating system to run. Your operating system is 32-bit and therefore the Ark Server Manager will be unable to start the server, but you may still install it or load and save profiles and settings files for use on other machines.\r\n\r\nDo you wish to continue?", "64-bit OS Required", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.No)
                 {
                     return false;
@@ -583,10 +609,10 @@ namespace ServerManagerTool.Lib
                             int count = 0;
                             await Task.Run(() =>
                                 ServerApp.DirectoryCopy(cacheFolder, installationFolder, true, Config.Default.AutoUpdate_UseSmartCopy, (p, m, n) =>
-                                    {
-                                        count++;
-                                        progressCallback?.Invoke(0, ".", count % DIRECTORIES_PER_LINE == 0);
-                                    }), cancellationToken);
+                                {
+                                    count++;
+                                    progressCallback?.Invoke(0, ".", count % DIRECTORIES_PER_LINE == 0);
+                                }), cancellationToken);
                         }
                     }
 
@@ -840,7 +866,7 @@ namespace ServerManagerTool.Lib
                                     // check if the mod needs to be copied, or force the copy.
                                     if (Config.Default.ServerUpdate_ForceCopyMods)
                                     {
-                                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Forcing mod copy - ASM setting is TRUE.");
+                                        progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Forcing mod copy - Server Manager setting is TRUE.");
                                     }
                                     else
                                     {

@@ -9,6 +9,29 @@
 
   <entry>
     <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
+    <title>1.1.77 (1.1.77.2)</title>
+    <summary>1.1.77.2</summary>
+    <link href="" />
+    <updated>2022-06-22T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
     <title>1.1.77 (1.1.77.1)</title>
     <summary>1.1.77.1</summary>
     <link href="" />

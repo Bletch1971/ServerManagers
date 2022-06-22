@@ -193,7 +193,7 @@ namespace ServerManagerTool.Lib
             //
             // Get the local endpoint for querying the local network
             //
-            if (!ushort.TryParse(this.ProfileSnapshot.QueryPort.ToString(), out ushort port))
+            if (!ushort.TryParse(this.ProfileSnapshot.QueryPort.ToString(), out _))
             {
                 _logger.Error($"Port is out of range ({this.ProfileSnapshot.QueryPort})");
                 return;
@@ -205,7 +205,7 @@ namespace ServerManagerTool.Lib
             // Get the public endpoint for querying Steam
             //
             steamServerQueryEndPoint = null;
-            if (!String.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
+            if (!string.IsNullOrWhiteSpace(Config.Default.MachinePublicIP))
             {
                 if (IPAddress.TryParse(Config.Default.MachinePublicIP, out IPAddress steamServerIpAddress))
                 {
@@ -237,7 +237,7 @@ namespace ServerManagerTool.Lib
 
         private void ProcessStatusUpdate(IAsyncDisposable registration, ServerStatusUpdate update)
         {
-            if(!Object.ReferenceEquals(registration, this.updateRegistration))
+            if (!ReferenceEquals(registration, this.updateRegistration))
             {
                 return;
             }
@@ -245,64 +245,90 @@ namespace ServerManagerTool.Lib
             TaskUtils.RunOnUIThreadAsync(() =>
             {
                 var oldStatus = this.Status;
+                var oldAvailability = this.Availability;
+
                 switch (update.Status)
                 {
+                    case WatcherServerStatus.Unknown:
+                        if (oldStatus != ServerStatus.Updating)
+                            UpdateServerStatus(ServerStatus.Unknown, AvailabilityStatus.Unknown, false);
+
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
+                        break;
+
                     case WatcherServerStatus.NotInstalled:
                         if (oldStatus != ServerStatus.Updating)
                             UpdateServerStatus(ServerStatus.Uninstalled, AvailabilityStatus.Unavailable, false);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
-                        break;
 
-                    case WatcherServerStatus.Initializing:
-                        if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Initializing, AvailabilityStatus.Unavailable, oldStatus != ServerStatus.Initializing && oldStatus != ServerStatus.Unknown);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
 
                     case WatcherServerStatus.Stopped:
                         if (oldStatus != ServerStatus.Updating)
                             UpdateServerStatus(ServerStatus.Stopped, AvailabilityStatus.Unavailable, oldStatus == ServerStatus.Initializing || oldStatus == ServerStatus.Running || oldStatus == ServerStatus.Stopping);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
 
-                    case WatcherServerStatus.Unknown:
-                        if (oldStatus != ServerStatus.Updating)
-                            UpdateServerStatus(ServerStatus.Unknown, AvailabilityStatus.Unknown, false);
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                    case WatcherServerStatus.Initializing:
+                        if (oldStatus != ServerStatus.Stopping)
+                            UpdateServerStatus(ServerStatus.Initializing, AvailabilityStatus.Unavailable, oldStatus != ServerStatus.Initializing && oldStatus != ServerStatus.Unknown);
+
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
 
                     case WatcherServerStatus.RunningLocalCheck:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, this.Availability != AvailabilityStatus.Available ? AvailabilityStatus.Waiting : this.Availability, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            UpdateServerStatus(ServerStatus.Running, oldAvailability != AvailabilityStatus.Available ? AvailabilityStatus.LocalOnly : AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                                this.motdIntervalTimer.Start();
                         }
                         else
-                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                                this.motdIntervalTimer.Stop();
+                        }
                         break;
 
                     case WatcherServerStatus.RunningExternalCheck:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Waiting, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.PublicOnly, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                                this.motdIntervalTimer.Start();
                         }
                         else
-                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                                this.motdIntervalTimer.Stop();
+                        }
                         break;
 
                     case WatcherServerStatus.Published:
                         if (oldStatus != ServerStatus.Stopping)
                         {
                             UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Start();
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                                this.motdIntervalTimer.Start();
                         }
                         else
-                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                                this.motdIntervalTimer.Stop();
+                        }
                         break;
 
                     default:
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) this.motdIntervalTimer.Stop();
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                            this.motdIntervalTimer.Stop();
                         break;
                 }
 
@@ -322,7 +348,7 @@ namespace ServerManagerTool.Lib
                         if (match.Success && match.Groups.Count >= 2)
                         {
                             var serverVersion = $"{version}.{match.Groups[1].Value}";
-                            if (!String.IsNullOrWhiteSpace(serverVersion) && Version.TryParse(serverVersion, out Version temp))
+                            if (!string.IsNullOrWhiteSpace(serverVersion) && Version.TryParse(serverVersion, out Version temp))
                             {
                                 this.Version = temp;
                             }
@@ -385,7 +411,7 @@ namespace ServerManagerTool.Lib
                 if (localServerQueryEndPoint == null || steamServerQueryEndPoint == null)
                     return;
 
-                this.updateRegistration = ServerStatusWatcher.Instance.RegisterForUpdates(this.ProfileSnapshot.InstallDirectory, this.ProfileSnapshot.ProfileId, this.ProfileSnapshot.GameFile, localServerQueryEndPoint, steamServerQueryEndPoint, ProcessStatusUpdate);
+                this.updateRegistration = ServerStatusWatcher.Instance.RegisterForUpdates(this.ProfileSnapshot.InstallDirectory, this.ProfileSnapshot.ProfileId, localServerQueryEndPoint, steamServerQueryEndPoint, ProcessStatusUpdate);
             }
         }
 

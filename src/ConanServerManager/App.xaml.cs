@@ -672,12 +672,12 @@ namespace ServerManagerTool
             if (Config.Default.LoggingEnabled)
             {
                 while (!LogManager.IsLoggingEnabled())
-                    LogManager.EnableLogging();
+                    LogManager.ResumeLogging();
             }
             else
             {
                 while (LogManager.IsLoggingEnabled())
-                    LogManager.DisableLogging();
+                    LogManager.SuspendLogging();
             }
 
             Debug.WriteLine($"Logging Enabled: {LogManager.IsLoggingEnabled()}");

@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using NLog;
+﻿using NLog;
 using ServerManagerTool.Common.Lib;
 using System;
 using System.Collections.Generic;
@@ -126,45 +125,6 @@ namespace ServerManagerTool.Common.Utils
                 }
 
                 return String.Empty;
-            }
-        }
-
-        public static async Task<bool> CheckServerStatusViaAPI(Uri uri, IPEndPoint endpoint)
-        {
-            try
-            {
-                string jsonString;
-                using (var client = new WebClient())
-                {
-                    jsonString = await client.DownloadStringTaskAsync(uri);
-                }
-
-                if (jsonString == null)
-                {
-                    _logger.Debug($"Server info request returned null string for {endpoint.Address}:{endpoint.Port}");
-                    return false;
-                }
-
-                JObject query = JObject.Parse(jsonString);
-                if (query == null)
-                {
-                    _logger.Debug($"Server info request failed to parse for {endpoint.Address}:{endpoint.Port} - '{jsonString}'");
-                    return false;
-                }
-
-                var available = query.SelectToken("available");
-                if (available == null)
-                {
-                    _logger.Debug($"Server at {endpoint.Address}:{endpoint.Port} returned no availability.");
-                    return false;
-                }
-
-                return (bool)available;
-            }
-            catch (Exception ex)
-            {
-                _logger.Debug($"{nameof(CheckServerStatusViaAPI)} - Failed checking status via API for: {endpoint.Address}:{endpoint.Port}. {ex.Message}");
-                return false;
             }
         }
 

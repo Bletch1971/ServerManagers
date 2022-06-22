@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
-    <title>1.1.77 (1.1.77.1)</title>
-    <summary>1.1.77.1</summary>
+    <title>1.1.77 (1.1.77.2)</title>
+    <summary>1.1.77.2</summary>
     <link href="" />
     <updated>2022-06-22T00:00:00Z</updated>
     <content type="xhtml">
@@ -19,6 +19,7 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
             <li>3rd Party Libraries - updated all library to latest versions.</li>
           </ul>
         </p>

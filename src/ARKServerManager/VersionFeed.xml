@@ -9,8 +9,8 @@
 
   <entry>
     <id>urn:uuid:FF41F7AB-66B0-4504-9F2C-2E1325DB50E2</id>
-    <title>1.1.434 (1.1.434.2)</title>
-    <summary>1.1.434.2</summary>
+    <title>1.1.434 (1.1.434.3)</title>
+    <summary>1.1.434.3</summary>
     <link href="" />
     <updated>2022-06-22T00:00:00Z</updated>
     <content type="xhtml">
@@ -19,9 +19,10 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>3rd Party Libraries - updated all library to latest versions.</li>
+            <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
             <li>Rules Section - Fjordur Settings - added checkbox to enable/disable settings.</li>
             <li>Rules Section - Ragnarok Settings - added settings for Ragnarok, located at the bottom of the section.</li>
+            <li>3rd Party Libraries - updated all library to latest versions.</li>
           </ul>
         </p>
       </div>

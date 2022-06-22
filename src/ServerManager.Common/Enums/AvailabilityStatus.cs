@@ -4,7 +4,8 @@
     {
         Unknown,
         Unavailable,
-        Waiting,
-        Available
+        LocalOnly,
+        PublicOnly,
+        Available,
     }
 }

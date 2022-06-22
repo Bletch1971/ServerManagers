@@ -968,13 +968,18 @@
     <sys:String x:Key="ServerSettings_LastStartedLabel">Last Start Time:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">Availability:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">The status of the server on Steam.</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unknown">Unknown</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_SetPublicIP">Set Public IP</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unavailable">Unavailable</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Waiting">Waiting for publication</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Available">Available</sys:String>
     <sys:String x:Key="ServerSettings_PlayersLabel">Players:</sys:String>
     <sys:String x:Key="ServerSettings_PlayersTooltip">The current number of players connected to the server.</sys:String>
+
+    <sys:String x:Key="ServerSettings_Availability_Unknown">Unknown</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Unavailable">Unavailable</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_UnavailableTootip">Server in not accessible</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnly">LAN Only</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnlyTootip">Server accessible via Local IP only. Port Forwarding, Firewall or CGNAT etc are preventing public access.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnly">Available - No Loopback</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnlyTootip">Server accessible via Local IP and Public IP, loopback not available. Server is public but Public IP not accessible via LAN.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Available">Available</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_AvailableTootip">Server accessible via Local IP and Public IP</sys:String>
 
     <sys:String x:Key="ServerSettings_RuntimeStatusInitializingLabel">Initializing</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusRunningLabel">Running</sys:String>
