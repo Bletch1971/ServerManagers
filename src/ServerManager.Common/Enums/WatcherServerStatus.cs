@@ -1,4 +1,4 @@
-﻿namespace ServerManagerTool.Enums
+﻿namespace ServerManagerTool.Common.Enums
 {
     public enum WatcherServerStatus
     {

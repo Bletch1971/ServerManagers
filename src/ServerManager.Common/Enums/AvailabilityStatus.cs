@@ -1,9 +1,8 @@
-﻿namespace ServerManagerTool.Enums
+﻿namespace ServerManagerTool.Common.Enums
 {
     public enum AvailabilityStatus
     {
         Unknown,
-        SetPublicIP,
         Unavailable,
         Waiting,
         Available

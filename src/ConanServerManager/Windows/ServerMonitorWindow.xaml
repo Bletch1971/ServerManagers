@@ -8,9 +8,9 @@
         xmlns:sm="clr-namespace:ServerManagerTool"
         xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
         xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
+        xmlns:ce="clr-namespace:ServerManagerTool.Common.Enums;assembly=ServerManager.Common"
         xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:controls="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
-        xmlns:enum="clr-namespace:ServerManagerTool.Enums"
         xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
         mc:Ignorable="d"
         MinWidth="600" MinHeight="500" Width="900" Height="500" Left="50" Top="50" ResizeMode="CanResize"
@@ -198,25 +198,25 @@
                                     <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Null}">
                                         <Setter Property="Background" Value="#26FF0000" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                         <Setter Property="Background" Value="#26FFA500" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                         <Setter Property="Background" Value="#26008000" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                         <Setter Property="Background" Value="#26FFA500" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                         <Setter Property="Background" Value="White" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                         <Setter Property="Background" Value="#26FF0000" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                         <Setter Property="Background" Value="#260000FF" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                         <Setter Property="Background" Value="#260000FF" />
                                     </DataTrigger>
                                 </Style.Triggers>
@@ -375,28 +375,28 @@
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerMonitor_StopServerTooltip}" />
                                                         <Setter Property="Visibility" Value="Hidden"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerMonitor_StopServerTooltip}" />
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerMonitor_StopServerTooltip}" />
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerMonitor_StartServerTooltip}" />
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                                         <Setter Property="Visibility" Value="Hidden"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                                         <Setter Property="Visibility" Value="Hidden"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>
@@ -409,25 +409,25 @@
                                                         <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Null}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Cancel.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Start.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Cancel.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Cancel.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Cancel.ico,Size=32}"/>
                                                         </DataTrigger>
                                                     </Style.Triggers>
@@ -454,26 +454,26 @@
                                                     <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Null}">
                                                         <Setter Property="Visibility" Value="Hidden"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_UpgradeButtonTooltip}" />
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                                         <Setter Property="Visibility" Value="Hidden"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                                         <Setter Property="ToolTip" Value="{DynamicResource ServerSettings_InstallButtonTooltip}" />
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
@@ -487,25 +487,25 @@
                                                         <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Null}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Cancel.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Cancel.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Stop.ico,Size=32}"/>
                                                         </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                        <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                                             <Setter Property="Source" Value="{com:Icon Path=/ConanServerManager;component/Art/Download.ico,Size=32}"/>
                                                         </DataTrigger>
                                                     </Style.Triggers>
@@ -538,25 +538,25 @@
                                                     <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Null}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>
@@ -596,25 +596,25 @@
                                                     <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Null}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Initializing}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Initializing}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Running}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Running}">
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopping}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopping}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Stopped}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Stopped}">
                                                         <Setter Property="IsEnabled" Value="True"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Unknown}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Unknown}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Updating}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Updating}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static enum:ServerStatus.Uninstalled}">
+                                                    <DataTrigger Binding="{Binding Runtime.Status}" Value="{x:Static ce:ServerStatus.Uninstalled}">
                                                         <Setter Property="IsEnabled" Value="False"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>

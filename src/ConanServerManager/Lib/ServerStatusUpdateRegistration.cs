@@ -8,12 +8,11 @@ namespace ServerManagerTool.Lib
     {
         public string InstallDirectory;
         public IPEndPoint LocalEndpoint;
-        public IPEndPoint SteamEndpoint;
+        public IPEndPoint PublicEndpoint;
         public Action<IAsyncDisposable, ServerStatusUpdate> UpdateCallback;
         public Func<Task> UnregisterAction;
 
         public string ProfileId;
-        public string GameFile;
 
         public async ValueTask DisposeAsync()
         {

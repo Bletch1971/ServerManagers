@@ -282,9 +282,6 @@
     <Compile Include="Enums\ServerProcessStatus.cs" />
     <Compile Include="Enums\ServerProcessType.cs" />
     <Compile Include="Enums\ServerProfileCategory.cs" />
-    <Compile Include="Enums\ServerStatus.cs" />
-    <Compile Include="Enums\AvailabilityStatus.cs" />
-    <Compile Include="Enums\WatcherServerStatus.cs" />
     <Compile Include="ErrorHandling.cs" />
     <Content Include="Styles\Default.xaml">
       <SubType>Designer</SubType>

@@ -1,5 +1,6 @@
 ﻿using IWshRuntimeLibrary;
 using NLog;
+using ServerManagerTool.Common.Enums;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.DiscordBot.Enums;

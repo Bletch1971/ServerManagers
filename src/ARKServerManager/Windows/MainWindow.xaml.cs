@@ -1,9 +1,8 @@
 ﻿using EO.Wpf;
 using NLog;
-using ServerManagerTool.Common;
+using ServerManagerTool.Common.Enums;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
 using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;

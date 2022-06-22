@@ -3,6 +3,7 @@ using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
 using ServerManagerTool.Common;
+using ServerManagerTool.Common.Enums;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Model;
 using ServerManagerTool.Common.Utils;

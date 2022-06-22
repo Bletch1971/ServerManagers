@@ -187,11 +187,8 @@
     <Compile Include="Enums\ServerProfileCategory.cs" />
     <Compile Include="Enums\ServerSettingsCustomLevelsAction.cs" />
     <Compile Include="Enums\ServerSettingsResetAction.cs" />
-    <Compile Include="Enums\ServerStatus.cs" />
     <Compile Include="Enums\ServerUpdateType.cs" />
     <Compile Include="Enums\StatsMultiplier.cs" />
-    <Compile Include="Enums\AvailabilityStatus.cs" />
-    <Compile Include="Enums\WatcherServerStatus.cs" />
     <Compile Include="Interface\ISpawnIniValue.cs" />
     <Compile Include="Interface\ISpawnIniValuesCollection.cs" />
     <Compile Include="Lib\Events\ProfileEventArgs.cs" />

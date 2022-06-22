@@ -1,5 +1,5 @@
-﻿using System.Diagnostics;
-using ServerManagerTool.Enums;
+﻿using ServerManagerTool.Common.Enums;
+using System.Diagnostics;
 
 namespace ServerManagerTool.Lib
 {

@@ -1,4 +1,13 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ServerManagerTool.Common;
+using ServerManagerTool.Common.Enums;
+using ServerManagerTool.Common.Lib;
+using ServerManagerTool.Common.Model;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
+using ServerManagerTool.Lib;
+using ServerManagerTool.Plugin.Common;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -13,14 +22,6 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Input;
-using Microsoft.WindowsAPICodePack.Dialogs;
-using ServerManagerTool.Common;
-using ServerManagerTool.Common.Lib;
-using ServerManagerTool.Common.Model;
-using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
-using ServerManagerTool.Lib;
-using ServerManagerTool.Plugin.Common;
 using WPFSharp.Globalizer;
 
 namespace ServerManagerTool

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using NLog;
+using ServerManagerTool.Common.Enums;
+using ServerManagerTool.Common.Utils;
+using ServerManagerTool.Enums;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -7,10 +11,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
-using NLog;
-using ServerManagerTool.Common.Interfaces;
-using ServerManagerTool.Common.Utils;
-using ServerManagerTool.Enums;
 
 namespace ServerManagerTool.Lib
 {
@@ -46,7 +46,7 @@ namespace ServerManagerTool.Lib
                 InstallDirectory = installDirectory,
                 ProfileId = profileId,
                 LocalEndpoint = localEndpoint, 
-                SteamEndpoint = steamEndpoint, 
+                PublicEndpoint = steamEndpoint, 
                 UpdateCallback = updateCallback,
             };
 
@@ -57,7 +57,7 @@ namespace ServerManagerTool.Lib
                     {
                         if(_serverRegistrations.Contains(registration))
                         {
-                            Logger.Debug($"{nameof(RegisterForUpdates)} Removing registration for L:{registration.LocalEndpoint} S:{registration.SteamEndpoint}");
+                            Logger.Debug($"{nameof(RegisterForUpdates)} Removing registration for L:{registration.LocalEndpoint} P:{registration.PublicEndpoint}");
                             _serverRegistrations.Remove(registration);
                         }
                         tcs.TrySetResult(true);
@@ -71,10 +71,10 @@ namespace ServerManagerTool.Lib
                 {
                     if (!_serverRegistrations.Contains(registration))
                     {
-                        Logger.Debug($"{nameof(RegisterForUpdates)} Adding registration for L:{registration.LocalEndpoint} S:{registration.SteamEndpoint}");
+                        Logger.Debug($"{nameof(RegisterForUpdates)} Adding registration for L:{registration.LocalEndpoint} P:{registration.PublicEndpoint}");
                         _serverRegistrations.Add(registration);
 
-                        var registrationKey = registration.SteamEndpoint.ToString();
+                        var registrationKey = registration.PublicEndpoint.ToString();
                         _nextExternalStatusQuery[registrationKey] = DateTime.MinValue;
                     }
                     return Task.FromResult(true);
@@ -204,7 +204,7 @@ namespace ServerManagerTool.Lib
 
         private async Task<ServerStatusUpdate> GenerateServerStatusUpdateAsync(ServerStatusUpdateRegistration registration)
         {
-            var registrationKey = registration.SteamEndpoint.ToString();
+            var registrationKey = registration.PublicEndpoint.ToString();
 
             //
             // First check the process status
@@ -246,10 +246,10 @@ namespace ServerManagerTool.Lib
                 //
                 // Now that it's running, we can check the publication status.
                 //
-                Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server public status direct at {registration.SteamEndpoint}");
+                Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server public (directly) status at {registration.PublicEndpoint}");
 
                 // get the server information direct from the server using public connection.
-                var serverStatus = CheckServerStatusDirect(registration.SteamEndpoint);
+                var serverStatus = CheckServerStatusDirect(registration.PublicEndpoint);
                 // check if the server returned the information.
                 if (!serverStatus)
                 {
@@ -261,11 +261,11 @@ namespace ServerManagerTool.Lib
 
                         if (!string.IsNullOrWhiteSpace(Config.Default.ServerStatusUrlFormat))
                         {
-                            Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server public status via api at {registration.SteamEndpoint}");
+                            Logger.Info($"{nameof(GenerateServerStatusUpdateAsync)} Checking server public (via api) status at {registration.PublicEndpoint}");
 
                             // get the server information direct from the server using external connection.
-                            var uri = new Uri(string.Format(Config.Default.ServerStatusUrlFormat, Config.Default.ServerManagerCode, App.Instance.Version, registration.SteamEndpoint.Address, registration.SteamEndpoint.Port));
-                            serverStatus = await NetworkUtils.CheckServerStatusViaAPI(uri, registration.SteamEndpoint);
+                            var uri = new Uri(string.Format(Config.Default.ServerStatusUrlFormat, Config.Default.ServerManagerCode, App.Instance.Version, registration.PublicEndpoint.Address, registration.PublicEndpoint.Port));
+                            serverStatus = await NetworkUtils.CheckServerStatusViaAPI(uri, registration.PublicEndpoint);
                         }
 
                         _nextExternalStatusQuery[registrationKey] = DateTime.Now.AddMilliseconds(Config.Default.ServerStatusWatcher_RemoteStatusQueryDelay);

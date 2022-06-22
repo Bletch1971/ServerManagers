@@ -1,4 +1,4 @@
-﻿using ServerManagerTool.Enums;
+﻿using ServerManagerTool.Common.Enums;
 
 namespace ServerManagerTool.Delegates
 {
