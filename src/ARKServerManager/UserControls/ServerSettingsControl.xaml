@@ -2149,8 +2149,12 @@
                                         </Grid>
                                     </GroupBox>
 
-                                    <GroupBox Header="{DynamicResource ServerSettings_FjordurLabel}" Style="{StaticResource GroupBoxStyle}">
-                                        <Grid>
+                                    <GroupBox Style="{StaticResource GroupBoxStyle}">
+                                        <GroupBox.Header>
+                                            <cctl:CheckBoxAndTextBlock IsChecked="{Binding EnableFjordurSettings, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FjordurLabel}" />
+                                        </GroupBox.Header>
+
+                                        <Grid IsEnabled="{Binding EnableFjordurSettings}">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
                                             </Grid.RowDefinitions>

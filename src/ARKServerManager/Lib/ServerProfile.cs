@@ -1811,8 +1811,16 @@ namespace ServerManagerTool.Lib
             set { SetValue(HexagonCostMultiplierProperty, value); }
         }
 
+        public static readonly DependencyProperty EnableFjordurSettingsProperty = DependencyProperty.Register(nameof(EnableFjordurSettings), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableFjordurSettings
+        {
+            get { return (bool)GetValue(EnableFjordurSettingsProperty); }
+            set { SetValue(EnableFjordurSettingsProperty, value); }
+        }
+
         public static readonly DependencyProperty UseFjordurTraversalBuffProperty = DependencyProperty.Register(nameof(UseFjordurTraversalBuff), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
-        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, ConditionedOn = nameof(EnableFjordurSettings))]
         public bool UseFjordurTraversalBuff
         {
             get { return (bool)GetValue(UseFjordurTraversalBuffProperty); }
