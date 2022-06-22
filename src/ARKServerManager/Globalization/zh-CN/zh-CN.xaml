@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2022.06.13(叶凡) --交流群:109949666反馈</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2022.06.20(叶凡,龍柒) --交流群:109949666反馈</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -84,6 +84,15 @@
     <!--#region 处理器亲和性-->
     <sys:String x:Key="ProcessorAffinity_Invalid">无效</sys:String>
     <sys:String x:Key="ProcessorAffinity_All">所有</sys:String>
+    <!--#endregion-->
+	
+	<!--#region 任务优先级 -->
+    <sys:String x:Key="TaskPriority_Idle">闲置</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">低于正常</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">正常</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">高于正常</sys:String>
+    <sys:String x:Key="TaskPriority_High">高</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">实时</sys:String>
     <!--#endregion-->
 
     <!--#region 窗口启动模式 -->
@@ -684,6 +693,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">日志级别:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">领取令牌...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">帮助...</sys:String>
+	<sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordLabel">所有的配置文件别名:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordTooltip">当通过discord向与discord频道相关的所有配置文件发送命令时，要使用的别名。不要包括空格或特殊字符。要禁用所有配置文件的别名，请清除该值。</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">允许所有机器人</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">如果启用，服务器管理器机器人将响应所有其他机器人，否则将忽略它们，除非它们在白名单中.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">机器人白名单</sys:String>
@@ -836,6 +847,7 @@
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">打开插件</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">打开帮助</sys:String>
     <sys:String x:Key="MainWindow_OpenServerMonitorTooltip">打开服务器监控器</sys:String>
+	<sys:String x:Key="MainWindow_JoinDiscordTooltip">加入不和谐Discord服务器</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">升级到 {0} 最新版!</sys:String>
     <sys:String x:Key="MainWindow_TaskStatusLabel">任务状态</sys:String>
     <sys:String x:Key="MainWindow_TaskAdminErrorTitle">需要管理权限</sys:String>
@@ -972,7 +984,9 @@
     <!--#endregion-->
 
     <!--#region 服务器设置 - 一般按​​钮 -->
-    <sys:String x:Key="ServerSettings_SupportZipButtonLabel">创建支持Zip</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonLabel">查找</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonTooltip">查找设置</sys:String>
+	<sys:String x:Key="ServerSettings_SupportZipButtonLabel">创建支持Zip</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">创建一个zip文件，其中包含服务器管理器支持团队用来诊断问题所需的所有文件。</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">同步</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonTooltip">将设置从此配置文件复制到一个或多个配置文件。</sys:String>
@@ -1098,7 +1112,7 @@
     <sys:String x:Key="ServerSettings_MapPathTooltip">标准地图名称 (例如. TheIsland,TheCenter,ScorchedEarth_P,Ragnarok).或本地MOD地图 例如:(/Game/Mods/504122600/Valhalla) 数字是MOD ID 后面是MOD地图名字，记得更新你的服务器下载MOD地图。</sys:String>
     <sys:String x:Key="ServerSettings_TotalConversionLabel">总转换MOD ID:</sys:String>
     <sys:String x:Key="ServerSettings_TotalConversionTooltip">总转换MOD ID，是方舟里的一个模式转换！.</sys:String>
-    <sys:String x:Key="ServerSettings_FindTotalConversionMapNameTooltip">读取总转换MOD ID找到地图名称</sys:String>
+        <sys:String x:Key="ServerSettings_FindTotalConversionMapNameTooltip">读取总转换MOD ID找到地图名称</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameSuccessTitle">查找总转换地图名称</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameSuccessLabel">地图名称已更新。</sys:String>
     <sys:String x:Key="ServerSettings_FindTotalConversionMapNameErrorTitle">查找总转换地图名称错误</sys:String>
@@ -1182,7 +1196,7 @@
     <sys:String x:Key="ServerSettings_StasisKeepControllersTooltip">如果启用，服务器可以通过将人工智能保存在静态生物的内存中来获得性能。 注意:你的服务器必须有大量的内存，否则你的服务器会有很大的内存开销。</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionLabel">无挂起检测</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionTooltip">如果启用，可防止因挂起而导致的某些类型的崩溃(服务器挂起时，可能会出现服务器滞后的情况)。</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinosLabel">没有恐龙</sys:String>
+   <sys:String x:Key="ServerSettings_NoDinosLabel">没有恐龙</sys:String>
     <sys:String x:Key="ServerSettings_NoDinosTooltip">如果启用，则不会在地图上产生恐龙。</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselLabel">服务器允许NVIDIA Ansel技术</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">如果启用，在单个玩家中激活NVIDIA Ansel支持。 连接到服务器时，即使通电和点亮，这也会导致大多数灯（灯）不再起作用。</sys:String>
@@ -3164,27 +3178,31 @@
 	<sys:String x:Key="Fenrir_Character_BP_C">芬里尔冰霜巨狼</sys:String>
 	<sys:String x:Key="Andrewsarchus_Character_BP_C">安氏兽</sys:String>
 	<sys:String x:Key="Desmodus_Character_BP_C">吸血蝙蝠</sys:String>
+	<sys:String x:Key="Direbear_Character_BP_SteinbjornMinion_C">碎石恐熊</sys:String>
+	
 	<!--#endregion-->
 	
 	<!--#region 恐龙/生物类名称 - 维京岛-BOSS-->
-	<sys:String x:Key="BeylaMinion_Character_BP_C">爪牙仆从</sys:String>
-	<sys:String x:Key="Beyla_Character_BP_C">爪牙</sys:String>
-	<sys:String x:Key="SpiderL_Character_BP_Easy_FJ_C">牧羊人 (简单)</sys:String>
-	<sys:String x:Key="SpiderL_Character_BP_Hard_FJ_C">牧羊人 (困难)</sys:String>
-	<sys:String x:Key="SpiderL_Character_BP_Medium_FJ_C">牧羊人 (中等)</sys:String>
-	<sys:String x:Key="Dragon_Character_BP_Boss_Easy_FJ_C">蜻蜓（简单）</sys:String>
-	<sys:String x:Key="Dragon_Character_BP_Boss_Hard_FJ_C">蜻蜓（困难）</sys:String>
-	<sys:String x:Key="Dragon_Character_BP_Boss_Medium_FJ_C">蜻蜓（中等）</sys:String>
+	<sys:String x:Key="BeylaMinion_Character_BP_C">贝拉仆从</sys:String>
+	<sys:String x:Key="Beyla_Character_BP_C">贝拉</sys:String>
+	<sys:String x:Key="SpiderL_Character_BP_Easy_FJ_C">育母蛛蛛菜斯立克斯(简单)</sys:String>
+	<sys:String x:Key="SpiderL_Character_BP_Hard_FJ_C">育母蛛蛛菜斯立克斯(困难)</sys:String>
+	<sys:String x:Key="SpiderL_Character_BP_Medium_FJ_C">育母蛛蛛菜斯立克斯(中等)</sys:String>
+	<sys:String x:Key="Dragon_Character_BP_Boss_Easy_FJ_C">喷火龙（简单）</sys:String>
+	<sys:String x:Key="Dragon_Character_BP_Boss_Hard_FJ_C">喷火龙（困难）</sys:String>
+	<sys:String x:Key="Dragon_Character_BP_Boss_Medium_FJ_C">喷火龙（中等）</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_MiniBoss_Hati_C">哈蒂</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_MiniBoss_Skoll_C">斯库尔</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_MiniBoss_C">召唤 芬里尔</sys:String>
 	<sys:String x:Key="Steinbjorn_Character_BP_C">斯坦比约恩</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_Minion_C">芬里厄的奴才</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_Boss_Easy_C">芬里尔巨狼（简单）</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_Boss_Medium_C">芬里尔巨狼（中等）</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_Boss_Hard_C">芬里尔巨狼（困难）</sys:String>
-	<sys:String x:Key="Gorilla_Character_BP_Easy_FJ_C">巨齿兽(简单)</sys:String>
-	<sys:String x:Key="Gorilla_Character_BP_Medium_FJ_C">巨齿兽(中等)</sys:String>
-	<sys:String x:Key="Gorilla_Character_BP_Hard_FJ_C">巨齿兽(困难)</sys:String>
+	<sys:String x:Key="Gorilla_Character_BP_Easy_FJ_C">大金刚(简单)</sys:String>
+	<sys:String x:Key="Gorilla_Character_BP_Medium_FJ_C">大金刚(中等)</sys:String>
+	<sys:String x:Key="Gorilla_Character_BP_Hard_FJ_C">大金刚(困难)</sys:String>
+	<sys:String x:Key="Fenrir_Character_BP_Boss_C">芬里尔巨狼大BOSS</sys:String>
 	<!--#endregion-->
 	
     <!--#endregion-->
@@ -5971,11 +5989,11 @@
 	<sys:String x:Key="SupplyCrate_Space_07_ElementDust_C">空投_青色(创世2)</sys:String>
 	<sys:String x:Key="SupplyCrate_Space_08_BlackPearls_C">空投_橙色(创世2)</sys:String>
 	
-	<sys:String x:Key="SupplyCrate_Level45_LostIsland_C">黄色灯塔(维京岛)</sys:String>
-	<sys:String x:Key="SupplyCrate_Level45_LostIsland_Double_C">黄色灯塔双份(维京岛)</sys:String>
-	<sys:String x:Key="SupplyCrate_Level60_LostIsland_C">红色灯塔(维京岛)</sys:String>
-	<sys:String x:Key="SupplyCrate_Level60_LostIsland_Double_C">红色灯塔双份(维京岛)</sys:String>
-	<sys:String x:Key="SupplyCrate_Ruins_LostIsland_C">废墟地牢箱子(维京岛)</sys:String>	
+	<sys:String x:Key="SupplyCrate_Level45_LostIsland_C">黄色补给箱（迷失岛)</sys:String>
+	<sys:String x:Key="SupplyCrate_Level45_LostIsland_Double_C">黄色补给箱(双份)</sys:String>
+	<sys:String x:Key="SupplyCrate_Level60_LostIsland_C">红色补给箱</sys:String>
+	<sys:String x:Key="SupplyCrate_Level60_LostIsland_Double_C">红色补给箱(双份)</sys:String>
+	<sys:String x:Key="SupplyCrate_Ruins_LostIsland_C">废墟地牢箱子</sys:String>	
 	
     <!--#endregion-->
 
@@ -6030,6 +6048,14 @@
 	<sys:String x:Key="DinoDropInventoryComponent_BossManticore_Easy_Ragnarok_C">Boss 清单 - 狮身蝎尾 (简单)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Medium_Ragnarok_C">Boss 清单 - 狮身蝎尾 (中等)</sys:String>
     <sys:String x:Key="DinoDropInventoryComponent_BossManticore_Hard_Ragnarok_C">Boss 清单 - 狮身蝎尾 (困难)</sys:String>
+	
+	<sys:String x:Key="DinoDropInventoryComponent_Steinbjorn_C">Boss 清单 - 斯坦比约恩</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_Hati_C">Boss 清单 - 哈蒂</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_Skoll_C">Boss 清单 - 斯科尔</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_Beyla_C">Boss 清单 - 贝拉</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_FenrirBoss_Easy_C">Boss 清单 - 芬里尔巨狼(简单)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_FenrirBoss_Medium_C">Boss 清单 - 芬里尔巨狼(中等)</sys:String>
+	<sys:String x:Key="DinoDropInventoryComponent_FenrirBoss_Hard_C">Boss 清单 - 芬里尔巨狼(困难)</sys:String>
     <!--#endregion-->
     
     <!--#endregion-->
@@ -7105,6 +7131,15 @@
 
     <sys:String x:Key="DiscordBot_CountLabel">总数:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">地图:</sys:String>
+    <!--#endregion-->
+	
+	
+    <!--#region 查找设置窗口 -->
+    <sys:String x:Key="FindSettingWindow_Title">查找设置</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_NotFoundErrorLabel">没有找到该设置: {0}</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_FindButtonLabel">查找</sys:String>
     <!--#endregion-->
     
 </Globalization:GlobalizationResourceDictionary>

@@ -679,13 +679,13 @@
                                         </Button>
 
                                         <Label   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ServerPortLabel}" ToolTip="{DynamicResource ServerSettings_ServerPortTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
-                                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding ServerPort, Mode=TwoWay, Converter={cc:IntRangeValueConverter 1, 65535}, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" SourceUpdated="ServerPort_SourceUpdated" ToolTip="{DynamicResource ServerSettings_ServerPortTooltip}"/>
+                                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding ServerPort, Mode=TwoWay, Converter={cc:IntRangeValueConverter 1, 65535}, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" SourceUpdated="Ports_SourceUpdated" ToolTip="{DynamicResource ServerSettings_ServerPortTooltip}"/>
 
                                         <Label   Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_ServerPeerPortLabel}" ToolTip="{DynamicResource ServerSettings_ServerPeerPortTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="1" Grid.Column="3" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding ServerPeerPort}" ToolTip="{DynamicResource ServerSettings_ServerPeerPortTooltip}" IsEnabled="False"/>
 
                                         <Label   Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_QueryPortLabel}" ToolTip="{DynamicResource ServerSettings_QueryPortTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
-                                        <TextBox Grid.Row="1" Grid.Column="5" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding QueryPort, Converter={cc:IntRangeValueConverter 1, 65535}}" ToolTip="{DynamicResource ServerSettings_QueryPortTooltip}"/>
+                                        <TextBox Grid.Row="1" Grid.Column="5" Margin="1" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding QueryPort, Converter={cc:IntRangeValueConverter 1, 65535}, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" SourceUpdated="Ports_SourceUpdated" ToolTip="{DynamicResource ServerSettings_QueryPortTooltip}"/>
                                     </Grid>
                                 </GroupBox>
 

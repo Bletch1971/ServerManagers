@@ -193,6 +193,7 @@ namespace ServerManagerTool.Lib
             { 
                 SetValue(ServerPortProperty, value);
                 ServerPeerPort = value + 1;
+                UpdatePortsString();
             }
         }
 
@@ -201,7 +202,11 @@ namespace ServerManagerTool.Lib
         public int ServerPeerPort
         {
             get { return (int)GetValue(ServerPeerPortProperty); }
-            set { SetValue(ServerPeerPortProperty, value); }
+            set 
+            { 
+                SetValue(ServerPeerPortProperty, value);
+                UpdatePortsString();
+            }
         }
 
         public static readonly DependencyProperty QueryPortProperty = DependencyProperty.Register(nameof(QueryPort), typeof(int), typeof(ServerProfile), new PropertyMetadata(27015));
@@ -210,7 +215,18 @@ namespace ServerManagerTool.Lib
         public int QueryPort
         {
             get { return (int)GetValue(QueryPortProperty); }
-            set { SetValue(QueryPortProperty, value); }
+            set 
+            { 
+                SetValue(QueryPortProperty, value);
+                UpdatePortsString();
+            }
+        }
+
+        public static readonly DependencyProperty PortsStringProperty = DependencyProperty.Register(nameof(PortsString), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        public string PortsString
+        {
+            get { return (string)GetValue(PortsStringProperty); }
+            set { SetValue(PortsStringProperty, value); }
         }
 
         public static readonly DependencyProperty ServerMapProperty = DependencyProperty.Register(nameof(ServerMap), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
@@ -1201,6 +1217,11 @@ namespace ServerManagerTool.Lib
             return true;
         }
 
+        public void UpdatePortsString()
+        {
+            this.PortsString = $"{this.ServerPort}, {this.ServerPeerPort}, {this.QueryPort}";
+        }
+
         public bool UpdateSchedules()
         {
             SaveLauncher();
@@ -1531,6 +1552,8 @@ namespace ServerManagerTool.Lib
             this.ClearValue(ServerPortProperty);
             this.ClearValue(ServerPeerPortProperty);
             this.ClearValue(QueryPortProperty);
+
+            UpdatePortsString();
 
             this.ClearValue(ServerMapProperty);
             this.ClearValue(ServerMapSaveFileNameProperty);

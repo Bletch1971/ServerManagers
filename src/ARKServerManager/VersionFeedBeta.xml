@@ -20,6 +20,8 @@
           <br/>
           <ul>
             <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+            <li>Server Monitor - Added a Ports column that shows the main server ports.</li>
+            <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
       </div>

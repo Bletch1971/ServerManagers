@@ -20,9 +20,11 @@
           <br/>
           <ul>
             <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+            <li>Server Monitor - Added a Ports column that shows the main server ports.</li>
             <li>Rules Section - Fjordur Settings - added checkbox to enable/disable settings.</li>
             <li>Rules Section - Ragnarok Settings - added settings for Ragnarok, located at the bottom of the section.</li>
             <li>3rd Party Libraries - updated all library to latest versions.</li>
+            <li>zh-CN Translation file updated.</li>
           </ul>
         </p>
       </div>

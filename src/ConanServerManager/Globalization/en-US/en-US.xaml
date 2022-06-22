@@ -412,6 +412,7 @@
     <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selected</sys:String>
     <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Profile</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
+    <sys:String x:Key="ServerMonitor_PortsColumnLabel">Ports</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">Version</sys:String>

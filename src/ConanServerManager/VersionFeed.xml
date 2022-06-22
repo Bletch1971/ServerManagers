@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+            <li>Server Monitor - Added a Ports column that shows the main server ports.</li>
             <li>3rd Party Libraries - updated all library to latest versions.</li>
           </ul>
         </p>

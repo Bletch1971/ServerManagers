@@ -1289,10 +1289,11 @@ namespace ServerManagerTool
             Settings.ValidateServerName();
         }
 
-        private void ServerPort_SourceUpdated(object sender, DataTransferEventArgs e)
+        private void Ports_SourceUpdated(object sender, DataTransferEventArgs e)
         {
-            // force the porperty to be updated.
+            // force the property to be updated.
             Settings.ServerPort = Settings.ServerPort;
+            Settings.UpdatePortsString();
         }
 
         private void MOTD_SourceUpdated(object sender, DataTransferEventArgs e)

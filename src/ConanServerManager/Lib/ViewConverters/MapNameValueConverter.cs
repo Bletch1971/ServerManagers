@@ -16,7 +16,7 @@ namespace ServerManagerTool.Lib.ViewModel
                 if (valueString == null)
                     return string.Empty;
 
-                var name = GlobalizedApplication.Instance.GetResourceString(valueString);
+                var name = GlobalizedApplication.Instance.GetResourceString($"Map_{valueString}");
                 if (!string.IsNullOrWhiteSpace(name))
                     return name;
 
@@ -27,7 +27,7 @@ namespace ServerManagerTool.Lib.ViewModel
                 var mapName = ModUtils.GetMapName(valueString);
 
                 // check if the name is stored in the globalization file
-                name = GlobalizedApplication.Instance.GetResourceString(mapName);
+                name = GlobalizedApplication.Instance.GetResourceString($"Map_{mapName}");
                 if (!string.IsNullOrWhiteSpace(name))
                     return name;
 

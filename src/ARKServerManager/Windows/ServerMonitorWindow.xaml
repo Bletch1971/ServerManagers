@@ -4,15 +4,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tb="http://www.hardcodet.net/taskbar"
-        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:sm="clr-namespace:ServerManagerTool"
         xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
-        xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
-        xmlns:ce="clr-namespace:ServerManagerTool.Common.Enums;assembly=ServerManager.Common"
-        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:controls="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
-        xmlns:enum="clr-namespace:ServerManagerTool.Enums"
+        xmlns:ce="clr-namespace:ServerManagerTool.Common.Enums;assembly=ServerManager.Common"
+        xmlns:clib="clr-namespace:ServerManagerTool.Common.Lib;assembly=ServerManager.Common"
+        xmlns:com="clr-namespace:ServerManagerTool.Common;assembly=ServerManager.Common"
         xmlns:vm="clr-namespace:ServerManagerTool.Lib.ViewModel"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         mc:Ignorable="d"
         MinWidth="600" MinHeight="500" Width="900" Height="500" Left="50" Top="50" ResizeMode="CanResize"
         Loaded="ServerMonitorWindow_Loaded" SizeChanged="ServerMonitorWindow_SizeChanged" StateChanged="ServerMonitorWindow_StateChanged" LocationChanged="ServerMonitorWindow_LocationChanged"
@@ -276,7 +275,7 @@
                             </DataGridTemplateColumn.CellStyle>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Width="Auto" MinWidth="100">
+                        <DataGridTemplateColumn Width="Auto" MinWidth="50">
                             <DataGridTemplateColumn.Header>
                                 <TextBlock Text="{DynamicResource ServerMonitor_MapColumnLabel}" />
                             </DataGridTemplateColumn.Header>
@@ -284,6 +283,23 @@
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Content="{Binding Profile.ServerMap, Converter={StaticResource MapNameValueConverter}}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                            <DataGridTemplateColumn.CellStyle>
+                                <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTemplateColumn.CellStyle>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Width="Auto" MinWidth="50">
+                            <DataGridTemplateColumn.Header>
+                                <TextBlock Text="{DynamicResource ServerMonitor_PortsColumnLabel}" />
+                            </DataGridTemplateColumn.Header>
+
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Profile.PortsString}"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                             <DataGridTemplateColumn.CellStyle>
@@ -310,7 +326,7 @@
                             </DataGridTemplateColumn.CellStyle>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Width="Auto" MinWidth="80">
+                        <DataGridTemplateColumn Width="Auto" MinWidth="50">
                             <DataGridTemplateColumn.Header>
                                 <TextBlock Text="{DynamicResource ServerMonitor_VersionColumnLabel}" />
                             </DataGridTemplateColumn.Header>
@@ -327,7 +343,7 @@
                             </DataGridTemplateColumn.CellStyle>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Width="Auto" MinWidth="80">
+                        <DataGridTemplateColumn Width="Auto" MinWidth="50">
                             <DataGridTemplateColumn.Header>
                                 <TextBlock Text="{DynamicResource ServerMonitor_PlayersColumnLabel}" />
                             </DataGridTemplateColumn.Header>
