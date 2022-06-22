@@ -52,11 +52,8 @@ namespace ArkData
 
                 for (var i = 0; i < Players.Count; i++)
                 {
-                    var online_player = online.SingleOrDefault(p => p.Name == Players[i].PlayerName);
-                    if (online_player != null)
-                        Players[i].Online = true;
-                    else
-                        Players[i].Online = false;
+                    var online_player = online.FirstOrDefault(p => p.Name == Players[i].PlayerName);
+                    Players[i].Online = online_player != null;
                 }
             }
             catch (SSQLServerException)
@@ -74,13 +71,13 @@ namespace ArkData
             {
                 var player = Players[i];
                 player.OwnedTribes = Tribes.Where(t => t.OwnerId == player.CharacterId).ToList();
-                player.Tribe = Tribes.SingleOrDefault(t => t.Id == player.TribeId);
+                player.Tribe = Tribes.FirstOrDefault(t => t.Id == player.TribeId);
             }
 
             for (var i = 0; i < Tribes.Count; i++)
             {
                 var tribe = Tribes[i];
-                tribe.Owner = Players.SingleOrDefault(p => p.CharacterId == tribe.OwnerId);
+                tribe.Owner = Players.FirstOrDefault(p => p.CharacterId == tribe.OwnerId);
                 tribe.Players = Players.Where(p => p.TribeId == tribe.Id).ToList();
             }
         }
@@ -95,16 +92,21 @@ namespace ArkData
 
             for (var i = 0; i < profiles.Count; i++)
             {
-                var player = Players.Single(p => p.PlayerId == profiles[i].steamid);
-                player.PlayerName = profiles[i].personaname;
-                player.LastPlatformUpdateUtc = lastSteamUpdateUtc;
+                var player = Players.FirstOrDefault(p => p.PlayerId == profiles[i].steamid);
+                if (player != null)
+                {
+                    player.PlayerName = profiles[i].personaname;
+                    player.LastPlatformUpdateUtc = lastSteamUpdateUtc;
+                }
             }
 
             for (var i = 0; i < playerSteamIds.Length; i++)
             {
-                var player = Players.SingleOrDefault(p => p.PlayerId == playerSteamIds[i]);
+                var player = Players.FirstOrDefault(p => p.PlayerId == playerSteamIds[i]);
                 if (player != null && player.LastPlatformUpdateUtc == DateTime.MinValue)
+                {
                     player.NoUpdateCount = Math.Min(MAX_INVALID_COUNT, player.NoUpdateCount + 1);
+                }
             }
         }
     }

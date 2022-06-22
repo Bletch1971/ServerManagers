@@ -40,13 +40,17 @@ namespace ArkData
             if (playerFiles != null)
             {
                 foreach (var file in playerFiles)
+                {
                     container.Players.Add(await Parser.ParsePlayerAsync(file));
+                }
             }
 
             if (tribeFiles != null)
             {
                 foreach (var file in tribeFiles)
+                {
                     container.Tribes.Add(await Parser.ParseTribeAsync(file));
+                }
             }
 
             container.LinkPlayerTribe();
@@ -85,12 +89,16 @@ namespace ArkData
 
                     var response = await client.GetAsync(string.Format("ISteamUser/GetPlayerSummaries/v0002/?key={0}&steamids={1}", apiKey, builder));
                     if (response.IsSuccessStatusCode)
+                    {
                         using (var reader = new StreamReader(await response.Content.ReadAsStreamAsync()))
                         {
                             LinkSteamProfiles(await reader.ReadToEndAsync(), lastSteamUpdateUtc, playerSteamIds);
                         }
+                    }
                     else
+                    {
                         throw new System.Net.WebException("The Steam API request was unsuccessful. Are you using a valid key?");
+                    }
                 }
 
                 startIndex += steamIdsCount;
@@ -109,12 +117,16 @@ namespace ArkData
         public Task LoadOnlinePlayersAsync(string ipString, int port)
         {
             if (SteamLoaded)
+            {
                 return Task.Run(() =>
                 {
                     LinkOnlinePlayers(ipString, port);
                 });
+            }
             else
+            {
                 throw new System.Exception("The Steam user data should be loaded before the server status can be checked.");
+            }
         }
     }
 }
