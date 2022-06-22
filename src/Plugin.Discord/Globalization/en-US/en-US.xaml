@@ -8,6 +8,7 @@
     <sys:String x:Key="AlertType_Backup">Backup</sys:String>
     <sys:String x:Key="AlertType_Error">Error</sys:String>
     <sys:String x:Key="AlertType_ModUpdateDetected">Mod Update Detected</sys:String>
+    <sys:String x:Key="AlertType_OnlinePlayerCountChanged">Online Player Count Change</sys:String>
     <sys:String x:Key="AlertType_Shutdown">Shutdown</sys:String>
     <sys:String x:Key="AlertType_ShutdownMessage">Shutdown Message</sys:String>
     <sys:String x:Key="AlertType_ShutdownReason">Shutdown Reason</sys:String>

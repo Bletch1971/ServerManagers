@@ -8,7 +8,6 @@
              xmlns:globcntrls="clr-namespace:WPFSharp.Globalizer.Controls;assembly=WPFSharp.Globalizer"
              mc:Ignorable="d" 
              d:DesignWidth="800"
-             FocusManager.FocusedElement="{Binding ElementName=DataPathTextBox}"
              x:Name="GlobalSettings">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -77,7 +76,7 @@
                 <ComboBox Name="WindowStateServerMonitorComboBox" Grid.Row="4" Grid.Column="1" Margin="1,2,1,2" ItemsSource="{Binding ElementName=GlobalSettings, Path=WindowStatesServerMonitor}" SelectedValue="{Binding Config.ServerMonitorWindow_WindowState}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
 
                 <Label    Grid.Row="5" Grid.Column="0" Margin="1" Content="{DynamicResource GlobalSettings_DataDirectoryLabel}" VerticalAlignment="Center"/>
-                <TextBox  x:Name="DataPathTextBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.DataDir, Mode=TwoWay}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" />
+                <TextBox  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.DataDir, Mode=TwoWay}" IsReadOnly="True" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" />
                 <Button   Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,1,0,1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{DynamicResource DataDirectoryButtonContent}" Click="SetDataDir_Click" Visibility="Hidden" />
                 <Button   Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,1,0,1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{DynamicResource DataDirectoryResetButtonContent}" Click="ResetDataDir_Click" />
 
@@ -571,6 +570,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" MinWidth="100"/>
@@ -613,9 +613,12 @@
                         
                         <Label Grid.Row="11" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ModUpdateDetectedLabel}" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ModUpdateDetected}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ModUpdateDetectedTooltip}"/>
-                        
-                        <Label Grid.Row="12" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosLabel}" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ForceRespawnDinos}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosTooltip}"/>
+
+                        <Label Grid.Row="12" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_OnlinePlayerCountChangeLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_OnlinePlayerCountChange}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip}"/>
+
+                        <Label Grid.Row="13" Grid.Column="0" Content="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="13" Grid.Column="1" Grid.ColumnSpan="2" Margin="1" Text="{Binding Config.Alert_ForceRespawnDinos}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_Alerts_ForceRespawnDinosTooltip}"/>
                     </Grid>
                 </GroupBox>
 

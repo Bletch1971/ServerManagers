@@ -893,5 +893,8 @@
     <Setting Name="DiscordUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://discord.gg/cJdHJSG</Value>
     </Setting>
+    <Setting Name="Alert_OnlinePlayerCountChange" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Online Player Count:</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

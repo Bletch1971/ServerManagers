@@ -11,5 +11,6 @@
         UpdateResults,
         ServerStatusChange,
         ModUpdateDetected,
+        OnlinePlayerCountChanged,
     }
 }

@@ -333,6 +333,10 @@ namespace ServerManagerTool.Lib
                         break;
                 }
 
+                if (this.Players != update.OnlinePlayerCount)
+                {
+                    PluginHelper.Instance.ProcessAlert(AlertType.OnlinePlayerCountChanged, this.ProfileSnapshot.ProfileName, $"{Config.Default.Alert_OnlinePlayerCountChange} {update.OnlinePlayerCount}");
+                }
                 this.Players = update.OnlinePlayerCount;
                 this.MaxPlayers = update.ServerInfo?.MaxPlayers ?? this.ProfileSnapshot.MaxPlayerCount;
 
