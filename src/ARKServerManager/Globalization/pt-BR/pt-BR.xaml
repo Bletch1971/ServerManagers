@@ -452,6 +452,7 @@
     <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selecionar</sys:String>
     <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Perfil</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Servidor</sys:String>
+    <sys:String x:Key="ServerMonitor_PortsColumnLabel">Portas</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Mapa</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">Versão</sys:String>
@@ -854,6 +855,7 @@
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Abra Plugins</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">Abra a Ajuda</sys:String>
 	<sys:String x:Key="MainWindow_OpenServerMonitorTooltip">Abrir Monitor de servidor</sys:String>
+    <sys:String x:Key="MainWindow_JoinDiscordTooltip">Junte-se ao Discord</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">Atualize para {0} agora!</sys:String>
     <sys:String x:Key="MainWindow_TaskStatusLabel">Status da Tarefa</sys:String>
     <sys:String x:Key="MainWindow_TaskAdminErrorTitle">Requer permissões de administração</sys:String>
@@ -967,13 +969,18 @@
     <sys:String x:Key="ServerSettings_LastStartedLabel">Última hora de início:</sys:String>
 	<sys:String x:Key="ServerSettings_AvailabilityLabel">Disponibilidade:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">O status do servidor Ark no Steam.</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unknown">Desconhecido</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_SetPublicIP">Definir IP público</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unavailable">Indisponível</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Waiting">Esperando pela publicação</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Available">Acessível</sys:String>
     <sys:String x:Key="ServerSettings_PlayersLabel">Jogadores:</sys:String>
     <sys:String x:Key="ServerSettings_PlayersTooltip">O número atual de jogadores conectados ao servidor Ark.</sys:String>
+	
+    <sys:String x:Key="ServerSettings_Availability_Unknown">Desconhecido</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Unavailable">Indisponível</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_UnavailableTootip">Servidor não acessível</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnly">Somente em LAN</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnlyTootip">Servidor acessível apenas através de IP local. Port Forwarding, Firewall ou CGNAT etc. estão impedindo o acesso público.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnly">Disponíveis - Sem Loopback</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnlyTootip">Servidor acessível via IP Local e IP Público, loopback não disponível. O servidor é público mas o IP Público não está acessível via LAN.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Available">Acessível</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_AvailableTootip">Servidor acessível via IP Local e IP Público</sys:String>
 
     <sys:String x:Key="ServerSettings_RuntimeStatusInitializingLabel">Inicializando</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusRunningLabel">Online</sys:String>
@@ -993,6 +1000,8 @@
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
+    <sys:String x:Key="ServerSettings_SettingFindButtonLabel">Localizar</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonTooltip">Procurar configuração</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Criar Zip de Suporte</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Crie um arquivo zip que contenha todos os arquivos necessários para uso da equipe de suporte do ASM, para diagnosticar um problema.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sincronizar</sys:String>
@@ -1549,8 +1558,20 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Especifica o multiplicador para as recompensas dos Hexagons.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Multiplicador de custo Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Especifica o multiplicador para o custo Hexagons dos itens.</sys:String>
+
+    <sys:String x:Key="ServerSettings_RagnarokLabel">Ativar configurações Ragnarok</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsLabel">Permitir múltiplos Unicórnios domesticados</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsTooltip">Se ativado, permitirá um vários Unicórnios domesticados no mapa. Caso contrário, apenas um unicórnio de cada vez no mapa.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalLabel">Intervaldo de Spawn Unicórnio</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalTooltip">Quanto tempo deve esperar antes de novo spawn de Unicórnio se o selvagem for morto (ou domesticado, se AllowMultipleTamedUnicorns estiver habilitado). Este valor define o tempo mínimo (em horas), e o máximo é igual a 2x este valor.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoLabel">Habilitar Vulcão</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoTooltip">Se ativado, permitirá que o vulcão se torne ativo.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalLabel">Intervalo Vulcânico</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalTooltip">0 = 5000 (min) - 15000 (max) segundos para intensa erupção vulcânica se tornar ativo. Qualquer número acima de 0 atua como um multiplicador.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityLabel">Intensidade do vulcão</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityTooltip">Quanto mais baixo for o valor, mais intensa será a erupção do vulcânica. Recomendado deixar 1,0, o valor mínimo é 0,25, e para jogos multiplayer, não deve ir abaixo de 0,5. Números muito altos irão basicamente desativar as rochas em chamas atiradas para fora do vulcão.</sys:String>
 	
-    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_FjordurLabel">Ativar configurações Fjordur</sys:String>
     <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Ativar Teleporte do Bioma Fjordur</sys:String>
     <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">Se ativado, permitirá o teleporte para bioma do mapa Fjordur.</sys:String>
 	

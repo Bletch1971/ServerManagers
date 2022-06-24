@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">22.05.2022 от Varlonec, Эдван</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">23.06.2022 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -25,6 +25,7 @@
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
+    <sys:String x:Key="Map_Fjordur">Fjordur</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -58,6 +59,7 @@
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
+    <sys:String x:Key="Mod_Fjordur">Fjordur</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -105,6 +107,12 @@
     <sys:String x:Key="DiscordBotLogLevel_Info">Информация</sys:String>
     <sys:String x:Key="DiscordBotLogLevel_Verbose">Многословный</sys:String>
     <sys:String x:Key="DiscordBotLogLevel_Debug">Отладка</sys:String>
+    <!--#endregion-->
+
+    <!--#region Rcon Message Modes -->
+    <sys:String x:Key="InputMode_Command">Команда</sys:String>
+    <sys:String x:Key="InputMode_Global">Сообщение чата</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Глобальное оповещение</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -562,7 +570,7 @@
     <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Если включено, выход SteamCMD будет отображаться в окне выполнения, а не в окне команд. ПРИМЕЧАНИЕ: Если этот параметр включен, это может привести к сбою обновления вашего сервера и мод.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Анонимная учетная запись</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Используется анонимная учетная запись для загрузки из SteamCMD.</sys:String>
-    
+
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Пользовательские настройки</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Вкл пользовательские настройки Engine.ini</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Если включено, то настройки engine.ini будут менеджерами сервера.</sys:String>
@@ -587,13 +595,13 @@
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">Количество XP будет увеличено при добавлении нового настраиваемого уровня.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Увеличение уровня динозавров:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">Количество XP, которое должно быть увеличено при добавлении нового настраиваемого уровня.</sys:String>
-    
+
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Настройки активных иконок статуса сервера</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Вкл активную иконку</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">Если включено, при нажатии на иконку активности сервера, можно вызвать функцию включения или выключения.</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Показать подтверждения действий</sys:String>
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">Если включено, будет показан диалог подтверждения действия статуса сервера.</sys:String>
-    
+
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Настройки активных иконок статуса сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Проверить профиль при старте сервера</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Если включено, при ручном запуске сервера выполняется базовая проверка сервера и файлов модов. ПРИМЕЧАНИЕ: Не будет выполнено, если включено авто-управление Ark Mod Management (автоматическое управление модами).</sys:String>
@@ -846,6 +854,7 @@
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Открыть плагины</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">Открыть Помощь</sys:String>
     <sys:String x:Key="MainWindow_OpenServerMonitorTooltip">Открыть Сервер Монитор</sys:String>
+    <sys:String x:Key="MainWindow_JoinDiscordTooltip">Присоединяйтесь к серверу Discord</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">Обновить до {0} сейчас!</sys:String>
     <sys:String x:Key="MainWindow_TaskStatusLabel">Статус задач</sys:String>
     <sys:String x:Key="MainWindow_TaskAdminErrorTitle">Требуется разрешение администратора</sys:String>
@@ -985,6 +994,8 @@
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
+    <sys:String x:Key="ServerSettings_SettingFindButtonLabel">Поиск</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonTooltip">Поиск настроек</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Создать Zip файл в поддержку</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Создать zip-файл, содержащий все файлы, необходимые для использования службой поддержки ASM для диагностики проблемы.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Синхронизация</sys:String>
@@ -994,9 +1005,9 @@
     <sys:String x:Key="ServerSettings_SaveButtonLabel">Сохранить</sys:String>
     <sys:String x:Key="ServerSettings_SaveButtonTooltip">Сохраняет текущий профиль и записывает его в .INI-файлы сервера.</sys:String>
     <sys:String x:Key="ServerSettings_StopButtonLabel">Стоп</sys:String>
-    <sys:String x:Key="ServerSettings_StopButtonTooltip">Остановить ARK сервер.</sys:String>
+    <sys:String x:Key="ServerSettings_StopButtonTooltip">Остановить сервер.</sys:String>
     <sys:String x:Key="ServerSettings_StartButtonLabel">Старт</sys:String>
-    <sys:String x:Key="ServerSettings_StartButtonTooltip">Запустить ARK сервер.</sys:String>
+    <sys:String x:Key="ServerSettings_StartButtonTooltip">Запустить сервер.</sys:String>
     <sys:String x:Key="ServerSettings_RCONButtonLabel">RCON</sys:String>
     <sys:String x:Key="ServerSettings_RCONButtonTooltip">Открыть окно RCON.</sys:String>
     <sys:String x:Key="ServerSettings_PlayerListButtonLabel">Игроки</sys:String>
@@ -1031,6 +1042,10 @@
     <sys:String x:Key="ServerSettings_BackupServer_Title">Авто-Бекап Сервера</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Ошибка Авто-Бекап Сервера</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">Резервное копирование прошло успешно.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">Сброс сервера</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">Ошибка сброса сервера</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">Это приведет к удалению всех файлов сервера, игроков, племени и сбросу вашего сервера обратно на новый. Вы хотите продолжить?</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">Сброс прошел успешно.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Ошибка Выключения Сервера</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Выключение Сервера отменено</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">Окно Выключения уже открыто для этого сервера.</sys:String>
@@ -1120,6 +1135,8 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">Разделить запятыми список ID модификаций, в том порядке, в котором они должны применяться (например 123456789,987654321,159753258).</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">Посмотреть все моды детально.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Обновить и установить все моды до последней версии.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonLabel">Сброс</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">Удаляет все файлы сервера, игрока, племени и сбрасывает ваш сервер обратно на новый.</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">Сохранение</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Период Авто-Сохранения:</sys:String>
@@ -1535,6 +1552,10 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Задает множитель для наград в виде шестигранников.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Множитель цены в магазине за шестигранники</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Позволяет изменять стоимость предметов в магазине шестигранников</sys:String>
+
+    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Включить Телепортацию биомов Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">Если включено, позволит телепортировать биом на карте Fjordur.</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">ПРЕДУПРЕЖДЕНИЕ: это навсегда изменит статистику любых существующих элементов, поэтому обязательно сделайте резервную копию вашего текущего сохранения, прежде чем изменять и играть с ограничивающими значениями.</sys:String>
@@ -2653,10 +2674,6 @@
     <sys:String x:Key="RCON_ClearLogs_Label">Логи в {0} удалены.</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Не удается открыть журналы</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Не удалось открыть каталог журналов в {0}. Убедитесь, что этот каталог существует и у вас есть разрешение на его открытие.\nException: {1}</sys:String>
-
-    <sys:String x:Key="InputMode_Command">Команда</sys:String>
-    <sys:String x:Key="InputMode_Global">Сообщение чата</sys:String>
-    <sys:String x:Key="InputMode_Broadcast">Глобальное оповещение</sys:String>
 
     <sys:String x:Key="ConsoleStatus_Disconnected">Разъединено</sys:String>
     <sys:String x:Key="ConsoleStatus_Connected">Соединено</sys:String>
@@ -5803,6 +5820,14 @@
 
     <sys:String x:Key="DiscordBot_CountLabel">Итог:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Карта:</sys:String>
+    <!--#endregion-->
+    
+    <!--#region Find Setting Window -->
+    <sys:String x:Key="FindSettingWindow_Title">Найти настройки</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_NotFoundErrorLabel">Настройка не была найдена: {0}</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_FindButtonLabel">Найти</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

@@ -1403,7 +1403,7 @@
                                             <cctl:CheckBoxAndTextBlock Grid.Row="0" Margin="5,5,5,0" Text="{DynamicResource ServerSettings_AutoStartLabel}" IsChecked="{Binding EnableAutoStart, Mode=TwoWay}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_AutoStartTooltip}" HorizontalAlignment="Left"/>
 
                                             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" >
-                                                <cctl:CheckBoxAndTextBlock Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1, Mode=TwoWay}" Content="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                                <cctl:CheckBoxAndTextBlock Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
                                                 <TextBox Margin="10,0,0,0" Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown1}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
                                                     <Validation.ErrorTemplate>
                                                         <ControlTemplate>
@@ -5363,7 +5363,7 @@
                                                 </DataGridTemplateColumn.Header>
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <ComboBox IsReadOnly="True" IsEditable="True" ItemsSource="{Binding Source={StaticResource NPCSpawnContainerTypes}}" Text="{Binding ContainerType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+                                                        <ComboBox IsEditable="True" ItemsSource="{Binding Source={StaticResource NPCSpawnContainerTypes}}" Text="{Binding ContainerType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
