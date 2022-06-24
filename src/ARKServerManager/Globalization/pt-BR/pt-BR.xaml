@@ -713,6 +713,8 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Esta mensagem será exibida quando o status do servidor for alterado.</sys:String>
 	<sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Atualização de mods detectada:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Esta mensagem será exibida quando o gerenciador do servidor detectar que um ou mais mods estão desatualizados.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">Alteração na contagem de jogadores online:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">Esta mensagem será exibida quando a contagem de jogadores online mudar.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Força Respawn de Dinos:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Esta mensagem será exibida quando o servidor estiver sendo iniciado e um wipe do dino selvagem estiver programado.</sys:String>	
 
@@ -5765,9 +5767,18 @@
     <sys:String x:Key="DiscordBot_StartRequested">Uma solicitação de iníciar para o servidor '{0}' foi enviada.</sys:String>
     <sys:String x:Key="DiscordBot_StopRequested">Uma solicitação de parar o servidor '{0}' foi enviada.</sys:String>
     <sys:String x:Key="DiscordBot_UpdateRequested">Uma solicitação de atualização para o servidor '{0}' foi enviada.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandComplete">A solicitação para o servidor '{0}' foi concluída.</sys:String>
 
     <sys:String x:Key="DiscordBot_CountLabel">Quantidade:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Mapa:</sys:String>
+    <!--#endregion-->
+    
+    <!--#region Find Setting Window -->
+    <sys:String x:Key="FindSettingWindow_Title">Encontrar configurações</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_NotFoundErrorLabel">A configuração não foi encontrada: {0}</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_FindButtonLabel">Buscar</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>

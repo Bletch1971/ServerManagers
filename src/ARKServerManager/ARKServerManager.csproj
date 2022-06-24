@@ -193,6 +193,7 @@
     <Compile Include="Interface\ISpawnIniValuesCollection.cs" />
     <Compile Include="Lib\Events\ProfileEventArgs.cs" />
     <Compile Include="Lib\Model\EngramAutoUnlock.cs" />
+    <Compile Include="Lib\Model\FindSettingItem.cs" />
     <Compile Include="Lib\Model\PreventTransferOverride.cs" />
     <Compile Include="Lib\Model\StackSizeOverride.cs" />
     <Compile Include="Lib\Model\StatsMultiplierIntegerArray.cs" />

@@ -8,6 +8,7 @@ using ServerManagerTool.Common.Serialization;
 using ServerManagerTool.Common.Utils;
 using ServerManagerTool.Enums;
 using ServerManagerTool.Lib;
+using ServerManagerTool.Lib.Model;
 using ServerManagerTool.Lib.ViewModel;
 using ServerManagerTool.Plugin.Common;
 using ServerManagerTool.Utils;
@@ -36,7 +37,7 @@ namespace ServerManagerTool
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private CancellationTokenSource _upgradeCancellationSource = null;
         private FindSettingWindow _findSettingWindow = null;
-        private Control _lastFoundControl = null;
+        private FindSettingItem _lastFoundSetting = null;
 
         // Using a DependencyProperty as the backing store for ServerManager.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty BaseDinoModListProperty = DependencyProperty.Register(nameof(BaseDinoModList), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
@@ -4380,7 +4381,13 @@ namespace ServerManagerTool
                     parent.IsExpanded = true;
                 }
 
-                control.Background = Brushes.AliceBlue;
+                var item = new FindSettingItem()
+                {
+                    FoundControl = control,
+                    BackgroundBrush = control.Background,
+                };
+
+                control.Background = (Brush)FindResource("FoundSetting");
                 control.BringIntoView();
 
                 if (control is AnnotatedSlider)
@@ -4408,7 +4415,7 @@ namespace ServerManagerTool
                     focused = control.Focus();
                 }
 
-                _lastFoundControl = control;
+                _lastFoundSetting = item;
             });
 
             return true;
@@ -4416,11 +4423,11 @@ namespace ServerManagerTool
 
         public void UnselectControl()
         {
-            if (_lastFoundControl is null)
+            if (_lastFoundSetting is null)
                 return;
 
-            _lastFoundControl.Background = null;
-            _lastFoundControl = null;
+            _lastFoundSetting.FoundControl.Background = _lastFoundSetting.BackgroundBrush;
+            _lastFoundSetting = null;
         }
 
         private async Task<bool> UpdateServer(bool establishLock, bool updateServer, bool updateMods, bool closeProgressWindow)

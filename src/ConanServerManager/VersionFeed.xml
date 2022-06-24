@@ -9,10 +9,10 @@
 
   <entry>
     <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
-    <title>1.1.77 (1.1.77.2)</title>
-    <summary>1.1.77.2</summary>
+    <title>1.1.77 (1.1.77.3)</title>
+    <summary>1.1.77.3</summary>
     <link href="" />
-    <updated>2022-06-22T00:00:00Z</updated>
+    <updated>2022-06-24T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+            <li>Main Window - changed the control coloring (now blue) that are NOT included in the profile sync.</li>
             <li>Server Monitor - Added a Ports column that shows the main server ports.</li>
             <li>3rd Party Libraries - updated all library to latest versions.</li>
           </ul>

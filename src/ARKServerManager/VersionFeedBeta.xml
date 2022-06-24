@@ -9,6 +9,30 @@
 
   <entry>
     <id>urn:uuid:F3965FC7-685F-47DF-9E5B-3BA4D928127F</id>
+    <title>1.1.434 (1.1.434.5)</title>
+    <summary>1.1.434.5</summary>
+    <link href="" />
+    <updated>2022-06-24T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - changed the control coloring (now blue) that are NOT included in the profile sync.</li>
+            <li>pt-BR Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F3965FC7-685F-47DF-9E5B-3BA4D928127F</id>
     <title>1.1.434 (1.1.434.4)</title>
     <summary>1.1.434.4</summary>
     <link href="" />

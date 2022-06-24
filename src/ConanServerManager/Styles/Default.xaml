@@ -31,7 +31,7 @@
     <SolidColorBrush x:Key="DarkBorder" Color="#FF10274F"/>
     <SolidColorBrush x:Key="HeaderBrush" Color="#FFF0F0F0"/>
     <SolidColorBrush x:Key="SolidBackground" Color="White" />
-    <SolidColorBrush x:Key="UnSyncedSetting" Color="OrangeRed"/>
+    <SolidColorBrush x:Key="UnSyncedSetting" Color="RoyalBlue"/>
 
     <SolidColorBrush x:Key="TabItem.Selected.Background" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="TabItem.Selected.Border" Color="#ACACAC"/>
