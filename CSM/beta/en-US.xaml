@@ -870,8 +870,8 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">This message will be displayed when the status of the server changes.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mod Update Detected:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Creatures Warning:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild creature wipe is scheduled.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">Online Player Count Change:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">This message will be displayed when the online player count changes.</sys:String>
 
     <sys:String x:Key="GlobalSettings_DiscordBotLabel">Enable Discord Bot</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">You will need to restart the server manager if you change any settings for the Discord Bot.</sys:String>
