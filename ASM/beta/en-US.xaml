@@ -713,6 +713,8 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">This message will be displayed when the status of the server changes.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mod Update Detected:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">Online Player Count Change:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">This message will be displayed when the online player count changes.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Force Respawn Dinos Warning:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">This message will be displayed when the server is being started and a wild dino wipe is scheduled.</sys:String>
 
