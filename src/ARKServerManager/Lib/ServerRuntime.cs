@@ -333,12 +333,14 @@ namespace ServerManagerTool.Lib
                         break;
                 }
 
-                if (this.Players != update.OnlinePlayerCount)
-                {
-                    PluginHelper.Instance.ProcessAlert(AlertType.OnlinePlayerCountChanged, this.ProfileSnapshot.ProfileName, $"{Config.Default.Alert_OnlinePlayerCountChange} {update.OnlinePlayerCount}");
-                }
+                var previousOnlinePlayerCount = this.Players;
                 this.Players = update.OnlinePlayerCount;
                 this.MaxPlayers = update.ServerInfo?.MaxPlayers ?? this.ProfileSnapshot.MaxPlayerCount;
+
+                if (previousOnlinePlayerCount != this.Players)
+                {
+                    PluginHelper.Instance.ProcessAlert(AlertType.OnlinePlayerCountChanged, this.ProfileSnapshot.ProfileName, $"{Config.Default.Alert_OnlinePlayerCountChange} {this.Players} / {this.MaxPlayers}");
+                }
 
                 if (update.ServerInfo != null)
                 {
