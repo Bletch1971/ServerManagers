@@ -5,7 +5,43 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-06-21T00:00:00Z</updated>
+  <updated>2022-06-24T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:FF41F7AB-66B0-4504-9F2C-2E1325DB50E2</id>
+    <title>1.1.434 (1.1.434.5)</title>
+    <summary>1.1.434.5</summary>
+    <link href="" />
+    <updated>2022-06-24T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Shutdown Option 1 - fixed the missing checkbox.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+            <li>Main Window - changed the control coloring (now blue) that are NOT included in the profile sync.</li>
+            <li>Server Monitor - Added a Ports column that shows the main server ports.</li>
+            <li>Rules Section - Fjordur Settings - added checkbox to enable/disable settings.</li>
+            <li>Rules Section - Ragnarok Settings - added settings for Ragnarok, located at the bottom of the section.</li>
+            <li>3rd Party Libraries - updated all library to latest versions.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+            <li>zh-CN Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:1AE0925B-64EB-4177-B834-7A75FA46E807</id>
