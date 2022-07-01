@@ -448,6 +448,7 @@
 	<sys:String x:Key="ServerMonitor_SelectedColumnLabel">选择</sys:String>
     <sys:String x:Key="ServerMonitor_ProfileColumnLabel">配置名称</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">服务器名称</sys:String>
+	<sys:String x:Key="ServerMonitor_PortsColumnLabel">服务器、对等，查询端口</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">地图</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">MOD</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">版本</sys:String>
@@ -1536,6 +1537,18 @@
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">六角币消耗倍数</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">设置六角币消耗倍数.</sys:String>
 	
+	<sys:String x:Key="ServerSettings_RagnarokLabel">启用 仙境地图 设置</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsLabel">允许多个被驯服的独角兽</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsTooltip">如果启用，将允许在地图上有一个野生和无限的驯服独角兽。否则一次只能有一只独角兽在地图上。</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalLabel">独角兽产卵间隔</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalTooltip">如果野生的独角兽被杀死（或者被驯服，如果允许多个驯服的独角兽被启用），游戏应该等待多长时间才能产生新的独角兽。这个值设置了最小的时间（以小时为单位），最大的时间等于这个值的2倍。</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoLabel">启用火山口</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoTooltip">如果启用，将允许火山变得活跃。</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalLabel">火山间隔</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalTooltip">0=5000（最小）-15000（最大）秒的火山实例变得活跃。任何高于0的数字都作为一个乘数。</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityLabel">火山强度</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityTooltip">数值越低，火山爆发的强度就越大。建议留到1.0，最小值是0.25，对于多人游戏，不应该低于0.5。非常高的数字基本上会使火山中甩出的火焰石块失效。</sys:String>
+	
 	<sys:String x:Key="ServerSettings_FjordurLabel">维京岛Fjordur</sys:String>
     <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">启用维京生物群落的传送装置</sys:String>
     <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">如果启用，将允许在维京地图上进行生物群落传送。</sys:String>
@@ -2085,28 +2098,28 @@
     <sys:String x:Key="ServerSettings_ServerFilesSaveErrorTitle">保存错误</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesAdminLabel">服主、管理员</sys:String>
-    <sys:String x:Key="ServerSettings_AddAdminPlayerTooltip">添加管理员</sys:String>
-    <sys:String x:Key="ServerSettings_ClearAdminPlayerTooltip">清除管理员</sys:String>
+    <sys:String x:Key="ServerSettings_AddAdminPlayerTooltip">添加服主管理员</sys:String>
+    <sys:String x:Key="ServerSettings_ClearAdminPlayerTooltip">清除服主管理员</sys:String>
     <sys:String x:Key="ServerSettings_ReloadAdminPlayerTooltip">从文件重新加载</sys:String>
-    <sys:String x:Key="ServerSettings_RemoveAdminPlayerTooltip">删除管理员</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">玩家ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">玩家名称</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveAdminPlayerTooltip">删除服主管理员</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminIdColumnLabel">17位steam ID</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesAdminNameColumnLabel">服主名字</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesWhitelistLabel">白名单</sys:String>
     <sys:String x:Key="ServerSettings_AddWhitelistPlayerTooltip">添加白名单</sys:String>
     <sys:String x:Key="ServerSettings_ClearWhitelistPlayerTooltip">清除白名单</sys:String>
     <sys:String x:Key="ServerSettings_ReloadWhitelistPlayerTooltip">从文件重新加载</sys:String>
     <sys:String x:Key="ServerSettings_RemoveWhitelistPlayerTooltip">删除白名单</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">玩家ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">玩家名称</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistIdColumnLabel">17位steam ID</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistNameColumnLabel">玩家名字</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerFilesExclusiveLabel">专用连接</sys:String>
     <sys:String x:Key="ServerSettings_AddExclusivePlayerTooltip">添加专用</sys:String>
     <sys:String x:Key="ServerSettings_ClearExclusivePlayerTooltip">清除专用</sys:String>
     <sys:String x:Key="ServerSettings_ReloadExclusivePlayerTooltip">从文件重新加载</sys:String>
     <sys:String x:Key="ServerSettings_RemoveExclusivePlayerTooltip">删除专用</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">玩家ID</sys:String>
-    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">玩家名称</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveIdColumnLabel">17位steam ID</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesExclusiveNameColumnLabel">玩家名字</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinLabel">启用专用连接</sys:String>
     <sys:String x:Key="ServerSettings_EnableExclusiveJoinTooltip">如果启用，仅专用加入列表中的玩家将能够登录到服务器.</sys:String>
     <!--#endregion-->
