@@ -30,9 +30,20 @@ namespace ServerManagerTool.Lib
                 this.FirstOrDefault(r => r.IsEquivalent(item)).Multiplier = item.Multiplier;
             }
 
-            IsEnabled = (Count > 0);
+            IsEnabled = this.Any(d => d.ShouldSave());
 
             Sort(AggregateIniValue.SortKeySelector);
+        }
+        public override void Reset()
+        {
+            Clear();
+
+            if (this._resetFunc != null)
+                this.AddRange(this._resetFunc());
+
+            IsEnabled = this.Any(d => d.ShouldSave());
+
+            this.Sort(AggregateIniValue.SortKeySelector);
         }
 
         public override IEnumerable<string> ToIniValues()

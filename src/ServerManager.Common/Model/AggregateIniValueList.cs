@@ -48,11 +48,12 @@ namespace ServerManagerTool.Common.Model
             this.Sort(AggregateIniValue.SortKeySelector);
         }
 
-        public void Reset()
+        public virtual void Reset()
         {
             this.Clear();
             if (this._resetFunc != null)
                 this.AddRange(this._resetFunc());
+            IsEnabled = (Count > 0);
 
             this.Sort(AggregateIniValue.SortKeySelector);
         }
