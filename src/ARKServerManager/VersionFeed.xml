@@ -5,20 +5,22 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-07-01T00:00:00Z</updated>
+  <updated>2022-07-08T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:7E95E486-1977-42F0-9AD6-8DB89A81A877</id>
-    <title>1.1.435 (1.1.435.1)</title>
-    <summary>1.1.435.1</summary>
+    <title>1.1.435 (1.1.435.2)</title>
+    <summary>1.1.435.2</summary>
     <link href="" />
-    <updated>2022-07-01T00:00:00Z</updated>
+    <updated>2022-07-08T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>Added config settings to allow multiple CPUs to be read when setting the CPU Affinity.</li>
+            <li>fr-FR Translation file updated.</li>
             <li>zh-CN Translation file updated.</li>
           </ul>
         </p>

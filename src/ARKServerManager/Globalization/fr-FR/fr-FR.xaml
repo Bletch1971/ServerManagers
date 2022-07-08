@@ -25,6 +25,7 @@
     <sys:String x:Key="Map_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Map_Gen2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Map_LostIsland">Lost Island</sys:String>
+    <sys:String x:Key="Map_Fjordur">Fjordur</sys:String>
     <!--#endregion-->
 
     <!--#region Total Conversion Names -->
@@ -58,6 +59,7 @@
     <sys:String x:Key="Mod_CrystalIsles">Crystal Isles</sys:String>
     <sys:String x:Key="Mod_Genesis2">Genesis: Part 2</sys:String>
     <sys:String x:Key="Mod_LostIsland">Lost Island</sys:String>
+    <sys:String x:Key="Mod_Fjordur">Fjordur</sys:String>
     <sys:String x:Key="Mod_PGM">PGM</sys:String>
     <!--#endregion-->
 
@@ -73,7 +75,7 @@
     <!--#region Process Priority -->
     <sys:String x:Key="Priority_low">Basse</sys:String>
     <sys:String x:Key="Priority_belownormal">Inférieur à la normale</sys:String>
-    <sys:String x:Key="Priority_normal">Normal</sys:String>
+    <sys:String x:Key="Priority_normal">Normale</sys:String>
     <sys:String x:Key="Priority_abovenormal">Supérieur à la normale</sys:String>
     <sys:String x:Key="Priority_high">Haute</sys:String>
     <!--#endregion-->
@@ -83,8 +85,17 @@
     <sys:String x:Key="ProcessorAffinity_All">Tout</sys:String>
     <!--#endregion-->
 
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_Idle">Inactive</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">En dessous de la normale</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Normale</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Au dessus de la normale</sys:String>
+    <sys:String x:Key="TaskPriority_High">Haute</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">Temps réel</sys:String>
+    <!--#endregion-->
+
     <!--#region Processor Window States -->
-    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Normal">Normale</sys:String>
     <sys:String x:Key="WindowState_Minimized">Minimisé</sys:String>
     <sys:String x:Key="WindowState_Maximized">Maximisé</sys:String>
     <!--#endregion-->
@@ -96,6 +107,12 @@
     <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
     <sys:String x:Key="DiscordBotLogLevel_Verbose">Verbeux</sys:String>
     <sys:String x:Key="DiscordBotLogLevel_Debug">Déboguer</sys:String>
+    <!--#endregion-->
+
+    <!--#region Rcon Message Modes -->
+    <sys:String x:Key="InputMode_Command">Commande</sys:String>
+    <sys:String x:Key="InputMode_Global">Globale</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Diffuser</sys:String>
     <!--#endregion-->
 
     <!--#region Application -->
@@ -431,26 +448,63 @@
     <!--#region Server Monitor Window -->
     <sys:String x:Key="ServerMonitor_Title">Server Monitor</sys:String>
 
-    <sys:String x:Key="ServerMonitor_TotalCountLabel">Total Servers:</sys:String>
-    <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
-    <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
+    <sys:String x:Key="ServerMonitor_TotalCountLabel">Totalité des serveurs:</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Choisir</sys:String>
+    <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Profile</sys:String>
+    <sys:String x:Key="ServerMonitor_ServerColumnLabel">Serveur</sys:String>
+    <sys:String x:Key="ServerMonitor_PortsColumnLabel">Ports</sys:String>
+    <sys:String x:Key="ServerMonitor_MapColumnLabel">Carte</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">Version</sys:String>
-    <sys:String x:Key="ServerMonitor_PlayersColumnLabel">Players</sys:String>
-    <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
+    <sys:String x:Key="ServerMonitor_PlayersColumnLabel">Joueurs</sys:String>
+    <sys:String x:Key="ServerMonitor_StatusColumnLabel">Statut</sys:String>
 
-    <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
-    <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
-    <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
-    <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
-    <sys:String x:Key="ServerMonitor_StopServerTooltip">Stop the server.</sys:String>
-    <sys:String x:Key="ServerMonitor_InstallServerTooltip">Install the server.</sys:String>
-    <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Update/Verify the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Créez un raccourci de bureau pour ouvrir ce formulaire directement.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">Sélectionnez tous les serveurs.</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">Désélectionner tous les serveurs.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Démarrer les serveurs sélectionnés.</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">Arrêter les serveurs sélectionnés</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">Arrêter les serveurs sélectionnés</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Redémarrer les serveurs sélectionnés.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">Mettre à jour / vérifier les serveurs sélectionnés</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">Mettre à jour les mods uniquement sur les serveurs sélectionnés</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Sauvegarder les serveurs sélectionnés.</sys:String>
+    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">Annuler le traitement des serveurs sélectionnés.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">Traiter les serveurs séquentiellement</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">S'ils sont activés, les serveurs seront traités l'un après l'autre; Sinon, ils seront tous traités en même temps.</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">Retard du processus séquentiel</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">Nombre de secondes à attendre avant que le prochain serveur ne soit traité.</sys:String>
 
-    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Server Update Error</sys:String>
-    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Another server is being upgraded, wait until the upgrade has finished and try again.</sys:String>
-    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Confirm Window Close</sys:String>
-    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">You are currently perform a server update, closing the window with disconnect you from steamcmd. Do you want to continue closing the window?</sys:String>
+    <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Ouvrir la fenêtre "Liste des joueurs".</sys:String>
+    <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Ouvrir la fenêtre "RCON".</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServerTooltip">Démarrer le serveur.</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServerTooltip">Arrêter le serveur.</sys:String>
+    <sys:String x:Key="ServerMonitor_InstallServerTooltip">Installer le serveur.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Mettre à jour / vérifier le serveur.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">Le processus a été annulé par l'utilisateur. Vous devrez vérifier l'état de vos serveurs.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">Une demande d'annulation de processus a été envoyée.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Erreur de mise à jour du serveur</sys:String>
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Un autre serveur est mis à niveau, attendez que la mise à niveau soit terminée et réessayez.</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Confirmer la fermeturede la fenêtre</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">Vous effectuez actuellement une mise à jour du serveur, la fermeture de la fenêtre vous déconnectera de SteamCMD. Voulez-vous continuer à fermer la fenêtre?</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmTitle">Confirmer l'arrêt des serveurs</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmLabel">Vous êtes sur le point d'arrêter les serveurs sélectionnés. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmTitle">Confirmer le démarrage des serveurs</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmLabel">Vous êtes sur le point de démarrer les serveurs sélectionnés. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmTitle">Confirmer l'arrêt des serveurs</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmLabel">Vous êtes sur le point d'arrêter les serveurs sélectionnés. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmTitle">Confirmer le redémarrage des serveurs</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmLabel">Vous êtes sur le point de redémarrer les serveurs sélectionnés. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmTitle">Confirmer mise à jour des serveurs de mise à jour</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmLabel">Vous êtes sur le point de mettre à jour les serveurs sélectionnés. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmTitle">Confirmer sauvegarde des serveurs</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmLabel">Vous êtes sur le point de sauvegarder les serveurs sélectionnés. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">Erreur des serveurs sélectionnés</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorLabel">Vous n'avez sélectionné aucun serveur. Sélectionné un ou plusieurs serveurs dans la liste et réessayer.</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmTitle">Fermer l’erreur du moniteur du serveur</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmLabel">La fenêtre du moniteur du serveur ne peut pas être fermée pour le moment. Un ou plusieurs des serveurs commencent actuellement, a fermer ou a redémarrer.</sys:String>
     <!--#endregion-->
 
     <!--#region Shutdown Window -->
@@ -505,6 +559,19 @@
 
     <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Langue</sys:String>
 
+    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Paramètres Steam</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Arrêtez la fermeture de SteamCMD (utilisation pour le débogage uniquement)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">Si elle est activée, la fenêtre SteamCMD ne sera pas fermée une fois terminée. Vous devrez le fermer manuellement ou saisir cesser. Remarque: n'affecte pas la mise à jour automatique.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Nom d'utilisateur:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">Le nom d'utilisateur associé au compte Steam.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Mot de passe:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">Le mot de passe associé au compte Steam.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authentifier...</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Sortie de la fenêtre de progression de SteamCMD</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Si elle est activée, la sortie SteamCMD sera affichée dans la fenêtre de progression au lieu de la fenêtre de commande. Remarque: s'il est activé, cela pourrait entraîner l'échec de vos mises à jour de votre serveur et des mods.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Utilisez des informations d'identification anonymes avec SteamCMD</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Contrôle si l'utilisateur anonyme est utilisé pour télécharger à partir de Steamcmd.</sys:String>
+
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsLabel">Activation d'options de personnalisation</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsLabel">Activer les paramètres personnalisés Engine.ini</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideCustomEngineSettingsTooltip">Si activé, les paramètres engine.ini seront gérés par le gestionnaire du serveur.</sys:String>
@@ -523,6 +590,12 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Paramètres SotF</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Si activé, les paramètres SotF seront gérés par ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">AVERTISSEMENT: Tant que l'une de ces options est désactivée, ASM ne lit ni n'écrit les paramètres de remplacement associés. Si vous réactivez l'une de ces options, TOUS les remplacements associés existants seront supprimés du fichier de configuration.</sys:String>
+
+    <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Options de niveau personnalisé</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Augmentation du niveau des joueurs:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">Augmentation du niveau des joueurs.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Augmentation du niveau de dino:</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">Quantité d'XP à augmenter lors de l'ajout d'un nouveau niveau personnalisé.</sys:String>
     
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">Options d'état du serveur</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Activer les actions d'état du serveur</sys:String>
@@ -531,29 +604,12 @@
     <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">Si activé, une boîte de dialogue s'affichera pour confirmer l'action de l'état du serveur.</sys:String> 
     
     <sys:String x:Key="GlobalSettings_ServerStartupLabel">Options de démarrage du serveur</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Augmentation du niveau du joueur:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">La quantité d'XP à augmenter lors de l'ajout d'un nouveau niveau personnalisé.</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoLabel">Augmentation du niveau de Dino:</sys:String>
-    <sys:String x:Key="GlobalSettings_CustomLevelXPIncreaseDinoTooltip">La quantité d'XP à augmenter lors de l'ajout d'un nouveau niveau personnalisé.</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Valider le profil au démarrage du serveur</sys:String>
     <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">Si elle est activée, lorsque vous démarrez manuellement le serveur, une validation de base est effectuée sur le serveur et les fichiers mod. NOTE: Ne sera pas effectuée si Ark Mod Management est activé.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Effectuer la mise à jour du serveur et du mod au démarrage du serveur</sys:String>
     <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">Si elle est activée, lorsque vous démarrez manuellement le serveur, les fichiers du serveur et du mod seront mis à jour avec la dernière version. NOTE: Ne sera pas effectuée si Ark Mod Management est activé.</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Démarrer le serveur minimisé</sys:String>
     <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">Si activé, lorsque le serveur est démarré, la fenêtre de commande sera minimisée, sinon elle s'ouvrira normalement.</sys:String>
-    
-    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Paramètres Steam</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Arrêter la fermeture de SteamCMD (à utiliser uniquement pour le débogage)</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">Si cette option est activée, la fenêtre Steamcmd ne sera pas fermée lorsque vous aurez terminé. Vous devrez le fermer manuellement ou taper quitter. Remarque: n'affecte pas la mise à jour automatique.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Nom d'utilisateur:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">Le nom d'utilisateur associé au compte Steam.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Mot de passe:</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">Le mot de passe associé au compte Steam.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authentifier...</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Afficher SteamCMD dans ca propre fenêtre de progression</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">Si elle est activée, la sortie SteamCMD sera affichée dans la fenêtre de progression au lieu de la fenêtre de commande. REMARQUE: si cette option est activée, les mises à jour du serveur et des mods risquent d'échouer.</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Utiliser des informations d'identification anonymes avec SteamCMD</sys:String>
-    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Contrôle si l'utilisateur anonyme est utilisé pour télécharger à partir de SteamCMD.</sys:String>
     
     <sys:String x:Key="GlobalSettings_UpdateModSettingsLabel">Paramètres de mise à jour de Mod</sys:String>
     <sys:String x:Key="GlobalSettings_UpdateModWithServerLabel">Valider les modifications lors de la mise à jour</sys:String>
@@ -567,15 +623,19 @@
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Expiration du cache du Workshop</sys:String>
     <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">Le nombre d'heures écoulées depuis la dernière actualisation du cache de l'atelier sera considéré comme ancien et sera actualisé automatiquement.</sys:String>
     
-    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Activer la sauvegarde automatique</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Intervalle de sauvegarde:</sys:String>
-    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Fréquence d'exécution de la sauvegarde du serveur, en heures et minutes (hh:mm). Mettre à 00:00 pour désactiver.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Backup Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Include the SaveGames folder when performing a WorldSave backup</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">If enabled, when a worldsave backup runs it will include the SaveGames folder used to store mod data files.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Supprimer les anciennes sauvegardes</sys:String>
-    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Si activé, lorsque la sauvegarde automatique est exécuté, les anciens fichiers de sauvegarde seront supprimées. .</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">Si activé, lorsque la sauvegarde automatique est exécuté, les anciens fichiers de sauvegarde seront supprimées.</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Plus âgé que:</sys:String>
     <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">Quel âge doit avoir le fichier de sauvegarde à supprimer en jours.</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">Message en jeux:</sys:String>
     <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">Ce message sera affiché lors de la sauvegarde lorsque le jeu est sur le point d'être sauvegardé.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Activer la sauvegarde automatique</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Intervalle de sauvegarde:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">Fréquence d'exécution de la sauvegarde du serveur, en heures et minutes (hh:mm). Mettre à 00:00 pour désactiver.</sys:String>
     
     <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Activer la mise à jour automatique</sys:String>
     <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Serveur du jeu</sys:String>
@@ -628,6 +688,36 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Afficher le motif d'arrêt avec TOUS les messages d'arrêt</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Si elle est activée, la raison de l'arrêt s'affichera avec tous les messages d'arrêt; sinon, il ne sera affiché qu'au début de l'arrêt du serveur.</sys:String>
 
+    <sys:String x:Key="GlobalSettings_AlertsLabel">Options d'alerte</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Message d'arrêt du serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">Ce message sera affiché lors de l'arrêt du serveur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Message d'arrêt du serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Ce message sera affiché lors de l'arrêt du serveur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Message de démarrage du serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Ce message sera affiché au démarrage du serveur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Inclure l'IP et le port publique dans le message de démarrage</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">Le message de démarrage comprendra l'IP et le port publics.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Erreur de processus de sauvegarde:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Ce message sera affiché lorsque le processus de support automatique a rencontré une erreur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Erreur du processus d'arrêt:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">Ce message sera affiché lorsque le processus d'arret automatique rencontre une erreur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Erreur de processus de redémarrage:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">Ce message sera affiché lorsque le processus de auto-redémarage rencontre une erreur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Erreur de mise à jour du processus:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">Ce message sera affiché lorsque le processus de mise à jour automatique rencontre une erreur.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Mettre à jour les résultats:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">Ce message sera affiché lorsque le processus automatique-mise à jour trouve quelque chose à mettre à jour.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Message de mise à jour du serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">Ce message sera affiché lorsque le serveur de jeux aura été mis à jour.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Changement d’état du serveur:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Ce message sera affiché lorsque l'état du serveur est modifié.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mise à jour de mod détectée:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Ce message s’affiche lorsque le gestionnaire du serveur détecte qu’un ou plusieurs mods sont périmés.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">Changement du décompte de joueurs en ligne:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">Ce message sera affiché lorsque le nombre de joueurs en ligne change.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Avertissement du Force Respawn Dinos:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Ce message s’affiche lorsque le serveur démarre et qu’un nettoyage dino sauvage est programmé.</sys:String>
+
     <sys:String x:Key="GlobalSettings_DiscordBotLabel">Activer le Bot Discord</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">Vous devrez redémarrer le gestionnaire de serveur si vous modifiez les paramètres du Bot Discord..</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
@@ -639,6 +729,8 @@
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Niveau du log:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Faire desToken...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Aide...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordLabel">Tous les profils alias:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordTooltip">L'alias à utiliser lors de l'envoi d'une commande via Discord à tous les profils associés à un canal Discord. N'incluez pas d'espaces ou de caractères spéciaux. Pour désactiver l'alias de tous les profils, effacez la valeur.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Permettez à tous les bots</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">Si activé, le gestionnaire de serveur Bot répondra à tous les autres bots, sinon ils seront ignorés à moins qu'ils ne soient dans la liste blanche..</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Liste blanche Bot</sys:String>
@@ -702,6 +794,15 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">Quel âge les fichiers log doivent être supprimés en jours.</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Nombre maximum de logs</sys:String>
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Le nombre maximum de fichiers log qui seront conservés.</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Mode de diffusion RCON:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Sélectionnez la méthode utilisée par le gestionnaire de serveur pour envoyer des messages de processus automatique aux clients du jeu via RCON.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Toute modification apportée à ces priorités prendra effet après la création ou l'enregistrement de la tâche.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Sélectionnez la priorité utilisée par le gestionnaire de tâches Windows lors de l'exécution de cette tâche.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">Priorité de la tâche de sauvegarde automatique:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Priorité de la tâche de mise à jour automatique:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Priorité de tâche d'arrêt automatique/redémarrage:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Priorité de la tâche de démarrage automatique:</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirmer la réinitialisation des paramètres</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Cliquez sur "Oui" pour confirmer que vous voulez réinitialiser les paramètres.</sys:String>
@@ -733,34 +834,6 @@
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTitle">Authentification SteamCmd désactivée</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledLabel">Vous avez choisi de rediriger la sortie steamcmd vers la fenêtre de progression. Vous n'êtes pas en mesure d'utiliser vos informations d'identification, vous devez utiliser des informations d'identification anonymes.</sys:String>
     <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTooltip">Pour utiliser vos informations d'identification à la vapeur, vous devez désactiver l'option "Afficher SteamCMD dans ca propre fenêtre de progression".</sys:String>
-
-    <sys:String x:Key="GlobalSettings_AlertsLabel">Options d'alerte</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Message d'arrêt du serveur:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">Ce message sera affiché lorsque le serveur est arrêté.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Message d'arrêt du serveur:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">Ce message sera affiché lors de l'arrêt du serveur.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Message démarré par le serveur:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">Ce message sera affiché lors du démarrage du serveur.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Inclure l'IP Public et le port dans le message Démarrer</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">Le message de démarrage comprendra l'IP publique et le port.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Erreur de processus de sauvegarde:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">Ce message sera affiché lorsque le processus de sauvegarde automatique a rencontré une erreur.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Erreur de processus d'arrêt:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">Ce message sera affiché lorsque le processus d'arrêt automatique a rencontré une erreur.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Erreur lors du redémarrage du processus:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">Ce message s'affichera lorsque le processus de redémarrage automatique rencontrera une erreur.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Erreur du processus de mise à jour:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">Ce message sera affiché lorsque le processus de mise à jour automatique a rencontré une erreur.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Résultats de Mise à jour:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">Ce message sera affiché lorsque le processus de mise à jour automatique trouve quelque chose à mettre à jour.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Message de mise à jour serveur:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">Ce message sera affiché lorsque le serveur de jeu a été mis à jour.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Changement d'état du serveur:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Ce message sera affiché lorsque l'état du serveur changera.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mise à jour du mod détectée:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Ce message s'affiche lorsque le gestionnaire de serveur détecte qu'un ou plusieurs mods sont obsolètes.</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Avertissement Force Respawn Dinos:</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Ce message sera affiché lorsque le serveur est démarré et qu'un nettoyage de dino sauvage est planifié.</sys:String>
     <!--#endregion-->
 
     <!--#region Main Window -->
@@ -784,6 +857,7 @@
     <sys:String x:Key="MainWindow_OpenPluginsTooltip">Ouvrir les plugins</sys:String>
     <sys:String x:Key="MainWindow_OpenHelpTooltip">Ouvrir l'aide</sys:String>
     <sys:String x:Key="MainWindow_OpenServerMonitorTooltip">Ouvrir Moniteur de serveur</sys:String>
+    <sys:String x:Key="MainWindow_JoinDiscordTooltip">Rejoidre le serveur Discord</sys:String>
     <sys:String x:Key="MainWindow_UpdateToLabelFormat">Mettre à niveau vers {0} now!</sys:String>
     <sys:String x:Key="MainWindow_TaskStatusLabel">Statut des tâches</sys:String>
     <sys:String x:Key="MainWindow_TaskAdminErrorTitle">Requiert l'autorisation d'administrations</sys:String>
@@ -897,13 +971,18 @@
     <sys:String x:Key="ServerSettings_LastStartedLabel">Dernière heure de début:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">Disponibilité:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">Le statut du serveur Ark sur Steam.</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unknown">Inconnu</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_SetPublicIP">Définir l'adresse IP publique</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unavailable">Indisponible</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Waiting">En attente de publication</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Available">Disponible</sys:String>
     <sys:String x:Key="ServerSettings_PlayersLabel">Joueurs:</sys:String>
     <sys:String x:Key="ServerSettings_PlayersTooltip">Le nombre actuel de joueurs connectés au serveur Ark.</sys:String>
+
+    <sys:String x:Key="ServerSettings_Availability_Unknown">Inconnu</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Unavailable">ndisponible</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_UnavailableTootip">Serveur non accessible</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnly">Lan uniquement</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnlyTootip">Serveur accessible via IP locale uniquement. Redirection de port, Firewall ou CGNAT etc empêchent l’accès public.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnly">Disponible - Aucune boucle</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnlyTootip">Serveur accessible via IP local et IP publique, Redirection non disponible. Le serveur est public mais IP publique n'est pas accessible via LAN.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Available">Disponible</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_AvailableTootip">Serveur accessible via une adresse IP locale et une adresse IP publique</sys:String>
 
     <sys:String x:Key="ServerSettings_RuntimeStatusInitializingLabel">Initialisation</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusRunningLabel">En Fonction</sys:String>
@@ -923,6 +1002,8 @@
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
+    <sys:String x:Key="ServerSettings_SettingFindButtonLabel">Trouver</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonTooltip">Trouver réglage</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Créer un Support Zip</sys:String>
     <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Créer un fichier zip contenant tous les fichiers nécessaires à l'équipe de support ASM pour diagnostiquer un problème.</sys:String>
     <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sync</sys:String>
@@ -969,6 +1050,10 @@
     <sys:String x:Key="ServerSettings_BackupServer_Title">Sauvegarde du serveur</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Erreur de sauvegarde du serveur</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">La sauvegarde a réussi.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">Réinitialiser le serveur</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">Réinitialiser l'erreur du serveur</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">Cela supprimera tous les fichiers du serveur, du lecteur et de la tribu et réinitialisera votre serveur à nouveau. Voulez-vous continuer?</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">La réinitialisation a réussi.</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Erreur de serveur d'arrêt</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Arrêt du serveur annulé</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">La fenêtre d'arrêt est déjà ouverte pour ce serveur.</sys:String>
@@ -1058,6 +1143,8 @@
     <sys:String x:Key="ServerSettings_ModIdsTooltip">Une liste de modems séparés par des virgules, dans l'ordre dans lequel ils doivent être appliqués.</sys:String>
     <sys:String x:Key="ServerSettings_ModDetailsTooltip">Voir les détails du mod.</sys:String>
     <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Mettre à niveau vers la dernière version des mods actuellement disponible au téléchargement.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonLabel">Réinitialiser</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">Supprime tous les fichiers serveur, joueur et tribu et réinitialise votre serveur à nouveau.</sys:String>
 
     <sys:String x:Key="ServerSettings_SavesLabel">Sauvegardes</sys:String>
     <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Enregistrement automatique toute les:</sys:String>
@@ -1109,6 +1196,8 @@
     <sys:String x:Key="ServerSettings_UseBattlEyeLabel">Activer BattlEye Anti-Cheat System</sys:String>
     <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">Si activé, le système anti-triche de BattlEye sera activé.</sys:String>
     <sys:String x:Key="ServerSettings_AntiSpeedHackBiasUnits">x</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogLabel">Journal de sortie du serveur vers la console du serveur</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogTooltip">S'il est activé, les journaux du serveur seront affiché sur la console du serveur.</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresLabel">Utiliser tous les noyaux disponibles</sys:String>
     <sys:String x:Key="ServerSettings_UseAllAvailableCoresTooltip">Si activé, tous vos cœurs de CPU seront utilisés, si tous ne sont pas utilisés après avoir utilisé cette option de lancement, puis essayez de le désactiver.</sys:String>
     <sys:String x:Key="ServerSettings_UseCacheLabel">Utiliser le cache</sys:String>
@@ -1236,6 +1325,8 @@
     <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">L'ID du canal de Discord Server que ce profil écoutera.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasTooltip">Nom unique pour identifier votre serveur lors de l'utilisation des commandes Discord, peut être utilisé à la place de l'ID de profil.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasLabel">Autoriser l'alias du cluster</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordClusterAliasTooltip">Si vous êtes activé, l'ID de cluster peut être utilisé comme un alias Discord pour effectuer des commandes de serveur.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Autoriser la sauvegarde</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">Si activé, le profil écoutera les commandes de sauvegarde de discord.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Autoriser le redémarrage</sys:String>
@@ -1469,6 +1560,22 @@
     <sys:String x:Key="ServerSettings_HexagonRewardMultiplierTooltip">Spécifie le multiplicateur pour les récompenses d'hexagones.</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Multiplicateur de coûts hexagones</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Spécifie le multiplicateur pour le coût de l'hexagone par articles.</sys:String>
+
+    <sys:String x:Key="ServerSettings_RagnarokLabel">Activer les paramètres Ragnarok</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsLabel">Autoriser plusieurs licornes apprivoisées</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsTooltip">S'il est activé, permettra une licorne apprivoisée sauvage et illimitée sur la carte. Sinon une seule licorne sur la carte à la fois.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalLabel">Intervalle d'apparition de la licorne</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalTooltip">Combien de temps le jeu doit attendre avant de donner naissance à une nouvelle licorne si le sauvage est tué (ou apprivoisé, si AllyMultipletameDunicorns est activé). Cette valeur définit la durée minimale (en heures), et le maximum est égal à 2x cette valeur.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoLabel">Activer le volcan</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoTooltip">Si elle est activée, permettra au volcan de devenir actif.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalLabel">Intervalle du volcan</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalTooltip">0 = 5000 (min) - 15000 (max) secondes entre les instances du volcan devenant actifs. N'importe quel nombre supérieur à 0 agit comme un multiplicateur.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityLabel">Intensité du volcan</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityTooltip">Plus la valeur est faible, plus l'éruption du volcan sera intense. Recommandé de partir à 1,0, la valeur minimale est de 0,25, et pour les jeux multijoueurs, il ne devrait pas être inférieur à 0,5. Des nombres très élevés désactiveront essentiellement les rochers enflammés jetés du volcan.</sys:String>
+
+    <sys:String x:Key="ServerSettings_FjordurLabel">Activer les paramètres Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Activer la téléportation du biome fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">S'il est activé, permettra la téléportation de biome sur la carte fjordur.</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Vérouillage des stat d'item</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">AVERTISSEMENT: Cela modifiera définitivement les statistiques de tous les éléments existants, assurez-vous de sauvegarder votre sauvegarde actuelle avant de modifier et de jouer avec les valeurs de vérouillage.</sys:String>
@@ -2587,10 +2694,6 @@
     <sys:String x:Key="RCON_ClearLogs_Label">S'identifie {0} supprimé.</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Impossible d'ouvrir les journaux</sys:String>
     <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Impossible d'ouvrir le répertoire des journaux à {0}. Veuillez vous assurer que ce répertoire existe et que vous avez l'autorisation d'y accéder.\nException: {1}</sys:String>
-
-    <sys:String x:Key="InputMode_Command">Commande</sys:String>
-    <sys:String x:Key="InputMode_Global">Global</sys:String>
-    <sys:String x:Key="InputMode_Broadcast">Message</sys:String>
 
     <sys:String x:Key="ConsoleStatus_Disconnected">Déconnecté</sys:String>
     <sys:String x:Key="ConsoleStatus_Connected">Connecté</sys:String>
@@ -5647,6 +5750,7 @@
     <sys:String x:Key="DiscordBot_ProfileNotFound">Profile '{0}' n'a pas été trouvé ou n'est pas associé au canal.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' est dans un état '{1}' qui ne peut pas exécuter cette commande.</sys:String>
     <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' est actuellement mis à jour.</sys:String>
+    <sys:String x:Key="DiscordBot_NoChannelProfiles">Aucun profil n'est associé au canal.</sys:String>
 
     <sys:String x:Key="DiscordBot_InfoFailed">Appeler au serveur '{0}' a échoué.</sys:String>
     <sys:String x:Key="DiscordBot_BackupRequested">Une demande de sauvegarde pour serveur '{0}' a été envoyée.</sys:String>
@@ -5655,9 +5759,18 @@
     <sys:String x:Key="DiscordBot_StartRequested">Une demande de démarrage pour le serveur '{0}' a été envoyée.</sys:String>
     <sys:String x:Key="DiscordBot_StopRequested">Une demande d'arrêt de serveur '{0}' a été envoyée.</sys:String>
     <sys:String x:Key="DiscordBot_UpdateRequested">Une demande de mise à jour du serveur '{0}' a été envoyée.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandComplete">La demande de serveur '{0}' est completé.</sys:String>
 
     <sys:String x:Key="DiscordBot_CountLabel">Dénombrer:</sys:String>
     <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
+    <!--#endregion-->
+    
+    <!--#region Find Setting Window -->
+    <sys:String x:Key="FindSettingWindow_Title">Trouver paramètres</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_NotFoundErrorLabel">LeRéglage n’a pas été trouvé: {0}</sys:String>
+
+    <sys:String x:Key="FindSettingWindow_FindButtonLabel">trouver</sys:String>
     <!--#endregion-->
 
 </Globalization:GlobalizationResourceDictionary>
