@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -338,29 +339,31 @@ namespace ServerManagerTool.Lib
                 0. Bletch, 76561197991984752 <- steam
                 0. Bletch, 7171521174456260817 <- epic
             */
+            var matchRegex = new Regex(@"^(?<index>\d*)\. (?<playerName>.*), (?<playerId>\d*)$");
             var output = new List<string>();
             var onlinePlayers = new List<PlayerInfo>();
-            var playerLines = commandLines?.ToList() ?? new List<string>();
 
+            var playerLines = commandLines?.ToList() ?? new List<string>();
             if (playerLines.Count > 0)
             {
                 foreach (var line in playerLines)
                 {
-                    var elements = line.Split(',', '.');
-                    if (elements.Length != 3)
-                        // Invalid data. Ignore it.
+                    var isMatch = matchRegex.IsMatch(line);
+                    if (!isMatch)
                         continue;
 
-                    var id = elements[2].Trim();
+                    var match = matchRegex.Match(line);
+                    var playerName = match.Groups["playerName"].Value.Trim();
+                    var playerId = match.Groups["playerId"].Value.Trim();
 
-                    if (onlinePlayers.FirstOrDefault(p => p.PlayerId.Equals(id, StringComparison.OrdinalIgnoreCase)) != null)
+                    if (onlinePlayers.FirstOrDefault(p => p.PlayerId.Equals(playerId, StringComparison.OrdinalIgnoreCase)) != null)
                         // Duplicate data. Ignore it.
                         continue;
 
                     var newPlayer = new PlayerInfo()
                     {
-                        PlayerId = id,
-                        PlayerName = elements[1].Trim(),
+                        PlayerId = playerId,
+                        PlayerName = playerName,
                         IsOnline = true,
                     };
                     onlinePlayers.Add(newPlayer);

@@ -5,14 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="http://arkservermanager.freeforums.net/" />
-  <updated>2022-07-08T00:00:00Z</updated>
+  <updated>2022-07-11T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:7E95E486-1977-42F0-9AD6-8DB89A81A877</id>
-    <title>1.1.435 (1.1.435.3)</title>
-    <summary>1.1.435.3</summary>
+    <title>1.1.435 (1.1.435.4)</title>
+    <summary>1.1.435.4</summary>
     <link href="" />
-    <updated>2022-07-08T00:00:00Z</updated>
+    <updated>2022-07-11T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -21,6 +21,12 @@
           <ul>
             <li>Server Settings - Rules Section - Enable Tribe Alliance - fixed the checkbox, so that it enables/disables per profile.</li>
             <li>Server Settings - Environment Section - Custom Harvest Amount Multiplier - fixed the checkbox, so that it enables/disables when there are changes or unknown resources.</li>
+            <li>RCON - changed the way the online players are handled when they contain a '.' character.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>tr-TR Translation file added.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
