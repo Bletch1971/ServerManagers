@@ -12,7 +12,7 @@ namespace ServerManagerTool.Plugin.Discord {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
     internal sealed partial class Config : global::System.Configuration.ApplicationSettingsBase {
         
         private static Config defaultInstance = ((Config)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Config())));
@@ -25,7 +25,7 @@ namespace ServerManagerTool.Plugin.Discord {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.azurewebsites.net/api/plugin/call/{0}/{1}/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.azurewebsites.net/api/plugin/call/{0}/{1}/")]
         public string PluginCallUrlFormat {
             get {
                 return ((string)(this["PluginCallUrlFormat"]));
@@ -157,7 +157,7 @@ namespace ServerManagerTool.Plugin.Discord {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://whatismyip.akamai.com/")]
         public string PublicIPCheckUrl2 {
             get {
                 return ((string)(this["PublicIPCheckUrl2"]));

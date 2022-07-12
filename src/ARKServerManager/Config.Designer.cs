@@ -248,15 +248,6 @@ namespace ServerManagerTool {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
-        public string PublicIPCheckUrl {
-            get {
-                return ((string)(this["PublicIPCheckUrl"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -365,7 +356,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/thread/1194/faq-frequently-asked")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/thread/1194/faq-frequently-asked")]
         public string HelpUrl {
             get {
                 return ((string)(this["HelpUrl"]));
@@ -596,7 +587,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://store.steampowered.com/app/346110/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://store.steampowered.com/app/346110/")]
         public string AppUrl {
             get {
                 return ((string)(this["AppUrl"]));
@@ -605,7 +596,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://store.steampowered.com/app/407530/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://store.steampowered.com/app/407530/")]
         public string AppUrl_SotF {
             get {
                 return ((string)(this["AppUrl_SotF"]));
@@ -1231,7 +1222,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/thread/5193/downloads")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/thread/5193/downloads")]
         public string LatestASMPatchNotesUrl {
             get {
                 return ((string)(this["LatestASMPatchNotesUrl"]));
@@ -1240,7 +1231,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/board/11/beta-testers")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/board/11/beta-testers")]
         public string LatestASMBetaPatchNotesUrl {
             get {
                 return ((string)(this["LatestASMBetaPatchNotesUrl"]));
@@ -1541,7 +1532,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/thread/3024/get-own-steam-web-api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/thread/3024/get-own-steam-web-api")]
         public string SteamWebAPIKeyHelpUrl {
             get {
                 return ((string)(this["SteamWebAPIKeyHelpUrl"]));
@@ -1772,7 +1763,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/board/22/plugins")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/board/22/plugins")]
         public string ServerManagerPluginUrl {
             get {
                 return ((string)(this["ServerManagerPluginUrl"]));
@@ -2287,7 +2278,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://arkservermanager.freeforums.net/board/25/game-data")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arkservermanager.freeforums.net/board/25/game-data")]
         public string GameDataUrl {
             get {
                 return ((string)(this["GameDataUrl"]));
@@ -3051,7 +3042,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.azurewebsites.net/api/server/call/{0}/{1}/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.azurewebsites.net/api/server/call/{0}/{1}/")]
         public string ServerCallUrlFormat {
             get {
                 return ((string)(this["ServerCallUrlFormat"]));

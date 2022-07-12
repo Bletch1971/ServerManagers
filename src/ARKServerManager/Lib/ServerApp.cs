@@ -1428,11 +1428,11 @@ namespace ServerManagerTool.Lib
                                         var modLastUpdated = ModUtils.GetModLatestTime(ModUtils.GetLatestModTimeFile(_profile.InstallDirectory, modId));
                                         LogProfileMessage($"Mod {modId} version: {modLastUpdated}.");
 
-                                        LogProfileMessage($"Workshop page: http://steamcommunity.com/sharedfiles/filedetails/?id={modId}");
-                                        LogProfileMessage($"Change notes: http://steamcommunity.com/sharedfiles/filedetails/changelog/{modId}");
+                                        LogProfileMessage($"Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id={modId}");
+                                        LogProfileMessage($"Change notes: https://steamcommunity.com/sharedfiles/filedetails/changelog/{modId}");
 
-                                        emailMessage.AppendLine($"Workshop page: http://steamcommunity.com/sharedfiles/filedetails/?id={modId}");
-                                        emailMessage.AppendLine($"Change notes: http://steamcommunity.com/sharedfiles/filedetails/changelog/{modId}");
+                                        emailMessage.AppendLine($"Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id={modId}");
+                                        emailMessage.AppendLine($"Change notes: https://steamcommunity.com/sharedfiles/filedetails/changelog/{modId}");
 
                                         LogProfileMessage($"Finished mod {modId} update from cache.");
                                     }

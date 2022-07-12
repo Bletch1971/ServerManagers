@@ -75,7 +75,7 @@ namespace ServerManagerTool.Common.Model
             private set;
         }
 
-        public string WorkshopUrl => $"http://steamcommunity.com/sharedfiles/filedetails/?id={WorkshopId}";
+        public string WorkshopUrl => $"https://steamcommunity.com/sharedfiles/filedetails/?id={WorkshopId}";
 
         public static WorkshopFileItem GetItem(WorkshopFileDetail item)
         {

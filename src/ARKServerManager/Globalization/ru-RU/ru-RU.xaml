@@ -1174,7 +1174,7 @@
     <sys:String x:Key="ServerSettings_IdleTimeoutTooltip">Время простоя игроков до кика с сервера.</sys:String>
     <sys:String x:Key="ServerSettings_IdleTimeoutUnits">секунд</sys:String>
     <sys:String x:Key="ServerSettings_UseBanListLabel">Использовать URL-адрес бан-листа</sys:String>
-    <sys:String x:Key="ServerSettings_UseBanListTooltip">Если включен, то будет использоваться URL-адрес, со списком забаненных. По умолчанию http://playark.com/banlist.txt</sys:String>
+    <sys:String x:Key="ServerSettings_UseBanListTooltip">Если включен, то будет использоваться URL-адрес, со списком забаненных. По умолчанию http://arkdedicated.com/banlist.txt</sys:String>
     <sys:String x:Key="ServerSettings_BanListTooltip">Чтобы использовать, введите URL-адрес с бан-листом.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBanlistTooltip">Сбросьте настройки Бан листа по умолчанию.</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACLabel">Отключить ValveAntiCheat систему (VAC)</sys:String>

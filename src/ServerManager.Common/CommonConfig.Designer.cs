@@ -12,7 +12,7 @@ namespace ServerManagerTool.Common {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
     public sealed partial class CommonConfig : global::System.Configuration.ApplicationSettingsBase {
         
         private static CommonConfig defaultInstance = ((CommonConfig)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new CommonConfig())));
@@ -163,7 +163,7 @@ namespace ServerManagerTool.Common {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://whatismyip.akamai.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://whatismyip.akamai.com/")]
         public string PublicIPCheckUrl2 {
             get {
                 return ((string)(this["PublicIPCheckUrl2"]));

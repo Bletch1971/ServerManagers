@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="PluginCallUrlFormat" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://servermanagers.azurewebsites.net/api/plugin/call/{0}/{1}/</Value>
+      <Value Profile="(Default)">https://servermanagers.azurewebsites.net/api/plugin/call/{0}/{1}/</Value>
     </Setting>
     <Setting Name="PluginCallUrlDelay" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">12</Value>
@@ -45,7 +45,7 @@
       <Value Profile="(Default)">https://api.ipify.org</Value>
     </Setting>
     <Setting Name="PublicIPCheckUrl2" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://whatismyip.akamai.com/</Value>
+      <Value Profile="(Default)">https://whatismyip.akamai.com/</Value>
     </Setting>
   </Settings>
 </SettingsFile>

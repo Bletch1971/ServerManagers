@@ -321,7 +321,7 @@ namespace ServerManagerTool.Lib.Model
 
         public string MapName { get; set; }
 
-        public string ModUrl => $"http://steamcommunity.com/sharedfiles/filedetails/?id={ModId}";
+        public string ModUrl => $"https://steamcommunity.com/sharedfiles/filedetails/?id={ModId}";
 
         public string TimeUpdatedString => TimeUpdated <= 0 ? string.Empty : ModUtils.UnixTimeStampToDateTime(TimeUpdated).ToString();
 

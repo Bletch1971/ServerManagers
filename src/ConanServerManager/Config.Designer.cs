@@ -221,7 +221,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.freeforums.net/thread/43/faq-frequently-asked")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.freeforums.net/thread/43/faq-frequently-asked")]
         public string HelpUrl {
             get {
                 return ((string)(this["HelpUrl"]));
@@ -275,7 +275,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://store.steampowered.com/app/440900/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://store.steampowered.com/app/440900/")]
         public string AppUrl {
             get {
                 return ((string)(this["AppUrl"]));
@@ -805,7 +805,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.freeforums.net/thread/36/downloads")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.freeforums.net/thread/36/downloads")]
         public string LatestServerManagerPatchNotesUrl {
             get {
                 return ((string)(this["LatestServerManagerPatchNotesUrl"]));
@@ -814,7 +814,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.freeforums.net/board/44/beta-testers")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.freeforums.net/board/44/beta-testers")]
         public string LatestServerManagerBetaPatchNotesUrl {
             get {
                 return ((string)(this["LatestServerManagerBetaPatchNotesUrl"]));
@@ -1013,7 +1013,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.freeforums.net/thread/40/get-own-steam-web-api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.freeforums.net/thread/40/get-own-steam-web-api")]
         public string SteamWebAPIKeyHelpUrl {
             get {
                 return ((string)(this["SteamWebAPIKeyHelpUrl"]));
@@ -1208,7 +1208,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.freeforums.net/board/36/plugins")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.freeforums.net/board/36/plugins")]
         public string ServerManagerPluginUrl {
             get {
                 return ((string)(this["ServerManagerPluginUrl"]));
@@ -1217,7 +1217,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.freeforums.net/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.freeforums.net/")]
         public string ServerManagerForumUrl {
             get {
                 return ((string)(this["ServerManagerForumUrl"]));
@@ -2234,7 +2234,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servermanagers.azurewebsites.net/api/server/call/{0}/{1}/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servermanagers.azurewebsites.net/api/server/call/{0}/{1}/")]
         public string ServerCallUrlFormat {
             get {
                 return ((string)(this["ServerCallUrlFormat"]));
