@@ -4,8 +4,32 @@
   <id>urn:uuid:9EF03FB7-4958-4B39-808A-12B8E4008510</id>
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager release version feed.</subtitle>
-  <link href="http://servermanagers.freeforums.net/" />
-  <updated>2022-06-21T00:00:00Z</updated>
+  <link href="https://servermanagers.freeforums.net/" />
+  <updated>2022-07-08T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
+    <title>1.1.78 (1.1.78.2)</title>
+    <summary>1.1.78.1</summary>
+    <link href="" />
+    <updated>2022-07-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added config settings to allow multiple CPUs to be read when setting the CPU Affinity.</li>
+            <li>Updated all URL links to use https.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
