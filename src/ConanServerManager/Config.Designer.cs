@@ -1842,7 +1842,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("120000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("60000")]
         public int ServerStatusWatcher_RemoteStatusQueryDelay {
             get {
                 return ((int)(this["ServerStatusWatcher_RemoteStatusQueryDelay"]));

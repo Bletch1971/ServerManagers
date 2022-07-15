@@ -25,15 +25,20 @@
         /// <summary>
         /// The server is responding locally on its port, a local check was made
         /// </summary>
-        RunningLocalCheck,
+        LocalSuccess,
+
+        /// <summary>
+        /// The server is responding locally on its port, a public check was skipped
+        /// </summary>
+        ExternalSkipped,
 
         /// <summary>
         /// The server is responding locally on its port, a public check was made
         /// </summary>
-        RunningExternalCheck,
+        ExternalSuccess,
 
         /// <summary>
-        /// The server is responding externally on its port
+        /// The server is responding publicly on its port
         /// </summary>
         Published,
     }

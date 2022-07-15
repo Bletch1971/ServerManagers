@@ -150,52 +150,52 @@ namespace ServerManagerTool.Lib
 
             var currentStatus = WatcherServerStatus.Initializing;
 
-            //
-            // If the process was running do we then perform network checks.
-            //
-            Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server local network status at {registration.LocalEndpoint}");
+            Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server local (directly) status at {registration.LocalEndpoint}");
 
-            // get the server information direct from the server using local connection.
+            // get the server information direct from the server using local endpoint.
             var serverStatus = GetLocalNetworkStatus(registration.LocalEndpoint, out ServerInfo localInfo, out int onlinePlayerCount);
 
             if (serverStatus)
             {
-                currentStatus = WatcherServerStatus.RunningLocalCheck;
+                currentStatus = WatcherServerStatus.LocalSuccess;
 
-                //
-                // Now that it's running, we can check the publication status.
-                //
                 Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server public (directly) status at {registration.PublicEndpoint}");
 
-                // get the server information direct from the server using public connection.
+                // get the server information direct from the server using public endpoint.
                 serverStatus = GetPublicNetworkStatusDirectly(registration.PublicEndpoint);
 
-                // check if the server returned the information.
-                if (!serverStatus)
+                if (serverStatus)
                 {
-                    // server did not return any information
+                    _nextExternalStatusQuery[registrationKey] = DateTime.MinValue;
+
+                    currentStatus = WatcherServerStatus.Published;
+                }
+                else if (!string.IsNullOrWhiteSpace(Config.Default.ServerStatusUrlFormat))
+                {
                     var nextExternalStatusQuery = _nextExternalStatusQuery.ContainsKey(registrationKey) ? _nextExternalStatusQuery[registrationKey] : DateTime.MinValue;
                     if (DateTime.Now >= nextExternalStatusQuery)
                     {
-                        currentStatus = WatcherServerStatus.RunningExternalCheck;
+                        Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server public (externally) status at {registration.PublicEndpoint}");
 
-                        if (!string.IsNullOrWhiteSpace(Config.Default.ServerStatusUrlFormat))
+                        // get the server information direct from the server using external endpoint.
+                        var url = string.Format(Config.Default.ServerStatusUrlFormat, Config.Default.ServerManagerCode, App.Instance.Version, registration.PublicEndpoint.Address, registration.PublicEndpoint.Port);
+                        var uri = new Uri(url);
+                        serverStatus = await GetPublicNetworkStatusViaAPIAsync(uri, registration.PublicEndpoint);
+
+                        var remoteStatusQueryDelay = serverStatus 
+                            ? Config.Default.ServerStatusWatcher_RemoteStatusQueryDelay 
+                            : 15000;
+                        _nextExternalStatusQuery[registrationKey] = DateTime.Now.AddMilliseconds(remoteStatusQueryDelay);
+
+                        if (serverStatus)
                         {
-                            Logger.Info($"{nameof(DoServerStatusUpdateAsync)} Checking server public (via api) status at {registration.PublicEndpoint}");
-
-                            // get the server information direct from the server using external connection.
-                            var uri = new Uri(string.Format(Config.Default.ServerStatusUrlFormat, Config.Default.ServerManagerCode, App.Instance.Version, registration.PublicEndpoint.Address, registration.PublicEndpoint.Port));
-                            serverStatus = await GetPublicNetworkStatusViaAPIAsync(uri, registration.PublicEndpoint);
+                            currentStatus = WatcherServerStatus.ExternalSuccess;
                         }
-
-                        _nextExternalStatusQuery[registrationKey] = DateTime.Now.AddMilliseconds(Config.Default.ServerStatusWatcher_RemoteStatusQueryDelay);
                     }
-                }
-
-                // check if the server returned the information.
-                if (serverStatus)
-                {                    
-                    currentStatus = WatcherServerStatus.Published;
+                    else
+                    {
+                        currentStatus = WatcherServerStatus.ExternalSkipped;
+                    }
                 }
             }
 

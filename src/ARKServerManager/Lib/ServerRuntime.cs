@@ -252,84 +252,162 @@ namespace ServerManagerTool.Lib
                 {
                     case WatcherServerStatus.Unknown:
                         if (oldStatus != ServerStatus.Updating)
-                            UpdateServerStatus(ServerStatus.Unknown, AvailabilityStatus.Unknown, false);
+                        {
+                            UpdateServerStatus(
+                                ServerStatus.Unknown, 
+                                AvailabilityStatus.Unknown, 
+                                false);
+                        }
 
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                        {
                             this.motdIntervalTimer.Stop();
+                        }
+
                         break;
 
                     case WatcherServerStatus.NotInstalled:
                         if (oldStatus != ServerStatus.Updating)
-                            UpdateServerStatus(ServerStatus.Uninstalled, AvailabilityStatus.Unavailable, false);
+                        {
+                            UpdateServerStatus(
+                                ServerStatus.Uninstalled, 
+                                AvailabilityStatus.Unavailable, 
+                                false);
+                        }
 
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                        {
                             this.motdIntervalTimer.Stop();
+                        }
+
                         break;
 
                     case WatcherServerStatus.Stopped:
                         if (oldStatus != ServerStatus.Updating)
-                            UpdateServerStatus(ServerStatus.Stopped, AvailabilityStatus.Unavailable, oldStatus == ServerStatus.Initializing || oldStatus == ServerStatus.Running || oldStatus == ServerStatus.Stopping);
+                        {
+                            UpdateServerStatus(
+                                ServerStatus.Stopped, 
+                                AvailabilityStatus.Unavailable, 
+                                oldStatus == ServerStatus.Initializing || oldStatus == ServerStatus.Running || oldStatus == ServerStatus.Stopping);
+                        }
 
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                        {
                             this.motdIntervalTimer.Stop();
+                        }
+
                         break;
 
                     case WatcherServerStatus.Initializing:
                         if (oldStatus != ServerStatus.Stopping)
-                            UpdateServerStatus(ServerStatus.Initializing, AvailabilityStatus.Unavailable, oldStatus != ServerStatus.Initializing && oldStatus != ServerStatus.Unknown);
+                        {
+                            UpdateServerStatus(
+                                ServerStatus.Initializing, 
+                                AvailabilityStatus.Unavailable, 
+                                oldStatus != ServerStatus.Initializing && oldStatus != ServerStatus.Unknown);
+                        }
 
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                        {
                             this.motdIntervalTimer.Stop();
+                        }
+
                         break;
 
-                    case WatcherServerStatus.RunningLocalCheck:
+                    case WatcherServerStatus.LocalSuccess:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, oldAvailability != AvailabilityStatus.Available ? AvailabilityStatus.LocalOnly : AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(
+                                ServerStatus.Running,
+                                AvailabilityStatus.LocalOnly,
+                                oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
 
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled)
+                            {
                                 this.motdIntervalTimer.Start();
+                            }
                         }
                         else
                         {
                             if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                            {
                                 this.motdIntervalTimer.Stop();
+                            }
                         }
                         break;
 
-                    case WatcherServerStatus.RunningExternalCheck:
+                    case WatcherServerStatus.ExternalSkipped:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.PublicOnly, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(
+                                ServerStatus.Running,
+                                oldAvailability >= AvailabilityStatus.PublicOnly ? AvailabilityStatus.PublicOnly : AvailabilityStatus.LocalOnly,
+                                oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
 
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled)
+                            {
                                 this.motdIntervalTimer.Start();
+                            }
                         }
                         else
                         {
                             if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                            {
                                 this.motdIntervalTimer.Stop();
+                            }
+                        }
+                        break;
+
+                    case WatcherServerStatus.ExternalSuccess:
+                        if (oldStatus != ServerStatus.Stopping)
+                        {
+                            UpdateServerStatus(
+                                ServerStatus.Running,
+                                AvailabilityStatus.PublicOnly,
+                                oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled)
+                            {
+                                this.motdIntervalTimer.Start();
+                            }
+                        }
+                        else
+                        {
+                            if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                            {
+                                this.motdIntervalTimer.Stop();
+                            }
                         }
                         break;
 
                     case WatcherServerStatus.Published:
                         if (oldStatus != ServerStatus.Stopping)
                         {
-                            UpdateServerStatus(ServerStatus.Running, AvailabilityStatus.Available, oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
+                            UpdateServerStatus(
+                                ServerStatus.Running, 
+                                AvailabilityStatus.Available, 
+                                oldStatus != ServerStatus.Running && oldStatus != ServerStatus.Unknown);
 
-                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled) 
+                            if (this.ProfileSnapshot.MOTDIntervalEnabled && this.motdIntervalTimer != null && !this.motdIntervalTimer.Enabled)
+                            {
                                 this.motdIntervalTimer.Start();
+                            }
                         }
                         else
                         {
                             if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                            {
                                 this.motdIntervalTimer.Stop();
+                            }
                         }
                         break;
 
                     default:
-                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled) 
+                        if (this.motdIntervalTimer != null && this.motdIntervalTimer.Enabled)
+                        {
                             this.motdIntervalTimer.Stop();
+                        }
+
                         break;
                 }
 
