@@ -29,7 +29,7 @@ namespace ServerManagerTool
             {
                 var details = new StringBuilder();
                 details.AppendLine("Server Manager Crash Report");
-                details.AppendLine($"Please report this crash to the Server Manager forums - {Config.Default.ServerManagerForumUrl}");
+                details.AppendLine($"Please report this crash to the Server Manager discord - {Config.Default.DiscordUrl}");
                 details.AppendLine();
 
                 details.AppendLine($"Assembly: {Assembly.GetEntryAssembly()}");
@@ -64,7 +64,7 @@ namespace ServerManagerTool
                 message.AppendLine($"Crash Dump: {crashFile}");
                 details.AppendLine();
                 details.AppendLine();
-                message.AppendLine($"Please report this crash to the Server Manager forums - {Config.Default.ServerManagerForumUrl}");
+                message.AppendLine($"Please report this crash to the Server Manager discord - {Config.Default.DiscordUrl}");
                 message.AppendLine("The crash log will now be opened in notepad.");
 
                 var result = MessageBox.Show(message.ToString(), "Server Manager crashed", MessageBoxButton.OK, MessageBoxImage.Exclamation);

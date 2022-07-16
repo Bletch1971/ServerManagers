@@ -2447,5 +2447,14 @@ namespace ServerManagerTool {
                 this["Alert_OnlinePlayerCountChange"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3072")]
+        public int ServicePointManager_SecurityProtocol {
+            get {
+                return ((int)(this["ServicePointManager_SecurityProtocol"]));
+            }
+        }
     }
 }

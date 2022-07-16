@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Configuration;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -50,43 +51,12 @@ namespace ServerManagerTool
 
         public App()
         {
-            if (string.IsNullOrWhiteSpace(Config.Default.ServerManagerUniqueKey))
-            {
-                Config.Default.ServerManagerUniqueKey = Guid.NewGuid().ToString();
-            }
-
-            if (!string.IsNullOrWhiteSpace(Config.Default.DataDir))
-            {
-                Config.Default.DataDir = IOUtils.NormalizeFolder(Config.Default.DataDir);
-            }
-
-            if (!string.IsNullOrWhiteSpace(Config.Default.ConfigDirectory))
-            {
-                Config.Default.ConfigDirectory = IOUtils.NormalizeFolder(Config.Default.ConfigDirectory);
-            }
-
-            if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
-            {
-                Config.Default.BackupPath = IOUtils.NormalizeFolder(Config.Default.BackupPath);
-            }
-
-            if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
-            {
-                Config.Default.AutoUpdate_CacheDir = IOUtils.NormalizeFolder(Config.Default.AutoUpdate_CacheDir);
-            }
-
-            App.Instance = this;
+            Instance = this;
             ApplicationStarted = false;
             Args = string.Empty;
             BetaVersion = false;
             Title = string.Empty;
             Version = AppUtils.GetDeployedVersion(Assembly.GetEntryAssembly());
-
-            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(0xC00); // TLS12
-            AppDomain.CurrentDomain.UnhandledException += ErrorHandling.CurrentDomain_UnhandledException;
-
-            MigrateSettings();
-            ReconfigureLogging();
         }
 
         public bool ApplicationStarted
@@ -192,6 +162,37 @@ namespace ServerManagerTool
             catch (Exception ex)
             {
                 Debug.WriteLine($"Failed calling home to API.\r\n{ex.Message}");
+            }
+        }
+
+        private void CheckForValidSettings()
+        {
+            try
+            {
+                // test one property from both setting files
+                var upgradeConfigTest = Config.Default.UpgradeConfig;
+                upgradeConfigTest = CommonConfig.Default.UpgradeConfig;
+
+                // no issues fetching the setting values, must have valid files.
+                return;
+            }
+            catch (ConfigurationErrorsException ex)
+            {
+                // one or more issues occurred when fetching the setting values.
+                // we need to delete the setting files.
+
+                ConfigurationErrorsException exception = ex;
+                while (exception != null)
+                {
+                    if (!string.IsNullOrWhiteSpace(exception.Filename) && exception.Filename.EndsWith("user.config"))
+                    {
+                        File.Delete(exception.Filename);
+                    }
+
+                    exception = exception.InnerException as ConfigurationErrorsException;
+                }
+
+                throw;
             }
         }
 
@@ -308,6 +309,50 @@ namespace ServerManagerTool
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            try
+            {
+                CheckForValidSettings();
+            }
+            catch (Exception ex)
+            {
+                var message = $"{ex.Message}\r\n\r\nTry restarting the server manager, if this keeps happening please report this crash to the Server Manager discord.";
+                var result = MessageBox.Show(message, "Server Manager crashed", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                Environment.Exit(1);
+            }
+
+            MigrateSettings();
+
+            if (string.IsNullOrWhiteSpace(Config.Default.ServerManagerUniqueKey))
+            {
+                Config.Default.ServerManagerUniqueKey = Guid.NewGuid().ToString();
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.DataDir))
+            {
+                Config.Default.DataDir = IOUtils.NormalizeFolder(Config.Default.DataDir);
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.ConfigDirectory))
+            {
+                Config.Default.ConfigDirectory = IOUtils.NormalizeFolder(Config.Default.ConfigDirectory);
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
+            {
+                Config.Default.BackupPath = IOUtils.NormalizeFolder(Config.Default.BackupPath);
+            }
+
+            if (!string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
+            {
+                Config.Default.AutoUpdate_CacheDir = IOUtils.NormalizeFolder(Config.Default.AutoUpdate_CacheDir);
+            }
+
+            ServicePointManager.SecurityProtocol = SecurityUtils.GetSecurityProtocol(Config.Default.ServicePointManager_SecurityProtocol);
+
+            AppDomain.CurrentDomain.UnhandledException += ErrorHandling.CurrentDomain_UnhandledException;
+
+            ReconfigureLogging();
 
             _globalizer = GlobalizedApplication.Instance;
             try

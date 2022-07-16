@@ -30,7 +30,7 @@ namespace ServerManagerTool
             {
                 var details = new StringBuilder();
                 details.AppendLine("ARK Server Manager Crash Report");
-                details.AppendLine("Please report this crash to the Ark Server Manager forums - https://arkservermanager.freeforums.net");
+                details.AppendLine($"Please report this crash to the Server Manager discord - {Config.Default.DiscordUrl}");
                 details.AppendLine();
 
                 details.AppendLine($"Assembly: {Assembly.GetExecutingAssembly()}");
@@ -64,7 +64,7 @@ namespace ServerManagerTool
                 message.AppendLine($"Crash Dump: {crashFile}");
                 details.AppendLine();
                 details.AppendLine();
-                message.AppendLine("Please report this crash to the Ark Server Manager forums - https://arkservermanager.freeforums.net");
+                message.AppendLine($"Please report this crash to the Server Manager discord - {Config.Default.DiscordUrl}");
                 message.AppendLine("The crash log will now be opened in notepad.");
 
                 var result = MessageBox.Show(message.ToString(), "ARK Server Manager crashed", MessageBoxButton.OK, MessageBoxImage.Exclamation);
