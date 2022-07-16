@@ -4275,7 +4275,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid ItemsSource="{Binding Path=SelectedCustomGameUserSetting.SectionItems, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid ItemsSource="{Binding Path=SelectedCustomGameUserSetting.SectionItems, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="True" CanUserResizeRows="False" RowHeaderWidth="25">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -4434,7 +4434,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid ItemsSource="{Binding Path=SelectedCustomGameSetting.SectionItems, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid ItemsSource="{Binding Path=SelectedCustomGameSetting.SectionItems, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="True" CanUserResizeRows="False" RowHeaderWidth="25">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
@@ -4593,7 +4593,7 @@
                                         </StackPanel>
                                     </GroupBox.Header>
 
-                                    <DataGrid ItemsSource="{Binding Path=SelectedCustomEngineSetting.SectionItems, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="25">
+                                    <DataGrid ItemsSource="{Binding Path=SelectedCustomEngineSetting.SectionItems, ElementName=SettingsControl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="true" SelectionMode="Single" CanUserResizeColumns="True" CanUserResizeRows="False" RowHeaderWidth="25">
                                         <DataGrid.Resources>
                                             <Style TargetType="{x:Type DataGridRow}">
                                                 <Style.Resources>
