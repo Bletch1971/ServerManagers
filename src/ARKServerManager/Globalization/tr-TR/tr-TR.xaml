@@ -376,7 +376,7 @@
     <sys:String x:Key="Progress_ReinstallSteamCmd_WindowTitle">SteamCMD İlerleme</sys:String>
     <!--#bölge-->
 
-    <!--#region GameData Penceresi -->
+    <!--#region GameData Window -->
     <sys:String x:Key="GameDataWindow_Title">Oyun Veri Dosyaları</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddGameDataTooltip">Oyun Veri Dosyası Ekle</sys:String>
@@ -384,35 +384,35 @@
     <sys:String x:Key="GameDataWindow_OpenGameDataFolderTooltip">Oyun Verileri Klasörünü Aç</sys:String>
     <sys:String x:Key="GameDataWindow_GameDataForumTooltip">Oyun Verileri Forumunu Aç</sys:String>
     <sys:String x:Key="GameDataWindow_ReloadGameDataTooltip">Oyun Veri Dosyalarını Yeniden Yükle</sys:String>
-    <sys:String x:Key="GameDataWindow_ValidateGameDataTooltip">Oyun Veri Dosyalarını Doğrulayın</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateGameDataTooltip">Oyun Veri Dosyalarını Doğrulama</sys:String>
     <sys:String x:Key="GameDataWindow_RemoveGameDataTooltip">Oyun Veri Dosyasını Sil</sys:String>
 
-    <sys:String x:Key="GameDataWindow_NameColumnLabel">Ad</sys:String>
+    <sys:String x:Key="GameDataWindow_NameColumnLabel">İsim</sys:String>
     <sys:String x:Key="GameDataWindow_VersionColumnLabel">Sürüm</sys:String>
-    <sys:String x:Key="GameDataWindow_DateColumnLabel">Oluşturma Tarihi</sys:String>
+    <sys:String x:Key="GameDataWindow_DateColumnLabel">Oluşturulma Tarihi</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddErrorTitle">Eylem Hatası Ekle</sys:String>
     <sys:String x:Key="GameDataWindow_AddErrorLabel">Seçili dosya okunurken bir hata oluştu.</sys:String>
-    <sys:String x:Key="GameDataWindow_ExistingFileErrorLabel">Aynı ada sahip bir dosya zaten var, mevcut dosyayı silin ve yeniden deneyin.</sys:String>
-    <sys:String x:Key="GameDataWindow_ClearTitle">Eylemi Temizle Onayla</sys:String>
-    <sys:String x:Key="GameDataWindow_ClearLabel">Tümünü silmek istediğinizi onaylamak için 'Evet'i tıklayın.</sys:String>
+    <sys:String x:Key="GameDataWindow_ExistingFileErrorLabel">Aynı ada sahip bir dosya zaten var, varolan dosyayı silin ve yeniden deneyin.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearTitle">Açık Eylemi Onayla</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearLabel">Tümünü temizlemek istediğinizi onaylamak için 'Evet'i tıklayın.</sys:String>
     <sys:String x:Key="GameDataWindow_ClearErrorTitle">Eylem Hatasını Temizle</sys:String>
     <sys:String x:Key="GameDataWindow_DeleteTitle">Silme İşlemini Onayla</sys:String>
-    <sys:String x:Key="GameDataWindow_DeleteLabel">Silme işlemini gerçekleştirmek istediğinizi onaylamak için 'Evet'i tıklayın.</sys:String>
-    <sys:String x:Key="GameDataWindow_DeleteErrorTitle">Eylem Silme Hatası</sys:String>
-    <sys:String x:Key="GameDataWindow_OpenErrorTitle">Klasörü Açma Hatası</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteLabel">Silme işlemini gerçekleştirmek istediğinizi onaylamak için 'Evet'i tıklatın.</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteErrorTitle">Eylem Hatasını Sil</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenErrorTitle">Klasörü Aç Hatası</sys:String>
     <sys:String x:Key="GameDataWindow_LoadErrorTitle">Yükleme Hatası</sys:String>
     <sys:String x:Key="GameDataWindow_ValidateSuccessTitle">Doğrulama</sys:String>
     <sys:String x:Key="GameDataWindow_ValidateSuccessLabel">Tüm oyun veri dosyaları geçerlidir.</sys:String>
     <sys:String x:Key="GameDataWindow_ValidateErrorTitle">Doğrulama Hatası</sys:String>
-    <sys:String x:Key="GameDataWindow_ValidateErrorLabel">Aşağıdaki dosya(lar)da hatalar var</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorLabel">Aşağıdaki dosya(s) ın hataları var</sys:String>
     <sys:String x:Key="GameDataWindow_ValidateErrorMessage">Dosya geçerli değil. Hatalar içerebilir veya yanlış biçimlendirmeye sahip olabilir.</sys:String>
 
     <sys:String x:Key="GameDataWindow_AddDialogTitle">Oyun veri dosyasını seçin</sys:String>
-    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">oyun verileri</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String>
     <sys:String x:Key="GameDataWindow_AddFilterLabel">Oyun Veri Dosyaları</sys:String>
     <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
-    <!--#bölge-->
+    <!--#endregion-->
 
     <!--#region Eklentiler Penceresi -->
     <sys:String x:Key="PluginsWindow_Title">Eklentiler</sys:String>
@@ -1218,15 +1218,15 @@
     <sys:String x:Key="ServerSettings_StasisKeepControllersTooltip">Etkinleştirilirse, sunucu AI'ları belirtilen yaratıkların belleğinde tutarak performans kazanabilir. NOT: sunucunuzun çok fazla RAM'i olmalıdır, aksi takdirde sunucunuz büyük bir bellek yüküne maruz kalır.</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionLabel">Asma Algılaması Yok</sys:String>
     <sys:String x:Key="ServerSettings_UseNoHangDetectionTooltip">Etkinleştirilirse, askıda kalmanın neden olduğu bazı kilitlenme türlerini önler (sunucu askıdayken sunucu gecikiyormuş gibi görünebilir).</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinosLabel">Dinos Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinosLabel">Dinolar Yok</sys:String>
     <sys:String x:Key="ServerSettings_NoDinosTooltip">Etkinleştirilirse, haritada hiçbir dinos doğmaz.</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselLabel">Sunucu Ansel'e İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">Etkinleştirilirse, Sunucularda NVIDIA Ansel'i etkinleştirir.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Yapı Belleği Optimizasyonları</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">Etkinleştirilirse, yapı belleği optimizasyonlarını etkinleştirir. NOT: Bu mod yapılarının anlık noktalarını bozabileceğinden, yapıyla ilgili modları çalıştırırken (güncellenene kadar) kullanmaktan kaçının.</sys:String>
-    <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">Ash Altında Denetim Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">Mesh Altında Denetim Yok</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">Etkinleştirilirse, ağ önleme sistemini tamamen kapatır.</sys:String>
-    <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">Ash Altı Öldürme Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">Mesh Altı Öldürme Yok</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">Etkinleştirilirse, ağ oluşturma önleyici oyuncu öldürmelerini kapatır (ancak yine de ışınlanmaya izin verir).</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxLabel">Vivox'u Etkinleştir</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxTooltip">Etkinleştirilirse, Vivox'u açar. NOT: Yalnızca Steam Sunucuları.</sys:String>
@@ -1369,7 +1369,7 @@
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Etkinleştirilirse, PvE modu etkinleştirildiğinde mağaralarda inşa etmeye izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">PvE Cryo Sickness'ı Etkinleştir</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Etkinleştirilirse, evcilleştirilmiş bir yaratığı bir kriyopoddan serbest bırakırsanız, PvE modu etkinleştirildiğinde bir kriyo hastalığı zamanlayıcınız olur.</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireLabel">PvE Friendly Fire'ı Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireLabel">PvE Dost Ateşi'ni Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvEFriendlyFireTooltip">Etkinleştirilirse, oyuncular PvE modu etkinleştirildiğinde diğer klan üyelerine, dinozorlara ve yapılara hasar veremez veya onları öldüremez.</sys:String>
     <sys:String x:Key="ServerSettings_DisableLootCratesLabel">Tedarik Kasalarını Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisableLootCratesTooltip">Etkinleştirilirse, Tedarik kasalarının oluşturulmasını engeller (yapay kasalar yine de ortaya çıkar).</sys:String>
@@ -1379,13 +1379,13 @@
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">Etkinleştirilirse, Tedarik Kasalarını rastgele yapar.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Kaynak Zengin Alanlarda Oluşturmayı Engelle</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Etkinleştirilirse, kaynak açısından zengin belirli alanlarda, özellikle de büyük dağların etrafındaki TheIsland kurulumunda bina oluşturmayı tamamen devre dışı bırakır.</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">PvP Friendly Fire'ı Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">PvP Dost Ateş'ini Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Etkinleştirilirse, oyuncular PvP modu etkinleştirildiğinde diğer kabile üyelerine, dinozorlara ve yapılara hasar veremez veya onları öldüremez.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Ceset Bulucu Kullan</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">Etkinleştirilirse, ölüm üzerine, oyuncunun öldüğü yeri bulmasına yardımcı olmak için gökyüzüne bir ışık huzmesi fırlar.</sys:String>
-    <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Animasyonların Canlanmasını Önle</sys:String>
+    <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Yeniden Canlanma Animasyonunu Önle</sys:String>
     <sys:String x:Key="ServerSettings_PreventSpawnAnimationsTooltip">Etkinleştirilirse, yeniden canlanma animasyonunu devre dışı bırakır.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsLabel">Sınırsız Özelliğe İzin Ver</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsLabel">Sınırsız MindWipe Özelliğine İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowUnlimitedRespecsTooltip">Etkinleştirilirse, oyuncunun mindwipe toniğini kullanarak sınırsız özelliklere sahip olmasını sağlar.</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsLabel">Platform Teline Çoklu Katlara İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowPlatformSaddleMultiFloorsTooltip">Etkinleştirilirse, sallar ve eyer platformlarında birden çok platform zeminine izin verir.</sys:String>
@@ -1403,37 +1403,37 @@
     <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp Label">Seviyeyi Aşan Tameleri Yok Edin:</sys:String>
     <sys:String x:Key="ServerSettings_DestroyTamesOverLevelClamp Tooltip">Bu düzeyi aşan evcilleştirmeler, sunucu başlatıldığında silinecektir. Silmeyi devre dışı bırakmak için 0 olarak ayarlayın.</sys:String>
  
-    <sys:String x:Key="ServerSettings_EnableTributeLabel">Övgü İndirmelerini Etkinleştir</sys:String>
+    <sys:String x:Key="ServerSettings_EnableTributeLabel">Eşya İndirmelerini Etkinleştir</sys:String>
     <sys:String x:Key="ServerSettings_EnableTributeTooltip">Etkinleştirilirse, bu, harici kurtulanların/öğelerin/dinos'un sunucunuza indirilmesine izin verir.</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Survivor İndirme Yok</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsTooltip">Etkinleştirilirse, hayatta kalan indirmeler devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemDownloadsLabel">Öğe İndirme Yok</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemDownloadsTooltip">Etkinleştirilirse, öğe indirmeleri devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_NoDinoDownloadsLabel">Dino İndirme Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsLabel">Karakter İndirmesi Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorDownloadsTooltip">Etkinleştirilirse, Karakter indirmeler devre dışı bırakılır.</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemDownloadsLabel">Eşya İndirmesi Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemDownloadsTooltip">Etkinleştirilirse, Eşya indirmeleri devre dışı bırakılır.</sys:String>
+    <sys:String x:Key="ServerSettings_NoDinoDownloadsLabel">Dino İndirmesi Yok</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoDownloadsTooltip">Etkinleştirilirse, dino indirmeleri devre dışı bırakılır.</sys:String>
 
-    <sys:String x:Key="ServerSettings_TributeUploadLabel">Övgü Yükleme Seçenekleri</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorUploadsLabel">Survivor Yüklemesi Yok</sys:String>
-    <sys:String x:Key="ServerSettings_NoSurvivorUploadsTooltip">Etkinleştirilirse, hayatta kalan yüklemeler devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_NoItemUploadsLabel">Öğe Yükleme Yok</sys:String>
+    <sys:String x:Key="ServerSettings_TributeUploadLabel">Eşya Yükleme Ayarları</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorUploadsLabel">Karakter Yüklemesi Yok</sys:String>
+    <sys:String x:Key="ServerSettings_NoSurvivorUploadsTooltip">Etkinleştirilirse, karakter yüklemeler devre dışı bırakılır.</sys:String>
+    <sys:String x:Key="ServerSettings_NoItemUploadsLabel">Eşya Yüklemesi Yok</sys:String>
     <sys:String x:Key="ServerSettings_NoItemUploadsTooltip">Etkinleştirilirse, öğe yüklemeleri devre dışı bırakılır.</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoUploadsLabel">Dino Yüklemesi Yok</sys:String>
     <sys:String x:Key="ServerSettings_NoDinoUploadsTooltip">Etkinleştirilirse, dino yüklemeleri devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Max Tribute Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeDinosLabel">Max Dino Yüklemesi</sys:String>
     <sys:String x:Key="ServerSettings_MaxTributeDinosTooltip">Etkinleştirilirse, oyuncunun dikilitaşlarda saklayabileceği dino sayısını sınırlar. NOT: Bunu yüksek olarak ayarlamak küme bozulmasına neden olabilir.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Maks. Övgü Öğesi</sys:String>
-    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">Etkinleştirilirse, oyuncunun dikilitaşlarda saklayabileceği öğelerin sayısını sınırlar. NOT: Bunu yüksek olarak ayarlamak küme bozulmasına neden olabilir.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsLabel">Max Eşya Yüklemesi</sys:String>
+    <sys:String x:Key="ServerSettings_MaxTributeItemsTooltip">Etkinleştirilirse, oyuncunun dikilitaşlarda saklayabileceği eşya sayısını sınırlar. NOT: Bunu yüksek olarak ayarlamak küme bozulmasına neden olabilir.</sys:String>
 
-    <sys:String x:Key="ServerSettings_ClusterTributeLabel">Küme Haraç Seçenekleri</sys:String>
+    <sys:String x:Key="ServerSettings_ClusterTributeLabel">Cluster Limit Ayarları</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Filtrelemeden Aktarım Yok</sys:String>
-    <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Etkinleştirilirse, sunucu aynı kümede değilse, hayatta kalan, öğe ve dino aktarımları devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Hayatta Kalan Yükleme Süresini Geçersiz Kıl</sys:String>
+    <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Etkinleştirilirse, sunucu aynı kümede değilse, hayatta kalan, Eşya ve dino aktarımları devre dışı bırakılır.</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Karakter Yükleme Süresini Geçersiz Kıl</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">Etkinleştirilirse, sona erme zamanlayıcısını geçersiz kılmanıza olanak tanır.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Öğe Yükleme Süresi Sonunu Geçersiz Kıl</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsLabel">Eşya Yükleme Süresi Sonunu Geçersiz Kıl</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeItemExpirationSecondsTooltip">Etkinleştirilirse, sona erme zamanlayıcısını geçersiz kılmanıza olanak tanır.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsLabel">Dino Yükleme Süresini Geçersiz Kıl</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeDinoExpirationSecondsTooltip">Etkinleştirilirse, sona erme zamanlayıcısını geçersiz kılmanıza olanak tanır.</sys:String>
-    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Minimum Dino Yeniden Yükleme Aralığını Geçersiz Kıl</sys:String>
+    <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalLabel">Dino Yükleme Aralığı</sys:String>
     <sys:String x:Key="ServerSettings_OverrideMinimumDinoReuploadIntervalTooltip">Etkinleştirilirse, yeniden yükleme aralığını geçersiz kılmanıza olanak tanır.</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsLabel">Yabancı Dino İndirmelerine İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_CrossARKAllowForeignDinoDownloadsTooltip">Etkinleştirilirse, yabancı Dino'ları haritaya indirmenize izin verir.</sys:String>
@@ -1442,11 +1442,11 @@
     <sys:String x:Key="ServerSettings_PvPRespawnTooltip">Etkinleştirilirse, PvP yeniden doğma aralığı ayarlarını artırmayı etkinleştirir.</sys:String>
     <sys:String x:Key="ServerSettings_IntervalCheckPeriodLabel">Aralık Denetimi Dönemi</sys:String>
     <sys:String x:Key="ServerSettings_IntervalCheckPeriodTooltip">Yeniden doğma kontrolünün, oyuncunun bir takım tarafından öldürülmesinden sonraki süre.</sys:String>
-    <sys:String x:Key="ServerSettings_IntervalCheckPeriodUnits">saniye</sys:String>
+    <sys:String x:Key="ServerSettings_IntervalCheckPeriodUnits">Saniye</sys:String>
     <sys:String x:Key="ServerSettings_IntervalMultiplierLabel">Aralık Çarpanı:</sys:String>
     <sys:String x:Key="ServerSettings_IntervalMultiplierTooltip">Yeniden doğma zamanını belirlemek için temel miktarın çarpan değeri.</sys:String>
     <sys:String x:Key="ServerSettings_IntervalMultiplierUnits">x</sys:String>
-    <sys:String x:Key="ServerSettings_IntervalBaseLabel">Aralık Temel Miktarı:</sys:String>
+    <sys:String x:Key="ServerSettings_IntervalBaseLabel">Temel Aralığı Miktarı:</sys:String>
     <sys:String x:Key="ServerSettings_IntervalBaseTooltip">Yeniden doğma zamanını belirlemek için kullanılan temel zaman aralığı.</sys:String>
     <sys:String x:Key="ServerSettings_IntervalBaseUnits">saniye</sys:String>
     <sys:String x:Key="ServerSettings_PreventOfflinePvPLabel">Çevrimdışı PvP'yi Önleyin</sys:String>
@@ -1501,9 +1501,9 @@
     <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScaleTooltip">Etkinleştirilirse, NPC ağ istatistikleri aralığı ölçeği ayarlarını geçersiz kılabilirsiniz.</sys:String>
     <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePlayerCountStartLabel">Çevrimiçi Oyuncu Sayımı Başlatma</sys:String>
     <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePlayerCountStartTooltip">Statis ölçeği etkinleştirildiğinde minimum çevrimiçi oyuncu sayısı.</sys:String>
-    <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePlayerCountEndLabel">Çevrimiçi Oyuncu Sayımı End</sys:String>
+    <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePlayerCountEndLabel">Çevrimiçi Oyuncu Sayımı Son</sys:String>
     <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePlayerCountEndTooltip">Ölçek maksimumuna ulaşıldığında maksimum çevrimiçi oyuncu sayısı.</sys:String>
-    <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePercentEndLabel">Scale Maximum</sys:String>
+    <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePercentEndLabel">Maksimum Ölçek</sys:String>
     <sys:String x:Key="ServerSettings_NPCNetworkStasisRangeScalePercentEndTooltip">Çevrimiçi oynatıcı sayısı bitiş değerine ulaşıldığında sunucu tarafından kullanılan maksimum ölçek yüzdesi.</sys:String>
 
     <sys:String x:Key="ServerSettings_OxygenSwimSpeedStatMultiplierLabel">Oksijen Yüzme Hızı İstatistik Çarpanı</sys:String>
@@ -1520,9 +1520,9 @@
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondTooltip">Elektrikli nesnelerde şarj pillerinin kullanılma hızı için çarpanı belirtir (saniye başına azalma).</sys:String>
     <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierLabel">Yakıt Tüketimi Aralığı Çarpanı</sys:String>
     <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierTooltip">Yakıt tüketimi aralığı için çarpanı belirtir.</sys:String>
-    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeLabel">Oyuncu Olmayan Öğeler Aralığını Sınırla</sys:String>
+    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeLabel">Oyuncu Olmayan Yapı Aralığını Sınırla</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsRangeTooltip">Bir alandaki bırakılan öğelerin sayısını sınırlayın (LimitNonPlayerDroppedItemsCount ile birlikte).</sys:String>
-    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Oyuncu Olmayan Öğelerin Sayısını Sınırla</sys:String>
+    <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountLabel">Oyuncu Olmayan Yapı Sayısını Sınırla</sys:String>
     <sys:String x:Key="ServerSettings_LimitNonPlayerDroppedItemsCountTooltip">Bir alandaki bırakılan öğelerin sayısını sınırlayın (LimitNonPlayerDroppedItemsRange ile birlikte).</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableCryopodNerfLabel">Cryopod Nerf'i Etkinleştir</sys:String>
@@ -1539,7 +1539,7 @@
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsLabel">Görevleri Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisableGenesisMissionsTooltip">etkinleştirilirse, Genesis haritasındaki tüm görevleri devre dışı bırakır.</sys:String>
 
-    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Yükselirken TEK Takımını Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsLabel">Genesis TEK Takımını Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisableDefaultMapItemSetsTooltip">Etkinleştirilirse, oyuncunun TEK Suit ile doğmasını engeller.</sys:String>
 
     <sys:String x:Key="ServerSettings_DisableWorldBuffsLabel">World Buff'ları Devre Dışı Bırak</sys:String>
@@ -1583,10 +1583,10 @@
     <sys:String x:Key="ServerSettings_ItemStatClamps_ArmorLabel">Zırh</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_MaxDurabilityLabel">Maks Dayanıklılık</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponDamagePercentLabel">Silah Hasar Yüzdesi</sys:String>
-    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">Silah Klipsi Cephanesi</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_WeaponClipAmmoLabel">Silah Cephanesi</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_HypothermalInsulationLabel">Hipo Yalıtımı</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClamps_WeightLabel">Ağırlık</sys:String>
-    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">Hyper Insulation</sys:String>
+    <sys:String x:Key="ServerSettings_ItemStatClamps_HyperthermalInsulationLabel">Hiper Yalıtım</sys:String>
     <!--#bölge-->
 
     <!--#region Sunucu Ayarları - Sohbet ve Bildirimler -->
@@ -1640,7 +1640,7 @@
     <sys:String x:Key="ServerSettings_StaminaDrainTooltip">Dayanıklılık tüketimi için ölçeklendirme faktörünü belirtir. Daha yüksek değerler dayanıklılık tüketimini artırır (daha hızlı yorulur).</sys:String>
     <sys:String x:Key="ServerSettings_HealthRecoveryLabel">Sağlık Kurtarma:</sys:String>
     <sys:String x:Key="ServerSettings_HealthRecoveryTooltip">Durum kurtarma için ölçeklendirme faktörünü belirtir. Daha yüksek değerler iyileşme oranını artırır (daha hızlı iyileşir).</sys:String>
-    <sys:String x:Key="ServerSettings_HarvestingDamageLabel">Hasar Toplama:</sys:String>
+    <sys:String x:Key="ServerSettings_HarvestingDamageLabel">Hasat Hasarı:</sys:String>
     <sys:String x:Key="ServerSettings_HarvestingDamageTooltip">Hasat hasar oranı için ölçeklendirme faktörünü belirtir. Daha yüksek değerler hasar oranını artırır. Düşük değerler onu azaltır.</sys:String>
     <sys:String x:Key="ServerSettings_TurretDamageLabel">Taret Hasarı:</sys:String>
     <sys:String x:Key="ServerSettings_TurretDamageTooltip">Taret (mermi ve mermi taretleri) tarafından verilen hasar için ölçeklendirme faktörünü belirtir. Daha yüksek değerler taret hasarını artırır. Düşük değerler onu azaltır.</sys:String>
@@ -1678,8 +1678,8 @@
     <sys:String x:Key="ServerSettings_StatSpeedLabel">Hız:</sys:String>
     <sys:String x:Key="ServerSettings_StatSpeedTooltip">Seviye başına hız kazancı çarpanını belirtir. Daha yüksek değerler hızı daha hızlı artırır; düşük değerler hızı daha yavaş artırır.</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatSpeedTooltip">Temel hız için çarpanı belirtir. Daha yüksek değerler temel hızı artırır; düşük değerler temel hızı düşürür.</sys:String>
-    <sys:String x:Key="ServerSettings_StatFortitudeLabel">Fortitude:</sys:String>
-    <sys:String x:Key="ServerSettings_StatFortitudeTooltip">Seviye başına metanet kazancı çarpanını belirtir. Daha yüksek değerler metaneti daha hızlı artırır; daha düşük değerler gücü daha yavaş artırır.</sys:String>
+    <sys:String x:Key="ServerSettings_StatFortitudeLabel">Direnç:</sys:String>
+    <sys:String x:Key="ServerSettings_StatFortitudeTooltip">Seviye başına Direnç kazancı çarpanını belirtir. Daha yüksek değerler metaneti daha hızlı artırır; daha düşük değerler gücü daha yavaş artırır.</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatFortitudeTooltip">Temel metanet için çarpanı belirtir. Daha yüksek değerler temel dayanıklılığı artırır; daha düşük değerler temel dayanıklılığı azaltır.</sys:String>
     <sys:String x:Key="ServerSettings_StatCraftingLabel">Yapım:</sys:String>
     <sys:String x:Key="ServerSettings_StatCraftingTooltip">Seviye başına beceri kazanımı oluşturmak için çarpanı belirtir. Daha yüksek değerler, zanaatkarlık becerisini daha hızlı artırır; daha düşük değerler, zanaatkarlık becerisini daha yavaş artırır.</sys:String>
@@ -1700,38 +1700,38 @@
     <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosLabel">Maks Evcil Dinozorlar (kabile):</sys:String>
     <sys:String x:Key="ServerSettings_MaxPersonalTamedDinosTooltip">Kabilen başına maksimum evcilleştirilmiş dino sayısını ayarlayın.</sys:String>
     <sys:String x:Key="ServerSettings_DinoSettingsLabel">Dino Ayarları</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDamageLabel">Ehlal Edilmiş Hasar:</sys:String>
-    <sys:String x:Key="ServerSettings_TamedResistanceLabel">Ehlileştirilmiş Direnç:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDamageLabel">Evcilleştirilmiş Hasar:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedResistanceLabel">Evcilleştirilmiş direnç:</sys:String>
     <sys:String x:Key="ServerSettings_FoodDrainMultiplierLabel">Yiyecek Boşaltma:</sys:String>
     <sys:String x:Key="ServerSettings_FoodDrainMultiplierTooltip">Vahşi dinozorların yiyecek boşaltması için ölçeklendirme faktörünü belirtir. Daha yüksek değerler yemek tüketimini artırır. Düşük değerler onu azaltır.</sys:String>
-    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierLabel">Ehlileştirilmiş Yiyecek Boşaltma:</sys:String>
-    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierTooltip">Ehlileştirilmiş dinozorların yiyecek boşaltması için ölçeklendirme faktörünü belirtir. Daha yüksek değerler yemek tüketimini artırır. Düşük değerler onu azaltır.</sys:String>
+    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierLabel">Evcilleştirilmiş Yiyecek Boşaltma:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierTooltip">Evcilleştirilmiş dinozorların yiyecek boşaltması için ölçeklendirme faktörünü belirtir. Daha yüksek değerler yemek tüketimini artırır. Düşük değerler onu azaltır.</sys:String>
       <sys:String x:Key="ServerSettings_TorporDrainMultiplierLabel">Torpor Tahliyesi:</sys:String>
     <sys:String x:Key="ServerSettings_TorporDrainMultiplierTooltip">Vahşi dinoların uyuşukluk boşaltması için ölçeklendirme faktörünü belirtir. Daha yüksek değerler torpor tahliyesini arttırır. Düşük değerler onu azaltır.</sys:String>
-    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierLabel">Uysallaştırılmış Torpor Tahliyesi:</sys:String>
-    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierTooltip">Ehlileştirilmiş dinoların uyuşukluk boşaltması için ölçeklendirme faktörünü belirtir. Daha yüksek değerler torpor tahliyesini arttırır. Düşük değerler onu azaltır.</sys:String>
-    <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierLabel">Pasif Tame Aralığı:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierLabel">Evcilleştirilmiş Torpor Tahliyesi:</sys:String>
+    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierTooltip">Evcilleştirilmiş dinoların uyuşukluk boşaltması için ölçeklendirme faktörünü belirtir. Daha yüksek değerler torpor tahliyesini arttırır. Düşük değerler onu azaltır.</sys:String>
+    <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierLabel">Pasif Evcilleştirme Aralığı:</sys:String>
     <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierTooltip">Pasif evcilleştirme beslemeleri arasındaki süre için ölçeklendirme faktörünü belirtir. Daha yüksek değerler beslemeler arasındaki zaman aralığını arttırır. Düşük değerler onu azaltır.</sys:String>
 
-    <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostLabel">Tamed Dinos Eyer Yapısı Maliyeti:</sys:String>
+    <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostLabel">Evcilleştirilmiş Dino Eyer Yapısı Maliyeti:</sys:String>
     <sys:String x:Key="ServerSettings_PersonalTamedDinosSaddleStructureCostTooltip">Her platform eyerinin (yapılarla birlikte) kabile evcilleştirilmiş dino yuvalarının sayısı.</sys:String>
     <sys:String x:Key="ServerSettings_UseTameLimitForStructuresOnlyLabel">Yalnızca Yapılar için Tame Sınırını Kullan</sys:String>
     <sys:String x:Key="ServerSettings_UseTameLimitForStructuresOnlyTooltip">etkinleştirilirse, Evcil Birimlerin yalnızca Yapıları ve Raftları olan Platformlar için uygulanmasını ve kullanılmasını sağlar.</sys:String>
     <sys:String x:Key="ServerSettings_DinoSpawnsLabel">Dino Çıktıları:</sys:String>
     <sys:String x:Key="ServerSettings_DinoSpawnsTooltip">Dino yumurtlamaları için ölçeklendirme faktörünü belirtir. Daha yüksek değerler, Ark'ta ortaya çıkan dinozorların sayısını artırır.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowRaidDinoFeedingLabel">Raid Dino Beslemeye İzin Ver</sys:String>
+    <sys:String x:Key="ServerSettings_AllowRaidDinoFeedingLabel">Titan Dino Beslemeye İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowRaidDinoFeedingTooltip">Etkinleştirilirse, sunucunuzun Titanosaur'larının kalıcı olarak evcilleştirilmesine izin verir (yani, Beslenmelerine izin verir).</sys:String>
     <sys:String x:Key="ServerSettings_RaidDinoCharacterFoodDrainMultiplierLabel">Yiyecek Boşaltma Çarpanı</sys:String>
     <sys:String x:Key="ServerSettings_RaidDinoCharacterFoodDrainMultiplierTooltip">Baskın dinolarının yiyecek boşaltma çarpanını belirtir. Daha yüksek değerler yemek tüketimini artırır; daha düşük değerler yemek tüketimini azaltır.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersLabel">Mağaralarda El İlanlarına İzin Ver</sys:String>
-    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">Etkinleştirilirse, Flyers'ın mağaralara girmesine izin verir.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersLabel">Mağaralarda Uçanlara İlanlarına İzin Ver</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAllowCaveFlyersTooltip">Etkinleştirilirse, Uçanlar'ın mağaralara girmesine izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryLabel">Uçan Dayanıklılık Kurtarmaya İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">Etkinleştirilirse, bir el ilanı üzerinde dururken dayanıklılığı kurtarır.</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingLabel">Flyer Hız Seviyelendirmesine İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Etkinleştirilirse, el ilanı hareket hızının dengelenmesine izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Dino Mate Boost'u Önleyin</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Etkinleştirilirse, dino mate güçlendirme devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Patlayıcılarla Force Ground Flyer'ı Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Disable Force Ground Flyer with Explosives</sys:String>
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Etkinleştirilirse, üzerlerine patlayıcı yerleştirildiğinde el ilanının topraklanmasını devre dışı bırakır.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Birden Çok Ekli C4'e İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Etkinleştirilirse, dino başına birden fazla C4 eklenmesine izin verir.</sys:String>
@@ -1741,15 +1741,15 @@
     <sys:String x:Key="ServerSettings_DisableDinoDecayPvPTooltip">Etkinleştirilirse, PvP'de dino sahipliğinin kademeli olarak azalmasını devre dışı bırakır; aksi takdirde her dino herhangi bir oyuncu tarafından talep edilebilir.</sys:String>
     <sys:String x:Key="ServerSettings_DinoDecayPeriodLabel">PvE Dino Bozulma Dönemi:</sys:String>
     <sys:String x:Key="ServerSettings_DinoDecayPeriodTooltip">Dino sahiplik süresinin temel bozulmasında çarpan. Yalnızca Dino Decay PvE'yi Devre Dışı Bırak seçeneği işaretli olmadığında çalışır.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableImprintDinoBuffLabel">Bebek Dino Imprint Buff'ı Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_DisableImprintDinoBuffLabel">Bebek Dino İlgi Buff'ı Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisableImprintDinoBuffTooltip">Etkinleştirilirse, dino damgalayıcı oyuncu stat bonusunu devre dışı bırakır, normalde dino üzerine özel olarak basılan ve onu bir damgalama kalitesine sahip olacak şekilde yükselten kişi ekstra hasar/direnç güçlendirmesi alır.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleLabel">Bebek Dino Damgasının Herkes Tarafından Sarılmasına İzin Ver</sys:String>
+    <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleLabel">Bebek Dino İlgi Herkes Tarafından verilmesine İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleTooltip">Etkinleştirilirse, Bebek Dino'ya (sarılma vb.) ilgilenen herkes, yalnızca üzerine basılan kişiyle değil, HERKES ilgilenebilecek.</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosLabel">Çürümüş Dinoları Otomatik Yok Et</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosTooltip">Etkinleştirilirse, hak talebinde bulunulabilir tüm çürümüş dinolar, Talep Edilebilir olarak kalmaları yerine yüklendiğinde otomatik olarak yok edilir.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Dino Sürüşünü Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Dino Binmeyi Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">Etkinleştirilirse, evcilleştirilmiş tüm dinozorlara binilemez.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Dino Taming'i Devre Dışı Bırak</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Dino Evcilleştirmeyi Devre Dışı Bırak</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">Etkinleştirilirse, tüm vahşi dinozorlar evcilleştirilemez.</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Flyer Riding'i Değiştir</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">Etkinleştirilirse, el ilanlarının haritada kullanılıp kullanılamayacağını değiştirmenize olanak tanır; aksi takdirde varsayılan olarak harita ayarlarını kullanır.</sys:String>
@@ -1788,12 +1788,12 @@
     <sys:String x:Key="ServerSettings_DinoCustomization_DinoRemoveRecordTitle">Dino'yu Kaldır</sys:String>
     <sys:String x:Key="ServerSettings_DinoCustomization_DinoRemoveRecordLabel">Dino kaydını silmek istediğinizi onaylamak için 'Evet'i tıklayın.</sys:String>
 
-    <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatMultipliersLabel">Seviye Başına İstatistik Çarpanları (Tamed)</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Seviye Başına İstatistik Çarpanları (Tamed) - Ekle</sys:String>
-    <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Seviye Başına İstatistik Çarpanları (Tamed) - Yakınlık</sys:String>
-    <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Seviye Başına İstatistik Çarpanları (Wild)</sys:String>
-    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Mutajen Düzeyi Artışı (Wild)</sys:String>
-    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Mutajen Düzeyi Artışı (Bred)</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatMultipliersLabel">Seviye Başına İstatistik Çarpanları (Evcilleştirilmiş)</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAddMultipliersLabel">Seviye Başına İstatistik Çarpanları (Evcilleştirilmiş) - Ekle</sys:String>
+    <sys:String x:Key="ServerSettings_TamedDinoPerLevelStatAffinityMultipliersLabel">Seviye Başına İstatistik Çarpanları (Evcilleştirilmiş) - Yakınlık</sys:String>
+    <sys:String x:Key="ServerSettings_WildDinoPerLevelStatMultipliersLabel">Seviye Başına İstatistik Çarpanları (Vahşi)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoWildMutagenLevelBoostLabel">Mutajen Düzeyi Artışı (Vahşi)</sys:String>
+    <sys:String x:Key="ServerSettings_DinoBredMutagenLevelBoostLabel">Mutajen Düzeyi Artışı (Nesil)</sys:String>
     <sys:String x:Key="ServerSettings_DinoBreedingMultipliersLabel">Dino Yetiştirme Çarpanları</sys:String>
     <sys:String x:Key="ServerSettings_BaseStatMultipliersTooltip">Etkinleştirilirse, her bir temel istatistik için ölçek faktörlerinin uygulanmasına izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_PerLevelStatMultipliersTooltip">Etkinleştirilirse, ölçek faktörlerinin her bir istatistiğe uygulanmasına izin verir.</sys:String>
@@ -1805,27 +1805,27 @@
     <sys:String x:Key="ServerSettings_ResetPerLevelStatMultipliersTooltip">Tüm değerleri varsayılanlara sıfırlayın.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBaseStatMultipliersTooltip">Tüm değerleri varsayılanlara sıfırlayın.</sys:String>
 
-    <sys:String x:Key="ServerSettings_MatingIntervalLabel">Eşleşme Aralığı:</sys:String>
-    <sys:String x:Key="ServerSettings_MatingIntervalTooltip">Ehlileştirilmiş dino çiftleştirme arasındaki süre için çarpanı belirtir. Daha düşük değerler, çiftleşme arasındaki süreyi azaltır.</sys:String>
-    <sys:String x:Key="ServerSettings_MatingSpeedLabel">Eşleşme Hızı:</sys:String>
-    <sys:String x:Key="ServerSettings_MatingSpeedTooltip">Dinozorların birbirleriyle çiftleşme hızının çarpanını belirtir. Daha yüksek değerler, eşleşme hızını artırır.</sys:String>
-    <sys:String x:Key="ServerSettings_EggHatchSpeedLabel">Yumurta Tarama Hızı:</sys:String>
+    <sys:String x:Key="ServerSettings_MatingIntervalLabel">Çiftleşme Aralığı:</sys:String>
+    <sys:String x:Key="ServerSettings_MatingIntervalTooltip">Evcişlleştirilmiş dino çiftleştirme arasındaki süre için çarpanı belirtir. Daha düşük değerler, çiftleşme arasındaki süreyi azaltır.</sys:String>
+    <sys:String x:Key="ServerSettings_MatingSpeedLabel">Çiftleşme Hızı:</sys:String>
+    <sys:String x:Key="ServerSettings_MatingSpeedTooltip">Dinozorların birbirleriyle çiftleşme hızının çarpanını belirtir. Daha yüksek değerler, çiftleşme hızını artırır.</sys:String>
+    <sys:String x:Key="ServerSettings_EggHatchSpeedLabel">Evcil Dino Yumurtalama Hızı:</sys:String>
     <sys:String x:Key="ServerSettings_EggHatchSpeedTooltip">Döllenmiş yumurtaların yumurtadan çıktığı süre için çarpanı belirtir. Daha yüksek değerler, yumurtaların kuluçka süresini kısaltır.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyMatureSpeedLabel">Bebek Yetişkin Hızı:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyMatureSpeedLabel">Bebek Yetişkin Olma Hızı:</sys:String>
     <sys:String x:Key="ServerSettings_BabyMatureSpeedTooltip">Bebek dinozorların olgunlaşarak yetişkinlere dönüştüğü süre için çarpanı belirtir. Daha yüksek değerler, bebek dinozorların yetişkinlere dönüşmesi için geçen süreyi azaltır.</sys:String>
     <sys:String x:Key="ServerSettings_BabyFoodConsumptionSpeedLabel">Bebek Maması Tüketim Hızı:</sys:String>
     <sys:String x:Key="ServerSettings_BabyFoodConsumptionSpeedTooltip">Bebek dinozorların yiyeceği tüketme hızının çarpanını belirtir. Daha yüksek değerler bebeğin daha sık yemek yemesini sağlar.</sys:String>
 
-    <sys:String x:Key="ServerSettings_DinoImprintLabel">Dino Baskısı</sys:String>
+    <sys:String x:Key="ServerSettings_DinoImprintLabel">Dino İlgi</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierLabel">Durum Ölçeği Basılıyor:</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">Baskı kalitesinin istatistikler üzerinde ne kadar etkisi olduğu. Sistemi etkin bir şekilde devre dışı bırakmak için 0'a ayarlayın.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Künye Miktarı Ölçeği:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">İlgi Miktarı Ölçeği:</sys:String>
     <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Her dizinin sağladığı yüzdeye uygulanan bir çarpan. Bu çarpan küreseldir, yani her türün damgalama ilerlemesini etkileyecektir. Daha yüksek değerler, her dizinin miktarını artırır.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Sarılma Aralığı:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Bebeklerin ne sıklıkla kucaklaşmak istediklerine ilişkin bir çarpan. Daha düşük değerler, baskı kalitesi elde etmek için onlarla daha sık kucaklaşmanız gerekeceği anlamına gelir.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Sarılma Ek Süresi:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Bebekle kucaklaşmayı geciktirdikten sonra baskı kalitesinin düşmeye başlamasına kadar geçen süreyi gösteren bir çarpan. Daha yüksek değerler, ek süreyi artırır.</sys:String>
-    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Cuddle Lose Imprint Quality Speed:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">İlgi Kaybetme Hızı:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Henüz bebeğinize sarılmadıysanız, ek süre sonunda baskı kalitesinin ne kadar hızlı düştüğüne dair bir çarpan. Daha düşük değerler, baskı kalitesi kaybını yavaşlatır.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Sıfırlama İşlemini Onayla</sys:String>
@@ -1960,7 +1960,7 @@
     <sys:String x:Key="ServerSettings_EnableFastDecayIntervalTooltip">Etkinleştirilirse, hızlı bozulma seçeneklerinin ayarlanmasına izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_FastDecayIntervalLabel">Hızlı Bozunma Aralığı</sys:String>
     <sys:String x:Key="ServerSettings_FastDecayIntervalTooltip">"Hızlı Çürüme" yapıları (sütunlar veya yalnız temeller gibi) için sabit bir sabit bozulma süresi ayarlar.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceAllStructureLockingLabel">Tüm Yapı Kilitlemeyi Zorla</sys:String>
+    <sys:String x:Key="ServerSettings_ForceAllStructureLockingLabel">Tüm Yapıları Kilitlemeyi Zorla</sys:String>
     <sys:String x:Key="ServerSettings_ForceAllStructureLockingTooltip">Etkinleştirilmişse, tüm öğe kapsayıcılarının Kilitlenmesine izin verin.</sys:String>
     <sys:String x:Key="ServerSettings_PassiveDefensesDamageDinosLabel">Pasif Savunmalar Binicisiz Dinozorlara Zarar Verir</sys:String>
     <sys:String x:Key="ServerSettings_PassiveDefensesDamageDinosTooltip">Etkinleştirilirse, dikenli duvarlar vahşi/binicisiz Dino'lara zarar verir.</sys:String>
@@ -1970,8 +1970,8 @@
     <sys:String x:Key="ServerSettings_LimitTurretsRangeTooltip">TÜM otomatik taretler ve tek taretleri için sınır aralığını ayarlar.</sys:String>
     <sys:String x:Key="ServerSettings_LimitTurretsNumLabel">Taret Limiti</sys:String>
     <sys:String x:Key="ServerSettings_LimitTurretsNumTooltip">Sınır aralığı içinde yerleştirilebilecek maksimum taret sayısını ayarlar.</sys:String>
-    <sys:String x:Key="ServerSettings_HardLimitTurretsInRangeLabel">Menzildeki Taretleri Sabit Sınırlama</sys:String>
-    <sys:String x:Key="ServerSettings_HardLimitTurretsInRangeTooltip">Etkinleştirilirse, geriye dönük bir taret sabit sınırı uygular. Bu, otomatik taretlerde, ağır taretlerde, tek taretlerde, bitki taretlerinde çalışacak ve artık haritaya özgü değil. Zor limit hesaplaması başlangıçta yapılır, bu nedenle taretleriniz limitin üzerine çıkarsa, siz limitin altına düşene kadar rasgele kapatılacaktır. Kapatılan taretleri geri yüklemek için sayıyı aşan kuleleri ve kapatma taretlerini alıp çalışabilmeleri için değiştirmelisiniz.</sys:String>
+    <sys:String x:Key="ServerSettings_HardLimitTurretsInRangeLabel">Menzildeki Taretleri Sınırlama</sys:String>
+    <sys:String x:Key="ServerSettings_HardLimitTurretsInRangeTooltip">Etkinleştirilirse, geriye dönük bir taret sınırı uygular. Bu, otomatik taretlerde, ağır taretlerde, tek taretlerde, bitki taretlerinde çalışacak ve artık haritaya özgü değil. Zor limit hesaplaması başlangıçta yapılır, bu nedenle taretleriniz limitin üzerine çıkarsa, siz limitin altına düşene kadar rasgele kapatılacaktır. Kapatılan taretleri geri yüklemek için sayıyı aşan kuleleri ve kapatma taretlerini alıp çalışabilmeleri için değiştirmelisiniz.</sys:String>
     <sys:String x:Key="ServerSettings_StructurePickupLabel">Yapı Alma</sys:String>
     <sys:String x:Key="ServerSettings_AlwaysAllowStructurePickupLabel">Yapı Alımına Daima İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AlwaysAllowStructurePickupTooltip">Etkinleştirilirse, hızlı alma sistemindeki zamanlayıcıyı devre dışı bırakır.</sys:String>

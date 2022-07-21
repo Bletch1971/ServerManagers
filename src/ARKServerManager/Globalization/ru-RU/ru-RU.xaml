@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">23.06.2022 от Varlonec, Эдван</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">17.07.2022 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -452,6 +452,7 @@
     <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Выбранный</sys:String>
     <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Профиль</sys:String>
     <sys:String x:Key="ServerMonitor_ServerColumnLabel">Cервер</sys:String>
+    <sys:String x:Key="ServerMonitor_PortsColumnLabel">Порты</sys:String>
     <sys:String x:Key="ServerMonitor_MapColumnLabel">Карта</sys:String>
     <sys:String x:Key="ServerMonitor_ModsColumnLabel">Моды</sys:String>
     <sys:String x:Key="ServerMonitor_VersionColumnLabel">Версия</sys:String>
@@ -712,6 +713,8 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">Это сообщение будет отображаться при изменении состояния сервера.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Обнаружено обновление мода:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">Это сообщение будет отображаться, когда менеджер сервера обнаружит, что один или несколько модов устарели.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">Изменение количества Онлайн-Игроков:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">Это сообщение будет отображаться при изменении количества онлайн-игроков.</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">Предупреждение о респавне динозавров:</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">Это сообщение будет отображаться при запуске сервера и оповещение о запланированном респе динозавров</sys:String>
 
@@ -968,13 +971,18 @@
     <sys:String x:Key="ServerSettings_LastStartedLabel">Время последнего запуска:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">Доступность:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">Статус сервера ARK в Steam.</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unknown">Неизвестный</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_SetPublicIP">Задать публичный IP-адрес</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Unavailable">Недоступно</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Waiting">В ожидании публикации</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Available">Доступно</sys:String>
     <sys:String x:Key="ServerSettings_PlayersLabel">Игроки:</sys:String>
     <sys:String x:Key="ServerSettings_PlayersTooltip">Число игроков подключенные к серверу ARK в настоящее время.</sys:String>
+
+    <sys:String x:Key="ServerSettings_Availability_Unknown">Неизвестный</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Unavailable">Недоступно</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_UnavailableTootip">Сервер недоступен</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnly">Только LAN</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnlyTootip">Сервер доступен только через локальный IP. Переадресация портов, брандмауэр или CGNAT и т. д. препятствуют публичному доступу.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnly">Доступно - без обратной связи</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnlyTootip">Сервер доступен через локальный IP и общедоступный IP, петля недоступна. Сервер является общедоступным, но общедоступный IP-адрес недоступен через локальную сеть.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Available">Доступно</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_AvailableTootip">Сервер доступен через локальный IP и общедоступный IP</sys:String>
 
     <sys:String x:Key="ServerSettings_RuntimeStatusInitializingLabel">Инициализация</sys:String>
     <sys:String x:Key="ServerSettings_RuntimeStatusRunningLabel">Запущен</sys:String>
@@ -1553,9 +1561,21 @@
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierLabel">Множитель цены в магазине за шестигранники</sys:String>
     <sys:String x:Key="ServerSettings_HexagonCostMultiplierTooltip">Позволяет изменять стоимость предметов в магазине шестигранников</sys:String>
 
-    <sys:String x:Key="ServerSettings_FjordurLabel">Fjordur</sys:String>
-    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Включить Телепортацию биомов Fjordur</sys:String>
-    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">Если включено, позволит телепортировать биом на карте Fjordur.</sys:String>
+    <sys:String x:Key="ServerSettings_RagnarokLabel">Включить настройки Ragnarok</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsLabel">Разрешить несколько прирученных единорогов</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_AllowMultipleTamedUnicornsTooltip">Если включено, на карте будет разрешен один дикий и неограниченное количество прирученных единорогов. В противном случае только один единорог на карте одновременно.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalLabel">Интервал появления единорога</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_UnicornSpawnIntervalTooltip">Как долго игра должна ждать перед созданием нового единорога, если дикий убит (или приручен, если включен параметр AllowMultipleTamedUnicorns). Это значение устанавливает минимальное количество времени (в часах), а максимальное равно удвоенному этому значению.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoLabel">Включить вулкан</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_EnableVolcanoTooltip">Если включено, вулкан станет активным.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalLabel">Вулкан Интервал</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntervalTooltip">0 = 5000 (минимум) - 15000 (максимум) секунд между случаями активации вулкана. Любое число выше 0 действует как множитель.</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityLabel">Вулкан Интенсивность</sys:String>
+    <sys:String x:Key="ServerSettings_Ragnarok_VolcanoIntensityTooltip">Чем ниже значение, тем интенсивнее будет извержение вулкана. Рекомендуется оставить 1,0, минимальное значение 0,25, а для многопользовательских игр оно не должно опускаться ниже 0,5. Очень высокие числа в основном отключат пылающие камни, выброшенные из вулкана.</sys:String>
+
+    <sys:String x:Key="ServerSettings_FjordurLabel">Включить настройки Fjordur</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffLabel">Включить Fjordur биом телепорта</sys:String>
+    <sys:String x:Key="ServerSettings_UseFjordurTraversalBuffTooltip">Если включено, позволит телепортироваться в биом на карте Фьордура</sys:String>
 
     <sys:String x:Key="ServerSettings_ItemStatClampsLabel">Item Stat Clamps</sys:String>
     <sys:String x:Key="ServerSettings_ItemStatClampsNoteLabel">ПРЕДУПРЕЖДЕНИЕ: это навсегда изменит статистику любых существующих элементов, поэтому обязательно сделайте резервную копию вашего текущего сохранения, прежде чем изменять и играть с ограничивающими значениями.</sys:String>
