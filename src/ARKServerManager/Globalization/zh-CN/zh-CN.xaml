@@ -15,17 +15,18 @@
 
     <!--#region 游戏地图名称 -->
     <sys:String x:Key="Map_TheIsland">孤岛(The Island)</sys:String>
-    <sys:String x:Key="Map_TheCenter">中心岛地图(The Center)</sys:String>
-    <sys:String x:Key="Map_ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
-    <sys:String x:Key="Map_Ragnarok">仙境地图(Ragnarok)</sys:String>
-    <sys:String x:Key="Map_Aberration_P">畸变地图(Aberration)</sys:String>
-    <sys:String x:Key="Map_Extinction">灭绝地图(Extinction)</sys:String>
-    <sys:String x:Key="Map_Valguero_P">瓦尔盖罗(Valguero)</sys:String>
+    <sys:String x:Key="Map_Ragnarok">仙境(Ragnarok)</sys:String>
+    <sys:String x:Key="Map_Aberration_P">畸变(Aberration)</sys:String>
+    <sys:String x:Key="Map_Extinction">灭绝(Extinction)</sys:String>
     <sys:String x:Key="Map_Genesis">创世纪 1(Genesis: Part 1)</sys:String>
 	<sys:String x:Key="Map_Gen2">创世纪 2（Genesis: Part 2）</sys:String>
+    <sys:String x:Key="Map_TheCenter">中心岛(The Center)</sys:String>
     <sys:String x:Key="Map_CrystalIsles">水晶岛(Crystal Isles)</sys:String>
-	<sys:String x:Key="Map_LostIsland">迷失岛(Lost Island)</sys:String>
 	<sys:String x:Key="Map_Fjordur">维京岛(Fjordur)</sys:String>
+    <sys:String x:Key="Map_Valguero_P">瓦尔盖罗(Valguero)</sys:String>
+    <sys:String x:Key="Map_ScorchedEarth_P">焦土地图(Scorched Earth)</sys:String>
+	<sys:String x:Key="Map_LostIsland">迷失岛(Lost Island)</sys:String>
+
     <!--#endregion-->
 
     <!--#region 总转换名称 -->
@@ -823,7 +824,9 @@
     <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">当服务器的状态发生变化时，将显示此消息。</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">检测到MOD更新：</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">当服务器管理器检测到一个或多个mod已过期时，将显示此消息。</sys:String>
-    <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">强制重生恐龙警告：</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">在线玩家人数变化:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">当在线玩家人数发生变化时，将显示此信息。</sys:String>
+	<sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosLabel">强制重生恐龙警告：</sys:String>
     <sys:String x:Key="GlobalSettings_Alerts_ForceRespawnDinosTooltip">当服务器启动并且安排了野生恐龙清除时，将显示此消息。</sys:String>
     <!--#endregion-->
 
@@ -959,11 +962,16 @@
     <sys:String x:Key="ServerSettings_LastStartedLabel">最后开始时间:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityLabel">网络状态:</sys:String>
     <sys:String x:Key="ServerSettings_AvailabilityTooltip">方舟服务器在Steam网络上的状态.</sys:String>
+	
     <sys:String x:Key="ServerSettings_Availability_Unknown">未知</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_SetPublicIP">设置公网 IP</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Unavailable">不可用</sys:String>
-    <sys:String x:Key="ServerSettings_Availability_Waiting">等待发布</sys:String>
+	<sys:String x:Key="ServerSettings_Availability_UnavailableTootip">服务器无法访问</sys:String>
+	<sys:String x:Key="ServerSettings_Availability_LocalOnly">等待发布 - 仅限局域网访问</sys:String>
+	<sys:String x:Key="ServerSettings_Availability_LocalOnlyTootip">服务器只能通过本地IP在局域网内访问！一般是无公网IP或者端口映射转发问题！请检查是否有公网IP，或者检查端口是否开放！</sys:String>
+	<sys:String x:Key="ServerSettings_Availability_PublicOnly">可用 - 无回路</sys:String>
+	<sys:String x:Key="ServerSettings_Availability_PublicOnlyTootip">服务器可通过本地IP和公共IP访问、回路不可用！一般是因为公网IP动态更换后导致的！不用在意！重启或者等待几天即可！</sys:String>
     <sys:String x:Key="ServerSettings_Availability_Available">可用</sys:String>
+	<sys:String x:Key="ServerSettings_Availability_AvailableTootip">通过本地IP和公共IP访问服务器</sys:String>
     <sys:String x:Key="ServerSettings_PlayersLabel">在线玩家:</sys:String>
     <sys:String x:Key="ServerSettings_PlayersTooltip">连接到方舟服务器的玩家数量.</sys:String>
 
@@ -2336,18 +2344,18 @@
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_SaveTitle">地图恐龙刷新设置</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_DisableLabel">注意：如果要手动或者使用其他应用程序管理地图刷新覆盖，可以禁用此服务器管理器地图刷新覆盖。 详情在右上角全局设置“启用地图刷新设置”选项。</sys:String>
 
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnLabel">类型</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnLabel">类型（增加、减去、覆盖）</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerTypeColumnTooltip">恐龙刷新重写类型</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnLabel">恐龙刷新</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnTooltip">恐龙刷新类字符串</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnLabel">恐龙刷新区域</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_ContainerClassColumnTooltip">恐龙刷新类地区</sys:String>
 
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryNameColumnLabel">名称</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryNameColumnLabel">恐龙名称</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryNameColumnTooltip">恐龙刷新的名称</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryClassColumnLabel">恐龙</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryClassColumnLabel">恐龙ID</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryClassColumnTooltip">要添加的恐龙ID</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryWeightClassColumnLabel">重量</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryWeightClassColumnLabel">恐龙刷新数量</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryWeightClassColumnTooltip">此恐龙刷新数量</sys:String>
-    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryMaxPercentageColumnLabel">最大百分比</sys:String>
+    <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryMaxPercentageColumnLabel">最大允许刷新的百分比</sys:String>
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_EntryMaxPercentageColumnTooltip">设置此实例的最大允许恐龙和生物</sys:String>
 
     <sys:String x:Key="ServerSettings_MapSpawnerOverrides_AddContainerTooltip">添加地图生成容器</sys:String>
@@ -3097,6 +3105,11 @@
 	<sys:String x:Key="CrystalWyvern_Character_BP_WS_C">热带水晶飞龙</sys:String>
 	<sys:String x:Key="Tropeognathus_Character_BP_C">喷气翼龙</sys:String>
 	<sys:String x:Key="HoneyBee_Character_BP_C">巨蜂</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Minion_Blood_C">血色水晶飞龙</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_C">水晶双足飞龙</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Minion_Ember_C">水晶灰烬黄金飞龙</sys:String>
+	<sys:String x:Key="CrystalWyvern_Character_BP_Minion_WS_C">热带水晶双足飞龙</sys:String>
+	
 	<!--#endregion-->
 	
 	<!--#region 恐龙/生物类名-水晶岛-BOSS -->
@@ -5470,21 +5483,6 @@
 	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Medium_C">恐狒BOSS战利品(困难)(迷失岛)</sys:String>
 	<!--#endregion-->
 
-    <!--#region 项目类别名称 - 新增（唯一集成模组） -->
-	<sys:String x:Key="PrimalItem_xidianka_Weiyi_C">恐龙洗点卡</sys:String>
-	<sys:String x:Key="PrimalItem_TEK_unlock_Weiyi_C">泰克一键解锁</sys:String>
-	<sys:String x:Key="PrimalItem_TurretZD_Weiyi_C">炮塔终端</sys:String>
-	<sys:String x:Key="PrimalItem_shengjika_Weiyi_C">恐龙自定义等级升级卡</sys:String>
-	<sys:String x:Key="PrimalItem_unlock_Weiyi_C">一键解锁</sys:String>
-	<sys:String x:Key="PrimalItem_Adminzhaozi_C">小姐姐保护罩</sys:String>
-	<sys:String x:Key="PrimalItem_chibang_weiyi_C">管理员翅膀</sys:String>
-	<sys:String x:Key="PrimalItem_Fly_weiyi_C">飞行背包</sys:String>
-	<sys:String x:Key="PrimalItem_jinshou_weiyi_C">金手指 2.0</sys:String>
-	<sys:String x:Key="PrimalItem_lihe_weiyi_C">抽奖礼盒1</sys:String>
-	<sys:String x:Key="PrimalItem_lihe2_weiyi_C">抽奖礼盒2</sys:String>
-	<sys:String x:Key="PrimalItem_mubei_weiyi_C">墓碑</sys:String>
-	<sys:String x:Key="PrimalItem_xinshoubao_weiyi_C">新手礼包</sys:String>
-	<!--#endregion-->
 	
     <!--#region 地图生物生成 -->
 

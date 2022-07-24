@@ -591,6 +591,9 @@ namespace ServerManagerTool
 
         public static void ReconfigureLogging()
         {
+            if (string.IsNullOrWhiteSpace(Config.Default.DataDir))
+                return;
+
             UpdateLoggingStatus();
 
             var logDir = Path.Combine(Config.Default.DataDir, Config.Default.LogsDir);

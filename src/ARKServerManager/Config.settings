@@ -362,9 +362,6 @@
     <Setting Name="EmailNotify_ShutdownRestart" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="WorkshopCache_ExpiredHours" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">168</Value>
-    </Setting>
     <Setting Name="DefaultServerFolderName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Server</Value>
     </Setting>

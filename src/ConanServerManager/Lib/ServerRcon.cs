@@ -422,7 +422,7 @@ namespace ServerManagerTool.Lib
             }
 
             _maxCommandRetries = 10;
-            _errorLogger?.Error($"Failed to connect to Rcon at {_rconParameters.RconHostIP}:{_rconParameters.RconPort} with {_rconParameters.RconPassword}. {lastException.Message}");
+            _errorLogger?.Error($"Failed to connect to Rcon at {_rconParameters.RconHostIP}:{_rconParameters.RconPort}. {lastException.Message}");
             throw new Exception($"Command failed to send after {_maxCommandRetries} attempts.  Last exception: {lastException.Message}", lastException);
         }
         #endregion

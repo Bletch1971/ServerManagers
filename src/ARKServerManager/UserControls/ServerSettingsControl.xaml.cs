@@ -919,7 +919,6 @@ namespace ServerManagerTool
                 comment.AppendLine($"ServerUpdate_ForceUpdateMods: {Config.Default.ServerUpdate_ForceUpdateMods}");
                 comment.AppendLine($"ServerUpdate_ForceCopyMods: {Config.Default.ServerUpdate_ForceCopyMods}");
                 comment.AppendLine($"ServerUpdate_ForceUpdateModsIfNoSteamInfo: {Config.Default.ServerUpdate_ForceUpdateModsIfNoSteamInfo}");
-                comment.AppendLine($"WorkshopCache_ExpiredHours: {Config.Default.WorkshopCache_ExpiredHours}");
 
                 if (!string.IsNullOrWhiteSpace(Config.Default.BackupPath))
                     comment.AppendLine($"Backup Directory: {Config.Default.BackupPath}");

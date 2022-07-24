@@ -9,10 +9,10 @@
 
   <entry>
     <id>urn:uuid:8CDA70CF-E8B8-4B9B-AD50-AD9A8B528E5B</id>
-    <title>1.1.79 (1.1.79.2)</title>
-    <summary>1.1.79.2</summary>
+    <title>1.1.79 (1.1.79.3)</title>
+    <summary>1.1.79.3</summary>
     <link href="" />
-    <updated>2022-07-16T00:00:00Z</updated>
+    <updated>2022-07-25T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -20,7 +20,8 @@
           <br/>
           <ul>
             <li>Server Status - changed the server status code to stop the status cycling and to be more accurate.</li>
-            <li>Added a check for a valid configuration file when starting the server manager.\r\nIf config file is not valid, then it will delete the config file and shutdown the manager, with a message to restart the manager.</li>
+            <li>Added a check for a valid configuration file when starting the server manager. If config file is not valid, then it will delete the config file and shutdown the manager, with a message to restart the manager.</li>
+            <li>Fixed a crash bug when trying to set the logging folder.</li>
           </ul>
         </p>
       </div>

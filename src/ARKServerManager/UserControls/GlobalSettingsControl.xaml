@@ -357,8 +357,6 @@
                         <CheckBox Grid.Row="0" Grid.Column="6" Margin="0,0,0,5" IsChecked="{Binding Config.ServerUpdate_ForceCopyMods, Mode=TwoWay}" Content="{DynamicResource GlobalSettings_ForceCopyModsLabel}" ToolTip="{DynamicResource GlobalSettings_ForceCopyModsTooltip}" HorizontalAlignment="Left"/>
 
                         <CheckBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Margin="5,0,0,0" IsChecked="{Binding Config.ServerUpdate_ForceUpdateModsIfNoSteamInfo, Mode=TwoWay}" Content="{DynamicResource GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel}" ToolTip="{DynamicResource GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip}" HorizontalAlignment="Left"/>
-
-                        <cctl:AnnotatedSlider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,5,0" Label="{DynamicResource GlobalSettings_WorkshopCacheExpiredHoursLabel}" Value="{Binding Config.WorkshopCache_ExpiredHours}" Minimum="0" Maximum="1000" SmallChange="1" LargeChange="12" TickFrequency="24" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Hours}" ToolTip="{DynamicResource GlobalSettings_WorkshopCacheExpiredHoursTooltip}"/>
                     </Grid>
                 </GroupBox>
 

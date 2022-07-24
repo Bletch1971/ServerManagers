@@ -854,18 +854,6 @@ namespace ServerManagerTool {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("168")]
-        public int WorkshopCache_ExpiredHours {
-            get {
-                return ((int)(this["WorkshopCache_ExpiredHours"]));
-            }
-            set {
-                this["WorkshopCache_ExpiredHours"] = value;
-            }
-        }
-        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("server")]

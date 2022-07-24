@@ -169,11 +169,6 @@ namespace ServerManagerTool
                     if (loadFromCacheFile)
                     {
                         steamCache = localCache;
-
-                        // check if the cache is old
-                        if (localCache != null && Config.Default.WorkshopCache_ExpiredHours > 0 && localCache.cached.AddHours(Config.Default.WorkshopCache_ExpiredHours) < DateTime.UtcNow)
-                            // cache is considered old, clear cache variable so it will reload from internet
-                            steamCache = null;
                     }
 
                     // check if the cache exists
