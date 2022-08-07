@@ -464,7 +464,18 @@
                                         </Image.Style>
                                     </Image>
                                 </Button>
-                                <TextBlock Margin="2,0,0,0" VerticalAlignment="Center" Text="{Binding Profile.ProfileName}"/>
+                                <TextBlock Margin="2,0,0,0" VerticalAlignment="Center" Text="{Binding Profile.ProfileName}">
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Profile.UseTestlive}" Value="True">
+                                                    <Setter Property="Foreground" Value="#4E008B"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </StackPanel>
                         </DataTemplate>
                     </eo:TabControl.HeaderTemplate>
