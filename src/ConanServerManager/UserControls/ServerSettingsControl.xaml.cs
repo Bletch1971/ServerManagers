@@ -589,7 +589,8 @@ namespace ServerManagerTool
                 }
 
                 // <data folder>\SteamCMD\steamapps\workshop\content\<app id>
-                var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, this.Settings.UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId);
+                var appId = this.Settings.UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId;
+                var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, appId);
                 folder = Path.Combine(Config.Default.DataPath, CommonConfig.Default.SteamCmdRelativePath, workshopPath);
                 if (Directory.Exists(folder))
                 {

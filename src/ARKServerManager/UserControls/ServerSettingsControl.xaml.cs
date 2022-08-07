@@ -799,7 +799,8 @@ namespace ServerManagerTool
                 }
 
                 // <data folder>\SteamCMD\steamapps\workshop\content\<app id>
-                var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, this.Settings.SOTF_Enabled ? Config.Default.AppId_SotF : Config.Default.AppId);
+                var appId = this.Settings.SOTF_Enabled ? Config.Default.AppId_SotF : Config.Default.AppId;
+                var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, appId);
                 folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, workshopPath);
                 if (Directory.Exists(folder))
                 {
