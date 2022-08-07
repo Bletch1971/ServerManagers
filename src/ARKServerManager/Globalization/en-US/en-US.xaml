@@ -1301,8 +1301,12 @@
     <sys:String x:Key="ServerSettings_AutomaticManagementLabel">Automatic Management</sys:String>
     <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">Why can't I use this?</sys:String>
     <sys:String x:Key="ServerSettings_ASMSettingLabel">Server Manager Settings</sys:String>
-    <sys:String x:Key="ServerSettings_AutoStartLabel">Auto-Start server on boot</sys:String>
-    <sys:String x:Key="ServerSettings_AutoStartTooltip">Automatically start the server when the machine starts.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerLabel">Auto-Start server</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerTooltip">Automatically start the server.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootLabel">on Boot</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootTooltip">Start the server when the machine starts.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginLabel">on Login</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginTooltip">Start the server when the user logs in.</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Shutdown server at</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownTooltip">The hour and minute of the day to force a server shutdown.</sys:String>
     <sys:String x:Key="ServerSettings_RestartAfterShutdownLabel">then restart</sys:String>

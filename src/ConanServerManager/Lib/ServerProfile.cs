@@ -486,6 +486,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(EnableAutoStartProperty, value); }
         }
 
+        public static readonly DependencyProperty AutoStartOnLoginProperty = DependencyProperty.Register(nameof(AutoStartOnLogin), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool AutoStartOnLogin
+        {
+            get { return (bool)GetValue(AutoStartOnLoginProperty); }
+            set { SetValue(AutoStartOnLoginProperty, value); }
+        }
+
         public static readonly DependencyProperty EnableAutoUpdateProperty = DependencyProperty.Register(nameof(EnableAutoUpdate), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [DataMember]
         public bool EnableAutoUpdate
@@ -1240,7 +1248,7 @@ namespace ServerManagerTool.Lib
 
             var taskKey = GetProfileKey();
 
-            if(!TaskSchedulerUtils.ScheduleAutoStart(taskKey, null, this.EnableAutoStart, GetLauncherFile(), ProfileName, true, Config.Default.AutoStart_TaskPriority))
+            if (!TaskSchedulerUtils.ScheduleAutoStart(taskKey, null, this.EnableAutoStart, GetLauncherFile(), ProfileName, this.AutoStartOnLogin, Config.Default.AutoStart_TaskPriority))
             {
                 return false;
             }

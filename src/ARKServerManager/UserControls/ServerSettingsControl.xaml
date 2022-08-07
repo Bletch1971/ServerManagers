@@ -1400,7 +1400,12 @@
                                                 </Style>
                                             </Grid.Style>
 
-                                            <cctl:CheckBoxAndTextBlock Grid.Row="0" Margin="5,5,5,0" Text="{DynamicResource ServerSettings_AutoStartLabel}" IsChecked="{Binding EnableAutoStart, Mode=TwoWay}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_AutoStartTooltip}" HorizontalAlignment="Left"/>
+                                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5,5,5,0">
+                                                <cctl:CheckBoxAndTextBlock Text="{DynamicResource ServerSettings_AutoStartServerLabel}" VerticalAlignment="Bottom" IsChecked="{Binding EnableAutoStart, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_AutoStartServerTooltip}" HorizontalAlignment="Left"/>
+                                                <RadioButton GroupName="AutoStartServer" Margin="10,0,0,0" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin, Converter={StaticResource InvertBooleanConverter}}" Content="{DynamicResource ServerSettings_AutoStartServerOnBootLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnBootTooltip}"/>
+                                                <RadioButton GroupName="AutoStartServer" Margin="5,0,0,0" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin}" Content="{DynamicResource ServerSettings_AutoStartServerOnLoginLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnLoginTooltip}"/>
+                                            </StackPanel>
+
 
                                             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" >
                                                 <cctl:CheckBoxAndTextBlock Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>

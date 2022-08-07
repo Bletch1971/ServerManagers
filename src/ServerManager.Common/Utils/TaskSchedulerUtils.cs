@@ -185,6 +185,7 @@ namespace ServerManagerTool.Common.Utils
 
                 Task task = null;
                 TaskDefinition taskDefinition = null;
+                TaskLogonType taskLogonType = TaskLogonType.InteractiveToken;
 
                 try
                 {
@@ -204,8 +205,9 @@ namespace ServerManagerTool.Common.Utils
 
                 Version.TryParse(AppUtils.GetDeployedVersion(), out Version appVersion);
 
-                taskDefinition.Principal.LogonType = TaskLogonType.InteractiveToken;
+                taskDefinition.Principal.LogonType = taskLogonType;
                 taskDefinition.Principal.RunLevel = TaskRunLevel.Highest;
+                taskDefinition.Principal.UserId = null;
 
                 taskDefinition.RegistrationInfo.Description = "Server Auto-Backup";
                 taskDefinition.RegistrationInfo.Source = "Server Manager";
@@ -245,7 +247,7 @@ namespace ServerManagerTool.Common.Utils
 
                 try
                 {
-                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, null, null, TaskLogonType.InteractiveToken);
+                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, null, null, taskLogonType);
                     return task != null;
                 }
                 catch (Exception ex)
@@ -309,6 +311,7 @@ namespace ServerManagerTool.Common.Utils
 
                 Task task = null;
                 TaskDefinition taskDefinition = null;
+                TaskLogonType taskLogonType = TaskLogonType.InteractiveToken;
 
                 try
                 {
@@ -328,8 +331,9 @@ namespace ServerManagerTool.Common.Utils
 
                 Version.TryParse(AppUtils.GetDeployedVersion(), out Version appVersion);
 
-                taskDefinition.Principal.LogonType = TaskLogonType.InteractiveToken;
+                taskDefinition.Principal.LogonType = taskLogonType;
                 taskDefinition.Principal.RunLevel = TaskRunLevel.Highest;
+                taskDefinition.Principal.UserId = null;
 
                 taskDefinition.RegistrationInfo.Description = $"Server Auto-Shutdown - {profileName}";
                 taskDefinition.RegistrationInfo.Source = "Server Manager";
@@ -393,7 +397,7 @@ namespace ServerManagerTool.Common.Utils
 
                 try
                 {
-                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, null, null, TaskLogonType.InteractiveToken);
+                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, null, null, taskLogonType);
                     return task != null;
                 }
                 catch (Exception ex)
@@ -426,7 +430,7 @@ namespace ServerManagerTool.Common.Utils
             return false;
         }
 
-        public static bool ScheduleAutoStart(string taskKey, string taskSuffix, bool enableAutoStart, string command, string profileName, bool onBoot, ProcessPriorityClass priority)
+        public static bool ScheduleAutoStart(string taskKey, string taskSuffix, bool enableAutoStart, string command, string profileName, bool onLogin, ProcessPriorityClass priority)
         {
             var taskName = GetScheduledTaskName(TaskType.AutoStart, taskKey, taskSuffix);
             var taskFolder = TaskService.Instance.RootFolder.SubFolders.Exists(TaskFolder) ? TaskService.Instance.RootFolder.SubFolders[TaskFolder] : null;
@@ -452,6 +456,8 @@ namespace ServerManagerTool.Common.Utils
 
                 Task task = null;
                 TaskDefinition taskDefinition = null;
+                TaskLogonType taskLogonType;
+                string userId;
 
                 try
                 {
@@ -471,7 +477,6 @@ namespace ServerManagerTool.Common.Utils
 
                 Version.TryParse(AppUtils.GetDeployedVersion(), out Version appVersion);
 
-                taskDefinition.Principal.LogonType = TaskLogonType.ServiceAccount;
                 taskDefinition.Principal.RunLevel = TaskRunLevel.Highest;
 
                 taskDefinition.RegistrationInfo.Description = $"Server Auto-Start - {profileName}";
@@ -481,16 +486,28 @@ namespace ServerManagerTool.Common.Utils
                 taskDefinition.Settings.ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT);
                 taskDefinition.Settings.Priority = priority;
 
-                // Add a trigger that will fire after the machine has started
-                if (onBoot)
+                if (onLogin)
                 {
-                    var triggers = taskDefinition.Triggers.OfType<BootTrigger>();
+                    taskLogonType = TaskLogonType.InteractiveToken;
+                    taskDefinition.Principal.LogonType = taskLogonType;
+                    taskDefinition.Principal.UserId = null;
+                    userId = null;
+
+                    var oldtriggers = taskDefinition.Triggers.OfType<BootTrigger>();
+                    foreach (var trigger in oldtriggers)
+                    {
+                        taskDefinition.Triggers.Remove(trigger);
+                    }
+
+                    // Add a trigger that will fire after a user has logged in
+                    var triggers = taskDefinition.Triggers.OfType<LogonTrigger>();
                     if (triggers.IsEmpty())
                     {
-                        var trigger = new BootTrigger
+                        var trigger = new LogonTrigger
                         {
                             Delay = TimeSpan.FromMinutes(1),
-                            ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT)
+                            ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT),
+                            UserId = System.Security.Principal.WindowsIdentity.GetCurrent().Name,                            
                         };
                         taskDefinition.Triggers.Add(trigger);
                     }
@@ -499,18 +516,31 @@ namespace ServerManagerTool.Common.Utils
                         foreach (var trigger in triggers)
                         {
                             trigger.Delay = TimeSpan.FromMinutes(1);
+                            trigger.UserId = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
                         }
                     }
                 }
                 else
                 {
-                    var triggers = taskDefinition.Triggers.OfType<LogonTrigger>();
+                    taskLogonType = TaskLogonType.ServiceAccount;
+                    taskDefinition.Principal.LogonType = taskLogonType;
+                    taskDefinition.Principal.UserId = null;
+                    userId = "SYSTEM";
+
+                    var oldtriggers = taskDefinition.Triggers.OfType<LogonTrigger>();
+                    foreach (var trigger in oldtriggers)
+                    {
+                        taskDefinition.Triggers.Remove(trigger);
+                    }
+
+                    // Add a trigger that will fire after the machine has booted
+                    var triggers = taskDefinition.Triggers.OfType<BootTrigger>();
                     if (triggers.IsEmpty())
                     {
-                        var trigger = new LogonTrigger
+                        var trigger = new BootTrigger
                         {
                             Delay = TimeSpan.FromMinutes(1),
-                            ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT)
+                            ExecutionTimeLimit = TimeSpan.FromHours(EXECUTION_TIME_LIMIT),
                         };
                         taskDefinition.Triggers.Add(trigger);
                     }
@@ -534,7 +564,7 @@ namespace ServerManagerTool.Common.Utils
 
                 try
                 {
-                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, "SYSTEM", null, TaskLogonType.ServiceAccount);
+                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, userId, null, taskLogonType);
                     return task != null;
                 }
                 catch (Exception ex)
@@ -594,6 +624,7 @@ namespace ServerManagerTool.Common.Utils
 
                 Task task = null;
                 TaskDefinition taskDefinition = null;
+                TaskLogonType taskLogonType = TaskLogonType.InteractiveToken;
 
                 try
                 {
@@ -613,8 +644,9 @@ namespace ServerManagerTool.Common.Utils
 
                 Version.TryParse(AppUtils.GetDeployedVersion(), out Version appVersion);
 
-                taskDefinition.Principal.LogonType = TaskLogonType.InteractiveToken;
+                taskDefinition.Principal.LogonType = taskLogonType;
                 taskDefinition.Principal.RunLevel = TaskRunLevel.Highest;
+                taskDefinition.Principal.UserId = null;
 
                 taskDefinition.RegistrationInfo.Description = "Server Auto-Update";
                 taskDefinition.RegistrationInfo.Source = "Server Manager";
@@ -654,7 +686,7 @@ namespace ServerManagerTool.Common.Utils
 
                 try
                 {
-                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, null, null, TaskLogonType.InteractiveToken);
+                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, null, null, taskLogonType);
                     return task != null;
                 }
                 catch (Exception ex)
