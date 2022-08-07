@@ -658,22 +658,9 @@ namespace ServerManagerTool
             window.Focus();
         }
 
-        private void HelpSOTF_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(Config.Default.AppUrl_SotF))
-                return;
-
-            Process.Start(Config.Default.AppUrl_SotF);
-        }
-
         private void PatchNotes_Click(object sender, RoutedEventArgs e)
         {
-            var url = string.Empty;
-            if (Settings.SOTF_Enabled)
-                url =Config.Default.AppPatchNotesUrlSotF;
-            else
-                url = Config.Default.AppPatchNotesUrl;
-
+            var url = Settings.SOTF_Enabled ? Config.Default.AppPatchNotesUrlSotF : Config.Default.AppPatchNotesUrl;
             if (string.IsNullOrWhiteSpace(url))
                 return;
 
@@ -812,10 +799,8 @@ namespace ServerManagerTool
                 }
 
                 // <data folder>\SteamCMD\steamapps\workshop\content\<app id>
-                if (this.Settings.SOTF_Enabled)
-                    folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.AppSteamWorkshopFolderRelativePath_SotF);
-                else
-                    folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.AppSteamWorkshopFolderRelativePath);
+                var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, this.Settings.SOTF_Enabled ? Config.Default.AppId_SotF : Config.Default.AppId);
+                folder = Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, workshopPath);
                 if (Directory.Exists(folder))
                 {
                     foreach (var modFolder in Directory.GetDirectories(folder))

@@ -32,6 +32,9 @@ namespace ServerManagerTool.Lib
         public bool MOTDIntervalEnabled;
         public int MOTDInterval;
 
+        public string AppId;
+        public string AppIdServer;
+        public bool UseTestlive;
         public string BranchName;
         public string BranchPassword;
 
@@ -75,6 +78,9 @@ namespace ServerManagerTool.Lib
                 MOTDIntervalEnabled = profile.MOTDIntervalEnabled && !string.IsNullOrWhiteSpace(profile.MOTD),
                 MOTDInterval = Math.Max(1, Math.Min(int.MaxValue, profile.MOTDInterval)),
 
+                AppId = profile.UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId,
+                AppIdServer = profile.UseTestlive ? Config.Default.AppIdServer_Testlive : Config.Default.AppIdServer,
+                UseTestlive = profile.UseTestlive,
                 BranchName = profile.BranchName,
                 BranchPassword = profile.BranchPassword,
 

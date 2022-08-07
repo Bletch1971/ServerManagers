@@ -77,9 +77,6 @@
     <Setting Name="AppPatchNotesUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://forums.funcom.com/c/conan-exiles/Patch-Notes</Value>
     </Setting>
-    <Setting Name="AppUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://store.steampowered.com/app/440900/</Value>
-    </Setting>
     <Setting Name="RunAsAdministratorPrompt" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
@@ -117,7 +114,7 @@
       <Value Profile="(Default)">+login {0} +workshop_download_item {1} {2} +quit</Value>
     </Setting>
     <Setting Name="AppSteamWorkshopFolderRelativePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">steamapps\workshop\content\440900\</Value>
+      <Value Profile="(Default)">steamapps\workshop\content\{0}\</Value>
     </Setting>
     <Setting Name="ServerModsRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ConanSandbox\Mods</Value>
@@ -147,7 +144,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="WorkshopCacheFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">workshopcache_440900.json</Value>
+      <Value Profile="(Default)">workshopcache_{0}.json</Value>
     </Setting>
     <Setting Name="Email_Host" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -192,7 +189,7 @@
       <Value Profile="(Default)">steamapps\workshop</Value>
     </Setting>
     <Setting Name="AppSteamWorkshopFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">appworkshop_440900.acf</Value>
+      <Value Profile="(Default)">appworkshop_{0}.acf</Value>
     </Setting>
     <Setting Name="SteamCmd_Password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -414,7 +411,7 @@
       <Value Profile="(Default)">__</Value>
     </Setting>
     <Setting Name="AppSteamManifestFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">appmanifest_443030.acf</Value>
+      <Value Profile="(Default)">appmanifest_{0}.acf</Value>
     </Setting>
     <Setting Name="SteamManifestFolderRelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">steamapps</Value>
@@ -670,6 +667,15 @@
     </Setting>
     <Setting Name="ServicePointManager_SecurityProtocol" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">3072</Value>
+    </Setting>
+    <Setting Name="AppId_Testlive" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">931180</Value>
+    </Setting>
+    <Setting Name="AppIdServer_Testlive" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">931580</Value>
+    </Setting>
+    <Setting Name="AppPatchNotesUrl_Testlive" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://forums.funcom.com/c/conan-exiles/exiles-pc/testlive</Value>
     </Setting>
   </Settings>
 </SettingsFile>

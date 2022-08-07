@@ -160,7 +160,7 @@ namespace ServerManagerTool.Utils
             return timespan.TotalSeconds;
         }
 
-        public static string GetLatestModCacheTimeFile(string modId, bool isSotF) => IOUtils.NormalizePath(Path.Combine(GetModCachePath(modId, isSotF), Config.Default.LastUpdatedTimeFile));
+        public static string GetLatestModCacheTimeFile(string modId, string appId) => IOUtils.NormalizePath(Path.Combine(GetModCachePath(modId, appId), Config.Default.LastUpdatedTimeFile));
 
         public static string GetLatestModTimeFile(string installDirectory, string modId) => IOUtils.NormalizePath(Path.Combine(installDirectory, Config.Default.ServerModsRelativePath, modId, Config.Default.LastUpdatedTimeFile));
 
@@ -228,12 +228,10 @@ namespace ServerManagerTool.Utils
             return mapNames != null && mapNames.Count > 0 ? mapNames[0] : string.Empty;
         }
 
-        public static string GetModCachePath(string modId, bool isSotF)
+        public static string GetModCachePath(string modId, string appId)
         {
-            if (isSotF)
-                return IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.AppSteamWorkshopFolderRelativePath_SotF, modId));
-
-            return IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.AppSteamWorkshopFolderRelativePath, modId));
+            var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, appId);
+            return IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, workshopPath, modId));
         }
 
         public static List<string> GetModIdList(string modIds)
@@ -272,27 +270,21 @@ namespace ServerManagerTool.Utils
             var modFolder = GetModPath(installDirectory, modId);
             var modFile = $"{modFolder}.mod";
 
-            Dictionary<string, string> metaInformation;
-            List<string> mapNames;
-            ReadModFile(modFile, out modId, out metaInformation, out mapNames);
+            ReadModFile(modFile, out _, out Dictionary<string, string> metaInformation, out _);
 
             return metaInformation != null && metaInformation.ContainsKey("ModType") ? metaInformation["ModType"] : MODTYPE_UNKNOWN;
         }
 
-        public static string GetSteamManifestFile(string installDirectory, bool isSotF)
+        public static string GetSteamManifestFile(string installDirectory, string appIdServer)
         {
-            if (isSotF)
-                return IOUtils.NormalizePath(Path.Combine(installDirectory, Config.Default.SteamManifestFolderRelativePath, Config.Default.AppSteamManifestFile_SotF));
-
-            return IOUtils.NormalizePath(Path.Combine(installDirectory, Config.Default.SteamManifestFolderRelativePath, Config.Default.AppSteamManifestFile));
+            var fileName = string.Format(Config.Default.AppSteamManifestFile, appIdServer);
+            return IOUtils.NormalizePath(Path.Combine(installDirectory, Config.Default.SteamManifestFolderRelativePath, fileName));
         }
 
-        public static string GetSteamWorkshopFile(bool isSotF)
+        public static string GetSteamWorkshopFile(string appId)
         {
-            if (isSotF)
-                return IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.SteamWorkshopFolderRelativePath, Config.Default.AppSteamWorkshopFile_SotF));
-
-            return IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.SteamWorkshopFolderRelativePath, Config.Default.AppSteamWorkshopFile));
+            var fileName = string.Format(Config.Default.AppSteamWorkshopFile, appId);
+            return IOUtils.NormalizePath(Path.Combine(Config.Default.DataDir, Config.Default.SteamCmdDir, Config.Default.SteamWorkshopFolderRelativePath, fileName));
         }
 
         public static int GetSteamWorkshopLatestTime(string workshopFile, string modId)

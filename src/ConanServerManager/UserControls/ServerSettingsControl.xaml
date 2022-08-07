@@ -21,9 +21,43 @@
                 <ResourceDictionary Source="..\Styles\Default.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <ControlTemplate x:Key="ExpanderTemplateSE" TargetType="{x:Type Expander}">
+            <ControlTemplate x:Key="ExpanderTemplate" TargetType="{x:Type Expander}">
                 <Border BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3" SnapsToDevicePixels="true" Padding="1" Margin="0,0,0,3" BorderBrush="Black">
                     <DockPanel Background="#FFEAE7E0">
+                        <ToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}" ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}" Content="{TemplateBinding Header}" DockPanel.Dock="Top" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FocusVisualStyle="{StaticResource ExpanderHeaderFocusVisual}" FontStyle="{TemplateBinding FontStyle}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="4,4,1,4" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" Style="{StaticResource ExpanderDownHeaderStyle}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="10,0,0,0"/>
+                    </DockPanel>
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsExpanded" Value="true">
+                        <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible"/>
+                    </Trigger>
+                    <Trigger Property="IsExpanded" Value="false">
+                        <Setter Property="Visibility" TargetName="ExpandSite" Value="Collapsed"/>
+                    </Trigger>
+                    <Trigger Property="ExpandDirection" Value="Right">
+                        <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Right"/>
+                        <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Left"/>
+                        <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderRightHeaderStyle}"/>
+                    </Trigger>
+                    <Trigger Property="ExpandDirection" Value="Up">
+                        <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Top"/>
+                        <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Bottom"/>
+                        <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderUpHeaderStyle}"/>
+                    </Trigger>
+                    <Trigger Property="ExpandDirection" Value="Left">
+                        <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Left"/>
+                        <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Right"/>
+                        <Setter Property="Style" TargetName="HeaderSite" Value="{StaticResource ExpanderLeftHeaderStyle}"/>
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="ExpanderTemplateTestlive" TargetType="{x:Type Expander}">
+                <Border BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3" SnapsToDevicePixels="true" Padding="1" Margin="0,0,0,3" BorderBrush="Black">
+                    <DockPanel Background="#FFEAE0E0">
                         <ToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}" ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}" Content="{TemplateBinding Header}" DockPanel.Dock="Top" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FocusVisualStyle="{StaticResource ExpanderHeaderFocusVisual}" FontStyle="{TemplateBinding FontStyle}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="4,4,1,4" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" Style="{StaticResource ExpanderDownHeaderStyle}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="10,0,0,0"/>
                     </DockPanel>
@@ -410,7 +444,12 @@
 
                             <Expander.Style>
                                 <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
-                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplate}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseTestlive}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplateTestlive}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </Expander.Style>
 
@@ -903,7 +942,12 @@
 
                             <Expander.Style>
                                 <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
-                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplate}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseTestlive}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplateTestlive}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </Expander.Style>
 
@@ -1070,7 +1114,12 @@
 
                             <Expander.Style>
                                 <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
-                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplate}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseTestlive}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplateTestlive}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </Expander.Style>
 
@@ -1135,7 +1184,12 @@
 
                             <Expander.Style>
                                 <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
-                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplate}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseTestlive}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplateTestlive}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </Expander.Style>
 
@@ -1154,7 +1208,40 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <GroupBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_BranchLabel}" DataContext="{Binding Runtime, ElementName=SettingsControl}">
+                                <CheckBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" IsChecked="{Binding UseTestlive, Mode=TwoWay}" Content="{DynamicResource ServerSettings_UseTestliveLabel}" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseTestliveTooltip}">
+                                    <CheckBox.Style>
+                                        <Style TargetType="{x:Type CheckBox}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Null}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Initializing}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Running}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Stopping}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Stopped}">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Unknown}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Updating}">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Runtime.Status, ElementName=SettingsControl}" Value="{x:Static ce:ServerStatus.Uninstalled}">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </CheckBox.Style>
+                                </CheckBox>
+
+                                <GroupBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_BranchLabel}" DataContext="{Binding Runtime, ElementName=SettingsControl}">
                                     <GroupBox.Style>
                                         <Style BasedOn="{StaticResource GroupBoxStyle}" TargetType="{x:Type GroupBox}">
                                             <Style.Triggers>
@@ -1216,7 +1303,12 @@
 
                             <Expander.Style>
                                 <Style BasedOn="{StaticResource ExpanderStyle1}" TargetType="{x:Type Expander}">
-                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplateSE}"/>
+                                    <Setter Property="Template" Value="{StaticResource ExpanderTemplate}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseTestlive}" Value="True">
+                                            <Setter Property="Template" Value="{StaticResource ExpanderTemplateTestlive}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </Expander.Style>
 

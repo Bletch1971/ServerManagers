@@ -650,6 +650,14 @@ namespace ServerManagerTool.Lib
         #endregion
 
         #region Server Details
+        public static readonly DependencyProperty UseTestliveProperty = DependencyProperty.Register(nameof(UseTestlive), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool UseTestlive
+        {
+            get { return (bool)GetValue(UseTestliveProperty); }
+            set { SetValue(UseTestliveProperty, value); }
+        }
+
         public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [DataMember]
         public string BranchName
@@ -786,7 +794,8 @@ namespace ServerManagerTool.Lib
 
             try
             {
-                var manifestFile = ModUtils.GetSteamManifestFile(InstallDirectory);
+                var appIdServer = UseTestlive ? Config.Default.AppIdServer_Testlive : Config.Default.AppIdServer;
+                var manifestFile = ModUtils.GetSteamManifestFile(InstallDirectory, appIdServer);
                 if (string.IsNullOrWhiteSpace(manifestFile) || !File.Exists(manifestFile))
                     return;
 
@@ -1256,7 +1265,7 @@ namespace ServerManagerTool.Lib
             validationMessage = string.Empty;
             StringBuilder result = new StringBuilder();
 
-            var appId = Config.Default.AppId;
+            var appId = UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId;
 
             // checking the port values are within the valid range
             if (ServerPort < ushort.MinValue || ServerPort > ushort.MaxValue)
@@ -1593,6 +1602,7 @@ namespace ServerManagerTool.Lib
 
         public void ResetServerDetailsSection()
         {
+            this.ClearValue(UseTestliveProperty);
             this.ClearValue(BranchNameProperty);
             this.ClearValue(BranchPasswordProperty);
         }
@@ -1680,6 +1690,7 @@ namespace ServerManagerTool.Lib
 
         private void SyncServerDetails(ServerProfile sourceProfile)
         {
+            this.SetValue(UseTestliveProperty, sourceProfile.UseTestlive);
             this.SetValue(BranchNameProperty, sourceProfile.BranchName);
             this.SetValue(BranchPasswordProperty, sourceProfile.BranchPassword);
         }

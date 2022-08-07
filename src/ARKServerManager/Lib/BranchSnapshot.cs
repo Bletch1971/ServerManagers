@@ -9,6 +9,7 @@ namespace ServerManagerTool.Lib
         {
         }
 
+        public string AppIdServer = string.Empty;
         public string BranchName = string.Empty;
         public string BranchPassword = string.Empty;
 
@@ -16,6 +17,7 @@ namespace ServerManagerTool.Lib
         {
             return new BranchSnapshot
             {
+                AppIdServer = profile.SOTF_Enabled ? Config.Default.AppIdServer_SotF : string.Empty,
                 BranchName = profile.BranchName,
                 BranchPassword = profile.BranchPassword
             };
@@ -25,6 +27,7 @@ namespace ServerManagerTool.Lib
         {
             return new BranchSnapshot
             {
+                AppIdServer = profile.AppIdServer,
                 BranchName = profile.BranchName,
                 BranchPassword = profile.BranchPassword
             };
@@ -42,17 +45,20 @@ namespace ServerManagerTool.Lib
             if (x is null || y is null)
                 return false;
 
-            //Check whether the snapshot' properties are equal.
-            return string.Equals(x.BranchName ?? string.Empty, y.BranchName ?? string.Empty, StringComparison.OrdinalIgnoreCase);
+            //Check whether the snapshot properties are equal.
+            var result = string.Equals(x.AppIdServer ?? string.Empty, y.AppIdServer ?? string.Empty, StringComparison.OrdinalIgnoreCase);
+            return result && string.Equals(x.BranchName ?? string.Empty, y.BranchName ?? string.Empty, StringComparison.OrdinalIgnoreCase);
         }
 
         public int GetHashCode(BranchSnapshot snapshot)
         {
             //Check whether the object is null
-            if (snapshot is null) return 0;
+            if (snapshot is null) 
+                return 0;
 
             //Get hash code for the Name field if it is not null.
-            return snapshot.BranchName == null ? 0 : snapshot.BranchName.GetHashCode();
+            var result = $"{snapshot.AppIdServer ?? ""}-{snapshot.BranchName ?? ""}";
+            return result.GetHashCode();
         }
     }
 }

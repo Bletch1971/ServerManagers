@@ -29,13 +29,15 @@ namespace ServerManagerTool.Lib
         public string ServerMap;
         public string ServerMapModId;
         public string TotalConversionModId;
-        public IEnumerable<string> ServerModIds;
+        public List<string> ServerModIds;
         public string MOTD;
         public int MOTDDuration;
         public bool MOTDIntervalEnabled;
         public int MOTDInterval;
         public bool ForceRespawnDinos;
 
+        public string AppId;
+        public string AppIdServer;
         public string BranchName;
         public string BranchPassword;
 
@@ -87,6 +89,8 @@ namespace ServerManagerTool.Lib
                 MOTDInterval = Math.Max(1, Math.Min(int.MaxValue, profile.MOTDInterval.Value)),
                 ForceRespawnDinos = profile.ForceRespawnDinos,
 
+                AppId = profile.SOTF_Enabled ? Config.Default.AppId_SotF : Config.Default.AppId,
+                AppIdServer = profile.SOTF_Enabled ? Config.Default.AppIdServer_SotF : Config.Default.AppIdServer,
                 BranchName = profile.BranchName,
                 BranchPassword = profile.BranchPassword,
 

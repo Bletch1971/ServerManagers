@@ -659,8 +659,10 @@ namespace ServerManagerTool.Lib
                     // Server Update Section
                     // *********************
 
+                    var branchInfo = ServerApp.GetBranchInfo(branch?.AppIdServer, branch?.BranchName);
+
                     progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Starting server update.");
-                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Server branch: {ServerApp.GetBranchName(branch?.BranchName)}.");
+                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Server branch: {branchInfo}.");
                     progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Profile name: {this.ProfileSnapshot.ProfileName}.");
 
                     // create the branch arguments
@@ -678,8 +680,7 @@ namespace ServerManagerTool.Lib
                     // Check if this is a new server installation.
                     if (isNewInstallation && Config.Default.AutoUpdate_EnableUpdate && !string.IsNullOrWhiteSpace(Config.Default.AutoUpdate_CacheDir))
                     {
-                        var branchName = string.IsNullOrWhiteSpace(branch?.BranchName) ? Config.Default.DefaultServerBranchName : branch.BranchName;
-                        var cacheFolder = IOUtils.NormalizePath(Path.Combine(Config.Default.AutoUpdate_CacheDir, $"{Config.Default.ServerBranchFolderPrefix}{branchName}"));
+                        var cacheFolder = ServerApp.GetServerCacheFolder(branch?.AppIdServer, branch?.BranchName);
 
                         // check if the auto-update facility is enabled and the cache folder defined.
                         if (!string.IsNullOrWhiteSpace(cacheFolder) && Directory.Exists(cacheFolder))
@@ -718,7 +719,7 @@ namespace ServerManagerTool.Lib
                     };
 
                     var steamCmdRemoveQuit = CommonConfig.Default.SteamCmdRemoveQuit && !Config.Default.SteamCmdRedirectOutput;
-                    var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, this.ProfileSnapshot.InstallDirectory, Config.Default.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
+                    var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, this.ProfileSnapshot.InstallDirectory, this.ProfileSnapshot.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
                     var workingDirectory = Config.Default.DataPath;
 
                     success = await ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, this.ProfileSnapshot.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
@@ -811,15 +812,26 @@ namespace ServerManagerTool.Lib
 
                                 progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Mod {modTitle}.");
 
-                                var modCachePath = ModUtils.GetModCachePath(modId);
-                                var cacheTimeFile = ModUtils.GetLatestModCacheTimeFile(modId);
-                                var modPath = ModUtils.GetModPath(this.ProfileSnapshot.InstallDirectory, modId);
-                                var modTimeFile = ModUtils.GetLatestModTimeFile(this.ProfileSnapshot.InstallDirectory, modId);
-
                                 var modCacheLastUpdated = 0;
                                 var downloadMod = true;
                                 var copyMod = true;
                                 var updateError = false;
+
+                                if (modDetail?.creator_app_id != null && !modDetail.creator_app_id.Equals(this.ProfileSnapshot.AppId, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ***************************************************************************");
+                                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ERROR: Mod cannot be updated, this mod does not belong to this application.");
+                                    progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} ***************************************************************************");
+
+                                    downloadMod = false;
+                                    copyMod = false;
+                                    updateError = true;
+                                }
+
+                                var modCachePath = ModUtils.GetModCachePath(modId, this.ProfileSnapshot.AppId);
+                                var cacheTimeFile = ModUtils.GetLatestModCacheTimeFile(modId, this.ProfileSnapshot.AppId);
+                                var modPath = ModUtils.GetModPath(this.ProfileSnapshot.InstallDirectory, modId);
+                                var modTimeFile = ModUtils.GetLatestModTimeFile(this.ProfileSnapshot.InstallDirectory, modId);
 
                                 if (downloadMod)
                                 {
@@ -893,9 +905,9 @@ namespace ServerManagerTool.Lib
                                         var steamCmdArgs = string.Empty;
                                         var steamCmdRemoveQuit = CommonConfig.Default.SteamCmdRemoveQuit && !Config.Default.SteamCmdRedirectOutput;
                                         if (Config.Default.SteamCmd_UseAnonymousCredentials)
-                                            steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_AnonymousUsername, Config.Default.AppId, modId);
+                                            steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_AnonymousUsername, this.ProfileSnapshot.AppId, modId);
                                         else
-                                            steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, Config.Default.AppId, modId);
+                                            steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, this.ProfileSnapshot.AppId, modId);
                                         var workingDirectory = Config.Default.DataPath;
 
                                         modSuccess = await ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
@@ -915,7 +927,7 @@ namespace ServerManagerTool.Lib
                                                 if (modDetail == null || modDetail.time_updated <= 0)
                                                 {
                                                     // get the version number from the steamcmd workshop file.
-                                                    steamLastUpdated = ModUtils.GetSteamWorkshopLatestTime(ModUtils.GetSteamWorkshopFile(), modId).ToString();
+                                                    steamLastUpdated = ModUtils.GetSteamWorkshopLatestTime(ModUtils.GetSteamWorkshopFile(this.ProfileSnapshot.AppId), modId).ToString();
                                                 }
 
                                                 // update the last updated file with the steam updated time.

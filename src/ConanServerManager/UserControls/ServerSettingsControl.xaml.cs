@@ -440,10 +440,11 @@ namespace ServerManagerTool
 
         private void PatchNotes_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(Config.Default.AppPatchNotesUrl))
+            var url = this.Settings.UseTestlive ? Config.Default.AppPatchNotesUrl_Testlive : Config.Default.AppPatchNotesUrl;
+            if (string.IsNullOrWhiteSpace(url))
                 return;
 
-            Process.Start(Config.Default.AppPatchNotesUrl);
+            Process.Start(url);
         }
 
         private void NeedAdmin_Click(object sender, RoutedEventArgs e)
@@ -588,7 +589,8 @@ namespace ServerManagerTool
                 }
 
                 // <data folder>\SteamCMD\steamapps\workshop\content\<app id>
-                folder = Path.Combine(Config.Default.DataPath, CommonConfig.Default.SteamCmdRelativePath, Config.Default.AppSteamWorkshopFolderRelativePath);
+                var workshopPath = string.Format(Config.Default.AppSteamWorkshopFolderRelativePath, this.Settings.UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId);
+                folder = Path.Combine(Config.Default.DataPath, CommonConfig.Default.SteamCmdRelativePath, workshopPath);
                 if (Directory.Exists(folder))
                 {
                     foreach (var modFolder in Directory.GetDirectories(folder))

@@ -193,15 +193,6 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Ark Server Manager")]
-        public string DefaultDataDir {
-            get {
-                return ((string)(this["DefaultDataDir"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("ShooterGameServer")]
         public string ServerProcessName {
             get {
@@ -585,24 +576,6 @@ namespace ServerManagerTool {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://store.steampowered.com/app/346110/")]
-        public string AppUrl {
-            get {
-                return ((string)(this["AppUrl"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://store.steampowered.com/app/407530/")]
-        public string AppUrl_SotF {
-            get {
-                return ((string)(this["AppUrl_SotF"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -742,7 +715,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\346110\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\{0}\\")]
         public string AppSteamWorkshopFolderRelativePath {
             get {
                 return ((string)(this["AppSteamWorkshopFolderRelativePath"]));
@@ -862,7 +835,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("workshopcache_346110.json")]
+        [global::System.Configuration.DefaultSettingValueAttribute("workshopcache_{0}.json")]
         public string WorkshopCacheFile {
             get {
                 return ((string)(this["WorkshopCacheFile"]));
@@ -1042,7 +1015,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_346110.acf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_{0}.acf")]
         public string AppSteamWorkshopFile {
             get {
                 return ((string)(this["AppSteamWorkshopFile"]));
@@ -1106,33 +1079,6 @@ namespace ServerManagerTool {
             }
             set {
                 this["ServerUpdate_OnServerStart"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_407530.acf")]
-        public string AppSteamWorkshopFile_SotF {
-            get {
-                return ((string)(this["AppSteamWorkshopFile_SotF"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\407530\\")]
-        public string AppSteamWorkshopFolderRelativePath_SotF {
-            get {
-                return ((string)(this["AppSteamWorkshopFolderRelativePath_SotF"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("workshopcache_407530.json")]
-        public string WorkshopCacheFile_SotF {
-            get {
-                return ((string)(this["WorkshopCacheFile_SotF"]));
             }
         }
         
@@ -2086,19 +2032,10 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_376030.acf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_{0}.acf")]
         public string AppSteamManifestFile {
             get {
                 return ((string)(this["AppSteamManifestFile"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_407530.acf")]
-        public string AppSteamManifestFile_SotF {
-            get {
-                return ((string)(this["AppSteamManifestFile_SotF"]));
             }
         }
         
