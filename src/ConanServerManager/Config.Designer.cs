@@ -273,15 +273,6 @@ namespace ServerManagerTool {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://store.steampowered.com/app/440900/")]
-        public string AppUrl {
-            get {
-                return ((string)(this["AppUrl"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -421,7 +412,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\440900\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("steamapps\\workshop\\content\\{0}\\")]
         public string AppSteamWorkshopFolderRelativePath {
             get {
                 return ((string)(this["AppSteamWorkshopFolderRelativePath"]));
@@ -532,7 +523,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("workshopcache_440900.json")]
+        [global::System.Configuration.DefaultSettingValueAttribute("workshopcache_{0}.json")]
         public string WorkshopCacheFile {
             get {
                 return ((string)(this["WorkshopCacheFile"]));
@@ -703,7 +694,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_440900.acf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("appworkshop_{0}.acf")]
         public string AppSteamWorkshopFile {
             get {
                 return ((string)(this["AppSteamWorkshopFile"]));
@@ -1485,7 +1476,7 @@ namespace ServerManagerTool {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_443030.acf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("appmanifest_{0}.acf")]
         public string AppSteamManifestFile {
             get {
                 return ((string)(this["AppSteamManifestFile"]));
@@ -2442,6 +2433,33 @@ namespace ServerManagerTool {
         public int ServicePointManager_SecurityProtocol {
             get {
                 return ((int)(this["ServicePointManager_SecurityProtocol"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("931180")]
+        public string AppId_Testlive {
+            get {
+                return ((string)(this["AppId_Testlive"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("931580")]
+        public string AppIdServer_Testlive {
+            get {
+                return ((string)(this["AppIdServer_Testlive"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://forums.funcom.com/c/conan-exiles/exiles-pc/testlive")]
+        public string AppPatchNotesUrl_Testlive {
+            get {
+                return ((string)(this["AppPatchNotesUrl_Testlive"]));
             }
         }
     }

@@ -1276,6 +1276,9 @@
     <!--#region Server Settings - Server Details -->
     <sys:String x:Key="ServerSettings_ServerDetailsLabel">Server Details</sys:String>
 
+    <sys:String x:Key="ServerSettings_UseTestliveLabel">Use Testlive Dedicated Server Files</sys:String>
+    <sys:String x:Key="ServerSettings_UseTestliveTooltip">If enabled, will use the testlive dedicated server files instead of the testlive branch. Leave the branch as default, do not set to Testlive.</sys:String>
+    
     <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
     <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>

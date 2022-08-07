@@ -6497,9 +6497,6 @@
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <cctl:CheckBoxAndTextBlock Name="EnableSOTFCheckbox" IsChecked="{Binding SOTF_Enabled, Mode=TwoWay, NotifyOnSourceUpdated=True}" IsEnabled="{Binding ElementName=EnablePGMCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_EnableSOTFLabel}" ToolTip="{DynamicResource ServerSettings_EnableSOTFTooltip}" VerticalContentAlignment="Center" FontWeight="Bold" SourceUpdated="EnableSOTFCheckbox_SourceUpdated" />
-                                            <Button Margin="20,5,5,5" Click="HelpSOTF_Click" BorderThickness="0" Background="{StaticResource BeigeGradient}"  ToolTip="{DynamicResource ServerSettings_SOTF_HelpTooltip}" Style="{StaticResource ButtonStyle1}">
-                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Help.ico,Size=32}"/>
-                                            </Button>
                                         </StackPanel>
                                     </GroupBox.Header>
 

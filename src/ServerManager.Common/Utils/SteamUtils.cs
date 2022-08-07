@@ -75,6 +75,14 @@ namespace ServerManagerTool.Common.Utils
 
         public static PublishedFileDetailsResponse GetSteamModDetails(List<string> modIdList)
         {
+            return GetSteamModDetails(new List<(string AppId, List<string> ModIdList)>()
+            {
+                ("", modIdList),
+            });
+        }
+
+        public static PublishedFileDetailsResponse GetSteamModDetails(List<(string AppId, List<string> ModIdList)> appMods)
+        {
             const int MAX_IDS = 20;
 
             PublishedFileDetailsResponse response = null;
@@ -83,57 +91,63 @@ namespace ServerManagerTool.Common.Utils
 
             try
             {
-                if (modIdList == null || modIdList.Count == 0)
+                if (appMods == null || appMods.Count == 0)
                     return new PublishedFileDetailsResponse();
 
-                int remainder;
-                var totalRequests = Math.DivRem(modIdList.Count, MAX_IDS, out remainder);
-                if (remainder > 0)
-                    totalRequests++;
-
-                var requestIndex = 0;
-                while (requestIndex < totalRequests)
+                foreach (var appMod in appMods)
                 {
-                    var count = 0;
-                    var postData = "";
-                    for (var index = requestIndex * MAX_IDS; count < MAX_IDS && index < modIdList.Count; index++)
+                    if (appMod.ModIdList.Count == 0)
+                        continue;
+
+                    int remainder;
+                    var totalRequests = Math.DivRem(appMod.ModIdList.Count, MAX_IDS, out remainder);
+                    if (remainder > 0)
+                        totalRequests++;
+
+                    var requestIndex = 0;
+                    while (requestIndex < totalRequests)
                     {
-                        postData += $"&publishedfileids[{count}]={modIdList[index]}";
-                        count++;
-                    }
-
-                    postData = $"key={SteamWebApiKey}&format=json&itemcount={count}{postData}";
-
-                    var data = Encoding.ASCII.GetBytes(postData);
-
-                    var httpRequest = WebRequest.Create("https://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v1/");
-                    httpRequest.Timeout = 30000;
-                    httpRequest.Method = "POST";
-                    httpRequest.ContentType = "application/x-www-form-urlencoded";
-                    httpRequest.ContentLength = data.Length;
-
-                    using (var stream = httpRequest.GetRequestStream())
-                    {
-                        stream.Write(data, 0, data.Length);
-                    }
-
-                    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                    var responseString = new StreamReader(httpResponse.GetResponseStream()).ReadToEnd();
-
-                    var result = JsonUtils.Deserialize<PublishedFileDetailsResult>(responseString);
-                    if (result != null && result.response != null)
-                    {
-                        if (response == null)
-                            response = result.response;
-                        else
+                        var count = 0;
+                        var postData = "";
+                        for (var index = requestIndex * MAX_IDS; count < MAX_IDS && index < appMod.ModIdList.Count; index++)
                         {
-                            response.resultcount += result.response.resultcount;
-                            response.publishedfiledetails.AddRange(result.response.publishedfiledetails);
+                            postData += $"&publishedfileids[{count}]={appMod.ModIdList[index]}";
+                            count++;
                         }
-                    }
 
-                    requestIndex++;
-                };
+                        postData = $"key={SteamWebApiKey}&format=json&itemcount={count}{postData}";
+
+                        var data = Encoding.ASCII.GetBytes(postData);
+
+                        var httpRequest = WebRequest.Create("https://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v1/");
+                        httpRequest.Timeout = 30000;
+                        httpRequest.Method = "POST";
+                        httpRequest.ContentType = "application/x-www-form-urlencoded";
+                        httpRequest.ContentLength = data.Length;
+
+                        using (var stream = httpRequest.GetRequestStream())
+                        {
+                            stream.Write(data, 0, data.Length);
+                        }
+
+                        var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                        var responseString = new StreamReader(httpResponse.GetResponseStream()).ReadToEnd();
+
+                        var result = JsonUtils.Deserialize<PublishedFileDetailsResult>(responseString);
+                        if (result != null && result.response != null)
+                        {
+                            if (response == null)
+                                response = result.response;
+                            else
+                            {
+                                response.resultcount += result.response.resultcount;
+                                response.publishedfiledetails.AddRange(result.response.publishedfiledetails);
+                            }
+                        }
+
+                        requestIndex++;
+                    };
+                }
 
                 return response ?? new PublishedFileDetailsResponse();
             }

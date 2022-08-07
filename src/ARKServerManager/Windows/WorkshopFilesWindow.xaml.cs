@@ -25,7 +25,6 @@ namespace ServerManagerTool
         private readonly GlobalizedApplication _globalizer = GlobalizedApplication.Instance;
         private readonly ServerProfile _profile = null;
         private ModDetailList _modDetails = null;
-        private readonly bool _isSotF = false;
 
         private readonly ModDetailsWindow _window = null;
 
@@ -40,7 +39,6 @@ namespace ServerManagerTool
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
 
             _profile = profile;
-            _isSotF = _profile?.SOTF_Enabled ?? false;
             this.Title = string.Format(_globalizer.GetResourceString("WorkshopFiles_ProfileTitle"), _profile?.ProfileName);
 
             UpdateModDetailsList(modDetails);
@@ -55,7 +53,6 @@ namespace ServerManagerTool
 
             _window = window;
             _profile = profile;
-            _isSotF = _profile?.SOTF_Enabled ?? false;
             this.Title = string.Format(_globalizer.GetResourceString("WorkshopFiles_ProfileTitle"), _profile?.ProfileName);
 
             UpdateModDetailsList(window?.ModDetails);
@@ -164,8 +161,11 @@ namespace ServerManagerTool
                 WorkshopFileDetailResponse localCache = null;
                 WorkshopFileDetailResponse steamCache = null;
 
+                var appId = _profile.SOTF_Enabled ? Config.Default.AppId_SotF : Config.Default.AppId;
+                var workshopCacheFile = string.Format(Config.Default.WorkshopCacheFile, appId);
+
                 await Task.Run( () => {
-                    var file = Path.Combine(Config.Default.DataDir, _isSotF ? Config.Default.WorkshopCacheFile_SotF : Config.Default.WorkshopCacheFile);
+                    var file = Path.Combine(Config.Default.DataDir, workshopCacheFile);
 
                     // try to load the cache file.
                     localCache = WorkshopFileDetailResponse.Load(file);
@@ -178,7 +178,7 @@ namespace ServerManagerTool
                     // check if the cache exists
                     if (steamCache == null)
                     {
-                        steamCache = SteamUtils.GetSteamModDetails(_isSotF ? Config.Default.AppId_SotF : Config.Default.AppId);
+                        steamCache = SteamUtils.GetSteamModDetails(appId);
                         if (steamCache != null)
                             steamCache.Save(file);
                         else

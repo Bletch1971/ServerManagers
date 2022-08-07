@@ -3642,7 +3642,8 @@ namespace ServerManagerTool.Lib
 
             try
             {
-                var manifestFile = ModUtils.GetSteamManifestFile(InstallDirectory, SOTF_Enabled);
+                var appIdServer = SOTF_Enabled ? Config.Default.AppIdServer_SotF : Config.Default.AppIdServer;
+                var manifestFile = ModUtils.GetSteamManifestFile(InstallDirectory, appIdServer);
                 if (string.IsNullOrWhiteSpace(manifestFile) || !File.Exists(manifestFile))
                     return;
 

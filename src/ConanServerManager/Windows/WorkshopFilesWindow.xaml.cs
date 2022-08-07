@@ -160,8 +160,11 @@ namespace ServerManagerTool
                 WorkshopFileDetailResponse localCache = null;
                 WorkshopFileDetailResponse steamCache = null;
 
+                var appId = _profile.UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId;
+                var workshopCacheFile = string.Format(Config.Default.WorkshopCacheFile, appId);
+
                 await Task.Run( () => {
-                    var file = Path.Combine(Config.Default.DataPath, Config.Default.WorkshopCacheFile);
+                    var file = Path.Combine(Config.Default.DataPath, workshopCacheFile);
 
                     // try to load the cache file.
                     localCache = WorkshopFileDetailResponse.Load(file);
@@ -174,7 +177,7 @@ namespace ServerManagerTool
                     // check if the cache exists
                     if (steamCache == null)
                     {
-                        steamCache = SteamUtils.GetSteamModDetails(Config.Default.AppId);
+                        steamCache = SteamUtils.GetSteamModDetails(appId);
                         if (steamCache != null)
                             steamCache.Save(file);
                         else

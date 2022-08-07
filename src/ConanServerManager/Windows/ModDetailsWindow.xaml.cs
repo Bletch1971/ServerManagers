@@ -479,8 +479,11 @@ namespace ServerManagerTool
         {
             WorkshopFileDetailResponse localCache = null;
 
+            var appId = _profile.UseTestlive ? Config.Default.AppId_Testlive : Config.Default.AppId;
+            var workshopCacheFile = string.Format(Config.Default.WorkshopCacheFile, appId);
+
             await Task.Run(() => {
-                var file = Path.Combine(Config.Default.DataPath, Config.Default.WorkshopCacheFile);
+                var file = Path.Combine(Config.Default.DataPath, workshopCacheFile);
 
                 // try to load the cache file.
                 localCache = WorkshopFileDetailResponse.Load(file);

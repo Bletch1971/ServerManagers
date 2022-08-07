@@ -8,6 +8,30 @@
   <updated>2022-07-15T00:00:00Z</updated>
 
   <entry>
+    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
+    <title>1.1.80 (1.1.80.1)</title>
+    <summary>1.1.80.1</summary>
+    <link href="" />
+    <updated>2022-08-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Details Section - added new option to use the Conan Testlive Dedicated Server files. This new option will switch the steam application id of the server files to use the Conan Testlive Dedicated Server files, instead of the Conan Dedicated Server files.</li>
+            <li>Server Update - updated the code to determine which set of dedicated server files (Conan or Conan Testlive) is required when performing server and mod file updates. Separate Cache folders will be maintained for each.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
     <id>urn:uuid:8CDA70CF-E8B8-4B9B-AD50-AD9A8B528E5B</id>
     <title>1.1.79 (1.1.79.3)</title>
     <summary>1.1.79.3</summary>

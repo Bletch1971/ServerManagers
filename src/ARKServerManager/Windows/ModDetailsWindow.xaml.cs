@@ -104,7 +104,7 @@ namespace ServerManagerTool
         {
             try
             {
-                WorkshopFiles = await LoadWorkshopItemsAsync(_profile.SOTF_Enabled);
+                WorkshopFiles = await LoadWorkshopItemsAsync();
                 await LoadModsFromProfile();
             }
             catch (Exception ex)
@@ -156,7 +156,7 @@ namespace ServerManagerTool
 
             try
             {
-                WorkshopFiles = await LoadWorkshopItemsAsync(_profile.SOTF_Enabled);
+                WorkshopFiles = await LoadWorkshopItemsAsync();
             }
             catch (Exception ex)
             {
@@ -506,12 +506,15 @@ namespace ServerManagerTool
             ModDetailsChanged = true;
         }
 
-        private async Task<WorkshopFileList> LoadWorkshopItemsAsync(bool isSotF)
+        private async Task<WorkshopFileList> LoadWorkshopItemsAsync()
         {
             WorkshopFileDetailResponse localCache = null;
 
+            var appId = _profile.SOTF_Enabled ? Config.Default.AppId_SotF : Config.Default.AppId;
+            var workshopCacheFile = string.Format(Config.Default.WorkshopCacheFile, appId);
+
             await Task.Run(() => {
-                var file = Path.Combine(Config.Default.DataDir, isSotF ? Config.Default.WorkshopCacheFile_SotF : Config.Default.WorkshopCacheFile);
+                var file = Path.Combine(Config.Default.DataDir, workshopCacheFile);
 
                 // try to load the cache file.
                 localCache = WorkshopFileDetailResponse.Load(file);
