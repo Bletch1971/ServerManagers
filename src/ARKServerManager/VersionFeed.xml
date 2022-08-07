@@ -5,12 +5,12 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2022-07-25T00:00:00Z</updated>
+  <updated>2022-08-07T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:84E1DDF9-EFA4-4A8B-90DE-564AE3B3B633</id>
-    <title>1.1.437 (1.1.437.1)</title>
-    <summary>1.1.437.1</summary>
+    <title>1.1.437 (1.1.437.2)</title>
+    <summary>1.1.437.2</summary>
     <link href="" />
     <updated>2022-08-07T00:00:00Z</updated>
     <content type="xhtml">
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Server Update - updated the code to simplify which set of dedicated server files (Ark Survival Evolved or Ark: SotF) is required when performing server and mod file updates. Separate Cache folders will be maintained for each.</li>
+            <li>Auto-Start Server Option - added a new option selection for on Boot and on Login.</li>
           </ul>
         </p>
       </div>
