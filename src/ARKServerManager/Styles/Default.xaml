@@ -12,7 +12,6 @@
     <cc:CommaDelimitedStringCountConverter x:Key="CommaDelimitedStringCountConverter"/>
     <cc:EnumConverter x:Key="EnumConverter"/>
     <cc:EnumFlagsConverter x:Key="EnumFlagsConverter"/>
-    <cc:FlagsEnumToBooleanConverter x:Key="FlagsEnumToBooleanConverter"/>
     <cc:FloatToPercentageConverter x:Key="FloatToPercentageConverter"/>
     <cc:HasStringValueConverter x:Key="HasStringValueConverter"/>
     <cc:InstalledVersionConverter x:Key="InstalledVersionConverter"/>

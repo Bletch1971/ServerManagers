@@ -32,6 +32,9 @@
             <vm:PlayerLevelIndexToDisplayLevelConverter x:Key="PlayerLevelIndexToDisplayLevelConverter" />
             <vm:ResourceNameValueConverter x:Key="ResourceNameValueConverter" />
             <vm:TributeExpirationConverter x:Key="TributeExpirationConverter"/>
+            
+            <cc:FlagsEnumToBooleanConverter x:Key="FlagsEnumToBooleanConverterShutdown1"/>
+            <cc:FlagsEnumToBooleanConverter x:Key="FlagsEnumToBooleanConverterShutdown2"/>
 
             <ObjectDataProvider x:Key="NPCSpawnContainerTypes" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
                 <ObjectDataProvider.MethodParameters>
@@ -1426,31 +1429,31 @@
                                                 <StackPanel Orientation="Horizontal">
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[0], ElementName=SettingsControl, FallbackValue=Sun}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Sunday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Sunday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[1], ElementName=SettingsControl, FallbackValue=Mon}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Monday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Monday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[2], ElementName=SettingsControl, FallbackValue=Tue}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Tuesday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Tuesday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[3], ElementName=SettingsControl, FallbackValue=Wed}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Wednesday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Wednesday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[4], ElementName=SettingsControl, FallbackValue=Thu}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Thursday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Thursday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[5], ElementName=SettingsControl, FallbackValue=Fri}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Friday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Friday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[6], ElementName=SettingsControl, FallbackValue=Sat}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Saturday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding ShutdownDaysOfTheWeek1, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown1}, ConverterParameter={x:Static mts:DaysOfTheWeek.Saturday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </StackPanel>
                                                 <cctl:CheckBoxAndTextBlock IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding UpdateAfterShutdown1, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UpdateAfterShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_UpdateAfterShutdownTooltip}" FlowDirection="RightToLeft" Margin="10,0,0,0" />
@@ -1480,31 +1483,31 @@
                                                 <StackPanel Orientation="Horizontal">
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[0], ElementName=SettingsControl, FallbackValue=Sun}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Sunday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Sunday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[1], ElementName=SettingsControl, FallbackValue=Mon}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Monday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Monday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[2], ElementName=SettingsControl, FallbackValue=Tue}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Tuesday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Tuesday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[3], ElementName=SettingsControl, FallbackValue=Wed}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Wednesday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Wednesday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[4], ElementName=SettingsControl, FallbackValue=Thu}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Thursday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Thursday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[5], ElementName=SettingsControl, FallbackValue=Fri}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Friday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Friday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <Label    Content="{Binding CurrentCulture.DateTimeFormat.AbbreviatedDayNames[6], ElementName=SettingsControl, FallbackValue=Sat}" HorizontalAlignment="Center" Margin="0,-5,0,-5"/>
-                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverter}, ConverterParameter={x:Static mts:DaysOfTheWeek.Saturday}}" HorizontalAlignment="Center"/>
+                                                        <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding ShutdownDaysOfTheWeek2, Mode=TwoWay, Converter={StaticResource FlagsEnumToBooleanConverterShutdown2}, ConverterParameter={x:Static mts:DaysOfTheWeek.Saturday}}" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </StackPanel>
                                                 <cctl:CheckBoxAndTextBlock IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding UpdateAfterShutdown2, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UpdateAfterShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_UpdateAfterShutdownTooltip}" FlowDirection="RightToLeft" Padding="4,-1,0,0" Margin="10,0,0,0"/>
