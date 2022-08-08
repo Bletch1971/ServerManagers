@@ -107,6 +107,7 @@ namespace ServerManagerTool.Lib
         public int ExitCode { get; set; } = EXITCODE_NORMALEXIT;
         public bool OutputLogs { get; set; } = false;
         public bool PerformWorldSave { get; set; } = Config.Default.ServerShutdown_EnableWorldSave;
+        public bool RestartIfShutdown { get; set; } = false;
         public bool SendAlerts { get; set; } = false;
         public bool SendEmails { get; set; } = false;
         public ProgressDelegate ProgressCallback { get; set; } = null;
@@ -333,7 +334,7 @@ namespace ServerManagerTool.Lib
             // check if the server was previously running.
             if (!_serverRunning)
             {
-                if (_profile.AutoRestartIfShutdown)
+                if (RestartIfShutdown)
                 {
                     LogProfileMessage("Server was not running, server will be started as the setting to restart if shutdown is TRUE.");
                 }
@@ -3170,7 +3171,8 @@ namespace ServerManagerTool.Lib
                                     SendAlerts = SendAlerts,
                                     SendEmails = SendEmails,
                                     ServerProcess = ServerProcess,
-                                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
+                                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden,
+                                    RestartIfShutdown = profile.AutoRestartIfShutdown,
                                 };
                                 app.PerformProfileUpdate(branch, profile);
                                 profileExitCodes.TryAdd(profile, app.ExitCode);
@@ -3191,7 +3193,8 @@ namespace ServerManagerTool.Lib
                                     SendAlerts = SendAlerts,
                                     SendEmails = SendEmails,
                                     ServerProcess = ServerProcess,
-                                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
+                                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden,
+                                    RestartIfShutdown = profile.AutoRestartIfShutdown,
                                 };
                                 app.PerformProfileUpdate(branch, profile);
                                 profileExitCodes.TryAdd(profile, app.ExitCode);
@@ -3358,7 +3361,8 @@ namespace ServerManagerTool.Lib
                     SendAlerts = true,
                     SendEmails = true,
                     ServerProcess = type,
-                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden
+                    SteamCMDProcessWindowStyle = ProcessWindowStyle.Hidden,
+                    RestartIfShutdown = performRestart,
                 };
                 exitCode = app.PerformProfileShutdown(profile, performRestart, performUpdate ? ServerUpdateType.ServerAndMods : ServerUpdateType.None, true, false, CancellationToken.None);
 

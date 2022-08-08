@@ -1332,7 +1332,6 @@ namespace ServerManagerTool.Windows
 
                 _currentProfileCommands.Add(server.Profile.ProfileID, restart ? CommandType.Restart : CommandType.Start);
                 var profile = ServerProfileSnapshot.Create(server.Profile);
-                profile.AutoRestartIfShutdown = true;
                 profileList.Add(profile);
             }
 
@@ -1349,6 +1348,7 @@ namespace ServerManagerTool.Windows
                     SendEmails = false,
                     ShutdownReason = shutdownReason,
                     ServerProcess = ServerProcessType.Restart,
+                    RestartIfShutdown = true,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -1492,6 +1492,7 @@ namespace ServerManagerTool.Windows
                     SendEmails = false,
                     ShutdownReason = shutdownReason,
                     ServerProcess = shutdown ? ServerProcessType.Shutdown : ServerProcessType.Stop,
+                    RestartIfShutdown = false,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -1588,8 +1589,6 @@ namespace ServerManagerTool.Windows
 
             foreach (var server in serverList)
             {
-                var performRestart = false;
-
                 // check if another command is being run against the profile
                 if (_currentProfileCommands.ContainsKey(server.Profile.ProfileID))
                 {
@@ -1600,7 +1599,6 @@ namespace ServerManagerTool.Windows
                 switch (server.Runtime.Status)
                 {
                     case ServerStatus.Running:
-                        performRestart = true;
                         break;
 
                     case ServerStatus.Initializing:
@@ -1616,7 +1614,6 @@ namespace ServerManagerTool.Windows
 
                 _currentProfileCommands.Add(server.Profile.ProfileID, CommandType.Update);
                 var profile = ServerProfileSnapshot.Create(server.Profile);
-                profile.RestartAfterShutdown1 = performRestart; // use this property to trigger a restart
                 profileList.Add(profile);
             }
 
@@ -1633,6 +1630,7 @@ namespace ServerManagerTool.Windows
                     SendEmails = false,
                     ShutdownReason = shutdownReason,
                     ServerProcess = ServerProcessType.Update,
+                    RestartIfShutdown = false,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -1650,7 +1648,7 @@ namespace ServerManagerTool.Windows
                 {
                     AddMessageBlockContent(string.Format(_globalizer.GetResourceString("DiscordBot_UpdateRequested"), profile.ServerName));
 
-                    app.PerformProfileShutdown(profile, profile.RestartAfterShutdown1, updateModsOnly ? ServerUpdateType.Mods : ServerUpdateType.ServerAndMods, false, false, token);
+                    app.PerformProfileShutdown(profile, true, updateModsOnly ? ServerUpdateType.Mods : ServerUpdateType.ServerAndMods, false, false, token);
 
                     Task.Delay(DELAY_PROCESSCOMPLETE).Wait();
 

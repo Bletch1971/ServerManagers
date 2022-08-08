@@ -1193,7 +1193,7 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Вкл. периодические Авто-Обновления</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">If enabled, the server will be periodically updated during the Auto-Update cycle. See the settings for Auto-Update options.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Перезагрузить сервер после выключения</sys:String>
-    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Restarts and Auto-Updates.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Updates.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Discord Bot Details -->

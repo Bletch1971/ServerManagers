@@ -1221,7 +1221,7 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Schließt den Server in den Auto Aktualisierungszyklus ein</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Wenn aktiviert, wird der Server während des automatischen Aktualisierungszyklus regelmäßig aktualisiert. Siehe die Einstellungen für die Optionen für die automatische Aktualisierung.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Startet den Server neu, wenn er heruntergefahren ist</sys:String>
-    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Wenn aktiviert, wird der Server neu gestartet, auch wenn er für automatische Neustarts und automatische Updates heruntergefahren wird.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Wenn aktiviert, wird der Server neu gestartet, auch wenn er für automatische Updates heruntergefahren wird.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Discord Bot Details -->

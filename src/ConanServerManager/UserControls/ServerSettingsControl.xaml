@@ -953,20 +953,17 @@
 
                             <StackPanel Margin="-8,0,2,0">
                                 <GroupBox Header="{DynamicResource ServerSettings_ServerManagerSettingsLabel}" Style="{StaticResource GroupBoxStyle}">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-
-                                        <Grid Grid.Row="0" >
+                                    <StackPanel Orientation="Vertical">
+                                        <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
                                             </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" MinWidth="50"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
                                             <Grid.Style>
                                                 <Style TargetType="{x:Type Grid}">
@@ -981,15 +978,15 @@
                                                 </Style>
                                             </Grid.Style>
 
-                                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5,5,5,0">
-                                                <CheckBox Content="{DynamicResource ServerSettings_AutoStartServerLabel}" VerticalAlignment="Bottom" IsChecked="{Binding EnableAutoStart}" ToolTip="{DynamicResource ServerSettings_AutoStartServerTooltip}" HorizontalAlignment="Left"/>
-                                                <RadioButton GroupName="AutoStartServer" Margin="10,0,0,0" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin, Converter={StaticResource InvertBooleanConverter}}" Content="{DynamicResource ServerSettings_AutoStartServerOnBootLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnBootTooltip}"/>
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" Content="{DynamicResource ServerSettings_AutoStartServerLabel}" VerticalAlignment="Bottom" IsChecked="{Binding EnableAutoStart}" ToolTip="{DynamicResource ServerSettings_AutoStartServerTooltip}" HorizontalAlignment="Left"/>
+                                            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" Orientation="Horizontal">
+                                                <RadioButton GroupName="AutoStartServer" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin, Converter={StaticResource InvertBooleanConverter}}" Content="{DynamicResource ServerSettings_AutoStartServerOnBootLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnBootTooltip}"/>
                                                 <RadioButton GroupName="AutoStartServer" Margin="5,0,0,0" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin}" Content="{DynamicResource ServerSettings_AutoStartServerOnLoginLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnLoginTooltip}"/>
                                             </StackPanel>
 
-                                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5,5,5,0" >
-                                                <CheckBox Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1}" Content="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
-                                                <TextBox Margin="10,0,0,0" Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown1}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
+                                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="5,5,5,0" Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1}" Content="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,5,5,0" Orientation="Horizontal">
+                                                <TextBox Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown1}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
                                                     <Validation.ErrorTemplate>
                                                         <ControlTemplate>
                                                             <StackPanel>
@@ -1041,9 +1038,9 @@
                                                 <CheckBox IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding RestartAfterShutdown1}" Content="{DynamicResource ServerSettings_RestartAfterShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_RestartAfterShutdownTooltip}" FlowDirection="RightToLeft" Margin="10,0,0,0" />
                                             </StackPanel>
 
-                                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5,5,5,0" >
-                                                <CheckBox Name="EnableAutoShutdown2Checkbox" IsChecked="{Binding EnableAutoShutdown2}" Content="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
-                                                <TextBox Margin="10,0,0,0" Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown2}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
+                                            <CheckBox Grid.Row="2" Grid.Column="0" Margin="5,5,5,0" Name="EnableAutoShutdown2Checkbox" IsChecked="{Binding EnableAutoShutdown2}" Content="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5,5,5,0" Orientation="Horizontal">
+                                                <TextBox Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown2}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
                                                     <Validation.ErrorTemplate>
                                                         <ControlTemplate>
                                                             <StackPanel>
@@ -1095,11 +1092,23 @@
                                                 <CheckBox IsEnabled="{Binding EnableAutoShutdown2}" IsChecked="{Binding RestartAfterShutdown2}" Content="{DynamicResource ServerSettings_RestartAfterShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_RestartAfterShutdownTooltip}" FlowDirection="RightToLeft" Padding="4,-1,0,0" Margin="10,0,0,0"/>
                                             </StackPanel>
                                         </Grid>
+                                        
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" MinWidth="50"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
-                                        <CheckBox Grid.Row="1" Margin="5,5,5,0" IsChecked="{Binding EnableAutoBackup}" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_PeriodicBackupsLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicBackupsTooltip}" HorizontalAlignment="Left"/>
-                                        <CheckBox Grid.Row="2" Margin="5,5,5,0" IsChecked="{Binding EnableAutoUpdate}" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_PeriodicUpdatesLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicUpdatesTooltip}" HorizontalAlignment="Left"/>
-                                        <CheckBox Grid.Row="3" Margin="5,5,5,0" IsChecked="{Binding AutoRestartIfShutdown}" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_RestartIfShutdownLabel}" ToolTip="{DynamicResource ServerSettings_RestartIfShutdownTooltip}" HorizontalAlignment="Left"/>
-                                    </Grid>
+                                            <CheckBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding EnableAutoBackup}" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_PeriodicBackupsLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicBackupsTooltip}" HorizontalAlignment="Left"/>
+
+                                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding EnableAutoUpdate}" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_PeriodicUpdatesLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicUpdatesTooltip}" HorizontalAlignment="Left"/>
+                                            <CheckBox Grid.Row="2" Grid.Column="1" Margin="10,5,5,0" IsChecked="{Binding AutoRestartIfShutdown}" VerticalAlignment="Center" Content="{DynamicResource ServerSettings_RestartIfShutdownLabel}" ToolTip="{DynamicResource ServerSettings_RestartIfShutdownTooltip}" HorizontalAlignment="Left"/>
+                                        </Grid>
+                                    </StackPanel>
                                 </GroupBox>
                             </StackPanel>
                         </Expander>

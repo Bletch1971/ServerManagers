@@ -1016,7 +1016,7 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Incluir servidor no ciclo de atualização automática</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Se ativado, o servidor será atualizado periodicamente durante o ciclo de atualização automática. Veja as configurações para as opções de atualização automática.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Reinicie o servidor se desligado</sys:String>
-    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Se ativado, o servidor será reiniciado mesmo se for encerrado para reinicializações automáticas e atualizações automáticas.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Se ativado, o servidor será reiniciado mesmo se for encerrado para atualizações automáticas.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Server Details -->

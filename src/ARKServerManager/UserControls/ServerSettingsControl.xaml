@@ -1372,20 +1372,17 @@
 
                             <StackPanel Margin="-8,0,2,0">
                                 <GroupBox Header="{DynamicResource ServerSettings_ASMSettingLabel}" Style="{StaticResource GroupBoxStyle}">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-
-                                        <Grid Grid.Row="0" >
+                                    <StackPanel Orientation="Vertical">
+                                        <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
                                             </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" MinWidth="50"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
                                             <Grid.Style>
                                                 <Style TargetType="{x:Type Grid}">
@@ -1400,15 +1397,14 @@
                                                 </Style>
                                             </Grid.Style>
 
-                                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5,5,5,0">
-                                                <cctl:CheckBoxAndTextBlock Text="{DynamicResource ServerSettings_AutoStartServerLabel}" VerticalAlignment="Bottom" IsChecked="{Binding EnableAutoStart, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_AutoStartServerTooltip}" HorizontalAlignment="Left"/>
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" Text="{DynamicResource ServerSettings_AutoStartServerLabel}" VerticalAlignment="Bottom" IsChecked="{Binding EnableAutoStart, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_AutoStartServerTooltip}" HorizontalAlignment="Left"/>
+                                            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" Orientation="Horizontal">
                                                 <RadioButton GroupName="AutoStartServer" Margin="10,0,0,0" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin, Converter={StaticResource InvertBooleanConverter}}" Content="{DynamicResource ServerSettings_AutoStartServerOnBootLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnBootTooltip}"/>
                                                 <RadioButton GroupName="AutoStartServer" Margin="5,0,0,0" VerticalAlignment="Bottom" IsEnabled="{Binding EnableAutoStart}" IsChecked="{Binding AutoStartOnLogin}" Content="{DynamicResource ServerSettings_AutoStartServerOnLoginLabel}" ToolTip="{DynamicResource ServerSettings_AutoStartServerOnLoginTooltip}"/>
                                             </StackPanel>
 
-
-                                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" >
-                                                <cctl:CheckBoxAndTextBlock Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="0" Margin="5,5,5,0" Name="EnableAutoShutdown1Checkbox" IsChecked="{Binding EnableAutoShutdown1, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,5,5,0" Orientation="Horizontal" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" >
                                                 <TextBox Margin="10,0,0,0" Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown1}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
                                                     <Validation.ErrorTemplate>
                                                         <ControlTemplate>
@@ -1461,8 +1457,8 @@
                                                 <cctl:CheckBoxAndTextBlock IsEnabled="{Binding EnableAutoShutdown1}" IsChecked="{Binding RestartAfterShutdown1, Mode=TwoWay}" Text="{DynamicResource ServerSettings_RestartAfterShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_RestartAfterShutdownTooltip}" FlowDirection="RightToLeft" Margin="10,0,0,0" />
                                             </StackPanel>
 
-                                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" >
-                                                <cctl:CheckBoxAndTextBlock Name="EnableAutoShutdown2Checkbox" IsChecked="{Binding EnableAutoShutdown2, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="2" Grid.Column="0" Margin="5,5,5,0" Name="EnableAutoShutdown2Checkbox" IsChecked="{Binding EnableAutoShutdown2, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableAutoShutdownLabel}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}"/>
+                                            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5,5,5,0" Orientation="Horizontal" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" >
                                                 <TextBox Margin="10,0,0,0" Width="60" Height="20" IsEnabled="{Binding EnableAutoShutdown2}" VerticalAlignment="Bottom" ToolTip="{DynamicResource ServerSettings_EnableAutoShutdownTooltip}">
                                                     <Validation.ErrorTemplate>
                                                         <ControlTemplate>
@@ -1516,10 +1512,22 @@
                                             </StackPanel>
                                         </Grid>
 
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="1" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoBackup, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_PeriodicBackupsLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicBackupsTooltip}" HorizontalAlignment="Left"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="2" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoUpdate, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_PeriodicUpdatesLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicUpdatesTooltip}" HorizontalAlignment="Left"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="3" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding AutoRestartIfShutdown, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_RestartIfShutdownLabel}" ToolTip="{DynamicResource ServerSettings_RestartIfShutdownTooltip}" HorizontalAlignment="Left"/>
-                                    </Grid>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" MinWidth="50"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoBackup, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_PeriodicBackupsLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicBackupsTooltip}" HorizontalAlignment="Left"/>
+
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="0" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoUpdate, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_PeriodicUpdatesLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicUpdatesTooltip}" HorizontalAlignment="Left"/>
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="1" Margin="10,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding AutoRestartIfShutdown, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_RestartIfShutdownLabel}" ToolTip="{DynamicResource ServerSettings_RestartIfShutdownTooltip}" HorizontalAlignment="Left"/>
+                                        </Grid>
+                                    </StackPanel>
                                 </GroupBox>
                             </StackPanel>
                         </Expander>

@@ -1316,7 +1316,7 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Inclure cycle de mise à jour automatique du serveur</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">Si cette option est activée, le serveur sera périodiquement mis à jour pendant le cycle de mise à jour automatique. Voir les paramètres pour les options de mise à jour automatique.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Redémarrer le serveur en cas d'arrêt</sys:String>
-    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Si cette option est activée, le serveur sera redémarré même s'il est arrêté pour les redémarrages automatiques et les mises à jour automatiques.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">Si cette option est activée, le serveur sera redémarré même s'il est arrêté pour les mises à jour automatiques.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Discord Bot Details -->

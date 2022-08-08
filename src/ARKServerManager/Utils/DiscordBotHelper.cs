@@ -448,7 +448,6 @@ namespace ServerManagerTool.Utils
 
                         _currentProfileCommands.Add(server.Profile.ProfileID, restart ? CommandType.Restart : CommandType.Start);
                         var profile = ServerProfileSnapshot.Create(server.Profile);
-                        profile.AutoRestartIfShutdown = true;
                         profileList.Add(profile);
                     }
                 }
@@ -462,6 +461,7 @@ namespace ServerManagerTool.Utils
                     SendAlerts = true,
                     SendEmails = false,
                     ServerProcess = ServerProcessType.Restart,
+                    RestartIfShutdown = true,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -576,6 +576,7 @@ namespace ServerManagerTool.Utils
                     SendAlerts = true,
                     SendEmails = false,
                     ServerProcess = shutdown ? ServerProcessType.Shutdown : ServerProcessType.Stop,
+                    RestartIfShutdown = false,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -644,8 +645,6 @@ namespace ServerManagerTool.Utils
                 {
                     foreach (var server in serverList)
                     {
-                        var performRestart = false;
-
                         if (!server.Profile.AllowDiscordUpdate)
                         {
                             responseList.Add(string.Format(_globalizer.GetResourceString("DiscordBot_CommandDisabledProfile"), CommandType.Update, server.Profile.ProfileName));
@@ -662,7 +661,6 @@ namespace ServerManagerTool.Utils
                         switch (server.Runtime.Status)
                         {
                             case ServerStatus.Running:
-                                performRestart = true;
                                 break;
 
                             case ServerStatus.Initializing:
@@ -678,7 +676,6 @@ namespace ServerManagerTool.Utils
 
                         _currentProfileCommands.Add(server.Profile.ProfileID, CommandType.Update);
                         var profile = ServerProfileSnapshot.Create(server.Profile);
-                        profile.RestartAfterShutdown1 = performRestart; // use this property to trigger a restart
                         profileList.Add(profile);
                     }
                 }
@@ -692,6 +689,7 @@ namespace ServerManagerTool.Utils
                     SendAlerts = true,
                     SendEmails = false,
                     ServerProcess = ServerProcessType.Update,
+                    RestartIfShutdown = false,
                     ServerStatusChangeCallback = (ServerStatus serverStatus) =>
                     {
                         TaskUtils.RunOnUIThreadAsync(() =>
@@ -707,7 +705,7 @@ namespace ServerManagerTool.Utils
 
                 Task.Run(() =>
                 {
-                    app.PerformProfileShutdown(profile, profile.RestartAfterShutdown1, ServerUpdateType.ServerAndMods, false, false, token);
+                    app.PerformProfileShutdown(profile, true, ServerUpdateType.ServerAndMods, false, false, token);
                     _currentProfileCommands.Remove(profile.ProfileId);
                 }, token);
 
