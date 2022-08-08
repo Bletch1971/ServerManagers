@@ -972,6 +972,14 @@ namespace ServerManagerTool
                 comment.AppendLine($"ServerShutdown_WorldSaveDelay: {Config.Default.ServerShutdown_WorldSaveDelay}");
                 comment.AppendLine($"RCON_MessageCommand: {Config.Default.RCON_MessageCommand}");
 
+                comment.AppendLine($"AutoBackup_TaskPriority: {Config.Default.AutoBackup_TaskPriority}");
+                comment.AppendLine($"AutoUpdate_TaskPriority: {Config.Default.AutoUpdate_TaskPriority}");
+                comment.AppendLine($"AutoShutdown_TaskPriority: {Config.Default.AutoShutdown_TaskPriority}");
+                comment.AppendLine($"AutoStart_TaskPriority: {Config.Default.AutoStart_TaskPriority}");
+
+                comment.AppendLine($"TaskSchedulerUsername: {Config.Default.TaskSchedulerUsername}");
+                comment.AppendLine($"HasTaskSchedulerPassword: {!string.IsNullOrWhiteSpace(Config.Default.TaskSchedulerPassword)}");
+
                 var zipFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), this.Settings.ProfileID + ".zip");
                 if (File.Exists(zipFile)) File.Delete(zipFile);
 

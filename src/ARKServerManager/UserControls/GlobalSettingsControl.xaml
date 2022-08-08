@@ -813,6 +813,8 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" MinWidth="150"/>
@@ -856,6 +858,12 @@
 
                         <Label Grid.Row="10" Grid.Column="2" Margin="0" Content="{DynamicResource GlobalSettings_TaskPriority_AutoStartLabel}" VerticalAlignment="Center"/>
                         <ComboBox Name="TaskPriorityAutoStartComboBox" Grid.Row="10" Grid.Column="3" Margin="1" ItemsSource="{Binding ElementName=GlobalSettings, Path=TaskPriorities}" SelectedValue="{Binding Config.AutoStart_TaskPriority}" ToolTip="{DynamicResource GlobalSettings_TaskPriority_Tooltip}" SelectedValuePath="ValueMember" DisplayMemberPath="DisplayMember" PreviewMouseWheel="ComboBox_PreviewMouseWheel"/>
+
+                        <Label Grid.Row="12" Grid.Column="0" Content="{DynamicResource GlobalSettings_TaskSchedulerUsernameLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="12" Grid.Column="1" Margin="1" Text="{Binding Config.TaskSchedulerUsername}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_TaskSchedulerUsernameTooltip}"/>
+                        <Label Grid.Row="12" Grid.Column="2" Content="{DynamicResource GlobalSettings_TaskSchedulerPasswordLabel}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="12" Grid.Column="3" Margin="1" Name="HideTaskSchedulerPasswordTextBox" Text="{DynamicResource ServerSettings_HidePasswordText}" IsEnabled="{Binding Config.Email_UseDetaultCredentials, Converter={StaticResource InvertBooleanConverter}}" ToolTip="{DynamicResource ServerSettings_HidePasswordTooltip}" GotFocus="HiddenField_GotFocus" Style="{StaticResource HiddenTextBoxStyle}"/>
+                        <TextBox Grid.Row="12" Grid.Column="3" Margin="1" Name="TaskSchedulerPasswordTextBox" Text="{Binding Config.TaskSchedulerPassword}" IsReadOnlyCaretVisible="True" VerticalContentAlignment="Center" ToolTip="{DynamicResource GlobalSettings_TaskSchedulerPasswordTooltip}" LostFocus="HiddenField_LostFocus" Visibility="Collapsed"/>
                     </Grid>
                 </GroupBox>
             </Grid>

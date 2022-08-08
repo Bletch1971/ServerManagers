@@ -430,7 +430,7 @@ namespace ServerManagerTool.Common.Utils
             return false;
         }
 
-        public static bool ScheduleAutoStart(string taskKey, string taskSuffix, bool enableAutoStart, string command, string profileName, bool onLogin, ProcessPriorityClass priority)
+        public static bool ScheduleAutoStart(string taskKey, string taskSuffix, bool enableAutoStart, string command, string profileName, bool onLogin, string username, string password, ProcessPriorityClass priority)
         {
             var taskName = GetScheduledTaskName(TaskType.AutoStart, taskKey, taskSuffix);
             var taskFolder = TaskService.Instance.RootFolder.SubFolders.Exists(TaskFolder) ? TaskService.Instance.RootFolder.SubFolders[TaskFolder] : null;
@@ -457,7 +457,8 @@ namespace ServerManagerTool.Common.Utils
                 Task task = null;
                 TaskDefinition taskDefinition = null;
                 TaskLogonType taskLogonType;
-                string userId;
+                string taskUsername = !string.IsNullOrWhiteSpace(username) ? username : null;
+                string taskPassword = !string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password) ? password : null;
 
                 try
                 {
@@ -488,10 +489,12 @@ namespace ServerManagerTool.Common.Utils
 
                 if (onLogin)
                 {
+                    taskUsername = null;
+                    taskPassword = null;
+
                     taskLogonType = TaskLogonType.InteractiveToken;
                     taskDefinition.Principal.LogonType = taskLogonType;
                     taskDefinition.Principal.UserId = null;
-                    userId = null;
 
                     var oldtriggers = taskDefinition.Triggers.OfType<BootTrigger>();
                     foreach (var trigger in oldtriggers)
@@ -522,10 +525,18 @@ namespace ServerManagerTool.Common.Utils
                 }
                 else
                 {
-                    taskLogonType = TaskLogonType.ServiceAccount;
+                    if (!string.IsNullOrWhiteSpace(taskUsername))
+                    {
+                        taskLogonType = TaskLogonType.Password;
+                    }
+                    else
+                    {
+                        taskUsername = "SYSTEM";
+                        taskPassword = null;
+                        taskLogonType = TaskLogonType.ServiceAccount;
+                    }
                     taskDefinition.Principal.LogonType = taskLogonType;
                     taskDefinition.Principal.UserId = null;
-                    userId = "SYSTEM";
 
                     var oldtriggers = taskDefinition.Triggers.OfType<LogonTrigger>();
                     foreach (var trigger in oldtriggers)
@@ -564,7 +575,7 @@ namespace ServerManagerTool.Common.Utils
 
                 try
                 {
-                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, userId, null, taskLogonType);
+                    task = taskFolder.RegisterTaskDefinition(taskName, taskDefinition, TaskCreation.CreateOrUpdate, taskUsername, taskPassword, taskLogonType);
                     return task != null;
                 }
                 catch (Exception ex)

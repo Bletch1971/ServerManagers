@@ -2462,5 +2462,29 @@ namespace ServerManagerTool {
                 return ((string)(this["AppPatchNotesUrl_Testlive"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TaskSchedulerUsername {
+            get {
+                return ((string)(this["TaskSchedulerUsername"]));
+            }
+            set {
+                this["TaskSchedulerUsername"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TaskSchedulerPassword {
+            get {
+                return ((string)(this["TaskSchedulerPassword"]));
+            }
+            set {
+                this["TaskSchedulerPassword"] = value;
+            }
+        }
     }
 }

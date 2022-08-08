@@ -1248,7 +1248,7 @@ namespace ServerManagerTool.Lib
 
             var taskKey = GetProfileKey();
 
-            if (!TaskSchedulerUtils.ScheduleAutoStart(taskKey, null, this.EnableAutoStart, GetLauncherFile(), ProfileName, this.AutoStartOnLogin, Config.Default.AutoStart_TaskPriority))
+            if (!TaskSchedulerUtils.ScheduleAutoStart(taskKey, null, this.EnableAutoStart, GetLauncherFile(), ProfileName, this.AutoStartOnLogin, Config.Default.TaskSchedulerUsername, Config.Default.TaskSchedulerPassword, Config.Default.AutoStart_TaskPriority))
             {
                 return false;
             }

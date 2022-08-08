@@ -872,5 +872,11 @@
     <Setting Name="ServicePointManager_SecurityProtocol" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">3072</Value>
     </Setting>
+    <Setting Name="TaskSchedulerUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TaskSchedulerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

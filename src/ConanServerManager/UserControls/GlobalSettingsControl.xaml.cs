@@ -435,6 +435,8 @@ namespace ServerManagerTool
                     textBox = EmailPasswordTextBox;
                 if (Equals(hideTextBox, HideDiscordBotTokenTextBox))
                     textBox = DiscordBotTokenTextBox;
+                if (Equals(hideTextBox, HideTaskSchedulerPasswordTextBox))
+                    textBox = TaskSchedulerPasswordTextBox;
 
                 if (textBox != null)
                 {
@@ -460,6 +462,8 @@ namespace ServerManagerTool
                     hideTextBox = HideEmailPasswordTextBox;
                 if (textBox == DiscordBotTokenTextBox)
                     hideTextBox = HideDiscordBotTokenTextBox;
+                if (textBox == TaskSchedulerPasswordTextBox)
+                    hideTextBox = HideTaskSchedulerPasswordTextBox;
 
                 if (hideTextBox != null)
                 {
