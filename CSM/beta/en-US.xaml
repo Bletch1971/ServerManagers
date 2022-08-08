@@ -957,6 +957,11 @@
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Auto Shutdown/Restart Task Priority:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Auto Start Task Priority:</sys:String>
 
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameLabel">Task Scheduler Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameTooltip">This username will be used for the Auto-Start server on Boot task.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordLabel">Task Scheduler Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordTooltip">This password will be used for the Auto-Start server on Boot task.</sys:String>
+
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_FailedTitle">Failed to Reset Settings</sys:String>
