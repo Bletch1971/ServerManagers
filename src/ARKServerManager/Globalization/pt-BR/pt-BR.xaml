@@ -620,8 +620,6 @@
     <sys:String x:Key="GlobalSettings_ForceCopyModsTooltip">Se ativado, os mod serão copiados para a pasta do servidor, mesmo se o servidor tiver a versão mais recente. A ativação pode corrigir problemas de corrupção de mod.</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Forçar downloads de mod quando não houver informações de vapor disponíveis</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">Se habilitado, os mods serão baixados do steam mesmo quando nenhuma informação de vapor estiver disponível.</sys:String>
-    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Expiração do Cache do Workshop</sys:String>
-    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">O número de horas desde a última atualização do cache da oficina será considerado antigo e será atualizado automaticamente.</sys:String>
 	
     <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Configurações de backup</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Inclua a pasta SaveGames ao realizar um backup do WorldSave</sys:String>
@@ -803,6 +801,11 @@
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Prioridade da tarefa - atualização automática:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Prioridade da tarefa - desligamento/reinicialização automática:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Prioridade da tarefa - iniciar automático:</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameLabel">Nome de usuário no Agendador de Tarefas:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameTooltip">Este nome de usuário será usado para a tarefa de inicialização automática do servidor</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordLabel">Senha do Agendador de Tarefas:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordTooltip">Essa senha será usada para a tarefa de inicialização automática do servidor</sys:String>
 	
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Redefinir configurações</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Clique em 'Sim' para confirmar que você deseja executar as configurações redefinidas.</sys:String>
@@ -1303,8 +1306,12 @@
     <sys:String x:Key="ServerSettings_AutomaticManagementLabel">Gerenciamento Automático</sys:String>
     <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">Por que não posso usar isso?</sys:String>
     <sys:String x:Key="ServerSettings_ASMSettingLabel">Configurações do Ark Server Manager</sys:String>
-    <sys:String x:Key="ServerSettings_AutoStartLabel">Inicialização automática do Servidor</sys:String>
-    <sys:String x:Key="ServerSettings_AutoStartTooltip">Iniciar automaticamente o servidor quando a máquina é iniciada.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerLabel">Inicialização automática</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerTooltip">Iniciar o servidor automaticamente.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootLabel">Na inicialização</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootTooltip">Iniciar o servidor quando a máquina for iniciada.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginLabel">No Login</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginTooltip">Iniciar o servidor quando o usuário fizer login.</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Servidor desligará em</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownTooltip">A hora e o minuto do dia para forçar o desligamento do servidor.</sys:String>
     <sys:String x:Key="ServerSettings_RestartAfterShutdownLabel">Reiniciar</sys:String>
