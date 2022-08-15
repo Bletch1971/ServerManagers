@@ -5,137 +5,21 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="https://servermanagers.freeforums.net/" />
-  <updated>2022-08-08T00:00:00Z</updated>
+  <updated>2022-08-15T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
-    <title>1.1.80 (1.1.80.6)</title>
-    <summary>1.1.80.6</summary>
+    <id>urn:uuid:BFC591B5-6DF6-48FF-9107-E5B9C41EC1C1</id>
+    <title>1.1.81 (1.1.81.1)</title>
+    <summary>1.1.81.1</summary>
     <link href="" />
-    <updated>2022-08-08T00:00:00Z</updated>
+    <updated>2022-08-15T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Automatic Management - fixed a bug with the shutdown server day selection. Both Shutdown 1 and Shutdown 2 days would affect each other, now they are independant.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
-    <title>1.1.80 (1.1.80.5)</title>
-    <summary>1.1.80.5</summary>
-    <link href="" />
-    <updated>2022-08-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Support Zip - added missing settings.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
-    <title>1.1.80 (1.1.80.4)</title>
-    <summary>1.1.80.4</summary>
-    <link href="" />
-    <updated>2022-08-08T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Automatic Management - rearranged the options so they are grouped correctly.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
-    <title>1.1.80 (1.1.80.3)</title>
-    <summary>1.1.80.3</summary>
-    <link href="" />
-    <updated>2022-08-07T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Auto-Start Server Option - added a new option selection for on Boot and on Login.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
-    <title>1.1.80 (1.1.80.2)</title>
-    <summary>1.1.80.2</summary>
-    <link href="" />
-    <updated>2022-08-07T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Settings Coloring - Set the coloring of the settings window to Blue when Testlive option selected.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
-    <title>1.1.80 (1.1.80.1)</title>
-    <summary>1.1.80.1</summary>
-    <link href="" />
-    <updated>2022-08-07T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>Server Details Section - added new option to use the Conan Testlive Dedicated Server files. This new option will switch the steam application id of the server files to use the Conan Testlive Dedicated Server files, instead of the Conan Dedicated Server files.</li>
-            <li>Server Update - updated the code to determine which set of dedicated server files (Conan or Conan Testlive) is required when performing server and mod file updates. Separate Cache folders will be maintained for each.</li>
+            <li>Automatic Management Section - fixed on Login selection of the Auto-Start option.</li>
           </ul>
         </p>
       </div>

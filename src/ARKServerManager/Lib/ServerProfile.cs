@@ -6040,19 +6040,23 @@ namespace ServerManagerTool.Lib
 
         private void SyncAutomaticManagement(ServerProfile sourceProfile)
         {
-            this.SetValue(EnableAutoBackupProperty, sourceProfile.EnableAutoBackup);
             this.SetValue(EnableAutoStartProperty, sourceProfile.EnableAutoStart);
-            this.SetValue(EnableAutoUpdateProperty, sourceProfile.EnableAutoUpdate);
+            this.SetValue(AutoStartOnLoginProperty, sourceProfile.AutoStartOnLogin);
+
             this.SetValue(EnableAutoShutdown1Property, sourceProfile.EnableAutoShutdown1);
             this.SetValue(AutoShutdownTime1Property, sourceProfile.AutoShutdownTime1);
             this.SetValue(ShutdownDaysOfTheWeek1Property, sourceProfile.ShutdownDaysOfTheWeek1);
             this.SetValue(RestartAfterShutdown1Property, sourceProfile.RestartAfterShutdown1);
             this.SetValue(UpdateAfterShutdown1Property, sourceProfile.UpdateAfterShutdown1);
+
             this.SetValue(EnableAutoShutdown2Property, sourceProfile.EnableAutoShutdown2);
             this.SetValue(AutoShutdownTime2Property, sourceProfile.AutoShutdownTime2);
             this.SetValue(ShutdownDaysOfTheWeek2Property, sourceProfile.ShutdownDaysOfTheWeek2);
             this.SetValue(RestartAfterShutdown2Property, sourceProfile.RestartAfterShutdown2);
             this.SetValue(UpdateAfterShutdown2Property, sourceProfile.UpdateAfterShutdown2);
+
+            this.SetValue(EnableAutoBackupProperty, sourceProfile.EnableAutoBackup);
+            this.SetValue(EnableAutoUpdateProperty, sourceProfile.EnableAutoUpdate);
             this.SetValue(AutoRestartIfShutdownProperty, sourceProfile.AutoRestartIfShutdown);
         }
 
