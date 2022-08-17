@@ -5,14 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2022-08-15T00:00:00Z</updated>
+  <updated>2022-08-17T00:00:00Z</updated>
 
   <entry>
     <id>urn:uuid:84E1DDF9-EFA4-4A8B-90DE-564AE3B3B633</id>
-    <title>1.1.437 (1.1.437.7)</title>
-    <summary>1.1.437.7</summary>
+    <title>1.1.437 (1.1.437.8)</title>
+    <summary>1.1.437.8</summary>
     <link href="" />
-    <updated>2022-08-15T00:00:00Z</updated>
+    <updated>2022-08-17T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -20,6 +20,7 @@
           <br/>
           <ul>
             <li>Automatic Management - fixed a bug with the shutdown server day selection. Both Shutdown 1 and Shutdown 2 days would affect each other, now they are independant.</li>
+            <li>Support Zip Creation - fixed crashing bug when the file contents is empty.</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
