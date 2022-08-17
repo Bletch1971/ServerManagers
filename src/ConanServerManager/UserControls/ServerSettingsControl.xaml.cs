@@ -483,7 +483,7 @@ namespace ServerManagerTool
                 Application.Current.Dispatcher.Invoke(() => this.Cursor = Cursors.Wait);
                 await Task.Delay(500);
 
-                var obfuscateFiles = new Dictionary<string, string>();
+                var obfuscateFiles = new Dictionary<string, List<(string entryName, string contents)>>();
                 var files = new List<string>();
 
                 // <server>
@@ -511,7 +511,17 @@ namespace ServerManagerTool
                     {
                         iniFile.WriteKey("OnlineSubsystem", "ServerPassword", "obfuscated");
                         iniFile.WriteKey("OnlineSubsystemSteam", "ServerPassword", "obfuscated");
-                        obfuscateFiles.Add(file, iniFile.ToOutputString());
+
+                        var key = Path.GetDirectoryName(file);
+                        var entryName = Path.GetFileName(file);
+
+                        if (obfuscateFiles.ContainsKey(key))
+                            obfuscateFiles[key].Add((entryName, iniFile.ToOutputString()));
+                        else
+                            obfuscateFiles.Add(key, new List<(string entryName, string contents)>
+                            {
+                                (entryName, iniFile.ToOutputString())
+                            });
                     }
                 }
                 file = Path.Combine(this.Settings.GetProfileServerConfigDir(), Config.Default.ServerGameConfigFile);
@@ -520,7 +530,18 @@ namespace ServerManagerTool
                     var iniFile = IniFileUtils.ReadFromFile(file);
                     if (iniFile != null)
                     {
-                        obfuscateFiles.Add(file, iniFile.ToOutputString());
+                        iniFile.WriteKey("RconPlugin", "RconPassword", "obfuscated");
+
+                        var key = Path.GetDirectoryName(file);
+                        var entryName = Path.GetFileName(file);
+
+                        if (obfuscateFiles.ContainsKey(key))
+                            obfuscateFiles[key].Add((entryName, iniFile.ToOutputString()));
+                        else
+                            obfuscateFiles.Add(key, new List<(string entryName, string contents)>
+                            {
+                                (entryName, iniFile.ToOutputString())
+                            });
                     }
                 }
                 file = Path.Combine(this.Settings.GetProfileServerConfigDir(), Config.Default.ServerSettingsConfigFile);
@@ -530,7 +551,17 @@ namespace ServerManagerTool
                     if (iniFile != null)
                     {
                         iniFile.WriteKey("ServerSettings", "AdminPassword", "obfuscated");
-                        obfuscateFiles.Add(file, iniFile.ToOutputString());
+
+                        var key = Path.GetDirectoryName(file);
+                        var entryName = Path.GetFileName(file);
+
+                        if (obfuscateFiles.ContainsKey(key))
+                            obfuscateFiles[key].Add((entryName, iniFile.ToOutputString()));
+                        else
+                            obfuscateFiles.Add(key, new List<(string entryName, string contents)>
+                            {
+                                (entryName, iniFile.ToOutputString())
+                            });
                     }
                 }
                 file = Path.Combine(this.Settings.GetProfileServerConfigDir(), Config.Default.LauncherFile);
@@ -584,7 +615,17 @@ namespace ServerManagerTool
                         profileFile.ServerPassword = string.IsNullOrWhiteSpace(profileFile.ServerPassword) ? "empty" : "obfuscated";
                         profileFile.RconPassword = string.IsNullOrWhiteSpace(profileFile.RconPassword) ? "empty" : "obfuscated";
                         profileFile.BranchPassword = string.IsNullOrWhiteSpace(profileFile.BranchPassword) ? "empty" : "obfuscated";
-                        obfuscateFiles.Add(file, profileFile.ToOutputString());
+
+                        var key = Path.GetDirectoryName(file);
+                        var entryName = Path.GetFileName(file);
+
+                        if (obfuscateFiles.ContainsKey(key))
+                            obfuscateFiles[key].Add((entryName, profileFile.ToOutputString()));
+                        else
+                            obfuscateFiles.Add(key, new List<(string entryName, string contents)>
+                            {
+                                (entryName, profileFile.ToOutputString())
+                            });
                     }
                 }
 
@@ -611,29 +652,45 @@ namespace ServerManagerTool
 
                 // scheduled tasks (profile level)
                 var taskKey = this.Settings.GetProfileKey();
+                var taskList = new List<(string entryName, string contents)>();
 
                 var taskXML = TaskSchedulerUtils.GetScheduleTaskInformation(TaskSchedulerUtils.TaskType.AutoStart, taskKey, null);
                 if (!string.IsNullOrWhiteSpace(taskXML))
-                    obfuscateFiles.Add($"Task-{TaskSchedulerUtils.TaskType.AutoStart}.xml", taskXML);
+                {
+                    taskList.Add(($"Task-{TaskSchedulerUtils.TaskType.AutoStart}.xml", taskXML));
+                }
 
                 taskXML = TaskSchedulerUtils.GetScheduleTaskInformation(TaskSchedulerUtils.TaskType.AutoShutdown, taskKey, "#1");
                 if (!string.IsNullOrWhiteSpace(taskXML))
-                    obfuscateFiles.Add($"Task-{TaskSchedulerUtils.TaskType.AutoShutdown}-#1.xml", taskXML);
+                {
+                    taskList.Add(($"Task-{TaskSchedulerUtils.TaskType.AutoShutdown}-#1.xml", taskXML));
+                }
 
                 taskXML = TaskSchedulerUtils.GetScheduleTaskInformation(TaskSchedulerUtils.TaskType.AutoShutdown, taskKey, "#2");
                 if (!string.IsNullOrWhiteSpace(taskXML))
-                    obfuscateFiles.Add($"Task-{TaskSchedulerUtils.TaskType.AutoShutdown}-#2.xml", taskXML);
+                {
+                    taskList.Add(($"Task-{TaskSchedulerUtils.TaskType.AutoShutdown}-#2.xml", taskXML));
+                }
 
                 // scheduled tasks (manager level)
                 taskKey = TaskSchedulerUtils.ComputeKey(Config.Default.DataPath);
 
                 taskXML = TaskSchedulerUtils.GetScheduleTaskInformation(TaskSchedulerUtils.TaskType.AutoBackup, taskKey, null);
                 if (!string.IsNullOrWhiteSpace(taskXML))
-                    obfuscateFiles.Add($"Task-{TaskSchedulerUtils.TaskType.AutoBackup}.xml", taskXML);
+                {
+                    taskList.Add(($"Task-{TaskSchedulerUtils.TaskType.AutoBackup}.xml", taskXML));
+                }
 
                 taskXML = TaskSchedulerUtils.GetScheduleTaskInformation(TaskSchedulerUtils.TaskType.AutoUpdate, taskKey, null);
                 if (!string.IsNullOrWhiteSpace(taskXML))
-                    obfuscateFiles.Add($"Task-{TaskSchedulerUtils.TaskType.AutoUpdate}.xml", taskXML);
+                {
+                    taskList.Add(($"Task-{TaskSchedulerUtils.TaskType.AutoUpdate}.xml", taskXML));
+                }
+
+                if (obfuscateFiles.ContainsKey(""))
+                    obfuscateFiles[""].AddRange(taskList);
+                else
+                    obfuscateFiles.Add("", taskList);
 
                 // archive comment - mostly global config settings
                 var comment = new StringBuilder();
@@ -758,10 +815,7 @@ namespace ServerManagerTool
                 if (File.Exists(zipFile)) File.Delete(zipFile);
 
                 ZipUtils.ZipFiles(zipFile, files, comment.ToString());
-                foreach (var kvp in obfuscateFiles)
-                {
-                    ZipUtils.ZipContent(zipFile, kvp.Key, kvp.Value);
-                }
+                ZipUtils.ZipContents(zipFile, obfuscateFiles);
 
                 var message = _globalizer.GetResourceString("ServerSettings_SupportZipSuccessLabel").Replace("{filename}", Path.GetFileName(zipFile));
                 MessageBox.Show(message, _globalizer.GetResourceString("ServerSettings_SupportZipTitle"), MessageBoxButton.OK, MessageBoxImage.Information);

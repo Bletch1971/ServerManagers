@@ -184,6 +184,77 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
+        public static void ZipContents(string zipFile, Dictionary<string, List<(string entryName, string content)>> contentsToZip, string comment = "")
+        {
+            if (string.IsNullOrWhiteSpace(zipFile))
+                throw new ArgumentNullException(nameof(zipFile));
+
+            if (contentsToZip is null || contentsToZip.IsEmpty())
+                throw new ArgumentNullException(nameof(contentsToZip));
+
+            if (!File.Exists(zipFile))
+            {
+                using (var zip = new ZipFile(zipFile))
+                {
+                    foreach (var zipFolder in contentsToZip.Keys)
+                    {
+                        contentsToZip[zipFolder]
+                            .Where(c => !string.IsNullOrWhiteSpace(c.entryName) && !string.IsNullOrWhiteSpace(c.content)).ToList()
+                            .ForEach(c =>
+                            {
+                                var zipEntry = zip.AddEntry(c.entryName, c.content);
+                                if (string.IsNullOrWhiteSpace(zipFolder))
+                                {
+                                    zipEntry.FileName = c.entryName;
+                                }
+                                else
+                                {
+                                    zipEntry.FileName = $"{zipFolder}/{c.entryName}";
+                                }
+                            });
+                    }
+
+                    zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
+                    if (!string.IsNullOrWhiteSpace(comment))
+                    {
+                        zip.Comment = comment;
+                    }
+
+                    zip.Save();
+                }
+            }
+            else
+            {
+                using (var zip = Ionic.Zip.ZipFile.Read(zipFile))
+                {
+                    foreach (var zipFolder in contentsToZip.Keys)
+                    {
+                        contentsToZip[zipFolder]
+                            .Where(c => !string.IsNullOrWhiteSpace(c.entryName) && !string.IsNullOrWhiteSpace(c.content)).ToList()
+                            .ForEach(c =>
+                            {
+                                var zipEntry = zip.AddEntry(c.entryName, c.content);
+                                if (string.IsNullOrWhiteSpace(zipFolder))
+                                {
+                                    zipEntry.FileName = c.entryName;
+                                }
+                                else
+                                {
+                                    zipEntry.FileName = $"{zipFolder}/{c.entryName}";
+                                }
+                            });
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(comment))
+                    {
+                        zip.Comment = comment;
+                    }
+
+                    zip.Save();
+                }
+            }
+        }
+
         public static void ZipFile(string zipFile, string directoryPath, string fileToZip)
         {
             ZipFile(zipFile, directoryPath, fileToZip, null);
