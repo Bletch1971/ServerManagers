@@ -5,7 +5,39 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2022-07-25T00:00:00Z</updated>
+  <updated>2022-08-17T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:84E1DDF9-EFA4-4A8B-90DE-564AE3B3B633</id>
+    <title>1.1.437 (1.1.437.8)</title>
+    <summary>1.1.437.8</summary>
+    <link href="" />
+    <updated>2022-08-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Automatic Management - fixed a bug with the shutdown server day selection. Both Shutdown 1 and Shutdown 2 days would affect each other, now they are independant.</li>
+            <li>Support Zip Creation - fixed crashing bug when the file contents is empty.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Update - updated the code to simplify which set of dedicated server files (Ark Survival Evolved or Ark: SotF) is required when performing server and mod file updates. Separate Cache folders will be maintained for each.</li>
+            <li>Automatic Management - rearranged the options so they are grouped correctly.</li>
+            <li>Auto-Start Server Option - added a new option selection for on Boot and on Login.</li>
+            <li>pt-BR Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:8CDA70CF-E8B8-4B9B-AD50-AD9A8B528E5B</id>

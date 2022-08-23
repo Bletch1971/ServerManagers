@@ -802,6 +802,11 @@
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Auto Shutdown/Restart Task Priority:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Auto Start Task Priority:</sys:String>
 
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameLabel">Task Scheduler Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameTooltip">This username will be used for the Auto-Start server on Boot task.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordLabel">Task Scheduler Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordTooltip">This password will be used for the Auto-Start server on Boot task.</sys:String>
+
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_FailedTitle">Failed to Reset Settings</sys:String>
@@ -1301,8 +1306,12 @@
     <sys:String x:Key="ServerSettings_AutomaticManagementLabel">Automatic Management</sys:String>
     <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">Why can't I use this?</sys:String>
     <sys:String x:Key="ServerSettings_ASMSettingLabel">Server Manager Settings</sys:String>
-    <sys:String x:Key="ServerSettings_AutoStartLabel">Auto-Start server on boot</sys:String>
-    <sys:String x:Key="ServerSettings_AutoStartTooltip">Automatically start the server when the machine starts.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerLabel">Auto-Start server</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerTooltip">Automatically start the server.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootLabel">on Boot</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootTooltip">Start the server when the machine starts.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginLabel">on Login</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginTooltip">Start the server when the user logs in.</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Shutdown server at</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownTooltip">The hour and minute of the day to force a server shutdown.</sys:String>
     <sys:String x:Key="ServerSettings_RestartAfterShutdownLabel">then restart</sys:String>
@@ -1314,7 +1323,7 @@
     <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Include server in the Auto-Update cycle</sys:String>
     <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">If enabled, the server will be periodically updated during the Auto-Update cycle. See the settings for Auto-Update options.</sys:String>
     <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Restart server if shutdown</sys:String>
-    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Restarts and Auto-Updates.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Updates.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Discord Bot Details -->
