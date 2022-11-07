@@ -769,6 +769,11 @@
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">自动更新任务优先级:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">自动关机/重启任务优先级:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">自动启动任务优先级:</sys:String>
+	
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameLabel">任务计划程序用户名:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameTooltip">这个用户名将用于启动时自动启动服务器的任务。</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordLabel">任务计划程序密码:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordTooltip">这个密码将用于启动时自动启动服务器的任务。</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">确认设置重置动作</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">单击“是”确认您要执行设置重置。</sys:String>
@@ -1041,6 +1046,10 @@
     <sys:String x:Key="ServerSettings_BackupServer_Title">备份服务器</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">备份服务器错误</sys:String>
     <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">备份成功。</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">重置服务器</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">重置服务器错误</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">这将删除所有的服务器、玩家和部落文件，并将你的服务器重置为新的。你想继续吗？</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">重置成功。</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">关闭服务器错误</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">取消关闭服务器</sys:String>
     <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">服务器中关闭窗口已经打开。</sys:String>
@@ -1290,6 +1299,12 @@
     <sys:String x:Key="ServerSettings_AutomaticManagementLabel">自动管理</sys:String>
     <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">我为什么不能用这个？</sys:String>
     <sys:String x:Key="ServerSettings_ASMSettingLabel">方舟服务器管理器设置</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerLabel">自动启动服务器</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerTooltip">自动启动服务器。</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootLabel">开机时</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootTooltip">在机器启动时启动服务器。</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginLabel">登录时</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginTooltip">在用户登录时启动服务器。</sys:String>
     <sys:String x:Key="ServerSettings_AutoStartLabel">开机自动启动服务器</sys:String>
     <sys:String x:Key="ServerSettings_AutoStartTooltip">当计算机启动时自动启动服务器。</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">关闭服务器</sys:String>
