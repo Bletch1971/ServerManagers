@@ -6032,10 +6032,10 @@ namespace ServerManagerTool.Lib
             this.SetValue(WebAlarmKeyProperty, sourceProfile.WebAlarmKey);
             this.SetValue(WebAlarmUrlProperty, sourceProfile.WebAlarmUrl);
 
-            this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
-            this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
-            this.SetValue(LauncherArgsPrefixProperty, sourceProfile.LauncherArgsPrefix);
-            this.SetValue(AdditionalArgsProperty, sourceProfile.AdditionalArgs);
+            //this.SetValue(LauncherArgsProperty, sourceProfile.LauncherArgs);
+            //this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
+            //this.SetValue(LauncherArgsPrefixProperty, sourceProfile.LauncherArgsPrefix);
+            //this.SetValue(AdditionalArgsProperty, sourceProfile.AdditionalArgs);
         }
 
         private void SyncAutomaticManagement(ServerProfile sourceProfile)
