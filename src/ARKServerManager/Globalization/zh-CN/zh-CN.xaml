@@ -1705,10 +1705,10 @@
     <sys:String x:Key="ServerSettings_FoodDrainMultiplierTooltip">指野生恐龙食物流失的倍数。 较高的值会增加食物的流失 较低的值则会降低。</sys:String>
     <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierLabel">驯服食物流失：</sys:String>
     <sys:String x:Key="ServerSettings_TamedFoodDrainMultiplierTooltip">指驯服恐龙的食物流失的倍数。 较高的值会增加食物的流失 较低的值则会降低。</sys:String>
-    <sys:String x:Key="ServerSettings_TorporDrainMultiplierLabel">野生水份流失：</sys:String>
-    <sys:String x:Key="ServerSettings_TorporDrainMultiplierTooltip">指野生恐龙的水份流失的倍数。 较高的值会增加水份流失。 较低的值则会降低。</sys:String>
-    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierLabel">驯服水份流失：</sys:String>
-    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierTooltip">指驯服恐龙的水份流失的倍数。 较高的值会增加水份流失。 较低的值则会降低。</sys:String>
+    <sys:String x:Key="ServerSettings_TorporDrainMultiplierLabel">野生眩晕流失：</sys:String>
+    <sys:String x:Key="ServerSettings_TorporDrainMultiplierTooltip">指野生恐龙的眩晕流失的倍数。 较高的值会增加眩晕流失。 较低的值则会降低。</sys:String>
+    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierLabel">驯服眩晕流失：</sys:String>
+    <sys:String x:Key="ServerSettings_TamedTorporDrainMultiplierTooltip">指驯服恐龙的眩晕流失的倍数。 较高的值会增加眩晕流失。 较低的值则会降低。</sys:String>
     <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierLabel">被动驯服间隔：</sys:String>
     <sys:String x:Key="ServerSettings_PassiveTameIntervalMultiplierTooltip">指两次被动驯养之间的倍数。 较高的值会增加两次进食之间的时间间隔。 较低的值会降低两次进食。</sys:String>
 
@@ -3216,6 +3216,7 @@
 	
 	<!--#region 恐龙/生物类名称 - 维京岛 -->
 	<sys:String x:Key="Fjordhawk_Character_BP_C">峡鹰</sys:String>
+	<sys:String x:Key="Carcha_Character_BP_C">鲨齿龙</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_C">芬里尔冰霜巨狼</sys:String>
 	<sys:String x:Key="Andrewsarchus_Character_BP_C">安氏兽</sys:String>
 	<sys:String x:Key="Desmodus_Character_BP_C">吸血蝙蝠</sys:String>
@@ -4018,6 +4019,7 @@
 	
 	<!--#region 印痕技能 - 维京岛 -->
 	<sys:String x:Key="EngramEntry_Saddle_Andrewsarchus_C">安氏兽鞍</sys:String>
+	<sys:String x:Key="EngramEntry_Saddle_Carcha_C">鲨齿龙鞍</sys:String>
 	<sys:String x:Key="EngramEntry_Saddle_Desmodus_C">吸血蝙蝠鞍</sys:String>
     <!--#endregion-->
 	
