@@ -1,0 +1,27 @@
+name: $(VersionMajor).$(VersionMinor).$(VersionBuild).$(VersionRevision)
+
+trigger:
+  branches:
+    include:
+    - source
+
+steps:
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet 4.4.1'
+  inputs:
+    versionSpec: '4.4.1'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: '$(SolutionFile)'
+
+- task: PowerShell@2
+  displayName: 'Apply Semantic Versioning to Assemblies'
+  inputs:
+    targetType: filePath
+    filePath: '.\src\_deployment\scripts\ApplySemanticVersioningToAssemblies.ps1'
+    pwsh: true
+  env:
+    BUILD_APPLICATION_NAME: $(ApplicationName)
+    BUILD_SOURCE_PATH: $(Build.SourcesDirectory)\src
