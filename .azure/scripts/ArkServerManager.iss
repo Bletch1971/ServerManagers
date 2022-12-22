@@ -27,7 +27,7 @@ SolidCompression=yes
 UninstallDisplayName=Ark Server Manager
 UninstallDisplayIcon={app}\ARK Server Manager.exe
 
-SourceDir={#RootPath}\Application Files\ARK Server Manager_{#AppVerPath}
+SourceDir={#RootPath}\Application Files\ARKServerManager_{#AppVerPath}
 OutputDir={#RootPath}\
 OutputBaseFilename=ArkServerManager_{#AppVer}
 
