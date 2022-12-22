@@ -18,7 +18,7 @@ Function Get-AzureDevopsAgent() {
         [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls13"
 
         $headers = @{
-            Authorization = "Basic $accessToken"
+            Authorization = "Bearer $accessToken"
         }
 
         $uri = "$($baseUri)/distributedtask/pools?api-version=6.0"
