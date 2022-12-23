@@ -228,6 +228,7 @@ namespace Plugin.Discord.UnitTests
             });
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "SCS0005:Weak random number generator.", Justification = "<Pending>")]
         private void SendMultipleMessages(DiscordPlugin plugin, string profileName)
         {
             // Arrange
@@ -254,6 +255,7 @@ namespace Plugin.Discord.UnitTests
             Assert.IsTrue(true);
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "SCS0005:Weak random number generator.", Justification = "<Pending>")]
         private void SendMultipleErrors(DiscordPlugin plugin, string profileName)
         {
             // Arrange

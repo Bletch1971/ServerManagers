@@ -2342,6 +2342,7 @@ namespace ServerManagerTool.Lib
             return appMods;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "SCS0006:Weak hashing function.", Justification = "<Pending>")]
         public static string GetMutexName(string directory)
         {
             using (var hashAlgo = MD5.Create())

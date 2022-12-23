@@ -20,6 +20,7 @@ namespace ServerManagerTool.Common.Utils
 
         private static int callCount = 0;
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "SCS0005:Weak random number generator.", Justification = "<Pending>")]
         public static string GeneratePassword(int count)
         {
             StringBuilder newPassword = new StringBuilder(count);

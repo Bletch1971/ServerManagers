@@ -46,6 +46,7 @@ namespace ServerManagerTool.Common.Utils
             set;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "SCS0006:Weak hashing function.", Justification = "<Pending>")]
         public static string ComputeKey(string folder)
         {
             try

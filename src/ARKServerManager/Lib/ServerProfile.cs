@@ -1295,25 +1295,33 @@ namespace ServerManagerTool.Lib
         public bool SaveTributeCharacterExpirationSeconds
         {
             get { return !string.IsNullOrWhiteSpace(this.CrossArkClusterId) && OverrideTributeCharacterExpirationSeconds; }
+#pragma warning disable CS1717 // Assignment made to same variable
             set { value = value; }
+#pragma warning restore CS1717 // Assignment made to same variable
         }
 
         public bool SaveTributeItemExpirationSeconds
         {
             get { return !string.IsNullOrWhiteSpace(this.CrossArkClusterId) && OverrideTributeItemExpirationSeconds; }
+#pragma warning disable CS1717 // Assignment made to same variable
             set { value = value; }
+#pragma warning restore CS1717 // Assignment made to same variable
         }
 
         public bool SaveTributeDinoExpirationSeconds
         {
             get { return !string.IsNullOrWhiteSpace(this.CrossArkClusterId) && OverrideTributeDinoExpirationSeconds; }
+#pragma warning disable CS1717 // Assignment made to same variable
             set { value = value; }
+#pragma warning restore CS1717 // Assignment made to same variable
         }
 
         public bool SaveMinimumDinoReuploadInterval
         {
             get { return !string.IsNullOrWhiteSpace(this.CrossArkClusterId) && OverrideMinimumDinoReuploadInterval; }
+#pragma warning disable CS1717 // Assignment made to same variable
             set { value = value; }
+#pragma warning restore CS1717 // Assignment made to same variable
         }
 
         public static readonly DependencyProperty TributeCharacterExpirationSecondsProperty = DependencyProperty.Register(nameof(TributeCharacterExpirationSeconds), typeof(int), typeof(ServerProfile), new PropertyMetadata(86400));
@@ -5220,6 +5228,7 @@ namespace ServerManagerTool.Lib
             list.UpdateTotals();
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "SCS0005:Weak random number generator.", Justification = "<Pending>")]
         public void RandomizePGMSettings()
         {
             var random = new Random(DateTime.Now.Millisecond);
