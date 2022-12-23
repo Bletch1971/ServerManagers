@@ -27,8 +27,8 @@ SolidCompression=yes
 UninstallDisplayName=Conan Server Manager
 UninstallDisplayIcon={app}\ConanServerManager.exe
 
-SourceDir={#RootPath}\Application Files\ConanServerManager_{#AppVerPath}
-OutputDir={#RootPath}\
+SourceDir={#SourceDir}
+OutputDir={#OutputDir}\
 OutputBaseFilename=ConanServerManager_{#AppVer}
 
 [Languages]
