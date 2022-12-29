@@ -1,0 +1,1402 @@
+﻿<Globalization:GlobalizationResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:Globalization="clr-namespace:WPFSharp.Globalizer;assembly=WPFSharp.Globalizer"
+    Name="en-US"
+    LinkedStyle="en-US-style"
+    >
+
+    <!--#region Generic -->
+    <sys:String x:Key="Generic_TranslatedByLabel">Last Updated By:</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">unknown</sys:String>
+    <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
+    <!--#endregion-->
+
+    <!--#region Game Map Names -->
+    <sys:String x:Key="Map_ConanSandbox">The Exiled Lands</sys:String>
+    <sys:String x:Key="Map_/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah">Isle of Siptah</sys:String>
+    <!--#endregion-->
+
+    <!--#region Branch Names -->
+    <sys:String x:Key="Branch_live">Live</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Types -->
+    <sys:String x:Key="ModType_Unknown">Unknown</sys:String>
+    <sys:String x:Key="ModType_NotDownloaded">Not Downloaded</sys:String>
+    <sys:String x:Key="ModType_Map">Map</sys:String>
+    <sys:String x:Key="ModType_Mod">Mod</sys:String>
+    <!--#endregion-->
+
+    <!--#region GameApplication enum -->
+    <sys:String x:Key="GameApplication_All">All</sys:String>
+    <sys:String x:Key="GameApplication_Conan">Conan</sys:String>
+    <sys:String x:Key="GameApplication_Unknown">Unknown</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Regions -->
+    <sys:String x:Key="ServerRegion_0">Europe</sys:String>
+    <sys:String x:Key="ServerRegion_1">North America</sys:String>
+    <sys:String x:Key="ServerRegion_2">Asia</sys:String>
+    <sys:String x:Key="ServerRegion_3">Australia</sys:String>
+    <sys:String x:Key="ServerRegion_4">South America</sys:String>
+    <sys:String x:Key="ServerRegion_5">Japan</sys:String>
+    <!--#endregion-->
+
+    <!--#region Process Priority -->
+    <sys:String x:Key="Priority_low">Low</sys:String>
+    <sys:String x:Key="Priority_belownormal">Below Normal</sys:String>
+    <sys:String x:Key="Priority_normal">Normal</sys:String>
+    <sys:String x:Key="Priority_abovenormal">Above Normal</sys:String>
+    <sys:String x:Key="Priority_high">High</sys:String>
+    <!--#endregion-->
+
+    <!--#region Processor Afinity -->
+    <sys:String x:Key="ProcessorAffinity_Invalid">invalid</sys:String>
+    <sys:String x:Key="ProcessorAffinity_All">All</sys:String>
+    <!--#endregion-->
+
+    <!--#region Task Priority -->
+    <sys:String x:Key="TaskPriority_Idle">Idle</sys:String>
+    <sys:String x:Key="TaskPriority_BelowNormal">Below Normal</sys:String>
+    <sys:String x:Key="TaskPriority_Normal">Normal</sys:String>
+    <sys:String x:Key="TaskPriority_AboveNormal">Above Normal</sys:String>
+    <sys:String x:Key="TaskPriority_High">High</sys:String>
+    <sys:String x:Key="TaskPriority_RealTime">RealTime</sys:String>
+    <!--#endregion-->
+
+    <!--#region Window States -->
+    <sys:String x:Key="WindowState_Normal">Normal</sys:String>
+    <sys:String x:Key="WindowState_Minimized">Minimized</sys:String>
+    <sys:String x:Key="WindowState_Maximized">Maximized</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot Log Levels -->
+    <sys:String x:Key="DiscordBotLogLevel_Critical">Critical</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Error">Error</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Warning">Warning</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Info">Info</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Verbose">Verbose</sys:String>
+    <sys:String x:Key="DiscordBotLogLevel_Debug">Debug</sys:String>
+    <!--#endregion-->
+
+    <!--#region Rcon Message Modes -->
+    <sys:String x:Key="InputMode_Command">Command</sys:String>
+    <sys:String x:Key="InputMode_Global">Global</sys:String>
+    <sys:String x:Key="InputMode_Broadcast">Broadcast</sys:String>
+    <sys:String x:Key="InputMode_Alert">Alert (requires Pippi mod)</sys:String>
+    <sys:String x:Key="InputMode_Server">Server (requires Pippi mod)</sys:String>
+    <!--#endregion-->
+
+    <!--#region Unit strings -->
+    <sys:String x:Key="SliderUnits_Multiplier">x</sys:String>
+    <sys:String x:Key="SliderUnits_Percentage">%</sys:String>
+    <sys:String x:Key="SliderUnits_Seconds">seconds</sys:String>
+    <sys:String x:Key="SliderUnits_Minutes">minutes</sys:String>
+    <sys:String x:Key="SliderUnits_Hours">hours</sys:String>
+    <sys:String x:Key="SliderUnits_Days">days</sys:String>
+    <sys:String x:Key="SliderUnits_Files">files</sys:String>
+    <sys:String x:Key="SliderUnits_Items">items</sys:String>
+    <sys:String x:Key="SliderUnits_XP">xp</sys:String>
+    <sys:String x:Key="SliderUnits_Players">players</sys:String>
+    <sys:String x:Key="SliderUnits_Tribes">tribes</sys:String>
+    <sys:String x:Key="SliderUnits_Levels">levels</sys:String>
+    <!--#endregion-->
+
+    <!--#region General strings -->
+    <sys:String x:Key="General_FilterLabel">Filter:</sys:String>
+    <sys:String x:Key="General_FilterButtonTooltip">Click to apply the filter.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Application -->
+    <sys:String x:Key="Application_RunAsAdministratorTitle">Run as Administrator</sys:String>
+    <sys:String x:Key="Application_RunAsAdministratorLabel">This application requires administration priviledges to access ALL functionality. Would you like to Run as Administrator?</sys:String>
+    <sys:String x:Key="Application_RunAsAdministrator_FailedTitle">Run as Administrator Failed</sys:String>
+    <sys:String x:Key="Application_RunAsAdministrator_FailedLabel">Sorry, this application could not be Run as Administrator, reverting back to user priviledges.</sys:String>
+    <sys:String x:Key="Application_SingleInstanceTitle">Application Already Running</sys:String>
+    <sys:String x:Key="Application_SingleInstanceLabel">Another instance of the application is already running. Do you want to switch to that instance?</sys:String>
+    <sys:String x:Key="Application_SingleInstance_FailedTitle">Application Switch Failed</sys:String>
+    <sys:String x:Key="Application_SingleInstance_FailedLabel">Failed to switch to the other application instance. Starting new application instance.</sys:String>
+
+    <sys:String x:Key="Application_DataDirectoryTitle">Select Data Directory</sys:String>
+    <sys:String x:Key="Application_DataDirectoryLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile. You will now be asked to select the location where the server manager's data directory is located. You may later change this in the Settings window.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DialogTitle">Select a Data Directory</sys:String>
+    <sys:String x:Key="Application_DataDirectory_ConfirmTitle">Confirm location</sys:String>
+    <sys:String x:Key="Application_DataDirectory_ConfirmLabel">The server manager will store profiles and SteamCMD in the following directories:\r\n\r\nProfiles: {0}\r\nSteamCMD: {1}\r\n\r\nIs this ok?</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryFolderErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinInstallFolderErrorLabel">The directory you have chosen is within the server manager installation folder. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_DataDirectory_DataDirectoryWithinDesktopFolderErrorLabel">The directory you have chosen is on the desktop. This is not recommended, please choose another folder.</sys:String>
+    <sys:String x:Key="Application_Profile_SaveFailedTitle">Failed to save profile</sys:String>
+    <sys:String x:Key="Application_Profile_SaveFailedLabel">Failed to save profile {0}.  {1}\n{2}</sys:String>
+
+    <sys:String x:Key="Application_NotifyIcon_ShowMainWindow">Show Main Window</sys:String>
+    <sys:String x:Key="Application_NotifyIcon_ShowServerMonitorWindow">Show Server Monitor</sys:String>
+    <!--#endregion-->
+
+    <!--#region Updater Window -->
+    <sys:String x:Key="AutoUpdater_Title">Server Manager - Updating...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status">Status</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_CleaningSteamCmd">Cleaning up SteamCMD...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_DownloadingSteamCmd">Downloading SteamCMD...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_UnzippingSteamCmd">Unzipping SteamCMD...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_RunningSteamCmd">Authorizing SteamCMD...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_InstallSteamCmdComplete">SteamCMD installed</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_CheckForNewServerVersion">Checking for new server version...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_DownloadNewServerVersion">Downloading new server version...</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_DownloadNewServerComplete">Server download complete</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Complete">Complete</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Cancelled">Cancelled</sys:String>
+    <sys:String x:Key="AutoUpdater_Status_Failed">Failed</sys:String>
+    <sys:String x:Key="AutoUpdater_CancelButtonLabel">Cancel</sys:String>
+    <!--#endregion-->
+
+    <!--#region Progress Window -->
+    <sys:String x:Key="Progress_Title">Progress</sys:String>
+    <sys:String x:Key="Progress_UpgradeServer_WindowTitle">Update Progress - {0}</sys:String>
+    <sys:String x:Key="Progress_ReinstallSteamCmd_WindowTitle">SteamCMD Progress</sys:String>
+    <!--#endregion-->
+
+    <!--#region Version Feed Window -->
+    <sys:String x:Key="VersionFeedWindow_Title">Server Manager Version Details</sys:String>
+    <sys:String x:Key="VersionFeedWindow_Load_FailedTitle">Load Feed Error</sys:String>
+
+    <sys:String x:Key="VersionFeedWindow_VersionFilterLabel">Version:</sys:String>
+    <sys:String x:Key="VersionFeedWindow_VersionFilterTooltip">Select the version to view details.</sys:String>
+    <!--#endregion-->
+
+    <!--#region CommandLine Window -->
+    <sys:String x:Key="CommandLine_Title">Command Line</sys:String>
+    <sys:String x:Key="CommandLine_CopyButtonLabel">Copy to clipboard</sys:String>
+    <sys:String x:Key="CommandLine_CopyButton_ConfirmTitle">Copied to clipboard</sys:String>
+    <sys:String x:Key="CommandLine_CopyButton_ConfirmLabel">Done!</sys:String>
+    <sys:String x:Key="CommandLine_CopyButton_ErrorTitle">Copy to clipboard failed.</sys:String>
+    <sys:String x:Key="CommandLine_CopyButton_ErrorLabel">Clipboard could not be opened. Another application may be using it. Please try closing other applications and trying again.</sys:String>
+    <!--#endregion-->
+
+    <!--#region AddSteamUserWindow Window -->
+    <sys:String x:Key="AddUser_Title">Add Users</sys:String>
+    <sys:String x:Key="AddUser_InstructionLabel">Enter one or more ids. Each id must be on a new line.</sys:String>
+    <sys:String x:Key="AddUser_ProcessButtonLabel">OK</sys:String>
+    <sys:String x:Key="AddUser_CancelButtonLabel">Cancel</sys:String>
+    <!--#endregion-->
+
+    <!--#region ProcessorAffinity Window -->
+    <sys:String x:Key="ProcessorAffinity_Title">Processor Affinity</sys:String>
+    <sys:String x:Key="ProcessorAffinity_ProfileTitle">Processor Affinity - {0}</sys:String>
+    <sys:String x:Key="ProcessorAffinity_InstructionLabel">Which processors are allowed to run the server?</sys:String>
+    <sys:String x:Key="ProcessorAffinity_AllCpuLabel">All Processors</sys:String>
+    <sys:String x:Key="ProcessorAffinity_AllCpuTooltip">Is enabled, will default to use all processors, otherwise selecte the specific processors.</sys:String>
+    <sys:String x:Key="ProcessorAffinity_SelectAllButtonLabel">All</sys:String>
+    <sys:String x:Key="ProcessorAffinity_UnselectAllButtonLabel">None</sys:String>
+    <sys:String x:Key="ProcessorAffinity_ProcessButtonLabel">OK</sys:String>
+    <sys:String x:Key="ProcessorAffinity_CancelButtonLabel">Cancel</sys:String>
+
+    <sys:String x:Key="ProcessorAffinity_SelectedColumnLabel">Selected</sys:String>
+    <sys:String x:Key="ProcessorAffinity_DescriptionColumnLabel">Processor</sys:String>
+    <!--#endregion-->
+
+    <!--#region Data Directory Window -->
+    <sys:String x:Key="DataDirectory_Title">Data Folder Selection</sys:String>
+    <sys:String x:Key="DataDirectory_InformationLabel">It appears you do not have a data directory set. The data directory is where your profiles and SteamCMD will be stored. It is not the same as the server installation directory, which you can choose for each profile.</sys:String>
+    <sys:String x:Key="DataDirectory_SelectionLabel">Select the drive where the data folder should be located.</sys:String>
+    <sys:String x:Key="DataDirectory_FolderLabel">Data Folder Name:</sys:String>
+    <sys:String x:Key="DataDirectory_FolderTooltip">The name of the server manager data folder.</sys:String>
+    <sys:String x:Key="DataDirectory_LocalDiskLabel">Local Disk</sys:String>
+    <sys:String x:Key="DataDirectory_DriveLine2Label">{0} free of {1}</sys:String>
+
+    <sys:String x:Key="DataDirectory_OkButtonLabel">Ok</sys:String>
+    <sys:String x:Key="DataDirectory_CancelButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="DataDirectory_RefreshButtonLabel">Refresh</sys:String>
+
+    <sys:String x:Key="DataDirectory_ErrorTitle">Data Directory Selection Error</sys:String>
+    <sys:String x:Key="DataDirectory_FolderErrorLabel">The data folder name you have entered is not valid.</sys:String>
+    <sys:String x:Key="DataDirectory_RestartTitle">Server Manager Restart Required</sys:String>
+    <sys:String x:Key="DataDirectory_RestartLabel">The data folder has been set, you must now restart the server manager to use the new settings.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Mod Details Window -->
+    <sys:String x:Key="ModDetails_Title">Mod Details</sys:String>
+    <sys:String x:Key="ModDetails_ProfileTitle">Mod Details - {0}</sys:String>
+    <sys:String x:Key="ModDetails_Load_FailedTitle">Load Mod Details Error</sys:String>
+    <sys:String x:Key="ModDetails_Load_FailedLabel">An error occurred while retrieving the mod details.\r\n{0}</sys:String>
+    <sys:String x:Key="ModDetails_Purge_FailedTitle">Purge Unused Mods Error</sys:String>
+    <sys:String x:Key="ModDetails_Purge_Title">Purge Unused Mods</sys:String>
+    <sys:String x:Key="ModDetails_Purge_Label">You are about to purge ALL unused mods from your server's Mod folder. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_Purge_SuccessLabel">Mod purge complete, a total of {folderCount} mod folder(s) and {fileCount} mod file(s) were purged.</sys:String>
+    <sys:String x:Key="ModDetails_Refresh_FailedTitle">Refresh Mod Details Error</sys:String>
+    <sys:String x:Key="ModDetails_Reload_FailedTitle">Reload Mod Details Error</sys:String>
+    <sys:String x:Key="ModDetails_Save_FailedTitle">Save Mods Error</sys:String>
+    <sys:String x:Key="ModDetails_Save_UnknownTitle">Unknown Mod Types</sys:String>
+    <sys:String x:Key="ModDetails_Save_UnknownLabel">There are one or more mods that have not been downloaded, this could prevent the map mods and total conversion mods being detected properly. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_Unsaved_Title">Unsaved Changed</sys:String>
+    <sys:String x:Key="ModDetails_Unsaved_Label">You have made changes that have not been saved to the profile, if you continue your changes will be discarded. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmTitle">Write Timestamp Confirmation</sys:String>
+    <sys:String x:Key="ModDetails_WriteTimestamp_ConfirmLabel">You are about to update the mod version in the ASM last updated file. Do you want to continue?</sys:String>
+    <sys:String x:Key="ModDetails_WriteTimestamp_FailedTitle">Write Timestamp Error</sys:String>
+    <sys:String x:Key="ModDetails_WriteTimestamp_FailedLabel">The mod folder could not be found or does not exist. Try downloading the mod and trying again.</sys:String>
+    <sys:String x:Key="ModDetails_ModDetailFetchFailed_Label">Mod Details could not be fetched from steam.</sys:String>
+
+    <sys:String x:Key="ModDetails_TotalCountLabel">Total Count:</sys:String>
+
+    <sys:String x:Key="ModDetails_IndexColumnLabel">#</sys:String>
+    <sys:String x:Key="ModDetails_ModIdColumnLabel">Mod ID</sys:String>
+    <sys:String x:Key="ModDetails_TitleColumnLabel">Name</sys:String>
+    <sys:String x:Key="ModDetails_TypeColumnLabel">Mod Type</sys:String>
+    <sys:String x:Key="ModDetails_LastUpdatedColumnLabel">Last Downloaded</sys:String>
+    <sys:String x:Key="ModDetails_TimeUpdatedColumnLabel">Last Updated (Author)</sys:String>
+    <sys:String x:Key="ModDetails_TimestampColumnLabel">Timestamp</sys:String>
+    <sys:String x:Key="ModDetails_FolderSizeColumnLabel">Folder Size</sys:String>
+
+    <sys:String x:Key="ModDetails_AddModsTooltip">Add mods to the list.</sys:String>
+    <sys:String x:Key="ModDetails_LoadModsTooltip">Load mod list from server mods folder.</sys:String>
+    <sys:String x:Key="ModDetails_MoveModUpTooltip">Move mod up in the list.</sys:String>
+    <sys:String x:Key="ModDetails_MoveModDownTooltip">Move mod down in the list.</sys:String>
+    <sys:String x:Key="ModDetails_PurgeModsFolderTooltip">Purge unused mods from Mods folder.</sys:String>
+    <sys:String x:Key="ModDetails_RefreshModsTooltip">Refresh mod list information.</sys:String>
+    <sys:String x:Key="ModDetails_ReloadModsTooltip">Reload mod list from profile.</sys:String>
+    <sys:String x:Key="ModDetails_RemoveModTooltip">Remove mod from the list.</sys:String>
+    <sys:String x:Key="ModDetails_WriteTimestampModTooltip">Write timestamp to LastUpdatedASM.txt file. Only use this if you manually update the mod.</sys:String>
+    <sys:String x:Key="ModDetails_RemoveAllModsTooltip">Remove all mods from the list.</sys:String>
+    <sys:String x:Key="ModDetails_SaveModsTooltip">Save mods back to the profile.</sys:String>
+    <sys:String x:Key="ModDetails_SaveModDetailsTooltip">Save formatted mod details.</sys:String>
+    <sys:String x:Key="ModDetails_Clipboard_SaveTitle">Mod Details</sys:String>
+    <!--#endregion-->
+
+    <!--#region Workshop Files Window -->
+    <sys:String x:Key="WorkshopFiles_Title">Workshop Details</sys:String>
+    <sys:String x:Key="WorkshopFiles_ProfileTitle">Workshop Details - {0}</sys:String>
+    <sys:String x:Key="WorkshopFiles_Load_FailedTitle">Load Workshop Items Error</sys:String>
+    <sys:String x:Key="WorkshopFiles_Refresh_FailedTitle">Refresh Workshop Items Error</sys:String>
+    <sys:String x:Key="WorkshopFiles_Refresh_FailedLabel">Loading workshop information from Steam failed, populating with the local cache instead.</sys:String>
+    <sys:String x:Key="WorkshopFiles_TotalCountLabel">Count:</sys:String>
+    <sys:String x:Key="WorkshopFiles_LastRefreshedLabel">Last Refreshed:</sys:String>
+    <sys:String x:Key="WorkshopFiles_FilterExistingLabel">Filter out existing mods</sys:String>
+
+    <sys:String x:Key="WorkshopFiles_SelectedColumnLabel">Selected</sys:String>
+    <sys:String x:Key="WorkshopFiles_ModIdColumnLabel">Mod ID</sys:String>
+    <sys:String x:Key="WorkshopFiles_TitleColumnLabel">Name</sys:String>
+    <sys:String x:Key="WorkshopFiles_CreatedDateColumnLabel">Created</sys:String>
+    <sys:String x:Key="WorkshopFiles_UpdatedDateColumnLabel">Last Updated</sys:String>
+    <sys:String x:Key="WorkshopFiles_SubscriptionsColumnLabel">Subs</sys:String>
+    <sys:String x:Key="WorkshopFiles_FileSizeColumnLabel">File Size (b)</sys:String>
+
+    <sys:String x:Key="WorkshopFiles_AddTooltip">Add mod</sys:String>
+    <sys:String x:Key="WorkshopFiles_AddSelectedTooltip">Add selected mods</sys:String>
+    <sys:String x:Key="WorkshopFiles_ReloadTooltip">Reload workshop information</sys:String>
+    <sys:String x:Key="WorkshopFiles_UnselectTooltip">Unselect all</sys:String>
+    <!--#endregion-->
+
+    <!--#region WorldSave Restore Window -->
+    <sys:String x:Key="WorldSaveRestore_Title">Restore</sys:String>
+    <sys:String x:Key="WorldSaveRestore_ProfileTitle">Restore - {0}</sys:String>
+    <sys:String x:Key="WorldSaveRestore_Load_FailedTitle">Load Backup Files Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_Refresh_FailedTitle">Refresh Backup Files Error</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="WorldSaveRestore_CreatedDateColumnLabel">Created</sys:String>
+    <sys:String x:Key="WorldSaveRestore_UpdatedDateColumnLabel">Last Updated</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_DeleteTooltip">Delete backup file</sys:String>
+    <sys:String x:Key="WorldSaveRestore_ReloadTooltip">Reload backup files</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreTooltip">Restore backup</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_DeleteConfirmationTitle">Delete Backup Confirmation</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteConfirmationLabel">You are about to delete backup file\r\n{fileName}.\r\n\r\nDo you want to continue?</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteErrorTitle">Delete Backup Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteSuccessTitle">Delete Backup Success</sys:String>
+    <sys:String x:Key="WorldSaveRestore_DeleteSuccessLabel">The backup file has been deleted.</sys:String>
+
+    <sys:String x:Key="WorldSaveRestore_RestoreConfirmationTitle">Restore Backup Confirmation</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreConfirmationLabel">You are about to restore backup file\r\n{fileName}.\r\n\r\nDo you want to continue?</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreErrorTitle">Restore Backup Error</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreSuccessTitle">Restore Backup Success</sys:String>
+    <sys:String x:Key="WorldSaveRestore_RestoreSuccessLabel">The backup file has been restored, {fileCount} file(s) restored.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Profile Sync Window -->
+    <sys:String x:Key="ProfileSyncWindow_Title">Profile Sync</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_ProfileTitle">Profile Sync - {0}</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Load_FailedTitle">Load Profile Sync Error</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_Title">Process Profile Sync</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_ConfirmLabel">You are about the overwrite the selected profiles with the settings from the selected sections of the current profile. You will not be able to undo, do you want to continue?</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_FailedTitle">Process Profile Sync Error</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_NoProfilesSelectedLabel">You have not selected any profiles to copy settings to.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_NoSectionsSelectedLabel">You have not selected any sections to copy settings from.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_Process_SuccessLabel">The settings from the selected sections have been successfully copied from the current profile to the selected profiles.</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_SelectAllButtonLabel">Select All</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_UnselectAllButtonLabel">Unselect All</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_ProcessButtonLabel">Process</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_CloseButtonLabel">Close</sys:String>
+
+    <sys:String x:Key="ProfileSyncWindow_SyncInformationLabel">This form will copy the selected settings to the selected profiles.</sys:String>
+
+    <sys:String x:Key="ProfileSyncWindow_SelectedColumnLabel">Copy</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_ProfileNameColumnLabel">Profile</sys:String>
+    <sys:String x:Key="ProfileSyncWindow_SectionNameColumnLabel">Section</sys:String>
+    <!--#endregion-->
+
+    <!--#region GameData Window -->
+    <sys:String x:Key="GameDataWindow_Title">Game Data Files</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddGameDataTooltip">Add Game Data File</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearGameDataTooltip">Delete All User Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenGameDataFolderTooltip">Open Game Data Folder</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataForumTooltip">Open Game Data Forum</sys:String>
+    <sys:String x:Key="GameDataWindow_ReloadGameDataTooltip">Reload Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateGameDataTooltip">Validate Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_RemoveGameDataTooltip">Delete Game Data File</sys:String>
+
+    <sys:String x:Key="GameDataWindow_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="GameDataWindow_VersionColumnLabel">Version</sys:String>
+    <sys:String x:Key="GameDataWindow_DateColumnLabel">Created Date</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddErrorTitle">Add Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_AddErrorLabel">An error occurred while reading the selected file.</sys:String>
+    <sys:String x:Key="GameDataWindow_ExistingFileErrorLabel">A file with the same name already exists, delete the existing file and try again.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearTitle">Confirm Clear Action</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
+    <sys:String x:Key="GameDataWindow_ClearErrorTitle">Clear Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteTitle">Confirm Delete Action</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="GameDataWindow_DeleteErrorTitle">Delete Action Error</sys:String>
+    <sys:String x:Key="GameDataWindow_OpenErrorTitle">Open Folder Error</sys:String>
+    <sys:String x:Key="GameDataWindow_LoadErrorTitle">Load Error</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateSuccessTitle">Validation</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateSuccessLabel">All game data files are valid.</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorTitle">Validation Error</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorLabel">The following file(s) have errors</sys:String>
+    <sys:String x:Key="GameDataWindow_ValidateErrorMessage">The file is not valid. It may contain errors or have incorrect formatting.</sys:String>
+
+    <sys:String x:Key="GameDataWindow_AddDialogTitle">Select game data file</sys:String>
+    <sys:String x:Key="GameDataWindow_GameDataDefaultExtension">gamedata</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterLabel">Game Data Files</sys:String>
+    <sys:String x:Key="GameDataWindow_AddFilterExtension">*.gamedata</sys:String>
+    <!--#endregion-->
+
+    <!--#region Plugins Window -->
+    <sys:String x:Key="PluginsWindow_Title">Plugins</sys:String>
+
+    <sys:String x:Key="PluginsWindow_AddPluginTooltip">Add Plugin</sys:String>
+    <sys:String x:Key="PluginsWindow_ClearPluginsTooltip">Delete All Plugins</sys:String>
+    <sys:String x:Key="PluginsWindow_ConfigPluginTooltip">Open Plugin Configuration</sys:String>
+    <sys:String x:Key="PluginsWindow_OpenPluginsFolderTooltip">Open Plugins Folder</sys:String>
+    <sys:String x:Key="PluginsWindow_PluginsForumTooltip">Open Plugins Forum</sys:String>
+    <sys:String x:Key="PluginsWindow_RemovePluginTooltip">Delete Plugin</sys:String>
+
+    <sys:String x:Key="PluginsWindow_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="PluginsWindow_TypeColumnLabel">Type</sys:String>
+    <sys:String x:Key="PluginsWindow_VersionColumnLabel">Version</sys:String>
+
+    <sys:String x:Key="PluginsWindow_AddErrorTitle">Add Action Error</sys:String>
+    <sys:String x:Key="PluginsWindow_AddErrorLabel">An error occurred while reading the selected file.</sys:String>
+    <sys:String x:Key="PluginsWindow_ClearTitle">Confirm Clear Action</sys:String>
+    <sys:String x:Key="PluginsWindow_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
+    <sys:String x:Key="PluginsWindow_ClearErrorTitle">Clear Action Error</sys:String>
+    <sys:String x:Key="PluginsWindow_ConfigErrorTitle">Plugin Configuration Error</sys:String>
+    <sys:String x:Key="PluginsWindow_DeleteTitle">Confirm Delete Action</sys:String>
+    <sys:String x:Key="PluginsWindow_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <sys:String x:Key="PluginsWindow_DeleteErrorTitle">Delete Action Error</sys:String>
+    <sys:String x:Key="PluginsWindow_OpenErrorTitle">Open Folder Error</sys:String>
+
+    <sys:String x:Key="PluginsWindow_AddDialogTitle">Select plugin file</sys:String>
+    <sys:String x:Key="PluginsWindow_PluginDefaultExtension">dll</sys:String>
+    <sys:String x:Key="PluginsWindow_AddFilterLabel">Plugin Files</sys:String>
+    <sys:String x:Key="PluginsWindow_AddFilterExtension">*.dll</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Monitor Window -->
+    <sys:String x:Key="ServerMonitor_Title">Server Monitor</sys:String>
+
+    <sys:String x:Key="ServerMonitor_TotalCountLabel">Total Servers:</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectedColumnLabel">Selected</sys:String>
+    <sys:String x:Key="ServerMonitor_ProfileColumnLabel">Profile</sys:String>
+    <sys:String x:Key="ServerMonitor_ServerColumnLabel">Server</sys:String>
+    <sys:String x:Key="ServerMonitor_PortsColumnLabel">Ports</sys:String>
+    <sys:String x:Key="ServerMonitor_MapColumnLabel">Map</sys:String>
+    <sys:String x:Key="ServerMonitor_ModsColumnLabel">Mods</sys:String>
+    <sys:String x:Key="ServerMonitor_VersionColumnLabel">Version</sys:String>
+    <sys:String x:Key="ServerMonitor_PlayersColumnLabel">Players</sys:String>
+    <sys:String x:Key="ServerMonitor_StatusColumnLabel">Status</sys:String>
+
+    <sys:String x:Key="ServerMonitor_CreateShortcutButtonTooltip">Create a desktop shortcut to open this form directly.</sys:String>
+    <sys:String x:Key="ServerMonitor_SelectAllServersButtonTooltip">Select all servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_UnselectAllServersButtonTooltip">Unselect all servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServersButtonTooltip">Start the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServersButtonLabel">Shutdown Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServersButtonLabel">Stop Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServersButtonTooltip">Restart the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServersButtonLabel">Update/Verify Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateModsButtonLabel">Update Mods Only on Selected Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServersButtonTooltip">Backup the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_CancelServersButtonTooltip">Cancel processing the selected servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyLabel">Process Servers Sequentially</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServersSequentiallyTooltip">If enabled, servers will be processed one after the other; otherwise they will all be processed at the same time.</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayLabel">Sequential Process Delay</sys:String>
+    <sys:String x:Key="ServerMonitor_SequentialProcessDelayTooltip">The number of seconds to wait before the next server will be processed.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_PlayerListButtonTooltip">Open the Player List window.</sys:String>
+    <sys:String x:Key="ServerMonitor_RCONButtonTooltip">Open the RCON window.</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServerTooltip">Start the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServerTooltip">Stop the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_InstallServerTooltip">Install the server.</sys:String>
+    <sys:String x:Key="ServerMonitor_UpgradeServerTooltip">Update/Verify the server.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelledLabel">The process was cancelled by the user. You will need to check the status of your servers.</sys:String>
+    <sys:String x:Key="ServerMonitor_ProcessServer_CancelRequestedLabel">A process cancellation request has been sent.</sys:String>
+
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedTitle">Server Update Error</sys:String>
+    <sys:String x:Key="ServerMonitor_UpgradeServer_FailedLabel">Another server is being upgraded, wait until the upgrade has finished and try again.</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmTitle">Confirm Window Close</sys:String>
+    <sys:String x:Key="ServerMonitor_CloseWindow_ConfirmLabel">You are currently performing a server update, closing the window will disconnect you from steamcmd. Do you want to continue closing the window?</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmTitle">Confirm Shutdown Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_ShutdownServers_ConfirmLabel">You are about to shutdown the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmTitle">Confirm Start Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_StartServers_ConfirmLabel">You are about to start the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmTitle">Confirm Stop Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_StopServers_ConfirmLabel">You are about to stop the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmTitle">Confirm Restart Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_RestartServers_ConfirmLabel">You are about to restart the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmTitle">Confirm Update Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_UpdateServers_ConfirmLabel">You are about to update the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmTitle">Confirm Backup Servers</sys:String>
+    <sys:String x:Key="ServerMonitor_BackupServers_ConfirmLabel">You are about to backup the selected servers. Do you want to continue?</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorTitle">Selected Servers Error</sys:String>
+    <sys:String x:Key="ServerMonitor_NoServersSelected_ErrorLabel">You have not selected any servers. Selected one or more servers in the list and try again.</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmTitle">Close Server Monitor Error</sys:String>
+    <sys:String x:Key="ServerMonitor_RunningProcesses_ConfirmLabel">The server monitor window cannot be closed at this time. One or more of the servers is currently starting, shutting down or restarting.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Shutdown Window -->
+    <sys:String x:Key="ShutdownWindow_Title">Server Shutdown</sys:String>
+    <sys:String x:Key="ShutdownWindow_ProfileTitle">Server Shutdown - {0}</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownRestartOptionsLabel">Shutdown/Restart Options</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownIntervalLabel">Countdown Length</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownIntervalTooltip">The number of minutes to countdown before the server will shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_RestartServerLabel">Restart server after shutdown</sys:String>
+    <sys:String x:Key="ShutdownWindow_RestartServerTooltip">If enabled, the server will be immediately restarted after it is shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_UpdateServerLabel">Update server after shutdown</sys:String>
+    <sys:String x:Key="ShutdownWindow_UpdateServerTooltip">If enabled, the server will be updated after it is shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="ShutdownWindow_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
+    <sys:String x:Key="ShutdownWindow_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
+    <sys:String x:Key="ShutdownWindow_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
+    <sys:String x:Key="ShutdownWindow_BackupWorldFileLabel">Backup world file after shutdown</sys:String>
+    <sys:String x:Key="ShutdownWindow_BackupWorldFileTooltip">If enabled, the world file will be backed up after shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownReasonLabel">Reason (optional):</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownReasonTooltip">An optional message to be broadcast to the server when performing the server shutdown. Leave blank for no message.</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownButtonLabel">Shutdown</sys:String>
+    <sys:String x:Key="ShutdownWindow_ShutdownButtonTooltip">Perform a server shutdown with countdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_RestartButtonLabel">Restart</sys:String>
+    <sys:String x:Key="ShutdownWindow_RestartButtonTooltip">Perform a server restart with countdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_CancelShutdownButtonLabel">Cancel Shutdown</sys:String>
+    <sys:String x:Key="ShutdownWindow_CancelShutdownButtonTooltip">Cancel the server shutdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_StopButtonLabel">Stop</sys:String>
+    <sys:String x:Key="ShutdownWindow_StopButtonTooltip">Stop the server immediately, without a countdown.</sys:String>
+    <sys:String x:Key="ShutdownWindow_CloseButtonLabel">Close</sys:String>
+    <sys:String x:Key="ShutdownWindow_CloseButtonTooltip">Close the window and cancel the server shutdown.</sys:String>
+    <!--#endregion-->
+
+    <!--#region RCON window -->
+    <sys:String x:Key="RCON_Menu_File">_File</sys:String>
+    <sys:String x:Key="RCON_Menu_ViewLogs">View Logs...</sys:String>
+    <sys:String x:Key="RCON_Menu_ClearLogs">Clear Logs</sys:String>
+    <sys:String x:Key="RCON_Menu_Confirm">Confirm</sys:String>
+    <sys:String x:Key="RCON_Menu_Console">_Console</sys:String>
+    <sys:String x:Key="RCON_Menu_AutoScroll">Auto-scroll</sys:String>
+    <sys:String x:Key="RCON_Menu_Server">_Server</sys:String>
+    <sys:String x:Key="RCON_Menu_Players">_Players</sys:String>
+    <sys:String x:Key="RCON_Menu_Sort">Sort</sys:String>
+    <sys:String x:Key="RCON_Menu_SortOnline">By Online</sys:String>
+    <sys:String x:Key="RCON_Menu_SortName">By Name</sys:String>
+    <sys:String x:Key="RCON_Menu_SortTribe">By Clan</sys:String>
+    <sys:String x:Key="RCON_Menu_SortLastOnline">By Last Online</sys:String>
+    <sys:String x:Key="RCON_Menu_Filter">_Filter</sys:String>
+    <sys:String x:Key="RCON_Menu_FilterOnline">Show Online</sys:String>
+    <sys:String x:Key="RCON_Menu_FilterOffline">Show Offline</sys:String>
+    <sys:String x:Key="RCON_Menu_FilterAdmin">Show Admin</sys:String>
+    <sys:String x:Key="RCON_Menu_FilterBanned">Show Banned</sys:String>
+    <sys:String x:Key="RCON_Menu_FilterWhitelisted">Show Whitelisted</sys:String>
+    <sys:String x:Key="RCON_Menu_FilterInvalid">Show Invalid</sys:String>
+    <sys:String x:Key="RCON_Menu_ShowAvatars">Show Player Avatars</sys:String>
+
+    <sys:String x:Key="RCON_Menu_ChatPlayer">Chat to Player...</sys:String>
+    <sys:String x:Key="RCON_Menu_RenamePlayer">Rename Player...</sys:String>
+    <sys:String x:Key="RCON_Menu_RenameTribe">Rename Clan...</sys:String>
+    <sys:String x:Key="RCON_Menu_Kick">Kick</sys:String>
+    <sys:String x:Key="RCON_Menu_Banned">Banned</sys:String>
+    <sys:String x:Key="RCON_Menu_ViewSteamProfile">View Steam Profile...</sys:String>
+    <sys:String x:Key="RCON_Menu_ViewProfile">View Profile...</sys:String>
+    <sys:String x:Key="RCON_Menu_ViewTribe">View Clan...</sys:String>
+    <sys:String x:Key="RCON_Menu_CopyId">Copy ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_CopyPlayerId">Copy Player ID...</sys:String>
+
+    <sys:String x:Key="RCON_StatusLabel">Status:</sys:String>
+    <sys:String x:Key="RCON_PlayersLabel">Players:</sys:String>
+    <sys:String x:Key="RCON_PlayersSeparatorLabel">/</sys:String>
+    <sys:String x:Key="RCON_ModeLabel">Mode:</sys:String>
+    <sys:String x:Key="RCON_ProfileCountLabel">Profiles:</sys:String>
+    <sys:String x:Key="RCON_ProfileInvalidCountLabel">Invalid:</sys:String>
+
+    <sys:String x:Key="RCON_Button_OK">OK</sys:String>
+    <sys:String x:Key="RCON_Button_Cancel">Cancel</sys:String>
+    <sys:String x:Key="RCON_Button_Change">Change</sys:String>
+    <sys:String x:Key="RCON_Button_Send">Send</sys:String>
+
+    <sys:String x:Key="RCON_TitleLabel">Rcon: {0}</sys:String>
+    <sys:String x:Key="RCON_UnnamedLabel">unnamed</sys:String>
+
+    <sys:String x:Key="RCON_ConnectionEstablishedLabel">Connection established.</sys:String>
+    <sys:String x:Key="RCON_ConnectionLostLabel">Connection lost.</sys:String>
+    <sys:String x:Key="RCON_NoCommandResponseLabel">Command returned no data</sys:String>
+
+    <sys:String x:Key="RCON_ChatPlayerLabel">Send a chat message to :</sys:String>
+    <sys:String x:Key="RCON_RenamePlayerLabel">Rename player from :</sys:String>
+    <sys:String x:Key="RCON_RenameTribeLabel">Rename clan from :</sys:String>
+    <sys:String x:Key="RCON_CopyIdLabel">ID copied to the clipboard for :</sys:String>
+    <sys:String x:Key="RCON_CopyIdTitle">ID copied</sys:String>
+    <sys:String x:Key="RCON_CopyPlayerIdLabel">Player ID copied to the clipboard for :</sys:String>
+    <sys:String x:Key="RCON_CopyPlayerIdTitle">Player ID copied</sys:String>
+    <sys:String x:Key="RCON_ClipboardErrorLabel">Clipboard could not be opened. Another application may be using it. Please try closing other applications and trying again.</sys:String>
+    <sys:String x:Key="RCON_ClipboardErrorTitle">Copy to clipboard failed.</sys:String>
+
+    <sys:String x:Key="RCON_Comments_Line1">Enter commands or chat into the box at the bottom.</sys:String>
+    <sys:String x:Key="RCON_Comments_Line2">In Command mode, everything you enter will be a normal admin command.</sys:String>
+    <sys:String x:Key="RCON_Comments_Line3">In Broadcast mode, everything you enter will be a global broadcast.</sys:String>
+    <sys:String x:Key="RCON_Comments_Line4">You may always prefix a command with / to be treated as a command and not chat.</sys:String>
+    <sys:String x:Key="RCON_Comments_Line5">Right click on players in the list to access player commands.</sys:String>
+    <sys:String x:Key="RCON_Comments_Line6">Type {0} to get help.</sys:String>
+
+    <sys:String x:Key="RCON_Help_Keyword">/help</sys:String>
+
+    <sys:String x:Key="RCON_ClearLogs_Title">Logs deleted</sys:String>
+    <sys:String x:Key="RCON_ClearLogs_Label">Logs in {0} deleted.</sys:String>
+    <sys:String x:Key="RCON_ViewLogs_ErrorTitle">Can't open logs</sys:String>
+    <sys:String x:Key="RCON_ViewLogs_ErrorLabel">Unable to open the logs directory at {0}. Please make sure this directory exists and that you have permission to access it.\nException: {1}</sys:String>
+
+    <sys:String x:Key="ConsoleStatus_Disconnected">Disconnected</sys:String>
+    <sys:String x:Key="ConsoleStatus_Connected">Connected</sys:String>
+
+    <sys:String x:Key="Player_Join">'{0}' joined the game.</sys:String>
+    <sys:String x:Key="Player_Leave">'{0}' left the game.</sys:String>
+    <!--#endregion-->
+
+    <!--#region PlayerListWindow Window -->
+    <sys:String x:Key="PlayerList_CloseButtonLabel">Close</sys:String>
+
+    <sys:String x:Key="PlayerList_TitleLabel">Player List: {0}</sys:String>
+    <sys:String x:Key="PlayerList_ProfileCountLabel">Profiles:</sys:String>
+    <sys:String x:Key="PlayerList_ProfileInvalidCountLabel">Invalid:</sys:String>
+
+    <sys:String x:Key="PlayerList_Menu_ViewProfile">View Profile...</sys:String>
+    <sys:String x:Key="PlayerList_Menu_ViewTribe">View Clan...</sys:String>
+    <sys:String x:Key="PlayerList_Menu_CopyId">Copy ID...</sys:String>
+    <sys:String x:Key="PlayerList_Menu_CopyPlayerId">Copy Player ID...</sys:String>
+
+    <sys:String x:Key="PlayerList_Menu_Players">_Players</sys:String>
+    <sys:String x:Key="PlayerList_Menu_Sort">Sort</sys:String>
+    <sys:String x:Key="PlayerList_Menu_SortName">By Name</sys:String>
+    <sys:String x:Key="PlayerList_Menu_SortTribe">By Clan</sys:String>
+    <sys:String x:Key="PlayerList_Menu_SortLastOnline">By Last Online</sys:String>
+    <sys:String x:Key="PlayerList_Menu_Filter">_Filter</sys:String>
+    <sys:String x:Key="PlayerList_Menu_FilterOffline">Show All</sys:String>
+    <sys:String x:Key="PlayerList_Menu_FilterAdmin">Show Admin</sys:String>
+    <sys:String x:Key="PlayerList_Menu_FilterWhitelisted">Show Whitelisted</sys:String>
+    <sys:String x:Key="PlayerList_Menu_FilterInvalid">Show Invalid</sys:String>
+    <!--#endregion-->
+
+    <!--#region Player/Tribe Profile Window -->
+    <sys:String x:Key="Profile_PlayerSectionLabel">Player Details</sys:String>
+    <sys:String x:Key="Profile_TribeSectionLabel">Clan Details</sys:String>
+    <sys:String x:Key="Profile_TribeMembersSectionLabel">Clan Members</sys:String>
+
+    <sys:String x:Key="Profile_IdLabel">Id:</sys:String>
+    <sys:String x:Key="Profile_NameLabel">Name:</sys:String>
+    <sys:String x:Key="Profile_OnlineLabel">Online:</sys:String>
+    <sys:String x:Key="Profile_LastOnlineLabel">Last Online:</sys:String>
+    <sys:String x:Key="Profile_LevelLabel">Level:</sys:String>
+    <sys:String x:Key="Profile_TribeOwnerLabel">Owner:</sys:String>
+    <sys:String x:Key="Profile_PlatformNameColumnLabel">Player Name</sys:String>
+    <sys:String x:Key="Profile_CharacterNameColumnLabel">Character Name</sys:String>
+    <sys:String x:Key="Profile_LevelColumnLabel">Level</sys:String>
+    <sys:String x:Key="Profile_OnlineColumnLabel">Online</sys:String>
+    <sys:String x:Key="Profile_LastOnlineColumnLabel">Last Online</sys:String>
+
+    <sys:String x:Key="Profile_WindowTitle_Player">Player Profile - {0}</sys:String>
+    <sys:String x:Key="Profile_WindowTitle_Tribe">Clan Profile - {0}</sys:String>
+    <!--#endregion-->
+
+    <!--#region Main Window -->
+    <sys:String x:Key="MainWindow_Title">Conan Exiles™ Server Manager</sys:String>
+    <sys:String x:Key="MainWindow_TitleWithAdmin">Conan Exiles™ Server Manager (Administrator)</sys:String>
+    <sys:String x:Key="MainWindow_Label">Conan Exiles™ Server Manager</sys:String>
+    <sys:String x:Key="MainWindow_NewProfileTooltip">Create a new server profile.</sys:String>
+    <sys:String x:Key="MainWindow_CloseProfileTooltip">Delete the server profile.</sys:String>
+    <sys:String x:Key="MainWindow_VersionLabel">Version:</sys:String>
+    <sys:String x:Key="MainWindow_BetaVersionLabel">Beta Version:</sys:String>
+    <sys:String x:Key="MainWindow_MyIpLabel">My Public IP</sys:String>
+    <sys:String x:Key="MainWindow_MyIpTooltip">The IP address players use to connect to your server.</sys:String>
+    <sys:String x:Key="MainWindow_MyIpError">Invalid IP address or hostname</sys:String>
+    <sys:String x:Key="MainWindow_RefreshMyIpTooltip">Attempt to determine your current public IP</sys:String>
+    <sys:String x:Key="MainWindow_DonateTooltip">Like what you see and want to show your appreciation?  Donate here!</sys:String>
+    <sys:String x:Key="MainWindow_SteamCMDTooltip">Reinstall SteamCMD from the internet.</sys:String>
+    <sys:String x:Key="MainWindow_OpenRCONTooltip">Open remote console</sys:String>
+    <sys:String x:Key="MainWindow_OpenLogFolderTooltip">Open server manager logs folder</sys:String>
+    <sys:String x:Key="MainWindow_OpenSettingsTooltip">Open Global Settings</sys:String>
+    <sys:String x:Key="MainWindow_OpenGameDataTooltip">Open Game Data</sys:String>
+    <sys:String x:Key="MainWindow_OpenPluginsTooltip">Open Plugins</sys:String>
+    <sys:String x:Key="MainWindow_OpenHelpTooltip">Open Help</sys:String>
+    <sys:String x:Key="MainWindow_OpenServerMonitorTooltip">Open Server Monitor</sys:String>
+    <sys:String x:Key="MainWindow_JoinDiscordTooltip">Join the Discord Server</sys:String>
+    <sys:String x:Key="MainWindow_UpdateToLabelFormat">Upgrade to {0} now!</sys:String>
+    <sys:String x:Key="MainWindow_TaskStatusLabel">Task Status</sys:String>
+    <sys:String x:Key="MainWindow_TaskAdminErrorTitle">Requires Administration Permissions</sys:String>
+    <sys:String x:Key="MainWindow_TaskAdminErrorLabel">This function cannot be performed as it requires administration permissions.</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskLabel">Auto-Backup:</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskRunLabel">Run</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskRunTooltip">Start the auto-backup scheduled task</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskDisableLabel">Disable</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskDisableTooltip">Disable the auto-backup scheduled task</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskEnableLabel">Enable</sys:String>
+    <sys:String x:Key="MainWindow_AutoBackupTaskEnableTooltip">Enable the auto-backup scheduled task</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskLabel">Auto-Update:</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskRunLabel">Run</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskRunTooltip">Start the auto-update scheduled task</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskDisableLabel">Disable</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskDisableTooltip">Disable the auto-update scheduled task</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">Enable</sys:String>
+    <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">Enable the auto-update scheduled task</sys:String>
+    <sys:String x:Key="MainWindow_TaskRunTimeLabel">Next Run Time:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord Bot:</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">Start</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">Start the discord bot</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">Stop</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">Stop the discord bot</sys:String>
+
+    <sys:String x:Key="MainWindow_TaskStateUnknownLabel">Unknown</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateDisabledLabel">Disabled</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateQueuedLabel">Queued</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateReadyLabel">Ready</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateRunningLabel">Running</sys:String>
+    <sys:String x:Key="MainWindow_TaskStateStoppedLabel">Stopped</sys:String>
+
+    <sys:String x:Key="MainWindow_ProfileLoad_FailedTitle">Profile failed to load</sys:String>
+    <sys:String x:Key="MainWindow_ProfileLoad_FailedLabel">The profile at {0} failed to load. The error was: {1}\r\n{2}</sys:String>
+    <sys:String x:Key="MainWindow_ProfileDelete_Title">Delete Profile {0}?</sys:String>
+    <sys:String x:Key="MainWindow_ProfileDelete_Label">Are you sure you want to delete this profile?\r\n\r\nNOTE: This will only delete the profile, not the installation directory, save games or settings files contained therein.</sys:String>
+    <sys:String x:Key="MainWindow_Donate_Title">Make a donation?</sys:String>
+    <sys:String x:Key="MainWindow_Donate_Label">This server manager is provided completely free of charge. You can still donate if you would like; however you are under no obligation. If you wish to donate, your browser will open to PayPal's website where you may donate as little or as much as you like. Would you like to donate now?</sys:String>
+    <sys:String x:Key="MainWindow_Upgrade_Title">Upgrade available</sys:String>
+    <sys:String x:Key="MainWindow_Upgrade_Label">Version {0} is now available. To upgrade the application must close. Close and upgrade now?</sys:String>
+    <sys:String x:Key="MainWindow_OverlayMessage_UpgradeLabel">Starting Upgrade...</sys:String>
+    <sys:String x:Key="MainWindow_Upgrade_FailedTitle">Upgrade failed!</sys:String>
+    <sys:String x:Key="MainWindow_Upgrade_FailedLabel">Unable to run the update process. Please report this.\r\nException: {0}\r\nStacktrace: {1}</sys:String>
+    <sys:String x:Key="MainWindow_SteamCmd_Title">Reinstall SteamCMD</sys:String>
+    <sys:String x:Key="MainWindow_SteamCmd_Label">If you proceed the entire SteamCMD folder will be removed including all mod cache downloads.\r\nAre you sure you want to reinstall SteamCMD?</sys:String>
+    <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
+    <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
+
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot Running Commands</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">The discord bot has one or more running commands, do you want to continue shutting down the server manager?</sys:String>
+
+    <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">Start Server Confirmation</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">You are about to start the server, do you want to continue?</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionTitle">Shutdown Server Confirmation</sys:String>
+    <sys:String x:Key="MainWindow_ServerStatus_ShutdownServerActionLabel">You are about to shutdown the server, do you want to continue?</sys:String>
+
+    <sys:String x:Key="Updater_ProgressMessage_DownloadLabel">Downloading latest version file...</sys:String>
+    <sys:String x:Key="Updater_ProgressMessage_PrepareLabel">Preparing downloadeded file...</sys:String>
+    <sys:String x:Key="Updater_ProgressMessage_ExtractLabel">Extracting latest version to staging area...</sys:String>
+    <sys:String x:Key="Updater_ProgressMessage_UpgradeLabel">Starting upgrade...</sys:String>
+    <!--#endregion-->
+
+    <!--#region Settings window -->
+    <sys:String x:Key="Settings_Title">Settings</sys:String>
+    <!--#endregion-->
+
+    <!--#region GlobalSettings Control -->
+    <sys:String x:Key="GlobalSettings_Title">Conan Exiles™ Server Manager</sys:String>
+    <sys:String x:Key="GlobalSettings_VersionLabel">Version:</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetButtonLabel">Reset</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetButtonTooltip">This will reset ALL the user global settings for the server manager. The server manager will be closed if successful.</sys:String>
+    <sys:String x:Key="GlobalSettings_RunAsAdministratorLabel">Enable Run as Administrator Prompt on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckIfServerManagerRunningOnStartupLabel">Check if Server Manager Running on Startup</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeLabel">Main Window Start Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_StartModeServerMonitorLabel">Server Monitor Window Start Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_MinimizeToTrayLabel">Minimize To Tray</sys:String>
+    <sys:String x:Key="GlobalSettings_ManageFirewallLabel">Manage firewall settings automatically</sys:String>
+    <sys:String x:Key="GlobalSettings_ManagePublicIPLabel">Manage Public IP automatically</sys:String>
+    <sys:String x:Key="GlobalSettings_DataDirectoryLabel">Data Directory:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupDirectoryLabel">Backup Directory:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamAPIKeyLabel">Steam WebApi Key:</sys:String>
+    <sys:String x:Key="GlobalSettings_SaveManagerPasswordButtonLabel">Save Manager Password...</sys:String>
+    <sys:String x:Key="GlobalSettings_CreateManagerUserButtonLabel">Create Manager User...</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteManagerUserButtonLabel">Delete Manager User...</sys:String>
+    <sys:String x:Key="GlobalSettings_SetLocationButtonLabel">...</sys:String>
+    <sys:String x:Key="GlobalSettings_ClearButtonLabel">Clear</sys:String>
+    <sys:String x:Key="GlobalSettings_SetSteamFileButtonLabel">...</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheDirectoryButtonLabel">...</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamAPIKeyButtonLabel">Get WebApi Key...</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamAPIKeyHelpButtonLabel">Help...</sys:String>
+    
+    <sys:String x:Key="GlobalSettings_LanguageSelectionLabel">Language</sys:String>
+
+    <sys:String x:Key="GlobalSettings_SteamSettingsLabel">Steam Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitLabel">Stop SteamCMD closing (use for debugging only)</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRemoveQuitTooltip">If enabled, the Steamcmd window will not be closed when finished. You will need to manually close it or type quit. Note: does not affect auto-update.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameLabel">Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdUsernameTooltip">The user name associated with the steam account.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordLabel">Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdPasswordTooltip">The password associated with the steam account.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthenticateButtonLabel">Authenticate...</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputLabel">Output SteamCMD to the progress window</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdRedirectOutputTooltip">If enabled, the SteamCMD output will be shown in the progress window instead of the command window. NOTE: if enabled, this could cause your server and mods updates to fail.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsLabel">Use Anonymous Credentials with SteamCMD</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdCredentialsTooltip">Controls whether the anonymous user is used to download from SteamCMD.</sys:String>
+    
+    <sys:String x:Key="GlobalSettings_ServerStatusLabel">Server Status Options</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">Enable Server Status Actions</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">If enabled, clicking the server status icons may perform one or mroe actions.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationLabel">Show Server Status Action Confirmation</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowServerStatusActionConfirmationTooltip">If enabled, a dialogue will be shown to confirmation the server status action.</sys:String>
+    
+    <sys:String x:Key="GlobalSettings_ServerStartupLabel">Server Startup Options</sys:String>
+    <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartLabel">Validate profile on server start</sys:String>
+    <sys:String x:Key="GlobalSettings_ValidateProfileOnServerStartTooltip">If enabled, when you manually start the server, a basic validation is performed on the server and mod files.</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartLabel">Perform server and mod update on server start</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerUpdateOnServerStartTooltip">If enabled, when you manually start the server, the server and mod files will be updated to the latest version.</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedLabel">Start Server Minimized</sys:String>
+    <sys:String x:Key="GlobalSettings_ServerStartMinimizedTooltip">If enabled, when the server is started the command window will be minimized, otherwise it will open in normally.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_UpdateModSettingsLabel">Mod Update Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateModWithServerLabel">Update mods when updating server</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateModWithServerTooltip">If enabled, the mods will be updated when the server is updated.</sys:String>
+    <sys:String x:Key="GlobalSettings_ForceUpdateModsLabel">Force mod file downloads</sys:String>
+    <sys:String x:Key="GlobalSettings_ForceUpdateModsTooltip">If enabled, the mods will be downloaded from steam even if the server has the latest version. Enabling can fix mod corruption issues.</sys:String>
+    <sys:String x:Key="GlobalSettings_ForceCopyModsLabel">Force mod file copying</sys:String>
+    <sys:String x:Key="GlobalSettings_ForceCopyModsTooltip">If enabled, the mod files will be copied to the server folder even if the server has the latest version. Enabling can fix mod corruption issues.</sys:String>
+    <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Force mod file downloads when no steam information available</sys:String>
+    <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">If enabled, the mods will be downloaded from steam even when no steam information is available.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Backup Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Include the SaveGames folder when performing a WorldSave backup</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabelTooltip">If enabled, when a worldsave backup runs it will include the SaveGames folder used to store mod data files.</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesLabel">Delete Old Backup Files</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteOldFilesTooltip">If enabled, when the auto-backup runs the old backup files will be deleted.</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteIntervalLabel">Older Than:</sys:String>
+    <sys:String x:Key="GlobalSettings_DeleteIntervalTooltip">How old the backup file must be to be deleted in days.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldSaveLabel">WorldSave Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldSaveTooltip">This message will be displayed upon backup when the world is about to be saved.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoBackupLabel">Enable Auto Backup</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalLabel">Backup Interval:</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupIntervalTooltip">How often to perform the server backup, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoUpdateLabel">Enable Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoUpdate_GameServerLabel">Game Server</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheDirectoryLabel">Cache Directory:</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheDirectoryTooltip">This is where the automatic updater will cache copies of the server files.</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateIntervalLabel">Update Interval:</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateIntervalTooltip">How often to check Steam for server updates, in hours and minutes (hh:mm). Set to 00:00 to disable.</sys:String>
+    <sys:String x:Key="GlobalSettings_ValidateServerFilesLabel">Validate Server Files</sys:String>
+    <sys:String x:Key="GlobalSettings_ValidateServerFilesTooltip">If enabled, when the automatic updater runs, it will validate the server files before updating. This will slow down the update process but will ensure that your server files are not corrupted.</sys:String>
+    <sys:String x:Key="GlobalSettings_UseSmartCopyLabel">Use smart cache copy</sys:String>
+    <sys:String x:Key="GlobalSettings_UseSmartCopyTooltip">If enabled, when the automatic updater copies files from the cache folder to the server folder, it will check the file time. This will speed up the copy as it will only copy changed files.</sys:String>
+    <sys:String x:Key="GlobalSettings_RetryOnFailLabel">Attempt retry on fail</sys:String>
+    <sys:String x:Key="GlobalSettings_RetryOnFailTooltip">If enabled, when the server or mod fails to download a retry attempt will be made.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowUpdateReasonLabel">Show Update Reason in Shutdown Messages</sys:String>
+    <sys:String x:Key="GlobalSettings_ShowUpdateReasonTooltip">If enabled, when the auto-update is performed the broadcast message will include what (server or mods) is being updated.</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateReasonPrefixLabel">Update Reason Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateReasonPrefixTooltip">This text is shown at the start of the Auto-Update reason message.</sys:String>
+    <sys:String x:Key="GlobalSettings_OverrideServerStartupLabel">Override server restart after auto-update</sys:String>
+    <sys:String x:Key="GlobalSettings_OverrideServerStartupTooltip">If enabled, when the auto-update is performed the server WILL NOT be restarted, regardless of if it was online before the auto-update.</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelUpdateLabel">Update servers in parallel</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">If enabled, when the auto-update is performed all servers will be updated at the same time, otherwise each server will be updated one after the other (this will take more time to complete).</sys:String>
+    <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
+    <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AutoRestartLabel">Auto Restart Options</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalInformationLabel">The grace period does not prevent auto-updates from restarting your server.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalLabel">Enable Grace Period</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalTooltip">If enabled, it will check if the server was last started with the grace period and skip; otherwise if not last started within the grace period the server will be restarted.</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalLabel">Grace Period:</sys:String>
+    <sys:String x:Key="GlobalSettings_RestartGraceIntervalTooltip">The amount of time in hours and minutes (hh:mm) to prevent the server restarting, since the last server start.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_ShutdownLabel">Shutdown Options</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">These warning messages will only be broadcast to your server if RCON is enabled and the RCON port set on your server profile.</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersLabel">Perform Online Player Check</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersTooltip">If enabled, the shutdown process will check if players are online. If no player are online, the grace period will be bypassed and shutdown will happen immediately. Otherwise the shutdown will wait until the grace period timer runs out.</sys:String>
+    <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Send Shutdown Messages to Game Client</sys:String>
+    <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">If enabled, the shutdown messages will be sent to the game client via RCON. NOTE: RCON must be enable on the server.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Grace Period:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalTooltip">The amount of time in minutes to broadcast messages about the upgrade before shutting down and upgrading the server.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage1Label">Message 1:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage1Tooltip">This message will be displayed upon shutdown when there is 2 or more minutes left.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage2Label">Message 2:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage2Tooltip">This message will be displayed upon shutdown when there is 1 minute left.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage3Label">Message 3:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage3Tooltip">This message will be displayed when the server is about to shutdown.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownWorldSaveLabel">WorldSave Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownWorldSaveTooltip">This message will be displayed upon shutdown when the world is about to be saved.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownCancelLabel">Cancel Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">This message will be displayed when the server shutdown has been cancelled.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Show shutdown reason with ALL shutdown messages</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">If enabled, the shutdown reason will be shown with all shutdown message; otherwise it will only be shown at the start of the server shutdown.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AlertsLabel">Alert Options</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageLabel">Server Stop Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStopMessageTooltip">This message will be displayed when the server is being stopped.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageLabel">Server Shutdown Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerShutdownMessageTooltip">This message will be displayed when the server is being shutdown.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageLabel">Server Start Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageTooltip">This message will be displayed when the server is being started.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortLabel">Include Public IP and Port in Start Message</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStartedMessageIncludeIPandPortTooltip">The startup message will include the Public IP and Port.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorLabel">Backup Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_BackupProcessErrorTooltip">This message will be displayed when the auto-backup process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorLabel">Shutdown Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ShutdownProcessErrorTooltip">This message will be displayed when the auto-shutdown process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorLabel">Restart Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_RestartProcessErrorTooltip">This message will be displayed when the auto-restart process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorLabel">Update Process Error:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateProcessErrorTooltip">This message will be displayed when the auto-update process encountered an error.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsLabel">Update Results:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_UpdateResultsTooltip">This message will be displayed when the auto-update process finds something to update.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateLabel">Server Update Message:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerUpdateTooltip">This message will be displayed when the game server has been updated.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeLabel">Server Status Change:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ServerStatusChangeTooltip">This message will be displayed when the status of the server changes.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedLabel">Mod Update Detected:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_ModUpdateDetectedTooltip">This message will be displayed when the server manager detects one or more mods are out of date.</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeLabel">Online Player Count Change:</sys:String>
+    <sys:String x:Key="GlobalSettings_Alerts_OnlinePlayerCountChangeTooltip">This message will be displayed when the online player count changes.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_DiscordBotLabel">Enable Discord Bot</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">You will need to restart the server manager if you change any settings for the Discord Bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">Token:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">The token associated with the discord bot.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">Server Id:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">The id of the discord server the bot will listen to.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">Prefix:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">The prefix that must be used when sending a command via discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">Log Level:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">Get Token...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">Help...</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordLabel">All Profiles Alias:</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllServersKeywordTooltip">The alias to use when sending a command via discord to all profiles associated with a discord channel. Do not include spaces or special characters. To disable the All Profiles alias, clear the value.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsLabel">Allow All Bots</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotAllowAllBotsTooltip">If enabled, the server manager bot will respond to all other bots, otherwise they will be ignored unless they are in the whitelist.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistLabel">Bot Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdLabel">Bot ID</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotWhitelistIdTooltip">The id of the bot to whitelist.</sys:String>
+    <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">Add Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">Clear Whitelists</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">Delete Whitelist</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">If enabled, the backup command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">If enabled, the restart command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">If enabled, the shutdown command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">If enabled, the start command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">If enabled, the stop command can be sent from discord.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">If enabled, the update command can be sent from discord.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP Email Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailHostLabel">Host:</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailHostTooltip">The name or IP address of the host used for SMTP transmissions.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailPortLabel">Port:</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailPortTooltip">The port used for SMTP transmissions.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailUseSSLLabel">Use SSL</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailUseSSLTooltip">Whether to use Secure Sockets Layer (SSL) to encrypt the connection.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailUseDefaultCredentialsLabel">Use Default Credentials</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailUseDefaultCredentialsTooltip">Controls whether the DefaultCredentials are sent with requests.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailUsernameLabel">Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailUsernameTooltip">The user name associated with the host account.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailPasswordLabel">Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailPasswordTooltip">The password associated with the host account.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailFromLabel">From:</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailFromTooltip">The from address for the e-mail message.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailToLabel">To:</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailToTooltip">The address collection that contains the recipients of the e-mail message. Separate multiple email addresses with a comma (,).</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailTestButtonLabel">Send Test Email</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotifySettingsLabel">Email Notify Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_AutoBackupLabel">Auto-Backup</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_AutoBackupTooltip">If enabled, an email will be sent if the server is backed up during the auto-backup process.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_AutoUpdateLabel">Auto-Update</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_AutoUpdateTooltip">If enabled, an email will be sent if the server is updated during the auto-update process.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_AutoRestartLabel">Auto-Shutdown</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_AutoRestartTooltip">If enabled, an email will be sent when the server is shutdown/restarted during the auto-shutdown process.</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_ShutdownRestartLabel">Shutdown/Restart</sys:String>
+    <sys:String x:Key="GlobalSettings_EmailNotify_ShutdownRestartTooltip">If enabled, an email will be sent when the server is shutdown or restarted.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_AdvancedSettingsLabel">Advanced Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_AdvancedSettingsInformationLabel">Do not touch these settings unless you know what you are doing, or have been instructed to change them by support staff.</sys:String>
+    <sys:String x:Key="GlobalSettings_UseShutdownCommandLabel">Use Server Shutdown Command</sys:String>
+    <sys:String x:Key="GlobalSettings_UseShutdownCommandTooltip">If enabled, the shutdown command will be used first to shutdown the server. If it fails or is disabled, then the ctrl+c method is used instead.</sys:String>
+    <sys:String x:Key="GlobalSettings_CloseShutdownWindowWhenFinishedLabel">Close Shutdown Window When Finished</sys:String>
+    <sys:String x:Key="GlobalSettings_CloseShutdownWindowWhenFinishedTooltip">If enabled, the server shutdown window will close after it is finished; otherwise it will stay open.</sys:String>
+    <sys:String x:Key="GlobalSettings_WorldSaveDelayLabel">WorldSave Delay:</sys:String>
+    <sys:String x:Key="GlobalSettings_WorldSaveDelayTooltip">The number of seconds to wait for the worldsave command to complete before the server is shutdown.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldFileLabel">Backup World File on Shutdown</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupWorldFileTooltip">If enabled, a world file backup will be performed when the server is shutdown; otherwise no world save backup will be performed.</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateLabel">Verify Server Files After Auto Update</sys:String>
+    <sys:String x:Key="GlobalSettings_VerifyServerAfterUpdateTooltip">If enabled, after the server has been updated from the cache, it will perform a server verification using steamcmd.</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsLabel">Update Directory Permissions on Save</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateDirectoryPermissionsTooltip">If enabled, when a save is performed, all folders under the server directory will be have the permissions check and if necessary fixed. WARNING: Disabling could prevent your server from running properly.</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingLabel">Enable Logging</sys:String>
+    <sys:String x:Key="GlobalSettings_EnableLoggingTooltip">If enabled, all logging will be enabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysLabel">Delete Logs After</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveDaysTooltip">How old the log files must be to be deleted in days.</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesLabel">Max Number of Logs</sys:String>
+    <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">The maximum number of log files that will be kept.</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
+    <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Any changes to these priorities will take effect after the task has been created or saved.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Select the priority used by the windows task manager when running this task.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoBackupLabel">Auto Backup Task Priority:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Auto Update Task Priority:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Auto Shutdown/Restart Task Priority:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Auto Start Task Priority:</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameLabel">Task Scheduler Username:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameTooltip">This username will be used for the Auto-Start server on Boot task.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordLabel">Task Scheduler Password:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordTooltip">This password will be used for the Auto-Start server on Boot task.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Confirm Settings Reset Action</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Click 'Yes' to confirm you want to perform the settings reset.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetSettings_FailedTitle">Failed to Reset Settings</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetSettings_FailedLabel">There was an error while resetting the settings. The application will now close.</sys:String>
+    <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmTitle">Confirm changing data directory</sys:String>
+    <sys:String x:Key="GlobalSettings_DataDirectoryChange_ConfirmLabel">Changing the data directory will move any existing profiles to the new location, but it will not move any server installations. Do you still want to change this directory?</sys:String>
+    <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedTitle">Failed to change data directory</sys:String>
+    <sys:String x:Key="GlobalSettings_DataDirectoryChange_FailedLabel">There was an error changing the data directory: {0}\r\nPlease correct the error and try again, or contact technical support for assistance.</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmTitle">Confirm Data Directory Reset</sys:String>
+    <sys:String x:Key="GlobalSettings_ResetDataDirectory_ConfirmLabel">Click 'Yes' to confirm you want to reset the location of the data directory. Once reset, the server manager will shutdown and you will need to restart.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_DataDirectoryTitle">Select Backup Directory</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheDirectoryTitle">Select Cache Directory</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheDirectory_ErrorTitle">Invalid cache directory</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheDirectory_ErrorLabel">The cache directory must specify a valid location or the cache update period must be 0.</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheTaskUpdate_ErrorTitle">Update task failed</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheTaskUpdate_ErrorLabel">Failed to update the cache task. Ensure you have administrative rights and try again.</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheUpdate_EnabledTitle">Updates enabled</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheUpdate_EnabledLabel">Server cache will update every {0} minutes.</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheUpdate_DisabledTitle">Updates disabled</sys:String>
+    <sys:String x:Key="GlobalSettings_CacheUpdate_DisabledLabel">Server cache updating disabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupTaskUpdate_ErrorTitle">Update task failed</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupTaskUpdate_ErrorLabel">Failed to update the server backup task. Ensure you have administrative rights and try again.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupTaskUpdate_EnabledTitle">Backups enabled</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupTaskUpdate_EnabledLabel">Server backups will run every {0} minutes.</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupTaskUpdate_DisabledTitle">Backups disabled</sys:String>
+    <sys:String x:Key="GlobalSettings_BackupTaskUpdate_DisabledLabel">Server backups are disabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTitle">SteamCmd Authentication Disabled</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledLabel">You have chosen to redirect the steamcmd output to the progress window. You are not able to use your steam credentials, you must use anonymous credentials.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCMDAuthentication_DisabledTooltip">To use your steam credentials with SteamCMD you must turn off the Output SteamCMD to the progress window option.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings Control-->
+    <!--#region Server Settings - General -->
+    <sys:String x:Key="ServerSettings_ProfileIdLabel">Profile ID:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileIdTooltip">The unique ID assigned to the profile.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileLabel">Profile:</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileTooltip">The name for the server profile. This is not the public name users will see in the game. For that, set the 'Server Name' field.</sys:String>
+    <sys:String x:Key="ServerSettings_InstalledVersionLabel">Installed Version:</sys:String>
+    <sys:String x:Key="ServerSettings_InstalledVersionTooltip">The version of the server that is currently downloaded (NOTE: will not update until the server is started).</sys:String>
+    <sys:String x:Key="ServerSettings_OutOfDateModsLabel">Outdated Mods:</sys:String>
+    <sys:String x:Key="ServerSettings_OutOfDateModsTooltip">The number of mod that are currently out of date.</sys:String>
+    <sys:String x:Key="ServerSettings_OutOfDateModsButtonTooltip">Perform a mod check.</sys:String>
+    <sys:String x:Key="ServerSettings_PatchNotesTooltip">View the Patch Notes.</sys:String>
+    <sys:String x:Key="ServerSettings_OpenLogFolderTooltip">Open the server's logs folder.</sys:String>
+    <sys:String x:Key="ServerSettings_ValidateProfileTooltip">Performs a basic profile validation on the server and mod files.</sys:String>
+    <sys:String x:Key="ServerSettings_InstallLocationLabel">Installation Location:</sys:String>
+    <sys:String x:Key="ServerSettings_InstallLocationTooltip">The folder that contains the server game and configuration files.</sys:String>
+    <sys:String x:Key="ServerSettings_OpenServerFolderTooltip">Open the server's installation folder.</sys:String>
+    <sys:String x:Key="ServerSettings_StatusLabel">Status:</sys:String>
+    <sys:String x:Key="ServerSettings_StatusTooltip">The status of the server on your local network.</sys:String>
+    <sys:String x:Key="ServerSettings_LastStartedLabel">Last Start Time:</sys:String>
+    <sys:String x:Key="ServerSettings_AvailabilityLabel">Availability:</sys:String>
+    <sys:String x:Key="ServerSettings_AvailabilityTooltip">The status of the server on Steam.</sys:String>
+    <sys:String x:Key="ServerSettings_PlayersLabel">Players:</sys:String>
+    <sys:String x:Key="ServerSettings_PlayersTooltip">The current number of players connected to the server.</sys:String>
+
+    <sys:String x:Key="ServerSettings_Availability_Unknown">Unknown</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Unavailable">Unavailable</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_UnavailableTootip">Server in not accessible</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnly">LAN Only</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_LocalOnlyTootip">Server accessible via Local IP only. Port Forwarding, Firewall or CGNAT etc are preventing public access.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnly">Available - No Loopback</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_PublicOnlyTootip">Server accessible via Local IP and Public IP, loopback not available. Server is public but Public IP not accessible via LAN.</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_Available">Available</sys:String>
+    <sys:String x:Key="ServerSettings_Availability_AvailableTootip">Server accessible via Local IP and Public IP</sys:String>
+
+    <sys:String x:Key="ServerSettings_RuntimeStatusInitializingLabel">Initializing</sys:String>
+    <sys:String x:Key="ServerSettings_RuntimeStatusRunningLabel">Running</sys:String>
+    <sys:String x:Key="ServerSettings_RuntimeStatusStoppedLabel">Stopped</sys:String>
+    <sys:String x:Key="ServerSettings_RuntimeStatusStoppingLabel">Stopping</sys:String>
+    <sys:String x:Key="ServerSettings_RuntimeStatusUninstalledLabel">Uninstalled</sys:String>
+    <sys:String x:Key="ServerSettings_RuntimeStatusUnknownLabel">Unknown</sys:String>
+    <sys:String x:Key="ServerSettings_RuntimeStatusUpdatingLabel">Updating</sys:String>
+
+    <sys:String x:Key="ServerSettings_ProfileValidateTitle">Profile Validation</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateSuccessLabel">The profile passed the basic validation.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileValidateErrorTitle">Profile Validation Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_SupportZipTitle">Support ZipFile Creation</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipSuccessLabel">The support zip file has been created and saved to your desktop.\r\nThe filename is {filename}.</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipErrorTitle">Support ZipFile Creation Error</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - General Buttons -->
+    <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Create Support Zip</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Create a zip file that contains all the files necessary for use by the server manager support team to diagnose a problem.</sys:String>
+    <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Sync</sys:String>
+    <sys:String x:Key="ServerSettings_SyncProfileButtonTooltip">Copy settings from this profile to one or more profiles.</sys:String>
+    <sys:String x:Key="ServerSettings_ImportButtonLabel">Import</sys:String>
+    <sys:String x:Key="ServerSettings_ImportButtonTooltip">Load an existing profile, or import one directly from an existing server.</sys:String>
+    <sys:String x:Key="ServerSettings_SaveButtonLabel">Save</sys:String>
+    <sys:String x:Key="ServerSettings_SaveButtonTooltip">Save the current profile and write the .INI files for the server.</sys:String>
+    <sys:String x:Key="ServerSettings_StopButtonLabel">Stop</sys:String>
+    <sys:String x:Key="ServerSettings_StopButtonTooltip">Stop the server.</sys:String>
+    <sys:String x:Key="ServerSettings_StartButtonLabel">Start</sys:String>
+    <sys:String x:Key="ServerSettings_StartButtonTooltip">Start the server.</sys:String>
+    <sys:String x:Key="ServerSettings_RconButtonLabel">RCON</sys:String>
+    <sys:String x:Key="ServerSettings_RconButtonTooltip">Open the RCON window.</sys:String>
+    <sys:String x:Key="ServerSettings_PlayerListButtonLabel">Players</sys:String>
+    <sys:String x:Key="ServerSettings_PlayerListButtonTooltip">Open the Player List window.</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeButtonLabel">Upgrade / Verify</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeButtonTooltip">Upgrade to the latest version of the server that is currently available to download. If there is no update then it will verify your server files</sys:String>
+    <sys:String x:Key="ServerSettings_InstallButtonLabel">Install</sys:String>
+    <sys:String x:Key="ServerSettings_InstallButtonTooltip">Install the latest version of the server.</sys:String>
+    <sys:String x:Key="ServerSettings_CancelUpgradeButtonLabel">Cancel</sys:String>
+    <sys:String x:Key="ServerSettings_CancelUpgradeButtonTooltip">Cancel the server upgrade.</sys:String>
+    <sys:String x:Key="ServerSettings_SetLocationButtonLabel">Set Location...</sys:String>
+    <sys:String x:Key="ServerSettings_SetLocationButtonTooltip">Update the folder that contains the server game and configuration files.</sys:String>
+    <sys:String x:Key="ServerSettings_ValidateButtonLabel">Validate</sys:String>
+    <sys:String x:Key="ServerSettings_ValidateButtonTooltip">Verify the server content against the Steam version.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetSectionTooltip">Resets the section back to defaults.</sys:String>
+
+    <sys:String x:Key="ServerSettings_AdminRequired_ErrorTitle">Needs Administrator Access</sys:String>
+    <sys:String x:Key="ServerSettings_AdminRequired_ErrorLabel">Automatic Management features of the server manager use administrator features of Windows to schedule tasks that will run even if the server manager is not running, without installing any separate processes or services. To do this, the server manager must run with administrator privileges. Restart the server manager and 'Run As Administrator' and you will be able to utilize these features.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoSettings_ErrorTitle">Conan Auto Settings</sys:String>
+    <sys:String x:Key="ServerSettings_ServerAutoSettings_ErrorLabel">The Conan automatic settings and the server manager automatic settings cannot be enabled at the same time. They are similar features that cause problems for the other and if the server manager automatic features are enabled, the Conan features are disabled.</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeServer_RunningTitle">Server running</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeServer_RunningLabel">The server must be stopped to upgrade. Do you wish to proceed?</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeServer_FailedTitle">Server Update Error</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeServer_MutexFailedLabel">Could not lock the server, another process is using the server. Update process was cancelled.</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_StartingTitle">Stop the server?</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_StartingLabel">This will stop the server. Do you wish to proceed?</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_RunningTitle">Shutdown the server?</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_RunningLabel">This will shut down the server. Do you wish to proceed?\r\n\r\nClick Yes to shutdown with a timer.\r\nClick No to shutdown now.\r\nClick Cancel to cancel shutdown.</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_FailedTitle">Starting Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_StartServer_MutexFailedLabel">Could not lock the server, another process is using the server. Server start was cancelled.</sys:String>
+    <sys:String x:Key="ServerSettings_UpdateServer_FailedTitle">Updating Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_UpdateServer_NoSteamCredentialsLabel">The server update failed as the steam username or password has not been setup in the Global Settings.</sys:String>
+    <sys:String x:Key="ServerSettings_BackupServer_Title">Backup Server</sys:String>
+    <sys:String x:Key="ServerSettings_BackupServer_FailedTitle">Backup Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_BackupServer_SuccessfulLabel">The backup was successful.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_Title">Reset Server</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_FailedTitle">Reset Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_ConfirmationLabel">This will delete all the server files and reset your server back to new. Do you wish to proceed?</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServer_SuccessfulLabel">The reset was successful.</sys:String>
+    <sys:String x:Key="ServerSettings_ShutdownServer_FailedTitle">Shutdown Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_ShutdownServer_CancelledTitle">Shutdown Server Cancelled</sys:String>
+    <sys:String x:Key="ServerSettings_ShutdownServer_AlreadyOpenLabel">The shutdown window is already open for this server.</sys:String>
+    <sys:String x:Key="ServerSettings_StopServer_FailedTitle">Stopping Server Error</sys:String>
+    <sys:String x:Key="ServerSettings_InstallServer_Title">Select Install Directory</sys:String>
+    <sys:String x:Key="ServerSettings_LoadConfig_Title">Load Server Profile or Game Server config file</sys:String>
+    <sys:String x:Key="ServerSettings_LoadConfig_ErrorTitle">Profile failed to load</sys:String>
+    <sys:String x:Key="ServerSettings_LoadConfig_ErrorLabel">The profile at {0} failed to load. The error was: {1}\r\n{2}</sys:String>
+    <sys:String x:Key="ServerSettings_Save_ServerCache_ErrorTitle">Server cache not configured</sys:String>
+    <sys:String x:Key="ServerSettings_Save_ServerCache_ErrorLabel1">Auto-updates is enabled but the Server Cache update is not yet configured. The server cache downloads server updates in the background automatically to enable faster server updates, particularly when there are multiple servers. You must first configure the cache, then you may enable automatic updating. Would you like to configure the cache now?</sys:String>
+    <sys:String x:Key="ServerSettings_Save_ServerCache_ErrorLabel2">The server cache was not configured. Disabling auto-updates.</sys:String>
+    <sys:String x:Key="ServerSettings_Save_AutoRestart_SotF_ErrorTitle">SotF Not Compatible</sys:String>
+    <sys:String x:Key="ServerSettings_Save_AutoRestart_SotF_ErrorLabel">Auto-restarts are enabled but is not compatible with SotF. Disabling auto-restarts.</sys:String>
+    <sys:String x:Key="ServerSettings_Save_AutoUpdate_SotF_ErrorTitle">SotF Not Compatible</sys:String>
+    <sys:String x:Key="ServerSettings_Save_AutoUpdate_SotF_ErrorLabel">Auto-updates are enabled but is not compatible with SotF. Disabling auto-updates.</sys:String>
+    <sys:String x:Key="ServerSettings_Save_UpdatePermissions_ErrorTitle">Update directory permissions</sys:String>
+    <sys:String x:Key="ServerSettings_Save_UpdatePermissions_ErrorLabel">Failed to update directory permissions. Ensure you have administrator rights on this machine and try again. If the problem persists, please report this as a bug.</sys:String>
+    <sys:String x:Key="ServerSettings_Save_UpdateSchedule_ErrorTitle">Update schedule failed</sys:String>
+    <sys:String x:Key="ServerSettings_Save_UpdateSchedule_ErrorLabel">Failed to update scheduled tasks. Ensure you have administrator rights on this machine and try again. If the problem persists, please report this as a bug.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetTitle">Confirm Reset Action</sys:String>
+    <sys:String x:Key="ServerSettings_ResetLabel">Click 'Yes' to confirm you want to perform the reset.</sys:String>
+    <sys:String x:Key="ServerSettings_LoadCustomConfig_Title">Load Ini File.</sys:String>
+    <sys:String x:Key="ServerSettings_LoadCustomConfig_Label">The ini file was successfully loaded.</sys:String>
+    <sys:String x:Key="ServerSettings_LoadCustomConfig_ErrorTitle">Ini File Load Error</sys:String>
+    <sys:String x:Key="ServerSettings_ClearTitle">Confirm Clear Action</sys:String>
+    <sys:String x:Key="ServerSettings_ClearLabel">Click 'Yes' to confirm you want to clear all.</sys:String>
+    <sys:String x:Key="ServerSettings_DeleteTitle">Confirm Delete Action</sys:String>
+    <sys:String x:Key="ServerSettings_DeleteLabel">Click 'Yes' to confirm you want to perform the delete.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Administration -->
+    <sys:String x:Key="ServerSettings_AdministrationSectionLabel">Administration</sys:String>
+    <sys:String x:Key="ServerSettings_NameAndPasswordsLabel">Name and Passwords</sys:String>
+    <sys:String x:Key="ServerSettings_ServerNameLabel">Server Name:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerNameTooltip">The public name of the server, as seen in Steam and in the game.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerNameLengthLabel">Length:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPasswordLabel">Server Password:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPasswordTooltip">The password users must enter in order to access the server. If this is set, only people who know the password can access your server.</sys:String>
+    <sys:String x:Key="ServerSettings_AdminPasswordLabel">Admin Password:</sys:String>
+    <sys:String x:Key="ServerSettings_AdminPasswordTooltip">The password users must enter to execute admin/cheat commands on the server. If this is not set, anyone can use cheats.</sys:String>
+
+    <sys:String x:Key="ServerSettings_HidePasswordText">Hidden - Click to Show</sys:String>
+    <sys:String x:Key="ServerSettings_HidePasswordTooltip">When selected the hidden text will show, to hide the text unselect the field.</sys:String>
+
+    <sys:String x:Key="ServerSettings_NetworkingLabel">Networking</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPLabel">Local IP:</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPTooltip">Sets the local (private) IP the server will listen on. This should be your primary network card which routes to the public internet.</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPGameChooseLabel">Let the server choose</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIPRecommendedLabel">(Recommended)</sys:String>
+    <sys:String x:Key="ServerSettings_RefreshLocalIPTooltip">Refresh the available local IPs.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPortLabel">Server Port:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPortTooltip">The port users will use to connect to your game server and used to send mods to game clients. Default is 7777.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortLabel">Peer Port:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerPeerPortTooltip">Pinger port used by server browser to determine server availability. Default is 7778.</sys:String>
+    <sys:String x:Key="ServerSettings_QueryPortLabel">Query Port:</sys:String>
+    <sys:String x:Key="ServerSettings_QueryPortTooltip">The port used to communicate with your game server. Default is 27015.</sys:String>
+
+    <sys:String x:Key="ServerSettings_LocalIP_ErrorTitle">Local IP invalid</sys:String>
+    <sys:String x:Key="ServerSettings_LocalIP_ErrorLabel">Your Local IP address {0} is no longer available. Please review the available IP addresses and select a valid one. If you have a server running on the original IP, you will need to stop it first.</sys:String>
+
+    <sys:String x:Key="ServerSettings_RconEnabledLabel">Enable Rcon</sys:String>
+    <sys:String x:Key="ServerSettings_RconEnabledTooltip">If enabled, the Rcon feature will be enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_RconPortLabel">Rcon Port:</sys:String>
+    <sys:String x:Key="ServerSettings_RconPortTooltip">The port that Rcon will use on your server.</sys:String>
+    <sys:String x:Key="ServerSettings_RconPasswordLabel">Rcon Password:</sys:String>
+    <sys:String x:Key="ServerSettings_RconPasswordTooltip">The password used to access the Rcon feature.</sys:String>
+    <sys:String x:Key="ServerSettings_RconResetTooltip">Resets the Rcon Window settings back to defaults.</sys:String>
+
+    <sys:String x:Key="ServerSettings_MapsAndModsLabel">Maps and Mods</sys:String>
+    <sys:String x:Key="ServerSettings_MapPathLabel">Map Name:</sys:String>
+    <sys:String x:Key="ServerSettings_MapPathTooltip">The standard map name.</sys:String>
+    <sys:String x:Key="ServerSettings_MapSaveNameLabel">Map Save File:</sys:String>
+    <sys:String x:Key="ServerSettings_MapSaveNameTooltip">The file name of the map save (e.g. game.db).</sys:String>
+    <sys:String x:Key="ServerSettings_ModIdsLabel">Mod IDs:</sys:String>
+    <sys:String x:Key="ServerSettings_ModIdsTooltip">A comma-separated list of mod ids, in the order in which they should be applied.</sys:String>
+    <sys:String x:Key="ServerSettings_ModDetailsTooltip">View the mod details.</sys:String>
+    <sys:String x:Key="ServerSettings_ModUpgradeTooltip">Upgrade to the latest version of the mods that is currently available to download.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonLabel">Reset</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerButtonTooltip">Deletes all the server files and resets your server back to new.</sys:String>
+
+    <sys:String x:Key="ServerSettings_SavesLabel">Saves</sys:String>
+    <sys:String x:Key="ServerSettings_AutoSavesPeriodLabel">Auto Save Period:</sys:String>
+    <sys:String x:Key="ServerSettings_AutoSavesPeriodTooltip">The time between server auto-saves.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoSavesPeriodUnits">minutes</sys:String>
+    <sys:String x:Key="ServerSettings_SaveBackupButtonLabel">Backup Now</sys:String>
+    <sys:String x:Key="ServerSettings_SaveBackupButtonTooltip">Perform a manual world save.</sys:String>
+    <sys:String x:Key="ServerSettings_SaveRestoreButtonLabel">Restore...</sys:String>
+    <sys:String x:Key="ServerSettings_SaveRestoreButtonTooltip">Restore a previous world save.</sys:String>
+
+    <sys:String x:Key="ServerSettings_MOTDLabel">Message of the Day</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDTooltip">The Message of the Day displayed to users when they connect to the server.</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDLineCountLabel">Lines:</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDLengthLabel">Length:</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDIntervalEnabledLabel">Enable Interval:</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDIntervalEnabledTooltip">If enabled, the message of the day will be shown at set intervals.</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDIntervalTooltip">The interval when the Message of the Day will be shown.</sys:String>
+    <sys:String x:Key="ServerSettings_MOTDIntervalUnits">minutes</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerOptionsLabel">Server Options</sys:String>
+    <sys:String x:Key="ServerSettings_ResetServerOptionsTooltip">Reset all server options to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_UseVACLabel">Use VAC (Valve Anti-Cheat)</sys:String>
+    <sys:String x:Key="ServerSettings_UseVACTooltip">If enabled, will enable VAC protection for your game server.</sys:String>
+    <sys:String x:Key="ServerSettings_UseBattlEyeLabel">Use BattlEye</sys:String>
+    <sys:String x:Key="ServerSettings_UseBattlEyeTooltip">If enabled, will enable BattlEye protection for your game server.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFamilySharedAccountLabel">Allow Family Shared Accounts</sys:String>
+    <sys:String x:Key="ServerSettings_AllowFamilySharedAccountTooltip">If enabled, players will be able to use family shared accounts to access the server; otherwise only the account that owns the game wil be able to access the server.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPlayersLabel">Max Players:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPlayersTooltip">Sets the maximum number of players which can join this server.</sys:String>
+    <sys:String x:Key="ServerSettings_KickIdlePlayersPercentageLabel">Kick AFK Percentage:</sys:String>
+    <sys:String x:Key="ServerSettings_KickIdlePlayersPercentageTooltip">The percentage controls how many players need to be logged on before the system starts to kick people. If set to 0, the system should be off. If set to 80 then you need 80% of max players logged in before it will start to kick anybody.</sys:String>
+    <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodLabel">Kick AFK Time:</sys:String>
+    <sys:String x:Key="ServerSettings_KickIdlePlayersPeriodTooltip">Set the amount of AFK time before a character is kicked.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerRegionLabel">Server Region:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerRegionTooltip">Selecting a server region will affect how your server is filtered in the list. Select your region to help players find a server that is close to them.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerTransferEnabledLabel">Enable Server Transfers</sys:String>
+    <sys:String x:Key="ServerSettings_ServerTransferEnabledTooltip">If enabled, will enable character server transfers.</sys:String>
+    <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerLabel">Can Import Directly from Same Server</sys:String>
+    <sys:String x:Key="ServerSettings_CanImportDirectlyFromSameServerTooltip">If enabled, will allow players to directly import characters that were exported from exactly the same server.</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogLabel">Output Server Log to Server Console</sys:String>
+    <sys:String x:Key="ServerSettings_OutputServerLogTooltip">If enabled, the server logs will be output to the server console.</sys:String>
+
+    <sys:String x:Key="ServerSettings_CommandLineLabel">Command Line</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessPriorityLabel">Priority:</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessPriorityTooltip">Set the application priority when starting the server.</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessorAffinityLabel">Affinity - CPU:</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessorAffinityTooltip">Specifies the processor affinity as a hexadecimal number. The process is restricted to running on these processors.</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessorAffinityButtonLabel">...</sys:String>
+    <sys:String x:Key="ServerSettings_ProcessorAffinityButtonTooltip">Open the Affinity selection window.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsLabel">Launcher Args:</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsTooltip">Additional command-line args for the server launcher. Use this with caution! For more information search 'Microsoft Start Command' on the internet.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsOverrideLabel">Override Launcher</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsOverrideTooltip">If enabled, the RunServer.cmd file will only contain what is included in the Launcher Args field.</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixLabel">Prefix Launcher</sys:String>
+    <sys:String x:Key="ServerSettings_LauncherArgsPrefixTooltip">If enabled, the RunServer.cmd file will include the Launcher Args field before the server start (will allow other files to be executed before the server is started).</sys:String>
+    <sys:String x:Key="ServerSettings_ServerArgsLabel">Server Args:</sys:String>
+    <sys:String x:Key="ServerSettings_ServerArgsTooltip">Additional command-line args for the server. If you specify this, add the args which start with ?'s first, followed by any other args.  For example: ?MaxPlayers=5?QueryPort=9999 -nosteamclient</sys:String>
+    <sys:String x:Key="ServerSettings_ShowCommandButtonLabel">Show Command...</sys:String>
+    <sys:String x:Key="ServerSettings_ShowCommandButtonTooltip">View the command line start command for the server.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Automatic Management -->
+    <sys:String x:Key="ServerSettings_AutomaticManagementLabel">Automatic Management</sys:String>
+    <sys:String x:Key="ServerSettings_NoAutoManagementButtonLabel">Why can't I use this?</sys:String>
+    <sys:String x:Key="ServerSettings_ServerManagerSettingsLabel">Server Manager Settings</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerLabel">Auto-Start server</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerTooltip">Automatically start the server.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootLabel">on Boot</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootTooltip">Start the server when the machine starts.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginLabel">on Login</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginTooltip">Start the server when the user logs in.</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Shutdown server at</sys:String>
+    <sys:String x:Key="ServerSettings_EnableAutoShutdownTooltip">The hour and minute of the day to force a server shutdown.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartAfterShutdownLabel">then restart</sys:String>
+    <sys:String x:Key="ServerSettings_RestartAfterShutdownTooltip">If enabled, will restart the server after the shutdown</sys:String>
+    <sys:String x:Key="ServerSettings_UpdateAfterShutdownLabel">perform update</sys:String>
+    <sys:String x:Key="ServerSettings_UpdateAfterShutdownTooltip">If enabled, will update the server after the shutdown</sys:String>
+    <sys:String x:Key="ServerSettings_PeriodicBackupsLabel">Include server in the Auto-Backup cycle</sys:String>
+    <sys:String x:Key="ServerSettings_PeriodicBackupsTooltip">If enabled, the server will be periodically backed up during the Auto-Backup cycle. See the settings for Auto-Backup options.</sys:String>
+    <sys:String x:Key="ServerSettings_PeriodicUpdatesLabel">Include server in the Auto-Update cycle</sys:String>
+    <sys:String x:Key="ServerSettings_PeriodicUpdatesTooltip">If enabled, the server will be periodically updated during the Auto-Update cycle. See the settings for Auto-Update options.</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownLabel">Restart server if shutdown</sys:String>
+    <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">If enabled, the server will be restarted even if shutdown for Auto-Updates.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Discord Bot Details -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord Bot Details</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">Channel Id:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">The id of the discord server channel this profile will listen to.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasLabel">Alias:</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">A unique name to identify your server when using the discord commands, can be used instead of the profile id.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">Allow Backup</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">If enabled, the profile will listen for backup commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">Allow Restart</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">If enabled, the profile will listen for restart commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">Allow Shutdown</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">If enabled, the profile will listen for shutdown commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">Allow Start</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">If enabled, the profile will listen for start commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">Allow Stop</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">If enabled, the profile will listen for stop commands from discord.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">Allow Update</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">If enabled, the profile will listen for update commands from discord.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server Details -->
+    <sys:String x:Key="ServerSettings_ServerDetailsLabel">Server Details</sys:String>
+
+    <sys:String x:Key="ServerSettings_UseTestliveLabel">Use Testlive Dedicated Server Files</sys:String>
+    <sys:String x:Key="ServerSettings_UseTestliveTooltip">If enabled, will use the testlive dedicated server files instead of the testlive branch. Leave the branch as default, do not set to Testlive.</sys:String>
+    
+    <sys:String x:Key="ServerSettings_BranchLabel">Branch Details</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameLabel">Branch Name:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchNameTooltip">The name of the branch to download (leave blank to use the release branch).</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordLabel">Branch Password:</sys:String>
+    <sys:String x:Key="ServerSettings_BranchPasswordTooltip">The password that is used to access the branch download.</sys:String>
+    <sys:String x:Key="ServerSettings_BranchClearErrorTitle">Clear Branch Error</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Server File Details -->
+    <sys:String x:Key="ServerSettings_ServerFilesLabel">Server File Details</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWarningLabel">NOTE: Any changes will require a server restart to take effect.</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesLoadErrorTitle">Load Error</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesSaveErrorTitle">Save Error</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedLabel">Blacklisted</sys:String>
+    <sys:String x:Key="ServerSettings_AddBlacklistedPlayerTooltip">Add Blacklisted Player</sys:String>
+    <sys:String x:Key="ServerSettings_ClearBlacklistedPlayerTooltip">Clear Blacklisted Players</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadBlacklistedPlayerTooltip">Reload from File</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveBlacklistedPlayerTooltip">Delete Blacklisted Player</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesBlacklistedNameColumnLabel">Player Name</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedLabel">Enable Whitelist</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedTooltip">If enabled, only whitelised players will be able to join the server.</sys:String>
+    <sys:String x:Key="ServerSettings_AddWhitelistedPlayerTooltip">Add Whitelisted Player</sys:String>
+    <sys:String x:Key="ServerSettings_ClearWhitelistedPlayerTooltip">Clear Whitelisted Players</sys:String>
+    <sys:String x:Key="ServerSettings_ReloadWhitelistedPlayerTooltip">Reload from File</sys:String>
+    <sys:String x:Key="ServerSettings_RemoveWhitelistedPlayerTooltip">Delete Whitelisted Player</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedIdColumnLabel">Player Id</sys:String>
+    <sys:String x:Key="ServerSettings_ServerFilesWhitelistedNameColumnLabel">Player Name</sys:String>
+    <!--#endregion-->
+    <!--#endregion-->
+
+    <!--#region Server Settings - Overlay -->
+    <sys:String x:Key="ServerSettings_OverlayMessage_SavingLabel">Saving...</sys:String>
+    <sys:String x:Key="ServerSettings_OverlayMessage_PermissionsLabel">Checking Directory Permissions...</sys:String>
+    <sys:String x:Key="ServerSettings_OverlayMessage_SchedulesLabel">Checking Scheduled Tasks...</sys:String>
+    <!--#endregion-->
+
+    <!--#region Profile Validation -->
+    <sys:String x:Key="ProfileValidation_Title">Profile Validation</sys:String>
+    <sys:String x:Key="ProfileValidation_WarningLabel">The following validation problems were encountered.\r\n\r\n{validateMessage}\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ServerPort">The server port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerPeerPort">The server peer port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_QueryPort">The query port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+    <sys:String x:Key="ProfileValidation_RconPort">The rcon port is outside the valid range ({PortMinimum}-{PortMaximum}).</sys:String>
+
+    <sys:String x:Key="ProfileValidation_MapNameBlank">The map name has not been entered.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ServerNotDownloaded">Server files have not been downloaded, server folder does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerExeNotDownloaded">Server files have not been downloaded properly, server executable file ({ServerExe}) does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ServerDifferentApplication">The server files are for a different application.</sys:String>
+
+    <sys:String x:Key="ProfileValidation_ModFileNotDownloaded">Mod {modId} has not been downloaded, mod file does not exist.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModDifferentApplication">Mod {modId} is for a different application.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModOutdated">Mod {modId} is outdated.</sys:String>
+    <sys:String x:Key="ProfileValidation_ModSteamError">Mod {modId} details could not be retrieved from steam.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Profile Save -->
+    <sys:String x:Key="ProfileSave_Saving">Saving...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingProfileFile">Saving Profile File...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingConfigFiles">Saving Config Files...</sys:String>
+    <sys:String x:Key="ProfileSave_SavingLauncherFile">Saving Launcher File...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingDirectoryPermissions">Checking Directory Permissions...</sys:String>
+    <sys:String x:Key="ProfileSave_CheckingScheduledTasks">Checking Scheduled Tasks...</sys:String>
+    <!--#endregion-->
+
+    <!--#region Restore Save Files -->
+    <sys:String x:Key="RestoreSaveFiles_BackupFileNotFound">Backup file could not be found or does not exist.</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_SaveFolderNotFound">The server save folder could not be found or does not exist.\r\n{saveFolder}</sys:String>
+    <sys:String x:Key="RestoreSaveFiles_MissingWorldSaveFile">The backup does not contain the world save file.</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Update -->
+    <sys:String x:Key="ServerUpdate_Title">Server Update</sys:String>
+    <sys:String x:Key="ServerUpdate_WarningLabel">There was a problem while performing the server update. This may leave your server in a incomplete state.\r\n\r\nDo you want to continue with the server start, this could cause problems?</sys:String>
+    <!--#endregion-->
+
+    <!--#region Discord Bot -->
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord Bot Error</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">The discord bot requires a valid token so it can log into the discord server\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">The discord bot requires a valid prefix.\r\nThis can be set in the global settings.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">The discord bot prefix contains invalid characters. Only letters and numbers are allowed.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CommandNotEnabled">Command '{0}' has not been enabled.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandUnknown">Unknown command '{0}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunning">Another command is currently being processed.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandRunningProfile">Another command '{0}' is currently running against profile '{1}'.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandDisabledProfile">Command '{0}' has been disabled for profile '{1}'.</sys:String>
+
+    <sys:String x:Key="DiscordBot_ProfileMissing">The '{0}' command requires a profile id or alias.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileNotFound">Profile/Alias '{0}' was not found or is not associated with the channel.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileBadStatus">Profile '{0}' is in a state '{1}' that cannot run this command.</sys:String>
+    <sys:String x:Key="DiscordBot_ProfileUpdating">Profile '{0}' is currently being updated.</sys:String>
+    <sys:String x:Key="DiscordBot_NoChannelProfiles">No profiles are associated with the channel.</sys:String>
+
+    <sys:String x:Key="DiscordBot_InfoFailed">Call to server '{0}' failed.</sys:String>
+    <sys:String x:Key="DiscordBot_BackupRequested">A backup request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_RestartRequested">A restart request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_ShutdownRequested">A shutdown request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_StartRequested">A start request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_StopRequested">A stop request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_UpdateRequested">An update request for server '{0}' has been sent.</sys:String>
+    <sys:String x:Key="DiscordBot_CommandComplete">The request for server '{0}' has completed.</sys:String>
+
+    <sys:String x:Key="DiscordBot_CountLabel">Count:</sys:String>
+    <sys:String x:Key="DiscordBot_MapLabel">Map:</sys:String>
+    <!--#endregion-->
+
+</Globalization:GlobalizationResourceDictionary>
