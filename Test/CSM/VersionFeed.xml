@@ -1,0 +1,2223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:9EF03FB7-4958-4B39-808A-12B8E4008510</id>
+  <title>Conan Server Manager Version Feed</title>
+  <subtitle>This is the Conan Server Manager release version feed.</subtitle>
+  <link href="https://servermanagers.freeforums.net/" />
+  <updated>2022-11-07T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:5E67390A-B4A5-442D-AC94-9E1A79423B86</id>
+    <title>1.1.82 (1.1.82.1)</title>
+    <summary>1.1.82.1</summary>
+    <link href="" />
+    <updated>2022-11-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>zh-CN Translation file added.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:BFC591B5-6DF6-48FF-9107-E5B9C41EC1C1</id>
+    <title>1.1.81 (1.1.81.2)</title>
+    <summary>1.1.81.2</summary>
+    <link href="" />
+    <updated>2022-08-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Automatic Management Section - fixed on Login selection of the Auto-Start option.</li>
+            <li>Support Zip Creation - fixed crashing bug when the file contents is empty.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6D1F49A0-06E6-415F-AA92-AACD598BC50C</id>
+    <title>1.1.80 (1.1.80.6)</title>
+    <summary>1.1.80.6</summary>
+    <link href="" />
+    <updated>2022-08-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Automatic Management - fixed a bug with the shutdown server day selection. Both Shutdown 1 and Shutdown 2 days would affect each other, now they are independant.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Details Section - added new option to use the Conan Testlive Dedicated Server files. This new option will switch the steam application id of the server files to use the Conan Testlive Dedicated Server files, instead of the Conan Dedicated Server files.</li>
+            <li>Server Update - updated the code to determine which set of dedicated server files (Conan or Conan Testlive) is required when performing server and mod file updates. Separate Cache folders will be maintained for each.</li>
+            <li>Automatic Management - rearranged the options so they are grouped correctly.</li>
+            <li>Auto-Start Server Option - added a new option selection for on Boot and on Login.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:8CDA70CF-E8B8-4B9B-AD50-AD9A8B528E5B</id>
+    <title>1.1.79 (1.1.79.3)</title>
+    <summary>1.1.79.3</summary>
+    <link href="" />
+    <updated>2022-07-25T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Status - changed the server status code to stop the status cycling and to be more accurate.</li>
+            <li>Added a check for a valid configuration file when starting the server manager. If config file is not valid, then it will delete the config file and shutdown the manager, with a message to restart the manager.</li>
+            <li>Fixed a crash bug when trying to set the logging folder.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
+    <title>1.1.78 (1.1.78.2)</title>
+    <summary>1.1.78.1</summary>
+    <link href="" />
+    <updated>2022-07-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added config settings to allow multiple CPUs to be read when setting the CPU Affinity.</li>
+            <li>Updated all URL links to use https.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CDD1853D-66EA-4649-AD24-E491D64C853E</id>
+    <title>1.1.77 (1.1.77.3)</title>
+    <summary>1.1.77.3</summary>
+    <link href="" />
+    <updated>2022-06-24T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Availability Status - Changed the Waiting for Publication status into two new statuses, to clarify the issue.</li>
+            <li>Main Window - changed the control coloring (now blue) that are NOT included in the profile sync.</li>
+            <li>Server Monitor - Added a Ports column that shows the main server ports.</li>
+            <li>3rd Party Libraries - updated all library to latest versions.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:15FEC514-38B7-4367-BE79-1E00983E7EBB</id>
+    <title>1.1.76 (1.1.76.3)</title>
+    <summary>1.1.76.3</summary>
+    <link href="" />
+    <updated>2022-06-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Gamedata Files - when adding, deleteing or reloading the gamedata files via the gamedata window, the server manager will reload them and update the settings window.</li>
+            <li>Main Window - when changing the location of the server, it will reload the profile with the config settings in the new location.</li>
+            <li>Main Window - colored the settings (orange) that are NOT included in the profile sync.</li>
+            <li>Main Window - added discord server button.</li>
+            <li>Main Window - re-organised the buttons.</li>
+            <li>Default Window Focus - set the default focus of each window to the first control - if possible.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:4E189446-9861-4B64-9B27-0E3E655CD1CA</id>
+    <title>1.1.75 (1.1.75.1)</title>
+    <summary>1.1.75.1</summary>
+    <link href="" />
+    <updated>2022-06-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Reset Server - added new button to reset your server. This will delete all server files and reset your server back to new.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor - added shutdown reason.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:4E189446-9861-4B64-9B27-0E3E655CD1CA</id>
+    <title>1.1.74 (1.1.74.3)</title>
+    <summary>1.1.74.3</summary>
+    <link href="" />
+    <updated>2022-06-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Updated to query master timeouts from 10 seconds to 30 seconds.</li>
+            <li>RCON Message Modes - now loads them from the gamedata file, so they can be extended without a code change.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D0681B47-5715-473E-99D3-63F475A997C4</id>
+    <title>1.1.73 (1.1.73.5)</title>
+    <summary>1.1.73.5</summary>
+    <link href="" />
+    <updated>2022-05-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Monitor - added new functionality to bulk start, restart, stop, shutdown, update and backup your servers.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>World Save Zipping - have changed the way the zip file is created. All files are now added to the zip in one pass, rather than as separate files.</li>
+            <li>Backup Interval Changes - The backup interval has been changed to use the value in the global settings, when auto-backup is enabled or not.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E367ACB5-E38A-4B3A-A089-E43D011A97E4</id>
+    <title>1.1.72 (1.1.72.4)</title>
+    <summary>1.1.72.4</summary>
+    <link href="" />
+    <updated>2022-05-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Shutdown/Restart - have rewritten the code that sends the RCON commands to prevent the hangs after the RCON command fails.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto Process Task Priorities - Have added task priority droplists to the global settings, allowing the priority for each auto process task to be changed.</li>
+            <li>Player List - adjusted the margin around the border of the players in the player list.</li>
+            <li>de-DE Translation file added.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CE3805D7-1CC8-4DF6-8015-8E2B9B87C1FF</id>
+    <title>1.1.71 (1.1.71.1)</title>
+    <summary>1.1.71.1</summary>
+    <link href="" />
+    <updated>2022-05-09T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>World Save Backups - have fixed the timestamps associated with the files inside the zip file.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:86CF3CE5-C935-4C04-8D31-224B2E1DD203</id>
+    <title>1.1.70 (1.1.70.2)</title>
+    <summary>1.1.70.2</summary>
+    <link href="" />
+    <updated>2022-05-09T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Rcon Player List - fixed a bug when displaying the player details for Epic Players.</li>
+            <li>Removed TLS13 from the list of accepted security protocols, as not all OS support TLS13.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:AD8ABBB5-093A-4FDB-B473-FCED2DB46781</id>
+    <title>1.1.69 (1.1.69.7)</title>
+    <summary>1.1.69.7</summary>
+    <link href="" />
+    <updated>2022-05-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed an issue that would not send through the auto process messages via RCON using the correct mode selected in the global settings.</li>
+            <li>Fixed an issue with the path normalization, where it would add extra '\' characters to the end of the path, when the path was a Unc path.</li>
+            <li>World Save Backup - fixed the backup of the files.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto Backup Settings - added RCON broadcast mode droplist, so backup processes can send messages via RCON using this mode.</li>
+            <li>Global Backup Settings - added option to include/exclude the SaveGames folder in the worldsave backup (default exclude).</li>
+            <li>Global Alert Settings - added new textbox allowing the formatting of the ipaddress and port in the server startup message (default {ipaddress}:{port}).</li>
+            <li>Rcon Window - minor changes to the player list, online player count and server status.</li>
+            <li>Online Player Count - fixed the online player count to display the correct value.</li>
+            <li>Security Protocol Changes - updated the security protocols to use TLS12 and TLS13.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:FF2C83B2-6D10-4217-A021-5B5F090FC480</id>
+    <title>1.1.68 (1.1.68.2)</title>
+    <summary>1.1.68.2</summary>
+    <link href="" />
+    <updated>2022-05-02T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Shutdown window - when shutting down a server, the Cancel Shutdown button is now displayed.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>World Save Backup - added the SaveGames folder to the to the backup zip file.</li>
+            <li>World Save Restore - now restores the SaveGames folder.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E482A8A4-88C3-4517-A4DD-B954811F4F13</id>
+    <title>1.1.67 (1.1.67.1)</title>
+    <summary>1.1.67.1</summary>
+    <link href="" />
+    <updated>2022-04-23T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed the discord bot Info command, to release the profile once the command has finished running.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>ru-RU Translation file added.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:243F602B-CD67-4691-BE25-61646590A07A</id>
+    <title>1.1.66 (1.1.66.1)</title>
+    <summary>1.1.66.1</summary>
+    <link href="" />
+    <updated>2022-04-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - added new discord bot setting for an All Profiles alias. To disable to All Profiles feature, just clear the alias field.</li>
+            <li>Discord Bot - can now use the new All Profiles alias to send a command to all profiles associated with the channel.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:59A5E20B-D3B2-4FDB-8E03-F0C3022C344F</id>
+    <title>1.1.65 (1.1.65.1)</title>
+    <summary>1.1.65.1</summary>
+    <link href="" />
+    <updated>2022-03-23T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>RCON Window - added two addional RCON broadcast methods, both require Pippi mod - Alert and Server.</li>
+            <li>Global Settings - added RCON broadcast mode droplist, so auto processes can send messages via RCON using this mode.</li>
+            <li>Auto Processes - changed the message broadcast to use the new config setting, not a hardcoded value.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:674D8E81-FB1B-42D9-8309-41AE40D5192F</id>
+    <title>1.1.64 (1.1.64.1)</title>
+    <summary>1.1.64.1</summary>
+    <link href="" />
+    <updated>2022-03-22T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug that would prevent auto processes from sending through broadcast messages to the clients.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C6DE07B3-ADA8-4AE4-BFE4-1F87CDFF6284</id>
+    <title>1.1.63 (1.1.63.2)</title>
+    <summary>1.1.63.2</summary>
+    <link href="" />
+    <updated>2022-03-03T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Branch Details moved to new Server Details section, easier to perform profile sync.</li>
+            <li>Misc. Language File Updates.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6F91598E-D62C-4F48-A205-C9C4A66BBB65</id>
+    <title>1.1.62 (1.1.62.3)</title>
+    <summary>1.1.62.3</summary>
+    <link href="" />
+    <updated>2022-02-17T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added prefix launcher option to launcher arguments.</li>
+            <li>Added server monitor window startup state to global settings.</li>
+            <li>Added confirmation message box when stopping server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:189B95FA-8ACA-4E37-9A34-443B6C5E27EE</id>
+    <title>1.1.61 (1.1.61.4)</title>
+    <summary>1.1.61.4</summary>
+    <link href="" />
+    <updated>2022-01-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug when pasting ini config into paste window, resulting in blank record.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Server Startup Options - Added new option to start the server windows minimzed.</li>
+            <li>Minor tweaks to the Auto-Update process to help prevent intermittent exceptions.</li>
+            <li>Server manager language will default to the computers language setting on first start, if possible.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:656D558C-0D7C-47CF-BB80-527443B0EA5E</id>
+    <title>1.1.60 (1.1.60.2)</title>
+    <summary>1.1.60.2</summary>
+    <link href="" />
+    <updated>2021-12-23T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed an error when deleting from a list while iterating over it.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added option to enable/disable the check for running server manager instance on startup.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:7531B516-6C68-452B-B484-25374A47C7A5</id>
+    <title>1.1.59 (1.1.59.1)</title>
+    <summary>1.1.59.1</summary>
+    <link href="" />
+    <updated>2021-12-22T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed the duplication of the Server Files for Steam Users.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:19B09A66-43F2-4D5F-AF33-5C77D7EA9A6B</id>
+    <title>1.1.58 (1.1.58.17)</title>
+    <summary>1.1.58.17</summary>
+    <link href="" />
+    <updated>2021-12-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed the cleanup of the log files generated by the auto processes (Backup, Update and Shutdown/Restart).<br/>NOTE: It will not cleanup the existing files, you need to do that manually.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Discord Bot Status and a button to Stop/Start the discord bot.</li>
+            <li>Global Settings - Discord Bot section - Added a log level droplist.</li>
+            <li>Global Settings - Discord Bot section - Added a checkbox to allow all bots.</li>
+            <li>Global Settings - Discord Bot section - Added a whitelist to allow bots to send commands to the server manager.</li>
+            <li>Global Settings - Added new Log settings which allow you to turn if on/off and set the number of days/files to retain.</li>
+            <li>Server Settings - Discord Bot section - Added an alias that can be used with the discord command instead of the profile id.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Discord Bot - all commands are now case INsensitive, along with the profile id and the alias.</li>
+            <li>Discord Bot - removed the mandatory requirement to enter the '!' after the discord prefix. The '!' has been added to the existing prefix so no change to existing functionality, but you can now change it.</li>
+            <li>Server Settings - Discord Bot section - Add a reset to default button.</li>
+            <li>Profile Sync - Added Discord Bot section to the list.</li>
+            <li>Auto-Update process - have reworked parts of the process and the logging.</li>
+            <li>Manual-Update process - have reworked parts of the logging.</li>
+            <li>Out of Date Mod Check - Added Valid mod check, so will not include mod that are invalid.</li>
+            <li>Made changes to the code to help improve performance.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6383E79A-C31F-462B-9730-B26B28DC5EFF</id>
+    <title>1.1.57 (1.1.57.3)</title>
+    <summary>1.1.57.3</summary>
+    <link href="" />
+    <updated>2021-12-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug with the Server Shutdown when the CheckForOnlinePlayers option not selected.</li>
+            <li>Fixed a bug when the backup path was a root directory that caused a 'Invalid URI: A Dos path must be rooted' crash.</li>
+            <li>Added additional validation when setting directories in the global setting, to ensure they are rooted correctly.</li>
+            <li>Fixed a bug when starting the server manager and it tries to download steamcmd, but fails as steamcmd is unavailable for download.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F8A08616-749B-48E7-87D5-D97E86AB3926</id>
+    <title>1.1.56 (1.1.56.6)</title>
+    <summary>1.1.56.6</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>
+              A new Discord Bot has been added to the server manager.<br/>
+              This new discord bot will allow you to send <font color="#0094FF">Start, Stop, Shutdown, Restart, Backup and Update</font> commands to the server manager from within your discord client.<br/>
+              To setup the new discord bot, open the global settings and scroll down to the Discord section.<br/><br/>
+              <font color="#e62919">
+                NOTE: This is long process to get the discord bot working, and I have created a forum post with detailed instructions how to do it.
+              </font>
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Added reset button to the Data Directory Location.</li>
+            <li>Server Monitor window now stores it's location.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A3A790A9-D511-4CE8-AC15-A36B3DAB4385</id>
+    <title>1.1.55 (1.1.55.2)</title>
+    <summary>1.1.55.2</summary>
+    <link href="" />
+    <updated>2021-12-05T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed some globalization key values (maps and branches).</li>
+            <li>Changed the way the data directory is selected and created on first startup of the server manager.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:38961ED8-0964-4C1A-B09C-8AE2C5FCF76E</id>
+    <title>1.1.54 (1.1.54.3)</title>
+    <summary>1.1.54.3</summary>
+    <link href="" />
+    <updated>2021-12-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added the Profile ID to the top of the profile window.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added globalization to the Main Window Start Mode setting in the Global Settings.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:80B2DFDC-E9BE-4B56-A1FE-DD57E64647D1</id>
+    <title>1.1.53 (1.1.53.1)</title>
+    <summary>1.1.53.1</summary>
+    <link href="" />
+    <updated>2021-11-24T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a crashing bug when CSM closes and is unable to find the backup location to save the config settings.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - added option to set the Main Window start mode - Normal, Maximized, Minimized.</li>
+            <li>Main Window - now stores the Left and Top positions of the window, when in Normal mode. Will restore the window position when started. Defaults to 50,50.</li>
+            <li>Server Settings - added resizing to all the grids, so the height can be increased/decreased. The height is also remembered, so when you reopen, it will size the grid correctly.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Fixed the steamcmd warning about 'Please use force_install_dir before login!'.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:285E9972-4FC6-49EA-8FAD-1086F7FC5354</id>
+    <title>1.1.52 (1.1.52.1)</title>
+    <summary>1.1.52.1</summary>
+    <link href="" />
+    <updated>2021-11-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Status checks - a few code tweaks to the server status checks.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:2B49A030-A742-476B-B811-6F0D7780B117</id>
+    <title>1.1.51 (1.1.51.1)</title>
+    <summary>1.1.51.1</summary>
+    <link href="" />
+    <updated>2021-08-22T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Added new server transfer options (server whitelist option in future version).</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6914861A-2D4E-4F08-89A3-D3D7A77F74C1</id>
+    <title>1.1.50 (1.1.50.1)</title>
+    <summary>1.1.50.1</summary>
+    <link href="" />
+    <updated>2020-11-25T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Added option to automatically manage the Public IP, default to True. If disabled, then the Public IP must be updated manually.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:B16E389F-EB2F-43DE-8802-1FD5FE09E90A</id>
+    <title>1.1.49 (1.1.49.3)</title>
+    <summary>1.1.49.3</summary>
+    <link href="" />
+    <updated>2020-11-10T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Server Settings - Added Options UseVAC and AllowFamilySharedAccount.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Disabled the Server Peer Port - can no longer be changed, defaults to Server Port + 1.</li>
+            <li>Removed Query Port and Server Peer Port from Engine.ini file.</li>
+            <li>Added Rcon Port to the command line.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:570ABD59-6E8B-4A20-87EA-083D947B995D</id>
+    <title>1.1.48 (1.1.48.5)</title>
+    <summary>1.1.48.5</summary>
+    <link href="" />
+    <updated>2020-10-25T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added public ip checks to all server starts.</li>
+            <li>Server Options - added server region selection.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>After profile sync, if automatic management section selected, it will run the schedule update.</li>
+            <li>Translation files updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:613F9F72-EBAF-484B-9593-8977CF8ACCD4</id>
+    <title>1.1.47 (1.1.47.2)</title>
+    <summary>1.1.47.2</summary>
+    <link href="" />
+    <updated>2020-10-02T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added new global setting to include Server IP and port to server start alert.</li>
+            <li>Added server ip and port to the alert message when starting the server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:AC6E0F0E-76F6-4769-81AF-7B9919FCD99C</id>
+    <title>1.1.46 (1.1.46.3)</title>
+    <summary>1.1.46.3</summary>
+    <link href="" />
+    <updated>2020-09-25T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Rcon Window/Player List - changed the way the players are loaded and the online status is fetched.</li>
+            <li>Server Shutdown - added additional logging to server shutdown process to diagnose why in-game shutdown broadcasts are not being sent.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:63D078CE-5E97-462C-A0A6-4327692D0D69</id>
+    <title>1.1.45 (1.1.45.1)</title>
+    <summary>1.1.45.1</summary>
+    <link href="" />
+    <updated>2020-09-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed bug that cleared the server map when clicking save in the Mod Details window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5C31A84E-72DB-41A8-8FE1-91ACC40B318B</id>
+    <title>1.1.44 (1.1.44.1)</title>
+    <summary>1.1.44.1</summary>
+    <link href="" />
+    <updated>2020-09-20T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor - fixed DLC map name display</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:21AABD3F-375F-4D5D-B8AD-78062834009D</id>
+    <title>1.1.43 (1.1.43.1)</title>
+    <summary>1.1.43.1</summary>
+    <link href="" />
+    <updated>2020-09-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Administration section - Added the Isle of Siptah DLC map to the map droplist.</li>
+            <li>Administration section - added new field to set the Map Save filename, should default to the correct db file, for the two maps.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:892ADC34-8A4A-460F-9B04-DC9C9987466C</id>
+    <title>1.1.42 (1.1.42.1)</title>
+    <summary>1.1.42.1</summary>
+    <link href="" />
+    <updated>2020-08-06T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>en-US updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:1C99C798-11ED-4D57-A661-423D30D8B9AA</id>
+    <title>1.1.41 (1.1.41.8)</title>
+    <summary>1.1.41.8</summary>
+    <link href="" />
+    <updated>2020-07-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added a new server manager updater check, when performing an upgrade of the server manager.</li>
+            <li>Added a new directory check when selecting the data directory, to make sure it is not underneath the installation folder.</li>
+            <li>New tray icon when the server manager starts.</li>
+            <li>New global setting to Minimize to Tray.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added a filter button to the filter boxes. Typing in the filter box no longer auto filters, you need to click the filter button to apply/clear the filter.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:45292341-D95A-42CE-88AB-C7B5E34AFAF9</id>
+    <title>1.1.40 (1.1.40.2)</title>
+    <summary>1.1.40.2</summary>
+    <link href="" />
+    <updated>2020-07-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the shutdown timer alert interval from always 5 minutes, to a varying scale base on remaining time. Eg. 60 minute shutdown timer will only alert at these times - 60, 30, 15, 10, 5, 4 ,3, 2, 1.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C66B9180-74BF-4B6D-B04F-E220623DD748</id>
+    <title>1.1.39 (1.1.39.1)</title>
+    <summary>1.1.39.1</summary>
+    <link href="" />
+    <updated>2020-07-11T12:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed an issue where the Alert message for the server status would send through English only. Changed it so that it will send the translated status instead.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C8612D41-184B-4A9E-9780-457B0337CD33</id>
+    <title>1.1.38 (1.1.38.13)</title>
+    <summary>1.1.38.13</summary>
+    <link href="" />
+    <updated>2020-07-11T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Added Whitelist checkbox to the sync.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Shutdown Options - Have added a new setting to disable the online player check when shutting down the server.</li>
+            <li>Shutdown Window - Have added a new setting to disable the online player check when shutting down the server.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Globalisation - added some additional strings to the globalisation files.</li>
+            <li>Remove the avatar images from the player/rcon list.</li>
+            <li>Removed the map from the profile sync.</li>
+            <li>Removed all steam related features from PlayerList/Rcon windows.</li>
+            <li>Fixed loaded EPIC player profiles in PlayerList/Rcon windows.</li>
+            <li>Removed steam details from Player window.</li>
+            <li>Changed the Server Files section to be generic.</li>
+            <li>Changed the database schema, so the player and tribe loading works again.</li>
+            <li>Updated QueryMaster to handle missing message parts, when querying the server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:3BF2385D-97ED-48C9-890E-E76F740B4EBB</id>
+    <title>1.1.37 (1.1.37.1)</title>
+    <summary>1.1.37.1</summary>
+    <link href="" />
+    <updated>2020-06-11T12:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Mod Details Window - fixed bug when clicking save button.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:855F4319-6E7D-4DB7-A7C8-AD6DC2A4C074</id>
+    <title>1.1.36 (1.1.36.5)</title>
+    <summary>1.1.36.5</summary>
+    <link href="" />
+    <updated>2020-06-10T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the logic when reading the config files, when an expected setting is missing from the config file.</li>
+            <li>Globalisation - added some additional strings to the globalisation files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:84F25550-B942-4C86-9822-F71265A1EC8F</id>
+    <title>1.1.35 (1.1.35.1)</title>
+    <summary>1.1.35.1</summary>
+    <link href="" />
+    <updated>2020-05-28T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added additional logging when the server is being started.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F6979B74-6993-41F7-B824-E936E804B2D3</id>
+    <title>1.1.34 (1.1.34.3)</title>
+    <summary>1.1.34.3</summary>
+    <link href="" />
+    <updated>2020-05-21T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Profile Sync - removed the ports and password from the administration section sync.</li>
+            <li>Global Settings - changed the workshop cache field to accept 0. When set the zero it will disable to auto refresh, and must be done manually.</li>
+            <li>Globalisation - added some missing strings to the globalisation files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F31488FF-5B1F-4484-A9C0-DE9AA1DB8282</id>
+    <title>1.1.33 (1.1.33.7)</title>
+    <summary>1.1.33.7</summary>
+    <link href="" />
+    <updated>2020-05-14T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Removed ProfileToolTip from profile file.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings - added new alert message for Outdated mods to the discord plugin.</li>
+            <li>Out of Date Mods - added new alert message that is sent when the server manager detects a mod is outdated.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Profile Sync Window - have changed the way this window works. You now open on the profile you want to copy from, and you can now select one or more profiles to copy to.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5ADD1255-C89E-4DEF-934A-03F129CBE779</id>
+    <title>1.1.32 (1.1.32.1)</title>
+    <summary>1.1.32.1</summary>
+    <link href="" />
+    <updated>2020-04-21T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server Setting Resets - added any missing settings to each reset methods.</li>
+            <li>Server Setting Syncs - added any missing settings to each sync methods.</li>
+            <li>New Profile Creation - fixed a bug that causes new profile to use the same profile id.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0AEF2443-7B40-41B9-9918-7C5C034912AC</id>
+    <title>1.1.31 (1.1.31.1)</title>
+    <summary>1.1.31.1</summary>
+    <link href="" />
+    <updated>2020-04-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Setting Directory Permissions - Fixed bug that caused the directory permissions process to fail.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:518E4808-C54D-4FED-9E47-5777468E33BD</id>
+    <title>1.1.30 (1.1.30.5)</title>
+    <summary>1.1.30.5</summary>
+    <link href="" />
+    <updated>2020-04-19T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Deleting profiles - have added dispose call to prevent crash when updating server status.</li>
+            <li>Deleting profiles - have added null check to dispose call to prevent crash when removing profile.</li>
+            <li>Server Monitor Shortcut - fixed the shortcut creation, due to new server manager name.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added ToolTip to profile label and profile tab that shows the profile name and profile id.</li>
+            <li>Windows Firewall Management - have replaced the command line code to create the firewall rules with a proper library to create them.</li>
+            <li>Windows Firewall Management - when you delete a profile it will now attempt to remove the firewall rules.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:63BC4246-3F95-4B06-99D3-C012D8B7BA0E</id>
+    <title>1.1.29 (1.1.29.1)</title>
+    <summary>1.1.29.1</summary>
+    <link href="" />
+    <updated>2020-04-12T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug that caused the server manager to crash when creating the server file watchers.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5FEBCE52-E2B5-453F-BE87-A6D56E415E6C</id>
+    <title>1.1.28 (1.1.28.1)</title>
+    <summary>1.1.28.1</summary>
+    <link href="" />
+    <updated>2020-04-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed a bug that caused the server manager to crash when opening the RCON Window or Players List.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E797A3E2-5708-422A-808B-48DBA55B3FB0</id>
+    <title>1.1.27 (1.1.27.2)</title>
+    <summary>1.1.27.2</summary>
+    <link href="" />
+    <updated>2020-04-10T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Manager Profiles - Have changed the name of the profile files to be the profile id. This is to prevent profile name clashes.</li>
+            <li>Server Manager Profiles - Have removed the config file backups in the profiles folder. These files were never used and a pain to maintain.</li>
+            <li>Server Manager Logging - All logging now uses the profile id as the folder/filenames.</li>
+            <li>Server Installation Folder - changed the underlying control so that it displays underscore characters.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A231F3EF-9CC8-4107-8580-1067D1C49054</id>
+    <title>1.0.26 (1.0.26.3)</title>
+    <summary>1.0.26.3</summary>
+    <link href="" />
+    <updated>2020-04-05T03:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - changed the min width to 1024 pixels.</li>
+            <li>Main Window - rearranged the header section and the buttons.</li>
+            <li>Profile Sync Window - windows is now resizable.</li>
+            <li>Slider control - changed the min width of the value field to be smaller.</li>
+            <li>pt-BR Translation file added. (thanks @bruno5011)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:EF91C5B7-05CE-4FD9-9CD1-AC5D37DEEB59</id>
+    <title>1.0.25 (1.0.25.2)</title>
+    <summary>1.0.25.2</summary>
+    <link href="" />
+    <updated>2020-04-04T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>RCON Window - Fixed the overlay, so that is can be used again.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>pt-BR Translation file added. (thanks @bruno5011)</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Added last started date/time as tooltip for Status field.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:7F94445C-7435-4688-8C88-468E5308735E</id>
+    <title>1.0.24 (1.0.24.1)</title>
+    <summary>1.0.24.1</summary>
+    <link href="" />
+    <updated>2020-04-02T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed the Auto-Restart Grace Period interval logic. It should work correctly now.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Global Settings - Auto-Restart section - added a note and fixed the tooltip.</li>
+            <li>ru-RU Translation file updated. (thanks @varlonec)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:AFF6E785-595E-47B9-82AF-526CD0BBBBA4</id>
+    <title>1.0.23 (1.0.23.10)</title>
+    <summary>1.0.23.10</summary>
+    <link href="" />
+    <updated>2020-04-01T02:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Setting - Added new Auto Restart section with options to enable/disable auto restart grace period.</li>
+            <li>Starting a Server - when you server is started, it now records the last started time in your profiles.</li>
+            <li>Auto-Restart - with the grace period option enabled, when the auto-restart process runs it will check if your server was started within the grace period and skip; otherwise it will restart as normal.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>RCON Window - added adjustable player list, width is retained.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:B33EF359-E372-4BA6-BC43-B8AC59939DEA</id>
+    <title>1.0.22 (1.0.22.1)</title>
+    <summary>1.0.22.1</summary>
+    <link href="" />
+    <updated>2020-03-23T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Monitor Window - added backup and open folder buttons.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0DB80A69-BA80-4451-A3C2-58C1918F5FBA</id>
+    <title>1.0.21 (1.0.21.8)</title>
+    <summary>1.0.21.8</summary>
+    <link href="" />
+    <updated>2020-03-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">New</u>
+          <br/>
+          <ul>
+            <li>Main Window - the main window now stores the height and width of the window.</li>
+            <li>Main Window - new button (top right corner) to open the new Server Monitor window.</li>
+            <li>Server Monitor Window - new window that shows all you servers in one form. Allows you to Start, Stop, Update/Verify and open the Player List or RCON Windows.</li>
+            <li>Server Monitor Window - includes a button to create a shortcut on your desktop that can start the Server Monitor directly, without the server manager.</li>
+            <li>Global Settings - Shutdown Options - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
+            <li>Shutdown Window - have added an option to enable/disable sending the shutdown message to the game client via RCON.</li>
+            <li>Shutdown Process - have added logic to send the shutdown message to the game client via RCON, only if the setting is enabled.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated. (thanks @angemymy)</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:DEA5605F-8087-4BC5-A344-B1443BFFE919</id>
+    <title>1.0.20 (1.0.20.1)</title>
+    <summary>1.0.20.1</summary>
+    <link href="" />
+    <updated>2020-03-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Game Data - fixed a crash when loading with an invalid gamedata file.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Game Data Window - Added a validate button, to validate the user gamedata files.</li>
+            <li>Game Data Window - Displays the gamedata file in Red if the file is invalid.</li>
+            <li>Game Data Window - When adding a new gamedata file, will display an error if the file is invalid.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:BBA9E018-2C37-4407-A499-F4A54D37B1AA</id>
+    <title>1.0.19 (1.0.19.1)</title>
+    <summary>1.0.19.1</summary>
+    <link href="" />
+    <updated>2020-03-08T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Dialog forms - have fixed an issue where the dialog forms would open behind the current window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:2E41E574-FB45-4B23-B080-07645DCCABEE</id>
+    <title>1.0.18 (1.0.18.1)</title>
+    <summary>1.0.18.1</summary>
+    <link href="" />
+    <updated>2020-03-07T01:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Game Data - fixed a bug that would prevent gamedata files from being loaded.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:FCE4B9D9-9A1B-4A99-B2DD-364B53DD911D</id>
+    <title>1.0.17 (1.0.17.1)</title>
+    <summary>1.0.17.1</summary>
+    <link href="" />
+    <updated>2020-03-07T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Main Window - Added Game Data Window button to open a new Game Data window. Button is top right corner next to plugins button.</li>
+            <li>Game Data Window - A new window that allows you to manage your game data files.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:702FFCE2-CEFB-45C9-A5E6-C1619B39D2DE</id>
+    <title>1.0.16 (1.0.16.1)</title>
+    <summary>1.0.16.1</summary>
+    <link href="" />
+    <updated>2020-03-03T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Global Settings (Advanced) - added an option to enable/disable world save backups being performed when the server shuts down. For those of you who use other backup methods.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:571A6313-F1A5-406C-B979-3472CEF9AA16</id>
+    <title>1.0.15 (1.0.15.1)</title>
+    <summary>1.0.15.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2019-11-01T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Server File Details - Fixed a crashing bug caused by having a steamid that is not available or does not exist.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C4A1DE77-2559-4415-A262-A3A8C8610822</id>
+    <title>1.0.14 (1.0.14.1)</title>
+    <summary>1.0.14.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-11-22T10:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Game Map droplist - moved TheExiledLands map to the gamedata file.</li>
+          </ul>
+          <font color="#ff0000">
+            WARNING: Before you restart your servers, check that the Map Name is set correctly.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:0FDE5546-E576-44C2-860D-A266A24F1D8C</id>
+    <title>1.0.13 (1.0.13.1)</title>
+    <summary>1.0.13.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-11-19T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Auto Update - Have added a delay settings to the auto-update for Sequential processing. The delay is in seconds (default 0) and will wait that number of seconds between each server update.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Main Window - Start position changed to 50,50.</li>
+            <li>Server Status - removed server status call to offline WEB API.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:61CA2DCD-A90C-45EA-8FDA-8C497FEFFE3B</id>
+    <title>1.0.12 (1.0.12.1)</title>
+    <summary>1.0.12.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-08-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Download Location Changed - Have moved the server manager files to a new location for hosting.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:61CA2DCD-A90C-45EA-8FDA-8C497FEFFE3B</id>
+    <title>1.0.11 (1.0.11.1)</title>
+    <summary>1.0.11.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-06-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Whitelisted Players - Added check option to turn whitelist on/off.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:773B7F65-4B5C-4775-B985-C115284B7312</id>
+    <title>1.0.10 (1.0.10.5)</title>
+    <summary>1.0.10.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-06-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MotD Interval - fixed the bug when enabling the MotD interval.</li>
+            <li>Profile Import - fixed the profile import, so that any INI file can be imported.</li>
+            <li>Out-Of-Date Mods - Fixed bug that would keep updating mod status when changing profiles.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Auto-Shutdown/Restart - Have added days of week, so you can schedule your server to shutdown on one or more days.</li>
+            <li>Server Files - Disabled file watcher when saving server files. Prevents double loading.</li>
+            <li>Config Files - changed the output of float numbers to 6 decimals.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:3872D5BF-BD64-4F2B-B9BE-79246113F88F</id>
+    <title>1.0.9 (1.0.9.5)</title>
+    <summary>1.0.9.5</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+  <updated>2018-06-04T05:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Mod Details - when the steam fetch fails, basic mod details are read from the local workshop cache file, if one exists.</li>
+            <li>Mod Details - grid background changed to blue, if mod record is invalid.</li>
+            <li>Mod Details - grid background changed to blue, if mod details could not be downloaded from steam. Private mods and mod that have been removed from steam workshop.</li>
+            <li>Mod Details - added mod fetch status message if failed.</li>
+            <li>Out of Date Mods - changed to exclude mods that are invalid (no steam information).</li>
+            <li>Rcon Window - changed the order the server status and player list is started.</li>
+            <li>Rcon Window - added null reference checking for send command results.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:9776B7FA-7E33-47DC-8454-1E5812D76473</id>
+    <title>1.0.8 (1.0.8.1)</title>
+    <summary>1.0.8.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-30T00:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Translations - Fixed the map name and branch names when changing languages.</li>
+            <li>Server Validation - Fixed the validation when the mod details could not be downloaded from steam.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Server Shutdown Countdown - have removed the 4 minute, 3 minute and 2 minute broadcasts. So after the 5 minute broadcast then next one is the 1 minute broadcast.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:4B4FDA09-8A0F-4C44-9384-75F5EF2BC8FD</id>
+    <title>1.0.7 (1.0.7.2)</title>
+    <summary>1.0.7.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-27T03:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Processor Affinity - fixed bug with machines that have more than 32 processors.</li>
+            <li>Processor Affinity - removed code that checks the LauncherArgs for Affinity. Affinity can be set using the Affinity window, or the LauncherArgs.</li>
+            <li>Fix the bug when generating the support zip file.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Whitelist Server Files - Added new whitelist section to the server files. Creates the whitelist.txt file.</li>
+            <li>Whitelist Filters - Added new whitelist filters to the RCON window and Player List Window.</li>
+            <li>Whitelist Indicator - PLayers that are whitelisted now have a blue border around the player profile when offline.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:201FEB6E-0EF4-4BBD-8368-D9C8C5AF1FDA</id>
+    <title>1.0.6 (1.0.6.4)</title>
+    <summary>1.0.6.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-24T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Profile Tabs - added server status indicator buttons to the profile tabs for quick reference and ability to Start/Stop the server.</li>
+            <li>
+              Server Status Options - added two new options to the global settings.<br/>
+              1. Enable Server Status Actions - will enabled/disable to ability to perform an action when clicking on the server status icon.<br/>
+              2. Show Server Status Action Confirmation - will enabled/disable the display of a confirmation dialogue when an action is performed.
+            </li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>MotD Duration Label - fixed motd duration label format.</li>
+            <li>Global Settings - fixed shutdown command option tooltip.</li>
+            <li>Log folder creation - added exists check when creating the Logs folder.</li>
+            <li>DotNet Framework updated</li>
+          </ul>
+          <br/>
+          <font color="#1979e6">
+            NOTE: There is a new version of the Discord plugin - 1.0.12.1.
+          </font>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:179FDCE4-029F-4253-B531-0BF7619FF65F</id>
+    <title>1.0.5 (1.0.5.1)</title>
+    <summary>1.0.5.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-21T23:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Admin Password - fixed the bug that would prevent the admin password being written to the ServerSettings.ini file.</li>
+          </ul>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Process Priority and Processor Affinity - added new priority and affinity entry fields.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:E0D7D9C4-ECDD-4681-8D80-AF4238377B2E</id>
+    <title>1.0.4 (1.0.4.4)</title>
+    <summary>1.0.4.4</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-21T03:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Import Profile - new imports button to import existing servers to the current profile.</li>
+            <li>MotD - Message of the Day added with an interval timer that will broadcast it in game.</li>
+            <li>Kick AFK Settings - added Kick AFK percentage/time server settings.</li>
+            <li>User Settings - added reading user config settings from json file when loading.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:91B72A9C-84C9-47AE-A9C6-1E3565CA102A</id>
+    <title>1.0.3 (1.0.3.1)</title>
+    <summary>1.0.3.1</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-19T10:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>RCON Window - fixed the SQLite error, missing interop files are now deployed.</li>
+            <li>RCON Window - player list is now properly populated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CEC7E44F-F552-4CB0-8EBC-4122347D4B1A</id>
+    <title>1.0.2 (1.0.2.2)</title>
+    <summary>1.0.2.2</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-19T02:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>MOD Path - manual and auto updates now use the same path method.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Shutdown/Save Commands - moved them to the config file.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:5E30B739-D598-4E69-AB14-361B2676447A</id>
+    <title>1.0.1 (1.0.1.7)</title>
+    <summary>1.0.1.7</summary>
+    <link href="http://servermanagers.freeforums.net/thread/36/downloads" />
+    <updated>2018-05-17T08:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Very rough version for testing purposes only.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
