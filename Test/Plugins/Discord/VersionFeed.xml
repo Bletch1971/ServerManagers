@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>urn:uuid:C93B24FC-C8DB-44F3-8B6F-A27A52E7AF9F</id>
+  <title>Discord Plugin Version Feed</title>
+  <subtitle>This is the Discord Plugin release version feed.</subtitle>
+  <link href="" />
+  <updated>2022-01-15T00:00:00Z</updated>
+
+  <entry>
+    <id>urn:uuid:91438110-415C-4B88-9637-DB107AEE4546</id>
+    <title>1.0.22 (1.0.22.1)</title>
+    <summary>1.0.22.1</summary>
+    <link href="" />
+    <updated>2022-01-15T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>fr-FR Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:F8987FDF-7A69-4E03-99D8-E04ADFFFF0BB</id>
+    <title>1.0.20 (1.0.20.1)</title>
+    <summary>1.0.20.1</summary>
+    <link href="" />
+    <updated>2021-12-20T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Additional changes to config loading to prevent blanking the config file.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A9EC2F32-E026-485F-BD7B-C657DBA95B54</id>
+    <title>1.0.19 (1.0.19.5)</title>
+    <summary>1.0.19.5</summary>
+    <link href="" />
+    <updated>2021-12-12T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Fixed alert test message to support globalization.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the plugin initialization so it throws an exception if unable to load config file, rather than creating a new config file.</li>
+            <li>de-DE Translation file updated.</li>
+            <li>fr-FR Translation file added.</li>
+            <li>pt-BR Translation file updated.</li>
+            <li>ru-RU Translation file added.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C01A4AA0-D839-4732-9814-301DAC6EB094</id>
+    <title>1.0.18 (1.0.18.1)</title>
+    <summary>1.0.18.1</summary>
+    <link href="" />
+    <updated>2021-12-03T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>de-DE Translation file added.</li>
+            <li>pt-BR Translation file added.</li>
+            <li>zh-CN Translation file added.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Have enabled globalization support for the plugin.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:D8974ABF-8444-4D40-A594-D4443921B3B8</id>
+    <title>1.0.17 (1.0.17.2)</title>
+    <summary>1.0.17.2</summary>
+    <link href="" />
+    <updated>2020-07-13T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Profile name has been converted to a droplist and is now populated with the Server Manager Profile Names for selection.</li>
+            <li>Added drag/drop feature to the config window.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:A7158CB1-C5B2-4505-B171-CDD54918B227</id>
+    <title>1.0.16 (1.0.16.1)</title>
+    <summary>1.0.16.1</summary>
+    <link href="" />
+    <updated>2020-06-12T00:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Added url encoding so that special characters are sent to the webhook correctly.</li>
+            <li>Changed the text encoding from ASCII to UTF8, so that unicode languages should work correctly.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6ADCC571-3933-44E1-91FB-4DC8F8B836F2</id>
+    <title>1.0.15 (1.0.15.1)</title>
+    <summary>1.0.15.1</summary>
+    <link href="" />
+    <updated>2020-03-03T00:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Config Save - nows creates a backup file (.bak) of the config file before the new changes are saved.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6ADCC571-3933-44E1-91FB-4DC8F8B836F2</id>
+    <title>1.0.14 (1.0.14.2)</title>
+    <summary>1.0.14.2</summary>
+    <link href="" />
+    <updated>2018-08-16T00:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Download Location Changed - Have moved the server manager files to a new location for hosting.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:6ADCC571-3933-44E1-91FB-4DC8F8B836F2</id>
+    <title>1.0.13 (1.0.13.1)</title>
+    <summary>1.0.13.1</summary>
+    <link href="" />
+    <updated>2018-06-13T04:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Message Options - Added new message options to display the messages in Bold, Italic, Underlined and Embedded Code Block.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:21C68E55-E915-4337-8CFB-7E96FE6967CB</id>
+    <title>1.0.12 (1.0.12.1)</title>
+    <summary>1.0.12.1</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>Added version feed window.</li>
+          </ul>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>DotNet Framework updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C1ED0129-58CF-4AA4-8203-DDFA199E17DE</id>
+    <title>1.0.11 (1.0.11.0)</title>
+    <summary>1.0.11.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Icons - all icons have be cleaned up and updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:58894ADA-FDC4-4F5A-A904-B81D9130FD00</id>
+    <title>1.0.10 (1.0.10.0)</title>
+    <summary>1.0.10.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Attempt to fix the save config bug, where the config file is blank.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:20DB658C-44FA-4642-923B-A94926B0FDC3</id>
+    <title>1.0.9 (1.0.9.0)</title>
+    <summary>1.0.9.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">BUGFIX</u>
+          <br/>
+          <ul>
+            <li>Some minor bugfixes and code cleanup.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:3B0D107D-77DB-4E70-BE8A-336A20A55F8A</id>
+    <title>1.0.8 (1.0.8.0)</title>
+    <summary>1.0.8.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Changed the download location of the plugin.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:CDA4857D-FC4A-44AB-A11E-9CC1CDA11BCD</id>
+    <title>1.0.7 (1.0.7.0)</title>
+    <summary>1.0.7.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Minor code clean-up and tweaks.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:C6CEC6B2-E405-4DF6-B991-FC1D4EEDF3E8</id>
+    <title>1.0.6 (1.0.6.0)</title>
+    <summary>1.0.6.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>Have changed the storage host for the discord plugin.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+  <entry>
+    <id>urn:uuid:9C4A9557-3A74-428F-A22C-727CBBFB6E91</id>
+    <title>1.0.5 (1.0.5.0)</title>
+    <summary>1.0.5.0</summary>
+    <link href="" />
+    <updated>2018-05-24T00:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">NEW</u>
+          <br/>
+          <ul>
+            <li>New discord plugin to send Server Manager alerts to one or more channels on your discord server.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>bletch</name>
+      <email>bletch1971@hotmail.com</email>
+    </author>
+  </entry>
+
+</feed>
