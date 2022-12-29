@@ -86,7 +86,7 @@ if ($debugMode -eq "true")
 
 $AgentData = Get-AzureDevopsAgent -baseUri "$($CollectionUri)_apis" -accessToken $AccessToken -agentId $AgentId -agentName $AgentName
 if ($AgentData) {
-    Output-AgentCapabilities -capabilities $AgentData.systemCapabilities -capabilityType 'System'
+    #Output-AgentCapabilities -capabilities $AgentData.systemCapabilities -capabilityType 'System'
     Output-AgentCapabilities -capabilities $AgentData.userCapabilities -capabilityType 'User'
 }
 
