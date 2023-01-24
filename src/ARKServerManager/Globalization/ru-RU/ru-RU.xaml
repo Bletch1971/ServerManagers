@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">17.07.2022 от Varlonec, Эдван</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">02.01.2023 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -620,8 +620,6 @@
     <sys:String x:Key="GlobalSettings_ForceCopyModsTooltip">Если включено, файлы Модов будут скопированы в папку сервера, даже если у сервера установлена последняя версия. Включение может устранить проблемы с повреждением Модом.</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoLabel">Принудительная загрузка файлов Модов при отсутствии информации в Steam</sys:String>
     <sys:String x:Key="GlobalSettings_ForceUpdateModsIfNoSteamInfoTooltip">Если включено, моды будут загружаться из Steam, даже если информация Steam не доступна.</sys:String>
-    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursLabel">Хранение Кеша Мастерской</sys:String>
-    <sys:String x:Key="GlobalSettings_WorkshopCacheExpiredHoursTooltip">Количество часов с момента последнего обновления кеша Мастерской, будет считаться старым и будет автоматически обновляться.</sys:String>
 
     <sys:String x:Key="GlobalSettings_BackupSettingsLabel">Настройки резервного копирования</sys:String>
     <sys:String x:Key="GlobalSettings_BackupIncludeSaveGamesFolderLabel">Включите папку SaveGames при выполнении резервного копирования World Save</sys:String>
@@ -803,6 +801,11 @@
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoUpdateLabel">Приоритет задачи Автоматического Обновления:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoShutdownLabel">Приоритет задачи Автоматического Выключения/Перезапуска:</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_AutoStartLabel">Приоритет задачи Автоматического Запуска:</sys:String>
+
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameLabel">Имя пользователя планировщика задач:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerUsernameTooltip">Это имя пользователя будет использоваться для автозапуска сервера при выполнении задачи загрузки.</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordLabel">Пароль планировщика задач:</sys:String>
+    <sys:String x:Key="GlobalSettings_TaskSchedulerPasswordTooltip">Этот пароль будет использоваться для автоматического запуска сервера при выполнении задачи загрузки.</sys:String>
 
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmTitle">Подтвердить сброс настроек</sys:String>
     <sys:String x:Key="GlobalSettings_ResetSettings_ConfirmLabel">Нажмите «Да», для подтверждения, что вы хотите выполнить сброс настроек.</sys:String>
@@ -1305,6 +1308,10 @@
     <sys:String x:Key="ServerSettings_ASMSettingLabel">Настройки Ark Server Manager</sys:String>
     <sys:String x:Key="ServerSettings_AutoStartLabel">Автозапуск при загрузке операционной системы</sys:String>
     <sys:String x:Key="ServerSettings_AutoStartTooltip">Автоматически запускать сервер при включении компьютера.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootLabel">при загрузке</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnBootTooltip">Запустите сервер при запуске компьютера.</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginLabel">при входе в систему</sys:String>
+    <sys:String x:Key="ServerSettings_AutoStartServerOnLoginTooltip">Запустите сервер, когда пользователь войдет в систему.</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownLabel">Выключить сервер в</sys:String>
     <sys:String x:Key="ServerSettings_EnableAutoShutdownTooltip">Укажите время выключения сервера (формат в ЧЧ:ММ)</sys:String>
     <sys:String x:Key="ServerSettings_RestartAfterShutdownLabel">Перезагрузить</sys:String>
