@@ -21,7 +21,7 @@ public class HealthController : ControllerBase
         }
         catch
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, false);
+            return StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
 }
