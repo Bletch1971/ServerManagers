@@ -18,10 +18,9 @@ jobs:
       - uses: actions/checkout@v3.3.0
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v3.0.3
+        uses: actions/setup-dotnet@v2.1.1
         with:
           dotnet-version: '6.0.x'
-          include-prerelease: true
 
       - name: Build with dotnet
         run: dotnet build ./src/ServerManager.WebApplication/ServerManager.WebApplication.csproj --configuration Release
