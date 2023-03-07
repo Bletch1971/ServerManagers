@@ -16,9 +16,9 @@ public class Program
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();
-            })
-            .ConfigureLogging((hostingContext, options) =>
-            {
-                options.AddApplicationInsights();
             });
+            //.ConfigureLogging((hostingContext, options) =>
+            //{
+            //    options.AddApplicationInsights();
+            //});
 }
