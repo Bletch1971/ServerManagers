@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using ServerManager.WebApplication.Models;
 using ServerManager.WebApplication.Models.ApiVersion1;
 using ServerManager.WebApplication.Services;
-using System;
-using System.Collections.Generic;
 
 namespace ServerManager.WebApplication.Controllers;
 

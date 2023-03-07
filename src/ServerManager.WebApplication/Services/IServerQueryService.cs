@@ -1,7 +1,6 @@
-﻿namespace ServerManager.WebApplication.Services
+﻿namespace ServerManager.WebApplication.Services;
+
+public interface IServerQueryService
 {
-    public interface IServerQueryService
-    {
-        bool CheckServerStatus(string managerCode, string managerVersion, string ipString, int port);
-    }
+    bool CheckServerStatus(string managerCode, string managerVersion, string ipString, int port);
 }

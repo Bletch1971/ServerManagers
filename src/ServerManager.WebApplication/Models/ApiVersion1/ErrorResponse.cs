@@ -2,15 +2,14 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace ServerManager.WebApplication.Models.ApiVersion1
+namespace ServerManager.WebApplication.Models.ApiVersion1;
+
+public class ErrorResponse
 {
-    public class ErrorResponse
-    {
-        /// <summary>
-        /// List of errors.
-        /// </summary>
-        [Required]
-        [Description("List of errors.")]
-        public ICollection<string> Errors { get; set; } = new List<string>();
-    }
+    /// <summary>
+    /// List of errors.
+    /// </summary>
+    [Required]
+    [Description("List of errors.")]
+    public ICollection<string> Errors { get; set; } = new List<string>();
 }
