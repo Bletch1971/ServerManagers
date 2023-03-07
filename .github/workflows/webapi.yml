@@ -15,10 +15,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.3.0
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3.0.3
         with:
           dotnet-version: '6.0.x'
           include-prerelease: true
@@ -30,7 +30,7 @@ jobs:
         run: dotnet publish ./src/ServerManager.WebApplication/ServerManager.WebApplication.csproj -c Release -o ${{env.DOTNET_ROOT}}/webapi
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/webapi
@@ -45,13 +45,13 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3.0.2
         with:
           name: .net-app
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v2.2.6
         with:
           app-name: 'servermanagers'
           slot-name: 'Production'
