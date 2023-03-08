@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace ServerManager.WebApplication;
 
@@ -17,8 +16,4 @@ public class Program
             {
                 webBuilder.UseStartup<Startup>();
             });
-            //.ConfigureLogging((hostingContext, options) =>
-            //{
-            //    options.AddApplicationInsights();
-            //});
 }
