@@ -1227,6 +1227,12 @@
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">If enabled, will enable NVIDIA Ansel on Servers.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Structure Memory Optimizations</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">If enabled, will enable the structure memory optimizations. NOTE: avoid using it when running structure-related mods (until they get updated) as it can break the snappoints of these mod structures.</sys:String>
+    <sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">Creature Upload Issue Protection</sys:String>
+    <sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">Protection against creature upload issue (Please be aware this may have an impact on some mods)</sys:String>
+    <sys:String x:Key="ServerSettings_UseItemDupeCheckLabel">Additional Dupe Protection</sys:String>
+    <sys:String x:Key="ServerSettings_UseItemDupeCheckTooltip">Enables additional dupe protection (Note: this could have an impact on mods, so use with caution).</sys:String>
+    <sys:String x:Key="ServerSettings_UseSecureSpawnRulesLabel">Secure Item/Dino spawning Rules</sys:String>
+    <sys:String x:Key="ServerSettings_UseSecureSpawnRulesTooltip">More secure item/dino spawning rules (Note: this could have an impact on mods, so use with caution).</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">No Under Mesh Checking</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">If enabled, will turn it off the anti meshing system entirely.</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">No Under Mesh Killing</sys:String>
@@ -1362,6 +1368,8 @@
     <sys:String x:Key="ServerSettings_EventNote">NOTE: Enabling an event on your server should only be done when the official event is running. If you enable the event before or after the official dates, the event may cause your server to become unstable, or may not work at all.</sys:String>
     <sys:String x:Key="ServerSettings_EventNameLabel">Active Event:</sys:String>
     <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">Dino Color Chance:</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">Dino event color chance.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -1523,6 +1531,8 @@
     <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">If enabled, disables harvesting non-meat fish loot.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Use Corpse Life Span Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Specifies the multiplier for corpse and dropped box lifespan.</sys:String>
+    <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">Fjordhawk Inventory Cooldown</sys:String>
+    <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalTooltip">Fjordhawk cooldown on retrieval of player's inventory when killed. Defaults to 1 hour.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Global Powered Battery Durability</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondTooltip">Specifies the multiplier for the rate at which charge batteries are used in electrical objects (decrease per second).</sys:String>
     <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierLabel">Fuel Consumption Interval Multiplier</sys:String>
