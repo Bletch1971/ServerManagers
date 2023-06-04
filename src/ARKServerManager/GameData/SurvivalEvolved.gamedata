@@ -940,6 +940,14 @@
       "Mod": "ArkPrime"
     },
     {
+      "NameTag": "Rhyniognatha",
+      "IsSpawnable": true,
+      "IsTameable": "false",
+      "ClassName": "Rhynio_Character_BP_C",
+      "Description": "Rhyniognatha",
+      "Mod": "ArkPrime"
+    },
+    {
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
@@ -5084,6 +5092,14 @@
       "ClassName": "EngramEntry_Wire_Flex_C",
       "Description": "Flexible Electrical Cable",
       "Mod": "ArkPrime"
+    },
+    {
+      "Level": 90,
+      "Points": 65,
+      "IsTekGram": false,
+      "ClassName": "EngramEntry_Saddle_Rhynio_C",
+      "Description": "Rhyniognatha Saddle",
+      "Mod": "ArkPrime"
     }
   ],
   "Items": [
@@ -9208,6 +9224,13 @@
       "IsHarvestable": false,
       "ClassName": "PrimalItemResourceGeneric_Curing_C",
       "Description": "Leech Blood or Horns",
+      "Mod": "ArkPrime"
+    },
+    {
+      "Category": "Resource",
+      "IsHarvestable": false,
+      "ClassName": "PrimalItemConsumableEatable_RhynioPheromone_C",
+      "Description": "Rhyniognatha Pheromone",
       "Mod": "ArkPrime"
     },
     {

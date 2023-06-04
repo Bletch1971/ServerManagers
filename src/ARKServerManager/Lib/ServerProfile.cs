@@ -804,6 +804,30 @@ namespace ServerManagerTool.Lib
             set { SetValue(ClusterDirOverrideProperty, value); }
         }
 
+        public static readonly DependencyProperty SecureSendArKPayloadProperty = DependencyProperty.Register(nameof(SecureSendArKPayload), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool SecureSendArKPayload
+        {
+            get { return (bool)GetValue(SecureSendArKPayloadProperty); }
+            set { SetValue(SecureSendArKPayloadProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseItemDupeCheckProperty = DependencyProperty.Register(nameof(UseItemDupeCheck), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool UseItemDupeCheck
+        {
+            get { return (bool)GetValue(UseItemDupeCheckProperty); }
+            set { SetValue(UseItemDupeCheckProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseSecureSpawnRulesProperty = DependencyProperty.Register(nameof(UseSecureSpawnRules), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool UseSecureSpawnRules
+        {
+            get { return (bool)GetValue(UseSecureSpawnRulesProperty); }
+            set { SetValue(UseSecureSpawnRulesProperty, value); }
+        }
+
         public static readonly DependencyProperty ProcessPriorityProperty = DependencyProperty.Register(nameof(ProcessPriority), typeof(string), typeof(ServerProfile), new PropertyMetadata("normal"));
         [DataMember]
         public string ProcessPriority
@@ -1072,6 +1096,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (string)GetValue(EventNameProperty); }
             set { SetValue(EventNameProperty, value); }
+        }
+
+        public static readonly DependencyProperty EventColorsChanceOverrideProperty = DependencyProperty.Register(nameof(EventColorsChanceOverride), typeof(float), typeof(ServerProfile), new PropertyMetadata(0.0f));
+        [DataMember]
+        public float EventColorsChanceOverride
+        {
+            get { return (float)GetValue(EventColorsChanceOverrideProperty); }
+            set { SetValue(EventColorsChanceOverrideProperty, value); }
         }
         #endregion
 
@@ -1593,6 +1625,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(UseCorpseLocatorProperty); }
             set { SetValue(UseCorpseLocatorProperty, value); }
+        }
+
+        public static readonly DependencyProperty MinimumTimeBetweenInventoryRetrievalProperty = DependencyProperty.Register(nameof(MinimumTimeBetweenInventoryRetrieval), typeof(int), typeof(ServerProfile), new PropertyMetadata(3600));
+        [DataMember]
+        public int MinimumTimeBetweenInventoryRetrieval
+        {
+            get { return (int)GetValue(MinimumTimeBetweenInventoryRetrievalProperty); }
+            set { SetValue(MinimumTimeBetweenInventoryRetrievalProperty, value); }
         }
 
         public static readonly DependencyProperty PreventSpawnAnimationsProperty = DependencyProperty.Register(nameof(PreventSpawnAnimations), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
@@ -3871,6 +3911,11 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append("?RingStartTime=").Append(this.SOTF_RingStartTime);
             }
 
+            if (this.EventColorsChanceOverride > 0)
+            {
+                serverArgs.Append("?EventColorsChanceOverride=").Append(this.EventColorsChanceOverride);
+            }
+
             if (!string.IsNullOrWhiteSpace(this.AdditionalArgs))
             {
                 var addArgs = this.AdditionalArgs.TrimStart();
@@ -4081,6 +4126,21 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -structurememopts");
             }
 
+            if (this.SecureSendArKPayload)
+            {
+                serverArgs.Append(" -SecureSendArKPayload");
+            }
+
+            if (this.UseItemDupeCheck)
+            {
+                serverArgs.Append(" -UseItemDupeCheck");
+            }
+
+            if (this.UseSecureSpawnRules)
+            {
+                serverArgs.Append(" -UseSecureSpawnRules");
+            }
+
             if (this.NoUnderMeshChecking)
             {
                 serverArgs.Append(" -noundermeshchecking");
@@ -4122,6 +4182,11 @@ namespace ServerManagerTool.Lib
             if (this.OutputServerLog)
             {
                 serverArgs.Append($" -log");
+            }
+
+            if (this.MinimumTimeBetweenInventoryRetrieval > 0)
+            {
+                serverArgs.Append(" -MinimumTimeBetweenInventoryRetrieval=").Append(this.MinimumTimeBetweenInventoryRetrieval);
             }
 
             return serverArgs.ToString();
@@ -4309,6 +4374,7 @@ namespace ServerManagerTool.Lib
                 BranchName = string.Empty;
                 BranchPassword = string.Empty;
                 EventName = string.Empty;
+                EventColorsChanceOverride = 0;
 
                 // ensure that the auto settings are switched off for SotF servers
                 EnableAutoBackup = false;
@@ -5357,6 +5423,9 @@ namespace ServerManagerTool.Lib
             this.ClearValue(EpicOnlyProperty);
             this.ClearValue(EnablePublicIPForEpicProperty);
             this.ClearValue(OutputServerLogProperty);
+            this.ClearValue(SecureSendArKPayloadProperty);
+            this.ClearValue(UseItemDupeCheckProperty);
+            this.ClearValue(UseSecureSpawnRulesProperty);
 
             this.ClearValue(AltSaveDirectoryNameProperty);
             this.ClearValue(CrossArkClusterIdProperty);
@@ -5741,6 +5810,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(FishingLootQualityMultiplierProperty);
             this.ClearValue(EnableNoFishLootProperty);
             this.ClearValue(UseCorpseLifeSpanMultiplierProperty);
+            this.ClearValue(MinimumTimeBetweenInventoryRetrievalProperty);
             this.ClearValue(GlobalPoweredBatteryDurabilityDecreasePerSecondProperty);
             this.ClearValue(RandomSupplyCratePointsProperty);
             this.ClearValue(FuelConsumptionIntervalMultiplierProperty);
@@ -5792,6 +5862,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(BranchPasswordProperty);
 
             this.ClearValue(EventNameProperty);
+            this.ClearValue(EventColorsChanceOverrideProperty);
         }
 
         public void ResetSOTFSection()
@@ -6027,6 +6098,9 @@ namespace ServerManagerTool.Lib
             //this.SetValue(AltSaveDirectoryNameProperty, sourceProfile.AltSaveDirectoryName);
             this.SetValue(CrossArkClusterIdProperty, sourceProfile.CrossArkClusterId);
             this.SetValue(ClusterDirOverrideProperty, sourceProfile.ClusterDirOverride);
+            this.SetValue(SecureSendArKPayloadProperty, sourceProfile.SecureSendArKPayload);
+            this.SetValue(UseItemDupeCheckProperty, sourceProfile.UseItemDupeCheck);
+            this.SetValue(UseSecureSpawnRulesProperty, sourceProfile.UseSecureSpawnRules);
 
             // server log options
             this.SetValue(EnableServerAdminLogsProperty, sourceProfile.EnableServerAdminLogs);
@@ -6471,6 +6545,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(FishingLootQualityMultiplierProperty, sourceProfile.FishingLootQualityMultiplier);
             this.SetValue(EnableNoFishLootProperty, sourceProfile.EnableNoFishLoot);
             this.SetValue(UseCorpseLifeSpanMultiplierProperty, sourceProfile.UseCorpseLifeSpanMultiplier);
+            this.SetValue(MinimumTimeBetweenInventoryRetrievalProperty, sourceProfile.MinimumTimeBetweenInventoryRetrieval);
             this.SetValue(GlobalPoweredBatteryDurabilityDecreasePerSecondProperty, sourceProfile.GlobalPoweredBatteryDurabilityDecreasePerSecond);
             this.SetValue(RandomSupplyCratePointsProperty, sourceProfile.RandomSupplyCratePoints);
             this.SetValue(FuelConsumptionIntervalMultiplierProperty, sourceProfile.FuelConsumptionIntervalMultiplier);
@@ -6522,6 +6597,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(BranchPasswordProperty, sourceProfile.BranchPassword);
 
             this.SetValue(EventNameProperty, sourceProfile.EventName);
+            this.SetValue(EventColorsChanceOverrideProperty, sourceProfile.EventColorsChanceOverride);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)
