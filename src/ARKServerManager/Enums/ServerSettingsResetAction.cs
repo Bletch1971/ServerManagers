@@ -41,5 +41,6 @@
         RCONWindowExtents,
         ServerOptions,
         ServerLogOptions,
+        ServerBadWordFilterOptions,
     }
 }

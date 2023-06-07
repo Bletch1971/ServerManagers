@@ -1241,6 +1241,41 @@
                                 <GroupBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
+                                            <Label Content="{DynamicResource ServerSettings_ServerBadWordFilterOptionsLabel}"/>
+                                            <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerBadWordFilterOptions}" ToolTip="{DynamicResource ServerSettings_ResetBadWordFilterOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </GroupBox.Header>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="180"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center" IsChecked="{Binding EnableBadWordListURL, Mode=TwoWay}" Text="{DynamicResource ServerSettings_BadWordListURLLabel}" ToolTip="{DynamicResource ServerSettings_BadWordListURLTooltip}"/>
+                                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Text="{Binding BadWordListURL}" ToolTip="{DynamicResource ServerSettings_BadWordListURLTooltip}" IsEnabled="{Binding EnableBadWordListURL}"/>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center" IsChecked="{Binding EnableBadWordWhiteListURL, Mode=TwoWay}" Text="{DynamicResource ServerSettings_BadWordWhiteListURLLabel}" ToolTip="{DynamicResource ServerSettings_BadWordWhiteListURLTooltip}"/>
+                                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Text="{Binding BadWordWhiteListURL}" ToolTip="{DynamicResource ServerSettings_BadWordWhiteListURLTooltip}" IsEnabled="{Binding EnableBadWordWhiteListURL}"/>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding FilterTribeNames, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FilterTribeNamesLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_FilterTribeNamesTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding FilterCharacterNames, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FilterCharacterNamesLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_FilterCharacterNamesTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding FilterChat, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FilterChatLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_FilterChatTooltip}"/>
+                                    </Grid>
+                                </GroupBox>
+
+                                <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                    <GroupBox.Header>
+                                        <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerLogOptionsLabel}"/>
                                             <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerLogOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
@@ -1276,7 +1311,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <cctl:CheckBoxAndTextBlock Name="EnableWebAlarmCheckbox" IsChecked="{Binding EnableWebAlarm, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableWebAlarmLabel}" ToolTip="{DynamicResource ServerSettings_EnableWebAlarmTooltip}" />
                                     </GroupBox.Header>

@@ -740,6 +740,62 @@ namespace ServerManagerTool.Lib
             set { SetValue(UseVivoxProperty, value); }
         }
 
+        public static readonly DependencyProperty EnableBadWordListURLProperty = DependencyProperty.Register(nameof(EnableBadWordListURL), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableBadWordListURL
+        {
+            get { return (bool)GetValue(EnableBadWordListURLProperty); }
+            set { SetValue(EnableBadWordListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty BadWordListURLProperty = DependencyProperty.Register(nameof(BadWordListURL), typeof(string), typeof(ServerProfile), new PropertyMetadata(""));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, ConditionedOn = nameof(EnableBadWordListURL), QuotedString = QuotedStringType.True)]
+        public string BadWordListURL
+        {
+            get { return (string)GetValue(BadWordListURLProperty); }
+            set { SetValue(BadWordListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableBadWordWhiteListURLProperty = DependencyProperty.Register(nameof(EnableBadWordWhiteListURL), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableBadWordWhiteListURL
+        {
+            get { return (bool)GetValue(EnableBadWordWhiteListURLProperty); }
+            set { SetValue(EnableBadWordWhiteListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty BadWordWhiteListURLProperty = DependencyProperty.Register(nameof(BadWordWhiteListURL), typeof(string), typeof(ServerProfile), new PropertyMetadata(""));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, ConditionedOn = nameof(EnableBadWordWhiteListURL), QuotedString = QuotedStringType.True)]
+        public string BadWordWhiteListURL
+        {
+            get { return (string)GetValue(BadWordWhiteListURLProperty); }
+            set { SetValue(BadWordWhiteListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty FilterTribeNamesProperty = DependencyProperty.Register(nameof(FilterTribeNames), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, "bFilterTribeNames")]
+        public bool FilterTribeNames
+        {
+            get { return (bool)GetValue(FilterTribeNamesProperty); }
+            set { SetValue(FilterTribeNamesProperty, value); }
+        }
+
+        public static readonly DependencyProperty FilterCharacterNamesProperty = DependencyProperty.Register(nameof(FilterCharacterNames), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, "bFilterCharacterNames")]
+        public bool FilterCharacterNames
+        {
+            get { return (bool)GetValue(FilterCharacterNamesProperty); }
+            set { SetValue(FilterCharacterNamesProperty, value); }
+        }
+
+        public static readonly DependencyProperty FilterChatProperty = DependencyProperty.Register(nameof(FilterChat), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, "bFilterChat")]
+        public bool FilterChat
+        {
+            get { return (bool)GetValue(FilterChatProperty); }
+            set { SetValue(FilterChatProperty, value); }
+        }
+
         public static readonly DependencyProperty OutputServerLogProperty = DependencyProperty.Register(nameof(OutputServerLog), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
         [DataMember]
         public bool OutputServerLog
@@ -5445,6 +5501,17 @@ namespace ServerManagerTool.Lib
             this.ClearValue(ClusterDirOverrideProperty);
         }
 
+        public void ResetServerBadWordFilterOptions()
+        {
+            this.ClearValue(EnableBadWordListURLProperty);
+            this.ClearValue(EnableBadWordWhiteListURLProperty);
+            this.ClearValue(BadWordListURLProperty);
+            this.ClearValue(BadWordWhiteListURLProperty);
+            this.ClearValue(FilterTribeNamesProperty);
+            this.ClearValue(FilterCharacterNamesProperty);
+            this.ClearValue(FilterChatProperty);
+        }
+
         public void ResetServerLogOptions()
         {
             this.ClearValue(EnableServerAdminLogsProperty);
@@ -5495,6 +5562,7 @@ namespace ServerManagerTool.Lib
             this.ClearNullableValue(MOTDIntervalProperty);
 
             ResetServerOptions();
+            ResetServerBadWordFilterOptions();
             ResetServerLogOptions();
 
             this.ClearValue(EnableWebAlarmProperty);
@@ -6115,6 +6183,15 @@ namespace ServerManagerTool.Lib
             this.SetValue(SecureSendArKPayloadProperty, sourceProfile.SecureSendArKPayload);
             this.SetValue(UseItemDupeCheckProperty, sourceProfile.UseItemDupeCheck);
             this.SetValue(UseSecureSpawnRulesProperty, sourceProfile.UseSecureSpawnRules);
+
+            // server filter options
+            this.SetValue(EnableBadWordListURLProperty, sourceProfile.EnableBadWordListURL);
+            this.SetValue(EnableBadWordWhiteListURLProperty, sourceProfile.EnableBadWordWhiteListURL);
+            this.SetValue(BadWordListURLProperty, sourceProfile.BadWordListURL);
+            this.SetValue(BadWordWhiteListURLProperty, sourceProfile.BadWordWhiteListURL);
+            this.SetValue(FilterTribeNamesProperty, sourceProfile.FilterTribeNames);
+            this.SetValue(FilterCharacterNamesProperty, sourceProfile.FilterCharacterNames);
+            this.SetValue(FilterChatProperty, sourceProfile.FilterChat);
 
             // server log options
             this.SetValue(EnableServerAdminLogsProperty, sourceProfile.EnableServerAdminLogs);
