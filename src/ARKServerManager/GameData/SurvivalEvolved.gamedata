@@ -942,7 +942,7 @@
     {
       "NameTag": "Rhyniognatha",
       "IsSpawnable": true,
-      "IsTameable": "false",
+      "IsTameable": "true",
       "ClassName": "Rhynio_Character_BP_C",
       "Description": "Rhyniognatha",
       "Mod": "ArkPrime"
