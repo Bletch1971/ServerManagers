@@ -2562,6 +2562,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty, value); }
         }
 
+        public static readonly DependencyProperty ImprintlimitProperty = DependencyProperty.Register(nameof(Imprintlimit), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 101)));
+        [DataMember]
+        public NullableValue<int> Imprintlimit
+        {
+            get { return (NullableValue<int>)GetValue(ImprintlimitProperty); }
+            set { SetValue(ImprintlimitProperty, value); }
+        }
+
         public static readonly DependencyProperty WildDinoCharacterFoodDrainMultiplierProperty = DependencyProperty.Register(nameof(WildDinoCharacterFoodDrainMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, WriteIfNotValue = 1.0f)]
         public float WildDinoCharacterFoodDrainMultiplier
@@ -4189,6 +4197,11 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -MinimumTimeBetweenInventoryRetrieval=").Append(this.MinimumTimeBetweenInventoryRetrieval);
             }
 
+            if (this.Imprintlimit.HasValue)
+            {
+                serverArgs.Append(" -imprintlimit=").Append(this.Imprintlimit);
+            }
+
             return serverArgs.ToString();
         }
 
@@ -5578,6 +5591,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(BabyCuddleIntervalMultiplierProperty);
             this.ClearValue(BabyCuddleGracePeriodMultiplierProperty);
             this.ClearValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty);
+            this.ClearValue(ImprintlimitProperty);
 
             this.ClearValue(WildDinoCharacterFoodDrainMultiplierProperty);
             this.ClearValue(TamedDinoCharacterFoodDrainMultiplierProperty);
@@ -6249,6 +6263,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(BabyCuddleIntervalMultiplierProperty, sourceProfile.BabyCuddleIntervalMultiplier);
             this.SetValue(BabyCuddleGracePeriodMultiplierProperty, sourceProfile.BabyCuddleGracePeriodMultiplier);
             this.SetValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty, sourceProfile.BabyCuddleLoseImprintQualitySpeedMultiplier);
+            this.SetValue(ImprintlimitProperty, sourceProfile.Imprintlimit);
 
             this.SetValue(WildDinoCharacterFoodDrainMultiplierProperty, sourceProfile.WildDinoCharacterFoodDrainMultiplier);
             this.SetValue(TamedDinoCharacterFoodDrainMultiplierProperty, sourceProfile.TamedDinoCharacterFoodDrainMultiplier);

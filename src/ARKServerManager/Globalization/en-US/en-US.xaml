@@ -1844,6 +1844,8 @@
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">A multiplier on how long after delaying cuddling with the baby before imprinting quality starts to decrease. Higher values increase the grace period.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Cuddle Lose Imprint Quality Speed:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">A multiplier on how fast imprinting quality decreases after the grace period if you haven't yet cuddled with the baby. Lower values slow the imprint quality loss.</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitLabel">Max Imprint Limit:</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitTooltip">Automatically destroys creatures exceeding the imprinting bonus limit specified, in %. It is recommended going 1% higher to catch potential floating point errors, especially when working with custom imprinting rates.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Click 'Yes' to confirm you want to reset the Max XP.</sys:String>
