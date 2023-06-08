@@ -620,22 +620,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(ForceNoManSkyProperty, value); }
         }
 
-        public static readonly DependencyProperty UseAllAvailableCoresProperty = DependencyProperty.Register(nameof(UseAllAvailableCores), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool UseAllAvailableCores
-        {
-            get { return (bool)GetValue(UseAllAvailableCoresProperty); }
-            set { SetValue(UseAllAvailableCoresProperty, value); }
-        }
-
-        public static readonly DependencyProperty UseCacheProperty = DependencyProperty.Register(nameof(UseCache), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool UseCache
-        {
-            get { return (bool)GetValue(UseCacheProperty); }
-            set { SetValue(UseCacheProperty, value); }
-        }
-
         public static readonly DependencyProperty UseNoMemoryBiasProperty = DependencyProperty.Register(nameof(UseNoMemoryBias), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [DataMember]
         public bool UseNoMemoryBias
@@ -4149,17 +4133,6 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -nomansky");
             }
 
-            if (this.UseAllAvailableCores)
-            {
-                serverArgs.Append(" -useallavailablecores");
-            }
-
-            if (this.UseCache)
-            {
-                serverArgs.Append(" -usecache");
-            }
-
-
             if (this.UseNoMemoryBias)
             {
                 serverArgs.Append(" -nomemorybias");
@@ -5467,8 +5440,6 @@ namespace ServerManagerTool.Lib
             this.ClearValue(DisableAntiSpeedHackDetectionProperty);
             this.ClearValue(SpeedHackBiasProperty);
             this.ClearValue(UseBattlEyeProperty);
-            this.ClearValue(UseAllAvailableCoresProperty);
-            this.ClearValue(UseCacheProperty);
 
             this.ClearValue(ForceRespawnDinosProperty);
             this.ClearValue(EnableServerAutoForceRespawnWildDinosIntervalProperty);
@@ -6154,8 +6125,6 @@ namespace ServerManagerTool.Lib
             this.SetValue(DisablePlayerMovePhysicsOptimizationProperty, sourceProfile.DisablePlayerMovePhysicsOptimization);
             this.SetValue(DisableAntiSpeedHackDetectionProperty, sourceProfile.DisableAntiSpeedHackDetection);
             this.SetValue(SpeedHackBiasProperty, sourceProfile.SpeedHackBias);
-            this.SetValue(UseAllAvailableCoresProperty, sourceProfile.UseAllAvailableCores);
-            this.SetValue(UseCacheProperty, sourceProfile.UseCache);
             this.SetValue(UseNoHangDetectionProperty, sourceProfile.UseNoHangDetection);
             this.SetValue(NoDinosProperty, sourceProfile.NoDinos);
             this.SetValue(NoUnderMeshCheckingProperty, sourceProfile.NoUnderMeshChecking);
