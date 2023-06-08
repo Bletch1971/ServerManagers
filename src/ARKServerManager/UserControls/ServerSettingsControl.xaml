@@ -2250,10 +2250,10 @@
                                                     Text="{DynamicResource ServerSettings_Ragnarok_EnableVolcanoLabel}" 
                                                     ToolTip="{DynamicResource ServerSettings_Ragnarok_EnableVolcanoTooltip}"/>
 
-                                            <cctl:AnnotatedIntSlider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding Ragnarok_EnableVolcano}"
-                                                    Minimum="0" Maximum="10" SmallChange="1" LargeChange="1" TickFrequency="1"
+                                            <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding Ragnarok_EnableVolcano}"
+                                                    Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="0.1" TickFrequency="0.1"
                                                     Label="{DynamicResource ServerSettings_Ragnarok_VolcanoIntervalLabel}" 
-                                                    Value="{Binding Ragnarok_VolcanoInterval, Converter={cc:IntRangeValueConverter 0, 100}}"
+                                                    Value="{Binding Ragnarok_VolcanoInterval, Converter={cc:DoubleRangeValueConverter 0, 10}}"
                                                     Suffix="{DynamicResource SliderUnits_Multiplier}"  
                                                     ToolTip="{DynamicResource ServerSettings_Ragnarok_VolcanoIntervalTooltip}"/>
 

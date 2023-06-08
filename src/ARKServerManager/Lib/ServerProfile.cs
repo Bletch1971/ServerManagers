@@ -1970,11 +1970,11 @@ namespace ServerManagerTool.Lib
             set { SetValue(Ragnarok_EnableVolcanoProperty, value); }
         }
 
-        public static readonly DependencyProperty Ragnarok_VolcanoIntervalProperty = DependencyProperty.Register(nameof(Ragnarok_VolcanoInterval), typeof(int), typeof(ServerProfile), new PropertyMetadata(0));
+        public static readonly DependencyProperty Ragnarok_VolcanoIntervalProperty = DependencyProperty.Register(nameof(Ragnarok_VolcanoInterval), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "VolcanoInterval", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
-        public int Ragnarok_VolcanoInterval
+        public float Ragnarok_VolcanoInterval
         {
-            get { return (int)GetValue(Ragnarok_VolcanoIntervalProperty); }
+            get { return (float)GetValue(Ragnarok_VolcanoIntervalProperty); }
             set { SetValue(Ragnarok_VolcanoIntervalProperty, value); }
         }
 
