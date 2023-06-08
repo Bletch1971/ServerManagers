@@ -657,6 +657,10 @@
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">If enabled, when the auto-update is performed all servers will be updated at the same time, otherwise each server will be updated one after the other (this will take more time to complete).</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupLabel">Backup servers in parallel</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupTooltip">If enabled, when the auto-backup is performed all servers will be backup at the same time, otherwise each server will be backup one after the other (this could produce less server lags).</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBacckupSequencialDelayPeriodLabel">Delay between each server backup</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBackupSequencialDelayPeriodTooltip">The amount of time to wait in between each server backup, only available if Parallel Backup is disabled.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoRestartLabel">Auto Restart Options</sys:String>
     <sys:String x:Key="GlobalSettings_RestartGraceIntervalInformationLabel">The grace period does not prevent auto-updates from restarting your server.</sys:String>
