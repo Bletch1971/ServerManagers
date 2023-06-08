@@ -1259,6 +1259,7 @@
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">The interval between the forced auto dino respawn.</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Alternate Save Directory Name:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Optional)</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameNote">NOTE: Set "Alternate Save Directory Name" only in advanced setups! Research before enabling!</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Sets the directory name (underneath the servers Saved folder) to store the world, player and tribe files.</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Cross-ARK Data Transfer ClusterId:</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group the servers together via Cross-ARK Data Transfer.</sys:String>
