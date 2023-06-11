@@ -8,7 +8,7 @@
   <updated>2023-06-09T00:00:00Z</updated>
 
   <entry>
-    <id></id>
+    <id>urn:uuid:FACD905A-551E-4D7A-ADCB-D0023FF7BBE7</id>
     <title>1.1.441 (1.1.441.1)</title>
     <summary>1.1.441.1</summary>
     <link href="" />
@@ -30,6 +30,7 @@
             <li>Rules Section - allow decimal values for Ragnarok Volcano Interval.</li>
             <li>Dino Settings - add max imprint limit.</li>
             <li>Global Settings - add option to run auto backup sequential.</li>
+            <li>pt-BR Translation file updated.</li>
           </ul>
         </p>
       </div>

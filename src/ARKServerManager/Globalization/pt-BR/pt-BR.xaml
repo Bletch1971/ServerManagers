@@ -1227,6 +1227,12 @@
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">Se habilitado, habilitará o NVIDIA Ansel em Servidores.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Otimizações de memória de estrutura</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">Se ativado, habilitará as otimizações de memória da estrutura. NOTA: evite usá-lo ao executar mods relacionados à estrutura (até que sejam atualizados), pois isso pode interromper os pontos de snap dessas estruturas de mod.</sys:String>
+    <sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">Proteção contra problemas de upload de dinos</sys:String>
+    <sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">Proteção contra problema de upload de criaturas (esteja ciente de que isso pode afetar alguns mods)</sys:String>
+    <sys:String x:Key="ServerSettings_UseItemDupeCheckLabel">Proteção adicional contra Dupe</sys:String>
+    <sys:String x:Key="ServerSettings_UseItemDupeCheckTooltip">Ativa proteção adicional contra dupes (Nota: isso pode afetar os mods, portanto, use com cuidado).</sys:String>
+    <sys:String x:Key="ServerSettings_UseSecureSpawnRulesLabel">Proteção contra spawn itens/dino</sys:String>
+    <sys:String x:Key="ServerSettings_UseSecureSpawnRulesTooltip">Proteção contra spawn de itens/dino mais seguro (Nota: isso pode ter um impacto nos mods, então use com cuidado).</sys:String>	
 	<sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">Sem verificação de Mesh</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">Se ativado, desligará o sistema anti meshing completamente.</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">Não matar Jogador</sys:String>
@@ -1241,9 +1247,9 @@
     <sys:String x:Key="ServerSettings_EpicOnlyTooltip">Se ativado, permitirá apenas os jogadores da Epic Games se conectem.</sys:String>
 	<sys:String x:Key="ServerSettings_EnablePublicIPForEpicLabel">Ativar IP público para épico</sys:String>
     <sys:String x:Key="ServerSettings_EnablePublicIPForEpicTooltip">Se ativado, adicionará um argumento do servidor para o IP público ao qual os clientes EPIC tentarão se conectar.</sys:String>
-	<sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Forçar Dinos Respawn no Startup (provoca lag após 'Ready' durante o repovoamento)</sys:String>
-    <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">Se habilitado, quando o servidor for iniciado, TODAS as criaturas selvagens serão apagadas e reabertas (isso só destruirá as criaturas selvagens que NÃO estão sendo domadas).</sys:String>
-	<sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Ativar Força Automática de Respawn Dinos</sys:String>
+	<sys:String x:Key="ServerSettings_ForceRespawnDinosLabel">Forçar respawn de Dinos no Start Serve</sys:String>
+    <sys:String x:Key="ServerSettings_ForceRespawnDinosTooltip">Se habilitado, quando o servidor for iniciado, TODAS os dinos selvagens serão destruidos e respawnados (isso só destruirá as criaturas selvagens que NÃO estão sendo domadas).</sys:String>
+	<sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel">Ativar respawn de Dinos automático</sys:String>
     <sys:String x:Key="ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip">Se habilitado, irá forçar o respawn de dinos selvagens após o intervalo especificado.</sys:String>
 	<sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel">Auto Força Respawn Dinos Intervalo</sys:String>
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">O intervalo entre o respawn forçado auto dino.</sys:String>
@@ -1362,6 +1368,8 @@
     <sys:String x:Key="ServerSettings_EventNote">NOTA: A ativação de um evento no seu servidor só deve ser realizada quando o evento oficial estiver em execução. Se você ativar o evento antes ou depois das datas oficiais, o evento poderá causar instabilidade no servidor ou pode não funcionar.</sys:String>
     <sys:String x:Key="ServerSettings_EventNameLabel">Evento ativo:</sys:String>
     <sys:String x:Key="ServerSettings_EventNameTooltip">O nome do evento a ser ativado (deixe em branco para desativar o evento).</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">Chance de cores em Dinos:</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">Chance de cores no evento Dinos.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -1523,6 +1531,8 @@
     <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Se ativado, desativa a coleta de pilhagem de peixe não-carne.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Usa o multiplicador de vida útil nos cadáveres</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Especifica o multiplicador para o tempo de vida dos cadáver e da caixa de depósito.</sys:String>
+    <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">Tempo de Recarga no Inventário Fjordhawk</sys:String>
+    <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalTooltip">Cooldown na recuperação do inventário do jogador quando morto. O padrão é 1 hora.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Durabilidade global da bateria</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondTooltip">Especifica o multiplicador para a taxa na qual as baterias de carga são usadas em objetos elétricos (diminuição por segundo).</sys:String>
     <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierLabel">Multiplicador de intervalo de consumo de combustível</sys:String>
@@ -1931,11 +1941,11 @@
     <sys:String x:Key="ServerSettings_EnablePvPStructureDecayTooltip">Se ativado, as estruturas no PvP serão automaticamente decaídas se não forem usadas após um período de tempo.</sys:String>
     <sys:String x:Key="ServerSettings_PvPZoneStructureDamageLabel">Danos de Estrutura em Caverna:</sys:String>
     <sys:String x:Key="ServerSettings_PvPZoneStructureDamageTooltip">Especifica o fator de escala para as estruturas que ocorrem nas entradas de cavernas / cavernas no PvP.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxStructuresVisibleLabel">Estruturas máximas visíveis:</sys:String>
-    <sys:String x:Key="ServerSettings_MaxStructuresVisibleTooltip">O número máximo de estruturas que serão visíveis para o jogador. Valores menores podem ajudar com a velocidade do servidor.</sys:String>
+    <sys:String x:Key="ServerSettings_MaxStructuresVisibleLabel">Max Estruturas em range:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxStructuresVisibleTooltip">Especifica o número máximo de estruturas que podem ser construídas dentro de um determinado intervalo.</sys:String>
     <sys:String x:Key="ServerSettings_PerPlatformStructuresMultiplierLabel">Multiplicador de estruturas por plataforma:</sys:String>
     <sys:String x:Key="ServerSettings_PerPlatformStructuresMultiplierTooltip">Especifica o fator de escala para o número máximo de estruturas permitidas em uma única plataforma / sela / jangada.</sys:String>
-    <sys:String x:Key="ServerSettings_MaxPlatformSaddleStructuresLabel">Máxima de selas plataforma e jangadas:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxPlatformSaddleStructuresLabel">Máx de selas plataforma e jangadas:</sys:String>
     <sys:String x:Key="ServerSettings_MaxPlatformSaddleStructuresTooltip">Altera o número máximo de selas plataforma e jangadas permitidas em todo o servidor.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideStructurePlatformPreventionLabel">Permitir Torrretas em Plataformas de Selas</sys:String>
     <sys:String x:Key="ServerSettings_OverrideStructurePlatformPreventionTooltip">Se habilitado, permite que as torretas automáticas e espinhos sejam colocadas nas selas plataforma de dinos.</sys:String>
