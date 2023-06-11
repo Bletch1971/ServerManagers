@@ -657,6 +657,10 @@
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">If enabled, when the auto-update is performed all servers will be updated at the same time, otherwise each server will be updated one after the other (this will take more time to complete).</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Delay between each server update</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">The amount of time to wait in between each server update, only available if Parallel Update is disabled.</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupLabel">Backup servers in parallel</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupTooltip">If enabled, when the auto-backup is performed all servers will be backup at the same time, otherwise each server will be backup one after the other (this could produce less server lags).</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBacckupSequencialDelayPeriodLabel">Delay between each server backup</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBackupSequencialDelayPeriodTooltip">The amount of time to wait in between each server backup, only available if Parallel Backup is disabled.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoRestartLabel">Auto Restart Options</sys:String>
     <sys:String x:Key="GlobalSettings_RestartGraceIntervalInformationLabel">The grace period does not prevent auto-updates from restarting your server.</sys:String>
@@ -1255,11 +1259,25 @@
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">The interval between the forced auto dino respawn.</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Alternate Save Directory Name:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Optional)</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameNote">NOTE: Set "Alternate Save Directory Name" only in advanced setups! Research before enabling!</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Sets the directory name (underneath the servers Saved folder) to store the world, player and tribe files.</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Cross-ARK Data Transfer ClusterId:</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Sets a cluster id for this server that will group the servers together via Cross-ARK Data Transfer.</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Cluster Directory Override</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">If enabled, allows you to use a common cross-server storage location that functions between multiple servers running on the same machine. Uses the clusters directory in the server manager Data directory.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerBadWordFilterOptionsLabel">Bad Word Filter</sys:String>
+    <sys:String x:Key="ServerSettings_ResetBadWordFilterOptionsTooltip">Reset all bad word filter options to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLLabel">Bad Word Filter URL:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLTooltip">Add the url to hosting your own bad words list.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLLabel">Bad Word Whitelist URL:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLTooltip">Add the url to hosting your own good words list .</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesLabel">Filter Tribe Names</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesTooltip">Filters out tribe names based on the bad words/good words list.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesLabel">Filter Character Names</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesTooltip">Filters out character names based on the bad words/good words list.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatLabel">Filter Chat</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatTooltip">Filters chat messages based on the bad word/good words list.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Server Log Options</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Reset all server log options to defaults.</sys:String>
@@ -1844,6 +1862,8 @@
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">A multiplier on how long after delaying cuddling with the baby before imprinting quality starts to decrease. Higher values increase the grace period.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Cuddle Lose Imprint Quality Speed:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">A multiplier on how fast imprinting quality decreases after the grace period if you haven't yet cuddled with the baby. Lower values slow the imprint quality loss.</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitLabel">Max Imprint Limit:</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitTooltip">Automatically destroys creatures exceeding the imprinting bonus limit specified, in %. It is recommended going 1% higher to catch potential floating point errors, especially when working with custom imprinting rates.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Confirm Reset Action</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Click 'Yes' to confirm you want to reset the Max XP.</sys:String>
