@@ -419,6 +419,9 @@
                                 <Binding Path="Config.AutoBackup_BackupPeriod" Converter="{StaticResource MinutesToTimeValueConverter}"/>
                             </TextBox.Text>
                         </TextBox>
+
+                        <CheckBox Grid.Row="3" Grid.Column="0" Margin="5,2,0,2" Grid.ColumnSpan="2" Content="{DynamicResource GlobalSettings_ParallelBackupLabel}" IsChecked="{Binding Config.AutoBackup_ParallelBackup, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_ParallelBackupTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,2,0,2" Label="{DynamicResource GlobalSettings_AutoBacckupSequencialDelayPeriodLabel}" Value="{Binding Config.AutoBackup_SequencialDelayPeriod}" Minimum="0" Maximum="1200" SmallChange="1" LargeChange="2" TickFrequency="5" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_AutoBackupSequencialDelayPeriodTooltip}" IsEnabled="{Binding Config.AutoBackup_ParallelBackup, Converter={StaticResource InvertBooleanConverter}}"/>
                     </Grid>
                 </GroupBox>
 

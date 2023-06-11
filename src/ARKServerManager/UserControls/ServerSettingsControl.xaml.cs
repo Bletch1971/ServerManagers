@@ -4302,6 +4302,10 @@ namespace ServerManagerTool
                             case ServerSettingsResetAction.ServerLogOptions:
                                 this.Settings.ResetServerLogOptions();
                                 break;
+
+                            case ServerSettingsResetAction.ServerBadWordFilterOptions:
+                                this.Settings.ResetServerBadWordFilterOptions();
+                                break;
                         }
                     },
                     canExecute: (action) => true

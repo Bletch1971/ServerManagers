@@ -1040,6 +1040,7 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                             <RowDefinition/>
+                                            <RowDefinition/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="1*"/>
@@ -1065,25 +1066,23 @@
                                         <cctl:CheckBoxAndTextBlock Grid.Row="3" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseBattlEye, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseBattlEyeLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseBattlEyeTooltip}"/>
                                         <cctl:CheckBoxAndTextBlock Grid.Row="4" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding DisablePlayerMovePhysicsOptimization, Mode=TwoWay}" Text="{DynamicResource ServerSettings_DisablePMVOptimizationLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisablePMVOptimizationTooltip}"/>
                                         <cctl:CheckBoxAndTextBlock Grid.Row="5" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding OutputServerLog, Mode=TwoWay}" Text="{DynamicResource ServerSettings_OutputServerLogLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_OutputServerLogTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="6" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseAllAvailableCores, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseAllAvailableCoresLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseAllAvailableCoresTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="7" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseCache, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseCacheLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseCacheTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="8" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseNoHangDetection, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseNoHangDetectionLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseNoHangDetectionTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="9" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding NoDinos, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NoDinosLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NoDinosTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="10" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding NoUnderMeshChecking, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NoUnderMeshCheckingLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NoUnderMeshCheckingTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="11" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding NoUnderMeshKilling, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NoUnderMeshKillingLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NoUnderMeshKillingTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="12" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseVivox, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseVivoxLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseVivoxTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="13" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding AllowSharedConnections, Mode=TwoWay}" Text="{DynamicResource ServerSettings_AllowSharedConnectionsLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowSharedConnectionsTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="14" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding SecureSendArKPayload, Mode=TwoWay}" Text="{DynamicResource ServerSettings_SecureSendArKPayloadLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_SecureSendArKPayloadTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="15" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseItemDupeCheck, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseItemDupeCheckLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseItemDupeCheckTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="16" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseSecureSpawnRules, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseSecureSpawnRulesLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseSecureSpawnRulesTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="6" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseNoHangDetection, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseNoHangDetectionLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseNoHangDetectionTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="7" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding NoDinos, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NoDinosLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NoDinosTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="8" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding NoUnderMeshChecking, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NoUnderMeshCheckingLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NoUnderMeshCheckingTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="9" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding NoUnderMeshKilling, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NoUnderMeshKillingLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NoUnderMeshKillingTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="10" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseVivox, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseVivoxLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseVivoxTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="11" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding AllowSharedConnections, Mode=TwoWay}" Text="{DynamicResource ServerSettings_AllowSharedConnectionsLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_AllowSharedConnectionsTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="12" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding SecureSendArKPayload, Mode=TwoWay}" Text="{DynamicResource ServerSettings_SecureSendArKPayloadLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_SecureSendArKPayloadTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="13" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseItemDupeCheck, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseItemDupeCheckLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseItemDupeCheckTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="14" Grid.Column="0" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding UseSecureSpawnRules, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseSecureSpawnRulesLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseSecureSpawnRulesTooltip}"/>
 
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,5,5,0" IsChecked="{Binding ForceRespawnDinos, Mode=TwoWay}" Text="{DynamicResource ServerSettings_ForceRespawnDinosLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_ForceRespawnDinosTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,5,5,0" IsChecked="{Binding EnableServerAutoForceRespawnWildDinosInterval, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,5,5,0" IsChecked="{Binding ForceRespawnDinos, Mode=TwoWay}" Text="{DynamicResource ServerSettings_ForceRespawnDinosLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_ForceRespawnDinosTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="4" Margin="5,5,5,0" IsChecked="{Binding EnableServerAutoForceRespawnWildDinosInterval, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_EnableServerAutoForceRespawnWildDinosIntervalTooltip}"/>
 
-                                        <cctl:AnnotatedSlider Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Margin="20,1,5,1" Label="{DynamicResource ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel}" Value="{Binding ServerAutoForceRespawnWildDinosInterval, Converter={StaticResource SecondsToHoursConverter}}" Suffix="{DynamicResource SliderUnits_Hours}" Minimum="1" Maximum="720" SmallChange="1" LargeChange="24" TickFrequency="24" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip}" IsEnabled="{Binding EnableServerAutoForceRespawnWildDinosInterval, FallbackValue=False}"/>
+                                        <cctl:AnnotatedSlider Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="4" Margin="20,1,5,1" Label="{DynamicResource ServerSettings_ServerAutoForceRespawnWildDinosIntervalLabel}" Value="{Binding ServerAutoForceRespawnWildDinosInterval, Converter={StaticResource SecondsToHoursConverter}}" Suffix="{DynamicResource SliderUnits_Hours}" Minimum="1" Maximum="720" SmallChange="1" LargeChange="24" TickFrequency="24" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip}" IsEnabled="{Binding EnableServerAutoForceRespawnWildDinosInterval, FallbackValue=False}"/>
 
-                                        <Label Grid.Row="20" Grid.Column="0" Margin="20,0,5,0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_AltSaveDirectoryNameLabel}" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}" VerticalAlignment="Center" MinWidth="200" Foreground="{DynamicResource UnSyncedSetting}"/>
-                                        <TextBox Grid.Row="20" Grid.Column="2" Margin="1,1,0,1" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}">
+                                        <Label Grid.Row="18" Grid.Column="0" Margin="20,0,5,0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_AltSaveDirectoryNameLabel}" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}" VerticalAlignment="Center" MinWidth="200" Foreground="{DynamicResource UnSyncedSetting}"/>
+                                        <TextBox Grid.Row="18" Grid.Column="2" Margin="1,1,0,1" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}">
                                             <Validation.ErrorTemplate>
                                                 <ControlTemplate>
                                                     <StackPanel>
@@ -1100,11 +1099,12 @@
                                                 </Binding>
                                             </TextBox.Text>
                                         </TextBox>
-                                        <Label Grid.Row="20" Grid.Column="3" Content="{DynamicResource ServerSettings_AltSaveDirectoryNameLabel2}" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="18" Grid.Column="3" Content="{DynamicResource ServerSettings_AltSaveDirectoryNameLabel2}" ToolTip="{DynamicResource ServerSettings_AltSaveDirectoryNameTooltip}" VerticalAlignment="Center"/>
+                                        <TextBlock Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Margin="30,0,5,0" Text="{DynamicResource ServerSettings_AltSaveDirectoryNameNote}" FontWeight="Bold" TextWrapping="WrapWithOverflow" IsEnabled="False"/>
 
-                                        <Label Grid.Row="21" Grid.Column="0" Margin="20,0,5,0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_CrossArkClusterIdLabel}" ToolTip="{DynamicResource ServerSettings_CrossArkClusterIdTooltip}" VerticalAlignment="Center" MinWidth="200"/>
-                                        <TextBox Grid.Row="21" Grid.Column="2" Margin="1,1,0,1" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding CrossArkClusterId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ToolTip="{DynamicResource ServerSettings_CrossArkClusterIdTooltip}"/>
-                                        <cctl:CheckBoxAndTextBlock Grid.Row="21" Grid.Column="3" Margin="5,1,0,0" IsEnabled="{Binding CrossArkClusterId, Converter={StaticResource HasStringValueConverter}, FallbackValue=false}" IsChecked="{Binding ClusterDirOverride, Mode=TwoWay}" Text="{DynamicResource ServerSettings_ClusterDirOverrideLabel}" ToolTip="{DynamicResource ServerSettings_ClusterDirOverrideTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left" UseLayoutRounding="False"/>
+                                        <Label Grid.Row="20" Grid.Column="0" Margin="20,0,5,0" Grid.ColumnSpan="2" Content="{DynamicResource ServerSettings_CrossArkClusterIdLabel}" ToolTip="{DynamicResource ServerSettings_CrossArkClusterIdTooltip}" VerticalAlignment="Center" MinWidth="200"/>
+                                        <TextBox Grid.Row="20" Grid.Column="2" Margin="1,1,0,1" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding CrossArkClusterId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" ToolTip="{DynamicResource ServerSettings_CrossArkClusterIdTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="20" Grid.Column="3" Margin="5,1,0,0" IsEnabled="{Binding CrossArkClusterId, Converter={StaticResource HasStringValueConverter}, FallbackValue=false}" IsChecked="{Binding ClusterDirOverride, Mode=TwoWay}" Text="{DynamicResource ServerSettings_ClusterDirOverrideLabel}" ToolTip="{DynamicResource ServerSettings_ClusterDirOverrideTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left" UseLayoutRounding="False"/>
 
                                         <cctl:CheckBoxAndTextBlock Grid.Row="2" Grid.Column="2" Margin="5,5,5,0" Grid.ColumnSpan="2" IsChecked="{Binding DisableAntiSpeedHackDetection, Mode=TwoWay}" Text="{DynamicResource ServerSettings_DisableAntiSpeedHackLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_DisableAntiSpeedHackTooltip}"/>
                                         <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="2" Margin="20,1,5,1" Grid.ColumnSpan="2" Label="{DynamicResource ServerSettings_AntiSpeedHackBiasLabel}" Value="{Binding SpeedHackBias}" Suffix="{DynamicResource ServerSettings_AntiSpeedHackBiasUnits}" Minimum="0.0" Maximum="1.0" SmallChange="0.1" LargeChange="0.25" TickFrequency="60" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_AntiSpeedHackBiasTooltip}" />
@@ -1241,6 +1241,41 @@
                                 <GroupBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
+                                            <Label Content="{DynamicResource ServerSettings_ServerBadWordFilterOptionsLabel}"/>
+                                            <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerBadWordFilterOptions}" ToolTip="{DynamicResource ServerSettings_ResetBadWordFilterOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
+                                                <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </GroupBox.Header>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="180"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center" IsChecked="{Binding EnableBadWordListURL, Mode=TwoWay}" Text="{DynamicResource ServerSettings_BadWordListURLLabel}" ToolTip="{DynamicResource ServerSettings_BadWordListURLTooltip}"/>
+                                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1" Text="{Binding BadWordListURL}" ToolTip="{DynamicResource ServerSettings_BadWordListURLTooltip}" IsEnabled="{Binding EnableBadWordListURL}"/>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center" IsChecked="{Binding EnableBadWordWhiteListURL, Mode=TwoWay}" Text="{DynamicResource ServerSettings_BadWordWhiteListURLLabel}" ToolTip="{DynamicResource ServerSettings_BadWordWhiteListURLTooltip}"/>
+                                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Text="{Binding BadWordWhiteListURL}" ToolTip="{DynamicResource ServerSettings_BadWordWhiteListURLTooltip}" IsEnabled="{Binding EnableBadWordWhiteListURL}"/>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding FilterTribeNames, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FilterTribeNamesLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_FilterTribeNamesTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding FilterCharacterNames, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FilterCharacterNamesLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_FilterCharacterNamesTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,0" IsChecked="{Binding FilterChat, Mode=TwoWay}" Text="{DynamicResource ServerSettings_FilterChatLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_FilterChatTooltip}"/>
+                                    </Grid>
+                                </GroupBox>
+
+                                <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                    <GroupBox.Header>
+                                        <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerLogOptionsLabel}"/>
                                             <Button Margin="20,0,0,0" Command="{Binding ResetActionCommand, ElementName=SettingsControl}" CommandParameter="{x:Static enum:ServerSettingsResetAction.ServerOptions}" ToolTip="{DynamicResource ServerSettings_ResetServerLogOptionsTooltip}" Style="{StaticResource ButtonStyle1}">
                                                 <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Refresh.ico,Size=32}"/>
@@ -1276,7 +1311,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <cctl:CheckBoxAndTextBlock Name="EnableWebAlarmCheckbox" IsChecked="{Binding EnableWebAlarm, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableWebAlarmLabel}" ToolTip="{DynamicResource ServerSettings_EnableWebAlarmTooltip}" />
                                     </GroupBox.Header>
@@ -2215,10 +2250,10 @@
                                                     Text="{DynamicResource ServerSettings_Ragnarok_EnableVolcanoLabel}" 
                                                     ToolTip="{DynamicResource ServerSettings_Ragnarok_EnableVolcanoTooltip}"/>
 
-                                            <cctl:AnnotatedIntSlider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding Ragnarok_EnableVolcano}"
-                                                    Minimum="0" Maximum="10" SmallChange="1" LargeChange="1" TickFrequency="1"
+                                            <cctl:AnnotatedSlider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0" IsEnabled="{Binding Ragnarok_EnableVolcano}"
+                                                    Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="0.1" TickFrequency="0.1"
                                                     Label="{DynamicResource ServerSettings_Ragnarok_VolcanoIntervalLabel}" 
-                                                    Value="{Binding Ragnarok_VolcanoInterval, Converter={cc:IntRangeValueConverter 0, 100}}"
+                                                    Value="{Binding Ragnarok_VolcanoInterval, Converter={cc:DoubleRangeValueConverter 0, 10}}"
                                                     Suffix="{DynamicResource SliderUnits_Multiplier}"  
                                                     ToolTip="{DynamicResource ServerSettings_Ragnarok_VolcanoIntervalTooltip}"/>
 
@@ -3189,6 +3224,8 @@
                                             <cctl:AnnotatedSlider Margin="1" Label="{DynamicResource ServerSettings_BabyCuddleIntervalMultiplierLabel}" Value="{Binding BabyCuddleIntervalMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_BabyCuddleIntervalMultiplierTooltip}"/>
                                             <cctl:AnnotatedSlider Margin="1" Label="{DynamicResource ServerSettings_BabyCuddleGracePeriodMultiplierLabel}" Value="{Binding BabyCuddleGracePeriodMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_BabyCuddleGracePeriodMultiplierTooltip}"/>
                                             <cctl:AnnotatedSlider Margin="1" Label="{DynamicResource ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel}" Value="{Binding BabyCuddleLoseImprintQualitySpeedMultiplier}" Suffix="{DynamicResource SliderUnits_Multiplier}" Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1" TickFrequency="1" ToolTip="{DynamicResource ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip}"/>
+
+                                            <cctl:AnnotatedCheckBoxAndIntegerSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="1" Label="{DynamicResource ServerSettings_ImprintlimitLabel}" Suffix="{DynamicResource SliderUnits_Percentage}" Value="{Binding Imprintlimit}" ToolTip="{DynamicResource ServerSettings_ImprintlimitTooltip}" Minimum="0" Maximum="101" VerticalAlignment="Center" LargeChange="10" SmallChange="1" TickFrequency="1"/>
                                         </StackPanel>
                                     </GroupBox>
                                 </StackPanel>

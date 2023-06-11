@@ -1402,7 +1402,37 @@ namespace ServerManagerTool {
                 this["AutoBackup_BackupPeriod"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoBackup_ParallelBackup
+        {
+            get
+            {
+                return ((bool)(this["AutoBackup_ParallelBackup"]));
+            }
+            set
+            {
+                this["AutoBackup_ParallelBackup"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int AutoBackup_SequencialDelayPeriod
+        {
+            get
+            {
+                return ((int)(this["AutoBackup_SequencialDelayPeriod"]));
+            }
+            set
+            {
+                this["AutoBackup_SequencialDelayPeriod"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]

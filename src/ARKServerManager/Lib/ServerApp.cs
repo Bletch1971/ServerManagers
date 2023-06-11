@@ -3391,18 +3391,43 @@ namespace ServerManagerTool.Lib
                 var profiles = _profiles.Keys.Where(p => p.EnableAutoBackup);
                 var exitCodes = new ConcurrentDictionary<ServerProfileSnapshot, int>();
 
-                Parallel.ForEach(profiles, profile => {
-                    var app = new ServerApp
+
+                if (Config.Default.AutoBackup_ParallelBackup)
+                {
+                    Parallel.ForEach(profiles, profile => {
+                        var app = new ServerApp
+                        {
+                            DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
+                            OutputLogs = true,
+                            SendAlerts = true,
+                            SendEmails = true,
+                            ServerProcess = ServerProcessType.AutoBackup
+                        };
+                        app.PerformProfileBackup(profile, CancellationToken.None);
+                        exitCodes.TryAdd(profile, app.ExitCode);
+                    });
+                }
+                else
+                {
+                    var delay = 0;
+                    foreach (ServerProfileSnapshot profile in profiles)
                     {
-                        DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
-                        OutputLogs = true,
-                        SendAlerts = true,
-                        SendEmails = true,
-                        ServerProcess = ServerProcessType.AutoBackup
-                    };
-                    app.PerformProfileBackup(profile, CancellationToken.None);
-                    exitCodes.TryAdd(profile, app.ExitCode);
-                });
+                        if (delay > 0)
+                            Task.Delay(delay * 1000).Wait();
+                        delay = Math.Max(0, Config.Default.AutoBackup_SequencialDelayPeriod);
+
+                        var app = new ServerApp
+                        {
+                            DeleteOldBackupFiles = Config.Default.AutoBackup_DeleteOldFiles,
+                            OutputLogs = true,
+                            SendAlerts = true,
+                            SendEmails = true,
+                            ServerProcess = ServerProcessType.AutoBackup
+                        };
+                        app.PerformProfileBackup(profile, CancellationToken.None);
+                        exitCodes.TryAdd(profile, app.ExitCode);
+                    }
+                }
 
                 foreach (var profile in _profiles.Keys)
                 {

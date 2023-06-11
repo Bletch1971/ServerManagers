@@ -620,22 +620,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(ForceNoManSkyProperty, value); }
         }
 
-        public static readonly DependencyProperty UseAllAvailableCoresProperty = DependencyProperty.Register(nameof(UseAllAvailableCores), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool UseAllAvailableCores
-        {
-            get { return (bool)GetValue(UseAllAvailableCoresProperty); }
-            set { SetValue(UseAllAvailableCoresProperty, value); }
-        }
-
-        public static readonly DependencyProperty UseCacheProperty = DependencyProperty.Register(nameof(UseCache), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool UseCache
-        {
-            get { return (bool)GetValue(UseCacheProperty); }
-            set { SetValue(UseCacheProperty, value); }
-        }
-
         public static readonly DependencyProperty UseNoMemoryBiasProperty = DependencyProperty.Register(nameof(UseNoMemoryBias), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [DataMember]
         public bool UseNoMemoryBias
@@ -738,6 +722,62 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(UseVivoxProperty); }
             set { SetValue(UseVivoxProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableBadWordListURLProperty = DependencyProperty.Register(nameof(EnableBadWordListURL), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableBadWordListURL
+        {
+            get { return (bool)GetValue(EnableBadWordListURLProperty); }
+            set { SetValue(EnableBadWordListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty BadWordListURLProperty = DependencyProperty.Register(nameof(BadWordListURL), typeof(string), typeof(ServerProfile), new PropertyMetadata(""));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, ConditionedOn = nameof(EnableBadWordListURL), QuotedString = QuotedStringType.True)]
+        public string BadWordListURL
+        {
+            get { return (string)GetValue(BadWordListURLProperty); }
+            set { SetValue(BadWordListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableBadWordWhiteListURLProperty = DependencyProperty.Register(nameof(EnableBadWordWhiteListURL), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableBadWordWhiteListURL
+        {
+            get { return (bool)GetValue(EnableBadWordWhiteListURLProperty); }
+            set { SetValue(EnableBadWordWhiteListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty BadWordWhiteListURLProperty = DependencyProperty.Register(nameof(BadWordWhiteListURL), typeof(string), typeof(ServerProfile), new PropertyMetadata(""));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, ConditionedOn = nameof(EnableBadWordWhiteListURL), QuotedString = QuotedStringType.True)]
+        public string BadWordWhiteListURL
+        {
+            get { return (string)GetValue(BadWordWhiteListURLProperty); }
+            set { SetValue(BadWordWhiteListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty FilterTribeNamesProperty = DependencyProperty.Register(nameof(FilterTribeNames), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, "bFilterTribeNames")]
+        public bool FilterTribeNames
+        {
+            get { return (bool)GetValue(FilterTribeNamesProperty); }
+            set { SetValue(FilterTribeNamesProperty, value); }
+        }
+
+        public static readonly DependencyProperty FilterCharacterNamesProperty = DependencyProperty.Register(nameof(FilterCharacterNames), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, "bFilterCharacterNames")]
+        public bool FilterCharacterNames
+        {
+            get { return (bool)GetValue(FilterCharacterNamesProperty); }
+            set { SetValue(FilterCharacterNamesProperty, value); }
+        }
+
+        public static readonly DependencyProperty FilterChatProperty = DependencyProperty.Register(nameof(FilterChat), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, "bFilterChat")]
+        public bool FilterChat
+        {
+            get { return (bool)GetValue(FilterChatProperty); }
+            set { SetValue(FilterChatProperty, value); }
         }
 
         public static readonly DependencyProperty OutputServerLogProperty = DependencyProperty.Register(nameof(OutputServerLog), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
@@ -1914,11 +1954,11 @@ namespace ServerManagerTool.Lib
             set { SetValue(Ragnarok_EnableVolcanoProperty, value); }
         }
 
-        public static readonly DependencyProperty Ragnarok_VolcanoIntervalProperty = DependencyProperty.Register(nameof(Ragnarok_VolcanoInterval), typeof(int), typeof(ServerProfile), new PropertyMetadata(0));
+        public static readonly DependencyProperty Ragnarok_VolcanoIntervalProperty = DependencyProperty.Register(nameof(Ragnarok_VolcanoInterval), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_Ragnarok, ServerProfileCategory.Rules, "VolcanoInterval", ConditionedOn = nameof(Ragnarok_EnableSettings), ClearSectionIfEmpty = true)]
-        public int Ragnarok_VolcanoInterval
+        public float Ragnarok_VolcanoInterval
         {
-            get { return (int)GetValue(Ragnarok_VolcanoIntervalProperty); }
+            get { return (float)GetValue(Ragnarok_VolcanoIntervalProperty); }
             set { SetValue(Ragnarok_VolcanoIntervalProperty, value); }
         }
 
@@ -2560,6 +2600,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (float)GetValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty); }
             set { SetValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty, value); }
+        }
+
+        public static readonly DependencyProperty ImprintlimitProperty = DependencyProperty.Register(nameof(Imprintlimit), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 101)));
+        [DataMember]
+        public NullableValue<int> Imprintlimit
+        {
+            get { return (NullableValue<int>)GetValue(ImprintlimitProperty); }
+            set { SetValue(ImprintlimitProperty, value); }
         }
 
         public static readonly DependencyProperty WildDinoCharacterFoodDrainMultiplierProperty = DependencyProperty.Register(nameof(WildDinoCharacterFoodDrainMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
@@ -4085,17 +4133,6 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -nomansky");
             }
 
-            if (this.UseAllAvailableCores)
-            {
-                serverArgs.Append(" -useallavailablecores");
-            }
-
-            if (this.UseCache)
-            {
-                serverArgs.Append(" -usecache");
-            }
-
-
             if (this.UseNoMemoryBias)
             {
                 serverArgs.Append(" -nomemorybias");
@@ -4187,6 +4224,11 @@ namespace ServerManagerTool.Lib
             if (this.MinimumTimeBetweenInventoryRetrieval > 0)
             {
                 serverArgs.Append(" -MinimumTimeBetweenInventoryRetrieval=").Append(this.MinimumTimeBetweenInventoryRetrieval);
+            }
+
+            if (this.Imprintlimit.HasValue)
+            {
+                serverArgs.Append(" -imprintlimit=").Append(this.Imprintlimit);
             }
 
             return serverArgs.ToString();
@@ -5398,8 +5440,6 @@ namespace ServerManagerTool.Lib
             this.ClearValue(DisableAntiSpeedHackDetectionProperty);
             this.ClearValue(SpeedHackBiasProperty);
             this.ClearValue(UseBattlEyeProperty);
-            this.ClearValue(UseAllAvailableCoresProperty);
-            this.ClearValue(UseCacheProperty);
 
             this.ClearValue(ForceRespawnDinosProperty);
             this.ClearValue(EnableServerAutoForceRespawnWildDinosIntervalProperty);
@@ -5430,6 +5470,17 @@ namespace ServerManagerTool.Lib
             this.ClearValue(AltSaveDirectoryNameProperty);
             this.ClearValue(CrossArkClusterIdProperty);
             this.ClearValue(ClusterDirOverrideProperty);
+        }
+
+        public void ResetServerBadWordFilterOptions()
+        {
+            this.ClearValue(EnableBadWordListURLProperty);
+            this.ClearValue(EnableBadWordWhiteListURLProperty);
+            this.ClearValue(BadWordListURLProperty);
+            this.ClearValue(BadWordWhiteListURLProperty);
+            this.ClearValue(FilterTribeNamesProperty);
+            this.ClearValue(FilterCharacterNamesProperty);
+            this.ClearValue(FilterChatProperty);
         }
 
         public void ResetServerLogOptions()
@@ -5482,6 +5533,7 @@ namespace ServerManagerTool.Lib
             this.ClearNullableValue(MOTDIntervalProperty);
 
             ResetServerOptions();
+            ResetServerBadWordFilterOptions();
             ResetServerLogOptions();
 
             this.ClearValue(EnableWebAlarmProperty);
@@ -5578,6 +5630,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(BabyCuddleIntervalMultiplierProperty);
             this.ClearValue(BabyCuddleGracePeriodMultiplierProperty);
             this.ClearValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty);
+            this.ClearValue(ImprintlimitProperty);
 
             this.ClearValue(WildDinoCharacterFoodDrainMultiplierProperty);
             this.ClearValue(TamedDinoCharacterFoodDrainMultiplierProperty);
@@ -6072,8 +6125,6 @@ namespace ServerManagerTool.Lib
             this.SetValue(DisablePlayerMovePhysicsOptimizationProperty, sourceProfile.DisablePlayerMovePhysicsOptimization);
             this.SetValue(DisableAntiSpeedHackDetectionProperty, sourceProfile.DisableAntiSpeedHackDetection);
             this.SetValue(SpeedHackBiasProperty, sourceProfile.SpeedHackBias);
-            this.SetValue(UseAllAvailableCoresProperty, sourceProfile.UseAllAvailableCores);
-            this.SetValue(UseCacheProperty, sourceProfile.UseCache);
             this.SetValue(UseNoHangDetectionProperty, sourceProfile.UseNoHangDetection);
             this.SetValue(NoDinosProperty, sourceProfile.NoDinos);
             this.SetValue(NoUnderMeshCheckingProperty, sourceProfile.NoUnderMeshChecking);
@@ -6101,6 +6152,15 @@ namespace ServerManagerTool.Lib
             this.SetValue(SecureSendArKPayloadProperty, sourceProfile.SecureSendArKPayload);
             this.SetValue(UseItemDupeCheckProperty, sourceProfile.UseItemDupeCheck);
             this.SetValue(UseSecureSpawnRulesProperty, sourceProfile.UseSecureSpawnRules);
+
+            // server filter options
+            this.SetValue(EnableBadWordListURLProperty, sourceProfile.EnableBadWordListURL);
+            this.SetValue(EnableBadWordWhiteListURLProperty, sourceProfile.EnableBadWordWhiteListURL);
+            this.SetValue(BadWordListURLProperty, sourceProfile.BadWordListURL);
+            this.SetValue(BadWordWhiteListURLProperty, sourceProfile.BadWordWhiteListURL);
+            this.SetValue(FilterTribeNamesProperty, sourceProfile.FilterTribeNames);
+            this.SetValue(FilterCharacterNamesProperty, sourceProfile.FilterCharacterNames);
+            this.SetValue(FilterChatProperty, sourceProfile.FilterChat);
 
             // server log options
             this.SetValue(EnableServerAdminLogsProperty, sourceProfile.EnableServerAdminLogs);
@@ -6249,6 +6309,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(BabyCuddleIntervalMultiplierProperty, sourceProfile.BabyCuddleIntervalMultiplier);
             this.SetValue(BabyCuddleGracePeriodMultiplierProperty, sourceProfile.BabyCuddleGracePeriodMultiplier);
             this.SetValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty, sourceProfile.BabyCuddleLoseImprintQualitySpeedMultiplier);
+            this.SetValue(ImprintlimitProperty, sourceProfile.Imprintlimit);
 
             this.SetValue(WildDinoCharacterFoodDrainMultiplierProperty, sourceProfile.WildDinoCharacterFoodDrainMultiplier);
             this.SetValue(TamedDinoCharacterFoodDrainMultiplierProperty, sourceProfile.TamedDinoCharacterFoodDrainMultiplier);
