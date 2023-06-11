@@ -65,6 +65,7 @@ namespace ServerManagerTool.Lib
             this.ClearNullableValue(ItemStatClamps_HyperthermalInsulationProperty);
             this.ClearNullableValue(OverrideMaxExperiencePointsPlayerProperty);
             this.ClearNullableValue(OverrideMaxExperiencePointsDinoProperty);
+            this.ClearNullableValue(ImprintlimitProperty);
 
             // initialise the complex properties
             this.DinoSpawnWeightMultipliers = new AggregateIniValueList<DinoSpawn>(nameof(DinoSpawnWeightMultipliers), GameData.GetDinoSpawns);
@@ -5630,7 +5631,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(BabyCuddleIntervalMultiplierProperty);
             this.ClearValue(BabyCuddleGracePeriodMultiplierProperty);
             this.ClearValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty);
-            this.ClearValue(ImprintlimitProperty);
+            this.ClearNullableValue(ImprintlimitProperty);
 
             this.ClearValue(WildDinoCharacterFoodDrainMultiplierProperty);
             this.ClearValue(TamedDinoCharacterFoodDrainMultiplierProperty);
@@ -6309,7 +6310,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(BabyCuddleIntervalMultiplierProperty, sourceProfile.BabyCuddleIntervalMultiplier);
             this.SetValue(BabyCuddleGracePeriodMultiplierProperty, sourceProfile.BabyCuddleGracePeriodMultiplier);
             this.SetValue(BabyCuddleLoseImprintQualitySpeedMultiplierProperty, sourceProfile.BabyCuddleLoseImprintQualitySpeedMultiplier);
-            this.SetValue(ImprintlimitProperty, sourceProfile.Imprintlimit);
+            this.SetNullableValue(ImprintlimitProperty, sourceProfile.Imprintlimit);
 
             this.SetValue(WildDinoCharacterFoodDrainMultiplierProperty, sourceProfile.WildDinoCharacterFoodDrainMultiplier);
             this.SetValue(TamedDinoCharacterFoodDrainMultiplierProperty, sourceProfile.TamedDinoCharacterFoodDrainMultiplier);
