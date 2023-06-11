@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2022.06.20(叶凡,龍柒) --交流群:109949666反馈</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2023.06.11(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -684,14 +684,14 @@
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">显示所有关机消息的关机原因</sys:String>
     <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">如果启用，关闭原因将显示所有关闭消息; 否则只会在服务器关机开始时显示。</sys:String>
     
-	<sys:String x:Key="GlobalSettings_DiscordBotLabel">启用Discord(开黑) 机器人</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">如果更改Discord(开黑)机器人的任何设置，则需要重新启动服务器管理器.</sys:String>
+	<sys:String x:Key="GlobalSettings_DiscordBotLabel">启用Discord(KOOK) 机器人</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotInformationLabel">如果更改Discord(KOOK)机器人的任何设置，则需要重新启动服务器管理器.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotTokenLabel">令牌:</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">与Discord(开黑)关联的令牌.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotTokenTooltip">与Discord(KOOK)关联的令牌.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotServerLabel">地图配置ID:</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">机器人将侦听的Discord(开黑)服务器的id.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotServerTooltip">机器人将侦听的Discord(KOOK)服务器的id.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotPrefixLabel">前缀:</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">通过Discord(开黑)发送命令时必须使用的前缀.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotPrefixTooltip">通过Discord(KOOK)发送命令时必须使用的前缀.</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotLogLevelLabel">日志级别:</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotApplyButtonLabel">领取令牌...</sys:String>
     <sys:String x:Key="GlobalSettings_DiscordBotHelpButtonLabel">帮助...</sys:String>
@@ -705,12 +705,12 @@
     <sys:String x:Key="ServerSettings_AddDiscordBotWhitelistTooltip">添加白名单</sys:String>
     <sys:String x:Key="ServerSettings_ClearDiscordBotWhitelistTooltip">清除白名单</sys:String>
     <sys:String x:Key="ServerSettings_RemoveDiscordBotWhitelistTooltip">删除白名单</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">如果启用，则可以从discord(开黑)发送备份命令.</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">如果启用，可以从discord(开黑)发送重启命令.</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">如果启用，可以从discord(开黑)发送关机命令.</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">如果启用，则可以从discord(开黑)发送开始命令.</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">如果启用，可以从discord(开黑)发送停止命令.</sys:String>
-    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">如果启用，则可以从discord(开黑)发送更新命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowBackupTooltip">如果启用，则可以从discord(KOOK)发送备份命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowRestartTooltip">如果启用，可以从discord(KOOK)发送重启命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowShutdownTooltip">如果启用，可以从discord(KOOK)发送关机命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStartTooltip">如果启用，则可以从discord(KOOK)发送开始命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowStopTooltip">如果启用，可以从discord(KOOK)发送停止命令.</sys:String>
+    <sys:String x:Key="GlobalSettings_DiscordBotAllowUpdateTooltip">如果启用，则可以从discord(KOOK)发送更新命令.</sys:String>
 	
     <sys:String x:Key="GlobalSettings_EmailSettingsLabel">SMTP 电子邮箱设置</sys:String>
     <sys:String x:Key="GlobalSettings_EmailHostLabel">主机:</sys:String>
@@ -876,11 +876,11 @@
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableLabel">启用</sys:String>
     <sys:String x:Key="MainWindow_AutoUpdateTaskEnableTooltip">启用自动更新计划任务</sys:String>
     <sys:String x:Key="MainWindow_TaskRunTimeLabel">下次运行时间：</sys:String>
-	<sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord(开黑)机器人:</sys:String>
+	<sys:String x:Key="MainWindow_DiscordBotStatusLabel">Discord(KOOK)机器人:</sys:String>
     <sys:String x:Key="MainWindow_DiscordBotTaskStartLabel">开始</sys:String>
-    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">启动Discord(开黑)机器人</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStartTooltip">启动Discord(KOOK)机器人</sys:String>
     <sys:String x:Key="MainWindow_DiscordBotTaskStopLabel">停止</sys:String>
-    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">停止Discord(开黑)机器人</sys:String>
+    <sys:String x:Key="MainWindow_DiscordBotTaskStopTooltip">停止Discord(KOOK)机器人</sys:String>
 
     <sys:String x:Key="MainWindow_TaskStateUnknownLabel">未知</sys:String>
     <sys:String x:Key="MainWindow_TaskStateDisabledLabel">禁用</sys:String>
@@ -1220,11 +1220,17 @@
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">如果启用，在单个玩家中激活NVIDIA Ansel支持。 连接到服务器时，即使通电和点亮，这也会导致大多数灯（灯）不再起作用。</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">建筑内存优化</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">如果启用，将启用建筑内存优化。 注意：在运行与建筑相关的MOD（直到它们被更新）时，请避免使用它，因为它可能会破坏这些MOD建筑的捕捉点。</sys:String>
+	<sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">生物上传问题保护</sys:String>
+	<sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">防止生物上传问题（请注意，这可能会对一些MOD产生影响）</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">无网格下检查</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">如果启用，将完全关闭反啮合系统。</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">无网下杀死</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingTooltip">如果启用，将关闭反啮合玩家杀死(但仍然允许传送)。</sys:String>
+	<sys:String x:Key="ServerSettings_UseItemDupeCheckLabel">额外的双重保护</sys:String>
+	<sys:String x:Key="ServerSettings_UseItemDupeCheckTooltip">启用额外的重复数据保护（注意：这可能会对MOD产生影响，请谨慎使用）.</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxLabel">启用 Vivox</sys:String>
+	<sys:String x:Key="ServerSettings_UseSecureSpawnRulesLabel">安全物品/恐龙产卵规则</sys:String>
+	<sys:String x:Key="ServerSettings_UseSecureSpawnRulesTooltip">更安全的物品/恐龙产卵规则（注意：这可能会对mod产生影响，请谨慎使用）.</sys:String>
     <sys:String x:Key="ServerSettings_UseVivoxTooltip">如果启用，将开启Vivox通信协议。 注意：仅适用于Steam服务器。</sys:String>
     <sys:String x:Key="ServerSettings_AllowSharedConnectionsLabel">允许共享连接</sys:String>
     <sys:String x:Key="ServerSettings_AllowSharedConnectionsTooltip">如果禁用，将禁用家庭共享。</sys:String>
@@ -1242,11 +1248,25 @@
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">强制自动重生恐龙的间隔。</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">备用保存目录名称:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(可选)</sys:String>
+	<sys:String x:Key="ServerSettings_AltSaveDirectoryNameNote">注意：仅在高级设置中设置“备用保存目录名”!启用前进行研究!</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">设置目录名（在服务器保存的文件夹下）来存储世界、玩家和部落文件。</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">跨方舟数据传输集群ID：</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">为此服务器设置一个集群 ID，该集群 ID 将通过跨方舟数据传输将方舟服务器联系在一起。</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">集群目录覆盖</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">如果启用，则允许您使用一个公共的跨服务器存储位置，该位置在同一台计算机上运行的多个服务器之间起作用。 使用服务器管理器数据目录中的群集目录。</sys:String>
+	
+	<sys:String x:Key="ServerSettings_ServerBadWordFilterOptionsLabel">屏蔽(敏感词)筛选器</sys:String>
+    <sys:String x:Key="ServerSettings_ResetBadWordFilterOptionsTooltip">将所有屏蔽字筛选器(敏感词)选项重置为默认值.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLLabel">屏蔽字筛选器(敏感词)网址:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLTooltip">将网址添加到托管您自己的(敏感词)列表中.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLLabel">敏感词白名单网址:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLTooltip">将网址添加到托管您自己的不敏感词列表中.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesLabel">筛选部落名称</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesTooltip">根据敏感词/不敏感词列表筛选出部落名称.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesLabel">筛选游戏玩家名称</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesTooltip">根据敏感词/不敏感词列表筛选出玩家名称.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatLabel">筛选聊天</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatTooltip">根据敏感词/不敏感词列表过滤聊天信息.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">服务器日志选项</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">将所有服务器日志选项重置为默认值。</sys:String>
@@ -1321,24 +1341,24 @@
     <sys:String x:Key="ServerSettings_RestartIfShutdownTooltip">如果启用，即使关闭自动重启和自动更新，服务器也将重新启动。</sys:String>
     <!--#endregion-->
 	
-	<!--#region 服务器设置-Discord(开黑) 机器人详细信息 -->
-    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord(开黑)机器人细节</sys:String>
+	<!--#region 服务器设置-Discord(KOOK) 机器人详细信息 -->
+    <sys:String x:Key="ServerSettings_DiscordBotLabel">Discord(KOOK)机器人细节</sys:String>
     <sys:String x:Key="ServerSettings_DiscordBotChannelLabel">频道ID:</sys:String>
-    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">此配置文件将侦听的Discord(开黑)服务器通道的ID.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordBotChannelTooltip">此配置文件将侦听的Discord(KOOK)服务器通道的ID.</sys:String>
     <sys:String x:Key="ServerSettings_DiscordAliasLabel">名称:</sys:String>
-    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">在使用Discord(开黑)命令时，可以使用唯一的名称来标识服务器，而不是配置文件id.</sys:String>
+    <sys:String x:Key="ServerSettings_DiscordAliasTooltip">在使用Discord(KOOK)命令时，可以使用唯一的名称来标识服务器，而不是配置文件id.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordBackupLabel">允许备份</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">如果启用，配置文件将侦听来自Discord(开黑)的备份命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordBackupTooltip">如果启用，配置文件将侦听来自Discord(KOOK)的备份命令.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordRestartLabel">允许重新启动</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">如果启用，配置文件将侦听来自Discord(开黑)的重新启动命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordRestartTooltip">如果启用，配置文件将侦听来自Discord(KOOK)的重新启动命令.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordShutdownLabel">允许关机</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">如果启用，配置文件将侦听来自Discord(开黑)的关机命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordShutdownTooltip">如果启用，配置文件将侦听来自Discord(KOOK)的关机命令.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordStartLabel">允许启动</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">如果启用，配置文件将侦听来自Discord(开黑)的启动命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStartTooltip">如果启用，配置文件将侦听来自Discord(KOOK)的启动命令.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordStopLabel">允许停止</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">如果启用，配置文件将侦听来自Discord(开黑)的停止命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordStopTooltip">如果启用，配置文件将侦听来自Discord(KOOK)的停止命令.</sys:String>
     <sys:String x:Key="ServerSettings_AllowDiscordUpdateLabel">允许更新</sys:String>
-    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">如果启用，配置文件将侦听来自Discord(开黑)的更新命令.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowDiscordUpdateTooltip">如果启用，配置文件将侦听来自Discord(KOOK)的更新命令.</sys:String>
     <!--#endregion-->
 
     <!--#region 服务器设置 - 服务器详细信息 -->
@@ -1355,6 +1375,8 @@
     <sys:String x:Key="ServerSettings_EventNote">注意：仅在正式事件运行时才应在服务器上启用事件。 如果您在正式日期之前或之后启用了该事件，则该事件可能会导致服务器变得不稳定或根本无法工作。</sys:String>
     <sys:String x:Key="ServerSettings_EventNameLabel">活动事件：</sys:String>
     <sys:String x:Key="ServerSettings_EventNameTooltip">要启用的事件的名称（留空以禁用事件）。</sys:String>
+	<sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">恐龙颜色随机:</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">恐龙事件颜色随机.</sys:String>
     <!--#endregion-->
 
     <!--#region 服务器设置 - 规则 -->
@@ -1515,6 +1537,8 @@
     <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">如果启用，钓鱼将不会在获得任何装备和图纸奖励，只有鱼肉。</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">使用尸体和包裹时间倍数</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">调整尸体和掉落包裹的存在时间倍数。</sys:String>
+	<sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">维京岛冷却时间(取回背包)</sys:String>
+    <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalTooltip">维京岛冷却时间在玩家被杀时取回背包。默认为1小时.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">蓄电池的电量的消耗速度</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondTooltip">指定在电气对象中使用的电池电量消耗的倍数（每秒减少）。</sys:String>
     <sys:String x:Key="ServerSettings_FuelConsumptionIntervalMultiplierLabel">油耗间隔倍数</sys:String>
@@ -1827,6 +1851,8 @@
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">在延迟与婴儿拥抱多久时间后，留痕质量开始下降，较高的数值会增加宽限期。</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">拥抱失去留痕质量速度：</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">如果您尚未拥抱婴儿，宽限期结束后留痕质量下降速度的倍数。值越低，留痕质量损失越慢。</sys:String>
+	<sys:String x:Key="ServerSettings_ImprintlimitLabel">最大印记限制添加:</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitTooltip">自动摧毁超过指定印记奖励限制的生物，单位为%。建议提高1%以捕捉潜在的浮点误差，尤其是在使用自定义压印速率时.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">确认重置操作</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">点击“是”确认要重置最大 XP。</sys:String>
@@ -3155,6 +3181,7 @@
 	<sys:String x:Key="LionfishLion_Character_BP_C">影鬃</sys:String>
 	<sys:String x:Key="TekStrider_Character_BP_C">跨步者</sys:String>
 	<sys:String x:Key="TekWyvern_Character_BP_C">虚空飞龙</sys:String>
+	<sys:String x:Key="TekHoverSail_Character_BP_C">泰克悬停帆</sys:String>
 	<sys:String x:Key="Gigant_Character_BP_ExpG_C">实验巨龙</sys:String>
 	<sys:String x:Key="Macrophage_Swarm_Character_BP_C">巨噬细胞</sys:String>
 	<sys:String x:Key="Allo_Character_BP_Rockwell_C">R-异特龙</sys:String>
@@ -3216,6 +3243,7 @@
 	
 	<!--#region 恐龙/生物类名称 - 维京岛 -->
 	<sys:String x:Key="Fjordhawk_Character_BP_C">峡鹰</sys:String>
+	<sys:String x:Key="Rhynio_Character_BP_C">莱尼虫龙</sys:String>
 	<sys:String x:Key="Carcha_Character_BP_C">鲨齿龙</sys:String>
 	<sys:String x:Key="Fenrir_Character_BP_C">芬里尔冰霜巨狼</sys:String>
 	<sys:String x:Key="Andrewsarchus_Character_BP_C">安氏兽</sys:String>
@@ -4019,6 +4047,7 @@
 	
 	<!--#region 印痕技能 - 维京岛 -->
 	<sys:String x:Key="EngramEntry_Saddle_Andrewsarchus_C">安氏兽鞍</sys:String>
+	<sys:String x:Key="EngramEntry_Saddle_Armor_RhynioSaddle_C">莱尼虫鞍</sys:String>
 	<sys:String x:Key="EngramEntry_Saddle_Carcha_C">鲨齿龙鞍</sys:String>
 	<sys:String x:Key="EngramEntry_Saddle_Desmodus_C">吸血蝙蝠鞍</sys:String>
     <!--#endregion-->
@@ -5499,6 +5528,17 @@
 	<sys:String x:Key="PrimalItemTrophy_BossDinopithecus_Hard_C">恐狒BOSS战利品(中等)(迷失岛)</sys:String>
 	<sys:String x:Key="PrimalItem_BossTribute_LostIsland_Medium_C">恐狒BOSS战利品(困难)(迷失岛)</sys:String>
 	<!--#endregion-->
+
+    <!--#region 项目类别名称 - 维京岛 -->
+    <sys:String x:Key="PrimalItemArmor_RhynioSaddle_C">莱尼虫鞍</sys:String>
+	<sys:String x:Key="PrimalItemArmor_CarchaSaddle_C">鲨齿龙鞍</sys:String>
+	<sys:String x:Key="PrimalItemArmor_AndrewsarchusSaddle_C">安氏兽鞍</sys:String>
+	<sys:String x:Key="PrimalItemArmor_DesmodusSaddle_C">吸血蝠鞍</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_FenrirBoss_C">芬里尔奖杯</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_FenrirBoss_Gamma_C">芬里尔奖杯(简单)</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_FenrirBoss_Beta_C">芬里尔奖杯(中等)</sys:String>
+	<sys:String x:Key="PrimalItemTrophy_FenrirBoss_Alpha_C">芬里尔奖杯(困难)</sys:String>
+    <!--#endregion-->
 
 	
     <!--#region 地图生物生成 -->
@@ -7133,10 +7173,10 @@
 	<!--#endregion-->
 	
 	<!--#region Discord Bot -->
-    <sys:String x:Key="DiscordBot_ErrorTitle">Discord(开黑)机器人错误</sys:String>
-    <sys:String x:Key="DiscordBot_MissingTokenError">Discord(开黑)机器人需要有效的令牌，以便它可以登录到Discord(开黑)服务器。\r\n这可以在全局设置中设置.</sys:String>
-    <sys:String x:Key="DiscordBot_MissingPrefixError">Discord(开黑)机器人需要有效的前缀。\r\n这可以在全局设置中设置.</sys:String>
-    <sys:String x:Key="DiscordBot_InvalidPrefixError">Discord(开黑)机器人前缀包含无效字符。只允许使用字母和数字.</sys:String>
+    <sys:String x:Key="DiscordBot_ErrorTitle">Discord(KOOK)机器人错误</sys:String>
+    <sys:String x:Key="DiscordBot_MissingTokenError">Discord(KOOK)机器人需要有效的令牌，以便它可以登录到Discord(KOOK)服务器。\r\n这可以在全局设置中设置.</sys:String>
+    <sys:String x:Key="DiscordBot_MissingPrefixError">Discord(KOOK)机器人需要有效的前缀。\r\n这可以在全局设置中设置.</sys:String>
+    <sys:String x:Key="DiscordBot_InvalidPrefixError">Discord(KOOK)机器人前缀包含无效字符。只允许使用字母和数字.</sys:String>
 
     <sys:String x:Key="DiscordBot_CommandNotEnabled">命令 '{0}'尚未启用.</sys:String>
     <sys:String x:Key="DiscordBot_CommandUnknown">未知命令 '{0}'.</sys:String>
