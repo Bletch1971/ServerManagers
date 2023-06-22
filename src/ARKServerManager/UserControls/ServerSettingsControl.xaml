@@ -810,7 +810,7 @@
                                             <Image Source="{com:Icon Path=/Ark Server Manager;component/Art/Find.ico,Size=32}"/>
                                         </Button>
 
-                                        <Label   Grid.Row="2" Grid.Column="0" Content="{DynamicResource ServerSettings_ModIdsLabel}" Grid.ColumnSpan="2" ToolTip="{DynamicResource ServerSettings_ModIdsTooltip}" VerticalAlignment="Center"/>
+                                        <Label   Grid.Row="2" Grid.Column="0" Content="{DynamicResource ServerSettings_ModIdsLabel}" Grid.ColumnSpan="2" ToolTip="{DynamicResource ServerSettings_ModIdsTooltip}" VerticalAlignment="Center" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" Margin="1" ToolTip="{DynamicResource ServerSettings_ModIdsTooltip}">
                                             <Validation.ErrorTemplate>
                                                 <ControlTemplate>
@@ -1364,13 +1364,13 @@
                                         <TextBox    Grid.Row="0" Grid.Column="3" Margin="1" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" MinWidth="100" Width="Auto" Text="{Binding ProcessAffinity, Converter={StaticResource ProcessorAffinityConverter}}" ToolTip="{DynamicResource ServerSettings_ProcessorAffinityTooltip}" IsEnabled="False"/>
                                         <Button     Grid.Row="0" Grid.Column="4" Margin="1" Width="22" HorizontalAlignment="Left" Click="OpenAffinity_Click" Content="{DynamicResource ServerSettings_ProcessorAffinityButtonLabel}" ToolTip="{DynamicResource ServerSettings_ProcessorAffinityButtonTooltip}"/>
 
-                                        <Label      Grid.Row="1" Grid.Column="0" Content="{DynamicResource ServerSettings_LauncherArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_LauncherArgsTooltip}"/>
+                                        <Label      Grid.Row="1" Grid.Column="0" Content="{DynamicResource ServerSettings_LauncherArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_LauncherArgsTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding LauncherArgs}" VerticalContentAlignment="Center" ToolTip="{DynamicResource ServerSettings_LauncherArgsTooltip}"/>
 
                                         <cctl:CheckBoxAndTextBlock   Grid.Row="2" Grid.Column="1" Margin="1" IsChecked="{Binding LauncherArgsOverride, Mode=TwoWay}" Text="{DynamicResource ServerSettings_LauncherArgsOverrideLabel}" ToolTip="{DynamicResource ServerSettings_LauncherArgsOverrideTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                                         <cctl:CheckBoxAndTextBlock   Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="1" IsChecked="{Binding LauncherArgsPrefix, Mode=TwoWay}" IsEnabled="{Binding LauncherArgsOverride, Converter={StaticResource InvertBooleanConverter}}" Text="{DynamicResource ServerSettings_LauncherArgsPrefixLabel}" ToolTip="{DynamicResource ServerSettings_LauncherArgsPrefixTooltip}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                                        <Label      Grid.Row="3" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}"/>
+                                        <Label      Grid.Row="3" Grid.Column="0" Content="{DynamicResource ServerSettings_ServerArgsLabel}" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}" Foreground="{DynamicResource UnSyncedSetting}"/>
                                         <TextBox    Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="1" Text="{Binding AdditionalArgs}" VerticalContentAlignment="Center" ToolTip="{DynamicResource ServerSettings_ServerArgsTooltip}"/>
                                         <Button     Grid.Row="3" Grid.Column="4" Margin="1" Content="{StaticResource ShowCmdButtonContent}" ToolTip="{DynamicResource ServerSettings_ShowCommandButtonTooltip}" Click="ShowCmd_Click"/>
                                     </Grid>
