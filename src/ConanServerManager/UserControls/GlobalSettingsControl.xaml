@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cctl="clr-namespace:ServerManagerTool.Common.Controls;assembly=ServerManager.Common"
              xmlns:cc="clr-namespace:ServerManagerTool.Common.Converters;assembly=ServerManager.Common"
+             xmlns:cvr="clr-namespace:ServerManagerTool.Common.ValidationRules;assembly=ServerManager.Common"
              xmlns:gctl="clr-namespace:WPFSharp.Globalizer.Controls;assembly=WPFSharp.Globalizer"
              mc:Ignorable="d" 
              d:DesignWidth="800"
@@ -780,6 +781,24 @@
                         <CheckBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_UpdateDirectoryPermissionsLabel}" IsChecked="{Binding Config.UpdateDirectoryPermissions, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_UpdateDirectoryPermissionsTooltip}" HorizontalAlignment="Left"/>
 
                         <CheckBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_SteamCmdRedirectOutputLabel}" IsChecked="{Binding Config.SteamCmdRedirectOutput, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_SteamCmdRedirectOutputTooltip}" HorizontalAlignment="Left" />
+                        <Label   Grid.Row="4" Grid.Column="2" Content="{DynamicResource GlobalSettings_SteamCmdIgnoreExitStatusCodesLabel}" Grid.ColumnSpan="2" ToolTip="{DynamicResource GlobalSettings_SteamCmdIgnoreExitStatusCodesTooltip}" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="6" Margin="1" ToolTip="{DynamicResource Config.SteamCmdIgnoreExitStatusCodes}">
+                            <Validation.ErrorTemplate>
+                                <ControlTemplate>
+                                    <StackPanel>
+                                        <AdornedElementPlaceholder x:Name="textBox"/>
+                                        <TextBlock Text="{Binding [0].ErrorContent}" Background="Red" Foreground="White"/>
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Validation.ErrorTemplate>
+                            <TextBox.Text>
+                                <Binding Path="Config.SteamCmdIgnoreExitStatusCodes">
+                                    <Binding.ValidationRules>
+                                        <cvr:IdListValidationRule ValidatesOnTargetUpdated="true" />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
 
                         <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,0,5,5" Content="{DynamicResource GlobalSettings_EnableLoggingLabel}" IsChecked="{Binding Config.LoggingEnabled, Mode=TwoWay}" ToolTip="{DynamicResource GlobalSettings_EnableLoggingTooltip}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <cctl:AnnotatedSlider Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Margin="1" Label="{DynamicResource GlobalSettings_WorldSaveDelayLabel}" Value="{Binding Config.ServerShutdown_WorldSaveDelay, Converter={cc:IntRangeValueConverter 10, 300}}" Minimum="10" Maximum="300" SmallChange="10" LargeChange="50" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" Suffix="{DynamicResource SliderUnits_Seconds}" ToolTip="{DynamicResource GlobalSettings_WorldSaveDelayTooltip}"/>

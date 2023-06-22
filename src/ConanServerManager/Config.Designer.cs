@@ -496,7 +496,22 @@ namespace ServerManagerTool {
                 this["SteamCmdRedirectOutput"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SteamCmdIgnoreExitStatusCodes
+        {
+            get
+            {
+                return ((string)(this["SteamCmdIgnoreExitStatusCodes"]));
+            }
+            set
+            {
+                this["SteamCmdIgnoreExitStatusCodes"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]

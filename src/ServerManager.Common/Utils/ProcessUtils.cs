@@ -162,7 +162,7 @@ namespace ServerManagerTool.Common.Utils
             }
         }
 
-        public static Task<bool> RunProcessAsync(string file, string arguments, string verb, string workingDirectory, string username, SecureString password, DataReceivedEventHandler outputHandler, CancellationToken cancellationToken, ProcessWindowStyle windowStyle = ProcessWindowStyle.Normal)
+        public static Task<bool> RunProcessAsync(string file, string arguments, string verb, string workingDirectory, string username, SecureString password, List<int> SteamCmdIgnoreExitStatusCodes, DataReceivedEventHandler outputHandler, CancellationToken cancellationToken, ProcessWindowStyle windowStyle = ProcessWindowStyle.Normal)
         {
             try
             {
@@ -211,6 +211,17 @@ namespace ServerManagerTool.Common.Utils
                         var exitCode = process.ExitCode;
 
                         _logger.Debug($"{nameof(RunProcessAsync)}: filename {fileName}; exitcode = {exitCode}");
+
+                        if (exitCode != 0)
+                        {
+                            _logger.Error($"{nameof(RunProcessAsync)}: filename {fileName}; exitcode = {exitCode}");
+
+                            if (SteamCmdIgnoreExitStatusCodes.Contains(exitCode))
+                            {
+                                exitCode = 0;
+                            }
+                        }
+
                         tcs.TrySetResult(exitCode == 0);
                         process.Close();
                     };
