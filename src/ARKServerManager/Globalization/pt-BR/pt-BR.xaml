@@ -657,7 +657,11 @@
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">Se ativado, quando a atualização automática for executada, todos os servidores serão atualizados ao mesmo tempo; caso contrário, cada servidor será atualizado um após o outro (isso levará mais tempo para ser concluído).</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Atraso entre cada atualização do servidor</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">A quantidade de tempo a aguardar entre cada atualização do servidor, disponível apenas se a Atualização paralela estiver desativada.</sys:String>
-    
+    <sys:String x:Key="GlobalSettings_ParallelBackupLabel">Backup em paralelo</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupTooltip">Se ativado, quando o backup automático for executado, todos os servidores serão copiados ao mesmo tempo, caso contrário, cada servidor será copiado um após o outro (isso pode produzir menos lag no servidor).</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBacckupSequencialDelayPeriodLabel">Atraso entre cada backup do servidor</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBackupSequencialDelayPeriodTooltip">A quantidade de tempo de espera entre cada backup do servidor, disponível apenas se o backup paralelo estiver desabilitado.</sys:String>    
+	
 	<sys:String x:Key="GlobalSettings_AutoRestartLabel">Opções de reinicialização automática</sys:String>
 	<sys:String x:Key="GlobalSettings_RestartGraceIntervalInformationLabel">O período de carência não impede que as atualizações automáticas reiniciem o servidor.</sys:String>
     <sys:String x:Key="GlobalSettings_EnableRestartGraceIntervalLabel">Ativar período de carência</sys:String>
@@ -1255,11 +1259,25 @@
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">O intervalo entre o respawn forçado auto dino.</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Alternar o Save do Diretório:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Optional)</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameNote">NOTA: Defina "Nome alternativo do diretório de salvamento" apenas em configurações avançadas! Pesquise antes de habilitar!</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Define o nome do diretório (embaixo da pasta Saved do servidor) para armazenar os arquivos world, player e tribo.</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">ClusterId de Transferência de Dados Cross-ARK:</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Define um ID de cluster para esse servidor que agrupará servidores ARK por meio da Transferência de Dados Cross-ARK.</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Substituição do Diretório de Cluster</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">Se ativado, permite usar um local comum de armazenamento entre servidores que funcione entre vários servidores em execução na mesma máquina. Usa o diretório de clusters no diretório ASM Data.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerBadWordFilterOptionsLabel">Filtro de palavras impróprias</sys:String>
+    <sys:String x:Key="ServerSettings_ResetBadWordFilterOptionsTooltip">Redefina todas as opções de filtro de palavras impróprias para os padrões.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLLabel">Filtro de palavras impróprias:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLTooltip">Adicione o URL para hospedar sua própria lista de palavrões.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLLabel">Filtro de palavras válidas:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLTooltip">Adicione o URL para hospedar sua própria lista de boas palavras.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesLabel">Filtrar nomes de tribo</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesTooltip">Filtra os nomes das tribos com base na lista de palavrões/boas palavras.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesLabel">Filtrar nomes de personagens</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesTooltip">Filtra os nomes dos personagens com base na lista de palavrões/boas palavras.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatLabel">Filtrar bate-papo</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatTooltip">Filtra mensagens de bate-papo com base na lista de palavrões/boas palavras.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Opções de Log do Servidor</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Redefinir todas as opções de log do servidor para os padrões.</sys:String>
@@ -1844,6 +1862,8 @@
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Um multiplicador de quanto tempo depois de atrasar o aconchego com o bebê antes da qualidade da imprint começa a diminuir. Valores mais altos aumentam o período de carência.</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Perda de Qualidade de Imprint:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Um multiplicador sobre a rapidez com que a qualidade de imprint diminui após o período de carência, se você ainda não abraçou o bebê. Valores mais baixos retardam a perda de qualidade de impressão.</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitLabel">Limite Máximo de Imprint:</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitTooltip">Destrói automaticamente as criaturas que excedem o limite de bônus de impressão especificado, em %. Recomenda-se aumentar 1% para detectar possíveis erros de ponto flutuante, especialmente ao trabalhar com taxas de impressão personalizadas.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Confirmar a ação Redefinir</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Clique em "Sim" para confirmar que você deseja redefinir o Max XP.</sys:String>
