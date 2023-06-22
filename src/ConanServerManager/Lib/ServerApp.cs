@@ -1898,6 +1898,9 @@ namespace ServerManagerTool.Lib
                     var engineIniFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.ServerEngineConfigFile));
                     var gameIniFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.ServerGameConfigFile));
                     var settingsIniFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.ServerSettingsConfigFile));
+                    var blacklistFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerSaveFolder(_profile), Config.Default.ServerBlacklistFile));
+                    var whitelistFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerSaveFolder(_profile), Config.Default.ServerWhitelistFile));
+                    var serverUidFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerSaveFolder(_profile), Config.Default.ServerUidFile));
                     var launcherFile = GetLauncherFile();
 
                     if (!Directory.Exists(backupFolder))
@@ -1921,6 +1924,15 @@ namespace ServerManagerTool.Lib
 
                     if (File.Exists(launcherFile))
                         files.Add(launcherFile);
+
+                    if (File.Exists(blacklistFile))
+                        files.Add(blacklistFile);
+
+                    if (File.Exists(whitelistFile))
+                        files.Add(whitelistFile);
+
+                    if (File.Exists(serverUidFile))
+                        files.Add(serverUidFile);
 
                     var comment = new StringBuilder();
                     comment.AppendLine($"Windows Platform: {Environment.OSVersion.Platform}");
@@ -2383,6 +2395,8 @@ namespace ServerManagerTool.Lib
         public static string GetProfileServerConfigDir(ServerProfile profile) => Path.Combine(profile.InstallDirectory, Config.Default.ServerConfigRelativePath);
 
         public static string GetProfileServerConfigDir(ServerProfileSnapshot profile) => Path.Combine(profile.InstallDirectory, Config.Default.ServerConfigRelativePath);
+
+        public static string GetProfileServerSaveFolder(ServerProfileSnapshot profile) => Path.Combine(profile.InstallDirectory, Config.Default.SavedFilesRelativePath);
 
         private static string GetRconMessageCommand(string commandValue)
         {

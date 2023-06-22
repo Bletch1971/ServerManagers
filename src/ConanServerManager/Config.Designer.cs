@@ -778,7 +778,18 @@ namespace ServerManagerTool {
                 return ((string)(this["ServerAppIdFile"]));
             }
         }
-        
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("serveruid.txt")]
+        public string ServerUidFile
+        {
+            get
+            {
+                return ((string)(this["ServerUidFile"]));
+            }
+        }
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/CSM/beta/lates" +
