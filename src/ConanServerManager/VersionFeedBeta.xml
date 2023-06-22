@@ -5,28 +5,29 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="https://servermanagers.freeforums.net/" />
-  <updated>2022-11-07T00:00:00Z</updated>
+  <updated>2023-06-22T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:5E67390A-B4A5-442D-AC94-9E1A79423B86</id>
-    <title>1.1.82 (1.1.82.1)</title>
-    <summary>1.1.82.1</summary>
+    <id></id>
+    <title>1.1.83 (1.1.83.1)</title>
+    <summary>1.1.83.1</summary>
     <link href="" />
-    <updated>2022-11-07T00:00:00Z</updated>
+    <updated>2023-06-22T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>zh-CN Translation file added.</li>
+            <li>Backup - add blacklist.txt, serveruid.txt, whitelist.txt to profile backup.</li>
+            <li>Global Settings - add option to add additional steamcmd exit status codes as "successful" (use on your own risk).</li>
           </ul>
         </p>
       </div>
     </content>
     <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
+      <name>Lacoi</name>
+      <email></email>
     </author>
   </entry>
 
