@@ -798,6 +798,8 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">The maximum number of log files that will be kept.</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON Broadcast Mode:</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Select the method used by the server manager to send auto process messages to the game clients via RCON.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdIgnoreExitStatusCodesLabel">Ignore following SteamCmd ExitStatus</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdIgnoreExitStatusCodesTooltip">A comma-separated list of exit staus ids, which are considered correct.</sys:String>
 
     <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Any changes to these priorities will take effect after the task has been created or saved.</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Select the priority used by the windows task manager when running this task.</sys:String>
