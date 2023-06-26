@@ -723,7 +723,9 @@ namespace ServerManagerTool.Lib
                     var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, this.ProfileSnapshot.InstallDirectory, this.ProfileSnapshot.AppIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
                     var workingDirectory = Config.Default.DataDir;
 
-                    success = await ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, this.ProfileSnapshot.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
+                    var SteamCmdIgnoreExitStatusCodes = SteamUtils.GetExitStatusList(Config.Default.SteamCmdIgnoreExitStatusCodes);
+
+                    success = await ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, this.ProfileSnapshot.InstallDirectory, SteamCmdIgnoreExitStatusCodes, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
                     if (success && downloadSuccessful)
                     {
                         progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Finished server update.");
@@ -912,7 +914,9 @@ namespace ServerManagerTool.Lib
                                             steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, this.ProfileSnapshot.AppId, modId);
                                         var workingDirectory = Config.Default.DataDir;
 
-                                        modSuccess = await ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
+                                        var SteamCmdIgnoreExitStatusCodes = SteamUtils.GetExitStatusList(Config.Default.SteamCmdIgnoreExitStatusCodes);
+
+                                        modSuccess = await ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, SteamCmdIgnoreExitStatusCodes, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, steamCmdRemoveQuit ? ProcessWindowStyle.Normal : ProcessWindowStyle.Minimized);
                                         if (modSuccess && downloadSuccessful)
                                         {
                                             progressCallback?.Invoke(0, $"{SteamCmdUpdater.OUTPUT_PREFIX} Finished mod download.");

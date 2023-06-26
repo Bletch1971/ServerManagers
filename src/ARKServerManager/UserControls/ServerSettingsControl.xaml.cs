@@ -926,6 +926,7 @@ namespace ServerManagerTool
                 comment.AppendLine($"SteamCmd_Username Set: {!string.IsNullOrWhiteSpace(Config.Default.SteamCmd_Username)}");
                 comment.AppendLine($"SteamCmd_Password Set: {!string.IsNullOrWhiteSpace(Config.Default.SteamCmd_Password)}");
                 comment.AppendLine($"SteamAPIKey: {!string.IsNullOrWhiteSpace(CommonConfig.Default.SteamAPIKey)}");
+                comment.AppendLine($"SteamCmdIgnoreExitStatusCodes: {!string.IsNullOrWhiteSpace(Config.Default.SteamCmdIgnoreExitStatusCodes)}");
 
                 comment.AppendLine($"SectionCraftingOverridesEnabled: {Config.Default.SectionCraftingOverridesEnabled}");
                 comment.AppendLine($"SectionStackSizeOverridesEnabled: {Config.Default.SectionStackSizeOverridesEnabled}");

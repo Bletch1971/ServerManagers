@@ -303,5 +303,15 @@ namespace ServerManagerTool.Common.Utils
             var argumentString = string.Format(argumentFormatString, argumentValues);
             return BuildSteamCmdArguments(removeQuit, argumentString);
         }
+
+        public static List<int> GetExitStatusList(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return new List<int>();
+            }
+
+            return new List<int>(Array.ConvertAll(value.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries), int.Parse));
+        }
     }
 }

@@ -6108,7 +6108,7 @@ namespace ServerManagerTool.Lib
 
         private void SyncAdministrationSection(ServerProfile sourceProfile)
         {
-            this.SetValue(ServerModIdsProperty, sourceProfile.ServerModIds);
+            //this.SetValue(ServerModIdsProperty, sourceProfile.ServerModIds);
 
             this.SetValue(AutoSavePeriodMinutesProperty, sourceProfile.AutoSavePeriodMinutes);
 

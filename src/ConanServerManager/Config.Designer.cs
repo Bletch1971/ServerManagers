@@ -496,7 +496,22 @@ namespace ServerManagerTool {
                 this["SteamCmdRedirectOutput"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SteamCmdIgnoreExitStatusCodes
+        {
+            get
+            {
+                return ((string)(this["SteamCmdIgnoreExitStatusCodes"]));
+            }
+            set
+            {
+                this["SteamCmdIgnoreExitStatusCodes"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -763,7 +778,18 @@ namespace ServerManagerTool {
                 return ((string)(this["ServerAppIdFile"]));
             }
         }
-        
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("serveruid.txt")]
+        public string ServerUidFile
+        {
+            get
+            {
+                return ((string)(this["ServerUidFile"]));
+            }
+        }
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://raw.githubusercontent.com/Bletch1971/ServerManagers/master/CSM/beta/lates" +

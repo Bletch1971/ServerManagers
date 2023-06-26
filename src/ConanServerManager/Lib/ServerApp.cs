@@ -794,7 +794,9 @@ namespace ServerManagerTool.Lib
                         SteamCMDProcessWindowStyle = ProcessWindowStyle.Normal;
                     }
 
-                    success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, _profile.InstallDirectory, Config.Default.SteamCmdRedirectOutput ? (DataReceivedEventHandler)serverOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
+                    var SteamCmdIgnoreExitStatusCodes = SteamUtils.GetExitStatusList(Config.Default.SteamCmdIgnoreExitStatusCodes);
+
+                    success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, _profile.InstallDirectory, SteamCmdIgnoreExitStatusCodes, Config.Default.SteamCmdRedirectOutput ? (DataReceivedEventHandler)serverOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
                     if (success && downloadSuccessful)
                     {
                         LogProfileMessage("Finished server update.");
@@ -968,7 +970,9 @@ namespace ServerManagerTool.Lib
                                         else
                                             steamCmdArgs = SteamUtils.BuildSteamCmdArguments(steamCmdRemoveQuit, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, _profile.AppId, modId);
 
-                                        modSuccess = ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
+                                        var SteamCmdIgnoreExitStatusCodes = SteamUtils.GetExitStatusList(Config.Default.SteamCmdIgnoreExitStatusCodes);
+
+                                        modSuccess = ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, SteamCmdIgnoreExitStatusCodes, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, cancellationToken, SteamCMDProcessWindowStyle).Result;
                                         if (modSuccess && downloadSuccessful)
                                         {
                                             LogProfileMessage("Finished mod download.");
@@ -1684,7 +1688,9 @@ namespace ServerManagerTool.Lib
                             steamCmdArgs = SteamUtils.BuildSteamCmdArguments(false, Config.Default.SteamCmdInstallModArgsFormat, Config.Default.SteamCmd_Username, appMod.AppId, modId);
                         var workingDirectory = Config.Default.DataPath;
 
-                        var success = ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, CancellationToken.None, SteamCMDProcessWindowStyle).Result;
+                        var SteamCmdIgnoreExitStatusCodes = SteamUtils.GetExitStatusList(Config.Default.SteamCmdIgnoreExitStatusCodes);
+
+                        var success = ServerUpdater.UpgradeModsAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, SteamCmdIgnoreExitStatusCodes, Config.Default.SteamCmdRedirectOutput ? modOutputHandler : null, CancellationToken.None, SteamCMDProcessWindowStyle).Result;
                         if (success && downloadSuccessful)
                             // download was successful, exit loop and continue.
                             break;
@@ -1807,7 +1813,9 @@ namespace ServerManagerTool.Lib
                 var steamCmdArgs = SteamUtils.BuildSteamCmdArguments(false, Config.Default.SteamCmdInstallServerArgsFormat, Config.Default.SteamCmd_AnonymousUsername, cacheFolder, appIdServer, steamCmdInstallServerBetaArgs.ToString(), validate ? "validate" : string.Empty);
                 var workingDirectory = Config.Default.DataPath;
 
-                var success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, cacheFolder, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, CancellationToken.None, SteamCMDProcessWindowStyle).Result;
+                var SteamCmdIgnoreExitStatusCodes = SteamUtils.GetExitStatusList(Config.Default.SteamCmdIgnoreExitStatusCodes);
+
+                var success = ServerUpdater.UpgradeServerAsync(steamCmdFile, steamCmdArgs, workingDirectory, null, null, cacheFolder, SteamCmdIgnoreExitStatusCodes, Config.Default.SteamCmdRedirectOutput ? serverOutputHandler : null, CancellationToken.None, SteamCMDProcessWindowStyle).Result;
                 if (success && downloadSuccessful)
                     // download was successful, exit loop and continue.
                     break;
@@ -1890,6 +1898,9 @@ namespace ServerManagerTool.Lib
                     var engineIniFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.ServerEngineConfigFile));
                     var gameIniFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.ServerGameConfigFile));
                     var settingsIniFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerConfigDir(_profile), Config.Default.ServerSettingsConfigFile));
+                    var blacklistFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerSaveFolder(_profile), Config.Default.ServerBlacklistFile));
+                    var whitelistFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerSaveFolder(_profile), Config.Default.ServerWhitelistFile));
+                    var serverUidFile = IOUtils.NormalizePath(Path.Combine(GetProfileServerSaveFolder(_profile), Config.Default.ServerUidFile));
                     var launcherFile = GetLauncherFile();
 
                     if (!Directory.Exists(backupFolder))
@@ -1913,6 +1924,15 @@ namespace ServerManagerTool.Lib
 
                     if (File.Exists(launcherFile))
                         files.Add(launcherFile);
+
+                    if (File.Exists(blacklistFile))
+                        files.Add(blacklistFile);
+
+                    if (File.Exists(whitelistFile))
+                        files.Add(whitelistFile);
+
+                    if (File.Exists(serverUidFile))
+                        files.Add(serverUidFile);
 
                     var comment = new StringBuilder();
                     comment.AppendLine($"Windows Platform: {Environment.OSVersion.Platform}");
@@ -2375,6 +2395,8 @@ namespace ServerManagerTool.Lib
         public static string GetProfileServerConfigDir(ServerProfile profile) => Path.Combine(profile.InstallDirectory, Config.Default.ServerConfigRelativePath);
 
         public static string GetProfileServerConfigDir(ServerProfileSnapshot profile) => Path.Combine(profile.InstallDirectory, Config.Default.ServerConfigRelativePath);
+
+        public static string GetProfileServerSaveFolder(ServerProfileSnapshot profile) => Path.Combine(profile.InstallDirectory, Config.Default.SavedFilesRelativePath);
 
         private static string GetRconMessageCommand(string commandValue)
         {
