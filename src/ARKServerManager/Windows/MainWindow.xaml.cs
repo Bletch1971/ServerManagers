@@ -1,5 +1,6 @@
 ﻿using EO.Wpf;
 using NLog;
+using ServerManagerTool.Common;
 using ServerManagerTool.Common.Enums;
 using ServerManagerTool.Common.Lib;
 using ServerManagerTool.Common.Utils;
@@ -35,6 +36,7 @@ namespace ServerManagerTool
 
         public static readonly DependencyProperty AppInstanceProperty = DependencyProperty.Register(nameof(AppInstance), typeof(App), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(MainWindow), new PropertyMetadata(null));
+        public static readonly DependencyProperty CommonConfigProperty = DependencyProperty.Register(nameof(CommonConfig), typeof(CommonConfig), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ServerManagerProperty = DependencyProperty.Register(nameof(ServerManager), typeof(ServerManager), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty AutoBackupStateProperty = DependencyProperty.Register(nameof(AutoBackupState), typeof(Microsoft.Win32.TaskScheduler.TaskState), typeof(MainWindow), new PropertyMetadata(Microsoft.Win32.TaskScheduler.TaskState.Unknown));
         public static readonly DependencyProperty AutoBackupStateStringProperty = DependencyProperty.Register(nameof(AutoBackupStateString), typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
@@ -52,6 +54,7 @@ namespace ServerManagerTool
         {
             this.AppInstance = App.Instance;
             this.Config = Config.Default;
+            this.CommonConfig = CommonConfig.Default;
 
             InitializeComponent();
             WindowUtils.RemoveDefaultResourceDictionary(this, Config.Default.DefaultGlobalizationFile);
@@ -100,6 +103,12 @@ namespace ServerManagerTool
         {
             get { return GetValue(ConfigProperty) as Config; }
             set { SetValue(ConfigProperty, value); }
+        }
+
+        public CommonConfig CommonConfig
+        {
+            get { return GetValue(CommonConfigProperty) as CommonConfig; }
+            set { SetValue(CommonConfigProperty, value); }
         }
 
         public ServerManager ServerManager

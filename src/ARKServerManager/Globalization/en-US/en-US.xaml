@@ -915,6 +915,7 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">If you proceed the entire SteamCMD folder will be removed including all mod cache downloads.\r\nAre you sure you want to reinstall SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
+	<sys:String x:Key="MainWindow_SteamWebApiKeyMissingLabel">Steam WebAPI Key missing! Updates, downloads and installation of profiles could fail. Enter your Steam WebApiKey in the global settings</sys:String>
 
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot Running Commands</sys:String>
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">The discord bot has one or more running commands, do you want to continue shutting down the server manager?</sys:String>
