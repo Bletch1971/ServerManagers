@@ -1549,8 +1549,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Specifies the multiplier for the supply crate loot quality.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Fishing Loot Quality Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Specifies the multiplier for the fishing loot quality.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Disable Non-Meat Fish Loot</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">If enabled, disables harvesting non-meat fish loot.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Use Corpse Life Span Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Specifies the multiplier for corpse and dropped box lifespan.</sys:String>
     <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">Fjordhawk Inventory Cooldown</sys:String>
@@ -1770,8 +1768,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">If enabled, allows the leveling of flyer movement speed.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Prevent Dino Mate Boost</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">If enabled, the dino mate boost will be disabled.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Disable Force Ground Flyer with Explosives</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">If enabled, will disable the grounding of the flyer when explosives are put on them.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Allow Multiple Attached C4</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">If enabled, will allow more than one C4 attached per dino.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Disable Dino Decay PvE</sys:String>
@@ -1980,8 +1976,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Enable Structure Decay PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">If enabled, enables decay of player structures in PvE.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Structure Decay Period:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Specifies the time required for player structures to decay in PvE mode.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Structure Decay Multiplier:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Specifies the scaling factor for the decay rate of player structures in PvE mode.</sys:String>
 

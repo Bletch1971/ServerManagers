@@ -1291,8 +1291,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Especifica el multiplicador para la calidad del botín de los cristales de suministros.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Multiplicador de calidad de botín de pesca</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Especifica el multiplicador para la calidad del botín de pesca.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Desactivar botín sin pescado</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Si es activado, desactiva el botín en cosecha sin pescado.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Usar multiplicador de vida útil de cadáver</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Especifica el multiplicador de vida útil para cadáveres y mochilas desechadas.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Durabilidad global de batería con alimentación</sys:String>
@@ -1459,8 +1457,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyingStaminaRecoveryTooltip">Si es activado, se recupera energía mientras se está parado en el aire.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Prevenir estímulo de dinos compañeros</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Si es activado, el estímulo de grupo será desactivado.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Desactivar aterrizaje forzado de voladores con explosivos</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Si es activado, será desactivado el aterrizaje de los dinos voladores si llevan puestos explosivos en ellos.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Permitir múltiples C4 unidos</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Al activas, se permitirá más de un C4 unido por dino.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Desactivar deterioro de dinos en JcE</sys:String>
@@ -1663,8 +1659,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Activar deterioro de estructuras en JcE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Si es activado, activa el deterioro de estructuras de jugador en JcE.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Periodo de deterioro de estructura:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Especifica el tiempo requerido para que las estructuras de jugadores inicien el deterioro en modo JcE.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Multiplicador de deterioro de estructura:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Especifica el factor de escala para el ratio de deterioro de estrucutras de jugador en modo JcE.</sys:String>
 

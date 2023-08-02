@@ -1740,14 +1740,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(FishingLootQualityMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty EnableNoFishLootProperty = DependencyProperty.Register(nameof(EnableNoFishLoot), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool EnableNoFishLoot
-        {
-            get { return (bool)GetValue(EnableNoFishLootProperty); }
-            set { SetValue(EnableNoFishLootProperty, value); }
-        }
-
         public static readonly DependencyProperty UseCorpseLifeSpanMultiplierProperty = DependencyProperty.Register(nameof(UseCorpseLifeSpanMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, WriteIfNotValue = 1.0f)]
         public float UseCorpseLifeSpanMultiplier
@@ -2428,14 +2420,6 @@ namespace ServerManagerTool.Lib
             set { SetValue(PvEDinoDecayPeriodMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty ForceFlyerExplosivesProperty = DependencyProperty.Register(nameof(ForceFlyerExplosives), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [DataMember]
-        public bool ForceFlyerExplosives
-        {
-            get { return (bool)GetValue(ForceFlyerExplosivesProperty); }
-            set { SetValue(ForceFlyerExplosivesProperty, value); }
-        }
-
         public static readonly DependencyProperty AllowMultipleAttachedC4Property = DependencyProperty.Register(nameof(AllowMultipleAttachedC4), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Dinos, ConditionedOn = nameof(AllowMultipleAttachedC4))]
         public bool AllowMultipleAttachedC4
@@ -3092,14 +3076,6 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(EnableStructureDecayPvEProperty); }
             set { SetValue(EnableStructureDecayPvEProperty, value); }
-        }
-
-        public static readonly DependencyProperty PvEStructureDecayDestructionPeriodProperty = DependencyProperty.Register(nameof(PvEStructureDecayDestructionPeriod), typeof(float), typeof(ServerProfile), new PropertyMetadata(0f));
-        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Structures, ConditionedOn = nameof(EnableStructureDecayPvE))]
-        public float PvEStructureDecayDestructionPeriod
-        {
-            get { return (float)GetValue(PvEStructureDecayDestructionPeriodProperty); }
-            set { SetValue(PvEStructureDecayDestructionPeriodProperty, value); }
         }
 
         public static readonly DependencyProperty PvEStructureDecayPeriodMultiplierProperty = DependencyProperty.Register(nameof(PvEStructureDecayPeriodMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
@@ -3936,11 +3912,6 @@ namespace ServerManagerTool.Lib
             {
                 serverArgs.Append($"?AltSaveDirectoryName={this.AltSaveDirectoryName}");
             }
-
-            if (this.ForceFlyerExplosives)
-            {
-                serverArgs.Append("?ForceFlyerExplosives=true");
-            }
             
             if (this.EnableServerAutoForceRespawnWildDinosInterval)
             {
@@ -3991,11 +3962,6 @@ namespace ServerManagerTool.Lib
             if (this.EnableAutoDestroyStructures)
             {
                 serverArgs.Append(" -AutoDestroyStructures");
-            }
-
-            if (this.EnableNoFishLoot)
-            {
-                serverArgs.Append(" -nofishloot");
             }
 
             if (this.KickIdlePlayersPeriod.HasValue)
@@ -5606,7 +5572,6 @@ namespace ServerManagerTool.Lib
             this.ClearValue(DisableDinoDecayPvPProperty);
             this.ClearValue(AutoDestroyDecayedDinosProperty);
             this.ClearValue(PvEDinoDecayPeriodMultiplierProperty);
-            this.ClearValue(ForceFlyerExplosivesProperty);
             this.ClearValue(AllowMultipleAttachedC4Property);
 
             this.ClearValue(DisableDinoRidingProperty);
@@ -5862,7 +5827,6 @@ namespace ServerManagerTool.Lib
             this.ClearValue(OxygenSwimSpeedStatMultiplierProperty);
             this.ClearValue(SupplyCrateLootQualityMultiplierProperty);
             this.ClearValue(FishingLootQualityMultiplierProperty);
-            this.ClearValue(EnableNoFishLootProperty);
             this.ClearValue(UseCorpseLifeSpanMultiplierProperty);
             this.ClearValue(MinimumTimeBetweenInventoryRetrievalProperty);
             this.ClearValue(GlobalPoweredBatteryDurabilityDecreasePerSecondProperty);
@@ -5962,7 +5926,6 @@ namespace ServerManagerTool.Lib
             this.ClearValue(FlyerPlatformAllowUnalignedDinoBasingProperty);
             this.ClearValue(PvEAllowStructuresAtSupplyDropsProperty);
             this.ClearValue(EnableStructureDecayPvEProperty);
-            this.ClearValue(PvEStructureDecayDestructionPeriodProperty);
             this.ClearValue(PvEStructureDecayPeriodMultiplierProperty);
             this.ClearValue(AutoDestroyOldStructuresMultiplierProperty);
             this.ClearValue(ForceAllStructureLockingProperty);
@@ -6285,7 +6248,6 @@ namespace ServerManagerTool.Lib
             this.SetValue(DisableDinoDecayPvPProperty, sourceProfile.DisableDinoDecayPvP);
             this.SetValue(AutoDestroyDecayedDinosProperty, sourceProfile.AutoDestroyDecayedDinos);
             this.SetValue(PvEDinoDecayPeriodMultiplierProperty, sourceProfile.PvEDinoDecayPeriodMultiplier);
-            this.SetValue(ForceFlyerExplosivesProperty, sourceProfile.ForceFlyerExplosives);
             this.SetValue(AllowMultipleAttachedC4Property, sourceProfile.AllowMultipleAttachedC4);
 
             this.SetValue(DisableDinoRidingProperty, sourceProfile.DisableDinoRiding);
@@ -6605,7 +6567,6 @@ namespace ServerManagerTool.Lib
             this.SetValue(OxygenSwimSpeedStatMultiplierProperty, sourceProfile.OxygenSwimSpeedStatMultiplier);
             this.SetValue(SupplyCrateLootQualityMultiplierProperty, sourceProfile.SupplyCrateLootQualityMultiplier);
             this.SetValue(FishingLootQualityMultiplierProperty, sourceProfile.FishingLootQualityMultiplier);
-            this.SetValue(EnableNoFishLootProperty, sourceProfile.EnableNoFishLoot);
             this.SetValue(UseCorpseLifeSpanMultiplierProperty, sourceProfile.UseCorpseLifeSpanMultiplier);
             this.SetValue(MinimumTimeBetweenInventoryRetrievalProperty, sourceProfile.MinimumTimeBetweenInventoryRetrieval);
             this.SetValue(GlobalPoweredBatteryDurabilityDecreasePerSecondProperty, sourceProfile.GlobalPoweredBatteryDurabilityDecreasePerSecond);
@@ -6721,7 +6682,6 @@ namespace ServerManagerTool.Lib
             this.SetValue(FlyerPlatformAllowUnalignedDinoBasingProperty, sourceProfile.FlyerPlatformAllowUnalignedDinoBasing);
             this.SetValue(PvEAllowStructuresAtSupplyDropsProperty, sourceProfile.PvEAllowStructuresAtSupplyDrops);
             this.SetValue(EnableStructureDecayPvEProperty, sourceProfile.EnableStructureDecayPvE);
-            this.SetValue(PvEStructureDecayDestructionPeriodProperty, sourceProfile.PvEStructureDecayDestructionPeriod);
             this.SetValue(PvEStructureDecayPeriodMultiplierProperty, sourceProfile.PvEStructureDecayPeriodMultiplier);
             this.SetValue(AutoDestroyOldStructuresMultiplierProperty, sourceProfile.AutoDestroyOldStructuresMultiplier);
             this.SetValue(ForceAllStructureLockingProperty, sourceProfile.ForceAllStructureLocking);

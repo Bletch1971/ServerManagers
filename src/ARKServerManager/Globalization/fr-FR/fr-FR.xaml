@@ -1512,8 +1512,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Spécifie le multiplicateur pour la qualité du butin des caisses de butin.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Multiplicateur de qualité du butin de pêche</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Spécifie le multiplicateur pour la qualité du butin de pêche.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Désactiver le butin hors viande des poissons</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Si activé, désactive la récolte du butin de poisson non-viande.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Multiplicateur avant décomposition du cadavre</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Spécifie le multiplicateur avant décomposition du cadavre et la perte de l'inventaire.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Durabilité de la batterie global</sys:String>
@@ -1731,8 +1729,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Si activé, permet le nivau de la vitesse de déplacement des créatures volantes.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Empêchez le bonus de couple</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Si cette option est activée, le le bonus de couple dino sera désactivé.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Désactiver l'entrave au sol des dinos volants avec explosifs</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Si activé, désactivera le bloquage des dinos volants au sol lorsque des explosifs sont placés dessus.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Autoriser plusieurs C4 attachés</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Si activé, permettra plus d'un C4 attaché par dino.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Désactiver la désintégration Dino PvE</sys:String>
@@ -1939,8 +1935,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Activer la dégradation des structures PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Si activé, permet la dégradation des structures de joueurs en PvE.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Période de décroissance de la structure:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Spécifie le temps nécessaire pour que les structures du joueur se désintègrent en mode PvE.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Multiplicateur de dégradation des structure:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Spécifie le facteur d'échelle pour le taux de décompostion des structures de joueur en mode PvE.</sys:String>
 
