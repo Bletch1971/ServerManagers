@@ -573,7 +573,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(NotifyAdminCommandsInChatProperty, value); }
         }
 
-        public static readonly DependencyProperty MaxTribeLogsProperty = DependencyProperty.Register(nameof(MaxTribeLogs), typeof(int), typeof(ServerProfile), new PropertyMetadata(100));
+        public static readonly DependencyProperty MaxTribeLogsProperty = DependencyProperty.Register(nameof(MaxTribeLogs), typeof(int), typeof(ServerProfile), new PropertyMetadata(400));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Administration)]
         public int MaxTribeLogs
         {
@@ -1309,7 +1309,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(PreventUploadDinosProperty, value); }
         }
 
-        public static readonly DependencyProperty MaxTributeDinosProperty = DependencyProperty.Register(nameof(MaxTributeDinos), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 50)));
+        public static readonly DependencyProperty MaxTributeDinosProperty = DependencyProperty.Register(nameof(MaxTributeDinos), typeof(NullableValue<int>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<int>(false, 20)));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
         public NullableValue<int> MaxTributeDinos
         {
@@ -1748,7 +1748,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(UseCorpseLifeSpanMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty GlobalPoweredBatteryDurabilityDecreasePerSecondProperty = DependencyProperty.Register(nameof(GlobalPoweredBatteryDurabilityDecreasePerSecond), typeof(float), typeof(ServerProfile), new PropertyMetadata(4.0f));
+        public static readonly DependencyProperty GlobalPoweredBatteryDurabilityDecreasePerSecondProperty = DependencyProperty.Register(nameof(GlobalPoweredBatteryDurabilityDecreasePerSecond), typeof(float), typeof(ServerProfile), new PropertyMetadata(3.0f));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, WriteIfNotValue = 4.0f)]
         public float GlobalPoweredBatteryDurabilityDecreasePerSecond
         {
@@ -1876,7 +1876,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(EnableCryoSicknessPVEProperty, value); }
         }
 
-        public static readonly DependencyProperty MaxHexagonsPerCharacterProperty = DependencyProperty.Register(nameof(MaxHexagonsPerCharacter), typeof(int), typeof(ServerProfile), new PropertyMetadata(2500000));
+        public static readonly DependencyProperty MaxHexagonsPerCharacterProperty = DependencyProperty.Register(nameof(MaxHexagonsPerCharacter), typeof(int), typeof(ServerProfile), new PropertyMetadata(2000000000));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
         public int MaxHexagonsPerCharacter
         {
@@ -2444,7 +2444,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(DisableDinoTamingProperty, value); }
         }
 
-        public static readonly DependencyProperty MaxTamedDinosProperty = DependencyProperty.Register(nameof(MaxTamedDinos), typeof(int), typeof(ServerProfile), new PropertyMetadata(4000));
+        public static readonly DependencyProperty MaxTamedDinosProperty = DependencyProperty.Register(nameof(MaxTamedDinos), typeof(int), typeof(ServerProfile), new PropertyMetadata(5000));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Dinos)]
         public int MaxTamedDinos
         {
