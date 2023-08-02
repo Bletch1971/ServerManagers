@@ -267,6 +267,28 @@
 
                 <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
+                        <Label Content="{DynamicResource ServerSettings_ProfileSyncSettingsLabel}"/>
+                    </GroupBox.Header>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Row="0" Grid.Column="0" Margin="5,0,5,5" Content="{DynamicResource ServerSettings_ProfileSyncServerModIdsEnabledLabel}" IsChecked="{Binding Config.ProfileSyncServerModIdsEnabled, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_ProfileSyncServerModIdsEnabledTooltip}" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="0" Grid.Column="1" Margin="5,0,5,5" Content="{DynamicResource ServerSettings_ProfileSyncCrossArkClusterIdEnabledLabel}" IsChecked="{Binding Config.ProfileSyncCrossArkClusterIdEnabled, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_ProfileSyncCrossArkClusterIdEnabledTooltip}" HorizontalAlignment="Left"/>
+                        <CheckBox Grid.Row="0" Grid.Column="2" Margin="5,0,5,5" Content="{DynamicResource ServerSettings_ProfileSyncAutoShutdownEnabledLabel}" IsChecked="{Binding Config.ProfileSyncAutoShutdownEnabled, Mode=TwoWay}" ToolTip="{DynamicResource ServerSettings_ProfileSyncAutoShutdownEnabledTooltip}" HorizontalAlignment="Left"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                    <GroupBox.Header>
                         <Label Content="{DynamicResource ServerSettings_CustomLevelProgressionsLabel}"/>
                     </GroupBox.Header>
             
@@ -285,7 +307,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_ServerStatusLabel}"/>
                     </GroupBox.Header>
@@ -306,7 +328,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_ServerStartupLabel}"/>
                     </GroupBox.Header>
@@ -328,7 +350,7 @@
                     </Grid>
                 </GroupBox>
 
-                <GroupBox Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
+                <GroupBox Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="4" Style="{StaticResource GroupBoxStyle}">
                     <GroupBox.Header>
                         <Label Content="{DynamicResource GlobalSettings_UpdateModSettingsLabel}"/>
                     </GroupBox.Header>

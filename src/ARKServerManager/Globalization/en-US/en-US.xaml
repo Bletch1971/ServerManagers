@@ -592,6 +592,14 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">If enabled, the SotF settings will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">WARNING: While any of these options are disabled, the server manager will not read or write the associated overrides settings. Re-enabling any of these options will cause ALL existing associated overrides to be removed from the config file.</sys:String>
 
+    <sys:String x:Key="ServerSettings_ProfileSyncSettingsLabel">Custom Profile Sync Options</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledLabel">Enable Sync for ModIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledTooltip">If enabled, on profile sync the ModIDs are still synced.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledLabel">Enable Sync for ClusterID</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledTooltip">If enabled, on profile sync the ClusterID is still synced.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledLabel">Enable Sync for Auto Shutdown Time</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledTooltip">If enabled, on profile sync the Auto Shutdown Time Settings are still synced.</sys:String>
+
     <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Custom Level Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Player Level Increase:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">The amount of XP to be increased when adding a new custom level.</sys:String>

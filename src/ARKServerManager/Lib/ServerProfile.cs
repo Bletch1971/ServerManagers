@@ -6071,7 +6071,10 @@ namespace ServerManagerTool.Lib
 
         private void SyncAdministrationSection(ServerProfile sourceProfile)
         {
-            //this.SetValue(ServerModIdsProperty, sourceProfile.ServerModIds);
+            if (Config.Default.ProfileSyncServerModIdsEnabled)
+            {
+                this.SetValue(ServerModIdsProperty, sourceProfile.ServerModIds);
+            }
 
             this.SetValue(AutoSavePeriodMinutesProperty, sourceProfile.AutoSavePeriodMinutes);
 
@@ -6111,7 +6114,11 @@ namespace ServerManagerTool.Lib
             this.SetValue(EnablePublicIPForEpicProperty, sourceProfile.EnablePublicIPForEpic);
             this.SetValue(OutputServerLogProperty, sourceProfile.OutputServerLog);
             //this.SetValue(AltSaveDirectoryNameProperty, sourceProfile.AltSaveDirectoryName);
-            this.SetValue(CrossArkClusterIdProperty, sourceProfile.CrossArkClusterId);
+            if (Config.Default.ProfileSyncCrossArkClusterIdEnabled)
+            {
+                this.SetValue(CrossArkClusterIdProperty, sourceProfile.CrossArkClusterId);
+                this.SetValue(ClusterDirOverrideProperty, sourceProfile.ClusterDirOverride);
+            }
             this.SetValue(ClusterDirOverrideProperty, sourceProfile.ClusterDirOverride);
             this.SetValue(SecureSendArKPayloadProperty, sourceProfile.SecureSendArKPayload);
             this.SetValue(UseItemDupeCheckProperty, sourceProfile.UseItemDupeCheck);
@@ -6151,14 +6158,20 @@ namespace ServerManagerTool.Lib
             this.SetValue(AutoStartOnLoginProperty, sourceProfile.AutoStartOnLogin);
 
             this.SetValue(EnableAutoShutdown1Property, sourceProfile.EnableAutoShutdown1);
-            this.SetValue(AutoShutdownTime1Property, sourceProfile.AutoShutdownTime1);
-            this.SetValue(ShutdownDaysOfTheWeek1Property, sourceProfile.ShutdownDaysOfTheWeek1);
+            if (Config.Default.ProfileSyncAutoShutdownEnabled)
+            {
+                this.SetValue(AutoShutdownTime1Property, sourceProfile.AutoShutdownTime1);
+                this.SetValue(ShutdownDaysOfTheWeek1Property, sourceProfile.ShutdownDaysOfTheWeek1);
+            }
             this.SetValue(RestartAfterShutdown1Property, sourceProfile.RestartAfterShutdown1);
             this.SetValue(UpdateAfterShutdown1Property, sourceProfile.UpdateAfterShutdown1);
 
             this.SetValue(EnableAutoShutdown2Property, sourceProfile.EnableAutoShutdown2);
-            this.SetValue(AutoShutdownTime2Property, sourceProfile.AutoShutdownTime2);
-            this.SetValue(ShutdownDaysOfTheWeek2Property, sourceProfile.ShutdownDaysOfTheWeek2);
+            if (Config.Default.ProfileSyncAutoShutdownEnabled)
+            {
+                this.SetValue(AutoShutdownTime2Property, sourceProfile.AutoShutdownTime2);
+                this.SetValue(ShutdownDaysOfTheWeek2Property, sourceProfile.ShutdownDaysOfTheWeek2);
+            }
             this.SetValue(RestartAfterShutdown2Property, sourceProfile.RestartAfterShutdown2);
             this.SetValue(UpdateAfterShutdown2Property, sourceProfile.UpdateAfterShutdown2);
 

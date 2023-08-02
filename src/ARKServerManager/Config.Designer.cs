@@ -3256,5 +3256,50 @@ namespace ServerManagerTool {
                 this["TaskSchedulerPassword"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProfileSyncServerModIdsEnabled
+        {
+            get
+            {
+                return ((bool)(this["ProfileSyncServerModIdsEnabled"]));
+            }
+            set
+            {
+                this["ProfileSyncServerModIdsEnabled"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProfileSyncCrossArkClusterIdEnabled
+        {
+            get
+            {
+                return ((bool)(this["ProfileSyncCrossArkClusterIdEnabled"]));
+            }
+            set
+            {
+                this["ProfileSyncCrossArkClusterIdEnabled"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProfileSyncAutoShutdownEnabled
+        {
+            get
+            {
+                return ((bool)(this["ProfileSyncAutoShutdownEnabled"]));
+            }
+            set
+            {
+                this["ProfileSyncAutoShutdownEnabled"] = value;
+            }
+        }
     }
 }
