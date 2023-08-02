@@ -319,6 +319,7 @@
     <sys:String x:Key="WorldSaveRestore_Refresh_FailedTitle">Refresh Backup Files Error</sys:String>
 
     <sys:String x:Key="WorldSaveRestore_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="WorldSaveRestore_FileSizeColumnLabel">Size</sys:String>
     <sys:String x:Key="WorldSaveRestore_CreatedDateColumnLabel">Created</sys:String>
     <sys:String x:Key="WorldSaveRestore_UpdatedDateColumnLabel">Last Updated</sys:String>
 

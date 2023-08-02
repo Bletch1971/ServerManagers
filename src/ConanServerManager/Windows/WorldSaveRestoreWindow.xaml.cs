@@ -38,6 +38,7 @@ namespace ServerManagerTool
             public static readonly DependencyProperty CreatedDateProperty = DependencyProperty.Register(nameof(CreatedDate), typeof(DateTime), typeof(WorldSaveFile), new PropertyMetadata(DateTime.MinValue));
             public static readonly DependencyProperty FileProperty = DependencyProperty.Register(nameof(File), typeof(string), typeof(WorldSaveFile), new PropertyMetadata(string.Empty));
             public static readonly DependencyProperty FileNameProperty = DependencyProperty.Register(nameof(FileName), typeof(string), typeof(WorldSaveFile), new PropertyMetadata(string.Empty));
+            public static readonly DependencyProperty FileSizeProperty = DependencyProperty.Register(nameof(FileSize), typeof(long), typeof(WorldSaveFile), new PropertyMetadata());
             public static readonly DependencyProperty UpdatedDateProperty = DependencyProperty.Register(nameof(UpdatedDate), typeof(DateTime), typeof(WorldSaveFile), new PropertyMetadata(DateTime.MinValue));
             public static readonly DependencyProperty IsActiveFileProperty = DependencyProperty.Register(nameof(IsActiveFile), typeof(bool), typeof(WorldSaveFile), new PropertyMetadata(false));
             public static readonly DependencyProperty IsArchiveFileProperty = DependencyProperty.Register(nameof(IsArchiveFile), typeof(bool), typeof(WorldSaveFile), new PropertyMetadata(false));
@@ -58,6 +59,12 @@ namespace ServerManagerTool
             {
                 get { return (string)GetValue(FileNameProperty); }
                 set { SetValue(FileNameProperty, value); }
+            }
+
+            public long FileSize
+            {
+                get { return (long)GetValue(FileSizeProperty); }
+                set { SetValue(FileSizeProperty, value); }
             }
 
             public DateTime UpdatedDate
@@ -261,14 +268,14 @@ namespace ServerManagerTool
                 var saveFiles = saveFolderInfo.GetFiles(searchPattern);
                 foreach (var file in saveFiles)
                 {
-                    WorldSaveFiles.Add(new WorldSaveFile { File = file.FullName, FileName = file.Name, CreatedDate = file.CreationTime, UpdatedDate = file.LastWriteTime, IsArchiveFile = false, IsActiveFile = file.Name.Equals(mapFileName, StringComparison.OrdinalIgnoreCase) });
+                    WorldSaveFiles.Add(new WorldSaveFile { File = file.FullName, FileName = file.Name, FileSize = file.Length, CreatedDate = file.CreationTime, UpdatedDate = file.LastWriteTime, IsArchiveFile = false, IsActiveFile = file.Name.Equals(mapFileName, StringComparison.OrdinalIgnoreCase) });
                 }
 
                 searchPattern = $"{mapName}_backup_*{mapExtension}";
                 saveFiles = saveFolderInfo.GetFiles(searchPattern);
                 foreach (var file in saveFiles)
                 {
-                    WorldSaveFiles.Add(new WorldSaveFile { File = file.FullName, FileName = file.Name, CreatedDate = file.CreationTime, UpdatedDate = file.LastWriteTime, IsArchiveFile = false, IsActiveFile = file.Name.Equals(mapFileName, StringComparison.OrdinalIgnoreCase) });
+                    WorldSaveFiles.Add(new WorldSaveFile { File = file.FullName, FileName = file.Name, FileSize = file.Length, CreatedDate = file.CreationTime, UpdatedDate = file.LastWriteTime, IsArchiveFile = false, IsActiveFile = file.Name.Equals(mapFileName, StringComparison.OrdinalIgnoreCase) });
                 }
 
                 var backupFolder = ServerApp.GetServerBackupFolder(_profile);
@@ -280,7 +287,7 @@ namespace ServerManagerTool
                     var backupFiles = backupFolderInfo.GetFiles(searchPattern);
                     foreach (var file in backupFiles)
                     {
-                        WorldSaveFiles.Add(new WorldSaveFile { File = file.FullName, FileName = file.Name, CreatedDate = file.CreationTime, UpdatedDate = file.LastWriteTime, IsArchiveFile = true, IsActiveFile = false });
+                        WorldSaveFiles.Add(new WorldSaveFile { File = file.FullName, FileName = file.Name, FileSize = file.Length, CreatedDate = file.CreationTime, UpdatedDate = file.LastWriteTime, IsArchiveFile = true, IsActiveFile = false });
                     }
                 }
 
