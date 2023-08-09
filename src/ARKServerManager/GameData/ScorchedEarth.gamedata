@@ -7,6 +7,7 @@
       "NameTag": "Camelsaurus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "camelsaurus_Character_BP_C",
       "Description": "Morellatops",
       "Mod": "ScorchedEarth"
@@ -15,6 +16,7 @@
       "NameTag": "Deathworm",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Deathworm_Character_BP_C",
       "Description": "Deathworm",
       "Mod": "ScorchedEarth"
@@ -23,6 +25,7 @@
       "NameTag": "Jerboa",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Jerboa_Character_BP_C",
       "Description": "Jerboa",
       "Mod": "ScorchedEarth"
@@ -31,6 +34,7 @@
       "NameTag": "JugBug",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Jugbug_Oil_Character_BP_C",
       "Description": "Oil Jug Bug",
       "Mod": "ScorchedEarth"
@@ -39,6 +43,7 @@
       "NameTag": "Mantis",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Mantis_Character_BP_C",
       "Description": "Mantis",
       "Mod": "ScorchedEarth"
@@ -47,6 +52,7 @@
       "NameTag": "Moth",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Moth_Character_BP_C",
       "Description": "Lymantria",
       "Mod": "ScorchedEarth"
@@ -55,6 +61,7 @@
       "NameTag": "Phoenix",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Phoenix_Character_BP_C",
       "Description": "Phoenix",
       "Mod": "ScorchedEarth"
@@ -63,6 +70,7 @@
       "NameTag": "RockElemental",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "RockGolem_Character_BP_C",
       "Description": "Rock Elemental",
       "Mod": "ScorchedEarth"
@@ -71,6 +79,7 @@
       "NameTag": "SpineyLizard",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "SpineyLizard_Character_BP_C",
       "Description": "Thorny Dragon",
       "Mod": "ScorchedEarth"
@@ -79,6 +88,7 @@
       "NameTag": "Vulture",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Vulture_Character_BP_C",
       "Description": "Vulture",
       "Mod": "ScorchedEarth"
@@ -87,6 +97,7 @@
       "NameTag": "Wyvern",
       "IsSpawnable": true,
       "IsTameable": "ByBreeding",
+      "IsBreedingable": "True",
       "ClassName": "Wyvern_Character_BP_Fire_C",
       "Description": "Fire Wyvern",
       "Mod": "ScorchedEarth"
@@ -95,6 +106,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Jugbug_Water_Character_BP_C",
       "Description": "Water Jug Bug",
       "Mod": "ScorchedEarth"
@@ -103,6 +115,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaDeathworm_Character_BP_C",
       "Description": "Alpha Deathworm",
       "Mod": "ScorchedEarth"
@@ -111,6 +124,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaWyvern_Character_BP_Fire_C",
       "Description": "Alpha Wyvern",
       "Mod": "ScorchedEarth"
@@ -119,6 +133,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "RubbleGolem_Character_BP_C",
       "Description": "Rubble Golem",
       "Mod": "ScorchedEarth"
@@ -127,6 +142,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "ByBreeding",
+      "IsBreedingable": "True",
       "ClassName": "Wyvern_Character_BP_Lightning_C",
       "Description": "Lightning Wyvern",
       "Mod": "ScorchedEarth"
@@ -135,6 +151,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "ByBreeding",
+      "IsBreedingable": "True",
       "ClassName": "Wyvern_Character_BP_Poison_C",
       "Description": "Poison Wyvern",
       "Mod": "ScorchedEarth"
@@ -143,6 +160,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_C",
       "Description": "Manticore",
       "Mod": "ScorchedEarth"
@@ -151,6 +169,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_Easy_C",
       "Description": "Manticore (Easy Variant)",
       "Mod": "ScorchedEarth"
@@ -159,6 +178,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_Medium_C",
       "Description": "Manticore (Medium Variant)",
       "Mod": "ScorchedEarth"
@@ -167,6 +187,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_Hard_C",
       "Description": "Manticore (Hard Variant)",
       "Mod": "ScorchedEarth"

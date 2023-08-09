@@ -7,6 +7,7 @@
       "NameTag": "Griffin",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Griffin_Character_BP_C",
       "Description": "Griffin",
       "Mod": "Ragnarok"
@@ -15,6 +16,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Polar_Bear_C",
       "Description": "Polar Bear",
       "Mod": "Ragnarok"
@@ -23,6 +25,7 @@
       "NameTag": "Ice Wyvern",
       "IsSpawnable": true,
       "IsTameable": "ByBreeding",
+      "IsBreedingable": "True",
       "ClassName": "Ragnarok_Wyvern_Override_Ice_C",
       "Description": "Ice Wyvern",
       "Mod": "Ragnarok"
@@ -31,6 +34,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Iceworm_Character_Minion_BP_smaller_C",
       "Description": "Iceworm",
       "Mod": "Ragnarok"
@@ -39,6 +43,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Iceworm_Queen_Character_BP_C",
       "Description": "Iceworm Queen",
       "Mod": "Ragnarok"
@@ -47,6 +52,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "LavaGolem_Character_BP_C",
       "Description": "Lava Golem",
       "Mod": "Ragnarok"
@@ -55,6 +61,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_Easy_Ragnarok_C",
       "Description": "Dragon (Easy Variant)",
       "Mod": "Ragnarok"
@@ -63,6 +70,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_Medium_Ragnarok_C",
       "Description": "Dragon (Medium Variant)",
       "Mod": "Ragnarok"
@@ -71,6 +79,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_Hard_Ragnarok_C",
       "Description": "Dragon (Hard Variant)",
       "Mod": "Ragnarok"
@@ -79,6 +88,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_Easy_Ragnarok_C",
       "Description": "Manticore (Easy Variant)",
       "Mod": "Ragnarok"
@@ -87,6 +97,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_Medium_Ragnarok_C",
       "Description": "Manticore (Medium Variant)",
       "Mod": "Ragnarok"
@@ -95,6 +106,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Manticore_Character_BP_Hard_Ragnarok_C",
       "Description": "Manticore (Hard Variant)",
       "Mod": "Ragnarok"

@@ -9,6 +9,7 @@ namespace ServerManagerTool.Lib.ViewModel
     {
         public AggregateIniValueList<DinoSpawn> DinoSpawnWeightMultipliers { get; }
         public StringIniValueList PreventDinoTameClassNames { get; }
+        public StringIniValueList PreventBreedingForClassNames { get; }
         public AggregateIniValueList<NPCReplacement> NpcReplacements { get; }
         public AggregateIniValueList<ClassMultiplier> TamedDinoClassDamageMultipliers { get; }
         public AggregateIniValueList<ClassMultiplier> TamedDinoClassResistanceMultipliers { get; }
@@ -20,12 +21,13 @@ namespace ServerManagerTool.Lib.ViewModel
             Reset();
         }
 
-        public DinoSettingsList(AggregateIniValueList<DinoSpawn> dinoSpawnWeightMultipliers, StringIniValueList preventDinoTameClassNames, AggregateIniValueList<NPCReplacement> npcReplacements,
+        public DinoSettingsList(AggregateIniValueList<DinoSpawn> dinoSpawnWeightMultipliers, StringIniValueList preventDinoTameClassNames, StringIniValueList preventBreedingForClassNames, AggregateIniValueList<NPCReplacement> npcReplacements,
                                 AggregateIniValueList<ClassMultiplier> tamedDinoClassDamageMultipliers, AggregateIniValueList<ClassMultiplier> tamedDinoClassResistanceMultipliers,
                                 AggregateIniValueList<ClassMultiplier> dinoClassDamageMultipliers, AggregateIniValueList<ClassMultiplier> dinoClassResistanceMultipliers)
         {
             this.DinoSpawnWeightMultipliers = dinoSpawnWeightMultipliers;
             this.PreventDinoTameClassNames = preventDinoTameClassNames;
+            this.PreventBreedingForClassNames = preventBreedingForClassNames;
             this.NpcReplacements = npcReplacements;
             this.TamedDinoClassDamageMultipliers = tamedDinoClassDamageMultipliers;
             this.TamedDinoClassResistanceMultipliers = tamedDinoClassResistanceMultipliers;
@@ -39,6 +41,7 @@ namespace ServerManagerTool.Lib.ViewModel
             var nameTag = GameData.NameTagForClass(className);
             var isSpawnable = GameData.IsSpawnableForClass(className);
             var isTameable = GameData.IsTameableForClass(className);
+            var isBreedingable = GameData.IsBreedingableForClass(className);
 
             return new DinoSettings()
             {
@@ -49,6 +52,7 @@ namespace ServerManagerTool.Lib.ViewModel
 
                 CanSpawn = true,
                 CanTame = isTameable != DinoTamable.False,
+                CanBreeding = isBreedingable != DinoBreedingable.False,
                 ReplacementClass = className,
 
                 SpawnWeightMultiplier = DinoSpawn.DEFAULT_SPAWN_WEIGHT_MULTIPLIER,
@@ -67,6 +71,7 @@ namespace ServerManagerTool.Lib.ViewModel
                 HasNameTag = hasNameTag,
                 IsSpawnable = isSpawnable,
                 IsTameable = isTameable,
+                IsBreedingable = isBreedingable,
             };
         }
 
@@ -135,7 +140,25 @@ namespace ServerManagerTool.Lib.ViewModel
                 }
             }
 
-            foreach(var entry in this.NpcReplacements.Where(e => !string.IsNullOrWhiteSpace(e.FromClassName)))
+            foreach (var entry in this.PreventBreedingForClassNames.Where(e => !string.IsNullOrWhiteSpace(e)))
+            {
+                if (this.Any(d => d.ClassName == entry))
+                {
+                    foreach (var dinoSetting in this.Where(d => d.ClassName == entry && d.CanBreeding))
+                    {
+                        dinoSetting.CanBreeding = false;
+                    }
+                }
+                else
+                {
+                    var dinoSetting = CreateDinoSetting(entry, GameData.MOD_UNKNOWN, false, false, true);
+                    dinoSetting.CanBreeding = false;
+
+                    this.Add(dinoSetting);
+                }
+            }
+
+            foreach (var entry in this.NpcReplacements.Where(e => !string.IsNullOrWhiteSpace(e.FromClassName)))
             {
                 if (this.Any(d => d.ClassName == entry.FromClassName))
                 {
@@ -235,6 +258,8 @@ namespace ServerManagerTool.Lib.ViewModel
             this.DinoSpawnWeightMultipliers.Clear();
             this.PreventDinoTameClassNames.Clear();
             this.PreventDinoTameClassNames.IsEnabled = true;
+            this.PreventBreedingForClassNames.Clear();
+            this.PreventBreedingForClassNames.IsEnabled = true;
             this.NpcReplacements.Clear();
             this.NpcReplacements.IsEnabled = true;
             this.TamedDinoClassDamageMultipliers.Clear();
@@ -284,6 +309,11 @@ namespace ServerManagerTool.Lib.ViewModel
                     if ((entry.IsTameable != DinoTamable.False) && !entry.CanTame)
                     {
                         this.PreventDinoTameClassNames.Add(entry.ClassName);
+                    }
+
+                    if ((entry.IsBreedingable != DinoBreedingable.False) && !entry.CanBreeding)
+                    {
+                        this.PreventBreedingForClassNames.Add(entry.ClassName);
                     }
 
                     this.NpcReplacements.Add(new NPCReplacement() { FromClassName = entry.ClassName, ToClassName = entry.CanSpawn ? entry.ReplacementClass : string.Empty });

@@ -202,6 +202,22 @@ namespace ServerManagerTool.Utils
         }
 
         public DinoTamable IsTameable = DinoTamable.False;
+
+        [DataMember(Name = "IsBreedingable")]
+        public string IsBreedingableString
+        {
+            get
+            {
+                return IsBreedingable.ToString();
+            }
+            set
+            {
+                if (!Enum.TryParse(value, true, out IsBreedingable))
+                    IsBreedingable = DinoBreedingable.False;
+            }
+        }
+
+        public DinoBreedingable IsBreedingable = DinoBreedingable.False;
     }
 
     [DataContract]

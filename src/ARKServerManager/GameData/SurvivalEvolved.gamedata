@@ -7,6 +7,7 @@
       "NameTag": "Achatina",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Achatina_Character_BP_C",
       "Description": "Achatina",
       "Mod": "ArkPrime"
@@ -15,6 +16,7 @@
       "NameTag": "Allo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Allo_Character_BP_C",
       "Description": "Allosaurus",
       "Mod": "ArkPrime"
@@ -23,6 +25,7 @@
       "NameTag": "Ammonite",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Ammonite_Character_C",
       "Description": "Ammonite",
       "Mod": "ArkPrime"
@@ -31,6 +34,7 @@
       "NameTag": "Angler",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Angler_Character_BP_C",
       "Description": "Anglerfish",
       "Mod": "ArkPrime"
@@ -39,6 +43,7 @@
       "NameTag": "Anky",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Ankylo_Character_BP_C",
       "Description": "Ankylosaurus",
       "Mod": "ArkPrime"
@@ -47,6 +52,7 @@
       "NameTag": "Ant",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Ant_Character_BP_C",
       "Description": "Titanomyrma Drone",
       "Mod": "ArkPrime"
@@ -55,6 +61,7 @@
       "NameTag": "Archa",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Archa_Character_BP_C",
       "Description": "Archaeopteryx",
       "Mod": "ArkPrime"
@@ -63,6 +70,7 @@
       "NameTag": "Argent",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Argent_Character_BP_C",
       "Description": "Argentavis",
       "Mod": "ArkPrime"
@@ -71,6 +79,7 @@
       "NameTag": "Arthro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Arthro_Character_BP_C",
       "Description": "Arthropluera",
       "Mod": "ArkPrime"
@@ -79,6 +88,7 @@
       "NameTag": "Baryonyx",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Baryonyx_Character_BP_C",
       "Description": "Baryonyx",
       "Mod": "ArkPrime"
@@ -87,6 +97,7 @@
       "NameTag": "Basilosaurus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Basilosaurus_Character_BP_C",
       "Description": "Basilosaurus",
       "Mod": "ArkPrime"
@@ -95,6 +106,7 @@
       "NameTag": "Bat",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Bat_Character_BP_C",
       "Description": "Onyc",
       "Mod": "ArkPrime"
@@ -103,6 +115,7 @@
       "NameTag": "Beaver",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Beaver_Character_BP_C",
       "Description": "Castoroides",
       "Mod": "ArkPrime"
@@ -111,6 +124,7 @@
       "NameTag": "Bee",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Bee_Character_BP_C",
       "Description": "Giant Bee",
       "Mod": "ArkPrime"
@@ -119,6 +133,7 @@
       "NameTag": "Bigfoot",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BigFoot_Character_BP_C",
       "Description": "Gigantopithecus",
       "Mod": "ArkPrime"
@@ -127,6 +142,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BionicPara_Character_BP_C",
       "Description": "Tek Parasaur",
       "Mod": "ArkPrime"
@@ -135,6 +151,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BionicQuetz_Character_BP_C",
       "Description": "Tek Quetzal",
       "Mod": "ArkPrime"
@@ -143,6 +160,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BionicRaptor_Character_BP_C",
       "Description": "Tek Raptor",
       "Mod": "ArkPrime"
@@ -151,6 +169,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BionicRex_Character_BP_C",
       "Description": "Tek Rex",
       "Mod": "ArkPrime"
@@ -159,6 +178,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BionicStego_Character_BP_C",
       "Description": "Tek Stegosaurus",
       "Mod": "ArkPrime"
@@ -167,14 +187,16 @@
       "NameTag": "Titanboa",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "BoaFrill_Character_BP_C",
       "Description": "Titanoboa",
       "Mod": "ArkPrime"
     },
     {
-      "NameTag": "Carcharodontosaurus",
+      "NameTag": "Carcha",
       "IsSpawnable": "true",
       "IsTameable": "true",
+      "IsBreedingable": "True",
       "ClassName": "Carcha_Character_BP_C",
       "Description": "Carcharodontosaurus",
       "Mod": "ArkPrime"
@@ -183,6 +205,7 @@
       "NameTag": "Carno",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Carno_Character_BP_C",
       "Description": "Carnotaurus",
       "Mod": "ArkPrime"
@@ -191,6 +214,7 @@
       "NameTag": "Chalico",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Chalico_Character_BP_C",
       "Description": "Chalicotherium",
       "Mod": "ArkPrime"
@@ -199,6 +223,7 @@
       "NameTag": "Cnidaria",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Cnidaria_Character_BP_C",
       "Description": "Cnidaria",
       "Mod": "ArkPrime"
@@ -207,6 +232,7 @@
       "NameTag": "Coel",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Coel_Character_BP_C",
       "Description": "Coelacanth",
       "Mod": "ArkPrime"
@@ -215,6 +241,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Coel_Character_BP_Ocean_C",
       "Description": "Coelacanth (Ocean)",
       "Mod": "ArkPrime"
@@ -223,6 +250,7 @@
       "NameTag": "Compy",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Compy_Character_BP_C",
       "Description": "Compy",
       "Mod": "ArkPrime"
@@ -231,6 +259,7 @@
       "NameTag": "Daeodon",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Daeodon_Character_BP_C",
       "Description": "Daeodon",
       "Mod": "ArkPrime"
@@ -239,6 +268,7 @@
       "NameTag": "Dilo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dilo_Character_BP_C",
       "Description": "Dilophosaurus",
       "Mod": "ArkPrime"
@@ -247,6 +277,7 @@
       "NameTag": "Dimetro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dimetro_Character_BP_C",
       "Description": "Dimetrodon",
       "Mod": "ArkPrime"
@@ -255,6 +286,7 @@
       "NameTag": "Dimorph",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dimorph_Character_BP_C",
       "Description": "Dimorphodon",
       "Mod": "ArkPrime"
@@ -263,6 +295,7 @@
       "NameTag": "Diplocaulus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Diplocaulus_Character_BP_C",
       "Description": "Diplocalus",
       "Mod": "ArkPrime"
@@ -271,6 +304,7 @@
       "NameTag": "Diplo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Diplodocus_Character_BP_C",
       "Description": "Diplodocus",
       "Mod": "ArkPrime"
@@ -279,6 +313,7 @@
       "NameTag": "Direbear",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Direbear_Character_BP_C",
       "Description": "Direbear",
       "Mod": "ArkPrime"
@@ -287,6 +322,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Direbear_Character_Polar_C",
       "Description": "Polar Bear",
       "Mod": "ArkPrime"
@@ -295,6 +331,7 @@
       "NameTag": "Direwolf",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Direwolf_Character_BP_C",
       "Description": "Direwolf",
       "Mod": "ArkPrime"
@@ -303,6 +340,7 @@
       "NameTag": "Dodo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dodo_Character_BP_C",
       "Description": "Dodo",
       "Mod": "ArkPrime"
@@ -311,6 +349,7 @@
       "NameTag": "Doed",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Doed_Character_BP_C",
       "Description": "Doedicurus",
       "Mod": "ArkPrime"
@@ -319,6 +358,7 @@
       "NameTag": "Dolphin",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dolphin_Character_BP_C",
       "Description": "Ichthy",
       "Mod": "ArkPrime"
@@ -327,6 +367,7 @@
       "NameTag": "Dragonfly",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragonfly_Character_BP_C",
       "Description": "Meganeura",
       "Mod": "ArkPrime"
@@ -335,6 +376,7 @@
       "NameTag": "Beetle",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "DungBeetle_Character_BP_C",
       "Description": "Dung Beetle",
       "Mod": "ArkPrime"
@@ -343,6 +385,7 @@
       "NameTag": "Dunkle",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dunkle_Character_BP_C",
       "Description": "Dunkleosteus",
       "Mod": "ArkPrime"
@@ -351,6 +394,7 @@
       "NameTag": "Eel",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Eel_Character_BP_C",
       "Description": "Electrophorus",
       "Mod": "ArkPrime"
@@ -359,6 +403,7 @@
       "NameTag": "Equus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Equus_Character_BP_C",
       "Description": "Equus",
       "Mod": "ArkPrime"
@@ -367,6 +412,7 @@
       "NameTag": "Euryp",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Euryp_Character_C",
       "Description": "Eurypterid",
       "Mod": "ArkPrime"
@@ -375,6 +421,7 @@
       "NameTag": "Galli",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Galli_Character_BP_C",
       "Description": "Gallimimus",
       "Mod": "ArkPrime"
@@ -383,6 +430,7 @@
       "NameTag": "Gigant",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Gigant_Character_BP_C",
       "Description": "Giganotosaurus",
       "Mod": "ArkPrime"
@@ -391,6 +439,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gigant_Character_BP_TekCave_C",
       "Description": "Giganotosaurus (Tek Cave)",
       "Mod": "ArkPrime"
@@ -399,6 +448,7 @@
       "NameTag": "Hesperornis",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Hesperornis_Character_BP_C",
       "Description": "Hesperornis",
       "Mod": "ArkPrime"
@@ -407,6 +457,7 @@
       "NameTag": "Hyaenodon",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Hyaenodon_Character_BP_C",
       "Description": "Hyaenodon",
       "Mod": "ArkPrime"
@@ -415,6 +466,7 @@
       "NameTag": "Ichthyornis",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Ichthyornis_Character_BP_C",
       "Description": "Ichthyornis",
       "Mod": "ArkPrime"
@@ -423,6 +475,7 @@
       "NameTag": "Iguanodon",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Iguanodon_Character_BP_C",
       "Description": "Iguanodon",
       "Mod": "ArkPrime"
@@ -431,6 +484,7 @@
       "NameTag": "Kairu",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Kairuku_Character_BP_C",
       "Description": "Kairuku",
       "Mod": "ArkPrime"
@@ -439,6 +493,7 @@
       "NameTag": "Kaprosuchus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Kaprosuchus_Character_BP_C",
       "Description": "Kaprosuchus",
       "Mod": "ArkPrime"
@@ -447,6 +502,7 @@
       "NameTag": "Kentro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Kentro_Character_BP_C",
       "Description": "Kentrosaurus",
       "Mod": "ArkPrime"
@@ -455,6 +511,7 @@
       "NameTag": "Leech",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Leech_Character_C",
       "Description": "Leech",
       "Mod": "ArkPrime"
@@ -463,6 +520,7 @@
       "NameTag": "Leedsichthys",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Leedsichthys_Character_BP_C",
       "Description": "Leedsichthys",
       "Mod": "ArkPrime"
@@ -471,6 +529,7 @@
       "NameTag": "Liopleurodon",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Liopleurodon_Character_BP_C",
       "Description": "Liopleurodon",
       "Mod": "ArkPrime"
@@ -479,6 +538,7 @@
       "NameTag": "Lystro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Lystro_Character_BP_C",
       "Description": "Lystrosaurus",
       "Mod": "ArkPrime"
@@ -487,6 +547,7 @@
       "NameTag": "Mammoth",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Mammoth_Character_BP_C",
       "Description": "Mammoth",
       "Mod": "ArkPrime"
@@ -495,6 +556,7 @@
       "NameTag": "Manta",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Manta_Character_BP_C",
       "Description": "Manta",
       "Mod": "ArkPrime"
@@ -503,6 +565,7 @@
       "NameTag": "Elite Carno",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaCarno_Character_BP_C",
       "Description": "Alpha Carnotaurus",
       "Mod": "ArkPrime"
@@ -511,6 +574,7 @@
       "NameTag": "Megalania",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Megalania_Character_BP_C",
       "Description": "Megalania",
       "Mod": "ArkPrime"
@@ -519,6 +583,7 @@
       "NameTag": "Mega",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Megalodon_Character_BP_C",
       "Description": "Megalodon",
       "Mod": "ArkPrime"
@@ -527,6 +592,7 @@
       "NameTag": "Megalosaurus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Megalosaurus_Character_BP_C",
       "Description": "Megalosaurus",
       "Mod": "ArkPrime"
@@ -535,6 +601,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Megalosaurus_Character_BP_TekCave_C",
       "Description": "Megalosaurus (Tek Cave)",
       "Mod": "ArkPrime"
@@ -543,6 +610,7 @@
       "NameTag": "Elite Mega",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MEgaMegalodon_Character_BP_C",
       "Description": "Alpha Megalodon",
       "Mod": "ArkPrime"
@@ -551,6 +619,7 @@
       "NameTag": "Elite Raptor",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaRaptor_Character_BP_C",
       "Description": "Alpha Raptor",
       "Mod": "ArkPrime"
@@ -559,6 +628,7 @@
       "NameTag": "Elite Rex",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaRex_Character_BP_C",
       "Description": "Alpha T-Rex",
       "Mod": "ArkPrime"
@@ -567,6 +637,7 @@
       "NameTag": "Megatherium",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Megatherium_Character_BP_C",
       "Description": "Megatherium",
       "Mod": "ArkPrime"
@@ -575,6 +646,7 @@
       "NameTag": "Microraptor",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Microraptor_Character_BP_C",
       "Description": "Microraptor",
       "Mod": "ArkPrime"
@@ -583,6 +655,7 @@
       "NameTag": "Monkey",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Monkey_Character_BP_C",
       "Description": "Mesopithecus",
       "Mod": "ArkPrime"
@@ -591,6 +664,7 @@
       "NameTag": "Mosasaur",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Mosa_Character_BP_C",
       "Description": "Mosasaurus",
       "Mod": "ArkPrime"
@@ -599,6 +673,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "false",
+      "IsBreedingable": "False",
       "ClassName": "Mosa_Character_BP_Cave_C",
       "Description": "Mosasaurus (Cave)",
       "Mod": "ArkPrime"
@@ -607,6 +682,7 @@
       "NameTag": "Moschops",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Moschops_Character_BP_C",
       "Description": "Moschops",
       "Mod": "ArkPrime"
@@ -615,6 +691,7 @@
       "NameTag": "Otter",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Otter_Character_BP_C",
       "Description": "Otter",
       "Mod": "ArkPrime"
@@ -623,6 +700,7 @@
       "NameTag": "Ovi",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Oviraptor_Character_BP_C",
       "Description": "Oviraptor",
       "Mod": "ArkPrime"
@@ -631,6 +709,7 @@
       "NameTag": "Pachy",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Pachy_Character_BP_C",
       "Description": "Pachy",
       "Mod": "ArkPrime"
@@ -639,6 +718,7 @@
       "NameTag": "Pachyrhino",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Pachyrhino_Character_BP_C",
       "Description": "Pachyrhinosaurus",
       "Mod": "ArkPrime"
@@ -647,6 +727,7 @@
       "NameTag": "Para",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Para_Character_BP_C",
       "Description": "Parasaur",
       "Mod": "ArkPrime"
@@ -655,6 +736,7 @@
       "NameTag": "Paracer",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Paracer_Character_BP_C",
       "Description": "Paraceratherium",
       "Mod": "ArkPrime"
@@ -663,6 +745,7 @@
       "NameTag": "Pegomastax",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Pegomastax_Character_BP_C",
       "Description": "Pegomastax",
       "Mod": "ArkPrime"
@@ -671,6 +754,7 @@
       "NameTag": "Pela",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Pela_Character_BP_C",
       "Description": "Pelagornis",
       "Mod": "ArkPrime"
@@ -679,6 +763,7 @@
       "NameTag": "Phiomia",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Phiomia_Character_BP_C",
       "Description": "Phiomia",
       "Mod": "ArkPrime"
@@ -687,6 +772,7 @@
       "NameTag": "Piranha",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Piranha_Character_BP_C",
       "Description": "Megapiranha",
       "Mod": "ArkPrime"
@@ -695,6 +781,7 @@
       "NameTag": "Plesiosaur",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Plesiosaur_Character_BP_C",
       "Description": "Plesiosaur",
       "Mod": "ArkPrime"
@@ -703,6 +790,7 @@
       "NameTag": "Kangaroo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Procoptodon_Character_BP_C",
       "Description": "Procoptodon",
       "Mod": "ArkPrime"
@@ -711,6 +799,7 @@
       "NameTag": "Ptera",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Ptero_Character_BP_C",
       "Description": "Pteranodon",
       "Mod": "ArkPrime"
@@ -719,6 +808,7 @@
       "NameTag": "Purlovia",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Purlovia_Character_BP_C",
       "Description": "Purlovia",
       "Mod": "ArkPrime"
@@ -727,6 +817,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "false",
+      "IsBreedingable": "False",
       "ClassName": "Purlovia_Character_BP_Polar_C",
       "Description": "Purlovia (Snow Cave)",
       "Mod": "ArkPrime"
@@ -735,6 +826,7 @@
       "NameTag": "Quetz",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Quetz_Character_BP_C",
       "Description": "Quetzal",
       "Mod": "ArkPrime"
@@ -743,6 +835,7 @@
       "NameTag": "Raptor",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Raptor_Character_BP_C",
       "Description": "Raptor",
       "Mod": "ArkPrime"
@@ -751,6 +844,7 @@
       "NameTag": "Rex",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Rex_Character_BP_C",
       "Description": "Rex",
       "Mod": "ArkPrime"
@@ -759,6 +853,7 @@
       "NameTag": "Rhino",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Rhino_Character_BP_C",
       "Description": "Woolly Rhino",
       "Mod": "ArkPrime"
@@ -767,6 +862,7 @@
       "NameTag": "Sabertooth",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Saber_Character_BP_C",
       "Description": "Sabertooth",
       "Mod": "ArkPrime"
@@ -775,6 +871,7 @@
       "NameTag": "Salmon",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Salmon_Character_BP_C",
       "Description": "Sabertooth Salmon",
       "Mod": "ArkPrime"
@@ -783,6 +880,7 @@
       "NameTag": "Sarco",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Sarco_Character_BP_C",
       "Description": "Sarco",
       "Mod": "ArkPrime"
@@ -791,6 +889,7 @@
       "NameTag": "Bronto",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Sauropod_Character_BP_C",
       "Description": "Bronto",
       "Mod": "ArkPrime"
@@ -799,6 +898,7 @@
       "NameTag": "Scorpion",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Scorpion_Character_BP_C",
       "Description": "Pulmonoscorpius",
       "Mod": "ArkPrime"
@@ -807,6 +907,7 @@
       "NameTag": "Sheep",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Sheep_Character_BP_C",
       "Description": "Ovis (Sheep)",
       "Mod": "ArkPrime"
@@ -815,6 +916,7 @@
       "NameTag": "Spider",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "SpiderS_Character_BP_C",
       "Description": "Araneo",
       "Mod": "ArkPrime"
@@ -823,6 +925,7 @@
       "NameTag": "Spino",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Spino_Character_BP_C",
       "Description": "Spinosaurus",
       "Mod": "ArkPrime"
@@ -831,6 +934,7 @@
       "NameTag": "Stag",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Stag_Character_BP_C",
       "Description": "Megaloceros",
       "Mod": "ArkPrime"
@@ -839,6 +943,7 @@
       "NameTag": "Stego",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Stego_Character_BP_C",
       "Description": "Stego",
       "Mod": "ArkPrime"
@@ -847,6 +952,7 @@
       "NameTag": "Tapejara",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Tapejara_Character_BP_C",
       "Description": "Tapejara",
       "Mod": "ArkPrime"
@@ -855,6 +961,7 @@
       "NameTag": "TerrorBird",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "TerrorBird_Character_BP_C",
       "Description": "Terror Bird",
       "Mod": "ArkPrime"
@@ -863,6 +970,7 @@
       "NameTag": "Therizinosaurus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Therizino_Character_BP_C",
       "Description": "Therizinosaurus",
       "Mod": "ArkPrime"
@@ -871,6 +979,7 @@
       "NameTag": "Thylacoleo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Thylacoleo_Character_BP_C",
       "Description": "Thylacoleo",
       "Mod": "ArkPrime"
@@ -879,6 +988,7 @@
       "NameTag": "Titan",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Titanosaur_Character_BP_C",
       "Description": "Titanosaur",
       "Mod": "ArkPrime"
@@ -887,6 +997,7 @@
       "NameTag": "Toad",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Toad_Character_BP_C",
       "Description": "Beelzebufo",
       "Mod": "ArkPrime"
@@ -895,6 +1006,7 @@
       "NameTag": "Trike",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Trike_Character_BP_C",
       "Description": "Trike",
       "Mod": "ArkPrime"
@@ -911,6 +1023,7 @@
       "NameTag": "Troodon",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Troodon_Character_BP_C",
       "Description": "Troodon",
       "Mod": "ArkPrime"
@@ -919,6 +1032,7 @@
       "NameTag": "Turtle",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Turtle_Character_BP_C",
       "Description": "Carbonemys",
       "Mod": "ArkPrime"
@@ -927,6 +1041,7 @@
       "NameTag": "Tusoteuthis",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Tusoteuthis_Character_BP_C",
       "Description": "Tusoteuthis",
       "Mod": "ArkPrime"
@@ -935,6 +1050,7 @@
       "NameTag": "Yutyrannus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Yutyrannus_Character_BP_C",
       "Description": "Yutyrannus",
       "Mod": "ArkPrime"
@@ -943,6 +1059,7 @@
       "NameTag": "Rhyniognatha",
       "IsSpawnable": true,
       "IsTameable": "true",
+      "IsBreedingable": "False",
       "ClassName": "Rhynio_Character_BP_C",
       "Description": "Rhyniognatha",
       "Mod": "ArkPrime"
@@ -951,6 +1068,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Alpha_Leedsichthys_Character_BP_C",
       "Description": "Alpha Leedsichthys",
       "Mod": "ArkPrime"
@@ -959,6 +1077,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Bee_Queen_Character_BP_C",
       "Description": "Queen Bee",
       "Mod": "ArkPrime"
@@ -967,6 +1086,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Equus_Character_BP_Unicorn_C",
       "Description": "Unicorn",
       "Mod": "ArkPrime"
@@ -975,6 +1095,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "FlyingAnt_Character_BP_C",
       "Description": "Titanomyrma Soldier",
       "Mod": "ArkPrime"
@@ -983,6 +1104,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Leech_Character_Diseased_C",
       "Description": "Diseased Leech",
       "Mod": "ArkPrime"
@@ -991,6 +1113,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Mega_Tusoteuthis_Character_BP_C",
       "Description": "Alpha Tusoteuthis",
       "Mod": "ArkPrime"
@@ -999,6 +1122,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Mosa_Character_BP_Mega_C",
       "Description": "Alpha Mosasaurus",
       "Mod": "ArkPrime"
@@ -1007,6 +1131,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Mosa_Character_BP_Mega_Cave_C",
       "Description": "Alpha Mosasaurus (Cave)",
       "Mod": "ArkPrime"
@@ -1015,6 +1140,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Yeti_Character_BP_C",
       "Description": "Yeti",
       "Mod": "ArkPrime"
@@ -1023,6 +1149,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_C",
       "Description": "Broodmother Lysrix",
       "Mod": "ArkPrime"
@@ -1031,6 +1158,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_Easy_C",
       "Description": "Broodmother Lysrix (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1039,6 +1167,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_Medium_C",
       "Description": "Broodmother Lysrix (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1047,6 +1176,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_Hard_C",
       "Description": "Broodmother Lysrix (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1055,6 +1185,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_C",
       "Description": "Megapithecus",
       "Mod": "ArkPrime"
@@ -1063,6 +1194,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_Easy_C",
       "Description": "Megapithecus (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1071,6 +1203,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_Medium_C",
       "Description": "Megapithecus (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1079,6 +1212,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_Hard_C",
       "Description": "Megapithecus (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1087,6 +1221,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_C",
       "Description": "Dragon",
       "Mod": "ArkPrime"
@@ -1095,6 +1230,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_Easy_C",
       "Description": "Dragon (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1103,6 +1239,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_Medium_C",
       "Description": "Dragon (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1111,6 +1248,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragon_Character_BP_Boss_Hard_C",
       "Description": "Dragon (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1119,6 +1257,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndDrone_Character_BP_C",
       "Description": "Attack Drone",
       "Mod": "ArkPrime"
@@ -1127,6 +1266,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndDrone_Character_BP_Med_C",
       "Description": "Attack Drone (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1135,6 +1275,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndDrone_Character_BP_Hard_C",
       "Description": "Attack Drone (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1143,6 +1284,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndTank_Character_BP_C",
       "Description": "Defense Unit",
       "Mod": "ArkPrime"
@@ -1151,6 +1293,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndTank_Character_BP_Med_C",
       "Description": "Defense Unit (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1159,6 +1302,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndTank_Character_BP_Hard_C",
       "Description": "Defense Unit (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1167,6 +1311,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "EndBoss_Character_C",
       "Description": "Overseer",
       "Mod": "ArkPrime"
@@ -1175,6 +1320,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "EndBoss_Character_Easy_C",
       "Description": "Overseer (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1183,6 +1329,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "EndBoss_Character_Medium_C",
       "Description": "Overseer (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1191,6 +1338,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "EndBoss_Character_Hard_C",
       "Description": "Overseer (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1199,6 +1347,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossDragon_Character_BP_C",
       "Description": "Dragon Guardian",
       "Mod": "ArkPrime"
@@ -1207,6 +1356,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossDragon_Character_BP_Easy_C",
       "Description": "Dragon Guardian (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1215,6 +1365,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossDragon_Character_BP_Medium_C",
       "Description": "Dragon Guardian (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1223,6 +1374,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossDragon_Character_BP_Hard_C",
       "Description": "Dragon Guardian (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1231,6 +1383,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossGorilla_Character_BP_C",
       "Description": "Megapithecus Guardian",
       "Mod": "ArkPrime"
@@ -1239,6 +1392,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossGorilla_Character_BP_Easy_C",
       "Description": "Megapithecus Guardian (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1247,6 +1401,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossGorilla_Character_BP_Medium_C",
       "Description": "Megapithecus Guardian (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1255,6 +1410,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossGorilla_Character_BP_Hard_C",
       "Description": "Megapithecus Guardian (Hard Variant)",
       "Mod": "ArkPrime"
@@ -1263,6 +1419,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossSpiderL_Character_BP_C",
       "Description": "Broodmother Guardian",
       "Mod": "ArkPrime"
@@ -1271,6 +1428,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossSpiderL_Character_BP_Easy_C",
       "Description": "Broodmother Guardian (Easy Variant)",
       "Mod": "ArkPrime"
@@ -1279,6 +1437,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossSpiderL_Character_BP_Medium_C",
       "Description": "Broodmother Guardian (Medium Variant)",
       "Mod": "ArkPrime"
@@ -1287,6 +1446,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "EndBossSpiderL_Character_BP_Hard_C",
       "Description": "Broodmother Guardian (Hard Variant)",
       "Mod": "ArkPrime"
@@ -13540,23 +13700,8 @@
     },
     {
       "IsSotF": false,
-      "EventName": "Arkaeology",
-      "Description": "Arkaeology"
-    },
-    {
-      "IsSotF": false,
-      "EventName": "ExtinctionChronicles",
-      "Description": "Extinction Chronicles"
-    },
-    {
-      "IsSotF": false,
       "EventName": "Summer",
       "Description": "Summer Bash"
-    },
-    {
-      "IsSotF": false,
-      "EventName": "ark7th",
-      "Description": "7th Anniversary"
     },
     {
       "IsSotF": false,

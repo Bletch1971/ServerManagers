@@ -23,6 +23,7 @@
         MapSpawnerOverrides,
         CraftingOverrides,
         SupplyCrateOverrides,
+        ExcludeItemIndicesOverrides,
         StackSizeOverrides,
         PreventTransferOverrides,
         PGM,

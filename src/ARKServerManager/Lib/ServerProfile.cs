@@ -70,12 +70,13 @@ namespace ServerManagerTool.Lib
             // initialise the complex properties
             this.DinoSpawnWeightMultipliers = new AggregateIniValueList<DinoSpawn>(nameof(DinoSpawnWeightMultipliers), GameData.GetDinoSpawns);
             this.PreventDinoTameClassNames = new StringIniValueList(nameof(PreventDinoTameClassNames), () => new string[0] );
+            this.PreventBreedingForClassNames = new StringIniValueList(nameof(PreventBreedingForClassNames), () => new string[0]);
             this.NPCReplacements = new AggregateIniValueList<NPCReplacement>(nameof(NPCReplacements), GameData.GetNPCReplacements);
             this.TamedDinoClassDamageMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(TamedDinoClassDamageMultipliers), GameData.GetDinoMultipliers);
             this.TamedDinoClassResistanceMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(TamedDinoClassResistanceMultipliers), GameData.GetDinoMultipliers);
             this.DinoClassDamageMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(DinoClassDamageMultipliers), GameData.GetDinoMultipliers);
             this.DinoClassResistanceMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(DinoClassResistanceMultipliers), GameData.GetDinoMultipliers);
-            this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
+            this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.PreventBreedingForClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
 
             this.DinoLevels = new LevelList();
             this.PlayerLevels = new LevelList();
@@ -97,6 +98,7 @@ namespace ServerManagerTool.Lib
             this.ConfigOverrideItemCraftingCosts = new CraftingOverrideList(nameof(ConfigOverrideItemCraftingCosts));
             this.ConfigOverrideItemMaxQuantity = new StackSizeOverrideList(nameof(ConfigOverrideItemMaxQuantity));
             this.ConfigOverrideSupplyCrateItems = new SupplyCrateOverrideList(nameof(ConfigOverrideSupplyCrateItems));
+            this.ExcludeItemIndices = new ExcludeItemIndicesOverrideList(nameof(ExcludeItemIndices));
             this.PreventTransferForClassNames = new PreventTransferOverrideList(nameof(PreventTransferForClassNames));
 
             this.ConfigAddNPCSpawnEntriesContainer = new NPCSpawnContainerList<NPCSpawnContainer>(nameof(ConfigAddNPCSpawnEntriesContainer), NPCSpawnContainerType.Add);
@@ -313,6 +315,38 @@ namespace ServerManagerTool.Lib
         {
             get { return (string)GetValue(BanListURLProperty); }
             set { SetValue(BanListURLProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableCustomDynamicConfigUrlProperty = DependencyProperty.Register(nameof(EnableCustomDynamicConfigUrl), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableCustomDynamicConfigUrl
+        {
+            get { return (bool)GetValue(EnableCustomDynamicConfigUrlProperty); }
+            set { SetValue(EnableCustomDynamicConfigUrlProperty, value); }
+        }
+
+        public static readonly DependencyProperty CustomDynamicConfigUrlProperty = DependencyProperty.Register(nameof(CustomDynamicConfigUrl), typeof(string), typeof(ServerProfile), new PropertyMetadata(""));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, ConditionedOn = nameof(EnableCustomDynamicConfigUrl), QuotedString = QuotedStringType.True)]
+        public string CustomDynamicConfigUrl
+        {
+            get { return (string)GetValue(CustomDynamicConfigUrlProperty); }
+            set { SetValue(CustomDynamicConfigUrlProperty, value); }
+        }
+
+        public static readonly DependencyProperty EnableCustomLiveTuningUrlProperty = DependencyProperty.Register(nameof(EnableCustomLiveTuningUrl), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool EnableCustomLiveTuningUrl
+        {
+            get { return (bool)GetValue(EnableCustomLiveTuningUrlProperty); }
+            set { SetValue(EnableCustomLiveTuningUrlProperty, value); }
+        }
+
+        public static readonly DependencyProperty CustomLiveTuningUrlProperty = DependencyProperty.Register(nameof(CustomLiveTuningUrl), typeof(string), typeof(ServerProfile), new PropertyMetadata(""));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Administration, ConditionedOn = nameof(EnableCustomLiveTuningUrl), QuotedString = QuotedStringType.True)]
+        public string CustomLiveTuningUrl
+        {
+            get { return (string)GetValue(CustomLiveTuningUrlProperty); }
+            set { SetValue(CustomLiveTuningUrlProperty, value); }
         }
 
         public static readonly DependencyProperty MaxPlayersProperty = DependencyProperty.Register(nameof(MaxPlayers), typeof(int), typeof(ServerProfile), new PropertyMetadata(70));
@@ -667,6 +701,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(StructureMemoryOptimizationsProperty); }
             set { SetValue(StructureMemoryOptimizationsProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseStructureStasisGridProperty = DependencyProperty.Register(nameof(UseStructureStasisGrid), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool UseStructureStasisGrid
+        {
+            get { return (bool)GetValue(UseStructureStasisGridProperty); }
+            set { SetValue(UseStructureStasisGridProperty, value); }
         }
 
         public static readonly DependencyProperty NoUnderMeshCheckingProperty = DependencyProperty.Register(nameof(NoUnderMeshChecking), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
@@ -1115,6 +1157,14 @@ namespace ServerManagerTool.Lib
         #endregion
 
         #region Server Details
+        public static readonly DependencyProperty CultureProperty = DependencyProperty.Register(nameof(Culture), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
+        [DataMember]
+        public string Culture
+        {
+            get { return (string)GetValue(CultureProperty); }
+            set { SetValue(CultureProperty, value); }
+        }
+
         public static readonly DependencyProperty BranchNameProperty = DependencyProperty.Register(nameof(BranchName), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [DataMember]
         public string BranchName
@@ -1197,6 +1247,22 @@ namespace ServerManagerTool.Lib
             set { SetValue(DisableFriendlyFirePvEProperty, value); }
         }
 
+        public static readonly DependencyProperty AllowCaveBuildingPvPProperty = DependencyProperty.Register(nameof(AllowCaveBuildingPvP), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules, "AllowCaveBuildingPvP")]
+        public bool AllowCaveBuildingPvP
+        {
+            get { return (bool)GetValue(AllowCaveBuildingPvPProperty); }
+            set { SetValue(AllowCaveBuildingPvPProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisableRailgunPVPProperty = DependencyProperty.Register(nameof(DisableRailgunPVP), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool DisableRailgunPVP
+        {
+            get { return (bool)GetValue(DisableRailgunPVPProperty); }
+            set { SetValue(DisableRailgunPVPProperty, value); }
+        }
+
         public static readonly DependencyProperty DisableLootCratesProperty = DependencyProperty.Register(nameof(DisableLootCrates), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bDisableLootCrates")]
         public bool DisableLootCrates
@@ -1219,6 +1285,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(EnableExtraStructurePreventionVolumesProperty); }
             set { SetValue(EnableExtraStructurePreventionVolumesProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseSingleplayerSettingsProperty = DependencyProperty.Register(nameof(UseSingleplayerSettings), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules, "bUseSingleplayerSettings", ConditionedOn = nameof(UseSingleplayerSettings))]
+        public bool UseSingleplayerSettings
+        {
+            get { return (bool)GetValue(UseSingleplayerSettingsProperty); }
+            set { SetValue(UseSingleplayerSettingsProperty, value); }
         }
 
         public static readonly DependencyProperty EnableDifficultyOverrideProperty = DependencyProperty.Register(nameof(EnableDifficultyOverride), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
@@ -1331,6 +1405,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(NoTransferFromFilteringProperty); }
             set { SetValue(NoTransferFromFilteringProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisableCustomFoldersInTributeInventoriesProperty = DependencyProperty.Register(nameof(DisableCustomFoldersInTributeInventories), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool DisableCustomFoldersInTributeInventories
+        {
+            get { return (bool)GetValue(DisableCustomFoldersInTributeInventoriesProperty); }
+            set { SetValue(DisableCustomFoldersInTributeInventoriesProperty, value); }
         }
 
         public static readonly DependencyProperty OverrideTributeCharacterExpirationSecondsProperty = DependencyProperty.Register(nameof(OverrideTributeCharacterExpirationSeconds), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
@@ -1866,6 +1948,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (float)GetValue(WorldBuffScalingEfficacyProperty); }
             set { SetValue(WorldBuffScalingEfficacyProperty, value); }
+        }
+
+        public static readonly DependencyProperty AdjustableMutagenSpawnDelayMultiplierProperty = DependencyProperty.Register(nameof(AdjustableMutagenSpawnDelayMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules)]
+        public float AdjustableMutagenSpawnDelayMultiplier
+        {
+            get { return (float)GetValue(AdjustableMutagenSpawnDelayMultiplierProperty); }
+            set { SetValue(AdjustableMutagenSpawnDelayMultiplierProperty, value); }
         }
 
         public static readonly DependencyProperty EnableCryoSicknessPVEProperty = DependencyProperty.Register(nameof(EnableCryoSicknessPVE), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
@@ -2412,6 +2502,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(AutoDestroyDecayedDinosProperty, value); }
         }
 
+        public static readonly DependencyProperty UseDinoLevelUpAnimationsProperty = DependencyProperty.Register(nameof(UseDinoLevelUpAnimations), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, "bUseDinoLevelUpAnimations")]
+        public bool UseDinoLevelUpAnimations
+        {
+            get { return (bool)GetValue(UseDinoLevelUpAnimationsProperty); }
+            set { SetValue(UseDinoLevelUpAnimationsProperty, value); }
+        }
+
         public static readonly DependencyProperty PvEDinoDecayPeriodMultiplierProperty = DependencyProperty.Register(nameof(PvEDinoDecayPeriodMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(1.0f));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Dinos, WriteIfNotValue = 1.0f)]
         public float PvEDinoDecayPeriodMultiplier
@@ -2428,6 +2526,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(AllowMultipleAttachedC4Property, value); }
         }
 
+        public static readonly DependencyProperty AllowUnclaimDinosProperty = DependencyProperty.Register(nameof(AllowUnclaimDinos), typeof(bool), typeof(ServerProfile), new PropertyMetadata(true));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, "bAllowUnclaimDinos")]
+        public bool AllowUnclaimDinos
+        {
+            get { return (bool)GetValue(AllowUnclaimDinosProperty); }
+            set { SetValue(AllowUnclaimDinosProperty, value); }
+        }
+
         public static readonly DependencyProperty DisableDinoRidingProperty = DependencyProperty.Register(nameof(DisableDinoRiding), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, "bDisableDinoRiding", ConditionedOn = nameof(DisableDinoRiding))]
         public bool DisableDinoRiding
@@ -2442,6 +2548,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(DisableDinoTamingProperty); }
             set { SetValue(DisableDinoTamingProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisableDinoBreedingProperty = DependencyProperty.Register(nameof(DisableDinoBreeding), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, "bDisableDinoBreeding", ConditionedOn = nameof(DisableDinoBreeding))]
+        public bool DisableDinoBreeding
+        {
+            get { return (bool)GetValue(DisableDinoBreedingProperty); }
+            set { SetValue(DisableDinoBreedingProperty, value); }
         }
 
         public static readonly DependencyProperty MaxTamedDinosProperty = DependencyProperty.Register(nameof(MaxTamedDinos), typeof(int), typeof(ServerProfile), new PropertyMetadata(5000));
@@ -2737,6 +2851,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (StringIniValueList)GetValue(PreventDinoTameClassNamesProperty); }
             set { SetValue(PreventDinoTameClassNamesProperty, value); }
+        }
+
+        public static readonly DependencyProperty PreventBreedingForClassNamesProperty = DependencyProperty.Register(nameof(PreventBreedingForClassNames), typeof(StringIniValueList), typeof(ServerProfile), new PropertyMetadata(null));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
+        public StringIniValueList PreventBreedingForClassNames
+        {
+            get { return (StringIniValueList)GetValue(PreventBreedingForClassNamesProperty); }
+            set { SetValue(PreventBreedingForClassNamesProperty, value); }
         }
 
         public static readonly DependencyProperty DinoSettingsProperty = DependencyProperty.Register(nameof(DinoSettings), typeof(DinoSettingsList), typeof(ServerProfile), new PropertyMetadata(null));
@@ -3158,6 +3280,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(DisableStructurePlacementCollisionProperty, value); }
         }
 
+        public static readonly DependencyProperty IgnoreLimitMaxStructuresInRangeTypeFlagProperty = DependencyProperty.Register(nameof(IgnoreLimitMaxStructuresInRangeTypeFlag), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Structures)]
+        public bool IgnoreLimitMaxStructuresInRangeTypeFlag
+        {
+            get { return (bool)GetValue(IgnoreLimitMaxStructuresInRangeTypeFlagProperty); }
+            set { SetValue(IgnoreLimitMaxStructuresInRangeTypeFlagProperty, value); }
+        }
+
         public static readonly DependencyProperty EnableFastDecayIntervalProperty = DependencyProperty.Register(nameof(EnableFastDecayInterval), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
         public bool EnableFastDecayInterval
         {
@@ -3235,6 +3365,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(AllowIntegratedSPlusStructuresProperty); }
             set { SetValue(AllowIntegratedSPlusStructuresProperty, value); }
+        }
+
+        public static readonly DependencyProperty IgnoreStructuresPreventionVolumesProperty = DependencyProperty.Register(nameof(IgnoreStructuresPreventionVolumes), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Structures, "bIgnoreStructuresPreventionVolumes")]
+        public bool IgnoreStructuresPreventionVolumes
+        {
+            get { return (bool)GetValue(IgnoreStructuresPreventionVolumesProperty); }
+            set { SetValue(IgnoreStructuresPreventionVolumesProperty, value); }
         }
 
         public static readonly DependencyProperty GenesisUseStructuresPreventionVolumesProperty = DependencyProperty.Register(nameof(GenesisUseStructuresPreventionVolumes), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
@@ -3469,6 +3607,16 @@ namespace ServerManagerTool.Lib
         {
             get { return (SupplyCrateOverrideList)GetValue(ConfigOverrideSupplyCrateItemsProperty); }
             set { SetValue(ConfigOverrideSupplyCrateItemsProperty, value); }
+        }
+        #endregion
+
+        #region Exclude Item Indices Overrides
+        public static readonly DependencyProperty ExcludeItemIndicesProperty = DependencyProperty.Register(nameof(ExcludeItemIndices), typeof(ExcludeItemIndicesOverrideList), typeof(ServerProfile), new PropertyMetadata(null));
+        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.ExcludeItemIndicesOverrides)]
+        public ExcludeItemIndicesOverrideList ExcludeItemIndices
+        {
+            get { return (ExcludeItemIndicesOverrideList)GetValue(ExcludeItemIndicesProperty); }
+            set { SetValue(ExcludeItemIndicesProperty, value); }
         }
         #endregion
 
@@ -4021,6 +4169,11 @@ namespace ServerManagerTool.Lib
                 }
             }
 
+            if (this.DisableCustomFoldersInTributeInventories)
+            {
+                serverArgs.Append(" -DisableCustomFoldersInTributeInventories");
+            }
+
             if (this.EnableWebAlarm)
             {
                 serverArgs.Append(" -webalarm");
@@ -4130,6 +4283,11 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -structurememopts");
             }
 
+            if (this.UseStructureStasisGrid)
+            {
+                serverArgs.Append(" -UseStructureStasisGrid");
+            }
+
             if (this.SecureSendArKPayload)
             {
                 serverArgs.Append(" -SecureSendArKPayload");
@@ -4170,9 +4328,19 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -epiconly");
             }
 
+            if (this.EnableCustomDynamicConfigUrl && !string.IsNullOrWhiteSpace(this.CustomDynamicConfigUrl))
+            {
+                serverArgs.Append(" -UseDynamicConfig ");
+            }
+
             if ((this.Crossplay || this.EpicOnly) && this.EnablePublicIPForEpic)
             {
                 serverArgs.Append($" -PublicIPForEpic={Config.Default.MachinePublicIP}");
+            }
+
+            if (this.DisableRailgunPVP)
+            {
+                serverArgs.Append(" -DisableRailgunPVP");
             }
 
             if (this.UseVivox)
@@ -4196,6 +4364,11 @@ namespace ServerManagerTool.Lib
             if (this.Imprintlimit.HasValue)
             {
                 serverArgs.Append(" -imprintlimit=").Append(this.Imprintlimit);
+            }
+
+            if (!string.IsNullOrWhiteSpace(this.Culture))
+            {
+                serverArgs.Append(" -culture=").Append(this.Culture);
             }
 
             return serverArgs.ToString();
@@ -4240,6 +4413,8 @@ namespace ServerManagerTool.Lib
                 profile.NPCSpawnSettings.RenderToView();
             if (Config.Default.SectionSupplyCrateOverridesEnabled)
                 profile.ConfigOverrideSupplyCrateItems.RenderToView();
+            if (Config.Default.SectionExcludeItemIndicesOverridesEnabled)
+                profile.ExcludeItemIndices.RenderToView();
             if (Config.Default.SectionCraftingOverridesEnabled)
                 profile.ConfigOverrideItemCraftingCosts.RenderToView();
             if (Config.Default.SectionStackSizeOverridesEnabled)
@@ -4320,6 +4495,8 @@ namespace ServerManagerTool.Lib
                 profile.NPCSpawnSettings.RenderToView();
             if (Config.Default.SectionSupplyCrateOverridesEnabled)
                 profile.ConfigOverrideSupplyCrateItems.RenderToView();
+            if (Config.Default.SectionExcludeItemIndicesOverridesEnabled)
+                profile.ExcludeItemIndices.RenderToView();
             if (Config.Default.SectionCraftingOverridesEnabled)
                 profile.ConfigOverrideItemCraftingCosts.RenderToView();
             if (Config.Default.SectionStackSizeOverridesEnabled)
@@ -4460,6 +4637,12 @@ namespace ServerManagerTool.Lib
             {
                 progressCallback?.Invoke(0, _globalizer.GetResourceString("ProfileSave_ConstructingSupplyCrateInformation"));
                 this.ConfigOverrideSupplyCrateItems.RenderToModel();
+            }
+
+            if (Config.Default.SectionExcludeItemIndicesOverridesEnabled)
+            {
+                progressCallback?.Invoke(0, _globalizer.GetResourceString("ProfileSave_ConstructingExcludeItemIndicesInformation"));
+                this.ExcludeItemIndices.RenderToModel();
             }
 
             if (Config.Default.SectionCraftingOverridesEnabled)
@@ -5402,6 +5585,7 @@ namespace ServerManagerTool.Lib
 
         public void ResetServerOptions()
         {
+            this.ClearValue(CultureProperty);
             this.ClearValue(DisableValveAntiCheatSystemProperty);
             this.ClearValue(DisablePlayerMovePhysicsOptimizationProperty);
             this.ClearValue(DisableAntiSpeedHackDetectionProperty);
@@ -5421,6 +5605,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(UseNoHangDetectionProperty);
             this.ClearValue(ServerAllowAnselProperty);
             this.ClearValue(StructureMemoryOptimizationsProperty);
+            this.ClearValue(UseStructureStasisGridProperty);
             this.ClearValue(NoUnderMeshCheckingProperty);
             this.ClearValue(NoUnderMeshKillingProperty);
             this.ClearValue(NoDinosProperty);
@@ -5477,6 +5662,10 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(EnableBanListURLProperty);
             this.ClearValue(BanListURLProperty);
+            this.ClearValue(EnableCustomDynamicConfigUrlProperty);
+            this.ClearValue(CustomDynamicConfigUrlProperty);
+            this.ClearValue(EnableCustomLiveTuningUrlProperty);
+            this.ClearValue(CustomLiveTuningUrlProperty);
             this.ClearValue(MaxPlayersProperty);
             this.ClearNullableValue(KickIdlePlayersPeriodProperty);
 
@@ -5571,11 +5760,14 @@ namespace ServerManagerTool.Lib
             this.ClearValue(DisableDinoDecayPvEProperty);
             this.ClearValue(DisableDinoDecayPvPProperty);
             this.ClearValue(AutoDestroyDecayedDinosProperty);
+            this.ClearValue(UseDinoLevelUpAnimationsProperty);
             this.ClearValue(PvEDinoDecayPeriodMultiplierProperty);
             this.ClearValue(AllowMultipleAttachedC4Property);
+            this.ClearValue(AllowUnclaimDinosProperty);
 
             this.ClearValue(DisableDinoRidingProperty);
             this.ClearValue(DisableDinoTamingProperty);
+            this.ClearValue(DisableDinoBreedingProperty);
             this.ClearValue(MaxTamedDinosProperty);
             this.ClearValue(MaxPersonalTamedDinosProperty);
             this.ClearValue(PersonalTamedDinosSaddleStructureCostProperty);
@@ -5613,13 +5805,14 @@ namespace ServerManagerTool.Lib
 
             this.DinoSpawnWeightMultipliers = new AggregateIniValueList<DinoSpawn>(nameof(DinoSpawnWeightMultipliers), GameData.GetDinoSpawns);
             this.PreventDinoTameClassNames = new StringIniValueList(nameof(PreventDinoTameClassNames), () => new string[0]);
+            this.PreventBreedingForClassNames = new StringIniValueList(nameof(PreventBreedingForClassNames), () => new string[0]);
             this.NPCReplacements = new AggregateIniValueList<NPCReplacement>(nameof(NPCReplacements), GameData.GetNPCReplacements);
             this.TamedDinoClassDamageMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(TamedDinoClassDamageMultipliers), GameData.GetDinoMultipliers);
             this.TamedDinoClassResistanceMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(TamedDinoClassResistanceMultipliers), GameData.GetDinoMultipliers);
             this.DinoClassDamageMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(DinoClassDamageMultipliers), GameData.GetDinoMultipliers);
             this.DinoClassResistanceMultipliers = new AggregateIniValueList<ClassMultiplier>(nameof(DinoClassResistanceMultipliers), GameData.GetDinoMultipliers);
-            
-            this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
+
+            this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.PreventBreedingForClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
             this.DinoSettings.RenderToView();
         }
 
@@ -5753,9 +5946,12 @@ namespace ServerManagerTool.Lib
             this.ClearValue(AllowCaveBuildingPvEProperty);
             this.ClearValue(DisableFriendlyFirePvPProperty);
             this.ClearValue(DisableFriendlyFirePvEProperty);
+            this.ClearValue(AllowCaveBuildingPvPProperty);
+            this.ClearValue(DisableRailgunPVPProperty);
             this.ClearValue(DisableLootCratesProperty);
             this.ClearValue(AllowCrateSpawnsOnTopOfStructuresProperty);
             this.ClearValue(EnableExtraStructurePreventionVolumesProperty);
+            this.ClearValue(UseSingleplayerSettingsProperty);
 
             this.ClearValue(EnableDifficultyOverrideProperty);
             this.ClearValue(OverrideOfficialDifficultyProperty);
@@ -5773,6 +5969,7 @@ namespace ServerManagerTool.Lib
             this.ClearNullableValue(MaxTributeItemsProperty);
 
             this.ClearValue(NoTransferFromFilteringProperty);
+            this.ClearValue(DisableCustomFoldersInTributeInventoriesProperty);
             this.ClearValue(OverrideTributeCharacterExpirationSecondsProperty);
             this.ClearValue(OverrideTributeItemExpirationSecondsProperty);
             this.ClearValue(OverrideTributeDinoExpirationSecondsProperty);
@@ -5847,6 +6044,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(DisableWorldBuffsProperty);
             this.ClearValue(EnableWorldBuffScalingProperty);
             this.ClearValue(WorldBuffScalingEfficacyProperty);
+            this.ClearValue(AdjustableMutagenSpawnDelayMultiplierProperty);
 
             this.ClearValue(MaxHexagonsPerCharacterProperty);
             this.ClearValue(DisableHexagonStoreProperty);
@@ -5936,6 +6134,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(FastDecayUnsnappedCoreStructuresProperty);
             this.ClearValue(DestroyUnconnectedWaterPipesProperty);
             this.ClearValue(DisableStructurePlacementCollisionProperty);
+            this.ClearValue(IgnoreLimitMaxStructuresInRangeTypeFlagProperty);
             this.ClearValue(EnableFastDecayIntervalProperty);
             this.ClearValue(FastDecayIntervalProperty);
             this.ClearValue(LimitTurretsInRangeProperty);
@@ -5946,6 +6145,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(StructurePickupTimeAfterPlacementProperty);
             this.ClearValue(StructurePickupHoldDurationProperty);
             this.ClearValue(AllowIntegratedSPlusStructuresProperty);
+            this.ClearValue(IgnoreStructuresPreventionVolumesProperty);
             this.ClearValue(GenesisUseStructuresPreventionVolumesProperty);
         }
 
@@ -5953,6 +6153,12 @@ namespace ServerManagerTool.Lib
         {
             this.ConfigOverrideSupplyCrateItems = new SupplyCrateOverrideList(nameof(ConfigOverrideSupplyCrateItems));
             this.ConfigOverrideSupplyCrateItems.Reset();
+        }
+
+        public void ResetExcludeItemIndicesOverridesSection()
+        {
+            this.ExcludeItemIndices = new ExcludeItemIndicesOverrideList(nameof(ExcludeItemIndices));
+            this.ExcludeItemIndices.Reset();
         }
 
         public void UpdateOverrideMaxExperiencePointsDino()
@@ -6054,6 +6260,9 @@ namespace ServerManagerTool.Lib
                 case ServerProfileCategory.SupplyCrateOverrides:
                     SyncSupplyCrateOverridesSection(sourceProfile);
                     break;
+                case ServerProfileCategory.ExcludeItemIndicesOverrides:
+                    SyncExcludeItemIndicesOverridesSection(sourceProfile);
+                    break;
                 case ServerProfileCategory.StackSizeOverrides:
                     SyncStackSizeOverridesSection(sourceProfile);
                     break;
@@ -6083,10 +6292,15 @@ namespace ServerManagerTool.Lib
             this.SetValue(ExtinctionEventUTCProperty, sourceProfile.ExtinctionEventUTC);
 
             // server options
+            this.SetValue(CultureProperty, sourceProfile.Culture);
             this.SetValue(MaxPlayersProperty, sourceProfile.MaxPlayers);
             this.SetNullableValue(KickIdlePlayersPeriodProperty, sourceProfile.KickIdlePlayersPeriod);
             this.SetValue(EnableBanListURLProperty, sourceProfile.EnableBanListURL);
             this.SetValue(BanListURLProperty, sourceProfile.BanListURL);
+            this.SetValue(EnableCustomDynamicConfigUrlProperty, sourceProfile.EnableCustomDynamicConfigUrl);
+            this.SetValue(CustomDynamicConfigUrlProperty, sourceProfile.CustomDynamicConfigUrl);
+            this.SetValue(EnableCustomLiveTuningUrlProperty, sourceProfile.EnableCustomLiveTuningUrl);
+            this.SetValue(CustomLiveTuningUrlProperty, sourceProfile.CustomLiveTuningUrl);
             this.SetValue(DisableValveAntiCheatSystemProperty, sourceProfile.DisableValveAntiCheatSystem);
             this.SetValue(UseBattlEyeProperty, sourceProfile.UseBattlEye);
             this.SetValue(DisablePlayerMovePhysicsOptimizationProperty, sourceProfile.DisablePlayerMovePhysicsOptimization);
@@ -6109,6 +6323,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(StasisKeepControllersProperty, sourceProfile.StasisKeepControllers);
             this.SetValue(ServerAllowAnselProperty, sourceProfile.ServerAllowAnsel);
             this.SetValue(StructureMemoryOptimizationsProperty, sourceProfile.StructureMemoryOptimizations);
+            this.SetValue(UseStructureStasisGridProperty, sourceProfile.UseStructureStasisGrid);
             this.SetValue(CrossplayProperty, sourceProfile.Crossplay);
             this.SetValue(EpicOnlyProperty, sourceProfile.EpicOnly);
             this.SetValue(EnablePublicIPForEpicProperty, sourceProfile.EnablePublicIPForEpic);
@@ -6260,11 +6475,14 @@ namespace ServerManagerTool.Lib
             this.SetValue(DisableDinoDecayPvEProperty, sourceProfile.DisableDinoDecayPvE);
             this.SetValue(DisableDinoDecayPvPProperty, sourceProfile.DisableDinoDecayPvP);
             this.SetValue(AutoDestroyDecayedDinosProperty, sourceProfile.AutoDestroyDecayedDinos);
+            this.SetValue(UseDinoLevelUpAnimationsProperty, sourceProfile.UseDinoLevelUpAnimations);
             this.SetValue(PvEDinoDecayPeriodMultiplierProperty, sourceProfile.PvEDinoDecayPeriodMultiplier);
             this.SetValue(AllowMultipleAttachedC4Property, sourceProfile.AllowMultipleAttachedC4);
+            this.SetValue(AllowUnclaimDinosProperty, sourceProfile.AllowUnclaimDinos);
 
             this.SetValue(DisableDinoRidingProperty, sourceProfile.DisableDinoRiding);
             this.SetValue(DisableDinoTamingProperty, sourceProfile.DisableDinoTaming);
+            this.SetValue(DisableDinoBreedingProperty, sourceProfile.DisableDinoBreeding);
             this.SetValue(MaxTamedDinosProperty, sourceProfile.MaxTamedDinos);
             this.SetValue(MaxPersonalTamedDinosProperty, sourceProfile.MaxPersonalTamedDinos);
             this.SetValue(PersonalTamedDinosSaddleStructureCostProperty, sourceProfile.PersonalTamedDinosSaddleStructureCost);
@@ -6327,6 +6545,10 @@ namespace ServerManagerTool.Lib
             this.PreventDinoTameClassNames.FromIniValues(sourceProfile.PreventDinoTameClassNames.ToIniValues());
             this.PreventDinoTameClassNames.IsEnabled = sourceProfile.PreventDinoTameClassNames.IsEnabled;
 
+            this.PreventBreedingForClassNames.Clear();
+            this.PreventBreedingForClassNames.FromIniValues(sourceProfile.PreventBreedingForClassNames.ToIniValues());
+            this.PreventBreedingForClassNames.IsEnabled = sourceProfile.PreventBreedingForClassNames.IsEnabled;
+
             this.NPCReplacements.Clear();
             this.NPCReplacements.FromIniValues(sourceProfile.NPCReplacements.ToIniValues());
             this.NPCReplacements.IsEnabled = sourceProfile.NPCReplacements.IsEnabled;
@@ -6347,7 +6569,7 @@ namespace ServerManagerTool.Lib
             this.DinoClassResistanceMultipliers.FromIniValues(sourceProfile.DinoClassResistanceMultipliers.ToIniValues());
             this.DinoClassResistanceMultipliers.IsEnabled = sourceProfile.DinoClassResistanceMultipliers.IsEnabled;
 
-            this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
+            this.DinoSettings = new DinoSettingsList(this.DinoSpawnWeightMultipliers, this.PreventDinoTameClassNames, this.PreventBreedingForClassNames, this.NPCReplacements, this.TamedDinoClassDamageMultipliers, this.TamedDinoClassResistanceMultipliers, this.DinoClassDamageMultipliers, this.DinoClassResistanceMultipliers);
             this.DinoSettings.RenderToView();
         }
 
@@ -6506,9 +6728,12 @@ namespace ServerManagerTool.Lib
             this.SetValue(AllowCaveBuildingPvEProperty, sourceProfile.AllowCaveBuildingPvE);
             this.SetValue(DisableFriendlyFirePvPProperty, sourceProfile.DisableFriendlyFirePvP);
             this.SetValue(DisableFriendlyFirePvEProperty, sourceProfile.DisableFriendlyFirePvE);
+            this.SetValue(AllowCaveBuildingPvPProperty, sourceProfile.AllowCaveBuildingPvP);
+            this.SetValue(DisableRailgunPVPProperty, sourceProfile.DisableRailgunPVP);
             this.SetValue(DisableLootCratesProperty, sourceProfile.DisableLootCrates);
             this.SetValue(AllowCrateSpawnsOnTopOfStructuresProperty, sourceProfile.AllowCrateSpawnsOnTopOfStructures);
             this.SetValue(EnableExtraStructurePreventionVolumesProperty, sourceProfile.EnableExtraStructurePreventionVolumes);
+            this.SetValue(UseSingleplayerSettingsProperty, sourceProfile.UseSingleplayerSettings);
 
             this.SetValue(EnableDifficultyOverrideProperty, sourceProfile.EnableDifficultyOverride);
             this.SetValue(OverrideOfficialDifficultyProperty, sourceProfile.OverrideOfficialDifficulty);
@@ -6526,6 +6751,7 @@ namespace ServerManagerTool.Lib
             this.SetNullableValue(MaxTributeItemsProperty, sourceProfile.MaxTributeItems);
 
             this.SetValue(NoTransferFromFilteringProperty, sourceProfile.NoTransferFromFiltering);
+            this.SetValue(DisableCustomFoldersInTributeInventoriesProperty, sourceProfile.DisableCustomFoldersInTributeInventories);
             this.SetValue(OverrideTributeCharacterExpirationSecondsProperty, sourceProfile.OverrideTributeCharacterExpirationSeconds);
             this.SetValue(OverrideTributeItemExpirationSecondsProperty, sourceProfile.OverrideTributeItemExpirationSeconds);
             this.SetValue(OverrideTributeDinoExpirationSecondsProperty, sourceProfile.OverrideTributeDinoExpirationSeconds);
@@ -6600,6 +6826,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(DisableWorldBuffsProperty, sourceProfile.DisableWorldBuffs);
             this.SetValue(EnableWorldBuffScalingProperty, sourceProfile.EnableWorldBuffScaling);
             this.SetValue(WorldBuffScalingEfficacyProperty, sourceProfile.WorldBuffScalingEfficacy);
+            this.SetValue(AdjustableMutagenSpawnDelayMultiplierProperty, sourceProfile.AdjustableMutagenSpawnDelayMultiplier);
 
             this.SetValue(MaxHexagonsPerCharacterProperty, sourceProfile.MaxHexagonsPerCharacter);
             this.SetValue(DisableHexagonStoreProperty, sourceProfile.DisableHexagonStore);
@@ -6705,6 +6932,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(FastDecayUnsnappedCoreStructuresProperty, sourceProfile.FastDecayUnsnappedCoreStructures);
             this.SetValue(DestroyUnconnectedWaterPipesProperty, sourceProfile.DestroyUnconnectedWaterPipes);
             this.SetValue(DisableStructurePlacementCollisionProperty, sourceProfile.DisableStructurePlacementCollision);
+            this.SetValue(IgnoreLimitMaxStructuresInRangeTypeFlagProperty, sourceProfile.IgnoreLimitMaxStructuresInRangeTypeFlag);
             this.SetValue(EnableFastDecayIntervalProperty, sourceProfile.EnableFastDecayInterval);
             this.SetValue(FastDecayIntervalProperty, sourceProfile.FastDecayInterval);
             this.SetValue(LimitTurretsInRangeProperty, sourceProfile.LimitTurretsInRange);
@@ -6715,6 +6943,7 @@ namespace ServerManagerTool.Lib
             this.SetValue(StructurePickupTimeAfterPlacementProperty, sourceProfile.StructurePickupTimeAfterPlacement);
             this.SetValue(StructurePickupHoldDurationProperty, sourceProfile.StructurePickupHoldDuration);
             this.SetValue(AllowIntegratedSPlusStructuresProperty, sourceProfile.AllowIntegratedSPlusStructures);
+            this.SetValue(IgnoreStructuresPreventionVolumesProperty, sourceProfile.IgnoreStructuresPreventionVolumes);
             this.SetValue(GenesisUseStructuresPreventionVolumesProperty, sourceProfile.GenesisUseStructuresPreventionVolumes);
         }
 
@@ -6726,6 +6955,16 @@ namespace ServerManagerTool.Lib
             this.ConfigOverrideSupplyCrateItems.FromIniValues(sourceProfile.ConfigOverrideSupplyCrateItems.ToIniValues());
             this.ConfigOverrideSupplyCrateItems.IsEnabled = this.ConfigOverrideSupplyCrateItems.Count > 0;
             this.ConfigOverrideSupplyCrateItems.RenderToView();
+        }
+
+        private void SyncExcludeItemIndicesOverridesSection(ServerProfile sourceProfile)
+        {
+            sourceProfile.ExcludeItemIndices.RenderToModel();
+
+            this.ExcludeItemIndices.Clear();
+            this.ExcludeItemIndices.FromIniValues(sourceProfile.ExcludeItemIndices.ToIniValues());
+            this.ExcludeItemIndices.IsEnabled = this.ExcludeItemIndices.Count > 0;
+            this.ExcludeItemIndices.RenderToView();
         }
         #endregion
 

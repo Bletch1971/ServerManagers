@@ -13,6 +13,7 @@ namespace ServerManagerTool.Lib.ViewModel
         public static readonly DependencyProperty ModProperty = DependencyProperty.Register(nameof(Mod), typeof(string), typeof(DinoSettings), new PropertyMetadata(String.Empty));
         public static readonly DependencyProperty KnownDinoProperty = DependencyProperty.Register(nameof(KnownDino), typeof(bool), typeof(DinoSettings), new PropertyMetadata(false));
         public static readonly DependencyProperty CanTameProperty = DependencyProperty.Register(nameof(CanTame), typeof(bool), typeof(DinoSettings), new PropertyMetadata(true));
+        public static readonly DependencyProperty CanBreedingProperty = DependencyProperty.Register(nameof(CanBreeding), typeof(bool), typeof(DinoSettings), new PropertyMetadata(true));
         public static readonly DependencyProperty CanSpawnProperty = DependencyProperty.Register(nameof(CanSpawn), typeof(bool), typeof(DinoSettings), new PropertyMetadata(true));
         public static readonly DependencyProperty ReplacementClassProperty = DependencyProperty.Register(nameof(ReplacementClass), typeof(string), typeof(DinoSettings), new PropertyMetadata(String.Empty));
         public static readonly DependencyProperty SpawnWeightMultiplierProperty = DependencyProperty.Register(nameof(SpawnWeightMultiplier), typeof(float), typeof(DinoSettings), new PropertyMetadata(DinoSpawn.DEFAULT_SPAWN_WEIGHT_MULTIPLIER));
@@ -45,6 +46,12 @@ namespace ServerManagerTool.Lib.ViewModel
         {
             get { return (bool)GetValue(CanTameProperty); }
             set { SetValue(CanTameProperty, value); }
+        }
+
+        public bool CanBreeding
+        {
+            get { return (bool)GetValue(CanBreedingProperty); }
+            set { SetValue(CanBreedingProperty, value); }
         }
 
         public bool CanSpawn
@@ -108,6 +115,7 @@ namespace ServerManagerTool.Lib.ViewModel
         public bool HasClassName { get; internal set; }
         public bool IsSpawnable { get; internal set; }
         public DinoTamable IsTameable { get; internal set; }
+        public DinoBreedingable IsBreedingable { get; internal set; }
         public string DisplayReplacementName => GameData.FriendlyCreatureNameForClass(ReplacementClass);
 
         public float OriginalSpawnWeightMultiplier { get; internal set; }
@@ -119,6 +127,7 @@ namespace ServerManagerTool.Lib.ViewModel
         public string ModSort => $"{Mod}|{DisplayName}";
         public string CanSpawnSort => $"{IsSpawnable}|{CanSpawn}|{DisplayName}|{Mod}";
         public string CanTameSort => $"{IsTameable != DinoTamable.False}|{CanTame}|{DisplayName}|{Mod}";
+        public string CanBreedingSort => $"{IsBreedingable != DinoBreedingable.False}|{CanBreeding}|{DisplayName}|{Mod}";
         public string ReplacementNameSort => $"{DisplayReplacementName}|{Mod}";
         public string SpawnWeightMultiplierSort => $"{SpawnWeightMultiplier:0000000000.0000000000}|{DisplayName}|{Mod}";
         public string OverrideSpawnLimitPercentageSort => $"{OverrideSpawnLimitPercentage}|{DisplayName}|{Mod}";

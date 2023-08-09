@@ -210,6 +210,8 @@ namespace ServerManagerTool.Lib
 
         public static DinoTamable IsTameableForClass(string className) => gameData?.Creatures?.FirstOrDefault(c => c.ClassName.Equals(className))?.IsTameable ?? DinoTamable.True;
 
+        public static DinoBreedingable IsBreedingableForClass(string className) => gameData?.Creatures?.FirstOrDefault(c => c.ClassName.Equals(className))?.IsBreedingable ?? DinoBreedingable.True;
+
         public static string NameTagForClass(string className, bool returnEmptyIfNotFound = false) => gameData?.Creatures?.FirstOrDefault(c => c.ClassName.Equals(className))?.NameTag ?? (returnEmptyIfNotFound ? string.Empty : className);
 
         public static string FriendlyCreatureNameForClass(string className, bool returnEmptyIfNotFound = false) => string.IsNullOrWhiteSpace(className) ? string.Empty : GlobalizedApplication.Instance.GetResourceString(className) ?? gameData?.Creatures?.FirstOrDefault(i => i.ClassName.Equals(className))?.Description ?? (returnEmptyIfNotFound ? string.Empty : className);
