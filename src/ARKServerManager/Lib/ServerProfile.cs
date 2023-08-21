@@ -1839,7 +1839,7 @@ namespace ServerManagerTool.Lib
         }
 
         public static readonly DependencyProperty RandomSupplyCratePointsProperty = DependencyProperty.Register(nameof(RandomSupplyCratePoints), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Rules)]
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.Rules)]
         public bool RandomSupplyCratePoints
         {
             get { return (bool)GetValue(RandomSupplyCratePointsProperty); }
@@ -2175,7 +2175,7 @@ namespace ServerManagerTool.Lib
         }
 
         public static readonly DependencyProperty EnablePlayerJoinedNotificationsProperty = DependencyProperty.Register(nameof(EnablePlayerJoinedNotifications), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
-        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.ChatAndNotifications, "alwaysNotifyPlayerJoined")]
+        [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_ServerSettings, ServerProfileCategory.ChatAndNotifications, "DontAlwaysNotifyPlayerJoined")]
         public bool EnablePlayerJoinedNotifications
         {
             get { return (bool)GetValue(EnablePlayerJoinedNotificationsProperty); }
@@ -2414,7 +2414,7 @@ namespace ServerManagerTool.Lib
             set { SetValue(DinoCharacterHealthRecoveryMultiplierProperty, value); }
         }
 
-        public static readonly DependencyProperty DinoHarvestingDamageMultiplierProperty = DependencyProperty.Register(nameof(DinoHarvestingDamageMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(3.0f));
+        public static readonly DependencyProperty DinoHarvestingDamageMultiplierProperty = DependencyProperty.Register(nameof(DinoHarvestingDamageMultiplier), typeof(float), typeof(ServerProfile), new PropertyMetadata(3.2f));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos, WriteIfNotValue = 3.0f)]
         public float DinoHarvestingDamageMultiplier
         {
