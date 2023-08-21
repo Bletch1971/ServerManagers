@@ -5,28 +5,39 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2023-06-22T00:00:00Z</updated>
+  <updated>2023-08-21T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:6D7413E7-3C96-41A6-B51F-C1B507FC7D7B</id>
-    <title>1.1.443 (1.1.443.1)</title>
-    <summary>1.1.443.1</summary>
+    <id></id>
+    <title>1.1.444 (1.1.444.1)</title>
+    <summary>1.1.444.1</summary>
     <link href="" />
-    <updated>2023-06-22T00:00:00Z</updated>
+    <updated>2023-08-21T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Administration - fix blue text for server / launcher args.</li>
-            <li>Global Settings - default auto backup should be sequential.</li>
+            <li>Chat and Notifications - fix setting for "Enable 'Player Joined' Notifications"</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Global Settings - add option to add additional steamcmd exit status codes as "successful" (use on your own risk).</li>
-            <li>Administration - remove ModID list from profile sync.</li>
+            <li>ASM Options - add setting to reenable ModIDs, CluserID and AutoShutdown Timer sync</li>
+            <li>Global - remove deprecated settings.</li>
+            <li>Global - add global info, if Steam WebApiKey is missing.</li>
+            <li>Administration - remove CluserID from profile sync.</li>
+            <li>Administration - add settings: CustomDynamicConfigUrl, CustomLiveTuningUrl, UseStructureStasisGrid, Culture</li>
+            <li>Administration - change default value for MaxTribeLogs</li>
+            <li>Automatic Management - remove AutoShutdown Timer from profile sync.</li>
+            <li>Rules - add settings: AllowCaveBuildingPvP, DisableRailgunPVP, DisableCustomFoldersInTributeInventories, AdjustableMutagenSpawnDelayMultiplier, bUseSingleplayerSettings</li>
+            <li>Rules - change default value for MaxTributeDinos, GlobalPoweredBatteryDurabilityDecreasePerSecond, MaxHexagonsPerCharacter</li>
+            <li>Structures - add settings: IgnoreLimitMaxStructuresInRangeTypeFlag, bIgnoreStructuresPreventionVolumes</li>
+            <li>Dino Settings - add settings: DisableDinoBreeding, AllowUnclaimDinos, PreventBreedingForClassNames, UseDinoLevelUpAnimations</li>
+            <li>Dino Settings - change default value for MaxTamedDinos</li>
+            <li>Exclude ItemIDs From Supply Crate Overrides - add new section</li>
+            <li>WorldSaveRestore - add file size</li>
           </ul>
         </p>
       </div>
