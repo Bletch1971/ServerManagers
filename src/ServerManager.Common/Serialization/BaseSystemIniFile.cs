@@ -1,5 +1,6 @@
 ﻿using ServerManagerTool.Common.Attibutes;
 using ServerManagerTool.Common.Enums;
+using ServerManagerTool.Common.Extensions;
 using ServerManagerTool.Common.Interfaces;
 using ServerManagerTool.Common.Utils;
 using System;
@@ -349,11 +350,20 @@ namespace ServerManagerTool.Common.Serialization
 
                                     if (attr.QuotedString == QuotedStringType.True)
                                     {
-                                        // add the leading and trailing quotes, if not already have them.
-                                        if (!strValue.StartsWith("\""))
-                                            strValue = "\"" + strValue;
-                                        if (!strValue.EndsWith("\""))
-                                            strValue = strValue + "\"";
+                                        // if the stValue is empty, return empty quoted string (parsing not needed)
+                                        // bug fix for 'property="' on a empty string
+                                        if (strValue.IsEmpty())
+                                        {
+                                            strValue = "\"\"";
+                                        }
+                                        else
+                                        {
+                                            // add the leading and trailing quotes, if not already have them.
+                                            if (!strValue.StartsWith("\""))
+                                                strValue = "\"" + strValue;
+                                            if (!strValue.EndsWith("\""))
+                                                strValue = strValue + "\"";
+                                        }
                                     }
                                     else if (attr.QuotedString == QuotedStringType.Remove)
                                     {
