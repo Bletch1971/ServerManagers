@@ -1545,8 +1545,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Especifica o multiplicador na qualidade do supply crate loot.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Multiplicador de Qualidade na Pesca de Loot</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Especifica o multiplicador na qualidade de pesca de loot.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Desativar pilhagem de peixe não-carne</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Se ativado, desativa a coleta de pilhagem de peixe não-carne.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Usa o multiplicador de vida útil nos cadáveres</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Especifica o multiplicador para o tempo de vida dos cadáver e da caixa de depósito.</sys:String>
     <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">Tempo de Recarga no Inventário Fjordhawk</sys:String>
@@ -1766,8 +1764,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Se habilitado, permite upar velocidade de movimento do flyer.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Desativar Bônus de companheiro</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Se ativado, Os dinos não receberão o bônus do companheiro, o mesmo não receberá o bônus de 33% de dano de resistência </sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Desativar força de Explosivos em voadores.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Se ativado, desativará o aterramento dos voadores no chão, quando explosivos forem colocados sobre eles.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Permitir Múltiplos C4 Anexados</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Se habilitado, permitirá mais de um C4 anexado por dino.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Desativar decaimento de Dino PvE</sys:String>
@@ -1976,8 +1972,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Ativar Decay de Estrutura PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Se habilitado, habilita o decaimento das estruturas do jogador em PvE.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Período de decaimento da estrutura:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Especifica o tempo necessário para as estruturas do player decaírem no modo PvE.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Multiplicador de Decaimento da Estrutura:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Especifica o fator de escala para a taxa de decaimento das estruturas do player no modo PvE.</sys:String>
 

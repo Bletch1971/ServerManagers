@@ -43,6 +43,10 @@
                         </Style>
                     </DockPanel.Style>
 
+                    <Grid DockPanel.Dock="Top" Background="Red" Visibility="{Binding CommonConfig.SteamAPIKey, Converter={StaticResource InvertStringNullOrEmptyToVisibilityConverter}}">
+                        <TextBlock Text="{DynamicResource MainWindow_SteamWebApiKeyMissingLabel}" Margin="0,5,0,5" HorizontalAlignment="Center" Foreground="White"/>
+                    </Grid>
+
                     <Grid DockPanel.Dock="Left">
                         <Grid.RowDefinitions>
                             <RowDefinition/>

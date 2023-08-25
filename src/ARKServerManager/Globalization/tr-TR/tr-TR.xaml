@@ -1512,8 +1512,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Tedarik sandığı yağma kalitesi için çarpanı belirtir.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Balık Tutma Ganimet Kalite Çarpanı</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Balıkçılık ganimet kalitesi için çarpanı belirtir.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Et Olmayan Balık Yağmasını Devre Dışı Bırak</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Etkinleştirilirse, et olmayan balık ganimeti toplamayı devre dışı bırakır.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Ceset Ömrü Çarpanı Kullan</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Ceset ve bırakılan kutu ömrü için çarpanı belirtir.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Küresel Güçle Çalışan Pil Dayanıklılığı</sys:String>
@@ -1731,8 +1729,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Etkinleştirilirse, el ilanı hareket hızının dengelenmesine izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Dino Mate Boost'u Önleyin</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Etkinleştirilirse, dino mate güçlendirme devre dışı bırakılır.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Disable Force Ground Flyer with Explosives</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Etkinleştirilirse, üzerlerine patlayıcı yerleştirildiğinde el ilanının topraklanmasını devre dışı bırakır.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Birden Çok Ekli C4'e İzin Ver</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Etkinleştirilirse, dino başına birden fazla C4 eklenmesine izin verir.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Dino Decay PvE'yi Devre Dışı Bırak</sys:String>
@@ -1939,8 +1935,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Yapı Bozulmasını Etkinleştir PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Etkinleştirilirse, PvE'deki oyuncu yapılarının bozulmasını etkinleştirir.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Yapı Bozulma Dönemi:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Oyuncu yapılarının PvE modunda çürümesi için gereken süreyi belirtir.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Yapı Bozulması Çarpanı:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">PvE modunda oyuncu yapılarının bozulma oranı için ölçeklendirme faktörünü belirtir.</sys:String>
 

@@ -1533,8 +1533,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">指定补给箱和宝箱的质量倍数。</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">钓鱼质量倍数</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">指定钓鱼获取物品质量的倍数。</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">禁用钓鱼奖励</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">如果启用，钓鱼将不会在获得任何装备和图纸奖励，只有鱼肉。</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">使用尸体和包裹时间倍数</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">调整尸体和掉落包裹的存在时间倍数。</sys:String>
 	<sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">维京岛冷却时间(取回背包)</sys:String>
@@ -1754,8 +1752,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">如果启用，允许飞行龙加点.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">防止恐龙交配</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">如果启用，恐龙交配将被禁用。</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">禁用带爆炸物的飞行物强制地面</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">如果启用，当飞行生物上装有炸药时，会使飞行生物的接地失效。（除风神翼龙和双足飞龙以外的飞行单位现被贴上C4后将无法飞行）。</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">允许恐龙贴多个C4</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">如果启用，将允许每个恐龙贴多个C4。</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">禁用PVE恐龙自动放生</sys:String>
@@ -1966,8 +1962,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">启用PVE建筑过期倒计时</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">如果启用，使得在PVE玩家建筑过期倒计时。</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">建筑过期时间:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">设置玩家建筑在PvE模式下过期所需的时间。(系统启用一个建筑过期倒计时，计时结束任何玩家可以拆除建筑。)</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">建筑过期倍数:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">设置PvE模式下玩家建筑过期的倍数。(高值增加时间，较低的值减少。)</sys:String>
 

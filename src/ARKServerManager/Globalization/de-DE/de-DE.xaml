@@ -1413,8 +1413,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Gibt den Multiplikator für die Beutequalität der Versorgungskiste an.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Fischen-Qualitätsmultiplikator</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Gibt den Multiplikator für die Qualität der Angelbeute an.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Deaktivieren die fleischlose Fischbeute</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Wenn aktiviert, wird das Ernten von nicht fleischiger Fischbeute deaktiviert.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Anzeigedauer Leichen/Gegenstände</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Gibt den Multiplikator für die Lebensdauer von Leichen und abgelegten Kisten an.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Globale Batterielebensdauer</sys:String>
@@ -1616,8 +1614,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Wenn diese Option aktiviert ist, kann die Bewegungsgeschwindigkeit der Flugtiere angepasst werden.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Verhindert Dino Begleiter Bonus</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Wenn diese Option aktiviert ist, wird der Dino-Paar-Bonus deaktiviert.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Deaktiviere Landung mit Sprengstoff</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Wenn aktiviert, wird die Landung des Fliegers deaktiviert, wenn Sprengstoff darauf gelegt wird.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Erlaube mehrere C4 Ladungen</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Wenn aktiviert, können mehr als ein C4 pro Dino geladen werden.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Deaktiviere Dino Verfall PvE</sys:String>
@@ -1824,8 +1820,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Aktiviere Strukturzerfall PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Wenn aktiviert, wird der Zerfall von Spielerstrukturen im PvE aktiviert.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Strukturverfallszeitraum:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Gibt die Zeit an, die Spielerstrukturen benötigen, um im PvE-Modus zu verfallen.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Strukturzerfallsmultiplikator:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Gibt den Skalierungsfaktor für die Zerfallsrate von Spielerstrukturen im PvE-Modus an.</sys:String>
 

@@ -7,6 +7,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_TheCenter_C",
       "Description": "Broodmother Lysrix (Easy Variant)",
       "Mod": "TheCenter"
@@ -15,6 +16,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_TheCenterMedium_C",
       "Description": "Broodmother Lysrix (Medium Variant)",
       "Mod": "TheCenter"
@@ -23,6 +25,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "SpiderL_Character_BP_TheCenterHard_C",
       "Description": "Broodmother Lysrix (Hard Variant)",
       "Mod": "TheCenter"
@@ -31,6 +34,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_TheCenter_C",
       "Description": "Megapithecus (Easy Variant)",
       "Mod": "TheCenter"
@@ -39,6 +43,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_TheCenter_Medium_C",
       "Description": "Megapithecus (Medium Variant)",
       "Mod": "TheCenter"
@@ -47,6 +52,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Gorilla_Character_BP_TheCenter_Hard_C",
       "Description": "Megapithecus (Hard Variant)",
       "Mod": "TheCenter"

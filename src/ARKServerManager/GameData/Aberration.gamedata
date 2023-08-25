@@ -7,6 +7,7 @@
       "NameTag": "Achatina",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Achatina_Character_BP_Aberrant_C",
       "Description": "Aberrant Achatina",
       "Mod": "Aberration"
@@ -15,6 +16,7 @@
       "NameTag": "Angler",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Angler_Character_BP_Aberrant_C",
       "Description": "Aberrant Anglerfish",
       "Mod": "Aberration"
@@ -23,6 +25,7 @@
       "NameTag": "Ankylo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Ankylo_Character_BP_Aberrant_C",
       "Description": "Aberrant Ankylosaurus",
       "Mod": "Aberration"
@@ -31,6 +34,7 @@
       "NameTag": "Arthro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Arthro_Character_BP_Aberrant_C",
       "Description": "Aberrant Arthropluera",
       "Mod": "Aberration"
@@ -39,6 +43,7 @@
       "NameTag": "Baryonyx",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Baryonyx_Character_BP_Aberrant_C",
       "Description": "Aberrant Baryonyx",
       "Mod": "Aberration"
@@ -47,6 +52,7 @@
       "NameTag": "Bigfoot",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "BigFoot_Character_BP_Aberrant_C",
       "Description": "Aberrant Gigantopithecus",
       "Mod": "Aberration"
@@ -55,6 +61,7 @@
       "NameTag": "Titanboa",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "BoaFrill_Character_BP_Aberrant_C",
       "Description": "Aberrant Titanoboa",
       "Mod": "Aberration"
@@ -63,6 +70,7 @@
       "NameTag": "Carno",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Carno_Character_BP_Aberrant_C",
       "Description": "Aberrant Carnotaurus",
       "Mod": "Aberration"
@@ -71,6 +79,7 @@
       "NameTag": "Cnidaria",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Cnidaria_Character_BP_Aberrant_C",
       "Description": "Aberrant Cnidaria",
       "Mod": "Aberration"
@@ -79,6 +88,7 @@
       "NameTag": "Coel",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Coel_Character_BP_Aberrant_C",
       "Description": "Aberrant Coelacanth",
       "Mod": "Aberration"
@@ -87,6 +97,7 @@
       "NameTag": "Dimetro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dimetro_Character_BP_Aberrant_C",
       "Description": "Aberrant Dimetrodon",
       "Mod": "Aberration"
@@ -95,6 +106,7 @@
       "NameTag": "Dimorph",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dimorph_Character_BP_Aberrant_C",
       "Description": "Aberrant Dimorphodon",
       "Mod": "Aberration"
@@ -103,6 +115,7 @@
       "NameTag": "Diplocaulus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Diplocaulus_Character_BP_Aberrant_C",
       "Description": "Aberrant Diplocaulus",
       "Mod": "Aberration"
@@ -111,6 +124,7 @@
       "NameTag": "Diplo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Diplodocus_Character_BP_Aberrant_C",
       "Description": "Aberrant Diplodocus",
       "Mod": "Aberration"
@@ -119,6 +133,7 @@
       "NameTag": "Direbear",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Direbear_Character_BP_Aberrant_C",
       "Description": "Aberrant Direbear",
       "Mod": "Aberration"
@@ -127,6 +142,7 @@
       "NameTag": "Dodo",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Dodo_Character_BP_Aberrant_C",
       "Description": "Aberrant Dodo",
       "Mod": "Aberration"
@@ -135,6 +151,7 @@
       "NameTag": "Doed",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Doed_Character_BP_Aberrant_C",
       "Description": "Aberrant Doedicurus",
       "Mod": "Aberration"
@@ -143,6 +160,7 @@
       "NameTag": "Dragonfly",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Dragonfly_Character_BP_Aberrant_C",
       "Description": "Aberrant Meganeura",
       "Mod": "Aberration"
@@ -151,6 +169,7 @@
       "NameTag": "Beetle",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "DungBeetle_Character_BP_Aberrant_C",
       "Description": "Aberrant Dung Beetle",
       "Mod": "Aberration"
@@ -159,6 +178,7 @@
       "NameTag": "Eel",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Eel_Character_BP_Aberrant_C",
       "Description": "Aberrant Electrophorus",
       "Mod": "Aberration"
@@ -167,6 +187,7 @@
       "NameTag": "Equus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Equus_Character_BP_Aberrant_C",
       "Description": "Aberrant Equus",
       "Mod": "Aberration"
@@ -175,6 +196,7 @@
       "NameTag": "Iguanodon",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Iguanodon_Character_BP_Aberrant_C",
       "Description": "Aberrant Iguanodon",
       "Mod": "Aberration"
@@ -183,6 +205,7 @@
       "NameTag": "Lystro",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Lystro_Character_BP_Aberrant_C",
       "Description": "Aberrant Lystrosaurus",
       "Mod": "Aberration"
@@ -191,6 +214,7 @@
       "NameTag": "Manta",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Manta_Character_BP_Aberrant_C",
       "Description": "Aberrant Manta",
       "Mod": "Aberration"
@@ -199,6 +223,7 @@
       "NameTag": "Megalania",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Megalania_Character_BP_Aberrant_C",
       "Description": "Aberrant Megalania",
       "Mod": "Aberration"
@@ -207,6 +232,7 @@
       "NameTag": "Megalosaurus",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Megalosaurus_Character_BP_Aberrant_C",
       "Description": "Aberrant Megalosaurus",
       "Mod": "Aberration"
@@ -215,6 +241,7 @@
       "NameTag": "Moschops",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Moschops_Character_BP_Aberrant_C",
       "Description": "Aberrant Moschops",
       "Mod": "Aberration"
@@ -223,6 +250,7 @@
       "NameTag": "Otter",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Otter_Character_BP_Aberrant_C",
       "Description": "Aberrant Otter",
       "Mod": "Aberration"
@@ -231,6 +259,7 @@
       "NameTag": "Para",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Para_Character_BP_Aberrant_C",
       "Description": "Aberrant Parasaur",
       "Mod": "Aberration"
@@ -239,6 +268,7 @@
       "NameTag": "Paracer",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Paracer_Character_BP_Aberrant_C",
       "Description": "Aberrant Paraceratherium",
       "Mod": "Aberration"
@@ -247,6 +277,7 @@
       "NameTag": "Piranha",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Piranha_Character_BP_Aberrant_C",
       "Description": "Aberrant Piranha",
       "Mod": "Aberration"
@@ -255,6 +286,7 @@
       "NameTag": "Purlovia",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Purlovia_Character_BP_Aberrant_C",
       "Description": "Aberrant Purlovia",
       "Mod": "Aberration"
@@ -263,6 +295,7 @@
       "NameTag": "Raptor",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Raptor_Character_BP_Aberrant_C",
       "Description": "Aberrant Raptor",
       "Mod": "Aberration"
@@ -271,6 +304,7 @@
       "NameTag": "Salmon",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Salmon_Character_Aberrant_C",
       "Description": "Aberrant Salmon",
       "Mod": "Aberration"
@@ -279,6 +313,7 @@
       "NameTag": "Sarco",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Sarco_Character_BP_Aberrant_C",
       "Description": "Aberrant Sarco",
       "Mod": "Aberration"
@@ -287,6 +322,7 @@
       "NameTag": "Scorpion",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Scorpion_Character_BP_Aberrant_C",
       "Description": "Aberrant Pulmonoscorpius",
       "Mod": "Aberration"
@@ -295,6 +331,7 @@
       "NameTag": "Sheep",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Sheep_Character_BP_Aberrant_C",
       "Description": "Aberrant Ovis",
       "Mod": "Aberration"
@@ -303,6 +340,7 @@
       "NameTag": "Spider",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "SpiderS_Character_BP_Aberrant_C",
       "Description": "Aberrant Araneo",
       "Mod": "Aberration"
@@ -311,6 +349,7 @@
       "NameTag": "Spino",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Spino_Character_BP_Aberrant_C",
       "Description": "Aberrant Spino",
       "Mod": "Aberration"
@@ -319,6 +358,7 @@
       "NameTag": "Stego",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Stego_Character_BP_Aberrant_C",
       "Description": "Aberrant Stegosaurus",
       "Mod": "Aberration"
@@ -327,6 +367,7 @@
       "NameTag": "Toad",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Toad_Character_BP_Aberrant_C",
       "Description": "Aberrant Beelzebufo",
       "Mod": "Aberration"
@@ -335,6 +376,7 @@
       "NameTag": "Trike",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Trike_Character_BP_Aberrant_C",
       "Description": "Aberrant Triceratops",
       "Mod": "Aberration"
@@ -343,6 +385,7 @@
       "NameTag": "Trilobite",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Trilobite_Character_Aberrant_C",
       "Description": "Aberrant Trilobite",
       "Mod": "Aberration"
@@ -351,6 +394,7 @@
       "NameTag": "Turtle",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "Turtle_Character_BP_Aberrant_C",
       "Description": "Aberrant Carbonemys",
       "Mod": "Aberration"
@@ -359,6 +403,7 @@
       "NameTag": "Basilisk",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Basilisk_Character_BP_C",
       "Description": "Basilisk",
       "Mod": "Aberration"
@@ -367,6 +412,8 @@
       "NameTag": "CaveWolf",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
+      "IsBreedingable": "False",
       "ClassName": "CaveWolf_Character_BP_C",
       "Description": "Ravager",
       "Mod": "Aberration"
@@ -375,6 +422,7 @@
       "NameTag": "Chupacabra",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "ChupaCabra_Character_BP_C",
       "Description": "Nameless",
       "Mod": "Aberration"
@@ -383,6 +431,7 @@
       "NameTag": "CaveCrab",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "False",
       "ClassName": "Crab_Character_BP_C",
       "Description": "Karkinos",
       "Mod": "Aberration"
@@ -391,6 +440,7 @@
       "NameTag": "Lamprey",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Lamprey_Character_C",
       "Description": "Lamprey",
       "Mod": "Aberration"
@@ -399,6 +449,7 @@
       "NameTag": "Lantern Bird",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "LanternBird_Character_BP_C",
       "Description": "Featherlight",
       "Mod": "Aberration"
@@ -407,6 +458,7 @@
       "NameTag": "Lantern Goat",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "LanternGoat_Character_BP_C",
       "Description": "Shinehorn",
       "Mod": "Aberration"
@@ -415,6 +467,7 @@
       "NameTag": "Lantern Lizard",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "LanternLizard_Character_BP_C",
       "Description": "Glowtail",
       "Mod": "Aberration"
@@ -423,6 +476,7 @@
       "NameTag": "Pug",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "LanternPug_Character_BP_C",
       "Description": "Bulbdog",
       "Mod": "Aberration"
@@ -431,6 +485,7 @@
       "NameTag": "Lightbug",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Lightbug_Character_BaseBP_C",
       "Description": "Glowbug",
       "Mod": "Aberration"
@@ -439,6 +494,7 @@
       "NameTag": "Elite Basilisk",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaBasilisk_Character_BP_C",
       "Description": "Alpha Basilisk",
       "Mod": "Aberration"
@@ -447,6 +503,7 @@
       "NameTag": "Elite CaveCrab",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaCrab_Character_BP_C",
       "Description": "Alpha Karkinos",
       "Mod": "Aberration"
@@ -455,6 +512,7 @@
       "NameTag": "Elite Xenomorph",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "MegaXenomorph_Character_BP_Male_Surface_C",
       "Description": "Alpha Surface Reaper King",
       "Mod": "Aberration"
@@ -463,6 +521,7 @@
       "NameTag": "MoleRat",
       "IsSpawnable": true,
       "IsTameable": "True",
+      "IsBreedingable": "True",
       "ClassName": "MoleRat_Character_BP_C",
       "Description": "Roll Rat",
       "Mod": "Aberration"
@@ -471,6 +530,7 @@
       "NameTag": "Bat",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Pteroteuthis_Char_BP_C",
       "Description": "Seeker",
       "Mod": "Aberration"
@@ -479,6 +539,7 @@
       "NameTag": "RockDrake",
       "IsSpawnable": true,
       "IsTameable": "ByBreeding",
+      "IsBreedingable": "True",
       "ClassName": "RockDrake_Character_BP_C",
       "Description": "Rock Drake",
       "Mod": "Aberration"
@@ -487,6 +548,7 @@
       "NameTag": "Xenomorph",
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_C",
       "Description": "Nameless Queen",
       "Mod": "Aberration"
@@ -495,6 +557,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "ChupaCabra_Character_BP_Minion_C",
       "Description": "Nameless (Minion)",
       "Mod": "Aberration"
@@ -503,6 +566,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "ChupaCabra_Character_BP_Surface_C",
       "Description": "Nameless (Surface)",
       "Mod": "Aberration"
@@ -511,6 +575,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Pteroteuthis_Char_BP_Surface_C",
       "Description": "Seeker (Surface)",
       "Mod": "Aberration"
@@ -519,6 +584,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_Female_C",
       "Description": "Reaper Queen",
       "Mod": "Aberration"
@@ -527,6 +593,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_Male_C",
       "Description": "Reaper King",
       "Mod": "Aberration"
@@ -535,6 +602,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_Male_Chupa_C",
       "Description": "Subterranean Reaper King",
       "Mod": "Aberration"
@@ -543,6 +611,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_Male_Minion_C",
       "Description": "Elemental Reaper King",
       "Mod": "Aberration"
@@ -551,6 +620,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_Male_Surface_C",
       "Description": "Surface Reaper King",
       "Mod": "Aberration"
@@ -559,6 +629,7 @@
       "NameTag": null,
       "IsSpawnable": true,
       "IsTameable": "ByBreeding",
+      "IsBreedingable": "False",
       "ClassName": "Xenomorph_Character_BP_Male_Tamed_C",
       "Description": "Reaper King Tamed",
       "Mod": "Aberration"
@@ -567,6 +638,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Rockwell_Character_BP_C",
       "Description": "Rockwell",
       "Mod": "Aberration"
@@ -575,6 +647,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Rockwell_Character_BP_Easy_C",
       "Description": "Rockwell (Easy Variant)",
       "Mod": "Aberration"
@@ -583,6 +656,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Rockwell_Character_BP_Medium_C",
       "Description": "Rockwell (Medium Variant)",
       "Mod": "Aberration"
@@ -591,6 +665,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "Rockwell_Character_BP_Hard_C",
       "Description": "Rockwell (Hard Variant)",
       "Mod": "Aberration"
@@ -599,6 +674,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "RockwellTentacle_Character_BP_C",
       "Description": "Rockwell Tentacle",
       "Mod": "Aberration"
@@ -607,6 +683,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "RockwellTentacle_Character_BP_Alpha_C",
       "Description": "Rockwell Tentacle (Hard Variant)",
       "Mod": "Aberration"
@@ -615,6 +692,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "RockwellTentacle_Character_BP_Beta_C",
       "Description": "Rockwell Tentacle (Medium Variant)",
       "Mod": "Aberration"
@@ -623,6 +701,7 @@
       "NameTag": null,
       "IsSpawnable": false,
       "IsTameable": "False",
+      "IsBreedingable": "False",
       "ClassName": "RockwellTentacle_Character_BP_Gamma_C",
       "Description": "Rockwell Tentacle (Easy Variant)",
       "Mod": "Aberration"

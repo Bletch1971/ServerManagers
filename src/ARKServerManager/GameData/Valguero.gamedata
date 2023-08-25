@@ -7,6 +7,7 @@
 			"NameTag": "Deinonychus",
 			"IsSpawnable": true,
 			"IsTameable": "ByBreeding",
+			"IsBreedingable": "True",
 			"ClassName": "Deinonychus_Character_BP_C",
 			"Description": "Deinonychus",
 			"Mod": "Valguero"
@@ -15,6 +16,7 @@
 			"NameTag": "ChalkRockElemental",
 			"IsSpawnable": true,
 			"IsTameable": "True",
+			"IsBreedingable": "False",
 			"ClassName": "ChalkGolem_Character_BP_C",
 			"Description": "Chalk Golem",
 			"Mod": "Valguero"
@@ -23,6 +25,7 @@
 			"NameTag": "IceRockElemental",
 			"IsSpawnable": true,
 			"IsTameable": "True",
+			"IsBreedingable": "False",
 			"ClassName": "IceGolem_Character_BP_C",
 			"Description": "Ice Golem",
 			"Mod": "Valguero"
@@ -31,6 +34,7 @@
 			"NameTag": "BroodmotherLysrix",
 			"IsSpawnable": true,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "SpiderL_VAL_Character_BP_C",
 			"Description": "Broodmother Lysrix",
 			"Mod": "Valguero"
@@ -39,6 +43,7 @@
 			"NameTag": "Megapithecus",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Gorilla_Character_BP_Easy_C",
 			"Description": "Megapithecus (Easy Variant)",
 			"Mod": "Valguero"
@@ -47,6 +52,7 @@
 			"NameTag": "Megapithecus",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Gorilla_Character_BP_Medium_C",
 			"Description": "Megapithecus (Medium Variant)",
 			"Mod": "Valguero"
@@ -55,6 +61,7 @@
 			"NameTag": "Megapithecus",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Gorilla_Character_BP_Hard_C",
 			"Description": "Megapithecus (Hard Variant)",
 			"Mod": "Valguero"
@@ -63,6 +70,7 @@
 			"NameTag": "Dragon",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Dragon_Character_BP_Boss_Easy_C",
 			"Description": "Dragon (Easy Variant)",
 			"Mod": "Valguero"
@@ -71,6 +79,7 @@
 			"NameTag": "Dragon",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Dragon_Character_BP_Boss_Medium_C",
 			"Description": "Dragon (Medium Variant)",
 			"Mod": "Valguero"
@@ -79,6 +88,7 @@
 			"NameTag": "Dragon",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Dragon_Character_BP_Boss_Hard_C",
 			"Description": "Dragon (Hard Variant)",
 			"Mod": "Valguero"
@@ -87,6 +97,7 @@
 			"NameTag": "Manticore",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Manticore_Character_BP_Easy_C",
 			"Description": "Manticore (Easy Variant)",
 			"Mod": "Valguero"
@@ -95,6 +106,7 @@
 			"NameTag": "Manticore",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Manticore_Character_BP_Medium_C",
 			"Description": "Manticore (Medium Variant)",
 			"Mod": "Valguero"
@@ -103,6 +115,7 @@
 			"NameTag": "Manticore",
 			"IsSpawnable": false,
 			"IsTameable": "False",
+			"IsBreedingable": "False",
 			"ClassName": "Manticore_Character_BP_Hard_C",
 			"Description": "Manticore (Hard Variant)",
 			"Mod": "Valguero"

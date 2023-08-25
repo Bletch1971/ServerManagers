@@ -1519,8 +1519,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Множитель для качества добычи в лучах/ящиках (значения от 1 до 5)</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Качества добычи при рыбалке</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Множитель для качества добычи с рыбалки (значения от 1 до 5)</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Откл. добычу предметов при рыбалке</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Если включено, то это отключает добычу предметов (кроме мяса) во время рыбалки.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Множитель удаления трупа и дропа</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Множитель времени до удаления трупов и выброшенных предметов</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Долговечность заряда батареи</sys:String>
@@ -1738,8 +1736,6 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Если включено, то позволяет прокачивать скорость полёта.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Запретить бонус разнополости</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Если включено, то бонус разнополости (Dino Mate Boost) будет отключен.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Выкл приземление летающих дино с C4</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Если включено, то отключит приземление летающих динозавров, если на них есть C4.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Разрешить множественное присоединение C4</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Если включено, то разрешено прикреплять более одного C4 на каждого динозавра.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Выкл потерю прав на дино в PvE</sys:String>
@@ -1946,8 +1942,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Вкл. разрушение структур в PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Если этот параметр включен, структуры в PvE будут автоматически разрушаться если они не использовались какое то время.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Время до разрушения структур:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Определяет время, необходимое для автоматического разрушения структур игрока в режиме PvE.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Множитель время разрушения структур:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Определяет множитель для автоматического разрушения структур игрока в режиме PvE.</sys:String>
 

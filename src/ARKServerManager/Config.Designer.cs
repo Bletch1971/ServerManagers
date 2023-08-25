@@ -1370,7 +1370,22 @@ namespace ServerManagerTool {
                 this["SectionSupplyCrateOverridesIsExpanded"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SectionExcludeItemIndicesOverridesIsExpanded
+        {
+            get
+            {
+                return ((bool)(this["SectionExcludeItemIndicesOverridesIsExpanded"]));
+            }
+            set
+            {
+                this["SectionExcludeItemIndicesOverridesIsExpanded"] = value;
+            }
+        }
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://steamcommunity.com/dev/apikey")]
@@ -1593,7 +1608,22 @@ namespace ServerManagerTool {
                 this["SectionSupplyCrateOverridesEnabled"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SectionExcludeItemIndicesOverridesEnabled
+        {
+            get
+            {
+                return ((bool)(this["SectionExcludeItemIndicesOverridesEnabled"]));
+            }
+            set
+            {
+                this["SectionExcludeItemIndicesOverridesEnabled"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -2552,7 +2582,22 @@ namespace ServerManagerTool {
                 this["SupplyCrateItemsGridHeight"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public global::System.Windows.GridLength ExcludeItemIndicesOverrideGridHeight
+        {
+            get
+            {
+                return ((global::System.Windows.GridLength)(this["ExcludeItemIndicesOverrideGridHeight"]));
+            }
+            set
+            {
+                this["ExcludeItemIndicesOverrideGridHeight"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("400")]
@@ -3254,6 +3299,51 @@ namespace ServerManagerTool {
             }
             set {
                 this["TaskSchedulerPassword"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProfileSyncServerModIdsEnabled
+        {
+            get
+            {
+                return ((bool)(this["ProfileSyncServerModIdsEnabled"]));
+            }
+            set
+            {
+                this["ProfileSyncServerModIdsEnabled"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProfileSyncCrossArkClusterIdEnabled
+        {
+            get
+            {
+                return ((bool)(this["ProfileSyncCrossArkClusterIdEnabled"]));
+            }
+            set
+            {
+                this["ProfileSyncCrossArkClusterIdEnabled"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProfileSyncAutoShutdownEnabled
+        {
+            get
+            {
+                return ((bool)(this["ProfileSyncAutoShutdownEnabled"]));
+            }
+            set
+            {
+                this["ProfileSyncAutoShutdownEnabled"] = value;
             }
         }
     }

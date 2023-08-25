@@ -319,6 +319,7 @@
     <sys:String x:Key="WorldSaveRestore_Refresh_FailedTitle">Refresh Backup Files Error</sys:String>
 
     <sys:String x:Key="WorldSaveRestore_NameColumnLabel">Name</sys:String>
+    <sys:String x:Key="WorldSaveRestore_FileSizeColumnLabel">Size</sys:String>
     <sys:String x:Key="WorldSaveRestore_CreatedDateColumnLabel">Created</sys:String>
     <sys:String x:Key="WorldSaveRestore_UpdatedDateColumnLabel">Last Updated</sys:String>
 
@@ -583,6 +584,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">If enabled, the map spawner overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Enable Supply Crate Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">If enabled, the supply crate overrides will be managed by the server manager.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideExcludeItemIndicesLabel">Enable Exclude Item Indices Overrides</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideExcludeItemIndicesTooltip">If enabled, the exclude item indices overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Enable Prevent Transfer Overrides</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">If enabled, the prevent transfer overrides will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Enable PGM Ark Settings</sys:String>
@@ -590,6 +593,14 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Enable SotF Settings</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">If enabled, the SotF settings will be managed by the server manager.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">WARNING: While any of these options are disabled, the server manager will not read or write the associated overrides settings. Re-enabling any of these options will cause ALL existing associated overrides to be removed from the config file.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ProfileSyncSettingsLabel">Custom Profile Sync Options</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledLabel">Enable Sync for ModIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledTooltip">If enabled, on profile sync the ModIDs are still synced.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledLabel">Enable Sync for ClusterID</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledTooltip">If enabled, on profile sync the ClusterID is still synced.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledLabel">Enable Sync for Auto Shutdown Time</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledTooltip">If enabled, on profile sync the Auto Shutdown Time Settings are still synced.</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Custom Level Options</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Player Level Increase:</sys:String>
@@ -914,6 +925,7 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">If you proceed the entire SteamCMD folder will be removed including all mod cache downloads.\r\nAre you sure you want to reinstall SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstall SteamCMD Error</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">An error occured while trying to reinstall SteamCMD. This has left SteamCmd in an unstable state, try reinstalling again or please report this.\r\nException: {0}</sys:String>
+	<sys:String x:Key="MainWindow_SteamWebApiKeyMissingLabel">Steam WebAPI Key missing! Updates, downloads and installation of profiles could fail. Enter your Steam WebApiKey in the global settings</sys:String>
 
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot Running Commands</sys:String>
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">The discord bot has one or more running commands, do you want to continue shutting down the server manager?</sys:String>
@@ -1194,6 +1206,14 @@
     <sys:String x:Key="ServerSettings_UseBanListTooltip">If enabled, the ban list URL specified will be used.</sys:String>
     <sys:String x:Key="ServerSettings_BanListTooltip">The URL of the ban list to use.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBanlistTooltip">Reset the ban list properties to defaults.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlLabel">Use Dynamic Config URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlTooltip">If enabled, the dynamic config URL specified will be used.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomDynamicConfigUrlTooltip">The URL of the dynamic config to use.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlLabel">Use Custom Live Tuning URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlTooltip">If enabled, the custom live tuning config URL specified will be used.</sys:String>
+    <sys:String x:Key="ServerSettings_CultureLabel">Server Language</sys:String>
+    <sys:String x:Key="ServerSettings_CultureTooltip">Overrides the server output language. It doesn't override clients language.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLiveTuningUrlTooltip">The URL of the custom live tuning config to use.</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACLabel">Disable Valve Anti-Cheat System (VAC)</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACTooltip">If enabled, the Valve anti-cheat system will be disabled. Please use this with caution!</sys:String>
     <sys:String x:Key="ServerSettings_DisablePMVOptimizationLabel">Disable Player-Move-Physics Optimization</sys:String>
@@ -1233,6 +1253,8 @@
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">If enabled, will enable NVIDIA Ansel on Servers.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Structure Memory Optimizations</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">If enabled, will enable the structure memory optimizations. NOTE: avoid using it when running structure-related mods (until they get updated) as it can break the snappoints of these mod structures.</sys:String>
+    <sys:String x:Key="ServerSettings_UseStructureStasisGridLabel">Structure Stasis Grid</sys:String>
+    <sys:String x:Key="ServerSettings_UseStructureStasisGridTooltip">Enables the structure stasis grid to improve server performance on large bases with lots of players. (Please be aware this may have an impact on some mods)</sys:String>
     <sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">Creature Upload Issue Protection</sys:String>
     <sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">Protection against creature upload issue (Please be aware this may have an impact on some mods)</sys:String>
     <sys:String x:Key="ServerSettings_UseItemDupeCheckLabel">Additional Dupe Protection</sys:String>
@@ -1414,8 +1436,14 @@
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">If enabled, will make Supply Crates random.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Prevent Building in Resource Rich Areas</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">If enabled, completely disables building in specific resource-rich areas, in particular setup on TheIsland around the major mountains.</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsLabel">Enable Single Player Settings</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsTooltip">If enabled, all game settings will be more balanced for an individual player experience. Useful for dedicated server with a very small amount of players.</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Disable PvP Friendly Fire</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">If enabled, players are unable to deal damage to or kill other tribe members, dinos and structures when PvP mode is enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPLabel">Enable PVP Cave Building</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPTooltip">If enabled, allows building in caves when PvP mode is enabled.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPLabel">Disable PvP Railgun</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPTooltip">If enabled, players are unable to use the Tek Railgun when PvP mode is enabled.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Use Corpse Locator</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">If enabled, upon death, a beam of light shoots into the sky to help the player locate where they died.</sys:String>
     <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Prevent Spawn Animations</sys:String>
@@ -1461,6 +1489,8 @@
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Cluster Tribute Options</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">No Transfer from Filtering</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesLabel">Disable Custom Tribute Folders</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesTooltip">Disables creation of folders in Tribute inventories.</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">If enabled, the survivor, item and dino transfers are disabled if the server is not in the same cluster.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Override Survivor Upload Expiration</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">If enabled, will allow you to override the expiration timer.</sys:String>
@@ -1547,8 +1577,6 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Specifies the multiplier for the supply crate loot quality.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Fishing Loot Quality Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Specifies the multiplier for the fishing loot quality.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Disable Non-Meat Fish Loot</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">If enabled, disables harvesting non-meat fish loot.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Use Corpse Life Span Multiplier</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Specifies the multiplier for corpse and dropped box lifespan.</sys:String>
     <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">Fjordhawk Inventory Cooldown</sys:String>
@@ -1585,6 +1613,8 @@
     <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">If enabled, will cause world buffs to scale their benefits multiplicatively, rather than add/subtract a flat amount to the value at runtime.</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">World Buff Scaling Efficacy</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Specifies the global scalar to reduce/increase the effectiveness of world buffs (e.g. 1 is default, 0.5 would be 50% less effective, 2.0 would be 2x more effective).</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierLabel">Mutagen Spawn Delay Multiplier</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierTooltip">Scales the Mutagen spawn rates. By default, the game attempts to spawn them every 8 hours on dedicated servers, and every hour on non-dedicated servers and single-player. Rising this value will rise the re-spawn interval, lowering will make it shorter.</sys:String>
 
     <sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Disable Hexagon Store</sys:String>
@@ -1768,10 +1798,10 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">If enabled, allows the leveling of flyer movement speed.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Prevent Dino Mate Boost</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">If enabled, the dino mate boost will be disabled.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Disable Force Ground Flyer with Explosives</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">If enabled, will disable the grounding of the flyer when explosives are put on them.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Allow Multiple Attached C4</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">If enabled, will allow more than one C4 attached per dino.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosLabel">Allow Unclaim Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosTooltip">if disabled, prevents players to unclaim tamed creatures.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Disable Dino Decay PvE</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayTooltip">If enabled, disables the gradual decay of dino ownership in PvE; otherwise every dino can be claimed by any player.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayPvPLabel">Disable Dino Decay PvP</sys:String>
@@ -1784,10 +1814,14 @@
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleTooltip">If enabled, ANYONE will to be able to take care of a Baby Dino (cuddle etc), not just whomever imprinted on it.</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosLabel">Auto Destroy Decayed Dinos</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosTooltip">If enabled, all claimable decayed dinos will auto-destroy on load, rather than have them remain around as Claimable.</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsLabel">Enable Level Up Animation</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsTooltip">If disabled, tamed dinos on level-up will not perform the related animation.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Disable Dino Riding</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">If enabled, all tamed dinos will be unable to be ridden.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Disable Dino Taming</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">If enabled, all wild dinos will be unable to be tamed.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingLabel">Disable Dino Breeding</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingTooltip">if enabled, prevents tames to be bred.</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Change Flyer Riding</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">If enabled, will allow you to change if flyers can be ridden on the map or not; otherwise will default to use the map settings.</sys:String>
     <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Enable Flyer Riding</sys:String>
@@ -1812,6 +1846,7 @@
     <sys:String x:Key="ServerSettings_ModColumnLabel">Mod</sys:String>
     <sys:String x:Key="ServerSettings_SpawnableColumnLabel">Spawnable</sys:String>
     <sys:String x:Key="ServerSettings_TameableColumnLabel">Tameable</sys:String>
+    <sys:String x:Key="ServerSettings_BreedingableColumnLabel">Breedable</sys:String>
     <sys:String x:Key="ServerSettings_ReplacementColumnLabel">Replace With</sys:String>
     <sys:String x:Key="ServerSettings_SpawnWeightColumnLabel">Spawn Weight</sys:String>
     <sys:String x:Key="ServerSettings_OverrideLimitColumnLabel">Override Limit</sys:String>
@@ -1953,6 +1988,8 @@
     <sys:String x:Key="ServerSettings_StructuresLabel">Structures</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionLabel">Disable Structure Placement Collision</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionTooltip">If enabled, will allow players to place structures that clip into terrain.</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagLabel">Remove Decorative Structures Limit</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagTooltip">Removes the limit of 150 decorative structures (flags, signs, dermis etc.).</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceLabel">Structure Resistance:</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceTooltip">Specifies the scaling factor for the resistance to damage structures receive when attacked. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDamageLabel">Structure Damage:</sys:String>
@@ -1978,8 +2015,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Enable Structure Decay PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">If enabled, enables decay of player structures in PvE.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Structure Decay Period:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Specifies the time required for player structures to decay in PvE mode.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Structure Decay Multiplier:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Specifies the scaling factor for the decay rate of player structures in PvE mode.</sys:String>
 
@@ -2020,6 +2055,8 @@
     <sys:String x:Key="ServerSettings_StructurePickupHoldDurationTooltip">Specifies the amount of time of the quick-pickup hold duration, use 0 to disable and have instant pickup.</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresLabel">Allow Integrated Structures Plus</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresTooltip">If enabled, will add all of the new S+ structures; otherwise disables all of the new S+ structures (intended mainly for letting unofficials that want to keep using the S+ mod version to keep using that without a ton of extra duplicate structures).</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesLabel">Disable Building in Special Areas</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesTooltip">If enabled, building areas where normally it's not allowed, such around some maps' Obelisks, in the Aberration Portal and in Mission Volumes areas on Genesis: Part 1. Note: in Genesis: Part 1 this settings is enabled by default and there is an ad hoc settings called bGenesisUseStructuresPreventionVolumes to disable it.</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Disable Building in Mission Areas</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">If enabled, will disable building in mission areas on the Genesis map.</sys:String>
     <!--#endregion-->
@@ -2542,6 +2579,23 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemTooltip">Delete item</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">Save all supply crates</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">Save supply crate</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Exclude Item Indices -->
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverridesLabel">Exclude ItemIDs From Supply Crate Overrides</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemsLabel">Exclude ItemIDs from Supply Crates</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveTitle">Exclude ItemIDs from Supply Crates Overrides Settings</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_WarningLabel">WARNING: Items on this list will be excluded from supply crates.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnLabel">ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnTooltip">ItemID Number</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_AddItemTooltip">Add ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ClearItemsTooltip">Delete all ItemIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_PasteItemsTooltip">Paste exclude item indices data</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_RemoveItemTooltip">Delete ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveItemsTooltip">Save exclude item indices data</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Stack Size Overrides -->

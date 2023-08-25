@@ -24,6 +24,8 @@
     <cc:SecondsToMinutesConverter x:Key="SecondsToMinutesConverter"/>
     <cc:SecondsToTimeValueConverter x:Key="SecondsToTimeValueConverter"/>
     <cc:UnixTimeToDateTimeConverter x:Key="UnixTimeToDateTimeConverter"/>
+    <cc:StringNullOrEmptyToVisibilityConverter x:Key="StringNullOrEmptyToVisibilityConverter"/>
+    <cc:InvertStringNullOrEmptyToVisibilityConverter x:Key="InvertStringNullOrEmptyToVisibilityConverter"/>
 
     <SolidColorBrush x:Key="BeigeBorder" Color="#FFD8CCBC"/>
     <SolidColorBrush x:Key="BeigeLabel" Color="#FFE6DFD8"/>

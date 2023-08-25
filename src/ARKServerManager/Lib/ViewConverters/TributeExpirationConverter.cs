@@ -6,8 +6,8 @@ namespace ServerManagerTool.Lib.ViewModel
 {
     public class TributeExpirationConverter : IValueConverter
     {
-        public const int MIN_VALUE = 1;
-        public const int MAX_VALUE = 20000;
+        public const int MIN_VALUE = 0;
+        public const int MAX_VALUE = 525600;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -20,6 +20,7 @@
         MapSpawnerOverridesSection,
         CraftingOverridesSection,
         SupplyCrateOverridesSection,
+        ExcludeItemIndicesOverridesSection,
         StackSizeOverridesSection,
         PreventTransferOverridesSection,
 

@@ -20,6 +20,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -53,6 +54,7 @@ namespace ServerManagerTool
         public static readonly DependencyProperty BaseEventsProperty = DependencyProperty.Register(nameof(BaseEvents), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty BetaVersionProperty = DependencyProperty.Register(nameof(BetaVersion), typeof(bool), typeof(ServerSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty ConfigProperty = DependencyProperty.Register(nameof(Config), typeof(Config), typeof(ServerSettingsControl));
+        public static readonly DependencyProperty CultureProperty = DependencyProperty.Register(nameof(Culture), typeof(ComboBoxItemList), typeof(ServerSettingsControl), new PropertyMetadata(null));
         public static readonly DependencyProperty IsAdministratorProperty = DependencyProperty.Register(nameof(IsAdministrator), typeof(bool), typeof(ServerSettingsControl), new PropertyMetadata(false));
         public static readonly DependencyProperty NetworkInterfacesProperty = DependencyProperty.Register(nameof(NetworkInterfaces), typeof(List<NetworkAdapterEntry>), typeof(ServerSettingsControl), new PropertyMetadata(new List<NetworkAdapterEntry>()));
         public static readonly DependencyProperty RuntimeProperty = DependencyProperty.Register(nameof(Runtime), typeof(ServerRuntime), typeof(ServerSettingsControl));
@@ -157,6 +159,12 @@ namespace ServerManagerTool
         {
             get { return GetValue(ConfigProperty) as Config; }
             set { SetValue(ConfigProperty, value); }
+        }
+
+        public ComboBoxItemList Culture
+        {
+            get { return (ComboBoxItemList)GetValue(CultureProperty); }
+            set { SetValue(CultureProperty, value); }
         }
 
         public bool IsAdministrator
@@ -364,6 +372,7 @@ namespace ServerManagerTool
             this.RefreshBaseSupplyCrateList();
             this.RefreshBaseGameMapsList();
             this.RefreshBaseTotalConversionsList();
+            this.RefreshCultureList();
             this.RefreshBaseBranchesList();
             this.RefreshBaseEventsList();
             this.RefreshProcessPrioritiesList();
@@ -374,6 +383,7 @@ namespace ServerManagerTool
             this.Settings.ConfigOverrideItemCraftingCosts.Update();
             this.Settings.ConfigOverrideItemMaxQuantity.Update();
             this.Settings.ConfigOverrideSupplyCrateItems.Update();
+            this.Settings.ExcludeItemIndices.Update();
             this.Settings.NPCSpawnSettings.Update();
             this.Settings.PreventTransferForClassNames.Update();
         }
@@ -398,6 +408,7 @@ namespace ServerManagerTool
                         ssc.RefreshBaseSupplyCrateList();
                         ssc.RefreshBaseGameMapsList();
                         ssc.RefreshBaseTotalConversionsList();
+                        ssc.RefreshCultureList();
                         ssc.RefreshBaseBranchesList();
                         ssc.RefreshBaseEventsList();
                         ssc.RefreshProcessPrioritiesList();
@@ -1385,6 +1396,11 @@ namespace ServerManagerTool
             Settings.ConfigOverrideSupplyCrateItems.Update();
         }
 
+        private void ExcludeItemIndicesOverrideGrids_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+            Settings.ExcludeItemIndices.Update();
+        }
+
         private void CraftingOverrideGrids_SourceUpdated(object sender, DataTransferEventArgs e)
         {
             Settings.ConfigOverrideItemCraftingCosts.Update();
@@ -1454,6 +1470,11 @@ namespace ServerManagerTool
                 Server.Profile.PreventDinoTameClassNames.AddRange(preventDinoTameClassNames);
                 Server.Profile.PreventDinoTameClassNames.IsEnabled |= preventDinoTameClassNames.IsEnabled;
 
+                var preventBreedingForClassNames = new StringIniValueList(nameof(Server.Profile.PreventBreedingForClassNames), null);
+                preventBreedingForClassNames.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{preventBreedingForClassNames.IniCollectionKey}=")));
+                Server.Profile.PreventBreedingForClassNames.AddRange(preventBreedingForClassNames);
+                Server.Profile.PreventBreedingForClassNames.IsEnabled |= preventBreedingForClassNames.IsEnabled;
+
                 var npcReplacements = new AggregateIniValueList<NPCReplacement>(nameof(Server.Profile.NPCReplacements), null);
                 npcReplacements.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{npcReplacements.IniCollectionKey}=")));
                 Server.Profile.NPCReplacements.AddRange(npcReplacements);
@@ -1480,7 +1501,7 @@ namespace ServerManagerTool
                 Server.Profile.DinoClassResistanceMultipliers.IsEnabled |= dinoClassResistanceMultipliers.IsEnabled;
             }
 
-            Server.Profile.DinoSettings = new DinoSettingsList(Server.Profile.DinoSpawnWeightMultipliers, Server.Profile.PreventDinoTameClassNames, Server.Profile.NPCReplacements, Server.Profile.TamedDinoClassDamageMultipliers, Server.Profile.TamedDinoClassResistanceMultipliers, Server.Profile.DinoClassDamageMultipliers, Server.Profile.DinoClassResistanceMultipliers);
+            Server.Profile.DinoSettings = new DinoSettingsList(Server.Profile.DinoSpawnWeightMultipliers, Server.Profile.PreventDinoTameClassNames, Server.Profile.PreventBreedingForClassNames, Server.Profile.NPCReplacements, Server.Profile.TamedDinoClassDamageMultipliers, Server.Profile.TamedDinoClassResistanceMultipliers, Server.Profile.DinoClassDamageMultipliers, Server.Profile.DinoClassResistanceMultipliers);
             Server.Profile.DinoSettings.RenderToView();
 
             RefreshBaseDinoList();
@@ -1506,6 +1527,7 @@ namespace ServerManagerTool
             var iniValues = new List<string>();
             iniValues.AddRange(Settings.DinoSpawnWeightMultipliers.ToIniValues());
             iniValues.AddRange(Settings.PreventDinoTameClassNames.ToIniValues());
+            iniValues.AddRange(Settings.PreventBreedingForClassNames.ToIniValues());
             iniValues.AddRange(Settings.NPCReplacements.ToIniValues());
             iniValues.AddRange(Settings.DinoClassDamageMultipliers.ToIniValues());
             iniValues.AddRange(Settings.DinoClassResistanceMultipliers.ToIniValues());
@@ -3349,6 +3371,109 @@ namespace ServerManagerTool
         }
         #endregion
 
+        #region Exclude Item Indices Overrides
+        private void AddExcludeItemIndicesOverride_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.ExcludeItemIndices.Add(new ExcludeItemIndicesOverride());
+            Settings.ExcludeItemIndices.Update();
+        }
+
+        private void ClearExcludeItemIndicesOverrides_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_ClearLabel"), _globalizer.GetResourceString("ServerSettings_ClearTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            Settings.ExcludeItemIndices.Clear();
+            Settings.ExcludeItemIndices.Update();
+        }
+
+        private void PasteExcludeItemIndicesOverride_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new CustomConfigDataWindow();
+            window.Owner = Window.GetWindow(this);
+            window.Closed += Window_Closed;
+            var result = window.ShowDialog();
+
+            if (!result.HasValue || !result.Value)
+                return;
+
+            // read the pasted data into an ini file.
+            var iniFile = IniFileUtils.ReadString(window.ConfigData.Replace(" ", ""));
+
+            Server.Profile.ExcludeItemIndices.RenderToModel();
+
+            // cycle through the sections, adding them to the list. Will bypass any sections that are named as per the ARK default sections.
+            foreach (var section in iniFile.Sections.Where(s => s.SectionName != null && !SystemIniFile.IniSectionNames.ContainsValue(s.SectionName)))
+            {
+                var excludeItemIndices = new AggregateIniValueList<ExcludeItemIndicesOverride>(nameof(Server.Profile.ExcludeItemIndices), null);
+                excludeItemIndices.FromIniValues(section.KeysToStringEnumerable().Where(s => s.StartsWith($"{excludeItemIndices.IniCollectionKey}=")));
+                Server.Profile.ExcludeItemIndices.AddRange(excludeItemIndices);
+                Server.Profile.ExcludeItemIndices.IsEnabled |= excludeItemIndices.IsEnabled;
+            }
+
+            var errors = Server.Profile.ExcludeItemIndices.RenderToView();
+
+            RefreshBaseDinoList();
+
+            if (errors.Any())
+            {
+                var error = $"The following errors have been found:\r\n\r\n{string.Join("\r\n", errors)}";
+
+                var window2 = new CommandLineWindow(error);
+                window2.OutputTextWrapping = TextWrapping.NoWrap;
+                window2.Height = 500;
+                window2.Title = "Import Errors";
+                window2.Owner = Window.GetWindow(this);
+                window2.ShowDialog();
+            }
+        }
+
+        private void RemoveExcludeItemIndicesOverrideItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show(_globalizer.GetResourceString("ServerSettings_DeleteLabel"), _globalizer.GetResourceString("ServerSettings_DeleteTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                return;
+
+            var item = ((ExcludeItemIndicesOverride)((Button)e.Source).DataContext);
+            Settings.ExcludeItemIndices.Remove(item);
+            Settings.ExcludeItemIndices.Update();
+        }
+
+        private void SaveExcludeItemIndicesOverride_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.ExcludeItemIndices.RenderToModel();
+
+            var iniValues = new List<string>();
+            iniValues.AddRange(Settings.ExcludeItemIndices.ToIniValues());
+            var iniValue = string.Join("\r\n", iniValues);
+
+            var window = new CommandLineWindow(iniValue);
+            window.OutputTextWrapping = TextWrapping.NoWrap;
+            window.Height = 500;
+            window.Title = _globalizer.GetResourceString("ServerSettings_ExcludeItemIndicesOverrides_SaveTitle");
+            window.Owner = Window.GetWindow(this);
+            window.ShowDialog();
+        }
+
+        private void SaveExcludeItemIndicesOverrideItem_Click(object sender, RoutedEventArgs e)
+        {
+            var item = ((ExcludeItemIndicesOverride)((Button)e.Source).DataContext);
+            if (item == null)
+                return;
+
+            Settings.ExcludeItemIndices.RenderToModel();
+
+            var iniName = Settings.ExcludeItemIndices.IniCollectionKey;
+            var iniValue = $"{iniName}={item.ToINIValue()}";
+
+            var window = new CommandLineWindow(iniValue);
+            window.OutputTextWrapping = TextWrapping.Wrap;
+            window.Height = 500;
+            window.Title = _globalizer.GetResourceString("ServerSettings_ExcludeItemIndicesOverrides_SaveTitle");
+            window.Owner = Window.GetWindow(this);
+            window.ShowDialog();
+        }
+        #endregion
+
         #region Stack Size Overrides
         private void AddStackSizeOverride_Click(object sender, RoutedEventArgs e)
         {
@@ -3562,6 +3687,24 @@ namespace ServerManagerTool
         {
             GameData.GameDataLoaded -= GameData_GameDataLoaded;
             GlobalizedApplication.Instance.GlobalizationManager.ResourceDictionaryChangedEvent -= ResourceDictionaryChangedEvent;
+        }
+
+        public void RefreshCultureList()
+        {
+            var newList = new ComboBoxItemList();
+
+            string[] culture = { "ca", "cs", "da", "de", "en", "es", "eu", "fi", "fr", "hu", "it", "ja", "ka", "ko", "nl", "pl", "pt_BR", "ru", "sv", "th", "tr", "zh", "zh-Hans-CN", "zh-TW" };
+            foreach (var lang in culture)
+            {
+                newList.Add(new Common.Model.ComboBoxItem
+                {
+                    DisplayMember = lang,
+                    ValueMember = lang,
+                });
+            }
+
+            this.Culture = newList;
+            this.CultureComboBox.SelectedValue = this.Settings.Culture;
         }
 
         public void RefreshBaseDinoModList()
@@ -4138,6 +4281,7 @@ namespace ServerManagerTool
                                 this.Settings.ResetAdministrationSection();
                                 RefreshBaseGameMapsList();
                                 RefreshBaseTotalConversionsList();
+                                RefreshCultureList();
                                 RefreshBaseBranchesList();
                                 RefreshBaseEventsList();
                                 RefreshProcessPrioritiesList();
@@ -4210,6 +4354,11 @@ namespace ServerManagerTool
                             case ServerSettingsResetAction.SupplyCrateOverridesSection:
                                 this.Settings.ResetSupplyCrateOverridesSection();
                                 RefreshBaseSupplyCrateList();
+                                RefreshBasePrimalItemList();
+                                break;
+
+                            case ServerSettingsResetAction.ExcludeItemIndicesOverridesSection:
+                                this.Settings.ResetExcludeItemIndicesOverridesSection();
                                 RefreshBasePrimalItemList();
                                 break;
 
@@ -4364,6 +4513,7 @@ namespace ServerManagerTool
                                 RefreshBaseSupplyCrateList();
                                 RefreshBaseGameMapsList();
                                 RefreshBaseTotalConversionsList();
+                                RefreshCultureList();
                                 RefreshBaseBranchesList();
                                 RefreshBaseEventsList();
                                 RefreshProcessPrioritiesList();

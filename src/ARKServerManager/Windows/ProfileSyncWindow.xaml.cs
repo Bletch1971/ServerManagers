@@ -238,6 +238,8 @@ namespace ServerManagerTool
                 SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.MapSpawnerOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_MapSpawnerOverridesLabel") });
             if (Config.Default.SectionSupplyCrateOverridesEnabled)
                 SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.SupplyCrateOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_SupplyCrateOverridesLabel") });
+            if (Config.Default.SectionExcludeItemIndicesOverridesEnabled)
+                SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.ExcludeItemIndicesOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_ExcludeItemIndicesOverridesLabel") });
             if (Config.Default.SectionStackSizeOverridesEnabled)
                 SyncSections.Add(new SyncSection() { Selected = false, Category = ServerProfileCategory.StackSizeOverrides, SectionName = _globalizer.GetResourceString("ServerSettings_StackSizeOverridesLabel") });
             if (Config.Default.SectionPreventTransferOverridesEnabled)
