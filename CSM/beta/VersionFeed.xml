@@ -5,27 +5,22 @@
   <title>Conan Server Manager Version Feed</title>
   <subtitle>This is the Conan Server Manager beta version feed.</subtitle>
   <link href="https://servermanagers.freeforums.net/" />
-  <updated>2023-06-22T00:00:00Z</updated>
+  <updated>2023-08-21T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:252C96CE-3D3C-4210-8863-F62238787733</id>
-    <title>1.1.83 (1.1.83.1)</title>
-    <summary>1.1.83.1</summary>
+    <id>urn:uuid:1D95A137-FD57-4194-A7AF-C0079EE78FC2</id>
+    <title>1.1.84 (1.1.84.1)</title>
+    <summary>1.1.84.1</summary>
     <link href="" />
-    <updated>2023-06-22T00:00:00Z</updated>
+    <updated>2023-08-21T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
-          <u style="font-size: .9em;">BUGFIX</u>
-          <br/>
-          <ul>
-            <li>ConanExiles - Change to new exe file.</li>
-          </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>Backup - add blacklist.txt, serveruid.txt, whitelist.txt to profile backup.</li>
-            <li>Global Settings - add option to add additional steamcmd exit status codes as "successful" (use on your own risk).</li>
+            <li>Global - add global info, if Steam WebApiKey is missing.</li>
+            <li>WorldSaveRestore - add file size</li>
           </ul>
         </p>
       </div>
