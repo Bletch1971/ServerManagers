@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Atualizado pela última vez por:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">bruno5011</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">Bruno5011</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Error</sys:String>
     <!--#endregion-->
 
@@ -319,6 +319,7 @@
     <sys:String x:Key="WorldSaveRestore_Refresh_FailedTitle">Erro ao atualizar arquivos de backup</sys:String>
 
     <sys:String x:Key="WorldSaveRestore_NameColumnLabel">Nome</sys:String>
+    <sys:String x:Key="WorldSaveRestore_FileSizeColumnLabel">Tamanho</sys:String>
     <sys:String x:Key="WorldSaveRestore_CreatedDateColumnLabel">Criado</sys:String>
     <sys:String x:Key="WorldSaveRestore_UpdatedDateColumnLabel">Ultima atualização</sys:String>
 
@@ -583,6 +584,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Se ativado, as substituições do gerador de mapa serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Ativar substituições de Supply Crate</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Se habilitado, as substituições de supply crate serão gerenciadas pelo ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideExcludeItemIndicesLabel">Ativar substituições de índices de itens excluídos</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideExcludeItemIndicesTooltip">Se ativado, as substituições de índices de itens excluídos serão gerenciadas pelo gerenciador do servidor.</sys:String>	
 	<sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Ativar Prevenção de Substituição de Transferência</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Se habilitado, as substituições de transferência de prevenção serão gerenciadas pelo gerenciador do servidor.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Ativar configurações do Ark PGM</sys:String>
@@ -591,6 +594,14 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Se ativado, as configurações do SotF serão gerenciadas pelo ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">AVISO: Embora qualquer uma dessas opções esteja desativada, o ASM não lerá nem gravará as configurações de substituições associadas. A reativação de qualquer uma dessas opções fará com que TODAS as substituições associadas existentes sejam removidas do arquivo de configuração.</sys:String>
  
+    <sys:String x:Key="ServerSettings_ProfileSyncSettingsLabel">Opções de sincronização de perfil personalizado</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledLabel">Habilitar sincronização para ModIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledTooltip">Se ativado, na sincronização do perfil os ModIDs ainda serão sincronizados.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledLabel">Habilitar sincronização para ClusterID</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledTooltip">Se ativado, na sincronização do perfil o ClusterID ainda estará sincronizado.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledLabel">Ativar sincronização desligamento automático</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledTooltip">Se ativado, na sincronização do perfil as configurações de tempo de desligamento automático ainda serão sincronizadas.</sys:String>
+
     <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Opções de nível personalizado</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Aumento do nível do jogador:</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerTooltip">A quantidade de XP a ser aumentada ao adicionar um novo nível personalizado.</sys:String>
@@ -914,6 +925,7 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">Se você prosseguir, toda a pasta do SteamCMD será removida, incluindo todos os downloads de cache mod.\R\n Tem certeza de que deseja reinstalar o SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Reinstale o erro do SteamCMD</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">Ocorreu um erro ao tentar reinstalar o SteamCMD. Isso deixou o SteamCmd em um estado instável, tente reinstalar novamente ou informe isso.\R\nException: {0}</sys:String>
+	<sys:String x:Key="MainWindow_SteamWebApiKeyMissingLabel">Chave da API da Web do Steam ausente! Atualizações, downloads e instalação de perfis podem falhar. Insira sua chave Steam Web Api nas configurações globais</sys:String>
 
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Discord Bot executando comandos</sys:String>
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">O bot discord tem um ou mais comandos em execução. Quer continuar fechando o server manager?</sys:String>
@@ -1194,6 +1206,14 @@
     <sys:String x:Key="ServerSettings_UseBanListTooltip">Se ativado, o URL da lista de proibições especificado será usado.</sys:String>
     <sys:String x:Key="ServerSettings_BanListTooltip">O URL da lista de banimento a ser usada.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBanlistTooltip">Redefinir as propriedades da lista de proibição para os padrões.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlLabel">Use Dynamic Config URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlTooltip">Se ativado, o URL de configuração dinâmica especificado será usado.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomDynamicConfigUrlTooltip">A URL da configuração dinâmica a ser usada.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlLabel">Use Custom Live Tuning URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlTooltip">Se ativado, o URL de configuração do ajuste ao vivo personalizado especificado será usado.</sys:String>
+    <sys:String x:Key="ServerSettings_CultureLabel">Idioma do servidor</sys:String>
+    <sys:String x:Key="ServerSettings_CultureTooltip">Substitui o idioma de saída do servidor. Não substitui o idioma dos clientes.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLiveTuningUrlTooltip">A URL da configuração de ajuste ao vivo personalizada a ser usada.</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACLabel">Desabilitar Valve Anti-Cheat System (VAC)</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACTooltip">Se ativado, o sistema Valve anti-cheat será desativado. Por favor, use isso com cautela!</sys:String>
     <sys:String x:Key="ServerSettings_DisablePMVOptimizationLabel">Desativar a otimização do jogador-mover-física</sys:String>
@@ -1233,7 +1253,9 @@
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">Se habilitado, habilitará o NVIDIA Ansel em Servidores.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Otimizações de memória de estrutura</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">Se ativado, habilitará as otimizações de memória da estrutura. NOTA: evite usá-lo ao executar mods relacionados à estrutura (até que sejam atualizados), pois isso pode interromper os pontos de snap dessas estruturas de mod.</sys:String>
-    <sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">Proteção contra problemas de upload de dinos</sys:String>
+    <sys:String x:Key="ServerSettings_UseStructureStasisGridLabel">Structure Stasis Grid</sys:String>
+    <sys:String x:Key="ServerSettings_UseStructureStasisGridTooltip">Permite que a Structure Stasis Grid melhore o desempenho do servidor em bases grandes com muitos jogadores. (Esteja ciente de que isso pode ter impacto em alguns mods)</sys:String>    
+	<sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">Proteção contra problemas de upload de dinos</sys:String>
     <sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">Proteção contra problema de upload de criaturas (esteja ciente de que isso pode afetar alguns mods)</sys:String>
     <sys:String x:Key="ServerSettings_UseItemDupeCheckLabel">Proteção adicional contra Dupe</sys:String>
     <sys:String x:Key="ServerSettings_UseItemDupeCheckTooltip">Ativa proteção adicional contra dupes (Nota: isso pode afetar os mods, portanto, use com cuidado).</sys:String>
@@ -1299,6 +1321,21 @@
     <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">Se ativado, os comandos do administrador serão ecoados para conversar apenas com administradores para ver.</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Estruturas de Inimigo Destruídas da Tribo Log</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">Se ativado, o log de destruição da estrutura do inimigo (para a tribo vítima) exibirá a tribo do atacante nos Registros da Tribo, em vez de uma mensagem de destruição da estrutura genérica.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerSaveOptionsLabel">Configurações Oficial salve</sys:String>
+    <sys:String x:Key="ServerSettings_NewSaveFormatLabel">Novo formato save</sys:String>
+    <sys:String x:Key="ServerSettings_NewSaveFormatTooltip" xml:space="preserve">É usado o novo formato de salvamento (versão 11), que é aproximadamente 4x mais rápido e 50% menor em comparação com o "formato de salvamento antigo" (versão 8).
+Obsoleto desde o patch 244.6, o formato de salvamento padrão atual (versão 9) é baseado nisso. Use apenas se necessário (por exemplo: o formato de salvamento padrão falha, assim como o formato de salvamento antigo).
+Esta opção deve ser usada para iniciar os backups oficiais do servidor 2023 junto com -usestore para carregar corretamente a propriedade da tribo.</sys:String>
+    <sys:String x:Key="ServerSettings_UseStoreLabel">Usar Store</sys:String>
+    <sys:String x:Key="ServerSettings_UseStoreTooltip" xml:space="preserve">O mesmo comportamento básico dos servidores oficiais (não legados) no tratamento de dados dos jogadores: o arquivo de perfil do personagem (.arkprofile) não é salvo separadamente do salvamento do mapa (.ark), nem seu backup.
+Quando necessário (por exemplo: um personagem recém-transferido ou um novo personagem foi criado) um arquivo temporário de perfil do personagem é criado e mantido até o próximo salvamento mundial.
+Os perfis da tribo são armazenados em um formato diferente (.arktributetribe). Permite a opção -BackupTransferPlayerDatas (para imitar totalmente o comportamento de salvamento dos servidores oficiais).
+Use a opção -converttostore para converter dados anteriores não armazenados em dados armazenados. Esta opção deve ser usada para carregar corretamente os backups oficiais do servidor 2023 junto com -newsaveformat.</sys:String>
+    <sys:String x:Key="ServerSettings_BackupTransferPlayerDatasLabel">Transferência de backup do Jogador</sys:String>
+    <sys:String x:Key="ServerSettings_BackupTransferPlayerDatasTooltip" xml:space="preserve">Imita totalmente os servidores oficiais (não legados) no manuseio dos dados dos jogadores, adicionando arquivos de backup permanentes do perfil do personagem separadamente do salvamento mundial.
+Requer a opção -usestore. Esta opção deve ser usada para reativar totalmente os backups de perfis de personagens ao jogar os backups oficiais de 2023 Server Saves.
+Undocumented bye wildcard.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Ativar alarmes da Web</sys:String>
     <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">Se ativado, os servidores agora podem receber notificações da Web publicadas em algum lugar quando coisas importantes acontecem a uma tribo.</sys:String>
@@ -1400,7 +1437,7 @@
     <sys:String x:Key="ServerSettings_EnablePvPTooltip">Ativa o modo Jogador contra Jogador (jogadores são capazes de causar dano ou matar uns aos outros. Em jogadores PvP também podem danificar ou destruir os edifícios de outra tribo ou matar seus dinossauros).</sys:String>
     <sys:String x:Key="ServerSettings_EnableCreativeModeLabel">Ativar o modo criativo</sys:String>
     <sys:String x:Key="ServerSettings_EnableCreativeModeTooltip">Se ativado, permite o modo criativo.</sys:String>
-	<sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Ativar construçoes em Caverna PvE</sys:String>
+	<sys:String x:Key="ServerSettings_EnablePvECaveBuildingLabel">Ativar construção em Caverna PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnablePvECaveBuildingTooltip">Se habilitado, permite a construção em cavernas quando o modo PVE estiver habilitado.</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVELabel">Ativar doença criogênica do PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableCryoSicknessPVETooltip">Se ativado, se você liberar uma criatura domesticada de um criodo, você terá um cronômetro de doença crio quando o modo PvE estiver ativado.</sys:String>
@@ -1414,9 +1451,15 @@
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">Se habilitado, fará os Supply Crates aleatórias.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Impedir construção em áreas ricas em recursos</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Se habilitado, desabilita completamente a construção em áreas específicas e ricas em recursos, em particular construções do próprio jogo...</sys:String>
-    <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Desativar Fogo Amigável PvP</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsLabel">Habilitar configurações de jogador único</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsTooltip">Se ativado, todas as configurações do jogo serão mais equilibradas para a experiência individual do jogador. Útil para servidores dedicados com poucos jogadores.</sys:String> 
+	<sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Desativar Fogo Amigável PvP</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Se habilitado, os jogadores são incapazes de causar dano ou matar outros membros da tribo, dinossauros e estruturas quando o modo PvP estiver habilitado.</sys:String>
-    <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Use o Localizador de Corpos</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPLabel">Ativar construção em cavernas PVP</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPTooltip">Se habilitado, permite construir em cavernas quando o modo PvP estiver habilitado.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPLabel">Desativar Tek Railgun PvP</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPTooltip">Se ativado, os jogadores não poderão usar o Tek Railgun quando o modo PvP estiver ativado.</sys:String>	
+	<sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Use o Localizador de Corpos</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">Se ativado, após a morte, um raio de luz dispara para o céu para ajudar o jogador a localizar onde morreu.</sys:String>
     <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Evitar animações de spawn</sys:String>
     <sys:String x:Key="ServerSettings_PreventSpawnAnimationsTooltip">Se habilitado, desabilitará a animação de respawn.</sys:String>
@@ -1461,6 +1504,8 @@
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Opções de Tributo do Cluster</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Nenhuma transferência da filtragem</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesLabel">Desativar pastas de tributo personalizadas</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesTooltip">Desativa a criação de pastas nos inventários do Tribute.</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Se ativado, as transferências do sobrevivente, item e dino serão desativadas se o servidor não estiver no mesmo cluster.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Substituir Expiração de Upload de Sobrevivente</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">Se habilitado, permitirá que você substitua o cronômetro de expiração.</sys:String>
@@ -1547,10 +1592,8 @@
     <sys:String x:Key="ServerSettings_SupplyCrateLootQualityMultiplierTooltip">Especifica o multiplicador na qualidade do supply crate loot.</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierLabel">Multiplicador de Qualidade na Pesca de Loot</sys:String>
     <sys:String x:Key="ServerSettings_FishingLootQualityMultiplierTooltip">Especifica o multiplicador na qualidade de pesca de loot.</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootLabel">Desativar pilhagem de peixe não-carne</sys:String>
-    <sys:String x:Key="ServerSettings_EnableNoFishLootTooltip">Se ativado, desativa a coleta de pilhagem de peixe não-carne.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierLabel">Usa o multiplicador de vida útil nos cadáveres</sys:String>
-    <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Especifica o multiplicador para o tempo de vida dos cadáver e da caixa de depósito.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCorpseLifeSpanMultiplierTooltip">Especifica o multiplicador para o tempo de vida dos cadáver e de caixa dropadas.</sys:String>
     <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalLabel">Tempo de Recarga no Inventário Fjordhawk</sys:String>
     <sys:String x:Key="ServerSettings_MinimumTimeBetweenInventoryRetrievalTooltip">Cooldown na recuperação do inventário do jogador quando morto. O padrão é 1 hora.</sys:String>
     <sys:String x:Key="ServerSettings_GlobalPoweredBatteryDurabilityDecreasePerSecondLabel">Durabilidade global da bateria</sys:String>
@@ -1585,6 +1628,8 @@
     <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">Se habilitado, fará com que os buffs do Mapa escalem seus benefícios multiplicativamente, ao invés de adicionar / subtrair uma quantia fixa ao valor em tempo de execução.</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">Buff de escalonamento global</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Especifica a escala global para reduzir / aumentar a eficácia dos buffs mundiais (por exemplo, 1 é o padrão, 0,5 seria 50% menos eficaz, 2,0 seria 2x mais eficaz).</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierLabel">Multiplicador Spawn Mutagen</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierTooltip">Por padrão, o jogo tenta gerá-los a cada 8 horas em servidores dedicados e a cada hora em servidores não dedicados e no modo single player. Aumentar esse valor aumentará o intervalo de reaparecimento, diminuir irá torná-lo mais curto.</sys:String>
 	
 	<sys:String x:Key="ServerSettings_HexagonsLabel">Hexagons</sys:String>
 	<sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Desativar Hexagon Store</sys:String>
@@ -1768,10 +1813,10 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Se habilitado, permite upar velocidade de movimento do flyer.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Desativar Bônus de companheiro</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Se ativado, Os dinos não receberão o bônus do companheiro, o mesmo não receberá o bônus de 33% de dano de resistência </sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Desativar força de Explosivos em voadores.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Se ativado, desativará o aterramento dos voadores no chão, quando explosivos forem colocados sobre eles.</sys:String>
-    <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Permitir Múltiplos C4 Anexados</sys:String>
+	<sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Permitir Múltiplos C4 Anexados</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Se habilitado, permitirá mais de um C4 anexado por dino.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosLabel">Permitir não reivindicar Dinos</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosTooltip">Se desativado, impede que os jogadores cancelem a reivindicação de criaturas domesticadas.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Desativar decaimento de Dino PvE</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayTooltip">Se habilitado, desativa o decaimento gradual da propriedade do dino no PvE; caso contrário, cada dinossauro pode ser reivindicado por qualquer jogador.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayPvPLabel">Desativar decaimento de Dino PvP</sys:String>
@@ -1784,10 +1829,14 @@
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleTooltip">Se habilitado, QUALQUER PESSOA será capaz de cuidar de um Baby Dino (carinho etc), não apenas quem imprimiu nele.</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosLabel">Auto destruir Dinos em decaimento</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosTooltip">Se habilitado, todos os dinossauros reivindicados com decaimento irão auto-destruir no carregamento, ao invés de tê-los permanecer como reivindicado.</sys:String>
-    <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Desativar Dino Domesticado</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsLabel">Ativar animação ao upar nível</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsTooltip">Se desativado, os dinossauros domesticados ao subir de nível não executarão a animação.</sys:String>   
+	<sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Desativar Dino Domesticado</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">Se ativado, todos os dinos domados não poderão ser usados.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Desativar Domesticação de Dino</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">Se ativado, todos os dinossauros selvagens não poderão ser domados.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingLabel">Desativar Breeding Dino</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingTooltip">Se ativado, impede a criação de dinos domesticados.</sys:String>
 	<sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Alterar Flyer</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">Se ativado, permitirá que você altere os flyer para ser montados no mapa ou não; caso contrário, o padrão será usar as configurações do mapa.</sys:String>
     <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Ativar Flyer</sys:String>
@@ -1812,6 +1861,7 @@
     <sys:String x:Key="ServerSettings_ModColumnLabel">Mod</sys:String>
     <sys:String x:Key="ServerSettings_SpawnableColumnLabel">Spawnavél</sys:String>
     <sys:String x:Key="ServerSettings_TameableColumnLabel">Tamavél</sys:String>
+    <sys:String x:Key="ServerSettings_BreedingableColumnLabel">Breedavel</sys:String>
     <sys:String x:Key="ServerSettings_ReplacementColumnLabel">Substituir por</sys:String>
     <sys:String x:Key="ServerSettings_SpawnWeightColumnLabel">Peso do Spawn</sys:String>
     <sys:String x:Key="ServerSettings_OverrideLimitColumnLabel">Limite de Override</sys:String>
@@ -1950,10 +2000,12 @@
     <!--#endregion-->
 
     <!--#region Server Settings - Structures -->
-   <sys:String x:Key="ServerSettings_StructuresLabel">Estruturas</sys:String>
+    <sys:String x:Key="ServerSettings_StructuresLabel">Estruturas</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionLabel">Desativar Colisão de Estrutura</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionTooltip">Se habilitado, permitirá que os jogadores coloquem estruturas que se encaixam no terreno.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureResistanceLabel">Resistência da estrutura:</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagLabel">Remover limite de estruturas decorativas</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagTooltip">Remove o limite de 150 estruturas decorativas (bandeiras, letreiros, derme etc.).</sys:String>  
+	<sys:String x:Key="ServerSettings_StructureResistanceLabel">Resistência da estrutura:</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceTooltip">Especifica o fator de escala para a resistência a estruturas de danos recebidas quando atacadas. Valores mais altos diminuem a resistência, aumentando o dano por ataque. Valores menores aumentam, reduzindo o dano por ataque.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDamageLabel">Dano de estrutura:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDamageTooltip">Especifica o fator de escala para as estruturas de dano lidar com seus ataques (por exemplo, paredes cravadas). Valores mais altos aumentam o dano. Valores mais baixos diminuem.</sys:String>
@@ -1978,8 +2030,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Ativar Decay de Estrutura PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Se habilitado, habilita o decaimento das estruturas do jogador em PvE.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Período de decaimento da estrutura:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Especifica o tempo necessário para as estruturas do player decaírem no modo PvE.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Multiplicador de Decaimento da Estrutura:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Especifica o fator de escala para a taxa de decaimento das estruturas do player no modo PvE.</sys:String>
 
@@ -2020,7 +2070,9 @@
     <sys:String x:Key="ServerSettings_StructurePickupHoldDurationTooltip">Especifica a quantidade de tempo da duração da espera de coleta rápida, use 0 para desativar e fazer a coleta instantânea.</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresLabel">Permitir Structures Plus</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresTooltip">Se ativado, adicionará todas as novas estruturas S +; caso contrário, desabilita todas as novas estruturas S + (destinadas principalmente a permitir que funcionários não oficiais que desejam continuar usando a versão mod S + continuem usando isso sem uma tonelada de estruturas duplicadas extras).</sys:String>
-    <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Desativar a construção em áreas de missão (Gênesis)</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesLabel">Desativar construção em áreas especiais</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesTooltip">Se habilitado, poderá construir em áreas onde normalmente não é permitido, como ao redor dos Obeliscos de alguns mapas, no Portal de Aberration e nas áreas de Missão em Gênesis 1. Nota: No Gênesis 1 esta configuração está habilitada por padrão e há uma configuração ad hoc chamada bGenesisUseStructuresPreventionVolumes para desativá-lo.</sys:String>
+	<sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Desativar a construção em áreas de missão (Gênesis)</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">Se ativado, desabilitará a construção nas áreas de missão.</sys:String>
 	<!--#endregion-->
 
@@ -2542,6 +2594,23 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemTooltip">Excluir item</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">Salvar todas os supply crates</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">Slvar supply crate</sys:String>
+    <!--#endregion-->
+	
+    <!--#region Server Settings - Exclude Item Indices -->
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverridesLabel">Excluir ItemIDs de substituições Supply Crate</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemsLabel">Excluir ItemIDs de Supply Crates</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveTitle">Excluir ItemIDs das configurações de substituição Supply Crates</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_DisableLabel">NOTA: Se desejar gerenciar suas substituições manualmente ou com outro aplicativo, você pode desabilitar a opção que impedirá o gerenciador do servidor de gerenciar as substituições. Consulte as 'Opções de substituição personalizadas' nas configurações globais.</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_WarningLabel">AVISO: Os itens desta lista serão excluídos dos Supply Crates.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnLabel">ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnTooltip">Número do ID do item</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_AddItemTooltip">Adicionar ID do item</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ClearItemsTooltip">Excluir todos os ItemIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_PasteItemsTooltip">Colar dados de índices de itens excluídos</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_RemoveItemTooltip">Excluir ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveItemsTooltip">Salvar dados de índices de itens excluídos</sys:String>
     <!--#endregion-->
 
 	<!--#region Server Settings - Stack Size Overrides -->
