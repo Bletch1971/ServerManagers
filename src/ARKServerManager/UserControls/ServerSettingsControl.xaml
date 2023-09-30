@@ -863,6 +863,7 @@
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="1*"/>
@@ -906,10 +907,29 @@
                                                 </Style>
                                             </Button.Style>
                                         </Button>
+                                        <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="1" Label="{DynamicResource ServerSettings_MaxNumOfSaveBackupsLabel}" Value="{Binding MaxNumOfSaveBackups}" VerticalAlignment="Center" Minimum="0" Maximum="20" LargeChange="2" SmallChange="1" TickFrequency="1" LabelRelativeWidth="Auto" SliderRelativeWidth="15*" SuffixRelativeWidth="Auto" ToolTip="{DynamicResource ServerSettings_MaxNumOfSaveBackupsTooltip}"/>
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}" Foreground="{DynamicResource UnSyncedSetting}">
+                                <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_ServerSaveOptionsLabel}" Style="{StaticResource GroupBoxStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsChecked="{Binding NewSaveFormat, Mode=TwoWay}" Text="{DynamicResource ServerSettings_NewSaveFormatLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_NewSaveFormatTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="1" Margin="5,5,5,0" IsChecked="{Binding UseStore, Mode=TwoWay}" Text="{DynamicResource ServerSettings_UseStoreLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_UseStoreTooltip}"/>
+                                        <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="2" Margin="5,5,5,0" IsChecked="{Binding BackupTransferPlayerDatas, Mode=TwoWay}" Text="{DynamicResource ServerSettings_BackupTransferPlayerDatasLabel}" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="{DynamicResource ServerSettings_BackupTransferPlayerDatasTooltip}"/>
+                                    </Grid>
+                                </GroupBox>
+
+                                <GroupBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" Header="{DynamicResource ServerSettings_MOTDLabel}" Style="{StaticResource GroupBoxStyle}" Foreground="{DynamicResource UnSyncedSetting}">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
@@ -990,7 +1010,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <cctl:CheckBoxAndTextBlock HorizontalAlignment="Left" IsChecked="{Binding EnableExtinctionEvent, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableExtinctionEventLabel}" ToolTip="{DynamicResource ServerSettings_EnableExtinctionEventTooltip}" />
                                     </GroupBox.Header>
@@ -1006,7 +1026,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerOptionsLabel}"/>
@@ -1254,7 +1274,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerBadWordFilterOptionsLabel}"/>
@@ -1289,7 +1309,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{DynamicResource ServerSettings_ServerLogOptionsLabel}"/>
@@ -1327,7 +1347,7 @@
                                     </Grid>
                                 </GroupBox>
 
-                                <GroupBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
+                                <GroupBox Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="6" Style="{StaticResource GroupBoxStyle}">
                                     <GroupBox.Header>
                                         <cctl:CheckBoxAndTextBlock Name="EnableWebAlarmCheckbox" IsChecked="{Binding EnableWebAlarm, Mode=TwoWay}" Text="{DynamicResource ServerSettings_EnableWebAlarmLabel}" ToolTip="{DynamicResource ServerSettings_EnableWebAlarmTooltip}" />
                                     </GroupBox.Header>
@@ -1582,6 +1602,7 @@
                                             </Grid.ColumnDefinitions>
 
                                             <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoBackup, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_PeriodicBackupsLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicBackupsTooltip}" HorizontalAlignment="Left"/>
+                                            <cctl:CheckBoxAndTextBlock Grid.Row="0" Grid.Column="1" Margin="10,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoBackup, Mode=TwoWay}" VerticalAlignment="Center" Text="Include Cluster Directory" ToolTip="{DynamicResource ServerSettings_PeriodicBackupsTooltip}" HorizontalAlignment="Left" Foreground="{DynamicResource UnSyncedSetting}"/>
 
                                             <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="0" Margin="5,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding EnableAutoUpdate, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_PeriodicUpdatesLabel}" ToolTip="{DynamicResource ServerSettings_PeriodicUpdatesTooltip}" HorizontalAlignment="Left"/>
                                             <cctl:CheckBoxAndTextBlock Grid.Row="1" Grid.Column="1" Margin="10,5,5,0" IsEnabled="{Binding ElementName=EnableSOTFCheckbox, Path=IsChecked, Converter={StaticResource InvertBooleanConverter}}" IsChecked="{Binding AutoRestartIfShutdown, Mode=TwoWay}" VerticalAlignment="Center" Text="{DynamicResource ServerSettings_RestartIfShutdownLabel}" ToolTip="{DynamicResource ServerSettings_RestartIfShutdownTooltip}" HorizontalAlignment="Left"/>

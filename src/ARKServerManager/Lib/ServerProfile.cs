@@ -455,6 +455,14 @@ namespace ServerManagerTool.Lib
             set { SetValue(AutoSavePeriodMinutesProperty, value); }
         }
 
+        public static readonly DependencyProperty MaxNumOfSaveBackupsProperty = DependencyProperty.Register(nameof(MaxNumOfSaveBackups), typeof(int), typeof(ServerProfile), new PropertyMetadata(20));
+        [DataMember]
+        public int MaxNumOfSaveBackups
+        {
+            get { return (int)GetValue(MaxNumOfSaveBackupsProperty); }
+            set { SetValue(MaxNumOfSaveBackupsProperty, value); }
+        }
+
         public static readonly DependencyProperty MOTDProperty = DependencyProperty.Register(nameof(MOTD), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
         [IniFileEntry(IniFiles.GameUserSettings, IniSections.GUS_MessageOfTheDay, ServerProfileCategory.Administration, "Message", ClearSection = true, Multiline = true, QuotedString = QuotedStringType.Remove)]
         public string MOTD
@@ -957,6 +965,30 @@ namespace ServerManagerTool.Lib
         {
             get { return (bool)GetValue(LauncherArgsPrefixProperty); }
             set { SetValue(LauncherArgsPrefixProperty, value); }
+        }
+
+        public static readonly DependencyProperty NewSaveFormatProperty = DependencyProperty.Register(nameof(NewSaveFormat), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool NewSaveFormat
+        {
+            get { return (bool)GetValue(NewSaveFormatProperty); }
+            set { SetValue(NewSaveFormatProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseStoreProperty = DependencyProperty.Register(nameof(UseStore), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool UseStore
+        {
+            get { return (bool)GetValue(UseStoreProperty); }
+            set { SetValue(UseStoreProperty, value); }
+        }
+
+        public static readonly DependencyProperty BackupTransferPlayerDatasProperty = DependencyProperty.Register(nameof(BackupTransferPlayerDatas), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool BackupTransferPlayerDatas
+        {
+            get { return (bool)GetValue(BackupTransferPlayerDatasProperty); }
+            set { SetValue(BackupTransferPlayerDatasProperty, value); }
         }
         #endregion
 
@@ -4371,6 +4403,26 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -culture=").Append(this.Culture);
             }
 
+            if (this.NewSaveFormat)
+            {
+                serverArgs.Append(" -newsaveformat");
+            }
+
+            if (this.UseStore)
+            {
+                serverArgs.Append(" -usestore");
+            }
+
+            if (this.BackupTransferPlayerDatas)
+            {
+                serverArgs.Append(" -BackupTransferPlayerDatas");
+            }
+
+            if (this.MaxNumOfSaveBackups != 20)
+            {
+                serverArgs.Append(" -MaxNumOfSaveBackups=").Append(this.MaxNumOfSaveBackups);
+            }
+
             return serverArgs.ToString();
         }
 
@@ -5683,6 +5735,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(ExtinctionEventUTCProperty);
 
             this.ClearValue(AutoSavePeriodMinutesProperty);
+            this.ClearValue(MaxNumOfSaveBackupsProperty);
 
             this.ClearValue(MOTDProperty);
             this.ClearValue(MOTDDurationProperty);
@@ -5706,6 +5759,10 @@ namespace ServerManagerTool.Lib
             this.ClearValue(LauncherArgsOverrideProperty);
             this.ClearValue(LauncherArgsPrefixProperty);
             this.ClearValue(LauncherArgsProperty);
+
+            this.ClearValue(NewSaveFormatProperty);
+            this.ClearValue(UseStoreProperty);
+            this.ClearValue(BackupTransferPlayerDatasProperty);
         }
 
         public void ResetChatAndNotificationSection()
@@ -6286,6 +6343,7 @@ namespace ServerManagerTool.Lib
             }
 
             this.SetValue(AutoSavePeriodMinutesProperty, sourceProfile.AutoSavePeriodMinutes);
+            this.SetValue(MaxNumOfSaveBackupsProperty, sourceProfile.MaxNumOfSaveBackups);
 
             this.SetValue(EnableExtinctionEventProperty, sourceProfile.EnableExtinctionEvent);
             this.SetValue(ExtinctionEventTimeIntervalProperty, sourceProfile.ExtinctionEventTimeInterval);
@@ -6365,6 +6423,10 @@ namespace ServerManagerTool.Lib
             //this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             //this.SetValue(LauncherArgsPrefixProperty, sourceProfile.LauncherArgsPrefix);
             //this.SetValue(AdditionalArgsProperty, sourceProfile.AdditionalArgs);
+
+            this.SetValue(NewSaveFormatProperty, sourceProfile.NewSaveFormat);
+            this.SetValue(UseStoreProperty, sourceProfile.UseStore);
+            this.SetValue(BackupTransferPlayerDatasProperty, sourceProfile.BackupTransferPlayerDatas);
         }
 
         private void SyncAutomaticManagement(ServerProfile sourceProfile)
