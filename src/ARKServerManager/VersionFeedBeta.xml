@@ -5,64 +5,30 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2023-08-26T00:00:00Z</updated>
+  <updated>2023-10-11T00:00:00Z</updated>
 
   <entry>
-    <id>urn:uuid:B4BD7D87-5A36-481F-827F-52C0E293A6B1</id>
-    <title>1.1.444 (1.1.444.2)</title>
-    <summary>1.1.444.2</summary>
+    <id></id>
+    <title>1.1.445 (1.1.445.1)</title>
+    <summary>1.1.445.1</summary>
     <link href="" />
-    <updated>2023-08-26T00:00:00Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
-        <p>
-          <u style="font-size: .9em;">CHANGE</u>
-          <br/>
-          <ul>
-            <li>pt-BR Translation file updated.</li>
-            <li>ru-RU Translation file updated.</li>
-            <li>zh-CN Translation file updated.</li>
-          </ul>
-        </p>
-      </div>
-    </content>
-    <author>
-      <name>bletch</name>
-      <email>bletch1971@hotmail.com</email>
-    </author>
-  </entry>
-
-  <entry>
-    <id>urn:uuid:BD58740F-8C66-4B21-B73D-22BF191590AA</id>
-    <title>1.1.444 (1.1.444.1)</title>
-    <summary>1.1.444.1</summary>
-    <link href="" />
-    <updated>2023-08-21T00:00:00Z</updated>
+    <updated>2023-10-11T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
           <u style="font-size: .9em;">BUGFIX</u>
           <br/>
           <ul>
-            <li>Chat and Notifications - fix setting for "Enable 'Player Joined' Notifications"</li>
+            <li>Dino Settings - fix Mutagen Level Boost (Bred)</li>
           </ul>
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
-            <li>ASM Options - add setting to reenable ModIDs, CluserID and AutoShutdown Timer sync</li>
-            <li>Global - remove deprecated settings.</li>
-            <li>Global - add global info, if Steam WebApiKey is missing.</li>
-            <li>Administration - remove CluserID from profile sync.</li>
-            <li>Administration - add settings: CustomDynamicConfigUrl, CustomLiveTuningUrl, UseStructureStasisGrid, Culture</li>
-            <li>Administration - change default value for MaxTribeLogs</li>
-            <li>Automatic Management - remove AutoShutdown Timer from profile sync.</li>
-            <li>Rules - add settings: AllowCaveBuildingPvP, DisableRailgunPVP, DisableCustomFoldersInTributeInventories, AdjustableMutagenSpawnDelayMultiplier, bUseSingleplayerSettings</li>
-            <li>Rules - change default value for MaxTributeDinos, GlobalPoweredBatteryDurabilityDecreasePerSecond, MaxHexagonsPerCharacter</li>
-            <li>Structures - add settings: IgnoreLimitMaxStructuresInRangeTypeFlag, bIgnoreStructuresPreventionVolumes</li>
-            <li>Dino Settings - add settings: DisableDinoBreeding, AllowUnclaimDinos, PreventBreedingForClassNames, UseDinoLevelUpAnimations</li>
-            <li>Dino Settings - change default value for MaxTamedDinos</li>
-            <li>Exclude ItemIDs From Supply Crate Overrides - add new section</li>
-            <li>WorldSaveRestore - add file size</li>
+            <li>Administration - add savegame settings for official backups</li>
+            <li>Administration - add max backup quantity for ark auto saves</li>
+            <li>Rules - change MaxTributeDinos and MaxTributeItems to safer max values</li>
+            <li>Dino Settings - PersonalTamedDinosSaddleStructureCost could be zero</li>
+            <li>pt-BR Translation file updated.</li>
           </ul>
         </p>
       </div>
