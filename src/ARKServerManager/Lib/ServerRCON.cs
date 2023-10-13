@@ -33,6 +33,9 @@ namespace ServerManagerTool.Lib
         public const string RCON_COMMAND_GETCHAT = "getchat";
         public const string RCON_COMMAND_SERVERCHAT = "serverchat";
         public const string RCON_COMMAND_WILDDINOWIPE = "DestroyWildDinos";
+        public const string RCON_COMMAND_KICKPLAYER = "KickPlayer";
+        public const string RCON_COMMAND_BANPLAYER = "BanPlayer";
+        public const string RCON_COMMAND_UNBANPLAYER = "UnbanPlayer";
 
         public event EventHandler PlayersCollectionUpdated;
 

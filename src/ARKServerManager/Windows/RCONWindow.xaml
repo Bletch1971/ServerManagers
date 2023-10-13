@@ -197,6 +197,11 @@
                                         <Separator/>
                                         <MenuItem Header="{DynamicResource RCON_Menu_CopyId}"                                            Command="{Binding Source={StaticResource proxy}, Path=Data.CopyIDCommand}" CommandParameter="{Binding}"/>
                                         <MenuItem Header="{DynamicResource RCON_Menu_CopyPlayerId}"                                      Command="{Binding Source={StaticResource proxy}, Path=Data.CopyPlayerIDCommand}" CommandParameter="{Binding}"/>
+                                        <Separator/>
+                                        <MenuItem Header="{DynamicResource RCON_Menu_KickPlayer}"                                        Command="{Binding Source={StaticResource proxy}, Path=Data.KickPlayerProfileCommand}" CommandParameter="{Binding}" />
+                                        <MenuItem Header="{DynamicResource RCON_Menu_BanPlayer}"                                         Command="{Binding Source={StaticResource proxy}, Path=Data.BanPlayerTribeCommand}" CommandParameter="{Binding}"/>
+                                        <MenuItem Header="{DynamicResource RCON_Menu_UnbanPlayer}"                                       Command="{Binding Source={StaticResource proxy}, Path=Data.UnbanPlayerTribeCommand}" CommandParameter="{Binding}"/>
+                                        <Separator/>
                                     </ContextMenu>
                                 </Setter.Value>
                             </Setter>

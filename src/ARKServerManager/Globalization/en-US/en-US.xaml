@@ -2723,6 +2723,9 @@ Undocumented bye wildcard.</sys:String>
     <sys:String x:Key="RCON_Menu_ViewTribe">View Tribe...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Copy Player ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_KickPlayer">Kick Player</sys:String>
+    <sys:String x:Key="RCON_Menu_BanPlayer">Ban Player</sys:String>
+    <sys:String x:Key="RCON_Menu_UnbanPlayer">Unban Player</sys:String>
 
     <sys:String x:Key="RCON_AdminNameLabel">Admin Name:</sys:String>
     <sys:String x:Key="RCON_AdminNameTooltip">This is the name used to prefix serverchat messages sent from the console.</sys:String>
