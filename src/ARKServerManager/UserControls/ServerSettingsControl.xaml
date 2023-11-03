@@ -1817,6 +1817,7 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                             <RowDefinition/>
+                                            <RowDefinition/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" MinWidth="100" />
@@ -1832,7 +1833,53 @@
 
                                         <cctl:AnnotatedSlider Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Label="{DynamicResource ServerSettings_EventColorsChanceOverrideLabel}" Value="{Binding EventColorsChanceOverride}" Suffix="{Binding EventColorsChanceOverride, Converter={StaticResource FloatToPercentageConverter}}" Minimum="0" Maximum="1" SmallChange="0.05" LargeChange="0.1" TickFrequency="0.1" ToolTip="{DynamicResource ServerSettings_EventColorsChanceOverrideTooltip}"/>
 
-                                        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" Margin="5,0,5,0" Text="{DynamicResource ServerSettings_EventNote}" FontWeight="Bold" TextWrapping="WrapWithOverflow" IsEnabled="False"/>
+                                        <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource ServerSettings_NewYear1UTCLabel}" ToolTip="{DynamicResource ServerSettings_NewYear1UTCTooltip}" VerticalAlignment="Center"/>
+                                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_NewYear1UTCTooltip}">
+                                            <Validation.ErrorTemplate>
+                                                <ControlTemplate>
+                                                    <StackPanel>
+                                                        <!-- Placeholder for the TextBox itself -->
+                                                        <AdornedElementPlaceholder x:Name="textBox"/>
+                                                        <TextBlock Text="{Binding [0].ErrorContent}" Background="Red" Foreground="White"/>
+                                                    </StackPanel>
+                                                </ControlTemplate>
+                                            </Validation.ErrorTemplate>
+                                            <TextBox.Text>
+                                                <Binding Path="NewYear1UTC">
+                                                    <Binding.Converter>
+                                                        <cc:DateTimeToStringConverter />
+                                                    </Binding.Converter>
+                                                    <Binding.ValidationRules>
+                                                        <cvr:DateTimeValidationRule ValidatesOnTargetUpdated="true" />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+
+                                        <Label Grid.Row="2" Grid.Column="2" Content="{DynamicResource ServerSettings_NewYear2UTCLabel}" ToolTip="{DynamicResource ServerSettings_NewYear2UTCTooltip}" VerticalAlignment="Center"/>
+                                        <TextBox Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" ToolTip="{DynamicResource ServerSettings_NewYear2UTCTooltip}">
+                                            <Validation.ErrorTemplate>
+                                                <ControlTemplate>
+                                                    <StackPanel>
+                                                        <!-- Placeholder for the TextBox itself -->
+                                                        <AdornedElementPlaceholder x:Name="textBox"/>
+                                                        <TextBlock Text="{Binding [0].ErrorContent}" Background="Red" Foreground="White"/>
+                                                    </StackPanel>
+                                                </ControlTemplate>
+                                            </Validation.ErrorTemplate>
+                                            <TextBox.Text>
+                                                <Binding Path="NewYear2UTC">
+                                                    <Binding.Converter>
+                                                        <cc:DateTimeToStringConverter />
+                                                    </Binding.Converter>
+                                                    <Binding.ValidationRules>
+                                                        <cvr:DateTimeValidationRule ValidatesOnTargetUpdated="true" />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+
+                                        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6" Margin="5,0,5,0" Text="{DynamicResource ServerSettings_EventNote}" FontWeight="Bold" TextWrapping="WrapWithOverflow" IsEnabled="False"/>
                                     </Grid>
                                 </GroupBox>
                             </Grid>
