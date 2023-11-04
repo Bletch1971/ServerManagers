@@ -1429,6 +1429,10 @@ Undocumented bye wildcard.</sys:String>
     <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">Dino Color Chance:</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">Dino event color chance.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCLabel">New Year Event 1:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCTooltip">The New Year Date must be entered as "yyyy.mm.dd hh:mm:ss" (though other formats are recognized and changed to this format). ASM will automatically convert the date to the value required by the game.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCLabel">New Year Event 2:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCTooltip">The New Year Date must be entered as "yyyy.mm.dd hh:mm:ss" (though other formats are recognized and changed to this format). ASM will automatically convert the date to the value required by the game.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->

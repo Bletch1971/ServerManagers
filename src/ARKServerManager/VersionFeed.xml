@@ -5,14 +5,14 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager release version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2023-10-11T00:00:00Z</updated>
+  <updated>2023-11-04T00:00:00Z</updated>
 
   <entry>
     <id></id>
     <title>1.1.445 (1.1.445.1)</title>
     <summary>1.1.445.1</summary>
     <link href="" />
-    <updated>2023-10-11T00:00:00Z</updated>
+    <updated>2023-11-04T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
         <p>
@@ -24,8 +24,10 @@
           <u style="font-size: .9em;">CHANGE</u>
           <br/>
           <ul>
+            <li>RCON - add player menu options to kick, ban or unban a player</li>
             <li>Administration - add savegame settings for official backups</li>
             <li>Administration - add max backup quantity for ark auto saves</li>
+            <li>Server Details - add NewYear Event Settings</li>
             <li>Rules - change MaxTributeDinos and MaxTributeItems to safer max values</li>
             <li>Dino Settings - PersonalTamedDinosSaddleStructureCost could be zero</li>
             <li>pt-BR Translation file updated.</li>
