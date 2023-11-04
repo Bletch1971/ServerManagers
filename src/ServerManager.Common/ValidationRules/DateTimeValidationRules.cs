@@ -23,16 +23,15 @@ namespace ServerManagerTool.Common.ValidationRules
                 return new ValidationResult(false, "Invalid Date. Date must be formatted as yyyy.mm.dd hh:mm:ss");
             }
 
-            if (datetime.ToUniversalTime() <= MinUnixDate)
+            if (datetime.ToUniversalTime() < MinUnixDate)
             {
                 return new ValidationResult(false, $"Invalid Date. The Date must be after {MinUnixDate.ToLocalTime().ToString("yyyy.MM.dd HH:mm:ss")}");
             }
 
-            if (datetime.ToUniversalTime() >= MaxUnixDate)
+            if (datetime.ToUniversalTime() > MaxUnixDate)
             {
                 return new ValidationResult(false, $"Invalid Date. The Date must be before {MaxUnixDate.ToLocalTime().ToString("yyyy.MM.dd HH:mm:ss")}");
             }
-
 
             return new ValidationResult(true, null);
         }

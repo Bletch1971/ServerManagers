@@ -1229,19 +1229,19 @@ namespace ServerManagerTool.Lib
             set { SetValue(EventColorsChanceOverrideProperty, value); }
         }
 
-        public static readonly DependencyProperty NewYear1UTCProperty = DependencyProperty.Register(nameof(NewYear1UTC), typeof(DateTime), typeof(ServerProfile), new PropertyMetadata(DateTime.MinValue));
+        public static readonly DependencyProperty NewYear1UTCProperty = DependencyProperty.Register(nameof(NewYear1UTC), typeof(NullableValue<DateTime>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<DateTime>()));
         [DataMember]
-        public DateTime NewYear1UTC
+        public NullableValue<DateTime> NewYear1UTC
         {
-            get { return (DateTime)GetValue(NewYear1UTCProperty); }
+            get { return (NullableValue<DateTime>)GetValue(NewYear1UTCProperty); }
             set { SetValue(NewYear1UTCProperty, value); }
         }
 
-        public static readonly DependencyProperty NewYear2UTCProperty = DependencyProperty.Register(nameof(NewYear2UTC), typeof(DateTime), typeof(ServerProfile), new PropertyMetadata(DateTime.MinValue));
+        public static readonly DependencyProperty NewYear2UTCProperty = DependencyProperty.Register(nameof(NewYear2UTC), typeof(NullableValue<DateTime>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<DateTime>()));
         [DataMember]
-        public DateTime NewYear2UTC
+        public NullableValue<DateTime> NewYear2UTC
         {
-            get { return (DateTime)GetValue(NewYear2UTCProperty); }
+            get { return (NullableValue<DateTime>)GetValue(NewYear2UTCProperty); }
             set { SetValue(NewYear2UTCProperty, value); }
         }
         #endregion
@@ -4131,17 +4131,17 @@ namespace ServerManagerTool.Lib
             {
                 serverArgs.Append("?EventColorsChanceOverride=").Append(this.EventColorsChanceOverride);
             }
-
-            if (this.NewYear1UTC != DateTime.MinValue)
+            
+            if (this.NewYear1UTC.HasValue)
             {
-                serverArgs.Append("?NewYear1UTC=").Append((new DateTimeOffset(this.NewYear1UTC.ToUniversalTime())).ToUnixTimeSeconds().ToString());
+                serverArgs.Append("?NewYear1UTC=").Append((new DateTimeOffset(this.NewYear1UTC.Value.ToUniversalTime())).ToUnixTimeSeconds().ToString());
             }
 
-            if (this.NewYear2UTC != DateTime.MinValue)
+            if (this.NewYear2UTC.HasValue)
             {
-                serverArgs.Append("?NewYear2UTC=").Append((new DateTimeOffset(this.NewYear2UTC.ToUniversalTime())).ToUnixTimeSeconds().ToString());
+                serverArgs.Append("?NewYear2UTC=").Append((new DateTimeOffset(this.NewYear2UTC.Value.ToUniversalTime())).ToUnixTimeSeconds().ToString());
             }
-
+            
             if (!string.IsNullOrWhiteSpace(this.AdditionalArgs))
             {
                 var addArgs = this.AdditionalArgs.TrimStart();
@@ -4448,12 +4448,12 @@ namespace ServerManagerTool.Lib
             {
                 serverArgs.Append(" -MaxNumOfSaveBackups=").Append(this.MaxNumOfSaveBackups);
             }
-
-            if (this.NewYear1UTC != DateTime.MinValue || this.NewYear2UTC != DateTime.MinValue)
+            
+            if (this.NewYear1UTC.HasValue || this.NewYear2UTC.HasValue)
             {
                 serverArgs.Append(" -NewYearEvent");
             }
-
+            
             return serverArgs.ToString();
         }
 
@@ -6167,8 +6167,8 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(EventNameProperty);
             this.ClearValue(EventColorsChanceOverrideProperty);
-            this.ClearValue(NewYear1UTCProperty);
-            this.ClearValue(NewYear2UTCProperty);
+            this.ClearNullableValue(NewYear1UTCProperty);
+            this.ClearNullableValue(NewYear2UTCProperty);
         }
 
         public void ResetSOTFSection()
@@ -6956,8 +6956,8 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(EventNameProperty, sourceProfile.EventName);
             this.SetValue(EventColorsChanceOverrideProperty, sourceProfile.EventColorsChanceOverride);
-            this.SetValue(NewYear1UTCProperty, sourceProfile.NewYear1UTC);
-            this.SetValue(NewYear2UTCProperty, sourceProfile.NewYear2UTC);
+            this.SetNullableValue(NewYear1UTCProperty, sourceProfile.NewYear1UTC);
+            this.SetNullableValue(NewYear2UTCProperty, sourceProfile.NewYear2UTC);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)

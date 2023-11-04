@@ -1847,7 +1847,7 @@
                                             <TextBox.Text>
                                                 <Binding Path="NewYear1UTC">
                                                     <Binding.Converter>
-                                                        <cc:DateTimeToStringConverter />
+                                                        <cc:NullableDateTimeToStringConverter />
                                                     </Binding.Converter>
                                                     <Binding.ValidationRules>
                                                         <cvr:DateTimeValidationRule ValidatesOnTargetUpdated="true" />
@@ -1870,7 +1870,7 @@
                                             <TextBox.Text>
                                                 <Binding Path="NewYear2UTC">
                                                     <Binding.Converter>
-                                                        <cc:DateTimeToStringConverter />
+                                                        <cc:NullableDateTimeToStringConverter />
                                                     </Binding.Converter>
                                                     <Binding.ValidationRules>
                                                         <cvr:DateTimeValidationRule ValidatesOnTargetUpdated="true" />

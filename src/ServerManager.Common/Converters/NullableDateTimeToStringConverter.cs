@@ -1,30 +1,30 @@
-﻿using System;
+﻿using ServerManagerTool.Common.Model;
+using System;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Markup;
 
 namespace ServerManagerTool.Common.Converters
 {
-    public class DateTimeToStringConverter : MarkupExtension, IValueConverter
+    public class NullableDateTimeToStringConverter : MarkupExtension, IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            DateTime datetime = (DateTime)value;
-            if (datetime == DateTime.MinValue)
-                return "";
+            if (value != null && value is NullableValue<DateTime> && ((NullableValue<DateTime>)value).Value != DateTime.MinValue)
+                return ((NullableValue<DateTime>)value).Value.ToString("yyyy.MM.dd HH:mm:ss");
 
-            return datetime.ToString("yyyy.MM.dd HH:mm:ss");
+            return "";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is null || value.ToString() == string.Empty)
-                return DateTime.MinValue;
+                return (new NullableValue<DateTime>());
 
             if (!DateTime.TryParse(value.ToString(), out DateTime datetime))
-                return DateTime.MinValue;
+                return (new NullableValue<DateTime>());
 
-            return datetime;
+            return (new NullableValue<DateTime>(datetime));
         }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
