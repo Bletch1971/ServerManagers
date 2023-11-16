@@ -4435,7 +4435,7 @@ namespace ServerManagerTool
                                 break;
 
                             case ServerSettingsResetAction.DinoBredMutagenLevelBoost:
-                                this.Settings.MutagenLevelBoostBred.Reset();
+                                this.Settings.MutagenLevelBoost_Bred.Reset();
                                 break;
 
                             case ServerSettingsResetAction.ItemStatClamps:

@@ -645,6 +645,57 @@ namespace ServerManagerTool
 
             }
         }
+
+        public ICommand KickPlayerProfileCommand
+        {
+            get
+            {
+                return new RelayCommand<PlayerInfo>(
+                    execute: (player) =>
+                    {
+                        if (player.PlayerData != null)
+                        {
+                            this.ServerRCON.IssueCommand($"{ServerRcon.RCON_COMMAND_KICKPLAYER} {player.PlayerId.ToString()}");
+                        }
+                    },
+                    canExecute: (player) => player != null
+                );
+            }
+        }
+
+        public ICommand BanPlayerProfileCommand
+        {
+            get
+            {
+                return new RelayCommand<PlayerInfo>(
+                    execute: (player) =>
+                    {
+                        if (player.PlayerData != null)
+                        {
+                            this.ServerRCON.IssueCommand($"{ServerRcon.RCON_COMMAND_BANPLAYER} {player.PlayerId.ToString()}");
+                        }
+                    },
+                    canExecute: (player) => player != null
+                );
+            }
+        }
+
+        public ICommand UnbanPlayerProfileCommand
+        {
+            get
+            {
+                return new RelayCommand<PlayerInfo>(
+                    execute: (player) =>
+                    {
+                        if (player.PlayerData != null)
+                        {
+                            this.ServerRCON.IssueCommand($"{ServerRcon.RCON_COMMAND_UNBANPLAYER} {player.PlayerId.ToString()}");
+                        }
+                    },
+                    canExecute: (player) => player != null
+                );
+            }
+        }
         #endregion
 
         #region Events

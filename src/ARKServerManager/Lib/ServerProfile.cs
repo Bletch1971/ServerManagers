@@ -87,7 +87,7 @@ namespace ServerManagerTool.Lib
             this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
             this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
             this.MutagenLevelBoost = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost), GameData.GetPerLevelMutagenLevelBoost_DinoWild, GameData.GetMutagenLevelBoostInclusions_DinoWild(), true);
-            this.MutagenLevelBoostBred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoostBred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
+            this.MutagenLevelBoost_Bred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost_Bred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
 
             this.HarvestResourceItemAmountClassMultipliers = new ResourceClassMultiplierList(nameof(HarvestResourceItemAmountClassMultipliers), GameData.GetResourceMultipliers);
 
@@ -453,6 +453,14 @@ namespace ServerManagerTool.Lib
         {
             get { return (float)GetValue(AutoSavePeriodMinutesProperty); }
             set { SetValue(AutoSavePeriodMinutesProperty, value); }
+        }
+
+        public static readonly DependencyProperty MaxNumOfSaveBackupsProperty = DependencyProperty.Register(nameof(MaxNumOfSaveBackups), typeof(int), typeof(ServerProfile), new PropertyMetadata(20));
+        [DataMember]
+        public int MaxNumOfSaveBackups
+        {
+            get { return (int)GetValue(MaxNumOfSaveBackupsProperty); }
+            set { SetValue(MaxNumOfSaveBackupsProperty, value); }
         }
 
         public static readonly DependencyProperty MOTDProperty = DependencyProperty.Register(nameof(MOTD), typeof(string), typeof(ServerProfile), new PropertyMetadata(String.Empty));
@@ -958,6 +966,30 @@ namespace ServerManagerTool.Lib
             get { return (bool)GetValue(LauncherArgsPrefixProperty); }
             set { SetValue(LauncherArgsPrefixProperty, value); }
         }
+
+        public static readonly DependencyProperty NewSaveFormatProperty = DependencyProperty.Register(nameof(NewSaveFormat), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool NewSaveFormat
+        {
+            get { return (bool)GetValue(NewSaveFormatProperty); }
+            set { SetValue(NewSaveFormatProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseStoreProperty = DependencyProperty.Register(nameof(UseStore), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool UseStore
+        {
+            get { return (bool)GetValue(UseStoreProperty); }
+            set { SetValue(UseStoreProperty, value); }
+        }
+
+        public static readonly DependencyProperty BackupTransferPlayerDatasProperty = DependencyProperty.Register(nameof(BackupTransferPlayerDatas), typeof(bool), typeof(ServerProfile), new PropertyMetadata(false));
+        [DataMember]
+        public bool BackupTransferPlayerDatas
+        {
+            get { return (bool)GetValue(BackupTransferPlayerDatasProperty); }
+            set { SetValue(BackupTransferPlayerDatasProperty, value); }
+        }
         #endregion
 
         #region Automatic Management
@@ -1195,6 +1227,22 @@ namespace ServerManagerTool.Lib
         {
             get { return (float)GetValue(EventColorsChanceOverrideProperty); }
             set { SetValue(EventColorsChanceOverrideProperty, value); }
+        }
+
+        public static readonly DependencyProperty NewYear1UTCProperty = DependencyProperty.Register(nameof(NewYear1UTC), typeof(NullableValue<DateTime>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<DateTime>()));
+        [DataMember]
+        public NullableValue<DateTime> NewYear1UTC
+        {
+            get { return (NullableValue<DateTime>)GetValue(NewYear1UTCProperty); }
+            set { SetValue(NewYear1UTCProperty, value); }
+        }
+
+        public static readonly DependencyProperty NewYear2UTCProperty = DependencyProperty.Register(nameof(NewYear2UTC), typeof(NullableValue<DateTime>), typeof(ServerProfile), new PropertyMetadata(new NullableValue<DateTime>()));
+        [DataMember]
+        public NullableValue<DateTime> NewYear2UTC
+        {
+            get { return (NullableValue<DateTime>)GetValue(NewYear2UTCProperty); }
+            set { SetValue(NewYear2UTCProperty, value); }
         }
         #endregion
 
@@ -2789,12 +2837,12 @@ namespace ServerManagerTool.Lib
             set { SetValue(MutagenLevelBoostProperty, value); }
         }
 
-        public static readonly DependencyProperty MutagenLevelBoostBredProperty = DependencyProperty.Register(nameof(MutagenLevelBoostBred), typeof(StatsMultiplierIntegerArray), typeof(ServerProfile), new PropertyMetadata(null));
+        public static readonly DependencyProperty MutagenLevelBoost_BredProperty = DependencyProperty.Register(nameof(MutagenLevelBoost_Bred), typeof(StatsMultiplierIntegerArray), typeof(ServerProfile), new PropertyMetadata(null));
         [IniFileEntry(IniFiles.Game, IniSections.Game_ShooterGameMode, ServerProfileCategory.Dinos)]
-        public StatsMultiplierIntegerArray MutagenLevelBoostBred
+        public StatsMultiplierIntegerArray MutagenLevelBoost_Bred
         {
-            get { return (StatsMultiplierIntegerArray)GetValue(MutagenLevelBoostBredProperty); }
-            set { SetValue(MutagenLevelBoostBredProperty, value); }
+            get { return (StatsMultiplierIntegerArray)GetValue(MutagenLevelBoost_BredProperty); }
+            set { SetValue(MutagenLevelBoost_BredProperty, value); }
         }
 
         public static readonly DependencyProperty DinoSpawnsProperty = DependencyProperty.Register(nameof(DinoSpawnWeightMultipliers), typeof(AggregateIniValueList<DinoSpawn>), typeof(ServerProfile), new PropertyMetadata(null));
@@ -3912,7 +3960,7 @@ namespace ServerManagerTool.Lib
             settings.PerLevelStatsMultiplier_DinoTamed_Affinity.Reset();
             settings.PerLevelStatsMultiplier_DinoWild.Reset();
             settings.MutagenLevelBoost.Reset();
-            settings.MutagenLevelBoostBred.Reset();
+            settings.MutagenLevelBoost_Bred.Reset();
             settings.PerLevelStatsMultiplier_Player.Reset();
             settings.PlayerBaseStatMultipliers.Reset();
             settings.LoadServerFiles(true, true, true);
@@ -4083,7 +4131,17 @@ namespace ServerManagerTool.Lib
             {
                 serverArgs.Append("?EventColorsChanceOverride=").Append(this.EventColorsChanceOverride);
             }
+            
+            if (this.NewYear1UTC.HasValue)
+            {
+                serverArgs.Append("?NewYear1UTC=").Append((new DateTimeOffset(this.NewYear1UTC.Value.ToUniversalTime())).ToUnixTimeSeconds().ToString());
+            }
 
+            if (this.NewYear2UTC.HasValue)
+            {
+                serverArgs.Append("?NewYear2UTC=").Append((new DateTimeOffset(this.NewYear2UTC.Value.ToUniversalTime())).ToUnixTimeSeconds().ToString());
+            }
+            
             if (!string.IsNullOrWhiteSpace(this.AdditionalArgs))
             {
                 var addArgs = this.AdditionalArgs.TrimStart();
@@ -4371,6 +4429,31 @@ namespace ServerManagerTool.Lib
                 serverArgs.Append(" -culture=").Append(this.Culture);
             }
 
+            if (this.NewSaveFormat)
+            {
+                serverArgs.Append(" -newsaveformat");
+            }
+
+            if (this.UseStore)
+            {
+                serverArgs.Append(" -usestore");
+            }
+
+            if (this.BackupTransferPlayerDatas)
+            {
+                serverArgs.Append(" -BackupTransferPlayerDatas");
+            }
+
+            if (this.MaxNumOfSaveBackups != 20)
+            {
+                serverArgs.Append(" -MaxNumOfSaveBackups=").Append(this.MaxNumOfSaveBackups);
+            }
+            
+            if (this.NewYear1UTC.HasValue || this.NewYear2UTC.HasValue)
+            {
+                serverArgs.Append(" -NewYearEvent");
+            }
+            
             return serverArgs.ToString();
         }
 
@@ -5683,6 +5766,7 @@ namespace ServerManagerTool.Lib
             this.ClearValue(ExtinctionEventUTCProperty);
 
             this.ClearValue(AutoSavePeriodMinutesProperty);
+            this.ClearValue(MaxNumOfSaveBackupsProperty);
 
             this.ClearValue(MOTDProperty);
             this.ClearValue(MOTDDurationProperty);
@@ -5706,6 +5790,10 @@ namespace ServerManagerTool.Lib
             this.ClearValue(LauncherArgsOverrideProperty);
             this.ClearValue(LauncherArgsPrefixProperty);
             this.ClearValue(LauncherArgsProperty);
+
+            this.ClearValue(NewSaveFormatProperty);
+            this.ClearValue(UseStoreProperty);
+            this.ClearValue(BackupTransferPlayerDatasProperty);
         }
 
         public void ResetChatAndNotificationSection()
@@ -5801,7 +5889,7 @@ namespace ServerManagerTool.Lib
             this.PerLevelStatsMultiplier_DinoTamed_Add = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Add), GameData.GetPerLevelStatsMultipliers_DinoTamedAdd, GameData.GetStatMultiplierInclusions_DinoTamedAdd(), true);
             this.PerLevelStatsMultiplier_DinoTamed_Affinity = new StatsMultiplierFloatArray(nameof(PerLevelStatsMultiplier_DinoTamed_Affinity), GameData.GetPerLevelStatsMultipliers_DinoTamedAffinity, GameData.GetStatMultiplierInclusions_DinoTamedAffinity(), true);
             this.MutagenLevelBoost = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost), GameData.GetPerLevelMutagenLevelBoost_DinoWild, GameData.GetMutagenLevelBoostInclusions_DinoWild(), true);
-            this.MutagenLevelBoostBred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoostBred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
+            this.MutagenLevelBoost_Bred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost_Bred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
 
             this.DinoSpawnWeightMultipliers = new AggregateIniValueList<DinoSpawn>(nameof(DinoSpawnWeightMultipliers), GameData.GetDinoSpawns);
             this.PreventDinoTameClassNames = new StringIniValueList(nameof(PreventDinoTameClassNames), () => new string[0]);
@@ -6079,6 +6167,8 @@ namespace ServerManagerTool.Lib
 
             this.ClearValue(EventNameProperty);
             this.ClearValue(EventColorsChanceOverrideProperty);
+            this.ClearNullableValue(NewYear1UTCProperty);
+            this.ClearNullableValue(NewYear2UTCProperty);
         }
 
         public void ResetSOTFSection()
@@ -6286,6 +6376,7 @@ namespace ServerManagerTool.Lib
             }
 
             this.SetValue(AutoSavePeriodMinutesProperty, sourceProfile.AutoSavePeriodMinutes);
+            this.SetValue(MaxNumOfSaveBackupsProperty, sourceProfile.MaxNumOfSaveBackups);
 
             this.SetValue(EnableExtinctionEventProperty, sourceProfile.EnableExtinctionEvent);
             this.SetValue(ExtinctionEventTimeIntervalProperty, sourceProfile.ExtinctionEventTimeInterval);
@@ -6365,6 +6456,10 @@ namespace ServerManagerTool.Lib
             //this.SetValue(LauncherArgsOverrideProperty, sourceProfile.LauncherArgsOverride);
             //this.SetValue(LauncherArgsPrefixProperty, sourceProfile.LauncherArgsPrefix);
             //this.SetValue(AdditionalArgsProperty, sourceProfile.AdditionalArgs);
+
+            this.SetValue(NewSaveFormatProperty, sourceProfile.NewSaveFormat);
+            this.SetValue(UseStoreProperty, sourceProfile.UseStore);
+            this.SetValue(BackupTransferPlayerDatasProperty, sourceProfile.BackupTransferPlayerDatas);
         }
 
         private void SyncAutomaticManagement(ServerProfile sourceProfile)
@@ -6531,9 +6626,9 @@ namespace ServerManagerTool.Lib
             this.MutagenLevelBoost.FromIniValues(sourceProfile.MutagenLevelBoost.ToIniValues());
             this.MutagenLevelBoost.IsEnabled = sourceProfile.MutagenLevelBoost.IsEnabled;
 
-            this.MutagenLevelBoostBred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoostBred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
-            this.MutagenLevelBoostBred.FromIniValues(sourceProfile.MutagenLevelBoostBred.ToIniValues());
-            this.MutagenLevelBoostBred.IsEnabled = sourceProfile.MutagenLevelBoostBred.IsEnabled;
+            this.MutagenLevelBoost_Bred = new StatsMultiplierIntegerArray(nameof(MutagenLevelBoost_Bred), GameData.GetPerLevelMutagenLevelBoost_DinoTamed, GameData.GetMutagenLevelBoostInclusions_DinoTamed(), true);
+            this.MutagenLevelBoost_Bred.FromIniValues(sourceProfile.MutagenLevelBoost_Bred.ToIniValues());
+            this.MutagenLevelBoost_Bred.IsEnabled = sourceProfile.MutagenLevelBoost_Bred.IsEnabled;
 
             sourceProfile.DinoSettings.RenderToModel();
 
@@ -6861,6 +6956,8 @@ namespace ServerManagerTool.Lib
 
             this.SetValue(EventNameProperty, sourceProfile.EventName);
             this.SetValue(EventColorsChanceOverrideProperty, sourceProfile.EventColorsChanceOverride);
+            this.SetNullableValue(NewYear1UTCProperty, sourceProfile.NewYear1UTC);
+            this.SetNullableValue(NewYear2UTCProperty, sourceProfile.NewYear2UTC);
         }
 
         private void SyncServerFiles(ServerProfile sourceProfile)

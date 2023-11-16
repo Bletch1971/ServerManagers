@@ -1175,7 +1175,9 @@
     <sys:String x:Key="ServerSettings_SaveBackupButtonTooltip">Perform a manual world save.</sys:String>
     <sys:String x:Key="ServerSettings_SaveRestoreButtonLabel">Restore...</sys:String>
     <sys:String x:Key="ServerSettings_SaveRestoreButtonTooltip">Restore a previous world save.</sys:String>
-
+    <sys:String x:Key="ServerSettings_MaxNumOfSaveBackupsLabel">Backup Quantity:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxNumOfSaveBackupsTooltip">Set the max number of backup to keeps in the save folder. Whenever a new backup is created, the oldest ones will be deleted. Default value is 20. Since such backups take place every 2 hours and they are uncomprssed files, it is suggested to use more flexible third party solutions, especially with "big" saves.</sys:String>
+    
     <sys:String x:Key="ServerSettings_MOTDLabel">Message of the Day</sys:String>
     <sys:String x:Key="ServerSettings_MOTDTooltip">The Message of the Day displayed to users when they connect to the server.</sys:String>
     <sys:String x:Key="ServerSettings_MOTDLineCountLabel">Lines:</sys:String>
@@ -1321,6 +1323,21 @@
     <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">If enabled, admin commands will be echoed to chat for admins only to see.</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Tribe Log Destroyed Enemy Structures</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">If enabled, the enemy-structure destruction log (for the victim tribe) wil display the attacker tribe in the Tribe Logs, instead of a generic structure destruction message.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerSaveOptionsLabel">Official Save Settings</sys:String>
+    <sys:String x:Key="ServerSettings_NewSaveFormatLabel">New Save Game Format</sys:String>
+    <sys:String x:Key="ServerSettings_NewSaveFormatTooltip" xml:space="preserve">The new save format (version 11) is used, which is approximately 4x faster and 50% smaller compared to "old save format" (version 8).
+Deprecated since patch 244.6, the current default save format (version 9) is based on this. Use only if necessary (e.g.: the default save format fails as well the old save format).
+This option must be used to start the Official 2023 Server Saves backups along with -usestore to correctly load tribe ownership.</sys:String>
+    <sys:String x:Key="ServerSettings_UseStoreLabel">Use Store</sys:String>
+    <sys:String x:Key="ServerSettings_UseStoreTooltip" xml:space="preserve">Same basic behaviour of official (non-legacy) servers on handling player characters data: character profile file (.arkprofile) is not saved separately from map save (.ark), nor its backup.
+When necessary (e.g.: a character just transferred or a new character has been created) a temporary character profile file is created and kept until next world-save.
+Tribe profiles are stored in a different format (.arktributetribe). Allows -BackupTransferPlayerDatas option (for fully mimic official servers save behaviour).
+Use the option -converttostore to convert previous non stored data to stored data. This option must be used to correctly load the Official 2023 Server Saves backups along with -newsaveformat.</sys:String>
+    <sys:String x:Key="ServerSettings_BackupTransferPlayerDatasLabel">Backup Transfer Player Datas (Undocumented)</sys:String>
+    <sys:String x:Key="ServerSettings_BackupTransferPlayerDatasTooltip" xml:space="preserve">Fully mimic official (non-legacy) servers on handling player characters data, adding permanent character profile backup files separately from the world-save.
+Requires -usestore option. This option must be used to fully re-enable character profile backups when playing the Official 2023 Server Saves backups.
+Undocumented bye wildcard.</sys:String>
     
     <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Enable Web Alarms</sys:String>
     <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">If enabled, servers can now get web notifications posted somewhere when important things happen to a tribe.</sys:String>
@@ -1412,6 +1429,10 @@
     <sys:String x:Key="ServerSettings_EventNameTooltip">The name of the event to enable (leave blank to disable the event).</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">Dino Color Chance:</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">Dino event color chance.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCLabel">New Year Event 1:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCTooltip">The New Year Date must be entered as "yyyy.mm.dd hh:mm:ss" (though other formats are recognized and changed to this format). ASM will automatically convert the date to the value required by the game.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCLabel">New Year Event 2:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCTooltip">The New Year Date must be entered as "yyyy.mm.dd hh:mm:ss" (though other formats are recognized and changed to this format). ASM will automatically convert the date to the value required by the game.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -2706,6 +2727,9 @@
     <sys:String x:Key="RCON_Menu_ViewTribe">View Tribe...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyId">Copy ID...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Copy Player ID...</sys:String>
+    <sys:String x:Key="RCON_Menu_KickPlayer">Kick Player</sys:String>
+    <sys:String x:Key="RCON_Menu_BanPlayer">Ban Player</sys:String>
+    <sys:String x:Key="RCON_Menu_UnbanPlayer">Unban Player</sys:String>
 
     <sys:String x:Key="RCON_AdminNameLabel">Admin Name:</sys:String>
     <sys:String x:Key="RCON_AdminNameTooltip">This is the name used to prefix serverchat messages sent from the console.</sys:String>
