@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2023.07.08(叶凡,龍柒)Q群:109949666</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2023.08.27(龍柒)</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -576,6 +576,14 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">如果启用，适者生存设置将由方舟服务器管理器进行管理。</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">警告：上面任何选项被禁用时，方舟服务器管理器将不会读取或写入关联的设置。 重新启用这些选项会导致所有配置文件中删除。</sys:String>
     
+	<sys:String x:Key="ServerSettings_ProfileSyncSettingsLabel">自定义配置文件同步选项</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledLabel">启用ModID同步</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledTooltip">如果启用，在配置文件同步时，ModID仍然同步.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledLabel">启用群集id的同步</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledTooltip">如果启用，在配置文件同步时，群集ID仍然同步.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledLabel">启用自动关闭时间同步</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledTooltip">如果启用，在配置文件同步时，自动关闭时间设置仍同步.</sys:String>
+	
     <sys:String x:Key="GlobalSettings_ServerStatusLabel">服务器状态选项</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsLabel">启用服务器状态操作</sys:String>
     <sys:String x:Key="GlobalSettings_EnableServerStatusActionsTooltip">如果启用，则单击服务器状态图标可能会执行一个或多个操作。</sys:String>
@@ -766,6 +774,8 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">将保留的最多日志文件数.</sys:String>
 	<sys:String x:Key="GlobalSettings_RCON_ModeLabel">RCON广播模式:</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">选择服务器管理者通过RCON向游戏客户端发送自动进程信息的方法。</sys:String>
+	<sys:String x:Key="GlobalSettings_SteamCmdIgnoreExitStatusCodesLabel">忽略以下SteamCmd退出状态</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdIgnoreExitStatusCodesTooltip">以逗号分隔的出口staus id列表，这些ID被认为是正确的.</sys:String>
 	
 	<sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">对这些优先级的任何改变将在任务创建或保存后生效。</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">选择windows任务管理器在运行该任务时使用的优先级。</sys:String>
@@ -908,6 +918,7 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">如果你进行重新安装，整个SteamCMD文件夹将被删除，包括所有的MOD下载缓存.\r\n你确定你想重新安装 SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">重新安装 SteamCMD 错误</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">在尝试重新安装SteamCMD时出错。这让SteamCMD处于不稳定的状态，请尝试重新安装一遍或请报告.\r\n例外: {0}</sys:String>
+    <sys:String x:Key="MainWindow_SteamWebApiKeyMissingLabel">Steam WebAPI密钥丢失！配置文件的更新、下载和安装可能会失败。在全局设置中输入</sys:String>
 
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionTitle">启动服务器确认</sys:String>
     <sys:String x:Key="MainWindow_ServerStatus_StartServerActionLabel">您即将启动服务器，你想继续吗？</sys:String>
@@ -1185,6 +1196,14 @@
     <sys:String x:Key="ServerSettings_UseBanListTooltip">如果启用，禁止列表指定的网址将被使用.</sys:String>
     <sys:String x:Key="ServerSettings_BanListTooltip">这是一个官方全球加黑的玩家名单，你可以使用来禁止他们进入你的服务器.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBanlistTooltip">将禁用列表属性重置为默认值</sys:String>
+	<sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlLabel">使用动态配置URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlTooltip">如果启用，将使用指定的动态配置URL.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomDynamicConfigUrlTooltip">要使用的动态配置的URL.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlLabel">使用自定义实时调整URL</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlTooltip">如果启用，将使用指定的自定义实时调整配置URL.</sys:String>
+    <sys:String x:Key="ServerSettings_CultureLabel">服务器语言</sys:String>
+    <sys:String x:Key="ServerSettings_CultureTooltip">覆盖服务器输出语言。它不会覆盖客户端语言.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLiveTuningUrlTooltip">要使用的自定义实时调整配置的URL.</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACLabel">禁用Valve防外挂系统（VAC）</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACTooltip">如果启用，该Valve防外挂系统（VAC）将被禁用。请谨慎使用！</sys:String>
     <sys:String x:Key="ServerSettings_DisablePMVOptimizationLabel">禁用-玩家移动-物理优化</sys:String>
@@ -1226,6 +1245,8 @@
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">如果启用，将启用建筑内存优化。 注意：在运行与建筑相关的MOD（直到它们被更新）时，请避免使用它，因为它可能会破坏这些MOD建筑的捕捉点。</sys:String>
 	<sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">生物上传问题保护</sys:String>
 	<sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">防止生物上传问题（请注意，这可能会对一些MOD产生影响）</sys:String>
+	<sys:String x:Key="ServerSettings_UseStructureStasisGridLabel">Structure Stasis Grid(结构停滞网格)</sys:String>
+	<sys:String x:Key="ServerSettings_UseStructureStasisGridTooltip">使结构停滞网格能够在拥有大量玩家的大型基础上提高服务器性能。（请注意，这可能会对某些MOD产生影响）</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">无网格下检查</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">如果启用，将完全关闭反啮合系统。</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">无网下杀死</sys:String>
@@ -1405,6 +1426,12 @@
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">如果启用，将使补给箱随机。</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">防止在资源丰富区域建设</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">如果启用，则完全禁止在资源丰富的区域建设,在TheIsland地图,特别设置遍布各大山脉。</sys:String>
+	<sys:String x:Key="ServerSettings_UseSingleplayerSettingsLabel">启用单机设置</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsTooltip">如果启用，所有游戏设置将更加平衡，以获得个人玩家体验。适用于玩家数量很少的专用服务器.</sys:String>
+	<sys:String x:Key="ServerSettings_AllowCaveBuildingPvPLabel">启用PVP洞穴建筑</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPTooltip">如果启用，则允许在PvP模式启用时在洞穴中建造.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPLabel">禁用PvP Railgun(轨道炮)</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPTooltip">如果启用，玩家在PvP模式启用时将无法使用Tek Railgun(轨道炮).</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">禁用PVP队友伤害</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">如果启用，玩家无法伤害或杀死部落成员，恐龙和建筑，PVP模式启用.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">使用尸体定位器</sys:String>
@@ -1451,6 +1478,8 @@
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">集群选项</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">禁用跨服务器传送</sys:String>
+	<sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesLabel">禁用自定义致敬文件夹</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesTooltip">禁止在致敬清单中创建文件夹.</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">如果启用，如果服务器不在同一群集中，则幸存者，物品和恐龙的传送将被禁用。</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">覆盖角色上传期限</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">如果启用，将允许您覆盖角色的到期时间。</sys:String>
@@ -1575,8 +1604,10 @@
     <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">如果启用，将使世界buff成倍地扩展其优势，而不是在运行时向该值添加/减去固定数量.</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">世界Buff比例效果</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">指定全局标量以降低/提高世界增益效果（例如，默认值为1，0.5将降低50%的效果，2.0将提高2倍的效果）.</sys:String>
-
-    <sys:String x:Key="ServerSettings_HexagonsLabel">六角币</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierLabel">突变体繁殖延迟乘法器</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierTooltip">缩放突变体的繁殖率。默认情况下，游戏尝试每8小时在专用服务器上生成一次，每小时在非专用服务器和单个玩家上生成。增加此值将增加重新生成间隔，降低此值将缩短重新生成间隔.</sys:String>
+    
+	<sys:String x:Key="ServerSettings_HexagonsLabel">六角币</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">禁用六角币存储</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreTooltip">启用后，将无法存储六角币.</sys:String>
     <sys:String x:Key="ServerSettings_HexStoreAllowOnlyEngramTradeOptionLabel">只允许印痕点交易</sys:String>
@@ -1762,6 +1793,8 @@
     <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">如果启用，当飞行生物上装有炸药时，会使飞行生物的接地失效。（除风神翼龙和双足飞龙以外的飞行单位现被贴上C4后将无法飞行）。</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">允许恐龙贴多个C4</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">如果启用，将允许每个恐龙贴多个C4。</sys:String>
+	<sys:String x:Key="ServerSettings_AllowUnclaimDinosLabel">允许未清理恐龙</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosTooltip">如果禁用，则阻止玩家解锁驯服的生物.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">禁用PVE恐龙自动放生</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayTooltip">如果启用，将禁用PVE中部落无人管理恐龙自动放生; 否则自动放生生效后任何玩家都可以认领每一条恐龙。</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayPvPLabel">禁用PVP恐龙自动放生</sys:String>
@@ -1774,10 +1807,14 @@
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleTooltip">如果启用，任何人都能够照顾一个恐龙宝宝（拥抱等），而不只是留痕的人.</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosLabel">自动摧毁可被领养的恐龙</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosTooltip">如果启用,自动摧毁可被领养期限过去很久的恐龙，而不是让他们保持可被领养的状态。</sys:String>
+	<sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsLabel">启用升级提升动画</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsTooltip">如果禁用，则上一级的驯服恐龙将不会执行相关动画.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">禁止恐龙骑乘</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">如果启用，所有被驯服的恐龙不能被骑。</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">禁止恐龙驯服</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">如果启用，所有的野生恐龙将无法被驯服。</sys:String>
+	<sys:String x:Key="ServerSettings_DisableDinoBreedingLabel">禁用恐龙繁殖</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingTooltip">如果启用，则阻止繁殖驯服动物.</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">更改飞行生物乘坐</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">如果启用，将允许您更改是否可以在地图上骑乘飞行生物； 否则将默认使用地图设置。</sys:String>
     <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">启用飞行生物乘坐</sys:String>
@@ -1945,6 +1982,8 @@
     <sys:String x:Key="ServerSettings_StructuresLabel">建筑设置</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionLabel">禁用结构放置碰撞</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionTooltip">如果启用，将允许玩家将建筑放置在地形中。</sys:String>
+	    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagLabel">Remove Decorative Structures Limit(移除装饰结构限制)</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagTooltip">取消了150个装饰结构（旗帜、标志、真皮等）的限制.</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceLabel">建筑抗性:</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceTooltip">指定当受到攻击时抵抗损坏建筑的比例参数。更高的值减少抗性，增加每次攻击的伤害。较低的值增加抗性，减少每次攻击的伤害（设置为0时建筑无敌状态）.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDamageLabel">建筑伤害:</sys:String>
@@ -2012,6 +2051,8 @@
     <sys:String x:Key="ServerSettings_StructurePickupHoldDurationTooltip">设置快速拾取建筑需要的持续时间，使用0禁用并立即拾取。</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresLabel">允许集成官方S+</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresTooltip">如果启用，将添加所有官方的S +建筑； 否则，将禁用所有新的S +建筑（主要用于让希望继续使用S + mod版本的非官方人员继续使用该建筑，而无需大量额外的重复建筑物）。</sys:String>
+	 <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesLabel">禁用特殊区域的建筑</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesTooltip">如果启用，在通常不允许的地方建造区域，例如一些地图的方尖碑周围、偏离门户和《创世纪：第1部分》中的任务卷区域。注意：在Genesis：第1部分中，此设置默认启用，并且有一个名为bGenesisUseStructuresPrevisionVolumes的特殊设置可以禁用它.</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">在任务区域禁用建筑物</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">如果启用，将禁用“创世纪”地图上任务区域的建筑。</sys:String>
     <!--#endregion-->
@@ -2518,6 +2559,23 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemTooltip">删除物品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">保存所有光柱/补给箱/战利品</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">保存光柱/补给箱/战利品</sys:String>
+    <!--#endregion-->
+	
+	<!--#region 服务器设置-排除项目索引 -->
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverridesLabel">从供应箱覆盖中排除ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemsLabel">从供应箱中排除ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveTitle">从供应箱替代设置中排除ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_DisableLabel">注意：如果要手动或使用其他应用程序管理覆盖，可以禁用将阻止服务器管理器管理覆盖的选项。请参阅全局设置中的“自定义覆盖选项”.</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_WarningLabel">警告：此清单上的物品将从供应板条箱中排除.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnLabel">ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnTooltip">物品ID号</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_AddItemTooltip">添加项目ID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ClearItemsTooltip">删除所有ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_PasteItemsTooltip">粘贴排除项目索引数据</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_RemoveItemTooltip">删除项目ID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveItemsTooltip">保存排除项目索引数据</sys:String>
     <!--#endregion-->
 
     <!--#region 服务器设置-叠加大小覆盖-->

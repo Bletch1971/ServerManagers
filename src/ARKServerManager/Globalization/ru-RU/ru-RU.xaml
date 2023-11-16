@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Последнее обновление:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">02.01.2023 от Varlonec, Эдван</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">05.09.2023 от Varlonec, Эдван</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Ошибка</sys:String>
     <!--#endregion-->
 
@@ -319,6 +319,7 @@
     <sys:String x:Key="WorldSaveRestore_Refresh_FailedTitle">Обновить ошибочное восстановление</sys:String>
 
     <sys:String x:Key="WorldSaveRestore_NameColumnLabel">Имя</sys:String>
+    <sys:String x:Key="WorldSaveRestore_FileSizeColumnLabel">Размер</sys:String>
     <sys:String x:Key="WorldSaveRestore_CreatedDateColumnLabel">Создать</sys:String>
     <sys:String x:Key="WorldSaveRestore_UpdatedDateColumnLabel">Последнее обновление</sys:String>
 
@@ -583,6 +584,8 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideMapSpawnerTooltip">Если включено, то спавнами дино будет управлять ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateLabel">Вкл настройки Лучей с дропами</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSupplyCrateTooltip">Если включено, то настройки лучей с дропом будет управлять ASM.</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideExcludeItemIndicesLabel">Включить исключения предметов Overrides</sys:String>
+    <sys:String x:Key="GlobalSettings_CustomOverrideExcludeItemIndicesTooltip">Если этот параметр включен, переопределение предметов исключенных элементов будет управляться диспетчером сервера.</sys:String>    
     <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferLabel">Вкл настройки Запретов трансфера дино</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePreventTransferTooltip">Если включено, то настройками запретов трансфера дино будет управлять ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverridePGMLabel">Вкл PGM ARK</sys:String>
@@ -590,6 +593,14 @@
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFLabel">Вкл SotF</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideSOTFTooltip">Если включено, Survival Of The Fittest появится в настройках ASM.</sys:String>
     <sys:String x:Key="GlobalSettings_CustomOverrideOptionsWarningLabel">ПРЕДУПРЕЖДЕНИЕ: Если любой из этих параметров отключен, ASM не будет читать или записывать связанные с этип параметры переопределения. Повторное включение любого из этих параметров приведет к удалению всех существующих связанных переопределений в файле конфигурации.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ProfileSyncSettingsLabel">Пользовательские настройки синхронизации профиля</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledLabel">Вкл. синхр. для ModIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncServerModIdsEnabledTooltip">Если включено, при синхронизации профиля ModIDs по-прежнему синхронизируются.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledLabel">Вкл. синхр. для ClusterID</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncCrossArkClusterIdEnabledTooltip">Если включено, при синхронизации профиля ClusterID все еще синхронизирован.</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledLabel">Вкл. синхр. на время авто-выключения</sys:String>
+    <sys:String x:Key="ServerSettings_ProfileSyncAutoShutdownEnabledTooltip">Если включено, при синхронизации профиля настройки времени автоматического выключения по-прежнему синхронизируются.</sys:String>
 
     <sys:String x:Key="ServerSettings_CustomLevelProgressionsLabel">Параметры Пользовательского Уровня</sys:String>
     <sys:String x:Key="GlobalSettings_CustomLevelXPIncreasePlayerLabel">Увеличение уровня игрока:</sys:String>
@@ -657,6 +668,10 @@
     <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">Если включено, когда выполняется автоматическое обновление, все серверы будут обновляться одновременно, в противном случае каждый сервер будет обновляться один за другим (для этого потребуется больше времени).</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Задержка между каждым обновлением сервера</sys:String>
     <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">Количество времени ожидания между каждым обновлением сервера доступно только при отключенном параллельном обновлении.</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupLabel">Бекапы серверов апалельно</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupTooltip">Если этот параметр включен, при выполнении автоматического резервного копирования все серверы будут резервироваться одновременно, в противном случае резервное копирование каждого сервера будет выполняться один за другим (это может привести к меньшим задержкам сервера).</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBacckupSequencialDelayPeriodLabel">Задержка между резервными копиями каждого сервера</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBackupSequencialDelayPeriodTooltip">Время ожидания между резервными копиями каждого сервера, доступное только в том случае, если параллельное резервное копирование отключено.</sys:String>
 
     <sys:String x:Key="GlobalSettings_AutoRestartLabel">Настройки АвроРестарта</sys:String>
     <sys:String x:Key="GlobalSettings_RestartGraceIntervalInformationLabel">Льготный период не препятствует автоматическому обновлению перезапустить ваш сервер.</sys:String>
@@ -794,6 +809,8 @@
     <sys:String x:Key="GlobalSettings_LoggingMaxArchiveFilesTooltip">Максимальное количество логов, которые будут храниться.</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeLabel">Режим оповещений RCON:</sys:String>
     <sys:String x:Key="GlobalSettings_RCON_ModeTooltip">Выберите метод, используемый менеджером сервера для отправки сообщений автоматической обработки игровым клиентам через RCON.</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdIgnoreExitStatusCodesLabel">Игнорировать следующее SteamCmd ExitStatus</sys:String>
+    <sys:String x:Key="GlobalSettings_SteamCmdIgnoreExitStatusCodesTooltip">Разделенный запятыми список идентификаторов статусов выхода, которые считаются правильными.</sys:String>
 
     <sys:String x:Key="GlobalSettings_TaskPriority_InformationLabel">Любые изменения в этих приоритетах вступят в силу после создания или сохранения задачи.</sys:String>
     <sys:String x:Key="GlobalSettings_TaskPriority_Tooltip">Выберите приоритет, используемый диспетчером задач Windows при выполнении этой задачи.</sys:String>
@@ -908,6 +925,7 @@
     <sys:String x:Key="MainWindow_SteamCmd_Label">Если запустить, SteamCMD будет удален, включая все загрузки кэша Модов.\r\nВы уверены, что хотите переустановить SteamCMD?</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedTitle">Ошибка переустановки SteamCMD</sys:String>
     <sys:String x:Key="MainWindow_SteamCmd_FailedLabel">Произошла ошибка при попытке переустановки SteamCMD. Попробуйте повторно установить или сообщите об этом.\r\nException: {0}</sys:String>
+	<sys:String x:Key="MainWindow_SteamWebApiKeyMissingLabel">Steam WebAPI Key отсутствует! Обновления, загрузки и установка профилей могли завершиться неудачно. Введите ключ Steam WebApiKey в глобальных настройках.</sys:String>
 
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsTitle">Команды запуска бота Discord</sys:String>
     <sys:String x:Key="MainWindow_DiscordBot_RunningCommandsLabel">У бота Discord есть одна или несколько запущенных команд, вы хотите продолжить выключение ASM?</sys:String>
@@ -1188,6 +1206,14 @@
     <sys:String x:Key="ServerSettings_UseBanListTooltip">Если включен, то будет использоваться URL-адрес, со списком забаненных. По умолчанию http://arkdedicated.com/banlist.txt</sys:String>
     <sys:String x:Key="ServerSettings_BanListTooltip">Чтобы использовать, введите URL-адрес с бан-листом.</sys:String>
     <sys:String x:Key="ServerSettings_ResetBanlistTooltip">Сбросьте настройки Бан листа по умолчанию.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlLabel">Использовать URL-адрес динамической конфигурации</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomDynamicConfigUrlTooltip">Если этот параметр включен, будет использоваться указанный URL-адрес динамической конфигурации.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomDynamicConfigUrlTooltip">URL-адрес динамической конфигурации, которую нужно использовать.</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlLabel">Использовать пользовательский URL-адрес Live Tuning</sys:String>
+    <sys:String x:Key="ServerSettings_UseCustomLiveTuningUrlTooltip">Если этот параметр включен, будет использоваться указанный URL-адрес пользовательской конфигурации в реальном времени.</sys:String>
+    <sys:String x:Key="ServerSettings_CultureLabel">Язык сервера</sys:String>
+    <sys:String x:Key="ServerSettings_CultureTooltip">Переопределяет язык вывода сервера. Это не отменяет язык клиента.</sys:String>
+    <sys:String x:Key="ServerSettings_CustomLiveTuningUrlTooltip">URL-адрес пользовательской конфигурации динамической настройки, которую нужно использовать.</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACLabel">Отключить ValveAntiCheat систему (VAC)</sys:String>
     <sys:String x:Key="ServerSettings_DisableVACTooltip">Если этот параметр включен, система античит Valve будет отключена. Пожалуйста, используйте это с осторожностью!</sys:String>
     <sys:String x:Key="ServerSettings_DisablePMVOptimizationLabel">Выкл. Оптимизацию ФизикиДвиженияИгрока</sys:String>
@@ -1227,6 +1253,14 @@
     <sys:String x:Key="ServerSettings_ServerAllowAnselTooltip">Если включено, разрешает NVIDIA Ansel на серверах.</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsLabel">Оптимизаций памяти построек</sys:String>
     <sys:String x:Key="ServerSettings_StructureMemoryOptimizationsTooltip">Если включено, включит оптимизацию памяти построек. Обратите внимание: Новый параметр запуска не рекомендуется использовать на серверах с модами, связанными с постройками.</sys:String>
+    <sys:String x:Key="ServerSettings_UseStructureStasisGridLabel">Структурная Стазисная Решетка</sys:String>
+    <sys:String x:Key="ServerSettings_UseStructureStasisGridTooltip">Включает сетку стазиса структуры для повышения производительности сервера на больших базах с большим количеством игроков. (Обратите внимание, что это может повлиять на некоторые моды)</sys:String>
+    <sys:String x:Key="ServerSettings_SecureSendArKPayloadLabel">Защита от проблем с загрузкой существ</sys:String>
+    <sys:String x:Key="ServerSettings_SecureSendArKPayloadTooltip">Защита от проблем с загрузкой существ (имейте в виду, что это может повлиять на некоторые моды)</sys:String>
+    <sys:String x:Key="ServerSettings_UseItemDupeCheckLabel">Дополнительная защита от дублирования</sys:String>
+    <sys:String x:Key="ServerSettings_UseItemDupeCheckTooltip">Включает дополнительную защиту от дублирования (Примечание: это может повлиять на моды, поэтому используйте с осторожностью).</sys:String>
+    <sys:String x:Key="ServerSettings_UseSecureSpawnRulesLabel">Правила появления безопасных предметов/динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_UseSecureSpawnRulesTooltip">Более безопасные правила появления предметов/динозавров (Примечание: это может повлиять на моды, поэтому используйте их с осторожностью).</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingLabel">No Under Mesh Checking</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshCheckingTooltip">Если включено, отключит систему анти-меш под текстурами.</sys:String>
     <sys:String x:Key="ServerSettings_NoUnderMeshKillingLabel">No Under Mesh Killing</sys:String>
@@ -1249,11 +1283,25 @@
     <sys:String x:Key="ServerSettings_ServerAutoForceRespawnWildDinosIntervalTooltip">Интервал между автоматическим респауном динозавров.</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel">Альтернативная папка сохранения:</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameLabel2">(Необязательно)</sys:String>
+    <sys:String x:Key="ServerSettings_AltSaveDirectoryNameNote">ПРИМЕЧАНИЕ. Устанавливайте «Альтернативное имя каталога сохранения» только в расширенных настройках! Прежде чем включать, изучите!</sys:String>
     <sys:String x:Key="ServerSettings_AltSaveDirectoryNameTooltip">Устанавливает имя каталога (под серверами «Сохраненная папка») для хранения файлов мира, игрока и племени.</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdLabel">Установить айди кластера:</sys:String>
     <sys:String x:Key="ServerSettings_CrossArkClusterIdTooltip">Устанавливает идентификатор, который будет объединять сервера в один общий кластер.</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideLabel">Установить каталог Кластера</sys:String>
     <sys:String x:Key="ServerSettings_ClusterDirOverrideTooltip">Если это разрешено, вы можете использовать общее хранилище Кластера, которое работает между несколькими серверами, работающими на одном компьютере.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ServerBadWordFilterOptionsLabel">Фильтр плохих слов</sys:String>
+    <sys:String x:Key="ServerSettings_ResetBadWordFilterOptionsTooltip">Сбросьте все параметры фильтра нецензурных слов на значения по умолчанию.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLLabel">URL-адрес фильтра недопустимых слов:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordListURLTooltip">Добавьте URL-адрес к хостингу собственного списка плохих слов.</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLLabel">URL-адрес белого списка недопустимых слов:</sys:String>
+    <sys:String x:Key="ServerSettings_BadWordWhiteListURLTooltip">Добавьте URL-адрес к хостингу собственного списка хороших слов.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesLabel">Фильтровать названия племен</sys:String>
+    <sys:String x:Key="ServerSettings_FilterTribeNamesTooltip">Отфильтровывает названия племен на основе списка плохих/хороших слов.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesLabel">Фильтровать имена персонажей</sys:String>
+    <sys:String x:Key="ServerSettings_FilterCharacterNamesTooltip">Отфильтровывает имена персонажей на основе списка плохих/хороших слов.</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatLabel">Фильтровать чат</sys:String>
+    <sys:String x:Key="ServerSettings_FilterChatTooltip">Фильтрует сообщения чата на основе списка плохих и хороших слов.</sys:String>
 
     <sys:String x:Key="ServerSettings_ServerLogOptionsLabel">Настройки логов сервера</sys:String>
     <sys:String x:Key="ServerSettings_ResetServerLogOptionsTooltip">Сброс всех настроек логов сервера по умолчанию.</sys:String>
@@ -1362,6 +1410,8 @@
     <sys:String x:Key="ServerSettings_EventNote">ПРИМЕЧАНИЕ: Включение события на вашем сервере должно выполняться только во время официального события. Если вы включите событие до или после официальных дат, событие может привести к нестабильной работе вашего сервера или вообще не работать.</sys:String>
     <sys:String x:Key="ServerSettings_EventNameLabel">Активный Event:</sys:String>
     <sys:String x:Key="ServerSettings_EventNameTooltip">Имя события, которое нужно включить (оставьте пустым, чтобы отключить событие).</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">Шанс цвета Дино:</sys:String>
+    <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">Шанс цвета события Дино.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -1386,8 +1436,14 @@
     <sys:String x:Key="ServerSettings_RandomSupplyCratePointsTooltip">Если это разрешено, то лучи спавнятся случайным образом.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesLabel">Запретить строительство в зонах респауна ресурсов.</sys:String>
     <sys:String x:Key="ServerSettings_EnableExtraStructurePreventionVolumesTooltip">Если включено, полностью запрещает строительство в зонах с богатыми ресурсами, в частности настройка на карте TheIsland вокруг основных гор.</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsLabel">Включить настройки одиночной игры</sys:String>
+    <sys:String x:Key="ServerSettings_UseSingleplayerSettingsTooltip">Если этот параметр включен, все настройки игры будут более сбалансированы для индивидуального опыта игрока. Полезно для выделенного сервера с очень небольшим количеством игроков.</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireLabel">Откл урон по своим в PvP</sys:String>
     <sys:String x:Key="ServerSettings_DisablePvPFriendlyFireTooltip">Если этот параметр включен, игроки не могут нанести повреждения или убить других членов трайба, динозавров и разрушить структуры.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPLabel">Включить строительство пещер PVP</sys:String>
+    <sys:String x:Key="ServerSettings_AllowCaveBuildingPvPTooltip">Если включено, позволяет строить пещеры при включенном режиме PvP.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPLabel">Отключить PvP-рейлган</sys:String>
+    <sys:String x:Key="ServerSettings_DisableRailgunPVPTooltip">Если этот параметр включен, игроки не смогут использовать Тек Рейлган, когда включен режим PvP.</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorLabel">Вкл луч для поиска трупа</sys:String>
     <sys:String x:Key="ServerSettings_UseCorpseLocatorTooltip">Если включено, то после смерти над вашим трупом будет виден зелёный луч света, чтобы помочь игроку найти место, где он погиб.</sys:String>
     <sys:String x:Key="ServerSettings_PreventSpawnAnimationsLabel">Откл анимацию респауна</sys:String>
@@ -1433,6 +1489,8 @@
 
     <sys:String x:Key="ServerSettings_ClusterTributeLabel">Настройки работы кластера</sys:String>
 	<sys:String x:Key="ServerSettings_NoTransferFromFilteringLabel">Трансфер только по Фильтру (кластер)</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesLabel">Отключить пользовательские папки трибьютов</sys:String>
+    <sys:String x:Key="ServerSettings_DisableCustomFoldersInTributeInventoriesTooltip">Отключает создание папок в инвентаре Tribute.</sys:String>
     <sys:String x:Key="ServerSettings_NoTransferFromFilteringTooltip">Если включено, то трансфер Выживших, предметов и динозавров отключен, если сервер не находится в одном кластере.</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsLabel">Изменить время хранения выживших в данных</sys:String>
     <sys:String x:Key="ServerSettings_OverrideTributeCharacterExpirationSecondsTooltip">Если включено, вы можете изменить время хранения Выжившего в данных (облаке).</sys:String>
@@ -1555,6 +1613,8 @@
     <sys:String x:Key="ServerSettings_EnableWorldBuffScalingTooltip">Если включено, это приведет к тому, что мировые баффы будут мультипликативно масштабировать свои преимущества, а не добавлять/вычитать фиксированную сумму к значению во время выполнения.</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyLabel">Эффективность масштабирования мирового баффа</sys:String>
     <sys:String x:Key="ServerSettings_WorldBuffScalingEfficacyTooltip">Задает глобальный скаляр для снижения/повышения эффективности мировых баффов (например, 1 по умолчанию, 0,5 будет на 50% менее эффективным, 2,0 будет в 2 раза эффективнее).</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierLabel">Множитель задержки появления мутагена</sys:String>
+    <sys:String x:Key="ServerSettings_AdjustableMutagenSpawnDelayMultiplierTooltip">Масштабирует скорость появления мутагенов. По умолчанию игра пытается создавать их каждые 8 часов на выделенных серверах и каждый час на невыделенных серверах и в одиночной игре. Увеличение этого значения увеличит интервал повторного появления, уменьшение сделает его короче.</sys:String>
 
     <sys:String x:Key="ServerSettings_HexagonsLabel">Шестигранники</sys:String>
     <sys:String x:Key="ServerSettings_DisableHexagonStoreLabel">Откл. магазин шестигранников</sys:String>
@@ -1738,10 +1798,10 @@
     <sys:String x:Key="ServerSettings_AllowFlyerSpeedLevelingTooltip">Если включено, то позволяет прокачивать скорость полёта.</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostLabel">Запретить бонус разнополости</sys:String>
     <sys:String x:Key="ServerSettings_PreventMateBoostTooltip">Если включено, то бонус разнополости (Dino Mate Boost) будет отключен.</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesLabel">Выкл приземление летающих дино с C4</sys:String>
-    <sys:String x:Key="ServerSettings_ForceFlyerExplosivesTooltip">Если включено, то отключит приземление летающих динозавров, если на них есть C4.</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Label">Разрешить множественное присоединение C4</sys:String>
     <sys:String x:Key="ServerSettings_AllowMultipleAttachedC4Tooltip">Если включено, то разрешено прикреплять более одного C4 на каждого динозавра.</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosLabel">Разрешить отменить права на динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_AllowUnclaimDinosTooltip">Если отключено, игроки не могут освободить прирученных существ.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayLabel">Выкл потерю прав на дино в PvE</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayTooltip">Если включено, то отключается постепенная потеря права собственности на динозавра в PvE; в противном случае по истечении таймера каждый динозавр может быть заклеймлен любым игроком.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoDecayPvPLabel">Выкл потерю прав на дино в PvP</sys:String>
@@ -1754,10 +1814,14 @@
     <sys:String x:Key="ServerSettings_AllowAnyoneBabyImprintCuddleTooltip">Если включено, то любой выживший в трайбе сможет позаботиться о динозавре (приласкать, прогуляться и т.д.), А не только те, кто его заклеймил.</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosLabel">Авто-Уничтожение Разклейменных Существ</sys:String>
     <sys:String x:Key="ServerSettings_AutoDestroyDecayedDinosTooltip">Если включено, все заклейменные динозавры будут автоматически уничтожаться при загрузке, если клеймо спало.</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsLabel">Включить анимацию повышения уровня</sys:String>
+    <sys:String x:Key="ServerSettings_UseDinoLevelUpAnimationsTooltip">Если этот параметр отключен, прирученные динозавры при повышении уровня не будут выполнять соответствующую анимацию.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingLabel">Выкл езду на дино</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoRidingTooltip">Если включено, то запрещено ездить на прирученных динозаврах.</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingLabel">Выкл приручение дино</sys:String>
     <sys:String x:Key="ServerSettings_DisableDinoTamingTooltip">Если включено, то все дикие динозавры не смогут быть приручены.</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingLabel">Отключить разведение динозавров</sys:String>
+    <sys:String x:Key="ServerSettings_DisableDinoBreedingTooltip">Если включено, предотвращает разведение прирученных животных.</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersLabel">Изменить езду на летающих дино</sys:String>
     <sys:String x:Key="ServerSettings_EnableForceCanRideFliersTooltip">Если включено, то позволит вам изменить, можно ли летать на карте. В противном случае по умолчанию будут использоваться настройки карты.</sys:String>
     <sys:String x:Key="ServerSettings_ForceCanRideFliersLabel">Вкл езду на летающих дино</sys:String>
@@ -1782,6 +1846,7 @@
     <sys:String x:Key="ServerSettings_ModColumnLabel">Ark App.</sys:String>
     <sys:String x:Key="ServerSettings_SpawnableColumnLabel">Появление</sys:String>
     <sys:String x:Key="ServerSettings_TameableColumnLabel">Приручение</sys:String>
+    <sys:String x:Key="ServerSettings_BreedingableColumnLabel">Размножаемый</sys:String>    
     <sys:String x:Key="ServerSettings_ReplacementColumnLabel">Заменить на</sys:String>
     <sys:String x:Key="ServerSettings_SpawnWeightColumnLabel">Вес появляемых</sys:String>
     <sys:String x:Key="ServerSettings_OverrideLimitColumnLabel">Перекрыть предел</sys:String>
@@ -1834,6 +1899,8 @@
     <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Множитель того, через какое время начинает уменьшаться привязанность, если вы вовремя не уделяли внимание растущему дино. Более низкие значения замедляют потерю привязанности</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Количество потери привязанности:</sys:String>
     <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Множитель того, насколько быстро в процентах начинает уменьшаться привязанность, если вы вовремя не уделяли внимание растущему дино. Более низкие значения замедляют потерю привязанности.</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitLabel">Максимальный лимит отпечатков:</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitTooltip">Автоматически уничтожает существ, превышающих указанный лимит бонуса запечатления в %. Рекомендуется увеличить значение на 1 %, чтобы выявить потенциальные ошибки с плавающей запятой, особенно при работе с пользовательскими скоростями впечатывания.</sys:String>
 
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Подтвердить сброс</sys:String>
     <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Нажмите «Да», чтобы подтвердить, что вы хотите сбросить Max XP.</sys:String>
@@ -1921,6 +1988,8 @@
     <sys:String x:Key="ServerSettings_StructuresLabel">Структуры</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionLabel">Откл. коллизию текстур</sys:String>
     <sys:String x:Key="ServerSettings_DisableStructurePlacementCollisionTooltip">Если включено, позволит игрокам размещать структуры друг в друга, на неровной местности и частично в текстурах.</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagLabel">Удалить лимит декоративных конструкций</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreLimitMaxStructuresInRangeTypeFlagTooltip">Убран лимит в 150 декоративных сооружений (флаги, знаки, дерма и т.д.).</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceLabel">Сопротивление структур:</sys:String>
     <sys:String x:Key="ServerSettings_StructureResistanceTooltip">Определяет коэффициент устойчивости структур к повреждению получаемых при атаке. Более высокие значения уменьшают сопротивление, увеличивая урон в атаке. Более низкие значения увеличивают его, уменьшая урон в атаке.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDamageLabel">Урон от структур:</sys:String>
@@ -1946,8 +2015,6 @@
 
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvELabel">Вкл. разрушение структур в PvE</sys:String>
     <sys:String x:Key="ServerSettings_EnableStructureDecayPvETooltip">Если этот параметр включен, структуры в PvE будут автоматически разрушаться если они не использовались какое то время.</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodLabel">Время до разрушения структур:</sys:String>
-    <sys:String x:Key="ServerSettings_StructureDecayPeriodTooltip">Определяет время, необходимое для автоматического разрушения структур игрока в режиме PvE.</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierLabel">Множитель время разрушения структур:</sys:String>
     <sys:String x:Key="ServerSettings_StructureDecayMultiplierTooltip">Определяет множитель для автоматического разрушения структур игрока в режиме PvE.</sys:String>
 
@@ -1988,6 +2055,8 @@
     <sys:String x:Key="ServerSettings_StructurePickupHoldDurationTooltip">Определяет количество времени для удержания при подборе. Используйте 0, чтобы включить мгновенный подбор.</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresLabel">Разрешить интегрированные Structures Plus</sys:String>
     <sys:String x:Key="ServerSettings_AllowIntegratedSPlusStructuresTooltip">Если включено, добавит все новые структуры S+, в противном случае отключаются все новые структуры S+ (предназначенные главным образом для того, чтобы позволить неофициальным серверам, которые хотят продолжать использовать версию S+ mod, продолжать использовать это без тонны дополнительных дублирующих структур).</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesLabel">Отключить строительство в особых зонах</sys:String>
+    <sys:String x:Key="ServerSettings_IgnoreStructuresPreventionVolumesTooltip">Если этот параметр включен, создаются области там, где обычно это запрещено, например, вокруг обелисков на некоторых картах, на портале аберраций и в областях миссий в Genesis: Part 1. Примечание: в Genesis: Part 1 эти настройки включены по умолчанию, и есть специальные настройки под названием bGenesisUseStructuresPreventionVolumes, чтобы отключить его.</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesLabel">Откл. строительство в зонах миссий (Genesis)</sys:String>
     <sys:String x:Key="ServerSettings_GenesisUseStructuresPreventionVolumesTooltip">Если включено, запрещает строительство в зонах миссий.</sys:String>
     <!--#endregion-->
@@ -2510,6 +2579,23 @@
     <sys:String x:Key="ServerSettings_SupplyCrate_RemoveItemTooltip">Delete item</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCratesTooltip">Save all supply crates</sys:String>
     <sys:String x:Key="ServerSettings_SupplyCrate_SaveCrateTooltip">Save supply crate</sys:String>
+    <!--#endregion-->
+
+    <!--#region Server Settings - Exclude Item Indices -->
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverridesLabel">Exclude ItemIDs From Supply Crate Overrides</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemsLabel">Exclude ItemIDs from Supply Crates</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveTitle">Exclude ItemIDs from Supply Crates Overrides Settings</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_DisableLabel">NOTE: If you want to manage your overrides manually or with another application, you can disable the option that will prevent the server manager managing the overrides. See the 'Custom Override Options' in the global settings.</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_WarningLabel">WARNING: Items on this list will be excluded from supply crates.</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnLabel">ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ItemClassColumnTooltip">ItemID Number</sys:String>
+
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_AddItemTooltip">Add ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_ClearItemsTooltip">Delete all ItemIDs</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_PasteItemsTooltip">Paste exclude item indices data</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_RemoveItemTooltip">Delete ItemID</sys:String>
+    <sys:String x:Key="ServerSettings_ExcludeItemIndicesOverrides_SaveItemsTooltip">Save exclude item indices data</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Stack Size Overrides -->
