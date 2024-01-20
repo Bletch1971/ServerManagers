@@ -1175,7 +1175,9 @@
     <sys:String x:Key="ServerSettings_SaveBackupButtonTooltip">Realiza um save manualmente.</sys:String>
     <sys:String x:Key="ServerSettings_SaveRestoreButtonLabel">Restaurar...</sys:String>
     <sys:String x:Key="ServerSettings_SaveRestoreButtonTooltip">Restaura um save anterior.</sys:String>
-
+    <sys:String x:Key="ServerSettings_MaxNumOfSaveBackupsLabel">Quantidade de backup:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxNumOfSaveBackupsTooltip">Defina o número máximo de backups para manter na pasta de salvamento. Sempre que um novo backup for criado, os mais antigos serão excluídos. O valor padrão é 20.Como esses backups ocorrem a cada 2 horas e são arquivos descompactados, sugere-se o uso de soluções de terceiros mais flexíveis, especialmente com salvamentos "grandes".</sys:String>
+ 
     <sys:String x:Key="ServerSettings_MOTDLabel">Mensagem do Dia</sys:String>
     <sys:String x:Key="ServerSettings_MOTDTooltip">A mensagem do dia exibida para os usuários quando eles se conectam ao servidor.</sys:String>
     <sys:String x:Key="ServerSettings_MOTDLineCountLabel">Linhas:</sys:String>
@@ -1322,7 +1324,7 @@
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Estruturas de Inimigo Destruídas da Tribo Log</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">Se ativado, o log de destruição da estrutura do inimigo (para a tribo vítima) exibirá a tribo do atacante nos Registros da Tribo, em vez de uma mensagem de destruição da estrutura genérica.</sys:String>
 
-    <sys:String x:Key="ServerSettings_ServerSaveOptionsLabel">Configurações Oficial salve</sys:String>
+    <sys:String x:Key="ServerSettings_ServerSaveOptionsLabel">Configurações Oficial</sys:String>
     <sys:String x:Key="ServerSettings_NewSaveFormatLabel">Novo formato save</sys:String>
     <sys:String x:Key="ServerSettings_NewSaveFormatTooltip" xml:space="preserve">É usado o novo formato de salvamento (versão 11), que é aproximadamente 4x mais rápido e 50% menor em comparação com o "formato de salvamento antigo" (versão 8).
 Obsoleto desde o patch 244.6, o formato de salvamento padrão atual (versão 9) é baseado nisso. Use apenas se necessário (por exemplo: o formato de salvamento padrão falha, assim como o formato de salvamento antigo).
@@ -1427,6 +1429,10 @@ Undocumented bye wildcard.</sys:String>
     <sys:String x:Key="ServerSettings_EventNameTooltip">O nome do evento a ser ativado (deixe em branco para desativar o evento).</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">Chance de cores em Dinos:</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">Chance de cores no evento Dinos.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCLabel">Evento de Ano Novo 1:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCTooltip">A data de Ano Novo deve ser inserida como "aaaa.mm.dd hh:mm:ss" (embora outros formatos sejam reconhecidos e alterados para este formato). O ASM converterá automaticamente a data para o valor exigido pelo jogo.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCLabel">Evento de Ano Novo 2:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCTooltip">A data de Ano Novo deve ser inserida como "aaaa.mm.dd hh:mm:ss" (embora outros formatos sejam reconhecidos e alterados para este formato). O ASM converterá automaticamente a data para o valor exigido pelo jogo.</sys:String>
     <!--#endregion-->
 
     <!--#region Server Settings - Rules -->
@@ -2721,6 +2727,9 @@ Undocumented bye wildcard.</sys:String>
     <sys:String x:Key="RCON_Menu_ViewTribe">Ver Tribo ...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyId">Copiar ID ...</sys:String>
     <sys:String x:Key="RCON_Menu_CopyPlayerId">Copiar ID do jogador ...</sys:String>
+    <sys:String x:Key="RCON_Menu_KickPlayer">Kick Player</sys:String>
+    <sys:String x:Key="RCON_Menu_BanPlayer">Ban Player</sys:String>
+    <sys:String x:Key="RCON_Menu_UnbanPlayer">Unban Player</sys:String>
 
     <sys:String x:Key="RCON_AdminNameLabel">Nome do Admin:</sys:String>
     <sys:String x:Key="RCON_AdminNameTooltip">Esse é o nome usado para prefixar as mensagens do chat do servidor enviadas do console.</sys:String>

@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">翻译:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">2023.08.27(龍柒)</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">2023.11.16(龍柒,叶凡)QQ群:109949666</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">错误</sys:String>
     <!--#endregion-->
 
@@ -1165,6 +1165,8 @@
     <sys:String x:Key="ServerSettings_SaveBackupButtonTooltip">执行手动方舟存档保存。</sys:String>
     <sys:String x:Key="ServerSettings_SaveRestoreButtonLabel">恢复...</sys:String>
     <sys:String x:Key="ServerSettings_SaveRestoreButtonTooltip">恢复以前的方舟存档。</sys:String>
+	<sys:String x:Key="ServerSettings_MaxNumOfSaveBackupsLabel">备份数量:</sys:String>
+    <sys:String x:Key="ServerSettings_MaxNumOfSaveBackupsTooltip">设置要保存在保存文件夹中的最大备份数。无论何时创建新备份，都会删除最旧的备份。默认值为20。由于此类备份每2小时进行一次，而且是未压缩的文件，因此建议使用更灵活的第三方解决方案，尤其是“大”存储.</sys:String>
 
     <sys:String x:Key="ServerSettings_MOTDLabel">服务器公告消息</sys:String>
     <sys:String x:Key="ServerSettings_MOTDTooltip">这个公告是当玩家进入你的方舟服务器时显示给玩家的信息.</sys:String>
@@ -1311,6 +1313,21 @@
     <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">如果启用，管理员命令将会被回传到聊天管理员才能看到。</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">部落日志显示攻击者部落</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">如果启用，受害者部落将在部落日志中显示攻击者的部落名称，而不是通用建筑销毁消息。</sys:String>
+	
+	<sys:String x:Key="ServerSettings_ServerSaveOptionsLabel">官方保存设置</sys:String>
+    <sys:String x:Key="ServerSettings_NewSaveFormatLabel">新保存游戏格式</sys:String>
+    <sys:String x:Key="ServerSettings_NewSaveFormatTooltip" xml:space="preserve">使用了新的保存格式（版本11），与“旧的保存格式”（版本8）相比，它大约快4倍，小50%。
+自补丁244.6以来已弃用，当前默认保存格式（版本9）基于此。仅在必要时使用（例如：默认保存格式和旧保存格式都会失败）。
+此选项必须用于启动官方2023服务器将备份与-usestore一起保存以正确加载部落所有权.</sys:String>
+    <sys:String x:Key="ServerSettings_UseStoreLabel">使用存储</sys:String>
+    <sys:String x:Key="ServerSettings_UseStoreTooltip" xml:space="preserve">官方（非传统）服务器在处理玩家角色数据时的基本行为相同：角色配置文件（.arkprofile）不会与地图保存（.ark）或其备份分开保存。
+必要时（例如：刚转移的角色或创建了新角色），会创建一个临时角色配置文件并保存到下一次保存。
+部落配置文件以不同的格式存储（.arktributerbe）。允许-BackupTransferPlayerDatas选项（用于完全模拟官方服务器的保存行为）。
+使用converttostore选项可以将以前未存储的数据转换为存储的数据。此选项必须用于正确加载Official 2023 服务器使用新闻保存备份.</sys:String>
+    <sys:String x:Key="ServerSettings_BackupTransferPlayerDatasLabel">备份 转移 玩家 数据 (未记录)</sys:String>
+    <sys:String x:Key="ServerSettings_BackupTransferPlayerDatasTooltip" xml:space="preserve">在处理玩家角色数据方面完全模仿官方（非传统）服务器，添加与世界保存分开的永久角色配置文件备份文件。
+需要-usestore选项。在播放官方2023服务器保存备份时，必须使用此选项来完全重新启用角色配置文件备份。
+未记录的bye通配符.</sys:String>
 
    <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">启用Web警报</sys:String>
     <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">如果启用，当部落发生重要事情时，服务器现在可以在某处发布网络通知。</sys:String>
@@ -1402,6 +1419,10 @@
     <sys:String x:Key="ServerSettings_EventNameTooltip">要启用的事件的名称（留空以禁用事件）。</sys:String>
 	<sys:String x:Key="ServerSettings_EventColorsChanceOverrideLabel">恐龙颜色随机:</sys:String>
     <sys:String x:Key="ServerSettings_EventColorsChanceOverrideTooltip">恐龙事件颜色随机.</sys:String>
+	<sys:String x:Key="ServerSettings_NewYear1UTCLabel">新年活动 1:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear1UTCTooltip">新年日期必须输入为 "yyyy.mm.dd hh:mm:ss" （尽管其他格式已被识别并更改为此格式）。ASM将自动将日期转换为游戏所需的值.</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCLabel">新年活动 2:</sys:String>
+    <sys:String x:Key="ServerSettings_NewYear2UTCTooltip">新年日期必须输入为 "yyyy.mm.dd hh:mm:ss" （尽管其他格式已被识别并更改为此格式）。ASM将自动将日期转换为游戏所需的值.</sys:String>
     <!--#endregion-->
 
     <!--#region 服务器设置 - 规则 -->
