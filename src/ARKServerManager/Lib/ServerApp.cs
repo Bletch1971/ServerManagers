@@ -2859,12 +2859,15 @@ namespace ServerManagerTool.Lib
 
         private bool SendMessage(string message, CancellationToken token)
         {
+            if (!SendShutdownMessages)
+                return false;
+
             return SendMessage(Config.Default.RCON_MessageCommand, message, token);
         }
 
         private bool SendMessage(string mode, string message, CancellationToken token)
         {
-            if (string.IsNullOrWhiteSpace(message) || !SendShutdownMessages)
+            if (string.IsNullOrWhiteSpace(message))
                 return false;
 
             var sent = SendCommand($"{GetRconMessageCommand(mode)} {message}", token);
