@@ -5,7 +5,31 @@
   <title>Ark Server Manager Version Feed</title>
   <subtitle>This is the Ark Server Manager beta version feed.</subtitle>
   <link href="https://arkservermanager.freeforums.net/" />
-  <updated>2024-01-20T00:00:00Z</updated>
+  <updated>2024-12-16T00:00:00Z</updated>
+
+  <entry>
+    <id></id>
+    <title>1.1.446 (1.1.446.2)</title>
+    <summary>1.1.446.2</summary>
+    <link href="" />
+    <updated>2024-12-16T00:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, Verdana, Helvetica, Sans-Serif;font-size: .8em;">
+        <p>
+          <u style="font-size: .9em;">CHANGE</u>
+          <br/>
+          <ul>
+            <li>tr-TR Translation file updated.</li>
+            <li>pt-BR Translation file updated.</li>
+          </ul>
+        </p>
+      </div>
+    </content>
+    <author>
+      <name>Lacoi</name>
+      <email></email>
+    </author>
+  </entry>
 
   <entry>
     <id>urn:uuid:3569D851-8A0C-4889-89BB-FE6C9A337522</id>
