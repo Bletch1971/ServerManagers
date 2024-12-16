@@ -9,7 +9,7 @@
 
     <!--#region Generic -->
     <sys:String x:Key="Generic_TranslatedByLabel">Son Güncelleyen:</sys:String>
-    <sys:String x:Key="Generic_TranslatedBy">Arif</sys:String>
+    <sys:String x:Key="Generic_TranslatedBy">WXSO ( 29/11/2024 )</sys:String>
     <sys:String x:Key="Generic_ErrorLabel">Hata</sys:String>
     <!--#endregion-->
 
@@ -658,6 +658,20 @@
     <sys:String x:Key="GlobalSettings_RetryOnFailTooltip">Etkinleştirilirse, sunucu veya mod indirme başarısız olursa yeniden deneme yapılır.</sys:String>
     <sys:String x:Key="GlobalSettings_ShowUpdateReasonLabel">Kapanma İletilerinde Güncelleme Nedenini Göster</sys:String>
     <sys:String x:Key="GlobalSettings_ShowUpdateReasonTooltip">Etkinleştirilirse, otomatik güncelleme gerçekleştiğinde sunucu yöneticisi kapanma iletisinde güncelleme nedenini gösterecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateReasonPrefixLabel">Güncelleme Nedeni:</sys:String>
+    <sys:String x:Key="GlobalSettings_UpdateReasonPrefixTooltip">Bu metin, mesajın başında ve otomatik güncelleme nedeninde gösterilir.</sys:String>
+    <sys:String x:Key="GlobalSettings_OverrideServerStartupLabel">Otomatik güncelleme sonrası sunucu yeniden başlatmasını geçersiz kıl</sys:String>
+    <sys:String x:Key="GlobalSettings_OverrideServerStartupTooltip">Eğer etkinse, otomatik güncelleme çalıştırıldığında sunucu, otomatik güncelleme öncesinde çevrimiçi olup olmadığına bakılmaksızın yeniden başlatılmayacaktır.</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelUpdateLabel">Sunucuları paralel olarak güncelle</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelUpdateTooltip">Eğer etkinse, otomatik güncelleme çalıştırıldığında tüm sunucular aynı anda güncellenir; aksi takdirde her bir sunucu sırayla güncellenir (bu işlem daha uzun sürebilir).</sys:String>
+    <sys:String x:Key="GlobalSettings_SequencialDelayPeriodLabel">Her sunucu güncellemesi arasında bekleme süresi</sys:String>
+    <sys:String x:Key="GlobalSettings_SequencialDelayPeriodTooltip">Her sunucu güncellemesi arasında beklenen süre, sadece paralel güncelleme devre dışıysa kullanılabilir.</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupLabel">Paralel yedekleme</sys:String>
+    <sys:String x:Key="GlobalSettings_ParallelBackupTooltip">Eğer etkinse, otomatik yedekleme çalıştırıldığında tüm sunucular aynı anda yedeklenir; aksi takdirde her bir sunucu sırayla yedeklenir (bu, sunucuda daha az gecikmeye neden olabilir).</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBacckupSequencialDelayPeriodLabel">Her sunucu yedeği arasında bekleme süresi</sys:String>
+    <sys:String x:Key="GlobalSettings_AutoBackupSequencialDelayPeriodTooltip">Her sunucu yedeği arasında beklenen süre, sadece paralel yedekleme devre dışıysa kullanılabilir.</sys:String>
+
+
 
     <sys:String x:Key="GlobalSettings_AutoRestartLabel">Otomatik Yeniden Başlatmayı Etkinleştir</sys:String>
     <sys:String x:Key="GlobalSettings_AutoRestartOnCrashLabel">Çökme Sonrası Otomatik Yeniden Başlatmayı Etkinleştir</sys:String>
@@ -667,6 +681,27 @@
     <sys:String x:Key="GlobalSettings_AutoRestartHourLabel">Günlük Yeniden Başlatma Saati:</sys:String>
     <sys:String x:Key="GlobalSettings_AutoRestartHourTooltip">Günlük otomatik yeniden başlatmanın saat dilimini ayarlar (24 saat biçiminde).</sys:String>
     <sys:String x:Key="GlobalSettings_AutoRestartWarningLabel">UYARI: Günlük otomatik yeniden başlatma etkinleştirildiğinde, sunucunuz belirtilen saatte otomatik olarak yeniden başlatılır ve tüm oyuncular oturumu kaybedebilir.</sys:String>
+
+    <sys:String x:Key="GlobalSettings_ShutdownLabel">Kapanış Seçenekleri</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessageInformationLabel">Bu uyarı mesajları yalnızca RCON etkinleştirildiğinde ve RCON portu sunucu profilinde ayarlandığında sunucuya iletilecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersLabel">Çevrimiçi oyuncu kontrolü yap</sys:String>
+    <sys:String x:Key="GlobalSettings_CheckForOnlinePlayersTooltip" xml:space="preserve">Eğer etkinse, kapanış işlemi oyuncuların çevrimiçi olup olmadığını kontrol eder. Hiçbir oyuncu çevrimiçi değilse, süre dikkate alınmaz ve kapanış hemen gerçekleşir. Aksi takdirde, kapanış, süre sayacı tamamlanana kadar bekleyecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_SendShutdownMessagesLabel">Kapanış mesajlarını Game Client'a gönder</sys:String>
+    <sys:String x:Key="GlobalSettings_SendShutdownMessagesTooltip">Eğer etkinse, kapanış mesajları RCON aracılığıyla oyun istemcisine gönderilecektir. NOT: RCON sunucuda etkin olmalıdır.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalLabel">Müsade Süresi:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownGraceIntervalTooltip">Sunucu kapanmadan ve güncellenmeden önce, güncelleme hakkında mesaj göndermek için geçen süre (dakika cinsinden).</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage1Label">Mesaj 1:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage1Tooltip">Bu mesaj, kapanıştan 2 veya daha fazla dakika önce gösterilecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage2Label">Mesaj 2:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage2Tooltip">Bu mesaj, kapanıştan 1 dakika önce gösterilecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage3Label">Mesaj 3:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownMessage3Tooltip">Bu mesaj, sunucu kapanmaya yakın gösterilecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownWorldSaveLabel">Yedekleme Mesajı:</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownWorldSaveTooltip">Bu mesaj, dünya kaydedilmeye başlanmadan önce kapanış sırasında gösterilecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownCancelLabel">Kapanış mesajını iptal et</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownCancelTooltip">Bu mesaj, sunucu kapanışı iptal edildiğinde gösterilecektir.</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonLabel">Kapanış nedeni ile birlikte tüm kapanış mesajlarını göster</sys:String>
+    <sys:String x:Key="GlobalSettings_ShutdownAllMessagesShowReasonTooltip">Eğer etkinse, kapanış nedeni tüm kapanış mesajlarıyla birlikte gösterilecektir; aksi takdirde yalnızca sunucu kapanışı başladığında gösterilecektir.</sys:String>
 
     <sys:String x:Key="GlobalSettings_RCONLabel">RCON Ayarları</sys:String>
     <sys:String x:Key="GlobalSettings_EnableRCONLabel">RCON Etkinleştir</sys:String>
@@ -1011,35 +1046,35 @@
     <!--#endregion-->
 
     <!--#region Server Settings - General Buttons -->
-	<sys:String x:Key="ServerSettings_SettingFindButtonLabel">Bul</sys:String>
-	<sys:String x:Key="ServerSettings_SettingFindButtonTooltip">Ayarı Bul</sys:String>
-	<sys:String x:Key="ServerSettings_SupportZipButtonLabel">Destek Zip'i Oluştur</sys:String>
-	<sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Sunucu yönetimi destek ekibinin sorunu teşhis etmek için gereken tüm dosyaları içeren bir zip dosyası oluşturun.</sys:String>
-	<sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Senkronize Et</sys:String>
-	<sys:String x:Key="ServerSettings_SyncProfileButtonTooltip">Bu profilden ayarları bir veya daha fazla profile kopyalayın.</sys:String>
-	<sys:String x:Key="ServerSettings_ImportButtonLabel">İçe Aktar</sys:String>
-	<sys:String x:Key="ServerSettings_ImportButtonTooltip">Mevcut bir profil yükleyin veya mevcut bir sunucudan doğrudan içe aktarın.</sys:String>
-	<sys:String x:Key="ServerSettings_SaveButtonLabel">Kaydet</sys:String>
-	<sys:String x:Key="ServerSettings_SaveButtonTooltip">Mevcut profili kaydedin ve sunucu için .INI dosyalarını yazın.</sys:String>
-	<sys:String x:Key="ServerSettings_StopButtonLabel">Durdur</sys:String>
-	<sys:String x:Key="ServerSettings_StopButtonTooltip">Sunucuyu durdurun.</sys:String>
-	<sys:String x:Key="ServerSettings_StartButtonLabel">Başlat</sys:String>
-	<sys:String x:Key="ServerSettings_StartButtonTooltip">Sunucuyu başlatın.</sys:String>
-	<sys:String x:Key="ServerSettings_RCONButtonLabel">RCON</sys:String>
-	<sys:String x:Key="ServerSettings_RCONButtonTooltip">RCON penceresini açın.</sys:String>
-	<sys:String x:Key="ServerSettings_PlayerListButtonLabel">Oyuncular</sys:String>
-	<sys:String x:Key="ServerSettings_PlayerListButtonTooltip">Oyuncu Listesi penceresini açın.</sys:String>
-	<sys:String x:Key="ServerSettings_UpgradeButtonLabel">Yükselt / Doğrula</sys:String>
-	<sys:String x:Key="ServerSettings_UpgradeButtonTooltip">Mevcut olarak indirilebilecek en son sunucu sürümüne yükseltin. Güncelleme yoksa sunucu dosyalarını doğrular.</sys:String>
-	<sys:String x:Key="ServerSettings_InstallButtonLabel">Yükle</sys:String>
-	<sys:String x:Key="ServerSettings_InstallButtonTooltip">Sunucunun en son sürümünü yükleyin.</sys:String>
-	<sys:String x:Key="ServerSettings_CancelUpgradeButtonLabel">İptal</sys:String>
-	<sys:String x:Key="ServerSettings_CancelUpgradeButtonTooltip">Sunucu yükseltmeyi iptal edin.</sys:String>
-	<sys:String x:Key="ServerSettings_SetLocationButtonLabel">Konumu Ayarla...</sys:String>
-	<sys:String x:Key="ServerSettings_SetLocationButtonTooltip">Sunucu oyununu ve yapılandırma dosyalarını içeren klasörü güncelleyin.</sys:String>
-	<sys:String x:Key="ServerSettings_ValidateButtonLabel">Geçerli Kıl</sys:String>
-	<sys:String x:Key="ServerSettings_ValidateButtonTooltip">Sunucu içeriğini Steam sürümüne karşı doğrulayın.</sys:String>
-	<sys:String x:Key="ServerSettings_ResetSectionTooltip">Bölümü varsayılana sıfırlar.</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonLabel">Bul</sys:String>
+    <sys:String x:Key="ServerSettings_SettingFindButtonTooltip">Ayarı Bul</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipButtonLabel">Destek Zip'i Oluştur</sys:String>
+    <sys:String x:Key="ServerSettings_SupportZipButtonTooltip">Sunucu yönetimi destek ekibinin sorunu teşhis etmek için gereken tüm dosyaları içeren bir zip dosyası oluşturun.</sys:String>
+    <sys:String x:Key="ServerSettings_SyncProfileButtonLabel">Senkronize Et</sys:String>
+    <sys:String x:Key="ServerSettings_SyncProfileButtonTooltip">Bu profilden ayarları bir veya daha fazla profile kopyalayın.</sys:String>
+    <sys:String x:Key="ServerSettings_ImportButtonLabel">İçe Aktar</sys:String>
+    <sys:String x:Key="ServerSettings_ImportButtonTooltip">Mevcut bir profil yükleyin veya mevcut bir sunucudan doğrudan içe aktarın.</sys:String>
+    <sys:String x:Key="ServerSettings_SaveButtonLabel">Kaydet</sys:String>
+    <sys:String x:Key="ServerSettings_SaveButtonTooltip">Mevcut profili kaydedin ve sunucu için .INI dosyalarını yazın.</sys:String>
+    <sys:String x:Key="ServerSettings_StopButtonLabel">Durdur</sys:String>
+    <sys:String x:Key="ServerSettings_StopButtonTooltip">Sunucuyu durdurun.</sys:String>
+    <sys:String x:Key="ServerSettings_StartButtonLabel">Başlat</sys:String>
+    <sys:String x:Key="ServerSettings_StartButtonTooltip">Sunucuyu başlatın.</sys:String>
+    <sys:String x:Key="ServerSettings_RCONButtonLabel">RCON</sys:String>
+    <sys:String x:Key="ServerSettings_RCONButtonTooltip">RCON penceresini açın.</sys:String>
+    <sys:String x:Key="ServerSettings_PlayerListButtonLabel">Oyuncular</sys:String>
+    <sys:String x:Key="ServerSettings_PlayerListButtonTooltip">Oyuncu Listesi penceresini açın.</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeButtonLabel">Yükselt / Doğrula</sys:String>
+    <sys:String x:Key="ServerSettings_UpgradeButtonTooltip">Mevcut olarak indirilebilecek en son sunucu sürümüne yükseltin. Güncelleme yoksa sunucu dosyalarını doğrular.</sys:String>
+    <sys:String x:Key="ServerSettings_InstallButtonLabel">Yükle</sys:String>
+    <sys:String x:Key="ServerSettings_InstallButtonTooltip">Sunucunun en son sürümünü yükleyin.</sys:String>
+    <sys:String x:Key="ServerSettings_CancelUpgradeButtonLabel">İptal</sys:String>
+    <sys:String x:Key="ServerSettings_CancelUpgradeButtonTooltip">Sunucu yükseltmeyi iptal edin.</sys:String>
+    <sys:String x:Key="ServerSettings_SetLocationButtonLabel">Konumu Ayarla...</sys:String>
+    <sys:String x:Key="ServerSettings_SetLocationButtonTooltip">Sunucu oyununu ve yapılandırma dosyalarını içeren klasörü güncelleyin.</sys:String>
+    <sys:String x:Key="ServerSettings_ValidateButtonLabel">Geçerli Kıl</sys:String>
+    <sys:String x:Key="ServerSettings_ValidateButtonTooltip">Sunucu içeriğini Steam sürümüne karşı doğrulayın.</sys:String>
+    <sys:String x:Key="ServerSettings_ResetSectionTooltip">Bölümü varsayılana sıfırlar.</sys:String>
 
     <sys:String x:Key="ServerSettings_AdminRequired_ErrorTitle">Yönetici Erişimi Gerekiyor</sys:String>
     <sys:String x:Key="ServerSettings_AdminRequired_ErrorLabel">Sunucu yönetici özelliklerini kullanarak görevleri zamanlayacak ve sunucu yöneticisi çalışmıyorken bile çalışacak şekilde planlayacaktır. Ayrı işlemler veya hizmetler kurmadan bunu yapabilmek için sunucu yöneticisinin yönetici ayrıcalıklarıyla çalışması gerekir. Sunucu yöneticisini yeniden başlatın ve 'Yönetici Olarak Çalıştır' ve bu özellikleri kullanabilirsiniz.</sys:String>
@@ -1314,6 +1349,21 @@
     <sys:String x:Key="ServerSettings_NotifyAdminCommandsInChatTooltip">Etkinleştirildiğinde, yönetici komutları yalnızca yöneticilerin görebileceği bir sohbete yansır.</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresLabel">Kabile Günlük Düşman Yapılarını Yok Etti</sys:String>
     <sys:String x:Key="ServerSettings_TribeLogDestroyedEnemyStructuresTooltip">Etkinleştirildiğinde, düşman yapı yok etme günlüğü (kurban kabilesi için) saldıran kabileyi Kabile Günlüklerinde görüntüler, yerine genel bir yapı yok etme mesajı kullanmaz.</sys:String>
+
+<sys:String x:Key="ServerSettings_ServerSaveOptionsLabel">Resmi Ayarlar</sys:String>
+<sys:String x:Key="ServerSettings_NewSaveFormatLabel">Yeni Kayıt Formatı(-New Game Save Format)</sys:String>
+<sys:String x:Key="ServerSettings_NewSaveFormatTooltip" xml:space="preserve">Yeni kayıt formatı (sürüm 11) kullanılır, bu format eski kayıt formatına (sürüm 8) kıyasla yaklaşık 4 kat daha hızlı ve %50 daha küçüktür.
+244.6 yamasından itibaren kullanılmıyor; mevcut varsayılan kayıt formatı (sürüm 9) buna dayalıdır. Yalnızca gerekli olduğunda kullanın (örneğin: varsayılan kayıt formatı başarısız olduğunda veya eski kayıt formatına ihtiyaç duyulduğunda).
+Bu seçenek, 2023 resmi sunucu yedeklerini -usestore seçeneğiyle birlikte düzgün şekilde yüklemek için kullanılmalıdır.</sys:String>
+<sys:String x:Key="ServerSettings_UseStoreLabel">Depoyu kullan (-usestorge)</sys:String>
+<sys:String x:Key="ServerSettings_UseStoreTooltip" xml:space="preserve">Resmi (eski olmayan) sunucularla aynı temel davranış: Oyuncu verilerinin işlenmesi sırasında karakter profili dosyası (.arkprofile) harita kaydından (.ark) ayrı olarak kaydedilmez, aynı şekilde yedeği de alınmaz.
+Gerekli olduğunda (örneğin: yeni aktarılmış bir karakter veya yeni oluşturulmuş bir karakter), geçici bir karakter profili dosyası oluşturulur ve bir sonraki dünya kaydına kadar korunur.
+Kabile profilleri farklı bir formatta (.arktributetribe) saklanır. Bu, -BackupTransferPlayerDatas seçeneğinin kullanılmasına olanak tanır (resmi sunucuların kayıt davranışını tamamen taklit eder).
+Önceki saklanmamış verileri saklanan verilere dönüştürmek için -converttostore seçeneğini kullanın. Bu seçenek, 2023 resmi sunucu yedeklerini -newsaveformat ile birlikte düzgün şekilde yüklemek için kullanılmalıdır.</sys:String>
+<sys:String x:Key="ServerSettings_BackupTransferPlayerDatasLabel">Oyuncu Yedek Aktarımı</sys:String>
+<sys:String x:Key="ServerSettings_BackupTransferPlayerDatasTooltip" xml:space="preserve">Oyuncu verilerinin işlenmesinde resmi sunucuların (eski olmayan) davranışını tamamen taklit eder, karakter profili dosyasının dünya kaydından ayrı olarak kalıcı yedek dosyalarının oluşturulmasını sağlar.
+-usestore seçeneğini gerektirir. Bu seçenek, 2023 resmi sunucu kayıtlarını oynatırken karakter profili yedeklerini tamamen yeniden etkinleştirmek için kullanılmalıdır.
+Wildcard tarafından belgelenmemiştir.</sys:String>
 
     <sys:String x:Key="ServerSettings_EnableWebAlarmLabel">Web Alarmları Etkinleştir</sys:String>
     <sys:String x:Key="ServerSettings_EnableWebAlarmTooltip">Etkinleştirildiğinde, sunucular önemli olaylar gerçekleştiğinde bir kabileye bildirimler gönderebilir.</sys:String>
@@ -1877,6 +1927,37 @@
     <sys:String x:Key="ServerSettings_DinoCustomization_PresetNameTooltip">Ayarları kaydetmek veya yüklemek için kullanılacak olan ön ayarın adını girin.</sys:String>
     <!--#endregion-->
 
+    <sys:String x:Key="ServerSettings_MatingIntervalLabel">Çiftleşme aralığı:</sys:String>
+    <sys:String x:Key="ServerSettings_MatingIntervalTooltip">Çiftleşme aralığını çoklu olarak ayarlayın. Değer ne kadar düşük olursa, çiftleşme aralığı o kadar kısa olur.</sys:String>
+    <sys:String x:Key="ServerSettings_MatingSpeedLabel">Çiftleşme hızı:</sys:String>
+    <sys:String x:Key="ServerSettings_MatingSpeedTooltip">Dinozorların birbirleriyle çiftleşme hızının katlarını belirtir. Daha yüksek değerler çiftleşme hızını artırır.</sys:String>
+    <sys:String x:Key="ServerSettings_EggHatchSpeedLabel">Yumurta kuluçka hızı:</sys:String>
+    <sys:String x:Key="ServerSettings_EggHatchSpeedTooltip">Döllenmiş yumurtanın kuluçka süresini birden fazla ayarlayın. Değer ne kadar yüksek olursa, yavru dinozor'unuz yumurtadan o kadar hızlı çıkar.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyMatureSpeedLabel">Bebek dinozor'unun büyüme hızı:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyMatureSpeedTooltip">Bebek dinozorların büyümesi için zaman çarpanını ayarlar. Değer ne kadar yüksek olursa bebek dinozor o kadar hızlı büyür.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyFoodConsumptionSpeedLabel">Yavru dinozor yemek tüketim oranı:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyFoodConsumptionSpeedTooltip">Yavru dinozor'unun yiyecek tüketim çarpanını ayarlayın. Değer ne kadar yüksek olursa yavru dinozor o kadar çok yiyecek tüketir.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DinoImprintLabel">Bebek dinozor ilgisi</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierLabel">ilgi istatistikleri tablosu:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintingStatScaleMultiplierTooltip">ilgi kalitesini etkili bir şekilde devre dışı bırakmak için bunu 0'a ayarlayın.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierLabel">Sahiplik miktar ölçeği:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyImprintAmountMultiplierTooltip">Her bir ilgiye, sağlanan yüzdenin katları uygulanır. Bu çarpan küreseldir, yani her türün damgalanma sürecini etkileyecektir. Değer ne kadar büyük olursa, her ilgi sayısı da o kadar büyük olur.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierLabel">Sarılma aralıkları:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleIntervalMultiplierTooltip">Bebek dinozorların ne sıklıkla kucaklanmak istediklerinin katları. Daha düşük değerler, baskı kalitesini elde etmek için onlara daha sık sarılmanız gerektiği anlamına gelir.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierLabel">Sahiplik Düşüş Çarpanı:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleGracePeriodMultiplierTooltip">Bebeğinize sarılmayı ne kadar erteledikten sonra sahiplik kalitesi düşmeye başlar, yüksek değerler bekleme süresini artırır.</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierLabel">Sahiplik kalitesini kaybetme hızını benimseyin:</sys:String>
+    <sys:String x:Key="ServerSettings_BabyCuddleLoseImprintQualitySpeedMultiplierTooltip">Henüz bebeğe sarılmadıysanız, izin süresi sona erdikten sonra sahiplik kalitesi birkaç kat daha hızlı düşecektir. Değer ne kadar düşük olursa, sahiplik kalitesi kaybı da o kadar yavaş olur.</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitLabel">Maksimum sahiplik sınırı eklendi:</sys:String>
+    <sys:String x:Key="ServerSettings_ImprintlimitTooltip">% olarak belirtilen işaret ödül sınırını aşan yaratıkları otomatik olarak yok edin. Özellikle özel baskı hızları kullanılırken olası kayan nokta hatalarını yakalamak için %1'lik bir artış önerilir.</sys:String>
+
+    <sys:String x:Key="ServerSettings_DinoMaxXP_ResetTitle">Sıfırlama işlemini onaylayın</sys:String>
+    <sys:String x:Key="ServerSettings_DinoMaxXP_ResetLabel">Maksimum XP'yi sıfırlamak istediğinizi onaylamak için "Evet"i tıklayın.</sys:String>
+    <sys:String x:Key="ServerSettings_DinoCustomization_ResetTitle">Sıfırlamayı onayla</sys:String>
+    <sys:String x:Key="ServerSettings_DinoCustomization_ResetLabel">Mevcut tüm dinozor özelleştirmelerini sıfırlamak istediğinizi onaylamak için "Evet"i tıklayın.</sys:String>
+    <!--#endregion-->
+
     <!--#region Server Settings - Environment -->
     <sys:String x:Key="ServerSettings_EnvironmentLabel">Ortam</sys:String>
     <sys:String x:Key="ServerSettings_TamingSpeedLabel">Evcilleştirme Hızı:</sys:String>
@@ -2244,168 +2325,167 @@
     <sys:String x:Key="ServerSettings_SOTF_HelpLabel">'Survival of the Fittest', Survival Evolved'a alternatif bir oyundur ve farklı bir dizi sunucu dosyası kullanır ve birçok kuralı değiştirir. Daha fazla ayrıntı için web sitesine bakın.</sys:String>
     <!--#endregion-->
 
-    <!--#region Server Settings - Procedurally Generated Arks -->
-    <sys:String x:Key="ServerSettings_PGMLabel">Procedurally Generated Arks</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_EnableLabel">Enable Procedurally Generated Arks</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_EnableTooltip">If enabled, configures the server to use a procedurally generated ark.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_PasteSettingsTooltip">Paste Procedurally Generated String</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_PasteSettingsTitle">Paste Procedurally Generated String</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_PasteSettingsConfirmTitle">Confirm Paste Procedurally Generated String</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_PasteSettingsConfirmLabel">You are about to overwrite ALL your Procedurally Generated ARK settings. Do you want to continue?</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_SaveSettingsTooltip">Save Procedurally Generated Settings String</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_SaveSettingsTitle">Procedurally Generated Settings String</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_RandomSettingsLabel">Randomize</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_RandomSettingsTooltip">Randomize the Procedurally Generated Settings</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_NameLabel">World File Name</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_NameTooltip">The name to use for the world file (e.g. MyPGArk1).</sys:String>
+    <!--#region Sunucu Ayarları - Prosedürel Olarak Oluşturulmuş Arklar -->
+    <sys:String x:Key="ServerSettings_PGMLabel">Prosedürel Olarak Oluşturulmuş Arklar</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_EnableLabel">Prosedürel Olarak Oluşturulmuş Arkları Etkinleştir</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_EnableTooltip">Etkinleştirildiğinde, sunucuyu prosedürel olarak oluşturulmuş bir ark kullanacak şekilde yapılandırır.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_PasteSettingsTooltip">Prosedürel Olarak Oluşturulmuş Dizeyi Yapıştır</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_PasteSettingsTitle">Prosedürel Olarak Oluşturulmuş Dizeyi Yapıştır</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_PasteSettingsConfirmTitle">Prosedürel Olarak Oluşturulmuş Dizeyi Yapıştırmayı Onayla</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_PasteSettingsConfirmLabel">TÜM Prosedürel Olarak Oluşturulmuş ARK ayarlarınızı üzerine yazmak üzeresiniz. Devam etmek istiyor musunuz?</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_SaveSettingsTooltip">Prosedürel Olarak Oluşturulmuş Ayar Dizesini Kaydet</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_SaveSettingsTitle">Prosedürel Olarak Oluşturulmuş Ayar Dizesi</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_RandomSettingsLabel">Rastgele Ayarla</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_RandomSettingsTooltip">Prosedürel Olarak Oluşturulmuş Ayarları Rastgele Ayarla</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_NameLabel">Dünya Dosyası Adı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_NameTooltip">Dünya dosyası için kullanılacak ad (ör. MyPGArk1).</sys:String>
     <sys:String x:Key="ServerSettings_PGM_XLabel">X</sys:String>
     <sys:String x:Key="ServerSettings_PGM_YLabel">Y</sys:String>
     <sys:String x:Key="ServerSettings_PGM_ZLabel">Z</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Warning1Label">WARNING: The procedurally generated Ark system is HIGHLY EXPERIMENTAL. Your saved procedurally generated Arks will necessarily be wiped in subsequent updates as the dynamic algorithms are further developed. We only recommend using this system at the present time if you're willing to accept the frequent clearing of your procedurally generated Ark's save data!</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Warning2Label">NOTE: Once you have started your server, changing these settings will have NO effect. To create an ARK with your new settings, you must either change the World File Name, or delete the existing world save file. In both cases you will loss ALL progress.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Warning1Label">UYARI: Prosedürel olarak oluşturulmuş Ark sistemi ÇOK DENEYSEL. Dinamik algoritmalar geliştirilmeye devam ettikçe, prosedürel olarak oluşturulmuş Ark'larınızın kayıtları sonraki güncellemelerde mutlaka silinecektir. Bu sistemi şu anda yalnızca prosedürel olarak oluşturulmuş Ark'ın kayıt verilerinin sık sık silinmesini kabul etmeye hazırsanız kullanmanızı öneririz!</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Warning2Label">NOT: Sunucunuzu başlattıktan sonra, bu ayarları değiştirmek HİÇBİR etkisi olmayacaktır. Yeni ayarlarınızla bir ARK oluşturmak için ya Dünya Dosyası Adını değiştirmelisiniz ya da mevcut dünya kayıt dosyasını silmelisiniz. Her iki durumda da TÜM ilerlemenizi kaybedeceksiniz.</sys:String>
 
-    <sys:String x:Key="ServerSettings_PGM_TerrianSettingsLabel">Terrian Settings</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MapSeedLabel">Map Seed</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MapSeedTooltip">The seed used in the noise and random functions.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_LandscapeRadiusLabel">Landscape Radius</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_LandscapeRadiusTooltip">The radius of the landscape, outside of this radius it is water (to avoid cutting the landscape by the terrain border).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterFrequencyLabel">Water Frequency</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterFrequencyTooltip">The frequency of the noise function used to generate land/water.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsFrequencyLabel">Mountain Frequency</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsFrequencyTooltip">The frequency of the noise used to generate mountains.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsSlopeLabel">Mountain Slop</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsSlopeTooltip">How hard the transition is from land to mountain, the higher the value the smoother the transition (from 0 to 2).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsHeightLabel">Mountain Height</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsHeightTooltip">A multiplier for mountain height.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_TurbulencePowerLabel">Turbulence Power</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_TurbulencePowerTooltip">The power of the turbulence function used to randomly perturb the coordinates input to the noise function, to add some realism to the noise.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreSlopeLabel">Shore Slope</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreSlopeTooltip">How hard the transition is from water floor to shore, the higher the value the smoother the transition (from 0 to 2).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreLineEndLabel">Shore Line End</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_TerrianSettingsLabel">Arazi Ayarları</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MapSeedLabel">Harita Tohumu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MapSeedTooltip">Gürültü ve rastgelelik fonksiyonlarında kullanılan tohum.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_LandscapeRadiusLabel">Manzara Yarıçapı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_LandscapeRadiusTooltip">Manzaranın yarıçapı, bu yarıçapın dışında kalan alan su olarak tanımlanır (manzaranın kenarları tarafından kesilmesini önlemek için).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterFrequencyLabel">Su Sıklığı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterFrequencyTooltip">Kara/su üretmek için kullanılan gürültü fonksiyonunun sıklığı.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsFrequencyLabel">Dağ Sıklığı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsFrequencyTooltip">Dağları üretmek için kullanılan gürültü fonksiyonunun sıklığı.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsSlopeLabel">Dağ Eğimi</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsSlopeTooltip">Kara ile dağ arasındaki geçişin ne kadar sert olduğu; değer ne kadar yüksekse geçiş o kadar yumuşaktır (0 ile 2 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsHeightLabel">Dağ Yüksekliği</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainsHeightTooltip">Dağ yüksekliği için bir çarpan.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_TurbulencePowerLabel">Türbülans Gücü</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_TurbulencePowerTooltip">Gürültü fonksiyonuna gerçekçilik katmak için koordinatları rastgele bozmak amacıyla kullanılan türbülans fonksiyonunun gücü.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreSlopeLabel">Kıyı Eğimi</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreSlopeTooltip">Su tabanından kıyıya geçişin ne kadar sert olduğu; değer ne kadar yüksekse geçiş o kadar yumuşaktır (0 ile 2 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreLineEndLabel">Kıyı Çizgisi Sonu</sys:String>
     <sys:String x:Key="ServerSettings_PGM_Terrain_ShoreLineEndTooltip">.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterLevelLabel">Water Level</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterLevelTooltip">The height value for the water surface (from Ocean Floor level to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_OceanFloorLevelLabel">Ocean Floor Level</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_OceanFloorLevelTooltip">The height value for the ocean floor (from -1 to Water Level).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_TerrainScaleMultiplierLabel">Terrain Scale Multiplier</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_TerrainScaleMultiplierTooltip">X, Y, Z to scale the whole terrain.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_ErosionStepsLabel">Erosion Steps</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterLevelLabel">Su Seviyesi</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_WaterLevelTooltip">Su yüzeyi için yükseklik değeri (Okyanus Tabanı seviyesinden 1'e kadar).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_OceanFloorLevelLabel">Okyanus Tabanı Seviyesi</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_OceanFloorLevelTooltip">Okyanus tabanı için yükseklik değeri (-1 ile Su Seviyesi arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_TerrainScaleMultiplierLabel">Arazi Ölçek Çarpanı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_TerrainScaleMultiplierTooltip">Tüm araziyi ölçeklendirmek için X, Y, Z değerleri.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_ErosionStepsLabel">Aşınma Adımları</sys:String>
     <sys:String x:Key="ServerSettings_PGM_Terrain_ErosionStepsTooltip">.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_ErosionStrengthLabel">Erosion Strength</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_ErosionStrengthLabel">Aşınma Gücü</sys:String>
     <sys:String x:Key="ServerSettings_PGM_Terrain_ErosionStrengthTooltip">.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_DepositionStrengthLabel">Deposition Strength</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_DepositionStrengthLabel">Çökme Gücü</sys:String>
     <sys:String x:Key="ServerSettings_PGM_Terrain_DepositionStrengthTooltip">.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_TreesGroundSlopeAccuracyLabel">Trees Slope Threshold</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_TreesGroundSlopeAccuracyLabel">Ağaç Eğim Eşiği</sys:String>
     <sys:String x:Key="ServerSettings_PGM_Terrain_TreesGroundSlopeAccuracyTooltip">.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainGeneralTreesPercentLabel">General Mountain Trees %</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Terrain_MountainGeneralTreesPercentLabel">Genel Dağ Ağaçları %</sys:String>
     <sys:String x:Key="ServerSettings_PGM_Terrain_MountainGeneralTreesPercentTooltip">.</sys:String>
 
-    <sys:String x:Key="ServerSettings_PGM_BiomeSettingsLabel">Biome Settings</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowBiomeSizeLabel">Snow Biome Size</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowBiomeSizeTooltip">The radius of the Snow biome (from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodBiomeSizeLabel">Redwood Biome Size</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodBiomeSizeTooltip">The radius of the Redwood biome (from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MountainBiomeStartLabel">Mountain Biome Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MountainBiomeStartTooltip">The height value at which the Mountain biome starts.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MountainsTreeDensityLabel">Mountains Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MountainsTreeDensityTooltip">Density of trees and rocks in the Mountain biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_JungleBiomeStartLabel">Jungle Biome Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_JungleBiomeStartTooltip">The height value at which the Jungle biome starts.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_IslandBorderCurveExponentLabel">Island Border Curve</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_IslandBorderCurveExponentTooltip">The exponent used in the curve to smoothly interpolate between island and water floor.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MaxSpawnPointHeightLabel">Max Spawn Point Height</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MaxSpawnPointHeightTooltip">The maximum height of land for a spawn point to be created.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_GrassDensityLabel">Grass Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_GrassDensityTooltip">Foliage density in the grasslands biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_JungleGrassDensityLabel">Jungle Grass Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_JungleGrassDensityTooltip">Foliage density in the Jungle biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowTreeDensityLabel">Snow Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowTreeDensityTooltip">Density of trees and rocks in the Snow biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodTreeDensityLabel">Redwood Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodTreeDensityTooltip">Density of trees and rocks in the Redwood biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_TreeDensityLabel">Grasslands Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_TreeDensityTooltip">Density of trees and rocks in the Grasslands biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_RedwoodGrassDensityLabel">Redwood Grass Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_RedwoodGrassDensityTooltip">Foliage density in the Redwood biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MountainGrassDensityLabel">Mountain Grass Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_MountainGrassDensityTooltip">Foliage density in the Mountain biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowGrassDensityLabel">Snow Grass Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowGrassDensityTooltip">Foliage density in the Snow biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_JungleTreeDensityLabel">Jungle Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_JungleTreeDensityTooltip">Density of trees and rocks in the Jungle biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_ShoreTreeDensityLabel">Shore Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_ShoreTreeDensityTooltip">Foliage density in the Shore biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineStartOffsetLabel">Shoreline Start Offset</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineStartOffsetTooltip">The distance from the water that the shoreline begins. Raise this for a shore that goes farther up to the land.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineThicknessLabel">Shoreline Thickness</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineThicknessTooltip">The overall width of the shore. Raise this along with ShorelineStartOffset to get a thicker, larger shore.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainsTreeDensityLabel">Snow Mountains Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainsTreeDensityTooltip">Density of trees and rocks in the Snow Mountain biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_UnderwaterObjectsDensityLabel">Underwater Objects Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_UnderwaterObjectsDensityTooltip">Object density in the Underwater biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainGrassDensityLabel">Snow Mountain Grass Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainGrassDensityTooltip">Foliage density in the Snow Mountain biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowShoreTreeDensityLabel">Snow Shore Tree Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_SnowShoreTreeDensityTooltip">Density of trees and rocks in the Snow Shore biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_InlandWaterObjectsDensityLabel">Inland Water Objects Density</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_InlandWaterObjectsDensityTooltip">Object density in the Inland Water biome.</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_DeepWaterBiomesDepthLabel">Deep Water Biomes Depth</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Biome_DeepWaterBiomesDepthTooltip">The depth value of the Deep Water biome.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_BiomeSettingsLabel">Biyom Ayarları</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowBiomeSizeLabel">Kar Biyomu Boyutu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowBiomeSizeTooltip">Kar biyomunun yarıçapı (0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodBiomeSizeLabel">Kızılçam Biyomu Boyutu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodBiomeSizeTooltip">Kızılçam biyomunun yarıçapı (0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MountainBiomeStartLabel">Dağ Biyomu Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MountainBiomeStartTooltip">Dağ biyomunun başladığı yükseklik değeri.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MountainsTreeDensityLabel">Dağ Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MountainsTreeDensityTooltip">Dağ biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_JungleBiomeStartLabel">Orman Biyomu Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_JungleBiomeStartTooltip">Orman biyomunun başladığı yükseklik değeri.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_IslandBorderCurveExponentLabel">Ada Sınır Eğrisi</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_IslandBorderCurveExponentTooltip">Ada ile su tabanı arasındaki geçişin eğrisinde kullanılan üstel değer.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MaxSpawnPointHeightLabel">Maksimum Doğma Noktası Yüksekliği</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MaxSpawnPointHeightTooltip">Bir doğma noktası oluşturulabilecek maksimum arazi yüksekliği.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_GrassDensityLabel">Çimen Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_GrassDensityTooltip">Çayır biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_JungleGrassDensityLabel">Orman Çimen Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_JungleGrassDensityTooltip">Orman biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowTreeDensityLabel">Kar Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowTreeDensityTooltip">Kar biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodTreeDensityLabel">Kızılçam Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_RedWoodTreeDensityTooltip">Kızılçam biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_TreeDensityLabel">Çayır Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_TreeDensityTooltip">Çayır biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_RedwoodGrassDensityLabel">Kızılçam Çimen Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_RedwoodGrassDensityTooltip">Kızılçam biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MountainGrassDensityLabel">Dağ Çimen Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_MountainGrassDensityTooltip">Dağ biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowGrassDensityLabel">Kar Çimen Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowGrassDensityTooltip">Kar biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_JungleTreeDensityLabel">Orman Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_JungleTreeDensityTooltip">Orman biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_ShoreTreeDensityLabel">Sahil Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_ShoreTreeDensityTooltip">Sahil biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineStartOffsetLabel">Sahil Başlangıç Uzaklığı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineStartOffsetTooltip">Suyun başladığı yerden sahil başlangıcına olan mesafe. Daha uzun bir sahil için bu değeri artırın.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineThicknessLabel">Sahil Kalınlığı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_ShorelineThicknessTooltip">Sahil genişliği. Daha kalın ve büyük bir sahil için bu değeri artırabilirsiniz.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainsTreeDensityLabel">Kar Dağı Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainsTreeDensityTooltip">Kar Dağı biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_UnderwaterObjectsDensityLabel">Su Altı Nesne Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_UnderwaterObjectsDensityTooltip">Su Altı biyomundaki nesne yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainGrassDensityLabel">Kar Dağı Çimen Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowMountainGrassDensityTooltip">Kar Dağı biyomundaki bitki örtüsü yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowShoreTreeDensityLabel">Kar Sahil Ağaç Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_SnowShoreTreeDensityTooltip">Kar Sahili biyomundaki ağaç ve kaya yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_InlandWaterObjectsDensityLabel">İç Su Nesne Yoğunluğu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_InlandWaterObjectsDensityTooltip">İç Su biyomundaki nesne yoğunluğu.</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_DeepWaterBiomesDepthLabel">Derin Su Biyom Derinliği</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Biome_DeepWaterBiomesDepthTooltip">Derin Su biyomunun derinlik değeri.</sys:String>
 
-    <sys:String x:Key="ServerSettings_PGM_MapSettingsLabel">Map Settings</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SnowBiomeLocationLabel">Snow Biome Location</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SnowBiomeLocationTooltip">The location of the Snow biome (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_RedWoodForestBiomeLocationLabel">Redwood Biome Location</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_RedWoodForestBiomeLocationTooltip">The location of the Redwood biome (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1StartLabel">North Region 1 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1StartTooltip">The start location of the North Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1EndLabel">North Region 1 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1EndTooltip">The end location of the North Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2StartLabel">North Region 2 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2StartTooltip">The start location of the North Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2EndLabel">North Region 2 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2EndTooltip">The end location of the North Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3StartLabel">North Region 3 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3StartTooltip">The start location of the North Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3EndLabel">North Region 3 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3EndTooltip">The end location of the North Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1StartLabel">South Region 1 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1StartTooltip">The start location of the South Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1EndLabel">South Region 1 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1EndTooltip">The end location of the South Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2StartLabel">South Region 2 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2StartTooltip">The start location of the South Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2EndLabel">South Region 2 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2EndTooltip">The end location of the South Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3StartLabel">South Region 3 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3StartTooltip">The start location of the South Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3EndLabel">South Region 3 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3EndTooltip">The end location of the South Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1StartLabel">East Region 1 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1StartTooltip">The start location of the East Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1EndLabel">East Region 1 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1EndTooltip">The end location of the East Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2StartLabel">East Region 2 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2StartTooltip">The start location of the East Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2EndLabel">East Region 2 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2EndTooltip">The end location of the East Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3StartLabel">East Region 3 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3StartTooltip">The start location of the East Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3EndLabel">East Region 3 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3EndTooltip">The end location of the East Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1StartLabel">West Region 1 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1StartTooltip">The start location of the West Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1EndLabel">West Region 1 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1EndTooltip">The end location of the West Region 1 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2StartLabel">West Region 2 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2StartTooltip">The start location of the West Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2EndLabel">West Region 2 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2EndTooltip">The end location of the West Region 2 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3StartLabel">West Region 3 Start</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3StartTooltip">The start location of the West Region 3 (X, Y from 0 to 1).</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3EndLabel">West Region 3 End</sys:String>
-    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3EndTooltip">The end location of the West Region 3 (X, Y from 0 to 1).</sys:String>
-    <!--#endregion-->
+    <sys:String x:Key="ServerSettings_PGM_MapSettingsLabel">Harita Ayarları</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SnowBiomeLocationLabel">Kar Biyomu Konumu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SnowBiomeLocationTooltip">Kar biyomunun konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_RedWoodForestBiomeLocationLabel">Kızılçam Biyomu Konumu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_RedWoodForestBiomeLocationTooltip">Kızılçam biyomunun konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1StartLabel">Kuzey Bölgesi 1 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1StartTooltip">Kuzey Bölgesi 1'in başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1EndLabel">Kuzey Bölgesi 1 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion1EndTooltip">Kuzey Bölgesi 1'in bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2StartLabel">Kuzey Bölgesi 2 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2StartTooltip">Kuzey Bölgesi 2'nin başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2EndLabel">Kuzey Bölgesi 2 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion2EndTooltip">Kuzey Bölgesi 2'nin bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3StartLabel">Kuzey Bölgesi 3 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3StartTooltip">Kuzey Bölgesi 3'ün başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3EndLabel">Kuzey Bölgesi 3 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_NorthRegion3EndTooltip">Kuzey Bölgesi 3'ün bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1StartLabel">Güney Bölgesi 1 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1StartTooltip">Güney Bölgesi 1'in başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1EndLabel">Güney Bölgesi 1 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion1EndTooltip">Güney Bölgesi 1'in bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2StartLabel">Güney Bölgesi 2 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2StartTooltip">Güney Bölgesi 2'nin başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2EndLabel">Güney Bölgesi 2 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion2EndTooltip">Güney Bölgesi 2'nin bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3StartLabel">Güney Bölgesi 3 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3StartTooltip">Güney Bölgesi 3'ün başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3EndLabel">Güney Bölgesi 3 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_SouthRegion3EndTooltip">Güney Bölgesi 3'ün bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1StartLabel">Doğu Bölgesi 1 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1StartTooltip">Doğu Bölgesi 1'in başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1EndLabel">Doğu Bölgesi 1 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion1EndTooltip">Doğu Bölgesi 1'in bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2StartLabel">Doğu Bölgesi 2 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2StartTooltip">Doğu Bölgesi 2'nin başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2EndLabel">Doğu Bölgesi 2 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion2EndTooltip">Doğu Bölgesi 2'nin bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3StartLabel">Doğu Bölgesi 3 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3StartTooltip">Doğu Bölgesi 3'ün başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3EndLabel">Doğu Bölgesi 3 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_EastRegion3EndTooltip">Doğu Bölgesi 3'ün bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1StartLabel">Batı Bölgesi 1 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1StartTooltip">Batı Bölgesi 1'in başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1EndLabel">Batı Bölgesi 1 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion1EndTooltip">Batı Bölgesi 1'in bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2StartLabel">Batı Bölgesi 2 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2StartTooltip">Batı Bölgesi 2'nin başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2EndLabel">Batı Bölgesi 2 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion2EndTooltip">Batı Bölgesi 2'nin bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3StartLabel">Batı Bölgesi 3 Başlangıcı</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3StartTooltip">Batı Bölgesi 3'ün başlangıç konumu (X, Y 0 ile 1 arasında).</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3EndLabel">Batı Bölgesi 3 Sonu</sys:String>
+    <sys:String x:Key="ServerSettings_PGM_Map_WestRegion3EndTooltip">Batı Bölgesi 3'ün bitiş konumu (X, Y 0 ile 1 arasında).</sys:String>
 
     <!--#region Server Settings - Map Spawner Overrides -->
     <sys:String x:Key="ServerSettings_MapSpawnerOverridesLabel">Spawner Ayarları</sys:String>
@@ -3136,7 +3216,7 @@
     <sys:String x:Key="KingKaiju_Character_BP_Alpha_C">King Titan (Alpha)</sys:String>
     <sys:String x:Key="KingKaiju_Character_BP_Beta_C">King Titan (Beta)</sys:String>
     <!--#endregion-->
-	
+
     <!--#region Dino/Creature Class Names - Genesis -->
     <sys:String x:Key="SpaceWhale_Character_BP_C">Astrocetus</sys:String>
     <sys:String x:Key="BogSpider_Character_BP_C">Bloodstalker</sys:String>
@@ -3176,11 +3256,11 @@
     <sys:String x:Key="EelBoss_Character_BP_Easy_C">Moeder, Master of the Ocean (Easy Variant)</sys:String>
     <sys:String x:Key="EelBoss_Character_BP_Medium_C">Moeder, Master of the Ocean (Medium Variant)</sys:String>
     <sys:String x:Key="EelBoss_Character_BP_Hard_C">Moeder, Master of the Ocean (Hard Variant)</sys:String>
-	
+
     <sys:String x:Key="EelMinion_Character_BP_Easy_C">Eel Minion (Gamma)</sys:String>
     <sys:String x:Key="EelMinion_Character_BP_Medium_C">Eel Minion (Beta)</sys:String>
     <sys:String x:Key="EelMinion_Character_BP_Hard_C">Eel Minion (Alpha)</sys:String>
-	
+
     <sys:String x:Key="VRMainBoss_Character_Easy_C">Corrupted Master Controller (Easy Variant)</sys:String>
     <sys:String x:Key="VRMainBoss_Character_Medium_C">Corrupted Master Controller (Medium Variant)</sys:String>
     <sys:String x:Key="VRMainBoss_Character_Hard_C">Corrupted Master Controller (Hard Variant)</sys:String>
@@ -3903,7 +3983,7 @@
     <sys:String x:Key="EngramEntry_TekBridge_C">Tek Bridge</sys:String>
     <sys:String x:Key="EngramEntry_TekGravityGrenade_C">Tek Gravity Grenade</sys:String>
     <!--#endregion-->
-	
+
     <!--#region Engram Class Names - Genesis -->
     <sys:String x:Key="EngramEntry_CherufeSaddle_C">Magmasaur Saddle</sys:String>
     <sys:String x:Key="EngramEntry_GiantTurtleSaddle_C">Megachelon Platform Saddle</sys:String>
