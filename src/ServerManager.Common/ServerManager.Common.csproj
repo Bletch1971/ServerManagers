@@ -17,7 +17,7 @@
     <None Remove="Controls\CheckBoxAndTextBlock.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="ProDotNetZip" Version="1.20.0" />
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="6.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog" Version="5.0.1" />
