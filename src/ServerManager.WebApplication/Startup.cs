@@ -1,9 +1,8 @@
+using Asp.Versioning;
+using Asp.Versioning.ApiExplorer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -40,13 +39,10 @@ public class Startup
                 new MediaTypeApiVersionReader("Version"),
                 new HeaderApiVersionReader("X-Version")
             );
-        });
-
-        services.AddVersionedApiExplorer(o =>
+        }).AddApiExplorer(options =>
         {
-            // add the versioned api explorer, which also adds IApiVersionDescriptionProvider service
-            // note: the specified format code will format the version as "'v'major[.minor][-status]"
-            o.GroupNameFormat = "'v'VVV";
+            options.GroupNameFormat = "'v'VVV";
+            options.SubstituteApiVersionInUrl = true;
         });
 
         services.AddServerQueryServices(Configuration);
@@ -64,18 +60,14 @@ public class Startup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
     {
         if (env.IsDevelopment())
-        {
             app.UseDeveloperExceptionPage();
-        }
 
         var enableSwagger = Configuration.GetValue<bool>("EnableSwagger");
         if (enableSwagger)
         {
             var swaggerRoutePrefix = Configuration.GetValue<string>("SwaggerRoutePrefix");
             if (!string.IsNullOrWhiteSpace(swaggerRoutePrefix) && !swaggerRoutePrefix.EndsWith("/"))
-            {
                 swaggerRoutePrefix += "/";
-            }
 
             app.UseSwagger();
             app.UseSwaggerUI(o =>

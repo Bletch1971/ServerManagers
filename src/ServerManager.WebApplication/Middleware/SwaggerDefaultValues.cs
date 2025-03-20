@@ -21,27 +21,19 @@ public class SwaggerDefaultValues : IOperationFilter
 
             foreach (var contentType in response.Content.Keys)
             {
-                if (!responseType.ApiResponseFormats.Any(x => x.MediaType == contentType))
-                {
+                if (responseType.ApiResponseFormats.All(x => x.MediaType != contentType))
                     response.Content.Remove(contentType);
-                }
             }
         }
 
         if (operation.Parameters is null)
-        {
             return;
-        }
 
         foreach (var parameter in operation.Parameters)
         {
-            var description = apiDescription.ParameterDescriptions
-                                            .First(p => p.Name == parameter.Name);
+            var description = apiDescription.ParameterDescriptions.First(p => p.Name == parameter.Name);
 
-            if (parameter.Description is null)
-            {
-                parameter.Description = description.ModelMetadata?.Description;
-            }
+            parameter.Description ??= description.ModelMetadata?.Description;
 
             if (parameter.Schema.Default is null && description.DefaultValue is not null)
             {

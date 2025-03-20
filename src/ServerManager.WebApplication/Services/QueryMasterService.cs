@@ -25,7 +25,7 @@ public class QueryMasterService : IServerQueryService
         try
         {
             using var server = ServerQuery.GetServerInstance(EngineType.Source, ipString, (ushort)port);
-            return server.GetInfo() != null;
+            return server.GetInfo() is not null;
         }
         catch
         {
@@ -38,35 +38,23 @@ public class QueryMasterService : IServerQueryService
         var errors = new List<string>();
 
         if (string.IsNullOrWhiteSpace(managerCode))
-        {
             errors.Add("Manager code is required.");
-        }
         else
         {
-            var managerCodes = _settings.ManagerCodes ?? new List<ManagerCode>();
+            var managerCodes = _settings.ManagerCodes ?? [];
             if (!managerCodes.Any(c => c.Code.Equals(managerCode, StringComparison.OrdinalIgnoreCase)))
-            {
                 errors.Add("Manager code is invalid.");
-            }
         }
 
         if (string.IsNullOrWhiteSpace(ipString))
-        {
             errors.Add("IP Address is required.");
-        }
-        else if (!IPAddress.TryParse(ipString, out IPAddress _))
-        {
+        else if (!IPAddress.TryParse(ipString, out _))
             errors.Add("IP Address is invalid.");
-        }
 
-        if (port <= ushort.MinValue || port >= ushort.MaxValue)
-        {
+        if (port is <= ushort.MinValue or >= ushort.MaxValue)
             errors.Add($"Valid port is required ({ushort.MinValue} to {ushort.MaxValue}).");
-        }
 
         if (errors.Count > 0)
-        {
             throw new ServerManagerApiException(StatusCodes.Status400BadRequest, errors);
-        }
     }
 }

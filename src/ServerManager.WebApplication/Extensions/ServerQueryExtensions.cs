@@ -11,7 +11,7 @@ public static class ServerQueryExtensions
     {
         var settings = configuration.GetSectionAs<ServerQuerySettings>();
         services.AddSingleton(settings);
-        
+
         services.AddScoped<IServerQueryService, QueryMasterService>();
         return services;
     }

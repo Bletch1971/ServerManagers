@@ -11,5 +11,5 @@ public class ErrorResponse
     /// </summary>
     [Required]
     [Description("List of errors.")]
-    public ICollection<string> Errors { get; set; } = new List<string>();
+    public ICollection<string> Errors { get; set; } = [];
 }

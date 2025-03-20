@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Asp.Versioning;
+using System;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -59,12 +59,9 @@ public class ServerController : ControllerBase
         // check for valid service
         if (_serverQueryService == null)
         {
-            var response = new ErrorResponse 
-            { 
-                Errors = new List<string> 
-                { 
-                    "Server query service not available." 
-                } 
+            var response = new ErrorResponse
+            {
+                Errors = ["Server query service not available."]
             };
             return StatusCode(StatusCodes.Status503ServiceUnavailable, response);
         }
@@ -74,9 +71,9 @@ public class ServerController : ControllerBase
             var stopWatch = Stopwatch.StartNew();
 
             var result = _serverQueryService.CheckServerStatus(managerCode, managerVersion, ipString, port);
-            var response = new ServerStatusResponse 
-            { 
-                Available = result.ToString() 
+            var response = new ServerStatusResponse
+            {
+                Available = result.ToString()
             };
 
             stopWatch.Stop();
@@ -85,20 +82,17 @@ public class ServerController : ControllerBase
         }
         catch (ServerManagerApiException ex)
         {
-            var response = new ErrorResponse 
-            { 
-                Errors = ex.Messages 
+            var response = new ErrorResponse
+            {
+                Errors = ex.Messages
             };
             return StatusCode(ex.StatusCode, response);
         }
         catch (Exception ex)
         {
-            var response = new ErrorResponse 
-            { 
-                Errors = new List<string> 
-                { 
-                    ex.Message 
-                } 
+            var response = new ErrorResponse
+            {
+                Errors = [ex.Message]
             };
             return StatusCode(StatusCodes.Status500InternalServerError, response);
         }
